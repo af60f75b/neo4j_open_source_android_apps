@@ -1,0 +1,823 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+a4e0449874423031107f6aaa7e97d0f1714a1d3b,a4e04498,sample-1.3.9 [ci skip],"sample-1.3.9 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1438863311,1438863311,3b3abef4c9bc2f6fbeb8211fc1f764c49c28e9c6
+3b3abef4c9bc2f6fbeb8211fc1f764c49c28e9c6,3b3abef4,2.11.0 [ci skip],"2.11.0 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1438862963,1438862963,40674e724fc989900c29f2629baad8548efffb06
+40674e724fc989900c29f2629baad8548efffb06,40674e72,Merge pull request #135 from open-keychain/alt-swipe-anim,"Merge pull request #135 from open-keychain/alt-swipe-anim
+
+nicer animation flow for dismiss on swipe",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1438862795,1438862795,"9aba8bd97fd4f3fafd9f40be3c3dd461c1e3aeac,ee92b4de41d93be201c7934556e4d6ddc6fa7653"
+9aba8bd97fd4f3fafd9f40be3c3dd461c1e3aeac,9aba8bd9,Merge pull request #134 from open-keychain/round-divider,"Merge pull request #134 from open-keychain/round-divider
+
+round corners on divider line in tablet layout",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1437021693,1437021693,"e3e72b88c8d76d50e6fa30cd589c2164eada4f01,cd4dfca4d3f019419183b0aeccd76592d9ab8a03"
+e3e72b88c8d76d50e6fa30cd589c2164eada4f01,e3e72b88,Merge pull request #133 from danpe/master,"Merge pull request #133 from danpe/master
+
+Enabling ReShowing a dismissed Snackbar.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1437021637,1437021637,"16b99f66aa1ee101241fed772fd0543e80a67653,611bf46e5648fbd69606c728c95c6c3d1b2b0202"
+ee92b4de41d93be201c7934556e4d6ddc6fa7653,ee92b4de,nicer animation flow for dismiss on swipe,"nicer animation flow for dismiss on swipe
+",,,,Vincent Breitmoser,valodim@mugenguild.com,Vincent Breitmoser,valodim@mugenguild.com,1436882330,1436893630,16b99f66aa1ee101241fed772fd0543e80a67653
+cd4dfca4d3f019419183b0aeccd76592d9ab8a03,cd4dfca4,round corners on divider line in tablet layout,"round corners on divider line in tablet layout
+",,,,Vincent Breitmoser,valodim@mugenguild.com,Vincent Breitmoser,valodim@mugenguild.com,1436879219,1436893337,16b99f66aa1ee101241fed772fd0543e80a67653
+611bf46e5648fbd69606c728c95c6c3d1b2b0202,611bf46e,Small Fix ;),Small Fix ;),,,,danpe,danpeleg1@gmail.com,danpe,danpeleg1@gmail.com,1436706514,1436706514,4180477eaa98e4361bd6edfe047b3debaf211d30
+4180477eaa98e4361bd6edfe047b3debaf211d30,4180477e,Updating Action Label even if Snackbar is already shown,"Updating Action Label even if Snackbar is already shown
+
+Updating Action Label even if Snackbar is already shown",,,,danpe,danpeleg1@gmail.com,danpe,danpeleg1@gmail.com,1436705939,1436705939,6005a2fccc3ed58f852d54ca4627aa5966b1f622
+6005a2fccc3ed58f852d54ca4627aa5966b1f622,6005a2fc,Enabling ReShowing a dismissed Snackbar. ,"Enabling ReShowing a dismissed Snackbar. 
+
+I think this is a bug, maybe feature as designed ?",,,,danpe,danpeleg1@gmail.com,danpe,danpeleg1@gmail.com,1436454651,1436454651,16b99f66aa1ee101241fed772fd0543e80a67653
+16b99f66aa1ee101241fed772fd0543e80a67653,16b99f66,2.10.10,"2.10.10
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1433073958,1433073958,9f8eaa233f6c136406a8ba95379ef4030635b1d6
+9f8eaa233f6c136406a8ba95379ef4030635b1d6,9f8eaa23,Merge pull request #131 from sbaar/patch-1,"Merge pull request #131 from sbaar/patch-1
+
+added min_width max_width to default values.xml",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1432944837,1432944837,"e8eea4031a6ff86db9e08d217e71ce299174165e,d3c5a4e7539d5b499a7cd915d9e990e79c4a05a4"
+d3c5a4e7539d5b499a7cd915d9e990e79c4a05a4,d3c5a4e7,added min_width max_width to default values.xml,"added min_width max_width to default values.xml
+
+This fixes a crash when calling 
+SnackbarManager.show(snackbar,false) on devices where the smallest width is less than 600dp, such as the nexus 5. It would throw a resource not found exception because the only value specified for the resource is in values-sw600dp
+
+Particularly, it would crash on line layout.setMinimumWidth(res.getDimensionPixelSize(dimen.sb__min_width)); in
+ private MarginLayoutParams init(Context context, Activity targetActivity, ViewGroup parent, boolean usePhoneLayout)
+of snackbar.java because it's being forced to use the tablet specific implementation when it would normally do so, namely when the width is less than 600dp on a device like the nexus 5 which is 360.0 dp x 592.0 dp",,,,Scott Baar,orphanfrequently@gmail.com,Scott Baar,orphanfrequently@gmail.com,1432943800,1432943800,e8eea4031a6ff86db9e08d217e71ce299174165e
+e8eea4031a6ff86db9e08d217e71ce299174165e,e8eea403,Deprecated [ci skip],Deprecated [ci skip],,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1432919975,1432919975,e48089ecdababa9845540059b22ced4f7e7cbe14
+e48089ecdababa9845540059b22ced4f7e7cbe14,e48089ec,sample-1.3.8 [ci skip],"sample-1.3.8 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1432558212,1432558212,7b98afccc612b61392e5c42f7d380e6b89b5fab1
+7b98afccc612b61392e5c42f7d380e6b89b5fab1,7b98afcc,sample-1.3.8 [ci skip],"sample-1.3.8 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1432557953,1432557953,42af70bcd0e5d0089d9a5bb347696e404a216c61
+42af70bcd0e5d0089d9a5bb347696e404a216c61,42af70bc,2.10.9 [ci skip],"2.10.9 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1432557517,1432557517,4c407319524f57d5e8febbdd4c0f52bb622dc224
+4c407319524f57d5e8febbdd4c0f52bb622dc224,4c407319,Merge pull request #128 from jaredrummler/patch-2,"Merge pull request #128 from jaredrummler/patch-2
+
+Use a WeakReference to fix activity leaks. Fixes #125 ",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1432556822,1432556822,"75ded8806b9983602f3906a0fffe27c7191f8da6,23e27b1c2a96fbe1575c801b312913fef31c67f8"
+23e27b1c2a96fbe1575c801b312913fef31c67f8,23e27b1c,Use a WeakReference to fix activity leaks.,Use a WeakReference to fix activity leaks.,,,,Jared Rummler,jared.rummler@gmail.com,Jared Rummler,jared.rummler@gmail.com,1432268643,1432268643,75ded8806b9983602f3906a0fffe27c7191f8da6
+75ded8806b9983602f3906a0fffe27c7191f8da6,75ded880,Merge pull request #122 from gedu/master,"Merge pull request #122 from gedu/master
+
+Update snackbar position for tablets/desktops",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1431819433,1431819433,"a46edab0726628dd8936ee6da2113fb0d0917144,5e095dea344ec490fadceab29dc105e4dad430f2"
+5e095dea344ec490fadceab29dc105e4dad430f2,5e095dea,"Fix show call. After rotate a device while the snackbar is displaying, make the…","Fix show call. After rotate a device while the snackbar is displaying, make the snackbar detached, but when try to show a new one (using the snackbarManager) the isShow and !isDismissing return true, so the show method never fired
+",,,,edug,edu@funler.com,edug,edu@funler.com,1431379006,1431379006,4c50047c512d2c43316a54dc00bb03fbd678ab8d
+4c50047c512d2c43316a54dc00bb03fbd678ab8d,4c50047c,"Update snacker position for tablets/desktops, following the Android guidelines","Update snacker position for tablets/desktops, following the Android guidelines
+",,,,edug,edu@funler.com,edug,edu@funler.com,1431364400,1431364400,a46edab0726628dd8936ee6da2113fb0d0917144
+a46edab0726628dd8936ee6da2113fb0d0917144,a46edab0,2.10.8 [ci skip],"2.10.8 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1430995078,1430995078,2ac86db4b7a57d2c3a3625cdf8f7cb83b5ae1d53
+2ac86db4b7a57d2c3a3625cdf8f7cb83b5ae1d53,2ac86db4,Merge pull request #120 from jonathan-caryl/add_elevation,"Merge pull request #120 from jonathan-caryl/add_elevation
+
+On Lollipop make sure the Snackbar elevation is the same as other children",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1430914460,1430914460,"2369f960367e1058e15ede6dc7f62d1ff6231ba1,c68ed96b22dc8f938362903491f9292a6fa9f606"
+c68ed96b22dc8f938362903491f9292a6fa9f606,c68ed96b,On Lollipop make sure the Snackbar elevation is the same as other children,"On Lollipop make sure the Snackbar elevation is the same as other children
+",,,,Jonathan Caryl,jonathan.caryl@livingsocial.com,Jonathan Caryl,jonathan.caryl@livingsocial.com,1430913858,1430913858,2369f960367e1058e15ede6dc7f62d1ff6231ba1
+2369f960367e1058e15ede6dc7f62d1ff6231ba1,2369f960,Merge pull request #116 from open-keychain/colored-top,"Merge pull request #116 from open-keychain/colored-top
+
+Support for colored top line",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1430488357,1430488357,"84b22337c90c2680c01990a75d0cff933bfe4649,271ae12a023a156f850a02ec1fd1c5989e817d07"
+271ae12a023a156f850a02ec1fd1c5989e817d07,271ae12a,support for colored top line,"support for colored top line
+",,,,Vincent Breitmoser,valodim@mugenguild.com,Dominik Schürmann,dominik@dominikschuermann.de,1427039472,1430348354,84b22337c90c2680c01990a75d0cff933bfe4649
+84b22337c90c2680c01990a75d0cff933bfe4649,84b22337,sample-1.3.7,"sample-1.3.7
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1429396849,1429396849,2e7f7075fc985668ce6a8a09850230af05e01984
+2e7f7075fc985668ce6a8a09850230af05e01984,2e7f7075,2.10.7,"2.10.7
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1429396777,1429396777,4c2601a649c589a55301a8d14edb282d48471d5f
+4c2601a649c589a55301a8d14edb282d48471d5f,4c2601a6,let the maven badge do the talking :P [ci skip],"let the maven badge do the talking :P [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1429396759,1429396759,c99f80fb35459d88623f8bce97fb2fbf3ec3eeff
+c99f80fb35459d88623f8bce97fb2fbf3ec3eeff,c99f80fb,Merge pull request #110 from fahimk/master,"Merge pull request #110 from fahimk/master
+
+add try/catch for accessibility event",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1429372029,1429372029,"dce3d7eb3272dbb96eb3fb806458cd3141a6d676,9d1dd0b06b7ffc917e52716c108bcf55b404b064"
+9d1dd0b06b7ffc917e52716c108bcf55b404b064,9d1dd0b0,add try/catch for accessibility event,"add try/catch for accessibility event
+",,,,Fahim Karim,fahim@jet.com,Fahim Karim,fahim@jet.com,1429286841,1429286841,dce3d7eb3272dbb96eb3fb806458cd3141a6d676
+dce3d7eb3272dbb96eb3fb806458cd3141a6d676,dce3d7eb,Merge pull request #108 from hatemsh/master,"Merge pull request #108 from hatemsh/master
+
+Fix dismissByReplace jarring animation",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1429012993,1429012993,"b53cf790b85423b6f4561b6420027cc3aa8e8d65,40b50fffa6f73a82c4ed8c74df5dd30fdbae17e6"
+40b50fffa6f73a82c4ed8c74df5dd30fdbae17e6,40b50fff,Fix dismissByReplace jarring animation,"Fix dismissByReplace jarring animation
+
+Separated the mAnimated field of Snackbar into 2 fields: mShowAnimated
+and mDismissAnimated with each field having its own getter and setter
+methods. withAnimation(boolean) will change both of these values and
+isAnimated() will return true only if both of them are set to true.
+
+In SnackBarManager when replacing a snackbar, dimissAnimation(false) is
+called on the previous snackbar and showAnimation(false) is called on
+the new snackbar. This provided much smoother visuals when dismissing by
+replace.
+",,,,Hatem Shahbari,hatem.shahbari@gmail.com,Hatem Shahbari,hatem.shahbari@gmail.com,1428921187,1428921187,b53cf790b85423b6f4561b6420027cc3aa8e8d65
+b53cf790b85423b6f4561b6420027cc3aa8e8d65,b53cf790,Merge pull request #104 from seanfredericksen/accessibility-event,"Merge pull request #104 from seanfredericksen/accessibility-event
+
+Make snackbar components focusable and fire accessibility event on show",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1427579904,1427579904,"6670368d8a6dd3dfb3e0c70a29ba98f97a2ec032,1cd4caaf6feb4b3caf84d7137fd02a258ab19185"
+1cd4caaf6feb4b3caf84d7137fd02a258ab19185,1cd4caaf,Make snackbar components focusable and fire accessibility event on show,"Make snackbar components focusable and fire accessibility event on show
+",,,,Sean Fredericksen,sean.fredericksen@banno.com,Sean Fredericksen,sean.fredericksen@banno.com,1427295118,1427295118,6670368d8a6dd3dfb3e0c70a29ba98f97a2ec032
+6670368d8a6dd3dfb3e0c70a29ba98f97a2ec032,6670368d,sample-1.3.6 [ci skip],"sample-1.3.6 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427158740,1427158751,e81fc0d7a35356309feaae9ff69a654f8629c4d3
+e81fc0d7a35356309feaae9ff69a654f8629c4d3,e81fc0d7,2.10.6 [ci skip],"2.10.6 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427158529,1427158529,24967cc99fac5abd5ef1dfb67c315fb291cc4703
+24967cc99fac5abd5ef1dfb67c315fb291cc4703,24967cc9,show/dismiss sb on main thread. Fixes #101,"show/dismiss sb on main thread. Fixes #101
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427158159,1427158159,ba98231a9ad2036eed17c71ea5a1cb8dc95e2257
+ba98231a9ad2036eed17c71ea5a1cb8dc95e2257,ba98231a,tests rename,"tests rename
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427157466,1427157466,e781e4581273ab03f7bad810a7460ec09dccd77c
+e781e4581273ab03f7bad810a7460ec09dccd77c,e781e458,import removal [ci skip],"import removal [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427157401,1427157401,7379c19c5aad1d6914ed69f7b2fe3e11ce510ce5
+7379c19c5aad1d6914ed69f7b2fe3e11ce510ce5,7379c19c,remove info,"remove info
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427153460,1427153460,c730e8d34c169c8d6bef8e9247851cf00642ae99
+c730e8d34c169c8d6bef8e9247851cf00642ae99,c730e8d3,dependency fix,"dependency fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427153082,1427153082,927a800d9aa9f76da6ef92ba03f62da57a61dc1a
+927a800d9aa9f76da6ef92ba03f62da57a61dc1a,927a800d,ant dependency for travis,"ant dependency for travis
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427152886,1427152886,2d3b74a4f7017e25f43aee09f60b5fd02eb4318a
+2d3b74a4f7017e25f43aee09f60b5fd02eb4318a,2d3b74a4,more info,"more info
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427152532,1427152532,2c51fb067b30a5202fa934a7236a38d5fe0be0fb
+2c51fb067b30a5202fa934a7236a38d5fe0be0fb,2c51fb06,appcompat as local lib due to Travis issue,"appcompat as local lib due to Travis issue
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427152321,1427152321,736a862a152fead20ff9fd403a65aff2beb66617
+736a862a152fead20ff9fd403a65aff2beb66617,736a862a,test,"test
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427151094,1427151094,4fc34fb6be9219eccfe2c46f4fa35dbef53f559f
+4fc34fb6be9219eccfe2c46f4fa35dbef53f559f,4fc34fb6,container based infrastructure,"container based infrastructure
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427150617,1427150617,be7bf8b6c35805655bf1666f9868408e93683396
+be7bf8b6c35805655bf1666f9868408e93683396,be7bf8b6,change travis script,"change travis script
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427150147,1427150147,764f1c5e43a124adef2c512233cb9f65138bd643
+764f1c5e43a124adef2c512233cb9f65138bd643,764f1c5e,tests excecuted from sample app,"tests excecuted from sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427149362,1427149362,d30b8cc120ae88cf3db31beed3f84922d2b2e7d6
+d30b8cc120ae88cf3db31beed3f84922d2b2e7d6,d30b8cc1,migrated tests to robolectric,"migrated tests to robolectric
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427146473,1427146473,95fecd6e871a707b914edd31c9b5aeea9dd2718e
+95fecd6e871a707b914edd31c9b5aeea9dd2718e,95fecd6e,gradle 2.3,"gradle 2.3
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427146146,1427146146,84a63ea81f0758eceeca89fc17f44671fa1aca64
+84a63ea81f0758eceeca89fc17f44671fa1aca64,84a63ea8,plugin 1.1.3 [ci skip],"plugin 1.1.3 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427142166,1427142166,4f1cd5244b38675d155944189d89fcbba482c2f8
+4f1cd5244b38675d155944189d89fcbba482c2f8,4f1cd524,wrong build tools version,"wrong build tools version
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427139981,1427139981,b25693b8f5546e729ef8f33f64dd7c07b0421afb
+b25693b8f5546e729ef8f33f64dd7c07b0421afb,b25693b8,sdk & build tools update to v22,"sdk & build tools update to v22
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427138851,1427138851,9edbb81cf9aacb7a980958f6ebd901ff0d04e432
+9edbb81cf9aacb7a980958f6ebd901ff0d04e432,9edbb81c,plugin 1.1.0,"plugin 1.1.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1427134373,1427134373,cc24077ad968ef3bf86c02d3b3dfe383948fc978
+cc24077ad968ef3bf86c02d3b3dfe383948fc978,cc24077a,sample-1.3.5 [ci skip],"sample-1.3.5 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550903,1426550903,eda1ff8e7ae20cf5e939490e9adae4bab117d527
+eda1ff8e7ae20cf5e939490e9adae4bab117d527,eda1ff8e,2.10.5 [ci skip],"2.10.5 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550866,1426550866,36aee88d97b20e847c8b661f96f79745bb6008b1
+36aee88d97b20e847c8b661f96f79745bb6008b1,36aee88d,center action button,"center action button
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550810,1426550810,adb76eedd2c4b48fe7512a68b7971048cb20b16d
+adb76eedd2c4b48fe7512a68b7971048cb20b16d,adb76eed,sample-1.3.4 [ci skip],"sample-1.3.4 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550500,1426550500,f833b7ef0baa9ce1d8f0ebf716f6538a541eb5e8
+f833b7ef0baa9ce1d8f0ebf716f6538a541eb5e8,f833b7ef,2.10.4 [ci skip],"2.10.4 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550254,1426550254,59e0fe1e2cff43d3cdbfa54c8b58815bd09ff99f
+59e0fe1e2cff43d3cdbfa54c8b58815bd09ff99f,59e0fe1e,removed LinearLayout as template parent. Closes #99,"removed LinearLayout as template parent. Closes #99
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426550212,1426550212,ba4ddbe883e790b9fed34687e75ab4d7c333268b
+ba4ddbe883e790b9fed34687e75ab4d7c333268b,ba4ddbe8,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426548529,1426548529,"dcfaf1d0f05986ec93cb0d1f2a51e3f2d12ad868,e3b53811c1d7fd43cc828d5b13a4656d11507b7f"
+e3b53811c1d7fd43cc828d5b13a4656d11507b7f,e3b53811,Merge pull request #98 from fcduarte/master,"Merge pull request #98 from fcduarte/master
+
+Fix small typo",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1426543216,1426543216,"996922ca6605a553c14583036a7a7a70bb009a2c,bfa6565a63f6c9bc9db99b279a11c189955039d5"
+bfa6565a63f6c9bc9db99b279a11c189955039d5,bfa6565a,Fix small typo,"Fix small typo
+",,,,Felipe Duarte,felipe.duarte@xoom.com,Felipe Duarte,felipe.duarte@xoom.com,1426531971,1426531971,996922ca6605a553c14583036a7a7a70bb009a2c
+dcfaf1d0f05986ec93cb0d1f2a51e3f2d12ad868,dcfaf1d0,sample-1.3.3 [ci skip],"sample-1.3.3 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426447944,1426447944,a1860cd8d231b4e725ee078c359cdced03da75bf
+a1860cd8d231b4e725ee078c359cdced03da75bf,a1860cd8,2.10.3 [ci skip],"2.10.3 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426447881,1426447881,b0d24f259626c3d766c03ba495743b437e8f70eb
+b0d24f259626c3d766c03ba495743b437e8f70eb,b0d24f25,2.10.3 [ci skip],"2.10.3 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1426447507,1426447507,996922ca6605a553c14583036a7a7a70bb009a2c
+996922ca6605a553c14583036a7a7a70bb009a2c,996922ca,Merge pull request #97 from AndreRoss/master,"Merge pull request #97 from AndreRoss/master
+
+fix snackbar width for tablets",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1426446272,1426446272,"d5e68036c74b1b22769b6ab9a6fe55eb18d4587b,67f022fcff418581dd9ef5b005032aa4c04a6012"
+67f022fcff418581dd9ef5b005032aa4c04a6012,67f022fc,fix snackbar width for tablets,"fix snackbar width for tablets
+",,,,André Roß,ross@adessso-mobile.de,André Roß,ross@adessso-mobile.de,1426443911,1426443911,d5e68036c74b1b22769b6ab9a6fe55eb18d4587b
+d5e68036c74b1b22769b6ab9a6fe55eb18d4587b,d5e68036,Apps using Snackbar [ci skip],Apps using Snackbar [ci skip],,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1426347914,1426347914,bb39e1e34ac303e7025b333db284aae73b23ebd0
+bb39e1e34ac303e7025b333db284aae73b23ebd0,bb39e1e3,sample-1.3.2,"sample-1.3.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425757619,1425757619,f3afe681ff2ebfdfc4864a3aa696fffd67a47d94
+f3afe681ff2ebfdfc4864a3aa696fffd67a47d94,f3afe681,2.10.2 [ci skip],"2.10.2 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425757407,1425757407,03c6df6e1845a6fab5ce89d4fb525876fa79b8aa
+03c6df6e1845a6fab5ce89d4fb525876fa79b8aa,03c6df6e,Merge pull request #91 from kosiara/feature/add.max.width.percentage.support,"Merge pull request #91 from kosiara/feature/add.max.width.percentage.support
+
+.maxWidthPercentage(float width) method",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1425603151,1425603151,"f1e24ecaa54bcdf4ce754287d9858a28b8cc51ea,d03bd78cc6468b5961907e4ecb39be49b9951484"
+f1e24ecaa54bcdf4ce754287d9858a28b8cc51ea,f1e24eca,Merge pull request #93 from AndreRoss/master,"Merge pull request #93 from AndreRoss/master
+
+Update text of shown snackbar",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1425601927,1425601927,"65537c3670bd45e7535fa258ee0d75ae86116ac0,042df1fa012f735f92564f2b0db62d93f45fb739"
+042df1fa012f735f92564f2b0db62d93f45fb739,042df1fa,update text of shown snackbar,"update text of shown snackbar
+",,,,André Roß,ross@adessso-mobile.de,André Roß,ross@adessso-mobile.de,1425548582,1425548582,2ec2e883f9fb702d7fb4c11af6f8df4a71eb9beb
+d03bd78cc6468b5961907e4ecb39be49b9951484,d03bd78c,.maxWidthPercentage(float width) method,".maxWidthPercentage(float width) method
+
+Adds the ability to set the desired width of the Snackbar on tablets. The maximum width of the message was set to
+<dimen name=""sb__max_width"">568dp</dimen> in dimens.xml which was too narrow for me. I wanted to have a full-width message on the bottom of the tablet's screen.
+
+Sample usage is:
+Snackbar.with(getApplicationContext())
+      .text(""Message text"")
+      .maxWidthPercentage(0.95f)
+      .show(this);
+",,,,Bartosz Kosarzycki,bkosarzycki@forcom.com.pl,Bartosz Kosarzycki,bkosarzycki@forcom.com.pl,1425400131,1425400131,65537c3670bd45e7535fa258ee0d75ae86116ac0
+65537c3670bd45e7535fa258ee0d75ae86116ac0,65537c36,sample-1.3.1 [ci skip],"sample-1.3.1 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425217321,1425217321,b9df4ea5bc98ee61d2124b584f90b51895b4f289
+b9df4ea5bc98ee61d2124b584f90b51895b4f289,b9df4ea5,2.10.1 [ci skip],"2.10.1 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425217012,1425217139,7e32a289b30d495811654a204d54d26873b04311
+7e32a289b30d495811654a204d54d26873b04311,7e32a289,Merge pull request #90 from AndreRoss/master,"Merge pull request #90 from AndreRoss/master
+
+fix #23",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1425216763,1425216763,"474f1b31f0a70602fb66e03a563525039011b7cc,2ec2e883f9fb702d7fb4c11af6f8df4a71eb9beb"
+2ec2e883f9fb702d7fb4c11af6f8df4a71eb9beb,2ec2e883,fix #23,"fix #23
+",,,,André Roß,ross@adessso-mobile.de,André Roß,ross@adessso-mobile.de,1425204253,1425204253,474f1b31f0a70602fb66e03a563525039011b7cc
+474f1b31f0a70602fb66e03a563525039011b7cc,474f1b31,sample 1.3.0 [ci skip],"sample 1.3.0 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425157491,1425157491,edec0e6677e6569c095ddfe39a0d722fe791e1e4
+edec0e6677e6569c095ddfe39a0d722fe791e1e4,edec0e66,2.10.0 [ci skip],"2.10.0 [ci skip]
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1425157148,1425157148,11b900e8d09c9f4f4d933619e1aff7ffc54cee3d
+11b900e8d09c9f4f4d933619e1aff7ffc54cee3d,11b900e8,Merge pull request #84 from TippingCanoe/tc-master,"Merge pull request #84 from TippingCanoe/tc-master
+
+Adding ability for Snackbar's to have margins, custom backgrounds, and be positioned at the top of the container.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1425124385,1425124385,"515d95fee13396deb1e3f0a25c136ea02973e47e,7ae790b8d352a79b9f9e5ef36d3c836533642a25"
+515d95fee13396deb1e3f0a25c136ea02973e47e,515d95fe,sample-1.2.1,"sample-1.2.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1424257157,1424257157,fe39b7b78efe29c3f7fab317afbf2591e34fc48e
+fe39b7b78efe29c3f7fab317afbf2591e34fc48e,fe39b7b7,2.9.1,"2.9.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1424256679,1424256679,e3a97de9d2ab492c4794ef456cda40f441c00f5c
+e3a97de9d2ab492c4794ef456cda40f441c00f5c,e3a97de9,Maven central badge [CI skip],Maven central badge [CI skip],,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1424036575,1424036575,3221ff80946f68e43e5b73030bc605988cb280d5
+3221ff80946f68e43e5b73030bc605988cb280d5,3221ff80,Android Weekly badge [CI skip],Android Weekly badge [CI skip],,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1424036104,1424036104,e76d0d0903b45425039ea4b0992be918b046cf05
+e76d0d0903b45425039ea4b0992be918b046cf05,e76d0d09,Merge pull request #85 from AndreRoss/feature/swipe_to_dismiss_listener,"Merge pull request #85 from AndreRoss/feature/swipe_to_dismiss_listener
+
+Add swipe to dismiss listener",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423946400,1423946400,"efc0d293e524d153d0e79f74cd6b4a718c22c893,4cb5385efe668b7c2ce745b119d0ead6ba65ef7c"
+4cb5385efe668b7c2ce745b119d0ead6ba65ef7c,4cb5385e,add swipe to dismiss listener,"add swipe to dismiss listener
+",,,,André Roß,ross@adessso-mobile.de,André Roß,ross@adessso-mobile.de,1423821254,1423821254,efc0d293e524d153d0e79f74cd6b4a718c22c893
+7ae790b8d352a79b9f9e5ef36d3c836533642a25,7ae790b8,Obeying coding standards,"Obeying coding standards
+",,,,Iain Connor,i.connor@tippingcanoe.com,Iain Connor,i.connor@tippingcanoe.com,1423783816,1423783816,0fefaa39a73b0e69b19e82a0482582140c378b61
+0fefaa39a73b0e69b19e82a0482582140c378b61,0fefaa39,Obeying coding standards,"Obeying coding standards
+",,,,Iain Connor,i.connor@tippingcanoe.com,Iain Connor,i.connor@tippingcanoe.com,1423783446,1423783446,f6860f8b025ef12951720ac63bd76f4e46f6638a
+f6860f8b025ef12951720ac63bd76f4e46f6638a,f6860f8b,Obeying coding standards,"Obeying coding standards
+",,,,Iain Connor,i.connor@tippingcanoe.com,Iain Connor,i.connor@tippingcanoe.com,1423782565,1423782565,efc0d293e524d153d0e79f74cd6b4a718c22c893
+efc0d293e524d153d0e79f74cd6b4a718c22c893,efc0d293,sample-1.2.0,"sample-1.2.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423697491,1423697491,03ef79ac28520764062c66b9a03f85f4986529ba
+03ef79ac28520764062c66b9a03f85f4986529ba,03ef79ac,2.9.0,"2.9.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423696527,1423696527,d18dae3d13eea36f0222a5dbb703bb2e745abd2c
+d18dae3d13eea36f0222a5dbb703bb2e745abd2c,d18dae3d,README updated with new features,"README updated with new features
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423696428,1423696428,72ccc942301402540339af7d4d37fc45fda4540a
+72ccc942301402540339af7d4d37fc45fda4540a,72ccc942,reindent,"reindent
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423695736,1423695736,c353c454e1855a8eb76a5654443d150c2f4f7706
+c353c454e1855a8eb76a5654443d150c2f4f7706,c353c454,Merge pull request #82 from h6ah4i/feature/attach_to_non_activity_root_view,"Merge pull request #82 from h6ah4i/feature/attach_to_non_activity_root_view
+
+Attach to non-Activity's root view",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423694813,1423694813,"faeb65c00b6384beba5f2c8df363e0563477bd7e,88ed42f51aef471a4e40de6f9b8f56e7f6430694"
+faeb65c00b6384beba5f2c8df363e0563477bd7e,faeb65c0,Broken link fix. Closes #83,Broken link fix. Closes #83,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423665477,1423665477,1ba38c106799210d73743d2bf44d4b0e4ce955aa
+88ed42f51aef471a4e40de6f9b8f56e7f6430694,88ed42f5,"Add SnackbarManager.show(SnackBar, ViewGroup, boolean) method in order to user…","Add SnackbarManager.show(SnackBar, ViewGroup, boolean) method in order to user can choose phone/tablet layout
+",,,,Haruki Hasegawa,h6a.h4i.0@gmail.com,Haruki Hasegawa,h6a.h4i.0@gmail.com,1423646501,1423657615,5577d141eee1eb8d90d268b25166d68850cb342c
+5577d141eee1eb8d90d268b25166d68850cb342c,5577d141,"Add ""Show in Dialog"" example","Add ""Show in Dialog"" example
+",,,,Haruki Hasegawa,h6a.h4i.0@gmail.com,Haruki Hasegawa,h6a.h4i.0@gmail.com,1423639875,1423657615,526e5801c38e1ac8abaf7dd5c0e480a2c7787d53
+526e5801c38e1ac8abaf7dd5c0e480a2c7787d53,526e5801,Add variant of ActivityManager.show() method which enables to place Snackbar in user specified view,"Add variant of ActivityManager.show() method which enables to place Snackbar in user specified view
+",,,,Haruki Hasegawa,h6a.h4i.0@gmail.com,Haruki Hasegawa,h6a.h4i.0@gmail.com,1423639288,1423657615,9f5a324f5ac336048183110ec36c13039b3cb7c0
+1ba38c106799210d73743d2bf44d4b0e4ce955aa,1ba38c10,Merge pull request #80 from h6ah4i/feature/improve_navbar_handling,"Merge pull request #80 from h6ah4i/feature/improve_navbar_handling
+
+Improve navigation bar handling",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423656870,1423656870,"52516c084be3a2d6985c5dcbcabc6e6b484820e2,9f5a324f5ac336048183110ec36c13039b3cb7c0"
+52516c084be3a2d6985c5dcbcabc6e6b484820e2,52516c08,Merge pull request #81 from markushi/master,"Merge pull request #81 from markushi/master
+
+added adapter implementation of EventListener interface",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423612754,1423612754,"560e6cbb26393f6d83ac7c066e05a72b9b06b533,7248ae15c8ad0d799a1b93b0b3eade1aae01eae3"
+7248ae15c8ad0d799a1b93b0b3eade1aae01eae3,7248ae15,added adapter implementation of EventListener interface,"added adapter implementation of EventListener interface
+",,,,Markus Hintersteiner,markus.hintersteiner@runtastic.com,Markus Hintersteiner,markus.hintersteiner@runtastic.com,1423522189,1423522189,2b3808fc6e26c1c59ba00f3f412cdd4d4c18a2f8
+9f5a324f5ac336048183110ec36c13039b3cb7c0,9f5a324f,Improve navigation bar handling,"Improve navigation bar handling
+",,,,Haruki Hasegawa,h6a.h4i.0@gmail.com,Haruki Hasegawa,h6a.h4i.0@gmail.com,1423469905,1423493167,847a66b410be476c621a6ccbf6fc246853520173
+847a66b410be476c621a6ccbf6fc246853520173,847a66b4,Add Immersive mode sample,"Add Immersive mode sample
+",,,,Haruki Hasegawa,h6a.h4i.0@gmail.com,Haruki Hasegawa,h6a.h4i.0@gmail.com,1423490983,1423491526,2b3808fc6e26c1c59ba00f3f412cdd4d4c18a2f8
+560e6cbb26393f6d83ac7c066e05a72b9b06b533,560e6cbb,sample-1.1.0,"sample-1.1.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423419380,1423419380,2b3808fc6e26c1c59ba00f3f412cdd4d4c18a2f8
+2b3808fc6e26c1c59ba00f3f412cdd4d4c18a2f8,2b3808fc,2.8.0,"2.8.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423416864,1423416864,597ac71473b6e1a590f962a4820ab7463e912e5b
+597ac71473b6e1a590f962a4820ab7463e912e5b,597ac714,2.8.0,"2.8.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423416686,1423416686,258cec698625ccd56a2eebf1ce6eaff524a26428
+258cec698625ccd56a2eebf1ce6eaff524a26428,258cec69,gradle android plugin update to 1.0.1,"gradle android plugin update to 1.0.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423416573,1423416573,891fa1191baa22fc14454bd3eb16e80d0799f5f5
+891fa1191baa22fc14454bd3eb16e80d0799f5f5,891fa119,undefined color value changed from -1. Fixes #67,"undefined color value changed from -1. Fixes #67
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423416373,1423416373,6a1c0f87b333e49c67557d11c2efe270b8cb826b
+6a1c0f87b333e49c67557d11c2efe270b8cb826b,6a1c0f87,method that notifies if the Snackbar action has been clicked. Fixes #73,"method that notifies if the Snackbar action has been clicked. Fixes #73
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1423412578,1423412578,5639868f142c5068b3f40190eb87db78d0869fb3
+5639868f142c5068b3f40190eb87db78d0869fb3,5639868f,Merge pull request #77 from xGary/master,"Merge pull request #77 from xGary/master
+
+Disallow action btn to be clicked multiple times or when dismissing",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423409535,1423409535,"221e3f0889a3e6603c7fa507be1a5ec67105fca3,11afca3defaf0cf3f29e23c993cba1317e8e12c1"
+221e3f0889a3e6603c7fa507be1a5ec67105fca3,221e3f08,Merge pull request #79 from pmcteixeira/master,"Merge pull request #79 from pmcteixeira/master
+
+Support for translucent navigation bars and extension of EventListener interface.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1423409169,1423409169,"5394e33dd888f78e1fd46e5991e7caa1d921caf7,261b58f36180a0e409d7d04bf295cae6a6632b01"
+261b58f36180a0e409d7d04bf295cae6a6632b01,261b58f3,Added Snackbar bottom padding for translucent navigation bars.,"Added Snackbar bottom padding for translucent navigation bars.
+Added 2 new callbacks for EventListener: onShowByReplace and onDismissByReplace.
+",,,,Pedro Teixeira,pmcteixeira@gmail.com,Pedro Teixeira,pmcteixeira@gmail.com,1423173285,1423173285,5394e33dd888f78e1fd46e5991e7caa1d921caf7
+11afca3defaf0cf3f29e23c993cba1317e8e12c1,11afca3d,Disallow action btn to be clicked multiple times or when dismissing,"Disallow action btn to be clicked multiple times or when dismissing
+
+Previously, the action button could be clicked multiple times (spam click while dismissing) which would result in the onActionClicked() callback being called multiple times. Considering the common uses of Snackbar, I feel like that should be undesired. Now, when the action button is clicked, it checks two things before calling the callback:
+
+1) The snackbar is not dismissing
+2) That it is the first time the button is being clicked unless multiple clicks are allowed (disabled by default)
+",,,,Gary,xGaaary@gmail.com,Gary,xGaaary@gmail.com,1422850280,1422850280,5394e33dd888f78e1fd46e5991e7caa1d921caf7
+5394e33dd888f78e1fd46e5991e7caa1d921caf7,5394e33d,sample v1.0.5,"sample v1.0.5
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1422119547,1422119547,4064a7fd591d36556c097bd1ae8e2fe6ef248dc8
+4064a7fd591d36556c097bd1ae8e2fe6ef248dc8,4064a7fd,v2.7.5,"v2.7.5
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1422118787,1422118787,79bbd99a3e83879640409a3dace01fab86ae940b
+79bbd99a3e83879640409a3dace01fab86ae940b,79bbd99a,contributors update,"contributors update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1422118748,1422118748,c3d77f30cb1432baa12bb390a3a47afa6c62de2a
+c3d77f30cb1432baa12bb390a3a47afa6c62de2a,c3d77f30,note about font customization,"note about font customization
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1422118726,1422118726,03714295d1010429abcea827b2be178c14126200
+03714295d1010429abcea827b2be178c14126200,03714295,Merge pull request #71 from hzsweers/master,"Merge pull request #71 from hzsweers/master
+
+Add options for custom typeface and make recyclerview a provided dependency",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1422104205,1422104205,"1c01243ee05a84e898312a67f2d3fc71c64c983f,04d8a1e38b0a228e5ba0e1167d32a394aaba6357"
+04d8a1e38b0a228e5ba0e1167d32a394aaba6357,04d8a1e3,Make RecyclerView a provided dependency,"Make RecyclerView a provided dependency
+
+If a developer doesn't use it, then this becomes an unnecessary extra dependency that exists for the sole purpose of attaching to and dismissing when a recyclerview scrolls. By marking it provided (and moving some code around), we can make sure this there for the developers that need it without unnecessarily burdening other developers with it as a transitive dependency.
+",,,,Henri Sweers,pandanomic@gmail.com,Henri Sweers,pandanomic@gmail.com,1422003695,1422003695,4a8dbd3e0144f6bc6ed7248eaea5a6862bbd28aa
+4a8dbd3e0144f6bc6ed7248eaea5a6862bbd28aa,4a8dbd3e,Bump recyclerview and support annotations versions to latest,"Bump recyclerview and support annotations versions to latest
+",,,,Henri Sweers,pandanomic@gmail.com,Henri Sweers,pandanomic@gmail.com,1422002566,1422002566,c5766b3cb139e8544dcea9f45ce6c39d66874fd9
+c5766b3cb139e8544dcea9f45ce6c39d66874fd9,c5766b3c,Add option to set custom text and action label typefaces,"Add option to set custom text and action label typefaces
+",,,,Henri Sweers,pandanomic@gmail.com,Henri Sweers,pandanomic@gmail.com,1422002431,1422002431,1c01243ee05a84e898312a67f2d3fc71c64c983f
+1c01243ee05a84e898312a67f2d3fc71c64c983f,1c01243e,Merge pull request #70 from pawelantczak/patch-1,"Merge pull request #70 from pawelantczak/patch-1
+
+Point default duration",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1421867163,1421867163,"22e51c083899ffa2a2087b4e006944dd472d9f9b,a3fe5d1476ed3ff71d4f630385671c4bb019792e"
+a3fe5d1476ed3ff71d4f630385671c4bb019792e,a3fe5d14,Point default duration,Point default duration,,,,Paweł Antczak,pawel@antczak.org,Paweł Antczak,pawel@antczak.org,1421840188,1421840188,22e51c083899ffa2a2087b4e006944dd472d9f9b
+22e51c083899ffa2a2087b4e006944dd472d9f9b,22e51c08,Merge pull request #66 from shekibobo/patch-1,"Merge pull request #66 from shekibobo/patch-1
+
+Allow access to the SnackbarManager's current Snackbar",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1421369519,1421369519,"b4e8ca7981088a7619b239ea1944c334c15db07e,dbe03c54d660d67e46c4d50c32f8dd3af6a2933d"
+dbe03c54d660d67e46c4d50c32f8dd3af6a2933d,dbe03c54,Allow access to the SnackbarManager's current Snackbar,Allow access to the SnackbarManager's current Snackbar,,,,Joshua Kovach,kovach.jc@gmail.com,Joshua Kovach,kovach.jc@gmail.com,1421273108,1421273108,b4e8ca7981088a7619b239ea1944c334c15db07e
+b4e8ca7981088a7619b239ea1944c334c15db07e,b4e8ca79,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1421013804,1421013804,"ee4bad9ddadaf5217a9cd96437402e35092a26d4,d9765d363aaa0aa07715102e39caa354792a67eb"
+ee4bad9ddadaf5217a9cd96437402e35092a26d4,ee4bad9d,sample-1.0.4,"sample-1.0.4
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1421013768,1421013768,6b20611eb692c49700ed20d07d9b6c940b918aae
+6b20611eb692c49700ed20d07d9b6c940b918aae,6b20611e,2.7.4,"2.7.4
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1421013539,1421013539,04ed7df8a877d8aada3b970ce77384d5900e7f1b
+04ed7df8a877d8aada3b970ce77384d5900e7f1b,04ed7df8,fix for possible memory leak. Fixes #64,"fix for possible memory leak. Fixes #64
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1421013515,1421013515,7f57df3e2ebebbc458b8cd80d7734b0205801ff5
+7f57df3e2ebebbc458b8cd80d7734b0205801ff5,7f57df3e,release variant is not debuggable,"release variant is not debuggable
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1421013358,1421013358,d49bdb0f4e4aa888cf7f5dd6f15a28df6c5b09b4
+d9765d363aaa0aa07715102e39caa354792a67eb,d9765d36,2015,2015,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1420550569,1420550569,4489cd3ed940939567823dd3e333bae0bd9359f4
+4489cd3ed940939567823dd3e333bae0bd9359f4,4489cd3e,Make note that tablets are always single-line,Make note that tablets are always single-line,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1420374576,1420374576,f5a8f40b35fca840dec0c94ed1e9acc0dde073b6
+f5a8f40b35fca840dec0c94ed1e9acc0dde073b6,f5a8f40b,Update README.md,Update README.md,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1420116262,1420116262,d49bdb0f4e4aa888cf7f5dd6f15a28df6c5b09b4
+d49bdb0f4e4aa888cf7f5dd6f15a28df6c5b09b4,d49bdb0f,sample-1.0.3,"sample-1.0.3
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419776301,1419776301,751f41d35b48e21cdd934665838232e99db93289
+751f41d35b48e21cdd934665838232e99db93289,751f41d3,2.7.3,"2.7.3
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419776214,1419776214,0cd971b59945bb83107807710d614ee247cf5d96
+0cd971b59945bb83107807710d614ee247cf5d96,0cd971b5,navBar is never hidden for APIs < JB. Fixes #57,"navBar is never hidden for APIs < JB. Fixes #57
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419776145,1419776145,7da39d430282a9d7b12a198fd9569534d293c47b
+7da39d430282a9d7b12a198fd9569534d293c47b,7da39d43,always check to remove Snackbar from parent,"always check to remove Snackbar from parent
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419439103,1419439103,e7577485f6130b2bf5ad7faa1cda924c9c1e6f30
+e7577485f6130b2bf5ad7faa1cda924c9c1e6f30,e7577485,Sample app v1.0.2,"Sample app v1.0.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419437086,1419437086,849f4a70ee06f9be0ae37a333bd8b6190dd90b30
+849f4a70ee06f9be0ae37a333bd8b6190dd90b30,849f4a70,2.7.2,"2.7.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419436535,1419436535,6ffff0dce0a6b172229b68162709a46de34f4c64
+6ffff0dce0a6b172229b68162709a46de34f4c64,6ffff0dc,bool value not necessary anymore,"bool value not necessary anymore
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419436497,1419436497,fb0676d9c314bb4c340b9ccca4f7bad31e14f265
+fb0676d9c314bb4c340b9ccca4f7bad31e14f265,fb0676d9,Merge branch 'androlizer-master',"Merge branch 'androlizer-master'
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419436254,1419436254,"447b740b5d5fb76f193d9d56c1734caa5c9b8655,4e0a14528b066c9403c4e943e1395a2a60085757"
+4e0a14528b066c9403c4e943e1395a2a60085757,4e0a1452,added boolean to xlarge instead of large,"added boolean to xlarge instead of large
+",,,,Nitin Misra,nitinmishra27@gmail.com,Nitin Misra,nitinmishra27@gmail.com,1419418669,1419418669,2a109b0f18b8a4ec01cca9a3d85c01fd454c142b
+2a109b0f18b8a4ec01cca9a3d85c01fd454c142b,2a109b0f,Not required in 6 inch devices,Not required in 6 inch devices,,,,Nitin Misra,nitinmishra27@gmail.com,Nitin Misra,nitinmishra27@gmail.com,1419418300,1419418300,502a34010363ca97504b4147fd14ad2760b6563d
+502a34010363ca97504b4147fd14ad2760b6563d,502a3401,6 inch tab is being treated as Tablet,6 inch tab is being treated as Tablet,,,,Nitin Misra,nitinmishra27@gmail.com,Nitin Misra,nitinmishra27@gmail.com,1419416605,1419416605,447b740b5d5fb76f193d9d56c1734caa5c9b8655
+447b740b5d5fb76f193d9d56c1734caa5c9b8655,447b740b,2.7.1,"2.7.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419378604,1419378604,0dd4c3cf465725d3f2d8d32a9ee1f8e92e5868f2
+0dd4c3cf465725d3f2d8d32a9ee1f8e92e5868f2,0dd4c3cf,Merge pull request #53 from Norfen/master,"Merge pull request #53 from Norfen/master
+
+Allow dismissing from SnackbarManager",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1419296835,1419296835,"301f49206d8a0af0eed2bd1a0ba22b1ea50b7949,d8eda6cf48dcc7b3fb41fa1888113a888e4c3257"
+d8eda6cf48dcc7b3fb41fa1888113a888e4c3257,d8eda6cf,Allow dismissing from SnackbarManager,"Allow dismissing from SnackbarManager
+",,,,Chris Day,chrisday0001@gmail.com,Chris Day,chrisday0001@gmail.com,1419282511,1419283059,301f49206d8a0af0eed2bd1a0ba22b1ea50b7949
+301f49206d8a0af0eed2bd1a0ba22b1ea50b7949,301f4920,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419186590,1419186590,"fa1410c6b93199e46751ae73abc0938b15e1a90a,0296ef8fa57903b1296985f0c53e503cf25b7704"
+fa1410c6b93199e46751ae73abc0938b15e1a90a,fa1410c6,gradle plugin upgrade,"gradle plugin upgrade
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419186574,1419186574,51f8b0f59271fe607a24f83643b32655ce5ecc9b
+0296ef8fa57903b1296985f0c53e503cf25b7704,0296ef8f,Changed duration section,Changed duration section,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1419185658,1419185658,51f8b0f59271fe607a24f83643b32655ce5ecc9b
+51f8b0f59271fe607a24f83643b32655ce5ecc9b,51f8b0f5,version upgrade,"version upgrade
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419184886,1419184886,a93bfcee1d33eea48aff56ca802876845535457e
+a93bfcee1d33eea48aff56ca802876845535457e,a93bfcee,button with indefinite duration,"button with indefinite duration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419184852,1419184852,8203885ea4a1a50aa838e799c02373ec7698b255
+8203885ea4a1a50aa838e799c02373ec7698b255,8203885e,2.7.0,"2.7.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419184548,1419184548,afa5aec47c6cb0b895609ff5c03a92c7865aca7b
+afa5aec47c6cb0b895609ff5c03a92c7865aca7b,afa5aec4,Allow indefinite duration. Fixes #46,"Allow indefinite duration. Fixes #46
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419184396,1419184396,38ff7f66457b72691557e6c479c15663e5042782
+38ff7f66457b72691557e6c479c15663e5042782,38ff7f66,Google Play badge for demo app,Google Play badge for demo app,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1419128300,1419128300,64e18f2a1a572c30dcf30e93bdf7c15e811a89e5
+64e18f2a1a572c30dcf30e93bdf7c15e811a89e5,64e18f2a,Sample app package refactor,"Sample app package refactor
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419127894,1419127894,7928ed4b59327853ca65af689aebe2996bb5650d
+7928ed4b59327853ca65af689aebe2996bb5650d,7928ed4b,updated dependencies,"updated dependencies
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419126602,1419126602,91205b1b97bae74fdfc492d11b972d1eafa89ce1
+91205b1b97bae74fdfc492d11b972d1eafa89ce1,91205b1b,new icons for sample app,"new icons for sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419125356,1419125356,115523ec55faf83efefc02c7d02b3e8ceea459d8
+115523ec55faf83efefc02c7d02b3e8ceea459d8,115523ec,2.6.1,"2.6.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419114836,1419114836,4ce74ff7f67c1fb40d0c59424116a404b0601527
+4ce74ff7f67c1fb40d0c59424116a404b0601527,4ce74ff7,"removed ""showcase"" section","removed ""showcase"" section
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419114738,1419114738,4f5c5fa3ebc83a1d9ea3c0a070c0dd93368bc108
+4f5c5fa3ebc83a1d9ea3c0a070c0dd93368bc108,4f5c5fa3,Added license to Roman's code,"Added license to Roman's code
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419114682,1419114682,40b5004e4970bec1a612a25f1c6d37ac55dac521
+40b5004e4970bec1a612a25f1c6d37ac55dac521,40b5004e,recycle VelocityTracker only if not null. Fixes #49,"recycle VelocityTracker only if not null. Fixes #49
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1419114610,1419114610,acb2f3c26f0829243b9641dbcf6a16ab38449875
+acb2f3c26f0829243b9641dbcf6a16ab38449875,acb2f3c2,"renamed resources without ""sb__"" prefix","renamed resources without ""sb__"" prefix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418975521,1418975521,04921e3e055f0f100b909391916c4b770ef57809
+04921e3e055f0f100b909391916c4b770ef57809,04921e3e,wording fix,wording fix,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418974074,1418974074,698abd2513a566ba83917839a5014db0fc937aae
+698abd2513a566ba83917839a5014db0fc937aae,698abd25,2.6.0,"2.6.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418874871,1418874871,93f13d737bc9a5c4511c50dc363822ebb007357e
+93f13d737bc9a5c4511c50dc363822ebb007357e,93f13d73,README update with SnackbarManager,"README update with SnackbarManager
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418874739,1418874739,374f8cf472c04635915632d6db44fdc106cb4aa1
+374f8cf472c04635915632d6db44fdc106cb4aa1,374f8cf4,SnackbarManager now in lib,"SnackbarManager now in lib
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418872358,1418872358,9bdff859f70535bf4a3ed16b1eba6df070cd675c
+9bdff859f70535bf4a3ed16b1eba6df070cd675c,9bdff859,SnackbarManager included in lib. Closes #35,"SnackbarManager included in lib. Closes #35
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418872336,1418872336,28790df40a0a61cfe2cf25e756068e54b4223b03
+28790df40a0a61cfe2cf25e756068e54b4223b03,28790df4,2.5.5,"2.5.5
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418868086,1418868086,7c62c91b1a8bc6885b27983961b2e3c35ff81ade
+7c62c91b1a8bc6885b27983961b2e3c35ff81ade,7c62c91b,2.5.4,"2.5.4
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418866591,1418866591,0a4ddccfb332739688b4401ea2fad810a0735ee0
+0a4ddccfb332739688b4401ea2fad810a0735ee0,0a4ddccf,check for nav bar visibility using system UI flags. Fixes #44,"check for nav bar visibility using system UI flags. Fixes #44
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418866358,1418866358,089f398fa69a7cac7d72ac3ddf41bacafd22cdb1
+089f398fa69a7cac7d72ac3ddf41bacafd22cdb1,089f398f,Android Arsenal badge flat design,Android Arsenal badge flat design,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418819640,1418819640,db8399027b794e3bec49b72fc67c615bf877c00f
+db8399027b794e3bec49b72fc67c615bf877c00f,db839902,Revert install version until #44 is fixed,Revert install version until #44 is fixed,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418819204,1418819204,fc73d15d7d0dc71ceda1accec68c2f968d93a212
+fc73d15d7d0dc71ceda1accec68c2f968d93a212,fc73d15d,2.5.3,"2.5.3
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418730414,1418730414,8ca051cfbe93a3854ca752f5ed3199a8584218bb
+8ca051cfbe93a3854ca752f5ed3199a8584218bb,8ca051cf,build tools update + travis extension,"build tools update + travis extension
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418729794,1418729794,06fb8ae63e3d79d9cbf11e27419e089bae208bc5
+06fb8ae63e3d79d9cbf11e27419e089bae208bc5,06fb8ae6,reindent,"reindent
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418729640,1418729640,ba4f9fc060dafd7f7d7189531478e6d48bf1c8cd
+ba4f9fc060dafd7f7d7189531478e6d48bf1c8cd,ba4f9fc0,Merge pull request #43 from theknut/master,"Merge pull request #43 from theknut/master
+
+Add bottom margin if content is fitting system ui",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418729456,1418729456,"8a8c421b7215c1e155e205475f8ab29a11cdc070,f6493cf95772c0e8c72ef1d9503c049ed27ca739"
+f6493cf95772c0e8c72ef1d9503c049ed27ca739,f6493cf9,Add bottom margin if content is fitting system ui,"Add bottom margin if content is fitting system ui
+
+If the content is fitting the system windows the snackbar gets animated behind the navigation bar. Therefore check if the measured height equals the bottom position of the content view. If it does add a the navigation bar height as bottom margin.
+
+This is rough workaround, further checks need to be added if required.
+
+This might resolve issue #41.",,,,theknut,alexander.as.schulz@gmail.com,theknut,alexander.as.schulz@gmail.com,1418572104,1418572104,8a8c421b7215c1e155e205475f8ab29a11cdc070
+8a8c421b7215c1e155e205475f8ab29a11cdc070,8a8c421b,Merge pull request #42 from SferaDev/patch-1,"Merge pull request #42 from SferaDev/patch-1
+
+Update Sample Code",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418506622,1418506622,"d088d6325b8c0b44635e7f1f9441fb4bd3742b03,cc3d1ed75336e5d347e45c0d4814e5a3861dfbaa"
+cc3d1ed75336e5d347e45c0d4814e5a3861dfbaa,cc3d1ed7,Update Sample Code,"Update Sample Code
+
+Updated onActionClicked Sample code to reflect changes of: 27aa620f178da3cb6a35c6641081d43856962f03",,,,Alexis Rico,SferaDev@users.noreply.github.com,Alexis Rico,SferaDev@users.noreply.github.com,1418493564,1418493564,d088d6325b8c0b44635e7f1f9441fb4bd3742b03
+d088d6325b8c0b44635e7f1f9441fb4bd3742b03,d088d632,v2.5.2,"v2.5.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418069455,1418069455,5618652f7799faa3e3ea6f3fd4cfa78df3776de4
+5618652f7799faa3e3ea6f3fd4cfa78df3776de4,5618652f,Merge pull request #39 from SteadfastInnovation/feature/remove_anim_duration_getter,"Merge pull request #39 from SteadfastInnovation/feature/remove_anim_duration_getter
+
+Removed deprecated animation duration getter. Use animation resource get...",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418069191,1418069191,"bb6a22bbbbdf8049c65269fcbfff877e133740b0,4caed66227d2b5d08615229e4836aa9b9afee813"
+bb6a22bbbbdf8049c65269fcbfff877e133740b0,bb6a22bb,Merge pull request #38 from SteadfastInnovation/feature/fix_dismiss_listener_not_called_on_swipe,"Merge pull request #38 from SteadfastInnovation/feature/fix_dismiss_listener_not_called_on_swipe
+
+Fixed issue where onDismiss() did not get called if Snackbar is swiped.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1418068263,1418068263,"e826f2a9af38f8d263ff9a42c33664e481c3c91b,6e3c6d17d943f5ac70b421653eb167e0c34b119f"
+4caed66227d2b5d08615229e4836aa9b9afee813,4caed662,Removed deprecated animation duration getter. Use animation resource getters,"Removed deprecated animation duration getter. Use animation resource getters
+instead.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1418067757,1418067757,e826f2a9af38f8d263ff9a42c33664e481c3c91b
+6e3c6d17d943f5ac70b421653eb167e0c34b119f,6e3c6d17,Fixed issue where onDismiss() did not get called if Snackbar is swiped.,"Fixed issue where onDismiss() did not get called if Snackbar is swiped.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1418067051,1418067051,e826f2a9af38f8d263ff9a42c33664e481c3c91b
+e826f2a9af38f8d263ff9a42c33664e481c3c91b,e826f2a9,v2.5.1,"v2.5.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418047247,1418047247,f79125087a2528a9c7be6d79a918e99fd0a1db49
+f79125087a2528a9c7be6d79a918e99fd0a1db49,f7912508,made animation getters static,"made animation getters static
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418047129,1418047129,8bc95ad8eb11dafd01a607cefef5d821bfaa43ed
+8bc95ad8eb11dafd01a607cefef5d821bfaa43ed,8bc95ad8,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418046690,1418046690,"f70ee43b9689604d7480b3397cfef3f8a33088ac,4ae4239ae92ea6855616b502fe7999b8bd6449ac"
+f70ee43b9689604d7480b3397cfef3f8a33088ac,f70ee43b,getters for animation resources,"getters for animation resources
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1418046674,1418046674,76555ffe7d751240754c3547a3c03eefe3d202f1
+4ae4239ae92ea6855616b502fe7999b8bd6449ac,4ae4239a,Update README.md,Update README.md,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417979646,1417979646,76555ffe7d751240754c3547a3c03eefe3d202f1
+76555ffe7d751240754c3547a3c03eefe3d202f1,76555ffe,v2.5.0,"v2.5.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417978636,1417978636,39e4dc3a8adf85e6d0f6205e5a18e33d7b25eae1
+39e4dc3a8adf85e6d0f6205e5a18e33d7b25eae1,39e4dc3a,Contributors section + reference to releases section,"Contributors section + reference to releases section
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417978559,1417978559,c0a18e2b957159bda57e30bde4dd0ddbe181816d
+c0a18e2b957159bda57e30bde4dd0ddbe181816d,c0a18e2b,code snippet update,"code snippet update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417977834,1417977834,1e30ccae08de7f7920bec14a3d3fde23fc298cb6
+1e30ccae08de7f7920bec14a3d3fde23fc298cb6,1e30ccae,reindent,"reindent
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417976826,1417976826,223d44701851a0f6f0be92c93993f20acbc57f6a
+223d44701851a0f6f0be92c93993f20acbc57f6a,223d4470,Merge pull request #31 from jrgonzalezg/master,"Merge pull request #31 from jrgonzalezg/master
+
+Modified callbacks so listeners receive full information of the process of showing / dimissing snackbars",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417976160,1417976160,"b58ab594c711e97708d5e6b0db7b69e3682ddabb,27aa620f178da3cb6a35c6641081d43856962f03"
+27aa620f178da3cb6a35c6641081d43856962f03,27aa620f,Listeners can now have full information about the process of showing /…,"Listeners can now have full information about the process of showing / dismissing snackbars including duration of in/out animations
+
+ActionClickListener now also provides the related snackbar instance
+
+Some fixes to previous merge
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417970012,1417970012,0eeb3ebce6b848513c8211df95619febc9422fd2
+0eeb3ebce6b848513c8211df95619febc9422fd2,0eeb3ebc,Merge remote-tracking branch 'upstream/master',"Merge remote-tracking branch 'upstream/master'
+
+Conflicts:
+	lib/src/main/java/com/nispok/snackbar/Snackbar.java
+	lib/src/main/java/com/nispok/snackbar/listeners/EventListener.java
+	sample/src/main/java/com/nispok/sample/snackbar/SnackbarSampleActivity.java
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417966137,1417966137,"7ea7521df320e919ecfdcb7336b6a3137069b1e4,b58ab594c711e97708d5e6b0db7b69e3682ddabb"
+b58ab594c711e97708d5e6b0db7b69e3682ddabb,b58ab594,@jrgonzalezg added as contributor,@jrgonzalezg added as contributor,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417913614,1417913614,6c536b9bf17eea5dd52a81568672e1725e92e741
+6c536b9bf17eea5dd52a81568672e1725e92e741,6c536b9b,Merge pull request #37 from SteadfastInnovation/feature/event_listener_px,"Merge pull request #37 from SteadfastInnovation/feature/event_listener_px
+
+Changed EventListener methods to take a Snackbar instance as the paramet...",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417912333,1417912333,"20b1167dd5f7fec63d703fb491f478fa6de54619,0ebe31231cb0b5618b115e2a5c63b29151a2edc4"
+0ebe31231cb0b5618b115e2a5c63b29151a2edc4,0ebe3123,Changed EventListener methods to take a Snackbar instance as the parameter.,"Changed EventListener methods to take a Snackbar instance as the parameter.
+
+This allows users to:
+- differentiate between Snackbar instances in common EventListener
+  implementations
+- get the width, height, and offset from the Snackbar in pixels (or any other
+  relevant info about the Snackbar)
+
+Also made sure that the width/height values are valid when onShow() is called
+and prevented the dismiss listener from making the height of the Snackbar 0
+before calling onDismiss() when swiping the Snackbar away (this logic was there
+for swiping away list items, which a Snackbar is not).
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1417910278,1417910278,20b1167dd5f7fec63d703fb491f478fa6de54619
+20b1167dd5f7fec63d703fb491f478fa6de54619,20b1167d,fix when calling SnackbarManager after #26 merge,"fix when calling SnackbarManager after #26 merge
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417907781,1417907781,57eebc4937e0a86d09bb7684a5b08a0f2c98420f
+57eebc4937e0a86d09bb7684a5b08a0f2c98420f,57eebc49,wording change,"wording change
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417881460,1417881460,43330de0b146872c7b0a11a5a9580ff0a630fba2
+43330de0b146872c7b0a11a5a9580ff0a630fba2,43330de0,Merge pull request #26 from egor-n/patch-1,"Merge pull request #26 from egor-n/patch-1
+
+Simplify sample project",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417874266,1417874266,"0f679425937501cb34766e6e6628fa31a8895619,885f2a27650c9cdb5760e559a131f26a2fd8cb60"
+0f679425937501cb34766e6e6628fa31a8895619,0f679425,Merge pull request #32 from SteadfastInnovation/feature/action_style_fix,"Merge pull request #32 from SteadfastInnovation/feature/action_style_fix
+
+Removed bold style from action button.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417873884,1417873884,"d6f9359210ffb979fc5ec5b4d5b5a75163a1e2a8,5c9753665e09bc2d638cd85213b1961cec8ec03b"
+d6f9359210ffb979fc5ec5b4d5b5a75163a1e2a8,d6f93592,Merge pull request #33 from SteadfastInnovation/feature/tablet_layout_fix,"Merge pull request #33 from SteadfastInnovation/feature/tablet_layout_fix
+
+Fixed the min/max width and offset for the tablet layout.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417872257,1417872257,"420debefb320112b8e1f6612b67535c612363f0a,3bc8f71db3ff3a957656d26b6842429929922166"
+7ea7521df320e919ecfdcb7336b6a3137069b1e4,7ea7521d,mOffset is now retrieved with resources.getDimensionPixelOffset() instead of…,"mOffset is now retrieved with resources.getDimensionPixelOffset() instead of resources.getDimensionPixelSize()
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417865896,1417865896,05ac99139e201fd26e3bc81bb2068c603ccc5542
+3bc8f71db3ff3a957656d26b6842429929922166,3bc8f71d,Fixed the min/max width and offset for the tablet layout.,"Fixed the min/max width and offset for the tablet layout.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1417825429,1417827172,420debefb320112b8e1f6612b67535c612363f0a
+5c9753665e09bc2d638cd85213b1961cec8ec03b,5c975366,Removed bold style from action button.,"Removed bold style from action button.
+
+The spec defines the action button to be Roboto Medium, however ""bold"" is
+heavier than Roboto Medium for API < 21. Therefore the action button should just
+be regular on API < 21.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1417826080,1417826080,420debefb320112b8e1f6612b67535c612363f0a
+05ac99139e201fd26e3bc81bb2068c603ccc5542,05ac9913,Updated Android Gradle Plugin,"Updated Android Gradle Plugin
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417795740,1417795740,47aa3206e144f2e1213a97f4da1b019250be5068
+47aa3206e144f2e1213a97f4da1b019250be5068,47aa3206,Minor fix to text messages,"Minor fix to text messages
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417777846,1417777846,fa5e6b27b161d1a63f5715734cf827c29b1d816e
+fa5e6b27b161d1a63f5715734cf827c29b1d816e,fa5e6b27,Modified calls to onShow(height) and onDismiss(height) so they both occur when…,"Modified calls to onShow(height) and onDismiss(height) so they both occur when the action is starting and they both provide an exact height in pixels instead of a maximum height. This helps in implementing floating action buttons movement with respect to the snackbar as specified in the material guidelines.
+
+Also removed some unneeded calls to dpToPx().
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417721445,1417721445,420debefb320112b8e1f6612b67535c612363f0a
+420debefb320112b8e1f6612b67535c612363f0a,420debef,2.4.0,"2.4.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417659834,1417659834,45c0c9a58b36d0f12d8f85f915e74791543e598e
+45c0c9a58b36d0f12d8f85f915e74791543e598e,45c0c9a5,added note about disabled swiping in APIs < 11,"added note about disabled swiping in APIs < 11
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417659461,1417659461,7605bc5e0ec55c279f2950631f44c78830a4244d
+7605bc5e0ec55c279f2950631f44c78830a4244d,7605bc5e,renamed interpolations to avoid naming conflicts,"renamed interpolations to avoid naming conflicts
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417659150,1417659150,5fd754b3214c268e9724548249e7f8b1fb583b8e
+5fd754b3214c268e9724548249e7f8b1fb583b8e,5fd754b3,minSDK supported = 8,"minSDK supported = 8
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417659048,1417659048,dc6e0dae9230db4f515f42e88af4e42a9d235fc1
+dc6e0dae9230db4f515f42e88af4e42a9d235fc1,dc6e0dae,disable swipe functionality for SDKs < 11,"disable swipe functionality for SDKs < 11
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417659020,1417659020,6451eca8c5353da9f53537a1a8a35a2e2b07ebab
+6451eca8c5353da9f53537a1a8a35a2e2b07ebab,6451eca8,rename,"rename
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417657165,1417657165,5f939d98591976753101eb3c4dba860ef759847c
+5f939d98591976753101eb3c4dba860ef759847c,5f939d98,Merge pull request #28 from jrgonzalezg/master,"Merge pull request #28 from jrgonzalezg/master
+
+Made compatible up to API level 10",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1417656101,1417656101,"dd6c704e23f56644e4a4215f08cc3ef9784713eb,622f7dc238e26bcb6bb116e83aa63608a1853878"
+622f7dc238e26bcb6bb116e83aa63608a1853878,622f7dc2,Added values-large folder that is needed for tablets prior to Android 3.2…,"Added values-large folder that is needed for tablets prior to Android 3.2 (copied from values-sw600dp)
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417617599,1417617657,166efc4fdb8054de6d457c8175c9a9443e8097f5
+166efc4fdb8054de6d457c8175c9a9443e8097f5,166efc4f,Made compatible up to API level 10,"Made compatible up to API level 10
+
+Also updated Android Gradle Plugin to 1.0.0-rc1 since 0.14.4 has kwown issues
+",,,,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,Juan Ramon Gonzalez Gonzalez,jrgonzalez@gmail.com,1417611883,1417612024,dd6c704e23f56644e4a4215f08cc3ef9784713eb
+dd6c704e23f56644e4a4215f08cc3ef9784713eb,dd6c704e,Version 2.3.1,"Version 2.3.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417568615,1417568615,32157d4442bbbedd0ff8386dfce9cef824030fa2
+32157d4442bbbedd0ff8386dfce9cef824030fa2,32157d44,bring Snackbar to front after attaching to parent Activity. Fixes #27,"bring Snackbar to front after attaching to parent Activity. Fixes #27
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417568204,1417568204,5b005f38aa18aa8bf709c04c9e7d020fdc1d33a2
+5b005f38aa18aa8bf709c04c9e7d020fdc1d33a2,5b005f38,gradle 2.2.1 upgrade,"gradle 2.2.1 upgrade
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1417218504,1417218504,ffe9a2efd97ce4ce947c0ae4d3cb69bfa1545427
+885f2a27650c9cdb5760e559a131f26a2fd8cb60,885f2a27,Simplify sample project,Simplify sample project,,,,Egor N,eneliuba@gmail.com,Egor N,eneliuba@gmail.com,1417186519,1417186519,ffe9a2efd97ce4ce947c0ae4d3cb69bfa1545427
+ffe9a2efd97ce4ce947c0ae4d3cb69bfa1545427,ffe9a2ef,v2.3.0,"v2.3.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416873006,1416873006,07f2a5ea3d0916107ddd1079318791833daa6f9e
+07f2a5ea3d0916107ddd1079318791833daa6f9e,07f2a5ea,same padding for all sizes,"same padding for all sizes
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416872944,1416872944,b2683acf05da1929599274c57ca61a5c44667a73
+b2683acf05da1929599274c57ca61a5c44667a73,b2683acf,tablet support. Closes #20,"tablet support. Closes #20
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416872680,1416872680,21499ed08c98b8430afffe67c766c4d39d0f0a42
+21499ed08c98b8430afffe67c766c4d39d0f0a42,21499ed0,v2.2.2,"v2.2.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416865828,1416865828,38c49e51ddcbb950e7b9b8c9e54ef1cab9fd87c7
+38c49e51ddcbb950e7b9b8c9e54ef1cab9fd87c7,38c49e51,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416865720,1416865720,"83ca15ac80ec49138000a4f6198fe0b88d797587,528973082f554b7e54c247595f254d1212a3f737"
+83ca15ac80ec49138000a4f6198fe0b88d797587,83ca15ac,v2.2.2,"v2.2.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416865699,1416865699,1caf0c2c305410d61683e2cafe1801975c654029
+528973082f554b7e54c247595f254d1212a3f737,52897308,Update .travis.yml,Update .travis.yml,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416864935,1416864935,1caf0c2c305410d61683e2cafe1801975c654029
+1caf0c2c305410d61683e2cafe1801975c654029,1caf0c2c,Merge pull request #21 from i906/master,"Merge pull request #21 from i906/master
+
+Added setColor(@resId) methods ",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416863830,1416863830,"672f6f426914e6501d0d1384645bf6f58e9711c6,85d97f8173f3d0c8da49db484384f3f18bbb2918"
+672f6f426914e6501d0d1384645bf6f58e9711c6,672f6f42,Android support libs,Android support libs,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416862620,1416862620,f0aa3fdc44628b404afb482e3a88d91e4b8df258
+f0aa3fdc44628b404afb482e3a88d91e4b8df258,f0aa3fdc,Link to Android Arsenal,Link to Android Arsenal,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416856331,1416856331,71ee1798c5fade825d13b547ae3cc61c9e626a79
+85d97f8173f3d0c8da49db484384f3f18bbb2918,85d97f81,Added tests for color resources,"Added tests for color resources
+",,,,Noorzaini Ilhami,ilhami.i906@gmail.com,Noorzaini Ilhami,ilhami.i906@gmail.com,1416727921,1416727921,7104f7f1d2a0058eabf23c80e279c749b49f1a48
+7104f7f1d2a0058eabf23c80e279c749b49f1a48,7104f7f1,Updated libraries,"Updated libraries
+",,,,Noorzaini Ilhami,ilhami.i906@gmail.com,Noorzaini Ilhami,ilhami.i906@gmail.com,1416727866,1416727866,21255bb171cb52d749ca347e7a341a909ca42809
+21255bb171cb52d749ca347e7a341a909ca42809,21255bb1,Added color(@resId) methods,"Added color(@resId) methods
+",,,,Noorzaini Ilhami,ilhami.i906@gmail.com,Noorzaini Ilhami,ilhami.i906@gmail.com,1416718472,1416718472,60845c25a8ff092fe5dffa6a9b80da22f36bad38
+60845c25a8ff092fe5dffa6a9b80da22f36bad38,60845c25,Added Android support annotations,"Added Android support annotations
+",,,,Noorzaini Ilhami,ilhami.i906@gmail.com,Noorzaini Ilhami,ilhami.i906@gmail.com,1416717784,1416717784,71ee1798c5fade825d13b547ae3cc61c9e626a79
+71ee1798c5fade825d13b547ae3cc61c9e626a79,71ee1798,Merge branch 'master' of https://github.com/nispok/snackbar,"Merge branch 'master' of https://github.com/nispok/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416708936,1416708936,"a74b370be1da2cf139f32e2012218914c732ab1e,833d452a6d543968028c86882c39859027eb4311"
+a74b370be1da2cf139f32e2012218914c732ab1e,a74b370b,v2.2.1,"v2.2.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416708913,1416708913,cbdde4816835b5c0932f2b2bfa6505dd76d944c2
+833d452a6d543968028c86882c39859027eb4311,833d452a,Merge pull request #19 from i906/text-resid,"Merge pull request #19 from i906/text-resid
+
+Added setText(@resId) methods",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416580615,1416580615,"4bd28c7d0ac3373bcc92a199201fb742a01e9d1e,946aab548cb39498facda9fa22d8e264966e26b2"
+946aab548cb39498facda9fa22d8e264966e26b2,946aab54,Added setText(@resId) methods,"Added setText(@resId) methods
+",,,,Noorzaini Ilhami,ilhami@terato.com,Noorzaini Ilhami,ilhami@terato.com,1416544313,1416544313,4bd28c7d0ac3373bcc92a199201fb742a01e9d1e
+4bd28c7d0ac3373bcc92a199201fb742a01e9d1e,4bd28c7d,email syntax,email syntax,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416525582,1416525582,cbdde4816835b5c0932f2b2bfa6505dd76d944c2
+cbdde4816835b5c0932f2b2bfa6505dd76d944c2,cbdde481,version 2.2.0,"version 2.2.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416525399,1416525399,b9e4b64c8c19930b9fed2ca8e3dcc4cd292b4674
+b9e4b64c8c19930b9fed2ca8e3dcc4cd292b4674,b9e4b64c,version 2.2.0,"version 2.2.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416520653,1416520653,19276e274aabadd117354d5cfcce74590b01956f
+19276e274aabadd117354d5cfcce74590b01956f,19276e27,Merge pull request #18 from davidjrichardson/master,"Merge pull request #18 from davidjrichardson/master
+
+Added dismissal timer pausing/resume on swipe start/stop",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416520452,1416520452,"0387c56f7136ae82cac61d1d949f4d777118d246,887e0f6bb115eace8982200d97d5b96d874e6368"
+887e0f6bb115eace8982200d97d5b96d874e6368,887e0f6b,Added dismissal timer pausing on swipe,"Added dismissal timer pausing on swipe
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416492352,1416492352,0387c56f7136ae82cac61d1d949f4d777118d246
+0387c56f7136ae82cac61d1d949f4d777118d246,0387c56f,Merge pull request #17 from MDXDave/master,"Merge pull request #17 from MDXDave/master
+
+Update README.md",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416490822,1416490822,"02b53f0220da2c95742ac437d9f845e53a6d45df,6aa559e02d5634a71649b7a4e62968e2666b992a"
+02b53f0220da2c95742ac437d9f845e53a6d45df,02b53f02,Merge pull request #16 from davidjrichardson/master,"Merge pull request #16 from davidjrichardson/master
+
+Fixed menu XML, added scroll to dismiss listeners for AbsListView and RecyclerView",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416490781,1416490781,"14f14fc6486215481b1d6805af8c3eaf8ccce0f3,dec604d70795813d3439fb0205311b86d7f47bfd"
+6aa559e02d5634a71649b7a4e62968e2666b992a,6aa559e0,Update README.md,"Update README.md
+
+Fix",,,,Dave,mdxdave@gmail.com,Dave,mdxdave@gmail.com,1416488935,1416488935,14f14fc6486215481b1d6805af8c3eaf8ccce0f3
+dec604d70795813d3439fb0205311b86d7f47bfd,dec604d7,Updated art image size,"Updated art image size
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416486521,1416486521,930d3c6f45fc63f22120b1a2a27086c3b6c2502b
+930d3c6f45fc63f22120b1a2a27086c3b6c2502b,930d3c6f,Update README.md,Update README.md,,,,David Richardson,davidjrichardson@users.noreply.github.com,David Richardson,davidjrichardson@users.noreply.github.com,1416486369,1416486369,0656136468e3ba9139d15a75097c009f74fecc55
+0656136468e3ba9139d15a75097c009f74fecc55,06561364,Update README.md,"Update README.md
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416485977,1416485977,ab30062fc139db3eaa340d39b19307c598157dbd
+ab30062fc139db3eaa340d39b19307c598157dbd,ab30062f,Updated sample application to provide examples of the new attachAbsListView and…,"Updated sample application to provide examples of the new attachAbsListView and attachRecyclerView methods.
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416481084,1416481084,68ac18b64f8cc02e1966575dbe5183ae328aff46
+68ac18b64f8cc02e1966575dbe5183ae328aff46,68ac18b6,Added attachAbsListView and attachRecyclerView methods to Snackbar to allow for…,"Added attachAbsListView and attachRecyclerView methods to Snackbar to allow for on scroll dismissal of the snackbar.
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416481015,1416481015,50f124b5ebed8ef9a07966798c38f55665ad4a46
+50f124b5ebed8ef9a07966798c38f55665ad4a46,50f124b5,Merge remote-tracking branch 'upstream/master',"Merge remote-tracking branch 'upstream/master'
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416395909,1416395909,"4101b4f12672bb1416c26dc02d23e29fbcf32e21,14f14fc6486215481b1d6805af8c3eaf8ccce0f3"
+14f14fc6486215481b1d6805af8c3eaf8ccce0f3,14f14fc6,Merge pull request #15 from nispok/master,"Merge pull request #15 from nispok/master
+
+2.1.1",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1416355303,1416355303,"d3502aac47d931b228a6cd5748a46a36dba02d6f,358b2c5da935393394e7df4d4136ece8d1927ad8"
+358b2c5da935393394e7df4d4136ece8d1927ad8,358b2c5d,version 2.1.1,"version 2.1.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416351254,1416351254,6c7da0d2bc1156bb31fc41fe3c9a77476cea749a
+6c7da0d2bc1156bb31fc41fe3c9a77476cea749a,6c7da0d2,added prefixes to all project resources. Fixes #12 and #14,"added prefixes to all project resources. Fixes #12 and #14
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416350845,1416350845,f8e88c75d82f0db38605c2bae63ce3512e2f708d
+f8e88c75d82f0db38605c2bae63ce3512e2f708d,f8e88c75,minSDK version lowered to 14. Closes #13,"minSDK version lowered to 14. Closes #13
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416284302,1416284352,babda75c6d4c69ab98659b570ba89514f11c6ca8
+4101b4f12672bb1416c26dc02d23e29fbcf32e21,4101b4f1,Fix sample menu xml file to work with appcompat,"Fix sample menu xml file to work with appcompat
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1416224857,1416224857,babda75c6d4c69ab98659b570ba89514f11c6ca8
+babda75c6d4c69ab98659b570ba89514f11c6ca8,babda75c,v2.1.0,"v2.1.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1416052277,1416052277,4eaa104848809177339a2ea717519f461b643c87
+4eaa104848809177339a2ea717519f461b643c87,4eaa1048,Merge pull request #1 from davidjrichardson/master,"Merge pull request #1 from davidjrichardson/master
+
+Update build tools, add ripple drawable & alter animation interpolators",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1415990990,1415990990,"508f8746748eb024240454af4f1a222d1baf080f,5884da2869aafb1e22efe1f79e807dfde163d215"
+5884da2869aafb1e22efe1f79e807dfde163d215,5884da28,Update .travis.yml,Update .travis.yml,,,,David Richardson,davidjrichardson@users.noreply.github.com,David Richardson,davidjrichardson@users.noreply.github.com,1415957079,1415957079,4e4ce33c76e8f1e267635acd1902aeb587003d16
+4e4ce33c76e8f1e267635acd1902aeb587003d16,4e4ce33c,Update .travis.yml,Update .travis.yml,,,,David Richardson,davidjrichardson@users.noreply.github.com,David Richardson,davidjrichardson@users.noreply.github.com,1415955636,1415955636,1448470164f3f675e2ba4fedb812de212e2f37a2
+1448470164f3f675e2ba4fedb812de212e2f37a2,14484701,Update README.md,"Update README.md
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1415890010,1415890010,a61116be320c14a828e08f7be81c754da9a95d80
+a61116be320c14a828e08f7be81c754da9a95d80,a61116be,Added ripple drawable to action text button & changed its color to be neutral in colour.,"Added ripple drawable to action text button & changed its color to be neutral in colour.
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1415889537,1415889537,a610380fd7a32ed798333165b0cc0791a09c5bd0
+a610380fd7a32ed798333165b0cc0791a09c5bd0,a610380f,"Altered animation interpolators to better reflect the material design ""authentic…","Altered animation interpolators to better reflect the material design ""authentic motion"" spec: http://www.google.com/design/spec/animation/authentic-motion.html#authentic-motion-mass-weight
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1415881528,1415881528,606d246cb0e1133bf14545aef06a0a7d82dd3f63
+606d246cb0e1133bf14545aef06a0a7d82dd3f63,606d246c,Updated build.gradle files to use latest build tools v21.1.1,"Updated build.gradle files to use latest build tools v21.1.1
+",,,,David Richardson,david@tankski.co.uk,David Richardson,david@tankski.co.uk,1415881370,1415881370,508f8746748eb024240454af4f1a222d1baf080f
+508f8746748eb024240454af4f1a222d1baf080f,508f8746,Update README.md,Update README.md,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1415760121,1415760121,0efa028e9a980fa23122c495cc2d764b71e4caed
+0efa028e9a980fa23122c495cc2d764b71e4caed,0efa028e,Update .travis.yml,Update .travis.yml,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1415536281,1415536281,9473941e5b1749ca7fcaaa0268765b88e0b92cdb
+9473941e5b1749ca7fcaaa0268765b88e0b92cdb,9473941e,Update .travis.yml,Update .travis.yml,,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1415535982,1415535982,b92cffc24df5214b4c7d9bbb7de84a126fcd08ee
+b92cffc24df5214b4c7d9bbb7de84a126fcd08ee,b92cffc2,Travis fix,"Travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415503254,1415503254,55c82f581523099a1f6ccf5e4bc27a0f8bf2a974
+55c82f581523099a1f6ccf5e4bc27a0f8bf2a974,55c82f58,Travis fix,"Travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415501497,1415501497,070daa054976a0f2dc0fb9d88ef99e5517e7adea
+070daa054976a0f2dc0fb9d88ef99e5517e7adea,070daa05,Travis fix,"Travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415500915,1415500915,e84de75246d75273c1e92b86585fc92e0ae6cc83
+e84de75246d75273c1e92b86585fc92e0ae6cc83,e84de752,README update,"README update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415314711,1415314711,8281102687fda6fd6ad8a97669a9265d17ac2d4b
+8281102687fda6fd6ad8a97669a9265d17ac2d4b,82811026,version 2.0.1,"version 2.0.1
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415314653,1415314653,07f6063778a71c4dae23a6a313fc416ef4c4e901
+07f6063778a71c4dae23a6a313fc416ef4c4e901,07f60637,color ID fix. Closes https://github.com/wmora/snackbar/issues/12,"color ID fix. Closes https://github.com/wmora/snackbar/issues/12
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415314586,1415314586,671224efa7bc5d6a41dc4b6259dc80f48d49619e
+671224efa7bc5d6a41dc4b6259dc80f48d49619e,671224ef,"horrible, new icons","horrible, new icons
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415065453,1415065453,f9d8bcafa959d31e28aa082e66e22b3b91ac8be4
+f9d8bcafa959d31e28aa082e66e22b3b91ac8be4,f9d8bcaf,version 2.0.0,"version 2.0.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415062808,1415062808,46d5151802b047765068551e179fef0f8c903595
+46d5151802b047765068551e179fef0f8c903595,46d51518,POM properties update,"POM properties update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415062770,1415062770,a2c5a4b7c52e089eac185d63e96f344e675d8a4b
+a2c5a4b7c52e089eac185d63e96f344e675d8a4b,a2c5a4b7,README update,"README update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415062743,1415062743,2cfec5c098a8ac13c3b8b84430951af77a7ca792
+2cfec5c098a8ac13c3b8b84430951af77a7ca792,2cfec5c0,Gradle plugin upgrade,"Gradle plugin upgrade
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1415062725,1415062725,b6e809d515b3f44f0d17511d3e95109bb1dbc93b
+b6e809d515b3f44f0d17511d3e95109bb1dbc93b,b6e809d5,download support libs for travis,"download support libs for travis
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414969075,1414969075,b566e8f556cfd1456bd3833c3c76a3ed0166eedf
+b566e8f556cfd1456bd3833c3c76a3ed0166eedf,b566e8f5,download support libs for travis,"download support libs for travis
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414967401,1414967401,a38d2143cd1d4159ec72950d1ca6451f26423c50
+a38d2143cd1d4159ec72950d1ca6451f26423c50,a38d2143,travis fix,"travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414965773,1414965773,232c27b363088824d979b46df39aa532a3ecb423
+232c27b363088824d979b46df39aa532a3ecb423,232c27b3,travis fix,"travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414964982,1414964982,d45415a7b6d33911d8003a6bee60efdd27956b40
+d45415a7b6d33911d8003a6bee60efdd27956b40,d45415a7,travis fix,"travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414957519,1414957519,715ff77f15c40fa83d90af5d907d522bcdb185ee
+715ff77f15c40fa83d90af5d907d522bcdb185ee,715ff77f,reformat,"reformat
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414952694,1414952694,64d8e726b71cf82643c47aabee9f92925948dfa0
+64d8e726b71cf82643c47aabee9f92925948dfa0,64d8e726,material design theme,"material design theme
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414950453,1414950453,6ddd18ac7510b16317d18bb0b5f181eba511662d
+6ddd18ac7510b16317d18bb0b5f181eba511662d,6ddd18ac,swipeable by default,"swipeable by default
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414950436,1414950436,1ef739040b24f5c9ac313af00b2302472a000053
+1ef739040b24f5c9ac313af00b2302472a000053,1ef73904,menu with option to visit repo,"menu with option to visit repo
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414949844,1414949844,f812946c538127821aaa8daaa21797fa0fb17b51
+f812946c538127821aaa8daaa21797fa0fb17b51,f812946c,menu with option to visit repo,"menu with option to visit repo
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414949799,1414949799,7084a7005e030ffbb6008d926180970760232763
+7084a7005e030ffbb6008d926180970760232763,7084a700,prepare demo for release,"prepare demo for release
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414949137,1414949137,54d84d9ab8ef80d041d60e209fcf871dfabaf3d6
+54d84d9ab8ef80d041d60e209fcf871dfabaf3d6,54d84d9a,updated demo with snackbar manager,"updated demo with snackbar manager
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414941476,1414941476,aa861366f7360941459098ba92c0880319699c75
+aa861366f7360941459098ba92c0880319699c75,aa861366,don't restart slideout if already dismissing,"don't restart slideout if already dismissing
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414895752,1414895752,39abf74978eb8647432410dd0fbfb0a953b5040f
+39abf74978eb8647432410dd0fbfb0a953b5040f,39abf749,updated demo,"updated demo
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414895724,1414895724,1e990807af44214aa194a4904c55ef1f30b07796
+1e990807af44214aa194a4904c55ef1f30b07796,1e990807,tests fix,"tests fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414895370,1414895370,15cb75c43b7394ebef53d53b98a6079ba4ec7675
+15cb75c43b7394ebef53d53b98a6079ba4ec7675,15cb75c4,refactor,"refactor
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414895217,1414895217,879fb22d8026a0b287c3b89d4f7bd6f3d5ec93b0
+879fb22d8026a0b287c3b89d4f7bd6f3d5ec93b0,879fb22d,demo update,"demo update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414894572,1414894572,f3ba1954d20aa9c4b449f51f5307d3305f4f36bb
+f3ba1954d20aa9c4b449f51f5307d3305f4f36bb,f3ba1954,default text colors may be changed through code or by overriding styles,"default text colors may be changed through code or by overriding styles
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414893702,1414893702,87d3e2484c43d5df6bc679c04bb5749b93d67342
+87d3e2484c43d5df6bc679c04bb5749b93d67342,87d3e248,Travis update,"Travis update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414891742,1414891742,4004a53ff426c99d51823b083efd5d0a588c9e09
+4004a53ff426c99d51823b083efd5d0a588c9e09,4004a53f,Travis update,"Travis update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414891157,1414891157,42f249941b687a73c020c11779a511a90cbedb28
+42f249941b687a73c020c11779a511a90cbedb28,42f24994,Travis update,"Travis update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414891105,1414891105,70f717afdf1bd7120a81c93a00e17ce340d00a4e
+70f717afdf1bd7120a81c93a00e17ce340d00a4e,70f717af,Travis update,"Travis update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414890612,1414890612,15a2215ad1a5e3dbf958e1b5b46e130519097a8d
+15a2215ad1a5e3dbf958e1b5b46e130519097a8d,15a2215a,Travis update,"Travis update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414890586,1414890586,502ec5623210507d29478bdf222ca518f46058bb
+502ec5623210507d29478bdf222ca518f46058bb,502ec562,Snackbar not swipeable by default,"Snackbar not swipeable by default
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414890562,1414890562,d726d3b40ff9f545838cf6e62d24e731e3e5f029
+d726d3b40ff9f545838cf6e62d24e731e3e5f029,d726d3b4,removed custom layout for tablets,"removed custom layout for tablets
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414888973,1414888973,aa68a718c3aa462974653f3da688939cdeac28ca
+aa68a718c3aa462974653f3da688939cdeac28ca,aa68a718,sliding animations,"sliding animations
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414884187,1414884187,709d134e882841d376bb2dc7f29323dfa3723ab3
+709d134e882841d376bb2dc7f29323dfa3723ab3,709d134e,lib refactor,"lib refactor
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414881753,1414881753,0b53d35580a713c3c9509cf4980738eff559b851
+0b53d35580a713c3c9509cf4980738eff559b851,0b53d355,demo refactor,"demo refactor
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414881475,1414881475,e6ca80aae016346c35e451537c260363585c47fe
+e6ca80aae016346c35e451537c260363585c47fe,e6ca80aa,config update,"config update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414881123,1414881123,d3502aac47d931b228a6cd5748a46a36dba02d6f
+d3502aac47d931b228a6cd5748a46a36dba02d6f,d3502aac,travis fix,"travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414248103,1414248103,8a8a5b56552645b8255072b45bf8bb4fd75bd3b8
+8a8a5b56552645b8255072b45bf8bb4fd75bd3b8,8a8a5b56,travis fix,"travis fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414248077,1414248077,0d329d09876267576744724910aa4f9a0947e173
+0d329d09876267576744724910aa4f9a0947e173,0d329d09,dismiss listener expanded and renamed to event listener. Closes #9,"dismiss listener expanded and renamed to event listener. Closes #9
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414246867,1414246867,4e9748541a68aa6dc2d8c1429b91669579aa0399
+4e9748541a68aa6dc2d8c1429b91669579aa0399,4e974854,swipe-to-dismiss can be disabled (enabled by default). See #9,"swipe-to-dismiss can be disabled (enabled by default). See #9
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1414239425,1414239425,69b6d3982f6bc99ac8f93b921b5613aeac0d7528
+69b6d3982f6bc99ac8f93b921b5613aeac0d7528,69b6d398,Version 1.3.0,"Version 1.3.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1412443935,1412443935,6f3a9f5026ffdd9bdf4c04257afa4fcc69760099
+6f3a9f5026ffdd9bdf4c04257afa4fcc69760099,6f3a9f50,update Gradle plugin to 0.13.2,"update Gradle plugin to 0.13.2
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1412443112,1412443112,f27add6a17a48e639bc8856ac84f3d2910a5b0d5
+f27add6a17a48e639bc8856ac84f3d2910a5b0d5,f27add6a,Merge branch 'SteadfastInnovation-feature/tablet_layout',"Merge branch 'SteadfastInnovation-feature/tablet_layout'
+
+tablet layout as defined in Material Design spec
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1412443022,1412443022,"61077776dfd6d5852b2a1889ced7540a4738f4c0,c95cadcd80ac19e5c335693e9e66b3c66a152a7f"
+c95cadcd80ac19e5c335693e9e66b3c66a152a7f,c95cadcd,Merge branch 'feature/tablet_layout' of…,"Merge branch 'feature/tablet_layout' of https://github.com/SteadfastInnovation/snackbar into SteadfastInnovation-feature/tablet_layout
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1412442610,1412442610,"61077776dfd6d5852b2a1889ced7540a4738f4c0,ab5d0b8059ba27dfad4ff697058f68e83fbe7e1e"
+61077776dfd6d5852b2a1889ced7540a4738f4c0,61077776,Version 1.2.0,"Version 1.2.0
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411519609,1411519609,c343fd59700c5041599fd37ec3f8f401e0be03a8
+c343fd59700c5041599fd37ec3f8f401e0be03a8,c343fd59,Updated doc for next release,"Updated doc for next release
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411519102,1411519102,eecd20d79a6cd78753485f184bffe42abd48dabc
+eecd20d79a6cd78753485f184bffe42abd48dabc,eecd20d7,example of DismissListener on sample app,"example of DismissListener on sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411518668,1411518668,554a5b0dc60f3b60f59b825f5f99e72a64ff1bcc
+554a5b0dc60f3b60f59b825f5f99e72a64ff1bcc,554a5b0d,Javadoc for isDimissed and isShowing,"Javadoc for isDimissed and isShowing
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411518620,1411518620,f48d3f7fadc29189b332e253adcbe85f24ac0a1d
+f48d3f7fadc29189b332e253adcbe85f24ac0a1d,f48d3f7f,Merge branch 'master' of https://github.com/wmora/snackbar,"Merge branch 'master' of https://github.com/wmora/snackbar
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411517069,1411517069,"6cebe0e633ca167b07afb363c4e7ac5d6e07e519,cad977d008e14ac3afd5649773e0aeb7a7a42534"
+cad977d008e14ac3afd5649773e0aeb7a7a42534,cad977d0,Merge pull request #5 from SteadfastInnovation/feature/dismiss_listener,"Merge pull request #5 from SteadfastInnovation/feature/dismiss_listener
+
+Added DismissListener to be called whenever the Snackbar is dismissed.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1411516988,1411516988,"11c9518bf2aeaebecd48daf50cb45a70e3d61a0b,95539c4c7eaa41b0b756fc827a88e156b47e4a29"
+6cebe0e633ca167b07afb363c4e7ac5d6e07e519,6cebe0e6,Gradle upgrade,"Gradle upgrade
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1411516632,1411516632,11c9518bf2aeaebecd48daf50cb45a70e3d61a0b
+ab5d0b8059ba27dfad4ff697058f68e83fbe7e1e,ab5d0b80,Added tablet layout as defined in Material Design spec.,"Added tablet layout as defined in Material Design spec.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1411515809,1411516123,11c9518bf2aeaebecd48daf50cb45a70e3d61a0b
+11c9518bf2aeaebecd48daf50cb45a70e3d61a0b,11c9518b,Merge pull request #6 from SteadfastInnovation/feature/update_animations,"Merge pull request #6 from SteadfastInnovation/feature/update_animations
+
+Changed in and out animations to follow the Material Design specs.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1411515762,1411515762,"c779567cdedd7fc93be4ddcf5239f8666086ccc2,9f234b91fc3783d4266e3e12d2b03714d5221573"
+9f234b91fc3783d4266e3e12d2b03714d5221573,9f234b91,Changed in and out animations to follow the Material Design specs. Also renamed,"Changed in and out animations to follow the Material Design specs. Also renamed
+animation resource files to snackbar_in and snackbar_out to make it less likely
+for the parent project to accidently override the animations. Naming them
+snackbar_in and snackbar_out also allows people to intentionally override them
+with custom in and out animations.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1411500550,1411501007,c779567cdedd7fc93be4ddcf5239f8666086ccc2
+95539c4c7eaa41b0b756fc827a88e156b47e4a29,95539c4c,Added DismissListener to be called whenever the Snackbar is dismissed.,"Added DismissListener to be called whenever the Snackbar is dismissed.
+",,,,Andrew Hughes,ashughes@gmail.com,Andrew Hughes,ashughes@gmail.com,1411428403,1411428403,c779567cdedd7fc93be4ddcf5239f8666086ccc2
+c779567cdedd7fc93be4ddcf5239f8666086ccc2,c779567c,README update,"README update
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409913276,1409913276,def6011e768648dd64d4d4d5b3fda48ac46a3bf0
+def6011e768648dd64d4d4d5b3fda48ac46a3bf0,def6011e,Custom duration and on action click dismissal,"Custom duration and on action click dismissal
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409879331,1409879331,b411d17707cf9482e80d400a819b85219953fdf9
+b411d17707cf9482e80d400a819b85219953fdf9,b411d177,Merge pull request #1 from lewisjdeane/master,"Merge pull request #1 from lewisjdeane/master
+
+Custom duration and now dismisses on action click.",,,,William Mora,william.r.mora@gmail.com,William Mora,william.r.mora@gmail.com,1409877836,1409877836,"1e105df5bed6a7d6d6bc6a9666e2c388a5f8460a,ae47f6a5778ffa7662576eb6a1b483e664c56a3b"
+ae47f6a5778ffa7662576eb6a1b483e664c56a3b,ae47f6a5,Switched from a ClickListener to a custom ActionClickListener which dismisses on…,"Switched from a ClickListener to a custom ActionClickListener which dismisses on click (Although there is a method to turn this off). Added ability to set custom duration.
+",,,,Lewis Deane,lewisjdeane@gmail.com,Lewis Deane,lewisjdeane@gmail.com,1409863604,1409863604,1e105df5bed6a7d6d6bc6a9666e2c388a5f8460a
+1e105df5bed6a7d6d6bc6a9666e2c388a5f8460a,1e105df5,Install fix,"Install fix
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409493045,1409493045,4d7a452c656d272c867a796c1ed86f6320f63837
+4d7a452c656d272c867a796c1ed86f6320f63837,4d7a452c,Groovy syntax for install instructions,"Groovy syntax for install instructions
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409492951,1409492951,83fbd059366c86563c0cd80384d2614c4c39901c
+83fbd059366c86563c0cd80384d2614c4c39901c,83fbd059,Travis build status,"Travis build status
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409492833,1409492833,78e158240afb43733332bcee8db75862fc3b24b4
+78e158240afb43733332bcee8db75862fc3b24b4,78e15824,Installation instructions,"Installation instructions
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409491321,1409491321,0b98d4209fc5250b5c3193d8540ba2238ae5d193
+0b98d4209fc5250b5c3193d8540ba2238ae5d193,0b98d420,Travis integration,"Travis integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409447805,1409447805,82124d960120b6a2a378f4487ed03915ff3dd4ef
+82124d960120b6a2a378f4487ed03915ff3dd4ef,82124d96,Travis integration,"Travis integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409447429,1409447429,58bbae1e9cebaf94357eed04432940329358a1de
+58bbae1e9cebaf94357eed04432940329358a1de,58bbae1e,Travis integration,"Travis integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409446722,1409446722,26adfa99c907089ccdaa3564b8185c1a1fb7ffd3
+26adfa99c907089ccdaa3564b8185c1a1fb7ffd3,26adfa99,Travis integration,"Travis integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409446408,1409446408,918e2719c251ec7cec3674731e0599025ed1b244
+918e2719c251ec7cec3674731e0599025ed1b244,918e2719,Travis integration,"Travis integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409446026,1409446026,973d435566f3a42e39a5ff62bcc2a67674e372aa
+973d435566f3a42e39a5ff62bcc2a67674e372aa,973d4355,Maven integration,"Maven integration
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409443619,1409443619,954befb46c9118bc9a86b6c0d64f796c2de56ffe
+954befb46c9118bc9a86b6c0d64f796c2de56ffe,954befb4,Unit tests,"Unit tests
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1409438721,1409438721,305178bd68b3cbf77ff53107b83536a1db403d43
+305178bd68b3cbf77ff53107b83536a1db403d43,305178bd,package rename,"package rename
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408595983,1408595983,06fbe163140e61e803dfba8f4c8023bad8530129
+06fbe163140e61e803dfba8f4c8023bad8530129,06fbe163,README,"README
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408496220,1408496220,bfe1dc34c3334f23892c453b231fcd803fd7544e
+bfe1dc34c3334f23892c453b231fcd803fd7544e,bfe1dc34,README,"README
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408496127,1408496127,11b23f727bec498b615194d2c42c828ca3a66fd6
+11b23f727bec498b615194d2c42c828ca3a66fd6,11b23f72,README + LICENSE,"README + LICENSE
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408496084,1408496084,e6796288695a68c1332874405c9441cc15679ac8
+e6796288695a68c1332874405c9441cc15679ac8,e6796288,README,"README
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408495688,1408495688,511cdfcc0b49dab5ad005efe8f1105bd0c2ec2c4
+511cdfcc0b49dab5ad005efe8f1105bd0c2ec2c4,511cdfcc,README,"README
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408495393,1408495393,d69fe33bd35512ae2a84b1c9a39bdfb834d79218
+d69fe33bd35512ae2a84b1c9a39bdfb834d79218,d69fe33b,Updated sample app,"Updated sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408494465,1408494465,a6816ca66cc943d671e2de2ba6a40d10a57aba44
+a6816ca66cc943d671e2de2ba6a40d10a57aba44,a6816ca6,Updated sample app,"Updated sample app
+",,,,William Mora,william.mora@mercadolibre.com,William Mora,william.mora@mercadolibre.com,1408484294,1408484294,89d3f9b7f96b2243e302a56f7dcf6cfb6f413384
+89d3f9b7f96b2243e302a56f7dcf6cfb6f413384,89d3f9b7,Measurements updated,"Measurements updated
+",,,,William Mora,william.mora@mercadolibre.com,William Mora,william.mora@mercadolibre.com,1408484061,1408484061,071e0e41fc60c597bbf5a8041f547366ab3df1e6
+071e0e41fc60c597bbf5a8041f547366ab3df1e6,071e0e41,Safe navigation,"Safe navigation
+",,,,William Mora,william.mora@mercadolibre.com,William Mora,william.mora@mercadolibre.com,1408471359,1408471359,5ec0cef0f8096c6d9108b6c6a42f710087b1a327
+5ec0cef0f8096c6d9108b6c6a42f710087b1a327,5ec0cef0,Lib + sample fixes,"Lib + sample fixes
+",,,,William Mora,william.mora@mercadolibre.com,William Mora,william.mora@mercadolibre.com,1408470841,1408470841,bc1a66c2d14a51a660d33b7b9278eb2f795040c6
+bc1a66c2d14a51a660d33b7b9278eb2f795040c6,bc1a66c2,Updated sample app,"Updated sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408409390,1408409390,30726d5718587cee03500ecefb9318523ef96241
+30726d5718587cee03500ecefb9318523ef96241,30726d57,Updated sample app,"Updated sample app
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408403789,1408403789,6e765319c9958df4be497e8e8dde2a692a648da2
+6e765319c9958df4be497e8e8dde2a692a648da2,6e765319,Removed string resources from lib,"Removed string resources from lib
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408403759,1408403759,ab39229a312e609d60fcbf57fab5c3cf60c97f6b
+ab39229a312e609d60fcbf57fab5c3cf60c97f6b,ab39229a,first commit,"first commit
+",,,,William Mora,wilmor24@gmail.com,William Mora,wilmor24@gmail.com,1408402201,1408402201,

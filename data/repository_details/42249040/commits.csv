@@ -1,0 +1,944 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b30950113e40defcf1d612fdc972708be2137a16,b3095011,Merge branch 'master' of https://github.com/xabre/xamarin-bluetooth-le,"Merge branch 'master' of https://github.com/xabre/xamarin-bluetooth-le
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1503758418,1503758418,"54fdfb21dab82a2c26bca4a6ac022ec9ec7d6b34,7e641bc192f50753b1941e7bb475f81d31d0ef3c"
+54fdfb21dab82a2c26bca4a6ac022ec9ec7d6b34,54fdfb21,Updated nuget and Xamarin Forms.,"Updated nuget and Xamarin Forms.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1503758407,1503758407,844c544e4918cb2d003027468c11a4b6178d3193
+7e641bc192f50753b1941e7bb475f81d31d0ef3c,7e641bc1,flat shields :P,flat shields :P,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1501068298,1501068298,844c544e4918cb2d003027468c11a4b6178d3193
+844c544e4918cb2d003027468c11a4b6178d3193,844c544e,Downgrade Xamarin.Build.Download to 0.4.5 for CI.,"Downgrade Xamarin.Build.Download to 0.4.5 for CI.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500819331,1500819331,db7d4b224cad47049d76d577f350a14c88cf249a
+db7d4b224cad47049d76d577f350a14c88cf249a,db7d4b22,Attempt to fix CI build by adjusting nuget targets.,"Attempt to fix CI build by adjusting nuget targets.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500819025,1500819025,551d123f78dd9334c012b09f6258e5e72a2fff7a
+551d123f78dd9334c012b09f6258e5e72a2fff7a,551d123f,Updated to mvvmcross 5.1,"Updated to mvvmcross 5.1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500818513,1500818513,0dc20ee2f32f7b39e7898bf003a4aaf9b575e7ac
+0dc20ee2f32f7b39e7898bf003a4aaf9b575e7ac,0dc20ee2,Merge branch '1.3.0',"Merge branch '1.3.0'
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500814836,1500814836,"c6df2eb51afc8d525a722a3831c0711bd2f00a4b,4d6f3c373fa628b07ccf72d8a079cadf1f64b077"
+4d6f3c373fa628b07ccf72d8a079cadf1f64b077,4d6f3c37,Updated version to 1.3.0 stable.,"Updated version to 1.3.0 stable.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500814625,1500814625,c3d6a9192e8bd06712840ec6c69a8df13f6b310e
+c3d6a9192e8bd06712840ec6c69a8df13f6b310e,c3d6a919,#229 #234 Minor adjustemnts after merge.,"#229 #234 Minor adjustemnts after merge.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1500813426,1500813426,b93efd90f596d0bcb06f5012f6533de134a55ebc
+b93efd90f596d0bcb06f5012f6533de134a55ebc,b93efd90,[Android] 1.3.0 - GATT operations issue on reconnecting on a previously connected IDevice (#234),"[Android] 1.3.0 - GATT operations issue on reconnecting on a previously connected IDevice (#234)
+
+Minor spelling mistake.
+
+* Fix Issue #227
+ 
+* Fix Issue where gatt operation would return FALSE in the following sequence:
+1. Connect to IDevice
+2. Turn peripheral off and start reconnect
+3. Turn peripheral on
+4. connection is established but any gatt operation will return false.
+
+Fix: call DeviceBase.ClearServices() on device disconnection to flush services & characteristics references
+",,,,Jean Bédard,bed007@hotmail.com,Adrian Seceleanu,xabre@users.noreply.github.com,1500812416,1500812416,d1a9e20184336dfeeeb224a763e43ff6aaf607a8
+d1a9e20184336dfeeeb224a763e43ff6aaf607a8,d1a9e201,Fix Issue #227 (#229),"Fix Issue #227 (#229)
+
+* Update README.md. Minor spelling mistake.
+* Fix Issue #227
+",,,,Jean Bédard,bed007@hotmail.com,Adrian Seceleanu,xabre@users.noreply.github.com,1500811754,1500811754,559219dbffa7ed18d1ea999e0f1fa1105ece783f
+559219dbffa7ed18d1ea999e0f1fa1105ece783f,559219db,"Update client to MvvmCross 5. Update to latest xamarin forms, support etc.","Update client to MvvmCross 5. Update to latest xamarin forms, support etc.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1499376462,1499376462,8505528fa668934fdad733bf045cf4f9248f7127
+8505528fa668934fdad733bf045cf4f9248f7127,8505528f,Merge branch 'JSchaenzle-patch-1' into 1.3.0,"Merge branch 'JSchaenzle-patch-1' into 1.3.0
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1499276496,1499276496,"61d8afff794dccca04940b8844aebecc3132a151,035b93cc0dfed6e06339dbb25e30462dc11af2a8"
+035b93cc0dfed6e06339dbb25e30462dc11af2a8,035b93cc,Use TaskBuilder for GetServicesNativeAsync,"Use TaskBuilder for GetServicesNativeAsync
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1499276442,1499276442,2595881709d3c7d2a15867bc4c61c63094cd370f
+2595881709d3c7d2a15867bc4c61c63094cd370f,25958817,Merge branch 'patch-1' of https://github.com/JSchaenzle/xamarin-bluetooth-le…,"Merge branch 'patch-1' of https://github.com/JSchaenzle/xamarin-bluetooth-le into JSchaenzle-patch-1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1499275313,1499275313,"61d8afff794dccca04940b8844aebecc3132a151,0817f270bb060a9a318c0438fdc2615d5ffcd587"
+c6df2eb51afc8d525a722a3831c0711bd2f00a4b,c6df2eb5,Merge pull request #207 from parth7676/patch-1,"Merge pull request #207 from parth7676/patch-1
+
+Update README.md",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1499275200,1499275200,"ba6445da6671365953949f0511d3edd541779a2f,a40e76e7e7c946e22bf6f38cd1e8707e52c0f19c"
+61d8afff794dccca04940b8844aebecc3132a151,61d8afff,#222 Check if internal CancellationTokenSource is not null on registration callback.,"#222 Check if internal CancellationTokenSource is not null on registration callback.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1498579461,1498579461,536f5611cca17f6ff7002f8ab78a01563eb9b193
+0817f270bb060a9a318c0438fdc2615d5ffcd587,0817f270,Update Device.cs,"Update Device.cs
+
+The handler function can be called for two reasons: 1) service discovery succeeded or 2) service discovery failed. In the later case `args.Error` will not be null and `_nativeDevice.Services` may be null. In that case, we cannot return from the handler without setting the result on the TaskCompletionSource. Doing so will certainly cause a deadlock because this task will never complete. The fact that the event handler is removed by `_nativeDevice.DiscoveredService -= handler;` ensures that. 
+
+If an error occurs, the code will not complete with an empty list of services. Then the caller can do what they choose with that.",,,,Jordan S,jschaenzle@gmail.com,GitHub,noreply@github.com,1497619384,1497619384,ba6445da6671365953949f0511d3edd541779a2f
+a40e76e7e7c946e22bf6f38cd1e8707e52c0f19c,a40e76e7,Update README.md,"Update README.md
+
+Minor spelling mistake.",,,,Parth Patel,parth7676@gmail.com,GitHub,noreply@github.com,1495086726,1495086726,ba6445da6671365953949f0511d3edd541779a2f
+536f5611cca17f6ff7002f8ab78a01563eb9b193,536f5611,Updated nuspec version to 1.3.0-beta.3,"Updated nuspec version to 1.3.0-beta.3
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493929516,1493929516,eed26ba9677e261f542ba532a13e725721d218f3
+eed26ba9677e261f542ba532a13e725721d218f3,eed26ba9,Merge pull request #200 from Dragon160/1.3.0,"Merge pull request #200 from Dragon160/1.3.0
+
+Added possibility to change ConnectionPriority/ ConnectionInterval for Android",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1493902138,1493902138,"8ca2958a2975bc1250419441b19da0437f9b8dbc,456c9bfa84d60750820cdfe6c88d050bd67927f0"
+456c9bfa84d60750820cdfe6c88d050bd67927f0,456c9bfa,make updateConnectionInterval API synchronous,"make updateConnectionInterval API synchronous
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493900892,1493900892,83b72612b7fb47cd264797e45abff17cd57f3ec6
+83b72612b7fb47cd264797e45abff17cd57f3ec6,83b72612,iOS implementation returns 'false' for connectionInterval update,"iOS implementation returns 'false' for connectionInterval update
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493711590,1493711590,e3ac734d0a9f35410f0d32903698d79ea2e77585
+e3ac734d0a9f35410f0d32903698d79ea2e77585,e3ac734d,added comments,"added comments
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493380307,1493380307,2ff4e788b220836c9ae0ccce846c9528fbad351d
+2ff4e788b220836c9ae0ccce846c9528fbad351d,2ff4e788,first version of requesting connection interval API,"first version of requesting connection interval API
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493373328,1493373328,5064651f2afbd91f5777ebec82942664727c7dc5
+8ca2958a2975bc1250419441b19da0437f9b8dbc,8ca2958a,Updated nuspec version to 1.3.0-beta2,"Updated nuspec version to 1.3.0-beta2
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493323128,1493323128,c772220660f4834f2da088afd6d95e4709763ad2
+c772220660f4834f2da088afd6d95e4709763ad2,c7722206,#198 Android: Clear cached Services/Charactersitics/Descriptors on signall…,"#198 Android: Clear cached Services/Charactersitics/Descriptors on signall loss/non user triggered disconnect.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493322844,1493322844,5064651f2afbd91f5777ebec82942664727c7dc5
+5064651f2afbd91f5777ebec82942664727c7dc5,5064651f,Updated version to 1.3.0-beta1,"Updated version to 1.3.0-beta1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493238786,1493238786,cbb180e7843b9800bd433660ebe6cd50a2e7441e
+cbb180e7843b9800bd433660ebe6cd50a2e7441e,cbb180e7,Adjust merged features from master. Mtu and connect.,"Adjust merged features from master. Mtu and connect.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493236928,1493236928,ac82dbd7d8bdae0e4eae777725cbb9b9c35912bb
+ac82dbd7d8bdae0e4eae777725cbb9b9c35912bb,ac82dbd7,Merge branch 'master' into 1.3.0,"Merge branch 'master' into 1.3.0
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1493235471,1493235471,"1589f61db411c3c01215c00ccfeb83d8ed9b0b4a,ba6445da6671365953949f0511d3edd541779a2f"
+ba6445da6671365953949f0511d3edd541779a2f,ba6445da,Merge pull request #195 from Dragon160/master,"Merge pull request #195 from Dragon160/master
+
+Added requestMTU feature (issue #128)",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1493234457,1493234457,"83f63bb918cbca0ae3c1e095f099d3c437baaadd,b31d98d4329eb9c7569d4a351f6b69b655d89404"
+b31d98d4329eb9c7569d4a351f6b69b655d89404,b31d98d4,added check for emtpy _gattCallback object,"added check for emtpy _gattCallback object
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493196191,1493196191,1fedaa5d74b66b633da6845e654d5ccf527093f1
+1fedaa5d74b66b633da6845e654d5ccf527093f1,1fedaa5d,Added error check in completionHandler. Added device in GattCallback. Added Todo…,"Added error check in completionHandler. Added device in GattCallback. Added Todo description in DeviceListViewModel.
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493196051,1493196051,6be1968857a50af71c48b547c996682e8c681326
+6be1968857a50af71c48b547c996682e8c681326,6be19688,removed tabs and replaced them with whitespaces,"removed tabs and replaced them with whitespaces
+",,,,Michael Probst,Probst.Michael@live.de,Michael Probst,Probst.Michael@live.de,1493107245,1493107245,98f08b0f2b4e959b6707821bba97a8526c31026e
+98f08b0f2b4e959b6707821bba97a8526c31026e,98f08b0f,.DS_Store added in gitignore,".DS_Store added in gitignore
+",,,,Michael Probst,mip@Michaels-MacBook-Pro.local,Michael Probst,mip@Michaels-MacBook-Pro.local,1493107171,1493107171,c1e92e0845d25880249443c3734720cc5f7909d8
+c1e92e0845d25880249443c3734720cc5f7909d8,c1e92e08,Request MTU: return unmodified ios value,"Request MTU: return unmodified ios value
+",,,,Michael Probst,mip@Michaels-MBP.fritz.box,Michael Probst,mip@Michaels-MBP.fritz.box,1493050404,1493050404,2c278a00fd5f6ef10c0d6a372607502501d69fb3
+2c278a00fd5f6ef10c0d6a372607502501d69fb3,2c278a00,added support for requestMTU on iDevice,"added support for requestMTU on iDevice
+",,,,Michael Probst,mip@Michaels-MBP.fritz.box,Michael Probst,mip@Michaels-MBP.fritz.box,1493033666,1493033666,83f63bb918cbca0ae3c1e095f099d3c437baaadd
+83f63bb918cbca0ae3c1e095f099d3c437baaadd,83f63bb9,Updated version and nuspec to 1.2.3,"Updated version and nuspec to 1.2.3
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1492549548,1492549548,13d2f4476d30bd1843fd418b8f0c2a35097a739c
+13d2f4476d30bd1843fd418b8f0c2a35097a739c,13d2f447,#183 Fixed Android UpdateRssi stale value because of inverted return condition.,"#183 Fixed Android UpdateRssi stale value because of inverted return condition.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1492549335,1492549335,ef7a5c811db1686f359bfef553eb858cb191a9e9
+1589f61db411c3c01215c00ccfeb83d8ed9b0b4a,1589f61d,Enhanced sample app for better tested. Added switch for Android AutoConnect.…,"Enhanced sample app for better tested. Added switch for Android AutoConnect. More device options as action sheet.
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1491582449,1491750077,7914486921f8c71f965f18a864b72ac2ad98d588
+7914486921f8c71f965f18a864b72ac2ad98d588,79144869,Added draft for command queue utility.,"Added draft for command queue utility.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1491747629,1491747629,3f2271b7f8257eb86eac287f565e0ce34fde9d34
+ef7a5c811db1686f359bfef553eb858cb191a9e9,ef7a5c81,fixed nuget badges,fixed nuget badges,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1491336638,1491336638,5c3bd2464066df7708000af6b441f9c2af232de5
+5c3bd2464066df7708000af6b441f9c2af232de5,5c3bd246,more detail on documentation,"more detail on documentation
+
+#136
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1491331583,1491331583,6329b0fee4b2c1282bbf48962a1abbf3f4c1e51a
+6329b0fee4b2c1282bbf48962a1abbf3f4c1e51a,6329b0fe,more detail on documentation,"more detail on documentation
+
+#136
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1491331537,1491331537,2fdd72744fa52cbeaa28c90c3ea3fd0966400396
+2fdd72744fa52cbeaa28c90c3ea3fd0966400396,2fdd7274,bumped version to 1.2.2,"bumped version to 1.2.2
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1491330500,1491330500,6281dbce594e2d02ef9105e95bd5bc2883457604
+6281dbce594e2d02ef9105e95bd5bc2883457604,6281dbce,Added support for scan modes,"Added support for scan modes
+
+#136
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1491330225,1491330225,9ed2e011dbcfe26ff4465e5004529fd9f69f7b73
+9ed2e011dbcfe26ff4465e5004529fd9f69f7b73,9ed2e011,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1490968617,1490968617,bb3265d4fe1f4b4e7b85662857c4bb662d2e5df8
+bb3265d4fe1f4b4e7b85662857c4bb662d2e5df8,bb3265d4,Added important remarks section to readme,Added important remarks section to readme,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1490967411,1490967411,0deac597e634f22df50fb014a3ed09e82e92403a
+0deac597e634f22df50fb014a3ed09e82e92403a,0deac597,Update ISSUE_TEMPLATE_CHECK.md,Update ISSUE_TEMPLATE_CHECK.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1489859950,1489859950,6c3be9ee43c52d4a81968c590791c57c3d037ec9
+6c3be9ee43c52d4a81968c590791c57c3d037ec9,6c3be9ee,Rename ISSUE_TEMPLATE_CHECK to ISSUE_TEMPLATE_CHECK.md,Rename ISSUE_TEMPLATE_CHECK to ISSUE_TEMPLATE_CHECK.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1489666781,1489666781,5ff4577a092582bb7f3276823424eb77f3bafbf6
+5ff4577a092582bb7f3276823424eb77f3bafbf6,5ff4577a,Create ISSUE_TEMPLATE_CHECK,Create ISSUE_TEMPLATE_CHECK,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1489666682,1489666682,0be38d943f530f699bf7cc2eae50b708e9b4707b
+0be38d943f530f699bf7cc2eae50b708e9b4707b,0be38d94,Merge pull request #167 from nithin-raj/master,"Merge pull request #167 from nithin-raj/master
+
+Typo Fix",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1489340548,1489340548,"6fd869179f33f770232416cc5df2ab565da8bd4f,8f1cfc2681a8a67edfcdca0451ded4167cb94567"
+8f1cfc2681a8a67edfcdca0451ded4167cb94567,8f1cfc26,Typo Fix,Typo Fix,,,,Nithin Raj,nithin153@gmail.com,GitHub,noreply@github.com,1489340333,1489340333,7bc8d9ba1f7cac459916068da016f7d864bb072a
+3f2271b7f8257eb86eac287f565e0ce34fde9d34,3f2271b7,merged gatt branch to 1.3.0,"merged gatt branch to 1.3.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1489175789,1489175789,"f35caf8581e0fdbee67359f973188ac33bc373eb,857f297b76b677a39b966c9d5a57700adc360b58"
+857f297b76b677a39b966c9d5a57700adc360b58,857f297b,added changelog for 1.3.0-aplha.1,"added changelog for 1.3.0-aplha.1
+
+Signed-off-by: Sven-Michael Stübe <stuebe2k7@gmail.com>
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1489169945,1489174595,ec895901334f0b1e38286906273ce767b0ffb26b
+ec895901334f0b1e38286906273ce767b0ffb26b,ec895901,version 1.3.0-alpha.1,"version 1.3.0-alpha.1
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1489174574,1489174574,82df72998a6b309784282dfcd2fe1718f139d747
+f35caf8581e0fdbee67359f973188ac33bc373eb,f35caf85,vs 2017 and start of cancellation,"vs 2017 and start of cancellation
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1489168539,1489168539,cb9768be10fe4f63f1d9e9afdcc0e444a1cfdf88
+82df72998a6b309784282dfcd2fe1718f139d747,82df7299,Merge branch 'master' into gatt_callback_refactoring,"Merge branch 'master' into gatt_callback_refactoring
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488990426,1488990426,"3a3c7a963a8acdb13ee0d142d624042d17176ae3,6fd869179f33f770232416cc5df2ab565da8bd4f"
+6fd869179f33f770232416cc5df2ab565da8bd4f,6fd86917,Updated version to 1.2.1,"Updated version to 1.2.1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488990194,1488990194,b8ede16c87827479b09ce18d77f571a33efcf949
+7bc8d9ba1f7cac459916068da016f7d864bb072a,7bc8d9ba,Typo fix at line 214 ,"Typo fix at line 214 
+
+Typo.",,,,Nithin Raj,nithin153@gmail.com,GitHub,noreply@github.com,1488955228,1488955228,b8ede16c87827479b09ce18d77f571a33efcf949
+3a3c7a963a8acdb13ee0d142d624042d17176ae3,3a3c7a96,#144: Added a reject handler to all TaskBuilder.FromEvent calls to prevent…,"#144: Added a reject handler to all TaskBuilder.FromEvent calls to prevent hanging tasks in case of connection interrupted. Maybe this can be also done for iOS?
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488726749,1488726749,6f3d96d11d501b0f5fc475aaed192d8b7df6e5dc
+6f3d96d11d501b0f5fc475aaed192d8b7df6e5dc,6f3d96d1,#144 Adjusted GetRssi and connect/disconnect. Current behaviour after…,"#144 Adjusted GetRssi and connect/disconnect. Current behaviour after refactoring should be the same.
+Events are still being used as the main method of passing information from the gatt callback to the interested parties.
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488721786,1488721786,fb11799277205c085cfa5bf488c36b19c2bada6c
+fb11799277205c085cfa5bf488c36b19c2bada6c,fb117992,#144: Basic refactoring for having one gatt calback /device.,"#144: Basic refactoring for having one gatt calback /device.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488720483,1488720483,b8ede16c87827479b09ce18d77f571a33efcf949
+cb9768be10fe4f63f1d9e9afdcc0e444a1cfdf88,cb9768be,added some cancellation tokens,"added some cancellation tokens
+
+#147
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1487185757,1488646551,b8ede16c87827479b09ce18d77f571a33efcf949
+b8ede16c87827479b09ce18d77f571a33efcf949,b8ede16c,Added AdvertismentRecord type for IsConnectable which always generated a trace…,"Added AdvertismentRecord type for IsConnectable which always generated a trace message on iOS. Unfortunately this flag is only exposed by the BLE stack on iOS and not Android.
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488545667,1488545667,38f97757369a69458b1eb29612bff647697079d2
+38f97757369a69458b1eb29612bff647697079d2,38f97757,Upgraded Android target to 25. Replaced iOS Sample App icon.,"Upgraded Android target to 25. Replaced iOS Sample App icon.
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488545601,1488545601,740b5695e78350bbf872698f54ba47c2a72443b5
+740b5695e78350bbf872698f54ba47c2a72443b5,740b5695,"Minor refactoring, adjustments","Minor refactoring, adjustments
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488536295,1488536295,225bbdfc393ec534b62d3c98cfcbd826daea0730
+225bbdfc393ec534b62d3c98cfcbd826daea0730,225bbdfc,Merge branch 'M2X-fr-master',"Merge branch 'M2X-fr-master'
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488494202,1488494202,"ece6670f6d36e0ca99470ae363a7ef78d3a729fb,bbc0775a883412ce79792358d84245aa72e749cd"
+bbc0775a883412ce79792358d84245aa72e749cd,bbc0775a,Merge branch 'master' of https://github.com/M2X-fr/xamarin-bluetooth-le into M2X-fr-master,"Merge branch 'master' of https://github.com/M2X-fr/xamarin-bluetooth-le into M2X-fr-master
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488494111,1488494111,"ece6670f6d36e0ca99470ae363a7ef78d3a729fb,19e12d9686acbb58c9961329f053b67adbed7246"
+ece6670f6d36e0ca99470ae363a7ef78d3a729fb,ece6670f,Updated sample project nuget packages. Cliend sample Android asks for location permission now.,"Updated sample project nuget packages. Cliend sample Android asks for location permission now.
+",,,,Adrian Seceleanu,adri.sece@gmail.com,Adrian Seceleanu,adri.sece@gmail.com,1488492510,1488492510,4df1727a948f9522e2ccbac5885f5f0adff4f9e4
+4df1727a948f9522e2ccbac5885f5f0adff4f9e4,4df1727a,Added xam permission plugin to samle ios project,"Added xam permission plugin to samle ios project
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488314205,1488314205,822ea075fd28cdef1aba11e08f7ded28cb3b20b1
+822ea075fd28cdef1aba11e08f7ded28cb3b20b1,822ea075,Added permissions plugin for sample app.,"Added permissions plugin for sample app.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1488312139,1488312139,2d6129077ff98e71e5d899bac2f03f294111c4df
+2d6129077ff98e71e5d899bac2f03f294111c4df,2d612907,Merge pull request #157 from simontreny/master,"Merge pull request #157 from simontreny/master
+
+Add support for NSString descriptor values",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1487850396,1487850396,"db8a745af88bee212974811c6f1a543e7e1003da,3b05e98caab863385ca27c5dd812b89a6a573bf3"
+3b05e98caab863385ca27c5dd812b89a6a573bf3,3b05e98c,Add support for NSString descriptor values,"Add support for NSString descriptor values
+",,,,Simon Trény,streny@betomorrow.com,Simon Trény,streny@betomorrow.com,1487849751,1487849751,db8a745af88bee212974811c6f1a543e7e1003da
+db8a745af88bee212974811c6f1a543e7e1003da,db8a745a,version 1.2.0,"version 1.2.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1487371721,1487371721,f7e5dc7f62677171c14257e95a2c9e2bc77607db
+f7e5dc7f62677171c14257e95a2c9e2bc77607db,f7e5dc7f,changelog,"changelog
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1487371635,1487371635,07b24653cab2efba427fc647c42d3dc83d364d15
+07b24653cab2efba427fc647c42d3dc83d364d15,07b24653,Merge branch 'master' into 1.2.0,"Merge branch 'master' into 1.2.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1487371223,1487371223,"757919bfedd22c25472153167876ce53dd98b5c8,0af4d8b97cb313eb98f500622b92bce1415f7f34"
+757919bfedd22c25472153167876ce53dd98b5c8,757919bf,fixed undisposed CancellationTokenRegistration,"fixed undisposed CancellationTokenRegistration
+
+#150
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1487371145,1487371145,a35079f93ba06c93c7d0e89258f3420295c5c77e
+19e12d9686acbb58c9961329f053b67adbed7246,19e12d96,Merge branch '1.2.0' into master,Merge branch '1.2.0' into master,,,,m-anthoine,m.anthoine@m2x.fr,GitHub,noreply@github.com,1486024970,1486024970,"afb192de8668d067eeaa50c05b5e1f2ff40b9e6e,a35079f93ba06c93c7d0e89258f3420295c5c77e"
+afb192de8668d067eeaa50c05b5e1f2ff40b9e6e,afb192de,Refactoring connection parameters like `autoconnect` and `forceBleTransport` to…,"Refactoring connection parameters like `autoconnect` and `forceBleTransport` to avoid breaking change in code for a futur parameter's add.
+",,,,m-anthoine,m.anthoine@m2x.fr,m-anthoine,m.anthoine@m2x.fr,1485962986,1485962986,37cc34029ea69b83f22508b35dc0529b84770755
+37cc34029ea69b83f22508b35dc0529b84770755,37cc3402,Added a boolean (forceBleTransport) to force the use of 'transport' parameter in…,"Added a boolean (forceBleTransport) to force the use of 'transport' parameter in connectGatt() method in Android.
+With forceBleTransport = true, we will use 'nativeDevice.ConnectGatt(Application.Context, autoconnect, _gattCallback, BluetoothTransports.Le);' to force BLE. Very important for Dual Mode Device.
+",,,,m-anthoine,m.anthoine@m2x.fr,m-anthoine,m.anthoine@m2x.fr,1485945757,1485945757,0af4d8b97cb313eb98f500622b92bce1415f7f34
+a35079f93ba06c93c7d0e89258f3420295c5c77e,a35079f9,Update README.md,"Update README.md
+
+Experimental: added issue stats",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1485353703,1485353703,b6efec395d44a27844b44eb1cfa6a12b37ff415c
+0af4d8b97cb313eb98f500622b92bce1415f7f34,0af4d8b9,made issue template (hopefully) more clear :pray:,made issue template (hopefully) more clear :pray:,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1483948137,1483948137,c4125aafd0259eba9965f087053c8261fcf211b7
+c4125aafd0259eba9965f087053c8261fcf211b7,c4125aaf,added link to how to create custom trace,"added link to how to create custom trace
+
+#132",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1483911321,1483911321,2c87b3f0167a0206e9e6e88c352d3c52d99b1c2f
+2c87b3f0167a0206e9e6e88c352d3c52d99b1c2f,2c87b3f0,Create howto_custom_trace.md,Create howto_custom_trace.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1483911224,1483911224,5102928cc07d85a9de99617f8c9ff04a2c6acd60
+b6efec395d44a27844b44eb1cfa6a12b37ff415c,b6efec39,removed trace race condition,"removed trace race condition
+
+#132
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1483910281,1483910281,9d09fd18ea8abe2e0cad7de6fc2011da011de92f
+9d09fd18ea8abe2e0cad7de6fc2011da011de92f,9d09fd18,catch exceptions in Trace,"catch exceptions in Trace
+
+#132
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1483909175,1483909175,dac61a4944eb7e83afd6bccf2b96d12b608f4ea9
+dac61a4944eb7e83afd6bccf2b96d12b608f4ea9,dac61a49,Merge branch 'master' into 1.2.0,"Merge branch 'master' into 1.2.0
+
+# Conflicts:
+#	.build/PluginNugetTest/MvxPluginNugetTest.Android/Properties/AssemblyInfo.cs
+#	.build/PluginNugetTest/MvxPluginNugetTest.iOS/Properties/AssemblyInfo.cs
+#	.build/PluginNugetTest/MvxPluginNugetTest/Properties/AssemblyInfo.cs
+#	.build/PluginNugetTest/PluginNugetTest.Android/Properties/AssemblyInfo.cs
+#	.build/PluginNugetTest/PluginNugetTest.iOS/Properties/AssemblyInfo.cs
+#	.build/PluginNugetTest/PluginNugetTest/Properties/AssemblyInfo.cs
+#	Source/BLE.Client/BLE.Client.Droid/Properties/AssemblyInfo.cs
+#	Source/BLE.Client/BLE.Client.iOS/Properties/AssemblyInfo.cs
+#	Source/BLE.Client/BLE.Client/Properties/AssemblyInfo.cs
+#	Source/BLE.Client/BLE.Client/ViewModels/CharacteristicListViewModel.cs
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482491125,1482491125,"c106c20311411e11e75a45c99492484b69509b75,5102928cc07d85a9de99617f8c9ff04a2c6acd60"
+c106c20311411e11e75a45c99492484b69509b75,c106c203,Normalize line endings again,"Normalize line endings again
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482490732,1482490732,1dafc1ceb99dc0ded6f637037d7f26ebed112a16
+5102928cc07d85a9de99617f8c9ff04a2c6acd60,5102928c,Normalize line endings again,"Normalize line endings again
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482490678,1482490678,ff6390d90e192c89e12b11de44a085f5274c9c37
+1dafc1ceb99dc0ded6f637037d7f26ebed112a16,1dafc1ce,Updated version to 1.2.0-beta4,"Updated version to 1.2.0-beta4
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482488421,1482488421,742e5f9e5b96f8fc1cd2336b8212eae29b541ac4
+742e5f9e5b96f8fc1cd2336b8212eae29b541ac4,742e5f9e,Refactored read rssi and discover services to use task builder.,"Refactored read rssi and discover services to use task builder.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482487932,1482487932,cc5eaf5a6d33f82df1e8401fb28888dd1415dcd9
+cc5eaf5a6d33f82df1e8401fb28888dd1415dcd9,cc5eaf5a,#122 Android: Introduced a extra connectivity state to distinguish system…,"#122 Android: Introduced a extra connectivity state to distinguish system connected device from app connected devices. System connected devices can't be used by the app because we have no gatt instance so we should allow to connect them via the adapter even though the ProfileState is ""Connected""
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1482485883,1482485883,16c356f0b088c23d83ffbf83bcdaeda62f94e804
+16c356f0b088c23d83ffbf83bcdaeda62f94e804,16c356f0,Updated versions to 1.2.0-beta3,"Updated versions to 1.2.0-beta3
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1481992785,1481992785,e47a35f26c0efdc103760a589cf56fcfa9bb72a9
+e47a35f26c0efdc103760a589cf56fcfa9bb72a9,e47a35f2,"#121 #126 - hardened characteristic discovery for iOS, hopefully no uncatchable exceptions.","#121 #126 - hardened characteristic discovery for iOS, hopefully no uncatchable exceptions.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1481907614,1481907614,6c6d6a5fd1562b30dfcf1492830756ef9c8f02f2
+ff6390d90e192c89e12b11de44a085f5274c9c37,ff6390d9,Merge pull request #120 from fcholette/patch-1,"Merge pull request #120 from fcholette/patch-1
+
+Fixed a typo",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1480462257,1480462257,"eb4a19e12cbb0aa683cc0a9d194fb0349f48c186,4e0483dfb5e09f97c3619f9e30e4497b325681ed"
+4e0483dfb5e09f97c3619f9e30e4497b325681ed,4e0483df,Fixed a typo,Fixed a typo,,,,Francois Cholette,fcholette@etlelectronique.com,GitHub,noreply@github.com,1480456598,1480456598,eb4a19e12cbb0aa683cc0a9d194fb0349f48c186
+eb4a19e12cbb0aa683cc0a9d194fb0349f48c186,eb4a19e1,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1480331564,1480331564,2c45430fb87d6d2717a8ded62a6bab65dfe3ca19
+6c6d6a5fd1562b30dfcf1492830756ef9c8f02f2,6c6d6a5f,set version to 1.2.0-beta2,"set version to 1.2.0-beta2
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1480278920,1480278920,55cb32c5a3bd2a621cba28365cd095bfe0491279
+55cb32c5a3bd2a621cba28365cd095bfe0491279,55cb32c5,fixed crash on read in empty value on iOS,"fixed crash on read in empty value on iOS
+
+#118
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1480278411,1480278411,0c72490cb4f77b9e9a22731215692e59f97813d1
+2c45430fb87d6d2717a8ded62a6bab65dfe3ca19,2c45430f,added request for platform version,added request for platform version,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1479924268,1479924268,700fa418a3d9d07082b0be1ac15249e768a15def
+0c72490cb4f77b9e9a22731215692e59f97813d1,0c72490c,Updated versions to 1.2.0-beta1,"Updated versions to 1.2.0-beta1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479587167,1479587167,d622c59f2c882a89273a3a1230da11af4e7e78a9
+d622c59f2c882a89273a3a1230da11af4e7e78a9,d622c59f,Updated nuspec to 1.2.0-beta1,"Updated nuspec to 1.2.0-beta1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479586168,1479586168,adc71c86c4c1a8459e5ed17d96283242b4a45d85
+adc71c86c4c1a8459e5ed17d96283242b4a45d85,adc71c86,#90 Added parent reference for IDescriptor->ICharacteristic->IService->IDevice,"#90 Added parent reference for IDescriptor->ICharacteristic->IService->IDevice
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479561173,1479561173,700fa418a3d9d07082b0be1ac15249e768a15def
+700fa418a3d9d07082b0be1ac15249e768a15def,700fa418,Normalized all line endings,"Normalized all line endings
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479559516,1479559516,ec614a96092d6c34b8560c71c3ff1b24a961e7d0
+ec614a96092d6c34b8560c71c3ff1b24a961e7d0,ec614a96,Create .gitattributes,Create .gitattributes,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1479559377,1479559377,2d083818770e0f3f85c5d07ad93404ecb0d13d60
+2d083818770e0f3f85c5d07ad93404ecb0d13d60,2d083818,Merge branch 'gtg529s-master',"Merge branch 'gtg529s-master'
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479501237,1479501237,"ab6b697a17834f74c4cb0d812edf30018838fbac,b6d28fc81cacb8256afe3d2fcb41055e63f7b128"
+b6d28fc81cacb8256afe3d2fcb41055e63f7b128,b6d28fc8,Merge branch 'master' of https://github.com/gtg529s/xamarin-bluetooth-le into gtg529s-master,"Merge branch 'master' of https://github.com/gtg529s/xamarin-bluetooth-le into gtg529s-master
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1479501174,1479501174,"ab6b697a17834f74c4cb0d812edf30018838fbac,e404f3ad5dd3fcd766b7393b73fa2413a1ccd4e4"
+e404f3ad5dd3fcd766b7393b73fa2413a1ccd4e4,e404f3ad,fixed indentation from Mono standard to VS standard (tabs to spaces),"fixed indentation from Mono standard to VS standard (tabs to spaces)
+",,,,Jason,jason.shehane@inspectall.com,Jason,jason.shehane@inspectall.com,1479386808,1479386808,34b5374b33bea03eeea61a5e642987948c2cc83a
+34b5374b33bea03eeea61a5e642987948c2cc83a,34b5374b,ServiceData parsed from advertising packet for iOS,"ServiceData parsed from advertising packet for iOS
+",,,,Jason,jason.shehane@inspectall.com,Jason,jason.shehane@inspectall.com,1479350916,1479350916,68af837084aeea46933fb3c30dda4cc45c2aa1c2
+ab6b697a17834f74c4cb0d812edf30018838fbac,ab6b697a,parse TxPower on iOS to single signed byte,"parse TxPower on iOS to single signed byte
+",,,,Jason,jason.shehane@inspectall.com,Adrian Seceleanu,xabre@users.noreply.github.com,1479316481,1479332543,1b90812be40417f5e8ebcc4cb5df726ab392ad89
+68af837084aeea46933fb3c30dda4cc45c2aa1c2,68af8370,parse TxPower on iOS to single signed byte,"parse TxPower on iOS to single signed byte
+",,,,Jason,jason.shehane@inspectall.com,Jason,jason.shehane@inspectall.com,1479316481,1479316481,f437d57b6b827cc45f85ec71bd0d67fd41daeeb6
+f437d57b6b827cc45f85ec71bd0d67fd41daeeb6,f437d57b,Merge remote-tracking branch 'xabre/master',"Merge remote-tracking branch 'xabre/master'
+",,,,Jason,jason.shehane@inspectall.com,Jason,jason.shehane@inspectall.com,1479316346,1479316346,"f918024947b03321690f6d4d92d17b60efbc6cd1,1b90812be40417f5e8ebcc4cb5df726ab392ad89"
+1b90812be40417f5e8ebcc4cb5df726ab392ad89,1b90812b,Merge pull request #109 from gtg529s/master,"Merge pull request #109 from gtg529s/master
+
+TxPower is now parsed from advertising data for iOS",,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1479290704,1479290704,"5b818e785c82a81853ab42df878e859128a5d496,f918024947b03321690f6d4d92d17b60efbc6cd1"
+f918024947b03321690f6d4d92d17b60efbc6cd1,f9180249,TxPower is now parsed from advertising data for iOS,"TxPower is now parsed from advertising data for iOS
+",,,,Jason,jason.shehane@inspectall.com,Jason,jason.shehane@inspectall.com,1479263602,1479263602,5b818e785c82a81853ab42df878e859128a5d496
+5b818e785c82a81853ab42df878e859128a5d496,5b818e78,Merge branch 'master' into 1.1.0,"Merge branch 'master' into 1.1.0
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1477038453,1477038453,"25ad0d6c106acdee3d9aa3bf8178364d3f5fc87f,d443f98aaea867fc92344b1a3a14124036a9e45d"
+25ad0d6c106acdee3d9aa3bf8178364d3f5fc87f,25ad0d6c,Updated nuspec to 1.1.0,"Updated nuspec to 1.1.0
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1477038387,1477038387,67a1b22ede2f7b9715368446856d2e41f77483f0
+67a1b22ede2f7b9715368446856d2e41f77483f0,67a1b22e,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1476994695,1476994695,2384220246a1fc0262ddbb9b49e10fe99fb39576
+2384220246a1fc0262ddbb9b49e10fe99fb39576,23842202,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1476731603,1476731603,8bbca48071531381b8e7fc120ad021e523ea21f6
+8bbca48071531381b8e7fc120ad021e523ea21f6,8bbca480,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1476731541,1476731541,93726b5c13a146ff1514f320bbc12ac712b0a963
+d443f98aaea867fc92344b1a3a14124036a9e45d,d443f98a,Update LICENSE,Update LICENSE,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1476263433,1476263433,1aaf45c9730ee67d426d73b360fd67505c584739
+1aaf45c9730ee67d426d73b360fd67505c584739,1aaf45c9,Update LICENSE,Update LICENSE,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1476263408,1476263408,9ce026d3176cd78a5c3e57727fb88012c4fe3860
+93726b5c13a146ff1514f320bbc12ac712b0a963,93726b5c,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1475964617,1475964617,290c681925619816e88521f54c0f3ed2ea780835
+290c681925619816e88521f54c0f3ed2ea780835,290c6819,Updated changelog for 1.1.0-beta5,"Updated changelog for 1.1.0-beta5
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475851796,1475851796,4cfa8adb9b5d1d599b112df0dcbe6e11ca3a6f26
+4cfa8adb9b5d1d599b112df0dcbe6e11ca3a6f26,4cfa8adb,Updated nuspec to 1.1.0-beta5,"Updated nuspec to 1.1.0-beta5
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475851661,1475851661,c095d1e9f376bbd8ff329d271a1ff5d814267b4f
+c095d1e9f376bbd8ff329d271a1ff5d814267b4f,c095d1e9,Merged #98 & #86 into one abstraction. As much as possible.,"Merged #98 & #86 into one abstraction. As much as possible.
+Fixed #97. Cause was wrong paramter fo service CBUUID in ios implementation.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475850951,1475850951,98539442f8d095f7dda468c26c7eacbf09f0416c
+98539442f8d095f7dda468c26c7eacbf09f0416c,98539442,#94 Switched to GetDescriptorsAsync for IOS descriptor discovery...,"#94 Switched to GetDescriptorsAsync for IOS descriptor discovery...
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475659647,1475659647,97d5bd83cf7431e4a76bfd51b13d41abb8267bb8
+97d5bd83cf7431e4a76bfd51b13d41abb8267bb8,97d5bd83,Merge branch '1.1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475427249,1475427249,"0b4845953d4412e1a71eeb04070799465fc51f3c,05628b49ad7734f43018a25d23d01df6cb2d7765"
+0b4845953d4412e1a71eeb04070799465fc51f3c,0b484595,#98 Get system paired devices.,"#98 Get system paired devices.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475427222,1475427222,fa24e0ad0265e0a6cccce399aeabaebcc2ee415d
+05628b49ad7734f43018a25d23d01df6cb2d7765,05628b49,Update changelog.md,Update changelog.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1475408331,1475408331,fa24e0ad0265e0a6cccce399aeabaebcc2ee415d
+fa24e0ad0265e0a6cccce399aeabaebcc2ee415d,fa24e0ad,Updated changelog for 1.1.0-beta4,"Updated changelog for 1.1.0-beta4
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475407545,1475407545,5da1e9c7a52472073f50dc08c080ca8f20381871
+5da1e9c7a52472073f50dc08c080ca8f20381871,5da1e9c7,Bugfix: gatt callback event not invoked for descriptor read,"Bugfix: gatt callback event not invoked for descriptor read
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475406307,1475406307,f779b623df62023790bee13e96851dfb6b5d65b6
+f779b623df62023790bee13e96851dfb6b5d65b6,f779b623,Sample app: Descriptor list & detail,"Sample app: Descriptor list & detail
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475406278,1475406278,58cb14be30b37843f8a97be0aa7f68266ee0cb3c
+58cb14be30b37843f8a97be0aa7f68266ee0cb3c,58cb14be,Merge branch '1.1.0' of https://github.com/xabre/xamarin-bluetooth-le into 1.1.0,"Merge branch '1.1.0' of https://github.com/xabre/xamarin-bluetooth-le into 1.1.0
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1475333100,1475333100,"9ce026d3176cd78a5c3e57727fb88012c4fe3860,0f6f8ee60421fa3110108b5bacaa24b55aa6bfac"
+0f6f8ee60421fa3110108b5bacaa24b55aa6bfac,0f6f8ee6,Updated version and changelog for 1.1.0-beta3,"Updated version and changelog for 1.1.0-beta3
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475236924,1475236924,c2f94e323f1c63da63a3514ce40fb10c3652952f
+c2f94e323f1c63da63a3514ce40fb10c3652952f,c2f94e32,#95 IOS wait for callback on start notifications/stop notifications. TaskBuilder…,"#95 IOS wait for callback on start notifications/stop notifications. TaskBuilder added reject handler for complete.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475229378,1475229378,6ce7d56f1f5fb5c570b7241ce753b670325c8469
+6ce7d56f1f5fb5c570b7241ce753b670325c8469,6ce7d56f,#95 #94 : Async for start/stop notifications so that the descriptor write callback is invoked,"#95 #94 : Async for start/stop notifications so that the descriptor write callback is invoked
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475227060,1475227060,f518a16e4b75481fdf84a4e0dc9da2ed87d37cec
+f518a16e4b75481fdf84a4e0dc9da2ed87d37cec,f518a16e,#94 Implementation of descriptor Write/Read for iOS and Android.,"#94 Implementation of descriptor Write/Read for iOS and Android.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475225460,1475225460,97bfa9f48f934476a993b6e1586dad02652adf21
+97bfa9f48f934476a993b6e1586dad02652adf21,97bfa9f4,#93 Fixed iOS crash when ble is off and ConnectingToKnownDeviceAsync. Wait for…,"#93 Fixed iOS crash when ble is off and ConnectingToKnownDeviceAsync. Wait for state & proper use of cancellation token.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475220111,1475220111,6d2a5fd97110846cb79cedb4715acdd00884ee94
+6d2a5fd97110846cb79cedb4715acdd00884ee94,6d2a5fd9,#82 Enable setting PeripheralScanningOptions for ScanForPeripherals on iOS,"#82 Enable setting PeripheralScanningOptions for ScanForPeripherals on iOS
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1475075369,1475075369,6f94590f76d2e9ac33293855bbb45f92ac522213
+9ce026d3176cd78a5c3e57727fb88012c4fe3860,9ce026d3,Merge branch 'master' into 1.1.0,"Merge branch 'master' into 1.1.0
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1474492460,1474492460,"6f94590f76d2e9ac33293855bbb45f92ac522213,e20941a7b9aeecec8d6d865652c7f76eae4bcc5b"
+6f94590f76d2e9ac33293855bbb45f92ac522213,6f94590f,fixed buildscript for mac,"fixed buildscript for mac
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474465668,1474465668,8ed02e2a098c62575068480f869728b00b0d6a6c
+8ed02e2a098c62575068480f869728b00b0d6a6c,8ed02e2a,updated version to 1.1.0-beta2,"updated version to 1.1.0-beta2
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474465211,1474465211,535574fb8bebfb2004d3e69fd236a2bcbcf1ee4b
+535574fb8bebfb2004d3e69fd236a2bcbcf1ee4b,535574fb,updated changelog,"updated changelog
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474465067,1474465067,90178af5bccd1ba6ded204149ffcd2bb4efdf670
+90178af5bccd1ba6ded204149ffcd2bb4efdf670,90178af5,Updated changelog,"Updated changelog
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474464285,1474464285,ac7392eb3b50826e18154bd2be69c62b2b05e229
+ac7392eb3b50826e18154bd2be69c62b2b05e229,ac7392eb,Updated pacakges for sample app,"Updated pacakges for sample app
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474463273,1474463273,9ac8dc1b6f9c913ed17e29974e9c1c015c5f7cd3
+9ac8dc1b6f9c913ed17e29974e9c1c015c5f7cd3,9ac8dc1b,"#81 Removed code smell, also name update subscription for now.","#81 Removed code smell, also name update subscription for now.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474462321,1474462321,78cbb5851dad44868cc1b31762c845d76581bf03
+78cbb5851dad44868cc1b31762c845d76581bf03,78cbb585,Adjusted Android Connect error handling for Android  < 4.4. When connecting to a…,"Adjusted Android Connect error handling for Android  < 4.4. When connecting to a device and not in range the profile state is Connected (instead of Disconnected) even if GattStatus is 133.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1474458687,1474458687,583c4f38db80e18c85e9f06c058113ed4536ea6e
+583c4f38db80e18c85e9f06c058113ed4536ea6e,583c4f38,Started implementation of #86. Added basic implementation. Figuring out how this…,"Started implementation of #86. Added basic implementation. Figuring out how this should work/ behaves.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1474226176,1474226176,2fd3807f6384e4c673ed2b27f35e5b92b6f6435d
+2fd3807f6384e4c673ed2b27f35e5b92b6f6435d,2fd3807f,Refactored Android Characteristic implementation to use TaskBuilder. Treated…,"Refactored Android Characteristic implementation to use TaskBuilder. Treated some error cases by throwing some exceptions in case of failerues for setvalue, writeWalue, SetCharacteristicNotification
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1472137819,1472137819,4210363d9315381e99cd22ecc665f1a4470181fe
+4210363d9315381e99cd22ecc665f1a4470181fe,4210363d,Enhanced sample app to include update RSSI when scanning for devices and device already connected.,"Enhanced sample app to include update RSSI when scanning for devices and device already connected.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1472131349,1472131349,5b86774bb47727482c77455e441e483e832c6caa
+5b86774bb47727482c77455e441e483e832c6caa,5b86774b,#73 hardened ConnectToKnownDeviceAsync so that calling without cancellation token does not crash.,"#73 hardened ConnectToKnownDeviceAsync so that calling without cancellation token does not crash.
+
+Updated nuget pacakges.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1472131020,1472131020,c4b2bc75cdee355a9a46f3141afa302e7c27961f
+c4b2bc75cdee355a9a46f3141afa302e7c27961f,c4b2bc75,BluetoothStateChangedArgs contain the old state and the new state,"BluetoothStateChangedArgs contain the old state and the new state
+
+#78
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1472075012,1472075018,60812c3154c05ba89f1c5ce6d316257f5fc4ea22
+e20941a7b9aeecec8d6d865652c7f76eae4bcc5b,e20941a7,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1471870732,1471870732,5b767e48252763ab6ed948067d71aa5c0686ac43
+60812c3154c05ba89f1c5ce6d316257f5fc4ea22,60812c31,Update changelog.md,Update changelog.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,GitHub,noreply@github.com,1471286643,1471286643,f64ff8a9c5614c54d4d9ccaa2c6b34059a74d7ec
+f64ff8a9c5614c54d4d9ccaa2c6b34059a74d7ec,f64ff8a9,set version to 1.1.0-beta1,"set version to 1.1.0-beta1
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1471286020,1471286020,4bbdeb8865013ede3102a51a5c29e914841e6a0d
+4bbdeb8865013ede3102a51a5c29e914841e6a0d,4bbdeb88,added test execution to build script,"added test execution to build script
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1471284997,1471284997,49e9817a2cb9cf56e8acbf9b449b1186ab64f610
+49e9817a2cb9cf56e8acbf9b449b1186ab64f610,49e9817a,Implemented proper write type default value handling #62,"Implemented proper write type default value handling #62
+
+- added tests
+- default write type is set based on characteristic properties
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1471282002,1471282002,84db3ea95e25361db83c487c8d9312ac154044ae
+84db3ea95e25361db83c487c8d9312ac154044ae,84db3ea9,some cleanup and more xml code doc comments :muscle:,"some cleanup and more xml code doc comments :muscle:
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1471219671,1471219671,395bc8329b83a898f79aa5d251cedc837f8d46d3
+395bc8329b83a898f79aa5d251cedc837f8d46d3,395bc832,Merge branch pull request #66 into 1.1.0 (for #62 Allow to specify write type),"Merge branch pull request #66 into 1.1.0 (for #62 Allow to specify write type)
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1471112203,1471179932,"893c9a6c94a696f368e12226292e5a43c428040e,486abd357f403a076552a1f503592e4e420fca76"
+5b767e48252763ab6ed948067d71aa5c0686ac43,5b767e48,Added best practices section to readme,Added best practices section to readme,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1470916237,1470916237,f8e90c7c8e54d43f087cf65aafdec68b8fc1ec88
+893c9a6c94a696f368e12226292e5a43c428040e,893c9a6c,fixed xml documentation,"fixed xml documentation
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470854404,1470854404,2171c940fde19765390035ecaee7c8397b687673
+2171c940fde19765390035ecaee7c8397b687673,2171c940,#69 ConnectToDeviceAsync: added null check for device,"#69 ConnectToDeviceAsync: added null check for device
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470853863,1470853863,8e8359e2aecdb4c0cb8173c2ad286b4fe366aa5d
+8e8359e2aecdb4c0cb8173c2ad286b4fe366aa5d,8e8359e2,Merge branch 'master' into 1.1.0,"Merge branch 'master' into 1.1.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470851421,1470851421,"c708939bc7f9a661fd638d3d24299a7c560c3309,f8e90c7c8e54d43f087cf65aafdec68b8fc1ec88"
+c708939bc7f9a661fd638d3d24299a7c560c3309,c708939b,Updated nuget packages to latest version.,"Updated nuget packages to latest version.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1470843994,1470843994,ccbf135b77517cdbfdb47f65e65b922793cf7c13
+f8e90c7c8e54d43f087cf65aafdec68b8fc1ec88,f8e90c7c,removed pre release note for vanilla package,"removed pre release note for vanilla package
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470586269,1470586269,352f0cf153ef58499c845f16cdf2362fbf1820c8
+352f0cf153ef58499c845f16cdf2362fbf1820c8,352f0cf1,added missing line break in readme,"added missing line break in readme
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470586132,1470586132,0e5c83d1be875d0e481cc9551ef41759b61e3e7b
+0e5c83d1be875d0e481cc9551ef41759b61e3e7b,0e5c83d1,updated version,"updated version
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470583925,1470583925,857cd69c2f1dae87f4bc1b6039045821cb65eb90
+857cd69c2f1dae87f4bc1b6039045821cb65eb90,857cd69c,added release notes to nuspecs,"added release notes to nuspecs
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470583824,1470583824,90d012984eb364bee727c837a954eea86e428657
+90d012984eb364bee727c837a954eea86e428657,90d01298,Added changelog,"Added changelog
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470583800,1470583800,b78acbca752199553b7064a7f01fb2f4bae9c717
+b78acbca752199553b7064a7f01fb2f4bae9c717,b78acbca,#45 Improved charcteristic property type implementation,"#45 Improved charcteristic property type implementation
+
+removed vendor specific stuff.
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1470583768,1470583768,5ce574ed8f0870f29cc5681f7433784f86b21b36
+5ce574ed8f0870f29cc5681f7433784f86b21b36,5ce574ed,Sample app OnConnectionLost info toast.,"Sample app OnConnectionLost info toast.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1470399813,1470399813,68f69734295d508c53213d60b7ff1a01329bc31e
+ccbf135b77517cdbfdb47f65e65b922793cf7c13,ccbf135b,#47 Android forwarded cancellation token. Not raising disconnect event if connection error occurs.,"#47 Android forwarded cancellation token. Not raising disconnect event if connection error occurs.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1469803711,1469803711,956d8947e547ee5fdf1cbef7f02304440c0e5b63
+956d8947e547ee5fdf1cbef7f02304440c0e5b63,956d8947,#47 iOS connect to known device and cancellation. iOS offers no timeout for…,"#47 iOS connect to known device and cancellation. iOS offers no timeout for connect device, so even if the device is found in the system but not in range the user needs to explicitly call cancelperipherialconnection.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1469801348,1469801348,f75822383254ca081655f489da5292d638bad20e
+486abd357f403a076552a1f503592e4e420fca76,486abd35,Added WriteType,"Added WriteType
+",,,,Marco Bellino,m.bellino@symbian-toys.com,Marco Bellino,m.bellino@symbian-toys.com,1469782559,1469782559,6ecdfd828816814fb82ef10b9c24084e6e16a1b3
+68f69734295d508c53213d60b7ff1a01329bc31e,68f69734,Update IAdapter.cs,Update IAdapter.cs,,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467294084,1467382943,69c493f6b97dc12c0b7aed8efb27cab0d3cb4695
+69c493f6b97dc12c0b7aed8efb27cab0d3cb4695,69c493f6,Update Adapter.cs,Update Adapter.cs,,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293959,1467382943,cc692d53a7e9161e9a88b3dfbe88916026ccc993
+cc692d53a7e9161e9a88b3dfbe88916026ccc993,cc692d53,Update DeviceListViewModel.cs,"Update DeviceListViewModel.cs
+
+""Async"" not ""Aync""",,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293786,1467382943,20d65a96c018d1d924c6fd62cff2391d8b5f8beb
+20d65a96c018d1d924c6fd62cff2391d8b5f8beb,20d65a96,Update AdapterExtenstion.cs,"Update AdapterExtenstion.cs
+
+""Async"" not ""Aync""",,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293635,1467382943,c099dcd7b63b8eee52493faae05e98d2a724c005
+c099dcd7b63b8eee52493faae05e98d2a724c005,c099dcd7,Update AdapterBase.cs,"Update AdapterBase.cs
+
+""Async"" not ""Aync""",,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293588,1467382943,320b9b94d7754856552c62812af188d1a833901d
+320b9b94d7754856552c62812af188d1a833901d,320b9b94,Update Adapter.cs,"Update Adapter.cs
+
+""Async"" not ""Aync""",,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293521,1467382943,21f224aeee1e5f76277f2ee0b3ca552c65704366
+21f224aeee1e5f76277f2ee0b3ca552c65704366,21f224ae,Update FakeAdapter.cs,"Update FakeAdapter.cs
+
+Simple typo - should be ""Async"" not ""Aync"" :)",,,,Morgan Oneka,onekam@mail.gvsu.edu,Adrian Seceleanu,sead@zuehlke.com,1467293342,1467382943,5c9007e59732f1b24eb07c6f091d12453f4f5677
+5c9007e59732f1b24eb07c6f091d12453f4f5677,5c9007e5,Merge branch 'master' into 1.0,"Merge branch 'master' into 1.0
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467382496,1467382496,"8e09f160c741969fb82038dc434797a344f7f502,6ecdfd828816814fb82ef10b9c24084e6e16a1b3"
+6ecdfd828816814fb82ef10b9c24084e6e16a1b3,6ecdfd82,Merge branch 'joechrysler-patch-1',"Merge branch 'joechrysler-patch-1'
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467382473,1467382473,"0cf24bc0ff6b225ff3b304c0bdc937d0fa83006b,829882b059bbd818f3d7e960da078ca90207b8ad"
+8e09f160c741969fb82038dc434797a344f7f502,8e09f160,Merge branch 'joechrysler-patch-1' into 1.0,"Merge branch 'joechrysler-patch-1' into 1.0
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467382356,1467382356,"4ddb82210dce237a8d68be863cfa2d831f25c099,829882b059bbd818f3d7e960da078ca90207b8ad"
+829882b059bbd818f3d7e960da078ca90207b8ad,829882b0,Added fallback case.,"Added fallback case.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467382305,1467382305,7633ec75689ef1cf84dab1b4daeb633bb3e6d467
+4ddb82210dce237a8d68be863cfa2d831f25c099,4ddb8221,Merge branch 'master' into 1.0,"Merge branch 'master' into 1.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1467352645,1467352645,"175eca9631ddaf94bb9d9fedf77548a9fe11cc7c,0cf24bc0ff6b225ff3b304c0bdc937d0fa83006b"
+7633ec75689ef1cf84dab1b4daeb633bb3e6d467,7633ec75,Use the Client Characteristic Configuration,"Use the Client Characteristic Configuration
+
+The [BLE GATT Descriptors spec](https://developer.bluetooth.org/gatt/descriptors/Pages/DescriptorsHomePage.aspx) defines a specific Descriptor that clients should use to write [Client Characteristic Configurations](https://developer.bluetooth.org/gatt/descriptors/Pages/DescriptorViewer.aspx?u=org.bluetooth.descriptor.gatt.client_characteristic_configuration.xml) such as enabling notifications or indications. Although it is sometimes (often) the first descriptor that appears in `_nativeCharacteristic.Descriptors`, order isn't guaranteed. For some devices (including the one I'm working with now), another descriptor comes first and grabbing the first one out of the list will result in never actually enabling notifications on the characteristic.",,,,Joe Chrysler,mail@joechrysler.com,GitHub,noreply@github.com,1467293291,1467293291,0cf24bc0ff6b225ff3b304c0bdc937d0fa83006b
+0cf24bc0ff6b225ff3b304c0bdc937d0fa83006b,0cf24bc0,Updated nuspec for 1.0.0-beta5 release.,"Updated nuspec for 1.0.0-beta5 release.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467207657,1467207657,ef6eac8e9b7869f55c313534063d79838e390bc2
+ef6eac8e9b7869f55c313534063d79838e390bc2,ef6eac8e,#56 Indicate supported,"#56 Indicate supported
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467207173,1467207173,eff65028189260c6a6c2f2dac0f6c33c43564767
+f75822383254ca081655f489da5292d638bad20e,f7582238,#47 integrated connect to known device with Android sample app.,"#47 integrated connect to known device with Android sample app.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467185681,1467185681,244fddb55e5f78012a1d56c5b87f4932a3d1529e
+175eca9631ddaf94bb9d9fedf77548a9fe11cc7c,175eca96,Merge remote-tracking branch 'refs/remotes/origin/master' into 1.0,"Merge remote-tracking branch 'refs/remotes/origin/master' into 1.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1467153070,1467153070,"88ade987d816c2102f7fb4b9e4e3a59ea5e881a0,eff65028189260c6a6c2f2dac0f6c33c43564767"
+88ade987d816c2102f7fb4b9e4e3a59ea5e881a0,88ade987,added characteristic property comparsion,"added characteristic property comparsion
+
+#45
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1467153047,1467153047,839e81c3bbc6768ec8d87b543f4ebef4fc0ac2c9
+eff65028189260c6a6c2f2dac0f6c33c43564767,eff65028,mvx plugin vanilla deps are now fixed.,"mvx plugin vanilla deps are now fixed.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467130137,1467130137,4efef4bc95b372c32511e070d8dba91a3534c693
+244fddb55e5f78012a1d56c5b87f4932a3d1529e,244fddb5,#47 demo app settings for storing device guids,"#47 demo app settings for storing device guids
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467129961,1467129961,fd7d66ed4d091f8d70da46b5f379ef6062387ac5
+fd7d66ed4d091f8d70da46b5f379ef6062387ac5,fd7d66ed,Merge branch 'master' into 1.1.0,"Merge branch 'master' into 1.1.0
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1467128780,1467128780,"6dbdb1622802dc7ee3080079f82355b2866e6d2d,4efef4bc95b372c32511e070d8dba91a3534c693"
+4efef4bc95b372c32511e070d8dba91a3534c693,4efef4bc,Update README.md,Update README.md,,,,Adrian Seceleanu,xabre@users.noreply.github.com,GitHub,noreply@github.com,1466752806,1466752806,3b9dabe79157e98a84946f339930ed98cbcfc0dd
+6dbdb1622802dc7ee3080079f82355b2866e6d2d,6dbdb162,#47 connect to knwon device without scanning Android implementation,"#47 connect to knwon device without scanning Android implementation
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1466152213,1466152213,3b9dabe79157e98a84946f339930ed98cbcfc0dd
+3b9dabe79157e98a84946f339930ed98cbcfc0dd,3b9dabe7,Updated release notes for 1.0.0-beta4,"Updated release notes for 1.0.0-beta4
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1465544744,1465544744,8992b3753b0b2d9e7e33606544b26cbe630af5dc
+8992b3753b0b2d9e7e33606544b26cbe630af5dc,8992b375,Update to 1.0.0-beta4,"Update to 1.0.0-beta4
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1465544605,1465544605,e659dbdec0ea90b722bb6f7a00605a26539f375e
+e659dbdec0ea90b722bb6f7a00605a26539f375e,e659dbde,Expanded sample client to test dispose functionality for idevice.,"Expanded sample client to test dispose functionality for idevice.
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1465543810,1465543810,3a9009177b586e789dbe67153cc0208579257c6a
+3a9009177b586e789dbe67153cc0208579257c6a,3a900917,#47 Cleared known services (cached services) on disconnect,"#47 Cleared known services (cached services) on disconnect
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1465291671,1465291671,df40cbe97398beaa90e0286907cebbd95a79c2a1
+df40cbe97398beaa90e0286907cebbd95a79c2a1,df40cbe9,Added IDisposable to IDevice,"Added IDisposable to IDevice
+",,,,Adrian Seceleanu,sead@zuehlke.com,Adrian Seceleanu,sead@zuehlke.com,1465290725,1465290725,f3f232cf9cf8bb844eca138fc15f3ed36833617a
+f3f232cf9cf8bb844eca138fc15f3ed36833617a,f3f232cf,Updated nuspec beta3,"Updated nuspec beta3
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1464952325,1464952325,161e2408b989c6046dbdb5f46c69a3f0b0c71bdc
+161e2408b989c6046dbdb5f46c69a3f0b0c71bdc,161e2408,Adjusted nuget install commands,Adjusted nuget install commands,,,,Adrian Seceleanu,xabre@users.noreply.github.com,Adrian Seceleanu,xabre@users.noreply.github.com,1464938080,1464938080,f152eea7f8c239e1e87410d62719ff11b0608a87
+f152eea7f8c239e1e87410d62719ff11b0608a87,f152eea7,:sweat: Added note for all these non mvvmcross questions,:sweat: Added note for all these non mvvmcross questions,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464355476,1464355476,839e81c3bbc6768ec8d87b543f4ebef4fc0ac2c9
+839e81c3bbc6768ec8d87b543f4ebef4fc0ac2c9,839e81c3,updated version to 1.0.0-beta2,"updated version to 1.0.0-beta2
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464281345,1464281345,395c04ead6e3e673fbfdfb242bf698fd3f32ca3f
+395c04ead6e3e673fbfdfb242bf698fd3f32ca3f,395c04ea,updated documentation for new singleton name,"updated documentation for new singleton name
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464209981,1464209981,0b53bfb4d46f01f4f010fe21673ec8ab23e156e9
+0b53bfb4d46f01f4f010fe21673ec8ab23e156e9,0b53bfb4,Renamed CrossBle to CrossBluetoothLE,"Renamed CrossBle to CrossBluetoothLE
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464209639,1464209639,e5dfc00c2f5402c29948d672c94cb40ac47feaa5
+e5dfc00c2f5402c29948d672c94cb40ac47feaa5,e5dfc00c,Refactored Descriptor,"Refactored Descriptor
+
+- renamed ID to Id
+- pushed common stuff into a parent class
+- removed NativeDescriptor from interface
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464207442,1464207442,ce63bdc25218654b4069688d441229f01c4091c5
+ce63bdc25218654b4069688d441229f01c4091c5,ce63bdc2,XML Documentation,"XML Documentation
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464206145,1464206145,75450014e646931abd0df595f83e4389424ef66d
+75450014e646931abd0df595f83e4389424ef66d,75450014,documented UpdateRssiAsync behavior,"documented UpdateRssiAsync behavior
+
+#35
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464129182,1464129187,c57573d968234eca185ca9bed4a69f75f834dc9b
+c57573d968234eca185ca9bed4a69f75f834dc9b,c57573d9,Documentation for Bluetooth state #40,Documentation for Bluetooth state #40,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464127681,1464127681,dc860a1c71e52d71cc173ad902224ddff2f33197
+dc860a1c71e52d71cc173ad902224ddff2f33197,dc860a1c,attempt to resolve #39,"attempt to resolve #39
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464126001,1464126001,db97a7b4e36b1c953cc78cce1bc77a3c1b7d5f18
+db97a7b4e36b1c953cc78cce1bc77a3c1b7d5f18,db97a7b4,forgot to save #40,"forgot to save #40
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464123684,1464123872,78494a12b7bab6ec323d73926c36f3f99dfe35f6
+78494a12b7bab6ec323d73926c36f3f99dfe35f6,78494a12,documentation and refactoring,"documentation and refactoring
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464123540,1464123872,9307cc9bd1c41d3903664751acae91dacc28ab39
+9307cc9bd1c41d3903664751acae91dacc28ab39,9307cc9b,updated connect documentation,"updated connect documentation
+
+#42",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1464095368,1464095368,866b68ad24836a36f49f5417bb6b0f5027fc5757
+866b68ad24836a36f49f5417bb6b0f5027fc5757,866b68ad,don't ignore cs files with fake in its name :rage1:,"don't ignore cs files with fake in its name :rage1:
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463855858,1463855858,a47fac6daef444ecbd4b9f81594e061667393256
+a47fac6daef444ecbd4b9f81594e061667393256,a47fac6d,Added Bluetooth state handling to example App #40,"Added Bluetooth state handling to example App #40
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463854881,1463854881,adcd31e40ea11714dc44a273466d90739bdfdf6d
+adcd31e40ea11714dc44a273466d90739bdfdf6d,adcd31e4,"Implemented bluetooth state iOS, refactored Android #40","Implemented bluetooth state iOS, refactored Android #40
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463854842,1463854842,2e3d71d81b81bb6a1a26c8b5ac59c7cc0213aa56
+2e3d71d81b81bb6a1a26c8b5ac59c7cc0213aa56,2e3d71d8,Implemented bluetooth state update Android #40,"Implemented bluetooth state update Android #40
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463698926,1463698926,3ec9b123df4fd6f7a36841843122686f27eecec3
+3ec9b123df4fd6f7a36841843122686f27eecec3,3ec9b123,Merge branch 'master' into 1.0,"Merge branch 'master' into 1.0
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463686864,1463686864,"1c7efc4b740ffd07324c3e404df8146731668ddf,b88a62775ae011a31ddb3b072e8c071e28cd2409"
+1c7efc4b740ffd07324c3e404df8146731668ddf,1c7efc4b,enabled generation of xml documentation files,"enabled generation of xml documentation files
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463349904,1463349904,342a8bf5b4447ae6859122f117c6d8e950630d69
+b88a62775ae011a31ddb3b072e8c071e28cd2409,b88a6277,Updated xamarin forms for sample project. Included resource designer in git for bitrise build.,"Updated xamarin forms for sample project. Included resource designer in git for bitrise build.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463146166,1463146166,17968199ac232613f0a68383674fedc3111344fd
+17968199ac232613f0a68383674fedc3111344fd,17968199,Adjusted nuspec for 1.0.0-beta release.,"Adjusted nuspec for 1.0.0-beta release.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463133464,1463133464,c413ff1acff21cef8ad2260dffe1e76fcf5edb97
+c413ff1acff21cef8ad2260dffe1e76fcf5edb97,c413ff1a,Rename solution,"Rename solution
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463131191,1463131191,6e73b8913f63b875755457e920dc1717ac68f12f
+6e73b8913f63b875755457e920dc1717ac68f12f,6e73b891,Merged branch '1.0' into 'master'.,"Merged branch '1.0' into 'master'.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463131147,1463131147,"84ec778dde8f3854cd6556f38a59cc8c1e305c65,342a8bf5b4447ae6859122f117c6d8e950630d69"
+342a8bf5b4447ae6859122f117c6d8e950630d69,342a8bf5,Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463130148,1463130148,"2ea56d93c7a51769af99108e6cee5fc2dcd49b47,3ca3094abb8396bbe2070aec01291ff3dd070a47"
+2ea56d93c7a51769af99108e6cee5fc2dcd49b47,2ea56d93,Added compiler please check. #27,"Added compiler please check. #27
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463130138,1463130138,d5f97b29bdc7628b20ca23ad3aa484f53181d35c
+3ca3094abb8396bbe2070aec01291ff3dd070a47,3ca3094a,Update README.md,Update README.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463130068,1463130068,6b755dd32f1a74ee0585e1d244dbcb9e3b852fa6
+6b755dd32f1a74ee0585e1d244dbcb9e3b852fa6,6b755dd3,Update README.md,Update README.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463127762,1463127762,8f2946cbe328df8a6c09b3b47f427a597674963c
+8f2946cbe328df8a6c09b3b47f427a597674963c,8f2946cb,Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463127354,1463127354,"12729c4d0e9aea2c0a4b2b756e49b068a2bdeb65,d5f97b29bdc7628b20ca23ad3aa484f53181d35c"
+12729c4d0e9aea2c0a4b2b756e49b068a2bdeb65,12729c4d,added DeviceItemViewModel,"added DeviceItemViewModel
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463127341,1463127341,8fe51b9017c29e0fcd6469668dec2df50b12a4f6
+d5f97b29bdc7628b20ca23ad3aa484f53181d35c,d5f97b29,Finished scripts for #27,"Finished scripts for #27
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463125314,1463125314,9809f415175708a2264630a37a7a84425e8de93b
+9809f415175708a2264630a37a7a84425e8de93b,9809f415,Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463123727,1463123727,"89173702d2d231187568577b778f68057500e72a,8fe51b9017c29e0fcd6469668dec2df50b12a4f6"
+89173702d2d231187568577b778f68057500e72a,89173702,Added update functionality for build script. #27,"Added update functionality for build script. #27
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463123627,1463123627,4eeb4a85090c1c0e73aa85faa8ac11ca3b5dab2e
+8fe51b9017c29e0fcd6469668dec2df50b12a4f6,8fe51b90,Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463123409,1463123409,"af6bd145e8cdab99634dcab5841191163d2b6364,4eeb4a85090c1c0e73aa85faa8ac11ca3b5dab2e"
+af6bd145e8cdab99634dcab5841191163d2b6364,af6bd145,changed namespaces and assembly names for vanilla plugin,"changed namespaces and assembly names for vanilla plugin
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463123399,1463123399,d5d9caca7a260b576733347c93b7f5d369a7e31b
+4eeb4a85090c1c0e73aa85faa8ac11ca3b5dab2e,4eeb4a85,Added nuget test project.,"Added nuget test project.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463122528,1463122528,cb1db7fd0893485948921a9c6c339fcf04d71e80
+cb1db7fd0893485948921a9c6c339fcf04d71e80,cb1db7fd,Extended scripts to updated nuspec dependecy version of mvx plugin and vanilla plugin,"Extended scripts to updated nuspec dependecy version of mvx plugin and vanilla plugin
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1463067127,1463067127,d5d9caca7a260b576733347c93b7f5d369a7e31b
+d5d9caca7a260b576733347c93b7f5d369a7e31b,d5d9caca,Added adapter to IBluetoothLE,"Added adapter to IBluetoothLE
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463060325,1463060331,b00675ab8aaf3d8723f8b654fbd31285e29c3db8
+b00675ab8aaf3d8723f8b654fbd31285e29c3db8,b00675ab,Update README.md,Update README.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463058748,1463058748,d5c69da8a6ea6257607839c2b6ebaf4a710bba4c
+d5c69da8a6ea6257607839c2b6ebaf4a710bba4c,d5c69da8,Update README.md,Update README.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463058691,1463058691,a6cdb26572003f9eb871fcbb867e3c3be12c3b09
+a6cdb26572003f9eb871fcbb867e3c3be12c3b09,a6cdb265,Used TaskUtil for Disconnect and Connect #21,"Used TaskUtil for Disconnect and Connect #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463055852,1463055852,f6962189b275fb8da183888773dd164c10727a7d
+f6962189b275fb8da183888773dd164c10727a7d,f6962189,removed unneccessary overloads with default parameter #21,"removed unneccessary overloads with default parameter #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463054130,1463054130,005ac28c1ca87387e9694c8b73f604688783504b
+005ac28c1ca87387e9694c8b73f604688783504b,005ac28c,merge fix,"merge fix
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463052757,1463052757,37481c613bd37d6adb9dfcea041bc3a22587faf1
+37481c613bd37d6adb9dfcea041bc3a22587faf1,37481c61,merged,"merged
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463052178,1463052178,74bca70ed30a2a324fe5e7b5a140d268aed28a40
+74bca70ed30a2a324fe5e7b5a140d268aed28a40,74bca70e,Merge remote-tracking branch 'origin/1.0' into 1.0,"Merge remote-tracking branch 'origin/1.0' into 1.0
+
+# Conflicts:
+#	Source/Plugin.BLE.Android/GattCallback.cs
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463052166,1463052166,"072238b521307eb79f8729436e2651ed8c0b83c8,716ae5eae156c7643f702a40b0033dbc538bdf71"
+072238b521307eb79f8729436e2651ed8c0b83c8,072238b5,more async stuff #21,"more async stuff #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1463052065,1463052065,63b4f5de6b83a0351773b36d9551bb027ffdd922
+716ae5eae156c7643f702a40b0033dbc538bdf71,716ae5ea,Cleaned up event args especially for gatt callback. #21,"Cleaned up event args especially for gatt callback. #21
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463045314,1463045314,2bd9fc1932bf7962063d931b025715bfeab9a670
+2bd9fc1932bf7962063d931b025715bfeab9a670,2bd9fc19,Refactored some android callback events,"Refactored some android callback events
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463043927,1463043927,b799f8b36ab387939bec9828d367193e0d98783e
+b799f8b36ab387939bec9828d367193e0d98783e,b799f8b3,Return type for read characteristic #37,"Return type for read characteristic #37
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463043243,1463043243,8e53b8af8bf5d1494846017e166d4f7b3d32cbc8
+8e53b8af8bf5d1494846017e166d4f7b3d32cbc8,8e53b8af,Activity indicator for stop scan/start scan #15,"Activity indicator for stop scan/start scan #15
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463039799,1463039799,c326dd617d78c95bec2abec73cab0d2ebcf15917
+c326dd617d78c95bec2abec73cab0d2ebcf15917,c326dd61,Added stop scan button. #15,"Added stop scan button. #15
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463039247,1463039247,63b4f5de6b83a0351773b36d9551bb027ffdd922
+63b4f5de6b83a0351773b36d9551bb027ffdd922,63b4f5de,Fixed ios stale device name #33,"Fixed ios stale device name #33
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1463037184,1463037184,cc293e02bf4b14148ca92f9a0204f047ae9a4800
+cc293e02bf4b14148ca92f9a0204f047ae9a4800,cc293e02,refactored Events #21,"refactored Events #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462981518,1462981518,09864800cd5c2ef76b624726a356e5938b35c0a0
+09864800cd5c2ef76b624726a356e5938b35c0a0,09864800,set use latest platform sdk to false to prevent collisions with preview.,"set use latest platform sdk to false to prevent collisions with preview.
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462981482,1462981482,1f314efba7bb683d76a8628e1b6288d83cbd89b4
+1f314efba7bb683d76a8628e1b6288d83cbd89b4,1f314efb,added xml doc for IAdapter #21,"added xml doc for IAdapter #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462981314,1462981314,52e5bd5979c4ba25e761d1563a203eb978b6f2d2
+52e5bd5979c4ba25e761d1563a203eb978b6f2d2,52e5bd59,fixed typo #15,"fixed typo #15
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462975165,1462975165,63236cef10bc93518ed18ea19f62b2b609241c81
+63236cef10bc93518ed18ea19f62b2b609241c81,63236cef,added device registration usage #21,"added device registration usage #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462972045,1462972054,daf15e427cefb15f9e715c354d0a20144784a758
+daf15e427cefb15f9e715c354d0a20144784a758,daf15e42,Removed old IAdapter #21,"Removed old IAdapter #21
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462972012,1462972012,26ccca90949384eda88ae1f4607128aaaed992f1
+26ccca90949384eda88ae1f4607128aaaed992f1,26ccca90,Merged changes,"Merged changes
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462969471,1462969471,"ade2af523be0e5becbd3a1e164730b487393d888,e5b36de7a2d29dfc8f73e4b6a2b521d6753c1d4e"
+ade2af523be0e5becbd3a1e164730b487393d888,ade2af52,Added button for testing connect to specific device. #15,"Added button for testing connect to specific device. #15
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462969342,1462969342,9c9387562fceda27da8d08747b491f07854a6439
+e5b36de7a2d29dfc8f73e4b6a2b521d6753c1d4e,e5b36de7,merge. git please... -.-,"merge. git please... -.-
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462969275,1462969275,3ab262d350ae583d476c8990881a8f7235c057db
+3ab262d350ae583d476c8990881a8f7235c057db,3ab262d3,Merge remote-tracking branch 'origin/1.0' into 1.0,"Merge remote-tracking branch 'origin/1.0' into 1.0
+
+# Conflicts:
+#	Source/Plugin.BLE.Abstractions/AdapterBase.cs
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462969250,1462969250,"4c7bbfa3e7aedee95e8a6e120b283f799ed8f054,9c9387562fceda27da8d08747b491f07854a6439"
+4c7bbfa3e7aedee95e8a6e120b283f799ed8f054,4c7bbfa3,intermediate commit for #21,"intermediate commit for #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462968975,1462968975,4f64fbbe954d11663843a524289a6beaa72538d6
+9c9387562fceda27da8d08747b491f07854a6439,9c938756,Changed Android Adapter to work with the new AdapterBase #21.,"Changed Android Adapter to work with the new AdapterBase #21.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462960623,1462960623,35136437d721ad4d2b5a4b3d8f556c845fc0dbdc
+35136437d721ad4d2b5a4b3d8f556c845fc0dbdc,35136437,Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git,"Merge branch '1.0' of https://github.com/xabre/xamarin-bluetooth-le.git
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462956179,1462956179,"7d4f5178ba56257b63b6580f45a90a53288793f5,4f64fbbe954d11663843a524289a6beaa72538d6"
+7d4f5178ba56257b63b6580f45a90a53288793f5,7d4f5178,Finalize CharacteristicDetail page for sample app,"Finalize CharacteristicDetail page for sample app
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462956173,1462956173,fe1f8628d4be96c2ba9fd5a1029cbcf0f7c306b5
+4f64fbbe954d11663843a524289a6beaa72538d6,4f64fbbe,definition of new IAdapter #21,"definition of new IAdapter #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462954951,1462954951,08979435622ac5e0d6e785baace6491594cf0d1b
+08979435622ac5e0d6e785baace6491594cf0d1b,08979435,refactored iOS Adapter #21,"refactored iOS Adapter #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462951316,1462951316,"fe1f8628d4be96c2ba9fd5a1029cbcf0f7c306b5,5564df11c001b5d11353c1c894a1fe5beb220266"
+fe1f8628d4be96c2ba9fd5a1029cbcf0f7c306b5,fe1f8628,Fixed string parse to byte,"Fixed string parse to byte
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462897600,1462897600,2835c0ca7f8b49d3ee08b1c8977b31132bc7784a
+2835c0ca7f8b49d3ee08b1c8977b31132bc7784a,2835c0ca,Started charecteristic detail page for sample app.,"Started charecteristic detail page for sample app.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1462897105,1462897105,587094b6ba575854cc9e02f882bd5845435b59e2
+84ec778dde8f3854cd6556f38a59cc8c1e305c65,84ec778d,added issue template,"added issue template
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462661545,1462661545,5f35030692f9e1904eb12a11b14e4052637ccdc2
+587094b6ba575854cc9e02f882bd5845435b59e2,587094b6,added issue template,"added issue template
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462661478,1462661478,0277340c7fbfe5dd1ea33acd6207e65af241f1b5
+0277340c7fbfe5dd1ea33acd6207e65af241f1b5,0277340c,Added null checks for UpdateRssiAsync #35,"Added null checks for UpdateRssiAsync #35
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462474477,1462474477,ba8734c6376047a8f9580c8a2bcca9bacee03a54
+ba8734c6376047a8f9580c8a2bcca9bacee03a54,ba8734c6,refactored Services #21,"refactored Services #21
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1462226583,1462226583,fd044aa7c864c7c079ec2619c488deca209cc3e1
+fd044aa7c864c7c079ec2619c488deca209cc3e1,fd044aa7,Navigation to characteristic detail page,"Navigation to characteristic detail page
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461861142,1461861142,56c876dbcd9efd8c468d5cd84241ada30ebde7b7
+56c876dbcd9efd8c468d5cd84241ada30ebde7b7,56c876db,Sample app. Added disconnect context action. AppCompat theme. Andorid icon,"Sample app. Added disconnect context action. AppCompat theme. Andorid icon
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461853981,1461853981,83fd150a2864ecd1f773b791f670029b4652a023
+83fd150a2864ecd1f773b791f670029b4652a023,83fd150a,Update README.md,Update README.md,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461610873,1461610873,0aa87e23ecea5c2eb87f249d9430a90a972671c2
+0aa87e23ecea5c2eb87f249d9430a90a972671c2,0aa87e23,removed icon path that contains the branch name.,removed icon path that contains the branch name.,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461610719,1461610719,9689eab91e2bb934fd8d0a837140ce922d27080d
+9689eab91e2bb934fd8d0a837140ce922d27080d,9689eab9,updated icon_small.png,"updated icon_small.png
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461610462,1461610462,2199f467f5d8d9d0ebf9f97683075aa842e3ff9a
+2199f467f5d8d9d0ebf9f97683075aa842e3ff9a,2199f467,added some tags,added some tags,,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461397880,1461397880,01f21cbcb358d9d6db305e2c8c0c8176b2bdc331
+01f21cbcb358d9d6db305e2c8c0c8176b2bdc331,01f21cbc,Removed dependecy on Json.Net :) by moving known services and descriptors to c#.,"Removed dependecy on Json.Net :) by moving known services and descriptors to c#.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461363310,1461363310,1ff0aff7c4fe9960d12bea539593beb8050adb0e
+1ff0aff7c4fe9960d12bea539593beb8050adb0e,1ff0aff7,Merged changes 1.0,"Merged changes 1.0
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461355389,1461355389,"54b82cd09c7f6ba1818b3468d9e61e75bc2f3491,9df7a1e32219dba51c3d202149a2ef392b74a9a0"
+54b82cd09c7f6ba1818b3468d9e61e75bc2f3491,54b82cd0,Refactoring known services in progress...,"Refactoring known services in progress...
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461355256,1461355256,6c3480e4479554c6290b03417d810b4ffb5d8e58
+9df7a1e32219dba51c3d202149a2ef392b74a9a0,9df7a1e3,new icon,"new icon
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461354772,1461354772,bbeec5583c4b56f5e921af3626b82f21ad7da1e2
+bbeec5583c4b56f5e921af3626b82f21ad7da1e2,bbeec558,Merge branch '1.0' of https://github.com/xabre/MvvmCross-BluetoothLE.git,"Merge branch '1.0' of https://github.com/xabre/MvvmCross-BluetoothLE.git
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461335287,1461335287,"20590dd18f8baf9aad2e5751332df8e6bb887d3f,37bfaf576e6229cd5273a9fe87fec47cc7abb301"
+6c3480e4479554c6290b03417d810b4ffb5d8e58,6c3480e4,Moved all known characteristics from json to C#.,"Moved all known characteristics from json to C#.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461332615,1461332615,37bfaf576e6229cd5273a9fe87fec47cc7abb301
+37bfaf576e6229cd5273a9fe87fec47cc7abb301,37bfaf57,"Extended ble client sample app. Added service, charactersitcs page, navigation, dialogs etc.","Extended ble client sample app. Added service, charactersitcs page, navigation, dialogs etc.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1461318309,1461318309,a7d2aa4b914b5a9de936cd53988e2514fda50f85
+20590dd18f8baf9aad2e5751332df8e6bb887d3f,20590dd1,removed BluetoothLEManager,"removed BluetoothLEManager
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461177785,1461177785,73d677b14d238eddab891f4ddde5e98bcd000c90
+73d677b14d238eddab891f4ddde5e98bcd000c90,73d677b1,removed LEStream,"removed LEStream
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461177700,1461177700,a7d2aa4b914b5a9de936cd53988e2514fda50f85
+a7d2aa4b914b5a9de936cd53988e2514fda50f85,a7d2aa4b,marked things to review more clear,"marked things to review more clear
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461017075,1461017075,011115d296913642e2e4160960651278b1471a1d
+011115d296913642e2e4160960651278b1471a1d,011115d2,refactored ICharacteristic,"refactored ICharacteristic
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461016942,1461016942,aa7bd1f52a88bacc18f6b833554143931d9b94de
+aa7bd1f52a88bacc18f6b833554143931d9b94de,aa7bd1f5,refactored IDevice and its descendants,"refactored IDevice and its descendants
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1461008855,1461008855,508bf12247b9e5fbf2f6fb44c9fd7fc4f59903b8
+5564df11c001b5d11353c1c894a1fe5beb220266,5564df11,adapter refactoring,"adapter refactoring
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460923834,1460923834,a6f669affc0c482d5558d585a5094969e5ce863c
+508bf12247b9e5fbf2f6fb44c9fd7fc4f59903b8,508bf122,Added nuspec for Plugin.BLE,"Added nuspec for Plugin.BLE
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1460723667,1460723667,f4b0be34a5b9843239e9600ed0d0b444ef11c44c
+f4b0be34a5b9843239e9600ed0d0b444ef11c44c,f4b0be34,Added device list with pull to refresh to sample app.,"Added device list with pull to refresh to sample app.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1460709160,1460709160,403ff1a917ada0f3a1eb689794dfc3257bc60118
+a6f669affc0c482d5558d585a5094969e5ce863c,a6f669af,need this in the :office:,"need this in the :office:
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460667163,1460667163,217759f5c99a2ec4858de182406f060ba32bf587
+403ff1a917ada0f3a1eb689794dfc3257bc60118,403ff1a9,Adjusted project build order. Updated xamarin forms to latest version for client projects.,"Adjusted project build order. Updated xamarin forms to latest version for client projects.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460534404,1460534404,a3d319435f2cf1c05eedccb16f0d025eb615c2a5
+a3d319435f2cf1c05eedccb16f0d025eb615c2a5,a3d31943,Added and adjusted build scripts from smstube.,"Added and adjusted build scripts from smstube.
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1460453450,1460453450,217759f5c99a2ec4858de182406f060ba32bf587
+217759f5c99a2ec4858de182406f060ba32bf587,217759f5,Set PCL profile to 259 #30,"Set PCL profile to 259 #30
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460394688,1460394688,99eeb063708357e23f6d70b53cce78e8561df465
+99eeb063708357e23f6d70b53cce78e8561df465,99eeb063,moved initial sample project from UWP branch #15,"moved initial sample project from UWP branch #15
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460393288,1460393288,3858873fd32c2a541b44e05a86af699bf1619e24
+3858873fd32c2a541b44e05a86af699bf1619e24,3858873f,removed redundant Bluetooth.LE namespace :boom:,"removed redundant Bluetooth.LE namespace :boom:
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460389127,1460389127,17fc2c75c4bb40cc0e1131999fd3786da6b58b1e
+17fc2c75c4bb40cc0e1131999fd3786da6b58b1e,17fc2c75,CI has a problem with Resource.Designer.cs,"CI has a problem with Resource.Designer.cs
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460367463,1460367463,008d7a2ab6437b7959293c37cb026780259c94ee
+008d7a2ab6437b7959293c37cb026780259c94ee,008d7a2a,Hopefully fixed CI build by setting the correct target platform for Json.net,"Hopefully fixed CI build by setting the correct target platform for Json.net
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460367114,1460367114,6353d08c9c700cf7b259f52ca62d04f91355c3f3
+6353d08c9c700cf7b259f52ca62d04f91355c3f3,6353d08c,Moved implementations from MvvmCross.Plugins.BLE.iOS to Plugin.BLE.iOS. Replaced Mvx.Trace.,"Moved implementations from MvvmCross.Plugins.BLE.iOS to Plugin.BLE.iOS. Replaced Mvx.Trace.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460365524,1460365524,7bae24d578372a5cfb0d80d93744f1cbabf35094
+7bae24d578372a5cfb0d80d93744f1cbabf35094,7bae24d5,Removed empty resources from MvvmCross.Plugin.BLE.Droid,"Removed empty resources from MvvmCross.Plugin.BLE.Droid
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460364774,1460364774,9dd240b5b033fcebc1b07b144a08179d189a4f42
+9dd240b5b033fcebc1b07b144a08179d189a4f42,9dd240b5,Added missing descriptor file,"Added missing descriptor file
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460364697,1460364697,976d47b01597262e48495b6e5e7026eb54d677c2
+976d47b01597262e48495b6e5e7026eb54d677c2,976d47b0,Created rudimentary implementation for a Trace.,"Created rudimentary implementation for a Trace.
+Replaced all calls to Mvx.Trace from the android project and moved all files from MvvmCross.Plugins.BLE.Droid to Plugin.Ble.Android.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460364679,1460364679,1739e7c28eb51ea5e68a031bd859a639ac6374bb
+5f35030692f9e1904eb12a11b14e4052637ccdc2,5f350306,Updated csprojects,"Updated csprojects
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1460359394,1460359743,d17b526dd550d9ef5cab1f49cdbfd6766736dea4
+1739e7c28eb51ea5e68a031bd859a639ac6374bb,1739e7c2,moved interfaces to Contracts #19,"moved interfaces to Contracts #19
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460138820,1460138820,d00cea4ee7a382ae124af2c1e3e52bd53d4e88b4
+d00cea4ee7a382ae124af2c1e3e52bd53d4e88b4,d00cea4e,moved common files over to Abstactions (1. step) #19,"moved common files over to Abstactions (1. step) #19
+commented mvx.Trace calls for now. (bring them back in #20)
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460137554,1460137554,74d2543536680d5d8be5cfda6472039c1b39d678
+74d2543536680d5d8be5cfda6472039c1b39d678,74d25435,moved interface to contracts folder,"moved interface to contracts folder
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460134509,1460134509,8405cc1c8bc5b25f793ba05052b3af029d65dcb9
+8405cc1c8bc5b25f793ba05052b3af029d65dcb9,8405cc1c,added initial projects for non Mvx plugin,"added initial projects for non Mvx plugin
+",,,,Sven-Michael Stübe,stuebe2k7@gmail.com,Sven-Michael Stübe,stuebe2k7@gmail.com,1460134042,1460134042,33d7e9404ab3432c30b797de3f4cd9f171ff5a94
+d17b526dd550d9ef5cab1f49cdbfd6766736dea4,d17b526d,Update README.md,Update README.md,,,,xabre,xabre@users.noreply.github.com,xabre,xabre@users.noreply.github.com,1459976416,1459976416,36019a83d656b911f9c868e50c1342ab3b848e58
+36019a83d656b911f9c868e50c1342ab3b848e58,36019a83,Update README.md,Update README.md,,,,xabre,xabre@users.noreply.github.com,xabre,xabre@users.noreply.github.com,1459976141,1459976141,33d7e9404ab3432c30b797de3f4cd9f171ff5a94
+33d7e9404ab3432c30b797de3f4cd9f171ff5a94,33d7e940,Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git,"Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1459586401,1459586401,"f7fa2536b67cb964b43b034317f82510806f04c0,e8178fbb069ea0184b95e398bb5c7a7e92f2fa01"
+f7fa2536b67cb964b43b034317f82510806f04c0,f7fa2536,Updated to MvvmCross 4.1.0. Fixed namespace for ios bootstrap file.,"Updated to MvvmCross 4.1.0. Fixed namespace for ios bootstrap file.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1459586383,1459586383,cad662025d18307f2fc3e21c92fea1ccf87b92f9
+e8178fbb069ea0184b95e398bb5c7a7e92f2fa01,e8178fbb,Update README.md,Update README.md,,,,xabre,xabre@users.noreply.github.com,xabre,xabre@users.noreply.github.com,1458311667,1458311667,cad662025d18307f2fc3e21c92fea1ccf87b92f9
+cad662025d18307f2fc3e21c92fea1ccf87b92f9,cad66202,Updated nuspec for 0.9.1 release,"Updated nuspec for 0.9.1 release
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1458311601,1458311601,70c7db4026fd239b9ec0d81d40ee817ee66a75aa
+70c7db4026fd239b9ec0d81d40ee817ee66a75aa,70c7db40,Added missing RSSI method for iOS device.,"Added missing RSSI method for iOS device.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1456411268,1456411268,0a80ecfa548d611c606b674a4eaa802363d178f8
+0a80ecfa548d611c606b674a4eaa802363d178f8,0a80ecfa,Update README.md,Update README.md,,,,xabre,xabre@users.noreply.github.com,xabre,xabre@users.noreply.github.com,1455274681,1455274681,0fd693d1c31666cb53d48d1642fa28baf16f1d93
+0fd693d1c31666cb53d48d1642fa28baf16f1d93,0fd693d1,Added RSSI read/update support.,"Added RSSI read/update support.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1455274289,1455274289,e1e470b590c14dbd6215a8db7142164c000f7639
+e1e470b590c14dbd6215a8db7142164c000f7639,e1e470b5,Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE,"Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454920449,1454920449,"4a37add35f8a74181e0209339b66087aa9de16d7,dfe961080a332821346077e70ff9a87d2be46b3d"
+4a37add35f8a74181e0209339b66087aa9de16d7,4a37add3,Updated nuspec for 0.9 release,"Updated nuspec for 0.9 release
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454920439,1454920439,04aea7f0c0060c264b2e990a7cc4e6b5bfde7964
+dfe961080a332821346077e70ff9a87d2be46b3d,dfe96108,We need at least a dummy Device for the DeviceConnectionError argument so that…,"We need at least a dummy Device for the DeviceConnectionError argument so that Extension Async calls correctly match awaiting device IDs. Otherwise, we get a nasty unhanded null reference exception in the DeviceConnectionError handler. I missed this the first time around; sorry about that.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1454723794,1454723794,3bff3bbbdb102570e0ae8f36bb651ec8814713b9
+3bff3bbbdb102570e0ae8f36bb651ec8814713b9,3bff3bbb,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1454675985,1454675985,04aea7f0c0060c264b2e990a7cc4e6b5bfde7964
+04aea7f0c0060c264b2e990a7cc4e6b5bfde7964,04aea7f0,Retargetted json.net for proper pcl platform,"Retargetted json.net for proper pcl platform
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454669032,1454669066,d9e799ce23fcc5345bd9b0829936a8c290716982
+d9e799ce23fcc5345bd9b0829936a8c290716982,d9e799ce,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1454666648,1454666648,007518e0b956241ffaa39635a0d36f9728c268c0
+007518e0b956241ffaa39635a0d36f9728c268c0,007518e0,Attempting to integrate bitrise.io as CI build host. Removed packages for dummy…,"Attempting to integrate bitrise.io as CI build host. Removed packages for dummy sampe in order to fix CI build.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454666542,1454666542,387f2cc7b17a85a79b2268ba7f2287331401d5df
+387f2cc7b17a85a79b2268ba7f2287331401d5df,387f2cc7,Added empty-sample project for ci build,"Added empty-sample project for ci build
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454666316,1454666316,da29dd4741f6ed4c55361e2273f7fee3751e391d
+da29dd4741f6ed4c55361e2273f7fee3751e391d,da29dd47,Removed samples from solution. Will create a new one for samples & actual…,"Removed samples from solution. Will create a new one for samples & actual samples (that really work)
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454665381,1454665381,fbc8301172445e1dbf57c044c6fcc89248b70a98
+fbc8301172445e1dbf57c044c6fcc89248b70a98,fbc83011,Merged changes.,"Merged changes.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1454664714,1454664714,"b4f856c4586b1fb3329564cb27a84e3e8822d6f6,e5c7b41cf1a55c88e66e3f8fa4d5d60bb3f52428"
+e5c7b41cf1a55c88e66e3f8fa4d5d60bb3f52428,e5c7b41c,On some Android GATT errors (usually manually turning off BT while the app is in…,"On some Android GATT errors (usually manually turning off BT while the app is in the middle of doing a bluetooth task... seems to be timing dependent), the Device argument will be null, so we handle that in the Event callbacks in the Async Extension calls.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1454637444,1454637444,9066f16bf3ccd4de8b973e836bbf05fadd00dfbd
+9066f16bf3ccd4de8b973e836bbf05fadd00dfbd,9066f16b,Updated nuspec to MvvmCross 4.0.0.,"Updated nuspec to MvvmCross 4.0.0.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1454620290,1454620290,93e98316edc5e677114db115684f179f9a6cb6be
+93e98316edc5e677114db115684f179f9a6cb6be,93e98316,Updated to MvvmCross 4.0.0 final.,"Updated to MvvmCross 4.0.0 final.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1454620153,1454620153,ab283c68aaee844e5eaad40da9c851f55179090a
+ab283c68aaee844e5eaad40da9c851f55179090a,ab283c68,"If there was a GATT error, continue with possible Disconnect procedures (in…","If there was a GATT error, continue with possible Disconnect procedures (in addition to the ConnectionError event), since the gatt is being closed anyway, and users should know that such a disconnect occurred.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1454465770,1454465770,6ebb06f4628fb469788c02142ad543ab6ae0de49
+6ebb06f4628fb469788c02142ad543ab6ae0de49,6ebb06f4,This is mainly to handle various GATT errors on the Android side. In the case of…,"This is mainly to handle various GATT errors on the Android side. In the case of GATT error (I usually see the generic error 133), the action should be to raise an error event to possible async extension calls (both ConnectAsync and DisconnectAsync now listen for the error event). If we don't do this and exit, the code would fall through to the switch statement, which would erroneously fall into the ""disconnect"" clause (since the enum for the unset [in the case of error] state 0 is the enum for disconnected). I close the gatt in this case, which seems to lead to fewer zombie gatts (previously, various errors would cause zombie gatts to hand around, holding on to a connection that you couldn't access, even sometimes past the lifetime of the app, requiring a phone reboot if max connections [6 on some phone models] was reached.)
+
+iOS just raises the error event in the case of a corresponding failure to connect event from central.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1453950555,1453950555,485569d680e985297543a2afa7bd3d7cb4b2aefd
+b4f856c4586b1fb3329564cb27a84e3e8822d6f6,b4f856c4,Some code cleanup for android. Also added gatt and gatcallback instances to all Characteristic,"Some code cleanup for android. Also added gatt and gatcallback instances to all Characteristic
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1453478494,1453478494,99ae9965d8ec1c0a3d97f64534a0b4bc89525d69
+485569d680e985297543a2afa7bd3d7cb4b2aefd,485569d6,Fixed Typos.,"Fixed Typos.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1453306569,1453306569,3e69da283fbd26ac58cf5191c901b6082cfbadbc
+3e69da283fbd26ac58cf5191c901b6082cfbadbc,3e69da28,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1453303380,1453303380,f0831326cae3ba2f19b36c02216ac461c5fa5bbb
+f0831326cae3ba2f19b36c02216ac461c5fa5bbb,f0831326,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1453303336,1453303336,12bc5f9ebe801f158d03287e261db75d7fc883dd
+12bc5f9ebe801f158d03287e261db75d7fc883dd,12bc5f9e,Merge pull request #12 from lothrop/master,"Merge pull request #12 from lothrop/master
+
+Updated Nuget tags",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1453303079,1453303079,"99ae9965d8ec1c0a3d97f64534a0b4bc89525d69,fca4af55cce7f7d59036f9566e10fb85b9e13aa4"
+fca4af55cce7f7d59036f9566e10fb85b9e13aa4,fca4af55,Updated Nuget tags (plugin is not discoverable when searching for bluetooth).,"Updated Nuget tags (plugin is not discoverable when searching for bluetooth).
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1453299886,1453299886,99ae9965d8ec1c0a3d97f64534a0b4bc89525d69
+99ae9965d8ec1c0a3d97f64534a0b4bc89525d69,99ae9965,Quick fix for Android adapter >= 5.0. Scanning would throw a null reference…,"Quick fix for Android adapter >= 5.0. Scanning would throw a null reference exception if BL was switched off (before or also during scan).
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1453285434,1453285434,7279f9389f5120d6107ed5897869855ea18d5c22
+7279f9389f5120d6107ed5897869855ea18d5c22,7279f938,Merge pull request #10 from lothrop/MvvmCross-update,"Merge pull request #10 from lothrop/MvvmCross-update
+
+More changes for MvvmCross-beta8",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1453278491,1453278491,"c1978eefa5fb8c334132fd61f8759256eb1c7d3e,e4e5d26e786f875aa3d1e928a86dfd2dc0dc189a"
+e4e5d26e786f875aa3d1e928a86dfd2dc0dc189a,e4e5d26e,Merge remote-tracking branch 'upstream/master' into MvvmCross-update,"Merge remote-tracking branch 'upstream/master' into MvvmCross-update
+
+Conflicts:
+	Source/MvvmCross.Plugins.BLE/MvvmCross.Plugins.BLE.sln
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1453277253,1453277253,"29eb9e10cac6c95399fe8fcca279bcd03981b01c,c1978eefa5fb8c334132fd61f8759256eb1c7d3e"
+29eb9e10cac6c95399fe8fcca279bcd03981b01c,29eb9e10,"More upgrades for beta8: Assembly should end in .iOS, not .Touch. See…","More upgrades for beta8: Assembly should end in .iOS, not .Touch. See <https://github.com/MvvmCross/MvvmCross/commit/74fafda22324603551bcb622fa3994f787b3423f>.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1453275828,1453275828,e966982acbb789f73fbb9cedd9853f039532c3e7
+c1978eefa5fb8c334132fd61f8759256eb1c7d3e,c1978eef,Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git,"Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1452848635,1452848635,"e463741a52736a3227c40513fbd7baf6922758d6,958717ea0d0c52d0c5d48f5e005007fadbf7d25a"
+958717ea0d0c52d0c5d48f5e005007fadbf7d25a,958717ea,Added nuget badge,Added nuget badge,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1452848627,1452848627,8ebec62a177cb3f7e76a0d2bc6dbaa87b79f6701
+e463741a52736a3227c40513fbd7baf6922758d6,e463741a,Cleanup of csproj references.,"Cleanup of csproj references.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1452847738,1452847738,8ebec62a177cb3f7e76a0d2bc6dbaa87b79f6701
+8ebec62a177cb3f7e76a0d2bc6dbaa87b79f6701,8ebec62a,Merge pull request #9 from lothrop/MvvmCross-update,"Merge pull request #9 from lothrop/MvvmCross-update
+
+Updated solution to MvvmCross-beta8.",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1452843946,1452843946,"90ab8e916d28595400e24cf493c27568eb978e47,e966982acbb789f73fbb9cedd9853f039532c3e7"
+90ab8e916d28595400e24cf493c27568eb978e47,90ab8e91,SetResult -> TrySetResult and SetException -> TrySetException to avoid…,"SetResult -> TrySetResult and SetException -> TrySetException to avoid Exceptions due to race conditions (double-setting tcs)
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1452815079,1452815079,e682a23378d94e8f11a667c865c88a0b3630a79f
+e966982acbb789f73fbb9cedd9853f039532c3e7,e966982a,Updated solution to MvvmCross-beta8.,"Updated solution to MvvmCross-beta8.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1452768304,1452768304,e682a23378d94e8f11a667c865c88a0b3630a79f
+e682a23378d94e8f11a667c865c88a0b3630a79f,e682a233,Prevent ReadAsync and WriteAsync waiting for callbacks that will never arrive.,"Prevent ReadAsync and WriteAsync waiting for callbacks that will never arrive.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1450580924,1450580924,b2b4124de42e95484e96a49c3dc287e2bc8bfc1f
+b2b4124de42e95484e96a49c3dc287e2bc8bfc1f,b2b4124d,Merge pull request #8 from birynk/master,"Merge pull request #8 from birynk/master
+
+When reading make sure the result is set for the correct characteristic.",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1450450474,1450450474,"73860da15f8afbb4f7e28ec644d94d4c5eb66c54,29ffa0f0ece1e0e8d216ae623b93678c9aae0bac"
+73860da15f8afbb4f7e28ec644d94d4c5eb66c54,73860da1,"Android: connection state should report whether the device is connected, rather…","Android: connection state should report whether the device is connected, rather than bond state (i.e. you can be bonded and not connected, connected and not bonded, and various combinations thereof, so bond state seems like a totally separate thing)
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1450391083,1450391083,7d5538ba00304aa6d73516d9f5937a465f9b89f5
+29ffa0f0ece1e0e8d216ae623b93678c9aae0bac,29ffa0f0,When reading make sure the correct characteristic receives the response.,"When reading make sure the correct characteristic receives the response.
+",,,,Irina Catalina,irina.catalina@zuehlke.com,Irina Catalina,irina.catalina@zuehlke.com,1450363728,1450363728,e6f3ade782c8c08fb6e1f5810ea37da470d98b9b
+7d5538ba00304aa6d73516d9f5937a465f9b89f5,7d5538ba,iOS : Cancellation token also used to cancel scan while waiting for adapter state.,"iOS : Cancellation token also used to cancel scan while waiting for adapter state.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450354626,1450354626,cb426ba5af25894628a70f1fe976be3e8ddda95f
+cb426ba5af25894628a70f1fe976be3e8ddda95f,cb426ba5,Hardened token disposal,"Hardened token disposal
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450282988,1450282988,9b2941e47856ad9f7a6c1517f4f8cd2beb342cee
+9b2941e47856ad9f7a6c1517f4f8cd2beb342cee,9b2941e4,Updated nuspec. Fixed resources,"Updated nuspec. Fixed resources
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450192518,1450192518,e6f3ade782c8c08fb6e1f5810ea37da470d98b9b
+e6f3ade782c8c08fb6e1f5810ea37da470d98b9b,e6f3ade7,Removed unnecessary strings in droid version.,"Removed unnecessary strings in droid version.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450186338,1450186338,1a0c7fb9827e0b24effeb9e0684727af74874ad8
+1a0c7fb9827e0b24effeb9e0684727af74874ad8,1a0c7fb9,Added additional debug messages,"Added additional debug messages
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450186224,1450186224,2e2e717fe644a1221e5e24a197fcd9fe11097a8c
+2e2e717fe644a1221e5e24a197fcd9fe11097a8c,2e2e717f,DisconnectAsync and android clear cached services on disconnect,"DisconnectAsync and android clear cached services on disconnect
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1450110766,1450110766,a6ece59d38ff60f87020d77e08cd7515f9d1cc17
+a6ece59d38ff60f87020d77e08cd7515f9d1cc17,a6ece59d,Removed unnecessary mvvmcross dependecies,"Removed unnecessary mvvmcross dependecies
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449829220,1449829220,376cd1d286e28806c3783d166e0e6807988bf4a5
+376cd1d286e28806c3783d166e0e6807988bf4a5,376cd1d2,Merge branch 'fasmat-master',"Merge branch 'fasmat-master'
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449828909,1449828909,"a32e850ff1891dacc5057e62bba5933c586c4d90,d403b3597adefa32c9f8908007c9e3290562b708"
+d403b3597adefa32c9f8908007c9e3290562b708,d403b359,Merged pullrequest fasmat-master,"Merged pullrequest fasmat-master
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449828775,1449828775,"a32e850ff1891dacc5057e62bba5933c586c4d90,482ddafb862abc2e0c80fad4eb90c84dea9865b9"
+a32e850ff1891dacc5057e62bba5933c586c4d90,a32e850f,Fixed additional scan cancel issue. (ios android),"Fixed additional scan cancel issue. (ios android)
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449759765,1449759765,a37e561c8136d69d3ee315d4e149c33ed3fdbc93
+482ddafb862abc2e0c80fad4eb90c84dea9865b9,482ddafb,Got rid of some bit operations.,"Got rid of some bit operations.
+",,,,Matthias Fasching,matthias.fasching@zuehlke.com,Matthias Fasching,matthias.fasching@zuehlke.com,1449750815,1449750815,393fec4632e35b7c60d40e01ce9848681c08fe56
+a37e561c8136d69d3ee315d4e149c33ed3fdbc93,a37e561c,Fixed ios cancellation token disposed,"Fixed ios cancellation token disposed
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449749927,1449749927,54f74b9e9c24808b9d0f96003dce8ffa306606c7
+393fec4632e35b7c60d40e01ce9848681c08fe56,393fec46,Removed C# 6.0 Language features for now.,"Removed C# 6.0 Language features for now.
+",,,,Matthias Fasching,matthias.fasching@zuehlke.com,Matthias Fasching,matthias.fasching@zuehlke.com,1449703688,1449703688,4ec9fe5c642d8896f1d49fcbc9bb9f887efddf6f
+4ec9fe5c642d8896f1d49fcbc9bb9f887efddf6f,4ec9fe5c,Updated MvvmCross,"Updated MvvmCross
+",,,,Matthias Fasching,matthias.fasching@zuehlke.com,Matthias Fasching,matthias.fasching@zuehlke.com,1449678429,1449678429,a31349e10815c5b488104b36b9bebc201cda02ae
+54f74b9e9c24808b9d0f96003dce8ffa306606c7,54f74b9e,Fixed android stop scanning issue where token would already be disposed,"Fixed android stop scanning issue where token would already be disposed
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449677409,1449677409,b43e314199efc408b70b31d8a6518c6c6f8b7667
+b43e314199efc408b70b31d8a6518c6c6f8b7667,b43e3141,"Temporary fix for ios, conneced device events also contain original advertising…","Temporary fix for ios, conneced device events also contain original advertising data. ToDo return the same IDevice instance that was created during discovery.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449672176,1449672176,26ccd9d597d53f11d34b1540415bea906c78b17d
+a31349e10815c5b488104b36b9bebc201cda02ae,a31349e1,Code cleanup of Touch plugin,"Code cleanup of Touch plugin
+",,,,Matthias Fasching,matthias.fasching@zuehlke.com,Matthias Fasching,matthias.fasching@zuehlke.com,1449663229,1449663229,26ccd9d597d53f11d34b1540415bea906c78b17d
+26ccd9d597d53f11d34b1540415bea906c78b17d,26ccd9d5,Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git,"Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449650177,1449650177,"17f0467f265fe1e3a2e06148652dccbe81677995,0f371c6772b269abd1407ddc4ef52da28a9b0f48"
+17f0467f265fe1e3a2e06148652dccbe81677995,17f0467f,Volatile _isScanning,"Volatile _isScanning
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449649043,1449649043,e1c11e18b6353b27260962ee1cd5533360bfb2ea
+e1c11e18b6353b27260962ee1cd5533360bfb2ea,e1c11e18,Additional fix for scanning timeout,"Additional fix for scanning timeout
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449588210,1449588210,e76335899b0b5f8a5f0a3b0c8a02c72ebd58ab2e
+e76335899b0b5f8a5f0a3b0c8a02c72ebd58ab2e,e7633589,Fixed effects of scan delay time when quickly starting and stopping scan…,"Fixed effects of scan delay time when quickly starting and stopping scan manually. Was creating additional scan elapsed events due to not cancelling Task.Await
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449585341,1449585341,77dc020c83534a47db9b74152dd80689907c043b
+0f371c6772b269abd1407ddc4ef52da28a9b0f48,0f371c67,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1449148192,1449148192,77dc020c83534a47db9b74152dd80689907c043b
+77dc020c83534a47db9b74152dd80689907c043b,77dc020c,Add small icon,"Add small icon
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449148151,1449148151,e35c8d36e89fc5fec822905d6aa17786e76c25b0
+e35c8d36e89fc5fec822905d6aa17786e76c25b0,e35c8d36,Added icon,"Added icon
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449147814,1449147814,5d07a107ae85083dfdc5ce8f276afb7af77c537d
+5d07a107ae85083dfdc5ce8f276afb7af77c537d,5d07a107,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1449137198,1449137198,4db671a84467791e03722a0d3aa68816aa451294
+4db671a84467791e03722a0d3aa68816aa451294,4db671a8,Fix for endianness in Advertisements. IList in interfaces.,"Fix for endianness in Advertisements. IList in interfaces.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1449103601,1449103601,9b2f9f6df728560495bdce7aca2a43b6a9e5e3f3
+9b2f9f6df728560495bdce7aca2a43b6a9e5e3f3,9b2f9f6d,Minor improvements. Debug outputs,"Minor improvements. Debug outputs
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1449066987,1449066987,a8c6e542d5e5a6318fe89ab4a0baad84b5508deb
+a8c6e542d5e5a6318fe89ab4a0baad84b5508deb,a8c6e542,Removed unnecessary read from characteristic start notifications,"Removed unnecessary read from characteristic start notifications
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448962066,1448962066,b2a183cf89e9df136b83db8b034a351d1d043b2f
+b2a183cf89e9df136b83db8b034a351d1d043b2f,b2a183cf,"IOS parse advertisment data for LocalName, UUIDS and Manufacurer data....…","IOS parse advertisment data for LocalName, UUIDS and Manufacurer data.... unfortunately because ios provides no raw byte array this has to be done individually for each type
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448541503,1448541503,3c0fd63c8e2298aec43ebb2c0399120b05de27aa
+3c0fd63c8e2298aec43ebb2c0399120b05de27aa,3c0fd63c,Advertisment record android adjustement,"Advertisment record android adjustement
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448467724,1448467724,042bba8ffee7b319462dbcd7215298304d840001
+042bba8ffee7b319462dbcd7215298304d840001,042bba8f,"Added advertisment record, and record parsing for Android, IOS. This includes…","Added advertisment record, and record parsing for Android, IOS. This includes all types of records (also ManufacturingSpecific data)
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448463406,1448463406,83452604bf34c395bfefc7720283dc067d188b43
+83452604bf34c395bfefc7720283dc067d188b43,83452604,Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git,"Merge branch 'master' of https://github.com/xabre/MvvmCross-BluetoothLE.git
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448449303,1448449303,"11a65dac9145284a980ddc4409cd34ac4fc04942,1025e3f18b45efc0abc0dc24175b8a4fb8c0254c"
+11a65dac9145284a980ddc4409cd34ac4fc04942,11a65dac,Write Async (Android) make sure setting the characteristic value is on the main thread,"Write Async (Android) make sure setting the characteristic value is on the main thread
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1448449287,1448449287,3e934f2f134509fcc2c10085b9dca2fad29a3ca9
+1025e3f18b45efc0abc0dc24175b8a4fb8c0254c,1025e3f1,Merge pull request #4 from lothrop/master,"Merge pull request #4 from lothrop/master
+
+Fixed a typo.",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1448366988,1448366988,"03b2dbfcb4423154a0e67e314537b468c4b9129a,716d21c394c8d869c8898c85c284720d38b55677"
+716d21c394c8d869c8898c85c284720d38b55677,716d21c3,Fixed typo.,"Fixed typo.
+",,,,Kerry W. Lothrop,kerry@lothrop.de,Kerry W. Lothrop,kerry@lothrop.de,1448362934,1448362934,03b2dbfcb4423154a0e67e314537b468c4b9129a
+03b2dbfcb4423154a0e67e314537b468c4b9129a,03b2dbfc,Update README.md,Update README.md,,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1447968791,1447968791,9a93abc6cbf16e9221ee3a9b119fc6d3d7015d35
+9a93abc6cbf16e9221ee3a9b119fc6d3d7015d35,9a93abc6,Bumped MvvmCross to 4.0.0-beta3,"Bumped MvvmCross to 4.0.0-beta3
+
+This is required because projects running this version of MvvmCross
+can't compile plugin bottloaders for plugins v3.5.1
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1447967525,1447967525,7c5f08a6d9217d7fa6c43e9ba0a5c4e8976336df
+7c5f08a6d9217d7fa6c43e9ba0a5c4e8976336df,7c5f08a6,Merge pull request #3 from adolgov/master,"Merge pull request #3 from adolgov/master
+
+iOS handling Device/Peripheral name change",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1447960439,1447960439,"3e934f2f134509fcc2c10085b9dca2fad29a3ca9,87b02591c78e808c0a49e9f51974c2b5b42744ff"
+87b02591c78e808c0a49e9f51974c2b5b42744ff,87b02591,iOS handling of device/peripheral name update.,"iOS handling of device/peripheral name update.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447959412,1447959412,2af7f52ef5cf222db76b1aa77199bda6a766c98c
+3e934f2f134509fcc2c10085b9dca2fad29a3ca9,3e934f2f,Some small refactoring,"Some small refactoring
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447843509,1447843509,3ec69b782231b11c1d550c25cd691d2120997ab0
+2af7f52ef5cf222db76b1aa77199bda6a766c98c,2af7f52e,Project tweak to compile on OS X,"Project tweak to compile on OS X
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447809441,1447809441,3ec69b782231b11c1d550c25cd691d2120997ab0
+3ec69b782231b11c1d550c25cd691d2120997ab0,3ec69b78,Ios adjustments,"Ios adjustments
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447765300,1447765300,6ed1a342eecee8ea02e60ae26c2bb91e4c0962a4
+6ed1a342eecee8ea02e60ae26c2bb91e4c0962a4,6ed1a342,Device registry init iOS.,"Device registry init iOS.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447762952,1447762952,941142308616b75e1a0908210914967419121f6b
+941142308616b75e1a0908210914967419121f6b,94114230,Adjusted keys for device registry to always use BluetoothDevice.Address,"Adjusted keys for device registry to always use BluetoothDevice.Address
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447758681,1447758681,25557d6001685ccc0f62825e36c7fb14b6080491
+25557d6001685ccc0f62825e36c7fb14b6080491,25557d60,Adjusted autoconnect.,"Adjusted autoconnect.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447757396,1447757396,c0a9d291799dc8508b021d80f502344fb20f1c47
+c0a9d291799dc8508b021d80f502344fb20f1c47,c0a9d291,Added android DeviceConnectionlost event. Refactored android adapter to use…,"Added android DeviceConnectionlost event. Refactored android adapter to use partial class instead of event forwarding form bluetooth gatt callback.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447751627,1447751627,0617873645ba86ad1a4ab325dc75d13c14a9340a
+0617873645ba86ad1a4ab325dc75d13c14a9340a,06178736,Merge pull request #2 from adolgov/master,"Merge pull request #2 from adolgov/master
+
+Parse out Manufacturer Specific Data for API < 21",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1447664281,1447664281,"ee7e4e9d6c6c488eed44bde9bb48b0d0c1bdd220,e4829d788e89606c653c27fd41c54d7ed8bd8bd5"
+e4829d788e89606c653c27fd41c54d7ed8bd8bd5,e4829d78,Manually parse out Manufacturer Specific Data from raw Advertising byte array when API < 21,"Manually parse out Manufacturer Specific Data from raw Advertising byte array when API < 21
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447468025,1447468025,ee7e4e9d6c6c488eed44bde9bb48b0d0c1bdd220
+ee7e4e9d6c6c488eed44bde9bb48b0d0c1bdd220,ee7e4e9d,Merge branch 'adolgov-master',"Merge branch 'adolgov-master'
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447432895,1447432895,"c52628c85008f26a43ea309b80b0552268128ebf,11ed26e53040b0fe60ba4012cfb8efcfb019368e"
+11ed26e53040b0fe60ba4012cfb8efcfb019368e,11ed26e5,Merged changes. Adjusted android adapter to use both api >=21 and api <21 scan methods.,"Merged changes. Adjusted android adapter to use both api >=21 and api <21 scan methods.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1447432863,1447432863,"c52628c85008f26a43ea309b80b0552268128ebf,73e45a885c8f3e29aaf7eff96d048a69e0b60add"
+73e45a885c8f3e29aaf7eff96d048a69e0b60add,73e45a88,Merge branch 'release/AdvertisementsSupported',"Merge branch 'release/AdvertisementsSupported'
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447210258,1447210258,"4975c8f43a64148f19d1e921be4c301e4b8b7f9f,b2fa5f8777d474e9e3e98b61d48a7507641ef3c2"
+b2fa5f8777d474e9e3e98b61d48a7507641ef3c2,b2fa5f87,Merge branch 'feature/Manufacturer_Specific_Advertisement_Data_Support' into develop,"Merge branch 'feature/Manufacturer_Specific_Advertisement_Data_Support' into develop
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447209683,1447209683,"4975c8f43a64148f19d1e921be4c301e4b8b7f9f,d10f01184fce6bd03218f545e663a26bab8c28f2"
+d10f01184fce6bd03218f545e663a26bab8c28f2,d10f0118,Only do characteristic update events and read acknowledgements when the…,"Only do characteristic update events and read acknowledgements when the characteristic in the native service matches our own native characteristic (_parentDevice will fire events for all of its characteristics, not just our specific one)
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1447125752,1447125752,de314c2c0751757042697d6799f336f555893bbf
+de314c2c0751757042697d6799f336f555893bbf,de314c2c,"If connected, should return the connected device, rather than null.","If connected, should return the connected device, rather than null.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1446669960,1446669960,32c78039b73cd44b2d79dafd76cd59d82b5596c9
+32c78039b73cd44b2d79dafd76cd59d82b5596c9,32c78039,If available use LocalName Advertisement data for Device name to avoid iOS's Name caching.,"If available use LocalName Advertisement data for Device name to avoid iOS's Name caching.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1446509432,1446509432,e70abef5ab90a6dbe0349a177d4b072dc95d4440
+e70abef5ab90a6dbe0349a177d4b072dc95d4440,e70abef5,Tweak for pre 5.0 Android compatibility.,"Tweak for pre 5.0 Android compatibility.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1446438484,1446438484,6329a183cdbaf020b41f01e8b268ce2757af3e55
+c52628c85008f26a43ea309b80b0552268128ebf,c52628c8,Added uuid based filterin for scan,"Added uuid based filterin for scan
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1445857879,1445857879,c86743a00de0ee3007322cd0dc59239ad567cc11
+6329a183cdbaf020b41f01e8b268ce2757af3e55,6329a183,"Update android BTLE scanning to latest API, parse Manufacturer Data in advertisement to match iOS.","Update android BTLE scanning to latest API, parse Manufacturer Data in advertisement to match iOS.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1445823826,1445823826,6099c92703ea402c327532a44a21962d03579a62
+6099c92703ea402c327532a44a21962d03579a62,6099c927,Device constructor bug fixes. Equator fix. Support characteristic async write without verification.,"Device constructor bug fixes. Equator fix. Support characteristic async write without verification.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1445645354,1445645354,2cc3bc2e1ab862e35fa41e42c9168d279c8fd50d
+c86743a00de0ee3007322cd0dc59239ad567cc11,c86743a0,Nuspec 0.8.5,"Nuspec 0.8.5
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1445517922,1445517922,1ab9d8c761dc8f5313ff4f8b7e204b92151309b1
+1ab9d8c761dc8f5313ff4f8b7e204b92151309b1,1ab9d8c7,Fixed iOS scan discover RSSI,"Fixed iOS scan discover RSSI
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1445517272,1445517272,da3d46a1d6ddf35540445d1e3969321b7352d594
+da3d46a1d6ddf35540445d1e3969321b7352d594,da3d46a1,Fixed android disconnect.,"Fixed android disconnect.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1445515609,1445515609,7a9ec6745ed8bf8ccf96f07e263d4a849019c8b9
+7a9ec6745ed8bf8ccf96f07e263d4a849019c8b9,7a9ec674,Fixed some disconnection issues on Android,"Fixed some disconnection issues on Android
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1445432183,1445432183,4975c8f43a64148f19d1e921be4c301e4b8b7f9f
+2cc3bc2e1ab862e35fa41e42c9168d279c8fd50d,2cc3bc2e,pass through Advertising data on Android when creating Device.,"pass through Advertising data on Android when creating Device.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1444960815,1444960815,439f455191b29f22feae5ea69b0e7d1e2b3a7533
+439f455191b29f22feae5ea69b0e7d1e2b3a7533,439f4551,Property convert Manufacturer Data in Advertisement to byte[] array in iOS implementation.,"Property convert Manufacturer Data in Advertisement to byte[] array in iOS implementation.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1444699578,1444699578,abcb02ff6a46789846a4d565059f50161f98263e
+abcb02ff6a46789846a4d565059f50161f98263e,abcb02ff,Add extension to discover and retrieve a specific Device.,"Add extension to discover and retrieve a specific Device.
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1444539084,1444539084,b7ea5431e8f7f321ef047271df3b20a9a2e204cb
+b7ea5431e8f7f321ef047271df3b20a9a2e204cb,b7ea5431,Addition of initial manufacturer specific advertisement data structures.…,"Addition of initial manufacturer specific advertisement data structures. Separate Advertisement event. Store RSSI values from advertisement, since they are null in the Native device (Tocuh).
+",,,,Andrey Dolgov,adolgov@blueskyscientific.com,Andrey Dolgov,adolgov@blueskyscientific.com,1444413059,1444413059,4975c8f43a64148f19d1e921be4c301e4b8b7f9f
+4975c8f43a64148f19d1e921be4c301e4b8b7f9f,4975c8f4,Add missing files.,"Add missing files.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442820190,1442820190,f055a6d6cf728dc5d1c33f089c9c4397fabd2c8c
+f055a6d6cf728dc5d1c33f089c9c4397fabd2c8c,f055a6d6,Added server/client throughput sample apps,"Added server/client throughput sample apps
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442820165,1442820165,50323cd62f4817e91b8e527cc054c0f2ab009802
+50323cd62f4817e91b8e527cc054c0f2ab009802,50323cd6,Readme,"Readme
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442307828,1442307828,7c7d9fec3b119a04c538a3ba388eda815ad733fa
+7c7d9fec3b119a04c538a3ba388eda815ad733fa,7c7d9fec,Updated readme,"Updated readme
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442307713,1442307713,2e17199ded45731e5c8b131c303add7558c3a6d7
+2e17199ded45731e5c8b131c303add7558c3a6d7,2e17199d,Updated build action for json resources.,"Updated build action for json resources.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442228335,1442228335,189431fafc86c1f22d466df7e86722ca23a08a5e
+189431fafc86c1f22d466df7e86722ca23a08a5e,189431fa,Managed some events for characteristic write,"Managed some events for characteristic write
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442220489,1442220489,c425fbc0b0409ee804375b29ff8f5a970c8ad384
+c425fbc0b0409ee804375b29ff8f5a970c8ad384,c425fbc0,"Added async write, organized some event handlers","Added async write, organized some event handlers
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1442217814,1442217814,e297d577493740a71ac1b678d4a00c8116d7346e
+e297d577493740a71ac1b678d4a00c8116d7346e,e297d577,Added missing Newtonsoft.Json dependecy to nuspec.,"Added missing Newtonsoft.Json dependecy to nuspec.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441969397,1441969397,20ccf15232ed74f9813a2962f55acab53feb6b05
+20ccf15232ed74f9813a2962f55acab53feb6b05,20ccf152,Updated readme,"Updated readme
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441969183,1441969183,ad5772e86c7d3ba6aba0a372159789e4c801cbef
+ad5772e86c7d3ba6aba0a372159789e4c801cbef,ad5772e8,Updated spec,"Updated spec
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441968964,1441968964,0f7a4b8b6e19afcab2946902a1f8818738c16765
+0f7a4b8b6e19afcab2946902a1f8818738c16765,0f7a4b8b,Added nuget/plugin scaffolding,"Added nuget/plugin scaffolding
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441959515,1441959515,1dda90da3d00c44a26d333cfbd07b720464c6845
+1dda90da3d00c44a26d333cfbd07b720464c6845,1dda90da,Added platform spceific code from Monkey.Robobtics,"Added platform spceific code from Monkey.Robobtics
+
+With some additional features.
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441955856,1441955856,0e515de11f2848316aca8f7b52de9473372f02f1
+0e515de11f2848316aca8f7b52de9473372f02f1,0e515de1,Md updated,"Md updated
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441899330,1441899330,8e0718f35d2a4d859aa3ce8c9a31ffd1f7ebb20d
+8e0718f35d2a4d859aa3ce8c9a31ffd1f7ebb20d,8e0718f3,"Added solution, project structure and bare core code from MonkeyRobotics","Added solution, project structure and bare core code from MonkeyRobotics
+",,,,sead,sead@zuehlke.com,sead,sead@zuehlke.com,1441899262,1441899262,d6918600fc4b1d25a13aa33bf18596590d040202
+d6918600fc4b1d25a13aa33bf18596590d040202,d6918600,Initial commit,"Initial commit
+",,,,xabre,adri.sece@gmail.com,xabre,adri.sece@gmail.com,1441894809,1441894809,

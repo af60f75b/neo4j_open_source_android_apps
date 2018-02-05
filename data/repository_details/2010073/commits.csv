@@ -1,0 +1,675 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0c0b8b98b8c3d16f71b07808a838cfa7057246ab,0c0b8b98,Fix silliness when confused by file names.,"Fix silliness when confused by file names.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1474913640,1474913640,1bedb25f063fbadb1a27cabad7535318b8f2bf4b
+1bedb25f063fbadb1a27cabad7535318b8f2bf4b,1bedb25f,Use IP address instead of name in DB update URL. v2.1.2.,"Use IP address instead of name in DB update URL. v2.1.2.
+
+Seeing the domain registration has expired and things are up in the air
+presently.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1462157279,1462157279,a12d999f3cf5b3720b6156c6b4169fcaaca52a46
+a12d999f3cf5b3720b6156c6b4169fcaaca52a46,a12d999f,Prior commit doesn't deal with the problem correctly. This makes sure,"Prior commit doesn't deal with the problem correctly. This makes sure
+that if there's a Merged file, it is used instead of plain GRT_GTFS.zip.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1451867479,1451867594,d2b48ec9b4e958fd08436d85b7ceeec23e31e086
+d2b48ec9b4e958fd08436d85b7ceeec23e31e086,d2b48ec9,"Should check for Merged file before plain GRT_GTFS, as the latter might","Should check for Merged file before plain GRT_GTFS, as the latter might
+contain only stuff for a future date.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1451866831,1451866831,6a3f579a628a1811be61ed013e6faf1442f996e5
+6a3f579a628a1811be61ed013e6faf1442f996e5,6a3f579a,Try harder to see what schedule file changed.,"Try harder to see what schedule file changed.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1451866297,1451866297,3d423f0ce2f9378df9710f6d53e3d03aa0872d3e
+3d423f0ce2f9378df9710f6d53e3d03aa0872d3e,3d423f0c,"Version 2.1.1, internal 25. Currently using db version 72.","Version 2.1.1, internal 25. Currently using db version 72.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1448149020,1448149020,c868ac63d431abbaddf76fa4a253cfea1e8459e7
+c868ac63d431abbaddf76fa4a253cfea1e8459e7,c868ac63,Merge branch 'realtime'. Brings in a whole bunch of lisp test code.,"Merge branch 'realtime'. Brings in a whole bunch of lisp test code.
+
+Also some tweaks to fix errors with realtime data on the display.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1448147549,1448147549,"f50490bfd3979412b9caf132936891867f69506a,59db9dddd8c1975a3ff6cc566ed16cb8654a29e3"
+59db9dddd8c1975a3ff6cc566ed16cb8654a29e3,59db9ddd,Merge branch 'lint-changes' into realtime,"Merge branch 'lint-changes' into realtime
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1448147212,1448147212,"118ba155bcf65b067cea5aef7c6d419865e9d295,db51fdcd30a90ff1cb73683dc929fdcf09b9fe55"
+db51fdcd30a90ff1cb73683dc929fdcf09b9fe55,db51fdcd,A whole bunch of little changes to make lint happy.,"A whole bunch of little changes to make lint happy.
+
+In theory none of this changes functionality, but we shall see.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1448146683,1448146683,a0d4d614fe7dfafd38906ec1094774dab1f8761e
+a0d4d614fe7dfafd38906ec1094774dab1f8761e,a0d4d614,"Updating tools versions. Min-sdk is now 16 (Android 4.1, Jellybean).","Updating tools versions. Min-sdk is now 16 (Android 4.1, Jellybean).
+
+Usage statisitics show almost no one is using v15, Android 4.0, so
+dropping them makes little difference. Sadly, more people are using
+v2, Android 2.2!
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1447824718,1448146209,118ba155bcf65b067cea5aef7c6d419865e9d295
+118ba155bcf65b067cea5aef7c6d419865e9d295,118ba155,"Change text size on map, and when we start showing text.","Change text size on map, and when we start showing text.
+
+Make text a big bigger, and show more info on earlier zooms.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446436312,1446436312,0ee6f49ac278ad1cd617b769f5553c87860b8512
+0ee6f49ac278ad1cd617b769f5553c87860b8512,0ee6f49a,Fix red highlighting of realtime minutes.,"Fix red highlighting of realtime minutes.
+
+Delay formatting the values, so we can compare the integer values,
+rather than poking around with ascii characters.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446434504,1446434504,8c00ae32ddf2817521ec581b61afe1d52cbbdd62
+8c00ae32ddf2817521ec581b61afe1d52cbbdd62,8c00ae32,Fix realtime time differences.,"Fix realtime time differences.
+
+Discrepancy caused by the app showing departure times, but the
+realtime data is based on arrival times, and sometimes they differ.
+This was introducing a small error into the calculated realtime
+differences. Stop 1907 is currently a good test.
+Also was not correctly setting the displayed field to blank when
+there is no RT data, so it was sometimes displaying an old string.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446322473,1446323443,56d5caac6f5085fb6244015b5e2fef16f9253ddf
+56d5caac6f5085fb6244015b5e2fef16f9253ddf,56d5caac,More tweaks to Gradle build config.,"More tweaks to Gradle build config.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446322376,1446322376,d93444713a60e9dbbd818e35124ba57c546d836d
+d93444713a60e9dbbd818e35124ba57c546d836d,d9344471,Show departure times in all-busses-at-stop*,"Show departure times in all-busses-at-stop*
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446322330,1446322330,293fadcc1b905a014daffad8539f9edaa6a3ec97
+293fadcc1b905a014daffad8539f9edaa6a3ec97,293fadcc,A bunch of changes to get Android Studio up to date and working.,"A bunch of changes to get Android Studio up to date and working.
+
+Not sure all of these files actually need to be checked in....
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446000364,1446000364,fde8c059e975b0cca2f1f6d7f934ac801fd8df33
+fde8c059e975b0cca2f1f6d7f934ac801fd8df33,fde8c059,Display realtime differences with correct sign.,"Display realtime differences with correct sign.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1446000326,1446000326,54bf47fc7df0ea844564ea29aacf0eed9c3c3f7d
+54bf47fc7df0ea844564ea29aacf0eed9c3c3f7d,54bf47fc,Deal with case where a route has only one trip.,"Deal with case where a route has only one trip.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1445979502,1445979502,00f225a31c0d590e0f0f64bad0b511fa446eb551
+00f225a31c0d590e0f0f64bad0b511fa446eb551,00f225a3,Pretty-printed version of active-trips; some cleaning up.,"Pretty-printed version of active-trips; some cleaning up.
+
+Removed printing from prior active-trips.
+Moved globals into a separate globals.lisp file.
+All-busses-at-stop* has option to show only realtime data.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1445550096,1445550096,a0d0134b4ff4f32865ad699352eea4adc99f2b87
+a0d0134b4ff4f32865ad699352eea4adc99f2b87,a0d0134b,Speedier get-route-details-for-trip.,"Speedier get-route-details-for-trip.
+
+Done by pre-building table strip-by-trip, in the same format as
+trips.txt, so we can retreive the required value with one lookup.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1445526897,1445526897,2472acc1697c91c72c36e02b0ff6052e3c21275e
+2472acc1697c91c72c36e02b0ff6052e3c21275e,2472acc1,Speed up timestr-to-epoch.,"Speed up timestr-to-epoch.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1445484419,1445484419,0aaa44307a02a4927c2ff50c58f9597edb73de67
+0aaa44307a02a4927c2ff50c58f9597edb73de67,0aaa4430,Active-trips now working with realtime data. Rather messy still.,"Active-trips now working with realtime data. Rather messy still.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445402479,1445402479,9a43b7b54455ea0fdd56f2cabafed03ef6bb8495
+9a43b7b54455ea0fdd56f2cabafed03ef6bb8495,9a43b7b5,First pass at listing active trips.,"First pass at listing active trips.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445314759,1445314759,ac47b353433f16dd62206e4753ffb1d74c86299b
+ac47b353433f16dd62206e4753ffb1d74c86299b,ac47b353,Pretty-print version all-busses-at-stop* now works,"Pretty-print version all-busses-at-stop* now works
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445217784,1445217784,e61f5aab297093e92232f58cec3a8d29d5a52a8d
+e61f5aab297093e92232f58cec3a8d29d5a52a8d,e61f5aab,Merge branch 'lisping' into realtime,"Merge branch 'lisping' into realtime
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445211392,1445211392,"5fd785eff678ff1d638bb53f7b50e3e4f0381633,c157a31058a39d9d8c1e845b3b0159b87c5d3ec9"
+5fd785eff678ff1d638bb53f7b50e3e4f0381633,5fd785ef,Merge branch 'master' into realtime,"Merge branch 'master' into realtime
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445211362,1445211362,"7556e0cd088efcaf6f45cfccca947c0b3d992ec6,f50490bfd3979412b9caf132936891867f69506a"
+7556e0cd088efcaf6f45cfccca947c0b3d992ec6,7556e0cd,"Updated developer studio, and it changes all these files...","Updated developer studio, and it changes all these files...
+
+Not sure if these need to be in git, but will stash them for now.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445210191,1445210191,29a6f332bbf012d12e03ecca9a2d09fe401dc578
+c157a31058a39d9d8c1e845b3b0159b87c5d3ec9,c157a310,Moving stuff into utilities.lisp. Working on realtime all-busses-at-stop*.,"Moving stuff into utilities.lisp. Working on realtime all-busses-at-stop*.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445144681,1445144681,8b1b2633c9428911a34cfc2730e1487c206fb037
+8b1b2633c9428911a34cfc2730e1487c206fb037,8b1b2633,Cache realtime data; added function to parse JSON dates.,"Cache realtime data; added function to parse JSON dates.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1445121667,1445121667,1d9350cdb2888da995f29de176593a69d15264dc
+1d9350cdb2888da995f29de176593a69d15264dc,1d9350cd,Sorting out submodules.,"Sorting out submodules.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1444799348,1444799348,5117c5938702150d94a551bff718f072c3540d7e
+29a6f332bbf012d12e03ecca9a2d09fe401dc578,29a6f332,Bump version numbers in build.gradle,"Bump version numbers in build.gradle
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1444601401,1444601401,2727ba0b8294db4a7f9d19300703b01eff29c56a
+f50490bfd3979412b9caf132936891867f69506a,f50490bf,"Make new schedules available immediately, automatically.","Make new schedules available immediately, automatically.
+What can possibly go wrong?
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1435176373,1435176373,766a14183c28fe636907566d7d7e1f57e740ce73
+766a14183c28fe636907566d7d7e1f57e740ce73,766a1418,Change file name for fetching from GRT.,"Change file name for fetching from GRT.
+
+http://www.regionofwaterloo.ca/en/regionalGovernment/GRT_GTFSdata.asp sez we should be getting the Daily file. Make it so.",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1435175832,1435175832,fe7f685dcec542d8c50aca0c81e7f4d63631c444
+fe7f685dcec542d8c50aca0c81e7f4d63631c444,fe7f685d,Fix test of count of files from GRT website.,"Fix test of count of files from GRT website.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1429120860,1429120860,8a4958baa9d3bb2638f6d0e3448f86c02f1bfd25
+2727ba0b8294db4a7f9d19300703b01eff29c56a,2727ba0b,More utility functions for dealing with time strings.,"More utility functions for dealing with time strings.
+Move code to find all busses visiting a stop into ServiceCalendar,
+since Realtime stuff will be needing this.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1423711376,1423711376,370756dafee3d823c62333c62d8b13a2a15ac53e
+370756dafee3d823c62333c62d8b13a2a15ac53e,370756da,"Read all trips in one go into cache, rather the piece by piece, as it's much faster this way.","Read all trips in one go into cache, rather the piece by piece, as it's much faster this way.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1423705682,1423705682,d350ea893dffb00d238295c70a37807a5e998a77
+d350ea893dffb00d238295c70a37807a5e998a77,d350ea89,Always show a sign with formatted minutes. Fix crash when trying to,"Always show a sign with formatted minutes. Fix crash when trying to
+parseint a diff with appended ""m"".
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1423114184,1423114184,b265e245eab9d7f14e0a6660693cfa43da60e74e
+b265e245eab9d7f14e0a6660693cfa43da60e74e,b265e245,Separate parts of 24hr time with a colon instead of `h'.,"Separate parts of 24hr time with a colon instead of `h'.
+When showing time differences, minutes >= 60 are split into hours
+& minutes part, separated by `h', thus the first change.
+Include a function for formatting minutes correctly using this.
+Fix calculation of time differences to be correct, hopefully, in
+case it wasn't before.
+ServiceCalendar apparently got reformatted?
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1422939372,1422939372,c89161af724fe02ab67bac4fbc4bdb6a3fbbacb7
+8a4958baa9d3bb2638f6d0e3448f86c02f1bfd25,8a4958ba,Show a notification screen for the new version on startup.,"Show a notification screen for the new version on startup.
+v2.1, pushing to play store. Includes realtime data for the first time.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1422422740,1422423005,63abbd0db6ae8cb2d284df75103840feac260a62
+c89161af724fe02ab67bac4fbc4bdb6a3fbbacb7,c89161af,Show a notification screen for the new version on startup.,"Show a notification screen for the new version on startup.
+v2.1, pushing to play store. Includes realtime data for the first time.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1422422740,1422422740,63abbd0db6ae8cb2d284df75103840feac260a62
+63abbd0db6ae8cb2d284df75103840feac260a62,63abbd0d,"Fix crash when selecting a route from the favs screen, thanks to the divider.","Fix crash when selecting a route from the favs screen, thanks to the divider.
+Closest stops now starts Times rather than RouteSelect actvity.
+Make realtime pref default to true.
+Bumped internal version to 33.
+Need to change nav menu to ""My localtion"" when already showing a map.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421986902,1421986902,b851e81c6f621accc238c45a2b53fe1fadc78809
+b851e81c6f621accc238c45a2b53fe1fadc78809,b851e81c,Bumped version to 2.1/33.,"Bumped version to 2.1/33.
+Added divider on FavStops screen.
+Refer am/pm time switch to only the schedules.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421899631,1421899865,11be11851f876198745edb707eb9c811893da48f
+11be11851f876198745edb707eb9c811893da48f,11be1185,"Activities no longer based on ListActivity, but rather plain Activity. Makes it","Activities no longer based on ListActivity, but rather plain Activity. Makes it
+easier to go to material design compat. FavStops completely reworked, layouts
+handled manually, with the idea in furture the next 3 busses wouold be shown per stop.
+Layouts expanded, reworked, more space....
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421822024,1421822024,d392e6dadb39a509f8ed46d9d821d67c58bec90e
+d392e6dadb39a509f8ed46d9d821d67c58bec90e,d392e6da,Deleted unnedded files.,"Deleted unnedded files.
+Made ClosestStops look better.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421560212,1421560212,a559429d9b527ba14c1445d68939e6cabafdf0d6
+a559429d9b527ba14c1445d68939e6cabafdf0d6,a559429d,Lint cleanups. Trying to get long click to work on favs screen.,"Lint cleanups. Trying to get long click to work on favs screen.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421466216,1421466216,bd9454ea6f89ff0f0e90b2542a74b13a680c4170
+bd9454ea6f89ff0f0e90b2542a74b13a680c4170,bd9454ea,Put a cache in front of the realtime queries.,"Put a cache in front of the realtime queries.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421456421,1421456421,99fdd99b60082d8763679ed9019c4975b31b6ab2
+99fdd99b60082d8763679ed9019c4975b31b6ab2,99fdd99b,"Cleaning up Realtime a bit, using names for types etc. Still need to","Cleaning up Realtime a bit, using names for types etc. Still need to
+put in some caching.
+Moved the time diff cals into ServiceCalendar, where they belong.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421391987,1421391987,499b007b945934219ced9d6a6ec1cebaaa4d59f0
+499b007b945934219ced9d6a6ec1cebaaa4d59f0,499b007b,More progress with realtime stuff. Creating new layouts etc. for more,"More progress with realtime stuff. Creating new layouts etc. for more
+consistency. Still to get rid of some of the old cruft.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421300039,1421300039,b674caa292eacf8f34c4671caa56a0c32bcb56fe
+b674caa292eacf8f34c4671caa56a0c32bcb56fe,b674caa2,"Made favstops an ""empty"" layout, to add items individually in the activity.","Made favstops an ""empty"" layout, to add items individually in the activity.
+It's only adding one bus per stop at the moment, but the intention is to show
+the first three, with realtime data. It's not clickable either atm.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421220383,1421220383,d17ab03ebc80060133a0604d103ad2cf1d8a4ff5
+d17ab03ebc80060133a0604d103ad2cf1d8a4ff5,d17ab03e,Fetching realtime data; need to clean up layouts.,"Fetching realtime data; need to clean up layouts.
+Works (?) on favstops & following details screens.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1421043410,1421128177,3f4ccba3ff416709afde2b2fffefc3919ffa981d
+5117c5938702150d94a551bff718f072c3540d7e,5117c593,Switched to using jsown for JSON parsing.,"Switched to using jsown for JSON parsing.
+Start using asdf.
+More work on fetching realtime data for a stop.
+Removed submodules; will keep them away from this repo.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1416463391,1420943973,f3551455406576c84638c64cef6a10e0eb29f995
+f3551455406576c84638c64cef6a10e0eb29f995,f3551455,Added st-json submodule for groking GRT's realtime JSON data.,"Added st-json submodule for groking GRT's realtime JSON data.
+Working on get-realtime, & adding data to next-bus-at-stop.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1416375582,1420943973,727257e37eae562d8772d7d65b8abd5fcb68ef37
+727257e37eae562d8772d7d65b8abd5fcb68ef37,727257e3,Added wget-text for fetching text from web page.,"Added wget-text for fetching text from web page.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1416366089,1420943973,871ca639ed547efbf85f821811a3bfb43c08816e
+871ca639ed547efbf85f821811a3bfb43c08816e,871ca639,Alternate version of finding trips using stop.,"Alternate version of finding trips using stop.
+
+Change-Id: Iefe92fcedcb8778d754a1ff267f9ebc2f9f9c1f3
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1387129149,1420943973,3e65c271553446ddc3d527821acabcd2f87b99f8
+3e65c271553446ddc3d527821acabcd2f87b99f8,3e65c271,"Create and use a table giving all trips using a stop, since this is such a common need.","Create and use a table giving all trips using a stop, since this is such a common need.
+
+Change-Id: I2d29a4eae025c89036c710305125b24f11ffec1d
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385967998,1420943973,9a7d2f149d1dc0a3cf44b1c63379036aca5a7153
+9a7d2f149d1dc0a3cf44b1c63379036aca5a7153,9a7d2f14,"A few more functions, using flets, etc.","A few more functions, using flets, etc.
+
+Change-Id: I14b5b4f4f4ee2f84fe1ffff44665d6419c366623
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385802723,1420943973,a9373efb92b4e968b83cda8c7270bb936e6c8ea3
+a9373efb92b4e968b83cda8c7270bb936e6c8ea3,a9373efb,Tweaking handling calendar.,"Tweaking handling calendar.
+
+Change-Id: If8c6290dbf4d265b41f3a4bacdd0886593e81804
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385792406,1420943973,bdf59af07944f9493806637853b51ffd501370b4
+bdf59af07944f9493806637853b51ffd501370b4,bdf59af0,Can do lookups for calendar exceptions.,"Can do lookups for calendar exceptions.
+
+Change-Id: I4236d2814f72a1df8f9098c33daf33ca2f804e75
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385622481,1420943973,a6a911cee8f942d660a86508e549a8b7dedffd0f
+a6a911cee8f942d660a86508e549a8b7dedffd0f,a6a911ce,"Can now list all busses for a stop, in time order.","Can now list all busses for a stop, in time order.
+Still ignoring calendar, and doing sequential sorts.
+Really need a stop -> trips mapping.
+
+Change-Id: I070558066354cbbbeb88e5a35086a0d26db996ec
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385535301,1420943973,641f846b49abcd32d4f3b79959cb77715f1a6226
+641f846b49abcd32d4f3b79959cb77715f1a6226,641f846b,Can now show next bus of each route due at a stop.,"Can now show next bus of each route due at a stop.
+
+Change-Id: I5e7d93b889c51a584f4b1840a5ed7b01f9a2c011
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385514290,1420943973,45a92f5253ba222af828d0d5c2894189a44af504
+45a92f5253ba222af828d0d5c2894189a44af504,45a92f52,Can retrieve all routes using a given stop.,"Can retrieve all routes using a given stop.
+No calendar checks yet. Crude, using sequential searches...
+
+Change-Id: I8f772cfb5670186ca86a84c7502287e389d52a63
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385362285,1420943973,2cc7bb0d0985fa8e2ab849b48aa123a04bc72992
+2cc7bb0d0985fa8e2ab849b48aa123a04bc72992,2cc7bb0d,Store hash tables in a pairlis,"Store hash tables in a pairlis
+
+Change-Id: Ic721d96e9ecef3af4dd73a815cc2f0f695aa3c8c
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385344190,1420943972,2d0db86ad118616daa824396ed8f7358fbf593b0
+2d0db86ad118616daa824396ed8f7358fbf593b0,2d0db86a,Basic reading of files working.,"Basic reading of files working.
+
+Change-Id: I8bdf52b56c3b7ba4f180192740172e21e74553fb
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385338183,1420943972,3f4ccba3ff416709afde2b2fffefc3919ffa981d
+3f4ccba3ff416709afde2b2fffefc3919ffa981d,3f4ccba3,"Try get smart downloading the new schedule files, because the Region","Try get smart downloading the new schedule files, because the Region
+is sure not making it easy by naming files arbitrarily, and not giving
+us any way of determining if anything has actually changed.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420941544,1420941544,7cc92fd901d2bccfe6adb7b388aa5946f443292e
+7cc92fd901d2bccfe6adb7b388aa5946f443292e,7cc92fd9,"Messing a bit with styling etc., for push to version 2.0.","Messing a bit with styling etc., for push to version 2.0.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420435940,1420435940,e0ce662a926739991b26955d578f280ee3d440af
+e0ce662a926739991b26955d578f280ee3d440af,e0ce662a,Updated icons. Messing with themes a bit.,"Updated icons. Messing with themes a bit.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420259724,1420259724,35b99f1faadbc3873deacb8b5b395a8bcc17bef0
+35b99f1faadbc3873deacb8b5b395a8bcc17bef0,35b99f1f,"Bunch of lint cleanup stuff, including lots of changes to accessibility","Bunch of lint cleanup stuff, including lots of changes to accessibility
+of members etc. Hopefully nothing b0rked.... I'm a bit worried about
+the dbHelper disappearing and crashing access to the database. Hmmm.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420189408,1420189408,b5c62720071fb2124c2748dad054c575b320104a
+b5c62720071fb2124c2748dad054c575b320104a,b5c62720,"Revert ""Changed default theme to DeviceDefault (which happens to be Holo at the moment).""","Revert ""Changed default theme to DeviceDefault (which happens to be Holo at the moment).""
+
+Turns out the default is not to have an icon on the action bar,
+which we want. So undo this.
+
+This reverts commit c711244eeabbd69891fe2cf41ed48ac78d1dacd6.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420187249,1420187249,412a1b802b4757f4e27373eb5e1bf93b116360d0
+412a1b802b4757f4e27373eb5e1bf93b116360d0,412a1b80,"Remove more mentions of animation. Get the hamburger back, and try keep it","Remove more mentions of animation. Get the hamburger back, and try keep it
+by using LocalClassNameHome, which we compare to now rather than strings in
+numerous places, one of which me missed when moving all activities to a
+separate sub folder.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420187121,1420187121,bcab4ed33adbe6512ec17239d459c1c0e2b65231
+bcab4ed33adbe6512ec17239d459c1c0e2b65231,bcab4ed3,"A tap on the favourites screen shows busses for all routes immediately,","A tap on the favourites screen shows busses for all routes immediately,
+instead of just listing routes and waiting for a tap (i.e. starts
+TimesActivity instead of RouteSelectActivity)... Is this better?
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420184107,1420184107,d28270602a2db08257aa3cc662124be5d36c0bc5
+d28270602a2db08257aa3cc662124be5d36c0bc5,d2827060,Make sure subtitles are set or clear appropriately as well as titles.,"Make sure subtitles are set or clear appropriately as well as titles.
+Fix case in timestopdescArrayAdapter name.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420183999,1420183999,c711244eeabbd69891fe2cf41ed48ac78d1dacd6
+c711244eeabbd69891fe2cf41ed48ac78d1dacd6,c711244e,Changed default theme to DeviceDefault (which happens to be Holo at the moment).,"Changed default theme to DeviceDefault (which happens to be Holo at the moment).
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420182711,1420182711,81c108884105e0d4c367ca4679ad1f5f83aeeb06
+81c108884105e0d4c367ca4679ad1f5f83aeeb06,81c10888,"Removed all animation, since Android does it for us now.","Removed all animation, since Android does it for us now.
+Was used the show / hide our progress bar.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420170657,1420182574,2dcf4222e86aa25c2d63cf064e7428dcf3ad9deb
+2dcf4222e86aa25c2d63cf064e7428dcf3ad9deb,2dcf4222,Moved activities into separate sub-directory.,"Moved activities into separate sub-directory.
+When selecting the map from the navigation drawer, centre the
+map on the active bus stop if there is one.
+Put all navigation processing into one place (NavOptionSelected). Allow
+overriding this to catch situations like above.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420170088,1420170088,d188070b95fe222c671cf10fffea7588a0631051
+d188070b95fe222c671cf10fffea7588a0631051,d188070b,Clean up titles a bit. Start adding nav drawer to maps.,"Clean up titles a bit. Start adding nav drawer to maps.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420093227,1420093227,88f1cd03c7a6ccc146367ab5b636daed8d6769d3
+88f1cd03c7a6ccc146367ab5b636daed8d6769d3,88f1cd03,"Removed titlelayout.xml, which contained a title & progress bar. Instead","Removed titlelayout.xml, which contained a title & progress bar. Instead
+use those in the ActionBar. Also flattened appearence slightly
+by tweaking the style so everything uses one background, rather
+than a light & dark one.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420083802,1420083802,e659d3ead0d74ea8a35de1129bc5124b1ddf73c2
+e659d3ead0d74ea8a35de1129bc5124b1ddf73c2,e659d3ea,Working on getting navigation drawer going.,"Working on getting navigation drawer going.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1420013879,1420013879,976375cea2f6b4b6eb161b546f0ee073293082b6
+976375cea2f6b4b6eb161b546f0ee073293082b6,976375ce,"Use BuildConfig class to find build details, rather than searching for package signatures etc.","Use BuildConfig class to find build details, rather than searching for package signatures etc.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1419970440,1419970440,8997efa45873b0559b3bbbccd49125f3713ec219
+8997efa45873b0559b3bbbccd49125f3713ec219,8997efa4,Switched to Android Studio / gradle.,"Switched to Android Studio / gradle.
+Removed support for old api calls and boutgh min API level to 15.
+Updated to newer version of analytics.
+Cleaned up lots of Lint etc. warnings.
+Bumped version number.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1419889566,1419909333,136711dd8092095f6a1545001db4ff3df4e2cd48
+136711dd8092095f6a1545001db4ff3df4e2cd48,136711dd,Added all files produced from the conversion in the previous commit.,"Added all files produced from the conversion in the previous commit.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1419555681,1419555681,cc1a15c407ade971d9a92b0c74ee668685139367
+cc1a15c407ade971d9a92b0c74ee668685139367,cc1a15c4,Immediately after conversion to Android Studio gradle project.,"Immediately after conversion to Android Studio gradle project.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1419555515,1419555515,b5d164066cf78f89d9fd40fab670ac1dec6947c4
+b5d164066cf78f89d9fd40fab670ac1dec6947c4,b5d16406,Synching up data files with baleka.org.,"Synching up data files with baleka.org.
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1415339897,1415339897,dabda49a9c7d1136fadff464adc50583b4fa78ce
+dabda49a9c7d1136fadff464adc50583b4fa78ce,dabda49a,"Fixing scripts to automate schedule updates, and including latest data.","Fixing scripts to automate schedule updates, and including latest data.
+
+Change-Id: Ib559a07722089117d51e10d4365660a4262afc16
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1409949927,1409949927,c28add8d13ba5a6cde8dc7681713e257b33becdb
+c28add8d13ba5a6cde8dc7681713e257b33becdb,c28add8d,Removed TwitterCredentials.java for push to Github.,"Removed TwitterCredentials.java for push to Github.
+
+Change-Id: I2d06e1fa03ac2879f1e48f474c96a36d6c467d69
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385098456,1385098456,77629c2c27d76204776c7175849000cb30b745cb
+77629c2c27d76204776c7175849000cb30b745cb,77629c2c,Merge branch 'master' of github.com:gdmalet/grtransit -- which,"Merge branch 'master' of github.com:gdmalet/grtransit -- which
+does not contain the true TwitterCredentials.java.
+
+Conflicts:
+	Android/AndroidManifest.xml
+
+Change-Id: I80458aa684d032e176c6445541d39d900281c176
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385096645,1385096645,"1c0cbcf86960c76eb6dafe80ef21a69bdc4553de,74608f30e90a975f965937951927aaf9f3734cc5"
+1c0cbcf86960c76eb6dafe80ef21a69bdc4553de,1c0cbcf8,Merge branch 'master' of ssh://localhost:29418/GRT-GTFS,"Merge branch 'master' of ssh://localhost:29418/GRT-GTFS
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1385093983,1385093983,"2dcec34945e84fd1cc933a82f129ff87df63a79d,206f785168e73227ba370af51ecef97e6271abe2"
+2dcec34945e84fd1cc933a82f129ff87df63a79d,2dcec349,Show whether it's a debug build on the About screen.,"Show whether it's a debug build on the About screen.
+Various script changes to automagically check for a new schedule,
+& push out the .dbg version to blakeka.org if one exists.
+
+Change-Id: I342e7eef9e6d7ca0e93b8c74f67f168d6797d8de
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1384489028,1385093160,29b79fb025b166cb77aa6a64256294ac5340e1cf
+206f785168e73227ba370af51ecef97e6271abe2,206f7851,Show whether it's a debug build on the About screen.,"Show whether it's a debug build on the About screen.
+Various script changes to automagically check for a new schedule,
+& push out the .dbg version to blakeka.org if one exists.
+
+Change-Id: I342e7eef9e6d7ca0e93b8c74f67f168d6797d8de
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1384489028,1384491900,29b79fb025b166cb77aa6a64256294ac5340e1cf
+29b79fb025b166cb77aa6a64256294ac5340e1cf,29b79fb0,"Append "".dbg"" to version and database files on baleka.org when doing a debug run.","Append "".dbg"" to version and database files on baleka.org when doing a debug run.
+
+Change-Id: I48b3101cd41c081ac66029caf1ccf0b0106f2a08
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1383799621,1384407535,82c2883d8a757b061a2ef1c1ae13b68f6ebc5117
+82c2883d8a757b061a2ef1c1ae13b68f6ebc5117,82c2883d,Hardware acceleration is turned off on the maps.,"Hardware acceleration is turned off on the maps.
+
+This is done else zooming on the maps causes lines to
+eventually disappear, and sudden crashes.  Logcat also
+says ""Shape path too large to be rendered into a texture"".
+See http://stackoverflow.com/questions/9896804/android-paths-for-real-time-charting
+
+Change-Id: I3861070279fa65fedd83abe98c564bca1c37d900
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1383797703,1384405810,faecb8388a018789365e348c3db235b18efed902
+faecb8388a018789365e348c3db235b18efed902,faecb838,Fix crash when displaying routes on map.,"Fix crash when displaying routes on map.
+If there's no DB and we can't check for a new one, let Favstops deal with it,
+rather than showing 0.0 megs to download.
+Reworded a couple of strings.
+
+Change-Id: I19389c9af0f59ec94ceb3b03001c8e56795bc43a
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1383714392,1384405361,9caae1326f6d307fc9cd38b747a5bf0f74344873
+9caae1326f6d307fc9cd38b747a5bf0f74344873,9caae132,Use a preference to decide if we should check online for database,"Use a preference to decide if we should check online for database
+updates. If set, and there's a new DB, offer to download and install.
+
+Change-Id: I7aba923aa1f05639fc93316c4eb2db233e63f5f9
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382588989,1384404517,be9ef0a84b675b5599b2d2870ee9fe5cc3c825e9
+be9ef0a84b675b5599b2d2870ee9fe5cc3c825e9,be9ef0a8,Eliminate duplicate stops when showing a trip.,"Eliminate duplicate stops when showing a trip.
+
+Change-Id: I40c49bde16315ec82cb706ad66611ccc804f74cf
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1383017375,1383017375,4acd4deb4649c34f117323eea9f93719a2cbae02
+4acd4deb4649c34f117323eea9f93719a2cbae02,4acd4deb,Screwed up a merge somewhere around 0aac87dea6b64d90ffe9f42ad1dc40c074db25b2,"Screwed up a merge somewhere around 0aac87dea6b64d90ffe9f42ad1dc40c074db25b2
+and lost changes to strings.xml, and references to those strings in the code.
+This commit just puts those changes back, plus some eclipse-generated format changes.
+
+Change-Id: I0586f1c503070efa6b987a3eee16169153808f3a
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382585406,1382585406,8409df023063fc57c2aa28901b73527f417ea680
+74608f30e90a975f965937951927aaf9f3734cc5,74608f30,"apk for 1.7.2, tagged as such. Version bumped in manifest.","apk for 1.7.2, tagged as such. Version bumped in manifest.
+
+Change-Id: I3e21b464824909ab82ef337b441fb28266cfe4b7
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382317657,1382318167,5478c365e6e031d624a52b11f4875191f557f5d3
+8409df023063fc57c2aa28901b73527f417ea680,8409df02,"apk for 1.7.2, tagged as such. Version bumped in manifest.","apk for 1.7.2, tagged as such. Version bumped in manifest.
+
+Change-Id: I3e21b464824909ab82ef337b441fb28266cfe4b7
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382317657,1382318167,24f6105a49928e108b779da2c0b1b4b8843bedf3
+24f6105a49928e108b779da2c0b1b4b8843bedf3,24f6105a,Need twitter credentials for Jenkins.,"Need twitter credentials for Jenkins.
+
+Change-Id: Ic7e70cb05917d7e31bd477fbb188124688c1d3ec
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382316802,1382316802,5478c365e6e031d624a52b11f4875191f557f5d3
+5478c365e6e031d624a52b11f4875191f557f5d3,5478c365,Rider alerts now working again.,"Rider alerts now working again.
+Fixed crash when no external (sdcard) storage available.
+Bumped target SDK version to 18 from 16.
+
+Change-Id: Iaa4b969dd5809a8f05575333e08ecf2a6176912b
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1382080590,1382309169,3e65d78854771459970d5cf53487d3511769b430
+3e65d78854771459970d5cf53487d3511769b430,3e65d788,apk for version 1.7.1.,"apk for version 1.7.1.
+
+Change-Id: I49390da36f2ce5286e583e27d210f2e9feed9422
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1381990045,1381990045,de6a200d1b596aaa54225fa70e5bc2bde5600500
+de6a200d1b596aaa54225fa70e5bc2bde5600500,de6a200d,Show version info in the About screen.,"Show version info in the About screen.
+
+Change-Id: If08779b4a4dc6dec1316542965e07c0439b4ae1a
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1381988585,1381988585,c7e37b5612dd301b272b540bf8fd87a6350e87b7
+c7e37b5612dd301b272b540bf8fd87a6350e87b7,c7e37b56,Remove duplicate trips from stops.,"Remove duplicate trips from stops.
+Bumped version code for next release.
+
+Change-Id: Iab049c91ecdb5198bf714692d133a2ad9ac67df2
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1381981396,1381981396,5c0aec224be36dbee0610c138ceedd984129a2f3
+5c0aec224be36dbee0610c138ceedd984129a2f3,5c0aec22,Clean up route id; new schedules for v1.7.,"Clean up route id; new schedules for v1.7.
+
+Change-Id: I2785ffa29fb934d8850dc9bb10966fb6f3bb67fb
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1381558820,1381560897,6424dd0bcc4b7638a9ee73f9738174ee54055ef8
+6424dd0bcc4b7638a9ee73f9738174ee54055ef8,6424dd0b,New schedules for fall 2013,"New schedules for fall 2013
+
+Change-Id: Ia692905cc981c475b46f331c21d05c88e2dac21b
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1378390697,1378390697,66e7afbaab1b9adf33e7952a0fcc941b3ccf875a
+66e7afbaab1b9adf33e7952a0fcc941b3ccf875a,66e7afba,New schedules for June 2013. Version 1.5.,"New schedules for June 2013. Version 1.5.
+
+Change-Id: I3ce996dc2b7e68e5cd9fa2f7a58d412cc3a6c3c0
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1372213215,1372213215,84d4f583976fbd32afeefae490f84c5f80e99cb3
+84d4f583976fbd32afeefae490f84c5f80e99cb3,84d4f583,"Schedule updated, v1.4","Schedule updated, v1.4
+
+Change-Id: I13862894ffc6d3ba855b56d360987fb05b812a46
+",,,,Giles Malet,gdmalet@gmail.com,Giles Malet,gdmalet@gmail.com,1366871488,1366871488,88f2f7cb78f4ac9fe20c13618ccfbc25afb36b4a
+88f2f7cb78f4ac9fe20c13618ccfbc25afb36b4a,88f2f7cb,Setting up for Jenkins builds.,"Setting up for Jenkins builds.
+(cherry picked from commit e5cf4f17d350faa70717d5b8ad1fbe6a2e20eb2c)
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1361252027,1361252924,c15c93d414ea26f52aaf5444a153cdc39c025c49
+c15c93d414ea26f52aaf5444a153cdc39c025c49,c15c93d4,"Use android.app.Application to handle globals, rather than having Globals.java…","Use android.app.Application to handle globals, rather than having Globals.java (which was renamed to GRTApplication.java).
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1357709014,1357709014,8e74495cebb25011c99391d2e43cfe4721cab972
+8e74495cebb25011c99391d2e43cfe4721cab972,8e74495c,January schedules; twitter is now @GRT_ROW.,"January schedules; twitter is now @GRT_ROW.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1357529069,1357529069,31f11c4a2119213aaca1f4de009537f443181a38
+31f11c4a2119213aaca1f4de009537f443181a38,31f11c4a,Use action bar style titles. New googleanalytics lib. New schedule. v1.2.,"Use action bar style titles. New googleanalytics lib. New schedule. v1.2.
+Fixed crash on long click on footers.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1356204317,1356321793,fa0e4da8ccff7de63f1f0469be4314469ca108c2
+fa0e4da8ccff7de63f1f0469be4314469ca108c2,fa0e4da8,Use the ActionBar for API >10.,"Use the ActionBar for API >10.
+Put ReflectionWrapper stuff into separate file.
+Drop ldpi support. Android will resize if it's needed.
+Bumped version to 1.2.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1355460949,1355460949,26e7a211d3865f1ee9321d17b626daa09f869a40
+26e7a211d3865f1ee9321d17b626daa09f869a40,26e7a211,Get overflow menu to display on newer devices without menu key. Include a `home' button.,"Get overflow menu to display on newer devices without menu key. Include a `home' button.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1355259585,1355259585,911f05c92c6ef5274d558362e8d0531b76b9df47
+911f05c92c6ef5274d558362e8d0531b76b9df47,911f05c9,Put all menu / title bar handling code in super classes of the ListActivity,"Put all menu / title bar handling code in super classes of the ListActivity
+and MapActivity, and derived from them. The code then handle menu selections &
+clicks in separate classes, so there is no duplication of code.
+Also reduced buttons on title bar to just search & overflow, bringing up the
+options menu for the latter. Handles newer phones with no menu button.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1355089326,1355089581,36562276390cf69f0a32384d792b1c63f3391f17
+36562276390cf69f0a32384d792b1c63f3391f17,36562276,Fix random crashes. Update progress bar on twitter fetch. Updated to v1.1.1.,"Fix random crashes. Update progress bar on twitter fetch. Updated to v1.1.1.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1354863330,1354945097,97bebb4649128f6cbdbbc4b7ee111c127c1aa8c6
+97bebb4649128f6cbdbbc4b7ee111c127c1aa8c6,97bebb46,"Search working, new title working.","Search working, new title working.
+Bumped version in manifest to 1.1.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1354515023,1354684423,d923e31c5ac9af80aff5dfe9038dcce177d93faf
+d923e31c5ac9af80aff5dfe9038dcce177d93faf,d923e31c,"Search sort of working, using Android search.","Search sort of working, using Android search.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1354491961,1354491961,7db5a12acfe92110c7b4f559190e0e848414d26e
+7db5a12acfe92110c7b4f559190e0e848414d26e,7db5a12a,Mostly working on new searches. Still need to sort out activity titles.,"Mostly working on new searches. Still need to sort out activity titles.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1354258812,1354258812,8dd383d4a196cbb196c0f9aacf4e056041000b1a
+8dd383d4a196cbb196c0f9aacf4e056041000b1a,8dd383d4,"New title bar in place. Still fiddling, still to do searches.","New title bar in place. Still fiddling, still to do searches.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1353908711,1353908711,85fad6dd0c62c0545d03dd6f2733a26a2600ada6
+85fad6dd0c62c0545d03dd6f2733a26a2600ada6,85fad6dd,Tweaks to twitter stuff. Starting to experiment with progress bar in title.,"Tweaks to twitter stuff. Starting to experiment with progress bar in title.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1353639553,1353639553,03bc2f0e56f5ec72361710734a10f5112cec9bb8
+03bc2f0e56f5ec72361710734a10f5112cec9bb8,03bc2f0e,"First draft of fetching @GRTRiderAlerts, using twitter search interface (not really working).","First draft of fetching @GRTRiderAlerts, using twitter search interface (not really working).
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1353288854,1353288854,5b2a2248dad15168321e297fcf100fde91b17ab1
+5b2a2248dad15168321e297fcf100fde91b17ab1,5b2a2248,Remove unused menu code. Minimize space used when showing times.,"Remove unused menu code. Minimize space used when showing times.
+Bump db version for new schedules (somewhat belated).
+Added version 1.0 binary. This is Sparta.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1352873518,1352953401,3a8f626a942a3918bf8f37f22c3462123e8c469c
+3a8f626a942a3918bf8f37f22c3462123e8c469c,3a8f626a,Drop trailing :00 from all times.,"Drop trailing :00 from all times.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1352687203,1352687203,e57e24c716404dbee42b1cb516b378c94cbdb20b
+e57e24c716404dbee42b1cb516b378c94cbdb20b,e57e24c7,"Making menus consistent, and working.","Making menus consistent, and working.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1352092453,1352092453,81c0d043495f828d52f20f0afc9a32cf6775f280
+81c0d043495f828d52f20f0afc9a32cf6775f280,81c0d043,Bumped minSdkVersion to 7 (Android 2.1). Minor tweaks.,"Bumped minSdkVersion to 7 (Android 2.1). Minor tweaks.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1352064124,1352064124,4a1c9aa81a8167b7b7916b324f3b78b369b23a92
+4a1c9aa81a8167b7b7916b324f3b78b369b23a92,4a1c9aa8,"Added ClosestStops activity, plus some minor GUI tweaks. Compiled for Android…","Added ClosestStops activity, plus some minor GUI tweaks. Compiled for Android 4.0. This will be releases as version 1.0 hopefully.
+",,,,Giles Malet,gdmalet@uwaterloo.ca,Giles Malet,gdmalet@uwaterloo.ca,1351826164,1351826164,4faee7fb2d1314e8e0959659094fda072bfacc7a
+4faee7fb2d1314e8e0959659094fda072bfacc7a,4faee7fb,Use last know fix if we don't have a current one.,"Use last know fix if we don't have a current one.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1350272324,1350272324,df0e208c498caca7512c1a1d42ba37432c36eb06
+df0e208c498caca7512c1a1d42ba37432c36eb06,df0e208c,"Updated to version 0.98.5, versioncode 17, db 11","Updated to version 0.98.5, versioncode 17, db 11
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1350158883,1350159410,cddf2232a76210c7b0881442e33db474b00e16a5
+cddf2232a76210c7b0881442e33db474b00e16a5,cddf2232,Forgot to add the apk and data to the new version!,"Forgot to add the apk and data to the new version!
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1340724785,1340724785,a5cd34da6657f1d6ca7b0fc636d001fee20a398e
+a5cd34da6657f1d6ca7b0fc636d001fee20a398e,a5cd34da,"New schedules, bumped version to 0.98.3, versioncode 15, db 9.","New schedules, bumped version to 0.98.3, versioncode 15, db 9.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1340721793,1340721793,063f7695336cd332e1dc342513b0a64aeb041b20
+063f7695336cd332e1dc342513b0a64aeb041b20,063f7695,Missing return in case statement meant request to show map led to prefs screen being displayed.,"Missing return in case statement meant request to show map led to prefs screen being displayed.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1335758962,1335758962,888dc9f6b382e9f1df1c329c60c2088f5c163c13
+888dc9f6b382e9f1df1c329c60c2088f5c163c13,888dc9f6,"New schedules, plus prefs for AM/PM times","New schedules, plus prefs for AM/PM times
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1335758261,1335758261,ae2c592469171d6015335008be7239aea62b6ac9
+ae2c592469171d6015335008be7239aea62b6ac9,ae2c5924,Complete preferences activity. Now updates screens when prefs changed.,"Complete preferences activity. Now updates screens when prefs changed.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1330402374,1330406725,d5e92e9cc7937069e6475f98d1f3531a0680f7f7
+d5e92e9cc7937069e6475f98d1f3531a0680f7f7,d5e92e9c,"Removed transitfeed source, since it is available from Google.","Removed transitfeed source, since it is available from Google.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1330230582,1330230582,f09466b4d6a509128dfabe60d6efff05ffef6709
+f09466b4d6a509128dfabe60d6efff05ffef6709,f09466b4,Added some missing apks; missing exit from switch in TimesActivity; check in the classpath,"Added some missing apks; missing exit from switch in TimesActivity; check in the classpath
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1330229784,1330229784,b3d0df2dbab301c4803799551ccf9b6b8b4beb97
+b3d0df2dbab301c4803799551ccf9b6b8b4beb97,b3d0df2d,Added missing files for preferences activity.,"Added missing files for preferences activity.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1329975881,1329975881,409d306b06eb5fc39498125bda9c4961e3435136
+409d306b06eb5fc39498125bda9c4961e3435136,409d306b,Use a preferences activity. Incomplete.,"Use a preferences activity. Incomplete.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1329975805,1329975805,2f5ff442c1f232b0be8d9409ddd1e1e583f2f978
+2f5ff442c1f232b0be8d9409ddd1e1e583f2f978,2f5ff442,"Option to display times with pm, but not yet settable. Also some refactoring in…","Option to display times with pm, but not yet settable. Also some refactoring in layouts to use the name stoptime etc.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1329802592,1329802592,f72fb99f86861a6716de15530cd22bf52656b289
+f72fb99f86861a6716de15530cd22bf52656b289,f72fb99f,"Long press on route list, move stop search off ui thread, so listview footers to…","Long press on route list, move stop search off ui thread, so listview footers to give hints to user.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1326260898,1326260898,0710d31928c4c4dbdce7428c698a23a12be896a7
+0710d31928c4c4dbdce7428c698a23a12be896a7,0710d319,Added a couple of missing files to git.,"Added a couple of missing files to git.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1326254706,1326254706,77a63e29f14439f635e7c164602695e3c58e7992
+77a63e29f14439f635e7c164602695e3c58e7992,77a63e29,Added list of stops when a time is clicked. Fixed mangled help screen on favourite stops.,"Added list of stops when a time is clicked. Fixed mangled help screen on favourite stops.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325886333,1325886333,05aa5b222b0681c826feb3359472077a619ce96b
+05aa5b222b0681c826feb3359472077a619ce96b,05aa5b22,"Grrr..... can't upload to market without bumping version. This is just the cursor fix, again.","Grrr..... can't upload to market without bumping version. This is just the cursor fix, again.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325483648,1325483648,18f1ac1c3f31a4a0860aa77bc2f406023c587eb4
+18f1ac1c3f31a4a0860aa77bc2f406023c587eb4,18f1ac1c,Close a cursor that was being left around on special holidays.,"Close a cursor that was being left around on special holidays.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325483173,1325483173,fdb8e3e720fffe53870cdb79b885946bedb225ec
+fdb8e3e720fffe53870cdb79b885946bedb225ec,fdb8e3e7,Close a cursor that was being left around on special holidays.,"Close a cursor that was being left around on special holidays.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325483047,1325483047,a5eeb355ecb18a906b8a35d3961f3ff889665635
+a5eeb355ecb18a906b8a35d3961f3ff889665635,a5eeb355,Release 0.98.,"Release 0.98.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325480301,1325480301,45085dd3b4703b694062e9b2b86415e3e2154760
+45085dd3b4703b694062e9b2b86415e3e2154760,45085dd3,Long route names were wrapping text.... Gave route and stop numbers a common parent in styles.xml.,"Long route names were wrapping text.... Gave route and stop numbers a common parent in styles.xml.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325317503,1325317503,7285910710c0eb489cda5f9f5f46d8add592ef11
+7285910710c0eb489cda5f9f5f46d8add592ef11,72859107,GUI cleanup done? Could still do with some refactoring... oh well.,"GUI cleanup done? Could still do with some refactoring... oh well.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325289322,1325289322,1178c6fc4f89a13a66fe0f24d57c82e3ea7f220f
+1178c6fc4f89a13a66fe0f24d57c82e3ea7f220f,1178c6fc,"Cleaning up GIU - about to convert to LinearLayour from TableLayout,","Cleaning up GIU - about to convert to LinearLayour from TableLayout,
+so the the route number will format correctly.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325282793,1325282793,a6cadd348a432e1764574b800cab7168d19ac68f
+a6cadd348a432e1764574b800cab7168d19ac68f,a6cadd34,"leaning up GIU - about to convert to LinearLayour from TableLayout,","leaning up GIU - about to convert to LinearLayour from TableLayout,
+so the the route number will format correctly.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325281716,1325281716,fc60ab6fdfaffaa4e070007fcde32a54f28c324d
+fc60ab6fdfaffaa4e070007fcde32a54f28c324d,fc60ab6f,More gui cleanups. Put animations onto favourites screen and brightened colours.,"More gui cleanups. Put animations onto favourites screen and brightened colours.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325215864,1325215864,9de512f76214917e4799608b3e084e8f2697dbb3
+9de512f76214917e4799608b3e084e8f2697dbb3,9de512f7,Starting to work on cleaner UI. Favourite stops screen first - using its own layout.,"Starting to work on cleaner UI. Favourite stops screen first - using its own layout.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325152436,1325152436,4159f1d7190c858f0d6e2f0595c67348db72e374
+4159f1d7190c858f0d6e2f0595c67348db72e374,4159f1d7,Added time of next bus to favourites screen. Put all the route handling stuff into ServiceCalendar.,"Added time of next bus to favourites screen. Put all the route handling stuff into ServiceCalendar.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1325122213,1325122213,c73e465aa9ddcbfc38090309cffca61bfcede139
+c73e465aa9ddcbfc38090309cffca61bfcede139,c73e465a,Labels were never going to right of stop on map. Also changed order of,"Labels were never going to right of stop on map. Also changed order of
+preference to go bottom middle, then top, etc.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1324946703,1324946703,49026a6f583ed35e22b71ff6cc6c7d64c98a0631
+49026a6f583ed35e22b71ff6cc6c7d64c98a0631,49026a6f,New schedule!,"New schedule!
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1324785971,1324785971,8ef4f868c97834f17bef2a6daeff099f92098edf
+8ef4f868c97834f17bef2a6daeff099f92098edf,8ef4f868,Passable implementation of balloon tags for labelling stop on the maps.,"Passable implementation of balloon tags for labelling stop on the maps.
+Added missing and new .pngs. Bumped version to test version.
+Made routes darker on map.
+Numerous whitespace changes as Eclipse cleans up the code....
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1324766495,1324766495,518c2027b6f34d962ccefee627bf516672c13db0
+518c2027b6f34d962ccefee627bf516672c13db0,518c2027,"Version 0.97a - purely a database update, and bump of version codes. Code…","Version 0.97a - purely a database update, and bump of version codes. Code changes are purely whitespace.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1324362719,1324362719,87c8499477956074f514f6c9c2b9bdecd8024be6
+87c8499477956074f514f6c9c2b9bdecd8024be6,87c84994,Final cleanup for version 0.97?,"Final cleanup for version 0.97?
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1323587331,1323587331,4b3a1cdc510ac6e2c9d5dea1b28be6d37de25667
+4b3a1cdc510ac6e2c9d5dea1b28be6d37de25667,4b3a1cdc,Cleanup pre-release.,"Cleanup pre-release.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1323243782,1323243782,d152a37fbceb19f4b581b4bde761ed57b02d8d1f
+d152a37fbceb19f4b581b4bde761ed57b02d8d1f,d152a37f,Mostly working. Cleaning up prior to release.,"Mostly working. Cleaning up prior to release.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1323158251,1323158251,2e9ac4ad6bc553221e648dc15a89033361778c96
+2e9ac4ad6bc553221e648dc15a89033361778c96,2e9ac4ad,Faster routes now working. Still cleaning up.,"Faster routes now working. Still cleaning up.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1323073312,1323073312,413ba54755f958a14d647862c0e89a04abff1324
+413ba54755f958a14d647862c0e89a04abff1324,413ba547,"Much faster version of StopsOverlay. Still testing, still to deal with routes.","Much faster version of StopsOverlay. Still testing, still to deal with routes.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1322541547,1322541547,312881feb16ee230e5dbb1156f6ea1c3e1852406
+312881feb16ee230e5dbb1156f6ea1c3e1852406,312881fe,More progress bars working. Some speedup on bus stops map (experimental still).,"More progress bars working. Some speedup on bus stops map (experimental still).
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1322286049,1322286049,e4e3abc24e39fd3cc9a50c8e8960b74bf2f5925a
+e4e3abc24e39fd3cc9a50c8e8960b74bf2f5925a,e4e3abc2,"TimesActivity now using background thread, and correct animation bar. Still to do other activities.","TimesActivity now using background thread, and correct animation bar. Still to do other activities.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1322031465,1322031465,0ee71d82126a32f8f08dfd1789f86f3d2cb37cfe
+0ee71d82126a32f8f08dfd1789f86f3d2cb37cfe,0ee71d82,"Null pointer passed to Google Analytics. Warning, tracking is on for debug…","Null pointer passed to Google Analytics. Warning, tracking is on for debug version: see Globals.java.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1321424859,1321424859,204db7998678c97c28f6266f802262cf9ff7c403
+204db7998678c97c28f6266f802262cf9ff7c403,204db799,More tweaks to get tracking working. Cache a copy of the bus stops overlay when showing all stops.,"More tweaks to get tracking working. Cache a copy of the bus stops overlay when showing all stops.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1321338075,1321338075,7b63db037512e188dffc8a952d5fa2658a201720
+7b63db037512e188dffc8a952d5fa2658a201720,7b63db03,Added intrumentation using Google Analytics.,"Added intrumentation using Google Analytics.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1321249435,1321249435,ddcfaea260e1aeedc2b2e3195d3160cf08f6365a
+ddcfaea260e1aeedc2b2e3195d3160cf08f6365a,ddcfaea2,"Use Environment call to find where sdcard is mounted, or API call if supported.","Use Environment call to find where sdcard is mounted, or API call if supported.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1321214566,1321214566,41303715d9ee6682905138bfe87ad7b23a8f6735
+41303715d9ee6682905138bfe87ad7b23a8f6735,41303715,Renamed a bunch of files for shorter names. Turn on StrictMode for debug builds.…,"Renamed a bunch of files for shorter names. Turn on StrictMode for debug builds. Reworked Globals class.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1321212627,1321212627,3279c96ae1a6656b42e2a00fcd89f8d0021601d2
+3279c96ae1a6656b42e2a00fcd89f8d0021601d2,3279c96a,Allow selecting one route when displaying times for many. Fix animation when mapping routes.,"Allow selecting one route when displaying times for many. Fix animation when mapping routes.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320812614,1320812614,80406279bad02dc33eb93b1ac614a1e823d7dfcc
+80406279bad02dc33eb93b1ac614a1e823d7dfcc,80406279,Bump version to 0.96.,"Bump version to 0.96.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320641685,1320641685,bd2cebea83bc747ead88e2be4f8f6c005e814bad
+bd2cebea83bc747ead88e2be4f8f6c005e814bad,bd2cebea,Turn off GPS when not visible. Remove logging etc. Getting ready for v0.96.,"Turn off GPS when not visible. Remove logging etc. Getting ready for v0.96.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320635218,1320635218,0d4cb5e5214b65f4a107161c99437f1845564d10
+0d4cb5e5214b65f4a107161c99437f1845564d10,0d4cb5e5,New DB! Plus minor edits in prep for 0.96 release.,"New DB! Plus minor edits in prep for 0.96 release.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320385303,1320385303,75feb2dd2cb4d314b6208c7d7686999268a2edfe
+75feb2dd2cb4d314b6208c7d7686999268a2edfe,75feb2dd,"Fixed flaky menus. Also fix at API level 7, and thus rewrite db creation code,…","Fixed flaky menus. Also fix at API level 7, and thus rewrite db creation code, which was using a v8 API call.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320297717,1320297717,5e28bd5fbdf4af44573861654998a8b21863c09e
+5e28bd5fbdf4af44573861654998a8b21863c09e,5e28bd5f,Displaying multiple routes mostly working.,"Displaying multiple routes mostly working.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320207681,1320207681,23fc6e20726506610f08a426c0a9bbb9a821e612
+23fc6e20726506610f08a426c0a9bbb9a821e612,23fc6e20,Working on fling to show all bus times for a given stop.,"Working on fling to show all bus times for a given stop.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320037331,1320037331,d40d99a3f7084f61b34cbad3158b7736c87ee53a
+d40d99a3f7084f61b34cbad3158b7736c87ee53a,d40d99a3,Exclude routes that have no currently valid schedule.,"Exclude routes that have no currently valid schedule.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1320017490,1320017490,a4340cebfe93b8803b8b8999a1db139dcf0f845b
+a4340cebfe93b8803b8b8999a1db139dcf0f845b,a4340ceb,Added apk for v0.95.,"Added apk for v0.95.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318818311,1318818311,189fbab1501e71c7593154dc5eccc349f7cd5bd7
+189fbab1501e71c7593154dc5eccc349f7cd5bd7,189fbab1,Bumped version to 0.95.,"Bumped version to 0.95.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318817729,1318817729,33ee23a415dd8c5b7aa008166da44db0a22a6825
+33ee23a415dd8c5b7aa008166da44db0a22a6825,33ee23a4,Moved database onto sdcard. Working on limiting routeselect to only showing…,"Moved database onto sdcard. Working on limiting routeselect to only showing busses that run today. Picking a bus stop from the map shows the routeselect activity now, rather than a dialog.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318484877,1318484877,3aa7c7bdf992caa456d0858197514757ac323521
+3aa7c7bdf992caa456d0858197514757ac323521,3aa7c7bd,"Bumped version number to 0.94, db 4, in preparation for release.","Bumped version number to 0.94, db 4, in preparation for release.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318378867,1318378867,057090da700e86087b1ea49edd7fb91e2b718136
+057090da700e86087b1ea49edd7fb91e2b718136,057090da,Removed logging.,"Removed logging.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318293758,1318293758,394561ad2283ed8f6db5167972336154a2114c70
+394561ad2283ed8f6db5167972336154a2114c70,394561ad,Tweaks to display help page if no favourites.,"Tweaks to display help page if no favourites.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1318292380,1318292380,25c562d409dd1807f4c7d8152bebfe8a274caba6
+25c562d409dd1807f4c7d8152bebfe8a274caba6,25c562d4,"All working? Favourites, better stack handling, etc.","All working? Favourites, better stack handling, etc.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317879554,1317879554,48518b01b39737064875aefc1d92dffe179f9581
+48518b01b39737064875aefc1d92dffe179f9581,48518b01,"Moved route selection into an Activity, instead of dialog, so we can have back…","Moved route selection into an Activity, instead of dialog, so we can have back history (and multiple select, later).
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317707194,1317707194,44d244d130d7a1e3219c2c7c09feaf0bf24d60e7
+44d244d130d7a1e3219c2c7c09feaf0bf24d60e7,44d244d1,Favourites & database copies all working?,"Favourites & database copies all working?
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317362545,1317362545,ece4d17e4720232abe9e1843a2ccfb18e2803782
+ece4d17e4720232abe9e1843a2ccfb18e2803782,ece4d17e,Favourite stops mostly working now.,"Favourite stops mostly working now.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317277695,1317277695,e6a4511f097eadd8c8a29f2c334197b14c4eaea8
+e6a4511f097eadd8c8a29f2c334197b14c4eaea8,e6a4511f,Initial shot at favourites screen now working. Still need delete ability though.,"Initial shot at favourites screen now working. Still need delete ability though.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317189177,1317189177,d8f0973e2725c416b5c786e85ae6039d9d41d022
+d8f0973e2725c416b5c786e85ae6039d9d41d022,d8f0973e,More changes to implement a favourites activity. Still not complete.,"More changes to implement a favourites activity. Still not complete.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1317103760,1317103760,6df4fef2ee08ac2a2ed0cce1bb6708cf81599aa3
+6df4fef2ee08ac2a2ed0cce1bb6708cf81599aa3,6df4fef2,Separating database access through a global static class,"Separating database access through a global static class
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316736609,1316736609,1e2ca1cede2bd659b539fb661be881fda0cd94de
+1e2ca1cede2bd659b539fb661be881fda0cd94de,1e2ca1ce,Still reworking database...,"Still reworking database...
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316495898,1316495898,c70b4a7d1d80d486116e06ba767ab384d2c97207
+c70b4a7d1d80d486116e06ba767ab384d2c97207,c70b4a7d,Added missing files to commit,"Added missing files to commit
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316485892,1316485892,795d1c45b039499e215dab120b4fc1deb7039722
+795d1c45b039499e215dab120b4fc1deb7039722,795d1c45,Reworking database handling -- still busy,"Reworking database handling -- still busy
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316485407,1316485407,b8007c67bf673a572f2744bbf5aa0706033a655b
+b8007c67bf673a572f2744bbf5aa0706033a655b,b8007c67,"Long press now adds stop to favourites, and stores them. Still debugging.","Long press now adds stop to favourites, and stores them. Still debugging.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316407439,1316407439,b53c5dad3703549482ec51355b7029d7e100e891
+b53c5dad3703549482ec51355b7029d7e100e891,b53c5dad,Do LoadDB() on the background thread for loading bus stops.,"Do LoadDB() on the background thread for loading bus stops.
+Also impliment basics of long touch to select a stop as a favourite.
+Incomplete, still debugging. Merging tags 0.91 and 0.92 from master.
+Merge branch 'master' of ssh://tux.uwaterloo.ca/home/gdmalet/src/.gitorigin/GRT-GTFS
+
+Conflicts:
+	Android/AndroidManifest.xml
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1316380024,1316380024,"d525bdc0dfbcd4b75c0ded40d7b035b7b02bc97b,817b0c9cadde6e3edec1d60db070114bae816074"
+d525bdc0dfbcd4b75c0ded40d7b035b7b02bc97b,d525bdc0,And removed yet more debugging code!,"And removed yet more debugging code!
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1315287556,1315287556,95eb7ab771db4becd79334001ddff67aa7f595d0
+95eb7ab771db4becd79334001ddff67aa7f595d0,95eb7ab7,"Added old executables, and removed more debugging code.","Added old executables, and removed more debugging code.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1315286885,1315286885,145e13ef89bae7279650a07d0e0f4fc866604527
+145e13ef89bae7279650a07d0e0f4fc866604527,145e13ef,Uploaded bad v0.91 files to github. This is v0.92 with the correct changes.,"Uploaded bad v0.91 files to github. This is v0.92 with the correct changes.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1315285937,1315285937,f0276bef660d55150414b6b50841fc922888f5f3
+817b0c9cadde6e3edec1d60db070114bae816074,817b0c9c,Merge branch 'master' of /home/gdmalet/src/.gitorigin/GRT-GTFS,"Merge branch 'master' of /home/gdmalet/src/.gitorigin/GRT-GTFS
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1315280010,1315280010,"94f2953b21f7244551cee767f0ef43a5500b787c,f0276bef660d55150414b6b50841fc922888f5f3"
+f0276bef660d55150414b6b50841fc922888f5f3,f0276bef,Temp fiddling with long touch.,"Temp fiddling with long touch.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1315258278,1315258278,6478ada3650770db9b5bc77f6db9684a719e5241
+94f2953b21f7244551cee767f0ef43a5500b787c,94f2953b,"Apparently this will run at much lower api levels, so adjust the manifest.","Apparently this will run at much lower api levels, so adjust the manifest.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1310066589,1310066589,6478ada3650770db9b5bc77f6db9684a719e5241
+6478ada3650770db9b5bc77f6db9684a719e5241,6478ada3,"Added copyright and license stuff, plus a signed copy of the v0.9 apk.","Added copyright and license stuff, plus a signed copy of the v0.9 apk.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1310009677,1310009800,2de61e9f05f5f49f3ce90b89399940001f6bf5ad
+2de61e9f05f5f49f3ce90b89399940001f6bf5ad,2de61e9f,"Added progaurd.cfg. Otherwise, this is the 0.9 release.","Added progaurd.cfg. Otherwise, this is the 0.9 release.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1310003997,1310003997,7508a16b200c4fdc0b10880a6196ebdbde74398a
+7508a16b200c4fdc0b10880a6196ebdbde74398a,7508a16b,Cleanup in preparation for release 0.9,"Cleanup in preparation for release 0.9
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1309670398,1309670398,4c5cbaac77840293fad5703f84f805d9d3375c3a
+4c5cbaac77840293fad5703f84f805d9d3375c3a,4c5cbaac,"Bad idea sorting by stop sequence when it's not selected, so revert to departure…","Bad idea sorting by stop sequence when it's not selected, so revert to departure time, and trim the table. Also replace mangled stops table. Release key is active now.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1309239749,1309239749,b6c2f3f16ac357de5874733b2067620f215faddd
+b6c2f3f16ac357de5874733b2067620f215faddd,b6c2f3f1,Order departure times by sequence number rather than departure time.... Also…,"Order departure times by sequence number rather than departure time.... Also optimized the db a bit by excluding unused tables & fields.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1309237409,1309237409,7c1edc1f137a6a822075c65b87c3512e4ad5d43c
+7c1edc1f137a6a822075c65b87c3512e4ad5d43c,7c1edc1f,"Played with exit/refresh option on menu, but commented it out. Also, code to…","Played with exit/refresh option on menu, but commented it out. Also, code to handle expired schedule (dialog box), and added new schedules.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1309211339,1309211339,c9b2def0a61df405c0362f339fdcffddbfc0b15f
+c9b2def0a61df405c0362f339fdcffddbfc0b15f,c9b2def0,"Convert all SQL queries to use selection parameters, which supposedly helps with…","Convert all SQL queries to use selection parameters, which supposedly helps with caching queries. Some oddness with || and ? to work around sqlite bug.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1309068581,1309068581,6cfe9d67ef1fd1cd82922b71d9e2ccdd88b51507
+6cfe9d67ef1fd1cd82922b71d9e2ccdd88b51507,6cfe9d67,Searches now working?,"Searches now working?
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308951320,1308951320,6a38cfa3f4d076781d1d498852869d58c8805973
+6a38cfa3f4d076781d1d498852869d58c8805973,6a38cfa3,Working on getting route search callable from bus stops activity. Checking in…,"Working on getting route search callable from bus stops activity. Checking in just to pull to laptop.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308929437,1308929437,4e674d965b356b773c4d5178cc2684c51ec2686b
+4e674d965b356b773c4d5178cc2684c51ec2686b,4e674d96,Searches mostly working. Using headsign as route descriptions instead of route_long_name.,"Searches mostly working. Using headsign as route descriptions instead of route_long_name.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308805881,1308805881,e1e0739740e08c86004471c7e8704d7462c6d530
+e1e0739740e08c86004471c7e8704d7462c6d530,e1e07397,Working on route search -- sort of there,"Working on route search -- sort of there
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308778343,1308778343,770bd8e3c24ed57f92d06375a10c02c5414f0703
+770bd8e3c24ed57f92d06375a10c02c5414f0703,770bd8e3,Search for bus stops now working.,"Search for bus stops now working.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308628408,1308628408,9677ac5f1809d43c233fec4e464135d2f57c12b2
+9677ac5f1809d43c233fec4e464135d2f57c12b2,9677ac5f,Working on bus stop search,"Working on bus stop search
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1308290785,1308290785,2b0e8c2ccd3d642f9cb07585563c5b058b120a3b
+2b0e8c2ccd3d642f9cb07585563c5b058b120a3b,2b0e8c2c,"Brighten up icon, put in release key.","Brighten up icon, put in release key.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307599892,1307599892,145a86235b98e63adb771b2215fd0b7c72d5b917
+145a86235b98e63adb771b2215fd0b7c72d5b917,145a8623,"Added service dates cache, more menu stuff.","Added service dates cache, more menu stuff.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307511904,1307511904,902211c74ca0edebb232a70dd1cfb0ba7b5f8e69
+902211c74ca0edebb232a70dd1cfb0ba7b5f8e69,902211c7,Working on getting menus etc. working.,"Working on getting menus etc. working.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307480021,1307480021,2ee3f02d23a97cd046b348a6fe024a38045a6fff
+2ee3f02d23a97cd046b348a6fe024a38045a6fff,2ee3f02d,Can limit list of displayed bus times to valid days.,"Can limit list of displayed bus times to valid days.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307427091,1307427091,28508355d68ca4f886f4a363d743561e07beaa78
+28508355d68ca4f886f4a363d743561e07beaa78,28508355,About to switch from CursorAdapter to ArrayAdapter.,"About to switch from CursorAdapter to ArrayAdapter.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307403557,1307403557,fbdd6b31c5ee19039e7572f66d7153dd4a29768f
+fbdd6b31c5ee19039e7572f66d7153dd4a29768f,fbdd6b31,"List of times now selects next bus, shows minutes remaining.","List of times now selects next bus, shows minutes remaining.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307325933,1307325933,e1d9b5f42e8663d07f15aa6d27e5137501e86be6
+e1d9b5f42e8663d07f15aa6d27e5137501e86be6,e1d9b5f4,Getting animations etc. to work,"Getting animations etc. to work
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307259971,1307259971,69398bd7f4cb83bf11f1f0f11d47cd2b969df01f
+69398bd7f4cb83bf11f1f0f11d47cd2b969df01f,69398bd7,Routes now working\!,"Routes now working\!
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307226635,1307226635,06d7f8f9a72623112a8bc5342950385babdd81c4
+06d7f8f9a72623112a8bc5342950385babdd81c4,06d7f8f9,Closer to getting route displayed with bus stops,"Closer to getting route displayed with bus stops
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307131422,1307131422,27408f82dc5e186df9cbd40037a7f381d34fce10
+27408f82dc5e186df9cbd40037a7f381d34fce10,27408f82,Try use a Path to draw a bus route,"Try use a Path to draw a bus route
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307082526,1307082526,be78e40ded678270d91fd630b7ee47dfb8d03bc1
+be78e40ded678270d91fd630b7ee47dfb8d03bc1,be78e40d,Renamed files to better match function,"Renamed files to better match function
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307078895,1307078895,174dc2879c2817dcebf6ab87e2d12d7df669001f
+174dc2879c2817dcebf6ab87e2d12d7df669001f,174dc287,Starting work on showing routes,"Starting work on showing routes
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1307078480,1307078480,55fa820b811b6115d34f2118e513c4f6e8ba28fe
+55fa820b811b6115d34f2118e513c4f6e8ba28fe,55fa820b,"Times list now working, roughly.","Times list now working, roughly.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306823334,1306823334,8290731d15d144a2b666530f66fd691fc02d9ba1
+8290731d15d144a2b666530f66fd691fc02d9ba1,8290731d,interim checkin,"interim checkin
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306729889,1306729889,a041f91657861e211bd79afcc74620887b3cc976
+a041f91657861e211bd79afcc74620887b3cc976,a041f916,still trying to show times,"still trying to show times
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306478274,1306478274,7e054e3f9de64b613a7a238e92311f15eb9026df
+7e054e3f9de64b613a7a238e92311f15eb9026df,7e054e3f,Working on list for bus times...,"Working on list for bus times...
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306461980,1306461980,42a5d8dadab2ff3fbd0adb7164fec280aaef836d
+42a5d8dadab2ff3fbd0adb7164fec280aaef836d,42a5d8da,Partially working list adapter,"Partially working list adapter
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306389305,1306389305,acc76a4069f28f93a9fae69cf74fb0ec85d5d0b1
+acc76a4069f28f93a9fae69cf74fb0ec85d5d0b1,acc76a40,Failed push? Trying again.,"Failed push? Trying again.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306304802,1306304802,1e09098164279d1a7b2c73086b211b42d8699ce7
+1e09098164279d1a7b2c73086b211b42d8699ce7,1e090981,Created new activity for showing bus times. Not implemented yet.,"Created new activity for showing bus times. Not implemented yet.
+Also added Google transifeed source to repository.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306304580,1306304580,e6dfcdaae1f340fb5192b0cc0bc5557f31c3cc92
+e6dfcdaae1f340fb5192b0cc0bc5557f31c3cc92,e6dfcdaa,First shot at getting times for a stop. Still need to look at services days.,"First shot at getting times for a stop. Still need to look at services days.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306221316,1306221316,49db4f9efa6e77b2d9cce4d305ec40e97bc12c77
+49db4f9efa6e77b2d9cce4d305ec40e97bc12c77,49db4f9e,"Early working version. Slow, clunky, big database.","Early working version. Slow, clunky, big database.
+",,,,Giles Malet,gdmalet+github@gmail.com,Giles Malet,gdmalet+github@gmail.com,1306210657,1306210657,

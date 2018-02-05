@@ -1,0 +1,45 @@
+commit_hash,tag_name,tag_message
+bf8a457f8cea157aaf283ce44c6a299d4ac40e16,version-0.0.9,"Fixed a crash
+
+Also increase the long long press timeout; long pressing ""e"" to get ""é"" should
+now be more usable."
+5bf8db8df3e3286948a67fc2c621470ff7dbe70e,version-0.0.8,"Multitouch, buffering and improved cleanup
+
+Hitting two keys at the same time will now enter both chars. Good for quick
+typists.
+
+If the app that the keyboard is talking to is slow, the keyboard will now do its
+own buffering to remain responsive.
+
+I've once seen the hint window still lingering after the keyboard is gone. This
+release contains an attempted fix for that. Whether or not it works is hard to
+say since I haven't been able to reproduce the problem though."
+91e6354c93da686d8200b041bcab02169205a46c,version-0.0.7,"Fix repeating backspace removing one char too many
+
+Also add another vibration when pressing OK in the vibration duration selection
+preferences."
+a8326b7365ebcd49e94d4bf9239b0a99ff2c2851,version-0.0.6,"Add vibration duration preference
+
+All device vibration units are not made equal, so the vibration duration needs
+to be tunable for the duration to make sense on all devices.
+
+Yay for beta testing!"
+753a254dc120d4bd24a9367f5340a00142cf8a88,version-0.0.5,"Remove popup when tapping keys
+
+Fix hold-delete behavior (it was too quick before this release)
+
+Attempt to make vibrations more robust. It didn't work on all phones, this
+change may or may not fix that."
+f8e99316274886d8e626b2ba7fa6df0e5912e606,version-0.0.4,Fix sending broken Action events
+07d333a9d4fd0e485664e793902ee2cd22d8d370,version-0.0.3,Continuous delete on holding down backspace
+a4a72b03bc5bc7d91045160af429adc84df9e183,version-0.0.2,"Fix keyboard mode issues
+
+Where ""mode"" is whether we're uppercase, lowercase or numeric."
+ade4b1cb18d0318a614a3879af21553b2abb1276,version-0.0.11,"Fix bogus detection of spaces and newlines
+
+This release changes the allowed marigin of error for detecting touches as
+keypresses rather than swipes. The effect is that all the misdetections of
+keypresses as swipes that I've had have gone away."
+9178ba6078d2728002c4ba5304bcd94e4132d361,version-0.0.10,Remove INTERNET permission from release builds
+6e5e8713361b33373e3bb16d42e06d275f06b923,version-0.0.1,
+174d7615d4a6c2089ec2f16848dcf0385973fb16,version-0.0.0,

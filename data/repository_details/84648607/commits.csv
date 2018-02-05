@@ -1,0 +1,99 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+79af6f5c4e57b5bb56ae9329bff4c58f48e8ca66,79af6f5c,Update version,"Update version
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1492080767,1492080767,f0759be9d4a0a4e0cf116930dd4d5c011f15c32b
+f0759be9d4a0a4e0cf116930dd4d5c011f15c32b,f0759be9,Merge branch 'master' of https://github.com/hamalaiv/weathermeter,"Merge branch 'master' of https://github.com/hamalaiv/weathermeter
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1492079885,1492079885,"c1120bb5c05fb7eedc79d9a0fc6718e272589fe5,4092460f807c83b88bc5aad42f309f0b5314291b"
+c1120bb5c05fb7eedc79d9a0fc6718e272589fe5,c1120bb5,Adjust tests because api not working consistently always,"Adjust tests because api not working consistently always
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1492079752,1492079752,cffb7ef7c5e4484a3b69c59628cd930ea33e91de
+cffb7ef7c5e4484a3b69c59628cd930ea33e91de,cffb7ef7,Move service and builder to their own files,"Move service and builder to their own files
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1492079729,1492079729,527a6e1314a260e98ee9ca7982b3e03752216f4e
+527a6e1314a260e98ee9ca7982b3e03752216f4e,527a6e13,use equals instead of ==,"use equals instead of ==
+
+because equals is more reliable
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491414887,1491414887,f4fa2b0ebd002c9e1425be80810ad00bd3d14d07
+f4fa2b0ebd002c9e1425be80810ad00bd3d14d07,f4fa2b0e,Remove unused imports,"Remove unused imports
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491414761,1491414761,9a3d0b2296e66026c93b0a573f23d50734ceffcd
+9a3d0b2296e66026c93b0a573f23d50734ceffcd,9a3d0b22,Declare fields at the top of the class,"Declare fields at the top of the class
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491414105,1491414105,5e0060cc38adb127f2997f5f375ece2e23e9af02
+5e0060cc38adb127f2997f5f375ece2e23e9af02,5e0060cc,Remove volley,"Remove volley
+
+Because it is not needed anymore.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491412660,1491412660,31ea648dde16d4b74e9f2fee9cda930773248e8b
+31ea648dde16d4b74e9f2fee9cda930773248e8b,31ea648d,Add tests for getters and bad city/country,"Add tests for getters and bad city/country
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491327534,1491327534,df2c8d84d425b73d8750b60bce2218324964551a
+df2c8d84d425b73d8750b60bce2218324964551a,df2c8d84,Move common code to same place and improve logging,"Move common code to same place and improve logging
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491240654,1491240654,3e022adf103f27033ef5fc28f1640d5eec8b47a8
+3e022adf103f27033ef5fc28f1640d5eec8b47a8,3e022adf,Return data instead of request response,"Return data instead of request response
+
+Same data is returned as the async requests retrieve to make the functions
+more consistent with each other.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491239833,1491239833,c79559968b7ea8cf2cda71ac81c790e9a7d89770
+c79559968b7ea8cf2cda71ac81c790e9a7d89770,c7955996,Fix null pointer exception,"Fix null pointer exception
+
+Forecast weather conditions cannot be null
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491140644,1491140644,a394cabc26da7a89ae85b498f804849b2d743361
+a394cabc26da7a89ae85b498f804849b2d743361,a394cabc,Refactor data parsing and get currentWeather isDay correctly,"Refactor data parsing and get currentWeather isDay correctly
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491140500,1491140500,d07fda37e3fd848ad579fd9df6d3d14a00819237
+d07fda37e3fd848ad579fd9df6d3d14a00819237,d07fda37,Fix null pointer exception,"Fix null pointer exception
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491137556,1491137556,48dd7904354cad00accf0eeaacf2bfcff23fcbc6
+48dd7904354cad00accf0eeaacf2bfcff23fcbc6,48dd7904,Replace old OpenWeatherMap implementation with new,"Replace old OpenWeatherMap implementation with new
+
+Implement same kind of functions for the new OpenWeatherMap so that
+other components work with minimal changes. The integrations can
+be improved later.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491115248,1491115248,325fbaa2994e8e72122bbe49057fa39e5cc4b16e
+325fbaa2994e8e72122bbe49057fa39e5cc4b16e,325fbaa2,Set base url as constant,"Set base url as constant
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491112829,1491112829,665a54c15160be349ab55d89ced5dc91cc665ec5
+665a54c15160be349ab55d89ced5dc91cc665ec5,665a54c1,Implement searchLocation,"Implement searchLocation
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491112650,1491112650,3260e04eebb8909f3d0e14d492743ab7bed5216a
+3260e04eebb8909f3d0e14d492743ab7bed5216a,3260e04e,Implement requestCurrentWeather,"Implement requestCurrentWeather
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491110440,1491110440,a17b03bfa4673396189436daf12becff7aa9b14e
+a17b03bfa4673396189436daf12becff7aa9b14e,a17b03bf,remove unused field,"remove unused field
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491110419,1491110419,71db74e071ae5729002af3032db386859b541795
+71db74e071ae5729002af3032db386859b541795,71db74e0,Implement get forecast and forecastData,"Implement get forecast and forecastData
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491061789,1491061789,79983da56d423c2eeb2cabac90e73dbcaabea960
+79983da56d423c2eeb2cabac90e73dbcaabea960,79983da5,Add refactored OpenWeatherMap and Implement forecast request for it,"Add refactored OpenWeatherMap and Implement forecast request for it
+
+Start implementing OpenWeatherMap with retrofit and gson. This allows
+easier testing for the requests and data.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491058097,1491058097,3b772dd8c5302151546b516a9bb0ba7af6bd1e3a
+3b772dd8c5302151546b516a9bb0ba7af6bd1e3a,3b772dd8,Add gson and retrofit libs,"Add gson and retrofit libs
+
+Retrofit and gson will be used to reformat OpenWeatherMap architecture.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1491029736,1491029736,f450031b8d234bd118a9ca42bbf58c5a5460186a
+4092460f807c83b88bc5aad42f309f0b5314291b,4092460f,Merge pull request #1 from codacy-badger/codacy-badge,"Merge pull request #1 from codacy-badger/codacy-badge
+
+Add a Codacy badge to README.md",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,GitHub,noreply@github.com,1489261399,1489261399,"f450031b8d234bd118a9ca42bbf58c5a5460186a,ce64435f39738f428e0b20fb8ef7cd570d4c101a"
+ce64435f39738f428e0b20fb8ef7cd570d4c101a,ce64435f,Add Codacy badge,Add Codacy badge,,,,The Codacy Badger,badger@codacy.com,The Codacy Badger,badger@codacy.com,1489260340,1489260340,f450031b8d234bd118a9ca42bbf58c5a5460186a
+f450031b8d234bd118a9ca42bbf58c5a5460186a,f450031b,Make parseWeather more explicit,"Make parseWeather more explicit
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489259280,1489259280,9cbca0bd5d2535f0d0748d673a91f93af0c616f4
+9cbca0bd5d2535f0d0748d673a91f93af0c616f4,9cbca0bd,Take height into account,"Take height into account
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489259246,1489259246,af92594d86dfe4be37afb698cb1b682f583317a2
+af92594d86dfe4be37afb698cb1b682f583317a2,af92594d,Remove unused variables,"Remove unused variables
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489258394,1489258394,da1d90829f710c0c9efa55f8ff7c187babb33488
+da1d90829f710c0c9efa55f8ff7c187babb33488,da1d9082,Remove unused imports,"Remove unused imports
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489258037,1489258037,ff2db71a89d43412b52c89d9a00d74fdf080774b
+ff2db71a89d43412b52c89d9a00d74fdf080774b,ff2db71a,Add logging for volley errors,"Add logging for volley errors
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489257732,1489257732,cdd972cde4d9f515a1988b486f982a34c0fda2da
+cdd972cde4d9f515a1988b486f982a34c0fda2da,cdd972cd,Declare fields at the top of the class,"Declare fields at the top of the class
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489257539,1489257539,51854ce72a1ad0708d1f1720424e30098e3bb920
+51854ce72a1ad0708d1f1720424e30098e3bb920,51854ce7,Use explicit scoping,"Use explicit scoping
+
+Because it prevents accidental usage of default package private level.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489257407,1489257407,485043342cba1371bb1a980086c181cd4b047341
+485043342cba1371bb1a980086c181cd4b047341,48504334,Limit variable scope,"Limit variable scope
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489257164,1489257164,b8d6ceb5eb2573e6874af6eda6b70cf842d2e7f7
+b8d6ceb5eb2573e6874af6eda6b70cf842d2e7f7,b8d6ceb5,Remove unused variable,"Remove unused variable
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489257123,1489257123,84f5f4d796c7bb5784ac64232d5258ee348cfb61
+84f5f4d796c7bb5784ac64232d5258ee348cfb61,84f5f4d7,Position literals first in string comparisons,"Position literals first in string comparisons
+
+Because if the second argument is null then NullPointerExceptions can
+be avoided, they will just return false.
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489256519,1489256519,b9ed19a131a1ba2d59e611748649080e1f0e0043
+b9ed19a131a1ba2d59e611748649080e1f0e0043,b9ed19a1,Fix .idea files,"Fix .idea files
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489256260,1489256260,555549ff6204f01fd400775ade98edb6312354e1
+555549ff6204f01fd400775ade98edb6312354e1,555549ff,Update readme,"Update readme
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489236090,1489236090,a507725df1812b12cb4439df1cf1c49780859648
+a507725df1812b12cb4439df1cf1c49780859648,a507725d,Add weather meter v1.1.1 codes,"Add weather meter v1.1.1 codes
+",,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489235782,1489235782,cb8632155f819ab064724d8f741d66896c7b7e0e
+cb8632155f819ab064724d8f741d66896c7b7e0e,cb863215,Initial commit,Initial commit,,,,Ville Hämäläinen,hamalainen.ville.p@gmail.com,Ville Hämäläinen,hamalainen.ville.p@gmail.com,1489235494,1489235494,

@@ -1,0 +1,191 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+dd5bceb91217c4bd48738f61e91f38421b81bc8a,dd5bceb9,"Broad fix for SecurityException when deleting emails. On Android 4.3, by default…","Broad fix for SecurityException when deleting emails. On Android 4.3, by default exported=false for providers instead of true before. Only recent version of K-9 Mail have it
+
+See
+  . http://stackoverflow.com/questions/18847302/securityexception-permission-denial-opening-provider
+  . https://github.com/k9mail/k-9/commit/06ae2a071b80b063ae4eafb635d6f8df728d4d6d
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383894074,1383894074,492a4862323c62aa500b7ee90241bd73d1827b4d
+492a4862323c62aa500b7ee90241bd73d1827b4d,492a4862,Bug fix for crash #9. Delete async task must be created on the UI thread.,"Bug fix for crash #9. Delete async task must be created on the UI thread.
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383603223,1383603223,3ba640279a3eb081de378808d08f7a7114c1ee0a
+3ba640279a3eb081de378808d08f7a7114c1ee0a,3ba64027,0.2.2 release notes,"0.2.2 release notes
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383354818,1383354818,04d1550d47879be5e42f055a27d342fe4e87bf13
+04d1550d47879be5e42f055a27d342fe4e87bf13,04d1550d,. Updated version to 0.2.2 (12),". Updated version to 0.2.2 (12)
+. Stability fixes: catch exceptions and display toast message when failing to open email in K-9 or delete an email
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383354323,1383354323,914b8eba640c00cb178d31c415db3f954e95d49d
+914b8eba640c00cb178d31c415db3f954e95d49d,914b8eba,Added sample values to help design in WYSIWYG tools,"Added sample values to help design in WYSIWYG tools
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383071529,1383071529,11bad614ef162f07c8cbbde20ce9bf91a6b9eb67
+11bad614ef162f07c8cbbde20ce9bf91a6b9eb67,11bad614,. Log level clean up,". Log level clean up
+. Minor thread optimization
+  . Only start EmailNotification thread to auto close activity when needed (dup of service thread in lots of cases)
+  . Notify EmailNotification thread to stop when activity is closed manually
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383071163,1383071163,cef44b9c195ca2ae4ebc2857df92a59f80e4e393
+cef44b9c195ca2ae4ebc2857df92a59f80e4e393,cef44b9c,Now show next popup (if any) as soon as the 'Close' button is pressed,"Now show next popup (if any) as soon as the 'Close' button is pressed
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383069797,1383069797,a8531878c95334f4646204d8c01e4748eff39ce0
+a8531878c95334f4646204d8c01e4748eff39ce0,a8531878,Updated 'About' text,"Updated 'About' text
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383010999,1383010999,746865506d92de0d1c6fab8d5e6af42c1cc920a4
+746865506d92de0d1c6fab8d5e6af42c1cc920a4,74686550,Removing private workspace.xml IntelliJ file,"Removing private workspace.xml IntelliJ file
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383010732,1383010732,041fbdb5f0ec75134f8ff375545cb5fc17175bb9
+041fbdb5f0ec75134f8ff375545cb5fc17175bb9,041fbdb5,Updated Intellij VCS file to GIT,"Updated Intellij VCS file to GIT
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383010662,1383010662,c20290556351ffecbcffb425d204a675fba43938
+c20290556351ffecbcffb425d204a675fba43938,c2029055,Added option to display or not the 'Delete' button,"Added option to display or not the 'Delete' button
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383003758,1383003758,440c674974db6618890fcc502ff324b1a7819cff
+440c674974db6618890fcc502ff324b1a7819cff,440c6749,. Increased versiont to 0.2.2 (11),". Increased versiont to 0.2.2 (11)
+. Removed emai popup notification from recent list + no history
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1383001099,1383001099,e0cddf7df2347cc48f92e7e4d92171c745b97c52
+e0cddf7df2347cc48f92e7e4d92171c745b97c52,e0cddf7d,Added keyguard unlocking security option ie whether or not the user needs to…,"Added keyguard unlocking security option ie whether or not the user needs to unlock the screen when he/she clicks on the popup's 'Delete' or 'Open' button
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1382378305,1382378408,6c6e6470d49b52573af8bbcecf2fb521221a6160
+6c6e6470d49b52573af8bbcecf2fb521221a6160,6c6e6470,Cleanup preference screen: externalized all strings,"Cleanup preference screen: externalized all strings
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1382243179,1382378408,0ab46c76e65db83daa0acc20ef755dd3d3bff0d7
+0ab46c76e65db83daa0acc20ef755dd3d3bff0d7,0ab46c76,Deleted some old testing code,"Deleted some old testing code
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1382242129,1382378408,37f5629dccbbcd1104edd5d5fc98c3fb8a036fc9
+37f5629dccbbcd1104edd5d5fc98c3fb8a036fc9,37f5629d,Fixed minor typos in log messages,"Fixed minor typos in log messages
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1382241879,1382378408,12001bacfa5dec8a04d09f80bc4e10fb527289d6
+12001bacfa5dec8a04d09f80bc4e10fb527289d6,12001bac,Update README.md,Update README.md,,,,Bao-Long Nguyen-Trong,baolongnt@gmail.com,Bao-Long Nguyen-Trong,baolongnt@gmail.com,1381724595,1381724595,d470a73646cd69233085745e1a25499ff4f27d99
+d470a73646cd69233085745e1a25499ff4f27d99,d470a736,Update README.md,Update README.md,,,,Bao-Long Nguyen-Trong,baolongnt@gmail.com,Bao-Long Nguyen-Trong,baolongnt@gmail.com,1381724384,1381724384,4b769bc190f90bba7e77cb509c91dc4461bc681f
+4b769bc190f90bba7e77cb509c91dc4461bc681f,4b769bc1,Create README.md,Create README.md,,,,Bao-Long Nguyen-Trong,baolongnt@gmail.com,Bao-Long Nguyen-Trong,baolongnt@gmail.com,1381724087,1381724087,a2329b901e6dfd8bc0f007fe0164af9efb9923bc
+a2329b901e6dfd8bc0f007fe0164af9efb9923bc,a2329b90,Initial .gitignore from https://raw.github.com/github/gitignore/master/Android.gitignore,"Initial .gitignore from https://raw.github.com/github/gitignore/master/Android.gitignore
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1381723185,1381723185,492467fccc1f13e2d10d97b722e4a2c3d24dbad9
+492467fccc1f13e2d10d97b722e4a2c3d24dbad9,492467fc,Apache 2 license,"Apache 2 license
+",,,,baolongnt,baolongnt@gmail.com,baolongnt,baolongnt@gmail.com,1381723113,1381723113,b80bd2becd5af993c9227a7c763c24c2bdeb12ae
+b80bd2becd5af993c9227a7c763c24c2bdeb12ae,b80bd2be,Author email cleanup,"Author email cleanup
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381717846,1381717846,46b8646d244ec9630c64dc734394368294d01f1e
+46b8646d244ec9630c64dc734394368294d01f1e,46b8646d,. Updated some strings,". Updated some strings
+. Preliminary for sound preference
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381716104,1381716104,1185df7c836a32ee44bbb4b68cb9499ac7daf49f
+1185df7c836a32ee44bbb4b68cb9499ac7daf49f,1185df7c,Updated market description,"Updated market description
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381715930,1381715930,6f02bbb5b5deae90f2d4595b4563ff97ae92fdcd
+6f02bbb5b5deae90f2d4595b4563ff97ae92fdcd,6f02bbb5,Cleaned up popup buttons (now applying Holo theme on devices that support it),"Cleaned up popup buttons (now applying Holo theme on devices that support it)
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381710199,1381710199,873cd24e6d4d551fc25d5221a799ca552535b98f
+873cd24e6d4d551fc25d5221a799ca552535b98f,873cd24e,More verbose logs (trying to get swipe to close to work...),"More verbose logs (trying to get swipe to close to work...)
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381707533,1381707533,1dc4a5745b36be8d5b9ebe0bbf7760fbac775d06
+1dc4a5745b36be8d5b9ebe0bbf7760fbac775d06,1dc4a574,Cleaned up test data,"Cleaned up test data
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381707392,1381707392,b028723577637812806f4b3c1b45d120e4c78e47
+b028723577637812806f4b3c1b45d120e4c78e47,b0287235,. Updated version to 10 / 0.2.1,". Updated version to 10 / 0.2.1
+. Added delete email feature 
+. Popup now in it's own task (seperate from preference screen)
++ Many updates to the test activity
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381707003,1381707003,a882be2d76894d930c1aa1c49e10a6197df3477a
+a882be2d76894d930c1aa1c49e10a6197df3477a,a882be2d,A little bit more detailed log,"A little bit more detailed log
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381706639,1381706639,0b07dd909e4bc7e1d8e5fc0f5cff08f69861f80c
+0b07dd909e4bc7e1d8e5fc0f5cff08f69861f80c,0b07dd90,Merged branch 0.1.6 into trunk,"Merged branch 0.1.6 into trunk
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1381384007,1381384007,d9f0ba4d5907e25774138cfedf06f5aaeb31e94b
+d9f0ba4d5907e25774138cfedf06f5aaeb31e94b,d9f0ba4d,Temp implementation of swipe to close,"Temp implementation of swipe to close
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380558260,1380558260,2cadb265543e1311b7c0e06306bd757ae55e488b
+2cadb265543e1311b7c0e06306bd757ae55e488b,2cadb265,Released 0.1.6,"Released 0.1.6
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380432804,1380432804,adce9cdf8da0d50de4e59e586be6a541eec411fe
+adce9cdf8da0d50de4e59e586be6a541eec411fe,adce9cdf,Added Crashlytics support in Ant build (upload of obfuscated class map),"Added Crashlytics support in Ant build (upload of obfuscated class map)
+Note: Make sure to set crashlytics.dir in local.properties
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380303367,1380303367,c6507ee381fff515350ade22a832d8a66d886e72
+c6507ee381fff515350ade22a832d8a66d886e72,c6507ee3,. Updated build.xml to latest SDK,". Updated build.xml to latest SDK
+. Updated release.sh. 
+Note: the new build.xml now automates signing and zipalign. Make sure to update key.store and key.alias in ant.properties
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380300824,1380300824,01ae9e6273fa8b9ea7d7b786092a53a6419db174
+01ae9e6273fa8b9ea7d7b786092a53a6419db174,01ae9e62,Import clean up,"Import clean up
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380300705,1380300705,3bac03a6c3a9bf3193d2d139854ccf16f5ed601f
+3bac03a6c3a9bf3193d2d139854ccf16f5ed601f,3bac03a6,A bit more logging,"A bit more logging
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262240,1380262240,ea706dd970ffd7fb57cc0da081e4b894f5f06f8f
+ea706dd970ffd7fb57cc0da081e4b894f5f06f8f,ea706dd9,Updated IntelliJ files,"Updated IntelliJ files
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262223,1380262223,ff177d569d47a1b121448cc92784c10c52f66956
+ff177d569d47a1b121448cc92784c10c52f66956,ff177d56,Removed private NB files,"Removed private NB files
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262202,1380262202,ce766c71f2026d899b7490a3e3e538169584c752
+ce766c71f2026d899b7490a3e3e538169584c752,ce766c71,Updated Crashlytics to v1.0.4,"Updated Crashlytics to v1.0.4
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262104,1380262104,d960827f26f46cebf6ce241c66f5e92f1a2fbd1c
+d960827f26f46cebf6ce241c66f5e92f1a2fbd1c,d960827f,Also lookup contact phone when testing contact lookup via email and name,"Also lookup contact phone when testing contact lookup via email and name
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262040,1380262040,2cf0d7b81f968d1b506a5381a61609eec74aabd5
+2cf0d7b81f968d1b506a5381a61609eec74aabd5,2cf0d7b8,Updated from deprecated Contact API to ContactContracts API. This allows up to…,"Updated from deprecated Contact API to ContactContracts API. This allows up to display contact photos from all sources (FB, LinkedI, Skype, etc...)
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380262008,1380262008,07fa960ffc85deb1c6900920c63fb2493bd25244
+07fa960ffc85deb1c6900920c63fb2493bd25244,07fa960f,Test buttons now use name and email from form vs hard coded ones,"Test buttons now use name and email from form vs hard coded ones
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1380171913,1380171913,7a6297c9062752b09d61339b8f069b0f572220e3
+7a6297c9062752b09d61339b8f069b0f572220e3,7a6297c9,Also starting Crashlytics in service and popup,"Also starting Crashlytics in service and popup
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379530841,1379530841,a9a68022dc155f297b9f888755e2bf38e8fd9750
+a9a68022dc155f297b9f888755e2bf38e8fd9750,a9a68022,Fixed typo in variable name,"Fixed typo in variable name
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379530726,1379530726,7985470c96ab32cbbcf029a5d3707fed90ef9271
+7985470c96ab32cbbcf029a5d3707fed90ef9271,7985470c,Added support for 'from self' extra intent,"Added support for 'from self' extra intent
+--> if true no popup
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379138400,1379138400,341a9f5c3bc81a14899f70133fdbe37d877d18da
+341a9f5c3bc81a14899f70133fdbe37d877d18da,341a9f5c,Added out to ignore list,"Added out to ignore list
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379136963,1379136963,ae55b1aa952be3c35123bb0c1c016d159a6680d7
+ae55b1aa952be3c35123bb0c1c016d159a6680d7,ae55b1aa,Added IntelliJ files,"Added IntelliJ files
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379136896,1379136896,e4f009fe69203e5a46a27796cdd495f3fa3dc0ca
+e4f009fe69203e5a46a27796cdd495f3fa3dc0ca,e4f009fe,. Increased to v0.1.6,". Increased to v0.1.6
+. Min sdk is now 10 (2.3.3)
+. Added Crashlytics support
+Note: We still need to get it to work when users don't visit the prefs page 
+. Fixed crash when only popup on starred contacts and email sender is not a contact
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1379136398,1379136398,496df65b8c32126ac8e464642869cb2633d877f1
+496df65b8c32126ac8e464642869cb2633d877f1,496df65b,Honeycomb / large screen support + v0.1.5,"Honeycomb / large screen support + v0.1.5
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1318140297,1318140297,09adda316fedf3f1a491437b8c0eab1e8cd65825
+09adda316fedf3f1a491437b8c0eab1e8cd65825,09adda31,Delete bin/ so that zipalign does not complain about exisiting files,"Delete bin/ so that zipalign does not complain about exisiting files
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1318140252,1318140252,46540a2df5c6fcbf51b4df6f62a56fb39f673534
+46540a2df5c6fcbf51b4df6f62a56fb39f673534,46540a2d,Escaped quote char in string,"Escaped quote char in string
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1318140213,1318140213,103dd26a7dc385513181fab0cf96e307eb6706b8
+103dd26a7dc385513181fab0cf96e307eb6706b8,103dd26a,Fixed 2 crash fixes,"Fixed 2 crash fixes
+. bad app logic
+. no from email address...
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1318140178,1318140178,7b287c394652f1274ebd1a912ad85d1b93292414
+7b287c394652f1274ebd1a912ad85d1b93292414,7b287c39,. v0.1.4: Added more display time options,". v0.1.4: Added more display time options
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1266680780,1266680780,adf3b237d1d7352c502cbe1429f94fb41a0b6013
+adf3b237d1d7352c502cbe1429f94fb41a0b6013,adf3b237,0.1.3,"0.1.3
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1262757505,1262757505,d24ccbbed4056fa88b162d8ee332c118d6f18145
+d24ccbbed4056fa88b162d8ee332c118d6f18145,d24ccbbe,v0.1.3,"v0.1.3
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1262757444,1262757444,ec2b7407bac1f6f1406b4ab0cb53f2140657f059
+ec2b7407bac1f6f1406b4ab0cb53f2140657f059,ec2b7407,Fixed bug with keyguard coming back even when the open button is clicked,"Fixed bug with keyguard coming back even when the open button is clicked
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1262757377,1262757377,177ff4ce72332eced4f7afc0935f12dafa268396
+177ff4ce72332eced4f7afc0935f12dafa268396,177ff4ce,Added Market description,"Added Market description
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1261681881,1261681881,7d35ccdb1af858cfabc595e0e0bc523dffb628f8
+7d35ccdb1af858cfabc595e0e0bc523dffb628f8,7d35ccdb,0.1.2,"0.1.2
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1261677083,1261677083,0b02c213242e84a90f6b5716dcf361618a2439da
+0b02c213242e84a90f6b5716dcf361618a2439da,0b02c213,0.1.2,"0.1.2
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1261676840,1261676840,e0c17391594da1d6388b6a40e35d9853bbb2b954
+e0c17391594da1d6388b6a40e35d9853bbb2b954,e0c17391,. Filtering out email order than 8hours,". Filtering out email order than 8hours
+TODO: Make this a preference
+. Added support for K-9 2.3x (package name change)
+. Added scripts for local deploy and building release
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1261676659,1261676659,5055ea45b4a6804811d06cbc845c10ec54e6d858
+5055ea45b4a6804811d06cbc845c10ec54e6d858,5055ea45,v0.1.1,"v0.1.1
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1258787274,1258787274,e267a1fd433bc8a9602b5ce6ec30b93d93ed9ac1
+e267a1fd433bc8a9602b5ce6ec30b93d93ed9ac1,e267a1fd,Added ignore properties: private,"Added ignore properties: private
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1258782830,1258782830,57ce7765b68bb0e1784e71237c1e6ebadb787650
+57ce7765b68bb0e1784e71237c1e6ebadb787650,57ce7765,Added ignore properties: bin and gen,"Added ignore properties: bin and gen
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1258782792,1258782792,40a6e57961a538e09f045041bda9f742f58cec63
+40a6e57961a538e09f045041bda9f742f58cec63,40a6e579,Added 'Open' and 'Close' buttons,"Added 'Open' and 'Close' buttons
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1258782655,1258782655,fc5b0d5b806b437b019988476ba42e4bc3e31e89
+fc5b0d5b806b437b019988476ba42e4bc3e31e89,fc5b0d5b,Clicking on the notification opens K-9,"Clicking on the notification opens K-9
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1258778622,1258778622,1adddbb60f82c867c903f3476a90a9408a2fc9aa
+1adddbb60f82c867c903f3476a90a9408a2fc9aa,1adddbb6,--no commit message,,,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1257318098,1257318098,0f26e59e7cbfcb64c4d530ae93a1242b1b2df010
+0f26e59e7cbfcb64c4d530ae93a1242b1b2df010,0f26e59e,. Better icon,". Better icon
+. Better about text
+. Hid test button
+. Removed unsued persmission request
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1257316929,1257316929,ca8d4c314c316d55177a28819f5a25ec425aef16
+ca8d4c314c316d55177a28819f5a25ec425aef16,ca8d4c31,. Cleaned up test screen,". Cleaned up test screen
+. Better about text
+. Mechanism for screenshots
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1256753690,1256753690,43288b87c9941cc0d5dcc864eba49601482d7a66
+43288b87c9941cc0d5dcc864eba49601482d7a66,43288b87,better about text,"better about text
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1256682025,1256682025,ac2d33c840a4678562142174df9c01c0f68af0b2
+ac2d33c840a4678562142174df9c01c0f68af0b2,ac2d33c8,. About screen,". About screen
+. Better layout
+. Better default photo
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1256447250,1256447250,9c7d3c5fb9f16c8d550d8a53bb6602a002e050c9
+9c7d3c5fb9f16c8d550d8a53bb6602a002e050c9,9c7d3c5f,. Switched default photo to droid one,". Switched default photo to droid one
+. Added icon to notification title
+. Hit test screen
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1256103161,1256103161,39f88a70e3ff707733ded731668e74741d6fab4a
+39f88a70e3ff707733ded731668e74741d6fab4a,39f88a70,. Added icon,". Added icon
+. Added service
+. Added more preferences: display & filtering
+TODO: About screen
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1255928368,1255928368,1430008e4bc05f282ffc94456eece9d86c0b0202
+1430008e4bc05f282ffc94456eece9d86c0b0202,1430008e,1st fully working version:,"1st fully working version:
+. Popup
+. Preferences
+. Test
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1255099294,1255099294,4510f43e9ed11f30f80cd6cf0ac9316a7fcb6c37
+4510f43e9ed11f30f80cd6cf0ac9316a7fcb6c37,4510f43e,1st fully working version:,"1st fully working version:
+. Popup
+. Preferences
+. Test
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1255099277,1255099277,2f73c2f59dc41ab06868609eda13991e8e5863a3
+2f73c2f59dc41ab06868609eda13991e8e5863a3,2f73c2f5,Created directory 'EmailPopup/trunk'.,"Created directory 'EmailPopup/trunk'.
+",,,,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,baolongnt,baolongnt@0fa9042c-1658-466d-a3ad-57b394c83ab8,1255099199,1255099199,

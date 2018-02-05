@@ -1,0 +1,101 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f7c4d77317adc80688f7d9bd01a5313fa45a482d,f7c4d773,Explicitly remove WAKE_LOCK permission,"Explicitly remove WAKE_LOCK permission
+
+Without this tag, the Google Play Services gradle plugin will add the
+permission to the application. It isn't needed as long as play services
+is available on the device running this application.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1459750312,1459750312,a4a7475d51fd3bb4617ff5aeefd848daebb9964a
+a4a7475d51fd3bb4617ff5aeefd848daebb9964a,a4a7475d,Add privacy policy,"Add privacy policy
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1459749637,1459749637,f5162de5b0eb6b29319b3d242676492b33936592
+f5162de5b0eb6b29319b3d242676492b33936592,f5162de5,"Add Google Analytics, fix widget bug, bump version","Add Google Analytics, fix widget bug, bump version
+
+- Add Google Analytics to track success and failures of launching the
+  Miracast settings Activity.
+- Request new permissions to support Google Analytics
+- Fix bug where widget would not update by sending an update broadcast
+  manually when MainActivity launches.
+- Bump version to 2.0.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1459748197,1459748531,01b9d5533f494e998b218f27eb5a8d8ffddb9908
+01b9d5533f494e998b218f27eb5a8d8ffddb9908,01b9d553,Remove unused eclipse settings file,"Remove unused eclipse settings file
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1459661450,1459661450,51b2c94ab5e004b0f964db80a8056c2412df8a02
+51b2c94ab5e004b0f964db80a8056c2412df8a02,51b2c94a,Migrate project to gradle and target API level 23,"Migrate project to gradle and target API level 23
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1459661226,1459661226,7a593437cfd9366aed33d3baa97532f1bc76d6ac
+7a593437cfd9366aed33d3baa97532f1bc76d6ac,7a593437,Remove hard package name dependency,"Remove hard package name dependency
+
+- Do not target the launch Intent directly to com.android.settings, for
+  some devices that package name is not maintained.
+- Query PackageManager for system applications that match the
+  IntentFilters instead of limiting by package name. This ensures that
+  third party apps are never launched for the cast settings
+  IntentFilter.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1446091166,1446091166,b00865c0b7982fc10db936d23b2eb39d430a0684
+b00865c0b7982fc10db936d23b2eb39d430a0684,b00865c0,Fail gracefully if permission denied when starting Activity,"Fail gracefully if permission denied when starting Activity
+
+- Instead of a previous implementation of checking if the Samsung
+  ALLSHARE_CAST permission was granted to me, just catch
+  SecurityException when starting this activity. This fixes a scenario
+  where the permission may not be granted to this app, but actually
+  isn't necessary. This way, we only show an error if the settings
+  activity truly cannot be launched.
+- Bump version to 1.7.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1445320901,1445320901,c5712743f5355f229b12acfee9a9678b64c16589
+c5712743f5355f229b12acfee9a9678b64c16589,c5712743,"Revert ""Fail gracefully when denied Samsung ALLCAST permission.""","Revert ""Fail gracefully when denied Samsung ALLCAST permission.""
+
+This reverts commit b89ad1cd3e878b657a47fcd36c78a2346ff741bb.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1445320698,1445320698,848f1f7d4260c1b5d164ae8fba2ba531f210601d
+848f1f7d4260c1b5d164ae8fba2ba531f210601d,848f1f7d,Bump version,"Bump version
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1445231605,1445231605,b89ad1cd3e878b657a47fcd36c78a2346ff741bb
+b89ad1cd3e878b657a47fcd36c78a2346ff741bb,b89ad1cd,Fail gracefully when denied Samsung ALLCAST permission.,"Fail gracefully when denied Samsung ALLCAST permission.
+
+- Check if the permission is defined but not granted. If so, display the
+  error message instead of just crashing.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1445217786,1445217786,b9b12ad2ab87cc43272d4f29a0597183038e673a
+b9b12ad2ab87cc43272d4f29a0597183038e673a,b9b12ad2,Restrict intent launches to Android Settings app.,"Restrict intent launches to Android Settings app.
+
+- Target the intent launches to the ""com.android.settings"" package.
+- Bump the version number and name.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1445144213,1445144213,9fdcc85102ef270f547ff1fc7ccf7b7cf7887601
+9fdcc85102ef270f547ff1fc7ccf7b7cf7887601,9fdcc851,"Update strings, remove unused String.","Update strings, remove unused String.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1444603148,1444603148,206f3c25604717b244dfde08d62116433a231b76
+206f3c25604717b244dfde08d62116433a231b76,206f3c25,Improve support and fix formatting.,"Improve support and fix formatting.
+
+- Fix formatting in several files.
+- Support the CAST_SETTINGS Intent action String for launching
+  the Miracast Settings. This improves support on several OEM Android
+  versions as well as Android Marshmallow which dropped the
+  WIFI_DISPLAY_SETTINGS action String.
+- Fix layout of widget so that Text will be centered on devices higher
+  than API level 17 that support the textAlign attribute.
+- Bump version to 1.4.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1444601966,1444602145,b90f2f645e3b02a456cf2a59fcc410c3036ce773
+b90f2f645e3b02a456cf2a59fcc410c3036ce773,b90f2f64,Add Apache 2.0 license file.,"Add Apache 2.0 license file.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413956522,1413956522,b963df4c2a1ae778272901ea283cfa85978f75fe
+b963df4c2a1ae778272901ea283cfa85978f75fe,b963df4c,Bump version number.,"Bump version number.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413300190,1413300190,6233af8b3b85f6b8a6a0ff5a61c00dbff30931b0
+6233af8b3b85f6b8a6a0ff5a61c00dbff30931b0,6233af8b,Add screenshots and graphics used for release.,"Add screenshots and graphics used for release.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413264562,1413264562,18d9548504d9f2b5b6a5b681331b20178070529a
+18d9548504d9f2b5b6a5b681331b20178070529a,18d95485,Add new launcher icon. Adjust widget margins around icon.,"Add new launcher icon. Adjust widget margins around icon.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413262752,1413262771,ec478aadfa700d824c5823fb28f8ae600b010b24
+ec478aadfa700d824c5823fb28f8ae600b010b24,ec478aad,Cleanup code and catch ActivityNotFoundException.,"Cleanup code and catch ActivityNotFoundException.
+
+If the Miracast Settings Activity is not found on the device, catch the
+Exception and show an error toast instead of crashing.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413261829,1413261829,14fb6985129edb22dd88f4809ccd7d7b89821bf6
+14fb6985129edb22dd88f4809ccd7d7b89821bf6,14fb6985,Add Samsung ALL_CAST permisson.,"Add Samsung ALL_CAST permisson.
+
+This is required for Samsung devices to launch the Miracast settings
+Activity.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1413261391,1413261391,ac765489cb110c77bb4cd6a4324f561f8f4d2d78
+ac765489cb110c77bb4cd6a4324f561f8f4d2d78,ac765489,Increment version number and name.,"Increment version number and name.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1389760861,1389760861,8df82c0a0573d7283b51e4c58b3b88e43bc88903
+8df82c0a0573d7283b51e4c58b3b88e43bc88903,8df82c0a,Merge branch 'master' of https://github.com/mattgmg1990/miracast-widget,"Merge branch 'master' of https://github.com/mattgmg1990/miracast-widget
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1389760786,1389760786,"d34a92322cab436f026c183d5cb78cd74388a2bd,a5725c3d6fd12f4708af2c37910c8f44dab6ea8b"
+d34a92322cab436f026c183d5cb78cd74388a2bd,d34a9232,"Dropped the update interval of the widget to 10 minutes, since I found that my…","Dropped the update interval of the widget to 10 minutes, since I found that my display listener would mysteriously get dropped after a while. This created a bug where the widget would not update, even if the screen was shared.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1389760751,1389760751,1c25428ab26b2d821df1a5524ac152aa9c69a328
+a5725c3d6fd12f4708af2c37910c8f44dab6ea8b,a5725c3d,Update README.md,Update README.md,,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1389340016,1389340016,1c25428ab26b2d821df1a5524ac152aa9c69a328
+1c25428ab26b2d821df1a5524ac152aa9c69a328,1c25428a,"Changed the min API level to be KitKat, since I have received reports from users…","Changed the min API level to be KitKat, since I have received reports from users about crashes trying to launch the intent to the screencasting settings activity in 4.2 and 4.3. I must temporarily only support KitKat.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1388774627,1388774627,f5f2ccd8bceb3b6050312c94c63580154f234df7
+f5f2ccd8bceb3b6050312c94c63580154f234df7,f5f2ccd8,Added a README file.,"Added a README file.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1388359199,1388359199,247604550e6ea4cf81e192ee360eefe35b807f64
+247604550e6ea4cf81e192ee360eefe35b807f64,24760455,Initial commit. Added the application to a git repository.,"Initial commit. Added the application to a git repository.
+",,,,Matt Garnes,matt@mattgarnes.com,Matt Garnes,matt@mattgarnes.com,1388358763,1388358763,

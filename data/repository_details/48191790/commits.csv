@@ -1,0 +1,74 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c582ba574fb14d355b3f52d470b6d5cc75aacfcc,c582ba57,* bugfix for a rare network-on-main exception,"* bugfix for a rare network-on-main exception
+* bugfix for the latest android versions with device-default themes (options in dropdown lists would appear with white text on white background)
+* changed script ""Get"" destination to scroll directly to the user scripts on the Pardus download page",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1424431356,1424431356,38680b7ea7fb843ee2d9f6ede40b46d0e59c0908
+38680b7ea7fb843ee2d9f6ede40b46d0e59c0908,38680b7e,* added support for recent Pardus features (configurable amount of…,"* added support for recent Pardus features (configurable amount of horizontal/vertical tiles on the Nav screen, MO log notification)
+* on the first run after installing the app the width/height of Nav in tiles is calculated and set depending on the display size
+* disabled the new dynamic Nav size feature (= automatic Nav size change on browser resize events) by cookie due to bugs when zooming using the app
+* replaced the broken Userscripts link with greasyfork.org",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1418985744,1418985744,eb96e8905bc8cece0b35ab20372ec0d33f15788d
+eb96e8905bc8cece0b35ab20372ec0d33f15788d,eb96e890,* bugfix for android version 4.4: webviews in android 4.4 are based on chromium…,* bugfix for android version 4.4: webviews in android 4.4 are based on chromium and do not allow access to file and content URLs from remote pages anymore -> local image packs do not work. this change simply makes the app on android versions 4.4+ use the online image pack configured in the user's account settings on pardus.at.,,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1386535659,1386535659,bbaa7218ee8c304ee2bf14f3371c7b273fdff28d
+bbaa7218ee8c304ee2bf14f3371c7b273fdff28d,bbaa7218,"* added a daily check to see if an update of the image pack in use is available,…","* added a daily check to see if an update of the image pack in use is available, prompting the user to download an incremental update if available (works only with image packs downloaded on or after may 20th)
+* switched from the solarix IP to the more recent xolarix IP in the image pack selection
+* includes the latest webview-gm library (Fixes issue 002)
+* several small changes to fix or remove invalid lint markers",,,,werner.bayer,werner.bayer@gmail.com,werner.bayer,werner.bayer@gmail.com,1369093254,1369093254,24e102ed96190f9b18b2cb4c5011c03043556c7b
+24e102ed96190f9b18b2cb4c5011c03043556c7b,24e102ed,* bugfix to not scroll back to 0/0 when loading forum threads or URLs containing a hash character,* bugfix to not scroll back to 0/0 when loading forum threads or URLs containing a hash character,,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1350137142,1350137142,082ddf5fb250e4ad16d4023c528981e59aaa8f9c
+082ddf5fb250e4ad16d4023c528981e59aaa8f9c,082ddf5f,* bugfix for devices missing a physical menu button,"* bugfix for devices missing a physical menu button
+* more menu items in the action bar (if available)
+* attempt at increasing the maximum level zooming out is possible (not working in android versions 3 and 4.1)
+* various minor improvements",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1349369638,1349369638,8941acb11bb18afa2bb7f8cfa85fe898a2872e0b
+8941acb11bb18afa2bb7f8cfa85fe898a2872e0b,8941acb1,* switched to build-sdk 13 (android 3.2) to fix a regression regarding screen…,"* switched to build-sdk 13 (android 3.2) to fix a regression regarding screen orientation changes in android 3.2+
+* now storing one page property (zoom, scroll) per url and screen orientation
+* added code to hide the automatic ""double-tap to zoom"" tips despite not having such functionality",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1349016433,1349016433,e5e55b44e427abd356ad2cff0a7c89f1531a04c8
+e5e55b44e427abd356ad2cff0a7c89f1531a04c8,e5e55b44,* fixed a bug in removeTraces,* fixed a bug in removeTraces,,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1348950779,1348950779,298f2913be7b74a62645199672500846bdc7a72e
+298f2913be7b74a62645199672500846bdc7a72e,298f2913,* fixed zoom level and scroll position remembering feature,* fixed zoom level and scroll position remembering feature,,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1348949811,1348949811,8701ff61abcf3d525b9013b8c38327a1b9c0a0bf
+8701ff61abcf3d525b9013b8c38327a1b9c0a0bf,8701ff61,* added feature to remember scroll position and zoom level of visited pages…,"* added feature to remember scroll position and zoom level of visited pages (working on emulators, but buggy on a v2.3 test phone -> NOT READY FOR RELEASE)
+* added option (default on) to remove zoom buttons if the phone supports multi-touch
+* added option to disable fullscreen mode
+* following external (non-Pardus) links now opens the default browser (previously ignored)
+* switched to target SDK 16 (v4.1)
+* optimizations for tablets
+* faster notification of new (system) messages and logs
+* fixed a rare crash during app pause/resume (NetworkOnMainThreadException)",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1348856833,1348856833,01f100da86b212e8ca3af6ccd6d2dddfeeb01371
+01f100da86b212e8ca3af6ccd6d2dddfeeb01371,01f100da,* fixed crash on copy&paste on some devices,"* fixed crash on copy&paste on some devices
+* fixed error when setting nav size
+* for security reasons the app's javascript interfaces (settings, links, utils) are made inaccessible before the execution of user scripts",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1331047942,1331047942,c1ecba52f2453c898fedc528694f7f9b956d7429
+c1ecba52f2453c898fedc528694f7f9b956d7429,c1ecba52,"* experimental greasemonkey support added (through the WebView-GM library, to be…","* experimental greasemonkey support added (through the WebView-GM library, to be published within the next days)
+* supports the most used GM functions: GM_getValue, GM_setValue, GM_listValues, GM_deleteValue, GM_addStyle, GM_log
+* supports unsafeWindow and the parsing of the metadata block
+* support missing (in order of importance): GM_xmlhttpRequest, metadata block usage of @require and @resource, GM_getResourceText, GM_getResourceURL, GM_registerMenuCommand, GM_openInTab, GM_info
+* messages have been moved to the left due to the interference of the zoom controls",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1330870946,1330870946,93e3270b4d184740fcf096a7383580519e198b39
+93e3270b4d184740fcf096a7383580519e198b39,93e3270b,* added menu bar sensitivity setting (= amount of pixels to scroll over the…,"* added menu bar sensitivity setting (= amount of pixels to scroll over the border to fade in the menu bar): options ranging from 0 to 80dp and ""never show by scrolling""
+* default sensitivity is 32dp as opposed to 16px in the previous version
+* fixed bulletin board mission accept bug",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1325531331,1325531331,bbee74cbadee569b9c5086d64f7ea46ffa952300
+bbee74cbadee569b9c5086d64f7ea46ffa952300,bbee74cb,* removed the two top frames (menu and message notification) to gain more space…,"* removed the two top frames (menu and message notification) to gain more space and to get rid of the TODOs and FIXMEs
+* added floating menu with Pardus links, accessed by scrolling against the top or bottom of a page or by using the app's menu
+* links in the new menu can be customized (added/edited/removed)
+* notifications about status messages, new PMs/AMs and logs are now displayed in the bottom right corner of the screen (updated by a background thread running once per minute)
+* enabled the copy part of copy&paste (long-press) for android versions 2.3 and below (higher versions have native support)
+* added a popup with new version infos to be shown at the first start after an update
+* improved the appearance of local pages on tablet resolutions (sizes in dp/sp instead of density dependent px)
+* ""switch to universe"" menu items are only shown if a character exists in the corresponding universe
+* added menu link for the account_play page and moved ingame links to the new floating menu
+* fixed the loading progress bar
+* removed the webview's extra right-border padding
+* removed the about page
+* added a new ""what is pardus"" button to the login page",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1325025642,1325025642,cb297e9c81f11b0f62714cbd29c64ec26615bd4c
+cb297e9c81f11b0f62714cbd29c64ec26615bd4c,cb297e9c,* the WebView component in Android3+ stopped loading local URLs if they…,"* the WebView component in Android3+ stopped loading local URLs if they contained parameters => added javascript workaround
+* fixed ""clear cache"" function to successfully delete any stored form fields (user/password)
+* added icon for xhdpi resolutions",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1324131022,1324131022,7bdd084732b44e498858e382c947627bfa44180f
+7bdd084732b44e498858e382c947627bfa44180f,7bdd0847,* removed compatibility code for versions <= 2.1,"* removed compatibility code for versions <= 2.1
+* added proguard build optimizations",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1315537705,1315537705,c46cb5a1957061962e3ffeb140c4e4c610a05320
+c46cb5a1957061962e3ffeb140c4e4c610a05320,c46cb5a1,* creation of .nomedia file in image pack directory to exclude it from android's gallery,"* creation of .nomedia file in image pack directory to exclude it from android's gallery
+* option to limit amount of loaded chat lines to 10 (default on)
+* new menu buttons to switch universe",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1315528388,1315528388,f97d8550a318301c01d052c26d2400f94893f014
+f97d8550a318301c01d052c26d2400f94893f014,f97d8550,* removed the application's title bar,"* removed the application's title bar
+* added a thin progress bar at the bottom of the screen, showing only during page loads",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292519865,1292519865,e8d37c91005d80ec74abffdc8117287b7e5f85be
+e8d37c91005d80ec74abffdc8117287b7e5f85be,e8d37c91,"* added new options: partial refresh (default on), ship animation (default off),…","* added new options: partial refresh (default on), ship animation (default off), ship rotation (default on)",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292503498,1292503498,bd72b1649894d0a9ecb5d5dbcc4e833e5bcc480a
+bd72b1649894d0a9ecb5d5dbcc4e833e5bcc480a,bd72b164,* previously hard-coded options now configurable through settings screen (use…,"* previously hard-coded options now configurable through settings screen (use https, log out on hide, nav space chart size)
+* stopping as many of the webview's tasks as possible when pausing/hiding the app (restarting them on resume)
+* access to the online login page always redirected to the local one",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292380038,1292380038,e784b6b65d7d153a588d0ddee33e6e1b407390e2
+e784b6b65d7d153a588d0ddee33e6e1b407390e2,e784b6b6,* bugfix: menu not working when character auto-login is selected,* bugfix: menu not working when character auto-login is selected,,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292201060,1292201060,f618106b453a04e12a7085b1ea316f04a3a27335
+f618106b453a04e12a7085b1ea316f04a3a27335,f618106b,* bugfix: detect logged in status when character auto-login is selected,"* bugfix: detect logged in status when character auto-login is selected
+* added signup link for new players from google market",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292197295,1292197295,e99977ce39d9c8d380e7224a7c12f3f198cdd441
+e99977ce39d9c8d380e7224a7c12f3f198cdd441,e99977ce,* first import of the pardus-android project,"* first import of the pardus-android project
+* includes SslError and WebViewClient of the android sdk core so ssl errors can be caught with devices running android 2.1 or lower",,,,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,werner.bayer,werner.bayer@b341ba14-7018-8258-861b-011a1ebac9d8,1292087713,1292087713,

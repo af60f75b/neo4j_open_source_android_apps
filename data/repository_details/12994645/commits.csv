@@ -1,0 +1,1086 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+43976e5135a85d53c3b091d6e9894e23ac0c6666,43976e51,Update to newest android developer stack,"Update to newest android developer stack
+
+Signed-off-by: David Graeff <david.graeff@web.de>
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1509121572,1509121572,2eda50f130af00aa9035f968825b9a45ccc64e39
+2eda50f130af00aa9035f968825b9a45ccc64e39,2eda50f1,Add broadcast receiver to provide an API for other applications to get a list of…,"Add broadcast receiver to provide an API for other applications to get a list of all executables. Important for voice control and starting an executable from outside.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1438812653,1438812653,d67340f85e10bc4a7a3215f439677b676fa4f359
+d67340f85e10bc4a7a3215f439677b676fa4f359,d67340f8,Fix bug in automatic setup (DataService not ready).,"Fix bug in automatic setup (DataService not ready).
+Add IOConnection Dialogs for UDP and IP and make UPD and IP connections editable from the context menu in the connections list.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1438812343,1438812343,27ebd184a175b880645dd4c95d5d353f558e46be
+27ebd184a175b880645dd4c95d5d353f558e46be,27ebd184,new shopping icon. Refactor. Fix: http on/off was toggle all the time.,"new shopping icon. Refactor. Fix: http on/off was toggle all the time.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1434984804,1434984804,92289acddd0962bbb8bc96b398639eda96a48ee0
+92289acddd0962bbb8bc96b398639eda96a48ee0,92289acd,Add poll to buy fragment. Improve navigation drawer. fix crash while creating a group for a device.,"Add poll to buy fragment. Improve navigation drawer. fix crash while creating a group for a device.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1434484018,1434484018,2d03df3ed42307dd3d4180b2c25eadc3e55b0ef1
+2d03df3ed42307dd3d4180b2c25eadc3e55b0ef1,2d03df3e,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1434372538,1434372538,"83f85ff4745be7c01d615b37ef37c02f286cfcfb,b91a733740e1acfd04b1a14cad8ac684ea6c87f3"
+83f85ff4745be7c01d615b37ef37c02f286cfcfb,83f85ff4,buy fragment. scenes are executable again. crashes fixed. fix automatic first…,"buy fragment. scenes are executable again. crashes fixed. fix automatic first setup (save credentials etc). Refactor DeviceQuery.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1434372531,1434372531,15f85d929f718f39a011925ac33254c376ea1227
+b91a733740e1acfd04b1a14cad8ac684ea6c87f3,b91a7337,Add reference to simpleUDP,Add reference to simpleUDP,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1433784547,1433784547,ffbcbb81271edddcbabf2280a72b8086bb17c5a1
+ffbcbb81271edddcbabf2280a72b8086bb17c5a1,ffbcbb81,Create simpleudp.md,Create simpleudp.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1433784296,1433784296,cb51f4aa3be3b86ff17b12f9a219499de610c56e
+cb51f4aa3be3b86ff17b12f9a219499de610c56e,cb51f4aa,Add external libraries and licenses to readme,Add external libraries and licenses to readme,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1433783625,1433783625,15f85d929f718f39a011925ac33254c376ea1227
+15f85d929f718f39a011925ac33254c376ea1227,15f85d92,Rename devices package to credentials. SimpleUDP fixes. Anel Plugin: Splitted…,"Rename devices package to credentials. SimpleUDP fixes. Anel Plugin: Splitted into AnelSendUDP, AnelReceiveUDP, AnelPlugin. Hide/show outlets adapter fixed.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1433782818,1433782818,bace9c983be8b710dc8b131ee71bc029042c998e
+bace9c983be8b710dc8b131ee71bc029042c998e,bace9c98,WolPlugin: Do not show entries if wol address is not in range (network host part differs).,"WolPlugin: Do not show entries if wol address is not in range (network host part differs).
+Remove also unconfigured credentials and executables if a rescan is issued, not only connections.
+SimpleUDP uses utf8 instead of latin1 codec.
+AddToConfigured: Also update executables if a new/edited credential is saved.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1432726085,1432726085,a97b70cf45f93b97fa8f8b868a20c9fccc5fb38f
+a97b70cf45f93b97fa8f8b868a20c9fccc5fb38f,a97b70cf,"Move OFF,ON,TOGGLE defines from Executable to ExecutableAndCommand. If an…","Move OFF,ON,TOGGLE defines from Executable to ExecutableAndCommand. If an executable is of type toggle, a toggle switches value between value_min and value_max (not only between two states anymore).
+
+If a command is send, and the remote device responds but the state hasn't changed, we still will still update the gui (remove grey-out text flag) now.
+
+Credential changes are saved now.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1432401348,1432401348,4479a4c5a09e0c9ca6d4950ea626f552bb5ff0f9
+4479a4c5a09e0c9ca6d4950ea626f552bb5ff0f9,4479a4c5,Tidy up icons. Add new plugin: WOL,"Tidy up icons. Add new plugin: WOL
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1432035315,1432035315,77fff9ed4ccb285b80c51dd6a6509b196d53f257
+77fff9ed4ccb285b80c51dd6a6509b196d53f257,77fff9ed,Theme improvements. Rotation and span computation fixed for outlet view.,"Theme improvements. Rotation and span computation fixed for outlet view.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431867501,1431867501,f29b5afd1750f9276bb259957dc69c0b10847246
+f29b5afd1750f9276bb259957dc69c0b10847246,f29b5afd,Use imagebuttons instead of a menu for preferences and feedback. On android 5…,"Use imagebuttons instead of a menu for preferences and feedback. On android 5 feedfack is not shown on smaller screens otherwise
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431790048,1431790048,57c840b4b7965e684d5d953645993cf7be2f0745
+57c840b4b7965e684d5d953645993cf7be2f0745,57c840b4,Preview images for widgets. Some fixes for widgets. Move App to the most top…,"Preview images for widgets. Some fixes for widgets. Move App to the most top package (for acra to find BuildConfig).
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431724826,1431724826,3c3848e37897a50142b56f297360e012232ccf15
+3c3848e37897a50142b56f297360e012232ccf15,3c3848e3,Dark theme repaired. Use ThemeHelper for dialogs. LoadStoreIconData: Move all…,"Dark theme repaired. Use ThemeHelper for dialogs. LoadStoreIconData: Move all inner classes out and create new SelectDrawableDialog class. Use recyclerview for the later.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431704647,1431704647,92f100a21c7f3201c9f588b7f2b80741d892d98b
+92f100a21c7f3201c9f588b7f2b80741d892d98b,92f100a2,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431528546,1431528546,"0f6e3559284df50b07426acfa5a405d5571f4efe,2d7682e635460cbbb580ba3269aa426da5335252"
+0f6e3559284df50b07426acfa5a405d5571f4efe,0f6e3559,Remove all alarm/timer classes. Renaming with anel plugin works now again…,"Remove all alarm/timer classes. Renaming with anel plugin works now again without activity crash. Remove donations library.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431528539,1431528539,0675058030dfbdd8fe8ba7e1c2943b338f5dc331
+2d7682e635460cbbb580ba3269aa426da5335252,2d7682e6,Update README.md,"Update README.md
+
+Update minimal android version in readme",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1431341878,1431341878,8b994fc5c15814b17f8c40e7d5d11d789366c67f
+8b994fc5c15814b17f8c40e7d5d11d789366c67f,8b994fc5,Update README.md,"Update README.md
+
+Update readme for version 8.0",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1431341739,1431341739,0675058030dfbdd8fe8ba7e1c2943b338f5dc331
+0675058030dfbdd8fe8ba7e1c2943b338f5dc331,06750580,Do not save scenes from homescreen icons when executed. Complete plugin…,"Do not save scenes from homescreen icons when executed. Complete plugin SimpleUDP. Reduce changelog to version 7 and 8. Buildsystem: Ignore incomlete translation for the time beeing.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431340931,1431340931,1b99466ecaea0d9906a695861655ed5bc39d23d2
+1b99466ecaea0d9906a695861655ed5bc39d23d2,1b99466e,"Add scene help button and show help for first time when clicked on ""+"" button.…","Add scene help button and show help for first time when clicked on ""+"" button. IconThemeDialog in MaterialDesign. Fix for scenes as widgets.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431298124,1431298124,1ea9b3eedd43ee3900ffc8a20193c0e3c2979257
+1ea9b3eedd43ee3900ffc8a20193c0e3c2979257,1ea9b3ee,fixed all deprecated warnings. fixed device detection. improved scene element…,"fixed all deprecated warnings. fixed device detection. improved scene element adding. fixed scene element change propagation
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431292546,1431292546,edacae9c395ce859670f428f248f72f06d7bf563
+edacae9c395ce859670f428f248f72f06d7bf563,edacae9c,new icons; improved design; fixed bugs,"new icons; improved design; fixed bugs
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1431106246,1431106246,cb4572df6776984f27b2c25b9276d97a28a4756a
+cb4572df6776984f27b2c25b9276d97a28a4756a,cb4572df,Improve connection add dialog. Switch more dialogs to material design. Use…,"Improve connection add dialog. Switch more dialogs to material design. Use material design buttons whereever possible. Change group list: Add device preferences button. Fix empty list recognition. Do not show ""Show all"" entry in group list if no group is existing, show text hint instead.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1430935114,1430935114,bbfdb455f140b31a7d7ea4818d7cd343a713c603
+bbfdb455f140b31a7d7ea4818d7cd343a713c603,bbfdb455,"Executable+IOConnection: missing writer.close(), so write didn't work. Add check…","Executable+IOConnection: missing writer.close(), so write didn't work. Add check and exception to capture this for the future.
+Hidding/Showing of executables work.
+Cache reachability state in executable instead of looking up ioconnections each time.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1430698278,1430698278,ae6fb6ac476537cfbfdf43e0d918e114f358b4b7
+ae6fb6ac476537cfbfdf43e0d918e114f358b4b7,ae6fb6ac,Refactor PluginService -> DataService,"Refactor PluginService -> DataService
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1430679729,1430679729,e42d40bbca29a235da4313547507abb1b0d81bf3
+e42d40bbca29a235da4313547507abb1b0d81bf3,e42d40bb,Update sub modules,"Update sub modules
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1423750913,1423750977,4ed4fc89c0d60c4a01726926ece3c3de918d7699
+4ed4fc89c0d60c4a01726926ece3c3de918d7699,4ed4fc89,update device_base and sliding menu sub modules,"update device_base and sliding menu sub modules
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1423750905,1423750977,f3e0d94763ac6def439871fca2255f43b1f7e685
+f3e0d94763ac6def439871fca2255f43b1f7e685,f3e0d947,Improve design. Fix some list update problems. Add consistency runtime check class.,"Improve design. Fix some list update problems. Add consistency runtime check class.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1423750897,1423750977,1bbdd0f22693fd72d5582868e87271be2f6a6289
+1bbdd0f22693fd72d5582868e87271be2f6a6289,1bbdd0f2,Change reachable API. Add annotation to int constants.,"Change reachable API. Add annotation to int constants.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1423750862,1423750977,306223a5aa467e70684443cc772aeb3d83771e5f
+306223a5aa467e70684443cc772aeb3d83771e5f,306223a5,Change reachable API. Add annotation to int constants.,"Change reachable API. Add annotation to int constants.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1423750972,1423750972,b833909cfba3f1b6ab873e4ee74b3f3ea9ad7d82
+b833909cfba3f1b6ab873e4ee74b3f3ea9ad7d82,b833909c,"New design. Left menu ist the device menu, right menu is the group menu.…","New design. Left menu ist the device menu, right menu is the group menu. Preferences and about is reachable via action bar. Missing: help text on empty group; Timer control.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1422878593,1422878593,5e503d81a4dc5e16704556e35b876747da4095dc
+5e503d81a4dc5e16704556e35b876747da4095dc,5e503d81,improve sliding menu (not fully integrated into NavigationController yet),"improve sliding menu (not fully integrated into NavigationController yet)
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1421409399,1421409399,5a0206ea08d7edcc98736185fce7944e502d19df
+5a0206ea08d7edcc98736185fce7944e502d19df,5a0206ea,Add sliding menu as submodule,"Add sliding menu as submodule
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1421400786,1421400786,b2974b3aa65963f89d7e4d34bab608cee4eccd1f
+b2974b3aa65963f89d7e4d34bab608cee4eccd1f,b2974b3a,Add WidgetConfigFragment. Change Service,"Add WidgetConfigFragment. Change Service
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1421400603,1421400603,8ba11247b5bd8beb2a49f886087ef584ce4601b1
+8ba11247b5bd8beb2a49f886087ef584ce4601b1,8ba11247,Improve device discovery,"Improve device discovery
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1421370307,1421370307,f5e422c647312a46b33207ecb1a6eb262e2f4fa5
+f5e422c647312a46b33207ecb1a6eb262e2f4fa5,f5e422c6,Improvements and fixes with calculating the next android alarm. New onPluginFinished interface.,"Improvements and fixes with calculating the next android alarm. New onPluginFinished interface.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1421278274,1421278274,aa20a074dbc33c7678f2ed301034a2877a430132
+aa20a074dbc33c7678f2ed301034a2877a430132,aa20a074,Refactor AdapterSource -> AdapterSource+Filters. Move mItems from Adapter to…,"Refactor AdapterSource -> AdapterSource+Filters. Move mItems from Adapter to AdapterSource. Use ExecutableAdapter instead of ExecutableEditableAdapter oder CheckableAdapter if only a list is required.
+
+Reachability is no boolean anymore but a three-state. NotReachable, Reachable, MaybeReachable.
+
+Groups can be created from within the edit activity.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1419995946,1419995946,d5956e8037ed0924c3b15513133980aaa7f2811c
+d5956e8037ed0924c3b15513133980aaa7f2811c,d5956e80,AppData is no singleton anymore and will be initiated by the PluginService. Use…,"AppData is no singleton anymore and will be initiated by the PluginService. Use PluginService.observerReady to get a pluginService reference and there you can call getAppData(). Refactor ApdaterSource.
+Instead of swiping through groups there is now a submenu on the right with all groups listed.
+Instead of a separate fragment for editing DevicePorts, this is now included in the EditSceneActivity. EditSceneActivity is renamed to EditActivity. There is a known crash when closing that activity (RecyclerView Bug: https://code.google.com/p/android/issues/detail?id=79244)
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1419431046,1419431047,0c978df0709a4a4fc828a8f6de1f8861d122c6b0
+0c978df0709a4a4fc828a8f6de1f8861d122c6b0,0c978df0,Fix TimerEdit Dialog. Fix executionActivity. Improve scene edit activity. Remove flatui dependency.,"Fix TimerEdit Dialog. Fix executionActivity. Improve scene edit activity. Remove flatui dependency.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418694584,1418694584,aecc092ea17b61e654c235394a5a26923d8b50e6
+aecc092ea17b61e654c235394a5a26923d8b50e6,aecc092e,Improve TimerFragment GUI.,"Improve TimerFragment GUI.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418667884,1418667884,18c5443c882c2a1e14b0c0ef831c8d26d966a69a
+18c5443c882c2a1e14b0c0ef831c8d26d966a69a,18c5443c,Remove background texture. Use user defined background instead as default. Fix…,"Remove background texture. Use user defined background instead as default. Fix bug with AnimationController. Improve some help strings. Fix bug with timer edit dialog.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418664858,1418664858,9f615a6ccf79b0b822e836d1c3d664bbb75103dc
+9f615a6ccf79b0b822e836d1c3d664bbb75103dc,9f615a6c,"Remove speech. edit mode, remove tools icon.","Remove speech. edit mode, remove tools icon.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418570521,1418570521,d9349458bead13fc294621380a6cfb4c17033c45
+d9349458bead13fc294621380a6cfb4c17033c45,d9349458,Add new alarm icons. Click on alarm plus icon: Menu for android alarm…,"Add new alarm icons. Click on alarm plus icon: Menu for android alarm once/repeating, device alarm. Last commit with speech
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418495982,1418495982,da67adcc0afb5009ba4413b93995087473e28a25
+da67adcc0afb5009ba4413b93995087473e28a25,da67adcc,Add setHidden method to DevicePort,"Add setHidden method to DevicePort
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418169190,1418169190,b5598575812a812df3a8857e8962d9dd32fa7155
+b5598575812a812df3a8857e8962d9dd32fa7155,b5598575,Add speech recognition. Make the Android Status Bar class a service. Add…,"Add speech recognition. Make the Android Status Bar class a service. Add LifecycleHandler instead of initiating PluginService and AppData on every activity.App::onCreate does less now, BroadcastReceivers may be faster because of the lower initial overhead. Implement hide/show device actions dialog. Still some issues though.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1418169166,1418169166,6ae0c8fca3142e9655459c4617351f1cbc489f3c
+6ae0c8fca3142e9655459c4617351f1cbc489f3c,6ae0c8fc,"Fixed problem with android 4.0.x (GLES, Canvas); Alarms improvement: On/Off…","Fixed problem with android 4.0.x (GLES, Canvas); Alarms improvement: On/Off separated into distinct alarms. Somewhat problematic with anel devices (adapter methods necessary) but better for android alarms and maintainance. Add dummy DeviceShare + DeviceIemHide Dialogs.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1417794998,1417794998,0bb638e2eaf8ad1a3be6009ed8384c132c8a4675
+0bb638e2eaf8ad1a3be6009ed8384c132c8a4675,0bb638e2,Some improvements. Update to android studio 1.0rc. Add share device over network…,"Some improvements. Update to android studio 1.0rc. Add share device over network menu entry (functionallity missing so far)
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1417688661,1417688661,c8a4c0e1c895cb28263f1acfc32911aa363979bd
+c8a4c0e1c895cb28263f1acfc32911aa363979bd,c8a4c0e1,new relese 6.9.4,"new relese 6.9.4
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1417606736,1417606736,88fde20c7b8748bbcdaf8ef5eae741c29ccbfcec
+88fde20c7b8748bbcdaf8ef5eae741c29ccbfcec,88fde20c,"improve logging. improve plugin loading sequence. alarm setup did not work, some…","improve logging. improve plugin loading sequence. alarm setup did not work, some changes, may work now
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1417542544,1417542544,b410851c916028457cf96bcb72838b7da9afbeca
+b410851c916028457cf96bcb72838b7da9afbeca,b410851c,"fixed problems with plugin loading sequence, reduces unnecessary refreshes.…","fixed problems with plugin loading sequence, reduces unnecessary refreshes. refreshDeviceData now with argument: lookForNewDevices/UseBroadcast/DiscoverNewExtensions
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416879380,1416879380,ad9f1acff30912c4169a4c42714be191d62f8061
+ad9f1acff30912c4169a4c42714be191d62f8061,ad9f1acf,"wenn connection hash werte sich bei einem update unterscheiden, dann auch changed flag setzen","wenn connection hash werte sich bei einem update unterscheiden, dann auch changed flag setzen
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416841077,1416841077,a6505c0eac9a4c534e290f378ab3312b3c66863e
+a6505c0eac9a4c534e290f378ab3312b3c66863e,a6505c0e,zeitschaltungen: am/pm problem behoben.,"zeitschaltungen: am/pm problem behoben.
+widgetupdateservice: keine warnung mehr für alte widget ids.
+auf tablets: device screen nicht zu groß durch margins/paddings
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416841043,1416841043,68debfa420fe67c2864ea44e368a1f0b56570777
+68debfa420fe67c2864ea44e368a1f0b56570777,68debfa4,"improve animations, rename listenService to PluginService.","improve animations, rename listenService to PluginService.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416837417,1416837417,d2f8c60893f01f98ef855cc4745ceb3b2167d3c2
+d2f8c60893f01f98ef855cc4745ceb3b2167d3c2,d2f8c608,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416319762,1416319762,ca4192dc5e9e8e407071f2ded67c076370a95b6e
+ca4192dc5e9e8e407071f2ded67c076370a95b6e,ca4192dc,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416319745,1416319745,40401672460f3f4f6ed916ae5ca705adf4b1877c
+40401672460f3f4f6ed916ae5ca705adf4b1877c,40401672,add new pictures.,"add new pictures.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416319700,1416319707,e1a09a9a3e05fe90727e5d1176e740706a674985
+e1a09a9a3e05fe90727e5d1176e740706a674985,e1a09a9a,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416319629,1416319629,612fd60da9c7ad5996fe4738cb91bc92176a813f
+612fd60da9c7ad5996fe4738cb91bc92176a813f,612fd60d,add new pictures.,"add new pictures.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416319578,1416319578,0317c9fc9acc00073e788ac15bee8db6280627f9
+0317c9fc9acc00073e788ac15bee8db6280627f9,0317c9fc,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416319212,1416319212,f413dcf10ddd3e4e0379bd9a027f50f8f5b398d6
+f413dcf10ddd3e4e0379bd9a027f50f8f5b398d6,f413dcf1,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416318395,1416318395,dd2bfb6ec7025f2b5c751bbd639cb8833dca9b58
+dd2bfb6ec7025f2b5c751bbd639cb8833dca9b58,dd2bfb6e,add new pictures. timerAdapter: show small android icon for android-stored alarms,"add new pictures. timerAdapter: show small android icon for android-stored alarms
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416318341,1416318341,447fe84703488aff2a10ccb4c40e20d24ac70a43
+447fe84703488aff2a10ccb4c40e20d24ac70a43,447fe847,device_base minSdk is 14 not 15.,"device_base minSdk is 14 not 15.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416316610,1416316610,d43a1132eb467b21d7b3cae45237a33934bece52
+d43a1132eb467b21d7b3cae45237a33934bece52,d43a1132,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416316449,1416316449,d132a1ad0b1980d8be127275e5ed36a8727ab594
+d132a1ad0b1980d8be127275e5ed36a8727ab594,d132a1ad,rename pictures in doc/,"rename pictures in doc/
+Fix bug with not-set unique id of devices
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416315327,1416315327,75d3c9d13525d99672975d3cfbeebc9bd599affb
+75d3c9d13525d99672975d3cfbeebc9bd599affb,75d3c9d1,Update README.md,"Update README.md
+
+Update pictue references",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1416315142,1416315142,68f0a29c93bf8961e4b93637df3daa63ac0c4125
+68f0a29c93bf8961e4b93637df3daa63ac0c4125,68f0a29c,bugs fixed: scene icons; timerCollection too few notifies,"bugs fixed: scene icons; timerCollection too few notifies
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416279012,1416279012,d7b2aabd071ae09f852da9a6bc4334685cbdf4e6
+d7b2aabd071ae09f852da9a6bc4334685cbdf4e6,d7b2aabd,Hide DevicePort constructors. New factory create methods added. Unique id of…,"Hide DevicePort constructors. New factory create methods added. Unique id of devicePort now depends on the device unique id and the devicePort id.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416276274,1416276274,9c8175e40ef4da815871cf7cef66ae68c45818d5
+9c8175e40ef4da815871cf7cef66ae68c45818d5,9c8175e4,Alarms for scenes and ports via android alarm manager. Wavelock included.,"Alarms for scenes and ports via android alarm manager. Wavelock included.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416276103,1416276103,ecc2659356c262114c7d4b6a22e83b764f56a88d
+ecc2659356c262114c7d4b6a22e83b764f56a88d,ecc26593,improvements,"improvements
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416245922,1416245922,b488e591e5248f3adb6456d892622c6a078c3849
+b488e591e5248f3adb6456d892622c6a078c3849,b488e591,"bugs fixed (scene dialog crash etc), device port image select","bugs fixed (scene dialog crash etc), device port image select
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416133806,1416133806,5b1ec38a1a3d7e9084c711c1e8486d35d242fdc8
+5b1ec38a1a3d7e9084c711c1e8486d35d242fdc8,5b1ec38a,"Google In-App billing, IllegalArgumentException: Service Intent must be…","Google In-App billing, IllegalArgumentException: Service Intent must be explicit, after upgrading to Android 5
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1416055712,1416055712,04d9f8f2010d7f3c11f3e7f582270fe5cbf3aae2
+04d9f8f2010d7f3c11f3e7f582270fe5cbf3aae2,04d9f8f2,bugs fixed (changing device port uids etc). edit outlet is now a fragment…,"bugs fixed (changing device port uids etc). edit outlet is now a fragment looking similar to the scene edit activity.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415711959,1415711959,041daab3647d2f021349b42aa35f1c1fb378b871
+041daab3647d2f021349b42aa35f1c1fb378b871,041daab3,Improve plugin interface,"Improve plugin interface
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415435915,1415435915,9016df4595e38dfe8e31f9f238d77bae6fc06dcb
+9016df4595e38dfe8e31f9f238d77bae6fc06dcb,9016df45,Further streamline updateExistingDevice/updateExistingDeviceFromOtherThread methods and usage.,"Further streamline updateExistingDevice/updateExistingDeviceFromOtherThread methods and usage.
+Add methods to precompute if an overview group change would show an empty result.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415433505,1415433505,3648e1c965a137b944754ff5547dd88616e31e65
+3648e1c965a137b944754ff5547dd88616e31e65,3648e1c9,Make plugin helper classes completely independent of the origin plugin project…,"Make plugin helper classes completely independent of the origin plugin project where they came from.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415433341,1415433341,a0d11f1a129f4d7a89e07689054c7a83515878e5
+a0d11f1a129f4d7a89e07689054c7a83515878e5,a0d11f1a,Update README.md,"Update README.md
+
+Add plugin wiki link",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1415364937,1415364937,42d67448a2933f92c789405e4f022a9883f45296
+42d67448a2933f92c789405e4f022a9883f45296,42d67448,Update README.md,"Update README.md
+
+Add hint to use git clone -r for submodules",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1415292120,1415292120,28b2596240d4e703c722691faa88f5a365a93986
+28b2596240d4e703c722691faa88f5a365a93986,28b25962,Add device_base submodule,"Add device_base submodule
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415291417,1415291417,3c7dd56f18fd0027cb985f6a9f20fb948d2a42ff
+3c7dd56f18fd0027cb985f6a9f20fb948d2a42ff,3c7dd56f,gitignore: Add build and app/build. Remove device_base. Will be a git submodule,"gitignore: Add build and app/build. Remove device_base. Will be a git submodule
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415291345,1415291345,1574653d23c1b4e11415fd68fa4b0be8e37a1a9a
+1574653d23c1b4e11415fd68fa4b0be8e37a1a9a,1574653d,Scene dialog improved -> many bugs regarding update of the overview remain,"Scene dialog improved -> many bugs regarding update of the overview remain
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415284125,1415284125,d69e8d0bc526eef089e9455f476f31fb693a2075
+d69e8d0bc526eef089e9455f476f31fb693a2075,d69e8d0b,Feedback fragment improved,"Feedback fragment improved
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415240033,1415240033,bbfd641d1ed96bdd5e163f1cb4dcb9d05110244e
+bbfd641d1ed96bdd5e163f1cb4dcb9d05110244e,bbfd641d,Redesign of overview + navigation drawer. All shared app and plugin classes…,"Redesign of overview + navigation drawer. All shared app and plugin classes (Device, DevicePort etc) are now in a separate lib package.
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1415228315,1415228316,820479012ac6cc46aea7b4052cbef19ac390624a
+820479012ac6cc46aea7b4052cbef19ac390624a,82047901,Add forgotten files,"Add forgotten files
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1414623721,1414623721,f2212fee6526c4d67819641ee18e1ab127839122
+f2212fee6526c4d67819641ee18e1ab127839122,f2212fee,Add .idea to gitignore,"Add .idea to gitignore
+",,,,David Graeff,david.graeff@web.de,David Graeff,david.graeff@web.de,1414622947,1414622947,5e03f85047a22ccefd7801cec7423c4f888c06a9
+5e03f85047a22ccefd7801cec7423c4f888c06a9,5e03f850,Bugs fixed. Fullscreen mode repaired.,"Bugs fixed. Fullscreen mode repaired.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414520653,1414520653,31c58be2e7f785bcffe4c7e61d52dece3496d8c7
+31c58be2e7f785bcffe4c7e61d52dece3496d8c7,31c58be2,Better restart of the application in preferences -> if icon set has changed the…,"Better restart of the application in preferences -> if icon set has changed the new one is now loaded; restoring of the fragments failed before because OutletsViewFragment cannot be restored (needs the container OutletsViewContainerFragment which is not accessable in the restoring process).
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414274548,1414274548,044eb31a4dd55b92d9979942b4528f881148bfab
+044eb31a4dd55b92d9979942b4528f881148bfab,044eb31a,A scene can be part of groups but the UI was missing until now.,"A scene can be part of groups but the UI was missing until now.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414272897,1414272897,56c64a2c538612a4a70107f5a957f0a2d9aa0abc
+56c64a2c538612a4a70107f5a957f0a2d9aa0abc,56c64a2c,Master/Slave scene icons in the overview will be updated if their connected device port changed.,"Master/Slave scene icons in the overview will be updated if their connected device port changed.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414271224,1414271224,eacf2364bb8248a870d396de4dbdcd187f986ae4
+eacf2364bb8248a870d396de4dbdcd187f986ae4,eacf2364,"Group selection in overview changed. Add button: (1) add scene, (2) add group.…","Group selection in overview changed. Add button: (1) add scene, (2) add group. Long click: jump to group.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414268195,1414268195,7779cddf8fbb2eef276fc0bd12093bbdbbd3927c
+7779cddf8fbb2eef276fc0bd12093bbdbbd3927c,7779cddf,"Make ExecutablesSources chainable (One for device ports, one for groups, one for scenes)","Make ExecutablesSources chainable (One for device ports, one for groups, one for scenes)
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414116220,1414116220,8980292113963c1d7930bca764be05ad17592276
+8980292113963c1d7930bca764be05ad17592276,89802921,Theme: Change to Material Design. Add floating buttons. Remove unessary menu items.,"Theme: Change to Material Design. Add floating buttons. Remove unessary menu items.
+Use RecyclerView and add animations. Make default icon set selectable.
+Add third type of view. Remove scene overview. Remove master/slave (scenes will do that now).
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1414110751,1414110751,06863d9213125f37112bc90940ea9261270b2683
+06863d9213125f37112bc90940ea9261270b2683,06863d92,new type of view for the outlets screen. fullscreen mode.,"new type of view for the outlets screen. fullscreen mode.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1413143379,1413143379,4d9a924dfccc545538ec3844b91bb5161cc4c441
+4d9a924dfccc545538ec3844b91bb5161cc4c441,4d9a924d,sync udp interrupt. refactor. add new http add connection dialog,"sync udp interrupt. refactor. add new http add connection dialog
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1412820476,1412820476,a47716f4a2cf436154cd4ef2d349062c32ab0f58
+a47716f4a2cf436154cd4ef2d349062c32ab0f58,a47716f4,Fix some bugs. Enable extensions again and improve extension connection.,"Fix some bugs. Enable extensions again and improve extension connection.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1412024173,1412024182,71492c97c21584c1211b4e94349e80ad40618f5c
+71492c97c21584c1211b4e94349e80ad40618f5c,71492c97,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1411584388,1411584388,37f6cf509a52d3c1eb724c4ced66f29fdc7bea3e
+37f6cf509a52d3c1eb724c4ced66f29fdc7bea3e,37f6cf50,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1411584363,1411584363,15ff9d2e1aec7af4ea7ff444a3e310ad1ed05676
+15ff9d2e1aec7af4ea7ff444a3e310ad1ed05676,15ff9d2e,Add unobtrusive notifications. Improve/repair bug reporting. Update outlet…,"Add unobtrusive notifications. Improve/repair bug reporting. Update outlet overview only if necessary.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1411571247,1411571247,c7d00e8d99dd02bfba303f8668db3e3f1d530a04
+c7d00e8d99dd02bfba303f8668db3e3f1d530a04,c7d00e8d,new icon; a lot of bugs fixed (add device; crashes); refactor class names: own…,"new icon; a lot of bugs fixed (add device; crashes); refactor class names: own package for outlets view.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1410688123,1410688123,2f0466a8ad2c779f331d044d3dce97829be3a9d0
+2f0466a8ad2c779f331d044d3dce97829be3a9d0,2f0466a8,rename files: Interfaces have ...Interfaces suffix. If an Interface has callback…,"rename files: Interfaces have ...Interfaces suffix. If an Interface has callback character it is named onXYZ without interface suffix. Unused files are removed. App store feature image added. Added new method to PluginInterface: ""EditDeviceInterface openEditDevice(Device device)"". New device and edit device fragments are now fully independent of the anel plugin.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1410003559,1410003559,84d60140ae6391926604f93c2982e620fcb8fbb1
+84d60140ae6391926604f93c2982e620fcb8fbb1,84d60140,clean up code (part 1); widget create activity improved; widget default values,"clean up code (part 1); widget create activity improved; widget default values
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1409854612,1409854612,8b120c16aa4009c11b4b39eaa6ed2a87cae82d26
+8b120c16aa4009c11b4b39eaa6ed2a87cae82d26,8b120c16,refactor donate. refactor alarms. debug app has own application id now. remove…,"refactor donate. refactor alarms. debug app has own application id now. remove gdrive+neighbour sync. refactor storage.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1409788929,1409788930,43d82d4747e4af4137bb7d53686ca6d07802b4db
+43d82d4747e4af4137bb7d53686ca6d07802b4db,43d82d47,refactor observers. bug fixes,"refactor observers. bug fixes
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1409186374,1409186374,3b561340a3d633e3264c5518864e23e762325e7f
+3b561340a3d633e3264c5518864e23e762325e7f,3b561340,improve add device dialog; lint fixes,"improve add device dialog; lint fixes
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1408621301,1408621301,6c3d2c64b770d6e746c035fbfa1dcfbcc5c1cfcd
+6c3d2c64b770d6e746c035fbfa1dcfbcc5c1cfcd,6c3d2c64,improve add device dialog; add initial device auto configuration; fix bug device…,"improve add device dialog; add initial device auto configuration; fix bug device query abort if no existing devices; add debug option to disable/enable energy save mode; fix bugs caused by own fragment backstack
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1408581555,1408581555,85486612032a06ef1c84d11ec36e2a072b8c7874
+85486612032a06ef1c84d11ec36e2a072b8c7874,85486612,Bug fiex: Switch between timer and overview fragments,"Bug fiex: Switch between timer and overview fragments
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1407377157,1407377157,68bc9fa6f09c009a9ca892eae2312563521e6191
+68bc9fa6f09c009a9ca892eae2312563521e6191,68bc9fa6,New theme elements. Improved animations. Bugs fixed: Crash on rotation; wrong…,"New theme elements. Improved animations. Bugs fixed: Crash on rotation; wrong computed span elements in grid view.
+Open bug counter in preferences.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1407375142,1407375143,712b091b610ab81e509b11d12b582960cd263891
+712b091b610ab81e509b11d12b582960cd263891,712b091b,Refactor service. Add multiple connections for one device (WIP).,"Refactor service. Add multiple connections for one device (WIP).
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1406644834,1406644834,39ebfbc596ec9a8538cceafda7e169942684a80f
+39ebfbc596ec9a8538cceafda7e169942684a80f,39ebfbc5,new screenshots. improved alarm. fixed neighbour sync. more gdrive error…,"new screenshots. improved alarm. fixed neighbour sync. more gdrive error messages. fixed null-exceptions because of new header items.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1405977673,1405977673,32602efaad3221c53eb34ead23345f259079d842
+32602efaad3221c53eb34ead23345f259079d842,32602efa,Remove scene/outlet asset icons. Group view.,"Remove scene/outlet asset icons. Group view.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1405001978,1405001978,53c4682942543eb69d530409f344776ada3cd3ed
+53c4682942543eb69d530409f344776ada3cd3ed,53c46829,Swipe-to-hide improved. Add remove animation. Remove ListviewAnimation package.,"Swipe-to-hide improved. Add remove animation. Remove ListviewAnimation package.
+Extract data gathering and updating from DevicePortBase+Inherited classes to DevicePortSource interface and classes.
+Move service related stuff (ready observer etc) from -Application to -Service.
+Extract Statusbar Notification from -Application to own class.
+Add first tests.
+Separate packages for device and device_ports.
+TODO: Refreshing with extensions does not work reliable.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1404864982,1404864982,80b2490f0d217f3b18b77b3086c8deac02ab9759
+80b2490f0d217f3b18b77b3086c8deac02ab9759,80b2490f,"Pull-ro-refresh, Swipe-to-hide, layout changes, forbid illegal port numbers and…","Pull-ro-refresh, Swipe-to-hide, layout changes, forbid illegal port numbers and port numbers < 1024, fix device create dialog, remove alarm
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1403728170,1403728170,9787adf0b69044465b8baf8a8a422c8ebc1ca864
+9787adf0b69044465b8baf8a8a422c8ebc1ca864,9787adf0,Alarm editing,"Alarm editing
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1401721969,1401721969,599ebeea10b72e5ebce05f09a303bc88c3255f92
+599ebeea10b72e5ebce05f09a303bc88c3255f92,599ebeea,"Alarms receiving, basic list.","Alarms receiving, basic list.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1401671721,1401671721,806b16fb57f007cc93c491e7ceebd0602b276f62
+806b16fb57f007cc93c491e7ceebd0602b276f62,806b16fb,Prepare for alarm support. Improve device-add/edit dialog.,"Prepare for alarm support. Improve device-add/edit dialog.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1401457097,1401457097,3b6b0d78da9269faa26db50f798c1459e9e7daaa
+3b6b0d78da9269faa26db50f798c1459e9e7daaa,3b6b0d78,Move transfer packet to backup.drive/backup.neighbours packet. Fix crashes.,"Move transfer packet to backup.drive/backup.neighbours packet. Fix crashes.
+Move ExecutionActivity to main packet. Move navigation_drawer und related classes to utils.gui.
+Improve themes.
+Add first timer support.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1400263556,1400263556,136aafe0f64db83e13da9d44bee457ae22bc63d6
+136aafe0f64db83e13da9d44bee457ae22bc63d6,136aafe0,neighbour icon number in details fixed. Fixed layout problems.,"neighbour icon number in details fixed. Fixed layout problems.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399860523,1399860523,e004777e1a4720ef86e47526707eb93a96d0db37
+e004777e1a4720ef86e47526707eb93a96d0db37,e004777e,GDrive is working now: Save to public dir instead of appfolder. Neighbour sync crashes fixed,"GDrive is working now: Save to public dir instead of appfolder. Neighbour sync crashes fixed
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399859530,1399859530,bc14ad488906d1546b35e7e650d0530252edebc7
+bc14ad488906d1546b35e7e650d0530252edebc7,bc14ad48,neighbour data receiving + sending.,"neighbour data receiving + sending.
+refactor packages
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399847538,1399847538,2cc71bb6fa02b98266287999756ef5f75cf27c37
+2cc71bb6fa02b98266287999756ef5f75cf27c37,2cc71bb6,donate + proguard,"donate + proguard
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399756325,1399756325,a0f7f27a915099e6c3fa5486825e15e0657e0cc9
+a0f7f27a915099e6c3fa5486825e15e0657e0cc9,a0f7f27a,"gDrive, neighbour sync, http support, bugfix configure device, improved layout…","gDrive, neighbour sync, http support, bugfix configure device, improved layout for tablets, improved sorting
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399749611,1399749611,d48653f47761b9ac2b095a3b729c5bde71a6bbd7
+d48653f47761b9ac2b095a3b729c5bde71a6bbd7,d48653f4,"add todos, remove obsolete DeviceInfo json reads","add todos, remove obsolete DeviceInfo json reads
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399327390,1399327390,8f3ed508210f560a3af98aa7a79c501af4dc4332
+8f3ed508210f560a3af98aa7a79c501af4dc4332,8f3ed508,Improve tablet theme. UDPSending (DeviceSend) is no singleton anymore. Introduce UDPReceiving.,"Improve tablet theme. UDPSending (DeviceSend) is no singleton anymore. Introduce UDPReceiving.
+Storing groups, scenes, devices works the same now, storing is done in LoadStoreData object now.
+Add GDrive support (login+list dirs+create dir).
+Add neighbour discovery service (find+pair).
+NFC is for android market link only now.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1399327187,1399327187,65d8bba37056d0141fbc855e6d88860b7964a09c
+65d8bba37056d0141fbc855e6d88860b7964a09c,65d8bba3,"Clean unused resources, fix lint warnings.","Clean unused resources, fix lint warnings.
+Add dark theme variant of radio button.
+Less saturation for the off-state image.
+Wake up from engery saving mode option.
+Improve nfc description and add nfc settings button
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1398997416,1398997416,277aadf83306bde6be1408a67566d81c18bf0807
+277aadf83306bde6be1408a67566d81c18bf0807,277aadf8,Master/Slave for outlets,"Master/Slave for outlets
+Master/Slave for scenes
+Fix crashes
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1398727340,1398727340,da0c21351da8c05f57335a80c1c9c3ae00a09bb2
+da0c21351da8c05f57335a80c1c9c3ae00a09bb2,da0c2135,Disable proguard (does not work with acra).,"Disable proguard (does not work with acra).
+Log for energy save mode.
+Improve energy save mode.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1398287752,1398287752,d96519035230305b3d3070efc034aef0ea8e6277
+d96519035230305b3d3070efc034aef0ea8e6277,d9651903,Forgot DeviceOberserverBase class.,"Forgot DeviceOberserverBase class.
+Proguard-rules.txt
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1397688437,1397688437,2acb33819aed0d1154cba9ab2e0fd4f65fbff344
+2acb33819aed0d1154cba9ab2e0fd4f65fbff344,2acb3381,Fix crashes of concurrent access,"Fix crashes of concurrent access
+Fix hide/unhide bug
+Fix update outlet bug
+Replace hash comparison with simple hasChanged boolean.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1397688386,1397688386,cb4e155367c685ae9ad710e4922c670cd564910e
+cb4e155367c685ae9ad710e4922c670cd564910e,cb4e1553,Fix crashes: Adding new device. Execute a scene.,"Fix crashes: Adding new device. Execute a scene.
+Fix bug: Execute a scene: Transaction was not cleared after executed
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1397398957,1397398957,276b0976d28e858bf1a7e68f826f1d54a2116132
+276b0976d28e858bf1a7e68f826f1d54a2116132,276b0976,Move files around. Improve pluginRemote debug messages.,"Move files around. Improve pluginRemote debug messages.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1397324424,1397324424,bdf66f39aec7085718fa046cf72659f2d7878194
+bdf66f39aec7085718fa046cf72659f2d7878194,bdf66f39,Version 2.8:,"Version 2.8:
+* Absturz bei Szenenerstellung behoben
+* Was ist neu - Dialog
+* Namensänderungen finden jetzt direkt auf dem Gerät statt
+* Mehr Kontrolle über den Energiesparmodus
+* Energiesparmodus überarbeitet
+* Eigene Icons für Steckdosen/IOs. Widget Icons müssen leider neu gesetzt werden.
+* Listen/Rasteransicht für Szenen, Gruppen und Steckdosen
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1397297406,1397297406,44987e0a4d567307c1bce8bef6f6d2f9257c134a
+44987e0a4d567307c1bce8bef6f6d2f9257c134a,44987e0a,Fix bug: Context menu belong to item now in outlet screen. Renaming/Assigning to…,"Fix bug: Context menu belong to item now in outlet screen. Renaming/Assigning to groups works now therefore.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1396600544,1396600544,7dd3365bd9b6849f456407b78ea68b7fd3570eb0
+7dd3365bd9b6849f456407b78ea68b7fd3570eb0,7dd3365b,Plugin actions can be assigned to scenes now. RangedValues work. Help added to scene screen.,"Plugin actions can be assigned to scenes now. RangedValues work. Help added to scene screen.
+Changed plugin interface: Allow state messages.
+Allot of crash fixes.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1396569769,1396569769,f040f68faf69398a276e6533ca09ae7e3dc11be1
+f040f68faf69398a276e6533ca09ae7e3dc11be1,f040f68f,"Add screenshots, Change plugin interface, remove help text, improve feedback/nfc…","Add screenshots, Change plugin interface, remove help text, improve feedback/nfc sections, add groups, refactored all anel stuff into anel package, improve dynamic gridview auto columns
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1393540932,1393540932,11792ef4ecfbc684698b14ae55a706b02fba5c52
+11792ef4ecfbc684698b14ae55a706b02fba5c52,11792ef4,"Move most anel specific stuff to anel. Add assets. Icons for widgets, scenes.","Move most anel specific stuff to anel. Add assets. Icons for widgets, scenes.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1393089067,1393089067,45079fc3fc6f53521a24ab714cc8c6e543c79323
+45079fc3fc6f53521a24ab714cc8c6e543c79323,45079fc3,"Add scene icon asset, scene icons, redesign add-scene","Add scene icon asset, scene icons, redesign add-scene
+* Add segmentedRadioGroup widget
+* Abandon CreateSceneOutletsAdapter, Use OutletsBaseAdapter and OutletsCreateSceneAdapter instead.
+* Add OutletsSceneEditFragment -> Use two of them for the new add-scene activity
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1392685866,1392685866,bd651920b637ed32e50bdf9f9ae15076ae830da7
+bd651920b637ed32e50bdf9f9ae15076ae830da7,bd651920,"Theme, Refactor, Loading","Theme, Refactor, Loading
+* Improve design for light theme, dark theme broken.
+* Requery for devices
+* Show loading animation in outlets screen on start
+* Use setEmptyView on all gridviews
+* Remove DragDrop ListView
+* Add DynamicGrid for Drag&Drop on Phones and Tablets.
+* Edit scenes by going into edit mode and clicking on item.
+* Move PluginController into Application instead of Activity
+* Remove PluginViews. This will be integrated into the outlets screen.
+* Refactor main activity -> DrawerController class introduced.
+* Refactor main application -> RuntimeDataController class introduced.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1392457010,1392457010,d9378a81dbb7e7811bce742cbb22cdc06daa61f5
+d9378a81dbb7e7811bce742cbb22cdc06daa61f5,d9378a81,Fix widgets icon selection (for newer android versions),"Fix widgets icon selection (for newer android versions)
+Fix crash on start (adapter not ready in main activity)
+Hide non reachable outlets
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1392294703,1392294703,af42f42bbd285e3d25bd680186ca3761f0febf89
+af42f42bbd285e3d25bd680186ca3761f0febf89,af42f42b,Improve reaction to network connected/disconnected states. Resend handler.,"Improve reaction to network connected/disconnected states. Resend handler.
+* Widgets work now as expected when network state changes.
+* AfterSendHandler removed, SendJobRepeater introduced. Works for single outlets, scenes and widgets.
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1390658327,1390658327,85cb5317096dedc9cc287a26db8b4e7b694d5842
+85cb5317096dedc9cc287a26db8b4e7b694d5842,85cb5317,Fix NullPointerException if getHostByName failed,"Fix NullPointerException if getHostByName failed
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1390231773,1390231773,f539d9c01bf4f4d24e3aa7623f520b481f3107a4
+f539d9c01bf4f4d24e3aa7623f520b481f3107a4,f539d9c0,"Widget update improved, create scene from all current outlet states","Widget update improved, create scene from all current outlet states
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1390143180,1390143180,312cd3a60866f5ae57756b4ba3d6c078af22cd5a
+312cd3a60866f5ae57756b4ba3d6c078af22cd5a,312cd3a6,Widget preferences,"Widget preferences
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1390080461,1390080461,fff01fed6ff5e12ede214f7b49f3cf18cfd2a579
+fff01fed6ff5e12ede214f7b49f3cf18cfd2a579,fff01fed,"Reduce update queries, no widget flickering","Reduce update queries, no widget flickering
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1390080334,1390080341,429afc11adf94857138bb69779b39b8baddc686d
+429afc11adf94857138bb69779b39b8baddc686d,429afc11,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1389789246,1389789246,41f4101864ccb194817589474ce67ab9262b8a0b
+41f4101864ccb194817589474ce67ab9262b8a0b,41f41018,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1389789169,1389789169,ffc1af854666692e712eddc80f52a01a3ec1107b
+ffc1af854666692e712eddc80f52a01a3ec1107b,ffc1af85,Version 1.9c,"Version 1.9c
+* Fix crashes caused by PluginController
+* Only load PluginController if enabled
+* PluginController works reliable now
+* Support unloaded/vanished plugins
+* Do not restore Activity with Feedback Dialog
+* Fix problem with InetAddress.getByName in gui thread
+* Send broadcast packets to all network interfaces
+* Show better error messages if network is not reachable
+* Query existing devices only, if network does not support broadcasts (2G, 3G)
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389627499,1389627499,796abe3a2b903214bca95973dc0deb56d2ca6796
+796abe3a2b903214bca95973dc0deb56d2ca6796,796abe3a,Version 1.9b,"Version 1.9b
+* Fix crash if listen service unbind is called while the service is not bound
+* Recreate plugin menu
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389559789,1389559789,08fff980df5244d614c68b94ed55ebc8b8c32834
+08fff980df5244d614c68b94ed55ebc8b8c32834,08fff980,Version 1.9a,"Version 1.9a
+* Fix many widget problems and a crash
+* Move all send code to DeviceSend
+* Sending is in one worker thread with a queue now
+* Delay work in onCreate-Activity for a smoother gui
+* Plugins working
+
+Problems:
+* PluginController does not update DrawerAdapter on a second Activity start
+  (when PluginController object already exists)
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389382607,1389382607,80028652b6634b665ad4b3d74e686990c7b454b7
+80028652b6634b665ad4b3d74e686990c7b454b7,80028652,"Notify on shortcut click, if option is set","Notify on shortcut click, if option is set
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389238778,1389238778,d8955730a422d0b640da56d655449e0290e31b06
+d8955730a422d0b640da56d655449e0290e31b06,d8955730,"Notify on shortcut click, if option is set","Notify on shortcut click, if option is set
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389238650,1389238650,5be19d1b05c3f5910db20dadc3ebdc9a69b75588
+5be19d1b05c3f5910db20dadc3ebdc9a69b75588,5be19d1b,"Crash fix, Optimization, Smoothness","Crash fix, Optimization, Smoothness
+* Drag & Drop of Scenes and Outlets in ListViews (not Gridviews atm)
+* Polished UI, more feedback, wifi state changes, Reachability
+* Fix: 8th Outlet can be toggled in scenes now
+* Plugins: Find by Broadcast
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389237226,1389237226,0014348f373304b9cd0d38e4e9e2b4ebf3390cb5
+0014348f373304b9cd0d38e4e9e2b4ebf3390cb5,0014348f,"Fix crashes in all outlets window, fix NFC, add not reachable hint","Fix crashes in all outlets window, fix NFC, add not reachable hint
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1389106933,1389106933,04209001f3d892799a688edaa4eab6dfe2d73c29
+04209001f3d892799a688edaa4eab6dfe2d73c29,04209001,Fix crashes in all outlets window while switching and if more than one widget,"Fix crashes in all outlets window while switching and if more than one widget
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388971194,1388971194,5b2bb5d579e6d22b9ef2756347534427d91bf5fe
+5b2bb5d579e6d22b9ef2756347534427d91bf5fe,5b2bb5d5,Update doc images to reflect version 1.5,"Update doc images to reflect version 1.5
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388967381,1388967381,929594b59a87bf3dadae285009b9d9f8b0ac1b4a
+929594b59a87bf3dadae285009b9d9f8b0ac1b4a,929594b5,Version 1.5,"Version 1.5
+* Fix: Abstürze im ""Alle Steckdosen""-Fenster behoben, das Speichern von
+  versteckten Steckdosen
+* Fix: Das Erstellen von Szenen ist wieder möglich.
+* Feature: Widgets werden jetzt über einen Hintergrundservice aktuell
+  gehalten. Dies kann in den Einstellungen abgeschaltet werden.
+* Deutsche Übersetzung vervollständigt.
+* Feature: NFC / Android Beam kann nun auch Szenen übertragen.
+* Feature: Im ""Alle Steckdosen""-Fenster können die Gerätenamen nun
+  vor den Steckdosennamen angezeigt werden.
+* Feature: Steckdosen können alphabetisch sortiert werden im ""Alle Steckdosen""-Fenster.
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388964767,1388964767,d77c9c9554eaca095769448f853960baee811901
+d77c9c9554eaca095769448f853960baee811901,d77c9c95,Don't show disabled outlets anymore,"Don't show disabled outlets anymore
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388721897,1388721897,ed3f3a62a1b59accad4574f8e82aeea9b126ff29
+ed3f3a62a1b59accad4574f8e82aeea9b126ff29,ed3f3a62,"Remove apk, add .idea to gitignore","Remove apk, add .idea to gitignore
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388721338,1388721338,600863e8a3ac7ac484e1ee97cc254e35430fe52a
+600863e8a3ac7ac484e1ee97cc254e35430fe52a,600863e8,NFC fixes,"NFC fixes
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388721073,1388721073,885f6a69c4cf5c16bcc827ec5795a9e52a53ffb2
+885f6a69c4cf5c16bcc827ec5795a9e52a53ffb2,885f6a69,"NFC working, new datastructures, json","NFC working, new datastructures, json
+* DeviceInfo, OutletInfo and new DeviceCollection are de/serializable via json
+* NFC selection dialog for transferred configured devices
+* Editing scenes work
+
+Missing:
+* Bug in saving scenes, where the wrong one is overwritten
+* Plugins
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388708336,1388708336,96e8fd590ef663e919d2b7f3ec20e7c098831983
+96e8fd590ef663e919d2b7f3ec20e7c098831983,96e8fd59,"Scene details shorter, widgets work, listen service fix","Scene details shorter, widgets work, listen service fix
+* Listen Service fixed
+* Widgets use a Widget Update Service
+* ShortcutExecutionActivity updates widgets if necessary
+* DevicesUpdate Interface for adapters (un/registerDeviceUpdate)
+* New mechanism for requesting a device update and get informed on
+  that update or get a timeout
+* New data structure: DeviceCommand. Build from OutletCommandGroup
+  which is good for storing on disk but not for creating the command udp packet.
+
+Still missing / bugs:
+* Save scenes and configured devices as json files
+* NFC
+* Testing
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388671652,1388671652,dd0badb6409a6ae835fd9349a0058dc28909dadb
+dd0badb6409a6ae835fd9349a0058dc28909dadb,dd0badb6,Add missing files,"Add missing files
+
+Still missing / bugs:
+* Save scenes and configured devices as json files
+* NFC
+* Testing
+* Widget Updates, Update time configurable
+* Scenes no grid only list
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388463652,1388463652,e3a8fe8f96753d765a29f82ce3741b8069d4f7fb
+e3a8fe8f96753d765a29f82ce3741b8069d4f7fb,e3a8fe8f,"Widgets, fix bulk send","Widgets, fix bulk send
+
+Still missing / bugs:
+* Save scenes and configured devices as json files
+* NFC
+* Testing
+* Widget Updates, Update time configurable
+* Scenes no grid only list
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388463483,1388463483,e6f27af789643cb3fa76c4a4600f00498a4e5ec0
+e6f27af789643cb3fa76c4a4600f00498a4e5ec0,e6f27af7,"Remove About, Add Feedback, Add Version Number to Drawer","Remove About, Add Feedback, Add Version Number to Drawer
+* Device test before saving as configured device
+* Reordering of outlets
+* German help text improved
+
+Still missing:
+* Save scenes and configured devices as json files
+* Renamed outlets are not persistent (json files necessary)
+* NFC (json files necessary)
+* Widgets do not work
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388448502,1388448502,db4bb0ddedcdf9d1b69c94306f7071fc51084481
+db4bb0ddedcdf9d1b69c94306f7071fc51084481,db4bb0dd,"Fix lint warnings, Fix crash","Fix lint warnings, Fix crash
+Still missing:
+* Save scenes and configured devices as json files
+* Renamed outlets are not persistent (json files necessary)
+* NFC (json files necessary)
+* Widgets do not work
+* Device test before saving as configured device
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Auf Zweig master
+# Your branch is up-to-date with 'origin/master'.
+#
+# zum Eintragen bereitgestellte Änderungen:
+#	gelöscht:    .classpath
+#	neue Datei:   .gradle/1.9/taskArtifacts/cache.properties
+#	neue Datei:   .gradle/1.9/taskArtifacts/cache.properties.lock
+#	neue Datei:   .gradle/1.9/taskArtifacts/fileHashes.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/fileSnapshots.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/outputFileStates.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/taskArtifacts.bin
+#	neue Datei:   .idea/.name
+#	neue Datei:   .idea/compiler.xml
+#	neue Datei:   .idea/copyright/profiles_settings.xml
+#	neue Datei:   .idea/encodings.xml
+#	neue Datei:   .idea/gradle.xml
+#	neue Datei:   .idea/libraries/net_simonvt_menudrawer_menudrawer_3_0_4.xml
+#	neue Datei:   .idea/libraries/support_v4_19_0_0.xml
+#	neue Datei:   .idea/misc.xml
+#	neue Datei:   .idea/modules.xml
+#	neue Datei:   .idea/scopes/scope_settings.xml
+#	neue Datei:   .idea/vcs.xml
+#	neue Datei:   .idea/workspace.xml
+#	gelöscht:    .project
+#	gelöscht:    .settings/org.eclipse.jdt.core.prefs
+#	neue Datei:   Android-NetPowerctrl12.iml
+#	neue Datei:   app/app.apk
+#	neue Datei:   app/app.iml
+#	neue Datei:   app/build.gradle
+#	umbenannt:    AndroidManifest.xml -> app/src/main/AndroidManifest.xml
+#	umbenannt:    src/oly/netpowerctrl/devicecontrol/DeviceControlActivity.java -> app/src/main/java/oly/netpowerctrl/devicecontrol/DeviceControlActivity.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/listadapter/AdapterUpdateManager.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/DeviceListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/DeviceListAdapter.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/listadapter/DrawerAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/GroupListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/GroupListAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/OutledListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/OutledListAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/OutledSwitchListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/OutledSwitchListAdapter.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/AboutDialog.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/ConfiguredDevicesListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/GroupListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/HelpFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/NetpowerctrlActivity.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/NewDevicesListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/OutletsListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/preferences/DevicePreferencesDialog.java
+#	umbenannt:    src/oly/netpowerctrl/preferences/PreferencesActivity.java -> app/src/main/java/oly/netpowerctrl/preferences/PreferencesFragment.java
+#	umbenannt:    src/oly/netpowerctrl/service/DeviceQuery.java -> app/src/main/java/oly/netpowerctrl/service/DeviceQuery.java
+#	umbenannt:    src/oly/netpowerctrl/service/DiscoveryThread.java -> app/src/main/java/oly/netpowerctrl/service/DiscoveryThread.java
+#	umbenannt:    src/oly/netpowerctrl/service/NetpowerctrlService.java -> app/src/main/java/oly/netpowerctrl/service/NetpowerctrlService.java
+#	umbenannt:    src/oly/netpowerctrl/service/ShortcutCreatorActivity.java -> app/src/main/java/oly/netpowerctrl/service/ShortcutCreatorActivity.java
+#	umbenannt:    src/oly/netpowerctrl/service/ShortcutExecutionActivity.java -> app/src/main/java/oly/netpowerctrl/service/ShortcutExecutionActivity.java
+#	umbenannt:    src/oly/netpowerctrl/utils/AfterSentHandler.java -> app/src/main/java/oly/netpowerctrl/utils/AfterSentHandler.java
+#	umbenannt:    src/oly/netpowerctrl/utils/DeviceConfigureEvent.java -> app/src/main/java/oly/netpowerctrl/utils/DeviceConfigureEvent.java
+#	umbenannt:    src/oly/netpowerctrl/utils/DeviceInfo.java -> app/src/main/java/oly/netpowerctrl/utils/DeviceInfo.java
+#	umbenannt:    src/oly/netpowerctrl/utils/GreenFlasher.java -> app/src/main/java/oly/netpowerctrl/utils/GreenFlasher.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletCommand.java -> app/src/main/java/oly/netpowerctrl/utils/OutletCommand.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletCommandGroup.java -> app/src/main/java/oly/netpowerctrl/utils/OutletCommandGroup.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletInfo.java -> app/src/main/java/oly/netpowerctrl/utils/OutletInfo.java
+#	umbenannt:    src/oly/netpowerctrl/utils/SharedPrefs.java -> app/src/main/java/oly/netpowerctrl/utils/SharedPrefs.java
+#	umbenannt:    src/oly/netpowerctrl/utils/UDPSendToDevice.java -> app/src/main/java/oly/netpowerctrl/utils/UDPSendToDevice.java
+#	umbenannt:    src/oly/netpowerctrl/widget/DeviceWidgetProvider.java -> app/src/main/java/oly/netpowerctrl/widget/DeviceWidgetProvider.java
+#	umbenannt:    src/oly/netpowerctrl/widget/WidgetConfig.java -> app/src/main/java/oly/netpowerctrl/widget/WidgetConfig.java
+#	neue Datei:   app/src/main/res/drawable-hdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/ic_drawer.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_add.png -> app/src/main/res/drawable-hdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-hdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_delete.png -> app/src/main/res/drawable-hdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_edit.png -> app/src/main/res/drawable-hdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_info_details.png -> app/src/main/res/drawable-hdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_preferences.png -> app/src/main/res/drawable-hdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_refresh.png -> app/src/main/res/drawable-hdpi/ic_menu_refresh.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/md__category_background.png
+#	umbenannt:    res/drawable-hdpi/netpowerctrl.png -> app/src/main/res/drawable-hdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-hdpi/perm_group_network.png -> app/src/main/res/drawable-hdpi/perm_group_network.png
+#	umbenannt:    res/drawable-hdpi/widget.png -> app/src/main/res/drawable-hdpi/widget.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_add.png -> app/src/main/res/drawable-ldpi/ic_menu_add.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-ldpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_delete.png -> app/src/main/res/drawable-ldpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_edit.png -> app/src/main/res/drawable-ldpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_info_details.png -> app/src/main/res/drawable-ldpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_preferences.png -> app/src/main/res/drawable-ldpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_refresh.png -> app/src/main/res/drawable-ldpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-ldpi/netpowerctrl.png -> app/src/main/res/drawable-ldpi/netpowerctrl.png
+#	umbenannt:    res/drawable-ldpi/perm_group_network.png -> app/src/main/res/drawable-ldpi/perm_group_network.png
+#	umbenannt:    res/drawable-ldpi/widget.png -> app/src/main/res/drawable-ldpi/widget.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/ic_drawer.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_add.png -> app/src/main/res/drawable-mdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-mdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_delete.png -> app/src/main/res/drawable-mdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_edit.png -> app/src/main/res/drawable-mdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_info_details.png -> app/src/main/res/drawable-mdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_preferences.png -> app/src/main/res/drawable-mdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_refresh.png -> app/src/main/res/drawable-mdpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-mdpi/netpowerctrl.png -> app/src/main/res/drawable-mdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-mdpi/perm_group_network.png -> app/src/main/res/drawable-mdpi/perm_group_network.png
+#	umbenannt:    res/drawable-mdpi/widget.png -> app/src/main/res/drawable-mdpi/widget.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/ic_drawer.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_add.png -> app/src/main/res/drawable-xhdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-xhdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_delete.png -> app/src/main/res/drawable-xhdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_edit.png -> app/src/main/res/drawable-xhdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_info_details.png -> app/src/main/res/drawable-xhdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_preferences.png -> app/src/main/res/drawable-xhdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_refresh.png -> app/src/main/res/drawable-xhdpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-xhdpi/netpowerctrl.png -> app/src/main/res/drawable-xhdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-xhdpi/perm_group_network.png -> app/src/main/res/drawable-xhdpi/perm_group_network.png
+#	umbenannt:    res/drawable-xhdpi/widget.png -> app/src/main/res/drawable-xhdpi/widget.png
+#	umbenannt:    res/drawable/outlet_bg.png -> app/src/main/res/drawable/outlet_bg.png
+#	umbenannt:    res/layout/about.xml -> app/src/main/res/layout/about.xml
+#	neue Datei:   app/src/main/res/layout/activity_main.xml
+#	umbenannt:    res/layout/device_control.xml -> app/src/main/res/layout/device_control.xml
+#	umbenannt:    res/layout/device_list_item.xml -> app/src/main/res/layout/device_list_item.xml
+#	neue Datei:   app/src/main/res/layout/drawer_list_header.xml
+#	neue Datei:   app/src/main/res/layout/drawer_list_item.xml
+#	neue Datei:   app/src/main/res/layout/fragment_item_grid.xml
+#	neue Datei:   app/src/main/res/layout/fragment_item_list.xml
+#	neue Datei:   app/src/main/res/layout/fragment_planet.xml
+#	umbenannt:    res/layout/group_list_item.xml -> app/src/main/res/layout/group_list_item.xml
+#	neue Datei:   app/src/main/res/layout/main_activity.xml
+#	umbenannt:    res/layout/outlet_config.xml -> app/src/main/res/layout/outlet_config.xml
+#	umbenannt:    res/layout/outlet_config_item.xml -> app/src/main/res/layout/outlet_config_item.xml
+#	umbenannt:    res/layout/outlet_list_item.xml -> app/src/main/res/layout/outlet_list_item.xml
+#	umbenannt:    res/layout/outlet_list_switch.xml -> app/src/main/res/layout/outlet_list_switch.xml
+#	umbenannt:    res/layout/shortcut_activity.xml -> app/src/main/res/layout/shortcut_activity.xml
+#	umbenannt:    res/layout/widget.xml -> app/src/main/res/layout/widget.xml
+#	neue Datei:   app/src/main/res/menu/configured_device.xml
+#	umbenannt:    res/menu/configured_device_menu.xml -> app/src/main/res/menu/configured_device_item.xml
+#	neue Datei:   app/src/main/res/menu/device_preferences.xml
+#	neue Datei:   app/src/main/res/menu/outlets.xml
+#	neue Datei:   app/src/main/res/menu/scenes.xml
+#	neue Datei:   app/src/main/res/menu/unconfigured_device.xml
+#	umbenannt:    res/raw/about.txt -> app/src/main/res/raw-de/about.txt
+#	neue Datei:   app/src/main/res/raw-de/help.txt
+#	neue Datei:   app/src/main/res/raw/about.txt
+#	neue Datei:   app/src/main/res/raw/help.txt
+#	umbenannt:    res/values-de/strings.xml -> app/src/main/res/values-de/strings.xml
+#	neue Datei:   app/src/main/res/values-large/refs.xml
+#	neue Datei:   app/src/main/res/values-sw600dp/refs.xml
+#	umbenannt:    res/values-v14/dimens.xml -> app/src/main/res/values-v14/dimens.xml
+#	umbenannt:    res/values-v14/theme.xml -> app/src/main/res/values-v14/theme.xml
+#	umbenannt:    res/values/dimens.xml -> app/src/main/res/values/dimens.xml
+#	neue Datei:   app/src/main/res/values/refs.xml
+#	umbenannt:    res/values/resources.xml -> app/src/main/res/values/resources.xml
+#	umbenannt:    res/values/strings.xml -> app/src/main/res/values/strings.xml
+#	neue Datei:   app/src/main/res/values/theme.xml
+#	umbenannt:    res/xml/appwidget_provider.xml -> app/src/main/res/xml/appwidget_provider.xml
+#	umbenannt:    res/xml/device_preferences.xml -> app/src/main/res/xml/device_preferences.xml
+#	umbenannt:    res/xml/preferences.xml -> app/src/main/res/xml/preferences.xml
+#	neue Datei:   build.gradle
+#	neue Datei:   gradle/wrapper/gradle-wrapper.jar
+#	neue Datei:   gradle/wrapper/gradle-wrapper.properties
+#	neue Datei:   gradlew
+#	neue Datei:   gradlew.bat
+#	gelöscht:    libs/android-support-v4.jar
+#	neue Datei:   local.properties
+#	gelöscht:    project.properties
+#	gelöscht:    res/layout/main_activity.xml
+#	gelöscht:    res/menu/unconfigured_device_menu.xml
+#	gelöscht:    res/values/theme.xml
+#	neue Datei:   settings.gradle
+#	gelöscht:    src/oly/netpowerctrl/main/AboutDialog.java
+#	gelöscht:    src/oly/netpowerctrl/main/NetpowerctrlActivity.java
+#	gelöscht:    src/oly/netpowerctrl/outletconfig/OutletConfig.java
+#	gelöscht:    src/oly/netpowerctrl/outletconfig/OutletConfigAdapter.java
+#	gelöscht:    src/oly/netpowerctrl/preferences/DevicePreferencesActivity.java
+#	umbenannt:    res/raw/make_drawables.sh -> tools/make_drawables.sh
+#	umbenannt:    res/raw/outlet.svg -> tools/outlet.svg
+#	umbenannt:    res/raw/outlet_bg.svg -> tools/outlet_bg.svg
+#	umbenannt:    res/raw/widget.svg -> tools/widget.svg
+#
+# Änderungen, die nicht zum Eintragen bereitgestellt sind:
+#	geändert:   .idea/workspace.xml
+#
+# Nicht überwachte Dateien:
+#	app/build/
+#
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388431806,1388431806,bf89ecb1a9512f65ce4a345ba4b8dc42813d9f1a
+bf89ecb1a9512f65ce4a345ba4b8dc42813d9f1a,bf89ecb1,"Implement missing functionality, refactor package structure","Implement missing functionality, refactor package structure
+* New package ""datastructure"" and ""network""
+* Add icons for refresh,show hidden, hide hidden
+* Outlets can be renamed, can be hidden, can be reordered
+* Scenes can be created again (fix)
+* New concept for widgets
+* Fix lint warnings
+
+Still missing:
+* Save scenes and configured devices as json files
+* Renamed outlets are not persistent (json files necessary)
+* NFC (json files necessary)
+* Widgets do not work
+* Device test before saving as configured device
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Auf Zweig master
+# Your branch is up-to-date with 'origin/master'.
+#
+# zum Eintragen bereitgestellte Änderungen:
+#	gelöscht:    .classpath
+#	neue Datei:   .gradle/1.9/taskArtifacts/cache.properties
+#	neue Datei:   .gradle/1.9/taskArtifacts/cache.properties.lock
+#	neue Datei:   .gradle/1.9/taskArtifacts/fileHashes.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/fileSnapshots.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/outputFileStates.bin
+#	neue Datei:   .gradle/1.9/taskArtifacts/taskArtifacts.bin
+#	neue Datei:   .idea/.name
+#	neue Datei:   .idea/compiler.xml
+#	neue Datei:   .idea/copyright/profiles_settings.xml
+#	neue Datei:   .idea/encodings.xml
+#	neue Datei:   .idea/gradle.xml
+#	neue Datei:   .idea/libraries/net_simonvt_menudrawer_menudrawer_3_0_4.xml
+#	neue Datei:   .idea/libraries/support_v4_19_0_0.xml
+#	neue Datei:   .idea/misc.xml
+#	neue Datei:   .idea/modules.xml
+#	neue Datei:   .idea/scopes/scope_settings.xml
+#	neue Datei:   .idea/vcs.xml
+#	neue Datei:   .idea/workspace.xml
+#	gelöscht:    .project
+#	gelöscht:    .settings/org.eclipse.jdt.core.prefs
+#	neue Datei:   Android-NetPowerctrl12.iml
+#	neue Datei:   app/app.apk
+#	neue Datei:   app/app.iml
+#	neue Datei:   app/build.gradle
+#	umbenannt:    AndroidManifest.xml -> app/src/main/AndroidManifest.xml
+#	umbenannt:    src/oly/netpowerctrl/devicecontrol/DeviceControlActivity.java -> app/src/main/java/oly/netpowerctrl/devicecontrol/DeviceControlActivity.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/listadapter/AdapterUpdateManager.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/DeviceListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/DeviceListAdapter.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/listadapter/DrawerAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/GroupListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/GroupListAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/OutledListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/OutledListAdapter.java
+#	umbenannt:    src/oly/netpowerctrl/listadapter/OutledSwitchListAdapter.java -> app/src/main/java/oly/netpowerctrl/listadapter/OutledSwitchListAdapter.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/AboutDialog.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/ConfiguredDevicesListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/GroupListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/HelpFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/NetpowerctrlActivity.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/NewDevicesListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/main/OutletsListFragment.java
+#	neue Datei:   app/src/main/java/oly/netpowerctrl/preferences/DevicePreferencesDialog.java
+#	umbenannt:    src/oly/netpowerctrl/preferences/PreferencesActivity.java -> app/src/main/java/oly/netpowerctrl/preferences/PreferencesFragment.java
+#	umbenannt:    src/oly/netpowerctrl/service/DeviceQuery.java -> app/src/main/java/oly/netpowerctrl/service/DeviceQuery.java
+#	umbenannt:    src/oly/netpowerctrl/service/DiscoveryThread.java -> app/src/main/java/oly/netpowerctrl/service/DiscoveryThread.java
+#	umbenannt:    src/oly/netpowerctrl/service/NetpowerctrlService.java -> app/src/main/java/oly/netpowerctrl/service/NetpowerctrlService.java
+#	umbenannt:    src/oly/netpowerctrl/service/ShortcutCreatorActivity.java -> app/src/main/java/oly/netpowerctrl/service/ShortcutCreatorActivity.java
+#	umbenannt:    src/oly/netpowerctrl/service/ShortcutExecutionActivity.java -> app/src/main/java/oly/netpowerctrl/service/ShortcutExecutionActivity.java
+#	umbenannt:    src/oly/netpowerctrl/utils/AfterSentHandler.java -> app/src/main/java/oly/netpowerctrl/utils/AfterSentHandler.java
+#	umbenannt:    src/oly/netpowerctrl/utils/DeviceConfigureEvent.java -> app/src/main/java/oly/netpowerctrl/utils/DeviceConfigureEvent.java
+#	umbenannt:    src/oly/netpowerctrl/utils/DeviceInfo.java -> app/src/main/java/oly/netpowerctrl/utils/DeviceInfo.java
+#	umbenannt:    src/oly/netpowerctrl/utils/GreenFlasher.java -> app/src/main/java/oly/netpowerctrl/utils/GreenFlasher.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletCommand.java -> app/src/main/java/oly/netpowerctrl/utils/OutletCommand.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletCommandGroup.java -> app/src/main/java/oly/netpowerctrl/utils/OutletCommandGroup.java
+#	umbenannt:    src/oly/netpowerctrl/utils/OutletInfo.java -> app/src/main/java/oly/netpowerctrl/utils/OutletInfo.java
+#	umbenannt:    src/oly/netpowerctrl/utils/SharedPrefs.java -> app/src/main/java/oly/netpowerctrl/utils/SharedPrefs.java
+#	umbenannt:    src/oly/netpowerctrl/utils/UDPSendToDevice.java -> app/src/main/java/oly/netpowerctrl/utils/UDPSendToDevice.java
+#	umbenannt:    src/oly/netpowerctrl/widget/DeviceWidgetProvider.java -> app/src/main/java/oly/netpowerctrl/widget/DeviceWidgetProvider.java
+#	umbenannt:    src/oly/netpowerctrl/widget/WidgetConfig.java -> app/src/main/java/oly/netpowerctrl/widget/WidgetConfig.java
+#	neue Datei:   app/src/main/res/drawable-hdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/ic_drawer.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_add.png -> app/src/main/res/drawable-hdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-hdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_delete.png -> app/src/main/res/drawable-hdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_edit.png -> app/src/main/res/drawable-hdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_info_details.png -> app/src/main/res/drawable-hdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_preferences.png -> app/src/main/res/drawable-hdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-hdpi/ic_menu_refresh.png -> app/src/main/res/drawable-hdpi/ic_menu_refresh.png
+#	neue Datei:   app/src/main/res/drawable-hdpi/md__category_background.png
+#	umbenannt:    res/drawable-hdpi/netpowerctrl.png -> app/src/main/res/drawable-hdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-hdpi/perm_group_network.png -> app/src/main/res/drawable-hdpi/perm_group_network.png
+#	umbenannt:    res/drawable-hdpi/widget.png -> app/src/main/res/drawable-hdpi/widget.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_add.png -> app/src/main/res/drawable-ldpi/ic_menu_add.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-ldpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_delete.png -> app/src/main/res/drawable-ldpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_edit.png -> app/src/main/res/drawable-ldpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_info_details.png -> app/src/main/res/drawable-ldpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_preferences.png -> app/src/main/res/drawable-ldpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-ldpi/ic_menu_refresh.png -> app/src/main/res/drawable-ldpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-ldpi/netpowerctrl.png -> app/src/main/res/drawable-ldpi/netpowerctrl.png
+#	umbenannt:    res/drawable-ldpi/perm_group_network.png -> app/src/main/res/drawable-ldpi/perm_group_network.png
+#	umbenannt:    res/drawable-ldpi/widget.png -> app/src/main/res/drawable-ldpi/widget.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-mdpi/ic_drawer.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_add.png -> app/src/main/res/drawable-mdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-mdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_delete.png -> app/src/main/res/drawable-mdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_edit.png -> app/src/main/res/drawable-mdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_info_details.png -> app/src/main/res/drawable-mdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_preferences.png -> app/src/main/res/drawable-mdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-mdpi/ic_menu_refresh.png -> app/src/main/res/drawable-mdpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-mdpi/netpowerctrl.png -> app/src/main/res/drawable-mdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-mdpi/perm_group_network.png -> app/src/main/res/drawable-mdpi/perm_group_network.png
+#	umbenannt:    res/drawable-mdpi/widget.png -> app/src/main/res/drawable-mdpi/widget.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/action_search.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/drawer_shadow.9.png
+#	neue Datei:   app/src/main/res/drawable-xhdpi/ic_drawer.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_add.png -> app/src/main/res/drawable-xhdpi/ic_menu_add.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_close_clear_cancel.png -> app/src/main/res/drawable-xhdpi/ic_menu_close_clear_cancel.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_delete.png -> app/src/main/res/drawable-xhdpi/ic_menu_delete.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_edit.png -> app/src/main/res/drawable-xhdpi/ic_menu_edit.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_info_details.png -> app/src/main/res/drawable-xhdpi/ic_menu_info_details.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_preferences.png -> app/src/main/res/drawable-xhdpi/ic_menu_preferences.png
+#	umbenannt:    res/drawable-xhdpi/ic_menu_refresh.png -> app/src/main/res/drawable-xhdpi/ic_menu_refresh.png
+#	umbenannt:    res/drawable-xhdpi/netpowerctrl.png -> app/src/main/res/drawable-xhdpi/netpowerctrl.png
+#	umbenannt:    res/drawable-xhdpi/perm_group_network.png -> app/src/main/res/drawable-xhdpi/perm_group_network.png
+#	umbenannt:    res/drawable-xhdpi/widget.png -> app/src/main/res/drawable-xhdpi/widget.png
+#	umbenannt:    res/drawable/outlet_bg.png -> app/src/main/res/drawable/outlet_bg.png
+#	umbenannt:    res/layout/about.xml -> app/src/main/res/layout/about.xml
+#	neue Datei:   app/src/main/res/layout/activity_main.xml
+#	umbenannt:    res/layout/device_control.xml -> app/src/main/res/layout/device_control.xml
+#	umbenannt:    res/layout/device_list_item.xml -> app/src/main/res/layout/device_list_item.xml
+#	neue Datei:   app/src/main/res/layout/drawer_list_header.xml
+#	neue Datei:   app/src/main/res/layout/drawer_list_item.xml
+#	neue Datei:   app/src/main/res/layout/fragment_item_grid.xml
+#	neue Datei:   app/src/main/res/layout/fragment_item_list.xml
+#	neue Datei:   app/src/main/res/layout/fragment_planet.xml
+#	umbenannt:    res/layout/group_list_item.xml -> app/src/main/res/layout/group_list_item.xml
+#	neue Datei:   app/src/main/res/layout/main_activity.xml
+#	umbenannt:    res/layout/outlet_config.xml -> app/src/main/res/layout/outlet_config.xml
+#	umbenannt:    res/layout/outlet_config_item.xml -> app/src/main/res/layout/outlet_config_item.xml
+#	umbenannt:    res/layout/outlet_list_item.xml -> app/src/main/res/layout/outlet_list_item.xml
+#	umbenannt:    res/layout/outlet_list_switch.xml -> app/src/main/res/layout/outlet_list_switch.xml
+#	umbenannt:    res/layout/shortcut_activity.xml -> app/src/main/res/layout/shortcut_activity.xml
+#	umbenannt:    res/layout/widget.xml -> app/src/main/res/layout/widget.xml
+#	neue Datei:   app/src/main/res/menu/configured_device.xml
+#	umbenannt:    res/menu/configured_device_menu.xml -> app/src/main/res/menu/configured_device_item.xml
+#	neue Datei:   app/src/main/res/menu/device_preferences.xml
+#	neue Datei:   app/src/main/res/menu/outlets.xml
+#	neue Datei:   app/src/main/res/menu/scenes.xml
+#	neue Datei:   app/src/main/res/menu/unconfigured_device.xml
+#	umbenannt:    res/raw/about.txt -> app/src/main/res/raw-de/about.txt
+#	neue Datei:   app/src/main/res/raw-de/help.txt
+#	neue Datei:   app/src/main/res/raw/about.txt
+#	neue Datei:   app/src/main/res/raw/help.txt
+#	umbenannt:    res/values-de/strings.xml -> app/src/main/res/values-de/strings.xml
+#	neue Datei:   app/src/main/res/values-large/refs.xml
+#	neue Datei:   app/src/main/res/values-sw600dp/refs.xml
+#	umbenannt:    res/values-v14/dimens.xml -> app/src/main/res/values-v14/dimens.xml
+#	umbenannt:    res/values-v14/theme.xml -> app/src/main/res/values-v14/theme.xml
+#	umbenannt:    res/values/dimens.xml -> app/src/main/res/values/dimens.xml
+#	neue Datei:   app/src/main/res/values/refs.xml
+#	umbenannt:    res/values/resources.xml -> app/src/main/res/values/resources.xml
+#	umbenannt:    res/values/strings.xml -> app/src/main/res/values/strings.xml
+#	neue Datei:   app/src/main/res/values/theme.xml
+#	umbenannt:    res/xml/appwidget_provider.xml -> app/src/main/res/xml/appwidget_provider.xml
+#	umbenannt:    res/xml/device_preferences.xml -> app/src/main/res/xml/device_preferences.xml
+#	umbenannt:    res/xml/preferences.xml -> app/src/main/res/xml/preferences.xml
+#	neue Datei:   build.gradle
+#	neue Datei:   gradle/wrapper/gradle-wrapper.jar
+#	neue Datei:   gradle/wrapper/gradle-wrapper.properties
+#	neue Datei:   gradlew
+#	neue Datei:   gradlew.bat
+#	gelöscht:    libs/android-support-v4.jar
+#	neue Datei:   local.properties
+#	gelöscht:    project.properties
+#	gelöscht:    res/layout/main_activity.xml
+#	gelöscht:    res/menu/unconfigured_device_menu.xml
+#	gelöscht:    res/values/theme.xml
+#	neue Datei:   settings.gradle
+#	gelöscht:    src/oly/netpowerctrl/main/AboutDialog.java
+#	gelöscht:    src/oly/netpowerctrl/main/NetpowerctrlActivity.java
+#	gelöscht:    src/oly/netpowerctrl/outletconfig/OutletConfig.java
+#	gelöscht:    src/oly/netpowerctrl/outletconfig/OutletConfigAdapter.java
+#	gelöscht:    src/oly/netpowerctrl/preferences/DevicePreferencesActivity.java
+#	umbenannt:    res/raw/make_drawables.sh -> tools/make_drawables.sh
+#	umbenannt:    res/raw/outlet.svg -> tools/outlet.svg
+#	umbenannt:    res/raw/outlet_bg.svg -> tools/outlet_bg.svg
+#	umbenannt:    res/raw/widget.svg -> tools/widget.svg
+#
+# Änderungen, die nicht zum Eintragen bereitgestellt sind:
+#	geändert:   .idea/workspace.xml
+#
+# Nicht überwachte Dateien:
+#	app/build/
+#
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1388410220,1388410251,1ca4c54a8d595ea2d0df0e417a09590288b2e270
+1ca4c54a8d595ea2d0df0e417a09590288b2e270,1ca4c54a,Buildsystem: Remove local.properties and add it to gitignore II,"Buildsystem: Remove local.properties and add it to gitignore II
+* Remove dependency to unused library
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1388086165,1388086165,fed9358b877df74598a4b9a15c455cf64a681896
+fed9358b877df74598a4b9a15c455cf64a681896,fed9358b,Buildsystem: Remove local.properties and add it to gitignore.,"Buildsystem: Remove local.properties and add it to gitignore.
+* Remove dependency to unused library
+",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1388084924,1388084924,ab0380513ed6bcd2897ee6d1bd0ed10ab272e974
+ab0380513ed6bcd2897ee6d1bd0ed10ab272e974,ab038051,Convert from eclipse to android-studio. Convert from Activity based to Fragment based.,"Convert from eclipse to android-studio. Convert from Activity based to Fragment based.
+* Use NavigationDrawer ui concept instead of tabs.
+* Split devices list into ""new devices"" and ""configured devices""
+* Add help text (de/en)
+* Refactor main activity: ListAdapter update code is in a new class AdapterUpdateManager
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1387881221,1387881221,0cfae72ba3f2be00d58daae05b2f31761c2cfa6b
+0cfae72ba3f2be00d58daae05b2f31761c2cfa6b,0cfae72b,Update readme links; Reorder actionbar icons,"Update readme links; Reorder actionbar icons
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380467797,1380467797,173ca8b8b4221ee3f8cfffa87a158cd0bc1df211
+173ca8b8b4221ee3f8cfffa87a158cd0bc1df211,173ca8b8,Remove duplicated strings/en; Feature: Allow do remove all groups at once,"Remove duplicated strings/en; Feature: Allow do remove all groups at once
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380458524,1380458524,dd2fe4e04ea2fa9b1a9d2c483394dd2baadd1bf1
+dd2fe4e04ea2fa9b1a9d2c483394dd2baadd1bf1,dd2fe4e0,Prevent android animation between activity changes II,"Prevent android animation between activity changes II
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380457220,1380457220,e0115b409d14bd467d055fff38d136bfa4e76906
+e0115b409d14bd467d055fff38d136bfa4e76906,e0115b40,Prevent android animation between activity changes,"Prevent android animation between activity changes
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380457191,1380457191,8edee9049de83e1acead19d96f200679ebb2888f
+8edee9049de83e1acead19d96f200679ebb2888f,8edee904,Flash group in green color if activated: Sleep a few ms between udp packets,"Flash group in green color if activated: Sleep a few ms between udp packets
+
+Fix: Don't show window on shortcut activation if not explicitly required
+Fix: Avoid flash while updaing outlet states in outletlist;
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380332614,1380332620,bf6100ddb5eb11aac1a179690ccae6fc02c73b26
+bf6100ddb5eb11aac1a179690ccae6fc02c73b26,bf6100dd,Update README.md,"Update README.md
+
+Add google play link",,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1380159681,1380159681,2be118a96f208f151f266ad0a9dd9eea733048da
+2be118a96f208f151f266ad0a9dd9eea733048da,2be118a9,Make Lint happy; Add copy of strings for english local; Change about dialog…,"Make Lint happy; Add copy of strings for english local; Change about dialog content; Add packages; Add group name support
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380158995,1380158995,822d134f3a49324b54fc97c634d00f070e208391
+822d134f3a49324b54fc97c634d00f070e208391,822d134f,Update README.md,Update README.md,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1380081610,1380081610,7e2fc8c06b17786fb3fd0c11521f68f8c7f734a5
+7e2fc8c06b17786fb3fd0c11521f68f8c7f734a5,7e2fc8c0,Readme: Smaller pictures,Readme: Smaller pictures,,,,David Gräff,david.graeff@web.de,David Gräff,david.graeff@web.de,1380080683,1380080683,680530fed6b4519530e12bc3dfb1f6d75e6f8ff4
+680530fed6b4519530e12bc3dfb1f6d75e6f8ff4,680530fe,"Add shortcuts. Refactor classes into packages, Add screenshots to Readme. Add group tab (todo)","Add shortcuts. Refactor classes into packages, Add screenshots to Readme. Add group tab (todo)
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1380080244,1380080244,1a8b3a5058087afd293c2d84d009a69a01a20353
+1a8b3a5058087afd293c2d84d009a69a01a20353,1a8b3a50,Readme update,"Readme update
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1379784669,1379784669,727ee790d5fc8fb4979d215c5e8343d369d8f58f
+727ee790d5fc8fb4979d215c5e8343d369d8f58f,727ee790,Readme update,"Readme update
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1379783442,1379783442,3fa0943c9df4f1dda2df95568ae3f8c661f661c9
+3fa0943c9df4f1dda2df95568ae3f8c661f661c9,3fa0943c,Add tab for overview of all outlets,"Add tab for overview of all outlets
+
+Require at least Android 2.3.2; Renamed DeviceControl in
+DeviceControlActivity. Added new DeviceControl class that extends a
+linear layout by Switches for each outlet of all configured devices
+(works the same as the inner mechanisms of DeviceControlActivity).
+",,,,davidgraeff,david.graeff@web.de,davidgraeff,david.graeff@web.de,1379780666,1379780666,40d04bcb773f92f36a28344edb2a9f599bc35525
+40d04bcb773f92f36a28344edb2a9f599bc35525,40d04bcb,only show up to 8 outlets and don't discover disabled outlets,only show up to 8 outlets and don't discover disabled outlets,,,,oly,oly@nittka.com,oly,oly@nittka.com,1357404490,1357404490,d0126ea854aa0ecb9a90e34279015dfa60972976
+d0126ea854aa0ecb9a90e34279015dfa60972976,d0126ea8,DeviceControl: re-send packets until outlet toggles,DeviceControl: re-send packets until outlet toggles,,,,oly,oly@nittka.com,oly,oly@nittka.com,1357401067,1357401067,558f8a8665f8407a399860d0d4d9443276bce0a3
+558f8a8665f8407a399860d0d4d9443276bce0a3,558f8a86,bugfix in DiscoveryThread: Toast needs a handler,bugfix in DiscoveryThread: Toast needs a handler,,,,oly,oly@nittka.com,oly,oly@nittka.com,1357394976,1357394976,fa0fee6a1ef5b6440c3f78aacb23f3f201f6b40a
+fa0fee6a1ef5b6440c3f78aacb23f3f201f6b40a,fa0fee6a,fix a crash in ouletConfigAdapter,fix a crash in ouletConfigAdapter,,,,oly,oly@nittka.com,oly,oly@nittka.com,1356292962,1356292962,39ddbdbf6fba0a50ee7eb9bad48c0328cbc963f3
+39ddbdbf6fba0a50ee7eb9bad48c0328cbc963f3,39ddbdbf,DiscoveryThread: decode incoming packets using latin-1,DiscoveryThread: decode incoming packets using latin-1,,,,oly,oly@nittka.com,oly,oly@nittka.com,1356212830,1356212830,b0c369665b34ea8f407e03b896bc3980af526dfd
+b0c369665b34ea8f407e03b896bc3980af526dfd,b0c36966,"DeviceControl: back() is ""up""","DeviceControl: back() is ""up""",,,,oly,oly@nittka.com,oly,oly@nittka.com,1356102282,1356102282,0f919d7cc2316adf4b03af9a921ad39a0d851f50
+0f919d7cc2316adf4b03af9a921ad39a0d851f50,0f919d7c,use a service as packet receiver,use a service as packet receiver,,,,oly,oly@nittka.com,oly,oly@nittka.com,1356101953,1356101953,c51339cdfed54aef9804c984edcd4a0c62f6f5e0
+c51339cdfed54aef9804c984edcd4a0c62f6f5e0,c51339cd,remove outdated request codes,"remove outdated request codes
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1356091608,1356091608,6cb3d688c1604fee1a156a84f7002f9aaffecdf5
+6cb3d688c1604fee1a156a84f7002f9aaffecdf5,6cb3d688,fixed OutletConfig,fixed OutletConfig,,,,oly,oly@nittka.com,oly,oly@nittka.com,1356088399,1356088399,d3a6cfc75d25c99231eafd7507ce2c8f8f992a16
+d3a6cfc75d25c99231eafd7507ce2c8f8f992a16,d3a6cfc7,fix DevicePreferences (except outlets),fix DevicePreferences (except outlets),,,,oly,oly@nittka.com,oly,oly@nittka.com,1356083039,1356083039,e3de256c77641622289fa5c1669c5e3560b15828
+e3de256c77641622289fa5c1669c5e3560b15828,e3de256c,completely rework config handling,"completely rework config handling
+(not yet working)
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1356067174,1356067174,cb6efa10eb3d227fc9574ada02fe66932a4f3d97
+cb6efa10eb3d227fc9574ada02fe66932a4f3d97,cb6efa10,requery now deletes list DiscoveredDevices,"requery now deletes list DiscoveredDevices
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1356054584,1356054584,26950525f162a4cf3ab32abb9b80b19b8a5a2ba3
+26950525f162a4cf3ab32abb9b80b19b8a5a2ba3,26950525,add *~ to .gitignore,"add *~ to .gitignore
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1356053981,1356053981,9282f8f5ff5c2bce3ad061c1006cdd2055361e5e
+9282f8f5ff5c2bce3ad061c1006cdd2055361e5e,9282f8f5,fix handling of multiple packets,"fix handling of multiple packets
+(e.g. from several devices)
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1356053905,1356053905,904cf0a659c02097e580b84073e9a54bb9cc5135
+904cf0a659c02097e580b84073e9a54bb9cc5135,904cf0a6,enhance artwork,"enhance artwork
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1355868709,1355868709,35d9ec43560f5de306f74130cb6ddc35000fda42
+35d9ec43560f5de306f74130cb6ddc35000fda42,35d9ec43,fixed outletConfigAdapter (cursor was jumping around),fixed outletConfigAdapter (cursor was jumping around),,,,oly,oly@nittka.com,oly,oly@nittka.com,1355056983,1355056983,4835912e9e6d1257169c6587c29dc9dd764676a2
+4835912e9e6d1257169c6587c29dc9dd764676a2,4835912e,artwork beautification,artwork beautification,,,,oly,oly@nittka.com,oly,oly@nittka.com,1355048572,1355048572,497f491d642d50a3427fc35d4fd0e7f361c01152
+497f491d642d50a3427fc35d4fd0e7f361c01152,497f491d,DeviceControl: restartDiscoveryThreads() got lost in some previous,"DeviceControl: restartDiscoveryThreads() got lost in some previous
+commit.
+-> enhance AppMain with start..() and maybeStart..() and use maybeStart
+now",,,,oly,oly@nittka.com,oly,oly@nittka.com,1355043215,1355043215,fda748b4cc048706278096c8a884254a336cb494
+fda748b4cc048706278096c8a884254a336cb494,fda748b4,enhance widget layout,enhance widget layout,,,,oly,oly@nittka.com,oly,oly@nittka.com,1355008390,1355008390,a9b88a0cab6e57061384733e5f6cd094badeab40
+a9b88a0cab6e57061384733e5f6cd094badeab40,a9b88a0c,make outlet_bg a bit darker to make it actually visible,make outlet_bg a bit darker to make it actually visible,,,,oly,oly@nittka.com,oly,oly@nittka.com,1355004030,1355004030,cb4759ecc6477652ebc534b9ac0a39b49c94d5b0
+cb4759ecc6477652ebc534b9ac0a39b49c94d5b0,cb4759ec,"DeviceConfig: show imgReceive for SDK<11, too","DeviceConfig: show imgReceive for SDK<11, too",,,,oly,oly@nittka.com,oly,oly@nittka.com,1355002156,1355002156,c583294887539ff7e1a8aa815b20d1074e3c57b3
+c583294887539ff7e1a8aa815b20d1074e3c57b3,c5832948,added receive image to DeviceControl,"added receive image to DeviceControl
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1354833168,1354833168,3b0c67f26f41f07fd03f1576ce460b7a94c4b878
+3b0c67f26f41f07fd03f1576ce460b7a94c4b878,3b0c67f2,device_control: take the device name out of the ScrollView,device_control: take the device name out of the ScrollView,,,,oly,oly@nittka.com,oly,oly@nittka.com,1354830441,1354830441,4693bca477f010f0b9c0ae7275cab119ed26174f
+4693bca477f010f0b9c0ae7275cab119ed26174f,4693bca4,revert: WidgetConfig mustn't have permission.INTERNET,"revert: WidgetConfig mustn't have permission.INTERNET
+(although lint complains)",,,,oly,oly@nittka.com,oly,oly@nittka.com,1354830200,1354830200,c992d13c586477c2ed68a3896082aa44d91939ac
+c992d13c586477c2ed68a3896082aa44d91939ac,c992d13c,"add ""refresh"" menu button to DeviceControl","add ""refresh"" menu button to DeviceControl",,,,oly,oly@nittka.com,oly,oly@nittka.com,1354827836,1354827836,6eae9bf81b7a109846ba6079e92282ac911decd0
+6eae9bf81b7a109846ba6079e92282ac911decd0,6eae9bf8,use locally stored menu drawables as suggested from android best,"use locally stored menu drawables as suggested from android best
+practice
+
+use SHOW_AS_ACTION_IF_ROOM in main menu",,,,oly,oly@nittka.com,oly,oly@nittka.com,1354824565,1354824565,a7e1bb295512ebf5bd3fd5dc0e3e833acb9ec15a
+a7e1bb295512ebf5bd3fd5dc0e3e833acb9ec15a,a7e1bb29,switch to targetSdkVersion 17,switch to targetSdkVersion 17,,,,oly,oly@nittka.com,oly,oly@nittka.com,1354824347,1354824347,83a49c277d51b7dc5d44dc8373f7504ce5bafd45
+83a49c277d51b7dc5d44dc8373f7504ce5bafd45,83a49c27,add AppMain to hold the descovery threads,"add AppMain to hold the descovery threads
+needed to the threads can be started from the widget, too
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341347722,1341347722,abfdebd90142e2e70ec1f1492341e6feb8e8d8e9
+abfdebd90142e2e70ec1f1492341e6feb8e8d8e9,abfdebd9,Bugfix in DeviceControl: controls were not updated,"Bugfix in DeviceControl: controls were not updated
+for Build.VERSION.SDK_INT < 11
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341347655,1341347655,fd8637acb0b54a3a7836981e6496fe183f269648
+fd8637acb0b54a3a7836981e6496fe183f269648,fd8637ac,DiscoveryThread: use socket.setReuseAddress(true),"DiscoveryThread: use socket.setReuseAddress(true)
+to prevent ""already opened"" error while the socket lingers.
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341347593,1341347593,cb68e5927f85b2eec2445786c15bdeedb79e3632
+cb68e5927f85b2eec2445786c15bdeedb79e3632,cb68e592,update README,"update README
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341272600,1341272600,c33e7f122a28ad7bb1a46cafa2f91816826b5c20
+c33e7f122a28ad7bb1a46cafa2f91816826b5c20,c33e7f12,bugfix for greenflasher: cannot even load the imports < V11,"bugfix for greenflasher: cannot even load the imports < V11
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341272366,1341272366,a9ebe02ab9cbf26438e06fca778404f55e500ea2
+a9ebe02ab9cbf26438e06fca778404f55e500ea2,a9ebe02a,homescreen widget works,homescreen widget works,,,,oly,oly@nittka.com,oly,oly@nittka.com,1341265961,1341265961,88091c68dacc1b6d8d9ff12b82c89ba6251e359f
+88091c68dacc1b6d8d9ff12b82c89ba6251e359f,88091c68,create SharedPrefs (for sotring/reading configured devices),"create SharedPrefs (for sotring/reading configured devices)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341259158,1341259158,fa57ad6bc6b3d597635623616b28fd596990bfe9
+fa57ad6bc6b3d597635623616b28fd596990bfe9,fa57ad6b,added WidgetConfig (stub),"added WidgetConfig (stub)
+",,,,Oliver Nittka,nittka@nittka.com,Oliver Nittka,nittka@nittka.com,1341252813,1341252813,014054cc1658f0928975f2f781efb4706ffaa675
+014054cc1658f0928975f2f781efb4706ffaa675,014054cc,outlet configuration works,outlet configuration works,,,,oly,oly@nittka.com,oly,oly@nittka.com,1341185080,1341185080,251f21ee43dfff8f959988cd28c92f6c2d4a105a
+251f21ee43dfff8f959988cd28c92f6c2d4a105a,251f21ee,implemented outlet_config as listview,"implemented outlet_config as listview
+(currently read-only)",,,,oly,oly@nittka.com,oly,oly@nittka.com,1341182954,1341182954,44218a4bf30a1b873c96be468e1dc0028a77690c
+44218a4bf30a1b873c96be468e1dc0028a77690c,44218a4b,add greenflasher to listviews,add greenflasher to listviews,,,,oly,oly@nittka.com,oly,oly@nittka.com,1341177067,1341177067,7a014ea65e2337579b9a908689513ac5957a789e
+7a014ea65e2337579b9a908689513ac5957a789e,7a014ea6,add a green flash in DeviceVontrol.onDeviceDiscovered,add a green flash in DeviceVontrol.onDeviceDiscovered,,,,oly,oly@nittka.com,oly,oly@nittka.com,1341172435,1341172435,b43b2ec4adcab16fadce9d14d32710391c41edd5
+b43b2ec4adcab16fadce9d14d32710391c41edd5,b43b2ec4,added OutletConfig,"added OutletConfig
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340314521,1340314521,c85bdfa0d7a5db15277a7077f9ad11e647cb3410
+c85bdfa0d7a5db15277a7077f9ad11e647cb3410,c85bdfa0,update README,"update README
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340235328,1340235328,5b28473f1a20a7b63e6ad6d51e7a7320c8d1a593
+5b28473f1a20a7b63e6ad6d51e7a7320c8d1a593,5b28473f,listen on all configured ports,"listen on all configured ports
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340235117,1340235117,aa8b6f4591973fde5a1c0c56b535a8f92f82f917
+aa8b6f4591973fde5a1c0c56b535a8f92f82f917,aa8b6f45,added preferences: default send/receive port,"added preferences: default send/receive port
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340232958,1340232958,7fe90e5c548202d50ced266c022bd036386b0ab4
+7fe90e5c548202d50ced266c022bd036386b0ab4,7fe90e5c,sendBroadcastQuery: send to default port and all configured devices,"sendBroadcastQuery: send to default port and all configured devices
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340228337,1340228337,1bf2254f06f1657fe4c8c992afac94815a068643
+1bf2254f06f1657fe4c8c992afac94815a068643,1bf2254f,Bugfixes in device config / nonstandard port handling,"Bugfixes in device config / nonstandard port handling
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340228310,1340228310,19d87d8eaf8534ea3e72d8fcffb23b201cee1c34
+19d87d8eaf8534ea3e72d8fcffb23b201cee1c34,19d87d8e,add DeviceQuery so we can update DeviceControl in onResume(),add DeviceQuery so we can update DeviceControl in onResume(),,,,oly,oly@nittka.com,oly,oly@nittka.com,1340226182,1340226182,334f7ce900727ec090400c58342f34c90c7e70a5
+334f7ce900727ec090400c58342f34c90c7e70a5,334f7ce9,use LocalBroadcastManager,"use LocalBroadcastManager
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340063900,1340063900,54fbad6d0d960e0a80c4373d87ffe15dd4cea1be
+54fbad6d0d960e0a80c4373d87ffe15dd4cea1be,54fbad6d,DeviceInfo: add mac address,"DeviceInfo: add mac address
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340063880,1340063880,ce2938935b942640f5dc688214298e36bc3f3922
+ce2938935b942640f5dc688214298e36bc3f3922,ce293893,"make the ""settings"" logo a bit darker","make the ""settings"" logo a bit darker
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340063846,1340063846,a7ef2f8cce14002f7294e34c572b5dae1af222da
+a7ef2f8cce14002f7294e34c572b5dae1af222da,a7ef2f8c,use a Broadcast instead of DeviceFoundEvent,"use a Broadcast instead of DeviceFoundEvent
+(so we can have multiple receivers)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1340060185,1340060185,e0a13870a73c0b5c5c5d6b3bfdc6093aa3345dda
+e0a13870a73c0b5c5c5d6b3bfdc6093aa3345dda,e0a13870,added README/COPYING,added README/COPYING,,,,oly,oly@nittka.com,oly,oly@nittka.com,1339785338,1339785338,378e3f3939f6d8661535a1378617da027814c90f
+378e3f3939f6d8661535a1378617da027814c90f,378e3f39,minor layout beautification,minor layout beautification,,,,oly,oly@nittka.com,oly,oly@nittka.com,1339614748,1339614748,948da96d4190541ff4d71d0fb7ccf08018add2da
+948da96d4190541ff4d71d0fb7ccf08018add2da,948da96d,added theme and background,added theme and background,,,,oly,oly@nittka.com,oly,oly@nittka.com,1339614639,1339614639,07e19c0266ecd5a34cea7f15dedb9a5b6af875e2
+07e19c0266ecd5a34cea7f15dedb9a5b6af875e2,07e19c02,DeviceInfo now has UUID which is used in DevicePreferences Activity,DeviceInfo now has UUID which is used in DevicePreferences Activity,,,,oly,oly@nittka.com,oly,oly@nittka.com,1339608142,1339608142,526027302a57286e31f9138f5dcc4d4ed5ed9732
+526027302a57286e31f9138f5dcc4d4ed5ed9732,52602730,removed some @Overrides that don't seem to be needed anymore,removed some @Overrides that don't seem to be needed anymore,,,,oly,oly@nittka.com,oly,oly@nittka.com,1339605934,1339605934,dce7c038c13dccf37c8137ea64097f59a0efe55f
+dce7c038c13dccf37c8137ea64097f59a0efe55f,dce7c038,optical enhancements to listview items,"optical enhancements to listview items
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339539406,1339539406,2de735a0a806ee9189c486636c30305a0dab292a
+2de735a0a806ee9189c486636c30305a0dab292a,2de735a0,"device_preferences: bring username/password further up, deactivate ""outlets""","device_preferences: bring username/password further up, deactivate ""outlets""
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339536049,1339536049,bec4dc4276177f68dd222987867d40a078ed225c
+bec4dc4276177f68dd222987867d40a078ed225c,bec4dc42,minor fixes for logo,"minor fixes for logo
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339535871,1339535871,9faf495706f4f3c3da6d010f080dc8f0f6f830b2
+9faf495706f4f3c3da6d010f080dc8f0f6f830b2,9faf4957,added german translation,"added german translation
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339535855,1339535855,b761824b862850f111ebb2b621798dd82bce1a0c
+b761824b862850f111ebb2b621798dd82bce1a0c,b761824b,"fixes all warnings, ermoved leftover device_settings.xml","fixes all warnings, ermoved leftover device_settings.xml
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339534087,1339534087,eca229b59b4600a38bc934728990fea8a65ceea2
+eca229b59b4600a38bc934728990fea8a65ceea2,eca229b5,new logo,"new logo
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339534061,1339534061,2f9230b9d0edc0d20044881509e8b7cdb0082757
+2f9230b9d0edc0d20044881509e8b7cdb0082757,2f9230b9,set project.properties to API ersion 14,"set project.properties to API ersion 14
+so we can instantiate the ""Switch"" widget directly.
+Also, handle screen rotation ourselves
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339530496,1339530496,815cbc0443edc3db2c962da4f51cc58b7fbea78f
+815cbc0443edc3db2c962da4f51cc58b7fbea78f,815cbc04,use a switch widget for android >= 14,"use a switch widget for android >= 14
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339456086,1339456086,573b3a9ef7eaf332da5a971e9d2a338072d14456
+573b3a9ef7eaf332da5a971e9d2a338072d14456,573b3a9e,improve DiscoveryThread pause/resume,"improve DiscoveryThread pause/resume
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339450488,1339450488,203ec57093a2aabb1a2a140ffbb2dfa232873ae8
+203ec57093a2aabb1a2a140ffbb2dfa232873ae8,203ec570,can now configure discovered devices,"can now configure discovered devices
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339448170,1339448170,11098770db25b2c1efa3480b533026b67b2d8d0d
+11098770db25b2c1efa3480b533026b67b2d8d0d,11098770,added homescreen widget (not yet configurable),"added homescreen widget (not yet configurable)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339370643,1339370643,f017e527b8cb6c149eab88758b06e5232da20cdb
+f017e527b8cb6c149eab88758b06e5232da20cdb,f017e527,added icon,"added icon
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339368313,1339368313,d03a83a76a995b3393b53cdbf25f1dcfe0b4289b
+d03a83a76a995b3393b53cdbf25f1dcfe0b4289b,d03a83a7,bugfix,"bugfix
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339367259,1339367259,0ccc23c0aa79845065268c904e1b336ba83e181c
+0ccc23c0aa79845065268c904e1b336ba83e181c,0ccc23c0,display error message from device,"display error message from device
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339367253,1339367253,a41031d02159387d31ef942db780a621942a7c5e
+a41031d02159387d31ef942db780a621942a7c5e,a41031d0,added DeviceControl,"added DeviceControl
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339365960,1339365960,e47ad961446ef4f0fd7d7bbdc4c003932288b104
+e47ad961446ef4f0fd7d7bbdc4c003932288b104,e47ad961,"added ""requery""","added ""requery""
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339360975,1339360975,03f126d76d3df5fabf9e5ad1002b5ddb4b868009
+03f126d76d3df5fabf9e5ad1002b5ddb4b868009,03f126d7,added DiscoveryThread,"added DiscoveryThread
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339358074,1339358074,52ab0ba8c40ea958bae1bc5b828910e3d5d3d72a
+52ab0ba8c40ea958bae1bc5b828910e3d5d3d72a,52ab0ba8,confirm deletion && added delete all,"confirm deletion && added delete all
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339345989,1339345989,866cacf6feba3e443a3b9d0196e02daa8d3289f8
+866cacf6feba3e443a3b9d0196e02daa8d3289f8,866cacf6,bugfix in DevicePreferences,"bugfix in DevicePreferences
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339343919,1339343919,217cf35b9b86b95b7891627eb54af9d0f93fc14f
+217cf35b9b86b95b7891627eb54af9d0f93fc14f,217cf35b,added delete/copy device,"added delete/copy device
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339341413,1339341413,90c81da4048d0bcca69effdb7a8f84fa78e358ac
+90c81da4048d0bcca69effdb7a8f84fa78e358ac,90c81da4,save configured devices,"save configured devices
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339340765,1339340765,42b3d1cea3d03107befcb68f4999f2133c7a5084
+42b3d1cea3d03107befcb68f4999f2133c7a5084,42b3d1ce,"added ""cancel"" in device settings","added ""cancel"" in device settings
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339339621,1339339621,865576a56cd1fbf3107536313bb04602de6fdc25
+865576a56cd1fbf3107536313bb04602de6fdc25,865576a5,configured device add / edit now working (not persistent yet),"configured device add / edit now working (not persistent yet)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339338909,1339338909,a0c7c27514b8c6725ce2d644d2ab7878024ace93
+a0c7c27514b8c6725ce2d644d2ab7878024ace93,a0c7c275,more work on settings (not working),"more work on settings (not working)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339271085,1339271085,580cecff5bc37701ba237323431068f68be1cf95
+580cecff5bc37701ba237323431068f68be1cf95,580cecff,some more work on preferences (unfinished),"some more work on preferences (unfinished)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1339264319,1339264319,dc50b81f86300cfecc832612ea9bd704406ef453
+dc50b81f86300cfecc832612ea9bd704406ef453,dc50b81f,added device settings (incomplete),"added device settings (incomplete)
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1337552088,1337552088,775668734112a9215a72375c8d5a540733b1d8be
+775668734112a9215a72375c8d5a540733b1d8be,77566873,fixes to listview layout,"fixes to listview layout
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1337552069,1337552069,e8273a0c84a203b955b0ef3788337398d7f153d7
+e8273a0c84a203b955b0ef3788337398d7f153d7,e8273a0c,DeviceInfo: added ports and user/pwd,"DeviceInfo: added ports and user/pwd
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1337125334,1337125334,1263061ef23cfdfb7495d679a22e104add51b3f2
+1263061ef23cfdfb7495d679a22e104add51b3f2,1263061e,added about dialog,"added about dialog
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1337125314,1337125314,c8be90484e90d2461a96df1801b1e572d766b7f9
+c8be90484e90d2461a96df1801b1e572d766b7f9,c8be9048,UI change,"UI change
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336951736,1336951736,ad43bfd28b600ac3a78e2606dc0b591dd829d6ef
+ad43bfd28b600ac3a78e2606dc0b591dd829d6ef,ad43bfd2,implement DeviceListAdapter,"implement DeviceListAdapter
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336951133,1336951133,3ecaebe94897aef2e0c2e48c3536ac7d99582144
+3ecaebe94897aef2e0c2e48c3536ac7d99582144,3ecaebe9,split OutletInfo into separate file,"split OutletInfo into separate file
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336951114,1336951114,629ce1feb35f300e3c18149c0f092a8828e65473
+629ce1feb35f300e3c18149c0f092a8828e65473,629ce1fe,read configured hosts from preferences,"read configured hosts from preferences
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336947685,1336947685,ce3bc7e9f11fa5a5163d623a4fcf851fbc841171
+ce3bc7e9f11fa5a5163d623a4fcf851fbc841171,ce3bc7e9,manifest: added android.permission.INTERNET,"manifest: added android.permission.INTERNET
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336947628,1336947628,8b6eb19bc91be0d4a4853c6f4c77be19fa2c5706
+8b6eb19bc91be0d4a4853c6f4c77be19fa2c5706,8b6eb19b,added DeviceInfo.java,"added DeviceInfo.java
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336947613,1336947613,703c519c219ec1942f72bda566ced6fa611871c7
+703c519c219ec1942f72bda566ced6fa611871c7,703c519c,basic layout of main window / basic listview handling,"basic layout of main window / basic listview handling
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1336945333,1336945333,b80cbc66d6bb659f759621e60254569fdd925d91
+b80cbc66d6bb659f759621e60254569fdd925d91,b80cbc66,init eclipse project,"init eclipse project
+",,,,oly,oly@nittka.com,oly,oly@nittka.com,1335378076,1335378076,

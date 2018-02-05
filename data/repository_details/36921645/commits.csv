@@ -1,0 +1,473 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f65619bb69a8c1ffa867e05015b3e30b2131b1ec,f65619bb,merged 1.4.0 from develop into master,"merged 1.4.0 from develop into master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1492038317,1492038317,"b088071baeaf1a942235c3be0f9426d3dff80085,a184c498e812cff8af39a3cc73e3cb800b70382a"
+a184c498e812cff8af39a3cc73e3cb800b70382a,a184c498,1.4.0 final,"1.4.0 final
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1492037945,1492037945,ca432e4dfecfdaff4037384dc4ee20b01137a9fa
+ca432e4dfecfdaff4037384dc4ee20b01137a9fa,ca432e4d,Merge pull request #57 from HubertZhang/master,"Merge pull request #57 from HubertZhang/master
+
+set default mediaSize and resolution to avoid crash",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1490985682,1490985682,"db741eff0ad2c7a7ff1113c2b670312d01d803d9,6748c586182706141e6d28ab5779d4410a20c12f"
+6748c586182706141e6d28ab5779d4410a20c12f,6748c586,set default mediaSize and resolution to avoid crash,"set default mediaSize and resolution to avoid crash
+
+When ipp returns a attribute set with no media size and resolution information, the builder would crash when build capabilities info
+",,,,Hubertzhang,hubert.zyk@gmail.com,Hubertzhang,hubert.zyk@gmail.com,1490860182,1490982564,db741eff0ad2c7a7ff1113c2b670312d01d803d9
+db741eff0ad2c7a7ff1113c2b670312d01d803d9,db741eff,allow builds to be made,"allow builds to be made
+even if the signing/play store config files are not there
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1490025435,1490026054,8c3d84c5d9bc5424a04b9e15c7770420a354cce0
+8c3d84c5d9bc5424a04b9e15c7770420a354cce0,8c3d84c5,version 1.4.0 beta,"version 1.4.0 beta
+called 1.4.0b1 on the play store, published to people subscribed to the beta channel
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489959529,1489959529,e6dc17774028acd12e88ecea53a6d79c6f7e3b76
+e6dc17774028acd12e88ecea53a6d79c6f7e3b76,e6dc1777,support for auto apk upload,"support for auto apk upload
+added signing configs and automated gradle script for play store upload
+fixed release builds being debuggable apks
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489959497,1489959497,b7cc87ce8b428da264721fbb3d1e19a6818bd7a0
+b7cc87ce8b428da264721fbb3d1e19a6818bd7a0,b7cc87ce,added instrumented test stub,"added instrumented test stub
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489918144,1489918144,3e8160dd6a86ed4ea29de6a8ec6cf64710c6d125
+3e8160dd6a86ed4ea29de6a8ec6cf64710c6d125,3e8160dd,added unit test stub,"added unit test stub
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489917355,1489917355,54a43a22a08aa9c27d1cfcceac728588435ee652
+54a43a22a08aa9c27d1cfcceac728588435ee652,54a43a22,enabled test coverage for jacoco to work,"enabled test coverage for jacoco to work
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489915139,1489915139,5273d6d2444307a48a56e791682779be21db1661
+5273d6d2444307a48a56e791682779be21db1661,5273d6d2,enabled test coverage for jacoco to work,"enabled test coverage for jacoco to work
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489914931,1489914931,129cce495964561bda3d9baa0936d400b1865f26
+129cce495964561bda3d9baa0936d400b1865f26,129cce49,"fixed some potential NPEs, lint checks and IDE warnings, added some null/non null annotations","fixed some potential NPEs, lint checks and IDE warnings, added some null/non null annotations
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489914785,1489914785,e8515ca11d48b5413586f45701a0317bf216c603
+e8515ca11d48b5413586f45701a0317bf216c603,e8515ca1,prevent NPE,"prevent NPE
+added null/non null annotations to IppOperation
+
+fix #37
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489913238,1489913238,3c2f695a32d3b371d8a7b0eb64a4e1c443c1ad26
+3c2f695a32d3b371d8a7b0eb64a4e1c443c1ad26,3c2f695a,dynamic URL path for printers,"dynamic URL path for printers
+
+this allows manually entered URL to be something different than the usual /printers/xyz
+refs #40
+also improved mDNS scan logging
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489849182,1489849271,d5d345e34c0de8f280ae0654fcb87a8221e6ce22
+d5d345e34c0de8f280ae0654fcb87a8221e6ce22,d5d345e3,disable crashlytics for debug builds,"disable crashlytics for debug builds
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489846671,1489846671,a2ee0b415e9bb494a4b8a1315660f97de492c33a
+a2ee0b415e9bb494a4b8a1315660f97de492c33a,a2ee0b41,added activity (launcher) that lists the manually entered printers,"added activity (launcher) that lists the manually entered printers
+a click on one item removes the printer
+
+fixes #26
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489846605,1489846605,ccce29c5f9e4fec7848aea23b9e6b334cc176149
+ccce29c5f9e4fec7848aea23b9e6b334cc176149,ccce29c5,improved debugging when parsing the printer check result,"improved debugging when parsing the printer check result
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489841967,1489841967,c9b49b4b2e9ee2ce74d4f925c295c02f0b7a9eb4
+b088071baeaf1a942235c3be0f9426d3dff80085,b088071b,merged sjjh edits into my diverged master,"merged sjjh edits into my diverged master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489840240,1489840240,"06ea58598ae014d6e1b0e5fe210f9f0ea60c04f9,8ca249ee74237641254dd63c0f3b93ec1d4af5ff"
+c9b49b4b2e9ee2ce74d4f925c295c02f0b7a9eb4,c9b49b4b,Don't blow away the host/device dictionaries with each packet.,"Don't blow away the host/device dictionaries with each packet.
+
+This allows a multi-packet response from a server to be handled
+properly.
+",,,,Solomon Peachy,pizza@shaftnet.org,Benoit Duffez,benoit.duffez@upactivity.com,1489289322,1489839986,074f11183312cbad99e4d13115eba36e6f099ef0
+074f11183312cbad99e4d13115eba36e6f099ef0,074f1118,actually report errors seen in mDNS,"actually report errors seen in mDNS
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489839904,1489839904,25b587baf4395bc63d4f2c9ed06aecc3cda2794d
+25b587baf4395bc63d4f2c9ed06aecc3cda2794d,25b587ba,"updated tools, gradle and lib versions to latest from API 25","updated tools, gradle and lib versions to latest from API 25
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489839873,1489839873,61f4849f64f3ae66e901d76d665965dd48366ae8
+61f4849f64f3ae66e901d76d665965dd48366ae8,61f4849f,added jacoco gradle task,"added jacoco gradle task
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1489839749,1489839749,e3923d0bb69ceb3089f863373564c4258c320ee1
+8ca249ee74237641254dd63c0f3b93ec1d4af5ff,8ca249ee,Merge pull request #50 from speachy/master,"Merge pull request #50 from speachy/master
+
+Don't blow away the host/device dictionaries with each packet.",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1489335766,1489335766,"33bd8efa709568c9391e3661ab38102bee1245e6,51de183f2964e883814f7477e965eaa855f82e93"
+51de183f2964e883814f7477e965eaa855f82e93,51de183f,Don't blow away the host/device dictionaries with each packet.,"Don't blow away the host/device dictionaries with each packet.
+
+This allows a multi-packet response from a server to be handled
+properly.
+",,,,Solomon Peachy,pizza@shaftnet.org,Solomon Peachy,pizza@shaftnet.org,1489289322,1489289413,33bd8efa709568c9391e3661ab38102bee1245e6
+33bd8efa709568c9391e3661ab38102bee1245e6,33bd8efa,Merge pull request #44 from sjjh/patch-1,"Merge pull request #44 from sjjh/patch-1
+
+Corrected grammar and switched from ""Sie"" to ""du""",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1488317433,1488317433,"b25e6849c8bc0c21767b8b6e71c28ba619622544,1830524f1f3c5bafebbce977d615c8d922a93e66"
+1830524f1f3c5bafebbce977d615c8d922a93e66,1830524f,"Corrected grammar and switched from ""Sie"" to ""du""","Corrected grammar and switched from ""Sie"" to ""du""
+
+I did correct some grammar mistakes (google translate isn't perfect after all :) ).
+And as Google switched for Android from the more formal ""Sie"" to the more informal ""du"", I followed that change as well.
+Note: I'm no language or translation expert, German is just my mother tongue...",,,,sjjh,simon.harhues@muenster.de,GitHub,noreply@github.com,1488315326,1488315326,b25e6849c8bc0c21767b8b6e71c28ba619622544
+e3923d0bb69ceb3089f863373564c4258c320ee1,e3923d0b,added comments whether methods are called on the UI thread (for Toast safety),"added comments whether methods are called on the UI thread (for Toast safety)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479774121,1479774121,a7249a5819288ae8a64727f39d69a482e8eb100c
+a7249a5819288ae8a64727f39d69a482e8eb100c,a7249a58,"added missing translations (Germans, please check, this was done with Google Translate)","added missing translations (Germans, please check, this was done with Google Translate)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479719888,1479719888,e28731a3d89754edbb11b60517d9c0659174c1e1
+e28731a3d89754edbb11b60517d9c0659174c1e1,e28731a3,reset README.md from what we have in master,"reset README.md from what we have in master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479717828,1479717828,bce3b3d806309bfd3848a7e323a34938cc0e2823
+06ea58598ae014d6e1b0e5fe210f9f0ea60c04f9,06ea5859,resolved a conflict in README.md,"resolved a conflict in README.md
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479108001,1479108001,"a13f5e4a81f8eded0c9af062610ad23a6058c019,b25e6849c8bc0c21767b8b6e71c28ba619622544"
+a13f5e4a81f8eded0c9af062610ad23a6058c019,a13f5e4a,merged develop into master,"merged develop into master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479107962,1479107962,"aa6de1472c2d8f4a7382e98490c45c50defdbe48,bce3b3d806309bfd3848a7e323a34938cc0e2823"
+bce3b3d806309bfd3848a7e323a34938cc0e2823,bce3b3d8,converted several methods / fields to package local to remove accessors and reduce apk method count,"converted several methods / fields to package local to remove accessors and reduce apk method count
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479077936,1479077936,4a20650dfac83fe363f88fc5b5545544cd8ba0d8
+4a20650dfac83fe363f88fc5b5545544cd8ba0d8,4a20650d,refs #21,"refs #21
+removed references to Uri.parse as it doesn't support IPv6 (see: https://code.google.com/p/android/issues/detail?id=192855)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479074019,1479074019,0f032ffa54023333b1e33b9c808d7b8c7c7010c0
+0f032ffa54023333b1e33b9c808d7b8c7c7010c0,0f032ffa,code reformat,"code reformat
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072723,1479072723,b1a627f95bd5891f1f32b6138974fd8810d3280a
+b1a627f95bd5891f1f32b6138974fd8810d3280a,b1a627f9,added some @NonNul annotations,"added some @NonNul annotations
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072486,1479072486,a703b9d282c0ee27039e534e7fbc2d2421a637c2
+a703b9d282c0ee27039e534e7fbc2d2421a637c2,a703b9d2,fixed misplaced comment position,"fixed misplaced comment position
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072429,1479072429,4ae59f75cf9ce7f7d92c46054a5bbb6b7d575dde
+4ae59f75cf9ce7f7d92c46054a5bbb6b7d575dde,4ae59f75,"log HTTP response code as verbose, all the time","log HTTP response code as verbose, all the time
+don't send all errors to crashlytics, it's already taken care of later
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072388,1479072388,d1985fc641e4ddde0619b67f39951d75db668366
+d1985fc641e4ddde0619b67f39951d75db668366,d1985fc6,ensure HTTP response code is logged before the exception is sent to crashlytics,"ensure HTTP response code is logged before the exception is sent to crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072292,1479072292,be7ade51837afcf5f002cf3643325c7ced812b5c
+be7ade51837afcf5f002cf3643325c7ced812b5c,be7ade51,updated license info to LGPL v3 (see #11),"updated license info to LGPL v3 (see #11)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479072113,1479072113,e1c270bdd686846d3435784199928a7efb9c5e14
+e1c270bdd686846d3435784199928a7efb9c5e14,e1c270bd,updated path to AddPrintersActivity,"updated path to AddPrintersActivity
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479071518,1479071518,484f3366508def1da9cf906ab735dcf9e2a32a89
+484f3366508def1da9cf906ab735dcf9e2a32a89,484f3366,updated build tools gradle version to 2.2.2,"updated build tools gradle version to 2.2.2
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479042381,1479042381,a865186b1945d1afbcc244db461412711d571c9e
+a865186b1945d1afbcc244db461412711d571c9e,a865186b,various minor fixes related to a full lint check,"various minor fixes related to a full lint check
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479040778,1479040778,03795bee482d8410f7a1549534c5b8b3b493653e
+03795bee482d8410f7a1549534c5b8b3b493653e,03795bee,moved UI classes to a .app dedicated package,"moved UI classes to a .app dedicated package
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479039993,1479039993,839ec7b3763caf0dc7b94e1487fa99f3eee05232
+839ec7b3763caf0dc7b94e1487fa99f3eee05232,839ec7b3,ensure default color mode is set,"ensure default color mode is set
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1479039764,1479039764,b41f8bd566feee137c35458d3ebb1a54892d4223
+b41f8bd566feee137c35458d3ebb1a54892d4223,b41f8bd5,better catch hostname not verified exceptions,"better catch hostname not verified exceptions
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478872027,1478872027,b8db5592cd43ed729d8250fb38bcc3ee7cebb96d
+b8db5592cd43ed729d8250fb38bcc3ee7cebb96d,b8db5592,silence unknown host / network unreachable from crashlytics + inform user with toast,"silence unknown host / network unreachable from crashlytics + inform user with toast
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478871825,1478871825,06c0eb2c4e91b2081eb88c28d429a449c0b7ac19
+06c0eb2c4e91b2081eb88c28d429a449c0b7ac19,06c0eb2c,silence SocketTimeoutException from crashlytics when discovering printers,"silence SocketTimeoutException from crashlytics when discovering printers
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478869900,1478869900,7a2247d50b0ff61e5b2785659c481df5f21d3e26
+7a2247d50b0ff61e5b2785659c481df5f21d3e26,7a2247d5,better exception management in print job handling,"better exception management in print job handling
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478869745,1478869745,218a9049f1b5d20d8efe9d3814f74c664e0236e3
+218a9049f1b5d20d8efe9d3814f74c664e0236e3,218a9049,silence FileNotFoundException from crashlytics when querying job status + inform user with a Toast,"silence FileNotFoundException from crashlytics when querying job status + inform user with a Toast
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478860033,1478860033,93d5b06259cf96ca4dcdda870c0876ea38c361e8
+93d5b06259cf96ca4dcdda870c0876ea38c361e8,93d5b062,centralized all logging into a dedicated class that will print logs and send them to crashlytics,"centralized all logging into a dedicated class that will print logs and send them to crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478859836,1478859836,5d3a85d14a5caf19be6e53ea902e34a0b495bf34
+5d3a85d14a5caf19be6e53ea902e34a0b495bf34,5d3a85d1,silence job-related ECONNRESET errors from crashlytics + show toast to user,"silence job-related ECONNRESET errors from crashlytics + show toast to user
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478856223,1478856223,fe36802876553519cce6831fec89212f1c7d28de
+fe36802876553519cce6831fec89212f1c7d28de,fe368028,better handle exceptions in job related queries,"better handle exceptions in job related queries
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478856074,1478856074,fe6d5f88d1dd89ce47f096250ee5e47f6ee968a4
+fe6d5f88d1dd89ce47f096250ee5e47f6ee968a4,fe6d5f88,added HTTP 400,"added HTTP 400
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478855769,1478855769,2cd40a041f2ea801c2c53e818f40bd786799775f
+2cd40a041f2ea801c2c53e818f40bd786799775f,2cd40a04,better handling of which exception should be reported to crashlytics,"better handling of which exception should be reported to crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854839,1478854839,e9fd912fe3dd9e1531c20ece813af5b227a86ada
+e9fd912fe3dd9e1531c20ece813af5b227a86ada,e9fd912f,handle HTTP 404,"handle HTTP 404
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854593,1478854593,f99d9d63331607a480f1a665ae0a8e0fa17a464e
+f99d9d63331607a480f1a665ae0a8e0fa17a464e,f99d9d63,update IDE project file,"update IDE project file
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854409,1478854409,f4db02b55613f5edeb5727cb0aab77ea260956ed
+f4db02b55613f5edeb5727cb0aab77ea260956ed,f4db02b5,code reformat,"code reformat
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854403,1478854403,a7dcf85ac7037a6fcf8b5f1690b631a9107d7683
+a7dcf85ac7037a6fcf8b5f1690b631a9107d7683,a7dcf85a,splitted the exception handling from the HTTP error handling,"splitted the exception handling from the HTTP error handling
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854323,1478854323,adba907e1fd01119fc31ba44c8f23799821330f4
+adba907e1fd01119fc31ba44c8f23799821330f4,adba907e,handle the printer check exception in a dedicated method,"handle the printer check exception in a dedicated method
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478854137,1478854137,8fc8a75b07691e844c036182dd675810a56782ff
+b25e6849c8bc0c21767b8b6e71c28ba619622544,b25e6849,merged develop into master,"merged develop into master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478526827,1478526827,"aa6de1472c2d8f4a7382e98490c45c50defdbe48,476ed1d7c07c521eb2e047ac4e6ebba020eaaca3"
+8fc8a75b07691e844c036182dd675810a56782ff,8fc8a75b,version bump for 1.3.0 final,"version bump for 1.3.0 final
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478526563,1478526563,d583bd250822efd8ca43b4d5f593db67b4accac8
+d583bd250822efd8ca43b4d5f593db67b4accac8,d583bd25,fixed a bug where the printer check would fail if a user-entered printer URL…,"fixed a bug where the printer check would fail if a user-entered printer URL didn't end with a slash
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478277694,1478277694,af0c1e0b5e3966adf6d5cfd426a115937e69b950
+af0c1e0b5e3966adf6d5cfd426a115937e69b950,af0c1e0b,"fix NPE crash (caught, but notify user when it happens)","fix NPE crash (caught, but notify user when it happens)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478276578,1478276578,b85d43e1e653532a34a30e26ab18114cc6bb07cd
+aa6de1472c2d8f4a7382e98490c45c50defdbe48,aa6de147,added minor clarifications to the README file,"added minor clarifications to the README file
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478272758,1478272758,2753006b1704cfd387bbc6ab562092a7bf90d2d9
+2753006b1704cfd387bbc6ab562092a7bf90d2d9,2753006b,added line break,"added line break
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478272630,1478272630,c62979c9146a46e96c84210508343e93c63d25d3
+c62979c9146a46e96c84210508343e93c63d25d3,c62979c9,added link to f-droid as an alternate store listing,"added link to f-droid as an alternate store listing
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1478272583,1478272583,eab5303ce535a99a2c9d387913878d8228dbb1ec
+b85d43e1e653532a34a30e26ab18114cc6bb07cd,b85d43e1,fix a non-fatal crash where the color mode would not be set. fallback to…,"fix a non-fatal crash where the color mode would not be set. fallback to monochrome by default if it's not set
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477996975,1477996975,129d4a4a5eafcc1af6464ef6d4f36c2caf263e67
+129d4a4a5eafcc1af6464ef6d4f36c2caf263e67,129d4a4a,minor code reformat,"minor code reformat
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477996483,1477996483,98831a8afbd0a29ecd82bdcfbfbb9f162e91f337
+98831a8afbd0a29ecd82bdcfbfbb9f162e91f337,98831a8a,don't try to display a Toast from the background thread,"don't try to display a Toast from the background thread
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477996453,1477996453,7e32f2c23d50fa4dab496832730c2c42325bc348
+7e32f2c23d50fa4dab496832730c2c42325bc348,7e32f2c2,silence HTTP 426 from crashlytics,"silence HTTP 426 from crashlytics
++ log HTTP response code before sending other HTTP errors to crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477908025,1477908025,a082bcda873f0ed5076c443b62e169024fcf8eb1
+a082bcda873f0ed5076c443b62e169024fcf8eb1,a082bcda,force port to be defined (handles MalformedURLException…,"force port to be defined (handles MalformedURLException java.lang.IllegalArgumentException: invalid port: -1)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477907335,1477907335,b35c34d07fcd3e9bb372bae18dbcae5ac72ebf99
+b35c34d07fcd3e9bb372bae18dbcae5ac72ebf99,b35c34d0,update of IDE project file,"update of IDE project file
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477906643,1477906643,87b635473ec81c4b756f27ad251b62f9fe8e2887
+87b635473ec81c4b756f27ad251b62f9fe8e2887,87b63547,avoid a crash when trying to unbox a null Integer,"avoid a crash when trying to unbox a null Integer
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477906634,1477906634,2d811edb17faf14da7fca6a27ad5395c53b51ea0
+2d811edb17faf14da7fca6a27ad5395c53b51ea0,2d811edb,removed old code related to misuse of the android print API,"removed old code related to misuse of the android print API
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477906545,1477906545,bd948ba58c7286ebd89c5fe43164a7d94be9f4aa
+bd948ba58c7286ebd89c5fe43164a7d94be9f4aa,bd948ba5,Merge pull request #20 from maniac103/develop,"Merge pull request #20 from maniac103/develop
+
+Improve DE translation.",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1477834925,1477834925,"7f2505f4ed3367c3449ffe096aa36d40b4d87510,4cbb03a31253c1bc9ed979bfcd216780731ea086"
+4cbb03a31253c1bc9ed979bfcd216780731ea086,4cbb03a3,Improve DE translation.,"Improve DE translation.
+",,,,Danny Baumann,dannybaumann@web.de,Danny Baumann,dannybaumann@web.de,1477833667,1477834056,7f2505f4ed3367c3449ffe096aa36d40b4d87510
+7f2505f4ed3367c3449ffe096aa36d40b4d87510,7f2505f4,silence SSLPeerUniverifiedException from crashlytics,"silence SSLPeerUniverifiedException from crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477813037,1477813037,96e38fb885a1a5114a10afd6964974d14688271f
+96e38fb885a1a5114a10afd6964974d14688271f,96e38fb8,version bump,"version bump
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477735049,1477735049,537dfcc4c3ef90cb07e09bf5ba082a62ef766149
+537dfcc4c3ef90cb07e09bf5ba082a62ef766149,537dfcc4,fix crash on android <7: missing FLAG_ACTIVITY_NEW_TASK on pseudo dialog activity intents,"fix crash on android <7: missing FLAG_ACTIVITY_NEW_TASK on pseudo dialog activity intents
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477733091,1477733091,94097757fbfb47161c8fe1484e06876eb7368b69
+94097757fbfb47161c8fe1484e06876eb7368b69,94097757,fix crash on android <7: missing FLAG_ACTIVITY_NEW_TASK on pseudo dialog activity intents,"fix crash on android <7: missing FLAG_ACTIVITY_NEW_TASK on pseudo dialog activity intents
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477733043,1477733043,72ef5b707ecea7bf735e8b3c1b8f2f8c37cf9e50
+72ef5b707ecea7bf735e8b3c1b8f2f8c37cf9e50,72ef5b70,code reformat,"code reformat
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477660253,1477660253,6309540594f993842c377867879687ea6a684150
+6309540594f993842c377867879687ea6a684150,63095405,ensure we pass correct parameters to the SSL context,"ensure we pass correct parameters to the SSL context
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477660234,1477660234,ab31d4c9bf02c6b9cc9cfb37743d7cbfae354fab
+ab31d4c9bf02c6b9cc9cfb37743d7cbfae354fab,ab31d4c9,silence SSL exceptions (it's up to the user to handle them),"silence SSL exceptions (it's up to the user to handle them)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477659837,1477659837,bec64ede56ecb589a1fe4e118a87a41860b6a7fb
+bec64ede56ecb589a1fe4e118a87a41860b6a7fb,bec64ede,better filtering of which IOException we want to silence,"better filtering of which IOException we want to silence
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477659636,1477659636,79b64ea26b3320aef7d0a5e48842efe810620390
+79b64ea26b3320aef7d0a5e48842efe810620390,79b64ea2,silence IOException when local keystore file isn't created yet,"silence IOException when local keystore file isn't created yet
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477659570,1477659570,476ed1d7c07c521eb2e047ac4e6ebba020eaaca3
+476ed1d7c07c521eb2e047ac4e6ebba020eaaca3,476ed1d7,updated translations,"updated translations
+German contributors: please fix translations, this comes from Google Translate and I have zero clue whether this means garbage or if it's actual German. Thanks :)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477510279,1477510279,e86f8cf3a431d7b8ce6ba26ed982e78d4f5f64e0
+eab5303ce535a99a2c9d387913878d8228dbb1ec,eab5303c,added link to beta in README,"added link to beta in README
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477463176,1477463176,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+e86f8cf3a431d7b8ce6ba26ed982e78d4f5f64e0,e86f8cf3,version bump,"version bump
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477462876,1477462876,b0e006434db746bd3f80b03d2191489ba9012fb2
+b0e006434db746bd3f80b03d2191489ba9012fb2,b0e00643,cosmetic changes to the security dialogs,"cosmetic changes to the security dialogs
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477436188,1477436188,2928c9748ef67efff9d368195e51cc4138e85247
+2928c9748ef67efff9d368195e51cc4138e85247,2928c974,made HTTP 426 Upgrade Required error more explicit to the user,"made HTTP 426 Upgrade Required error more explicit to the user
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477435948,1477435948,63be51cfb9e35b4fa95184a689913d8265bfda82
+63be51cfb9e35b4fa95184a689913d8265bfda82,63be51cf,fixed whole SSL/Basic auth behavior:,"fixed whole SSL/Basic auth behavior:
+* mDNS scan only fetches the list of available hosts (preferring HTTPS when a host offers both HTTP and HTTPS) (it used to scan + check HTTPS hosts)
+* checking a printer will raise all sorts of exception
+* catching an SSLPeerUnverifiedException will ask the user to explicitly trust the hostname
+* catching another SSLException will ask the user to explicitly trust the certificate
+* catching a FileNotFoundException (meaning HTTP >= 4xx) with an HTTP response code of 401 will ask the user its Basic Auth credentials
+All of these checks are done at printer check time, not mDNS scan time.
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477435420,1477435601,76ee8cf7db8f13effb244ad081bc92f6c8c35fa9
+76ee8cf7db8f13effb244ad081bc92f6c8c35fa9,76ee8cf7,misc useless IDE changes,"misc useless IDE changes
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477430023,1477435601,da764598f493cfbfc10a463612eacbec612f49b2
+da764598f493cfbfc10a463612eacbec612f49b2,da764598,added a hostname verifier with explicit user agreement dialog,"added a hostname verifier with explicit user agreement dialog
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477429970,1477435601,9ee1a6d5fee3b8fc006ee40ed6d6baf1df3c19cd
+9ee1a6d5fee3b8fc006ee40ed6d6baf1df3c19cd,9ee1a6d5,updated IDE project file,"updated IDE project file
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477376001,1477376001,cf656b75fca5923ed965223cdd63a11ef0443021
+cf656b75fca5923ed965223cdd63a11ef0443021,cf656b75,remove login/password being logged clearly to logcat...,"remove login/password being logged clearly to logcat...
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477348139,1477348139,4e442db624df9a40ae39ac1a823626dd2a1f7d4e
+4e442db624df9a40ae39ac1a823626dd2a1f7d4e,4e442db6,looks like legacy HTTP client dependency is no longer required :),"looks like legacy HTTP client dependency is no longer required :)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477348010,1477348010,e874f46e5ccf105426fa3c5d12618f0e4ebaca4f
+e874f46e5ccf105426fa3c5d12618f0e4ebaca4f,e874f46e,renamed/moved class that handles SSL and HTTP Basic Auth to a more explicit package and name,"renamed/moved class that handles SSL and HTTP Basic Auth to a more explicit package and name
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477347579,1477347579,9e6403c64102ef81ebe4548e23698be2955b899a
+9e6403c64102ef81ebe4548e23698be2955b899a,9e6403c6,merged legacy com.jonbanjo package with app's package,"merged legacy com.jonbanjo package with app's package
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477347446,1477347446,a9f3b876558682dfb560d1dc504da7f76ed8ba32
+a9f3b876558682dfb560d1dc504da7f76ed8ba32,a9f3b876,reformatted com.jonbanjo legacy code with more modern code style,"reformatted com.jonbanjo legacy code with more modern code style
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477347241,1477347241,93f90543615d05f64f02ba1ffd2e1a3de4270738
+93f90543615d05f64f02ba1ffd2e1a3de4270738,93f90543,renamed JfSSLScheme to a more explicit (but too long) name,"renamed JfSSLScheme to a more explicit (but too long) name
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477346992,1477346992,2644c90ce3e4c7229d034bbe1bb33f5f3f7c605d
+2644c90ce3e4c7229d034bbe1bb33f5f3f7c605d,2644c90c,removed an old check made by Jon that automatically removed the failed SSL…,"removed an old check made by Jon that automatically removed the failed SSL connections while doing mDNS scans
+this has been disabled for now because at Jon's time, SSL management wasn't done as we do it today
+now, SSL management is done at printer check time, so don't exclude failed SSL hosts at mDNS time
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477346904,1477346904,d7d7e831c70c8fd83ce1dd7955ca0db54d9dfbc7
+d7d7e831c70c8fd83ce1dd7955ca0db54d9dfbc7,d7d7e831,added support for HTTP basic auth,"added support for HTTP basic auth
+fixes #5
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477346225,1477346225,f7ed73096d304d4b1a1bea7fc8a4ae7996ddde1c
+f7ed73096d304d4b1a1bea7fc8a4ae7996ddde1c,f7ed7309,* replaced old HttpClient-related code to HttpUrlConnection,"* replaced old HttpClient-related code to HttpUrlConnection
+* added a storage of the server certificate in case of SSL
+* said stored certificate is presented to the user if it's not trusted; the user can choose to add it to an internal key store to trust this CUPS server
+* the app will check the system-wide key store when validating the server certificate
+
+This needs a lot of testing because it's quite a big change (new HTTP connection code) plus the management of SSL and untrusted SSL certs
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477265160,1477265160,210207c5eae0be3e3704a987cc433e736b10d53d
+210207c5eae0be3e3704a987cc433e736b10d53d,210207c5,moved Toast outside of background thread,"moved Toast outside of background thread
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477247320,1477247320,f624fdde91df8e892c147903307370bbe061102d
+f624fdde91df8e892c147903307370bbe061102d,f624fdde,moved Toast outside of background thread,"moved Toast outside of background thread
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477247280,1477247280,2b636f47449713b66d3d8a21624c181f8c6c9e40
+2b636f47449713b66d3d8a21624c181f8c6c9e40,2b636f47,"refactored cups4j code (removed blank spaces, added/removed null checks, added…","refactored cups4j code (removed blank spaces, added/removed null checks, added some annotations, javadoc, etc)
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477223210,1477223210,9d42ee4abe4e44534a8a6ea690c06e5b1d633c14
+9d42ee4abe4e44534a8a6ea690c06e5b1d633c14,9d42ee4a,reformatted cups4j code,"reformatted cups4j code
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477221572,1477221572,16026b986ac02e4e9b2c7fcf176d938fac12ae07
+16026b986ac02e4e9b2c7fcf176d938fac12ae07,16026b98,slightly better project description,"slightly better project description
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477169130,1477169130,2feebb6dbf1e24e3669806a7593a9ac1cd69e9b3
+2feebb6dbf1e24e3669806a7593a9ac1cd69e9b3,2feebb6d,clarified README regarding f-droid,"clarified README regarding f-droid
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477169111,1477169111,a464f3b81cf395df91d09c1c803410098281f007
+a464f3b81cf395df91d09c1c803410098281f007,a464f3b8,merged fdroid back into master,"merged fdroid back into master
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477167691,1477167691,"66ad6692c126768105343e572b07c5ac3a896ffd,fe39e0061b709981ea3c1052ed5fa407b8d3e5e8"
+66ad6692c126768105343e572b07c5ac3a896ffd,66ad6692,fixed a bug where the printer check would fail if a user-entered printer URL…,"fixed a bug where the printer check would fail if a user-entered printer URL didn't end with a slash
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477166361,1477166361,7f705cd273136d3a30e52aa6a4302d17634058ea
+7f705cd273136d3a30e52aa6a4302d17634058ea,7f705cd2,aligned build tools version with API level,"aligned build tools version with API level
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477056332,1477056332,d969eaec4365580ee1e57f232d0165fab29c8d5c
+d969eaec4365580ee1e57f232d0165fab29c8d5c,d969eaec,added printer URL/name empty check before trying to manually add it,"added printer URL/name empty check before trying to manually add it
+Contributors: the German strings were added using Google translate. I have no idea if these are correct or not.
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477056244,1477056244,99544777c2ded07c86a8a957250115cbad8d412b
+99544777c2ded07c86a8a957250115cbad8d412b,99544777,added missing translations,"added missing translations
+Contributors: the German string was added using Google translate. I have now idea if this is correct or not.
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477056086,1477056086,f4d7929d0ddcddd2c9baadef40ae73e1e9a7d8ba
+f4d7929d0ddcddd2c9baadef40ae73e1e9a7d8ba,f4d7929d,added null checks in the print service,"added null checks in the print service
+added some crashlytics logging when something fails
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477055983,1477055983,f8506e9075cc45e4b119e1132dc89a886c766fef
+f8506e9075cc45e4b119e1132dc89a886c766fef,f8506e90,force import legacy Apache HTTP client library,"force import legacy Apache HTTP client library
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477055673,1477055673,fa647351e8cc229da3e31d45a9d710b897f80ced
+fa647351e8cc229da3e31d45a9d710b897f80ced,fa647351,code reformat / fixed NonNull/Nullable annotations,"code reformat / fixed NonNull/Nullable annotations
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477055626,1477055626,431e938bab1a5da9f7c2623fb561be6b77f34529
+431e938bab1a5da9f7c2623fb561be6b77f34529,431e938b,added crashlytics,"added crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477055066,1477055066,f0972a7772e0548ed648992a727894b9d6d7cf40
+f0972a7772e0548ed648992a727894b9d6d7cf40,f0972a77,switched to API 25,"switched to API 25
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477054939,1477054939,bd5179f5b894cbdef90b80d3246a7e008896b0ec
+bd5179f5b894cbdef90b80d3246a7e008896b0ec,bd5179f5,"updated build tools, sdk and compiler versions","updated build tools, sdk and compiler versions
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477054881,1477054881,05c1579a96d735fa925d79c73b1b77f7d4b47998
+05c1579a96d735fa925d79c73b1b77f7d4b47998,05c1579a,Merge branch 'master' of github.com:BenoitDuffez/AndroidCupsPrint,"Merge branch 'master' of github.com:BenoitDuffez/AndroidCupsPrint
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477053617,1477053617,"21145ae10d3976d8524d97a2ff17643a407d9c4a,2329364d4f175cdc06f7ed793a59b611bd676f64"
+fe39e0061b709981ea3c1052ed5fa407b8d3e5e8,fe39e006,added printer URL/name empty check before trying to manually add it,"added printer URL/name empty check before trying to manually add it
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477052416,1477052416,21f87a4c3b9d76ec3f23a8b77f6cfadc930319fb
+21f87a4c3b9d76ec3f23a8b77f6cfadc930319fb,21f87a4c,added french translation,"added french translation
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477052263,1477052263,bf26eb66cafe42729c4b984933d5b51aaa834e77
+bf26eb66cafe42729c4b984933d5b51aaa834e77,bf26eb66,added null checks in the print service,"added null checks in the print service
+added some crashlytics logging when something fails
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477052257,1477052257,8a18d688df9d9a083a3ebf2598be0bd2d2e6a64f
+8a18d688df9d9a083a3ebf2598be0bd2d2e6a64f,8a18d688,force import legacy Apache HTTP client library,"force import legacy Apache HTTP client library
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477051071,1477051071,a7551bcfd5f88f57f8faa8d04968f92235053748
+a7551bcfd5f88f57f8faa8d04968f92235053748,a7551bcf,code reformat / fixed NonNull/Nullable annotations,"code reformat / fixed NonNull/Nullable annotations
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477050775,1477050775,e449add5bffe383bf712f5d4a393bdd7f6b94e06
+e449add5bffe383bf712f5d4a393bdd7f6b94e06,e449add5,added crashlytics,"added crashlytics
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477050601,1477050601,2c4c9c35b107395fea9b01b42633b4d9580689eb
+2c4c9c35b107395fea9b01b42633b4d9580689eb,2c4c9c35,switched to API 25,"switched to API 25
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477039015,1477039015,c18403e00e3ac3e99e93d2dabe88d6c71bb9f654
+c18403e00e3ac3e99e93d2dabe88d6c71bb9f654,c18403e0,"updated build tools, sdk and compiler versions","updated build tools, sdk and compiler versions
+",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1477035645,1477035645,ae2f04270c374c89cad312446cee68bd97c99a8f
+2329364d4f175cdc06f7ed793a59b611bd676f64,2329364d,Merge pull request #17 from maniac103/fix-discovery,"Merge pull request #17 from maniac103/fix-discovery
+
+Tell the CUPS server about the properties we're interested in.",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1468933422,1468933422,"ceb2edddd5a57caaff8d41b9284532317d4b0d5c,433820602b034595e8dc0d388adf190e453f86a8"
+ceb2edddd5a57caaff8d41b9284532317d4b0d5c,ceb2eddd,Merge pull request #18 from maniac103/update-gradle,"Merge pull request #18 from maniac103/update-gradle
+
+Update to latest version of Android Studio.",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1468933370,1468933370,"8809bd7cd40dcfda01de6f57babeae4f53e883a8,b1ece4256761c8b22e304411b66202f804d8f542"
+8809bd7cd40dcfda01de6f57babeae4f53e883a8,8809bd7c,Merge pull request #16 from maniac103/fix-margins,"Merge pull request #16 from maniac103/fix-margins
+
+Fix margin parsing.",,,,Benoit Duffez,benoit.duffez@upactivity.com,GitHub,noreply@github.com,1468933345,1468933345,"c2e1679cf1fe1a67a252ecca2ed92b7076655477,adbf2c3d3ef6471d0fb647425355a89646df0e6e"
+adbf2c3d3ef6471d0fb647425355a89646df0e6e,adbf2c3d,Fix margin parsing.,"Fix margin parsing.
+
+PWG JPS3 [1] says margins are given in 1/100 of mm instead of mm as
+expected by the previous code. This mismatch can cause the margins to be
+larger than the page: e.g. for my HP LaserJet 1018, the margins are 4 mm,
+thus the previous code calculated margins of 40 cm on all sides, which
+is larger than the 210x297 mm A4 page.
+
+Should fix #7.
+
+[1] https://ftp.pwg.org/pub/pwg/candidates/cs-ippjobprinterext3v10-20120727-5100.13.pdf
+",,,,Danny Baumann,dannybaumann@web.de,Danny Baumann,dannybaumann@web.de,1468693299,1468693828,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+b1ece4256761c8b22e304411b66202f804d8f542,b1ece425,Update to latest version of Android Studio.,"Update to latest version of Android Studio.
+",,,,Danny Baumann,dannybaumann@web.de,Danny Baumann,dannybaumann@web.de,1468693477,1468693655,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+433820602b034595e8dc0d388adf190e453f86a8,43382060,Tell the CUPS server about the properties we're interested in.,"Tell the CUPS server about the properties we're interested in.
+
+If we don't do that, it looks like the server sends only a very limited
+subset of all attributes.
+
+Should fix #6.
+",,,,Danny Baumann,dannybaumann@web.de,Danny Baumann,dannybaumann@web.de,1468693200,1468693645,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+ae2f04270c374c89cad312446cee68bd97c99a8f,ae2f0427,Merge branch 'theScrabi-master' into fdroid,"Merge branch 'theScrabi-master' into fdroid
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1465055764,1465055764,"c2e1679cf1fe1a67a252ecca2ed92b7076655477,357c33299478c24808ddfdf0ef014ddebbefe5e0"
+357c33299478c24808ddfdf0ef014ddebbefe5e0,357c3329,fdroid freindly version,"fdroid freindly version
+",,,,Christian Schabesberger,chris.schabesberger@mailbox.org,Christian Schabesberger,chris.schabesberger@mailbox.org,1464893000,1464893000,eedfa5d821846e068305a845bdb9065694865ff8
+eedfa5d821846e068305a845bdb9065694865ff8,eedfa5d8,made 1.2 fdroid compilable,"made 1.2 fdroid compilable
+",,,,Christian Schabesberger,chris.schabesberger@mailbox.org,Christian Schabesberger,chris.schabesberger@mailbox.org,1464342001,1464342001,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+21145ae10d3976d8524d97a2ff17643a407d9c4a,21145ae1,added French translation,"added French translation
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456913249,1456913249,1f03969111dd9415d3b161a9735fc61f3b4dc8e0
+1f03969111dd9415d3b161a9735fc61f3b4dc8e0,1f039691,#10: reformatted all code using the same rules,"#10: reformatted all code using the same rules
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456907890,1456907890,050f0abfa5a34d67c773bc2a781dbbad7d66b9af
+050f0abfa5a34d67c773bc2a781dbbad7d66b9af,050f0abf,Merge pull request #13 from Gemba/l10n,"Merge pull request #13 from Gemba/l10n
+
+German translation for commit aca9b4f and l10n code adaptions for plurals.",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1456907262,1456907262,"aca9b4ff002b7726a7d1d22e333faf590441852b,6970958d06c7214d9e38dfa0d60c182dd798fb76"
+6970958d06c7214d9e38dfa0d60c182dd798fb76,6970958d,German translation for commit aca9b4f and l10n adaptions for plurals.,"German translation for commit aca9b4f and l10n adaptions for plurals.
+",,,,Marian Flor,uid0@sdf-eu.org,Marian Flor,uid0@sdf-eu.org,1456871417,1456871417,aca9b4ff002b7726a7d1d22e333faf590441852b
+aca9b4ff002b7726a7d1d22e333faf590441852b,aca9b4ff,added a feature that allows to search for printers just based off the server IP/hostname,"added a feature that allows to search for printers just based off the server IP/hostname
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456838058,1456838058,9c94c32659e5fddc69613031ed1025804a5348d9
+9c94c32659e5fddc69613031ed1025804a5348d9,9c94c326,fixes #4,"fixes #4
+proper usage of the Android print service API: don't try to use the print session when adding the printer; use the shared preferences to store user input and retrieve them back when the session is activated by the system
+made the printer URI edit text use the textUri inputType
+added some annotations
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456831113,1456831113,5c616d547ea69bfafe43a3423cab7a4ce2952ea8
+5c616d547ea69bfafe43a3423cab7a4ce2952ea8,5c616d54,added another toast when the printer couldn't be checked,"added another toast when the printer couldn't be checked
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456830311,1456830311,5d3b6ebbde039a79f15e8f21b798fc07cc554e8c
+5d3b6ebbde039a79f15e8f21b798fc07cc554e8c,5d3b6ebb,added toast message at the end of the mDNS discovery session,"added toast message at the end of the mDNS discovery session
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456823472,1456823472,86acef494de9ad949da71bc008041cc5eb7dafa6
+86acef494de9ad949da71bc008041cc5eb7dafa6,86acef49,removed unused class + unused Apache HTTP dependency,"removed unused class + unused Apache HTTP dependency
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456822980,1456822980,a92fe18fdb083f7ff7df6e22f7e1dd1eb1fd5d6d
+a92fe18fdb083f7ff7df6e22f7e1dd1eb1fd5d6d,a92fe18f,#6: added the error message as a toast when the printer couldn't be checked,"#6: added the error message as a toast when the printer couldn't be checked
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456767257,1456767257,53b068223d6f5c2bacaaab844192699e82c6abc6
+53b068223d6f5c2bacaaab844192699e82c6abc6,53b06822,updated SDK/gradle/tools versions,"updated SDK/gradle/tools versions
+added dependency of legacy Apache HTTP lib (for now)
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1456766060,1456766060,97e251cb83add8cac44e5a6e9db1b582661d05c0
+97e251cb83add8cac44e5a6e9db1b582661d05c0,97e251cb,Merge pull request #9 from Gemba/fixes,"Merge pull request #9 from Gemba/fixes
+
+1) Fixes the setting default color pinting mode ""colorDefault"" (Print…",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1456681485,1456681485,"e259226b2d3642463e058d72c9af9912bfb70220,42f4684b2ad58eba58cf3f9e6381b98190d33dfa"
+e259226b2d3642463e058d72c9af9912bfb70220,e259226b,Merge pull request #8 from Gemba/german_l10n,"Merge pull request #8 from Gemba/german_l10n
+
+German translation",,,,Benoit Duffez,benoit.duffez@upactivity.com,Benoit Duffez,benoit.duffez@upactivity.com,1456681206,1456681206,"c2e1679cf1fe1a67a252ecca2ed92b7076655477,4de02bb3bde248f06bac126fd62a1b46a5b700a0"
+42f4684b2ad58eba58cf3f9e6381b98190d33dfa,42f4684b,"1) Fixes the setting default color pinting mode ""colorDefault""…","1) Fixes the setting default color pinting mode ""colorDefault"" (PrintAttributes.COLOR_MODE_COLOR or PrintAttributes.COLOR_MODE_MONOCHROME)
+2) Workaround for KitKat when a B&W only printer is used: Without workaround no printer will be enumerated on KitKat.
+",,,,Marian Flor,uid0@sdf-eu.org,Marian Flor,uid0@sdf-eu.org,1456498870,1456498870,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+4de02bb3bde248f06bac126fd62a1b46a5b700a0,4de02bb3,German translation,"German translation
+",,,,Marian Flor,uid0@sdf-eu.org,Marian Flor,uid0@sdf-eu.org,1456496338,1456496338,c2e1679cf1fe1a67a252ecca2ed92b7076655477
+c2e1679cf1fe1a67a252ecca2ed92b7076655477,c2e1679c,version bump,"version bump
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440853120,1440853120,0b91206f93979bf310253a9c13f7dd55365c9d62
+0b91206f93979bf310253a9c13f7dd55365c9d62,0b91206f,updated IDE project file,"updated IDE project file
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440853114,1440853114,73607baebae841d3152f92a138d368c8eefcfdfa
+73607baebae841d3152f92a138d368c8eefcfdfa,73607bae,forgot to uncomment line commented for debugging purposes,"forgot to uncomment line commented for debugging purposes
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440708692,1440708692,d35244cbad84bd0e2d8306cb593ac31d9cd11153
+d35244cbad84bd0e2d8306cb593ac31d9cd11153,d35244cb,updated README,"updated README
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440708589,1440708589,"7642407705ec48966b81967d7443c2250881ced5,50547c945e4da4c311d1a442e2f1d718cefe804b"
+7642407705ec48966b81967d7443c2250881ced5,76424077,added a label to the add printers activity,"added a label to the add printers activity
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440708540,1440708540,2f35114d160e64f2478e595ba7fa1f8177d49d5c
+2f35114d160e64f2478e595ba7fa1f8177d49d5c,2f35114d,first implementation of manual printer add,"first implementation of manual printer add
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440708474,1440708474,2edc75d3ec5aa5d8f46fd722bb3c64279d013ab4
+2edc75d3ec5aa5d8f46fd722bb3c64279d013ab4,2edc75d3,updated IDE files and appcompat lib version,"updated IDE files and appcompat lib version
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1440707696,1440707696,9821efa9a10041313ffe733c60312b2e88873143
+50547c945e4da4c311d1a442e2f1d718cefe804b,50547c94,Remove mentions of unused libraries,Remove mentions of unused libraries,,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433997530,1433997530,e951bcba4e487aa84ae8773c9e75fbb95ef775c8
+e951bcba4e487aa84ae8773c9e75fbb95ef775c8,e951bcba,Added play store link,Added play store link,,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433997370,1433997370,9821efa9a10041313ffe733c60312b2e88873143
+9821efa9a10041313ffe733c60312b2e88873143,9821efa9,version bump,"version bump
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433975905,1433975905,be07906de84a782fe67bbc991c609713f5dd9bfa
+be07906de84a782fe67bbc991c609713f5dd9bfa,be07906d,fixed stupid bug,"fixed stupid bug
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433975893,1433975893,f05cfb0908424016b96db2a5f102cf2d84a85768
+f05cfb0908424016b96db2a5f102cf2d84a85768,f05cfb09,version bump,"version bump
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433973671,1433973671,9061b29055f761d6959f7a82dfca66faabff3319
+9061b29055f761d6959f7a82dfca66faabff3319,9061b290,removed unused libs from IDE's project file,"removed unused libs from IDE's project file
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433973662,1433973662,706e311a1c836323502252f89d055bfad1e2c711
+706e311a1c836323502252f89d055bfad1e2c711,706e311a,updated README with more information,"updated README with more information
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433973591,1433973591,831dad95393a093a4b15341f1ef3ad2ef2a2f6cd
+831dad95393a093a4b15341f1ef3ad2ef2a2f6cd,831dad95,removed useless libs,"removed useless libs
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433972778,1433972778,cc550fb730e99eeefb2979b37a19d8a5a06f94c4
+cc550fb730e99eeefb2979b37a19d8a5a06f94c4,cc550fb7,removed debug logging,"removed debug logging
+use of either Log.i or Log.e depending on logged message
+moved log tag to a global constant in CupsPrintApp
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433972355,1433972355,5b5cafc14e25cccbbc3c9fa44a53c9033d802dca
+5b5cafc14e25cccbbc3c9fa44a53c9033d802dca,5b5cafc1,changed job status polling interval from 1s to 5s,"changed job status polling interval from 1s to 5s
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433972153,1433972153,6ff3a98ef346d21b41a7929499b4a95c252027dc
+6ff3a98ef346d21b41a7929499b4a95c252027dc,6ff3a98e,"removed all legacy code, now everything goes through the Android Print Service framework","removed all legacy code, now everything goes through the Android Print Service framework
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433972065,1433972065,dd20afc3403b0e0d3a23cb0e2d97ea786bc51943
+dd20afc3403b0e0d3a23cb0e2d97ea786bc51943,dd20afc3,replaced launcher icon,"replaced launcher icon
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433969395,1433969395,6b5243b3c29df65127c0ba94b2f6d3381efc143c
+6b5243b3c29df65127c0ba94b2f6d3381efc143c,6b5243b3,moved util class to its own file,"moved util class to its own file
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433967673,1433967673,8b589d5ee0e3205b89c90936d79370d8417e3e5a
+8b589d5ee0e3205b89c90936d79370d8417e3e5a,8b589d5e,moved print service related stuff to own subpackage,"moved print service related stuff to own subpackage
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433967522,1433967522,d638e61dbaff726cfc8b3ad25021901ba09d5ae3
+d638e61dbaff726cfc8b3ad25021901ba09d5ae3,d638e61d,modified gradle build script so that it can automatically sign APKs for play store publishing,"modified gradle build script so that it can automatically sign APKs for play store publishing
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433707756,1433707756,475d8792571a5edff95939f2a0dc66d31e03c53a
+475d8792571a5edff95939f2a0dc66d31e03c53a,475d8792,merged with changes made from github.com,"merged with changes made from github.com
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433706238,1433706238,"16a8583e6e5529d93e4871fb33a7fe92acd39bc0,0c5d915a8f84bd02341a460a4d43df5160680b83"
+16a8583e6e5529d93e4871fb33a7fe92acd39bc0,16a8583e,reformated code so that it better matches Android coding standards,"reformated code so that it better matches Android coding standards
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433706152,1433706152,1bfce7af949ace6f1bb17a74d12caca401d7073c
+1bfce7af949ace6f1bb17a74d12caca401d7073c,1bfce7af,renamed app package so that it can be published to the play store,"renamed app package so that it can be published to the play store
+renamed the app name in order to be clearer
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433705801,1433705801,cdc487786a0d3c9f3e64790148d6b1e056a50af3
+0c5d915a8f84bd02341a460a4d43df5160680b83,0c5d915a,resized image to improve visibility,resized image to improve visibility,,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433595642,1433595642,66a9699bcca7ef9cdde581b46bbddd41ae3660d2
+66a9699bcca7ef9cdde581b46bbddd41ae3660d2,66a9699b,added more information about what was modified + link to wiki,added more information about what was modified + link to wiki,,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433595271,1433595271,cdc487786a0d3c9f3e64790148d6b1e056a50af3
+cdc487786a0d3c9f3e64790148d6b1e056a50af3,cdc48778,"add a polling of job status query to see if job is complete or cancelled, in…","add a polling of job status query to see if job is complete or cancelled, in which case the framework is informed
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433593107,1433593107,f4a31c8a62195d48ce2102f12e61bbd20ca1a718
+f4a31c8a62195d48ce2102f12e61bbd20ca1a718,f4a31c8a,remove the job from the list of saved jobs when it's cancelled,"remove the job from the list of saved jobs when it's cancelled
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433591171,1433591171,6e626824a4cda9eb6c72aaef60e1b5dd31cd4a38
+6e626824a4cda9eb6c72aaef60e1b5dd31cd4a38,6e626824,allow print jobs to be cancelled,"allow print jobs to be cancelled
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433590902,1433590902,1e3d142f4f8f49080a66f46af03cebb99be7e201
+1e3d142f4f8f49080a66f46af03cebb99be7e201,1e3d142f,cosmetic changes to README,"cosmetic changes to README
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433586117,1433586117,6ee4afe3ab060b51e42c320add07923d6fda558a
+6ee4afe3ab060b51e42c320add07923d6fda558a,6ee4afe3,updated README with more details,"updated README with more details
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433586049,1433586049,518346134d0f5fb62562b6f58fbe0a5439378dd8
+518346134d0f5fb62562b6f58fbe0a5439378dd8,51834613,queued jobs are now sent to the printer,"queued jobs are now sent to the printer
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433585392,1433585392,a576e40cf01c8ce21856b1bedd08f454d60281b7
+a576e40cf01c8ce21856b1bedd08f454d60281b7,a576e40c,proper XML syntax,"proper XML syntax
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433582011,1433582011,94622bb7e3be0cf87d839cc6d0a1cf2a792539dd
+94622bb7e3be0cf87d839cc6d0a1cf2a792539dd,94622bb7,added copyright notice,"added copyright notice
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433581940,1433581940,2dca5fb63b384fc61245ab0d0d5d42a53a08209f
+2dca5fb63b384fc61245ab0d0d5d42a53a08209f,2dca5fb6,README cosmetic change,"README cosmetic change
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433537706,1433537706,e58acfa49ad004fe18f08a89205394f7f5e0355f
+e58acfa49ad004fe18f08a89205394f7f5e0355f,e58acfa4,added link to SE question that led to the original source,"added link to SE question that led to the original source
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433537683,1433537683,07ecef51275bc705ca95df8708b3386e31a9e5b6
+07ecef51275bc705ca95df8708b3386e31a9e5b6,07ecef51,first working version,"first working version
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433537612,1433537612,629c65e7d739320d539c7e59b8da82e51db9f30b
+629c65e7d739320d539c7e59b8da82e51db9f30b,629c65e7,removed NOTICE.txt from apk packaging so that gradle can compile the project,"removed NOTICE.txt from apk packaging so that gradle can compile the project
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433496324,1433496324,62d2cea26e4850a88d0ca88d712d8f2c185314f5
+62d2cea26e4850a88d0ca88d712d8f2c185314f5,62d2cea2,removed LICENSE.txt from apk packaging so that gradle can compile the project,"removed LICENSE.txt from apk packaging so that gradle can compile the project
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433495711,1433495711,eb298626b02580395d3b3203c3aec604fd00402e
+eb298626b02580395d3b3203c3aec604fd00402e,eb298626,removed android support jar as it is added by gradle automatically,"removed android support jar as it is added by gradle automatically
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433495679,1433495679,5bb3cfdeceb3c25609b4bfe8ae44b7ad29903c47
+5bb3cfdeceb3c25609b4bfe8ae44b7ad29903c47,5bb3cfde,converted project to gradle structure,"converted project to gradle structure
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433494964,1433494964,acc5b870cd11a3d733ee2e20f5cba1beb639b612
+acc5b870cd11a3d733ee2e20f5cba1beb639b612,acc5b870,added initial code from zip file from original author,"added initial code from zip file from original author
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433494001,1433494001,0c8284dde9ec8ee53a3c998635421890cde3c19d
+0c8284dde9ec8ee53a3c998635421890cde3c19d,0c8284dd,added basic info to readme,"added basic info to readme
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433493966,1433493966,e2813b2fd095b2528a967a42f8321e697dd4533c
+e2813b2fd095b2528a967a42f8321e697dd4533c,e2813b2f,Initial commit,"Initial commit
+",,,,Benoit Duffez,benoit@bicou.net,Benoit Duffez,benoit@bicou.net,1433493268,1433493268,

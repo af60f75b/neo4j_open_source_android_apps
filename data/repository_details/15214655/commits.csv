@@ -1,0 +1,1299 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ba812fba6aff14c0787dbd621cf69fc39d2329f4,ba812fba,Update readme,"Update readme
+
+Updated readme to reflect the fact that the app is not currently under active
+development.
+",,,,Benjamin Linskey,git@benlinskey.com,Benjamin Linskey,git@benlinskey.com,1490843664,1490843664,dbd86856dfceb4463cc2c380738e4ae01ce0d7d5
+dbd86856dfceb4463cc2c380738e4ae01ce0d7d5,dbd86856,Increment version code for v1.10.0,"Increment version code for v1.10.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470965282,1470965282,25b0c9edd4c2d88e395453274af40a2c2bbfdc2f
+25b0c9edd4c2d88e395453274af40a2c2bbfdc2f,25b0c9ed,Update readme,"Update readme
+
+- Bumped version number to 1.10.0.
+- Commented out Travis badge due to CI failure (bug #156).
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470964781,1470964781,0cd46c2a831421a8e3a7e6f9b3dfbd72d53b7e6d
+0cd46c2a831421a8e3a7e6f9b3dfbd72d53b7e6d,0cd46c2a,Fix nav drawer icon,"Fix nav drawer icon
+
+Replaced android.support.v4.app.ActionBarDrawerToggle with
+android.support.v7.app.ActionBarDrawerToggle.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470964675,1470964730,453522b2aad6408ed7738d2f2d4d9b861f3efd8f
+453522b2aad6408ed7738d2f2d4d9b861f3efd8f,453522b2,Increment version number to 1.10.0,"Increment version number to 1.10.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470963478,1470963478,85e623161cf6b770dfc3dd1f3b5ddbb9c42d6bc8
+85e623161cf6b770dfc3dd1f3b5ddbb9c42d6bc8,85e62316,Fix non-static dialog fragments,"Fix non-static dialog fragments
+
+Dialog fragments are now static and use MainActivity callbacks where
+appropriate to trigger presenter callbacks. Fixes #155.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470963391,1470963391,98cf04ab38c1327b0f562b95a9d83ad6e36136e6
+98cf04ab38c1327b0f562b95a9d83ad6e36136e6,98cf04ab,Update Travis configuration,"Update Travis configuration
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470962088,1470962088,a38e0064b56bf31bde9d5a88e82c3215582adc7e
+a38e0064b56bf31bde9d5a88e82c3215582adc7e,a38e0064,Add support for non-touchscreen Chromebooks,"Add support for non-touchscreen Chromebooks
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470961355,1470961355,b18225fa11a32bd7f8badf800f10b30149a47d1a
+b18225fa11a32bd7f8badf800f10b30149a47d1a,b18225fa,"Update build tools, SDK, &c. to latest versions","Update build tools, SDK, &c. to latest versions
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1470961335,1470961335,9cc54a481f03cb3bc360423f1b243c5eec2a5810
+9cc54a481f03cb3bc360423f1b243c5eec2a5810,9cc54a48,Fix Google Play badge in readme,"Fix Google Play badge in readme
+
+Replaced broken link to old-style Google Play badge with local image
+with new Google branding. Moved Amazon badge image file to new
+subdirectory alongside Google file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1458582779,1458583273,3cdd981c201f4b2aa4feb35972c106bcf4531197
+3cdd981c201f4b2aa4feb35972c106bcf4531197,3cdd981c,Optimize imports in LexiconDetailFragment.java,"Optimize imports in LexiconDetailFragment.java
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447218598,1447218598,f247294fab6513c2e45ef06e95a941fb16525fed
+f247294fab6513c2e45ef06e95a941fb16525fed,f247294f,Throw exception on missing lexicon entry,"Throw exception on missing lexicon entry
+
+Previously, if a lexicon entry could not be found in
+LexiconDetailFragment#onCreate(), the resulting exception was caught and
+a message was written to the Android log. mLexiconEntry remained null,
+causing a later exception. A NullPointerException will now be thrown in
+this scenario, so we will hopefully receive bug reports from users when
+errors happen here going forward.
+
+This is obviously a less than optimal way to deal with this bug.
+Long-term, we need to add automated testing to find and fix lexicon
+parsing problems. It would also be nice to catch and gracefully handle
+errors of this sort, propmting the user to submit a bug report, rather
+than crashing.
+
+See bug #148.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447217702,1447217702,2c118f9ccc5dd35aa38c88aba4e374345af27223
+2c118f9ccc5dd35aa38c88aba4e374345af27223,2c118f9c,Optimize imports in LexiconDetailFragment.java,"Optimize imports in LexiconDetailFragment.java
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447217121,1447217121,56a3297da0832309035ef54f0ab4d521c1003c07
+56a3297da0832309035ef54f0ab4d521c1003c07,56a3297d,Fix crash caused by null activity reference,"Fix crash caused by null activity reference
+
+LexiconDetailFragments were retaining a reference to their parent
+activities. These could become null at some points in the application
+lifecycle, causing exceptions when they were deferenced in
+onPrepareOptionsMenu(). getActivity() is now used rather than a retained
+reference to the activity. Fixes #150.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447216058,1447216058,ac33c7cfb7dd6b98663606327ffa91bb01e8d296
+ac33c7cfb7dd6b98663606327ffa91bb01e8d296,ac33c7cf,Update Gradle Android plugin to v1.3.0,"Update Gradle Android plugin to v1.3.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447213986,1447213986,ebe8b5421ec86d57c806b4d4f244d175dd8c9ad4
+ebe8b5421ec86d57c806b4d4f244d175dd8c9ad4,ebe8b542,Remove infer-out before running infer in infer.sh,"Remove infer-out before running infer in infer.sh
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447213913,1447213913,b0bf588d826afb4c471b1817a2722c6733d32d86
+b0bf588d826afb4c471b1817a2722c6733d32d86,b0bf588d,Ignore tags file,"Ignore tags file
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1447208455,1447208455,e9742a9d5f0792905d70ad015cb5788127df9a29
+e9742a9d5f0792905d70ad015cb5788127df9a29,e9742a9d,Merge branch 'master' into dev,"Merge branch 'master' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439663346,1439663346,"9cb2cc72122f1031e35e0134705e89d20ad0fe3e,fd54dea25ebbe7bab5266ed664a3a76d09cb2d7f"
+fd54dea25ebbe7bab5266ed664a3a76d09cb2d7f,fd54dea2,Update readme and build file for v1.9.2,"Update readme and build file for v1.9.2
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439663018,1439663018,4a78cb02430606dde38b0afbc0130ba860890662
+4a78cb02430606dde38b0afbc0130ba860890662,4a78cb02,Merge branches 'issue140' and 'issue142',"Merge branches 'issue140' and 'issue142'
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439662944,1439662944,"bf8543272ca7cdfb68dad308a8087b4a1d769091,68614590dba386bbd80843bca8a45bcf99dee41f"
+9cb2cc72122f1031e35e0134705e89d20ad0fe3e,9cb2cc72,Merge branches 'issue140' and 'issue142' into dev,"Merge branches 'issue140' and 'issue142' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439662905,1439662905,"111c346ede87609995d6cac0a8991e6cdd5d836d,bf8543272ca7cdfb68dad308a8087b4a1d769091,68614590dba386bbd80843bca8a45bcf99dee41f"
+bf8543272ca7cdfb68dad308a8087b4a1d769091,bf854327,"Fix a crash when parsing ""ptairw"" in lexicon","Fix a crash when parsing ""ptairw"" in lexicon
+
+Fixes #140. This is just a quick quick kludge; the parsers really need
+to be rewritten and tested.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439662465,1439662465,5cac5c53e9de786b946260695e9bde2de00b1eda
+68614590dba386bbd80843bca8a45bcf99dee41f,68614590,Fix a crash when rotating screen,"Fix a crash when rotating screen
+
+Fixes #142. It looks like getActivity() was sometimes returning null
+on screen rotation because the parent activity had been destroyed and
+not yet recreated. We now save a reference to the activity in
+onAttach(). Unfortunately I can't reproduce this bug, so I can't verify
+with certainty that this will fix it, but I think this will do the
+trick.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439659295,1439659295,5cac5c53e9de786b946260695e9bde2de00b1eda
+111c346ede87609995d6cac0a8991e6cdd5d836d,111c346e,Remove FAQs from readme,"Remove FAQs from readme
+
+Added link to GitHub wiki, which now houses the FAQs.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1439076431,1439076431,5cac5c53e9de786b946260695e9bde2de00b1eda
+5cac5c53e9de786b946260695e9bde2de00b1eda,5cac5c53,Increment version code,"Increment version code
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1438918290,1438918290,f82b0a80a7e847792ff28aa44c3190e6b321d883
+f82b0a80a7e847792ff28aa44c3190e6b321d883,f82b0a80,Update readme and build file for v1.9.1,"Update readme and build file for v1.9.1
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1438917420,1438917420,14b6784e885b2560f88fa5427dd6040f61676c5c
+14b6784e885b2560f88fa5427dd6040f61676c5c,14b6784e,Disable ProGuard,"Disable ProGuard
+
+Closes issue #135.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1438916125,1438916125,4a7783da0bc2cc99397fde4501510d035db4534e
+4a7783da0bc2cc99397fde4501510d035db4534e,4a7783da,Preserve line numbers in ProGuard,"Preserve line numbers in ProGuard
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1438130500,1438130500,05574faecb09d92b354db2773ba164f143e0a839
+05574faecb09d92b354db2773ba164f143e0a839,05574fae,Disable ProGuard optimization,"Disable ProGuard optimization
+
+Replaced ProGuard configuration file with default non-optimizing Android
+configuration file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1438130175,1438130175,b4c040b499fbcc248a89989a647761e60de2139d
+b4c040b499fbcc248a89989a647761e60de2139d,b4c040b4,Merge pull request #132 from blinskey/mvp,"Merge pull request #132 from blinskey/mvp
+
+Implement MVP architecture",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1437932927,1437932927,"191037d39a1db944a76604a9091bd6555cc2c3d9,3536aadc561448e51e57e11b636a485dff10d578"
+3536aadc561448e51e57e11b636a485dff10d578,3536aadc,Clean up and document code,"Clean up and document code
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437927211,1437927211,152893d08c6ff330561b5766da8657d8b75d27ac
+152893d08c6ff330561b5766da8657d8b75d27ac,152893d0,Consolidate redundant code,"Consolidate redundant code
+
+PerseusToolActivity and SettingsActivity now inherit from
+AbstractContainerActivity rather than duplicating methods defined in
+that class.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437925870,1437925870,10b9b430a123cf857d3bd8c2b8b71aaadf1abd09
+10b9b430a123cf857d3bd8c2b8b71aaadf1abd09,10b9b430,Rename and document ContainerActivity,"Rename and document ContainerActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437925761,1437925761,e0ece9936aaa2f4d49721fc49cb831f099bf3805
+e0ece9936aaa2f4d49721fc49cb831f099bf3805,e0ece993,Fix a couple of Android Studio warnings,"Fix a couple of Android Studio warnings
+
+Suppressed a refactoring suggestion and added a @NotNull annotation.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437922759,1437922759,022babaea85acfdbd0f0183745dae6cb7b3d7b94
+022babaea85acfdbd0f0183745dae6cb7b3d7b94,022babae,Suppress a couple of erroneous warnings,"Suppress a couple of erroneous warnings
+
+Android Studio sometimes produces incorrect ""unused method"" warnings.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437922648,1437922648,0ed2c9306aa1871e2fea27a0a11331fa71deb6b1
+0ed2c9306aa1871e2fea27a0a11331fa71deb6b1,0ed2c930,Reorganize code,"Reorganize code
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437922463,1437922463,e99fd266c63e3dd790d0bdeee66ae366a6968a9a
+e99fd266c63e3dd790d0bdeee66ae366a6968a9a,e99fd266,Consolidate toast code in ContainerActivity,"Consolidate toast code in ContainerActivity
+
+All toasts are now displayed via a single toast object in
+ContainerActivity. This fixes a bug that caused the app to crash when
+clearing the lexicon history or syntax bookmarks, ensures that we'll
+never have overlapping toasts, and simplifies toast creation throughout
+the app.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437921804,1437921804,01966dcc28528fe1584a569398809dce9b6f379e
+01966dcc28528fe1584a569398809dce9b6f379e,01966dcc,Consolidate common code,"Consolidate common code
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437920501,1437920501,f578a2b398a129d46b5dfc64343a2f273127d42a
+f578a2b398a129d46b5dfc64343a2f273127d42a,f578a2b3,Consolidate common code in AbstractDetailActivity,"Consolidate common code in AbstractDetailActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437920028,1437920028,045ae622a1ee462eca81094e08982741a2e37ed6
+045ae622a1ee462eca81094e08982741a2e37ed6,045ae622,Rename a method,"Rename a method
+
+Renamed DetailView#displayToast() to displayDetailViewToast() to
+prevent confusion with MainView#displayToast().
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437919806,1437919814,e8f81b6c871915da21c536ed67a7f41cc0690d32
+e8f81b6c871915da21c536ed67a7f41cc0690d32,e8f81b6c,Remove an unused method,"Remove an unused method
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437919525,1437919525,7eec788934d21f4258b291c178c1dcb8eb6e1cd8
+7eec788934d21f4258b291c178c1dcb8eb6e1cd8,7eec7889,Consolidate common code in ContainerActivity,"Consolidate common code in ContainerActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437918846,1437918846,441177290d4819a0848cce8df39d410456c6437a
+441177290d4819a0848cce8df39d410456c6437a,44117729,Remove unused code,"Remove unused code
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437917639,1437917727,36413ada2c1148069ae1400d586d9998833f91d2
+36413ada2c1148069ae1400d586d9998833f91d2,36413ada,Convert syntax detail code to MVP architecture,"Convert syntax detail code to MVP architecture
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437891120,1437891120,6eb3140da6aae7ad595fc4a8a7b70f318b8cc024
+6eb3140da6aae7ad595fc4a8a7b70f318b8cc024,6eb3140d,Move additional code to LexiconPresenter,"Move additional code to LexiconPresenter
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437888321,1437888321,e31c7d0f8d9d298be36a89c68c8ab636213eeac3
+e31c7d0f8d9d298be36a89c68c8ab636213eeac3,e31c7d0f,Merged LexiconHistoryManager into LexiconPresenter,"Merged LexiconHistoryManager into LexiconPresenter
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437886017,1437886017,5021ed11d07885a1b66e8c27e710f47e22aa9eff
+5021ed11d07885a1b66e8c27e710f47e22aa9eff,5021ed11,Begin migrating lexicon code to MVP architecture,"Begin migrating lexicon code to MVP architecture
+
+The MainActivity and LexiconDetailActivity now implement the
+LexiconDetailView interface. MainActivity acts as the lexicon view in
+two-pane mode and LexiconDetailActivity acts as the view in one-pane
+mode. Untested on tablets.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437885352,1437885352,cc3a93186717856e945c8c771599c8dc6ef31760
+cc3a93186717856e945c8c771599c8dc6ef31760,cc3a9318,Reorganize files,"Reorganize files
+
+Renamed Presenter to MainPresenter and moved a few files to new ""views""
+and ""presenters"" packages.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437883167,1437883167,5de6c06e1f36ca41fbe41fd7c697ddb5628a1725
+5de6c06e1f36ca41fbe41fd7c697ddb5628a1725,5de6c06e,Move more functionality into presenter,"Move more functionality into presenter
+
+All ContentResolver work in MainActivity has now been moved to
+Presenter. DialogFragments have been moved back to MainActivity; they
+now forward events to the Presenter when appropriate.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437865890,1437865890,aa9369bb86fd77be5f6f2a80b084d515ca0f5b01
+aa9369bb86fd77be5f6f2a80b084d515ca0f5b01,aa9369bb,Begin converting architecture to MVP,"Begin converting architecture to MVP
+
+Moved some, but not all, MainActivity logic to presenter class.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437789336,1437789336,5a92955b037cf76d6ea0d3b50d0708e4dda0a4c6
+5a92955b037cf76d6ea0d3b50d0708e4dda0a4c6,5a92955b,Add shebang to infer.sh,"Add shebang to infer.sh
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437789312,1437789312,a777cc6a0d5424e2ca19faede8db80e340b00a0b
+a777cc6a0d5424e2ca19faede8db80e340b00a0b,a777cc6a,Fix a misnamed variable,"Fix a misnamed variable
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1437783272,1437783272,cab2729950099393ea016afb8a12410f2e8fb2e6
+cab2729950099393ea016afb8a12410f2e8fb2e6,cab27299,Fix a documentation comment,"Fix a documentation comment
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436743632,1436743632,191037d39a1db944a76604a9091bd6555cc2c3d9
+191037d39a1db944a76604a9091bd6555cc2c3d9,191037d3,Improve a method name,"Improve a method name
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436742912,1436742912,b4b1d4000560261d909c7a0c660ebe722d749dcf
+b4b1d4000560261d909c7a0c660ebe722d749dcf,b4b1d400,Improve a documentation comment,"Improve a documentation comment
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436742853,1436742862,a2d348d5deb10f0e71c0a6545cfd2734d24762e9
+a2d348d5deb10f0e71c0a6545cfd2734d24762e9,a2d348d5,Add LexiconHistoryManager,"Add LexiconHistoryManager
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436740141,1436740141,d2d8468e713288e92c9cf2aefeef28db53e7126b
+d2d8468e713288e92c9cf2aefeef28db53e7126b,d2d8468e,Update Mode documentation,"Update Mode documentation
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436739340,1436739340,4ac5a4deb24ac5a977f7cb0ec894cdcb3bb4580e
+4ac5a4deb24ac5a977f7cb0ec894cdcb3bb4580e,4ac5a4de,Add access modifiers to MainActivity methods,"Add access modifiers to MainActivity methods
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436739316,1436739316,9d031e4e5420969ad4afcc3f2906e83aef2c9441
+9d031e4e5420969ad4afcc3f2906e83aef2c9441,9d031e4e,Reorganize dialog fragments,"Reorganize dialog fragments
+
+Moved a couple of classes from MainActivity to new files and moved all
+dialog fragment classes to the new ""dialogFragments"" package.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436738697,1436738697,30281f3c887760787dc750c3208073e7690157b9
+30281f3c887760787dc750c3208073e7690157b9,30281f3c,Reorder MainActivity methods,"Reorder MainActivity methods
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436738419,1436738419,adf6d0b609bb7918fbb783441c7ad923fb73aebb
+adf6d0b609bb7918fbb783441c7ad923fb73aebb,adf6d0b6,Move HelpDialogFragment to new file,"Move HelpDialogFragment to new file
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1436737631,1436737714,c1ff7ec4e19e3098c4f850973abaa751a3d47bdb
+c1ff7ec4e19e3098c4f850973abaa751a3d47bdb,c1ff7ec4,Fix resource leaks,"Fix resource leaks
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435720713,1435720878,1d3810eb6d1a7c0e8ad187848237bf83365d97d5
+1d3810eb6d1a7c0e8ad187848237bf83365d97d5,1d3810eb,Check for null pointers after executing queries,"Check for null pointers after executing queries
+
+Fixes potential problems detected by Infer. Right now, we just check
+the result of ContentResolver#query() and throw a NullPointerException
+if something went wrong. If we're actually getting NPEs here, we'll
+need to address the cause or fail gracefully.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435720274,1435720274,a035bd75f84d8d1993d8f4612637eea6891b931e
+a035bd75f84d8d1993d8f4612637eea6891b931e,a035bd75,Fix resource leaks in MainActivity,"Fix resource leaks in MainActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435710594,1435710594,c6665efd2c209f6edd318ba2961d388be67279bc
+c6665efd2c209f6edd318ba2961d388be67279bc,c6665efd,Add checks for null cursors in MainActivity,"Add checks for null cursors in MainActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435710538,1435710538,fd25704be85c6a0d00cf77c5c9ac181cbd70ed22
+fd25704be85c6a0d00cf77c5c9ac181cbd70ed22,fd25704b,Add script for analyzing code with Infer,"Add script for analyzing code with Infer
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435709968,1435709968,08cc7e0a4f565d261bd29c880fbf0b93da2b1392
+08cc7e0a4f565d261bd29c880fbf0b93da2b1392,08cc7e0a,Clean up MainActivity,"Clean up MainActivity
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435694677,1435694677,6e7292b59050dde8e494daab65e1fbfd1ee85fb9
+6e7292b59050dde8e494daab65e1fbfd1ee85fb9,6e7292b5,Remove logging from XML parsers,"Remove logging from XML parsers
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435446256,1435446256,a55c2ebaa63a520703470399ef838727257dfac4
+a55c2ebaa63a520703470399ef838727257dfac4,a55c2eba,Remove a redundant method,"Remove a redundant method
+
+Removed method simply called the overridden superclass method.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435445986,1435445986,187c34c4a4fd507621a0cd7ec759dcfc09a841d7
+187c34c4a4fd507621a0cd7ec759dcfc09a841d7,187c34c4,Remove unnecessary interface modifiers,"Remove unnecessary interface modifiers
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435445922,1435445922,cba39047dd6a0514d486124f030418c28d3474cf
+cba39047dd6a0514d486124f030418c28d3474cf,cba39047,Remove a stray semicolon,"Remove a stray semicolon
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435445822,1435445822,d6f6918a4f7d0916e2c9baf353817b0426f81c5f
+d6f6918a4f7d0916e2c9baf353817b0426f81c5f,d6f6918a,Add missing icon files,"Add missing icon files
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435445748,1435445748,95c75b2bba737c9de3d2708e7290897d3632950f
+95c75b2bba737c9de3d2708e7290897d3632950f,95c75b2b,Close database cursors after use,"Close database cursors after use
+
+Fixes all unclosed cursors detected by Android Lint.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1435445328,1435445328,1e7f59b6705427455513ba62d7d37cb9f8e31a8b
+1e7f59b6705427455513ba62d7d37cb9f8e31a8b,1e7f59b6,Update readme,"Update readme
+
+Standardized app name to Greek Reference: Ancient Greek Lexicon &
+Syntax.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1425827947,1425827947,1887cf4d5417948d65231dd058c3fc3637dbcf17
+1887cf4d5417948d65231dd058c3fc3637dbcf17,1887cf4d,Fix a broken link in the readme,"Fix a broken link in the readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1425762359,1425762359,6605a564f45bedf82073b5c8d1d8eebd3ad293d1
+6605a564f45bedf82073b5c8d1d8eebd3ad293d1,6605a564,Update readme and build script for v1.9.0,"Update readme and build script for v1.9.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1425762284,1425762284,9a7b536c0fa928673d1da6a6d78d7843fcdaa371
+9a7b536c0fa928673d1da6a6d78d7843fcdaa371,9a7b536c,Add build warning about missing config file,"Add build warning about missing config file
+
+The Gradle buildscript now prints a warning if there is no
+release.properties file in the root directory.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1425761851,1425761851,a3154d725ca4a52351d984397deebe74271b0e61
+a3154d725ca4a52351d984397deebe74271b0e61,a3154d72,Add promotional screenshots,"Add promotional screenshots
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1425759936,1425759936,f1196991607ee1130ad1ddf08e42094e0e193803
+f1196991607ee1130ad1ddf08e42094e0e193803,f1196991,Fix a Javadoc comment,"Fix a Javadoc comment
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422336784,1422336784,a0cf4909a8b9b6b821b5d7309db627ddd7c62cb2
+a0cf4909a8b9b6b821b5d7309db627ddd7c62cb2,a0cf4909,Remove unused imports,"Remove unused imports
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422336751,1422336751,fe4b16af934ffe18544dae6e34fb4cf1c3576204
+fe4b16af934ffe18544dae6e34fb4cf1c3576204,fe4b16af,Clean up a few minor style issues,"Clean up a few minor style issues
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422336171,1422336171,808028dfea3231f766c634f884c488a1b8d490ff
+808028dfea3231f766c634f884c488a1b8d490ff,808028df,Fix a Javadoc comment.,"Fix a Javadoc comment.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422335962,1422335962,42dbd40139f9d84d3c2991b1c9d961cbb952bb41
+42dbd40139f9d84d3c2991b1c9d961cbb952bb41,42dbd401,Change switch statement indentation,"Change switch statement indentation
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422335409,1422335409,462da51c48cfa79424f897c935e1a3dea9339ad1
+462da51c48cfa79424f897c935e1a3dea9339ad1,462da51c,Replace string concatenation with StringBuilders,"Replace string concatenation with StringBuilders
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422334703,1422334703,59dd2c7fdec77381fc7845626277a8adbf5004b2
+59dd2c7fdec77381fc7845626277a8adbf5004b2,59dd2c7f,Clean up switch statements,"Clean up switch statements
+
+Add a few missing default cases and change indentation.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422333647,1422333647,97fb1842f22a544bb1041e0937e05ca7e05c159a
+97fb1842f22a544bb1041e0937e05ca7e05c159a,97fb1842,Update .travis.yml,"Update .travis.yml
+
+Updated build tools version and added extra-google-m2repository. Fixes
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422068094,1422068094,655600533f4b2d648ff9c3cc8c3a42012c96ec3a
+655600533f4b2d648ff9c3cc8c3a42012c96ec3a,65560053,Merge branch 'cleanup' into dev,"Merge branch 'cleanup' into dev
+
+Conflicts:
+	GreekReference/src/main/java/com/benlinskey/greekreference/MainActivity.java
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422064062,1422064062,"32260e8a21067788ceb4c8303cf858123f7bda47,328e20b31c4a13c44bffcf1b174131bad4c6a921"
+328e20b31c4a13c44bffcf1b174131bad4c6a921,328e20b3,Clean up code,"Clean up code
+
+Made numerous style improvements and Javadoc fixes, removed unused
+methods, removed unused attributes, &c.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421891217,1422063521,32f21db79844cef47acbd1814a7f5e9aaccd75fd
+32260e8a21067788ceb4c8303cf858123f7bda47,32260e8a,Reorder typeface preferences,"Reorder typeface preferences
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1422060575,1422060575,10122621467dfa3d968dc14fb00b63ee45de8388
+10122621467dfa3d968dc14fb00b63ee45de8388,10122621,Merge branch 'issue107' into dev,"Merge branch 'issue107' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421979190,1421979190,"4340979093f9feb1b974cca5620dd4b0180faba1,14608ef306c673e1369cdc07a9f965fe54f8d239"
+4340979093f9feb1b974cca5620dd4b0180faba1,43409790,Improve GreekTextView code,"Improve GreekTextView code
+
+Made typeface check more efficient on pre-Lollipop devices and improved
+a method name.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421979042,1421979042,58952f57ca363ad9525abfde49dd49246d8599fd
+58952f57ca363ad9525abfde49dd49246d8599fd,58952f57,Improve code style,"Improve code style
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421978103,1421978119,bb6783e8b967bca956a5681a786923c3cc5b312e
+14608ef306c673e1369cdc07a9f965fe54f8d239,14608ef3,Set default typeface to Robot on Lollipop,"Set default typeface to Robot on Lollipop
+
+Closes #107.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421977749,1421977749,bb6783e8b967bca956a5681a786923c3cc5b312e
+bb6783e8b967bca956a5681a786923c3cc5b312e,bb6783e8,Update copyright and license info,"Update copyright and license info
+
+Updated a copyright date and added simple_list_item_activated_1.xml to
+About dialog license info string.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421890745,1421890745,95fc5e2bfd694c8394de7f3bfbf46ef1b7b611a6
+95fc5e2bfd694c8394de7f3bfbf46ef1b7b611a6,95fc5e2b,Improve layout,"Improve layout
+
+Removed margins on left and right sides of two-pane layout and increased
+margin on left side of GreekTextView. Fixes #113.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421890397,1421890397,1260dad2973682e2d58ae2c687d4b3312a932f30
+1260dad2973682e2d58ae2c687d4b3312a932f30,1260dad2,Fix overflow menu ordering on two-pane devices,"Fix overflow menu ordering on two-pane devices
+
+Moved View on Perseus option to top of list.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421889142,1421889142,ea9758b69539a4f92576d7c5801bf6f48709bd58
+ea9758b69539a4f92576d7c5801bf6f48709bd58,ea9758b6,Remove mode switch when clearing lists,"Remove mode switch when clearing lists
+
+The mode is no longer changed when clearing the history, bookmarks, and
+favorites lists. Fixes #121.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421888805,1421888805,4f67f795a34cef0c053fab2f76753d73b7501581
+32f21db79844cef47acbd1814a7f5e9aaccd75fd,32f21db7,Make various minor code improvements,"Make various minor code improvements
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421811208,1421811208,4f67f795a34cef0c053fab2f76753d73b7501581
+4f67f795a34cef0c053fab2f76753d73b7501581,4f67f795,Remove an unused icon,"Remove an unused icon
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421810197,1421810197,810a7b165f2af088f82460bd9e69c10ea209cbfb
+810a7b165f2af088f82460bd9e69c10ea209cbfb,810a7b16,Change search suggestion colors,"Change search suggestion colors
+
+Suggestions are now displayed with black text on a white background.
+Closes #114.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421729014,1421729014,5fbbdd99bff131434483833cb55527dd70649d18
+5fbbdd99bff131434483833cb55527dd70649d18,5fbbdd99,Reorder lexicon overflow menu entries,"Reorder lexicon overflow menu entries
+
+Ordered ""Clear favorites"" before ""Clear history"" so that the order of
+these items is parallel to the order in which the lexicon modes are
+listed in the navigation drawer.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421641560,1421641560,06ee398f6dc0a1bdcdcebf0da4e23bdf227f4f1f
+06ee398f6dc0a1bdcdcebf0da4e23bdf227f4f1f,06ee398f,Update build file,"Update build file
+
+Updated build tools and dependencies to latest versions and set all
+version numbers to exact values rather than using the latest-version
+specifier.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421640210,1421640210,33260eb0e61d6bffec063e939a4d8a29440ba9da
+33260eb0e61d6bffec063e939a4d8a29440ba9da,33260eb0,Merge branch 'issue111' into dev,"Merge branch 'issue111' into dev
+
+Conflicts:
+	GreekReference/src/main/res/values/attrs.xml
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421629857,1421629857,"47ed5e8294e375b36340960d74c783a7e783e606,6753039e6105bbd5e2ec61146f3d47232d2a6db4"
+6753039e6105bbd5e2ec61146f3d47232d2a6db4,6753039e,Fix two-pane nav drawer fragment ID,"Fix two-pane nav drawer fragment ID
+
+This fixes a bug introduced in aff3ce3a52b491a94a7e3cca4c54cca9ba971c82
+that causes a crash on launch on two-pane devices. See #111.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421628709,1421628709,132e5b59877c7bf962d337dac127e2f20f96f471
+47ed5e8294e375b36340960d74c783a7e783e606,47ed5e82,Merge pull request #116 from blinskey/issue107,"Merge pull request #116 from blinskey/issue107
+
+Add typeface preference",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1421628131,1421628131,"942250ecee85f4ef91d44ad77e35270c788f94de,e64452f0b22fe475a51f5cd198f3f501054eaaa3"
+e64452f0b22fe475a51f5cd198f3f501054eaaa3,e64452f0,Fix default typeface preference string alias,"Fix default typeface preference string alias
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421627898,1421627898,cf825d81d8ce49ff136312d38ab9727bc0565b65
+132e5b59877c7bf962d337dac127e2f20f96f471,132e5b59,Set action bar elevation,"Set action bar elevation
+
+This adds a slight shadow below the action bar.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421535308,1421535308,aff3ce3a52b491a94a7e3cca4c54cca9ba971c82
+aff3ce3a52b491a94a7e3cca4c54cca9ba971c82,aff3ce3a,Improve navigation drawer appearance,"Improve navigation drawer appearance
+
+The drawer now spans the height of the screen and is positioned under
+the status bar but over all other content. Closes #111.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421529791,1421529791,7ae663656c70f4df7289bf2fb12d8094d5b43889
+942250ecee85f4ef91d44ad77e35270c788f94de,942250ec,"Change ""Grammar"" to ""Syntax"" in action bar title","Change ""Grammar"" to ""Syntax"" in action bar title
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421474711,1421474711,801f4ee1fbee55e8ee469319582a6c2eed2fd073
+7ae663656c70f4df7289bf2fb12d8094d5b43889,7ae66365,Replace Action Bar with Toolbar,"Replace Action Bar with Toolbar
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421471393,1421471393,801f4ee1fbee55e8ee469319582a6c2eed2fd073
+801f4ee1fbee55e8ee469319582a6c2eed2fd073,801f4ee1,Remove debugging log messages,"Remove debugging log messages
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421385384,1421385384,b681ac743e2904ea3b9a06052c484c7ab09de451
+cf825d81d8ce49ff136312d38ab9727bc0565b65,cf825d81,Remove debugging log messsages,"Remove debugging log messsages
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421385359,1421385359,30d60fba54b8337f2cee61539e38b0e499e329d9
+30d60fba54b8337f2cee61539e38b0e499e329d9,30d60fba,Improve handling of text size preference,"Improve handling of text size preference
+
+Preference changes are now handled via a callback in the GreekTextView
+class. The text size can now be fixed at medium by setting the
+allowTextSizeChanges attribute to false in GreekTextView XML layouts.
+This functionality is used to prevent the text size from changing in
+ListView items.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421384921,1421384921,7caa962657ec54d63ee54be3466b1709aa0b8def
+7caa962657ec54d63ee54be3466b1709aa0b8def,7caa9626,Add typeface preference,"Add typeface preference
+
+Adds a preference allowing the user to choose between the Noto Serif and
+Roboto typefaces on devices running SDK 21 or higher. Older devices
+cannot use Roboto due to lack of support for polytonic Greek characters.
+This commit also includes various improvements to the design of the
+SettingsActivity and GreekTextView classes.
+
+Closes #107.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1421381983,1421382201,b681ac743e2904ea3b9a06052c484c7ab09de451
+b681ac743e2904ea3b9a06052c484c7ab09de451,b681ac74,Clean up a few minor code and Javadoc issues,"Clean up a few minor code and Javadoc issues
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420948374,1420948493,4ff98bec27b35f2d4993ee11c6ba336f638e0684
+4ff98bec27b35f2d4993ee11c6ba336f638e0684,4ff98bec,Renamed abstract classes,"Renamed abstract classes
+
+All abstract class names now begin with ""Abstract.""
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420947957,1420947957,a11a2e8822961f54ca7438b0714b3a70210a45f8
+a11a2e8822961f54ca7438b0714b3a70210a45f8,a11a2e88,Remove redundant manifest items,"Remove redundant manifest items
+
+Removed values that are overriden by values specified in build file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420947366,1420947366,ee0ec02b4d6cc6622f57247053d0e9144b3c60d3
+ee0ec02b4d6cc6622f57247053d0e9144b3c60d3,ee0ec02b,Removed unused icons,"Removed unused icons
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420947324,1420947324,ab894a9e523d43e4a51b546be47f4a349fb44f20
+ab894a9e523d43e4a51b546be47f4a349fb44f20,ab894a9e,"Specify exported=""false"" for content providers","Specify exported=""false"" for content providers
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420946564,1420946564,a02afc9f5901bdad45204040d7afd0123cbdc805
+a02afc9f5901bdad45204040d7afd0123cbdc805,a02afc9f,Fix various minor code style issues,"Fix various minor code style issues
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420945019,1420945019,203930ca255e210f9131407ef2b0c1e25e050d0d
+203930ca255e210f9131407ef2b0c1e25e050d0d,203930ca,Add padding to sides of empty list view,"Add padding to sides of empty list view
+
+Closes #112.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420943923,1420944157,60fef763a480909c77f4833009a06ab04a455648
+60fef763a480909c77f4833009a06ab04a455648,60fef763,Update readme and build file for v1.8.0,"Update readme and build file for v1.8.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420398904,1420398904,a3724d7569c718ff40ba6bda9b158affb2b93c19
+a3724d7569c718ff40ba6bda9b158affb2b93c19,a3724d75,Merge branch 'design' into dev,"Merge branch 'design' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420398637,1420398637,"12bc5d9b7bf0033e7fbd56e1dc9bb41423cd6333,8693cc3c2ba2d01eb57fbcd0daf48d3203a2f297"
+8693cc3c2ba2d01eb57fbcd0daf48d3203a2f297,8693cc3c,Improve theme colors,"Improve theme colors
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420398610,1420398610,8b1beab3c0f39bb27aa1ea84bbe7cfb9de9b0bcd
+8b1beab3c0f39bb27aa1ea84bbe7cfb9de9b0bcd,8b1beab3,Update navigation drawer layout,"Update navigation drawer layout
+
+Addresses #89.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420396605,1420396605,2d259da1fe80cbbdce8ff8c24be9c390799f53eb
+12bc5d9b7bf0033e7fbd56e1dc9bb41423cd6333,12bc5d9b,Merge v1.7.2 into dev,"Merge v1.7.2 into dev
+
+v1.7.2 contains a minor bug fix.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420390828,1420390828,"14db1db7ad945f29990158440bafe269fe206429,9af386a4d98f7b857be22a84a8fdc1a1f3237fc1"
+9af386a4d98f7b857be22a84a8fdc1a1f3237fc1,9af386a4,Update readme and build file for v1.7.2,"Update readme and build file for v1.7.2
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420390133,1420390133,39be2b67554cd074365ff215d0f0113fee314412
+39be2b67554cd074365ff215d0f0113fee314412,39be2b67,Add a workaround for a bug on some LG devices,"Add a workaround for a bug on some LG devices
+
+Avoids a bug related to the appcompat-v7 library on some LG devices.
+Fixes #109.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420389790,1420389790,aa28d7c80f2426400cd7bb8946f10bbc58b8c404
+2d259da1fe80cbbdce8ff8c24be9c390799f53eb,2d259da1,Update nav drawer width for Material Design,"Update nav drawer width for Material Design
+
+Addresses #89.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420361693,1420361693,ab9f1c297635c0469ed301b6dda0264e79279c9a
+ab9f1c297635c0469ed301b6dda0264e79279c9a,ab9f1c29,Fix a typo in a string name,"Fix a typo in a string name
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420361070,1420361070,5fe369cd12d07300e41c4ebec9230e812c09e561
+5fe369cd12d07300e41c4ebec9230e812c09e561,5fe369cd,Update empty list messages,"Update empty list messages
+
+Updates the old empty lexicon favorites list message, which referred to
+the old star icon, and updates the empty bookmark list message to
+conform to the new lexicon list message.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420360964,1420360964,2f2efa136552accb8fc8da882d1be65f48bab70e
+2f2efa136552accb8fc8da882d1be65f48bab70e,2f2efa13,Remove an unused method.,"Remove an unused method.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420360782,1420360782,abf8fb7431869df65afe8079c9e127cc10e72070
+abf8fb7431869df65afe8079c9e127cc10e72070,abf8fb74,Redesign navigation drawer,"Redesign navigation drawer
+
+Makes several changes to the visual design of the navigation drawer in
+order to more closely adhere to the Material Design style. Addresses
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420360667,1420360667,cd2f18af90e0ca6d6005feec41ad6ae6b8cb75c0
+cd2f18af90e0ca6d6005feec41ad6ae6b8cb75c0,cd2f18af,Change color palette,"Change color palette
+
+Adds a new color palette based on the Material Design guidelines and
+defines colors in a new XML file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420359805,1420359805,14db1db7ad945f29990158440bafe269fe206429
+14db1db7ad945f29990158440bafe269fe206429,14db1db7,Update icon license info in About dialog,"Update icon license info in About dialog
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420351853,1420351853,934acf2d629f7b776c4615cd8e052443ab5f1f81
+934acf2d629f7b776c4615cd8e052443ab5f1f81,934acf2d,Clarify app icon license in readme,"Clarify app icon license in readme
+
+Added text clarifying that the app icon is licensed under a Creative
+Commons Attribution-ShareAlike 4.0 International license.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420351074,1420351074,3c3b1df09e4346a941e471172e6539458fb67e7b
+3c3b1df09e4346a941e471172e6539458fb67e7b,3c3b1df0,Add a missing link in readme,"Add a missing link in readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420350829,1420350829,9a7ed698eb87ed896d4686e08ead8cdf958b98dd
+9a7ed698eb87ed896d4686e08ead8cdf958b98dd,9a7ed698,Reorganize readme,"Reorganize readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420350154,1420350154,932e21b1b1703ce1d5ef18ca0b6811da972bb014
+932e21b1b1703ce1d5ef18ca0b6811da972bb014,932e21b1,Replace Android Icons with Material Design icons,"Replace Android Icons with Material Design icons
+
+Replaces all icons except for the app icon with images from Google's
+Material Design Icons set. This commit also adds numerous icon files in
+alternate colors that are not currently used in the app. This is being
+done for the sake of convenience in the expectation that we may need
+some of these icons for future UI updates; I'll clean up any remaining
+unused icons once the Material Design update work is finished.
+
+Closes #108 and addresses #89.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420348907,1420348907,1a2d5f2a4840cb34b4a4578abb3ace0f3cd48118
+1a2d5f2a4840cb34b4a4578abb3ace0f3cd48118,1a2d5f2a,Improve NavigationDrawerRow constructor,"Improve NavigationDrawerRow constructor
+
+Constructor now takes a resource ID rather than a name.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420343807,1420343807,7b2006d2376aae49baa42a960e38d94995fe585a
+7b2006d2376aae49baa42a960e38d94995fe585a,7b2006d2,Update copyright year,"Update copyright year
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420314204,1420314204,a3029b3e8b1c8819f3cbd8c7cd1ab8d5054096a8
+a3029b3e8b1c8819f3cbd8c7cd1ab8d5054096a8,a3029b3e,Show polytonic characters in search suggestions,"Show polytonic characters in search suggestions
+
+Enables display of polytonic Greek characters in search suggestions on
+devices running Android 5.0 or later. Fixes #104.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420312841,1420312841,2fc33f5cd78af4ff8eb524ada8803a2a24821388
+2fc33f5cd78af4ff8eb524ada8803a2a24821388,2fc33f5c,Clean up LexiconProvider code and comments,"Clean up LexiconProvider code and comments
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420309826,1420310223,aa28d7c80f2426400cd7bb8946f10bbc58b8c404
+aa28d7c80f2426400cd7bb8946f10bbc58b8c404,aa28d7c8,Update readme and build file for v1.7.1,"Update readme and build file for v1.7.1
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420227043,1420227043,0f3d08aed40d9ecd5c379294bcdd28f231333ec5
+0f3d08aed40d9ecd5c379294bcdd28f231333ec5,0f3d08ae,Fix crash on certain devices running Android 4.2.2,"Fix crash on certain devices running Android 4.2.2
+
+Fixes #105. See Android issue 78377:
+https://code.google.com/p/android/issues/detail?id=78377#c138
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1420226982,1420226982,a58896bbe73dbd297e932816df22f08035b35b42
+a58896bbe73dbd297e932816df22f08035b35b42,a58896bb,Add versionCode and versionName to build file,"Add versionCode and versionName to build file
+
+The values set for these options will override the values set in the
+manifest.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419562350,1419562350,478cf4a632a45d8d2d8f947137b5c8b3a50a2b44
+478cf4a632a45d8d2d8f947137b5c8b3a50a2b44,478cf4a6,Add build status image,"Add build status image
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419554338,1419554338,d458c40429675bcccca780738c2b9d48603aca2d
+d458c40429675bcccca780738c2b9d48603aca2d,d458c404,Fix debug builds with no properties file,"Fix debug builds with no properties file
+
+Debug builds previously failed if a release.properties file was not
+present. This should allow Travis CI builds to execute properly (see
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419553747,1419553747,ce56f39817e522fcfdc9f9b7a11f4c4929925042
+ce56f39817e522fcfdc9f9b7a11f4c4929925042,ce56f398,Add .travis.yml,"Add .travis.yml
+
+Addresses #103.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419551915,1419551915,e38eeec84888a495f463c753a6738c3136d7e128
+e38eeec84888a495f463c753a6738c3136d7e128,e38eeec8,Clean up code and documentation,"Clean up code and documentation
+
+This completes the initial cleanup of major code style and documentation
+issues.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419459178,1419459178,7282b3f4bd909f614599fabdcc6d6798c0397957
+7282b3f4bd909f614599fabdcc6d6798c0397957,7282b3f4,Move license files to subdirectory,"Move license files to subdirectory
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419457374,1419457374,1b4421ec2e803ef05cbf46173a9dcaa4bb5f0e77
+1b4421ec2e803ef05cbf46173a9dcaa4bb5f0e77,1b4421ec,Clean up code and documentation,"Clean up code and documentation
+
+This commit includes minor improvements to numerous files, but not all
+code has yet been reviewed for basic style and documentation issues.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419310866,1419310866,457297e2aed4cd03908fc63d2b9e966eaa171b75
+457297e2aed4cd03908fc63d2b9e966eaa171b75,457297e2,Replace standard method with AppCompat method,"Replace standard method with AppCompat method
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419308800,1419308800,bcc7960825f5e5bb5fe5205ea3b7cf06d863b177
+bcc7960825f5e5bb5fe5205ea3b7cf06d863b177,bcc79608,Migrate to Android Gradle plugin v1.0.0.,"Migrate to Android Gradle plugin v1.0.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419133503,1419133503,d58c2bef3ebb42bb0eef71d36142f3a284e925d1
+d58c2bef3ebb42bb0eef71d36142f3a284e925d1,d58c2bef,Add icons from androidicons.com.,"Add icons from androidicons.com.
+
+These icons are now open source. Also updated readme. Closes #102.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1419127330,1419127330,5da1affa338db561bd866af5adbcf553080cd7c7
+5da1affa338db561bd866af5adbcf553080cd7c7,5da1affa,Update readme for version 1.7.0.,"Update readme for version 1.7.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1418693526,1418693526,4b0968d5ba1120a3b67febfb75d07b714bd7292f
+4b0968d5ba1120a3b67febfb75d07b714bd7292f,4b0968d5,Allow installation on external storage.,"Allow installation on external storage.
+
+Closes #98.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1418693429,1418693429,42c656fcade2fd61fc2041f75e192cd692f46fa1
+42c656fcade2fd61fc2041f75e192cd692f46fa1,42c656fc,Update readme and manifest for v1.6.2.,"Update readme and manifest for v1.6.2.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416269781,1416269781,af56bed2ddd44c3d4b2bb2095e5578601407d447
+af56bed2ddd44c3d4b2bb2095e5578601407d447,af56bed2,Fix crash in PerseusToolActivity.,"Fix crash in PerseusToolActivity.
+
+I overlooked this class when converting Activities to ActionBarActivities.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416269520,1416269520,5a7da280bc2305b8fbe14f538149d4996c0ef238
+5a7da280bc2305b8fbe14f538149d4996c0ef238,5a7da280,Update readme and manifest for v1.6.1.,"Update readme and manifest for v1.6.1.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416189334,1416189334,09e129de99df01a4fb7767ce905730aa16b3af91
+09e129de99df01a4fb7767ce905730aa16b3af91,09e129de,Fix a ProGuard-related crash.,"Fix a ProGuard-related crash.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416189272,1416189272,a1f04455dfc9a5d030bb2f21b1bdc851c367cb69
+a1f04455dfc9a5d030bb2f21b1bdc851c367cb69,a1f04455,Update readme and manifest for v1.6.0.,"Update readme and manifest for v1.6.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416183216,1416183216,30a746e990eab5bbe5fde4432046caf862c0399b
+30a746e990eab5bbe5fde4432046caf862c0399b,30a746e9,Remove v21 styles.xml.,"Remove v21 styles.xml.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416183166,1416183166,03a3ef0dc5a8f2af39e4763a502a111ac417291c
+03a3ef0dc5a8f2af39e4763a502a111ac417291c,03a3ef0d,Update readme with donation info.,"Update readme with donation info.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416182801,1416182801,60d8e3fd96267492cb5f6762170911d40b4ca1a3
+60d8e3fd96267492cb5f6762170911d40b4ca1a3,60d8e3fd,Update icon info in readme.,"Update icon info in readme.
+
+Added text regarding the upcoming open-sourcing of the Android Developer
+Icons.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416182674,1416182674,0f3d386023aa1a6d7371f95b66feea96e9fd4839
+0f3d386023aa1a6d7371f95b66feea96e9fd4839,0f3d3860,Add donation message in About dialog.,"Add donation message in About dialog.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416182351,1416182351,b39f5e323448be034901596b08e4be6ea1d19895
+b39f5e323448be034901596b08e4be6ea1d19895,b39f5e32,Improve theme.,"Improve theme.
+
+Made text black rather than gray and added and improved theme colors. The
+theme still needs some work, particularly the gray icons and light blue
+accent color left over from Holo.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416181766,1416181766,d7604c3aceed5e680d287b1661437f75438e3120
+d7604c3aceed5e680d287b1661437f75438e3120,d7604c3a,Update XML namespaces for appcompat-v7.,"Update XML namespaces for appcompat-v7.
+
+Use the `http://schemas.android.com/apk/res-auto` namespace for the
+`showAsAction` attribute in various XML files.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416179087,1416179087,76a22c9c5c8e62e129d3c6ccf6af589f51e6aee5
+76a22c9c5c8e62e129d3c6ccf6af589f51e6aee5,76a22c9c,Suppress an erroneous lint message.,"Suppress an erroneous lint message.
+
+Contrary to lint message, we do need the appcompat-v7 library for Material
+Design theming on pre-Lollipop devices.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416178864,1416178864,31dcd904eec5614cb5523812d8ccfbcbf226f66b
+31dcd904eec5614cb5523812d8ccfbcbf226f66b,31dcd904,Add Material Design theme on pre-5.0 devices.,"Add Material Design theme on pre-5.0 devices.
+
+This required adding the appcompat-v7 library.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1416178625,1416178625,393e6ddbdcfa3947aa39dea54bb87c94e524e297
+393e6ddbdcfa3947aa39dea54bb87c94e524e297,393e6ddb,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415487010,1415487010,"00b492511cea029a7319a5f47f83d72b67500370,3a081cb40fe3ea7587340e3c18cf94064ca7a81e"
+00b492511cea029a7319a5f47f83d72b67500370,00b49251,Add missing imports and remove unused parameters.,"Add missing imports and remove unused parameters.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415475854,1415475854,8db266a4f2bbbcad9b57e2b47f3479674c9e71e2
+8db266a4f2bbbcad9b57e2b47f3479674c9e71e2,8db266a4,Remove unnecessary log messages.,"Remove unnecessary log messages.
+
+Closes #96.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415430524,1415430524,6d27eb92a439dc4e788649f452bae9a1ff5141e7
+6d27eb92a439dc4e788649f452bae9a1ff5141e7,6d27eb92,Fix XML attribute disabling RTL support.,"Fix XML attribute disabling RTL support.
+
+Attribute was added to wrong element in 7a46d3cf4d.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415430259,1415430259,4c402534bd9f515b19e6db12f6901279f45cd61b
+4c402534bd9f515b19e6db12f6901279f45cd61b,4c402534,Remove an erroneous Javadoc tag.,"Remove an erroneous Javadoc tag.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415430056,1415430056,57649cb2c20559b7290dc004e26621c28f91c08b
+57649cb2c20559b7290dc004e26621c28f91c08b,57649cb2,Replace if-else chains with switch statements.,"Replace if-else chains with switch statements.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415430018,1415430018,49617b16f6403be29fc0e5eb99399bf43ea9c54f
+49617b16f6403be29fc0e5eb99399bf43ea9c54f,49617b16,"Combine identical ""catch"" blocks.","Combine identical ""catch"" blocks.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429968,1415429968,3edaf5c231e44637f480e15405dcaa57e3d5b159
+3edaf5c231e44637f480e15405dcaa57e3d5b159,3edaf5c2,Replace explicit types with diamond argument.,"Replace explicit types with diamond argument.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429935,1415429935,ea4b612e23fb0c63771592c30ffd4c28a2900949
+ea4b612e23fb0c63771592c30ffd4c28a2900949,ea4b612e,Remove unused imports.,"Remove unused imports.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429866,1415429866,0d3b27a966efbc659e3590bae8b839b4e4cbc7fb
+0d3b27a966efbc659e3590bae8b839b4e4cbc7fb,0d3b27a9,Eliminate unused variable assignments.,"Eliminate unused variable assignments.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429821,1415429821,6d3816ead6a467d21f5a6f0ffc8351cb52e17ecf
+6d3816ead6a467d21f5a6f0ffc8351cb52e17ecf,6d3816ea,"Remove an empty ""if"" statement.","Remove an empty ""if"" statement.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429611,1415429611,320d54ca5cbc29549989b8f404a4b9ed79d6d5a2
+320d54ca5cbc29549989b8f404a4b9ed79d6d5a2,320d54ca,Add some @nonNull annotations.,"Add some @nonNull annotations.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429552,1415429552,1cdd2462fbb414b446d278da4d44829a473ad411
+1cdd2462fbb414b446d278da4d44829a473ad411,1cdd2462,Add some assert statements to catch NPEs.,"Add some assert statements to catch NPEs.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429503,1415429503,7bea38fdf8775e22f5e2a6ebe532713b24c42937
+7bea38fdf8775e22f5e2a6ebe532713b24c42937,7bea38fd,Remove a couple of unused fields.,"Remove a couple of unused fields.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429293,1415429293,08fadd25429d049716cb2dfb1ce70bb7adce972f
+08fadd25429d049716cb2dfb1ce70bb7adce972f,08fadd25,Remove a log message.,"Remove a log message.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415429222,1415429222,f23d6942e2334af4a21f2b8af74f21212506e127
+f23d6942e2334af4a21f2b8af74f21212506e127,f23d6942,Simplified a conditional.,"Simplified a conditional.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415428831,1415428831,fd689eeb845d801f92de5a87d88731639304255e
+fd689eeb845d801f92de5a87d88731639304255e,fd689eeb,Suppress lint message on setJavaScriptEnabled.,"Suppress lint message on setJavaScriptEnabled.
+
+We need to enable JavaScript in order to display polytonic Greek
+characters.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415428592,1415428592,7a46d3cf4d106e23e4d39ee61f5c4fd2f763417f
+7a46d3cf4d106e23e4d39ee61f5c4fd2f763417f,7a46d3cf,Disable RTL support in manifest.,"Disable RTL support in manifest.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415428535,1415428535,42af5615456a0e74a028db4b9cdf4917e2442298
+42af5615456a0e74a028db4b9cdf4917e2442298,42af5615,Suppress a lint message.,"Suppress a lint message.
+
+We intentionally create a toast without showing it, as explained in a
+comment near the newly added annotation.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415428372,1415428372,dddfc4ac7bd794ab9efea2cba4b7200878a77e9b
+dddfc4ac7bd794ab9efea2cba4b7200878a77e9b,dddfc4ac,Fix layout_height for a couple of ScrollViews.,"Fix layout_height for a couple of ScrollViews.
+
+Replaced the incorrect ""match_parent"" attribute value with
+""wrap_content.""
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415428300,1415428300,6b35e7cbf99369f7a77f74510cdcd7faae46558b
+6b35e7cbf99369f7a77f74510cdcd7faae46558b,6b35e7cb,Remove appcompat library.,"Remove appcompat library.
+
+Our minimum SDK version is 14, so this library is not necessary.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427996,1415427996,64ec9c846a0025fd6d42a44eaa2e0d6a91de32de
+64ec9c846a0025fd6d42a44eaa2e0d6a91de32de,64ec9c84,"Revert ""Fix namespace on menu attributes.""","Revert ""Fix namespace on menu attributes.""
+
+This reverts commit 861b7bf2154b38491d1737f875b1ed3a9d9e677b. It turns
+out that we don't actually need to use the appcompat library, so there's
+no need for these changes.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427921,1415427921,16ce7602135344d24577bf6d3b50f49b9e0773fc
+16ce7602135344d24577bf6d3b50f49b9e0773fc,16ce7602,Update build tools version to 21.0.1.,"Update build tools version to 21.0.1.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427825,1415427825,861b7bf2154b38491d1737f875b1ed3a9d9e677b
+861b7bf2154b38491d1737f875b1ed3a9d9e677b,861b7bf2,Fix namespace on menu attributes.,"Fix namespace on menu attributes.
+
+Replaced numerous instances of ""android:showAsAction"" with
+""app:showAsAction,"" as required when using the appcompat library.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427713,1415427713,6004e4b2abc2d58110d20ba9b9773f6f1324c339
+6004e4b2abc2d58110d20ba9b9773f6f1324c339,6004e4b2,Suppress an unnecessary warning.,"Suppress an unnecessary warning.
+
+Suppressed ""Image without contentDescription"" warning for decorative
+image.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427371,1415427371,0d736ac6de90283769bed324ed4d32a99db18d2b
+0d736ac6de90283769bed324ed4d32a99db18d2b,0d736ac6,Remove a stray character from a layout file.,"Remove a stray character from a layout file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427151,1415427151,e6281a036920b83a513a186a34bf14609e38ecde
+e6281a036920b83a513a186a34bf14609e38ecde,e6281a03,Replace an ellipsis string with a character.,"Replace an ellipsis string with a character.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427092,1415427092,feb39b2414f972b030f52efb8b2971530e69f611
+feb39b2414f972b030f52efb8b2971530e69f611,feb39b24,Fix a deprecated Gradle plugin name.,"Fix a deprecated Gradle plugin name.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415427031,1415427031,3f05c0cbf781399d8db90172e999b16586ffefc3
+3f05c0cbf781399d8db90172e999b16586ffefc3,3f05c0cb,Remove a deprecated method call and fix a NPE.,"Remove a deprecated method call and fix a NPE.
+
+Probable fix for #95.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1415426685,1415426685,0fd1797323382fbaf4e7a9b94eecb7f188bec55b
+3a081cb40fe3ea7587340e3c18cf94064ca7a81e,3a081cb4,Fix an error in readme,Fix an error in readme,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1414380050,1414380050,0fd1797323382fbaf4e7a9b94eecb7f188bec55b
+0fd1797323382fbaf4e7a9b94eecb7f188bec55b,0fd17973,Update readme and manifest for v1.5.0.,"Update readme and manifest for v1.5.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413741038,1413741038,d4d8e1cd143c5662eef3a4d0314499ac9db894b6
+d4d8e1cd143c5662eef3a4d0314499ac9db894b6,d4d8e1cd,Add Material Design theme.,"Add Material Design theme.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413740538,1413740538,b0d8281f6b6ce7468ba46a6501bc32293867cb46
+b0d8281f6b6ce7468ba46a6501bc32293867cb46,b0d8281f,Modify .gitignore.,"Modify .gitignore.
+
+Ignore top-level ""build"" directory.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413740517,1413740517,317f0f774afab9a1b29c97c090e0233294e332cd
+317f0f774afab9a1b29c97c090e0233294e332cd,317f0f77,Improve compatibility with SDK versions < 17.,"Improve compatibility with SDK versions < 17.
+
+Added android:paddingRight attribute to
+greek_simple_list_item_activated_1.xml.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413739800,1413739800,e789ba18cc8acbcc654cb374adca4f99485b3f03
+e789ba18cc8acbcc654cb374adca4f99485b3f03,e789ba18,Fix a layout bug.,"Fix a layout bug.
+
+Replaced ""wrap_content"" attributes with ""match_parent.""
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413739656,1413739656,c8fb05d00059e77b8a41232458170bf6aae30487
+c8fb05d00059e77b8a41232458170bf6aae30487,c8fb05d0,Make debug builds unsigned.,"Make debug builds unsigned.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413738443,1413738443,1519f0ea4419e984915d01d04ec33fcb34937f31
+1519f0ea4419e984915d01d04ec33fcb34937f31,1519f0ea,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413596092,1413596092,"47627bfbb548b5430a602df411554b5a9ce0c220,adcd8514b26ed5156b9bf7096283ee4d49a5d49e"
+47627bfbb548b5430a602df411554b5a9ce0c220,47627bfb,Update SDK and build tools and fix errors.,"Update SDK and build tools and fix errors.
+
+- Updated SDK to version 21.
+- Updated build tools to version 21.
+- Updated Android gradle plug-in to version 0.13.2.
+- Updated Gradle wrapper to use Gradle version 2.1.
+- Fixed several errors reported by linter.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1413595812,1413595812,13a6513bc4ab599171c695a37cd4eaae0300aa62
+adcd8514b26ed5156b9bf7096283ee4d49a5d49e,adcd8514,Update readme.,"Update readme.
+
+Added an item about making a Latin version of the app to the FAQ.",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1411236234,1411236234,f28ab8df84bea1ad77e73e1e4c0365c1d61c5a44
+f28ab8df84bea1ad77e73e1e4c0365c1d61c5a44,f28ab8df,Improve readme.,Improve readme.,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1410845346,1410845346,d3d7737ab3d29fb1f17d16cc90847436dbd39b50
+d3d7737ab3d29fb1f17d16cc90847436dbd39b50,d3d7737a,Improve a hyperlink in readme.,Improve a hyperlink in readme.,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1410844962,1410844962,44a48d21a1ff865b9ec2ebfbaff7e90b2b9da2e1
+44a48d21a1ff865b9ec2ebfbaff7e90b2b9da2e1,44a48d21,Improve readme.,"Improve readme.
+
+Changed main heading, added contents, FAQ, and press, and fixed various minor issues.",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1410844842,1410844842,13a6513bc4ab599171c695a37cd4eaae0300aa62
+13a6513bc4ab599171c695a37cd4eaae0300aa62,13a6513b,Update readme and manifest for v1.4.2.,"Update readme and manifest for v1.4.2.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1410075710,1410075710,16659c08f1285064b2ad8ca533720cb35c641a84
+16659c08f1285064b2ad8ca533720cb35c641a84,16659c08,Fix #76.,"Fix #76.
+
+It looks like the ""Unmarshalling unknown type code"" exception was most likely
+caused by ProGuard, which we were running without a configuration file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1410073447,1410073447,f36e2b857b52d0cd9ee7c188cdecece65b9ef81c
+f36e2b857b52d0cd9ee7c188cdecece65b9ef81c,f36e2b85,Update readme and manifest for v1.4.1.,"Update readme and manifest for v1.4.1.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1401246771,1401246771,d7c1ee73c7a38748a1312f7a232ca87c465826ae
+d7c1ee73c7a38748a1312f7a232ca87c465826ae,d7c1ee73,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1401246642,1401246642,"5f45751859be172a775a2726d6c0aa95911e1030,baec43cb6a56c5bc1f7781a6872d0a19c3e7bad1"
+5f45751859be172a775a2726d6c0aa95911e1030,5f457518,Fix a crash on Samsung Galaxy Note 10.1.,"Fix a crash on Samsung Galaxy Note 10.1.
+
+Probable fix for #73, but needs testing on the affected device. See http://stackoverflow.com/questions/19037164/invalid-int-on-xml-android-color-file-when-launched-on-a-galaxy-tab for source of fix.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1401246418,1401246418,1653368d9af3a2da9a6f617abf05543aa515489e
+baec43cb6a56c5bc1f7781a6872d0a19c3e7bad1,baec43cb,Fix typo in readme.,Fix typo in readme.,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1398227597,1398227597,f10f4db1d6cf7cc9a426f7c6ad3d980c8832e862
+f10f4db1d6cf7cc9a426f7c6ad3d980c8832e862,f10f4db1,Fix link in readme.,Fix link in readme.,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1398227471,1398227471,1653368d9af3a2da9a6f617abf05543aa515489e
+1653368d9af3a2da9a6f617abf05543aa515489e,1653368d,Update readme and contributing guidelines.,"Update readme and contributing guidelines.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1398223574,1398223574,a79ebb56e7f10fd4b845c053062c555914f0fefa
+a79ebb56e7f10fd4b845c053062c555914f0fefa,a79ebb56,Update build files.,"Update build files.
+
+Fixes #57.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1398221677,1398221690,7f3088b2d670877c480ca303c807029bc8d871da
+7f3088b2d670877c480ca303c807029bc8d871da,7f3088b2,Add placeholder icons.,"Add placeholder icons.
+
+Closes #39.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1398220947,1398220947,5f89e17b162e65081e817d045680334bee19c9b0
+5f89e17b162e65081e817d045680334bee19c9b0,5f89e17b,Add Greek Reference Database Creator as a submodule.,"Add Greek Reference Database Creator as a submodule.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1398028989,1398028989,408d4d687e74b8de8ce6464ac7db43fb1957055a
+408d4d687e74b8de8ce6464ac7db43fb1957055a,408d4d68,Update readme and manifest for v1.3.1 release.,"Update readme and manifest for v1.3.1 release.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1393884369,1393884369,0930d4e2cd861561bc74d6cf8c4af6fd3cbe5160
+0930d4e2cd861561bc74d6cf8c4af6fd3cbe5160,0930d4e2,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1393882444,1393882444,"1a7ff8a84965df538db0df00e06607f5f0900944,6da802ee515be9b8e16136b3e449b9dd7e6d3439"
+1a7ff8a84965df538db0df00e06607f5f0900944,1a7ff8a8,Fix a bug when clearing syntax bookmarks.,"Fix a bug when clearing syntax bookmarks.
+
+Fixes #69, which caused the bookmark icon to remain in the action bar after
+clearing the bookmark list with an item selected on tablets.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1393882109,1393882109,039b49a3f9746c2c0c52e2f663af76d4f91ef7c3
+039b49a3f9746c2c0c52e2f663af76d4f91ef7c3,039b49a3,Simplify addHistory method.,"Simplify addHistory method.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1393879906,1393879906,560e3cbd9b0c9f983c2aac98574c7cc507ea28cc
+6da802ee515be9b8e16136b3e449b9dd7e6d3439,6da802ee,Improve a comment.,Improve a comment.,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1392776902,1392776902,560e3cbd9b0c9f983c2aac98574c7cc507ea28cc
+560e3cbd9b0c9f983c2aac98574c7cc507ea28cc,560e3cbd,Update readme and manifest for 1.3.0.,"Update readme and manifest for 1.3.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392759363,1392759363,8eaaa8ac3092129b7f6fc9741fdb1116959afb3c
+8eaaa8ac3092129b7f6fc9741fdb1116959afb3c,8eaaa8ac,Clear detail fragment on list reset.,"Clear detail fragment on list reset.
+
+Closes #67.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392759187,1392759187,2f32d9dde45e007cdbfb5f703e03ab4f7c37b1ae
+2f32d9dde45e007cdbfb5f703e03ab4f7c37b1ae,2f32d9dd,Fix menu ordering on tablets.,"Fix menu ordering on tablets.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392758539,1392758539,a395a46647cb514c9a41b4d9259ed6b92f625bad
+a395a46647cb514c9a41b4d9259ed6b92f625bad,a395a466,Add a couple of comments.,"Add a couple of comments.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392758254,1392758254,6a577a101d757b0bc33bab65cec14c5b1d74f274
+6a577a101d757b0bc33bab65cec14c5b1d74f274,6a577a10,Add setting to hide View on Perseus option.,"Add setting to hide View on Perseus option.
+
+Closes #68.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392757654,1392757654,0915160be9b79f2e948341b645aa8d9adb2b12b0
+0915160be9b79f2e948341b645aa8d9adb2b12b0,0915160b,Remove unused stylesheet.,"Remove unused stylesheet.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392756305,1392756305,69ac0ba8338e3448943235a1c6d92ff05f5b6d51
+69ac0ba8338e3448943235a1c6d92ff05f5b6d51,69ac0ba8,Add custom font in WebView through CSS injection.,"Add custom font in WebView through CSS injection.
+
+Addresses #68.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392755981,1392755981,9463c884c48722e14d1111a2b8965c6a49efbcb9
+9463c884c48722e14d1111a2b8965c6a49efbcb9,9463c884,Add basic Word Study Tool feature.,"Add basic Word Study Tool feature.
+
+Addresses #68. I'd still like to add a custom typeface and a setting to
+disable this feature.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1392751253,1392751336,11736eeae380cbe4da9264694835a228a02ba049
+11736eeae380cbe4da9264694835a228a02ba049,11736eea,Update manifest and readme for v1.2.1 release.,"Update manifest and readme for v1.2.1 release.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391579061,1391579061,fe1d4039b6185d834c0d2af9db8fd3e2948f2ae4
+fe1d4039b6185d834c0d2af9db8fd3e2948f2ae4,fe1d4039,"Use ""orth"" instead of ""key"" for lexicon headings.","Use ""orth"" instead of ""key"" for lexicon headings.
+
+Addresses #65. This fixes the headings in the lexicon entries, but we're still
+using the key values for lexicon lists. We need to either fix the original
+text or modify the GRDBC to use orth values instead of key values.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391578390,1391578390,c8da6afdc2d0017ef9cef44dcab4de7c90958a51
+c8da6afdc2d0017ef9cef44dcab4de7c90958a51,c8da6afd,Fix a lexicon parser crash.,"Fix a lexicon parser crash.
+
+Fixes #64. The parser was crashing due to an empty ""tr"" element. The remaining
+oddities in the text mirror the entry displayed on Perseus, with one
+exception: the ""key"" value, which we use to display the entry heading, is
+incorrect. We need to use the ""orth"" value instead. I have created issue #65
+to track this bug.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391577632,1391577632,ee12b42e7afdcbd17caf6995484d99d9d0225df0
+ee12b42e7afdcbd17caf6995484d99d9d0225df0,ee12b42e,Add lexicon favorites database upgrade code.,"Add lexicon favorites database upgrade code.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391489693,1391489693,c8cf8844227b823e4f863950524ac2693515e92f
+c8cf8844227b823e4f863950524ac2693515e92f,c8cf8844,Update manifest and readme for v1.2.0 release.,"Update manifest and readme for v1.2.0 release.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391487073,1391487073,9a74be24b86b82596818f0f2819e93157683cb16
+9a74be24b86b82596818f0f2819e93157683cb16,9a74be24,Fix a bug affecting lexicon favorites ordering.,"Fix a bug affecting lexicon favorites ordering.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391486521,1391486521,fd1a4bbd1296cab9e117da3b40b837e2784d66ac
+fd1a4bbd1296cab9e117da3b40b837e2784d66ac,fd1a4bbd,Remove deprecated Mode methods.,"Remove deprecated Mode methods.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391485879,1391485879,d84b37f8ec027436b9f2ed622b51b37b200ea966
+d84b37f8ec027436b9f2ed622b51b37b200ea966,d84b37f8,Add properly alphabetized lexicon database.,"Add properly alphabetized lexicon database.
+
+This commit adds a new, properly alphabetized version of the lexicon database
+created using GRDBC 1.2.0. This fixes #62.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391485248,1391485248,46c13542ed35c58a52bf318e03d0d75982e13446
+46c13542ed35c58a52bf318e03d0d75982e13446,46c13542,Improve one-pane mode for tablets.,"Improve one-pane mode for tablets.
+
+Closes #60.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391480688,1391480688,39086dbf1caa95e39f2120ff303eed957bcb9433
+39086dbf1caa95e39f2120ff303eed957bcb9433,39086dbf,Add non-static mode checking methods.,"Add non-static mode checking methods.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391479990,1391479990,64b1b3d2a91a919c5069092723962bd7f28f1a31
+64b1b3d2a91a919c5069092723962bd7f28f1a31,64b1b3d2,Add experimental one-pane mode for tablets.,"Add experimental one-pane mode for tablets.
+
+Addresses #60.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391479092,1391479092,a07f1398a2287aaaf959fadd3f0db87622cccccb
+a07f1398a2287aaaf959fadd3f0db87622cccccb,a07f1398,Replace deprecated method in SyntaxHelper.,"Replace deprecated method in SyntaxHelper.
+
+Closes #58.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391475010,1391475010,6f09f403b121d6b8f44d35a57ba9f1a947fe885c
+6f09f403b121d6b8f44d35a57ba9f1a947fe885c,6f09f403,Update readme.,"Update readme.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391329913,1391329913,65df863f6bbfdcffe699e48c69217cd65a5ba3a5
+65df863f6bbfdcffe699e48c69217cd65a5ba3a5,65df863f,Update manifest for 1.1.0.,"Update manifest for 1.1.0.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391329254,1391329254,94d4eb33d5b928feed32baae2f8e2ae14f70c8f0
+94d4eb33d5b928feed32baae2f8e2ae14f70c8f0,94d4eb33,Update lexicon database.,"Update lexicon database.
+
+This commit adds version 2 of the lexicon database, which was created using
+GRDBC 1.1.1. The database updates fix errors in the text related to Greek
+numerals and add the greekLowercase column to the index.
+
+Closes #53 and addresses #52.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391326935,1391326935,c00b216a9be4222b5e49c8b0735821bbd466db64
+c00b216a9be4222b5e49c8b0735821bbd466db64,c00b216a,Update SQLiteAssetHelper,"Update SQLiteAssetHelper
+
+We now use the version of the SQLiteAssetHelper library hosted on Maven
+Central.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391317986,1391317986,bca4b6080e77d1055259f64132ff8f095224c1fd
+bca4b6080e77d1055259f64132ff8f095224c1fd,bca4b608,Move About dialog to Settings menu,"Move About dialog to Settings menu
+
+Closes #55, but see #56.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391317740,1391317740,683410170cb43b4e5af828865d3bf75173fe022b
+683410170cb43b4e5af828865d3bf75173fe022b,68341017,Add settings menu.,"Add settings menu.
+
+Closes #22. The About dialog has not yet been merged into the settings menu.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1391291268,1391291268,6b6190e13354ebf69caddf506674b3dd5de8cc05
+6b6190e13354ebf69caddf506674b3dd5de8cc05,6b6190e1,Update readme,"Update readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390174701,1390174701,b280d69641174de26a60af1ab11179732ed8db9c
+b280d69641174de26a60af1ab11179732ed8db9c,b280d696,Improve Gradle build file,"Improve Gradle build file
+
+It's no longer necessary to comment out the release-related lines when
+creating a debug build.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390173403,1390173403,b83cbe40b01e0e8d73e3f36fc9c0d4988327c7f9
+b83cbe40b01e0e8d73e3f36fc9c0d4988327c7f9,b83cbe40,Add version number in About dialog,"Add version number in About dialog
+
+Closes #51.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390121819,1390121819,ec517df3e2ed093b6a96f9fbddc18258c436dc92
+ec517df3e2ed093b6a96f9fbddc18258c436dc92,ec517df3,Remove debug logging and optimize imports,"Remove debug logging and optimize imports
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390115615,1390115615,886c99e11369da75faa070875d451f3d2ea1e1a7
+886c99e11369da75faa070875d451f3d2ea1e1a7,886c99e1,Fix Lexicon Favorites list ordering,"Fix Lexicon Favorites list ordering
+
+Fixes #49.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390115503,1390115503,fa8997a23804fbb1292c408bdb2e818f0353b0fc
+fa8997a23804fbb1292c408bdb2e818f0353b0fc,fa8997a2,Restore Amazon badge image,"Restore Amazon badge image
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390109694,1390109694,8107d740ffae36405aaf52c6e4f9f56bf9b2d319
+8107d740ffae36405aaf52c6e4f9f56bf9b2d319,8107d740,Fix lexicon browse list ordering,"Fix lexicon browse list ordering
+
+Fixes #45.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390088995,1390088995,5b32b00a82622f2cc4e62c4321c9ca70669a6bbd
+5b32b00a82622f2cc4e62c4321c9ca70669a6bbd,5b32b00a,Add contributing guidelines,"Add contributing guidelines
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1390000656,1390000656,081ca95cda79e42a9ee5d8a38475ddb05fa93324
+081ca95cda79e42a9ee5d8a38475ddb05fa93324,081ca95c,Delete images directory,"Delete images directory
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389939898,1389939898,6d401abf15b91168ca44633f7676e4cb14a50fca
+6d401abf15b91168ca44633f7676e4cb14a50fca,6d401abf,Update files for v1.0.3,"Update files for v1.0.3
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389937075,1389937075,f86428f63978063708fcdb1fbd2df5f174c0b020
+f86428f63978063708fcdb1fbd2df5f174c0b020,f86428f6,Clean up and document more code,"Clean up and document more code
+
+Closes #24 and closes #32.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389936781,1389936781,0b79bbd3e560bda474dff0802357ff709e6d321d
+0b79bbd3e560bda474dff0802357ff709e6d321d,0b79bbd3,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389935387,1389935387,"573d40513ce76065ee99e527c452cecef4c84e5b,e9500df45c027d930d3c7b9ad85da6b53687672d"
+573d40513ce76065ee99e527c452cecef4c84e5b,573d4051,Fix search suggestion ordering,"Fix search suggestion ordering
+
+Prior to this change, we were sorting lexicon search suggestions by the
+_id column. It turns out that the IDs don't always correspond to alphabetical
+order, so we now retrieve and sort by the greekNoSymbols column instead.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389934934,1389934934,8888031fff46ed4fbe665bfa21300bdc7c882ad2
+e9500df45c027d930d3c7b9ad85da6b53687672d,e9500df4,Merge branch 'dev' of github.com:blinskey/greek-reference into dev,"Merge branch 'dev' of github.com:blinskey/greek-reference into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389849070,1389849070,"9b58f7214fddae3844a8b9c812d3634998387f6a,430d9134e971222f0052c5694bd0a9b319276cf9"
+9b58f7214fddae3844a8b9c812d3634998387f6a,9b58f721,Merge commit 'f97e90a225fcd95a8a94c3f0fb465d6e82c9740b' into dev,"Merge commit 'f97e90a225fcd95a8a94c3f0fb465d6e82c9740b' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389849057,1389849057,"a89c40e242bfa109afb305e9e85b650ff2cdf08b,f97e90a225fcd95a8a94c3f0fb465d6e82c9740b"
+f97e90a225fcd95a8a94c3f0fb465d6e82c9740b,f97e90a2,Add Amazon badge image,"Add Amazon badge image
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389849007,1389849007,953c51453d744cd909bd7d8950b61ec2a222de44
+a89c40e242bfa109afb305e9e85b650ff2cdf08b,a89c40e2,Merge commit '953c51453d744cd909bd7d8950b61ec2a222de44' into dev,"Merge commit '953c51453d744cd909bd7d8950b61ec2a222de44' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389848869,1389848929,"032068f8273db2930bb63e20d411cbca0adc3856,953c51453d744cd909bd7d8950b61ec2a222de44"
+430d9134e971222f0052c5694bd0a9b319276cf9,430d9134,Merge commit '953c51453d744cd909bd7d8950b61ec2a222de44' into dev,"Merge commit '953c51453d744cd909bd7d8950b61ec2a222de44' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389848869,1389848869,"032068f8273db2930bb63e20d411cbca0adc3856,953c51453d744cd909bd7d8950b61ec2a222de44"
+953c51453d744cd909bd7d8950b61ec2a222de44,953c5145,Add Amazon badge,"Add Amazon badge
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389848846,1389848846,8888031fff46ed4fbe665bfa21300bdc7c882ad2
+032068f8273db2930bb63e20d411cbca0adc3856,032068f8,Clean up and document more code.,"Clean up and document more code.
+
+Addresses #24 and #32.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389768401,1389768401,cc505db5f3cf741e97c851162e6b9a882cc0bfd1
+cc505db5f3cf741e97c851162e6b9a882cc0bfd1,cc505db5,Clean up and document MainActivity,"Clean up and document MainActivity
+
+Addresses #24 and #32.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389763567,1389763567,8888031fff46ed4fbe665bfa21300bdc7c882ad2
+8888031fff46ed4fbe665bfa21300bdc7c882ad2,8888031f,Merge branch 'master' of github.com:blinskey/greek-reference,"Merge branch 'master' of github.com:blinskey/greek-reference
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389733949,1389733949,"5c845c632602a76b28cd50aac21a4d5e6d2a84a7,2d69ba8976838e553f2665321aa2f14fa0ece081"
+5c845c632602a76b28cd50aac21a4d5e6d2a84a7,5c845c63,Add Google Play badge to readme,"Add Google Play badge to readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389733927,1389733927,d96bf3bef298b4909f3ae48ce7d04e8d93fe535a
+2d69ba8976838e553f2665321aa2f14fa0ece081,2d69ba89,Update readme,Update readme,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1389588164,1389588164,d96bf3bef298b4909f3ae48ce7d04e8d93fe535a
+d96bf3bef298b4909f3ae48ce7d04e8d93fe535a,d96bf3be,Update readme,Update readme,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1389560698,1389560698,a716c765e2fc13061c2054f23baf8abc778d6e5e
+a716c765e2fc13061c2054f23baf8abc778d6e5e,a716c765,Update readme,Update readme,,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1389560654,1389560654,d33a023f0728642cd883fb326d1766966639f122
+d33a023f0728642cd883fb326d1766966639f122,d33a023f,Update manifest and readme for v1.0.2,"Update manifest and readme for v1.0.2
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389560348,1389560348,ba7e090b52f33d4145910e51845227bbdde4f07f
+ba7e090b52f33d4145910e51845227bbdde4f07f,ba7e090b,Add Apache License information,"Add Apache License information
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389559695,1389560302,d989f6ceaf2bc7021695ad51dd9693d494cd40a2
+d989f6ceaf2bc7021695ad51dd9693d494cd40a2,d989f6ce,Add <supports-screens> element to manifest,"Add <supports-screens> element to manifest
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389509650,1389509650,fd372f353e52932ac8e8d4a2d4de6a2df270da99
+fd372f353e52932ac8e8d4a2d4de6a2df270da99,fd372f35,Update readme,"Update readme
+
+Adds a link to the app on the Google Play store.",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1389499880,1389499880,9167c6778e18dd5684cebd446dac3c8d2c17995e
+9167c6778e18dd5684cebd446dac3c8d2c17995e,9167c677,Fix a couple of links in the readme,"Fix a couple of links in the readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389495397,1389495397,a8ef3bff82a77bda988fe4528bb19f5b71c9b2c4
+a8ef3bff82a77bda988fe4528bb19f5b71c9b2c4,a8ef3bff,Update readme,"Update readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389495310,1389495310,be7c148f803f639a30926228e0e3a8e386f3da78
+be7c148f803f639a30926228e0e3a8e386f3da78,be7c148f,Merge branch 'dev',"Merge branch 'dev'
+
+Conflicts:
+	GreekReference/src/main/AndroidManifest.xml
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389492017,1389492017,"f428ce264c8927064507b11b7358c3cfc18bbbcf,de2cdea8bb8bb57f8443c42d516d7bae83954611"
+de2cdea8bb8bb57f8443c42d516d7bae83954611,de2cdea8,Update manifest version to 1.0.0,"Update manifest version to 1.0.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389491960,1389491960,e99cf7e11a0c4f53b5af066699c8ff7b114c30ac
+f428ce264c8927064507b11b7358c3cfc18bbbcf,f428ce26,Update manifest and readme for v0.5.0,"Update manifest and readme for v0.5.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389481610,1389481610,fd343c7093216e77fdb90ba9bb2e4dda0a34d61a
+fd343c7093216e77fdb90ba9bb2e4dda0a34d61a,fd343c70,Merge branch 'dev',"Merge branch 'dev'
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389481466,1389481466,"f1582f8cfb742758d1a0b0e365f8767c737624bc,e99cf7e11a0c4f53b5af066699c8ff7b114c30ac"
+e99cf7e11a0c4f53b5af066699c8ff7b114c30ac,e99cf7e1,Update copyright notices,"Update copyright notices
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389481359,1389481359,fac6961d645dd7d41d52bee789e82b7970578cb5
+fac6961d645dd7d41d52bee789e82b7970578cb5,fac6961d,Remove unused import statements,"Remove unused import statements
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389481011,1389481011,63e3df4e53933d34d3288dc8c894d0e57639c162
+63e3df4e53933d34d3288dc8c894d0e57639c162,63e3df4e,Remove nav drawer from detail activities,"Remove nav drawer from detail activities
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389480577,1389480577,8a307167fc4bccefa5d8fd038bb4a0d8f3abaef8
+8a307167fc4bccefa5d8fd038bb4a0d8f3abaef8,8a307167,Fix crash on initial launch,"Fix crash on initial launch
+
+Fixes #43. This crash was occurring because an AsyncTask and a ContentProvider
+queried by a ListView were simultaneously attempting to get a readable
+database from an SQLiteAssetHelper before the database had been created.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389477730,1389477730,f589fde9745ada141cf89d065c4d1e6bffda0b35
+f1582f8cfb742758d1a0b0e365f8767c737624bc,f1582f8c,Merge branch 'dev',"Merge branch 'dev'
+
+Conflicts:
+	GreekReference/src/main/AndroidManifest.xml
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389415442,1389415442,"455e7019b2b9960d77860c8f87e92693d05f9846,f589fde9745ada141cf89d065c4d1e6bffda0b35"
+f589fde9745ada141cf89d065c4d1e6bffda0b35,f589fde9,Increment version number in manifest and readme,"Increment version number in manifest and readme
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389415331,1389415331,b692ac3e2f9eff9ecb6459abdf459dfe4d8ea383
+b692ac3e2f9eff9ecb6459abdf459dfe4d8ea383,b692ac3e,Change a few icon names,"Change a few icon names
+
+This will make it easier to swap in icons of different colors.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389414497,1389414497,79a4d211b4227cd4610a96869187f263d375cc5b
+455e7019b2b9960d77860c8f87e92693d05f9846,455e7019,Update version info in manifest,"Update version info in manifest
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389317563,1389319213,f9a44ad0b426f7eec56341c1dbeac9ad7f057c93
+79a4d211b4227cd4610a96869187f263d375cc5b,79a4d211,Update version number in manifest.,"Update version number in manifest.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389317563,1389317563,f9a44ad0b426f7eec56341c1dbeac9ad7f057c93
+f9a44ad0b426f7eec56341c1dbeac9ad7f057c93,f9a44ad0,Change Android Gradle plug-in version to 0.7.+,"Change Android Gradle plug-in version to 0.7.+
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389315784,1389315784,ce3bc4337d0a891fb2f2c9b83aa7e39056c1f18b
+ce3bc4337d0a891fb2f2c9b83aa7e39056c1f18b,ce3bc433,Add additional attribution,"Add additional attribution
+
+Closes #9.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389314647,1389314647,e2feb13b60f584c17dc59b4dfe443fd42acfdf3c
+e2feb13b60f584c17dc59b4dfe443fd42acfdf3c,e2feb13b,"Comment out ""release"" lines in build.gradle","Comment out ""release"" lines in build.gradle
+
+The change introduced in fd29e3fcaf25a17db03a43c67288a708a63f0a99 prevents
+Gradle from building the project in Android Studio. We'll need to manually
+uncomment these lines before building a release APK.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389314284,1389314284,fd29e3fcaf25a17db03a43c67288a708a63f0a99
+fd29e3fcaf25a17db03a43c67288a708a63f0a99,fd29e3fc,Add updated gradle files,"Add updated gradle files
+
+build.gradle is now set to prompt the user for keystore data when building
+a release APK. Closes #42.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389241014,1389241063,20b523714322702e27053119509758f142e7afa7
+20b523714322702e27053119509758f142e7afa7,20b52371,Update .gitignore,"Update .gitignore
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389144636,1389144636,a8abb4749db889288bfd81c99e54b9358e4c2c0e
+a8abb4749db889288bfd81c99e54b9358e4c2c0e,a8abb474,Update readme for v0.2.0,"Update readme for v0.2.0
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389135478,1389135478,4adaabce65c39100eb49fd4256aa74e68750ddd2
+4adaabce65c39100eb49fd4256aa74e68750ddd2,4adaabce,Merge branch 'dev',"Merge branch 'dev'
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389135404,1389135404,"5c9d80ea6ffbb18604f367e8dc41b07375897afa,5cab04e2e9bd2ea160f2ec5024d3b4021bd2bdca"
+5cab04e2e9bd2ea160f2ec5024d3b4021bd2bdca,5cab04e2,Add syntax Sources Cited section,"Add syntax Sources Cited section
+
+This commit includes a new version of syntax.db.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389135336,1389135336,3d33bb5427e78a4e4fc3a831f46d81fc675e7164
+3d33bb5427e78a4e4fc3a831f46d81fc675e7164,3d33bb54,Fix bug in syntax parser,"Fix bug in syntax parser
+
+This fixes a bug that caused the Particples entry in the Overview of Greek
+Syntax to be improperly rendered. I've just implemented a quick, kludgy
+solution, since I plan to rewrite this parser to work with a WebView soon.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389133216,1389133216,fe96f53e00372eb576340feba0816f93dadf806c
+5c9d80ea6ffbb18604f367e8dc41b07375897afa,5c9d80ea,Update readme for v0.1.1,"Update readme for v0.1.1
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389086433,1389086433,fe96f53e00372eb576340feba0816f93dadf806c
+fe96f53e00372eb576340feba0816f93dadf806c,fe96f53e,Show Up button in DetailActivity,"Show Up button in DetailActivity
+
+This restores a change originally made in
+55ea17c47e97aca5c0f12dafab1c217499da6a94 and accidentally discarded during a
+merge.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389086225,1389086225,a83a8c20fb8a93ddb0a05b215bdb7e96598850b0
+a83a8c20fb8a93ddb0a05b215bdb7e96598850b0,a83a8c20,Update readme with GRDBC version,"Update readme with GRDBC version
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389085662,1389085662,319cb0384b34125ce7372c35152522aae5672b7a
+319cb0384b34125ce7372c35152522aae5672b7a,319cb038,Update readme for v0.1,"Update readme for v0.1
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389085026,1389085026,8488957e784837e05bcae013569c4a38c2e90526
+8488957e784837e05bcae013569c4a38c2e90526,8488957e,Improve syntax section formatting.,"Improve syntax section formatting.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389067610,1389067610,d86e4e71b071d36d15482f01d9a309d82cde5cb8
+d86e4e71b071d36d15482f01d9a309d82cde5cb8,d86e4e71,Add progress indicator to all list views,"Add progress indicator to all list views
+
+Closes #38.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389056996,1389056996,9f5621c39905682fe1a70ea237256a7d21f6cb55
+9f5621c39905682fe1a70ea237256a7d21f6cb55,9f5621c3,Add progress indicator to lexicon browse list,"Add progress indicator to lexicon browse list
+
+Addresses #2.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389052945,1389053082,5b405ea35fafb51c98cc312a00fd0716d26b4728
+5b405ea35fafb51c98cc312a00fd0716d26b4728,5b405ea3,Improve back navigation.,"Improve back navigation.
+
+The back button now only provides vertical navigation, in compliance with the
+Android design guidelines. Closes #11.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389050404,1389050404,b48aa6ddd6bda323714af70f194767b37be699a4
+b48aa6ddd6bda323714af70f194767b37be699a4,b48aa6dd,Preserve DetailFragment scroll position,"Preserve DetailFragment scroll position
+
+The scroll position is now restored after an orientation change. Closes #10.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389047339,1389047339,a82fc74865e22e5af9f87d276767e126aabc04bc
+a82fc74865e22e5af9f87d276767e126aabc04bc,a82fc748,Add proper scrolling in DetailFragments,"Add proper scrolling in DetailFragments
+
+Addresses #6.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389046588,1389046588,d472e2537f46ffc34eed6c6106b3aff163f11137
+d472e2537f46ffc34eed6c6106b3aff163f11137,d472e253,Improve search,"Improve search
+
+The mode is no longer switched to Browse on direct searches that produce no
+results.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389002165,1389002165,e742b168161975a2f26f487e8332ceaa50973875
+e742b168161975a2f26f487e8332ceaa50973875,e742b168,Fix a lexicon search bug,"Fix a lexicon search bug
+
+The navigation drawer selection is now properly set when searching the lexicon
+from the Favorites or History mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1389001422,1389001422,6eaf8b0f129e21fc74dfbbcfc7e95fff8992a53c
+6eaf8b0f129e21fc74dfbbcfc7e95fff8992a53c,6eaf8b0f,Improve lexicon search,"Improve lexicon search
+
+This commit fixes a crash that occurred when searching the lexicon from the
+Favorites or History mode and sets the list view to jump to items selected
+from search suggestions on tablets. Addresses #15.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388999940,1388999940,6f3ef47cb1e78a62b8754c7c071d9f5aa1631549
+6f3ef47cb1e78a62b8754c7c071d9f5aa1631549,6f3ef47c,"Remove ""clear list"" options from detail activities","Remove ""clear list"" options from detail activities
+
+The option to clear the favorites, history, and bookmarks list are now only
+available from MainActivity.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388996252,1388996252,eceeb542ccb17fe89e89c74638606b38a8441807
+eceeb542ccb17fe89e89c74638606b38a8441807,eceeb542,Fix crashes on orientation change,"Fix crashes on orientation change
+
+This fixes the crashes that occurred when a dialog was displayed during an
+orientation change. Addresses #10.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388996071,1388996071,128000143bc86130014633455928cb4bf6f09b39
+128000143bc86130014633455928cb4bf6f09b39,12800014,Improve orientation change handling,"Improve orientation change handling
+
+Addresses #10. This commit also includes some unrelated code restructuring.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388994312,1388994312,71cca2445b8e363936584dcc228248fd89a3253f
+71cca2445b8e363936584dcc228248fd89a3253f,71cca244,Removed unnecessary uses of support library,"Removed unnecessary uses of support library
+
+Closes #16.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388990449,1388990449,214436481eb3c2fb2794e393ae60a2dd90b81496
+214436481eb3c2fb2794e393ae60a2dd90b81496,21443648,Add remaining Help dialog code and add About dialog,"Add remaining Help dialog code and add About dialog
+
+Closes #13, closes #34.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388989172,1388989414,a73d9c820c3a50f51ff778cce6f37c98f0e158ad
+a73d9c820c3a50f51ff778cce6f37c98f0e158ad,a73d9c82,Improve help text,"Improve help text
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388982405,1388982405,9047016800aa53b1aa896aa510b1f930891458cc
+9047016800aa53b1aa896aa510b1f930891458cc,90470168,Add help dialog.,"Add help dialog.
+
+Closes #13.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388981839,1388981839,d608351702520a1f7165e1911d2dd41c3691fef7
+d608351702520a1f7165e1911d2dd41c3691fef7,d6083517,Add remaining empty views,"Add remaining empty views
+
+Closes #8, closes #28.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388978859,1388978859,589333825874de4addaabab20867a96e2ecf494c
+589333825874de4addaabab20867a96e2ecf494c,58933382,Add lexicon favorites empty view message.,"Add lexicon favorites empty view message.
+
+Closes #7.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388978255,1388978255,d01aafd1bdfedf058a9e3766626a9777e4c299eb
+d01aafd1bdfedf058a9e3766626a9777e4c299eb,d01aafd1,Fix a few references to BaseListFragment,"Fix a few references to BaseListFragment
+
+This completes the change started in a8f25d79bc44290363ea3e63640aa85b66e425ab.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388961099,1388961099,a8f25d79bc44290363ea3e63640aa85b66e425ab
+a8f25d79bc44290363ea3e63640aa85b66e425ab,a8f25d79,Rename ListFragment to BaseListFragment,"Rename ListFragment to BaseListFragment
+
+Fixes a bug introduced in d38421f1ff574bbbd2401850003888dfd9122ef2. In that
+commit, I renamed BaseListFragment to ListFragment, which is the name of a
+class in the Android APIs.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388882166,1388882166,cf345baef5152ec0f32ec8d866aa383d2307af1e
+cf345baef5152ec0f32ec8d866aa383d2307af1e,cf345bae,Change license name format,"Change license name format
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388877499,1388877499,ecc51aad8f9c6cdd64375a2166cf160221e91748
+ecc51aad8f9c6cdd64375a2166cf160221e91748,ecc51aad,Add AOSP license.,"Add AOSP license.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388877429,1388877429,d38421f1ff574bbbd2401850003888dfd9122ef2
+d38421f1ff574bbbd2401850003888dfd9122ef2,d38421f1,Rename a couple of classes.,"Rename a couple of classes.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388876707,1388876707,57147d6a870036181e4786d39adb075a77141107
+57147d6a870036181e4786d39adb075a77141107,57147d6a,Display toast on favorite and bookmark icon tap,"Display toast on favorite and bookmark icon tap
+
+Closes #18.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388876618,1388876618,b4ff73d8477e9caffe2af101f402ea2ad3b2e3c2
+b4ff73d8477e9caffe2af101f402ea2ad3b2e3c2,b4ff73d8,Move all bookmark code to SyntaxBookmarkActivity,"Move all bookmark code to SyntaxBookmarkActivity
+
+Addresses #23.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388875366,1388875408,36ba7c6c327ca4d1b5b4ed2079d41c226714043d
+36ba7c6c327ca4d1b5b4ed2079d41c226714043d,36ba7c6c,Move lexicon favorites code out of MainActivity,"Move lexicon favorites code out of MainActivity
+
+Addresses #23.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388874119,1388874893,51036e491392bf9081885d45e27f52c71ab05929
+51036e491392bf9081885d45e27f52c71ab05929,51036e49,Sort syntax bookmarks by section ID,"Sort syntax bookmarks by section ID
+
+Closes #30.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388871203,1388871203,c695f24a4a35569a2da1c1eaf7b6bfa7a2241166
+c695f24a4a35569a2da1c1eaf7b6bfa7a2241166,c695f24a,Alphabetize lexicon favorites,"Alphabetize lexicon favorites
+
+Addresses #30.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388870956,1388870956,ecffa2abf7aa81c7f6aae0e81016b3d990996420
+ecffa2abf7aa81c7f6aae0e81016b3d990996420,ecffa2ab,Move Mode out of MainActivity.,"Move Mode out of MainActivity.
+
+This helps a bit with #23, and we can move some more code from MainActivity to
+Mode. See the TODO comments in MainActivity for details.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388811814,1388811814,52c0b8e40b466a4f61c8fb8f58f81ac0df61059f
+52c0b8e40b466a4f61c8fb8f58f81ac0df61059f,52c0b8e4,Remove Settings option.,"Remove Settings option.
+
+Closes #12.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388811102,1388811102,28bd29f6f9ba52ba3e78d2029ef271abf3c6b11b
+28bd29f6f9ba52ba3e78d2029ef271abf3c6b11b,28bd29f6,Fix SyntaxDetailActivity bug.,"Fix SyntaxDetailActivity bug.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388800916,1388800969,ff921b79644c86d4a36476ed4944a47681c18f5d
+ff921b79644c86d4a36476ed4944a47681c18f5d,ff921b79,Add subtitles to action bar.,"Add subtitles to action bar.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388793072,1388793072,51511690b59a7fe91d926e1e806d6c0f92791cdf
+51511690b59a7fe91d926e1e806d6c0f92791cdf,51511690,Change font in lexicon list views.,"Change font in lexicon list views.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388788972,1388788972,3b91f548e4f60b7750ca6c0811ba0701ae33137b
+3b91f548e4f60b7750ca6c0811ba0701ae33137b,3b91f548,Add fast scroll bar to lexicon browse list.,"Add fast scroll bar to lexicon browse list.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388787712,1388787712,238407a913650c951f51559c2a0dff765e385b43
+238407a913650c951f51559c2a0dff765e385b43,238407a9,Improve search function.,"Improve search function.
+
+This replaces hardcoded strings with references to LexiconContract members.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388784973,1388784973,4d787109e9da9b281a33236f4ca934c69e035014
+4d787109e9da9b281a33236f4ca934c69e035014,4d787109,Add nav drawer functionality in detail activities.,"Add nav drawer functionality in detail activities.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388784633,1388784633,1b169a046daff39e6325fa7daef502e9c5eba48a
+1b169a046daff39e6325fa7daef502e9c5eba48a,1b169a04,Add syntax bookmark functionality on tablets.,"Add syntax bookmark functionality on tablets.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388777153,1388777153,69a3a896bea40b17b887f04a32aa085998d59bb4
+69a3a896bea40b17b887f04a32aa085998d59bb4,69a3a896,Add app icon.,"Add app icon.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388721657,1388721657,9c17c62c003db8932095a19919fb870ed739c9aa
+9c17c62c003db8932095a19919fb870ed739c9aa,9c17c62c,"Show ""Browse"" title on first launch.","Show ""Browse"" title on first launch.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388718079,1388718090,84613d418ed83267aba1c5834273fb0051cf419b
+84613d418ed83267aba1c5834273fb0051cf419b,84613d41,Add Clear Bookmarks functionality.,"Add Clear Bookmarks functionality.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388717765,1388717765,6b347743a76e44b38b6d09ee0d6a0c39a5b5dcab
+6b347743a76e44b38b6d09ee0d6a0c39a5b5dcab,6b347743,Add Clear Favorites functionality.,"Add Clear Favorites functionality.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388717560,1388717560,1fd8d5fcebf487dce2a61022a5447049cf119526
+1fd8d5fcebf487dce2a61022a5447049cf119526,1fd8d5fc,Add Send Feedback functionality.,"Add Send Feedback functionality.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388716579,1388716579,ce8be4f97df19e7629fc2099633d848caccfc442
+ce8be4f97df19e7629fc2099633d848caccfc442,ce8be4f9,Remove unused classes.,"Remove unused classes.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388715021,1388715179,5fb14048721e3da5c7309fe9ba51204e43119a75
+5fb14048721e3da5c7309fe9ba51204e43119a75,5fb14048,Change options menu items.,"Change options menu items.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388710134,1388710134,0c1e2caa71ac84858dd792e6f8236c9ade986f7d
+0c1e2caa71ac84858dd792e6f8236c9ade986f7d,0c1e2caa,Add Syntax Bookmarks mode.,"Add Syntax Bookmarks mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388705063,1388705063,39cdacdbdac1aa3aad3264ba52eb839e33620d3e
+39cdacdbdac1aa3aad3264ba52eb839e33620d3e,39cdacdb,Add Syntax Browse mode.,"Add Syntax Browse mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388703984,1388703984,b990f7d461d778545e421e954c1e9363c332e265
+b990f7d461d778545e421e954c1e9363c332e265,b990f7d4,Change favorite icons in lexicon mode.,"Change favorite icons in lexicon mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388702103,1388702103,4ad123e1f943656d4d13fba03169b7528411ac52
+4ad123e1f943656d4d13fba03169b7528411ac52,4ad123e1,Change lexicon browse nav drawer icon.,"Change lexicon browse nav drawer icon.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388695289,1388695289,1c694e8dc9f6e1ea3ca49d2efa2c1cede3749cb2
+1c694e8dc9f6e1ea3ca49d2efa2c1cede3749cb2,1c694e8d,Improve search.,"Improve search.
+
+Direct searches now properly set the selected item in the list fragment.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388648169,1388648169,d146fd564634f96da81dc474df9a44816fc88eee
+d146fd564634f96da81dc474df9a44816fc88eee,d146fd56,Add icons in navigation drawer.,"Add icons in navigation drawer.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388645135,1388645135,3ac6f1ac4f1a483e7d8cde34b6ea30c653fb3da0
+3ac6f1ac4f1a483e7d8cde34b6ea30c653fb3da0,3ac6f1ac,Add toast when search produces no results.,"Add toast when search produces no results.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388639526,1388639526,15402a9f0385259578397c396d009cd90408bd86
+15402a9f0385259578397c396d009cd90408bd86,15402a9f,Fix lexicon favorites in one-panel mode.,"Fix lexicon favorites in one-panel mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388639137,1388639137,608e1960ad9b338b36ecba5f78db450d65ac30c8
+608e1960ad9b338b36ecba5f78db450d65ac30c8,608e1960,Add lexicon favorites feature.,"Add lexicon favorites feature.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388633129,1388633129,dd7673bfa9583b31a1cb89a715d3cf98c1316a53
+dd7673bfa9583b31a1cb89a715d3cf98c1316a53,dd7673bf,Add Lexicon History functionality.,"Add Lexicon History functionality.
+
+This commit also adds the Clear History menu item functionality.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388615253,1388615253,01e1d3362fb2cedded05d1e09aa78066bcdfc6dd
+01e1d3362fb2cedded05d1e09aa78066bcdfc6dd,01e1d336,Add Lexicon History list.,"Add Lexicon History list.
+
+lexiconHistoryItemSelected() is not yet implemented.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388525393,1388525393,4980dea07dbc41f78d4019d474e51f20cb560be5
+4980dea07dbc41f78d4019d474e51f20cb560be5,4980dea0,Fix crash caused by extra whitespace in XML.,"Fix crash caused by extra whitespace in XML.
+
+This fixes the crash caused when selecting ""a)a/w"" in the lexicon.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388521833,1388521963,7edf20ca91e83f87222a1e95cbe1762cc8b69667
+7edf20ca91e83f87222a1e95cbe1762cc8b69667,7edf20ca,Add basic Lexicon History mode.,"Add basic Lexicon History mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388519622,1388519622,68ba546574fa057a600a5c4a881e387bfe7db66c
+68ba546574fa057a600a5c4a881e387bfe7db66c,68ba5465,Add basic Lexicon Favorites mode.,"Add basic Lexicon Favorites mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388519509,1388519509,13a9264015e82152f09e4c23e5d2d2fa54da1971
+13a9264015e82152f09e4c23e5d2d2fa54da1971,13a92640,Fix search suggestions.,"Fix search suggestions.
+
+Selected search suggestions are now properly handled.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388517941,1388517941,4271e5f8bbd9fa38044ba26f77ae0d4bc61b3e09
+4271e5f8bbd9fa38044ba26f77ae0d4bc61b3e09,4271e5f8,Fix direct search.,"Fix direct search.
+
+This commit fixes searches performed by entering a query and pressing the Go
+key. The search suggestion feature is not yet functional.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388517520,1388517520,e464cde6b24292e720d69beb32db6f8b89df031a
+e464cde6b24292e720d69beb32db6f8b89df031a,e464cde6,Fix off-by-one issue in Lexicon Browse.,"Fix off-by-one issue in Lexicon Browse.
+
+The proper lexicon entry is now displayed after selecting a word.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388516745,1388516745,d1538ba43dfe5fcc1fb62f2c83fb190f84aaef60
+d1538ba43dfe5fcc1fb62f2c83fb190f84aaef60,d1538ba4,Add highlight to selected item Lex. Browse mode.,"Add highlight to selected item Lex. Browse mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388474898,1388474898,6b386328305b5742e303f3ec4d3cf2e687b96441
+6b386328305b5742e303f3ec4d3cf2e687b96441,6b386328,Add remainder of lexicon browse framework.,"Add remainder of lexicon browse framework.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388472814,1388473755,5c8a8123e95eeb48fbdacaa2841b62673e187c6c
+5c8a8123e95eeb48fbdacaa2841b62673e187c6c,5c8a8123,Add new list fragment callback interface.,"Add new list fragment callback interface.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388471190,1388471190,7474336d744593642ad10e03240bfbcb4fffc5a6
+7474336d744593642ad10e03240bfbcb4fffc5a6,7474336d,Add basic lexicon browse list content.,"Add basic lexicon browse list content.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388468927,1388469262,6140a964c7fa97693d471062699e246ec0322290
+6140a964c7fa97693d471062699e246ec0322290,6140a964,Preserve action bar title on orientation change.,"Preserve action bar title on orientation change.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388465546,1388465546,a299e12373a9a21fd84d3245251e4c580ce0c1e0
+a299e12373a9a21fd84d3245251e4c580ce0c1e0,a299e123,Add remaining fragment swapping code.,"Add remaining fragment swapping code.
+
+This commit also contains code to ensure that list items are highlighted in
+two-pane mode.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388464866,1388464866,12c65987f3cac3779bc77e3a56c9d3a35d6b2f00
+12c65987f3cac3779bc77e3a56c9d3a35d6b2f00,12c65987,Add remaining fragments and swap code.,"Add remaining fragments and swap code.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388461407,1388461571,96fb2d8672b5b47271ce751f8bb5133f440cade1
+96fb2d8672b5b47271ce751f8bb5133f440cade1,96fb2d86,Add beginning of mode switch framework.,"Add beginning of mode switch framework.
+
+This commit includes a method for swapping fragments on mode switches and
+basic code for switching to the Lexicon Browse and Lexicon Favorites modes.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388460647,1388460647,6dccc188bf519b7dd20aef3dfca1a9a0c22e43b3
+6dccc188bf519b7dd20aef3dfca1a9a0c22e43b3,6dccc188,Add global action bar menu.,"Add global action bar menu.
+
+This menu will be displayed when the navigation drawer is open.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388290793,1388290793,301f502ff9f4efb037b5b107b6ff3c3bda46fbc9
+301f502ff9f4efb037b5b107b6ff3c3bda46fbc9,301f502f,Set SearchView to collapse to icon.,"Set SearchView to collapse to icon.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388283169,1388283169,3aec508548e4dd338228573940b71bb3fa3ebf1c
+3aec508548e4dd338228573940b71bb3fa3ebf1c,3aec5085,Add basic menu and search framework.,"Add basic menu and search framework.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388259441,1388259881,ede2763d635cf837804047bc3524a21547ce85b3
+ede2763d635cf837804047bc3524a21547ce85b3,ede2763d,"Add subpackages to ""data"" package.","Add subpackages to ""data"" package.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388257381,1388257381,471cdef0101084248ce7d4dbadae0773f2e1715f
+471cdef0101084248ce7d4dbadae0773f2e1715f,471cdef0,Fix error in readme.,"Fix error in readme.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388215227,1388215227,c380c3a7a09cfe7aaaf930cc75f0ccaa8e20dbde
+c380c3a7a09cfe7aaaf930cc75f0ccaa8e20dbde,c380c3a7,Add database installation code.,"Add database installation code.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388214529,1388214529,c1743d7363cb02d5f937c6562470264c1ef673c6
+c1743d7363cb02d5f937c6562470264c1ef673c6,c1743d73,Add databases and update readme.,"Add databases and update readme.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388214506,1388214506,0429a9f2c48f26847618bb0c0de0ae11cff1142e
+0429a9f2c48f26847618bb0c0de0ae11cff1142e,0429a9f2,Add external library to build file.,"Add external library to build file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388212839,1388212839,681d37876b85cce23d9afb46173914ccd1899747
+681d37876b85cce23d9afb46173914ccd1899747,681d3787,"Add ""data"" package.","Add ""data"" package.
+
+This commit adds all files from the ""data"" package in the original version of
+this project. I have made minor changes to the files to make them compatible
+with this version of the project and to fix various errors, but I have not
+tested them. They should be thoroughly reviewed, improved, and tested at a
+later date.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388211806,1388211806,d08e8ad2d70b6ab757172dd2ae91f25be295b6e5
+d08e8ad2d70b6ab757172dd2ae91f25be295b6e5,d08e8ad2,Add Android SQLiteAssetHelper library.,"Add Android SQLiteAssetHelper library.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388211185,1388211185,55903be0a97ccc64507a1731da5314299260b162
+55903be0a97ccc64507a1731da5314299260b162,55903be0,Add copyright notices.,"Add copyright notices.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388210316,1388210316,e776edb1c38257eee4758c53c91bb146fad88c11
+e776edb1c38257eee4758c53c91bb146fad88c11,e776edb1,Merge branch 'drawer' into dev,"Merge branch 'drawer' into dev
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388209596,1388209596,"55ea17c47e97aca5c0f12dafab1c217499da6a94,a16f99d90ee307970946b2df3928cbf5ec04f76e"
+a16f99d90ee307970946b2df3928cbf5ec04f76e,a16f99d9,Move navigation drawer classes to new package.,"Move navigation drawer classes to new package.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388209567,1388209567,01f20e8376484857b2946bc6456dbdfa463e51f0
+01f20e8376484857b2946bc6456dbdfa463e51f0,01f20e83,Add highlighting on selected nav drawer item.,"Add highlighting on selected nav drawer item.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388204892,1388205278,5d961d7949e3c27ce1f2c5bb4a6883b2817b3010
+5d961d7949e3c27ce1f2c5bb4a6883b2817b3010,5d961d79,Move nav drawer strings to resource file.,"Move nav drawer strings to resource file.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388196820,1388196820,4b943092e2752fd0c4d4cb7eaad5d7afc6aba7da
+55ea17c47e97aca5c0f12dafab1c217499da6a94,55ea17c4,Show Up icon in one-pane detail activity.,"Show Up icon in one-pane detail activity.
+
+The Up icon replaces the navigation drawer icon in the ItemDetailActivity.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388195292,1388195292,b9c2ec53b9e07371cda2d1a611610de601c3cc56
+4b943092e2752fd0c4d4cb7eaad5d7afc6aba7da,4b943092,Improve nav drawer styling.,"Improve nav drawer styling.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388194988,1388194988,f3e153cad87970d50b1468c3587d42de485436e8
+f3e153cad87970d50b1468c3587d42de485436e8,f3e153ca,Add basic navigation drawer menu.,"Add basic navigation drawer menu.
+
+This is a very rough, incomplete, initial implementation of a navigation
+drawer menu.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388126458,1388126458,b9c2ec53b9e07371cda2d1a611610de601c3cc56
+b9c2ec53b9e07371cda2d1a611610de601c3cc56,b9c2ec53,Fix an erroneous comment.,"Fix an erroneous comment.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388119387,1388119387,6ca83aa7c4dd2a967d694a35466ee5210566836c
+6ca83aa7c4dd2a967d694a35466ee5210566836c,6ca83aa7,Add basic navigation drawer.,"Add basic navigation drawer.
+
+This integrates the navigation drawer code from the Android Studio nav drawer
+template, with various minor changes.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388117227,1388117227,b10bd60822236fb49a6775107e4a183ab1e9257d
+b10bd60822236fb49a6775107e4a183ab1e9257d,b10bd608,Add layout alias for two-pane display.,"Add layout alias for two-pane display.
+
+This fixes a bug that caused devices with large screens to use the single-pane
+layout.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388115680,1388115680,03f05430d2aacaa025753f89e9fa343c96eb823d
+03f05430d2aacaa025753f89e9fa343c96eb823d,03f05430,Add resources from navigation drawer template.,"Add resources from navigation drawer template.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388113329,1388113329,7b94bda0f35716279ec9fd3eb51a9b1d040a10cd
+7b94bda0f35716279ec9fd3eb51a9b1d040a10cd,7b94bda0,Add master-detail flow template.,"Add master-detail flow template.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1388113041,1388113041,8b8e4f5aa58a4ac839a9cbeff9c614bd44334fe5
+8b8e4f5aa58a4ac839a9cbeff9c614bd44334fe5,8b8e4f5a,Update readme.,"Update readme.
+",,,,Ben Linskey,ben@benlinskey.com,Ben Linskey,ben@benlinskey.com,1387160253,1387160253,0d23345544b17d2cdf7983338e99bc647d40f46c
+0d23345544b17d2cdf7983338e99bc647d40f46c,0d233455,Initial commit,"Initial commit
+",,,,Ben Linskey,blinskey@users.noreply.github.com,Ben Linskey,blinskey@users.noreply.github.com,1387158237,1387158237,

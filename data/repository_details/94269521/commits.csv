@@ -1,0 +1,196 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+5bfcf04ca542051119ac12e34dd412008a8978bf,5bfcf04c,Bump library version to 1.1.1,"Bump library version to 1.1.1
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501703130,1501703130,a470a7bf5bb792966cbd08056c1d83b9d9c2ad9f
+a470a7bf5bb792966cbd08056c1d83b9d9c2ad9f,a470a7bf,Update changelog: reduced library size by about 2 KB,"Update changelog: reduced library size by about 2 KB
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501699781,1501699781,f2878b7fd3ae68cda56f2cd91290893d5235f49f
+f2878b7fd3ae68cda56f2cd91290893d5235f49f,f2878b7f,"Consolidate click listeners for number keys, alt keys, and backspace key","Consolidate click listeners for number keys, alt keys, and backspace key
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501646759,1501646759,d760399c84ecdfccdbe6f554cd0e02d698ea5d4c
+d760399c84ecdfccdbe6f554cd0e02d698ea5d4c,d760399c,Update changelog: INumberPadTimePicker.View APIs are no longer public,"Update changelog: INumberPadTimePicker.View APIs are no longer public
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501645282,1501645282,f651c786da2d383e14702931bd894085d0931c7f
+f651c786da2d383e14702931bd894085d0931c7f,f651c786,Hide NumberPadTimePicker's implementations of INumberPadTimePicker.View APIs.,"Hide NumberPadTimePicker's implementations of INumberPadTimePicker.View APIs.
+
+These APIs have been moved to the package-private NumberPadTimePickerComponent class.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501643841,1501643841,7db5ec77e17d9c8e48cc4f06d377e86f4d791220
+7db5ec77e17d9c8e48cc4f06d377e86f4d791220,7db5ec77,Create CHANGELOG.md beginning in version 1.1.0,"Create CHANGELOG.md beginning in version 1.1.0
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501495032,1501495032,40229dd0f0e0c77e839a59fb184d580e50d67236
+40229dd0f0e0c77e839a59fb184d580e50d67236,40229dd0,Make tablet optimizations to sample app to demo NumberPadTimePicker views.,"Make tablet optimizations to sample app to demo NumberPadTimePicker views.
+
+Changes:
+- Use ExactHeight styles for sw600dp-port qualifier.
+- Set ScrollView as root of TimePickerActivity only when smallest screen width is less than 600dp.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501473219,1501473219,f7e48afa2579777c99c95f09383ca10abdf1b68a
+f7e48afa2579777c99c95f09383ca10abdf1b68a,f7e48afa,Changes to README:,"Changes to README:
+
+- Minor syntax and typo fixes
+- Update section about dialog and Activity theming to list NPTP_Base_NumberPadTimePickerStandaloneStyle instead of NPTP_Base_NumberPadTimePickerStyle for consistency with the other base styles
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501470715,1501470715,296e0532797abce36f030a421b886e98d30b3268
+296e0532797abce36f030a421b886e98d30b3268,296e0532,Changes:,"Changes:
+- Create NPTP_Base_NumberPadTimePickerStandaloneStyle style resource. This is for consistency with the NPTP_Base_NumberPadTimePickerAlertStyle and NPTP_Base_NumberPadTimePickerBottomSheetStyle style resources.
+- Update the comments for the deprecated NPTP_NumberPadTimePickerStyle and NPTP_NumberPadTimePickerBottomSheetStyle style resources to instead recommend the NPTP_Base_NumberPadTimePickerAlertStyle and NPTP_Base_NumberPadTimePickerBottomSheetStyle style resources, respectively. These deprecated style resources were used in version 1.0.0 to style the NumberPadTimePicker in the dialogs; as such, the earlier recommendations to use the FillHeight and ExactHeight style variants were redundant and would have caused confusion, because the dialogs internally set the NumberPadTimePicker's layout_width and layout_height to WRAP_CONTENT.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501469657,1501469657,9d8ec1f890e6e89525765e0329fed27bd951e47c
+9d8ec1f890e6e89525765e0329fed27bd951e47c,9d8ec1f8,Use base styles for dialog layouts instead of ExactHeight or FillHeight style variants.,"Use base styles for dialog layouts instead of ExactHeight or FillHeight style variants.
+
+Specifying layout_width and layout_height on the NumberPadTimePicker is redundant when it is placed in a dialog, because they will always be internally set to WRAP_CONTENT.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501468453,1501468453,a1f73fcac93319c359060a004ac7661ca4172b47
+a1f73fcac93319c359060a004ac7661ca4172b47,a1f73fca,Add caveat to README about using NumberPadTimePicker in limited-height screen sizes,"Add caveat to README about using NumberPadTimePicker in limited-height screen sizes
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501406401,1501406401,01a6d744cf34e677b404748b05d337623db73cbe
+01a6d744cf34e677b404748b05d337623db73cbe,01a6d744,Update README to document use of new styles,"Update README to document use of new styles
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501403176,1501403176,713aa1997b643ff78d613df92b5062803a0dfe0f
+713aa1997b643ff78d613df92b5062803a0dfe0f,713aa199,Set ExactHeight styles in library's dialog layouts and in sample's custom dialog themes,"Set ExactHeight styles in library's dialog layouts and in sample's custom dialog themes
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501397569,1501397569,31dc5d26348dc24cee94b5ad99d9e25ee2ff1fd6
+31dc5d26348dc24cee94b5ad99d9e25ee2ff1fd6,31dc5d26,Fix crashing on earlier versions of the platform when calling super.onRestoreInstanceState().,"Fix crashing on earlier versions of the platform when calling super.onRestoreInstanceState().
+
+It is necessary to pass the super state of the provided state instead of the provided state itself.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501393802,1501393802,8302638707d20a9a44e3faabb1f8cae75eca8d8d
+8302638707d20a9a44e3faabb1f8cae75eca8d8d,83026387,Change default ExactHeight bottom sheet style to use layout_width of…,"Change default ExactHeight bottom sheet style to use layout_width of match_parent instead of wrap_content.
+
+This commit fixes the vertical bounds of the number pad grid in 24-hour mode. Prior to this fix, the 24-hour view rendered at a larger height than the 12-hour view did, causing the number pad grid to be drawn without vertical bounds for SDK 23+.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501386673,1501386673,a0321c9b5a95484d8830e09e7111715326cef0c5
+a0321c9b5a95484d8830e09e7111715326cef0c5,a0321c9b,Create fixed-width FillHeight and ExactHeight style variants for each time picker layout,"Create fixed-width FillHeight and ExactHeight style variants for each time picker layout
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501318617,1501318617,0a1f879b6defbe73bb8e2379156b9fb1cfd3ef57
+0a1f879b6defbe73bb8e2379156b9fb1cfd3ef57,0a1f879b,Split fixed-width style NPTP_NumberPadTimePickerStyle into separate styles for…,"Split fixed-width style NPTP_NumberPadTimePickerStyle into separate styles for each time picker layout
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501314898,1501314898,0a4bce487da9e13aae4f0aa434d5cb84e0f6f1fb
+0a4bce487da9e13aae4f0aa434d5cb84e0f6f1fb,0a4bce48,Set missing parent style on non-default variants of NPTP_NumberPadTimePickerStyle,"Set missing parent style on non-default variants of NPTP_NumberPadTimePickerStyle
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501310187,1501310187,67620edeebbf4697b4c54d856079d6b6d6592b9f
+67620edeebbf4697b4c54d856079d6b6d6592b9f,67620ede,Use dimen resource instead of explicit dimension for fixed-width styles,"Use dimen resource instead of explicit dimension for fixed-width styles
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501299900,1501299900,e92e5431166f30444599d17316771a4274b0140b
+e92e5431166f30444599d17316771a4274b0140b,e92e5431,Move custom width styles from sample to library.,"Move custom width styles from sample to library.
+
+Clients can now get fixed-width NumberPadTimePickers when they apply the existing style resources: NPTP_NumberPadTimePickerStyle and NPTP_NumberPadTimePickerBottomSheetStyle.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501282858,1501282858,7d546ab26118e8341116ba50892a3ad2a36bc5f9
+7d546ab26118e8341116ba50892a3ad2a36bc5f9,7d546ab2,"Update build.gradle: SDK 26, build tools 26.0.1, support library 26.0.0. Bump…","Update build.gradle: SDK 26, build tools 26.0.1, support library 26.0.0. Bump library to version 1.1.0.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501233737,1501233737,674495d34aa20a828d43f53f90e1de0a196e95ea
+674495d34aa20a828d43f53f90e1de0a196e95ea,674495d3,Update README for version 1.1.0,"Update README for version 1.1.0
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501210202,1501210202,447993e103225c90fe6f85b6bcecf2f766783686
+447993e103225c90fe6f85b6bcecf2f766783686,447993e1,Fix dialogs not being dismissed after clicking OK button when the requested time…,"Fix dialogs not being dismissed after clicking OK button when the requested time mode is different than the one NumberPadTimePicker is initialized with.
+
+This bug occurred when the picker's time mode is changed via setIs24HourMode(). The picker creates a new Presenter instance, but the Presenter reference in DialogPresenter was not updated with this new instance.
+
+This commit adds the OnTimeModeChange callback interface to NumberPadTimePicker, through which the new Presenter instance is passed back to callers of setIs24HourMode().
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501118783,1501118783,156c14b906d560a9349f4af03577d467d80bf514
+156c14b906d560a9349f4af03577d467d80bf514,156c14b9,Move all tests from NumberPadTimePickerDialogPresenterTest to…,"Move all tests from NumberPadTimePickerDialogPresenterTest to NumberPadTimePickerPresenterTest and delete the class.
+
+The View/Presenter interfaces now handle those DialogView/DialogPresenter responsibilities that were under test in NumberPadTimePickerDialogPresenterTest. This obviates the NumberPadTimePickerDialogPresenterTest class.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501109528,1501109528,9ca6024e718abbc5f980271acb01d8e686347453
+9ca6024e718abbc5f980271acb01d8e686347453,9ca6024e,Rename INumberPadTimePicker.Presenter methods: onCreate() to presentState() and…,"Rename INumberPadTimePicker.Presenter methods: onCreate() to presentState() and onStop() to detachView().
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501107087,1501107087,8f5351fa493672c92596fa01be63589e8033af13
+8f5351fa493672c92596fa01be63589e8033af13,8f5351fa,Convert NumberPadTimePickerDialogViewDelegate to a non-instantiable class with…,"Convert NumberPadTimePickerDialogViewDelegate to a non-instantiable class with static setup methods, and rename it to DialogViewInitializer.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501105814,1501105814,28858ab9ac03a314407e8532a98e59df7ffb883c
+28858ab9ac03a314407e8532a98e59df7ffb883c,28858ab9,Add 'nptp_is24HourMode' attribute and read from it during initialization,"Add 'nptp_is24HourMode' attribute and read from it during initialization
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501102553,1501102553,fb940b40ed5e48e7e2eff26d18439fc5e2c3c533
+fb940b40ed5e48e7e2eff26d18439fc5e2c3c533,fb940b40,Let NumberPadTimePicker save and restore instance state,"Let NumberPadTimePicker save and restore instance state
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501098028,1501098028,12d677da8d175afbd083a77564c87f007ed36329
+12d677da8d175afbd083a77564c87f007ed36329,12d677da,Add IDs to NumberPadTimePicker views.,"Add IDs to NumberPadTimePicker views.
+
+A View must have an ID in order for the platform to call its onSaveInstanceState() method.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1501041426,1501041426,8a57c020e88b856042493b7945bd5ac2ddc757c2
+8a57c020e88b856042493b7945bd5ac2ddc757c2,8a57c020,Fix missing import,"Fix missing import
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500937477,1500937684,8b14700d4cc6092986b001c2d916a7d573a3d844
+8b14700d4cc6092986b001c2d916a7d573a3d844,8b14700d,Reapply custom width to stretched-height NumberPadTimePickers for eligible layout qualifiers,"Reapply custom width to stretched-height NumberPadTimePickers for eligible layout qualifiers
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500935491,1500937683,a29033ccd3fb80dd00d26b3747c5a00c8e3699e0
+a29033ccd3fb80dd00d26b3747c5a00c8e3699e0,a29033cc,Update sample app to demo NumberPadTimePickers that stretch to their parent's height,"Update sample app to demo NumberPadTimePickers that stretch to their parent's height
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500921292,1500937682,cbb77caa3bcbd2cf43a514f495402d69ad34a443
+cbb77caa3bcbd2cf43a514f495402d69ad34a443,cbb77caa,Demo custom width NumberPadTimePicker in sample app,"Demo custom width NumberPadTimePicker in sample app
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500681983,1500937682,b058c4143629f649fc2e8518ae27b91aaea5738a
+b058c4143629f649fc2e8518ae27b91aaea5738a,b058c414,Update sample app to demo NumberPadTimePickers that stretch to their parent's height,"Update sample app to demo NumberPadTimePickers that stretch to their parent's height
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500921292,1500937681,7814c234c116b8dc8418783e46254ecde13562ad
+7814c234c116b8dc8418783e46254ecde13562ad,7814c234,Use row weight of 1 for all buttons in the number pad grid for each NumberPadTimePicker layout.,"Use row weight of 1 for all buttons in the number pad grid for each NumberPadTimePicker layout.
+
+This commit allows a NumberPadTimePicker, when used with layout_height=""match_parent"", to stretch the height of its number keys evenly across the entire height of its parent layout. The keys will still remain their minHeight value when NumberPadTimePicker is used with layout_height=""wrap_content"".
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500890223,1500937680,c1166ed59d4503455adc196676654dd296f92d64
+c1166ed59d4503455adc196676654dd296f92d64,c1166ed5,Demo custom width NumberPadTimePicker in sample app,"Demo custom width NumberPadTimePicker in sample app
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500681983,1500937679,e04332a5ba53b6f1cf9fc01c8ab9f4d3a5b5e873
+e04332a5ba53b6f1cf9fc01c8ab9f4d3a5b5e873,e04332a5,Change window height of BottomSheetNumberPadTimePickerDialog from WRAP_CONTENT…,"Change window height of BottomSheetNumberPadTimePickerDialog from WRAP_CONTENT to MATCH_PARENT for eligible layout qualifiers.
+
+This fixes the following issues that occurred for SDK 23+:
+ - The bottom edge of the dialog was slightly pushed up from the screen edge.
+ - The dialog's enter animation was janky and distorted.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500617755,1500937678,af66c4fc5d5fcc7e4a6654fb4fd2fd27673fc42a
+af66c4fc5d5fcc7e4a6654fb4fd2fd27673fc42a,af66c4fc,Demo setCancelButtonClickListener() in sample app,"Demo setCancelButtonClickListener() in sample app
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500601021,1500601021,58cb3c5ac47116d0dd39d70cb1b9374c5b61dc4e
+58cb3c5ac47116d0dd39d70cb1b9374c5b61dc4e,58cb3c5a,Add setCancelButtonClickListener(),"Add setCancelButtonClickListener()
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500600677,1500600677,01bfef04f620d8bc49ccb558cef83a0497cf26ee
+01bfef04f620d8bc49ccb558cef83a0497cf26ee,01bfef04,Customize windowBackground instead of colorBackground for TimePickerActivity.,"Customize windowBackground instead of colorBackground for TimePickerActivity.
+
+The color was not showing up for KitKat. This change fixes that issue and works for all API levels.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500599005,1500599005,e48c4451da5345c84e65822fa28913c27c99641e
+e48c4451da5345c84e65822fa28913c27c99641e,e48c4451,Display toast to show time selection from dialogs in sample app,"Display toast to show time selection from dialogs in sample app
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500598336,1500598336,468642efebda1f561ca3283f77c86f62745aeaa5
+468642efebda1f561ca3283f77c86f62745aeaa5,468642ef,Update sample app to demo NumberPadTimePicker as a View,"Update sample app to demo NumberPadTimePicker as a View
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500596630,1500596630,c8ef668f2a5130a24821c64f7cd29989ce424f81
+c8ef668f2a5130a24821c64f7cd29989ce424f81,c8ef668f,Add programmatic theming to NumberPadTimePicker,"Add programmatic theming to NumberPadTimePicker
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500595484,1500595484,186d12a80947a7e4414ec21846b2c85c65d8fc38
+186d12a80947a7e4414ec21846b2c85c65d8fc38,186d12a8,Add 'standalone' as value for nptp_numberPadTimePickerLayout attribute,"Add 'standalone' as value for nptp_numberPadTimePickerLayout attribute
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500445785,1500512853,dcff38a74a8a3d4c4fc13f63db129b23276f8982
+dcff38a74a8a3d4c4fc13f63db129b23276f8982,dcff38a7,Remove setHeaderDisplayFocused() method,"Remove setHeaderDisplayFocused() method
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500405441,1500433960,6c06fb9e43c41be71649d302a085c73e50b7d8cd
+6c06fb9e43c41be71649d302a085c73e50b7d8cd,6c06fb9e,Modify NumberPadTimePickerAlertComponent to install its own alert buttons.,"Modify NumberPadTimePickerAlertComponent to install its own alert buttons.
+
+This commit implements the ability to use NumberPadTimePicker as a standalone View for any layout: STANDALONE, ALERT, BOTTOM_SHEET.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500371100,1500404648,30591a4a04fa0ee95969d7242be6b5532eba337e
+30591a4a04fa0ee95969d7242be6b5532eba337e,30591a4a,Update enabled state of OK button when OkButtonCallbacks are set,"Update enabled state of OK button when OkButtonCallbacks are set
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500404604,1500404604,f05c372c1f139298550fefc689a4e608f842f53f
+f05c372c1f139298550fefc689a4e608f842f53f,f05c372c,Always set FAB enabled even if ShowFabPolicy is 'validTime',"Always set FAB enabled even if ShowFabPolicy is 'validTime'
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500344215,1500344215,47e496ccba60c1d0aaa1ba5f7c0c02fa525dbe10
+47e496ccba60c1d0aaa1ba5f7c0c02fa525dbe10,47e496cc,Consolidate interfaces and presenters.,"Consolidate interfaces and presenters.
+
+NumberPadTimePicker and NumberPadTimePickerPresenter have been promoted to handle all view logic, while NumberPadTimePickerDialogViewDelegate and NumberPadTimePickerDialogPresenter have been simplified to handle only dialog action buttons.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1500248695,1500248695,b36bb8e5bce2fcd6be818bddbf7bb0621fae0fb6
+b36bb8e5bce2fcd6be818bddbf7bb0621fae0fb6,b36bb8e5,Create new sample activity to demo use of NumberPadTimePicker as a View.,"Create new sample activity to demo use of NumberPadTimePicker as a View.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497818475,1497818475,ae1f5547aed7b5fa4c5cccb0bdc5ab1eabd10cf1
+ae1f5547aed7b5fa4c5cccb0bdc5ab1eabd10cf1,ae1f5547,Avoid exception if NumberPadTimePicker.confirmTimeSelection() is called when the…,"Avoid exception if NumberPadTimePicker.confirmTimeSelection() is called when the ""ok"" button is not enabled.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497663523,1497663523,fa5d4b2f6c31025184777bfbc0acc387779e810f
+fa5d4b2f6c31025184777bfbc0acc387779e810f,fa5d4b2f,Allow NumberPadTimePicker to be used like a dialog.,"Allow NumberPadTimePicker to be used like a dialog.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497642868,1497642868,83e79a8d04c6409adb687e075613c28a30b20cb5
+83e79a8d04c6409adb687e075613c28a30b20cb5,83e79a8d,Update README with sample app listing.,"Update README with sample app listing.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497482821,1497482821,81ed94399f48b639e18f5caa3f0520d78bbafef4
+81ed94399f48b639e18f5caa3f0520d78bbafef4,81ed9439,Update app icon and add tablet screenshots.,"Update app icon and add tablet screenshots.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497478900,1497478900,454dd25dd06ac5a808714a1b54a08cda6b4484f0
+454dd25dd06ac5a808714a1b54a08cda6b4484f0,454dd25d,Update attrs.xml formatting and comments.,"Update attrs.xml formatting and comments.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497419293,1497419293,6294c4dd697d0ca37b0a61d139d528c280de378f
+6294c4dd697d0ca37b0a61d139d528c280de378f,6294c4dd,Update README,"Update README
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497417973,1497417973,ccfe1b95ad0da4a525eb78fc87fef6b6f936af0d
+ccfe1b95ad0da4a525eb78fc87fef6b6f936af0d,ccfe1b95,Specify the preferred branch for sending pull requests to in the contributing…,"Specify the preferred branch for sending pull requests to in the contributing section of the README.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497399868,1497399868,bae8fd6f6dd3dbf7f3341da717b33f7c56bdfb7c
+bae8fd6f6dd3dbf7f3341da717b33f7c56bdfb7c,bae8fd6f,Build sample app with Proguard.,"Build sample app with Proguard.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497390983,1497390983,8fe5dfe60ce97e4649509decec06255f5197336b
+8fe5dfe60ce97e4649509decec06255f5197336b,8fe5dfe6,Make library AAR usable with Proguard.,"Make library AAR usable with Proguard.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497390950,1497390950,ad61c7c60261c7a7441634c9b1e0235ecefceb5f
+ad61c7c60261c7a7441634c9b1e0235ecefceb5f,ad61c7c6,Update support library to 25.4.0.,"Update support library to 25.4.0.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497384571,1497384571,51b1c6d7c92b65db49f193f22edd3ecf574046aa
+51b1c6d7c92b65db49f193f22edd3ecf574046aa,51b1c6d7,Delete unnecessary blocks in build.gradle files.,"Delete unnecessary blocks in build.gradle files.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497383845,1497383845,e86f64f6fd6762555594422f8289d2f2461bb652
+e86f64f6fd6762555594422f8289d2f2461bb652,e86f64f6,Change access levels of compound Views to public to satisfy Lint's…,"Change access levels of compound Views to public to satisfy Lint's Instantiatable requirement when building for release.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497332773,1497332773,24b72802b1866b4cf8efb66370b3ddbd2cd4859a
+24b72802b1866b4cf8efb66370b3ddbd2cd4859a,24b72802,"Add license, readme, and screenshots.","Add license, readme, and screenshots.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497320919,1497320919,b43101a4c0537e8a72868f8294172567d91c76e9
+b43101a4c0537e8a72868f8294172567d91c76e9,b43101a4,Add javadoc to Themer APIs.,"Add javadoc to Themer APIs.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497245829,1497245829,1225d4d22c2c5aa7a31a2cfc6e832bc926fa9202
+1225d4d22c2c5aa7a31a2cfc6e832bc926fa9202,1225d4d2,Use TextView to display the time set instead of a Toast.,"Use TextView to display the time set instead of a Toast.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497227628,1497236022,eaa16bc916456d5b7eea2cf1b3bf260c1aef4116
+eaa16bc916456d5b7eea2cf1b3bf260c1aef4116,eaa16bc9,Change default color settings for dynamic custom theme.,"Change default color settings for dynamic custom theme.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497225323,1497236021,eb021492a4cc4429cb70dc90c2735e391040e805
+eb021492a4cc4429cb70dc90c2735e391040e805,eb021492,Add option to demo custom themes through XML.,"Add option to demo custom themes through XML.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497172497,1497236020,f0f663d237686f83b10a6e33dcaa7b0cec2f34e6
+f0f663d237686f83b10a6e33dcaa7b0cec2f34e6,f0f663d2,Add color settings.,"Add color settings.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497154625,1497236019,7dab435df546cc6c79184bdd024a264c17580484
+7dab435df546cc6c79184bdd024a264c17580484,7dab435d,Apply the present settings to the custom themed picker options.,"Apply the present settings to the custom themed picker options.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497085473,1497236018,688a8ce3a97b028c49b80f5cc975c576ef72d582
+688a8ce3a97b028c49b80f5cc975c576ef72d582,688a8ce3,Add more demo options,"Add more demo options
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497080434,1497236017,0a6e52145b6e61072c2ae353f16aab139c7d27dc
+0a6e52145b6e61072c2ae353f16aab139c7d27dc,0a6e5214,Fix crashing on pre-21 when inflating the TextView for support PreferenceCategory labels.,"Fix crashing on pre-21 when inflating the TextView for support PreferenceCategory labels.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497060463,1497236016,6c5d9c2c2c71b159a957ac0ee10330d37f9add32
+6c5d9c2c2c71b159a957ac0ee10330d37f9add32,6c5d9c2c,Revamp sample app.,"Revamp sample app.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497056225,1497236015,f35d56bf58c42a96f4a3a3123aa924f43bb709e9
+f35d56bf58c42a96f4a3a3123aa924f43bb709e9,f35d56bf,Rename resource prefixes to 'nptp_' and 'NPTP_',"Rename resource prefixes to 'nptp_' and 'NPTP_'
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1496991256,1497236014,2f70feb23c7435d4447012e685ad6d86e442cc57
+2f70feb23c7435d4447012e685ad6d86e442cc57,2f70feb2,Replace ripple drawable with 'selectableItemBackgroundBorderless' in button background style,"Replace ripple drawable with 'selectableItemBackgroundBorderless' in button background style
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1496986784,1497236013,803914a7fbc8a12f90570a299e96e21c8402adc6
+803914a7fbc8a12f90570a299e96e21c8402adc6,803914a7,Fix UI test dependencies,"Fix UI test dependencies
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1497021962,1497236012,d4b3a1dfb35910d5ce0a0a5322da0d495b91df78
+d4b3a1dfb35910d5ce0a0a5322da0d495b91df78,d4b3a1df,Fix bottom sheet not showing fully expanded for pre-21.,"Fix bottom sheet not showing fully expanded for pre-21.
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1496987958,1496987958,51c7be4edca85766ef763ab3b54045c24708b224
+51c7be4edca85766ef763ab3b54045c24708b224,51c7be4e,Port over files,"Port over files
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1496986019,1496986019,14dc187667f2d2f4daca7cc5dbf2983f6921302f
+14dc187667f2d2f4daca7cc5dbf2983f6921302f,14dc1876,Initial commit,"Initial commit
+",,,,Phillip Hsu,philliphsu@outlook.com,Phillip Hsu,philliphsu@outlook.com,1496956267,1496956267,

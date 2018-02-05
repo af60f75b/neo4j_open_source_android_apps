@@ -1,0 +1,461 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+4ea0579090fafaeb5da7039cb4fe8aa08c58e2e7,4ea05790,Add Play Store Button,Add Play Store Button,,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1463149676,1463149676,e4c6945a448599fabaaf44e7b71e090f222adab1
+e4c6945a448599fabaaf44e7b71e090f222adab1,e4c6945a,Implement Runtime Permission Library,"Implement Runtime Permission Library
+
+Well the temporary solution of compiling to API 22 failed. Turns out you're not allowed to downgrade
+from API 23 due to the fact that the permission logic was already enforced for Marshmallow users.
+The Runtime Permissions really irked me and I despised the fact that it bloats the codebase. So I
+used a library that autogenerates classes for me to handle all that crap. I hope Google considers
+the developers point of views in future updates.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462993264,1462993264,e453da70a41e2d10748475ad507b1bd550dbb4cd
+e453da70a41e2d10748475ad507b1bd550dbb4cd,e453da70,WRITE access implicitly requires READ access,"WRITE access implicitly requires READ access
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462993146,1462993146,7b76629f4f02b76f9865e3aa2a4a9c0438dfccf6
+7b76629f4f02b76f9865e3aa2a4a9c0438dfccf6,7b76629f,Buffer the zip file retrieval,"Buffer the zip file retrieval
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462899598,1462899668,26355f359ff018e94da25422e432623637573c2f
+26355f359ff018e94da25422e432623637573c2f,26355f35,Handle local and server images,"Handle local and server images
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462899530,1462899666,f14bb264180c32fdda646086f24f39de04e6f28b
+f14bb264180c32fdda646086f24f39de04e6f28b,f14bb264,Avoid Marshmallow Permissions (temporary),"Avoid Marshmallow Permissions (temporary)
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462899347,1462899347,5ae4428a354a2d37c2e131a789591ec88c9980e6
+5ae4428a354a2d37c2e131a789591ec88c9980e6,5ae4428a,Update icon,"Update icon
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462831559,1462831559,09ac18e77b773d4558ba25c134404636ebf77bd3
+09ac18e77b773d4558ba25c134404636ebf77bd3,09ac18e7,Fix image file handling... again,"Fix image file handling... again
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462831189,1462831189,18392eab5c4d1b3008195c082dbf5b6ddd1284a8
+18392eab5c4d1b3008195c082dbf5b6ddd1284a8,18392eab,Add response logging for upload of image,"Add response logging for upload of image
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462831159,1462831159,880f60ca897486ab7a9784ce32200600d23b5641
+880f60ca897486ab7a9784ce32200600d23b5641,880f60ca,Add source photos,"Add source photos
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462566314,1462566314,20699e3b9ea069e4493dad69ff97123cb65dd2a6
+20699e3b9ea069e4493dad69ff97123cb65dd2a6,20699e3b,Update Logo,"Update Logo
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462564623,1462564623,4eb798eb42f80d74f05494016aa7d520b642f531
+4eb798eb42f80d74f05494016aa7d520b642f531,4eb798eb,Add Shapeways recognition,"Add Shapeways recognition
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462563277,1462564533,f6fe2a17439212cb0d44f6aaa4e9ddf820377abb
+f6fe2a17439212cb0d44f6aaa4e9ddf820377abb,f6fe2a17,Add Snackbar after user uploads image,"Add Snackbar after user uploads image
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461964451,1462564533,59f2189701abac98b6057c9e58fe7ec9b27960fe
+59f2189701abac98b6057c9e58fe7ec9b27960fe,59f21897,Fix loading images that weren't on local storage.,"Fix loading images that weren't on local storage.
+
+This solution works for files on the external sd, dropbox, etc.
+Fixes #62.
+
+However this doesn't work for images in the cloud, such as picasa images.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462040747,1462040870,8572d701142488d91d7db4ea67fa2833c18a05a5
+8572d701142488d91d7db4ea67fa2833c18a05a5,8572d701,Upgrade gradle,"Upgrade gradle
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462031968,1462031968,7dd7ad6680bebf34317ee9b53dd258a804e6cd73
+7dd7ad6680bebf34317ee9b53dd258a804e6cd73,7dd7ad66,Fix crashes when editing,"Fix crashes when editing
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462031940,1462031940,2ee39ecf33b0cb24f2a1412575d68de3602398b1
+2ee39ecf33b0cb24f2a1412575d68de3602398b1,2ee39ecf,Notify user that their image was uploaded,"Notify user that their image was uploaded
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1462031915,1462031915,80ac5c3c861ce040bed8ae50ce7d24685f69ef96
+80ac5c3c861ce040bed8ae50ce7d24685f69ef96,80ac5c3c,Replace Clear button with FAQ button,"Replace Clear button with FAQ button
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461905819,1461906034,c90bc0ba04da25a86c3f918003bd2d8248ecafff
+c90bc0ba04da25a86c3f918003bd2d8248ecafff,c90bc0ba,Add question and extract all string resources,"Add question and extract all string resources
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461905421,1461906033,ee83c7d880b958640be5f130b14f6983da644f8e
+ee83c7d880b958640be5f130b14f6983da644f8e,ee83c7d8,"Clean up test code, useless code and test files.","Clean up test code, useless code and test files.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461904022,1461906010,4a3dcb05c82b741344ca7d08f56f030b3797b9ae
+4a3dcb05c82b741344ca7d08f56f030b3797b9ae,4a3dcb05,Smooth scroll when new model received.,"Smooth scroll when new model received.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461903989,1461903989,bd76c61ee1dfe1dc24d535cff5fd9749fab8d5c3
+bd76c61ee1dfe1dc24d535cff5fd9749fab8d5c3,bd76c61e,Maintain list order when activity restarts,"Maintain list order when activity restarts
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461903532,1461903532,6258bb7c49817716ab54ac824ca44e82663c9133
+6258bb7c49817716ab54ac824ca44e82663c9133,6258bb7c,Remove cart addition. Not needed,"Remove cart addition. Not needed
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461902830,1461902830,22e63cc1615cb858489756d11562c423348c0364
+22e63cc1615cb858489756d11562c423348c0364,22e63cc1,Rename and fix UI,"Rename and fix UI
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461902715,1461902715,db130a5d5e0c6cdffa4712755c94e736b9515dc2
+db130a5d5e0c6cdffa4712755c94e736b9515dc2,db130a5d,Add FAQ page,"Add FAQ page
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461884601,1461884601,4877bf8b6caf01dcd6d81781b46d06a3669034ef
+4877bf8b6caf01dcd6d81781b46d06a3669034ef,4877bf8b,Add logo,"Add logo
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461860687,1461863147,1f312a7d171c788c4c578da8a9ddde21aeaf4d15
+1f312a7d171c788c4c578da8a9ddde21aeaf4d15,1f312a7d,Prevent model from being uploaded twice,"Prevent model from being uploaded twice
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461858906,1461863147,53525b71571728af59fe33efc6de1a1a38c311cb
+53525b71571728af59fe33efc6de1a1a38c311cb,53525b71,Implement progressDialog when uploading model,"Implement progressDialog when uploading model
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461858322,1461863147,00a8e558b503633e79c28ae909cb032adcf9a031
+00a8e558b503633e79c28ae909cb032adcf9a031,00a8e558,Send user to shop after uploading model,"Send user to shop after uploading model
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461855510,1461863143,b707bc707c0951d31c58b8076e14d512ca16cef8
+b707bc707c0951d31c58b8076e14d512ca16cef8,b707bc70,Create README.md,Create README.md,,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461844564,1461844564,d213aaabaa9f589ea94ddcb3789c7b2f7ab1521b
+d213aaabaa9f589ea94ddcb3789c7b2f7ab1521b,d213aaab,Add materials to model upload request,"Add materials to model upload request
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461791279,1461791279,aa17bf35891984da31255ee023c10c665f992136
+aa17bf35891984da31255ee023c10c665f992136,aa17bf35,Make apiService public static.,"Make apiService public static.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461791250,1461791250,693b680bb4450ddbe35c2538afd475ac87445693
+693b680bb4450ddbe35c2538afd475ac87445693,693b680b,Generate ModelResponse object after upload.,"Generate ModelResponse object after upload.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461791157,1461791157,3d713884162cdb1991bc5ae52aac597dcdfe4a16
+3d713884162cdb1991bc5ae52aac597dcdfe4a16,3d713884,Abstract the upload Model Response JSON.,"Abstract the upload Model Response JSON.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461791101,1461791101,64c23de3d8c404087939aee338f4e96c2ef164d9
+64c23de3d8c404087939aee338f4e96c2ef164d9,64c23de3,Add back Materials Enum. It's very useful!,"Add back Materials Enum. It's very useful!
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461791023,1461791023,ac58c5856489e33c1ac93f836b285eaf8db5c808
+ac58c5856489e33c1ac93f836b285eaf8db5c808,ac58c585,Move to Retrofit :),"Move to Retrofit :)
+
+Fixes #52.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461740038,1461740038,9068e9ca602a121a0d0ae0ed463abd3e2b43ae84
+9068e9ca602a121a0d0ae0ed463abd3e2b43ae84,9068e9ca,Add classes from jsonschema2pojo,"Add classes from jsonschema2pojo
+
+These classes are the result of parsing a sample GET cart request.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461739939,1461739939,614303206cd0bd287e4b3de96c58f5e0d0d90860
+614303206cd0bd287e4b3de96c58f5e0d0d90860,61430320,Abstract the model being uploaded,"Abstract the model being uploaded
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461739857,1461739857,d337fa81309f69765fc69f91cd0739720fab97d5
+d337fa81309f69765fc69f91cd0739720fab97d5,d337fa81,Remove ScribeJava library.,"Remove ScribeJava library.
+
+Moved all authenticated API requests to backend server for security
+reasons. Intend to use Retrofit to make calls to that server instead.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461731567,1461733596,743e188c0c6761a7be10cf914c5ea41f582fbff2
+743e188c0c6761a7be10cf914c5ea41f582fbff2,743e188c,Implement Facebook timeline posting code.,"Implement Facebook timeline posting code.
+
+Requires Facebook app to be installed.
+Fixes #37.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461560287,1461560287,1a818bdd3ff6af694170fb30e7e028017c943bce
+1a818bdd3ff6af694170fb30e7e028017c943bce,1a818bdd,Remove test libraries for now,"Remove test libraries for now
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461556747,1461556747,3ae66a785a708e8673fd56a106d1ea8da7720818
+3ae66a785a708e8673fd56a106d1ea8da7720818,3ae66a78,Add Facebook prerequisite code,"Add Facebook prerequisite code
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1461556684,1461556684,e1a33a2218fc17e2860692ebaaa063c11ba8315e
+e1a33a2218fc17e2860692ebaaa063c11ba8315e,e1a33a22,Implement title editing,"Implement title editing
+
+After two days of attempting to rename the files, for some strange reason, android refuses to
+properly rename the files within the model directories. My workaround is simply storing the original
+name the model was created with in addition to holding a display name, which will be kept in
+SharedPreferences.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460956101,1461556338,9912a5b63e96650d52ac083d0792b8e92df75432
+9912a5b63e96650d52ac083d0792b8e92df75432,9912a5b6,Implement 3D view on preview image click,"Implement 3D view on preview image click
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460833027,1460833661,1890dae1f66884372925ec724537055db809f42e
+1890dae1f66884372925ec724537055db809f42e,1890dae1,Fix .gitignore,"Fix .gitignore
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460830987,1460831309,16f02b67585c2df9e40842b23e6ba46fa3f48784
+16f02b67585c2df9e40842b23e6ba46fa3f48784,16f02b67,Removed the login portion of application.,"Removed the login portion of application.
+
+It ended up making no sense regarding where this app was heading. This
+will greatly simplify initial UX.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460787798,1460831309,1b647acb1ea22e9d5cbe296a0e653ffaebc849f5
+1b647acb1ea22e9d5cbe296a0e653ffaebc849f5,1b647acb,Implement delete button,"Implement delete button
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460733662,1460754143,541bcd72beed32a1d1ca0cab057fa65f5f4773eb
+541bcd72beed32a1d1ca0cab057fa65f5f4773eb,541bcd72,UI changes and fixes,"UI changes and fixes
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460732983,1460733118,516a5e0f654204c1318b0115611932273d5c5b05
+516a5e0f654204c1318b0115611932273d5c5b05,516a5e0f,Fix cards,"Fix cards
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460666345,1460666345,03c542d37579360b27642d9682951468a1c4e8eb
+03c542d37579360b27642d9682951468a1c4e8eb,03c542d3,Provide the correct filename,"Provide the correct filename
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460665495,1460665495,5f1e803ffcdb5b3ad052d299e05cdf39df3e77d4
+5f1e803ffcdb5b3ad052d299e05cdf39df3e77d4,5f1e803f,Move title above images,"Move title above images
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460656629,1460656629,7f8b9d6bdaa57636eba0b65f00d1ff6bd285dd67
+7f8b9d6bdaa57636eba0b65f00d1ff6bd285dd67,7f8b9d6b,Add preview image for 3d model,"Add preview image for 3d model
+
+Fixes #58.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460656400,1460656421,8b460b19edd2b91f15f36858310db4d8faf6c599
+8b460b19edd2b91f15f36858310db4d8faf6c599,8b460b19,Fixes #57,"Fixes #57
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460567225,1460567225,52fee38eea9a5769215e11d770d650516005fc90
+52fee38eea9a5769215e11d770d650516005fc90,52fee38e,Move from listview to cardview.,"Move from listview to cardview.
+
+Also included some images for future features such as sharing, deleting, etc.
+Fixes #54.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460495113,1460495202,15dd2e3279d2cb479eea36470f0260da86a1221b
+15dd2e3279d2cb479eea36470f0260da86a1221b,15dd2e32,Ensure user has camera app,"Ensure user has camera app
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460476712,1460478753,0635f12697653cde92cb569fdfadf538f2563ff5
+0635f12697653cde92cb569fdfadf538f2563ff5,0635f126,Crop on gallery selection and camera.,"Crop on gallery selection and camera.
+
+Fixes #35.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460476614,1460478681,5487fc7570de477bda59c63e693b75fbf01786fb
+5487fc7570de477bda59c63e693b75fbf01786fb,5487fc75,Add android-crop library,"Add android-crop library
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460408360,1460478680,df7e6c603c8e988b3c6eec4cce21a966e6d4f3bb
+df7e6c603c8e988b3c6eec4cce21a966e6d4f3bb,df7e6c60,Allow portrait and landscape,"Allow portrait and landscape
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460405273,1460478680,2590a9ba08852702c216a752ee808b2e1e3c1df6
+2590a9ba08852702c216a752ee808b2e1e3c1df6,2590a9ba,Fix bug on configuration changes.,"Fix bug on configuration changes.
+
+When configurations were changed, e.g. Camera was used and the screen rotated, the reference to the adapter was lost and instant updates to the recyclerview were impossible. By making the adapter static, this issue is resolved.
+
+Also changed the file directory to store models to the default external file storage.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460404981,1460478680,2215aeab7f2b87cff99b6b43e3bf2d7ba45537d4
+2215aeab7f2b87cff99b6b43e3bf2d7ba45537d4,2215aeab,Close FAB Menu after selection,"Close FAB Menu after selection
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460139042,1460478680,d8a6bbfb8673d6bebbe186a6efc551331a9894ab
+d8a6bbfb8673d6bebbe186a6efc551331a9894ab,d8a6bbfb,Implement camera logic,"Implement camera logic
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460128995,1460478680,9ad657cd231070d245e1db3a314b37772d959b87
+9ad657cd231070d245e1db3a314b37772d959b87,9ad657cd,Improve FAB with additional Camera option.,"Improve FAB with additional Camera option.
+
+Credit largely goes to this fork of the futuresimple's android-floating-action-button library:
+https://github.com/str4d/android-floating-action-button/pull/3
+Fixes #39.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460128689,1460478680,97df6a5c398c2fcb5c853f4240a439b29b45e49c
+97df6a5c398c2fcb5c853f4240a439b29b45e49c,97df6a5c,Fixes #56,"Fixes #56
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460123295,1460478680,5e99609360932af280298e94905405aab5829d98
+5e99609360932af280298e94905405aab5829d98,5e996093,New models appear at top,"New models appear at top
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460052632,1460478680,aedd02aab89207417eb6af6e1db3b5bc341c083f
+aedd02aab89207417eb6af6e1db3b5bc341c083f,aedd02aa,Change UI elements and icons,"Change UI elements and icons
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1460038675,1460478680,c468475e7786575f544eb6447a2e0b8ca5be3aaa
+c468475e7786575f544eb6447a2e0b8ca5be3aaa,c468475e,Refactor UX for processing,"Refactor UX for processing
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459890941,1460478680,32a61dcf7c9634d63703881f02974e35842978b2
+32a61dcf7c9634d63703881f02974e35842978b2,32a61dcf,Add ModelStatus Enum.,"Add ModelStatus Enum.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459889656,1459889656,da5800bbde63e46177c97a2974d465c52b30f4fc
+da5800bbde63e46177c97a2974d465c52b30f4fc,da5800bb,Add title to AlertDialog constructors,"Add title to AlertDialog constructors
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459889618,1459889618,5d229b1d2dadf63c19b1a35f4f0d3c4cce240295
+5d229b1d2dadf63c19b1a35f4f0d3c4cce240295,5d229b1d,Add constructors for duration of Snackbars.,"Add constructors for duration of Snackbars.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459889388,1459889578,d1a092191341bd7c79f9a7de563fe2ca0b177bbb
+d1a092191341bd7c79f9a7de563fe2ca0b177bbb,d1a09219,Refactor Model class,"Refactor Model class
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459873775,1459873775,64b163cad32516df228e576d20f616768ddfe50d
+64b163cad32516df228e576d20f616768ddfe50d,64b163ca,Add Materials Enum class,"Add Materials Enum class
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459873213,1459873213,2327551177941be1cd1588cb96b751217ba07b89
+2327551177941be1cd1588cb96b751217ba07b89,23275511,Add Processing status check,"Add Processing status check
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459803354,1459803420,8e2397faeab73edfb73e5e82fa4805d47ba4f87b
+8e2397faeab73edfb73e5e82fa4805d47ba4f87b,8e2397fa,Refactor and check response code.,"Refactor and check response code.
+
+UploadInBackground will now simply have the responsibility of uploading and retrieving the modelId.
+Adding an item to cart will have it's own AsyncTask.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459787551,1459803420,29b067d820f20d096402843c5c1d0f909b5f59c5
+29b067d820f20d096402843c5c1d0f909b5f59c5,29b067d8,Client calls return the Response,"Client calls return the Response
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459787472,1459787472,145832cf761c7bca98a04bbd4ba89f6c868d565e
+145832cf761c7bca98a04bbd4ba89f6c868d565e,145832cf,Change add-to-cart to an upload image.,"Change add-to-cart to an upload image.
+
+This is the first step to purchasing a newly created model. You must first upload that model to Shapeways.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459782172,1459787430,527975fc52bb9f37cbd4750101fc99243c97981d
+527975fc52bb9f37cbd4750101fc99243c97981d,527975fc,Refactor Model class.,"Refactor Model class.
+
+Bitmaps no longer need to be stored as a part of the model class. Source images for the preview will simply be stored within the model's respective folder.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459781995,1459787423,5e93922288ad331d316996e8311b3213650fc05c
+5e93922288ad331d316996e8311b3213650fc05c,5e939222,Field to check if model was uploaded.,"Field to check if model was uploaded.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459780733,1459781059,24bb3ed721ac183f0225fcde39ccd795344270cb
+24bb3ed721ac183f0225fcde39ccd795344270cb,24bb3ed7,Add confirmation alert to clear function.,"Add confirmation alert to clear function.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459780568,1459780568,1513eff4041a8010883a546943b036e274bf8e68
+1513eff4041a8010883a546943b036e274bf8e68,1513eff4,Add cart to toolbar,"Add cart to toolbar
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459780156,1459780156,951ce91e6a1fe64e641926f87d5b3064d92e3aa0
+951ce91e6a1fe64e641926f87d5b3064d92e3aa0,951ce91e,Utilize Picasso.,"Utilize Picasso.
+
+I should make a note that if I ever spend more than an hour on something, then someone has already solved it for me and I should study up on more libraries that have been created.
+Fixes #48.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459539091,1459539091,df15a3a8ed7245843142c131ad176fe38f0a304b
+df15a3a8ed7245843142c131ad176fe38f0a304b,df15a3a8,Implement Scroll Aware Behavior for FAB.,"Implement Scroll Aware Behavior for FAB.
+
+Apparently, if an element requires reference to the CoordinatorLayout, it isn't enough for the CoordinatorLayout to be just ""up there"" in the hierarchy. So the module that requires a CoordinatorLayout, must create a new one.
+Fixes #45.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459532992,1459533507,3a9715b10b90709033894f885b37edc64067b4ab
+3a9715b10b90709033894f885b37edc64067b4ab,3a9715b1,Switch from listview to recyclerview.,"Switch from listview to recyclerview.
+
+Fixes #47.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459529763,1459530136,63a56cb104763fee39f65a4ac393f0f90c0277c3
+63a56cb104763fee39f65a4ac393f0f90c0277c3,63a56cb1,Change textview size and margin,"Change textview size and margin
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459458708,1459458708,edab590039f1486de8fda3f050f5e874594928f3
+edab590039f1486de8fda3f050f5e874594928f3,edab5900,Change buttons to imagebutton,"Change buttons to imagebutton
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459458448,1459458448,7c6b0f6e47258d7495827eb054de4134bb1f16a8
+7c6b0f6e47258d7495827eb054de4134bb1f16a8,7c6b0f6e,Reposition camera,"Reposition camera
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459453355,1459456870,dfefe528057003be17c9e44649cad9eaecec1e02
+dfefe528057003be17c9e44649cad9eaecec1e02,dfefe528,Cache images into memory for listview.,"Cache images into memory for listview.
+
+Fixes #40.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459448852,1459456870,bf6c925d3debd8523b5bee082330ac8409b7aa39
+bf6c925d3debd8523b5bee082330ac8409b7aa39,bf6c925d,Reimplement image previews.,"Reimplement image previews.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459443923,1459456870,fd96a9ab0d3e4a08b30a6e2cebaf985b4abdb0ef
+fd96a9ab0d3e4a08b30a6e2cebaf985b4abdb0ef,fd96a9ab,Change intent type and refactor.,"Change intent type and refactor.
+
+ACTION_GET_CONTENT is highly preferable to ACTION_PICK. ACTION_PICK is somewhat unofficially deprecated in the community.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459431645,1459431645,9e7279aa3a18e1053607ca7be502106e14fc3738
+9e7279aa3a18e1053607ca7be502106e14fc3738,9e7279aa,Name models by the image's filename.,"Name models by the image's filename.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459362917,1459362924,529c1c6b1cef20929fb46f7e0af65f76f7ce638d
+529c1c6b1cef20929fb46f7e0af65f76f7ce638d,529c1c6b,Name model folders by the time they were created.,"Name model folders by the time they were created.
+
+As opposed to just the file's name, which was an awful idea since that renders the folder vulnerable
+to being overwritten.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459354867,1459362776,8e0aea43f94bf174389317e2a1c73ad25058e9c5
+8e0aea43f94bf174389317e2a1c73ad25058e9c5,8e0aea43,Add clear function,"Add clear function
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459344860,1459344884,bb2a3957b2fee1d3468dfb96bb52834a38fe5e5d
+bb2a3957b2fee1d3468dfb96bb52834a38fe5e5d,bb2a3957,Delete zipfiles after unzipping and refactor,"Delete zipfiles after unzipping and refactor
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459280818,1459280818,d206bca168f37ec02b64b3ef240334d11156937d
+d206bca168f37ec02b64b3ef240334d11156937d,d206bca1,Add documentation,"Add documentation
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459278621,1459278621,b486c943c1905f9b3e281db4683c910f1c1bf640
+b486c943c1905f9b3e281db4683c910f1c1bf640,b486c943,Increase timeout for intense images,"Increase timeout for intense images
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459271694,1459271694,c0babd8f13ec5491e4dc4d45c63f521baf9c7517
+c0babd8f13ec5491e4dc4d45c63f521baf9c7517,c0babd8f,Prevent app from crashing during IOException.,"Prevent app from crashing during IOException.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459271643,1459271643,9b5325f0d242181482e112afad7e792fc4ad08bf
+9b5325f0d242181482e112afad7e792fc4ad08bf,9b5325f0,Prevent app from crashing if file not found.,"Prevent app from crashing if file not found.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459271605,1459271605,2adfbd4cab2b9b174592fc1c2108f6fa51cc8844
+2adfbd4cab2b9b174592fc1c2108f6fa51cc8844,2adfbd4c,Add Button to open browser and go to cart.,"Add Button to open browser and go to cart.
+
+Remove placeholder stuff.
+Fixes #44.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459200714,1459202246,09b22f02f581c153947b7f957aa00b9c91dd6793
+09b22f02f581c153947b7f957aa00b9c91dd6793,09b22f02,Create Json utility class,"Create Json utility class
+
+Create Json utility class
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459197268,1459202184,599611dc698deb1ef68c519fb7e1c159b9edac99
+599611dc698deb1ef68c519fb7e1c159b9edac99,599611dc,Refactor Client and clean up Logging,"Refactor Client and clean up Logging
+
+Fixes #42.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459196764,1459197898,d3e617bc284cde11890131956751e5776f4157a2
+d3e617bc284cde11890131956751e5776f4157a2,d3e617bc,Implement 'Add to Cart' functionality,"Implement 'Add to Cart' functionality
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459193478,1459193478,82c46ec6f2f16c23e128fb7e529b663af48bf7fb
+82c46ec6f2f16c23e128fb7e529b663af48bf7fb,82c46ec6,Implement call to add to cart.,"Implement call to add to cart.
+
+User must click the buy button once in order to upload it, wait a few minutes, and then click it again to actually add it to the cart.
+This implementation is only temporary, and will soon be replaced with a cart page will allow you to select materials and checkout once the upload on that item is complete.
+Fixes #27.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459190320,1459190670,ec08dec3de80b37ddd46e18768c7a1703e80cc8c
+ec08dec3de80b37ddd46e18768c7a1703e80cc8c,ec08dec3,Make OAuth Client public and static,"Make OAuth Client public and static
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1459189968,1459189968,c22a770e8ca514e323c813db74d32689c72e0d27
+c22a770e8ca514e323c813db74d32689c72e0d27,c22a770e,Change Cart endpoint,"Change Cart endpoint
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458940337,1458940337,1567097f21fcffafc28a6e4c91f82e51f83a95f7
+1567097f21fcffafc28a6e4c91f82e51f83a95f7,1567097f,Implement Upload functionality,"Implement Upload functionality
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458940222,1458940222,14e9742d241339e568c9bf2ff27a6c2c5d176109
+14e9742d241339e568c9bf2ff27a6c2c5d176109,14e9742d,Change modelId to type Integer,"Change modelId to type Integer
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458940093,1458940093,45b6fe91c4ee7fa7a9d21e356ef72d153f23d0cd
+45b6fe91c4ee7fa7a9d21e356ef72d153f23d0cd,45b6fe91,Remove backbutton override. Irrelevant to memory.,"Remove backbutton override. Irrelevant to memory.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458829958,1458829973,7da7e23089565613ef8d8b9b8fe872bc7124971d
+7da7e23089565613ef8d8b9b8fe872bc7124971d,7da7e230,Refactor,"Refactor
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458761057,1458826681,070eb854bfc4c3a9a29486cd4b0b4dee19a8c5d1
+070eb854bfc4c3a9a29486cd4b0b4dee19a8c5d1,070eb854,Remove unecessary files and methods.,"Remove unecessary files and methods.
+
+The Constants files have been moved to the 3D-Image-Creator-Server repository.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458760242,1458765267,2901b1323df0de77e5aba333c5262645e04ca31d
+2901b1323df0de77e5aba333c5262645e04ca31d,2901b132,Remove unecessary binding of listview,"Remove unecessary binding of listview
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458759968,1458765267,2e5e1413c840d49aa0545bd29b6905c77172ed1e
+2e5e1413c840d49aa0545bd29b6905c77172ed1e,2e5e1413,Remove photo previews for the time being.,"Remove photo previews for the time being.
+
+Wow, I totally underestimated the complexity of having images within a listview. This is definitely
+going to be included in the final version of the application, but it is eating up way too much of my
+time and there are more important features to implement.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458759538,1458765258,f9cb6590f07145cf7cc6f9e5ac0c1ee1e3b3b15d
+f9cb6590f07145cf7cc6f9e5ac0c1ee1e3b3b15d,f9cb6590,Add ImageHelper for efficient bitmaps in memory.,"Add ImageHelper for efficient bitmaps in memory.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458752374,1458752374,6094347be5d3194f085e38dc763fb4c53c934dd0
+6094347be5d3194f085e38dc763fb4c53c934dd0,6094347b,Fix memory leak issue,"Fix memory leak issue
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458752316,1458752316,044518c3414813a38c84581c460e0270f08482fb
+044518c3414813a38c84581c460e0270f08482fb,044518c3,Move copyfile method to JavaUtilities,"Move copyfile method to JavaUtilities
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458742349,1458742571,ab3bdf814ac4b512fd84e8e39dcd1e8737700ceb
+ab3bdf814ac4b512fd84e8e39dcd1e8737700ceb,ab3bdf81,Fix image souce preview with new models,"Fix image souce preview with new models
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458742278,1458742278,21dff26565d0e52d35ba39a95239647236757e25
+21dff26565d0e52d35ba39a95239647236757e25,21dff265,Create Model class and implement source image view.,"Create Model class and implement source image view.
+
+Creating a model class makes it much easier to throw around data in addition to storing relavent
+data for the future.
+Fixes #36.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458680640,1458680747,0eec7f4bfb5271bf677193a063cbf1b175368712
+0eec7f4bfb5271bf677193a063cbf1b175368712,0eec7f4b,Implement ViewHolder Pattern,"Implement ViewHolder Pattern
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458674285,1458674285,a0cd505d795f36a773f211b874f65a8b4c727c25
+a0cd505d795f36a773f211b874f65a8b4c727c25,a0cd505d,Add custom row layout of items,"Add custom row layout of items
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458671353,1458671353,d6c1f42cbc1a1f8867c430dd28a1187dc25c5155
+d6c1f42cbc1a1f8867c430dd28a1187dc25c5155,d6c1f42c,Fixes #34,"Fixes #34
+
+Having a scrollview as the absolute parent to all fragments was pretty stupid.
+It makes much more sense to add a scrollview when it's necessary.
+Also having a listview inside a scrollview is widely discouraged among the android community, and
+for good reason too. They both have their own scrolling events to take care of, and it'd be weird to
+have them both react to the same scroll event.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458660858,1458660858,ade5c927e7096e55cd3cd94212f20218d3ce3805
+ade5c927e7096e55cd3cd94212f20218d3ce3805,ade5c927,Fix .gitignore errors,"Fix .gitignore errors
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458590212,1458590212,7deb9ea47f2c902614c272abb1fdb00867ddf07b
+7deb9ea47f2c902614c272abb1fdb00867ddf07b,7deb9ea4,Void previous api key and secret.,"Void previous api key and secret.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458589695,1458589916,745618669a8e58078117713dfb32a1616ca9e9f1
+745618669a8e58078117713dfb32a1616ca9e9f1,74561866,Redesign model storage architecture.,"Redesign model storage architecture.
+
+I just realized that in order to submit the order on shapeways, I would need both the g3db file for
+viewing, in addition to the stl file for uploading.
+
+Now every model will have it's own folder with a unique name, typically the name of the image.
+The folder will now contain both the g3db file as well as the stl file.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458588108,1458588108,106acd176b2d4aa943daf516f25e5f0785053d6e
+106acd176b2d4aa943daf516f25e5f0785053d6e,106acd17,Allow for any image size.,"Allow for any image size.
+
+Will regulate image size and complexity on the server somehow.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458335145,1458574573,12158305cb4d924f0c0b4bab87be7f6af5a55ff1
+12158305cb4d924f0c0b4bab87be7f6af5a55ff1,12158305,Fix rendering issue.,"Fix rendering issue.
+
+Fixes #32.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458335093,1458335093,f6bf86d8020f4cde4bf7afbb8f15c16792518ffc
+f6bf86d8020f4cde4bf7afbb8f15c16792518ffc,f6bf86d8,Display 3D view when item is selected in ListView.,"Display 3D view when item is selected in ListView.
+
+Closes #26.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458153569,1458154604,fbb0ea2e85b882b0645ac4a65a5639cc8181c004
+fbb0ea2e85b882b0645ac4a65a5639cc8181c004,fbb0ea2e,Implement rendering code.,"Implement rendering code.
+
+Delete placeholder class.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458153444,1458154604,0165879436d6599e3ce34f4ce3e4d9b24a16712d
+0165879436d6599e3ce34f4ce3e4d9b24a16712d,01658794,Replace default AndroidLauncher,"Replace default AndroidLauncher
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1458152555,1458154604,f8cd554c58e7501f9486fd2f0d7c425e069d38d0
+f8cd554c58e7501f9486fd2f0d7c425e069d38d0,f8cd554c,Successfully transition into LibGDX code.,"Successfully transition into LibGDX code.
+
+In addition, all images that were successfully transformed into 3D objects will be saved onto the device.
+Fixes #14.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457973139,1458154551,9b73ab89a1d1f6d0a44711b85430fb9caa4336bf
+9b73ab89a1d1f6d0a44711b85430fb9caa4336bf,9b73ab89,Refactor uploadImage and make it public.,"Refactor uploadImage and make it public.
+
+Also remove the psvm method.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457972756,1457972756,0032ebc6ffdde0588d5a6912d51b2240bac1f2dc
+0032ebc6ffdde0588d5a6912d51b2240bac1f2dc,0032ebc6,Fix #29,"Fix #29
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457737060,1457737060,3d5990faf6afb71fde5ecd6402308124d42b3b3f
+3d5990faf6afb71fde5ecd6402308124d42b3b3f,3d5990fa,Change application name,"Change application name
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457733251,1457735222,34f925fddfd0ecb0f976868e637c06d2392e1f93
+34f925fddfd0ecb0f976868e637c06d2392e1f93,34f925fd,Integrate code into a LibGDX project.,"Integrate code into a LibGDX project.
+
+I'm going to have to apologize for this massive disruption in project history. When I began this project, I thought it would be easier to simply program all the android specific code first, and then transitionit into a LibGDX project. I did not have clean project history in mind when I made this decision. This is still essentially the same application as the previous commit.
+
+Fixes #25
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457730026,1457730671,bf7d23f0c71802ada0293f795d82ba34812b34ec
+bf7d23f0c71802ada0293f795d82ba34812b34ec,bf7d23f0,Change logic for obtaining 3d files.,"Change logic for obtaining 3d files.
+
+Rather than attempting to obtain an stl file from the shapeJS server and convert it to a g3db on the phone (which is taxing and a bad idea in the first place, not to mention extremely difficult), the application will communicate with a custom server. That custom server will retrieve an image file, communicate with shapeJS, convert the received 3d file (twice), and return it to the application. A link to the server code will be provided within the Readme, along with the utilized conversion libraries.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457717805,1457717805,36d292ef4caf95d7fd7f89728e6c521601099ba3
+36d292ef4caf95d7fd7f89728e6c521601099ba3,36d292ef,Optimize imports,"Optimize imports
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457717723,1457717723,4507d8f7b4576b5e6df897ccfc5002009cdfee5b
+4507d8f7b4576b5e6df897ccfc5002009cdfee5b,4507d8f7,Remove empty homepage TextView when not empty,"Remove empty homepage TextView when not empty
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1457015498,1457015498,ef8f7667e9bb36abb2fdc304740ae619b8f206e0
+ef8f7667e9bb36abb2fdc304740ae619b8f206e0,ef8f7667,Change HomePage to ListFragment,"Change HomePage to ListFragment
+
+The intention is that for each image that successfully is turned into a 3D object, it'll be added to
+a history list of your past images that you created.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456955305,1456955305,6b81c7a635b8d31bf10f04c81ec415c68ec93fea
+6b81c7a635b8d31bf10f04c81ec415c68ec93fea,6b81c7a6,Add sample images for shapeJS,"Add sample images for shapeJS
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456951368,1456951504,6bb83f0404e8e67ceaaea55091a4e43e4cd1ae3c
+6bb83f0404e8e67ceaaea55091a4e43e4cd1ae3c,6bb83f04,Add shapeJS wrapper for 2D-3D functionality,"Add shapeJS wrapper for 2D-3D functionality
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456951271,1456951498,901fe9529f73dac0e05efd758b2a4e869d54a342
+901fe9529f73dac0e05efd758b2a4e869d54a342,901fe952,Add image selection to homescreen.,"Add image selection to homescreen.
+
+In addition, the image selection will immediately check if the file is too large for the shapeJS
+library.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456786177,1456786177,476cf10f4539c6d71bdba13699f6d538b092d06e
+476cf10f4539c6d71bdba13699f6d538b092d06e,476cf10f,Add AlertDialog Utility,"Add AlertDialog Utility
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456785805,1456786152,7a2b6a5135c4270a896e4a60235051fa65f66afb
+7a2b6a5135c4270a896e4a60235051fa65f66afb,7a2b6a51,Change empty homepage text,"Change empty homepage text
+
+Also change text to a more subtle color.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456785779,1456785908,1b5e7d8d4b42086b2a9af6a7c02cf1975d3c055c
+1b5e7d8d4b42086b2a9af6a7c02cf1975d3c055c,1b5e7d8d,Add image FAB,"Add image FAB
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456767599,1456771900,2d008d023f4f65707fda361099acfe7f4c8c392a
+2d008d023f4f65707fda361099acfe7f4c8c392a,2d008d02,Refactor,"Refactor
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456764288,1456764288,45568eb559249fa1f9fd878807082f99964f4df3
+45568eb559249fa1f9fd878807082f99964f4df3,45568eb5,Create constants for SharedPreferences keys,"Create constants for SharedPreferences keys
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456764010,1456764010,2aca90b4dff3e5ac18b5b86610eebfd0fbf577d0
+2aca90b4dff3e5ac18b5b86610eebfd0fbf577d0,2aca90b4,Remove debugging code,"Remove debugging code
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456760843,1456760843,3885bb363702480cfa655386d0e8a38a6f476a7d
+3885bb363702480cfa655386d0e8a38a6f476a7d,3885bb36,Optimize imports,"Optimize imports
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456759915,1456759915,c1868e0739284f3f19c62f5062e65d8c1eb1a8fc
+c1868e0739284f3f19c62f5062e65d8c1eb1a8fc,c1868e07,Update gitignore,"Update gitignore
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456759888,1456759888,6ac1d9749ad2dcc950700b041464cce4a3235839
+6ac1d9749ad2dcc950700b041464cce4a3235839,6ac1d974,Create UI Utility class for Snackbars,"Create UI Utility class for Snackbars
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456759641,1456759838,dfc87152e2950585322135c6e3b38e2ebc86a40a
+dfc87152e2950585322135c6e3b38e2ebc86a40a,dfc87152,Remove unnecessary methods,"Remove unnecessary methods
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456759456,1456759456,a450039b65725e1b95abee0eaf1ccea74deef731
+a450039b65725e1b95abee0eaf1ccea74deef731,a450039b,Implement persistent storage of access token,"Implement persistent storage of access token
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456755621,1456755621,14eb44f051218b284a69f618e3a2f24c2fd55f5f
+14eb44f051218b284a69f618e3a2f24c2fd55f5f,14eb44f0,Refactor method name,"Refactor method name
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456755583,1456755583,656a632b5e2c685a8e00b03e54e7aba8dbe2b118
+656a632b5e2c685a8e00b03e54e7aba8dbe2b118,656a632b,Add Homepage,"Add Homepage
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456354326,1456354326,d17b4acb0c411a18426b01b16fbb802a42ba5119
+d17b4acb0c411a18426b01b16fbb802a42ba5119,d17b4acb,Add Authorization WebView Activity,"Add Authorization WebView Activity
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456354222,1456354222,3dd7f2bbe1379d11e7c10532787f9e9506074ea4
+3dd7f2bbe1379d11e7c10532787f9e9506074ea4,3dd7f2bb,Add Shapeways API wrapper,"Add Shapeways API wrapper
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456354141,1456354141,0044be09eb5f15d58683905d4f630e6ca22a695a
+0044be09eb5f15d58683905d4f630e6ca22a695a,0044be09,Change method of logging in.,"Change method of logging in.
+
+As I learned more about Oauth, I realized that having a user sign into an account via a third party
+application is incredibly insecure. I learned the proper methods of authenticating a user on my
+application. As a result, right now, all the user needs to do is sign on via the Shapeways website,
+and give me the pin they obtained.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456353897,1456353897,d138bb09913ed65d5730430588b4561502e0932a
+d138bb09913ed65d5730430588b4561502e0932a,d138bb09,Update gitignore,"Update gitignore
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456353698,1456353698,e5a486c74eb0683d2937b984314b231dfc822394
+e5a486c74eb0683d2937b984314b231dfc822394,e5a486c7,Extract Snackbar creation method,"Extract Snackbar creation method
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456246133,1456252986,a0245c6ccf1e219b55458048df96f39fd6d61ad7
+a0245c6ccf1e219b55458048df96f39fd6d61ad7,a0245c6c,Initial API Wrapper,"Initial API Wrapper
+
+Using the ScribeJava library for easy OAuth setup and access.
+Excluded the Consumer enum class to hide specific Consumer Key and Secret values.
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1456244254,1456252971,1c20e55a65c91b17ff7e07a7dd72a26b2625527e
+1c20e55a65c91b17ff7e07a7dd72a26b2625527e,1c20e55a,Add Todos,"Add Todos
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455819779,1456244893,6867185f3e89ead3ae20be3dbb4211c038bdb503
+6867185f3e89ead3ae20be3dbb4211c038bdb503,6867185f,Turn LogIn UI into a fragment,"Turn LogIn UI into a fragment
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455815154,1456150098,cee80a859a544dbac6973681c4599c0d6384dfd7
+cee80a859a544dbac6973681c4599c0d6384dfd7,cee80a85,Add Navigation Drawer Layout,"Add Navigation Drawer Layout
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455752967,1456150098,5c5dcf4c572c2db9c9262a42bcafecad5025d8cf
+5c5dcf4c572c2db9c9262a42bcafecad5025d8cf,5c5dcf4c,Set up Espresso testing,"Set up Espresso testing
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455744130,1456150098,30ac53ed58525c5e1fbe6ab2bb9cd9da67c6a2f3
+30ac53ed58525c5e1fbe6ab2bb9cd9da67c6a2f3,30ac53ed,Add testing and desgin libraries,"Add testing and desgin libraries
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455743316,1456150098,0e865d96a5d70430c933a75c830421980a0780c7
+0e865d96a5d70430c933a75c830421980a0780c7,0e865d96,Initial Log In Screen Layout,"Initial Log In Screen Layout
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455743074,1456150089,fdc6eb4137d1bbba3aa5b3b6a0ef645a0455d8e4
+fdc6eb4137d1bbba3aa5b3b6a0ef645a0455d8e4,fdc6eb41,Initial commit,"Initial commit
+",,,,Igor Goldvekht,goldvekht.igor@gmail.com,Igor Goldvekht,goldvekht.igor@gmail.com,1455720149,1455742051,

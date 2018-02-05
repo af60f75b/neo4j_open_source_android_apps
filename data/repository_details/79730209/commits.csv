@@ -1,0 +1,978 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f08f4102f4033e3aeac68d54376c0d0b5acb72dc,f08f4102,Updated gitignore,"Updated gitignore
+
+Added user dictionaries to gitignore.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504702288,1504702288,04888fbf70673d59e45880661347ac7b2f6af5ea
+04888fbf70673d59e45880661347ac7b2f6af5ea,04888fbf,Reorganized displayContents method,"Reorganized displayContents method
+
+Some repeating code in the displayContents method has been moved to a
+new method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504617852,1504617852,8e699ff5eab2c71c7f316ba16e9ff7227737dd20
+8e699ff5eab2c71c7f316ba16e9ff7227737dd20,8e699ff5,Simplified ReferenceCell onSizeChanged code,"Simplified ReferenceCell onSizeChanged code
+
+Simplified the code for the onSizeChanged method, replacing variables
+which store nothing but the result of a single method with the method
+call, and the calculation of the object's height is done once in
+advance, rather than within the subsequent calculations, which partially
+reverts a tiny bit of an earlier commit
+(6077d20d7099f98de813a6cac51c8303ba9c7c0a).
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504612650,1504612650,6077d20d7099f98de813a6cac51c8303ba9c7c0a
+6077d20d7099f98de813a6cac51c8303ba9c7c0a,6077d20d,Reorganized ReferenceCell code,"Reorganized ReferenceCell code
+
+Much like what was done to KanaSelectionItem
+(d16daab2edc195109336677eef6e18bc5c314bd6), the ReferenceCell class has
+been reorganized so data isn't stored redundantly, and code that was in
+the updateObject method is only be called when necessary.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504607702,1504607702,04bf9784439db41cb7b250947013aaa1d26d486b
+04bf9784439db41cb7b250947013aaa1d26d486b,04bf9784,Removed redundant casting,"Removed redundant casting
+
+Removed explicit casting for certain instances of the findViewById
+method. The newest SDK now considers these redundant.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504600592,1504600592,17160b06b4eea8106b57f3495e62e54185d8e9ae
+17160b06b4eea8106b57f3495e62e54185d8e9ae,17160b06,Updated the SDK,"Updated the SDK
+
+Updated gradle file to use the latest Android SDK and support libraries,
+so it's fully compatible with Oreo. Also added the Google Maven
+repository.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504598848,1504598848,9a59b6a86a466b47b6475a18b8f4ef7c5c50b46f
+9a59b6a86a466b47b6475a18b8f4ef7c5c50b46f,9a59b6a8,Reorganized Hiragana and Katakana constructors,"Reorganized Hiragana and Katakana constructors
+
+The constructors for both the Hiragana and Katakana classes have been
+reorganized to no longer require an overly complicated parent
+constructor. Also created an addPrefIds method for the
+QuestionManagement class.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504595409,1504595409,4793ddd43e8e44d7f138212fd851226e83ea468f
+4793ddd43e8e44d7f138212fd851226e83ea468f,4793ddd4,Added addKanaSet method,"Added addKanaSet method
+
+Included a few addKanaSet methods for recording the kana sets for use in
+the QuestionManagement class, and modified the constructor to utilize
+them.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504182266,1504182266,2c775f5bb24e9e66adea704c8b73357b9700379f
+2c775f5bb24e9e66adea704c8b73357b9700379f,2c775f5b,Modified getKanaSet error handling,"Modified getKanaSet error handling
+
+Added detailed message to error handling in getKanaSet method, as well
+as a null check.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504170631,1504170631,d16daab2edc195109336677eef6e18bc5c314bd6
+d16daab2edc195109336677eef6e18bc5c314bd6,d16daab2,Reorganized KanaSelectionItem code,"Reorganized KanaSelectionItem code
+
+Reorganized KanaSelectionItem code to remove redundant storage of data
+(storing title and content in both a variable and as a property of the
+relevant TextView objects), and have code that was in the updateObject
+method split off so it will only be called when the relevant components
+are updated rather than call all the code when anything is updated. Also
+moved the setOnCheckedChangeListener command for the checkbox to the
+init method because I realized it does not need to be updated whenever
+the prefId changes, because the handler calls the getPrefId method,
+which'll respond to changes to the prefId on the fly. Finally, added a
+check to the section for loading object attributes so that the setters
+aren't called if there's nothing to set.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504054395,1504054395,02fe3db7bb9183a9a81897a104aec52c581ed1c1
+02fe3db7bb9183a9a81897a104aec52c581ed1c1,02fe3db7,Prevented null object references,"Prevented null object references
+
+Prevented the case of an accidental null object reference in
+OptionsControl causing an exception in the getBoolean method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504051752,1504051752,c6d9a3a262d4c54b3642aa055ac3dcb76f32f6cf
+c6d9a3a262d4c54b3642aa055ac3dcb76f32f6cf,c6d9a3a2,Reverted old edits to KanaSelectionItem,"Reverted old edits to KanaSelectionItem
+
+Reverted some of the changes to KanaSelectionItem from old commit
+(68fb42035e7aa300ac04ee4ad974047293bd9ff0), that edited the class to
+only display characters with diacritics if diacritics were selected as
+an option. Those edits were made redundant by the most recent change,
+that dynamically builds the Kana Selection screen from information
+stored in the Hiragana and Katakana classes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1504043776,1504043776,e62cc318a4144dc3d19c15498842a1259824e872
+e62cc318a4144dc3d19c15498842a1259824e872,e62cc318,Rebuilt selection screen construction code,"Rebuilt selection screen construction code
+
+Selection screen is now built using code from the QuestionManagement
+class, using the character data stored in the Hiragana and Katakana
+classes rather than string resources. This simplifies things somewhat
+and removes redundant data.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1503984382,1503984382,735efbdfafebe75a721f99292c8b2c687c643d18
+735efbdfafebe75a721f99292c8b2c687c643d18,735efbdf,Fixed styling,"Fixed styling
+
+Styling was munted in Hiragana and Katakana files, after the most recent
+change in simplifying the QuestionManagement constructor
+(a8ebdc7b925161e4046e4de59e225fa2b3c7394a). This has been fixed.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501870193,1501870193,33f9bff705197a0a0abf0d2202b6732caa493106
+33f9bff705197a0a0abf0d2202b6732caa493106,33f9bff7,Created displayContents method,"Created displayContents method
+
+New method to display the contents of a particular kana set for use on
+the Kana Selection screen.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501867123,1501867123,a8ebdc7b925161e4046e4de59e225fa2b3c7394a
+a8ebdc7b925161e4046e4de59e225fa2b3c7394a,a8ebdc7b,Simplified Pref Id transfer,"Simplified Pref Id transfer
+
+Simplified the transfer of Pref Ids in the QuestionManagement
+constructor, reducing the number of fields used from ten to one. Still
+has more work to do.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501864529,1501864529,ab9a9a0f9cea8db4922efbea47bfaabc7641432e
+ab9a9a0f9cea8db4922efbea47bfaabc7641432e,ab9a9a0f,Removed repeats from getPossibleAnswers method,"Removed repeats from getPossibleAnswers method
+
+Included a check to prevent repeating entries in possibleAnswers method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501862244,1501862244,be18bb47d299d1595b87397aad130c4663c99f20
+be18bb47d299d1595b87397aad130c4663c99f20,be18bb47,Altered Main Quiz layout,"Altered Main Quiz layout
+
+Made minor changes to Main Quiz layout. Will not affect anything
+visually.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501853362,1501853362,5d7b321acb938315a763010e73d6d0f0be5a21be
+5d7b321acb938315a763010e73d6d0f0be5a21be,5d7b321a,Created getPossibleAnswers method,"Created getPossibleAnswers method
+
+Created new method for the purpose of accumulating possible answers for
+a new multiple-choice feature.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501701215,1501701215,290b929a0b07dffbb69a886050ce51fdb338f8fa
+290b929a0b07dffbb69a886050ce51fdb338f8fa,290b929a,Reorganized checkAnswer method,"Reorganized checkAnswer method
+
+Moved the two checks to see if the answer is not empty and whether a
+submission should be allowed at this time, to occur within the
+checkAnswer method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501701049,1501701049,d4da0c9bba7de662bd3dde3cb30b53e51bcb517e
+d4da0c9bba7de662bd3dde3cb30b53e51bcb517e,d4da0c9b,Added notes and things,"Added notes and things
+
+Added notes to replace text colour kludge at some stage. Also did a
+slight reorganizing to the ReferenceCell class to only call getContext
+method once in init method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1501111332,1501111332,21ac3df6bc0cea2fc605726ac653e68debec1651
+21ac3df6bc0cea2fc605726ac653e68debec1651,21ac3df6,Fixed return to MainQuiz,"Fixed return to MainQuiz
+
+With a single change to the manifest, I was able to prevent the main
+activity from completely reloading every time the user returns from any
+of the other pages.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499864582,1499864582,6a9b856ff0eab9f92ef7ca013305999e701b08ba
+6a9b856ff0eab9f92ef7ca013305999e701b08ba,6a9b856f,Prepped for next release,"Prepped for next release
+
+Incremented version number.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499861550,1499861550,30cf246337547a877c41ca99820e3e7d1a7a1969
+30cf246337547a877c41ca99820e3e7d1a7a1969,30cf2463,Simplified a bit of code,"Simplified a bit of code
+
+Used an import statement so I could reduce the size of one line of code
+in KanaSelectionItem.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499861061,1499861061,2047169ca7f76275100d80614b7916f326ad275b
+2047169ca7f76275100d80614b7916f326ad275b,2047169c,Removed unnecessary braces,"Removed unnecessary braces
+
+Braces encompassing single lines of code have been removed since they
+were unnecessary.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499858545,1499858545,70167a918e825182b357bdbdd25491acc15c9d2c
+70167a918e825182b357bdbdd25491acc15c9d2c,70167a91,Altered menu code,"Altered menu code
+
+Changed the menu code to only reset the quiz when needed. Also added, as
+a point, a note reminding me that this code only works when a user hits
+the back button so I don't nearly delete it again, thinking it was
+rendered redundant.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499855404,1499855404,4ec99cbfd7c0adbb010dfc217ee326656a35c3a0
+4ec99cbfd7c0adbb010dfc217ee326656a35c3a0,4ec99cbf,Removed unused method,"Removed unused method
+
+Removed getReferenceTable method, since it's no longer being used.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499853674,1499853674,5c8f34351aa25a7454a5a683be14add853a79066
+5c8f34351aa25a7454a5a683be14add853a79066,5c8f3435,Cleaned up code,"Cleaned up code
+
+Reorganized some code for readability. Added a few missing Override
+annotations. Set the checkAnswer method to use return statements for
+simplicity, and generateReference method to use getKana method over
+direct property access.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499848419,1499848419,eddf745be143e15b93c820a8630e12d854fd7355
+eddf745be143e15b93c820a8630e12d854fd7355,eddf745b,Created layout file for reference subsection,"Created layout file for reference subsection
+
+For the reference subsections, I decided to use a layout file that for
+the initial empty layout without any reference material. So only the
+dynamic population of the reference screen, that responds to user
+settings, will be done programmatically.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499842574,1499842574,76c4a7ec78f8be6cc085c61568baeb3acaeb2b93
+76c4a7ec78f8be6cc085c61568baeb3acaeb2b93,76c4a7ec,Added error handling to subsection pagers,"Added error handling to subsection pagers
+
+The reference screen subsection pager classes now throw an exception if
+a non-existent kana type (ie. not Hiragana or Katakana) is passed. This
+should never happen, but it's handled nonetheless.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499691653,1499691653,a4951ff74f15266acc1d3f1dc8a722ce422145bf
+a4951ff74f15266acc1d3f1dc8a722ce422145bf,a4951ff7,Simplified repeating code,"Simplified repeating code
+
+Took some repeating code in the reference subsection methods, and
+simplified it by recording the constant interface from the Hiragana and
+Katakana classes, and running all methods through that.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499638579,1499638579,1c3527ad365b7b3d3d658149bc96f26052dd1b80
+1c3527ad365b7b3d3d658149bc96f26052dd1b80,1c3527ad,Fixed diacriticDigraphsSelected method,"Fixed diacriticDigraphsSelected method
+
+Corrected diacriticDigraphsSelected method to check the allow_diacritics
+option.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499589705,1499589705,6a83631ea83a75cbac0d9d8bdde1074acdeabcf7
+6a83631ea83a75cbac0d9d8bdde1074acdeabcf7,6a83631e,Added header for digraphs with diacritics,"Added header for digraphs with diacritics
+
+Added a special subheader on the reference screen, in the digraphs
+section, for digraphs with diacritics. Part of this involved splitting
+the getDigraphsReferenceTable method into two methods, one for the
+digraphs with diacritics, and one without. Created a new
+diacriticDigraphsSelected method. Also made a slight change to how the
+reference pages are built.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499588658,1499588658,505f04e74c9387d59c05dcdc6cb3a4e208c57613
+505f04e74c9387d59c05dcdc6cb3a4e208c57613,505f04e7,Reorganized reference screen pager code,"Reorganized reference screen pager code
+
+Redesigned the pager code to utilize more specific page names over page
+numbers which are likely to fluctuate depending on user settings.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499557314,1499557314,6259fc1d3640d537145c413e650bf56e8239dc55
+6259fc1d3640d537145c413e650bf56e8239dc55,6259fc1d,Simplified pager code,"Simplified pager code
+
+Redesigned code for pagers in reference screen to utilize arrays to
+store the structure and gathering information from that, rather than
+inferring it from complex 'if' statements.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499551112,1499551112,ce60d6b6044a161eb5eb477bfad1b7648f950629
+ce60d6b6044a161eb5eb477bfad1b7648f950629,ce60d6b6,Added ripple effect to KanaSelectionItem,"Added ripple effect to KanaSelectionItem
+
+So the kana selection screen responds visually to touch, I added the
+typical ripple effect, which is also found on the option screen items,
+to the KanaSelectionItems.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499501549,1499501549,f3d715d154f6013f3d724564e3209f756910b5b6
+f3d715d154f6013f3d724564e3209f756910b5b6,f3d715d1,Rebuilt KanaSelectionItem code,"Rebuilt KanaSelectionItem code
+
+KanaSelectionItem now uses a layout file for its basic design rather
+than building each internal element programmatically.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499491458,1499491458,00419667df1dace9364ef5346840d5f564f04495
+00419667df1dace9364ef5346840d5f564f04495,00419667,Improved external keyboard code,"Improved external keyboard code
+
+App will now respond to external keyboards being plugged in... in
+theory.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499297015,1499297015,2f774c4f547663f8db2147e46e27a21c69835c17
+2f774c4f547663f8db2147e46e27a21c69835c17,2f774c4f,Updated build tools,"Updated build tools
+
+Updated the gradle script to call the latest version of the Android
+build tools.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499288323,1499288323,1b36108353a5d24f11ab7db435c0d66e10a4be5a
+1b36108353a5d24f11ab7db435c0d66e10a4be5a,1b361083,Detects Hardware Keyboard,"Detects Hardware Keyboard
+
+The answer text box's hint now changes its instructions depending on
+whether the device has a hardware keyboard.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499227143,1499227143,d99088caedcac9d94ec4aa7c12b9ed10cf1eb224
+d99088caedcac9d94ec4aa7c12b9ed10cf1eb224,d99088ca,Removed button,"Removed button
+
+Removed the 'Answer' button, since submission should be done by pressing
+the 'Go' button on the touch keyboard, or pressing 'Enter' on a hardware
+keyboard. Also moved a few checks from its own method into the textbox
+action handler.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499214033,1499214033,e42dd6e6d9f9ca606926e4e45d66d23db5abe135
+e42dd6e6d9f9ca606926e4e45d66d23db5abe135,e42dd6e6,Reorganized answer methods,"Reorganized answer methods
+
+Reorganized how the submitAnswer and checkAnswer methods work. And made
+a slight modification to the answer text box action handler so on error
+it doesn't just close the keyboard.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499207862,1499207862,fd3a067d6135a8e94fd42385ca594a0810f2876f
+fd3a067d6135a8e94fd42385ca594a0810f2876f,fd3a067d,Reordered reference screen,"Reordered reference screen
+
+Kana on the reference screen is now ordered to fit the gojūon order.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499205728,1499205728,c0297ed846822da9cf80b58409e9c6df7fbb69bc
+c0297ed846822da9cf80b58409e9c6df7fbb69bc,c0297ed8,Changed answer hint,"Changed answer hint
+
+The hint used in the answer textbox has been changed to indicate that
+users can submit their answer through the touch keyboard.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499198710,1499198710,115b372330988763fcbe3dc4f6a2436fe9c15535
+115b372330988763fcbe3dc4f6a2436fe9c15535,115b3723,New full reference option,"New full reference option
+
+New option forces the reference screen to display all kana regardless of
+what's selected to appear in the quiz.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499197778,1499197778,531b1200d29adade05cf518fc6923a21a02b4ab5
+531b1200d29adade05cf518fc6923a21a02b4ab5,531b1200,Tabbed subsection now uses layout file,"Tabbed subsection now uses layout file
+
+Rewrote the code building the reference screen's secondary tab layout to
+be built from the activity_tabbed_screen layout file, since I found a
+way to actually make that work.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499141140,1499141140,e756250a4b25558685d198a84cdb91d7918898f2
+e756250a4b25558685d198a84cdb91d7918898f2,e756250a,Reorganized some paging code,"Reorganized some paging code
+
+Reorganized some conditional code to begin with positives rather than
+negatives; and, taking advantage of the mechanics of switch-case
+commands, removed some repeating code by moving around the break
+commands.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499137377,1499137377,556f2a1c0dc2a6d6b3079390aeeb7c0d50dff54d
+556f2a1c0dc2a6d6b3079390aeeb7c0d50dff54d,556f2a1c,Bit of code cleanup,"Bit of code cleanup
+
+Simplified the calling of the LayoutParams class and the linking of the
+pager for the reference subsection.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499136207,1499136207,6c24692a5188c5702da06c5707b917d0caaba538
+6c24692a5188c5702da06c5707b917d0caaba538,6c24692a,Altered ReferenceSubsectionPage property storage,"Altered ReferenceSubsectionPage property storage
+
+Changed how kanaType is recorded in the reference screen section. Rather
+than store it as a standard variable, it's now stored in the same way
+the page number is stored. This is because the property would otherwise
+be erased on screen rotation, causing a crash.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499132299,1499132299,0d1b4e42a7f0e413d310a1c648810b0953d8384d
+0d1b4e42a7f0e413d310a1c648810b0953d8384d,0d1b4e42,Reference screen now subtabbed,"Reference screen now subtabbed
+
+Edited reference screen to display further tabs underneath Hiragana and
+Katakana for the main kana group, diacritics, and digraphs. This is
+intended to make the reference screen easier to navigate.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499127803,1499127803,2d3263b18450067cb4b11c78500f11a1be5ef56c
+2d3263b18450067cb4b11c78500f11a1be5ef56c,2d3263b1,Split getReferenceTable method,"Split getReferenceTable method
+
+Split the getReferenceTable method into three separate methods for the
+three different categories. This is mainly intended for the development
+of a possible upcoming feature. Also added new methods to check if any
+diacritics or digraphs should be displayed at all.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499119904,1499119904,a606607bc4adacf217d5729a4a4ccb5b9ca1662b
+a606607bc4adacf217d5729a4a4ccb5b9ca1662b,a606607b,Implemented styleguide,"Implemented styleguide
+
+To improve consistency and readability of code, I edited Android
+Studio's built-in style settings to fit my own preferences and had it
+run through the all XML and Java code to match the new styleguide.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499108433,1499108433,f92097a9647355a13830c6dfb956d6a4a5ce14d3
+f92097a9647355a13830c6dfb956d6a4a5ce14d3,f92097a9,Merged tabbed layouts,"Merged tabbed layouts
+
+Both the reference screen and the kana selection screen were tabbed
+screens, with functionally identical layout files. I replaced them with
+single layout file for simplicity's sake.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499046656,1499046656,ecf4a36dac60af1c155fb6cbe3344bafc1453921
+ecf4a36dac60af1c155fb6cbe3344bafc1453921,ecf4a36d,Cleaned up layout files again,"Cleaned up layout files again
+
+Let Android Studio organize the layout files. Ensures more consistency
+between the files. Also tweaked a few more things by hand.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499044659,1499044659,8d15f6317394854cdee3e5f27ec86f85453a27ae
+8d15f6317394854cdee3e5f27ec86f85453a27ae,8d15f631,Fixed KanaSelectionItem in edit mode,"Fixed KanaSelectionItem in edit mode
+
+Added check to prevent fetching a preference when in Android Studio's
+design editor.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499041433,1499041433,dc14acdc8a2c44591c327a48fc22a54ae4c3e7a7
+dc14acdc8a2c44591c327a48fc22a54ae4c3e7a7,dc14acdc,Cleaned up layout files,"Cleaned up layout files
+
+Deleted the old options screen layout file, and made a few minor changes
+to the remaining files for readability and consistency.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1499038995,1499038995,dac133024fb3cd8f54c28e9171431bb5498c7fae
+dac133024fb3cd8f54c28e9171431bb5498c7fae,dac13302,Reorganized loops again,"Reorganized loops again
+
+Reorganized the loops in the getQuestionBank method to remove some
+repeating code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498925624,1498925624,44092a181dc9027e857715efb2e275f0c51823b5
+44092a181dc9027e857715efb2e275f0c51823b5,44092a18,Renamed tables in getReferenceTable,"Renamed tables in getReferenceTable
+
+Changed the table names in getReferenceTable to be more descriptive.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498852691,1498852691,7f768de440767f5ae1a59be1b64b252450787668
+7f768de440767f5ae1a59be1b64b252450787668,7f768de4,Reorganized loops,"Reorganized loops
+
+Some loops in QuestionManagement had identical iterators. To simplify
+things, these loops have been merged.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498850376,1498850376,ba1f5497a0ead260afc6303f360a967123375616
+ba1f5497a0ead260afc6303f360a967123375616,ba1f5497,Consolidated repeating code,"Consolidated repeating code
+
+Repeating blocks of code in the QuestionManagement class has been
+consolidated into repeating for loops.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498843827,1498843827,a86d8e8c53fd66036c58fb712dea93001a3232a1
+a86d8e8c53fd66036c58fb712dea93001a3232a1,a86d8e8c,Reorganized getReferenceTable code,"Reorganized getReferenceTable code
+
+Reorganized the code for building the reference tables. Moving all the
+statements initializing tables to the beginning of the method, and the
+statements throwing them all together at the end.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498842980,1498842980,5c4752723f5154050631e8114107932d01898537
+5c4752723f5154050631e8114107932d01898537,5c475272,Simplified kanaSet storage,"Simplified kanaSet storage
+
+The twenty-eight variables that stored the twenty-eight kana sets have
+been replaced with a single three-dimentional array.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498835642,1498835642,6e493533ccdfca8bd66fe99715e1876af77ae98c
+6e493533ccdfca8bd66fe99715e1876af77ae98c,6e493533,Simplified prefId storage,"Simplified prefId storage
+
+The ten prefIds in the QuestionManagement class, which were stored in
+ten separate variables, are now stored in a single array. Also
+simplified the code in the anySelected method by having it run through
+all ten items in a loop.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498761790,1498761790,b88340cf745ea40771926b1503ff78bb706be02a
+b88340cf745ea40771926b1503ff78bb706be02a,b88340cf,Redesigned QuestionManagement class,"Redesigned QuestionManagement class
+
+Redesigned the method of transferring the question data to the
+QuestionManagement objects from its subclasses. This system uses a
+massive constructor, which still needs to be simplified, but for now,
+all internal constants are fully encapsulated and cannot be directly
+accessed by outside classes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498760233,1498760233,c43f96f8ab923627e3c26537d7f7d2356bac6534
+c43f96f8ab923627e3c26537d7f7d2356bac6534,c43f96f8,Consolidated duplicate methods,"Consolidated duplicate methods
+
+The entirety of both the HiraganaQuestions and KatakanaQuestions classes
+were identical with the exception of the constants defining what each
+category meant. I decided to consolidate all the duplicate methods into
+a new QuestionManagement class, and rename the two original classes by
+dropping off the second half, and managing the interface through a
+single constant instance of the class. Functionally they remain a static
+classes, with slight changes in how they're interfaced with.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498741794,1498741794,1409f42b19558afaaf0490f345d2d8bb173c5a1e
+1409f42b19558afaaf0490f345d2d8bb173c5a1e,1409f42b,Simplified reference screen layout,"Simplified reference screen layout
+
+After recent changes, the reference page was a series of tables within a
+LinearLayout, within another LinearLayout, within a ScrollView. One of
+those LinearLayouts has been removed since it was redundant.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498737277,1498737277,8454625da3d54d19307492c92a5ef2ab10a27da8
+8454625da3d54d19307492c92a5ef2ab10a27da8,8454625d,Fixed default preferences,"Fixed default preferences
+
+When first starting the application, before visiting the options screen,
+the diacritics option would be set to false by default. This has been
+fixed. Also set the first hiragana set to be enabled by default.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498737057,1498737057,4ab6e7c4ecb965c0feb50ebb320398b0c585dc74
+4ab6e7c4ecb965c0feb50ebb320398b0c585dc74,4ab6e7c4,Prepped for next release,"Prepped for next release
+
+Incremented version number and updated gradle.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498670933,1498670933,9c9a7a9347d2a1b3ed58396c3939d5db8ce66bba
+9c9a7a9347d2a1b3ed58396c3939d5db8ce66bba,9c9a7a93,Tweaked header padding,"Tweaked header padding
+
+Changed the header padding on the reference screen for cosmetic
+purposes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498664611,1498664611,d80e7f47647c5e50a5ba3dacb0fc9d8029e26df4
+d80e7f47647c5e50a5ba3dacb0fc9d8029e26df4,d80e7f47,Simplified getReferenceTable code,"Simplified getReferenceTable code
+
+The complex if statements controlling what appears in the reference
+table has been simplified by the use of the getChildCount method
+checking at the end of each section if the related header should appear,
+rather than at the beginning.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498664064,1498664064,c7cc32934885ff4a50ac9b6aab7d7c249b14974d
+c7cc32934885ff4a50ac9b6aab7d7c249b14974d,c7cc3293,Altered buildRow methods,"Altered buildRow methods
+
+For the sake of efficiency, I altered the priority of the reference
+screen's row building methods. The buildRow method now merely places all
+the kana in the table with no spacing which is good for the majority of
+kana sets. The buildSpecialRow method is used exclusively for sets nine
+and ten, since they don't fill out all five vowels and need to be spaced
+out.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498662013,1498662013,a1d8b8104671cd910ec13669273ba48bff774e5c
+a1d8b8104671cd910ec13669273ba48bff774e5c,a1d8b810,Added digraphs to reference screen,"Added digraphs to reference screen
+
+Reference screen now displays digraphs if they've been selected to
+appear in the quiz.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498660574,1498660574,34ba0c3c0858680cbe9dec1eabf48772fc7f9753
+34ba0c3c0858680cbe9dec1eabf48772fc7f9753,34ba0c3c,Altered buildHeader code,"Altered buildHeader code
+
+Removed center alignment code in buildHeader method and changed to wrap
+content horizontally. This has no effect visually, since the objects are
+set to remain centered by the parent container.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498660397,1498660397,f06cd6691c4f122a9495ed8710d2882611289658
+f06cd6691c4f122a9495ed8710d2882611289658,f06cd669,Centered items in reference screen,"Centered items in reference screen
+
+To ensure layout consistency, added code to ensure all items on
+reference screen are horizontally centered.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498659569,1498659569,9cce16434b3f50cbb3997346e1f2fb3e15246a4b
+9cce16434b3f50cbb3997346e1f2fb3e15246a4b,9cce1643,Reorganized reference screen layout,"Reorganized reference screen layout
+
+Layout of reference screen is now split into multiple tables, one for
+each category.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498658330,1498658330,94a89f0121fb7e7b3112a538e360932fb67b5397
+94a89f0121fb7e7b3112a538e360932fb67b5397,94a89f01,Moved reference header code,"Moved reference header code
+
+Code used to build headers in the reference section has been moved from
+the HiraganaQuestions and KatakanaQuestions classes to the ReferenceCell
+class.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498657303,1498657303,7ed3a9b0b1cc636dca173a404787eb19a93a544d
+7ed3a9b0b1cc636dca173a404787eb19a93a544d,7ed3a9b0,Removed unused method,"Removed unused method
+
+The method to add three question groups to a KanaQuestionBank at once is
+no longer of any use. Therefore, it's been removed.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498654147,1498654147,780da46a7a2f731e5008e2aaf1c5dd756b5bf51e
+780da46a7a2f731e5008e2aaf1c5dd756b5bf51e,780da46a,Finished styling Kana Reference,"Finished styling Kana Reference
+
+Did some work styling the Kana Reference screen. Is now set to use the
+default system colour like the rest of the application, and display
+properly styled header for diacritics section. Also added colour
+attribute to the ReferenceCell class, and activated anti-aliasing on the
+TextPaint objects within.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498653793,1498653793,68fb42035e7aa300ac04ee4ad974047293bd9ff0
+68fb42035e7aa300ac04ee4ad974047293bd9ff0,68fb4203,Kana Selection screen responds to new option,"Kana Selection screen responds to new option
+
+If diacritics are disabled the Kana Selection screen will no longer
+display the characters with diacritics. Also changed KanaSelectionItem
+to internally fetch properties using methods as opposed to direct
+variable access.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498643500,1498643500,86dd2bdb8e9e6b614f218bee8ff9a2d7cf3708f9
+86dd2bdb8e9e6b614f218bee8ff9a2d7cf3708f9,86dd2bdb,Added option to hide diacritics,"Added option to hide diacritics
+
+New option allows a user to remove characters with diacritics from the
+quiz. This extends to digraphs with diacritics as well.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498640460,1498640460,c7fadc4f551b65c3cee928f29d46b092fc96a54b
+c7fadc4f551b65c3cee928f29d46b092fc96a54b,c7fadc4f,Replaced variable with method,"Replaced variable with method
+
+Replaced call for romanji variable in reference cell construction with
+equivalent method call. This is to ensure any future design changes
+maintain consistency.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498637347,1498637347,e3ce68772f55805c4a0bc97061204e508eb86a4a
+e3ce68772f55805c4a0bc97061204e508eb86a4a,e3ce6877,Fixed indentation,"Fixed indentation
+
+Corrected indentation in question storage classes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1498635870,1498635870,aa416c74dd6c4e642c1225d0c682006faaf4ced2
+aa416c74dd6c4e642c1225d0c682006faaf4ced2,aa416c74,Reorganized some code,"Reorganized some code
+
+Since resetQuiz and buildQuestionBank are always called together, and
+setQuestion and displayScore are also always called together, I merged
+each of these two pairs of methods together. Also renamed the new
+displayScore/setQuestion method to nextQuestion. Much simpler and
+clearer.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1491186189,1491186189,13578c12de7c6d5e09d360b0bf1825fb4ce76b35
+13578c12de7c6d5e09d360b0bf1825fb4ce76b35,13578c12,Implemented tabbed reference screen,"Implemented tabbed reference screen
+
+Added to the Reference function a tabbed layout separating Hiragana and
+Katakana, dynamically built according to the kana selection settings.
+This function is still not fully styled.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1490371440,1490371440,1c89d3751a2c18aaf3d784f388cce09d167a18fb
+1c89d3751a2c18aaf3d784f388cce09d167a18fb,1c89d375,Added anySelected method,"Added anySelected method
+
+Added method to check if any of the particular kana set options of
+either Hiragana or Katakana were selected to simplify certain
+operations.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1490297512,1490297512,9ec76d5de4c1fff518bde8b6476dee8185659b5f
+9ec76d5de4c1fff518bde8b6476dee8185659b5f,9ec76d5d,Redesigned question classes,"Redesigned question classes
+
+Replaced literal references to preference ids with constants in both
+HiraganaQuestions and KatakanaQuestions as part of a vain attempt to
+remove repeating code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1490289228,1490289228,e3a69824244181113cda57dea008f3b81bd1c123
+e3a69824244181113cda57dea008f3b81bd1c123,e3a69824,Implemented preliminary reference screen,"Implemented preliminary reference screen
+
+Designed and built the basic framework for an in-built reference screen,
+dynamically created the same way the question bank is. Still a work in
+progress, and not ready for a full release.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1490286983,1490286983,b337fee46d18b99b3e62747cbcf2b4a4ca1f3120
+b337fee46d18b99b3e62747cbcf2b4a4ca1f3120,b337fee4,Built ReferenceCell class,"Built ReferenceCell class
+
+This class is to be used in the upcoming reference table feature. Each
+one will hold a single kana for display, alongside its romanji
+equivalent.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489751225,1489751225,8077d569bb9eab6121442c5984c5da71fd560491
+8077d569bb9eab6121442c5984c5da71fd560491,8077d569,Replaced trinary conditional,"Replaced trinary conditional
+
+Replaced the trinary conditional statement used to prevent infinite
+loops in the repetition control system, with the simpler Math.min
+method.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489750950,1489750950,89b9f23dc1dcbb185424b6c3b9371d09fd7cf85a
+89b9f23dc1dcbb185424b6c3b9371d09fd7cf85a,89b9f23d,Fixed appearance of number picker,"Fixed appearance of number picker
+
+Number picker width in number preference dialog has been switched to
+wrap content for aesthetics sake.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489711899,1489711899,d14e5d0f6fdcd2ac0f0892fb2fbd87aa30fdf28b
+d14e5d0f6fdcd2ac0f0892fb2fbd87aa30fdf28b,d14e5d0f,Prepped next release,"Prepped next release
+
+Incremented version number, and updated Android support libraries. Also
+increased MaxValue on the NumberPreference class to match the addition
+of digraphs.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489663464,1489663464,adae9ba8b3336024964b367de2dbed944a17bbed
+adae9ba8b3336024964b367de2dbed944a17bbed,adae9ba8,Changed some digraph answers,"Changed some digraph answers
+
+Found alternative answers for some digraphs from a more reliable source
+(Wikipedia). Added them as the primary answers.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489662203,1489662203,068d9bb64de5779aa052b4b5f3d3579f6f10fcf6
+068d9bb64de5779aa052b4b5f3d3579f6f10fcf6,068d9bb6,Added digraph support,"Added digraph support
+
+Added support for digraphs, which are combo kana, and when they're
+combined they have a unique pronuciation the separate kana don't have.
+Answers were sourced from textfugu.com.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489661355,1489661355,d98e7566135d427c41703c797711939167dafbc1
+d98e7566135d427c41703c797711939167dafbc1,d98e7566,Fixed indentation,"Fixed indentation
+
+Fixed indentation from last commit.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489657792,1489657792,a6f37e736df712874f45a4739cf740e80a2457d7
+a6f37e736df712874f45a4739cf740e80a2457d7,a6f37e73,Altered NumberPreference to use NumberPicker,"Altered NumberPreference to use NumberPicker
+
+Converted the NumberPreference class to use the NumberPicker widget
+instead of the EditText widget.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489657738,1489657738,f960032f77663b38c469572715d2ab0542d1e4ce
+f960032f77663b38c469572715d2ab0542d1e4ce,f960032f,Fixed and cleaned up NumberPreference class,"Fixed and cleaned up NumberPreference class
+
+Removed unused import statements and restricted access to class
+properties.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489656596,1489656596,cd39ead82d4f1689dd21b56802bf18f5e813d8ec
+cd39ead82d4f1689dd21b56802bf18f5e813d8ec,cd39ead8,Implemented repetition control,"Implemented repetition control
+
+Added code to implement the repetition control feature. Also returned
+code for managing integer preferences to OptionsControl that was removed
+in an earlier commit (adf17f8a485f6c22ee45d4f3851d16677e827ef9).
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489655180,1489655180,46810f56d2f800a8f4ba5e069e6be8e41a6ac5b9
+46810f56d2f800a8f4ba5e069e6be8e41a6ac5b9,46810f56,Built NumberPreference class,"Built NumberPreference class
+
+Created a new class to allow easy selection of any number. Designed to
+implement a repetition control feature. While one can currently set the
+preference, it is not implemented in code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489654092,1489654092,9df89ed063cef78961e4e21794b63c79efe8d3ee
+9df89ed063cef78961e4e21794b63c79efe8d3ee,9df89ed0,Improved error handling on QuestionRecord,"Improved error handling on QuestionRecord
+
+If the question record was built using a 'capacity' of 1, which should
+represent no repetition, it would originally throw an exception, causing
+the app to crash. There was no way to run a check before running the
+parent constructor, or run it in a try-catch, so I altered the class to
+remove an item after every addition, which leaves an empty space
+constantly, but is effective in regulating the frequency of repeating
+questions, while allowing the ability to disable the whole feature.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489646031,1489646031,e5266a62724d2b097d2678d7fb9183797ede4de7
+e5266a62724d2b097d2678d7fb9183797ede4de7,e5266a62,Upgraded KanaQuestion to hold multiple answers,"Upgraded KanaQuestion to hold multiple answers
+
+KanaQuestion can now hold multiple possible correct answers to any given
+question. Since there seems to be some inconsistency among certain
+sources regarding romanization, I thought this would be useful. I also
+edited the questions to accept 'hu' as well as 'fu' for the hiragana ふ
+and the katakana フ, since at least one source says that is the correct
+answer, and the pronunciation fits (at least, to my ear).
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489642203,1489642203,3f585cdf95f6f8278692fefebd58c639ee067a78
+3f585cdf95f6f8278692fefebd58c639ee067a78,3f585cdf,Upgraded KanaQuestion for future expansion,"Upgraded KanaQuestion for future expansion
+
+KanaQuestion class now stores kana as a string rather than a character.
+This probably causes a bit of overhead since we're storing an object
+rather than a primitive, but it will also allow me to expand the
+application to include digraphs as questions alongside single kana.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489639617,1489639617,3c480a4f0c99b6deeddec8869243a763ac2b728f
+3c480a4f0c99b6deeddec8869243a763ac2b728f,3c480a4f,Replaced string literals with resource references,"Replaced string literals with resource references
+
+In the two kana selection fragments all the prefIds were string
+literals, I replaced them with the string resources I created when I
+created the KanaSelectionItem class. Obviously, this should've been done
+then.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489620346,1489620346,d469a7407b6298f6e3bd7fcb062e1b5c8d97b08a
+d469a7407b6298f6e3bd7fcb062e1b5c8d97b08a,d469a740,Added getters to KanaSelectionItem,"Added getters to KanaSelectionItem
+
+Added three new methods to KanaSelectionsItem, which correspond to
+retrieving each of the three main properties.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489619928,1489619928,aa903f7ad5b323f751bd744f537177817403ac57
+aa903f7ad5b323f751bd744f537177817403ac57,aa903f7a,Fixed KanaSelectionItem,"Fixed KanaSelectionItem
+
+Used isInEditMode method to stop crashes in design view.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489619034,1489619034,99dc3970742ff0a7d669820a7f85c9c41fb52b37
+99dc3970742ff0a7d669820a7f85c9c41fb52b37,99dc3970,Split records of question groups,"Split records of question groups
+
+For the purposes of future expansion, groups that use dakuten and
+handakuten have been split up in the code. This will not result in any
+changes for the end user. Also added new methods in KanaQuestionBank to
+take the addition of multiple question sets simultaniously.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489617657,1489617657,b413c4b9e7794978003e46ea03148c4f081fe45d
+b413c4b9e7794978003e46ea03148c4f081fe45d,b413c4b9,Moved options to XML-compatible format,"Moved options to XML-compatible format
+
+Rebuilt options screen to utilize the built-in preferences interface,
+using XML and an interface that's more consistent with other apps. It
+also automates the setting of default features. Will likely be expanding
+this in future.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489465638,1489465638,34a70366e067d102a192bd36943c482ce828364e
+34a70366e067d102a192bd36943c482ce828364e,34a70366,Corrected indentation,"Corrected indentation
+
+Corrected indentation from last commit.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489460901,1489460901,adf17f8a485f6c22ee45d4f3851d16677e827ef9
+adf17f8a485f6c22ee45d4f3851d16677e827ef9,adf17f8a,Redesigned on_incorrect preference,"Redesigned on_incorrect preference
+
+Changed the on_incorrect preference to store information as a String
+rather than as an integer code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489460771,1489460771,d3ddf50c0e9236e7ab6a37407ca5c3a1aa240de4
+d3ddf50c0e9236e7ab6a37407ca5c3a1aa240de4,d3ddf50c,Added commands to reset quiz,"Added commands to reset quiz
+
+Functionally, a revert of an earlier commit
+(7f0ad2a41bf1caee1ba5a10fdabac555611dc60a). I returned the code that
+resets the quiz when returning from other screens because while the app
+would reset automatically when one returns using the in-app navigation
+buttons, when using the device's back button it would not. This bit of
+code ensures the quiz resets no matter what.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489456803,1489456803,f4f503c41d29e3a1db659cfae1826c5917fb7a5a
+f4f503c41d29e3a1db659cfae1826c5917fb7a5a,f4f503c4,Prepped next release,"Prepped next release
+
+Incremented version number, also darkened the custom text colours.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489394141,1489394141,02caec220af86dcb21e879fcf48e4c8ab6500621
+02caec220af86dcb21e879fcf48e4c8ab6500621,02caec22,Restore instructional text on retry,"Restore instructional text on retry
+
+Added slight delay that made the instructional text reappear after
+telling the user they got an answer incorrect, and giving them the
+chance to retry. Also moved multiplying the score by 100 to the percent
+formatter, rather than handling it in my own code. Finally a lot of
+other code had been reorganized and refactored.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489393129,1489393129,1240b2565a9317526aa017bb972b2b6a80527877
+1240b2565a9317526aa017bb972b2b6a80527877,1240b256,Rename SetSelection files to KanaSelection,"Rename SetSelection files to KanaSelection
+
+To match the name of the activity and the new KanaSelectionItem class, I
+renamed all associated files from SetSelection to KanaSelection, and
+refactored the project accordingly.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489387754,1489387754,b1b520d7f1663f7d2d27b96708abfc0b66a095c2
+b1b520d7f1663f7d2d27b96708abfc0b66a095c2,b1b520d7,Created new KanaSelectionItem class,"Created new KanaSelectionItem class
+
+Replaced SetSelectionItem with new KanaSelectionItem that's intended to
+take greater advantage of the features of Android Studio and the Android
+SDK. It uses the XML interface for page layout, rather than coded in the
+java files. The new class retains much of the same code from the old
+one, copy-pasted over, but reorganized to fit the new structure.
+
+To take full advantage of this, I had to move the constants used in
+OptionsControl to strings.xml as string resources, and as a result add
+new functions to the OptionsControl class to accept string resources
+instead of pure strings.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489385652,1489385652,f920f330bf8f2dbabf11f5ae70020e5b27b592dc
+f920f330bf8f2dbabf11f5ae70020e5b27b592dc,f920f330,Reorganized menu code,"Reorganized menu code
+
+Reorganized and simplified onOptionsItemSelected code to reduce code
+repetition.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489374688,1489374688,7f0ad2a41bf1caee1ba5a10fdabac555611dc60a
+7f0ad2a41bf1caee1ba5a10fdabac555611dc60a,7f0ad2a4,Cleared out unnecessary menu code,"Cleared out unnecessary menu code
+
+Removed code used to reset quiz on return from Kana Selection screen.
+Turns out it was unnecessary because the activity itself resets entirely
+upon return, and it runs the exact same code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489374178,1489374178,7da889179c986b13088967ec7584c8fc42f07ea6
+7da889179c986b13088967ec7584c8fc42f07ea6,7da88917,Consolidated menu code,"Consolidated menu code
+
+Moved all code used to open menu items from three separate methods, into
+the single onOptionsItemSelected method, saving us a function call.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489373685,1489373685,8340b4c6e0c560f586896a8c5443c5b535ecb1b4
+8340b4c6e0c560f586896a8c5443c5b535ecb1b4,8340b4c6,Removed redundant constructor call,"Removed redundant constructor call
+
+Removed an unnecessary call to a parent constructor.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489363438,1489363438,32330d416fffe1944e5467363a1046001e21bea7
+32330d416fffe1944e5467363a1046001e21bea7,32330d41,Replaced hard-coded strings,"Replaced hard-coded strings
+
+Moved hard-coded strings in options screen to the string resource file.
+Also modified commented categories in the string resource file.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489358459,1489358459,d28a5d8d9cb05d12142c88401fd4ba9e779c11a5
+d28a5d8d9cb05d12142c88401fd4ba9e779c11a5,d28a5d8d,Increased minSdkVersion,"Increased minSdkVersion
+
+Because there were continuous problems involving layout, I decided to
+increase the minimum SDK. This locks out users using Android 4.1, which
+is 3.7% of the market share, but it does mean I can have an easier time
+laying everything out, without adding additional compatibility code just
+for that one version, because text alignment wasn't introduced until SDK
+17.
+
+I also removed the now-redundant code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489357986,1489357986,647e659323530aad1f31bd724d5d2dec39d1cd9f
+647e659323530aad1f31bd724d5d2dec39d1cd9f,647e6593,Closed a few access modifiers,"Closed a few access modifiers
+
+A few access modifiers were unnecessarily wide. I turned them from
+public to private. Also fixed indentation on a block in MainQuiz.java.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489357326,1489357326,d14fc9f923b1300e5d35a13f6d06fc2bea233f27
+d14fc9f923b1300e5d35a13f6d06fc2bea233f27,d14fc9f9,Added new option screen,"Added new option screen
+
+Renamed the old option screen to Kana Selection, and created a new
+option screen that currently only controls behaviour on an incorrect
+answer.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489267235,1489267235,d67312870c292c5c9519cb672161675a7143a3c7
+d67312870c292c5c9519cb672161675a7143a3c7,d6731287,Stop screen rotation,"Stop screen rotation
+
+Was having a problem with the quiz resetting every time the screen
+rotates. Tried finding a method to preserve the score and the current
+question between rotations, but it seemed the simpler solution was to
+just disable screen rotation and lock the screen in portrait mode,
+mainly because the app doesn't appear to be functional in landscape
+mode. I also removed some redundant code in MainQuiz.java. There's no
+need to initialize the score to zero when the onCreate method does it as
+well.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489258477,1489258477,a98f746a8b9f8617ca4f54d92ad7720160ebff25
+a98f746a8b9f8617ca4f54d92ad7720160ebff25,a98f746a,Moved Options and About to menu,"Moved Options and About to menu
+
+The two buttons used to access the Options and About screens have been
+moved to a new menu accessible in the top-right corner.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489249496,1489249496,94f73eb113196f54655f12aaeb600d587218bffc
+94f73eb113196f54655f12aaeb600d587218bffc,94f73eb1,Reorganized the submitAnswer methods,"Reorganized the submitAnswer methods
+
+Realized the two methods used to submit answers were slightly
+misorganized. I had the method that's called by the system keyboard in
+turn call the same method that's called by the button when I should've
+done it the other way around. This results in one less function call.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489249113,1489249113,7a244301ae37d888f41f6b3eef8362103b50ed01
+7a244301ae37d888f41f6b3eef8362103b50ed01,7a244301,Prepare next release,"Prepare next release
+
+Incremented version number for next release.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489218830,1489218830,ccf7b096a4b37efa369c08745de4141a5cb8537c
+ccf7b096a4b37efa369c08745de4141a5cb8537c,ccf7b096,Expanded context in OptionsControl,"Expanded context in OptionsControl
+
+Added getApplicationContext method to initialize method. This is merely
+a precaution since it should only be called on the main activity, which
+never closes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489214638,1489214638,8c8640762b269f3f715028010daa073371b2f64d
+8c8640762b269f3f715028010daa073371b2f64d,8c864076,Consolidated SharedPreferences,"Consolidated SharedPreferences
+
+Moved all functions that controlled user options to its own file for
+simplicity. Has the additional benefit of not having multiple redundant
+SharedPreferences objects floating around.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489212112,1489212112,9356d2e59157c9c046505009ede333414faa124e
+9356d2e59157c9c046505009ede333414faa124e,9356d2e5,Moved repeated identifiers,"Moved repeated identifiers
+
+The identifiers used to connect user options across the app have been
+moved to a single java file as constants. I plan to use this file to
+manage all control of user options and the android preferences system.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489208178,1489208178,448db6b15142c540cee85a467ffcebc5c69d5954
+448db6b15142c540cee85a467ffcebc5c69d5954,448db6b1,Removed unneccessary delay,"Removed unneccessary delay
+
+I once programmed the app to delay rebuilding the question bank after
+someone returned from the option screen by half a second. Because
+otherwise the question bank would rebuild before the changes to the
+option screen were recorded, making the whole thing useless. But I since
+changed something, likely the point when the changes on the option
+screen are recorded, that rendered the delay redundant. So I removed it.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489202639,1489202639,3ffa04821c09f47c18d706fedf0b61b874a2a2bc
+3ffa04821c09f47c18d706fedf0b61b874a2a2bc,3ffa0482,Fixed wonky display,"Fixed wonky display
+
+When either of the alternate incorrect answer behaviours are activated
+the lblResponse TextView box would jump around in size, causing the
+widgets below the box to move up and down. This has been fixed by
+setting the box to two lines in size when either of those two options
+are active. Also centered the text vertically for aesthetics.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489201951,1489201951,069d777f96c8ca032d5830de86da759fe4fc0b28
+069d777f96c8ca032d5830de86da759fe4fc0b28,069d777f,Added code to display answer when incorrect,"Added code to display answer when incorrect
+
+Added some code that would allow one to view the correct answer when
+their answer is incorrect. Much like the last addition, this option will
+be accessable on the option screen. For now, it can only be tested by
+editing the raw code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489200408,1489200408,0de8aa16d00a0976877c7756ac1e9596c16b4f4d
+0de8aa16d00a0976877c7756ac1e9596c16b4f4d,0de8aa16,Added code to retry question when incorrect,"Added code to retry question when incorrect
+
+Added a bit of code that will allow one to retry a question when their
+answer is incorrect. This option will be accessable on the options
+screen, for now it can only be tested by editing the raw code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489197844,1489197844,610b08789cc13c119ab1ca3d5c66dd32f85764ea
+610b08789cc13c119ab1ca3d5c66dd32f85764ea,610b0878,Added additional usability to options screen,"Added additional usability to options screen
+
+Can now touch the label on the options screen to select and unselect
+items.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489195151,1489195151,de501262ae2e99987d5f386ad4086ed882499c15
+de501262ae2e99987d5f386ad4086ed882499c15,de501262,Added system to extend anti-repetion function,"Added system to extend anti-repetion function
+
+To stop the quiz from having the same questions appear too frequently, I
+added a record of the last few questions that have been asked and a
+check to ensure the question hasn't been asked recently, replacing the
+previous method which just prevented the same question from appearing
+twice in a row. It also includes a check to prevent the limiter from
+introducing an infinite loop by having the required number of unique
+questions be greater than the number of questions available.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489111072,1489111072,e0915256b191df37d1be2e7c3116e8c247a93f40
+e0915256b191df37d1be2e7c3116e8c247a93f40,e0915256,Prepped for next release,"Prepped for next release
+
+Incremented version number
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489049126,1489049126,e7ee28056df27218d807e9a462ceb9771e62b9d4
+e7ee28056df27218d807e9a462ceb9771e62b9d4,e7ee2805,Rebuilt About Screen,"Rebuilt About Screen
+
+Redesigned About Screen from the ground up. Now uses vector logo from
+GitHub. Also added a link to my Twitter. Added copyright and a special
+thanks section.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489048530,1489048530,07515dc26361ed6f4fbe75b715cbbbaf38e9784f
+07515dc26361ed6f4fbe75b715cbbbaf38e9784f,07515dc2,Updated gradle information,"Updated gradle information
+
+Updated the gradle complier, now specifying a newer version in the
+build.gradle file.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489037577,1489037577,08967dfd51510712ffc0174d579f5ab124c38ec8
+08967dfd51510712ffc0174d579f5ab124c38ec8,08967dfd,Split up the last kana set into two,"Split up the last kana set into two
+
+Because I'm modeling the design of this app with the same progression
+used in the game Learn Japanese To Survive, I decided to finally look up
+how progression is actually handled in the parts I haven't played yet.
+As a result, I learned that the Y and W groups were split up in the game
+with the single N consonant paired with the W group, so I modified this
+app to reflect that.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489032347,1489032347,a3dfe94b357c2b29fe87b1b191fece884303453f
+a3dfe94b357c2b29fe87b1b191fece884303453f,a3dfe94b,Fixed borders on options screen,"Fixed borders on options screen
+
+The methodology for including borders separating items on the options
+menu was very kludgy. It used a background drawable that was a box with
+a black line at the bottom. This caused problems because the background
+colour had to be explicitly stated in code, which caused issues with
+certain android versions, because not all of them used the same default
+background colour. I could've forced the app to use a predefined
+background colour, but I thought this would cause more problems than it
+would solve. So I did something much more complex, yet paradoxically
+simpler, by just adding a line in an ImageView object at the bottom of
+each SetSelectionItem, and fiddling around with the Layout containers.
+Don't know why I didn't think of it sooner.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1489019986,1489019986,faafe5d8d7769dfa4adcb7462177da20e8dbb053
+faafe5d8d7769dfa4adcb7462177da20e8dbb053,faafe5d8,Prepped for next release,"Prepped for next release
+
+Incremented version number for next release.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1488843168,1488843168,95dc4b971bc6100f08a96b8a631ff4862c10aee2
+95dc4b971bc6100f08a96b8a631ff4862c10aee2,95dc4b97,Fixed indentation in layout file,"Fixed indentation in layout file
+
+Corrected the indentation in the About screen layout file for
+consistancy.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1487747488,1487747488,c4ce2ed0d43f39442bc8f0d080923de18ccdd0ae
+c4ce2ed0d43f39442bc8f0d080923de18ccdd0ae,c4ce2ed0,Edited About Screen,"Edited About Screen
+
+Removed title from About screen, which was rendered redundant when I
+added a title to the action bar at the top. Also increased the size of
+the application name and version number for aesthetics sake.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1487745992,1487745992,583957e94625dff6056f2cbcf0e60eb6d7dc0163
+583957e94625dff6056f2cbcf0e60eb6d7dc0163,583957e9,Added navigation buttons,"Added navigation buttons
+
+Added information to AndroidManifest to improve navigation. Now, on the
+Options and About screens, there will be an on-screen back button in the
+top-left corner, allowing the user to go back to the main quiz screen.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1487734955,1487734955,a9b9bf6e6613105c52726597ae40c4d79be4d289
+a9b9bf6e6613105c52726597ae40c4d79be4d289,a9b9bf6e,Fixed keyboard issue,"Fixed keyboard issue
+
+Change in last release caused problem with the touch keyboard closing
+after every submission. Problem code has been commented out, with a note
+to resolve the issue.
+
+Also incremented version number.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486368269,1486368269,3d9a00e6f19c4548e39f0ff1f5939ad77a6fcfc1
+3d9a00e6f19c4548e39f0ff1f5939ad77a6fcfc1,3d9a00e6,Prepping next release,"Prepping next release
+
+Incremented version number, and cleaned up AndroidManifest.xml. Also
+made some changes to activity_about_screen.xml for accessibility
+purposes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486153260,1486153260,d2033dec9003edf0f7f8b15412e3c0c72dd406d5
+d2033dec9003edf0f7f8b15412e3c0c72dd406d5,d2033dec,Added functionality to answering,"Added functionality to answering
+
+Now, users using an external keyboard can press 'enter' to submit their
+answer. Also, delayed clearing the answering textbox until the next
+question is displayed.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486152600,1486152600,4305ae4a2a40df229e2dedd55ae70268175c6f06
+4305ae4a2a40df229e2dedd55ae70268175c6f06,4305ae4a,Restyled code,"Restyled code
+
+Code has been looked over and restyled for consistancy.
+
+Also reduced the access level of certain methods and properties,
+combined a some blocks of code into single lines in AboutScreen and
+SetSelection, removed the unused merge method in the KanaQuestionBank
+class, and changed the percent formatter from an object property into a
+class constant.
+
+Changed nothing regarding user interaction.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486151407,1486151407,fad94811b0a6d6185a304b747e6e8ae4108a4c39
+fad94811b0a6d6185a304b747e6e8ae4108a4c39,fad94811,Added Katakana support,"Added Katakana support
+
+Katakana support in now fully integrated into the application through
+the option screen, which now includes a Katakana tab. Katakana character
+sets can be selected there.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486094313,1486094313,27028516a21f75a07adf61f26b61fc481988e039
+27028516a21f75a07adf61f26b61fc481988e039,27028516,Added Katakana characters,"Added Katakana characters
+
+Added the required elements for supporting Katakana characters: a
+KatakanaQuestions class, and a few associated string resources.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486078240,1486078240,20c542a33905e10ba36304a45c7f0cbb955b6e47
+20c542a33905e10ba36304a45c7f0cbb955b6e47,20c542a3,Created new SetSelectionItem class,"Created new SetSelectionItem class
+
+Fully encapsulated the selection items used on the option screen. Also
+moved the storing of changed preferences to be handled internally by
+said class, eliminating the need for the ids on the checkboxes.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486070139,1486070139,946205350f5a67c82fe4f0bafe220a8ad235a4d9
+946205350f5a67c82fe4f0bafe220a8ad235a4d9,94620535,Expanded KanaQuestionBank class,"Expanded KanaQuestionBank class
+
+Added two new methods for future use for adding questions from one bank
+to another or merging the two into a new bank.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486063888,1486063888,3783662b42936f1b33bf953f96b2a8dbf20cd11e
+3783662b42936f1b33bf953f96b2a8dbf20cd11e,3783662b,Moved all questions,"Moved all questions
+
+Moved all Hiragana questions to a new abstract class for simplicity and
+to safely isolate them.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486057618,1486057618,45387a16e8fec03e279be8188236bb154068c100
+45387a16e8fec03e279be8188236bb154068c100,45387a16,Prepared for future expansion,"Prepared for future expansion
+
+Changed many variable names to specify hiragana for future compatability
+reasons. Specifically, the plan to expand into Katakana.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1486056728,1486056728,e70aa9ebaaec937421b40245cf7a972080e6289c
+e70aa9ebaaec937421b40245cf7a972080e6289c,e70aa9eb,Encapsulated Questions as Objects,"Encapsulated Questions as Objects
+
+Questions are now encapulated as read only objects. Created two new
+classes, KanaQuestion and KanaQuestionBank to support this. Also created
+one exception class for cases when no question banks were selected in
+the options screen. Finally, removed everything now being handled by the
+new classes from the MainQuiz.java file, and streamlined much of the
+code.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485981132,1485981132,219111d1873a7b5611cefa8afa5390172b1a43cf
+219111d1873a7b5611cefa8afa5390172b1a43cf,219111d1,Cleaned up AboutScreen code,"Cleaned up AboutScreen code
+
+Removed old, unused, commented code and related import statements.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485978561,1485978561,8dd603b149c42f07e97bf40c7a22ee5c58c82755
+8dd603b149c42f07e97bf40c7a22ee5c58c82755,8dd603b1,Added about screen,"Added about screen
+
+Added a new about screen, which includes the licence boilerplate notice,
+as well as a link to github. Also edited the application name, and
+version number. This is all to prepare for the first official release.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485792868,1485792868,b19a8a57cf1bc6723fc8ce9811cba8538d6eb21d
+b19a8a57cf1bc6723fc8ce9811cba8538d6eb21d,b19a8a57,Removed example code,"Removed example code
+
+Removed some example code left behind by Android Studio.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485204467,1485204467,53ccb58b4564c87f7464597adb859df8c6e5c984
+53ccb58b4564c87f7464597adb859df8c6e5c984,53ccb58b,Fixed answer submission handling,"Fixed answer submission handling
+
+Moved trim() method to correct location, and added a hook that ignores
+blank answers. Also made a few tiny corrections to text on the options
+screen.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485180326,1485180326,720563f55a03e866cbc0a1edcb54e121bb48d477
+720563f55a03e866cbc0a1edcb54e121bb48d477,720563f5,Posting full source code,"Posting full source code
+
+The full source code of this Android application.
+",,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485104104,1485104104,b293500b327da4baa7d4d91acae2d1b6a978d3d5
+b293500b327da4baa7d4d91acae2d1b6a978d3d5,b293500b,Initial commit,Initial commit,,,,T Duke Perry,theblackwidower@noprestige.com,T Duke Perry,theblackwidower@noprestige.com,1485103394,1485103394,

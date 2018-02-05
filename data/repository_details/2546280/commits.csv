@@ -1,0 +1,1315 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+40132d36b683a7b9bd75077ebb87b44807d92b42,40132d36,"Add LICENSE, README","Add LICENSE, README
+
+Signed-off-by: Colin McCabe <cmccabe@alumni.cmu.edu>
+",,,,Colin Patrick McCabe,cmccabe@alumni.cmu.edu,Colin Patrick McCabe,cmccabe@alumni.cmu.edu,1318227130,1318227130,a5b9709fe9b249e090ca400fea85e554e9372e9c
+a5b9709fe9b249e090ca400fea85e554e9372e9c,a5b9709f,Add .gitignore file,"Add .gitignore file
+
+Add .gitignore file. Mostly, this just prevents git from harassing us
+about the generated R.java file and various cscope files.
+",,,,Colin Patrick McCabe,cmccabe@alumni.cmu.edu,Colin Patrick McCabe,cmccabe@alumni.cmu.edu,1266435798,1266435798,0013654766a7001b15b0799887a3e0cfdf351942
+0013654766a7001b15b0799887a3e0cfdf351942,00136547,Add salvo.apk for v.1.0 and sencha keystore,"Add salvo.apk for v.1.0 and sencha keystore
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250399754,1250399754,8fd325783bb92520de4c5c1457d119a0cfcfc765
+8fd325783bb92520de4c5c1457d119a0cfcfc765,8fd32578,Remove all debugging and disable debugger attach,"Remove all debugging and disable debugger attach
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250397941,1250399023,3fa2f886af6afa9b174a522911932cb381851c2e
+3fa2f886af6afa9b174a522911932cb381851c2e,3fa2f886,Change version from 1.0.0 to 1.0,"Change version from 1.0.0 to 1.0
+
+Change version from 1.0.0 to 1.0. Add ""all rights reserved"" to title screen.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250397653,1250397762,80eaf647ac95817a105f153cfa25e3428ecaab34
+80eaf647ac95817a105f153cfa25e3428ecaab34,80eaf647,Set minSdkVersion in AndroidManifest.xml,"Set minSdkVersion in AndroidManifest.xml
+
+Set minSdkVersion to 1 to indicate that we can work under the 1.0 SDK.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250395367,1250395367,1425a9de1365c266d36b945004c0751cc5359af7
+1425a9de1365c266d36b945004c0751cc5359af7,1425a9de,Retab,"Retab
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250393429,1250393429,90849a9550cec0be5007253b6a1fac32a79a1b31
+90849a9550cec0be5007253b6a1fac32a79a1b31,90849a95,Get rid of unused code and unused imports,"Get rid of unused code and unused imports
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250393374,1250393374,2e33d16a203a912a564c5973b683d4d70813e240
+2e33d16a203a912a564c5973b683d4d70813e240,2e33d16a,Don't log as much about the CPU's armory,"Don't log as much about the CPU's armory
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250392523,1250392523,1ea3dfcbdfbf89d98fdb095518f96e0030f2ad45
+1ea3dfcbdfbf89d98fdb095518f96e0030f2ad45,1ea3dfcb,"Change help a little bit, edit html","Change help a little bit, edit html
+
+Change help a little bit, edit html. Also remove the unused boom.wav sound.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1250392140,1250392140,a6e80bf98e0993f52031720cb37997f836d49779
+a6e80bf98e0993f52031720cb37997f836d49779,a6e80bf9,Fix getNextWeapon / getPrevWeapon crash,"Fix getNextWeapon / getPrevWeapon crash
+
+Fix getNextWeapon / getPrevWeapon crash that occurred if there was only one
+weapon in the armory.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1249176448,1249176448,f4eb753022f209e3334c9a80c1cbf8dc5f292e93
+f4eb753022f209e3334c9a80c1cbf8dc5f292e93,f4eb7530,Kill extraneous TODOs,"Kill extraneous TODOs
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248930803,1248930803,9734adbd8dadb7ab27e9e2d35420486e778708e6
+9734adbd8dadb7ab27e9e2d35420486e778708e6,9734adbd,Add screenOrientation = landscape to manifest.xml,"Add screenOrientation = landscape to manifest.xml
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248930480,1248930634,e29e0b801f24bb16cdc6df0fbb4990af655118c8
+e29e0b801f24bb16cdc6df0fbb4990af655118c8,e29e0b80,Tweak starting cash and weapon prices + powers,"Tweak starting cash and weapon prices + powers
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248930425,1248930437,a5c1d63ddfce95f3e541650e5972eaf430308175
+a5c1d63ddfce95f3e541650e5972eaf430308175,a5c1d63d,Create mDebug setting for log verbosity,"Create mDebug setting for log verbosity
+
+Printing out log messages degrades performance severely, because it triggers
+the garbage collector to run. Create a constant Util.mDebug which can suppress
+log messages if necessary.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248929043,1248929348,d3cd29a9c1dac475d8a908b2473043cfa8a4dbbf
+d3cd29a9c1dac475d8a908b2473043cfa8a4dbbf,d3cd29a9,Fix freezing of ExtraArmorState,"Fix freezing of ExtraArmorState
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248924915,1248924915,a2958d40f25fe8e228ba155b08a5763b7a9ffeb8
+a2958d40f25fe8e228ba155b08a5763b7a9ffeb8,a2958d40,Fix another non-static MyVars + improve help,"Fix another non-static MyVars + improve help
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248924556,1248924556,c1f8828bf2f6c43090e8719d06db0dd7bc9472d2
+c1f8828bf2f6c43090e8719d06db0dd7bc9472d2,c1f8828b,Improve help.html a bit,"Improve help.html a bit
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248836884,1248836884,4bfce0a2f189d0eba26973450059b2e15495c477
+4bfce0a2f189d0eba26973450059b2e15495c477,4bfce0a2,Make Brain.Move.MyVars a static class,"Make Brain.Move.MyVars a static class
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248667293,1248667293,071d57c36ae0744362f73e3bf0ee21637694cf49
+071d57c36ae0744362f73e3bf0ee21637694cf49,071d57c3,More help file improvements,"More help file improvements
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248664080,1248664719,44066db044fed1f5a7edc8fb98a6c055cd2783ab
+44066db044fed1f5a7edc8fb98a6c055cd2783ab,44066db0,Fix AutoPacking of RefinementBrain objects,"Fix AutoPacking of RefinementBrain objects
+
+Formerly we were trying to use AutoPack with an abstract class,
+RefinementBrain. Clearly this cannot work, because AutoPack uses
+newInstance(), which fails on abstract classes. Move all the packing /
+unpacking logic into the leaf classes MediumBrain and HardBrain. Move all the
+variables up into RefinementBrain. There were no extra variables in the leaf
+classes anyway, and they can always be added individually if necessary.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248662629,1248663342,74f746273964948d82373d160ec55b838d9db63a
+74f746273964948d82373d160ec55b838d9db63a,74f74627,Fix tabbing of HelpAct.java,"Fix tabbing of HelpAct.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248660386,1248660386,479d890f4e0a44572bac631f7a83eede66aeafdb
+479d890f4e0a44572bac631f7a83eede66aeafdb,479d890f,Fix flaw with freezing RefinementBrain AI objects,"Fix flaw with freezing RefinementBrain AI objects
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248660361,1248660361,22d3f13472ef59d0187ad17a26b2bf2ddfaccee2
+22d3f13472ef59d0187ad17a26b2bf2ddfaccee2,22d3f134,Fix bug in GetWeaponsDialog,"Fix bug in GetWeaponsDialog
+
+Fix bug in display of GetWeaponsDialog where the dialog was always told it was
+being started for player index 0, even when we were on another player index.
+
+Add picture to help.html.
+
+Change some WeaponType.java logic to be more straightforward (use standard
+boolean operators.)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248660043,1248660043,b6f0f2aec72516090403c610e892b343de489d3f
+b6f0f2aec72516090403c610e892b343de489d3f,b6f0f2ae,More help improvements,"More help improvements
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248649469,1248649469,65c2182e78481209b3fd0b3621ac0004bdc2446f
+65c2182e78481209b3fd0b3621ac0004bdc2446f,65c2182e,Add to the help text,"Add to the help text
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248647864,1248647864,ad3594becc0867b838758c036e82e2315f0f0d6c
+ad3594becc0867b838758c036e82e2315f0f0d6c,ad3594be,Create new HTML help system,"Create new HTML help system
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248643226,1248646528,836e9bf3f02e33e99acdb22c4f1e229c92401783
+836e9bf3f02e33e99acdb22c4f1e229c92401783,836e9bf3,Fix bug with extra armor never being used up,"Fix bug with extra armor never being used up
+
+Fix bug where we could keep using the same extra armor over and over.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248601574,1248601574,e30116701a39cdd5fb0f324c8ec24c28edbd1d64
+e30116701a39cdd5fb0f324c8ec24c28edbd1d64,e3011670,"Fix bug in RandomPlayers ""buy weapons"" routine","Fix bug in RandomPlayers ""buy weapons"" routine
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248600112,1248600112,4d152a155a4fa679c7f014f6ef9db78e7eb701e9
+4d152a155a4fa679c7f014f6ef9db78e7eb701e9,4d152a15,Fix log messages,"Fix log messages
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248592230,1248592230,26f8e0b7480365d436bf8fd352f7f3ebba56be06
+26f8e0b7480365d436bf8fd352f7f3ebba56be06,26f8e0b7,Fix number of rounds logic,"Fix number of rounds logic
+
+Fix number of rounds logic. Previously we had been playing one less than the
+desired number of rounds :P
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248591454,1248591454,8ba6df2c6ea5961e526ee3de8e363878144ee1fc
+8ba6df2c6ea5961e526ee3de8e363878144ee1fc,8ba6df2c,Beef up HardBrain and fix up other brain stuff,"Beef up HardBrain and fix up other brain stuff
+
+Beef up HardBrain so that it really is harder than MediumBrain.
+How is it better? It tries three initial fixes before deciding on one. It
+refines 3x as much as MediumBrain. And its shots never get worse (it never
+refines its shots so that the error is greater.)
+
+Fix a flaw in our optimization strategy. Previously, we were allowing the
+angle or the power to change, but not both. This could result in us getting
+stuck forever on a local hill in the optimization space. Sometimes it is
+possible to improve a shot only by tweaking both the power and the angle.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248586534,1248590912,0c822aef753c7b4c3a4c4f81544fa94bfb58fde6
+0c822aef753c7b4c3a4c4f81544fa94bfb58fde6,0c822aef,Bugfix the preceding weapons-buying changes,"Bugfix the preceding weapons-buying changes
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248585709,1248585709,7539e049241765756012d5c0235ef7b17cd34266
+7539e049241765756012d5c0235ef7b17cd34266,7539e049,Fix AI weapon type selection,"Fix AI weapon type selection
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248582569,1248583854,be3f3526d5e59197ff685131c356539045396755
+be3f3526d5e59197ff685131c356539045396755,be3f3526,Let computers buy weapons. Rotate Buy Weapons gui,"Let computers buy weapons. Rotate Buy Weapons gui
+
+Let computers buy weapons. Currently RandomBrain buys whatever it can
+randomly, and the RefinementBrains try to maintain an equal number of all
+items.
+
+For human players, rotate the buy weapons dialog box properly, so that each
+player gets a chance to buy.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248415903,1248415975,cd8032d5d66c9576810a40c75381c97f4c156171
+cd8032d5d66c9576810a40c75381c97f4c156171,cd8032d5,Rename Brains,"Rename Brains
+
+Rename SillyBrain to RandomBrain.
+
+Rename EasyBrain to MediumBrain.
+
+Create HardBrain. Still haven't made it any different yet.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248158851,1248160405,40a44d7ea42c3ae8f1474059d1353cf321f69ce6
+40a44d7ea42c3ae8f1474059d1353cf321f69ce6,40a44d7e,More tweaks to the refinement engine,"More tweaks to the refinement engine
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248158381,1248158391,565a6f34f9f49a44c777a9085717c2ef245756fe
+565a6f34f9f49a44c777a9085717c2ef245756fe,565a6f34,Tune up refinementPass and getSkewedRandom,"Tune up refinementPass and getSkewedRandom
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248156246,1248156246,2677c289341291c95ee31d5b384823d3631702fa
+2677c289341291c95ee31d5b384823d3631702fa,2677c289,Fix some AI bugs,"Fix some AI bugs
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248154270,1248154270,f18aafbe62fd528c8a729d732d0695bbe4f2a20a
+f18aafbe62fd528c8a729d732d0695bbe4f2a20a,f18aafbe,Implement simple refinement-based AI,"Implement simple refinement-based AI
+
+Implement a very simple AI strategy where we just try to refine our shot all
+the time.
+
+We do a lot of shot simluations now. Move some of the ballistic launching
+logic out of GameState and into a static factory method
+Projectile::launchProjectiled() in order to facilitate this.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1248152238,1248153209,8dad4f4840f16452bd7130f070930d09397548f7
+8dad4f4840f16452bd7130f070930d09397548f7,8dad4f48,"Implement kill bonus, survivor bonus, harm bonus","Implement kill bonus, survivor bonus, harm bonus
+
+Implement kill bonus, survivor bonus, harm bonus
+
+Also tweak starting cash schedule a little bit.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1247806768,1247806768,bfd4225afb280617a90cfaa8541ef998c20aa817
+bfd4225afb280617a90cfaa8541ef998c20aa817,bfd4225a,Remember to save state of Cosmos,"Remember to save state of Cosmos
+
+Remember to save state of Cosmos in RunGameAct.saveState().
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1247804455,1247804455,c0b1793320df38024c10389de5f2bb1bd4162287
+c0b1793320df38024c10389de5f2bb1bd4162287,c0b17933,Don't set all weapon starting amounts to 4,"Don't set all weapon starting amounts to 4
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1247799718,1247799718,889cc70ac2bfaeebeff5c62399829d147384bdd1
+889cc70ac2bfaeebeff5c62399829d147384bdd1,889cc70a,Correctly set player starting cash,"Correctly set player starting cash
+
+Correctly set player starting cash (actually Cosmos.PlayerInfo starting cash,
+since Player objects are created anew for each round.)
+
+Also fix weapon buying list colors.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1247798684,1247799688,c687d24ce977fdeb42ac7c6d6f51b6c083b94529
+c687d24ce977fdeb42ac7c6d6f51b6c083b94529,c687d24c,Implement buying weapons through the dialog box,"Implement buying weapons through the dialog box
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1247796390,1247798370,da80c7b96bcea4a7c98d2e8072d7bc9a097da87c
+da80c7b96bcea4a7c98d2e8072d7bc9a097da87c,da80c7b9,Retab,"Retab
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243243026,1243243026,7c9acfe764317853de3028b8deb09d3265fea139
+7c9acfe764317853de3028b8deb09d3265fea139,7c9acfe7,Rework buy weapons dialog box,"Rework buy weapons dialog box
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243241773,1243243021,56169d6b807a3d27f2d3af27f1dce576608587d1
+56169d6b807a3d27f2d3af27f1dce576608587d1,56169d6b,Fix minor back button snafu,"Fix minor back button snafu
+
+Fix a bug where GameSetupAct would exit when user pressed the back button in
+PlayerSetupAct.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243241181,1243241181,fa02d2362dedb20912b079599cf62e68a5222a70
+fa02d2362dedb20912b079599cf62e68a5222a70,fa02d236,Remove sound,"Remove sound
+
+Remove sound, since there will be no time to work on it.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243240652,1243240686,742f2245fef777b8012e43b462145b46bf6f2085
+742f2245fef777b8012e43b462145b46bf6f2085,742f2245,Fix bug in tie-game-announcing logic,"Fix bug in tie-game-announcing logic
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243239145,1243239145,166f44857d4b0848acc5f498fdde021fe32e4ed5
+166f44857d4b0848acc5f498fdde021fe32e4ed5,166f4485,Transition from game over to title screen directly,"Transition from game over to title screen directly
+
+We want to transition from ""game over"" to the title screen directly, rather
+than simply taking the user back to the game configuration screens.
+This is a simple matter of setting activity result codes and checking them.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243238114,1243238494,782a2abf3a51c4cf586f4ed615ff9e71e649800e
+782a2abf3a51c4cf586f4ed615ff9e71e649800e,782a2abf,Improve handling of ties in announce_winner dialog,"Improve handling of ties in announce_winner dialog
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243159558,1243159579,dee8e887c3e950b0127e1de6531221cced93e6d3
+dee8e887c3e950b0127e1de6531221cced93e6d3,dee8e887,Work on tie dialog,"Work on tie dialog
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243158333,1243158333,b1a39becc3ebf8b06f41a7819b6a8c65e811e8d8
+b1a39becc3ebf8b06f41a7819b6a8c65e811e8d8,b1a39bec,"Implement ""announce winner"" dialog box","Implement ""announce winner"" dialog box
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243154979,1243158164,8fe05e9419ec7e4a6423854f8257ede99f1a9556
+8fe05e9419ec7e4a6423854f8257ede99f1a9556,8fe05e94,Implement after-round pause,"Implement after-round pause
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243153509,1243153880,9b09a4034754191ab74814cf113464930432c11f
+9b09a4034754191ab74814cf113464930432c11f,9b09a403,Increase height of leaderboard dialog,"Increase height of leaderboard dialog
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243152868,1243152868,9ec567f4ab81d7d87bd15e8760f5a41d5120a4eb
+9ec567f4ab81d7d87bd15e8760f5a41d5120a4eb,9ec567f4,More leaderboard formatting improvements,"More leaderboard formatting improvements
+
+More tweaks to the shape of the leaderboard dialog box.
+
+Work around bug where right-justfied text gets crammed into the scroll bar of
+the ListView by adding 4 blank spaces to the right side of the text.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243125486,1243125486,8dc69c8ab38a8d6bacc75c7d84109b8115227022
+8dc69c8ab38a8d6bacc75c7d84109b8115227022,8dc69c8a,Improve leaderboard score formatting,"Improve leaderboard score formatting
+
+Fix glitch where scores were displayed directly to the right of names, with no
+real attempt at formatting.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243123589,1243124057,ce41098576bc3b43570dfca1809d34e4393bad10
+ce41098576bc3b43570dfca1809d34e4393bad10,ce410985,Fix leaderboard display bug,"Fix leaderboard display bug
+
+Fix leaderboard display bug where text was going off the screen.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243122653,1243122653,f26f747661ad74120c97f104bdcf0a8b235c8def
+f26f747661ad74120c97f104bdcf0a8b235c8def,f26f7476,Stop game after playing max number of rounds,"Stop game after playing max number of rounds
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243120543,1243121579,3b9ea44699954862786757826292558c243b2c96
+3b9ea44699954862786757826292558c243b2c96,3b9ea446,Implement multi-round games,"Implement multi-round games
+
+Move round initialization logic into startRound() / continueRound() in
+RunGameAct. Make all callbacks from GameControlView happen under mStateLock to
+avoid initialization races.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243119373,1243120174,e7b480507d54b006e005bb9639a8a44c13a3f412
+e7b480507d54b006e005bb9639a8a44c13a3f412,e7b48050,Create new Cosmos object for cross-round state,"Create new Cosmos object for cross-round state
+
+Create a new object called Cosmos to represent cross-round state. We already
+kind of have cross-round state in the form of the ModelFactory. However, we
+need something that can store earnings for the players and armories for the
+players.
+
+Also split PlayerColor into its own file, PlayerColor.java. It doesn't really
+need to be in Player.java.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1243112844,1243113398,9a31dfef33af18b626bdb50e8e77e83f0721ab03
+9a31dfef33af18b626bdb50e8e77e83f0721ab03,9a31dfef,Tweak cluster bombs and earthmovers,"Tweak cluster bombs and earthmovers
+
+Only have two sizes of cluster bomb: regular and doomhammer. Make regular
+cluster bombs explode closer to the target. The doomhammer effect is funny,
+but it's not good for every weapon.
+
+Make earthmovers much bigger to compensate for the fact that they don't deal
+direct damage.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1242892700,1242892781,8ef63b931f0c0ea4a5b42cd4f18031683bb8849f
+8ef63b931f0c0ea4a5b42cd4f18031683bb8849f,8ef63b93,Start explosions on player death,"Start explosions on player death
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1242891423,1242891996,64adaaf5b1a2f953427489ee4d3dac1496d80477
+64adaaf5b1a2f953427489ee4d3dac1496d80477,64adaaf5,Animate computer moves,"Animate computer moves
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1242887142,1242888344,95f69b9b0af20dce3664452c1c4dee183c99d89a
+95f69b9b0af20dce3664452c1c4dee183c99d89a,95f69b9b,Hardwire terrain to Rolling... for now,"Hardwire terrain to Rolling... for now
+
+I won't have time to implement multiple terrain types, so hardwire terrain to
+Rolling... for now
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1242883525,1242883525,47b9650658a1540124303b1b630ac6645054b27c
+47b9650658a1540124303b1b630ac6645054b27c,47b96506,Fix angle selection of SillyBrain,"Fix angle selection of SillyBrain
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241841111,1241851664,9c65c28d598f90b09fe7eb1f72200347151bff09
+9c65c28d598f90b09fe7eb1f72200347151bff09,9c65c28d,Implement SillyBrain + ComputerMoveState,"Implement SillyBrain + ComputerMoveState
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241831313,1241835967,6b63e6bd7a0bf8935734ccbe4bf5b4be8f778e2f
+6b63e6bd7a0bf8935734ccbe4bf5b4be8f778e2f,6b63e6bd,Kill unecessary getAppContext / getBaseContext,"Kill unecessary getAppContext / getBaseContext
+
+Kill unecessary calls to getApplicationContext() and getBaseContext().
+In most cases, what we really want is the Activity context, which we can get
+just by referring to ""this"".
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241771284,1241771284,d31075338459f80015b51357a32184d52d6d16f6
+d31075338459f80015b51357a32184d52d6d16f6,d3107533,Add ArmoryView stuff for AI use,"Add ArmoryView stuff for AI use
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241759860,1241759911,b1c0c526b9d87ad5d3a3d5fb69f86afd65d6f4e3
+b1c0c526b9d87ad5d3a3d5fb69f86afd65d6f4e3,b1c0c526,Rework the Armory in terms of arrays,"Rework the Armory in terms of arrays
+
+Rework the WeaponType.Armory object in terms of arrays. The overhead of using
+a TreeMap is higher than using an array, what with GC and all. We aren't
+expecting a large number of elements, either (the number should be around a
+dozen or so), so an array of ints won't break the bank.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241757346,1241758293,95a30693b3957de3946092bb8aa5b448bdc44674
+95a30693b3957de3946092bb8aa5b448bdc44674,95a30693,Improve Leaderboard display slightly,"Improve Leaderboard display slightly
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241755185,1241755185,c6461e36ac8e0dd3ab949881980d5f9bbe5459e8
+c6461e36ac8e0dd3ab949881980d5f9bbe5459e8,c6461e36,First cut at Leaderboard display,"First cut at Leaderboard display
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241710263,1241713958,2c5b32e008abd425caa557294d4ff10b8573d713
+2c5b32e008abd425caa557294d4ff10b8573d713,2c5b32e0,Fix fall damage bug + tweak damage amount,"Fix fall damage bug + tweak damage amount
+
+Fix a fall damage crash and tweak the damage amount to be less.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241705867,1241705867,1715f4cd8a4f3b82257e7a1b4c801e4cf6e42265
+1715f4cd8a4f3b82257e7a1b4c801e4cf6e42265,1715f4cd,First cut at BuyWeaponsState,"First cut at BuyWeaponsState
+
+A first try at implementing the weapons-buying state. It seems like the
+easiest way to do this will be to create a modal dialog box inside RunGameAct.
+
+We again need to use a Runnable object to start the dialog from the GUI
+thread.
+
+The dialog box doesn't cover the entire screen, although I think I can get it
+to cover most of it. I want the background to be the sky of the upcoming
+round, since that will look nice. Another possibility I am considering is
+setting the background to the color of the player who is buying weapons-- just
+to make it clearer who is buying in hot-seat games.
+
+Remove crusty old TODO comment in drawScreen() that has already been done.
+Remove another obsolete old todo calling for a ""floating arrow.""
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241673285,1241705186,21f59c24d11c455d5e4eff494e889937040d5def
+21f59c24d11c455d5e4eff494e889937040d5def,21f59c24,Add Brain inputs,"Add Brain inputs
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241648390,1241648944,5b8d4268a790a0f6bb69b67c18ce96f870b76bf3
+5b8d4268a790a0f6bb69b67c18ce96f870b76bf3,5b8d4268,Change color of FIRE text when button is pressed,"Change color of FIRE text when button is pressed
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241600348,1241601422,553ec2c11efa34aaa1c26b39c36e2df9ce416ff4
+553ec2c11efa34aaa1c26b39c36e2df9ce416ff4,553ec2c1,Spruce up armory arrow buttons,"Spruce up armory arrow buttons
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241598463,1241598930,93b9a93c4da4a9bbece6998abc6636a95de014d5
+93b9a93c4da4a9bbece6998abc6636a95de014d5,93b9a93c,Add tan fg. Use dark text for light foregrounds,"Add tan fg. Use dark text for light foregrounds
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241589127,1241590708,0a41963209b8e166731d7f252dc77464ccd02d05
+0a41963209b8e166731d7f252dc77464ccd02d05,0a419632,"Introduce ""snow"" foreground and log fg/bg names","Introduce ""snow"" foreground and log fg/bg names
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241583315,1241586909,1b81d9dfd7d3ad582d2d8bdec0d1cc3a03baf089
+1b81d9dfd7d3ad582d2d8bdec0d1cc3a03baf089,1b81d9df,Implement rollers,"Implement rollers
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241581003,1241583013,816afb6eeaaaffcba04364c35c26e511123544f1
+816afb6eeaaaffcba04364c35c26e511123544f1,816afb6e,Launch cluster bomb fragments using terrain angle,"Launch cluster bomb fragments using terrain angle
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241576811,1241578039,91c1321d53e13f33b08cc5b3c2b820c9c2313129
+91c1321d53e13f33b08cc5b3c2b820c9c2313129,91c1321d,Fix cluster bomb bugs,"Fix cluster bomb bugs
+
+Fix a bug where cluster bomb fragments would immediately explode after launch,
+due to being technically inside the terrain. Also make it so that when an
+explosion modifies the terrain, we redraw it immediately rather than waiting
+until after BallisticState is over.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241574178,1241574248,e79bfcc56016df5c9f3485937b511591d332163a
+e79bfcc56016df5c9f3485937b511591d332163a,e79bfcc5,Reorganize WeaponType + create cluster bombs,"Reorganize WeaponType + create cluster bombs
+
+Refactor WeaponType so that explosion attributes are in a separate type, which
+not all weapons have. This avoids the proliferation of explosion attributes
+creeping into the general type, which had to be zeroed for non-explosive
+weapons.
+
+Allow BallisticsState to track multiple projectiles and explosions at once,
+rather than just one. Separate out the concept of detonation from the concept
+of explosion. Not all weapons detonate explosively-- some create other weapons
+instead.
+
+Introduce the idea of hidden WeaponType objects. These are just an
+implementation detail and can't be directly fired or bought by users.
+
+Change Explosion.mX and mY to ints.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241569318,1241572766,07e83da033b8d6cbd3737369c33362f0cf0082fa
+07e83da033b8d6cbd3737369c33362f0cf0082fa,07e83da0,Don't let human use EXTRA_ARMOR if life is maxed,"Don't let human use EXTRA_ARMOR if life is maxed
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241558836,1241559655,6d5eb220b5727edcd7c4de94446265c3bc0dd62d
+6d5eb220b5727edcd7c4de94446265c3bc0dd62d,6d5eb220,Implement EXTRA_ARMOR,"Implement EXTRA_ARMOR
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241557948,1241558264,5866cb3c6794ab51ea23b1454572720695801c09
+5866cb3c6794ab51ea23b1454572720695801c09,5866cb3c,"Add ""threading"" comment to GameState.java","Add ""threading"" comment to GameState.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241557238,1241557238,53f3e59b7d598aaf27ff870c44ba7cb03ba55779
+53f3e59b7d598aaf27ff870c44ba7cb03ba55779,53f3e59b,Fix life meter + Cut out some deadcode,"Fix life meter + Cut out some deadcode
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241503240,1241503506,c42228587406b59fa9f31e6f1cf2838dcad266a6
+c42228587406b59fa9f31e6f1cf2838dcad266a6,c4222858,Fix teleporter bugs,"Fix teleporter bugs
+
+Fix bug where two players would be teleported to the same space after a death
++ a teleport.
+
+Fix a bug where using a teleporter didn't decrease the number of teleporters
+in the Armory.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241502901,1241502901,07bc8b90712ba5627254fb4a8d6bc6dae08dd273
+07bc8b90712ba5627254fb4a8d6bc6dae08dd273,07bc8b90,Implement TELEPORTER weapon,"Implement TELEPORTER weapon
+
+Make accessors and setters for three player colors: bodyColor, auraColor, and
+outlineColor. Use Player.setAuraAlpha() to enable and disable auras, instead
+of hard-coding the fact that only the current player has a displayed aura.
+
+The teleporter implements fairly clever swapping logic. Normally, it just
+swaps you with a dead player. If nobody's dead, it will swap you with a
+still-living player at random. In the 2-player game case, it can even put you
+in the very middle of the screen, since there's not much there.
+
+Hack in mFireSpecial boolean in HumanMoveState to handle moves which don't
+involve seeing the projectile power bar inch across the screen.
+
+Create the ModelFactory.getValidPlayerPlacements() function to allow the
+teleport code to calculate player placements too.
+
+In WeaponType, get rid of Attr.EARTHMOVER, since mFullDamage == 0 conveys the
+same information. Introduce Attr.PROJECTILE to separate projectile weapons
+from ""special"" weapons.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241497525,1241502245,2dcb569951d0d038a775cce87d5766551ec193ad
+2dcb569951d0d038a775cce87d5766551ec193ad,2dcb5699,Don't log state transitions,"Don't log state transitions
+
+To avoid GC
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241479065,1241479065,9fd9af42dac1472ae56aeafcce25c59bd2569c41
+9fd9af42dac1472ae56aeafcce25c59bd2569c41,9fd9af42,Introduce EARTHMOVERs + fix collision damage,"Introduce EARTHMOVERs + fix collision damage
+
+Introduce EARTHMOVER weapons which do no explosion damage and have a different
+color explosion.
+
+Fix some issues in Explosion.doDirectDamage.
+There are two important radii: the bullseye radius and the safety radius.
+Every projectile whose center is inside of the bullseye radius counts as a
+direct hit which does full damage.
+Projectiles which explode outside the bullseye radius deal damage
+linearly proportional to how close they are to the safety radius. Projectiles
+whose centers lie outside of the safety radius do no damage to a player.
+
+Introduce a new function, Util.linearInterpolation, to do exactly that.
+Linear interpolation is trivial in theory, but in practice the code looks
+messy sometimes if it's not encapsulated in a function.
+
+Reformat the way WeaponType objects are declared a little bit, to make it more
+readable.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241473800,1241478243,dd763fe29fe37eb34e38857e9b9982914866f361
+dd763fe29fe37eb34e38857e9b9982914866f361,dd763fe2,Prepare to implement AI,"Prepare to implement AI
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241431256,1241432377,325fb735db72c644d2595d2f0b9424fb115408f6
+325fb735db72c644d2595d2f0b9424fb115408f6,325fb735,Make player turns rotate,"Make player turns rotate
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241429991,1241430219,212b04159d624d6ed28ac20ff6d1c811535cc004
+212b04159d624d6ed28ac20ff6d1c811535cc004,212b0415,Implement mutable terrain,"Implement mutable terrain
+
+Change WeaponType.mExplosionSize to WeaponType.mExplosionRadius
+
+Separate PROJECTILE_COLLISION_RADIUS from PROJECTILE_RADIUS
+
+Move Projectile.circAt to Util.circAt. Fix error in equation.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241420664,1241423505,966fdf3d4152d02383f0f5071efefda1b483a869
+966fdf3d4152d02383f0f5071efefda1b483a869,966fdf3d,Change player outline based on remaining health,"Change player outline based on remaining health
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241219860,1241219860,cf324f3ce6786ceafe0ed6dbfd366d9ec32d67ae
+cf324f3ce6786ceafe0ed6dbfd366d9ec32d67ae,cf324f3c,Fix WeaponType.Armory freezing logic,"Fix WeaponType.Armory freezing logic
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241182102,1241182102,eba608e808642fc9a269f7dd2e5870da93aed856
+eba608e808642fc9a269f7dd2e5870da93aed856,eba608e8,Fix flipping bug where wrong weapon would be used,"Fix flipping bug where wrong weapon would be used
+
+Fix flipping bug in BallisticsState where the wrong weapon would be used for
+the explosion if we flipped while in BallisticsState. BallisticsState really
+needs to keep track of which weapon it is firing, and now it does.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241181616,1241181927,f7bcad1424806fc04ccfdd2562652247f905a36b
+f7bcad1424806fc04ccfdd2562652247f905a36b,f7bcad14,Rename all scorched.android to com.senchas.salvo,"Rename all scorched.android to com.senchas.salvo
+
+The big rename. Rename all scorched.android to com.senchas.salvo, reflecting
+the final product name.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241178408,1241179097,bf7cf7e8776b2fc5f84dec48fb8a42c29b80efcc
+bf7cf7e8776b2fc5f84dec48fb8a42c29b80efcc,bf7cf7e8,Draw bar at top to indicate offscreen projectile,"Draw bar at top to indicate offscreen projectile
+
+It's a nice touch...
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241165509,1241165509,c82c9b4ea3d73685b2205a74e378988627f8a0f6
+c82c9b4ea3d73685b2205a74e378988627f8a0f6,c82c9b4e,Give a good selection of testing weapons,"Give a good selection of testing weapons
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241164978,1241164978,553b438c159581c0e22a809a907b25733503bbe7
+553b438c159581c0e22a809a907b25733503bbe7,553b438c,Reduce amount of weapons in armory after use,"Reduce amount of weapons in armory after use
+
+To make this easier, refactor getNextWeapon and getPrevWeapon into Armory
+methods (rather than implementing them in GameState)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241164083,1241164737,7f0cc58d34c5dbe196c6f50a35b6ed8af67f44d6
+7f0cc58d34c5dbe196c6f50a35b6ed8af67f44d6,7f0cc58d,Implement explosions,"Implement explosions
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241130747,1241163198,b9ad79be74698e3ef7e6b1ab0a1c00e132f0358e
+b9ad79be74698e3ef7e6b1ab0a1c00e132f0358e,b9ad79be,Fix projectile out-of-bounds crash,"Fix projectile out-of-bounds crash
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241125670,1241125682,2a1d980303f5d11c6c3db1aab060e62877d573c1
+2a1d980303f5d11c6c3db1aab060e62877d573c1,2a1d9803,Create nice launcher icon,"Create nice launcher icon
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241072621,1241072936,69b96fa7a8b9894f0ddb177241ed6bed94de1854
+69b96fa7a8b9894f0ddb177241ed6bed94de1854,69b96fa7,Implement collisions,"Implement collisions
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241069492,1241070755,4b0192d3e481f5bffc002392349c2f1c1df2fbef
+4b0192d3e481f5bffc002392349c2f1c1df2fbef,4b0192d3,Add Projectile.java,"Add Projectile.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241068222,1241068222,0ee1703bb1d1237b5a5a189bab9eb4742a1392a0
+0ee1703bb1d1237b5a5a189bab9eb4742a1392a0,0ee1703b,Cache terrain at start of Ballistics state,"Cache terrain at start of Ballistics state
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241055235,1241055235,6c38d266d23cf8565b30469cd858ff0c626c8394
+6c38d266d23cf8565b30469cd858ff0c626c8394,6c38d266,Add wind,"Add wind
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241054576,1241055179,be8eb96da2f08671d799ca3c1cbfb625f74270b8
+be8eb96da2f08671d799ca3c1cbfb625f74270b8,be8eb96d,Fix initial projectile location glitch,"Fix initial projectile location glitch
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241054079,1241054079,76e8f49b0d5f7087ee236b671e7911ef800d67ec
+76e8f49b0d5f7087ee236b671e7911ef800d67ec,76e8f49b,Tweak gravity and power for better gameplay,"Tweak gravity and power for better gameplay
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241053808,1241053808,b74ee0913852ace0161239844cfc0a0e5726089b
+b74ee0913852ace0161239844cfc0a0e5726089b,b74ee091,Implement projectiles,"Implement projectiles
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241046425,1241048642,4a424f657a28a8eed3f88c84ceb6460370e56fb9
+4a424f657a28a8eed3f88c84ceb6460370e56fb9,4a424f65,Make armory buttons functional,"Make armory buttons functional
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1241035495,1241036736,f5cb7a2ab9f87895f65f9bfdccaca278b8fc9486
+f5cb7a2ab9f87895f65f9bfdccaca278b8fc9486,f5cb7a2a,Introduce the concept of weapon type,"Introduce the concept of weapon type
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240899765,1241032309,fd6b158e66a821937220f9dff6e21d0b38a2e1b9
+fd6b158e66a821937220f9dff6e21d0b38a2e1b9,fd6b158e,Hook in FIRE button,"Hook in FIRE button
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240892764,1240894004,fad430196583ccf9b402b2636648d32b96374ef5
+fad430196583ccf9b402b2636648d32b96374ef5,fad43019,Cache terrain in Bitmap,"Cache terrain in Bitmap
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240891137,1240891291,71bb13df0d688fd6a2f4a20ca53f7f9c11493ea8
+71bb13df0d688fd6a2f4a20ca53f7f9c11493ea8,71bb13df,Fix Player array deserialization,"Fix Player array deserialization
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240845181,1240845181,3f3ad3b0dbcb75d9bef5b9478b1eccc3c6b901d2
+3f3ad3b0dbcb75d9bef5b9478b1eccc3c6b901d2,3f3ad3b0,Start handling FIRE button,"Start handling FIRE button
+
+Start handling FIRE button. It's not fully implemented yet, but this is a step
+in the right direction.
+
+Create showArmory and hideArmory in preparation for implementing the power
+selector.
+
+Rename R.drawable.transparent_grey to R.drawable.armory_bg_color, to make it
+obvious what the color is used for.
+
+Get rid of unused mWeapSelLeftButton
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240744305,1240746278,7d845fda30d01874c2c177c31f988a0021d6846f
+7d845fda30d01874c2c177c31f988a0021d6846f,7d845fda,Use override annotation more in GameState.java,"Use override annotation more in GameState.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240739997,1240739997,b57d4e5401b56133e637d5d00d19dbb0dd8ced76
+b57d4e5401b56133e637d5d00d19dbb0dd8ced76,b57d4e54,Display current turret angle in the angle text box,"Display current turret angle in the angle text box
+
+Display the current player's current turret angle in the angle text box.
+
+Add ""static"" to a few class declarations. It's so easy to forget to put that
+in...
+
+Move DoToast to Util. It seems like a generally useful thing.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240738551,1240739529,db4ee85bbb5b7f3f166b3b141ef21fdf166232c7
+db4ee85bbb5b7f3f166b3b141ef21fdf166232c7,db4ee85b,Implement in-game angle selection,"Implement in-game angle selection
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240733835,1240734384,9d92c0570c9a13aae3fc1eedde5c25541e017e2e
+9d92c0570c9a13aae3fc1eedde5c25541e017e2e,9d92c057,Replace naked const with Color.WHITE and fix log,"Replace naked const with Color.WHITE and fix log
+
+Replace naked constant with Color.WHITE
+
+Fix error in RunGameAct logging
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240732026,1240732430,177c3dee8fde44e4363c7122188b08a05bb1de7b
+177c3dee8fde44e4363c7122188b08a05bb1de7b,177c3dee,Draw a highlighted circle around the cur player,"Draw a highlighted circle around the cur player
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240731271,1240731656,3e285c55eddb1d9856e0759de09294384846723d
+3e285c55eddb1d9856e0759de09294384846723d,3e285c55,No need for internal synch in ModelFactory,"No need for internal synch in ModelFactory
+
+We don't need for internal synch in ModelFactory, because the View tree is
+single-threaded. Callbacks run one by one in the UI thread, never in parallel.
+So there's no issues with callbacks stepping on each other's toes.
+
+The internal synchronization that I had there earlier was half-hearted and not
+completely correct for the unsynchronized case, anyway.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240730436,1240730539,aa5b6766b440ca8f8821bd3316596d74a77e9fb0
+aa5b6766b440ca8f8821bd3316596d74a77e9fb0,aa5b6766,Improve in-game tank graphic,"Improve in-game tank graphic
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240652951,1240657118,3cb52644b7cab7380940443e40311bc96dfb56ff
+3cb52644b7cab7380940443e40311bc96dfb56ff,3cb52644,Fix player spacing,"Fix player spacing
+
+Fix player spacing so that in games with fewer players, the players are nearer to
+the wall. This is most pronounced in 2-player games.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240647512,1240648382,009512b354581183e0f6096397d1154645f65982
+009512b354581183e0f6096397d1154645f65982,009512b3,Draw players as domes (with turrets when selected),"Draw players as domes (with turrets when selected)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240635110,1240635110,6896756f0e1530830c83a5ccb7fa01b09a90d101
+6896756f0e1530830c83a5ccb7fa01b09a90d101,6896756f,Draw players on the terrain,"Draw players on the terrain
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240631341,1240631732,c7577fbdb2e7275b79dbdb97d0881b55822b06d6
+c7577fbdb2e7275b79dbdb97d0881b55822b06d6,c7577fbd,Add little message when player is starting,"Add little message when player is starting
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240608620,1240609879,0a215e1192e210d838a12e45c2399a88c7eb0c9d
+0a215e1192e210d838a12e45c2399a88c7eb0c9d,0a215e11,Fix thread shutdown and Player.saveState,"Fix thread shutdown and Player.saveState
+
+Fix a flaw in thread shutdown (we were not waiting for the thread to finish
+before returning from GameControlViewObserver.surfaceDestroyed() ).
+
+Fix player saveState -- it was not saving its Brain correctly.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240606882,1240606882,a17e74a773ec63062acb3fb9818ba57505e0d2fe
+a17e74a773ec63062acb3fb9818ba57505e0d2fe,a17e74a7,Finish major refactoring outline,"Finish major refactoring outline
+
+Finally get rid of Graphics.java by moving its functionality into
+GameControlView. Polish up various pieces of code (though full debugging still
+remains to be done.) Move Background and Foreground objects into Model so that
+they can be stored in saveState().
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240599135,1240601016,b2128749bd8dca58bf1025c2befa46b63f2d23d1
+b2128749bd8dca58bf1025c2befa46b63f2d23d1,b2128749,Major reorganization [incomplete],"Major reorganization [incomplete]
+
+In RunGameAct, re-organize things. Now the main thread lives here. The main
+thread has its own state controller object, which is what the rest of the code
+interacts with when it wants to start or stop the thing. Got rid of stale code
+dealing with widgets that no longer exist.
+
+Restructure GameControlView to be mostly graphics code. Haven't gotten around
+to fully moving everything from Graphics.java over yet, but it will happen
+soon.
+
+Change GameState functions a bunch. We no longer have callback / callout
+functions for graphics; the main() function of the state should take care of
+it.
+
+In Model.java, create NextTurnInfo to encapsulate information returned from
+Model.getNextPlayerInfo().
+
+Rearrange game.xml somewhat.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240597482,1240597482,0bf3b707515cb9f807b15365fa34d0d5a3a30256
+0bf3b707515cb9f807b15365fa34d0d5a3a30256,0bf3b707,Delete unused zoom button graphics,"Delete unused zoom button graphics
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240285076,1240285076,d281de1048e691d2be0d14a20f2c557e0ec2d3fc
+d281de1048e691d2be0d14a20f2c557e0ec2d3fc,d281de10,Merge branch 'funky-button' into more-orcs-more-towers-more-victories,"Merge branch 'funky-button' into more-orcs-more-towers-more-victories
+
+Conflicts:
+	res/layout/game.xml
+	src/scorched/android/GameControlView.java
+	src/scorched/android/RunGameAct.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240284799,1240284799,"c61fa2874b1161296c6c6388f9521545a51ad9e3,034a5a22dec1f5acd05849edcde589ac293ac83f"
+c61fa2874b1161296c6c6388f9521545a51ad9e3,c61fa287,Big-time restructuring of the game logic [imcomplete],"Big-time restructuring of the game logic [imcomplete]
+
+Finally move the main thread out of GameControlView.java and into
+RunGame.java.
+
+Henceforth, GameControlView will just handle graphics. It will forward all
+important callbacks to be handled in RunGame.
+
+In turn, RunGame will defer most important decision to the state machine in
+GameState.java.
+
+Also made some changes to game.xml which will be overwritten soon by the merge
+from another branch.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239943489,1240284303,8b7aa21ae51be6bf7a61b13badbae40ea0e91c4f
+034a5a22dec1f5acd05849edcde589ac293ac83f,034a5a22,Rework grey bar again,"Rework grey bar again
+
+Add two gaps to the bottom grey bar in game.xml.
+
+Also separate out the weapon text fields into a description and an amount
+field.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240214788,1240216768,d4006d932f1d7970ec35d6f23adc6bbda2ed5f40
+d4006d932f1d7970ec35d6f23adc6bbda2ed5f40,d4006d93,Add nice right and left buttons,"Add nice right and left buttons
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240199298,1240214376,7a9ebf045611afbe5de0d32083fcff807bf38bdb
+7a9ebf045611afbe5de0d32083fcff807bf38bdb,7a9ebf04,Add Foreground.java file,"Add Foreground.java file
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240199169,1240199169,d6daaf8003024536091f4947463e96f7f591ef6c
+d6daaf8003024536091f4947463e96f7f591ef6c,d6daaf80,Fix tab issues,"Fix tab issues
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240198436,1240198436,9ecc5ce093c545564b546dccd0de1f551d2e2857
+9ecc5ce093c545564b546dccd0de1f551d2e2857,9ecc5ce0,Add randomized foregrounds,"Add randomized foregrounds
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240195826,1240198427,6f71b24d8ac96f34c5201b3346d55a5995224700
+6f71b24d8ac96f34c5201b3346d55a5995224700,6f71b24d,Add more backgrounds and make them usable,"Add more backgrounds and make them usable
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240188801,1240190962,24de3b2ebb3f55240e66837f47ee8e35c95bcbc7
+24de3b2ebb3f55240e66837f47ee8e35c95bcbc7,24de3b2e,More weapon picker refinements,"More weapon picker refinements
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240141583,1240141583,ebe104144fa2b63c675a9cf6d38a15b31767fc23
+ebe104144fa2b63c675a9cf6d38a15b31767fc23,ebe10414,Refine weapon picker,"Refine weapon picker
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240140153,1240140831,7c57d96e04490f08292371b372bf5d5d409696ce
+7c57d96e04490f08292371b372bf5d5d409696ce,7c57d96e,Fix up the fire button,"Fix up the fire button
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240134641,1240138976,0e8891cd1dc7a2bd5bfb2f62c15c03f525e09bb2
+0e8891cd1dc7a2bd5bfb2f62c15c03f525e09bb2,0e8891cd,"Improve ""angle display"" widget","Improve ""angle display"" widget
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240132510,1240132510,0d8ad1b8850b33e4d046c6d3598b23b0d14da4d1
+0d8ad1b8850b33e4d046c6d3598b23b0d14da4d1,0d8ad1b8,Comment out old stuff and add degree symbol,"Comment out old stuff and add degree symbol
+
+Comment out the unused player_colors array in values/colors.xml. Don't delete
+it completely, because I might need to make another one of these in the
+future, and documentation is hard to come by on the XML stuff.
+
+Add a real degree symbol and better font size to the degree readout.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240130953,1240130953,9177ff50311f8f5992ac393a880d3b3d444c50fe
+9177ff50311f8f5992ac393a880d3b3d444c50fe,9177ff50,Make grey bar transparent,"Make grey bar transparent
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240130573,1240130573,3048ea002db80048e163464ef8d13c6856044f44
+3048ea002db80048e163464ef8d13c6856044f44,3048ea00,Add shaded bar at the bottom of the screen,"Add shaded bar at the bottom of the screen
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1240130053,1240130434,76893769d6a09a2735fae11291d63bcadf0fe8b3
+76893769d6a09a2735fae11291d63bcadf0fe8b3,76893769,Correctly size foggy game background,"Correctly size foggy game background
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239958365,1240128997,2279be1fd32cb59968e86aa1af6cef96bda3dd8f
+2279be1fd32cb59968e86aa1af6cef96bda3dd8f,2279be1f,Rework in-game layout for zoomless operation,"Rework in-game layout for zoomless operation
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239957331,1239957331,5a6a18ae5037fdef1b84af7768a295e19465fbe3
+5a6a18ae5037fdef1b84af7768a295e19465fbe3,5a6a18ae,Use an image as the game background,"Use an image as the game background
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239956830,1239957122,297b53eb6af9713707eb067c0550eb6fd6024e29
+8b7aa21ae51be6bf7a61b13badbae40ea0e91c4f,8b7aa21a,Randomize Flat Terrain height a little bit,"Randomize Flat Terrain height a little bit
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239917057,1239917057,dcbcc9356343420ece8b37c0e637af1f5d6ea242
+dcbcc9356343420ece8b37c0e637af1f5d6ea242,dcbcc935,Update Rolling Terrain a bit (with min / max vals),"Update Rolling Terrain a bit (with min / max vals)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239914685,1239916569,297b53eb6af9713707eb067c0550eb6fd6024e29
+297b53eb6af9713707eb067c0550eb6fd6024e29,297b53eb,Implement splines in TerrainFactory,"Implement splines in TerrainFactory
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239785760,1239789774,014f0aaa533d6892a6cd53bf86cef69f6f00c9e1
+014f0aaa533d6892a6cd53bf86cef69f6f00c9e1,014f0aaa,Rip out zoom logic and redo Graphics.drawScreen(),"Rip out zoom logic and redo Graphics.drawScreen()
+
+We're just trying to get to a functional drawScreen() now, though the rest of
+the game is currently broken. Create a nice ASCII picture of the new playing
+field setup.
+
+Moved the last remnants of game setup out of the Model constructor and into
+ModelFactory.createModel(). Move the functionality of Player.setX() into
+Player.calcY().
+
+Get rid of RunGameAct.onRestoreInstanceState() since it's never used.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239766623,1239769546,14ca8fe3c7093ad3945b0022e780094778aae41c
+14ca8fe3c7093ad3945b0022e780094778aae41c,14ca8fe3,Move Player.java to the MyVars system,"Move Player.java to the MyVars system
+
+Get rid of ComputerPlayer.java and LocalHumanPlayer.java. Their function will
+be filled by the Brain class in the future.
+
+Move around ModelFactory.fromBundle. The new style is to put fromBundle
+methods next to the lifecycle block.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239746665,1239747941,6d50e784439b28c6bd0210f330273955c30fac53
+6d50e784439b28c6bd0210f330273955c30fac53,6d50e784,Create Terrain.java and TerrainFactory.java,"Create Terrain.java and TerrainFactory.java
+
+Replace ModelFactory.TerrainType with TerrainFactory.
+Separate out the terrain-related stuff in Model.java into Terrain.java. This
+is part of a bigger effort to turn Model.java into a container which holds
+most or all important game state.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239745353,1239746155,c2fa2b2fcd78ecac15e4592637bc6aa617c8693a
+c2fa2b2fcd78ecac15e4592637bc6aa617c8693a,c2fa2b2f,Move towards using ModelFactory,"Move towards using ModelFactory
+
+Move around methods in PlayerFactory
+
+Rename PlayerFactory.createDefault to PlayerFactory.fromDefault.
+
+First implementation of ModelFactory.createModel and
+PlayerFactory.createPlayer.
+
+Finally use ModelFactory where appropriate in RunGameAct.
+
+Partly convert Model.java to the MyVars system. Still need to fix Player to
+work with MyVars.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239702668,1239703634,aa4bf83e348c18a1cdedce5e4333f828ba2af3d0
+aa4bf83e348c18a1cdedce5e4333f828ba2af3d0,aa4bf83e,Start passing around Bundles between Activities,"Start passing around Bundles between Activities
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239700468,1239700499,07f6229690ea9884cd6f0bf499d5235e8f7859a8
+07f6229690ea9884cd6f0bf499d5235e8f7859a8,07f62296,Some code cleanups,"Some code cleanups
+
+Get rid of GameControlView.restoreState()... it is confusing and obsolete.
+
+Move to a static factory idiom in ModelFactory.
+
+Get rid of last remnants of Sound in GameControlView
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239699435,1239699871,337913837a43f657291f25876d165d0d96337e9d
+337913837a43f657291f25876d165d0d96337e9d,33791383,Upgrade AutoPack to handle arrays,"Upgrade AutoPack to handle arrays
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239694489,1239696590,aedb18fa3352286404390ad6525502f57f2bbc46
+aedb18fa3352286404390ad6525502f57f2bbc46,aedb18fa,Add some enemy names,"Add some enemy names
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239681791,1239681791,388b0151f2ad14f98a11b89a2d968fdadce4541f
+388b0151f2ad14f98a11b89a2d968fdadce4541f,388b0151,Replace PlayerFactory.PlayerType with BrainFactory,"Replace PlayerFactory.PlayerType with BrainFactory
+
+Create Brain.java and related files.
+
+Create Util.java and move mRandom and indexToString() to there.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239582591,1239609711,45ceb53560366a0bdb0a0d76897fb778357571d6
+45ceb53560366a0bdb0a0d76897fb778357571d6,45ceb535,Use AutoPack to handle onSave... onRestore,"Use AutoPack to handle onSave... onRestore
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239577652,1239580924,543e8b06931e0600019a02491d6e69899c8cd5fb
+543e8b06931e0600019a02491d6e69899c8cd5fb,543e8b06,Move random starting names into new file,"Move random starting names into new file
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239577046,1239577331,e048a9a618734b18b4d6afafc241d3d6f3f23cc4
+e048a9a618734b18b4d6afafc241d3d6f3f23cc4,e048a9a6,(Belatedly) Add player_spinner_item.xml,"(Belatedly) Add player_spinner_item.xml
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1239576952,1239576952,c3a5c227135e40edbf18860615bb3901b2450d79
+c3a5c227135e40edbf18860615bb3901b2450d79,c3a5c227,Improve player selection pt.2 (checkboxes),"Improve player selection pt.2 (checkboxes)
+
+Doesn't quite work yet... can't see the checkboxes...
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238627087,1238627087,cd652d686f9d2929bad5e920af6ccd639f86956f
+cd652d686f9d2929bad5e920af6ccd639f86956f,cd652d68,Improve player selection,"Improve player selection
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238490008,1238490008,1858f55f0f946f69f6e5651902f4a7a7a5fced80
+1858f55f0f946f69f6e5651902f4a7a7a5fced80,1858f55f,Eliminate Log(TAG...) stuff. Fix delete button,"Eliminate Log(TAG...) stuff. Fix delete button
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238488611,1238488611,925bf530d20a1e478e571a4f102cde21f4757bff
+925bf530d20a1e478e571a4f102cde21f4757bff,925bf530,Add cash spinner + fix terrain spinner,"Add cash spinner + fix terrain spinner
+
+Add starting cash spinner.
+
+Fix regression in terrain spinner
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238485547,1238487661,8f06d669485c4c2cf2ec33f97e9a649c611bbcae
+8f06d669485c4c2cf2ec33f97e9a649c611bbcae,8f06d669,Fix add/remove player button size,"Fix add/remove player button size
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238452129,1238452337,901327b474d9a8736f930f610b67cf1f59655a1e
+901327b474d9a8736f930f610b67cf1f59655a1e,901327b4,Implement button greying in PlayerSetupAct,"Implement button greying in PlayerSetupAct
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238451895,1238452003,6ae7098bce3f96fcee133a75dbb7dd2164b8b8c1
+6ae7098bce3f96fcee133a75dbb7dd2164b8b8c1,6ae7098b,Tweak GUI XML,"Tweak GUI XML
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238451287,1238451287,51f79976dc70957accf08e49084f3cd14f1f33ca
+51f79976dc70957accf08e49084f3cd14f1f33ca,51f79976,Add more enemy names,"Add more enemy names
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238450988,1238451040,76fd358b0158fec76d21ea2db5e70a6e8bebf1c5
+76fd358b0158fec76d21ea2db5e70a6e8bebf1c5,76fd358b,Add brown as a color,"Add brown as a color
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238449732,1238449732,a4cbf7a70e1b57e797088e85441dac5d7ba8b017
+a4cbf7a70e1b57e797088e85441dac5d7ba8b017,a4cbf7a7,Fix duplicate name bug and change max life to 300%,"Fix duplicate name bug and change max life to 300%
+
+Fix duplicate name bug in random name generation logic.
+
+Change max life to 300%. 1000% is just ridiculous and involves too much
+clicking!
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238402595,1238402595,84eda7c5e8066dc18b3cb8f63d82c8fa0f20ce7b
+84eda7c5e8066dc18b3cb8f63d82c8fa0f20ce7b,84eda7c5,Refactor enum stuff + shorten types,"Refactor enum stuff + shorten types
+
+Refactor some enums to get rid of static methods (in favor of using the
+builtin toString() method)
+
+Use import statements to shorten type names in various places
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238401923,1238402284,c7dfeb4d657a39c151c6fe35de7479794aaa47e3
+c7dfeb4d657a39c151c6fe35de7479794aaa47e3,c7dfeb4d,Create PlayerSetup screen,"Create PlayerSetup screen
+
+Create PlayerSetupAct-- the XML, the class, the legend.
+
+Rename the spinner item XMLs a little bit to reflect usage.
+
+Create MIN_PLAYERS constants
+
+Make Model.mRandom static to avoid having to reinitialize random number stuff.
+It should be safe to use this in each activity-- it will get reinitialized if
+necessary.
+
+Change fonts over to monospace-- to try a new look. May still want to change
+them over to something else.
+
+Add list of default player names. Add functions to create default players.
+
+Rename mStartingLifePercent to mLife. The variable length was getting
+ridiculous even for Java.
+
+Don't display an android standard title bar in TitleScreenAct (ironically?)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238305299,1238401630,2c342305eefdc3727cb52001ab0b1120e1fe3d49
+2c342305eefdc3727cb52001ab0b1120e1fe3d49,2c342305,Test GameSetupAct.saveState stuff,"Test GameSetupAct.saveState stuff
+
+Move layouts from layout-land directory into layout directory, because for
+testing purposes, we'd like to rotate to portrait mode. (This tests the
+saveState() / onCreate() stuff.)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238287537,1238288743,180f1e3cef06c7159ac0ad7c8c01120a9086aeef
+180f1e3cef06c7159ac0ad7c8c01120a9086aeef,180f1e3c,Separate new game stuff into two Activities,"Separate new game stuff into two Activities
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238278544,1238287283,427aa366f024d36b680abace4cc232b89fbfd6b3
+427aa366f024d36b680abace4cc232b89fbfd6b3,427aa366,All activities are now landscape + some cleanup,"All activities are now landscape + some cleanup
+
+Rename FooActivity to FooAct (for several Foo)
+
+Rename Salvo.java to TitleScreenAct.java for consistency's sake.
+
+Make all activities landscape. Users don't need to be able to use portrait for
+this game.
+
+Delete the portrait layouts.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1238272429,1238272983,a36dfec8572b0c5c445867e7e4b123aafcba8d9e
+a36dfec8572b0c5c445867e7e4b123aafcba8d9e,a36dfec8,Merge branch 'newgame',"Merge branch 'newgame'
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237884579,1237884579,"161ea13f6ce934b4ff49c5011742a5235e15fc47,27590cf6dd77158b4d1e30698491523cce1ef8d3"
+27590cf6dd77158b4d1e30698491523cce1ef8d3,27590cf6,Rename Amadeus -> Sencha,"Rename Amadeus -> Sencha
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237884489,1237884489,c62f0ae38c55d1de21fbf33c698c010d84d24809
+c62f0ae38c55d1de21fbf33c698c010d84d24809,c62f0ae3,Warn when about to create all-cpu game,"Warn when about to create all-cpu game
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237883983,1237884242,cff86a05881f4589f311fac9b69cd7a9ba7bab54
+cff86a05881f4589f311fac9b69cd7a9ba7bab54,cff86a05,"Warn about ""back"" button in RunGameActivity","Warn about ""back"" button in RunGameActivity
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237882084,1237882342,b161b851358878cf55a003b5782b96068817be22
+b161b851358878cf55a003b5782b96068817be22,b161b851,"Create ""too many players"" dialog box","Create ""too many players"" dialog box
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237879802,1237881808,071d913ed779dcd116da9d2813165f4f7751b0f1
+071d913ed779dcd116da9d2813165f4f7751b0f1,071d913e,Create landscape layout for GameSetup,"Create landscape layout for GameSetup
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237871999,1237878839,eba3a99913644ad8bbaa5f45bc2d6f0e40f42c01
+161ea13f6ce934b4ff49c5011742a5235e15fc47,161ea13f,Create landscape layout for GameSetup,"Create landscape layout for GameSetup
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237871999,1237872858,eba3a99913644ad8bbaa5f45bc2d6f0e40f42c01
+eba3a99913644ad8bbaa5f45bc2d6f0e40f42c01,eba3a999,Add new fields to GameSetupActivity layout,"Add new fields to GameSetupActivity layout
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237867141,1237871622,020e9d3244907bbd55014edb51bceafa3e0f2bfb
+020e9d3244907bbd55014edb51bceafa3e0f2bfb,020e9d32,Implement PlayerListAdapter for reals,"Implement PlayerListAdapter for reals
+
+Implement PlayerListAdapter so that the list of players in GameSetupActivity
+can work as planned.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237863589,1237866714,058a2af31b2f46c62fe27956a80721243a8f8564
+058a2af31b2f46c62fe27956a80721243a8f8564,058a2af3,Avoid races by moving some RunGame init to onStart,"Avoid races by moving some RunGame init to onStart
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237855082,1237855082,82e5ac06215ec443689af09cb6d90ea8085e0b3c
+82e5ac06215ec443689af09cb6d90ea8085e0b3c,82e5ac06,Create ModelFactory,"Create ModelFactory
+
+Create ModelFactory class, which represents the game settings we are
+configuring in the NewGame activity.
+
+Add a comment to AndroidManifest.xml about a possible improvement to
+ReadStuffActivity (using @android:style/Theme.Dialog on it)
+
+Figure out how to get callbacks from the ListView in GameSetupActivity.
+Paste in a code example called ""SeparatedListAdapter"" which we may or may not
+end up using.
+
+Eliminate playerColors in XML, because it's just too annoying. Make an enum in
+the Player class to deal with all of this. This makes serialization a lot
+easier.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237706462,1237707709,374e51bce9eac7865fac98ab0a5c45c98a220726
+374e51bce9eac7865fac98ab0a5c45c98a220726,374e51bc,"Fix about and help title bars, enhance newGame","Fix about and help title bars, enhance newGame
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237698880,1237698880,77bc361ba00bf4ebbe8808706e9295049f611668
+77bc361ba00bf4ebbe8808706e9295049f611668,77bc361b,NewGame screen work,"NewGame screen work
+
+Implement a NewGame screen with a listview and two buttons at the bottom.
+Added new_player_list_item.xml
+
+Adjust colors for ReadStuffActivity.
+
+Change string name=""app_name"" to ""Salvo"" rather than ""scorched_android"".
+
+Landscape view for NewGame is broken.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237686670,1237695810,adbbfe617c6ab63f3c282b847ce90367f15fb4f6
+adbbfe617c6ab63f3c282b847ce90367f15fb4f6,adbbfe61,Make the floor a hard boundary,"Make the floor a hard boundary
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237637806,1237637806,459933bd887bb5b86cef509a699f884ea4012490
+459933bd887bb5b86cef509a699f884ea4012490,459933bd,Create ReadStuffActivity for help / about box,"Create ReadStuffActivity for help / about box
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237633449,1237637558,48cfc2ce1e1611c9cf1fb23525f4f23186e273ce
+48cfc2ce1e1611c9cf1fb23525f4f23186e273ce,48cfc2ce,Re-add retabber.rb. Create string_const_tool.rb,"Re-add retabber.rb. Create string_const_tool.rb
+
+Create scripts/ directory to store little scripts that make life easier.
+Hopefully eclipse will not harass this directory like it does with the bin/
+directory. (eclipse seems to randomly delete files it doesn't understand in
+the bin/ directory.)
+
+Create string_const_tool.rb to help with creating long Java string constants.
+There is nothing equivalent to python's """""" or ruby's ""here documents,"" so we
+need this sort of script.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237627546,1237627829,52c5fa09c57cf6d878bbe957c47dd0bb3968ecc2
+52c5fa09c57cf6d878bbe957c47dd0bb3968ecc2,52c5fa09,Add title screen for landscape view,"Add title screen for landscape view
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237624031,1237624031,567097e3810f7c0aa5931d00a535f9553bc8c239
+567097e3810f7c0aa5931d00a535f9553bc8c239,567097e3,Add title text,"Add title text
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237617407,1237619861,2eca390c93b86a089f4eae7d2c4cf423ab17412a
+2eca390c93b86a089f4eae7d2c4cf423ab17412a,2eca390c,Make title screen buttons better,"Make title screen buttons better
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237616731,1237617270,ff442b61aee65c30d720ceb5b86e0d8a6e4b1996
+ff442b61aee65c30d720ceb5b86e0d8a6e4b1996,ff442b61,Create title screen,"Create title screen
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237600619,1237611957,d0c355cda3d4af8747b5eb18288170460cfceb1c
+d0c355cda3d4af8747b5eb18288170460cfceb1c,d0c355cd,Bring Sound.java in line with coding standards,"Bring Sound.java in line with coding standards
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237583615,1237583615,ce7450adca3de43b7b3a947db636460b2b4e46bc
+ce7450adca3de43b7b3a947db636460b2b4e46bc,ce7450ad,Merge branch 'life',"Merge branch 'life'
+
+Conflicts:
+	res/layout-land/game.xml
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237583469,1237583469,"ed32681c6f1d86abac6f1696a35a24a4c35a0f26,74468501741dbc2722ecd75f8e83ccd0fba1cb66"
+74468501741dbc2722ecd75f8e83ccd0fba1cb66,74468501,Un-bork in-game landscape layout,"Un-bork in-game landscape layout
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237583116,1237583116,f0aab726f6ec2860bf4cf2e8d929953df8c5ec30
+ed32681c6f1d86abac6f1696a35a24a4c35a0f26,ed32681c,"fixed wav file, removed useless parameter from Sound method","fixed wav file, removed useless parameter from Sound method
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237505004,1237505004,dce53c6e0a0a568f0d2befb3202296fc4548d150
+f0aab726f6ec2860bf4cf2e8d929953df8c5ec30,f0aab726,Tweak landscape layout + add state transition logs,"Tweak landscape layout + add state transition logs
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237500660,1237503648,b2b9e2c30838b6de41b8d28ba6ba965d4bfe4c66
+dce53c6e0a0a568f0d2befb3202296fc4548d150,dce53c6e,Added explosion sound which plays upon impact.,"Added explosion sound which plays upon impact.
+
+Note: sounds like shit on my end.  Not sure if this is an emulator issue
+or a bug.
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237484610,1237484610,dca0f32dd8c685cb85f5ccf59253f385d4a84f2d
+dca0f32dd8c685cb85f5ccf59253f385d4a84f2d,dca0f32d,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237479459,1237479459,"cbb5f0fb54b86f9e71f766833c4f6745bf48a84f,b2b9e2c30838b6de41b8d28ba6ba965d4bfe4c66"
+cbb5f0fb54b86f9e71f766833c4f6745bf48a84f,cbb5f0fb,delete reference to Sound constructor,"delete reference to Sound constructor
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237478779,1237478779,c57a81d37cb496a7df783a33bc75c4ec71068453
+b2b9e2c30838b6de41b8d28ba6ba965d4bfe4c66,b2b9e2c3,"Fix ""initial black screen"" bug","Fix ""initial black screen"" bug
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237457037,1237457788,8382eb73c503be861d2da72fb52957906c8730ee
+8382eb73c503be861d2da72fb52957906c8730ee,8382eb73,Fix initial game view,"Fix initial game view
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237454444,1237454721,c50c72a784baeecd4c98643380c1febab3ed6024
+c50c72a784baeecd4c98643380c1febab3ed6024,c50c72a7,Fix slider draw bug and fix overlong lines,"Fix slider draw bug and fix overlong lines
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237453594,1237453594,233256c86d835d9fd4e36cf649859b303bc3353c
+233256c86d835d9fd4e36cf649859b303bc3353c,233256c8,Retab,"Retab
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237453312,1237453312,f99166cac807d981a6830d2bd408d09c498d45e7
+f99166cac807d981a6830d2bd408d09c498d45e7,f99166ca,Optimize SalvoSlider.cacheStuff() a little bit,"Optimize SalvoSlider.cacheStuff() a little bit
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237453272,1237453272,73f2b74563ef917b282f5acb02a0b2561d49916b
+73f2b74563ef917b282f5acb02a0b2561d49916b,73f2b745,Center view on new player in InitMoveState,"Center view on new player in InitMoveState
+
+InitMoveState now smoothly moves to a new ViewSetting focused on the new
+player.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237423061,1237450874,d82fd59688ebeb0b6ef043a4efd4b3b55ccd4680
+c57a81d37cb496a7df783a33bc75c4ec71068453,c57a81d3,Merge branch 'master' of ssh://git@polarisinternal:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@polarisinternal:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237416327,1237416327,"e93203746e792ae83f27118ec95e32655202037b,d82fd59688ebeb0b6ef043a4efd4b3b55ccd4680"
+d82fd59688ebeb0b6ef043a4efd4b3b55ccd4680,d82fd596,Add file WeaponType.java,"Add file WeaponType.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237402410,1237402410,b82220e45fc405bc0dbacbaff6d87300f9dc573c
+e93203746e792ae83f27118ec95e32655202037b,e9320374,merge GameControlView,"merge GameControlView
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237393020,1237393020,eab3c1d341c30a9ddb632f87329843242447bf59
+eab3c1d341c30a9ddb632f87329843242447bf59,eab3c1d3,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237391807,1237391807,"092f5bae6d8239317a47cc6a4bfd800e619937ba,b82220e45fc405bc0dbacbaff6d87300f9dc573c"
+092f5bae6d8239317a47cc6a4bfd800e619937ba,092f5bae,Fix landscape layout,"Fix landscape layout
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1237390827,1237390827,92d641c8a61cabb799ff4f6d85cf9e8d06c51845
+b82220e45fc405bc0dbacbaff6d87300f9dc573c,b82220e4,Implement doExplosion for terrain model,"Implement doExplosion for terrain model
+
+Implement doExplosion so that explosions now modify the terrain. Yay!
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237359370,1237359370,af5047f995667a32ab7dcef41bcd8b9f00243a8c
+af5047f995667a32ab7dcef41bcd8b9f00243a8c,af5047f9,Implement explosion graphics,"Implement explosion graphics
+
+Implement explosion graphics as big orange and red circles.
+Kill some deadcode.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237342346,1237345549,47c1f0ce7a7131d4efdf955c673beee00954149b
+47c1f0ce7a7131d4efdf955c673beee00954149b,47c1f0ce,Refactor the pan / zoom and GameState code,"Refactor the pan / zoom and GameState code
+
+Refactor GameState code so that all user input flows through GameState, rather
+than just some, as before. This means no user-triggered pan / zoom in states
+other than the human player state, for now. Treat ZoomIn and ZoomOut as normal
+buttons to simplify the code.
+
+Kill Graphics.mNeedRedraw. The GameState should keep track of whether or not
+the screen needs to be redrawn. (Only the GameState knows if it is animating
+something, for example.)
+
+Move the code which alters ViewSettings into the ViewSettings class. Formerly,
+it was all over Graphics, which is not ideal-- since it really is a
+ViewSettings thing. Now, we do have to pass around screen height and width,
+though.  Make the APIs mutation-oriented because that's how we roll on
+Android. Centralize constraint-enforcement code in mutate().
+
+Some other small refactorings to kill warnings or eliminate unecessary
+statics.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237324387,1237327757,0169562594d8e742c4ef1299bd029204160d224c
+0169562594d8e742c4ef1299bd029204160d224c,01695625,Some getEnclosingViewSettings upgrades,"Some getEnclosingViewSettings upgrades
+
+Move getEnclosingViewSettings to a mutate-argument API to avoid allocations.
+Introduce a 'slop' argument so that the zoom looks better.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237319389,1237320040,92d641c8a61cabb799ff4f6d85cf9e8d06c51845
+92d641c8a61cabb799ff4f6d85cf9e8d06c51845,92d641c8,Some auto-zoom logic,"Some auto-zoom logic
+
+Right now it sucks a lot. Auto-zoom will have to be tweaked so that it shows
+users exactly what is going on...
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237274233,1237274233,bd75ae2b49dfc72761d302b5fd952f3fa1db9486
+bd75ae2b49dfc72761d302b5fd952f3fa1db9486,bd75ae2b,Ballistics tweaks,"Ballistics tweaks
+
+Tweak ballistics code-- including gravity and max_samples.
+
+Apparently drawing many lines at once eliminates a lot of the inefficiency.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237268053,1237272226,8eeabfe08f90d0113fa71f82d94a8163bd9acd0c
+8eeabfe08f90d0113fa71f82d94a8163bd9acd0c,8eeabfe0,More ballistics stuff,"More ballistics stuff
+
+Fix off-by-one foo in the Weapon class.
+
+Set surface type SURFACE_TYPE_HARDWARE
+
+Apparently the SurfaceHolder.lockCanvas() /
+SurfaceHolder.unlockCanvasAndPost() API doesn't support incremental redrawing.
+I'm not entirely sure what to do about that yet. One possibility is to look
+into overriding the View's onDraw().
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237179703,1237185387,1bc968554ed83b23a8172b76ed5ce0c557615175
+1bc968554ed83b23a8172b76ed5ce0c557615175,1bc96855,Implement Ballistics State,"Implement Ballistics State
+
+Implement weapon logic and all that.
+
+Fix an off-by-one error in Model.nextPlayer() logic.
+
+Make Graphics a singleton, since it's being used that way in practice. Be
+careful not to leak memory by retaining a reference to a Context in the
+singleton, though.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237173773,1237179312,7895f7bccfd31ea48824e3a489b9092db93f3d37
+7895f7bccfd31ea48824e3a489b9092db93f3d37,7895f7bc,Retab all files (and eliminate trailing spaces),"Retab all files (and eliminate trailing spaces)
+
+Use retabber.rb
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237170738,1237170926,05134c8ff917d63fd8484b2899d27d447a604aa2
+05134c8ff917d63fd8484b2899d27d447a604aa2,05134c8f,Have retabber.rb print out changed file names,"Have retabber.rb print out changed file names
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237170693,1237170693,a6554fff955af3634368ac4a3ecd43735bbf4375
+a6554fff955af3634368ac4a3ecd43735bbf4375,a6554fff,"Add back in retabber.rb, (got killed by bad merge)","Add back in retabber.rb, (got killed by bad merge)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1237023985,1237024018,bf08d99182b0fefedd8bc003354e01a392948d47
+bf08d99182b0fefedd8bc003354e01a392948d47,bf08d991,Rework GameState stuff,"Rework GameState stuff
+
+Create a better framework for game state. States are now first-class objects
+which receive callbacks at strategic times. Also drew an ASCII-art diagram of
+how the class states are laid out.
+
+Fixed some comments about ""blocking in the GUI thread""-- technically, blocking
+in the GUI thread is allowed. Blocking for long periods of time is bad, of
+course.
+
+Use canvas.drawColor to clear the Canvas-- it is the best way.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236991496,1237009936,0677a284bc0d00ca2da22c1ac4abf33d87abbf7e
+0677a284bc0d00ca2da22c1ac4abf33d87abbf7e,0677a284,Merge branch 'master' into ballistics,"Merge branch 'master' into ballistics
+
+Conflicts:
+	src/scorched/android/Graphics.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236983050,1236983050,"baff28dfc9d31e018d2c03181200f3376fc0e417,fdc25d8ba214ac261cdea50db8938e5a5a16aabb"
+fdc25d8ba214ac261cdea50db8938e5a5a16aabb,fdc25d8b,Merge branch 'master' of git@localhost:/home/git/scorched_android,"Merge branch 'master' of git@localhost:/home/git/scorched_android
+
+Conflicts:
+	src/scorched/android/Salvo.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236927304,1236927467,"f3719eed335f4aeb649d5ae13e46c754ee7f29c3,28cfd64136a2d28d424a9108f1dc07b0efdf70ef"
+f3719eed335f4aeb649d5ae13e46c754ee7f29c3,f3719eed,Restructure app based around 3 activities,"Restructure app based around 3 activities
+
+Restructure the app in terms of a title screen, a GameSetup screen, and a
+RunGame screen. Each screen is its own activity. Each activity has its own
+layout.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236915498,1236927103,bd9636e7674f2372c4ca0d24ad7d6d5573c83a4c
+baff28dfc9d31e018d2c03181200f3376fc0e417,baff28df,GameState rework (incomplete),"GameState rework (incomplete)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236913752,1236913752,bd9636e7674f2372c4ca0d24ad7d6d5573c83a4c
+28cfd64136a2d28d424a9108f1dc07b0efdf70ef,28cfd641,Enabled landscape layout,"Enabled landscape layout
+
+* Changed a font constant, was drawing too big otherwise
+  (tried to change the code to size the font but to no avail)
+* Enabled call to super.onPause() to avoid exception
+* Single row layout for landscape, as discussed, looks OK
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236907054,1236907054,ba7f9c1d20e086c4d54c9b8625e57690842b4b6b
+ba7f9c1d20e086c4d54c9b8625e57690842b4b6b,ba7f9c1d,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236895382,1236895382,"d22f7ce8157071bd0c277b86d006f644877f1f35,bd9636e7674f2372c4ca0d24ad7d6d5573c83a4c"
+d22f7ce8157071bd0c277b86d006f644877f1f35,d22f7ce8,Force zoom and pan to be in bounds (except for rotations),"Force zoom and pan to be in bounds (except for rotations)
+
+Note: Can't test landscape orientation due to broken layout
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236894154,1236894736,4fb8506bae31b3e7b95f96c0a2a62d2d60f046aa
+4fb8506bae31b3e7b95f96c0a2a62d2d60f046aa,4fb8506b,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236877953,1236877953,"a1dd9e74702f026eb181783bbc00ed6ad21d346e,c457e349a715ff1d3225fb86f8ff28c323901670"
+bd9636e7674f2372c4ca0d24ad7d6d5573c83a4c,bd9636e7,Zap some warnings (mostly unused imports),"Zap some warnings (mostly unused imports)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236844858,1236844858,c457e349a715ff1d3225fb86f8ff28c323901670
+c457e349a715ff1d3225fb86f8ff28c323901670,c457e349,Drop the hammer on sloppy mutex usage,"Drop the hammer on sloppy mutex usage
+
+We really need to have all the user input be serialized. Otherwise we might
+get weird drawing glitches if the user changes zoom factor or player angle
+during a screen redraw, etc. The easiest way to serialize everything is to put
+it all under mUserInputSem, so that's what I did. In theory, this could
+degrade UI performance. Performance seems to be ok, though. If it becomes an
+issue, I'll think about a message-queue based system. Hopefully it won't come
+to that, though.
+
+Eliminate onKeyDown(), etc. hooks. Keyboard input was only a temporary hack to
+test things out. Get rid of some crusty old onPause() etc. stuff which hasn't
+been used in a long time.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236844045,1236844522,920ce752c0d6135ca243dab485d728947a52f8fd
+920ce752c0d6135ca243dab485d728947a52f8fd,920ce752,Make viewX = mZoom * gameX rather than the reverse,"Make viewX = mZoom * gameX rather than the reverse
+
+Change the coordinate system so that we have
+viewX = mZoom * gameX rather than
+gameX = mZoom * viewX.
+
+In other words, mZoom is now the reciprocal of what it used to be. This
+eliminates an expensive division to get slotWidth
+(formerly slotWidth = 1/mZoom, now slotWidth = mZoom).
+It also tends to minimize numerical errors by keeping mZoom in a nicer range
+(0.5 - 60 or so) than before.
+
+gameXtoOnscreenX() tends to happen a lot more than onscreenXtoGameX().
+multiply is cheaper than divide. Therefore, it's good that we now have
+gameXtoOnscreenX implemented as a multiply rather than a divide.
+
+De-optimize zoomIn and zoomOut because I'm too lazy to fix the optimized
+version. These functions only happen when the user requests them, and then
+only as ""single shots,"" so they're not worth optimizing anyway.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236841692,1236841692,4f80cece25c892e8670e2cbf3c2c72845e1f2bb6
+4f80cece25c892e8670e2cbf3c2c72845e1f2bb6,4f80cece,Draw only onscreen players,"Draw only onscreen players
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236839039,1236840477,f7b2a85382715d57aab662581828aa6b3d537638
+f7b2a85382715d57aab662581828aa6b3d537638,f7b2a853,Retab everything.,"Retab everything.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236831615,1236831615,d6a552ee561126e45e3bf4f8bcf24ca4e9ec5533
+d6a552ee561126e45e3bf4f8bcf24ca4e9ec5533,d6a552ee,Add script to zap annoying hard-tabs,"Add script to zap annoying hard-tabs
+
+Hard tabs mess up diffs and are against our coding standard. Eclipse apparently
+cannot be trusted to keep hard tabs out of files, no matter what settings you
+use. Eclipse also likes to consider hard tabs as 4 spaces, whereas everyone
+else in the known universe prints them as 8.
+
+This script searches the current directory for java files. It converts all
+hard tabs in these files to 4 spaces. It also zaps spaces on the end of lines,
+which are also against our coding standard (and Linus').
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236831483,1236831483,5855fbcd22a286de864d74e9e4716115b1d2bf4f
+5855fbcd22a286de864d74e9e4716115b1d2bf4f,5855fbcd,"Some ""human factors"" bullshit","Some ""human factors"" bullshit
+
+Change zoom to be more coarse-- zoom is slow and having to jackhammer the
+button is annoying. Put sliders on the right side of the screen since most
+people are right-handed, and sliders must be accessed more frequently.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236829656,1236829656,bbbdefdc26474eb5c56836e2731e48dc321657b5
+bbbdefdc26474eb5c56836e2731e48dc321657b5,bbbdefdc,Hook up sliders to GameControlView,"Hook up sliders to GameControlView
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236828594,1236828594,54f9b2cd342d3739c67d94fe08fe12e79e60474e
+54f9b2cd342d3739c67d94fe08fe12e79e60474e,54f9b2cd,Some changes to deal with right-to-left sliders,"Some changes to deal with right-to-left sliders
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236827031,1236827322,63745820571f42f4fe11c308b8600c7fbdc6fe81
+63745820571f42f4fe11c308b8600c7fbdc6fe81,63745820,Add text to sliders,"Add text to sliders
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236826663,1236826663,a9bddfe9e0bbf1db2258b871b9a71e4ef02ef907
+a1dd9e74702f026eb181783bbc00ed6ad21d346e,a1dd9e74,Added extra tank,"Added extra tank
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236813018,1236813018,60a5287a8664c5acf8b5bbe11d7d6a61b8dc44f7
+60a5287a8664c5acf8b5bbe11d7d6a61b8dc44f7,60a5287a,Added preliminary title image,"Added preliminary title image
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236812750,1236812750,7f3a81439a48049688e47e2124f6a1706b7e155e
+a9bddfe9e0bbf1db2258b871b9a71e4ef02ef907,a9bddfe9,Improve slider graphics a lot,"Improve slider graphics a lot
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236803495,1236803495,c5765dc4847e1f9f5d9df74ad3c7cc31d07a9458
+c5765dc4847e1f9f5d9df74ad3c7cc31d07a9458,c5765dc4,Flesh out SalvoSlider states and interaction,"Flesh out SalvoSlider states and interaction
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236746992,1236758811,2ff235749454d9caf1fe370eb376572b9a93009a
+2ff235749454d9caf1fe370eb376572b9a93009a,2ff23574,Initialize AngleSlider too!,"Initialize AngleSlider too!
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236741997,1236741997,7f3a81439a48049688e47e2124f6a1706b7e155e
+7f3a81439a48049688e47e2124f6a1706b7e155e,7f3a8143,"added zoom controls, zoom on center of viewport","added zoom controls, zoom on center of viewport
+
+note: storyboard slightly changed, landscape is left untouched
+note: btn_* files are taken from android sources
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236722556,1236722556,37e26a718a9d4d4cb03ab93c04a9be1de63943c8
+37e26a718a9d4d4cb03ab93c04a9be1de63943c8,37e26a71,Remove copyrighted code and create SalvoSlider,"Remove copyrighted code and create SalvoSlider
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236651842,1236662149,6ce39873dfe05b88dc4d9b2cefbacff49ce7ba63
+6ce39873dfe05b88dc4d9b2cefbacff49ce7ba63,6ce39873,Fix player height calculation,"Fix player height calculation
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236624616,1236624616,d8bc1d26fa80f3d342699842240ca2d47fe1acfc
+d8bc1d26fa80f3d342699842240ca2d47fe1acfc,d8bc1d26,Eliminate some unecessary logs,"Eliminate some unecessary logs
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236624334,1236624334,4f3c521275d55ce3f4a2c4794f2900b406ca865d
+4f3c521275d55ce3f4a2c4794f2900b406ca865d,4f3c5212,Implement touchscreen pan and zoom,"Implement touchscreen pan and zoom
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236492522,1236623652,fd01a314c3ed9d19ea34707e2b1d94fbb3a8bb06
+fd01a314c3ed9d19ea34707e2b1d94fbb3a8bb06,fd01a314,Change code to reflect file renames,"Change code to reflect file renames
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236465436,1236465905,db56986ebe89e7b96105b9d4a74261c585c81544
+db56986ebe89e7b96105b9d4a74261c585c81544,db56986e,Rename sources to Salvo,"Rename sources to Salvo
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236464558,1236464558,0b2d78fd28e585332f0092265fef83e143c08b59
+0b2d78fd28e585332f0092265fef83e143c08b59,0b2d78fd,Optimize in-game storyboards,"Optimize in-game storyboards
+
+Change in-game storyboards. Optimize use of on-screen real-estate.
+Add descriptions of what the ""menu"" key will bring up.
+
+Add template_*.svg files which can be used to quickly make new storyboards
+with the correct aspect ratio and annoying bar at the top of the screen.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236463632,1236463632,d2f3306df449132aaa90fa59463fa05eead1abf9
+d2f3306df449132aaa90fa59463fa05eead1abf9,d2f3306d,Merge branch 'work',"Merge branch 'work'
+
+Conflicts:
+	src/scorched/android/Weapon.java
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236459876,1236459948,"00b8a1e3149280e169a8fb22e1304cc94d5368c1,f502a0796b7df5babded1024e970092c9a146f21"
+00b8a1e3149280e169a8fb22e1304cc94d5368c1,00b8a1e3,Merge branch 'master' of git@localhost:/home/git/scorched_android,"Merge branch 'master' of git@localhost:/home/git/scorched_android
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236389844,1236389844,"80dc1ddfac37e2a81071dbe24483ff86245606d1,dc48298243e5fd7028db0f91007035e97970a969"
+dc48298243e5fd7028db0f91007035e97970a969,dc482982,Added landscape layout,"Added landscape layout
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236385738,1236385738,c74610ef8d0c90e5599c14dd393605c013d72ba5
+c74610ef8d0c90e5599c14dd393605c013d72ba5,c74610ef,Added plus/minus buttons and hooked 'em up,"Added plus/minus buttons and hooked 'em up
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236327068,1236327068,3d4f3f79ba7c155bfc3ded2e8171fb411712f940
+3d4f3f79ba7c155bfc3ded2e8171fb411712f940,3d4f3f79,Layout updates,"Layout updates
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236325711,1236325711,46156f425654e2cc520ac02381119a776dfacfbf
+f502a0796b7df5babded1024e970092c9a146f21,f502a079,Reuse Path objects. Retab some things,"Reuse Path objects. Retab some things
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236302141,1236302141,3d1318138f3a9f0bf2351633eb37cc3ba90ebb90
+3d1318138f3a9f0bf2351633eb37cc3ba90ebb90,3d131813,Don't drawScreen for every step in ballistics,"Don't drawScreen for every step in ballistics
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236300837,1236301160,e54869b688a74f98a4b9f4ff73ac71905e806a1b
+80dc1ddfac37e2a81071dbe24483ff86245606d1,80dc1ddf,Don't drawScreen for every step in ballistics,"Don't drawScreen for every step in ballistics
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236300837,1236300837,e54869b688a74f98a4b9f4ff73ac71905e806a1b
+46156f425654e2cc520ac02381119a776dfacfbf,46156f42,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236297990,1236297990,"6b85ab0de4b31724a77f8f6be09afceb11d30582,e54869b688a74f98a4b9f4ff73ac71905e806a1b"
+6b85ab0de4b31724a77f8f6be09afceb11d30582,6b85ab0d,"Updates to layout, now with slider","Updates to layout, now with slider
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236297970,1236297970,3e42c4ae46405ea7c2c0d696fe4e8cc41acae216
+e54869b688a74f98a4b9f4ff73ac71905e806a1b,e54869b6,Change size of playing field and player size,"Change size of playing field and player size
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236297671,1236297671,8c4b690fa48c6e23157a933c4d3114b302db8ade
+3e42c4ae46405ea7c2c0d696fe4e8cc41acae216,3e42c4ae,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236296982,1236296982,"b40350bccab75e4aff17480b8173f83970b3685b,f96cbb645eb1450d4df2fa328cdded60dd0aef1e"
+8c4b690fa48c6e23157a933c4d3114b302db8ade,8c4b690f,Create gravity,"Create gravity
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236293497,1236293497,dd9aefff5cc8fe6b946078d8817a32d232e3015b
+dd9aefff5cc8fe6b946078d8817a32d232e3015b,dd9aefff,Fix getTurretX / getTurretY and comment out debug,"Fix getTurretX / getTurretY and comment out debug
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236293274,1236293274,f96cbb645eb1450d4df2fa328cdded60dd0aef1e
+f96cbb645eb1450d4df2fa328cdded60dd0aef1e,f96cbb64,Fix drawScreen() display bug,"Fix drawScreen() display bug
+
+There was a bug where we were beginning our drawing routine on a slot which
+was a multiple of 3 rather than 2. This resulted in inconsistent appearance
+when the user panned the screen, since a different set of slots would be
+selected for the bezier curve. Also, it was sub-optimal because we were
+drawing more than we needed to draw.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236290896,1236290896,d4ae96c807803c218500c328186fee8d1e522537
+d4ae96c807803c218500c328186fee8d1e522537,d4ae96c8,Allow user to adjust pan and zoom,"Allow user to adjust pan and zoom
+
+Using h,j,k,l for movement, and u,i for zoom right now.
+We really want touchscreen operation, but for now I'm just testing zoom.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236289399,1236290014,684bc160b78aa0746918c6ece078ad4e51eb5fbc
+684bc160b78aa0746918c6ece078ad4e51eb5fbc,684bc160,Pan and zoom stuff,"Pan and zoom stuff
+
+Replace a bunch of crazy hacks with a somewhat more well-thought-out
+coordinate system.
+
+Specifically, two coordinate systems. The in-game coordinate system
+runs from (0...MAX_X) and (0...MAX_Y). The display coordinate system
+goes from (0...canvasWidth) and (0...canvasHeight). To get from in-game
+coordinates to display coordinates, you subtract an offset and divide
+by a zoom factor.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236282949,1236288290,c8185a0e915f938438cd712092f17dc58c327680
+b40350bccab75e4aff17480b8173f83970b3685b,b40350bc,Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@northstar.ath.cx:1755/home/git/scorched_android
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236201735,1236201735,"cbfa8721e5a6559bbb6fd379c17f706124f53b68,c8185a0e915f938438cd712092f17dc58c327680"
+c8185a0e915f938438cd712092f17dc58c327680,c8185a0e,Rework ballistics,"Rework ballistics
+
+Store angles in radians, since every place we have to use the angle, it must
+be in radians. Fix a bunch of issues related to normalizing X vs. Y
+coordinates. Add some constants that didn't exist before.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236197889,1236199140,7824d31b0556d8be04fee5f382d5ef56cadf338c
+7824d31b0556d8be04fee5f382d5ef56cadf338c,7824d31b,First cut at ballistics,"First cut at ballistics
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236122265,1236146098,ea7248b17c3a52ba95e12e7e5e47ed1c79c9f7c7
+cbfa8721e5a6559bbb6fd379c17f706124f53b68,cbfa8721,Modified storyboard graphics for in-game,"Modified storyboard graphics for in-game
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236057283,1236057283,ea7248b17c3a52ba95e12e7e5e47ed1c79c9f7c7
+ea7248b17c3a52ba95e12e7e5e47ed1c79c9f7c7,ea7248b1,Add storyboards,"Add storyboards
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236054608,1236054608,30eb49655e0c298a09424f5620c32e964c63e772
+30eb49655e0c298a09424f5620c32e964c63e772,30eb4965,Merge branch 'master' of git@localhost:/home/git/scorched_android,"Merge branch 'master' of git@localhost:/home/git/scorched_android
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236052216,1236052216,"560f1027dafb1d982a70519bb594060f7d7eb90d,d17214708b664ae1d32b41195b3e54036d776d05"
+560f1027dafb1d982a70519bb594060f7d7eb90d,560f1027,Fix a bug or two,"Fix a bug or two
+
+Avoid black screen on startup
+
+Move mUserInputSem to ScorchedThread
+
+First start of support for the 'launch' button and 'q'
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236052128,1236052128,a479966fad868ab718ae38ae0187631fffac5a6b
+d17214708b664ae1d32b41195b3e54036d776d05,d1721470,Merge branch 'master' of ssh://git@polarisinternal:1755/home/git/scorched_android,"Merge branch 'master' of ssh://git@polarisinternal:1755/home/git/scorched_android
+
+Went with my thickness value for turret
+
+Conflicts:
+
+	src/scorched/android/ScorchedGraphics.java
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236048215,1236048215,"d63a8c892e1e15233ac49ac4ff4010de250a672e,a479966fad868ab718ae38ae0187631fffac5a6b"
+d63a8c892e1e15233ac49ac4ff4010de250a672e,d63a8c89,Changed tank look and buttons look,"Changed tank look and buttons look
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1236047681,1236047681,3648b7d3dbf08282ef87ce92e4446171830c34bf
+a479966fad868ab718ae38ae0187631fffac5a6b,a479966f,Rework the turret-moving code,"Rework the turret-moving code
+
+We don't need the giant serialization code. Simply handle changing player
+state in onKeyPressed, etc.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236041824,1236042012,2e8f92e148cab9080320998cf84a4f126234af25
+2e8f92e148cab9080320998cf84a4f126234af25,2e8f92e1,First shot at moving tank turrets.,"First shot at moving tank turrets.
+
+My first attempt at having some kind of game logic going on.
+My initial instinct was to serialize everything into the main() thread.
+I did this because I believed that holding down a key would not give multiple
+onKeyDown() calls. As it turns out, this is incorrect.
+
+This code can be simplified a lot. A lot of code will be moved into
+onKeyDown().
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1236039069,1236040215,8b23f1603eb86d5677ea75ee7cdb4b0236d45a4f
+8b23f1603eb86d5677ea75ee7cdb4b0236d45a4f,8b23f160,Add dome-drawing code (but don't use it yet),"Add dome-drawing code (but don't use it yet)
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235772704,1235772704,3648b7d3dbf08282ef87ce92e4446171830c34bf
+3648b7d3dbf08282ef87ce92e4446171830c34bf,3648b7d3,Start drawing turrets,"Start drawing turrets
+
+Also retab one or two lines since apparently somehow a tab got in there.
+
+Still trying to improve tank appearance...
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235769233,1235769233,9bc891f3c29b7bf7f42dba6294a7ebff946c7d98
+9bc891f3c29b7bf7f42dba6294a7ebff946c7d98,9bc891f3,Some display fixups,"Some display fixups
+
+Define player X size as 3 screen slots. Average the surrounding 3 slots to
+find out where to place a player on the terrain.
+
+I still don't like the way the tanks sit on the terrain. Once the game
+mechanics are working, I will tweak it.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235765253,1235765253,f57b477b82e4fe3a47050e4ff0b97b869e072023
+f57b477b82e4fe3a47050e4ff0b97b869e072023,f57b477b,Split off graphics stuff. Display tanks.,"Split off graphics stuff. Display tanks.
+
+Create ComputerPlayer.java and LocalHumanPlayer.java.
+
+Move all graphics stuff into ScorchedGraphics.java. It was getting too
+annoying having view and controller in the same file.
+
+Rework object lifecycles a bit. ScorchedGraphics, ScorchedModel, and
+ScorchedView are now all owned by the Activity at the top level. They can
+communicate with each other, though. Only the controller should be mutating
+the model. Of course, since Java lacks const, there is no practical
+way to enforce this.
+
+Locking is entirely handled by the controller. Hopefully this situation can
+continue in the future.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235723916,1235723916,601ddba95043208d0a360d120dec60f1254b9e99
+601ddba95043208d0a360d120dec60f1254b9e99,601ddba9,Merge branch 'master' of git@localhost:/home/git/scorched_android,"Merge branch 'master' of git@localhost:/home/git/scorched_android
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235707520,1235707520,"d89c3829a7259d529e33ad7c9790fba9e21adc1d,0749482dc7ab86541f1730003eb5fff712f23b7f"
+d89c3829a7259d529e33ad7c9790fba9e21adc1d,d89c3829,Introduce drawPlayer() function,"Introduce drawPlayer() function
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235705201,1235705903,e12d7bbc178254c3be4b2dc2ee3d0ab47859bfbf
+0749482dc7ab86541f1730003eb5fff712f23b7f,0749482d,"Changed layout, added mini-button","Changed layout, added mini-button
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1235698828,1235698828,1763f590afb7799d8f28a39e16abecc9c15f8250
+1763f590afb7799d8f28a39e16abecc9c15f8250,1763f590,Merge branch 'master' into landscape,"Merge branch 'master' into landscape
+(Throwing out my file since it just contained test code)
+
+Conflicts:
+
+	src/scorched/android/ScorchedView.java
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1235609697,1235609697,"2137ae1a5f716f4be2738243233e314448026940,e12d7bbc178254c3be4b2dc2ee3d0ab47859bfbf"
+2137ae1a5f716f4be2738243233e314448026940,2137ae1a,"added zoom thingy, messed with layout","added zoom thingy, messed with layout
+",,,,Martin,mhock@mhock-laptop.(none),Martin,mhock@mhock-laptop.(none),1235608611,1235608611,3eaf105eb39f4e71461a691e1c46c21b51868b87
+e12d7bbc178254c3be4b2dc2ee3d0ab47859bfbf,e12d7bbc,Add player class and player_colors,"Add player class and player_colors
+
+Add the Player class, which represents players of the game.
+This class will be owned by ScorchedModel.
+
+Add player_colors to colors.xml. I couldn't figure out how to store an array
+of colors in the resource fork, so I stored the colors as strings instead.
+Perhaps later they can be ints or something.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235527930,1235527930,05ad28bf8c3fbee1be436e47f13427a75417c0e6
+05ad28bf8c3fbee1be436e47f13427a75417c0e6,05ad28bf,Draw using splines instead of linear interpolation,"Draw using splines instead of linear interpolation
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235515485,1235515485,c234ec9d83ebfaadb99dfc54fc57196c28be542d
+c234ec9d83ebfaadb99dfc54fc57196c28be542d,c234ec9d,First cut at DrawScreen function,"First cut at DrawScreen function
+
+First cut at DrawScreen function. Pan and zoom are not implemented yet.
+There is Canvas support for these ops, so hopefully we can use that.
+Right now I am not using spline support, but I will try enabling that soon to
+see if it looks better than the current polygon-based approach.
+
+Add support for mulmSurfaceHasBeenCreatedtiple terrain generators, including
+HILLY, ROLLING, FLAT, etc.
+
+Fix a locking issue in surfaceCreated(). Apparently it is not a good idea to
+notify() the view, since other system components might be wait()ing on it.
+Instead, create a semaphore-like object just for notifications.
+Perhaps eventually mSurfaceHasBeenCreated itself can fill this function. Last
+time I tried it was flaky. Perhaps I need to change it into a Boolean (class)
+rather than a primitive boolean?
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235510934,1235512385,27a1418feacb126a7f1ec34bd75e42031a05c08d
+27a1418feacb126a7f1ec34bd75e42031a05c08d,27a1418f,Convert tabs to spaces.,"Convert tabs to spaces.
+
+My eclipse settings were letting tabs into the file, which isn't what we want.
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235463232,1235463232,4ec77cee5537f62fbdab116fc2fb61a21f135ee9
+4ec77cee5537f62fbdab116fc2fb61a21f135ee9,4ec77cee,Add ScorchedModel and clean up some stuff,"Add ScorchedModel and clean up some stuff
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1235440077,1235440077,3eaf105eb39f4e71461a691e1c46c21b51868b87
+3eaf105eb39f4e71461a691e1c46c21b51868b87,3eaf105e,Replace tabs with spaces per Android style guide,"Replace tabs with spaces per Android style guide
+(my editor was already set to use spaces instead of tabs though)",,,,Martin Hock,mdhock@gmail.com,mhock,mhock@mhock-laptop,1234895823,1234895823,6b531928c4f191cebf3c8a1fbbdca7f73885dcbd
+6b531928c4f191cebf3c8a1fbbdca7f73885dcbd,6b531928,Added ability to move square,Added ability to move square,,,,Martin Hock,mdhock@gmail.com,mhock,mhock@mhock-laptop,1234857188,1234857188,7b2f8d0384e51e9e17788dc0eb1c5cd5f2c5e38d
+7b2f8d0384e51e9e17788dc0eb1c5cd5f2c5e38d,7b2f8d03,Get something displaying on the screen,"Get something displaying on the screen
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234827053,1234827053,9276e378857e888becad06bfdc3513db6a6625c4
+9276e378857e888becad06bfdc3513db6a6625c4,9276e378,Add icon.png,"Add icon.png
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234570053,1234570053,731592a8db1f2c0833f28c24513b20d1027fc8dd
+731592a8db1f2c0833f28c24513b20d1027fc8dd,731592a8,A step towards getting a fullscreen game going here,"A step towards getting a fullscreen game going here
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234565915,1234565915,a38ad3b999712199bf5508c3f53943b1c94ea56a
+a38ad3b999712199bf5508c3f53943b1c94ea56a,a38ad3b9,Adapt some code from the lunar lander example,"Adapt some code from the lunar lander example
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234560376,1234560376,e89ade5cdac288a42585dcb080e8eeaedc9422bf
+e89ade5cdac288a42585dcb080e8eeaedc9422bf,e89ade5c,Get rid of R.java because it is a generated file,"Get rid of R.java because it is a generated file
+
+Add colors.xml
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234508691,1234508901,c12bd3f9696e37cb25a7a70fcd827b89034419fd
+c12bd3f9696e37cb25a7a70fcd827b89034419fd,c12bd3f9,Add xml files,"Add xml files
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234506299,1234506299,d0f1e0ebc738f8d02eed821849df5a891c57d295
+d0f1e0ebc738f8d02eed821849df5a891c57d295,d0f1e0eb,Create scorched_android,"Create scorched_android
+",,,,Colin McCabe,cmccabe@alumni.cmu.edu,Colin McCabe,cmccabe@alumni.cmu.edu,1234506248,1234506248,

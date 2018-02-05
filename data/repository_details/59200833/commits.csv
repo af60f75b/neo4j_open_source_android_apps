@@ -1,0 +1,733 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ea5e5a14af20a2e01f5a8f17e54f078f2d2b0ff9,ea5e5a14,Update heading on app start,"Update heading on app start
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1477302024,1477302024,8ff3c492f323ede4502d5c846e336d166c0bf30e
+8ff3c492f323ede4502d5c846e336d166c0bf30e,8ff3c492,Bump gradle plugin version,"Bump gradle plugin version
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1477302010,1477302010,47f050b8911dcb6d1dc2f06f1038282e8a9425eb
+47f050b8911dcb6d1dc2f06f1038282e8a9425eb,47f050b8,Specify a type when constructing FragmentInfo,"Specify a type when constructing FragmentInfo
+
+This fixes the case where two different fragments happen to have the
+same title (previously if this happened you wouldn't be able to select
+one from the other).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1475150259,1475150259,0c72cb80530a814bb36f2853ec35baa6e9f545cb
+0c72cb80530a814bb36f2853ec35baa6e9f545cb,0c72cb80,Merge branch 'tablet_simply',"Merge branch 'tablet_simply'
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1475148625,1475148625,"4520e81977e4dd9c1ae60a6092608b5f8958e124,f7bafbffe903360878ecdab73d5ee0d2894067b9"
+f7bafbffe903360878ecdab73d5ee0d2894067b9,f7bafbff,Remove unnecessary Handler in splash,"Remove unnecessary Handler in splash
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1475148596,1475148596,7d9159942e5bd4ead067a9bc7dfd212ef330e4a9
+4520e81977e4dd9c1ae60a6092608b5f8958e124,4520e819,New data dump and bump version.,"New data dump and bump version.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1475147125,1475147125,995500fae7688c50757cde35999e81cc701d9131
+7d9159942e5bd4ead067a9bc7dfd212ef330e4a9,7d915994,Use better IDs for search fragments,"Use better IDs for search fragments
+
+Now consecutive searches can be stacked.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1474976063,1474976063,c9cd457d89fb4ab34b5d75aaf51c3f6adf1227d3
+c9cd457d89fb4ab34b5d75aaf51c3f6adf1227d3,c9cd457d,Switch to legit size check (sw600dp).,"Switch to legit size check (sw600dp).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1474112767,1474112767,bb2982b11c197eac3ab31719de0178160af2063e
+bb2982b11c197eac3ab31719de0178160af2063e,bb2982b1,Updates to FragmentController.,"Updates to FragmentController.
+
+Abstract away the title/subtitle stuff into a new class FragmentInfo.
+FragmentController now isn't supposed to care about the title/subtitle
+of the fragment, it just gets a FragmentInfo blob to use. It's now up to
+MainActivity to set the title and up button and so on appropriately.
+FragmentController is just meant to organise which fragments get shown
+when.
+
+FragmentInfo also includes an ID which identifies a fragment to the
+level of ""looks the same"". This allows us to make sure the same fragment
+is never pushed twice in a row. This lives in FragmentController now for
+convenience, even though it really belongs in MainActivity.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1474111665,1474111665,28fab129ddae466a758b54ee42b380cd9ac94e24
+28fab129ddae466a758b54ee42b380cd9ac94e24,28fab129,General tidying of FragmentController.,"General tidying of FragmentController.
+
+Also fix a bug we would have seen if the root view had a slave. Add a
+couple of TODOs for the remaining work.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1473251272,1473251272,7c4a1a59500f63d3a3f4078b0c22d85fe873aecb
+7c4a1a59500f63d3a3f4078b0c22d85fe873aecb,7c4a1a59,Add support for up + back instead of just back=up.,"Add support for up + back instead of just back=up.
+
+Code needs some tidying, but the interactions actually seem pretty nice!
+Idea is that each fragment has a ""level"" and a ""slaveness"" (at the
+moment this is represented by odd vs even levels). When you push a
+fragment, if its level is the same as the level of the current leaf then
+it stays at the same hierarchy level, and either replaces the whole
+screen (if it's a master) or just the right (if it's a slave). Back
+goes back in time. Up goes back until the level changes. Note that the
+actual numerical ordering of the levels is irrelevant.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472991225,1472991225,bac719a21af34d885dc6216bd87ee6f94b0148ee
+bac719a21af34d885dc6216bd87ee6f94b0148ee,bac719a2,Alternative master/slave tablet layout.,"Alternative master/slave tablet layout.
+
+This still has some problems (mainly I think it would be good to have
+proper ""up"" functionality).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472734936,1472734936,b99cfed5c9d3dd2419a1e6b914cf23850b54f916
+b99cfed5c9d3dd2419a1e6b914cf23850b54f916,b99cfed5,"Remove, update and add some TODOs.","Remove, update and add some TODOs.
+
+Blergh.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472648444,1472648444,860f7ff648a7f0bdc811523491bf3a956cd7dae1
+860f7ff648a7f0bdc811523491bf3a956cd7dae1,860f7ff6,Tweaks to fragment controller.,"Tweaks to fragment controller.
+
+If a parent isn't specified, replace the right-most panel (rather than
+pushing onto the end).
+
+Updated the TODO about menu items.. Maybe they should show in a separate
+activity?
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472476155,1472476155,fb6c0f29f790873275463794e2621f975bfaa82c
+fb6c0f29f790873275463794e2621f975bfaa82c,fb6c0f29,Add a TODO about menu fragments.,"Add a TODO about menu fragments.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472128403,1472128403,249d29464b0334e365a5a2c19a31652fc03c7da5
+249d29464b0334e365a5a2c19a31652fc03c7da5,249d2946,Persist urgh so we always assign unique tags...,"Persist urgh so we always assign unique tags...
+
+...even after being destroyed and recreated.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472128324,1472128324,8e4aba08d8909ef44dc730af24ecf2b7d5cf3926
+8e4aba08d8909ef44dc730af24ecf2b7d5cf3926,8e4aba08,Rename style FragmentThing to FragmentRoot.,"Rename style FragmentThing to FragmentRoot.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472125552,1472125552,80c58738c6fb53d474be7347e065e2faa67b5f22
+80c58738c6fb53d474be7347e065e2faa67b5f22,80c58738,Use sw instead of w for layout determination.,"Use sw instead of w for layout determination.
+
+Also change it to 300 temporarily for testing.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472125494,1472125494,a708979d616b14f7e6639d526b9bbc4c40a5d798
+a708979d616b14f7e6639d526b9bbc4c40a5d798,a708979d,Remove obsolete Play Store links TODO.,"Remove obsolete Play Store links TODO.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472125356,1472125356,1c573c03e1d985fa97ea8a0ab836e53a528f6d67
+1c573c03e1d985fa97ea8a0ab836e53a528f6d67,1c573c03,Update to new support lib.,"Update to new support lib.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472125304,1472125304,fc80ad7a8b683f690075ddc09cef72224fa311ff
+fc80ad7a8b683f690075ddc09cef72224fa311ff,fc80ad7a,Add TODO for the fix just described.,"Add TODO for the fix just described.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472045089,1472045089,5d0ab94fe0a48862c88248103bfbb123ce8d1d1e
+5d0ab94fe0a48862c88248103bfbb123ce8d1d1e,5d0ab94f,More FragmentController.,"More FragmentController.
+
+Looking pretty good now, but came across a big problem: we basically
+need to synthesise a new back stack when changing from landscape to
+portrait, because whether we hide things differs between the two.
+
+Proposed solution: just use sw600dp instead of w600dp.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1472044866,1472044866,afc462b8dc942f04c4bedeb11213d2ec81f8f955
+afc462b8dc942f04c4bedeb11213d2ec81f8f955,afc462b8,Add TODO for bug I just noticed.,"Add TODO for bug I just noticed.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1471955597,1471955597,7455f180898eb5d7db475677a2c0cd7c3e776ad2
+7455f180898eb5d7db475677a2c0cd7c3e776ad2,7455f180,"More FragmentController stuff, and switch MainActivity to use it.","More FragmentController stuff, and switch MainActivity to use it.
+
+It basically works now, just needs a little bit of tweaking (options
+menu and so on). Also tidying.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1471955421,1471955421,7896ca3792cbc652e6b837f816b40e52fb47fd4b
+7896ca3792cbc652e6b837f816b40e52fb47fd4b,7896ca37,Little more work on the FragmentController.,"Little more work on the FragmentController.
+
+Still incomplete, just fleshed it out a little more and added some
+thoughts in TODOs.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1471263296,1471263296,7523e4b3d192c6b68d9294c076d23dd7a2b973a0
+7523e4b3d192c6b68d9294c076d23dd7a2b973a0,7523e4b3,Add a basic FragmentController (which isn't finished yet).,"Add a basic FragmentController (which isn't finished yet).
+
+Just to get the logic out of MainActivity. Think storing things as a
+custom tree is the way to go, since the navigation really is a tree. Not
+quite sure how to do the whole ""only show most leaf-like two nodes"", but
+whatever.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1471176925,1471176925,338c4eb004df6fff5ecd29ab401cc92e98ccd97e
+995500fae7688c50757cde35999e81cc701d9131,995500fa,Update species detail screenshot.,"Update species detail screenshot.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469230508,1469230508,18744dcbb3d17b5bd6980ab104f933a94970a254
+18744dcbb3d17b5bd6980ab104f933a94970a254,18744dcb,Bump version to 11.,"Bump version to 11.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469230467,1469230467,6c39c970fdc12170a87a8455a111961587f9a69d
+6c39c970fdc12170a87a8455a111961587f9a69d,6c39c970,New data dump.,"New data dump.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469230450,1469230450,adc5946f4e20246960dd1f94524ba188d2ad1d2b
+adc5946f4e20246960dd1f94524ba188d2ad1d2b,adc5946f,Add splash icons for all densities.,"Add splash icons for all densities.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469103447,1469103447,fe4e711bb38b48a32c3581e9eb3bf169d17214fb
+fe4e711bb38b48a32c3581e9eb3bf169d17214fb,fe4e711b,Remove xxxhdpi drawables. Apparently they're not needed.,"Remove xxxhdpi drawables. Apparently they're not needed.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469103234,1469103234,9ac0a1866a05608a8d83a6b3952e8a36273dbcd2
+9ac0a1866a05608a8d83a6b3952e8a36273dbcd2,9ac0a186,Bump version.,"Bump version.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017823,1469017823,f8fff9ccf73fc351e31835179c2d5de9b82ea25e
+f8fff9ccf73fc351e31835179c2d5de9b82ea25e,f8fff9cc,Rename launcher to Alps Insects.,"Rename launcher to Alps Insects.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017801,1469017801,ed02ea36f32a9d8bfa75bc6354252433429dea7c
+ed02ea36f32a9d8bfa75bc6354252433429dea7c,ed02ea36,Add new launcher icons.,"Add new launcher icons.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017672,1469017672,060470b5bf2eb36fc24e70ac8e8fab27f4bf2007
+060470b5bf2eb36fc24e70ac8e8fab27f4bf2007,060470b5,Add launcher icon file.,"Add launcher icon file.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017636,1469017636,ef8351251a6685ff0e9561f603390dbe71619083
+ef8351251a6685ff0e9561f603390dbe71619083,ef835125,Add a timer to the splash screen.,"Add a timer to the splash screen.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017623,1469017623,68a9fa25c530f70103a659f22073db845935026e
+68a9fa25c530f70103a659f22073db845935026e,68a9fa25,Abort on lint error.,"Abort on lint error.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017602,1469017602,800eb7a5d39d7ffa9fa05488f5c9b8c0cb6eb053
+800eb7a5d39d7ffa9fa05488f5c9b8c0cb6eb053,800eb7a5,Tweak data.,"Tweak data.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1469017593,1469017593,6a2e379eba33cc3a88f0436b9e1f7292bcff8168
+6a2e379eba33cc3a88f0436b9e1f7292bcff8168,6a2e379e,Bump up database version.,"Bump up database version.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468931539,1468931539,5d0ff1d4ec1acece679816f62080e131cb0c006a
+5d0ff1d4ec1acece679816f62080e131cb0c006a,5d0ff1d4,New data dump.,"New data dump.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468930960,1468930960,845c180506757e90204d5a5688c6583423113e8a
+338c4eb004df6fff5ecd29ab401cc92e98ccd97e,338c4eb0,Initial tablet explorations (totally broken).,"Initial tablet explorations (totally broken).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468930757,1468930757,845c180506757e90204d5a5688c6583423113e8a
+845c180506757e90204d5a5688c6583423113e8a,845c1805,Implement on*InstanceState.,"Implement on*InstanceState.
+
+Specifically:
+- remember the screens (fragment names, with corresponding screen titles
+and subtitles)
+- only add the initial fragment when there's no instance state (note
+that this is important, since if we don't do it the back stack gets messed up)
+- call through to super in on*InstanceState
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468755764,1468755764,e989f74486c0a5d9835b1453d798eabe626f1f96
+e989f74486c0a5d9835b1453d798eabe626f1f96,e989f744,Fix up fragment lifecycle.,"Fix up fragment lifecycle.
+
+Before we were opening cursors in onActivityCreated and closing them in
+onDestroy, but that's wrong -- onActivityCreated can be called multiple
+times for a fragment between onCreate and onDestroy.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468753565,1468753565,5b512699db86af75645fd36b27990a437b48add6
+5b512699db86af75645fd36b27990a437b48add6,5b512699,Always create the options menu ...,"Always create the options menu ...
+
+... but don't inflate anything when we don't want to show any menu. This
+makes the back button work more reliably (especially when instance
+states are being created and destroyed).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468753117,1468753117,26db7a0761e1e864d65499a090535bbc332296a5
+26db7a0761e1e864d65499a090535bbc332296a5,26db7a07,Fix up a patch failure from the previous commit.,"Fix up a patch failure from the previous commit.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468752619,1468752619,4aef1f20a17725135be340dcf7edbdc5a844626d
+4aef1f20a17725135be340dcf7edbdc5a844626d,4aef1f20,Hide the image detail divider line if there's no credit.,"Hide the image detail divider line if there's no credit.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468724750,1468724750,7eeab3301256dcd6e75c9538057a7b772144de40
+7eeab3301256dcd6e75c9538057a7b772144de40,7eeab330,"Add ""credit:"" prefix to species image credits.","Add ""credit:"" prefix to species image credits.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468724081,1468724081,3c41c17c6d6cfa68bba881224fcd8f54c0227306
+3c41c17c6d6cfa68bba881224fcd8f54c0227306,3c41c17c,Fix species details padding.,"Fix species details padding.
+
+Before it was on the ScrollView, which meant that the top and bottom of
+the screen were never used. Now it's on the LinearLayout, so the details
+scroll right past the edges of the screen (but the details are still
+padded initially).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468722691,1468722691,54b921a7e183b76b8773cd2d56b62c75adcf6022
+54b921a7e183b76b8773cd2d56b62c75adcf6022,54b921a7,Fix splash screen for M devices.,"Fix splash screen for M devices.
+
+The mountains were hiding behind the bottom navigation bar. Change the
+theme to set the background rather than window background to fix this.
+
+There was also a bit of a jank when we changed from the fullscreen
+splash screen to the non-fullscreen main screen, so make the splash
+activity non-fullscreen.
+
+Remove the activity_splash layout, and just leave the theme set instead.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468721218,1468721218,eb2f63d4834993be6bd96532a198b18d69e3df14
+eb2f63d4834993be6bd96532a198b18d69e3df14,eb2f63d4,Update screenshots.,"Update screenshots.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468650405,1468650405,929750ccb8b76cbc1239b00c56750fb07f51601f
+929750ccb8b76cbc1239b00c56750fb07f51601f,929750cc,"Bump version to 3, and change to more reasonable version naming.","Bump version to 3, and change to more reasonable version naming.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468649679,1468649679,3e892bcc8dc7f08ee1f5dbc11c6b32dfefb18d86
+3e892bcc8dc7f08ee1f5dbc11c6b32dfefb18d86,3e892bcc,Bump target SDK version to 23.,"Bump target SDK version to 23.
+
+This makes the status bar colouring work.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468649093,1468649093,0d7c6a45127a7b7fa88fe2d888ba39d88a00f02f
+0d7c6a45127a7b7fa88fe2d888ba39d88a00f02f,0d7c6a45,Add splash screenshot.,"Add splash screenshot.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468648760,1468648760,dae131c3475a54452fa57ae3b41c18bebede7ce9
+dae131c3475a54452fa57ae3b41c18bebede7ce9,dae131c3,Remove accent color. The default is better.,"Remove accent color. The default is better.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468648734,1468648734,0d72a9bb267520e17fb81d6a99bf47cb5d33eec3
+0d72a9bb267520e17fb81d6a99bf47cb5d33eec3,0d72a9bb,Add Play Store links to resources.,"Add Play Store links to resources.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468647965,1468647965,57fa758a3a6b29364e59851aa94c91970533b6b9
+57fa758a3a6b29364e59851aa94c91970533b6b9,57fa758a,Reformat get involved page,"Reformat get involved page
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468647294,1468647294,ed7f0b1fa5e9562168c08271a117c1f87561f9f3
+ed7f0b1fa5e9562168c08271a117c1f87561f9f3,ed7f0b1f,Switch to use bigfishcat's svg-android fork.,"Switch to use bigfishcat's svg-android fork.
+
+It seems more maintained.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468637486,1468637486,7e2ff01376bea28189646cba045664a5da11369b
+7e2ff01376bea28189646cba045664a5da11369b,7e2ff013,Update layout for group icons.,"Update layout for group icons.
+
+Make the details match_parent so that it really does make the icon as
+large as possible while fitting vertically.
+
+Make the items fitCenter so they actually scale.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468637373,1468637373,d03b7f1d0023271b24d24cbb8546c47ba4196333
+d03b7f1d0023271b24d24cbb8546c47ba4196333,d03b7f1d,Fix some italicisation in species descriptions.,"Fix some italicisation in species descriptions.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468632818,1468632818,d5e9de630a53c12bdc8fb64abf66004a82cb9aa2
+d5e9de630a53c12bdc8fb64abf66004a82cb9aa2,d5e9de63,Add deps to .gitignore.,"Add deps to .gitignore.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468629472,1468629472,74b5759f3b5a7c5644c18d451a7fd90c07c5794f
+74b5759f3b5a7c5644c18d451a7fd90c07c5794f,74b5759f,New data dump.,"New data dump.
+
+Also update extract_data, since the format has changed slightly.
+Specifically:
+- add support for group license name
+- add support for additional search text (groups and species can both
+have it -- species terms just get added to the search text, and group
+terms are added to the search texts for all species in that group)
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468501782,1468501782,52357e9f4f7e753fc33492e2da63315af6f41830
+52357e9f4f7e753fc33492e2da63315af6f41830,52357e9f,Add license to group model and database.,"Add license to group model and database.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468501635,1468501635,ab04caa1e1561741c149a555a508e598f8a84164
+ab04caa1e1561741c149a555a508e598f8a84164,ab04caa1,Add support to show the license name in group details.,"Add support to show the license name in group details.
+
+Previously we just showed the link. Now, if there's a name present too,
+we'll show that name and have it be a clickable link (just like species
+details).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468501536,1468501536,fa1d37f2bd4d943e47c86a97f7e266e7dece6b5a
+fa1d37f2bd4d943e47c86a97f7e266e7dece6b5a,fa1d37f2,Update image detail activity to have correctly styled toolbar.,"Update image detail activity to have correctly styled toolbar.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468501447,1468501447,1f3bf4742d75beefab821d11433360fe2eb3e3bc
+1f3bf4742d75beefab821d11433360fe2eb3e3bc,1f3bf474,Tweak the group details padding.,"Tweak the group details padding.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468499330,1468499330,378d6db1e72995eec980d88c63833ccf94ac6ee9
+378d6db1e72995eec980d88c63833ccf94ac6ee9,378d6db1,Replace group icons with SVGs.,"Replace group icons with SVGs.
+
+- Switch extract_data to export only the dark image, and to give the svg
+name (instead of png).
+- Replace the actual images.
+- Remove database/model references to white images.
+- Update the group details to use the proper svg icon (rather than
+always using the dummy one)
+- Update the group list to use svg icons.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468499166,1468499166,b88871a7a6f622e60a5050f7bb616f3f05262011
+b88871a7a6f622e60a5050f7bb616f3f05262011,b88871a7,Dummy implementation of SVG icons.,"Dummy implementation of SVG icons.
+
+- Add svg-android to build.
+- Add a single svg icon (cockroach, nice).
+- Show that icon in all the group details pages.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468417524,1468417524,a34d4ce6eaaa84d9106d37aedfceee55c15fe870
+a34d4ce6eaaa84d9106d37aedfceee55c15fe870,a34d4ce6,"Switch to support lib 23.3, and enable vector support.","Switch to support lib 23.3, and enable vector support.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468411397,1468411397,f3f9f83b48d3d37db8f1a44c471ec6f317699e11
+f3f9f83b48d3d37db8f1a44c471ec6f317699e11,f3f9f83b,Use PNGs for the splash mountains rather than SVG.,"Use PNGs for the splash mountains rather than SVG.
+
+These PNGs were being generated anyway, and even if we updated the
+gradle config to use vector drawables properly it still wouldn't allow
+them to be defined in xml.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468410767,1468410767,9492e6a70fa4a0abd748d870d1b672cf19455c45
+9492e6a70fa4a0abd748d870d1b672cf19455c45,9492e6a7,"Revert ""Revert ""Use an SVG for the splash mountains.""""","Revert ""Revert ""Use an SVG for the splash mountains.""""
+
+This reverts commit 4ec39f8b419c924b324cff8e128a0b3776c5e9e2.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468409629,1468409629,4ec39f8b419c924b324cff8e128a0b3776c5e9e2
+4ec39f8b419c924b324cff8e128a0b3776c5e9e2,4ec39f8b,"Revert ""Use an SVG for the splash mountains.""","Revert ""Use an SVG for the splash mountains.""
+
+This reverts commit f44718dec7ac266736afd7acb2119d5dc974345f.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468409526,1468409526,b3e636a9c103b40f158ffd696a2748c011a76a39
+b3e636a9c103b40f158ffd696a2748c011a76a39,b3e636a9,Fix selection from the species list on the group page.,"Fix selection from the species list on the group page.
+
+We were forgetting about the header view, so polling the wrong adapter
+position when getting labels and sublabels.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468238791,1468238791,fa4a5132ac4ec4def43e426cdceeaabd8fe1a19b
+fa4a5132ac4ec4def43e426cdceeaabd8fe1a19b,fa4a5132,Remove group details tab.,"Remove group details tab.
+
+Change it to be an expandable entry in the species list for the group.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468238136,1468238136,e993b7d91d5a420a1e607a19eb91ee7dd7259737
+e993b7d91d5a420a1e607a19eb91ee7dd7259737,e993b7d9,Add expand/collapse icons.,"Add expand/collapse icons.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468237930,1468237930,2183abdaa9921b30740a8b8f946ec947970a8ccf
+2183abdaa9921b30740a8b8f946ec947970a8ccf,2183abda,Show group details on the list page.,"Show group details on the list page.
+
+Have a subheading thing that toggles showing of the details.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468070225,1468070225,f44718dec7ac266736afd7acb2119d5dc974345f
+f44718dec7ac266736afd7acb2119d5dc974345f,f44718de,Use an SVG for the splash mountains.,"Use an SVG for the splash mountains.
+
+This means it stretches (horizontally) rather than scales.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468066486,1468066486,4c645404b4e69c58c1c05fb64179fada2bfc8b34
+4c645404b4e69c58c1c05fb64179fada2bfc8b34,4c645404,Add primary dark and accent colors.,"Add primary dark and accent colors.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468052110,1468052110,bc17966d8505acc10e508701346528ab16c6956c
+bc17966d8505acc10e508701346528ab16c6956c,bc17966d,Removed unused theme.,"Removed unused theme.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1468051683,1468051683,4c8d6bd666b57cea69de3f35190729c4eef7c0e2
+4c8d6bd666b57cea69de3f35190729c4eef7c0e2,4c8d6bd6,Merge branch 'lightify',"Merge branch 'lightify'
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467558484,1467558484,"31e70cb848bfe8b43b768758dd5b29d3bdc5a142,fe98929b4a57dc359c886eecc227ac5a9df981b3"
+fe98929b4a57dc359c886eecc227ac5a9df981b3,fe98929b,Switch to dark text on the action bar.,"Switch to dark text on the action bar.
+
+We still want light text on the search though. This appears to be a
+total mess. What the hell, Android. This shouldn't be difficult.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467558331,1467558331,b0751d7c875ece882e2a9be31fefc676dc68acc4
+b0751d7c875ece882e2a9be31fefc676dc68acc4,b0751d7c,Dark theme with coloured toolbar.,"Dark theme with coloured toolbar.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467549145,1467549145,67cf40b1fc05eb2aaf93d7db65b714405b79e248
+31e70cb848bfe8b43b768758dd5b29d3bdc5a142,31e70cb8,Add screenshots dir to gitignore.,"Add screenshots dir to gitignore.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467548738,1467548798,6475eb5dcf15e2a0042a19ae0853ec574aa622b6
+67cf40b1fc05eb2aaf93d7db65b714405b79e248,67cf40b1,Add screenshots dir to gitignore.,"Add screenshots dir to gitignore.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467548738,1467548738,b0be64960047ec037478e3dbdf11c499865f9ca5
+b0be64960047ec037478e3dbdf11c499865f9ca5,b0be6496,Merge branch 'master' into lightify,"Merge branch 'master' into lightify
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467530595,1467530595,"684f3f63bf2ad4a9adb64b22cd16d5dcc88ebf18,6475eb5dcf15e2a0042a19ae0853ec574aa622b6"
+6475eb5dcf15e2a0042a19ae0853ec574aa622b6,6475eb5d,"Revert ""Add clipChildren=false to main activity root.""","Revert ""Add clipChildren=false to main activity root.""
+
+This reverts commit 9f8700db8997f52248119c80c108285410b27b0e.
+
+Breaks scrolling views (specifically the open source licenses).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467530540,1467530540,9f8700db8997f52248119c80c108285410b27b0e
+684f3f63bf2ad4a9adb64b22cd16d5dcc88ebf18,684f3f63,Merge branch 'master' into lightify,"Merge branch 'master' into lightify
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467525558,1467525558,"873969f279861029d7c8dec48883e176c40013a1,9f8700db8997f52248119c80c108285410b27b0e"
+9f8700db8997f52248119c80c108285410b27b0e,9f8700db,Add clipChildren=false to main activity root.,"Add clipChildren=false to main activity root.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467525514,1467525514,82ddac6c519738045886278564380449ae9c5360
+82ddac6c519738045886278564380449ae9c5360,82ddac6c,Don't declare explicit BG in species details tab.,"Don't declare explicit BG in species details tab.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467525476,1467525476,c890b67c0361a023633db396302543808b98d7f7
+c890b67c0361a023633db396302543808b98d7f7,c890b67c,Remove unused colours.,"Remove unused colours.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467519852,1467519852,8116fa2932666c8f5a597e79003eafb9faf7fa9f
+8116fa2932666c8f5a597e79003eafb9faf7fa9f,8116fa29,Remove unused strings.,"Remove unused strings.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467519727,1467519727,bfe3b338592cd0f65f98de9ea59ce2a875203f32
+bfe3b338592cd0f65f98de9ea59ce2a875203f32,bfe3b338,Nik -> Nikolai,"Nik -> Nikolai
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467519578,1467519578,e33ce199fb3e9aa899b484311a8114d242c6b72a
+e33ce199fb3e9aa899b484311a8114d242c6b72a,e33ce199,Add licenses menu item.,"Add licenses menu item.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467519152,1467519152,cd90214a74a2b588a733e925ad2d41cbb8f110ef
+cd90214a74a2b588a733e925ad2d41cbb8f110ef,cd90214a,"Add readme, license and notice.","Add readme, license and notice.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467518584,1467518896,05465048b4918b85bd831bc54748ad3c40fd53cf
+873969f279861029d7c8dec48883e176c40013a1,873969f2,"Add readme, license and notice.","Add readme, license and notice.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467518584,1467518584,608109eb5a9d6a204260079bf5c3fc72288d940a
+608109eb5a9d6a204260079bf5c3fc72288d940a,608109eb,Lightify group items.,"Lightify group items.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467293145,1467293145,05465048b4918b85bd831bc54748ad3c40fd53cf
+05465048b4918b85bd831bc54748ad3c40fd53cf,05465048,"Remove scrollbar from group list, and don't clip to padding.","Remove scrollbar from group list, and don't clip to padding.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467291887,1467291887,5092ed9b5f81cbef37040922fe3da3c9ef6565e9
+5092ed9b5f81cbef37040922fe3da3c9ef6565e9,5092ed9b,Linkify species image licenses.,"Linkify species image licenses.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467290692,1467290692,b4759936e5841bf60f55ddfd79d73e4f72236ea4
+b4759936e5841bf60f55ddfd79d73e4f72236ea4,b4759936,Remove unused imports from HtmlTextFragment.,"Remove unused imports from HtmlTextFragment.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467290433,1467290433,9a318e0d11e31d67f0b55de1a04b9c02ee659805
+9a318e0d11e31d67f0b55de1a04b9c02ee659805,9a318e0d,Change group list subtitle.,"Change group list subtitle.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467289448,1467289448,3ee26668e13e449062446760cf5f1e5764a8db9d
+3ee26668e13e449062446760cf5f1e5764a8db9d,3ee26668,Add support for multiple build types (debug and release).,"Add support for multiple build types (debug and release).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467288992,1467288992,67e9488c39f543b9fef6cd89efaa7d983cfe080e
+67e9488c39f543b9fef6cd89efaa7d983cfe080e,67e9488c,Update sign script to remove old APK first.,"Update sign script to remove old APK first.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467288876,1467288876,2e4cc59da123eec4e02e32922a43bcbafb5e7133
+2e4cc59da123eec4e02e32922a43bcbafb5e7133,2e4cc59d,Remove some TODOs.,"Remove some TODOs.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467120660,1467120660,f081c12021b46e2382548018cc035c641cce255e
+f081c12021b46e2382548018cc035c641cce255e,f081c120,Add a script to sign and zipalign the release APK.,"Add a script to sign and zipalign the release APK.
+
+This only works for me on yoda (because that's where the key lives).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467118261,1467118261,38af62789b62e9733b19372e41c9ea716c30f3c1
+38af62789b62e9733b19372e41c9ea716c30f3c1,38af6278,Add various Play Store images.,"Add various Play Store images.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467115873,1467115873,d6c7e8cf5df99c947bbb1bbf8ee53946ffd41a43
+d6c7e8cf5df99c947bbb1bbf8ee53946ffd41a43,d6c7e8cf,Remove debuggable=false flag from manifest.,"Remove debuggable=false flag from manifest.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467115848,1467115848,da6bbcb31fb864ef5b2d17fedbebe6fc2f8724c5
+da6bbcb31fb864ef5b2d17fedbebe6fc2f8724c5,da6bbcb3,Enable aborting on lint error.,"Enable aborting on lint error.
+
+No lint errors!
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467115796,1467115796,5cd1afb6e85a8d14c6e8d0f2a71b5af8e5c8b341
+5cd1afb6e85a8d14c6e8d0f2a71b5af8e5c8b341,5cd1afb6,Remove unused resources.,"Remove unused resources.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467114040,1467114040,780cc436ff9f60636fa652f4adeb5b026d148a91
+780cc436ff9f60636fa652f4adeb5b026d148a91,780cc436,Bump version down to 1.,"Bump version down to 1.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467112810,1467112810,f26a88a905822b7590531213b3f5e44eb4bf3294
+f26a88a905822b7590531213b3f5e44eb4bf3294,f26a88a9,Remove unused utils.,"Remove unused utils.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467112701,1467112701,c261e23cef14bb78207d69fdbd7def925c0b9246
+c261e23cef14bb78207d69fdbd7def925c0b9246,c261e23c,Merge branch 'temp',"Merge branch 'temp'
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467112442,1467112442,"19aa28418bce706502b5dc708f249fe7fc70ac9e,41ea5deea69748411444260b71566a52a8599c9e"
+19aa28418bce706502b5dc708f249fe7fc70ac9e,19aa2841,Change the package name.,"Change the package name.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467112353,1467112353,02fb2d9df71d9505264af28da67860663d56e35e
+02fb2d9df71d9505264af28da67860663d56e35e,02fb2d9d,Remove unused preferences.xml.,"Remove unused preferences.xml.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467111293,1467111293,99861b6279416371bf5265071a8caf7f31b5e912
+41ea5deea69748411444260b71566a52a8599c9e,41ea5dee,Move files to new dir structure.,"Move files to new dir structure.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467111173,1467111173,99861b6279416371bf5265071a8caf7f31b5e912
+99861b6279416371bf5265071a8caf7f31b5e912,99861b62,Tidy-up of content providers.,"Tidy-up of content providers.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467110793,1467110793,980f4372c38f210d9ec8164d5b4fe8ad82d3989e
+980f4372c38f210d9ec8164d5b4fe8ad82d3989e,980f4372,Remove remnants of downloader stuff.,"Remove remnants of downloader stuff.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467108466,1467108466,abd99833fa6a703f639eb9b55c9270b8f164789a
+abd99833fa6a703f639eb9b55c9270b8f164789a,abd99833,Show group icon in the details tab.,"Show group icon in the details tab.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467107608,1467107608,e1cf07dbef3f03e4aaaa2d3b129bcefa13ad5adf
+e1cf07dbef3f03e4aaaa2d3b129bcefa13ad5adf,e1cf07db,Move SpeciesListCursorAdapter to ui/fragments.,"Move SpeciesListCursorAdapter to ui/fragments.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1467107518,1467107518,d0dcdedd699db54ea6a71e34424f550f4ae99e71
+d0dcdedd699db54ea6a71e34424f550f4ae99e71,d0dcdedd,Switch to use the DataProvider.,"Switch to use the DataProvider.
+
+Remove Utilities and ImageFetcher, change ImageResizer just to be a
+helper class with some static methods.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466694281,1466694281,ac366ee65089c36cd34cb537231dc23bceb7bd41
+ac366ee65089c36cd34cb537231dc23bceb7bd41,ac366ee6,Change size of species list thumbnails.,"Change size of species list thumbnails.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466694185,1466694185,ca2672d36b58c0ace5aece4f79d1c360ebc7ae6e
+ca2672d36b58c0ace5aece4f79d1c360ebc7ae6e,ca2672d3,Rename dimen and remove an unused one.,"Rename dimen and remove an unused one.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466694157,1466694157,ccc258b14d283c78adb5f2ed1bfb7b3eaa5128ed
+ccc258b14d283c78adb5f2ed1bfb7b3eaa5128ed,ccc258b1,Correctly scale items in species lists.,"Correctly scale items in species lists.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693896,1466693896,06261844f9c945956782e732162ded91a844e02a
+06261844f9c945956782e732162ded91a844e02a,06261844,Center the text in species list items.,"Center the text in species list items.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693574,1466693574,0fc431c986b665fba9ea9b5ec3de324b4ea66125
+0fc431c986b665fba9ea9b5ec3de324b4ea66125,0fc431c9,Clip the list in search results.,"Clip the list in search results.
+
+This fixes a jank where the list would partially show under the status
+bar (showing ""n results"").
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693515,1466693515,a7edb499f61e18aaa9061b012472dc220d9e8d5b
+a7edb499f61e18aaa9061b012472dc220d9e8d5b,a7edb499,Simplify splash.,"Simplify splash.
+
+Rather than downloading stuff, just open up the DB and finish.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693472,1466693472,f30012e2439e7f898768efa63c45e153d0d443ce
+f30012e2439e7f898768efa63c45e153d0d443ce,f30012e2,Add a DataProvider.,"Add a DataProvider.
+
+This should allow us to abstract away the providing of data. The
+implementation provided uses assets, but it should work just as well
+when backed by external files.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693256,1466693256,aff96f091d8c65a6b848f3ced39ebe95270a6b34
+aff96f091d8c65a6b848f3ced39ebe95270a6b34,aff96f09,Rescale a couple of thumbnails.,"Rescale a couple of thumbnails.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693215,1466693215,ca20a95eeb1dfa1d0b12e1165dc1b3fc8db72ea6
+ca20a95eeb1dfa1d0b12e1165dc1b3fc8db72ea6,ca20a95e,Move data to assets/.,"Move data to assets/.
+
+Also remove now-unused test data and obb scripts, and .DS_Store files.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466693134,1466693134,78a385d905e5fa044839c77cd7089b33fa702c9a
+78a385d905e5fa044839c77cd7089b33fa702c9a,78a385d9,Update voice prompt text.,"Update voice prompt text.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466691824,1466691824,610d3d91a5261322f419dc0184acfa6bd07675b0
+610d3d91a5261322f419dc0184acfa6bd07675b0,610d3d91,"Add about, get involved and resources pages.","Add about, get involved and resources pages.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466606709,1466606709,525173baef5638f705d110beae0f2aed656f92e7
+525173baef5638f705d110beae0f2aed656f92e7,525173ba,Splash screen.,"Splash screen.
+
+Also make onCreate of the DB run on the calling thread -- we were
+calling it from a non-main thread anyway, and this way we know when it's
+done.
+
+Hide the progress spinner and text. See what Rachel thinks, but I don't
+think they add a great deal.
+
+Remove the artifical 1s splash screen before showing the main activity.
+
+Remove the DB progress methods.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466602090,1466602090,2ad56c9b4ecdd0f728f93b348220868c69f4d928
+2ad56c9b4ecdd0f728f93b348220868c69f4d928,2ad56c9b,Remove no-op DB close.,"Remove no-op DB close.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466602030,1466602030,fc8103c25c074261d2ba919e81e239fb22e50f48
+fc8103c25c074261d2ba919e81e239fb22e50f48,fc8103c2,Add some elements for splash screen.,"Add some elements for splash screen.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466601919,1466601919,5bbbfd69c9cbea4a4d6e47acc5d2a9467e992e78
+5bbbfd69c9cbea4a4d6e47acc5d2a9467e992e78,5bbbfd69,Remove unused image.,"Remove unused image.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466596798,1466596798,9fc157dd553e0b3362f89f816a1af0f00df0acc7
+9fc157dd553e0b3362f89f816a1af0f00df0acc7,9fc157dd,Add play store image.,"Add play store image.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466596758,1466596758,c0be6827dda6d1260834bc7256dd44bf1218a8c0
+c0be6827dda6d1260834bc7256dd44bf1218a8c0,c0be6827,Remove some whitespace from SA.,"Remove some whitespace from SA.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466596747,1466596747,f8743b5127dd943808c0662e818fe6260ba4f462
+f8743b5127dd943808c0662e818fe6260ba4f462,f8743b51,Show group details.,"Show group details.
+
+This involves introducing a ViewPager to GroupFragment, where we show
+the old species list in the first tab and details in a second tab.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466513294,1466513294,c29757d8625f412166c2502a5a7f85c06eb6980e
+c29757d8625f412166c2502a5a7f85c06eb6980e,c29757d8,Remove unnecessary import from SDPA.,"Remove unnecessary import from SDPA.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466513269,1466513269,a3ab6e4a3f84ae0f97aa7009192e1bd9c509378f
+a3ab6e4a3f84ae0f97aa7009192e1bd9c509378f,a3ab6e4a,Move details page padding to dimens.,"Move details page padding to dimens.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466513231,1466513231,2c23d419b72f625cdcfdafb9de0858975c828926
+2c23d419b72f625cdcfdafb9de0858975c828926,2c23d419,"Add group license to DB, and add a getGroupDetails method.","Add group license to DB, and add a getGroupDetails method.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466513178,1466513178,df0a196a2fc3a5e706987690fbec75ee4abb1e02
+df0a196a2fc3a5e706987690fbec75ee4abb1e02,df0a196a,"Fix whitespace in strings, add (currently unused) group strings.","Fix whitespace in strings, add (currently unused) group strings.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466513117,1466513117,83ec4c0ca3398b5c4db15baa413edcada7fef283
+83ec4c0ca3398b5c4db15baa413edcada7fef283,83ec4c0c,Show licenses in species details.,"Show licenses in species details.
+
+Also remove the ""Other"" tab -- everything fits easily in the first one.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466509737,1466509737,6a0ceb17149356c3bf1e8a9fd7f9682c1b73cfa7
+6a0ceb17149356c3bf1e8a9fd7f9682c1b73cfa7,6a0ceb17,Fix license bug in extract_data.,"Fix license bug in extract_data.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466509726,1466509726,2665dedde97d8ef9068ba53c1fb8d80e5c04fc6c
+2665dedde97d8ef9068ba53c1fb8d80e5c04fc6c,2665dedd,Replace launcher icon.,"Replace launcher icon.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466505245,1466505245,31881bd39185656c77ad377d21d7123565879e97
+31881bd39185656c77ad377d21d7123565879e97,31881bd3,Add padding to group icons.,"Add padding to group icons.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466504015,1466504015,80bd1fe8fdc81fd0157c30b468efd2f2af5c7514
+80bd1fe8fdc81fd0157c30b468efd2f2af5c7514,80bd1fe8,Fix italicisation and search.,"Fix italicisation and search.
+
+Auto-generate search terms based on label, sublabel and group name.
+
+Specify italicisation by making the labels in the input data HTML. This
+will allow flexibility later.
+
+Remove sublabel from search instant, since we can't control
+italicisation.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466503611,1466503611,5fb90dfbf94e144a33e1e3ab89f8882e2e20c8c2
+5fb90dfbf94e144a33e1e3ab89f8882e2e20c8c2,5fb90dfb,Add rename script.,"Add rename script.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466503591,1466503591,bd5d07a0424ce7503cb0bbec7f231871381f368c
+bd5d07a0424ce7503cb0bbec7f231871381f368c,bd5d07a0,Remove blob from repo and add raw images instead.,"Remove blob from repo and add raw images instead.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466503503,1466503503,6797c25427c558aefd901aae47920c482f834d76
+6797c25427c558aefd901aae47920c482f834d76,6797c254,"Add new json, and add images to .gitignore.","Add new json, and add images to .gitignore.
+
+They're all included in the obb anyway.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466337559,1466337559,60080e9083697d424053ba583fdf0b740d814000
+60080e9083697d424053ba583fdf0b740d814000,60080e90,New data blob.,"New data blob.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466337445,1466337445,280db1e48b0b179809ea0b91f04c2860ed5a2bf7
+280db1e48b0b179809ea0b91f04c2860ed5a2bf7,280db1e4,"Little UI tweaks to species list, and have image details not crash if","Little UI tweaks to species list, and have image details not crash if
+there's no caption.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466337389,1466337389,d5a148b51abf27c84df39ab816c86fb312487388
+d5a148b51abf27c84df39ab816c86fb312487388,d5a148b5,Move data to test.,"Move data to test.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466333864,1466333864,0e96f880267df09e5e0f99aaf5686397e5b4d653
+0e96f880267df09e5e0f99aaf5686397e5b4d653,0e96f880,Tweaks to data-extraction.,"Tweaks to data-extraction.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466333577,1466333577,dae6f5a7e5bc3d03502fb124a2c2c83ff49cfe4b
+dae6f5a7e5bc3d03502fb124a2c2c83ff49cfe4b,dae6f5a7,Hide taxa rows when appropriate.,"Hide taxa rows when appropriate.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466333560,1466333560,5e497086cce3943d7ae78c5b0f97d87b5291dcc6
+5e497086cce3943d7ae78c5b0f97d87b5291dcc6,5e497086,Update DB fields to be relevant.,"Update DB fields to be relevant.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466324723,1466324723,d44b61b5663b1ba7e9082709f6d85ab2d5444f82
+d44b61b5663b1ba7e9082709f6d85ab2d5444f82,d44b61b5,Show only the species details we know about.,"Show only the species details we know about.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466319729,1466319729,c74fdca2adc64a097cdab2af90e2f15f92f8e33c
+c74fdca2adc64a097cdab2af90e2f15f92f8e33c,c74fdca2,Change the group list to a grid.,"Change the group list to a grid.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466309848,1466309848,476ab923ab5597fea007a519b4113c9636480fee
+476ab923ab5597fea007a519b4113c9636480fee,476ab923,Minor DB tweaks.,"Minor DB tweaks.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466302038,1466302038,1063857f3008833ae9dbc9a35e39e811752d1b21
+1063857f3008833ae9dbc9a35e39e811752d1b21,1063857f,Remove unnecessary close of DB.,"Remove unnecessary close of DB.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466085781,1466085781,338fcca1f72575313a938f4989fb4a6fb686f747
+338fcca1f72575313a938f4989fb4a6fb686f747,338fcca1,Fixes to image detail activity.,"Fixes to image detail activity.
+
+Now it shows the species label in the action bar, the action bar toggles
+on and off as the image is tapped, and the visibility of the chrome
+persists across the different fragments in the pager.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466085617,1466085617,0131ae47e4214a3f519c544b41f2cc14fad1be10
+0131ae47e4214a3f519c544b41f2cc14fad1be10,0131ae47,Fix images.,"Fix images.
+
+Images are now associated with a species by including the species ID
+with each image. There's also no more of the weird static image list
+thing; instead we just tell the image detail activity the species ID,
+and it grabs the the image list for itself.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466079437,1466079437,6bb718e8ffdb4fb3dbd5208fe97d4d3c5836f8a0
+6bb718e8ffdb4fb3dbd5208fe97d4d3c5836f8a0,6bb718e8,Remove ImageGridFragment.,"Remove ImageGridFragment.
+
+NOTE: This looks like it has some interesting stuff in it, so I may want
+to revive it at some point.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466078241,1466078241,261c9814d7869777da2c9dbc6b11da3781fffbe4
+261c9814d7869777da2c9dbc6b11da3781fffbe4,261c9814,Remove refs to SPECIES_IDENTIFIER.,"Remove refs to SPECIES_IDENTIFIER.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466071446,1466071446,2221daecc4ccef9a5b08b35c1ae9f76b333e7654
+2221daecc4ccef9a5b08b35c1ae9f76b333e7654,2221daec,Fix image panning.,"Fix image panning.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1466071312,1466071312,016b943633877a51eabb9263b6b4c5066a6c5925
+016b943633877a51eabb9263b6b4c5066a6c5925,016b9436,Add some extra images to a species for testing.,"Add some extra images to a species for testing.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465997045,1465997045,dd2bf874d56f0d838e32672a12c9fa75af4037fd
+dd2bf874d56f0d838e32672a12c9fa75af4037fd,dd2bf874,"Extract species data too, and write JSON to a file.","Extract species data too, and write JSON to a file.
+
+There are still some unknowns here:
+- italicise here, or do it in the code?
+- leave fields unset or as the empty string?
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465909560,1465909560,01c50d5659db55bf7845e55485d2ebf7d82d48e2
+01c50d5659db55bf7845e55485d2ebf7d82d48e2,01c50d56,"Add Order and Species CSV files, and extraction script.","Add Order and Species CSV files, and extraction script.
+
+At the moment only the groups extraction is implemented. This seems nice
+and delightfully easy though, using the json and csv libraries.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465907318,1465907318,c2fe48fabe136467c3997f97c7ac1348c96787a1
+c2fe48fabe136467c3997f97c7ac1348c96787a1,c2fe48fa,Remove BaseColumns.,"Remove BaseColumns.
+
+Instead, specify a numeric _ID for each table, and set this as the
+auto-generated rowid field in the databases. Remove the explicitly
+generated _id fields that were there before.
+
+Have adapters specify which columns they need, so that external things
+don't need to worry about the columns at all. To get around the fact
+that there's no _id column any more, select the _ID column as ""_id"".
+
+The _ID columns are the ones that should be used for identification in
+code, since querying by this column is fastest. This isn't all done yet.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465737941,1465737941,cf8451a5a14c3aa51cce0ffe827f31d717b44245
+cf8451a5a14c3aa51cce0ffe827f31d717b44245,cf8451a5,Make the database actually load again.,"Make the database actually load again.
+
+A few commits ago I removed some code that got a cursor and then did
+nothing with it (in SplashActivity). Turns out this was force-opening
+the database, and therefore causing it to be created. This change opens
+it in a more legit way.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465737712,1465737712,653edbfaaae850aca939ac4c5c7d505a89a7a14f
+653edbfaaae850aca939ac4c5c7d505a89a7a14f,653edbfa,Remove some unused strings.,"Remove some unused strings.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465737681,1465737681,3861a453f80409a7892298ebcfaa9d0793c326e8
+3861a453f80409a7892298ebcfaa9d0793c326e8,3861a453,Update deplay script to work.,"Update deplay script to work.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465737650,1465737650,89b8cff8e7d3aac4a204908b8093ffbf11024d19
+89b8cff8e7d3aac4a204908b8093ffbf11024d19,89b8cff8,Specify group columns in the fragment rather than DB.,"Specify group columns in the fragment rather than DB.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465730553,1465730553,6408b0c023ec4752279e4995f1f2a04776eb50e4
+6408b0c023ec4752279e4995f1f2a04776eb50e4,6408b0c0,Remove unused database methods.,"Remove unused database methods.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465730138,1465730138,7f4e2024c6343cd283cf826890c72784bab779b1
+7f4e2024c6343cd283cf826890c72784bab779b1,7f4e2024,Switch groups to be based on the new DB table.,"Switch groups to be based on the new DB table.
+
+Now group icons and labels are pulled from the group table, and groups
+are identified by order rather than name.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465559029,1465559029,8b28cfbef6599d7f3c4aa275f88ec22af0568cb6
+8b28cfbef6599d7f3c4aa275f88ec22af0568cb6,8b28cfbe,Remove unused variables from GF.,"Remove unused variables from GF.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465557601,1465557601,25c782ae942dd1c1f4431f3c0b53f540519697f5
+25c782ae942dd1c1f4431f3c0b53f540519697f5,25c782ae,Change fragments to use static factory methods.,"Change fragments to use static factory methods.
+
+This means users of the fragments don't need to know about bundles and
+extras and things, and can just pass legit arguments.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465557397,1465557397,d3520adc35214b78854aac70a6df6da1a430e064
+d3520adc35214b78854aac70a6df6da1a430e064,d3520adc,Lint fixes for image and species detail fragments.,"Lint fixes for image and species detail fragments.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465555981,1465555981,8c8d493b70cb2ca69f0bfa29236818f14fa48a74
+8c8d493b70cb2ca69f0bfa29236818f14fa48a74,8c8d493b,Added group-related methods to the database.,"Added group-related methods to the database.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465555917,1465555917,3d2b2b9bc633d14f0c78a363dc88102b3e92029e
+3d2b2b9bc633d14f0c78a363dc88102b3e92029e,3d2b2b9b,Start trying to get assets with extracting obb.,"Start trying to get assets with extracting obb.
+
+Done this for the database. Struggled with images. Left some notes in
+the code about ideas to try next.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465483759,1465483759,f40db4a21d7750a7d58f7ea538e688e0d80904e7
+f40db4a21d7750a7d58f7ea538e688e0d80904e7,f40db4a2,Add a groups table to the database.,"Add a groups table to the database.
+
+Also add some scripts for preparing and deploying updated data blobs.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465479094,1465479094,5442ebc678ca630c52ef0d3c6b5b7e2e09c2d704
+5442ebc678ca630c52ef0d3c6b5b7e2e09c2d704,5442ebc6,Remove unused resources.,"Remove unused resources.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465467080,1465467080,cc2274face2affc4bb803c64bfa299cae996322d
+cc2274face2affc4bb803c64bfa299cae996322d,cc2274fa,Remove unused Bunurong assets.,"Remove unused Bunurong assets.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465306649,1465306649,d1202d1019c7a15ebc0ed656715e036905a43d3e
+d1202d1019c7a15ebc0ed656715e036905a43d3e,d1202d10,Actually make the database compile.,"Actually make the database compile.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465306206,1465306206,0dd4d5ad9af27a5aace6db0a0b3321cf7991c07f
+0dd4d5ad9af27a5aace6db0a0b3321cf7991c07f,0dd4d5ad,Little tweaks to database.,"Little tweaks to database.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465305864,1465305864,a607feaeedf332020301de407cd7cdc8f978b15e
+a607feaeedf332020301de407cd7cdc8f978b15e,a607feae,Fix indentation of Detail.,"Fix indentation of Detail.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465304598,1465304598,8085bc32eb37228f8e57e48284e2364d50020108
+8085bc32eb37228f8e57e48284e2364d50020108,8085bc32,Database cleanup.,"Database cleanup.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465304053,1465304053,66d95fa15628fc22d8eac176e2338511ea3312fb
+66d95fa15628fc22d8eac176e2338511ea3312fb,66d95fa1,Remove conservation status.,"Remove conservation status.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465294644,1465294644,153a22633a6cd11694c300507ddef79096a16e24
+153a22633a6cd11694c300507ddef79096a16e24,153a2263,Remove audio.,"Remove audio.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1465293590,1465293590,d85ee6987e5feaade8feff8d407e8e62b21b1ba3
+d85ee6987e5feaade8feff8d407e8e62b21b1ba3,d85ee698,Delete more unused code.,"Delete more unused code.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464873049,1464873049,aa3f04cdcd1860767d5f8e665ca5537a06becc0e
+aa3f04cdcd1860767d5f8e665ca5537a06becc0e,aa3f04cd,Remove more unused fragments and activities.,"Remove more unused fragments and activities.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464870868,1464870868,062cf6c052bd97d2c0f000ff8ba0df64e8d79710
+062cf6c052bd97d2c0f000ff8ba0df64e8d79710,062cf6c0,Remove some unused code associated with species details.,"Remove some unused code associated with species details.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464870008,1464870008,05219b6e1f8ea8a48b95fb6748c46f0b929d0caf
+05219b6e1f8ea8a48b95fb6748c46f0b929d0caf,05219b6e,More things.,"More things.
+
+- Remove SpeciesListFragment, just keeping the adapter.
+- Modify this adapter to be a regular ViewPagerAdapter rather than a
+fragment one. The fragment just makes it harder to move information
+around.
+- Remove the old code from on*InstanceState. We don't restore correctly,
+but at least we don't crash.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464869628,1464869628,2c5b0e2a78492398c0c635c05a5b5281113a00a7
+2c5b0e2a78492398c0c635c05a5b5281113a00a7,2c5b0e2a,Make search suggestions work.,"Make search suggestions work.
+
+This is a little hacked, but that can be tidied up with the whole tidy
+of the database stuff.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464785894,1464785894,71cd0e94cb7d75dfa10daacea56d3b08b09f9468
+71cd0e94cb7d75dfa10daacea56d3b08b09f9468,71cd0e94,Little tweaks to search.,"Little tweaks to search.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464781871,1464781871,318290563755eabc4c072bc144b7b8fc9ff5f424
+318290563755eabc4c072bc144b7b8fc9ff5f424,31829056,Replace SettingsActivity with AboutFragment.,"Replace SettingsActivity with AboutFragment.
+
+At the moment this fragment doesn't do anything except show a dummy
+string.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464781182,1464781182,1e1dec57efc4798dddbd4488b9a8a980361a9994
+1e1dec57efc4798dddbd4488b9a8a980361a9994,1e1dec57,Make species details appear in the same fragment when selected from the,"Make species details appear in the same fragment when selected from the
+search results.
+
+Switch the search fragment to use the same adapter as the group
+fragment. The old adapter can be deleted now (although its name is
+probably better, so do it the other way around instead.. also we should
+use the indexer stuff from the old one too).
+
+Add functionality to style the title and subtitle associated with each
+fragment. Don't actually use this yet since the italicisation looks a
+bit silly, and I'm not sure there's value putting the scientific name
+there (it's shown a little lower down anyway). In fact, what I mean is
+that not only do we not use the new styling functionality, we no longer
+show the scientific name.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464698489,1464698489,10e74ca4aca5acabedb9d5ff0b2f20f35c4f7a1a
+10e74ca4aca5acabedb9d5ff0b2f20f35c4f7a1a,10e74ca4,Only show the options menu on the home screen. Maybe in the future I will want…,"Only show the options menu on the home screen. Maybe in the future I will want to show custom menus per fragment, but not for now.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464691075,1464691075,ae0b87ec68a1d7288ca4be0fb0f04db31b80cc4a
+ae0b87ec68a1d7288ca4be0fb0f04db31b80cc4a,ae0b87ec,Show the species label and sublabel when the species fragment is shown.,"Show the species label and sublabel when the species fragment is shown.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464689673,1464689673,fffa18094a85b191b97994cfda1972191e6a46de
+fffa18094a85b191b97994cfda1972191e6a46de,fffa1809,Make species details appear in the main activity.,"Make species details appear in the main activity.
+
+This isn't quite done, since I still need to make the label and sublabel
+appear in the toolbar.
+
+Little fix to toolbar titles (set them on the action bar rather than the
+toolbar, which makes things work on startup).
+
+Make a new fragment, GroupFragment, to show the elements in a group
+(rather than using the crazy SpeciesListFragment). This now actually
+shows things in the groups, rather than just everything.
+
+Make fragments crash if their activity doesn't implement their callback.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464182164,1464182164,0dc6dde55129be277a4d24b2dc89906dd4679902
+0dc6dde55129be277a4d24b2dc89906dd4679902,0dc6dde5,Start the conversion of search activity to a fragment.,"Start the conversion of search activity to a fragment.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464093543,1464093543,18396327c3f7e00f0d5d3b2ec85b2c09f0adc463
+18396327c3f7e00f0d5d3b2ec85b2c09f0adc463,18396327,"Remember which things are on the back stack, and when the back stack changes set…","Remember which things are on the back stack, and when the back stack changes set the toolbar settings appropriately.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464089434,1464089434,b938d5a3df496499dedf3eda4d32ff7811ef448f
+b938d5a3df496499dedf3eda4d32ff7811ef448f,b938d5a3,"Call super.onDetach in SGLF, fixing a crash that occurred when closing the activity.","Call super.onDetach in SGLF, fixing a crash that occurred when closing the activity.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464089395,1464089395,017ae49d084a13f904460a1806c6d1acf43022c8
+017ae49d084a13f904460a1806c6d1acf43022c8,017ae49d,Remove unnecessary this in SLF.,"Remove unnecessary this in SLF.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1464089362,1464089362,eba095bbc2ed82b0b12f6b50ddffb0ea65ee5e0f
+eba095bbc2ed82b0b12f6b50ddffb0ea65ee5e0f,eba095bb,Fix up clickability of group list. Now items can be clicked (and they get…,"Fix up clickability of group list. Now items can be clicked (and they get highlighted when clicked).
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463917627,1463917627,cf902c0dab9eb73fcca022df2c24434b149d83f4
+cf902c0dab9eb73fcca022df2c24434b149d83f4,cf902c0d,Change species list fragment (which is poorly named -- I actually changed the…,"Change species list fragment (which is poorly named -- I actually changed the path in the fragment that deals with the list of species within a group) to not bother about setting a title text in a toolbar thing. It will just be put in the main activity, which already has a toolbar.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463917566,1463917566,748c4a9aa6ae663375603630819c852cb2ee644c
+748c4a9aa6ae663375603630819c852cb2ee644c,748c4a9a,Change main activity to add its initial fragment programmatically -- fragments…,"Change main activity to add its initial fragment programmatically -- fragments added in xml can't be removed, and this is no good.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463917451,1463917451,de354fef251921369e743cbb94a8c939225ce0f3
+de354fef251921369e743cbb94a8c939225ce0f3,de354fef,Tried to make selecting items from the group list work. For one the listview…,"Tried to make selecting items from the group list work. For one the listview animation is broken.. might need to set a normal listener on the items. Also the new fragment doesn't seem to be getting pushed properly...
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463897141,1463897141,33936462c776cdfab5749e7a0375b6bc4f90b12b
+33936462c776cdfab5749e7a0375b6bc4f90b12b,33936462,Work on group list fragment.,"Work on group list fragment.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463893481,1463893481,e9fc39c63360d044ba4ea2e2d05ae9f82b546459
+e9fc39c63360d044ba4ea2e2d05ae9f82b546459,e9fc39c6,Add group list fragment to the main activity.,"Add group list fragment to the main activity.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463889651,1463889651,d3a50b77af59c7e84570c728be53c8e00e18b878
+d3a50b77af59c7e84570c728be53c8e00e18b878,d3a50b77,Lint fixes to database.,"Lint fixes to database.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463887982,1463887982,b61f21adb649fcda95deed94e8945f32415860ab
+b61f21adb649fcda95deed94e8945f32415860ab,b61f21ad,Tweaks to group fragment.,"Tweaks to group fragment.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463887974,1463887974,78a459917c31359a0bf57d3856081a456061de04
+78a459917c31359a0bf57d3856081a456061de04,78a45991,Remove unnecessary methods from MainActivity.,"Remove unnecessary methods from MainActivity.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463886612,1463886612,7fd59b9e28dfcad2ae24bd6ff2de188834fabcca
+7fd59b9e28dfcad2ae24bd6ff2de188834fabcca,7fd59b9e,Allow the build to abort on lint error.,"Allow the build to abort on lint error.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463886596,1463886596,4996e6c39d872531354b5c532d88014349432ae8
+4996e6c39d872531354b5c532d88014349432ae8,4996e6c3,"Tidy up image detail stuff a bit. Turns out this is kind of complicated, and it…","Tidy up image detail stuff a bit. Turns out this is kind of complicated, and it still is. I can probably simplify this a lot.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463661305,1463661305,fecd795fb87ec33bd386e20d1cc26636a06e1d00
+fecd795fb87ec33bd386e20d1cc26636a06e1d00,fecd795f,Start the switch from app bar to Toolbar.,"Start the switch from app bar to Toolbar.
+
+Do this for MainActivity, SearchActivity and SpeciesItemDetailActivity.
+
+Also make the searching a little cleaner.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463658072,1463658072,a50da47de59646e67706852d2b4e19412fdc5437
+a50da47de59646e67706852d2b4e19412fdc5437,a50da47d,Tweaks to search so that it's a bit less bad. This might still need fixing…,"Tweaks to search so that it's a bit less bad. This might still need fixing though, see https://developer.android.com/guide/topics/search/search-dialog.html.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463616906,1463616906,c714594d840b79740f7b9c224dd559165db66502
+c714594d840b79740f7b9c224dd559165db66502,c714594d,Switch to use the built-in search icon.,"Switch to use the built-in search icon.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463616877,1463616877,c5f467b1278e06b6cc296b41895ad8fc59486794
+c5f467b1278e06b6cc296b41895ad8fc59486794,c5f467b1,"Switch to dark styles, and make things more default.","Switch to dark styles, and make things more default.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463616850,1463616850,1856953fac1f24319e3a5da795fe6ac2a126a32c
+1856953fac1f24319e3a5da795fe6ac2a126a32c,1856953f,Add install script.,"Add install script.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463611550,1463611550,b2eceea278828cd1f1fe5582faaedf1c8b2afb05
+b2eceea278828cd1f1fe5582faaedf1c8b2afb05,b2eceea2,Update the code to use the appropriate AppCompat things. This now builds and…,"Update the code to use the appropriate AppCompat things. This now builds and runs, but is ugly. I also had to comment out SettingsActivity, so will need to re-implement that.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463525573,1463525573,7edb2ca8704054bf7595608de79cba786ccc4304
+7edb2ca8704054bf7595608de79cba786ccc4304,7edb2ca8,Replace styles with the AppCompat versions. Also remove some unused styles. Also…,"Replace styles with the AppCompat versions. Also remove some unused styles. Also remove -v11 and -v14 styles.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463094750,1463094750,c3ef8abf840fbf8c1b506af675276aaf2daf6c8b
+c3ef8abf840fbf8c1b506af675276aaf2daf6c8b,c3ef8abf,Replace ABS dependency with AC.,"Replace ABS dependency with AC.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463094480,1463094480,355ec9c1ea426811c46fcd2d108dafeeba603eb6
+355ec9c1ea426811c46fcd2d108dafeeba603eb6,355ec9c1,Fix a long line that snuck through the last commit.,"Fix a long line that snuck through the last commit.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463092511,1463092511,e41daedb43690488a48f2b8dc40ee90e759f649b
+e41daedb43690488a48f2b8dc40ee90e759f649b,e41daedb,More lint.,"More lint.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463092413,1463092413,1473bd915abffcdd0893a493fb46f93f514ce3a5
+1473bd915abffcdd0893a493fb46f93f514ce3a5,1473bd91,Lint fixes.,"Lint fixes.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463090055,1463090055,28fb13f91d296fe2dc80718bad2cdd4fe145da90
+28fb13f91d296fe2dc80718bad2cdd4fe145da90,28fb13f9,Add swp files to gitignore.,"Add swp files to gitignore.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463083854,1463083854,d0d70ae64e292698ad5839b419bb62e95d367455
+d0d70ae64e292698ad5839b419bb62e95d367455,d0d70ae6,Initial commit.,"Initial commit.
+",,,,Harry Slatyer,harry.slatyer@gmail.com,Harry Slatyer,harry.slatyer@gmail.com,1463083840,1463083840,

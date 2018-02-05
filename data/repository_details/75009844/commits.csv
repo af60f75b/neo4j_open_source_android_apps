@@ -1,0 +1,206 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c169422e52909d261c8d379009d02bb4eb53a3ad,c169422e,V4.01,"V4.01
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489775611,1489775611,ca6a72c8d876d7314b1a2d4c4ce039675a4112d6
+ca6a72c8d876d7314b1a2d4c4ce039675a4112d6,ca6a72c8,war for duplicate files (spring.*) in apk,"war for duplicate files (spring.*) in apk
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489772399,1489772399,aa510958cdf3b11e0f6c4901a7dd2eae57fd876d
+aa510958cdf3b11e0f6c4901a7dd2eae57fd876d,aa510958,for minify/optimize,"for minify/optimize
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489770245,1489770245,0106456896d0e5eab728ddf200ab80310f3ca6a8
+0106456896d0e5eab728ddf200ab80310f3ca6a8,01064568,fix dex limit for apis < 21,"fix dex limit for apis < 21
+
+see: https://developer.android.com/studio/build/multidex.html
+turns out that the dex format limits us to 64k references. by incorporating
+both etheremj & zbar we were hoing ober that limit. apis >=21 (eg lolypop,
+marshmellow, nougat) were fine just by setting multidex: true in build.gradle.
+but pre api 21 (eg kitkat) require the modifications in this commit.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489725616,1489725616,a2fbad9aeb5253344b41b702cf39fbe04eccfcf5
+a2fbad9aeb5253344b41b702cf39fbe04eccfcf5,a2fbad9a,Merge remote-tracking branch 'origin/master' into GH-master,"Merge remote-tracking branch 'origin/master' into GH-master
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489703944,1489703944,"622b66d15914832f4c687b273b83c09f23df4e3c,a710087acb0d31eae531bf671adbbffe034a2c25"
+622b66d15914832f4c687b273b83c09f23df4e3c,622b66d1,increase max heap,"increase max heap
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489616235,1489673158,46d3a2b781946f108e2b4f7662b2cb50513182fc
+a710087acb0d31eae531bf671adbbffe034a2c25,a710087a,increase max heap,"increase max heap
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489616235,1489616235,46d3a2b781946f108e2b4f7662b2cb50513182fc
+46d3a2b781946f108e2b4f7662b2cb50513182fc,46d3a2b7,ignore build files,"ignore build files
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489592309,1489592309,9c83f4f4adff6264bf6e3ed4e7d6ddc0e34bceed
+9c83f4f4adff6264bf6e3ed4e7d6ddc0e34bceed,9c83f4f4,rm build files,"rm build files
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489592115,1489592115,efe2599a8c44e97f9de9bfe611fafc0010756400
+efe2599a8c44e97f9de9bfe611fafc0010756400,efe2599a,remove state files,"remove state files
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489589850,1489589850,2ca87c411f73ed86007e92f29f6cade9ae8a0a42
+2ca87c411f73ed86007e92f29f6cade9ae8a0a42,2ca87c41,display processing msg if send is delayed,"display processing msg if send is delayed
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489589655,1489589655,2aa67091e3e932627f06f3ca5f4ef57fd7e10bd0
+2aa67091e3e932627f06f3ca5f4ef57fd7e10bd0,2aa67091,remove extraneous logging from ethereumj,"remove extraneous logging from ethereumj
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489553154,1489553154,d91afed1e3f3ffe5e651dd61cd25ebd9cf8e8c7f
+d91afed1e3f3ffe5e651dd61cd25ebd9cf8e8c7f,d91afed1,final bits to compile ethereumj-core from source,"final bits to compile ethereumj-core from source
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489542595,1489542595,e70b23d9d8af6d45e789446b64e44f3c8ce9a40b
+e70b23d9d8af6d45e789446b64e44f3c8ce9a40b,e70b23d9,Merge branch 'LOC-master' into GH-master,"Merge branch 'LOC-master' into GH-master
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489539905,1489539905,"603ef188f607ab4e9b1e4059c61447622b6edc8f,3b6ef5c37285182d012d41bc699e87d8be1d991a"
+3b6ef5c37285182d012d41bc699e87d8be1d991a,3b6ef5c3,build ethereum-core from source,"build ethereum-core from source
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489539703,1489539703,0c645cf65abc42d294e5f81fca6d7590fdb14069
+0c645cf65abc42d294e5f81fca6d7590fdb14069,0c645cf6,need spongycastle/prov,"need spongycastle/prov
+
+this to avoid class-not-found crash when importing acct
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489503436,1489503436,af7632fdd77ccb90a218222b79b091bb412c957c
+af7632fdd77ccb90a218222b79b091bb412c957c,af7632fd,"upgrade to gradle 2.3.0, tools 25.0.0","upgrade to gradle 2.3.0, tools 25.0.0
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489458745,1489458745,024a0cacd638674bb0bf735adfdd1b71df35d844
+024a0cacd638674bb0bf735adfdd1b71df35d844,024a0cac,V3.04,"V3.04
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489458242,1489458309,34440e17d8ce9b3e4bdd1dae498164fb5113c815
+603ef188f607ab4e9b1e4059c61447622b6edc8f,603ef188,V3.04,"V3.04
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489458242,1489458242,8674426dca55c3cfe7b0efe42e12d9bc217821cf
+8674426dca55c3cfe7b0efe42e12d9bc217821cf,8674426d,Merge remote-tracking branch 'local/master' into GH-master,"Merge remote-tracking branch 'local/master' into GH-master
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489457398,1489457398,"d46f0dd06d1bd2c14c1841d2edbcc25c182952dc,34440e17d8ce9b3e4bdd1dae498164fb5113c815"
+34440e17d8ce9b3e4bdd1dae498164fb5113c815,34440e17,improve gas price retrieval,"improve gas price retrieval
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1489457327,1489457327,14f72cbc25abec9db67567fff188ba5db299fd4e
+14f72cbc25abec9db67567fff188ba5db299fd4e,14f72cbc,update readme to indicate that now zbar is rebuilt from source,"update readme to indicate that now zbar is rebuilt from source
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487815420,1487878356,1fc8657eef3c7a5700204da7ea87705cdd58ec9e
+1fc8657eef3c7a5700204da7ea87705cdd58ec9e,1fc8657e,incorporate zbar source code into project,"incorporate zbar source code into project
+
+now rebuild zbar .jar and .so files using source code from
+ https://github.com/chentao0707/ZBarAndroidSDK/archive/master.zip
+which has now been incorporated into the project.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487813907,1487818898,f0694bf9eab2a8b1e739b5a9982e8d9950f5952c
+f0694bf9eab2a8b1e739b5a9982e8d9950f5952c,f0694bf9,get all zbar files from chentao0707,"get all zbar files from chentao0707
+
+https://github.com/chentao0707/ZBarAndroidSDK/archive/master.zip
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487734164,1487818886,d0d7d1568e9f0a6b7f3dffd51e66ae20fae8f8ac
+d0d7d1568e9f0a6b7f3dffd51e66ae20fae8f8ac,d0d7d156,remove referencve to maven https://dl.bintray.com/ethereum/maven,"remove referencve to maven https://dl.bintray.com/ethereum/maven
+
+the ethereum lib needs to come from oss.jfrog.org. see README.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487731943,1487818878,2d371a9dba6974b53d4e22d00dd8474eacedd04d
+d46f0dd06d1bd2c14c1841d2edbcc25c182952dc,d46f0dd0,update readme to indicate that now zbar is rebuilt from source,"update readme to indicate that now zbar is rebuilt from source
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487815420,1487815420,a220cfefeb5e6927ff530d616f1d11b664ae2fd1
+a220cfefeb5e6927ff530d616f1d11b664ae2fd1,a220cfef,incorporate zbar source code into project,"incorporate zbar source code into project
+
+now rebuild zbar .jar and .so files using source code from
+ https://github.com/chentao0707/ZBarAndroidSDK/archive/master.zip
+which has now been incorporated into the project.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487813907,1487813907,04cee3d671ce2b2a10228cad65a3f6c97dd6817b
+04cee3d671ce2b2a10228cad65a3f6c97dd6817b,04cee3d6,get all zbar files from chentao0707,"get all zbar files from chentao0707
+
+https://github.com/chentao0707/ZBarAndroidSDK/archive/master.zip
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487734164,1487734164,e12145394245a492ac4022a227d5ca0814364061
+e12145394245a492ac4022a227d5ca0814364061,e1214539,remove referencve to maven https://dl.bintray.com/ethereum/maven,"remove referencve to maven https://dl.bintray.com/ethereum/maven
+
+the ethereum lib needs to come from oss.jfrog.org. see README.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487731943,1487731943,8824134e9dc304dacb27e0bd1996f9b30b91aa62
+2d371a9dba6974b53d4e22d00dd8474eacedd04d,2d371a9d,update build instructions... more,"update build instructions... more
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487459718,1487461972,429f3a34c17734a2ad5b83035e97cd106884295d
+429f3a34c17734a2ad5b83035e97cd106884295d,429f3a34,update build instructions,"update build instructions
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487454574,1487461960,8e8eba7d468d3eeb6153b85f56d5bced29a783f0
+8824134e9dc304dacb27e0bd1996f9b30b91aa62,8824134e,update build instructions... more,"update build instructions... more
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487459718,1487459718,01cff9ee69fa8ffd9573d22f53c7bee5dd20c683
+01cff9ee69fa8ffd9573d22f53c7bee5dd20c683,01cff9ee,update build instructions,"update build instructions
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487454574,1487454574,df3754c160638c91c884a6a5f51eaae606cbd3f4
+8e8eba7d468d3eeb6153b85f56d5bced29a783f0,8e8eba7d,delete libs that should be added manually per README,"delete libs that should be added manually per README
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487451946,1487453078,e9da99a24260c87fc2d096db57c676a413172f86
+df3754c160638c91c884a6a5f51eaae606cbd3f4,df3754c1,delete libs that should be added manually per README,"delete libs that should be added manually per README
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487451946,1487451946,947419c8369873c897be5e14515bfd54c606bcb7
+947419c8369873c897be5e14515bfd54c606bcb7,947419c8,Merge branch 'LOC-master' into GH-master,"Merge branch 'LOC-master' into GH-master
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487451477,1487451477,"a37ce06bf24edc0818c858c495c57ba8613f7a72,e9da99a24260c87fc2d096db57c676a413172f86"
+e9da99a24260c87fc2d096db57c676a413172f86,e9da99a2,add instructions fofr installing libiconv.so and libzbarjni.so,"add instructions fofr installing libiconv.so and libzbarjni.so
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487401361,1487401361,5d466e46223724dac0bbe73e4e6772b26543a911
+5d466e46223724dac0bbe73e4e6772b26543a911,5d466e46,work towards verifiiable opensource build,"work towards verifiiable opensource build
+
+added licenses to all source files. gradle now downloads nearly
+all libs directly from guthub or mavin. readme explains special
+handling for zbar & ethereum-core.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487398929,1487398929,5b7e630216ad1db7f13ff1def7a3e32173b70af6
+5b7e630216ad1db7f13ff1def7a3e32173b70af6,5b7e6302,V3.01,"V3.01
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487115103,1487115103,34f7702f7272bddba9ac732701616ad41405ec72
+34f7702f7272bddba9ac732701616ad41405ec72,34f7702f,fix default denomination in send,"fix default denomination in send
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487102455,1487102455,0b9f528dd8170ef9abc2b8bac05c14be9386ba68
+a37ce06bf24edc0818c858c495c57ba8613f7a72,a37ce06b,Merge branch 'LOC-master' into GH-master,"Merge branch 'LOC-master' into GH-master
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487097166,1487097166,"cf182fea44795b92417824849b1afaabf8d9c922,0b9f528dd8170ef9abc2b8bac05c14be9386ba68"
+0b9f528dd8170ef9abc2b8bac05c14be9386ba68,0b9f528d,center refresh icon,"center refresh icon
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487096662,1487096662,f63d00ab8ba7e49abef5c30db36a500e8d09c307
+f63d00ab8ba7e49abef5c30db36a500e8d09c307,f63d00ab,center refresh icon,"center refresh icon
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487096429,1487096429,604e4b2befece28c2935e305106b3155cdd61b89
+cf182fea44795b92417824849b1afaabf8d9c922,cf182fea,remove cruft,"remove cruft
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487095225,1487095225,604e4b2befece28c2935e305106b3155cdd61b89
+604e4b2befece28c2935e305106b3155cdd61b89,604e4b2b,remove stale ref to unrelated,"remove stale ref to unrelated
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487094656,1487095069,595a70a77ab321d21842991b5cb2fcb0a7199130
+595a70a77ab321d21842991b5cb2fcb0a7199130,595a70a7,overhaul look and feel. complete.... i think,"overhaul look and feel. complete.... i think
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487061202,1487061202,63871a4befe1a891db94e20bf2d186fd27e1a6e6
+63871a4befe1a891db94e20bf2d186fd27e1a6e6,63871a4b,overhaul look and feel. part 2. wip,"overhaul look and feel. part 2. wip
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487053780,1487053780,120b36016443addd0a149ef72797fcec66960f8b
+120b36016443addd0a149ef72797fcec66960f8b,120b3601,overhaul look and feel. wip,"overhaul look and feel. wip
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1487039444,1487039444,73ad2f83dba82cc99c0f7b5d51257dc65b842763
+73ad2f83dba82cc99c0f7b5d51257dc65b842763,73ad2f83,fix conditions for new accounts,"fix conditions for new accounts
+
+fix initial tx nonce -- should be 0 instead of 1; also fix refresh
+of account that has never had a tx; nonce will be null.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1481325698,1481325698,bd0bc8017468ab5536e9b69f3cdd7896a875b68f
+bd0bc8017468ab5536e9b69f3cdd7896a875b68f,bd0bc801,"handle new, empty accounts","handle new, empty accounts
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1481319064,1481319064,93649c3a6bbd89c2122e3e0c095605ccaa73f06c
+93649c3a6bbd89c2122e3e0c095605ccaa73f06c,93649c3a,scan amount from qr code; pass to sendactivity.,"scan amount from qr code; pass to sendactivity.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1481074493,1481074493,8e6dc0ba6c20547c7a34897fdc293955003563b1
+8e6dc0ba6c20547c7a34897fdc293955003563b1,8e6dc0ba,V 2.01,"V 2.01
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480919526,1480919526,a5134908cb12575e24190e776d21752a42f4cb7d
+a5134908cb12575e24190e776d21752a42f4cb7d,a5134908,ignore CVS directories,"ignore CVS directories
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480889499,1480889499,93b7078f8656f473d3429ee17f573650c301cfa7
+93b7078f8656f473d3429ee17f573650c301cfa7,93b7078f,ability to set gas limit,"ability to set gas limit
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480889332,1480889332,1d9240be9fd681b89b33be216bd448c5f0751c05
+1d9240be9fd681b89b33be216bd448c5f0751c05,1d9240be,V 2.00,"V 2.00
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480835294,1480835294,057184edbc38251c35945cd575290a9ac300cad9
+057184edbc38251c35945cd575290a9ac300cad9,057184ed,make send-help icon transparent,"make send-help icon transparent
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480832875,1480832875,5b40ce3d57defb9393872182d2445e2a25121d29
+5b40ce3d57defb9393872182d2445e2a25121d29,5b40ce3d,improvements to regfresh button,"improvements to regfresh button
+
+line it up better
+transparent background (gray when pressed)
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480828712,1480828712,6ef0ae73c6f59d669b3ed9eabef49fc9f0f2da85
+6ef0ae73c6f59d669b3ed9eabef49fc9f0f2da85,6ef0ae73,specific title in toolbar for each activity. also bg color.,"specific title in toolbar for each activity. also bg color.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480827332,1480827332,48846d91ccacbb2d8f13ab16749de6a1623e5049
+48846d91ccacbb2d8f13ab16749de6a1623e5049,48846d91,more work for showing transaction history,"more work for showing transaction history
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480816760,1480816760,1f40f4848d40c8a3576f7b4dd4068712b7fd3bdb
+1f40f4848d40c8a3576f7b4dd4068712b7fd3bdb,1f40f484,"show transaction history, sent/received","show transaction history, sent/received
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480761027,1480761027,1ac378b22791a5a6df3597e8cac11e6460b8e036
+1ac378b22791a5a6df3597e8cac11e6460b8e036,1ac378b2,add history sent/received buttons to main layout,"add history sent/received buttons to main layout
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480665486,1480665486,3e18134fbb9be69fa53f257ae79acf0617a2b59d
+3e18134fbb9be69fa53f257ae79acf0617a2b59d,3e18134f,V 1.06,"V 1.06
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480662581,1480662581,05f8fc2dd5af01e5f7e68a5744484fde614179f5
+05f8fc2dd5af01e5f7e68a5744484fde614179f5,05f8fc2d,toolbar on each activity,"toolbar on each activity
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480556524,1480556524,483edc68c37ea74fc3bd502a0482993e5b5fdc30
+483edc68c37ea74fc3bd502a0482993e5b5fdc30,483edc68,small improvement in zippy-ness of toasts while refreshing acct status,"small improvement in zippy-ness of toasts while refreshing acct status
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480537797,1480537797,6f16b6f9f3ccae0b2a1e614af809d1c00b24a0ee
+6f16b6f9f3ccae0b2a1e614af809d1c00b24a0ee,6f16b6f9,update ver to 1.05,"update ver to 1.05
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480502953,1480502953,ef6ac5d5211b42d1c6706e22d7c9e7ea547c30a9
+ef6ac5d5211b42d1c6706e22d7c9e7ea547c30a9,ef6ac5d5,fix a race condition in camera_preview,"fix a race condition in camera_preview
+
+if the user released the camera by pressing the back-key before the
+camera_preview was created... well that would be bad. somehow this was
+more likely to happen when we lined up a batch of toasts just before
+starting the scan activity.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480502549,1480502549,90eb252fa0fc3870743aa98f11a0efc235919124
+90eb252fa0fc3870743aa98f11a0efc235919124,90eb252f,fix a bug that required a manual refresh after a pause/resume,"fix a bug that required a manual refresh after a pause/resume
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480499511,1480499511,d989275e94ae4e83fab0c133304be967767be437
+d989275e94ae4e83fab0c133304be967767be437,d989275e,provide visual feedback when refreshing balance,"provide visual feedback when refreshing balance
+
+automatically refresh nonce, balancem price after a payment, or after
+importing a new account. at those times the balance flashes, and toasts
+inform the user that the refresh is underway.
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480483754,1480483754,4e224e5b56486c6942082be7bc690fef7db8b8a9
+4e224e5b56486c6942082be7bc690fef7db8b8a9,4e224e5b,toast when refreshing balance,"toast when refreshing balance
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480407985,1480407985,8c5edf5556b6e3ac1bf0e62702b1b7c32763fec8
+8c5edf5556b6e3ac1bf0e62702b1b7c32763fec8,8c5edf55,initial,"initial
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480383279,1480383279,7966deb57eda183775694eb44577910be7ff1537
+7966deb57eda183775694eb44577910be7ff1537,7966deb5,initial,"initial
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480382820,1480382820,a378ebab5508e81f9381922c0821fd5bca55751c
+a378ebab5508e81f9381922c0821fd5bca55751c,a378ebab,initial,"initial
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480380160,1480380160,1c17f337f48a41630f063c22667b2a39671d32a4
+1c17f337f48a41630f063c22667b2a39671d32a4,1c17f337,initial,"initial
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480379727,1480379727,6ce3238646fd8f02db4dd21d8272bc8c2255ee8c
+6ce3238646fd8f02db4dd21d8272bc8c2255ee8c,6ce32386,initial,"initial
+",,,,David Rosen,dbenrosen@mcon.org,David Rosen,dbenrosen@mcon.org,1480376784,1480376784,607e90954a18bb81acc784ee1813e31648b9057e
+607e90954a18bb81acc784ee1813e31648b9057e,607e9095,Restore top level file,Restore top level file,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480376063,1480376063,ad10de8302697b3938459b84ddd592a3ee774e5c
+ad10de8302697b3938459b84ddd592a3ee774e5c,ad10de83,Delete SendActivity.java,Delete SendActivity.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375850,1480375850,29f86b96917b2c7a5c5f9c3298cd1562fbcfc8d3
+29f86b96917b2c7a5c5f9c3298cd1562fbcfc8d3,29f86b96,Delete ScanActivity.java,Delete ScanActivity.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375835,1480375835,398e2a69d8727544c0c9332c13472747836ce239
+398e2a69d8727544c0c9332c13472747836ce239,398e2a69,Delete Util.java,Delete Util.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375827,1480375827,8f1a57eda68bb972d9254732ab69a9b637259ba1
+8f1a57eda68bb972d9254732ab69a9b637259ba1,8f1a57ed,Delete ReceiveActivity.java,Delete ReceiveActivity.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375820,1480375820,23a321070f70815fdc8723e2344aa25967a9fde7
+23a321070f70815fdc8723e2344aa25967a9fde7,23a32107,Delete MainActivity.java,Delete MainActivity.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375810,1480375810,fdd099baf8a7a1ab9996c7e8734c630c6b46eb1c
+fdd099baf8a7a1ab9996c7e8734c630c6b46eb1c,fdd099ba,Delete HTTP_Query_Task.java,Delete HTTP_Query_Task.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375723,1480375723,e66092c5bb8cff02deec0bffe4dda7fdec85bd87
+e66092c5bb8cff02deec0bffe4dda7fdec85bd87,e66092c5,Delete HTTP_Query_Client.java,Delete HTTP_Query_Client.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375641,1480375641,8eba9e55029aebf85f6891cf4021818f39366dde
+8eba9e55029aebf85f6891cf4021818f39366dde,8eba9e55,Delete CameraPreview.java,Delete CameraPreview.java,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375629,1480375629,d996e424e0fd14b75466c4b70169de40b83e6b25
+d996e424e0fd14b75466c4b70169de40b83e6b25,d996e424,initial commits,"initial commits
+
+only 1 acct; no transaction history. no frills.",,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375240,1480375240,bf3f84b236130397eae102bca833f46ba9f84400
+bf3f84b236130397eae102bca833f46ba9f84400,bf3f84b2,Initial commits,Initial commits,,,,dbenrosen,dbenrosen@mcon.org,GitHub,noreply@github.com,1480375068,1480375068,001950598098a22c691c20143c43d671bdfdc822
+001950598098a22c691c20143c43d671bdfdc822,00195059,Initial commit,Initial commit,,,,dbenrosen,dbenrosen@mcon.org,dbenrosen,dbenrosen@mcon.org,1480363564,1480363564,

@@ -1,0 +1,158 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+72e7b7b17b1d48a06f9f09c5afc66bdbef62ea7c,72e7b7b1,Bump gradle plugin version to 2.3.3,"Bump gradle plugin version to 2.3.3
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1498543359,1498543359,2009d9a0ee9cc0120909a8d4fb8c23bd0ccc6b80
+2009d9a0ee9cc0120909a8d4fb8c23bd0ccc6b80,2009d9a0,Fix bug reading legacy tag format,"Fix bug reading legacy tag format
+...and add a legacy test
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1498524386,1498524386,918da413c4b8904b7bf92ace986fa13e0a6e14ce
+918da413c4b8904b7bf92ace986fa13e0a6e14ce,918da413,Fix configure-tag initialization bug,"Fix configure-tag initialization bug
+...and bump version to 1.02
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1498492254,1498492254,e932d6b1f0075374c5052b9b7af30e172558e145
+e932d6b1f0075374c5052b9b7af30e172558e145,e932d6b1,Bump version to 1.01,"Bump version to 1.01
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1498024117,1498024117,98cbb682016bef8fce99833f9fa3cfb6c3027a34
+98cbb682016bef8fce99833f9fa3cfb6c3027a34,98cbb682,Convert NFC format to JSON,"Convert NFC format to JSON
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1498023857,1498023857,3e8fe4729196618841620f9460c24c561ae4d094
+3e8fe4729196618841620f9460c24c561ae4d094,3e8fe472,"Bump version to 1.0, fix crash on large screens","Bump version to 1.0, fix crash on large screens
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1497759987,1497759987,7fa7fdd3995cc7c4d8de8c1a7131eed8b10fb236
+7fa7fdd3995cc7c4d8de8c1a7131eed8b10fb236,7fa7fdd3,Tweak comment with date example to match against,"Tweak comment with date example to match against
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1497678130,1497678130,f972804b4ba48bfd7e806eec292f668e6792b291
+f972804b4ba48bfd7e806eec292f668e6792b291,f972804b,Skip messages with bad patterns,"Skip messages with bad patterns
+
+Also, don't crash when String#format encounters a problem
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1497674089,1497674089,f426bc34c30735e51a30740afc6751a9ddcd7621
+f426bc34c30735e51a30740afc6751a9ddcd7621,f426bc34,Include message counts in toast,"Include message counts in toast
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1497333385,1497333385,c59a418e8d4d615017834f601406fbaf7a2980cf
+c59a418e8d4d615017834f601406fbaf7a2980cf,c59a418e,Merge pull request #16 from rschnapp/workspace,"Merge pull request #16 from rschnapp/workspace
+
+Workspace",,,,Russ Schnapp,russgoog+github@gmail.com,GitHub,noreply@github.com,1497113775,1497113775,"da433e073d23b58682d142c6edb80bef59c55438,2b34eb8a23c8bce9531c8fb6048cf98658c48af4"
+2b34eb8a23c8bce9531c8fb6048cf98658c48af4,2b34eb8a,Fix an error toast,"Fix an error toast
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1497112847,1497112847,00ab609e9b29965edf05a10f45617a0f37715ddb
+00ab609e9b29965edf05a10f45617a0f37715ddb,00ab609e,toast message download/parsing status,"toast message download/parsing status
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1497112521,1497112521,656e35b66255b1cd75d75f43addac3c77717e57c
+da433e073d23b58682d142c6edb80bef59c55438,da433e07,Merge pull request #15 from rschnapp/workspace,"Merge pull request #15 from rschnapp/workspace
+
+Fix crasher when busman is started by NFC tag",,,,Russ Schnapp,russgoog+github@gmail.com,GitHub,noreply@github.com,1492319960,1492319960,"3ef162a8216759ddd2094f4a9928919f6af8cbe5,656e35b66255b1cd75d75f43addac3c77717e57c"
+656e35b66255b1cd75d75f43addac3c77717e57c,656e35b6,Fix crasher when busman is started by NFC tag,"Fix crasher when busman is started by NFC tag
+
+Problem was occurring when we tried to get a welcome
+message before the message file parsing has completed.
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1492319341,1492319341,3ef162a8216759ddd2094f4a9928919f6af8cbe5
+3ef162a8216759ddd2094f4a9928919f6af8cbe5,3ef162a8,Add alreadyWelcomed and alreadyReturned messages,"Add alreadyWelcomed and alreadyReturned messages
+
+Add handling of unexpected presentation of riders to
+the JSON message repertoire, i.e.,
+  alreadyWelcomed messages are identical to welcome messages, but
+      will be used when the rider is already on the manifest, i.e.
+      they presented their NFC tag already.
+
+  alreadyReturned messages are similar to return messages, but with
+      the ""isLast"" boolean replaced with a ""dejaVu"" boolean. These
+      messages will be used when the rider is not found on the
+      manifest. dejaVu will be ""t"" if the rider was removed from
+      the manifest recently.
+
+  Also, I applied several Android Studio lint recommendations and
+      a few other minor cleanups.
+
+  Finally, I updated to Android Studio 2.3.1 and new gradle/plugin.
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1492315204,1492315764,edf3e27a90e7a6cacdd85958fdb23c56f018cddb
+edf3e27a90e7a6cacdd85958fdb23c56f018cddb,edf3e27a,Merge pull request #7 from rschnapp/russ-sample,"Merge pull request #7 from rschnapp/russ-sample
+
+Russ sample",,,,Russ Schnapp,russgoog+github@gmail.com,GitHub,noreply@github.com,1479080408,1479080408,"4db774788126aba4fc3352e1f6e855d13120c1ce,87020c792082d7bc5fb29513abdeb738d4cf5651"
+87020c792082d7bc5fb29513abdeb738d4cf5651,87020c79,Misc cleanups,"Misc cleanups
+
+1. Update to latest tools, allowing AS 2.2 and instarun
+2. Gate all logging through Log.isLoggable()
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1479078398,1479078398,86b16cd830a6f8daaa541a87a1f11cfdd601ccfe
+86b16cd830a6f8daaa541a87a1f11cfdd601ccfe,86b16cd8,Merge branch 'master' into russ-sample-x,"Merge branch 'master' into russ-sample-x
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1479075804,1479075804,"ec52cd95633da224973d6a039ff94207442e9818,e86318b151822f260795f1ac8f7101c50e7fb134"
+4db774788126aba4fc3352e1f6e855d13120c1ce,4db77478,Merge pull request #14 from rschnapp/new-gradle,"Merge pull request #14 from rschnapp/new-gradle
+
+Switch to gradle 2.2.2",,,,Russ Schnapp,russgoog+github@gmail.com,GitHub,noreply@github.com,1479054201,1479054201,"e86318b151822f260795f1ac8f7101c50e7fb134,a8524c45bd1f81028731c532d472a03ab702b1e8"
+a8524c45bd1f81028731c532d472a03ab702b1e8,a8524c45,Switch to gradle 2.2.2,"Switch to gradle 2.2.2
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1479053005,1479053005,e86318b151822f260795f1ac8f7101c50e7fb134
+e86318b151822f260795f1ac8f7101c50e7fb134,e86318b1,Merge pull request #13 from EboMike/master,"Merge pull request #13 from EboMike/master
+
+Updated to gradle plugin for Android Studio 2.2",,,,Russ Schnapp,russgoog+github@gmail.com,GitHub,noreply@github.com,1479051953,1479051953,"ffaef19af5bb4982c111599580d93d685596d1db,824c06dd8d1011c8394495cad02b8986029b3c9c"
+824c06dd8d1011c8394495cad02b8986029b3c9c,824c06dd,Updated to gradle plugin for Android Studio 2.2,"Updated to gradle plugin for Android Studio 2.2
+",,,,ebo,ebo@ebomike.com,ebo,ebo@ebomike.com,1476420484,1476420484,70cc0422db44f841e1d4a8b49d027e5d1e49761a
+70cc0422db44f841e1d4a8b49d027e5d1e49761a,70cc0422,Merge pull request #4 from rschnapp/master,"Merge pull request #4 from rschnapp/master
+
+Pull downstream changes",,,,EboMike,github@ebomike.com,GitHub,noreply@github.com,1476419100,1476419100,"50ae06016f43e852fa21bd76e6b0ec139fe45b6f,ffaef19af5bb4982c111599580d93d685596d1db"
+ffaef19af5bb4982c111599580d93d685596d1db,ffaef19a,Merge pull request #12 from rschnapp/pr/11,"Merge pull request #12 from rschnapp/pr/11
+
+Pr/11 (Mike's test framework and first test) plus a small tweak",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1460324348,1460324348,"e1ea204d6bf55fc9a43147d417be25794523f10b,bb1243f01f75427785b7c739dfdec768f174d804"
+bb1243f01f75427785b7c739dfdec768f174d804,bb1243f0,Use RiderMessages.DEFAULT_WEIGHT instead of literal value,"Use RiderMessages.DEFAULT_WEIGHT instead of literal value
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1460322892,1460322892,91a7819c75afa31d44d8bfdde62eab19bd58e02e
+e1ea204d6bf55fc9a43147d417be25794523f10b,e1ea204d,Merge pull request #10 from EboMike/json-support,"Merge pull request #10 from EboMike/json-support
+
+Remove support for the old-style messages file format",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1459633851,1459633851,"9a67aeb0dfeadde6b28fb547d46401f97e82134d,587bb6656428c27bfe62cbed474099d679069f9d"
+91a7819c75afa31d44d8bfdde62eab19bd58e02e,91a7819c,"Added the test framework, and wrote one test for RiderMessages","Added the test framework, and wrote one test for RiderMessages
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1455178299,1455178299,50ae06016f43e852fa21bd76e6b0ec139fe45b6f
+50ae06016f43e852fa21bd76e6b0ec139fe45b6f,50ae0601,Merge pull request #3 from rschnapp/master,"Merge pull request #3 from rschnapp/master
+
+Pull from upstream",,,,EboMike,github@ebomike.com,EboMike,github@ebomike.com,1455173082,1455173082,"bd561d33d9b99013eeb72f121dc5864cff642114,9a67aeb0dfeadde6b28fb547d46401f97e82134d"
+587bb6656428c27bfe62cbed474099d679069f9d,587bb665,Removed more obsolete code,"Removed more obsolete code
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1455154853,1455154853,2cb4d00e74ff8b6258ad8e6208bb76ea51868137
+2cb4d00e74ff8b6258ad8e6208bb76ea51868137,2cb4d00e,Merge branch 'json-support' of github.com:EboMike/BusMan into json-support,"Merge branch 'json-support' of github.com:EboMike/BusMan into json-support
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1455154731,1455154731,"a60951ca94fea4eabc00b503be8899555a12710d,6436ada5c3bf15956fa9ba5366a95ae3e31a6fa1"
+a60951ca94fea4eabc00b503be8899555a12710d,a60951ca,Remove support for the old-school messages file format,"Remove support for the old-school messages file format
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1455154707,1455154707,20df0d2956b17bcbadb58a5cc0da3b2f118e630d
+6436ada5c3bf15956fa9ba5366a95ae3e31a6fa1,6436ada5,Merge pull request #2 from rschnapp/master,"Merge pull request #2 from rschnapp/master
+
+Pull from upstream",,,,EboMike,github@ebomike.com,EboMike,github@ebomike.com,1455154652,1455154652,"20df0d2956b17bcbadb58a5cc0da3b2f118e630d,9a67aeb0dfeadde6b28fb547d46401f97e82134d"
+bd561d33d9b99013eeb72f121dc5864cff642114,bd561d33,Merge pull request #1 from EboMike/json-support,"Merge pull request #1 from EboMike/json-support
+
+Pull from upstream",,,,EboMike,github@ebomike.com,EboMike,github@ebomike.com,1455154290,1455154290,"db57b464f95d5bb4db67466f6bba14329fbf58da,20df0d2956b17bcbadb58a5cc0da3b2f118e630d"
+9a67aeb0dfeadde6b28fb547d46401f97e82134d,9a67aeb0,Merge branch 'EboMike-robust-ids',"Merge branch 'EboMike-robust-ids'
+
+Incorporate checking for a non-empty id
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1452445916,1452445916,"9ab5df827a837138ea496601f88c465a3024d7e3,ced3be613c4a8cfe19ea5cd3d5bd32f56e38aad2"
+ced3be613c4a8cfe19ea5cd3d5bd32f56e38aad2,ced3be61,Merge branch 'robust-ids' of https://github.com/EboMike/BusMan into EboMike-robust-ids,"Merge branch 'robust-ids' of https://github.com/EboMike/BusMan into EboMike-robust-ids
+
+Fix conflicts
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1452445853,1452445853,"9ab5df827a837138ea496601f88c465a3024d7e3,bd25aa1a60884ffc1485b377a132f9a8f208e3c0"
+9ab5df827a837138ea496601f88c465a3024d7e3,9ab5df82,Merge pull request #8 from EboMike/json-support,"Merge pull request #8 from EboMike/json-support
+
+Added support for reading JSON files.",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1452445078,1452445078,"db57b464f95d5bb4db67466f6bba14329fbf58da,20df0d2956b17bcbadb58a5cc0da3b2f118e630d"
+bd25aa1a60884ffc1485b377a132f9a8f208e3c0,bd25aa1a,Make check more robust by detecting braces in wrong order,"Make check more robust by detecting braces in wrong order
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1452417705,1452417705,889a214a6568516ade3ac48aa5b059a1544f7938
+20df0d2956b17bcbadb58a5cc0da3b2f118e630d,20df0d29,Replaced one more instance of idMatch with idRegexp,"Replaced one more instance of idMatch with idRegexp
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1452417513,1452417513,857299b8597fde917ca055008ce3138ba1f2d884
+857299b8597fde917ca055008ce3138ba1f2d884,857299b8,Renamed idMatch to idRegexp.,"Renamed idMatch to idRegexp.
+Added the concept of default values to the JSON-serialized classes.
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1452301316,1452301316,6377255be9a7cc2dd0bc1b2807cf4038347e6a92
+889a214a6568516ade3ac48aa5b059a1544f7938,889a214a,Added validation to the code that extracts the name from the rider ID,"Added validation to the code that extracts the name from the rider ID
+and safely handled all cases that relied on it.
+Also warn the user if a manually entered ID does not match the expected format.
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1451978948,1451978948,db57b464f95d5bb4db67466f6bba14329fbf58da
+6377255be9a7cc2dd0bc1b2807cf4038347e6a92,6377255b,Added support for reading JSON files.,"Added support for reading JSON files.
+The parser will try loading the JSON file first and then fall back to the old-school text file if the JSON file doesn't exist.
+The downloader will treat the URL as a JSON file if it ends with .json. This is temporary until we phase out the text file.
+",,,,Ebo,ebo@ebomike.com,Ebo,ebo@ebomike.com,1451977613,1451977613,db57b464f95d5bb4db67466f6bba14329fbf58da
+ec52cd95633da224973d6a039ff94207442e9818,ec52cd95,Finish gating Log.d in ManifestActivity,"Finish gating Log.d in ManifestActivity
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1451015546,1451015546,13206b53d1967725599a37bcfca9c09aebe84527
+13206b53d1967725599a37bcfca9c09aebe84527,13206b53,start gating logging,"start gating logging
+
+This is an example, to learn about pull requests.
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1451015292,1451015292,db57b464f95d5bb4db67466f6bba14329fbf58da
+db57b464f95d5bb4db67466f6bba14329fbf58da,db57b464,Don't crash on message string format errors,"Don't crash on message string format errors
+",,,,Russell Schnapp,russ@Russells-MacBook-Pro.local,Russell Schnapp,russ@Russells-MacBook-Pro.local,1450944325,1450944325,d07c81695f5274c6f53d92f176a57a974ca8072b
+d07c81695f5274c6f53d92f176a57a974ca8072b,d07c8169,Tweak breakpoint for stacked buttons,"Tweak breakpoint for stacked buttons
+
+This fixes portrait layout on Nexus 6
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1428469226,1428469226,0d1233082336ffadcbcf43d0759aa437d7ff15ca
+0d1233082336ffadcbcf43d0759aa437d7ff15ca,0d123308,Avoid consecutive welcome/return messages,"Avoid consecutive welcome/return messages
+
+Also changed version number (71) to reflect the version code string (0.71)
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1421626559,1421626559,6264a8051f29f443e1ca28c49b7824c485e2c6a3
+6264a8051f29f443e1ca28c49b7824c485e2c6a3,6264a805,clean up some debris,"clean up some debris
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1420046503,1420046503,84d5add1771004eb6662f8114fd7933c2b2ea0fc
+84d5add1771004eb6662f8114fd7933c2b2ea0fc,84d5add1,Improve the launcher icon,"Improve the launcher icon
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1420046264,1420046381,4e5df2ef86c97709485041b1a659dc92f1fe8c1b
+4e5df2ef86c97709485041b1a659dc92f1fe8c1b,4e5df2ef,Initial commit post-migration from code.google.com,"Initial commit post-migration from code.google.com
+
+This version includes a Settings activity an the ability to
+periodically download a messages file from the web.
+",,,,Russ Schnapp,rschnapp@google.com,Russ Schnapp,rschnapp@google.com,1419986972,1419986972,0e25009f20af1f5e7215e6d07c58c7cd8dc0a05c
+0e25009f20af1f5e7215e6d07c58c7cd8dc0a05c,0e25009f,Initial commit,"Initial commit
+",,,,Russ Schnapp,russgoog+github@gmail.com,Russ Schnapp,russgoog+github@gmail.com,1419985861,1419985861,

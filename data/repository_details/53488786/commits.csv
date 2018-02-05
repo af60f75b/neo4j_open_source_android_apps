@@ -1,0 +1,967 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b45839c2703fe3ecfacdf6a1e4a5b0a008935ba6,b45839c2,Merge pull request #106 from herbeth1u/develop,"Merge pull request #106 from herbeth1u/develop
+
+2.2.0",,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1493220526,1493220526,"dc7aa8bcf20770142e8ab487eff3ca0a330bbdd3,118aa5a2cdd937e46b579a8c38ddacf3f1f6cb4d"
+118aa5a2cdd937e46b579a8c38ddacf3f1f6cb4d,118aa5a2,[Fix] Quick fix for background color.,"[Fix] Quick fix for background color.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1493220494,1493220494,89a16ab1e095ddfdba4b93ee74db6a807b35eb4b
+89a16ab1e095ddfdba4b93ee74db6a807b35eb4b,89a16ab1,"[Fix] Fix #105 : ""Spoil me if finished"" not working.","[Fix] Fix #105 : ""Spoil me if finished"" not working.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1491417982,1491417982,7285e47ca73dfabd16a667cff397a9c54c4143ae
+7285e47ca73dfabd16a667cff397a9c54c4143ae,7285e47c,[Fix] Fixed a graphic bug when changing theme : the splash screen newly set in…,"[Fix] Fixed a graphic bug when changing theme : the splash screen newly set in the manifest for MainActivity overlapped the window background. All fragments now have a background color to avoid this bug. Also redefined the SplashScreen theme for 21+ devices to avoid status bar graphic issues (also when changing theme).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490809112,1490809112,5da4d65653a323fcc6dd8bb41bdd2ab6a24b481d
+5da4d65653a323fcc6dd8bb41bdd2ab6a24b481d,5da4d656,[-] Reduced wallpapers size.,"[-] Reduced wallpapers size.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490806626,1490806626,f2fc68924d35d37a2302cbed8670970f04b25a96
+f2fc68924d35d37a2302cbed8670970f04b25a96,f2fc6892,[-] Fix #104 : removed App Indexing (not used) and UIL (obsolete).,"[-] Fix #104 : removed App Indexing (not used) and UIL (obsolete).
+[#] Decreased a picture's size.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490804857,1490804857,54f877040aa07ec699527a01293c5f0ba4a08cc0
+54f877040aa07ec699527a01293c5f0ba4a08cc0,54f87704,[#] Added a linear drop shadow to the logo.,"[#] Added a linear drop shadow to the logo.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490728958,1490728958,5d2d1e755124d0b5366dc72372b8225debb65109
+5d2d1e755124d0b5366dc72372b8225debb65109,5d2d1e75,[#] Updated lib versions.,"[#] Updated lib versions.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490644033,1490644033,6df87fdd92ddec6f65ca331b6611e9f03b32e488
+6df87fdd92ddec6f65ca331b6611e9f03b32e488,6df87fdd,Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop,"Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490444823,1490444823,"31ff8efbb1ec7cd4cbdbc93f657538cd27f4b055,72de8c6f6379de4aeaa31efde7c2c818d5cbdfa5"
+31ff8efbb1ec7cd4cbdbc93f657538cd27f4b055,31ff8efb,[Fix] Fixed the new logo's center alignment.,"[Fix] Fixed the new logo's center alignment.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490444800,1490444800,4559113861ca9175a36810192effd09f0756de1f
+72de8c6f6379de4aeaa31efde7c2c818d5cbdfa5,72de8c6f,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1490207216,1490207216,4559113861ca9175a36810192effd09f0756de1f
+4559113861ca9175a36810192effd09f0756de1f,45591138,[#] Changed (again) the app logo.,"[#] Changed (again) the app logo.
+",,,,Thomas HERBETH,therbeth@citizencam.eu,Thomas HERBETH,therbeth@citizencam.eu,1490195671,1490195671,e3f2b938c9f0c08ab6c3fcfa8c64ab7768f638e6
+e3f2b938c9f0c08ab6c3fcfa8c64ab7768f638e6,e3f2b938,[Fix] MainActivity's selected page is now saved in the instance state.,"[Fix] MainActivity's selected page is now saved in the instance state.
+[Fix] In MainActivity.onCreate(), if there is already an active fragment, we no longer try to recreate a fragment based on selectedItem. This fixes a bug indirectly related to #97, as well as speeds up the activity recreation when the device is rotated.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490018487,1490018487,e99626b60aeb1b5f14de870965823bb52dc4e07a
+e99626b60aeb1b5f14de870965823bb52dc4e07a,e99626b6,[Fix] The connection receiver was always called the first time on specific…,"[Fix] The connection receiver was always called the first time on specific devices (because of some sticky broadcast behavior), which triggered a closeAll() which could make the app crash. This first call is now ignored.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1490018294,1490018294,db8829e49e7a2ec8be2dacc2b27ba07aab6cbbb0
+db8829e49e7a2ec8be2dacc2b27ba07aab6cbbb0,db8829e4,[#] Changed logo : now rounded (like Pixel icons) and removed the shadow for a more Material look.,"[#] Changed logo : now rounded (like Pixel icons) and removed the shadow for a more Material look.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489949401,1489949401,99d74a8efff7ff08f9e1ec3f2df099fffa7e8590
+99d74a8efff7ff08f9e1ec3f2df099fffa7e8590,99d74a8e,[#] Changed the official email.,"[#] Changed the official email.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489947234,1489947234,f55ce2770ea49baa0023874de18eed593afd656d
+f55ce2770ea49baa0023874de18eed593afd656d,f55ce277,[#] Resized all action bar icons to 24dp.,"[#] Resized all action bar icons to 24dp.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489947203,1489947203,5281b067b95130f87aad0eba25eabace26e5b519
+5281b067b95130f87aad0eba25eabace26e5b519,5281b067,"[Fix] #97 : when the static variables are wiped due to low memory, the app is…","[Fix] #97 : when the static variables are wiped due to low memory, the app is now able to resume where it stopped instead of crashing.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489938313,1489938313,1727dda9764414bcf710a26a6aa0ef051bd386dd
+1727dda9764414bcf710a26a6aa0ef051bd386dd,1727dda9,"[-] #97 : removed all the fixes related to this bug (not a good solution, going…","[-] #97 : removed all the fixes related to this bug (not a good solution, going to look for a more reliable one).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489762803,1489762803,9c711d4d2ecad61ccbef2fae07d19a281320d02d
+9c711d4d2ecad61ccbef2fae07d19a281320d02d,9c711d4d,[Fix] #97 : fix for empty accounts.,"[Fix] #97 : fix for empty accounts.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489682704,1489682704,4cb3045972ecdf774696be17b12bb32348591c97
+4cb3045972ecdf774696be17b12bb32348591c97,4cb30459,"[Fix] #97 : when the static variables are killed by Android, we now restart the…","[Fix] #97 : when the static variables are killed by Android, we now restart the app instead of crashing. Exception: when opening a deep link in this case, we don't restart the app but just make sure that previous activities are killed.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489677880,1489677880,ecb299c4e30f79625f68783c6a1ae6b6f5c9ea60
+ecb299c4e30f79625f68783c6a1ae6b6f5c9ea60,ecb299c4,[#] #99 : Removed the static ProgressiveResultLoader context fields. Now saving…,"[#] #99 : Removed the static ProgressiveResultLoader context fields. Now saving only the model for the results (created a new ProgressiveResultLoaderOptions class).
+[#] Renamed package ""bean"" -> ""model"".
+[Fix] The top progress bar was always below the cards list. It is now above.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489595284,1489595284,3152faa929f31e3d8d37f387ec2588cc2862b0d6
+3152faa929f31e3d8d37f387ec2588cc2862b0d6,3152faa9,[#] #99 : removed MainActivity.instance static context field.,"[#] #99 : removed MainActivity.instance static context field.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489592471,1489592471,6ea9b73208f8e224c6356071abe054a3050f1ee8
+6ea9b73208f8e224c6356071abe054a3050f1ee8,6ea9b732,[#] Updated support lib to 25.3.0.,"[#] Updated support lib to 25.3.0.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489592409,1489592409,231b4b79f2e098e398c986a488d4e72b472727ec
+231b4b79f2e098e398c986a488d4e72b472727ec,231b4b79,"[+] #100 : Now log all the exceptions as ""Non-fatals"" in Crashlytics.","[+] #100 : Now log all the exceptions as ""Non-fatals"" in Crashlytics.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489328687,1489328687,0e66887b1906739b4b405a5fa05997d29653517d
+0e66887b1906739b4b405a5fa05997d29653517d,0e66887b,[#] Bumped version to 2.2.0.,"[#] Bumped version to 2.2.0.
+[#] Bumped Crashlytics to 2.6.7.
+[-] Removed unused images.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489328642,1489328642,b5283fd53507b25249f21a9d467985d29af6c66d
+b5283fd53507b25249f21a9d467985d29af6c66d,b5283fd5,Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop,"Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489252556,1489252556,"c0e1a85956a7f6b0358c1b29702a9f897f4779fe,423fc0a414e7c2b87ce4dc35f39eb5c3c9cf603e"
+c0e1a85956a7f6b0358c1b29702a9f897f4779fe,c0e1a859,"[Fix] Fix #101 : every time the user changes the status, vote or priority of a…","[Fix] Fix #101 : every time the user changes the status, vote or priority of a VN, it is immediately saved in the DB (there is no need to close the activity anymore).
+[Fix] #101 : when a VN is removed from a list, it is now removed from the DB (without having to wait for the next startupClean()).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489252521,1489252521,06dbefb24335dbe78194425087c8f4afdf02fc34
+423fc0a414e7c2b87ce4dc35f39eb5c3c9cf603e,423fc0a4,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1489176050,1489176050,06dbefb24335dbe78194425087c8f4afdf02fc34
+06dbefb24335dbe78194425087c8f4afdf02fc34,06dbefb2,[Fix] Fix #102 : when a socket dies (for another reason than a connection…,"[Fix] Fix #102 : when a socket dies (for another reason than a connection change) and throws an SSLException, we now close it then try to send the request again once (and only once) because it is very likely that the socket just needed to be recreated.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1489174991,1489174991,a6a7716b5c0883a9fab81d53cdb58a634ec7928b
+a6a7716b5c0883a9fab81d53cdb58a634ec7928b,a6a7716b,[#] #100 : Reconfigured Crashlytics for RELEASE mode only.,"[#] #100 : Reconfigured Crashlytics for RELEASE mode only.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488535997,1488535997,77eed152704526bde88770c182afc76df8aa49f4
+77eed152704526bde88770c182afc76df8aa49f4,77eed152,[#] Updated Gradle to 2.3.0.,"[#] Updated Gradle to 2.3.0.
+[#] Updated Build Tools to 25.0.2.
+[#] Updated App Indexing to 10.2.0.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488535971,1488535971,e38f6c5dad743a878044135b5dd2e986f6e2aa03
+e38f6c5dad743a878044135b5dd2e986f6e2aa03,e38f6c5d,"[#] #100 : added ""Last VN visited"", ""VNs size"", ""vnlist size"", ""votelist size""…","[#] #100 : added ""Last VN visited"", ""VNs size"", ""vnlist size"", ""votelist size"" and ""wishlist size"" to Crashlytics bug reports.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488474142,1488474142,261974adad10380471f4dccfb0ea4e92ac5eb2df
+261974adad10380471f4dccfb0ea4e92ac5eb2df,261974ad,#100,"#100
+[-] Removed javax.mail libs and all email-related classes.
+[#] Replaced the FeedbackActivity with a native Android e-mail intent.
+[-] Removed the build date from the device info.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488122900,1488122900,596d7989cfaf4dd73c338ca19187495a6e9474ac
+596d7989cfaf4dd73c338ca19187495a6e9474ac,596d7989,[#] #100 : now initializing Crashlytics only in RELEASE.,"[#] #100 : now initializing Crashlytics only in RELEASE.
+[-] Removed VNDBApplication.applicationContext static Context field.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488122705,1488122705,bc436e585b0e19d1d4efebd46c1ce800d1e41a47
+bc436e585b0e19d1d4efebd46c1ce800d1e41a47,bc436e58,"[Fix] In VNDetailsActivity, now creating a VNDetailsListener for each operation…","[Fix] In VNDetailsActivity, now creating a VNDetailsListener for each operation (using the same one may result in bugs if the network is slow).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488122580,1488122580,7d939689da4a42eb4d12a6ced81d15dcfdc06b43
+7d939689da4a42eb4d12a6ced81d15dcfdc06b43,7d939689,[#] Upgraded support library to 25.2.0.,"[#] Upgraded support library to 25.2.0.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488122474,1488122474,36444ab3b94252038e0b1d9c953d5021ba516c49
+36444ab3b94252038e0b1d9c953d5021ba516c49,36444ab3,"[+] #100 : added Crashlytics as a bug tracker, with basic custom debug info.","[+] #100 : added Crashlytics as a bug tracker, with basic custom debug info.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1488021551,1488021551,dc7aa8bcf20770142e8ab487eff3ca0a330bbdd3
+dc7aa8bcf20770142e8ab487eff3ca0a330bbdd3,dc7aa8bc,2.1.1,"2.1.1
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1485008286,1485008286,43efd75c0b11eca5f03f8feff6bc7e36f17c3720
+43efd75c0b11eca5f03f8feff6bc7e36f17c3720,43efd75c,"[Fix] Fixed a crash with empty accounts only, when showing a ranking, then…","[Fix] Fixed a crash with empty accounts only, when showing a ranking, then opening a deep link, then showing the ranking again (cache reset while it should not).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483875626,1483875626,9365c9fe0c4ec6f5523d11dffc098f3c217322da
+9365c9fe0c4ec6f5523d11dffc098f3c217322da,9365c9fe,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1483793083,1483793083,ef64795d57e8dcc5c1f6a49c3967266806fc08ae
+ef64795d57e8dcc5c1f6a49c3967266806fc08ae,ef64795d,Merge branch 'develop',"Merge branch 'develop'
+
+Conflicts:
+	app/src/main/java/com/booboot/vndbandroid/util/Callback.java
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483791569,1483791569,"e87bf2def929629f9f7b2f7a5425a0c8c9b83a44,0e9307385d4a317dfeee366dbb1ce34c6c0c3e14"
+0e9307385d4a317dfeee366dbb1ce34c6c0c3e14,0e930738,[#] The demo placeholder pictures have been replaced with a Picasso blurred…,"[#] The demo placeholder pictures have been replaced with a Picasso blurred transformation which is much more pleasant and can be published on the Play Store.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483725793,1483725793,e79ce5a3015743ad6832bc7e7173d17df23fd3bd
+e79ce5a3015743ad6832bc7e7173d17df23fd3bd,e79ce5a3,[Fix] Fixed PopupWindow not positioning properly (x offset computation incorrect…,"[Fix] Fixed PopupWindow not positioning properly (x offset computation incorrect by default) in landscape on Android 4.x devices with resolution <= 720px.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483642792,1483642792,c1f3f30a9338e9b84fb3744e6302a44a7d9cc66d
+c1f3f30a9338e9b84fb3744e6302a44a7d9cc66d,c1f3f30a,"[Fix] Now uses support V8 library to blur images, to avoid critical crashes…","[Fix] Now uses support V8 library to blur images, to avoid critical crashes everywhere on Android 4.2 (API 17).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483639678,1483639678,497120989755bc0a9b5bc39a441b721f7689d0d9
+497120989755bc0a9b5bc39a441b721f7689d0d9,49712098,"[Fix] #97 : now saves the VN's id in onSaveInstanceState(), to make sure we can…","[Fix] #97 : now saves the VN's id in onSaveInstanceState(), to make sure we can always retrieve it in onCreate(), even when getIntExtra() has been lost.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483639617,1483639617,2bbc35b072dfe990f1673f0cb2723328ed744e8c
+2bbc35b072dfe990f1673f0cb2723328ed744e8c,2bbc35b0,[-] Removed useless intent filters from the Manifest.,"[-] Removed useless intent filters from the Manifest.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483639436,1483639436,ec44ee0792ba5e314fc699d38b57688c416f0183
+ec44ee0792ba5e314fc699d38b57688c416f0183,ec44ee07,"[Fix] Fixed a bug for the PopupMenu where it was not showing on a click, after…","[Fix] Fixed a bug for the PopupMenu where it was not showing on a click, after being dismissed from a touch outside which was not on the anchor.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483554620,1483554620,3c5be78ee42ebf01556320e92b6501d38e2533fb
+3c5be78ee42ebf01556320e92b6501d38e2533fb,3c5be78e,"[#] #98 : replaced the ""hide already in wishlist"" checkbox with a native one.","[#] #98 : replaced the ""hide already in wishlist"" checkbox with a native one.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483554531,1483554531,71af0d188f67bfae8da683f6bff6f28e8d07ef66
+71af0d188f67bfae8da683f6bff6f28e8d07ef66,71af0d18,[#] #98 : used a native RadioGroup and CheckBox for the spoiler popup menu.,"[#] #98 : used a native RadioGroup and CheckBox for the spoiler popup menu.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483553033,1483553033,fd8b7199da26b80160204f1fca9c7e9e8b495712
+fd8b7199da26b80160204f1fca9c7e9e8b495712,fd8b7199,[Fix] The [spoiler] regex now also match if there are whitespaces in the spoiler.,"[Fix] The [spoiler] regex now also match if there are whitespaces in the spoiler.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483552968,1483552968,a14761a4afc1497c64ce5d67442538bd40482a3b
+a14761a4afc1497c64ce5d67442538bd40482a3b,a14761a4,[Fix] #95 : the toasts don't pile up anymore and only one is always shown at a time.,"[Fix] #95 : the toasts don't pile up anymore and only one is always shown at a time.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483379290,1483379290,b0a6d94880254ba0b22133a8baf42b938639e87a
+b0a6d94880254ba0b22133a8baf42b938639e87a,b0a6d948,[#] Minor: Callback.countDownLatch has been moved to Cache.countDownLatch.,"[#] Minor: Callback.countDownLatch has been moved to Cache.countDownLatch.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483378809,1483378809,d441540e6ab4650ae2ed46f0849ac6d02732f730
+d441540e6ab4650ae2ed46f0849ac6d02732f730,d441540e,[Fix] #95 : now closing the socket if ANY exception occurs during an API request.,"[Fix] #95 : now closing the socket if ANY exception occurs during an API request.
+[Fix] #95 : if VNDB.org returns an empty response, we no longer assume we have been throttled, and just always leave here and now.
+[Fix] We now catch ArrayIndexOutOfBoundsExceptions during InputStream.read(), to properly execute the error callback, because it might exceptionally throw this exception at runtime.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483378573,1483378573,45bff0323deb6a9bd376118727029bc6da802318
+45bff0323deb6a9bd376118727029bc6da802318,45bff032,"[Fix] Removed a countdown latch countDown(), to avoid rare but critical multi-threading bugs.","[Fix] Removed a countdown latch countDown(), to avoid rare but critical multi-threading bugs.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1483377461,1483377461,358ee5a1ee063ba7f060889bb0749e09de4205f7
+358ee5a1ee063ba7f060889bb0749e09de4205f7,358ee5a1,"[#] Preferences : changed the label for ""In-app browser"" (easier to understand).","[#] Preferences : changed the label for ""In-app browser"" (easier to understand).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482860684,1482860684,9a700fc92eb27b57b91f0a2ca478045aac5bd3ae
+9a700fc92eb27b57b91f0a2ca478045aac5bd3ae,9a700fc9,[Fix] Crash due to the recent change a floating label hint.,"[Fix] Crash due to the recent change a floating label hint.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482860649,1482860649,44e13e18012a1051fed63a181965f10018a31be4
+44e13e18012a1051fed63a181965f10018a31be4,44e13e18,[Fix] API < 21 : the app crashed when trying to resolve an ?attr in a @drawable (pre-Lollipop bug).,"[Fix] API < 21 : the app crashed when trying to resolve an ?attr in a @drawable (pre-Lollipop bug).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482860593,1482860593,7a96fe9cd5f0a06726f7c0b11fc4a73f5ecbc030
+7a96fe9cd5f0a06726f7c0b11fc4a73f5ecbc030,7a96fe9c,[-] Removed com.wrapp.floatlabelededittext lib (for the native Android one).,"[-] Removed com.wrapp.floatlabelededittext lib (for the native Android one).
+[#] Upgraded support lib to 25.1.0.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482775935,1482775935,ddf5e14583b8d79859d45da761e7d3374d002733
+ddf5e14583b8d79859d45da761e7d3374d002733,ddf5e145,[+] #78 : configured Google App Indexing.,"[+] #78 : configured Google App Indexing.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482775841,1482775841,e93caf43c9210cea5be2942aadd789f09a7fbe7a
+e93caf43c9210cea5be2942aadd789f09a7fbe7a,e93caf43,[#] About : removed my VNDB profile and rephrase some text.,"[#] About : removed my VNDB profile and rephrase some text.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482774657,1482774657,a2be1e564ea01357d9ca9e9baff7df55c8b4d34a
+a2be1e564ea01357d9ca9e9baff7df55c8b4d34a,a2be1e56,[#] Updated tags and traits.,"[#] Updated tags and traits.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482773464,1482773464,f38e5f455ae31bdb3f12d0aabb282d1f349149d0
+f38e5f455ae31bdb3f12d0aabb282d1f349149d0,f38e5f45,"[Fix] #84 : increased the padding of the indicators on the VN cards, because the…","[Fix] #84 : increased the padding of the indicators on the VN cards, because the shadow was still clipped.
+[#] Increased padding for the VN details header.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482773151,1482773151,c4f569c38275a71ae57cc9122824d98f071ca504
+c4f569c38275a71ae57cc9122824d98f071ca504,c4f569c3,"[+] #78 : the cache is now always loaded before opening the deep link, so the…","[+] #78 : the cache is now always loaded before opening the deep link, so the status, vote and wish of the VN are retrieved.
+[Fix] #78 : better handling for ""empty"" accounts and credentials registered but still not connected.
+[Fix] Fixed an inconsistency for ""empty"" accounts when a VN was removed from a list, then the app was restarted : the VN reappeared in the list because it stayed in the cache.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482433524,1482433524,5067761aa199bcd1c650aa4ab2d3434f90e3da15
+5067761aa199bcd1c650aa4ab2d3434f90e3da15,5067761a,"[Fix] The covers on cards are no longer stretched but cropped, so it looks better.","[Fix] The covers on cards are no longer stretched but cropped, so it looks better.
+[-] Removed textColor=black for the Air theme.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482342730,1482342730,4442ae4380f64c1813f2ab303b0b862991e5d09c
+4442ae4380f64c1813f2ab303b0b862991e5d09c,4442ae43,"[#] #84 : on a VN card, the status, wish and vote indicators are now round chips…","[#] #84 : on a VN card, the status, wish and vote indicators are now round chips with elevation (and that's about 20% cooler, damn prettiest thing I made on this project).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482341658,1482341658,1f5d60437a3f419116be749fab9938af2926d7ae
+1f5d60437a3f419116be749fab9938af2926d7ae,1f5d6043,"[Fix] Set the default username to """" instead of null, to prevent the app from…","[Fix] Set the default username to """" instead of null, to prevent the app from crashing when opening a deep link is the first thing the user does after installing the app.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482258271,1482258271,66cab6ed1e18280b3e0f5e529a5f2f624d503624
+66cab6ed1e18280b3e0f5e529a5f2f624d503624,66cab6ed,[Fix] Replaced the long dash with a simple dash to avoid non-ASCII characters…,"[Fix] Replaced the long dash with a simple dash to avoid non-ASCII characters not showing on old devices.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482257425,1482257425,dca7bf2e71b83fe1f8681f7b79de7c5beb48e430
+dca7bf2e71b83fe1f8681f7b79de7c5beb48e430,dca7bf2e,"[Fix] ""Go back to VN list"" now always returns to the VN list (even if the app was already open).","[Fix] ""Go back to VN list"" now always returns to the VN list (even if the app was already open).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482257385,1482257385,132308df68d06204187c19885931d6744ebeab13
+132308df68d06204187c19885931d6744ebeab13,132308df,[Fix] Set height on PopupWindow so it shows on old Android devices.,"[Fix] Set height on PopupWindow so it shows on old Android devices.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482255371,1482255371,d166d81d3ee5a2b4cb5e5c87ac5b7ea90a75a3b2
+d166d81d3ee5a2b4cb5e5c87ac5b7ea90a75a3b2,d166d81d,[Fix] #90 : leave login() if context is null.,"[Fix] #90 : leave login() if context is null.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482255335,1482255335,272ea8b65e94b14248fab5b1b7afc2af35ae7d81
+272ea8b65e94b14248fab5b1b7afc2af35ae7d81,272ea8b6,[+] #72 : added an elevation to the custom popup window.,"[+] #72 : added an elevation to the custom popup window.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482176014,1482176014,f03c196439056d672abde348fa80261e1e379491
+f03c196439056d672abde348fa80261e1e379491,f03c1964,"[Fix] Fix #92 : the releases and characters (and their associated tables,…","[Fix] Fix #92 : the releases and characters (and their associated tables, including the producers) are now properly updated when we swipe to refresh a VN details page.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482175439,1482175439,8501a7f0aa25a41bec5760efb055d0c1feced5d5
+8501a7f0aa25a41bec5760efb055d0c1feced5d5,8501a7f0,[Fix] #91 : added NPE checks for releases.,"[Fix] #91 : added NPE checks for releases.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1482171158,1482171158,ac5305948a25e5611aff4c9cd359ee9dd094a881
+ac5305948a25e5611aff4c9cd359ee9dd094a881,ac530594,[Fix] Fix #91 : Fixed crash when trying to build a release while release.getLanguages() was null.,"[Fix] Fix #91 : Fixed crash when trying to build a release while release.getLanguages() was null.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481738562,1481738562,2f37b22034eee49975844cae892a43a03700dacb
+2f37b22034eee49975844cae892a43a03700dacb,2f37b220,[Fix] #91 : added a transaction when saving all the VNs in the database in…,"[Fix] #91 : added a transaction when saving all the VNs in the database in VNDetailsActivity.onDestroy() and Cache.loadData() to avoid corrupting the DB.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481737590,1481737590,d3a12404f747ccbdf201d01c5fc9e83e67e62aa7
+d3a12404f747ccbdf201d01c5fc9e83e67e62aa7,d3a12404,[Fix] #91 : never try to insert in the database a VN with a list attribute null…,"[Fix] #91 : never try to insert in the database a VN with a list attribute null (languages, platforms, animes, relations...).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481737519,1481737519,da2a255da105c13f444b0409e67e27715e3f572d
+da2a255da105c13f444b0409e67e27715e3f572d,da2a255d,[Fix] Fixed crashes trying to show toasts with a null context.,"[Fix] Fixed crashes trying to show toasts with a null context.
+[#] Quick minor refactoring.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481472664,1481472664,e71236cc8eb6a624eefe27446988fd2d65a19a35
+e71236cc8eb6a624eefe27446988fd2d65a19a35,e71236cc,"[+] #78 : disabling deep linking if the user clicks on ""Open in VNDB.org"".","[+] #78 : disabling deep linking if the user clicks on ""Open in VNDB.org"".
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481466380,1481466380,a166b8f3a7fa3a028448e8699dcf7a31031bd87d
+a166b8f3a7fa3a028448e8699dcf7a31031bd87d,a166b8f3,[+] #78 : VNDB.org links are now recognized and opened in a VN details page…,"[+] #78 : VNDB.org links are now recognized and opened in a VN details page (even if the app is not started). The splash screen is displayed while the app resolves the VN and fetches the data from the API, for a better UX.
+[+] #78 : ""Go back to your VN list"" option in the VN details page, which helps the user go back to their list after opening a deep link (because it would not be accessible otherwise, unless the user closes the activity, then reopen the app from the home screen).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481412381,1481412381,31452e974420d36cabc78bd72588a37d010e50a9
+31452e974420d36cabc78bd72588a37d010e50a9,31452e97,"[Fix] Sockets are now closed synchronously, which prevents bugs after an API…","[Fix] Sockets are now closed synchronously, which prevents bugs after an API error, especially during pipelining like the login phase.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481411941,1481411941,9585d8b65f8eec30d4e30e04eda47fb60139f4b6
+9585d8b65f8eec30d4e30e04eda47fb60139f4b6,9585d8b6,"[Fix] Fixed Picasso randomly not loading the VN cover, by keeping a strong…","[Fix] Fixed Picasso randomly not loading the VN cover, by keeping a strong reference to the Target instance used to display it.
+[#] VN cover: ImageButton -> ImageView.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481411819,1481411819,d67815e57f90805c90471747733f3c31afc44c81
+d67815e57f90805c90471747733f3c31afc44c81,d67815e5,[#] Upgraded client version to 2.1.,"[#] Upgraded client version to 2.1.
+[#] Upgraded Gradle to 2.2.3.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1481411420,1481411420,9c5a1ebd3d0334023d4669f86f6c99da56fdecad
+9c5a1ebd3d0334023d4669f86f6c99da56fdecad,9c5a1ebd,"[+] Fix #74 : ""Hide already in wishlist"" checkbox now working and saved persistently.","[+] Fix #74 : ""Hide already in wishlist"" checkbox now working and saved persistently.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1480698377,1480698377,76450dac03c679662dbe20eb7137c218b6b7015c
+76450dac03c679662dbe20eb7137c218b6b7015c,76450dac,Fix #80.,"Fix #80.
+[-] Removed an old error handling in VNDBServer, which fetched the data from the database in case of SocketException, corrupted the variables, especially Cache.vns, and made the app crash afterwards with strange, random and hard-to-debug exceptions (was used in the early days when the cache was fetched dynamically in case of error, and not at every startup).
+[-] Removed the fields Options.useCacheIfError and VNDBServer.useCacheIfError (obsolete since 2.0).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1480621141,1480621141,ac34608a53893bc5304e09e2f233d866a3d99cf4
+ac34608a53893bc5304e09e2f233d866a3d99cf4,ac34608a,"[+] #74 : ""Hide already in wishlist"" menu in recommendations fragment (not functional).","[+] #74 : ""Hide already in wishlist"" menu in recommendations fragment (not functional).
+[#] Refactored the popup windows creation in a separate factory.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1480364192,1480364192,25f60a45dbcb1ec868afd591a1f2c7ddb0f18e94
+25f60a45dbcb1ec868afd591a1f2c7ddb0f18e94,25f60a45,[Fix] Fixed scroll not beginning at top on login activity.,"[Fix] Fixed scroll not beginning at top on login activity.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1480364087,1480364087,d9b1e85d363f0e24ceef581e23fcf580c3245051
+d9b1e85d363f0e24ceef581e23fcf580c3245051,d9b1e85d,[#] Fix #83 : ImageLoader -> Picasso (also cleans old ImageLoader's cache).,"[#] Fix #83 : ImageLoader -> Picasso (also cleans old ImageLoader's cache).
+[#] It is no longer possible to choose the position of the blurred VN background, only ""show it or don't"" (really simplifies the code and less buggy).
+[#] Redesigned the ""spoiler level popup"" with a PopupWindow so I can put a fucking divider inside it.
+[+] Fix #72 : added a NSFW switch inside the VN page.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1480176023,1480176023,a0aefb7afb777310ebe9bbdb0dda49e7d18ef890
+a0aefb7afb777310ebe9bbdb0dda49e7d18ef890,a0aefb7a,[Fix] VN cards list has a wrong padding right.,"[Fix] VN cards list has a wrong padding right.
+",,,,Thomas HERBETH,therbeth@citizencam.eu,Thomas HERBETH,therbeth@citizencam.eu,1479905081,1479905081,9aec38204d2603ef536307329785455313a550b7
+9aec38204d2603ef536307329785455313a550b7,9aec3820,[-] Removed MaterialListView lib (discontinued and didn't give enough control over the layouts).,"[-] Removed MaterialListView lib (discontinued and didn't give enough control over the layouts).
+[+] Recreated all the card lists with a custom RecyclerView.
+[#] #84 : there are now 3 buttons on each VN card (for the status, wish and vote).
+[#] Refactored ""listener"" and ""view"" packages inside subpackages of ""adapter"".
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479844464,1479844464,1a736bbfc3505749a4858587ec546924fb027c9f
+e87bf2def929629f9f7b2f7a5425a0c8c9b83a44,e87bf2de,[Fix] Rare crash trying to show a toast with a null context.,"[Fix] Rare crash trying to show a toast with a null context.
+",,,,Thomas HERBETH,therbeth@citizencam.eu,Thomas HERBETH,therbeth@citizencam.eu,1479805279,1479805279,38aa7ed266c9c5ef7a5697c3b2ae3827fed5a257
+1a736bbfc3505749a4858587ec546924fb027c9f,1a736bbf,"[#] Simplified a lot the ""find a good text color according to whether the VN…","[#] Simplified a lot the ""find a good text color according to whether the VN background is there or not"" function.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479645787,1479645787,da804e92ba715414922848e439223d2ff9a81048
+da804e92ba715414922848e439223d2ff9a81048,da804e92,[+] We can now choose in the preferences the background position of the blurred…,"[+] We can now choose in the preferences the background position of the blurred cover (whole page, header only or none) and all the text colors adjust accordingly.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479643796,1479643796,41f3e1c8ed5823cabc8eae89f4b0189e85bf1e02
+41f3e1c8ed5823cabc8eae89f4b0189e85bf1e02,41f3e1c8,[Fix] Fixed a long-standing glitch in the login activity with the scrollview.,"[Fix] Fixed a long-standing glitch in the login activity with the scrollview.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479577611,1479577611,efe8587c7b663de9e42b26ea69b2f445e15f76d4
+efe8587c7b663de9e42b26ea69b2f445e15f76d4,efe8587c,[Fix] The top progress bar no longer takes a small grey space when it's not displaying.,"[Fix] The top progress bar no longer takes a small grey space when it's not displaying.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479563515,1479563515,2a69310200103c87102a4e0168d109bdadd83332
+2a69310200103c87102a4e0168d109bdadd83332,2a693102,[+] Fix #59 : now uses a darken blurred version of the VN cover as a background…,"[+] Fix #59 : now uses a darken blurred version of the VN cover as a background for the VN details activity. :)
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479561858,1479561858,38aa7ed266c9c5ef7a5697c3b2ae3827fed5a257
+38aa7ed266c9c5ef7a5697c3b2ae3827fed5a257,38aa7ed2,[+] v2.0.9,"[+] v2.0.9
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479491441,1479491441,f4a5422fd9209cc527b7ab523db894ee518dbd41
+f4a5422fd9209cc527b7ab523db894ee518dbd41,f4a5422f,"[Fix] Fixed critical crash at startup by fixing the sort algorithm, with some…","[Fix] Fixed critical crash at startup by fixing the sort algorithm, with some really specific conditions (cf. changelog for details).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1479491403,1479491403,f93e1e0ebb7fab2eb37b5875b72b7926bed80826
+f93e1e0ebb7fab2eb37b5875b72b7926bed80826,f93e1e0e,[Fix] Fix #82.,"[Fix] Fix #82.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1478969327,1478969327,ea92cf255994278b2ea215dddebbd9cad054c353
+ea92cf255994278b2ea215dddebbd9cad054c353,ea92cf25,[Fix] Critical crash at every startup after removing a VN from one's lists: the…,"[Fix] Critical crash at every startup after removing a VN from one's lists: the VN was removed from TABLE_VN but not TABLE_VNLIST.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1478968932,1478968932,528f6ab46298172701204b5761c662752ded16d9
+528f6ab46298172701204b5761c662752ded16d9,528f6ab4,[Fix] Crash when the lightbox tried to show while the activity was already gone.,"[Fix] Crash when the lightbox tried to show while the activity was already gone.
+[+] Set up some debug trace to understand an NPE.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1478858773,1478858773,d71d3b585888ed50d58f464f2c75bbe50800fb70
+d71d3b585888ed50d58f464f2c75bbe50800fb70,d71d3b58,"[Fix] On a VN details page, removing the VN from the lists then flipping the…","[Fix] On a VN details page, removing the VN from the lists then flipping the device no longer makes the app crash.
+[Fix] Memory leak with the connection receiver when flipping the device.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477909672,1477909672,b75a02c8a8a24957af8a90308207307bb516f58a
+b75a02c8a8a24957af8a90308207307bb516f58a,b75a02c8,"[Fix] In Nougat, the BroadcastReceiver didn't work because it now has to be…","[Fix] In Nougat, the BroadcastReceiver didn't work because it now has to be registered outside the manifest.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477838970,1477838970,830d26c5f2338e62bcd2c87e9693cecad8aff4cd
+830d26c5f2338e62bcd2c87e9693cecad8aff4cd,830d26c5,[#] #20 : Reverted back to Java 7.,"[#] #20 : Reverted back to Java 7.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477838100,1477838100,a092a18d89e21bab2e7957c01331dd247bdc50ea
+a092a18d89e21bab2e7957c01331dd247bdc50ea,a092a18d,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477832581,1477832581,"d6384a0c7b489dc06101dea6865c7c84b80c4610,fb7ce37d631ec578ee473fc9c03bdf71d8ae5d3d"
+d6384a0c7b489dc06101dea6865c7c84b80c4610,d6384a0c,[#] MailService : outlook.com -> laposte.net because of the security issue...,"[#] MailService : outlook.com -> laposte.net because of the security issue...
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477832403,1477832558,a0091119922b45144acbf9c9ac845c620a67592f
+a0091119922b45144acbf9c9ac845c620a67592f,a0091119,Fix #20,"Fix #20
+[#] Upgraded to Java 8.
+[#] Integrated lambda expressions wherever possible.
+[#] Build tools 23.0 -> 24.0.
+[#] Refactored Lightbox to avoid Java 8 nested blocks errors and window leaks upon flipping the device.
+[#] Put "" ? "" and "" ? "" characters in strings.xml to avoid Java 8 encoding problems.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477832356,1477832557,533dafc29bee7f7e623384893d30802fe1c5e9d8
+fb7ce37d631ec578ee473fc9c03bdf71d8ae5d3d,fb7ce37d,[#] MailService : outlook.com -> laposte.net because of the security issue...,"[#] MailService : outlook.com -> laposte.net because of the security issue...
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477832403,1477832403,b53d3cb8d66779918a4819417f3938c483dd9e97
+b53d3cb8d66779918a4819417f3938c483dd9e97,b53d3cb8,[#] Upgraded to Java 8.,"[#] Upgraded to Java 8.
+[#] Integrated lambda expressions wherever possible.
+[#] Build tools 23.0 -> 24.0.
+[#] Refactored Lightbox to avoid Java 8 nested blocks errors and window leaks upon flipping the device.
+[#] Put "" • "" and "" ‒ "" characters in strings.xml to avoid Java 8 encoding problems.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477832356,1477832356,533dafc29bee7f7e623384893d30802fe1c5e9d8
+533dafc29bee7f7e623384893d30802fe1c5e9d8,533dafc2,[Fix] Fixed typo when creating the information submenu.,"[Fix] Fixed typo when creating the information submenu.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477828270,1477828270,8645b34cf599a71ae3af0049cad86c54176fb050
+8645b34cf599a71ae3af0049cad86c54176fb050,8645b34c,"[Fix] When a VN was added to the list outside of the app, the background update…","[Fix] When a VN was added to the list outside of the app, the background update fetched all the VNs instead of just the new one (since commit 8dd9b2c).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477827278,1477827278,ee4d7391c307d8c9eeb1aa6792655633b11ceae9
+ee4d7391c307d8c9eeb1aa6792655633b11ceae9,ee4d7391,"[+] Fix #71 : Developers' name in the ""Information"" submenu.","[+] Fix #71 : Developers' name in the ""Information"" submenu.
+[Fix] The producers' fields were wrong when fetching them with SQLite (wrong column number because of a join).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477757983,1477757983,202379a7ae6a3675cfcb779cce320d33eae9493e
+202379a7ae6a3675cfcb779cce320d33eae9493e,202379a7,[Fix] Fixed yet again the number of cards per row.,"[Fix] Fixed yet again the number of cards per row.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477674546,1477674546,69f1a532a907cec971b42644e1d9b7b7004434ea
+69f1a532a907cec971b42644e1d9b7b7004434ea,69f1a532,[Fix] Fixed number of cards per row when in multi-window mode (Nougat-only).,"[Fix] Fixed number of cards per row when in multi-window mode (Nougat-only).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477596709,1477596709,c4ec8df30e52bf63d5495e3eb3d8364e7863099a
+c4ec8df30e52bf63d5495e3eb3d8364e7863099a,c4ec8df3,[Fix] Fixed all SQLite crashes upon inserting duplicate entries.,"[Fix] Fixed all SQLite crashes upon inserting duplicate entries.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477589672,1477589672,525cf5ed85956f58f42a9cd6c989425556b49b04
+525cf5ed85956f58f42a9cd6c989425556b49b04,525cf5ed,"[Fix] Login : when the password is incorrect, the socket is closed to avoid…","[Fix] Login : when the password is incorrect, the socket is closed to avoid subsequent errors even when the new passwords are correct!
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477588122,1477588122,95545585abed54cbc26f9d112b5fb4a5a9ed0ec8
+95545585abed54cbc26f9d112b5fb4a5a9ed0ec8,95545585,"[Fix] Fix #80 : even when the VN is not supposed to be null locally, we call the…","[Fix] Fix #80 : even when the VN is not supposed to be null locally, we call the generic method which checks that the VN actually is not null, and fetch it again otherwise. Did it everytime the VN details activity is launched to avoid any crash while opening it.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477587638,1477587638,e0761531f5395fd5fb3ba3be40bd550516fb76c2
+e0761531f5395fd5fb3ba3be40bd550516fb76c2,e0761531,[#] Upgraded Gradle to 2.2.2.,"[#] Upgraded Gradle to 2.2.2.
+[#] Upgraded target API to 25 (7.1).
+[#] Updated tags.json + traits.json.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1477587483,1477587483,42f2588602d112de6d8759773823f85fc5e8cb3f
+42f2588602d112de6d8759773823f85fc5e8cb3f,42f25886,"[Fix] Fix #80 : when removing a VN from one's lists, then adding notes to it,…","[Fix] Fix #80 : when removing a VN from one's lists, then adding notes to it, then leaving the page, then attempting to go back to it through search results, the activity crashed.
+[Fix] Implemented a fix to avoid inserting duplicate entries in TABLE_VN_RELEASE which crashed the app in some rare cases.
+[#] Upgraded target SDK to Nougat.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1476732691,1476732691,b4f67725548a3eaa05940b0f46f2c51ca27c9fb8
+b4f67725548a3eaa05940b0f46f2c51ca27c9fb8,b4f67725,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1476353089,1476353089,"5c305f3016589cf4274516eb2793f2bc3f3a988b,4196ded059cd958880dbd25066f0888254ed2cd3"
+5c305f3016589cf4274516eb2793f2bc3f3a988b,5c305f30,[Fix] Feedbacks were not sent due to a recent Gmail security update. Now uses Outlook.,"[Fix] Feedbacks were not sent due to a recent Gmail security update. Now uses Outlook.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1476353067,1476353067,2677c7b22262094b8ad1dbf6505a0b820f9fde6a
+4196ded059cd958880dbd25066f0888254ed2cd3,4196ded0,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1476098616,1476098616,2677c7b22262094b8ad1dbf6505a0b820f9fde6a
+2677c7b22262094b8ad1dbf6505a0b820f9fde6a,2677c7b2,[Fix] Themes are now stored in SharedPreferences with an arbitrary ID (rather…,"[Fix] Themes are now stored in SharedPreferences with an arbitrary ID (rather than the R.style.* ID which was not fixed and caused immediate crashes upon updating the app).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1475925240,1475925240,c6a91735aecc725c7e87422a5e6789174dfc291b
+c6a91735aecc725c7e87422a5e6789174dfc291b,c6a91735,"[Fix] Sorting by released date, length, popularity or rating in reverse order didn't work.","[Fix] Sorting by released date, length, popularity or rating in reverse order didn't work.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1475922039,1475922039,566748d570b2e50d46f22ac6d2b53a5fd8860405
+566748d570b2e50d46f22ac6d2b53a5fd8860405,566748d5,[#] Changed VNStat's API URL to production.,"[#] Changed VNStat's API URL to production.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1475049413,1475049413,6e7ac35067be4bd8f454c094667fdef4e2823254
+6e7ac35067be4bd8f454c094667fdef4e2823254,6e7ac350,"[Fix] On some old devices, SQLite could only insert 500 rows at a time. This has…","[Fix] On some old devices, SQLite could only insert 500 rows at a time. This has been fixed by inserting all elements by batch of 500.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474650256,1474650256,ad38b9ef12e0992245638eca48281fd5f3ab1bb6
+ad38b9ef12e0992245638eca48281fd5f3ab1bb6,ad38b9ef,"[Fix] #34 : the ""your lists are private"" warning now displays only in the…","[Fix] #34 : the ""your lists are private"" warning now displays only in the background OR only in a toast (not both at the same time).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474650177,1474650177,384c0c8c1acefcf065ccea72a4880a4b989acd4b
+384c0c8c1acefcf065ccea72a4880a4b989acd4b,384c0c8c,[Fix] Small devices can now display the search submit button. Top search bar for…,"[Fix] Small devices can now display the search submit button. Top search bar for large devices now takes more space.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474650027,1474650027,baf8500901dde05335cfee07550e11b9b37c71c9
+baf8500901dde05335cfee07550e11b9b37c71c9,baf85009,"[Fix] Fix for API < 21 devices that don't support "" ?attr "" in XML (applied to…","[Fix] Fix for API < 21 devices that don't support "" ?attr "" in XML (applied to token_background.xml).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474649943,1474649943,06dbdb14121acbcc7fd8dc78775790fe050efdd0
+06dbdb14121acbcc7fd8dc78775790fe050efdd0,06dbdb14,"[Fix] Scroll in search activity was a bit messed up when there was no result,…","[Fix] Scroll in search activity was a bit messed up when there was no result, then doing another search with results.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474564099,1474564099,6ad8a2242fcc4c1086d28018bd9ddfcb3511d43e
+6ad8a2242fcc4c1086d28018bd9ddfcb3511d43e,6ad8a224,[Fix] Fixed Github link.,"[Fix] Fixed Github link.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1474563984,1474563984,5a9e6cc24290bb0b09287eab3829a9722a664eb7
+5a9e6cc24290bb0b09287eab3829a9722a664eb7,5a9e6cc2,Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop,"Merge branch 'develop' of https://github.com/herbeth1u/VNDB-Android into develop
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1474545929,1474545929,"cc52ac7d9ac23bd0388434dcfeb739e5eea5b49f,4f864e6f245ac16a08e2ccd8c782ffc2051612b1"
+cc52ac7d9ac23bd0388434dcfeb739e5eea5b49f,cc52ac7d,[Fix] Removed LoginActivity.instance to avoid exceptional NPE crashes upon logging out.,"[Fix] Removed LoginActivity.instance to avoid exceptional NPE crashes upon logging out.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1474539720,1474539720,bbafa05d23ca753327c822a1d57ccf81cc997a11
+4f864e6f245ac16a08e2ccd8c782ffc2051612b1,4f864e6f,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1473433873,1473433873,c38b4683c7a2c4c2c83db0367be0dd9f89ab871f
+c38b4683c7a2c4c2c83db0367be0dd9f89ab871f,c38b4683,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,GitHub,noreply@github.com,1473433295,1473433295,bbafa05d23ca753327c822a1d57ccf81cc997a11
+bbafa05d23ca753327c822a1d57ccf81cc997a11,bbafa05d,[#] Changed my profile link on About page.,"[#] Changed my profile link on About page.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1473344510,1473344510,648c922f16a8d6335a849c1dbc1178408c54f809
+648c922f16a8d6335a849c1dbc1178408c54f809,648c922f,[+] #53 : all links are now compatible with Chrome custom tabs.,"[+] #53 : all links are now compatible with Chrome custom tabs.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1473344370,1473344370,b27797def5f7bf50e5e138ca0f8f0f4da9abb055
+b27797def5f7bf50e5e138ca0f8f0f4da9abb055,b27797de,[Fix] #68 : some security fix to avoid exceptional crash while changing account.,"[Fix] #68 : some security fix to avoid exceptional crash while changing account.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1473258195,1473258587,6d9a3a9efc01dda0f4be327406837c16c2e29777
+6d9a3a9efc01dda0f4be327406837c16c2e29777,6d9a3a9e,[Fix] #34 : the refresh icon wasn't hidden in case of error.,"[Fix] #34 : the refresh icon wasn't hidden in case of error.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1473258154,1473258154,7825cb0507d47de978c9198ee93ef8c06897bde7
+7825cb0507d47de978c9198ee93ef8c06897bde7,7825cb05,[+] #53 : link to Noslyl's reddit on About page.,"[+] #53 : link to Noslyl's reddit on About page.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1473258117,1473258117,8335540f94d028b7a3b1b4ef2d2b12ab37ddc261
+8335540f94d028b7a3b1b4ef2d2b12ab37ddc261,8335540f,[#] Better quality for background info's logo.,"[#] Better quality for background info's logo.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472810975,1472810975,018de85735aa52ca0fb578ce70f1a7fabc538c17
+018de85735aa52ca0fb578ce70f1a7fabc538c17,018de857,[+] #34 : user ID is now properly saved in SharedPreferences and deleted when logging out.,"[+] #34 : user ID is now properly saved in SharedPreferences and deleted when logging out.
+[+] #34 : detailed background message when the user hasn't been found on VNStat (because their lists aren't public).
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472810739,1472810739,f776ccd5557bd9a88e3d71e16ae808c2a800728e
+f776ccd5557bd9a88e3d71e16ae808c2a800728e,f776ccd5,[+] #34 : added a pretty message if the recommendations are empty.,"[+] #34 : added a pretty message if the recommendations are empty.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472744236,1472744236,ab454f46fcfe8890f96b4095510feee831d70caa
+ab454f46fcfe8890f96b4095510feee831d70caa,ab454f46,[+] #34 : get user id from VNDB and use it to fetch the right recommendations.,"[+] #34 : get user id from VNDB and use it to fetch the right recommendations.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472736134,1472736134,f5a3b36125e8976c5ac95e8d21fdf8d9e0a42dad
+f5a3b36125e8976c5ac95e8d21fdf8d9e0a42dad,f5a3b361,[+] #34 : user recommendations (everything's ok except using the correct user id).,"[+] #34 : user recommendations (everything's ok except using the correct user id).
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472659283,1472659283,248b34c4479557742e2a13d2bb930cbcb068db55
+248b34c4479557742e2a13d2bb930cbcb068db55,248b34c4,[Fix] Some card list fragments didn't have the gray background.,"[Fix] Some card list fragments didn't have the gray background.
+",,,,Thomas Herbeth,thomas.herbeth@gmail.com,Thomas Herbeth,thomas.herbeth@gmail.com,1472659201,1472659201,f10ac08fe05d172b1c71685f80c2b14f9e4f516d
+f10ac08fe05d172b1c71685f80c2b14f9e4f516d,f10ac08f,[Fix] Improved caching (especially offline) for dbstats.,"[Fix] Improved caching (especially offline) for dbstats.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1472297168,1472297168,9882b1d8d694ea077f708bf4b4c90acc8ea60351
+9882b1d8d694ea077f708bf4b4c90acc8ea60351,9882b1d8,[Fix] Improved paddings in submenus.,"[Fix] Improved paddings in submenus.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1472295298,1472295298,813cfe632eb17d34e46e219ad9232550578adfb3
+813cfe632eb17d34e46e219ad9232550578adfb3,813cfe63,[+] Fix #64 : we can now pull to refresh a VN.,"[+] Fix #64 : we can now pull to refresh a VN.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1472244764,1472244764,01c437713b23b34254a7f1b94fe48ada3b1e78fc
+01c437713b23b34254a7f1b94fe48ada3b1e78fc,01c43771,[+] #64 : Added a pull-to-refresh action in VN details view.,"[+] #64 : Added a pull-to-refresh action in VN details view.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1471461082,1471461082,b35e704c882ed02deebb086e5717be982d1677cd
+b35e704c882ed02deebb086e5717be982d1677cd,b35e704c,[#] Upgraded Gradle to 2.14.1.,"[#] Upgraded Gradle to 2.14.1.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1471461044,1471461044,1891c2d3449d9e6fac958818cd5caf1afb2ecfac
+1891c2d3449d9e6fac958818cd5caf1afb2ecfac,1891c2d3,[#] Changed Angelic Serenade theme's colors.,"[#] Changed Angelic Serenade theme's colors.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1471458789,1471458789,4c526a541ed75d4debc13ecb8b8c4b6cc4b4425f
+4c526a541ed75d4debc13ecb8b8c4b6cc4b4425f,4c526a54,[#] #64 : Cards' tag is now just the VN's id and not the full serialized VN…,"[#] #64 : Cards' tag is now just the VN's id and not the full serialized VN (faster, avoid some extra API queries and avoid showing out-of-date data in VN details view).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1470855290,1470855290,5bb051e2700164a3d55a92c18a7f4c14b52df533
+5bb051e2700164a3d55a92c18a7f4c14b52df533,5bb051e2,[#] Fix #66 : quick optimization when computing tab counters.,"[#] Fix #66 : quick optimization when computing tab counters.
+[-] Removed obsolete predicate classes.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1470852856,1470852856,8dd9b2cce1e509c78674bcab2b97efa586ebb4c9
+8dd9b2cce1e509c78674bcab2b97efa586ebb4c9,8dd9b2cc,"[+] Fix #63 : At startup, the database is cleaned of all elements that are not…","[+] Fix #63 : At startup, the database is cleaned of all elements that are not in any list, to lighten the database from obsolete data.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1470678669,1470678669,bf4cb0ed4db211882098bb3e3e89792fe6dfc59f
+bf4cb0ed4db211882098bb3e3e89792fe6dfc59f,bf4cb0ed,[Fix] #34 : Avoid crash when VNStat returns success=false (likely because the VN…,"[Fix] #34 : Avoid crash when VNStat returns success=false (likely because the VN is not listed on VNStat).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1470678597,1470678597,738163a2dba6ce7d01fbd11b661c9be407f171a3
+738163a2dba6ce7d01fbd11b661c9be407f171a3,738163a2,[Fix] Fix #65.,"[Fix] Fix #65.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1470678497,1470678497,3a0e039284b8209e8d6636b8910b584b901144e7
+3a0e039284b8209e8d6636b8910b584b901144e7,3a0e0392,[#] Quick optimization.,"[#] Quick optimization.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469798683,1469798683,f4fabc852a252b3d84daf2b33a0276bbdfba8100
+f4fabc852a252b3d84daf2b33a0276bbdfba8100,f4fabc85,[+] Added VNStat on About page.,"[+] Added VNStat on About page.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469712657,1469712657,ef3cff2940070a10c93e585584bf5e91f961ff40
+ef3cff2940070a10c93e585584bf5e91f961ff40,ef3cff29,[+] #63 #34 : Similar novels are now stored and retrieved from database.,"[+] #63 #34 : Similar novels are now stored and retrieved from database.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469708982,1469708982,e378bfcad66316cbe3b4a27625bb3878f9fc0882
+e378bfcad66316cbe3b4a27625bb3878f9fc0882,e378bfca,"[+] #34 #63 : New ""Similar novels"" submenu which uses the brand-new VNStat's API.","[+] #34 #63 : New ""Similar novels"" submenu which uses the brand-new VNStat's API.
+[#] Created subpackages under ""bean"".
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469627631,1469627631,00d37ff3d8bcfdeb554ef072400d098eec32e878
+00d37ff3d8bcfdeb554ef072400d098eec32e878,00d37ff3,[+] #63 : Loaded all other submenus on click! Startup time is now fully optimized.,"[+] #63 : Loaded all other submenus on click! Startup time is now fully optimized.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469455510,1469455510,f5cc607390c002d2889b6f985d5790e96b95c2d7
+f5cc607390c002d2889b6f985d5790e96b95c2d7,f5cc6073,[#] #63 : Refactored submenu data fetching into VNDetailsActivity.initSubmenu().,"[#] #63 : Refactored submenu data fetching into VNDetailsActivity.initSubmenu().
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469440488,1469440488,3b78b7ba034ab07053ad77dd968a10b6ea4cec36
+3b78b7ba034ab07053ad77dd968a10b6ea4cec36,3b78b7ba,[+] #63 : Languages are no longer fetched at startup but the first time the…,"[+] #63 : Languages are no longer fetched at startup but the first time the ""Languages"" submenu is clicked.
+[#] #63 : Refactoring to simplify the creation of submenus.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469289180,1469289180,07a8e7b135f4f32182a94030879e103ce272d992
+07a8e7b135f4f32182a94030879e103ce272d992,07a8e7b1,[Fix] #63 : Submenu loading icon now rotates in the right direction.,"[Fix] #63 : Submenu loading icon now rotates in the right direction.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469191366,1469191366,db4aa473277faabca17b4146b205fd547066ba87
+db4aa473277faabca17b4146b205fd547066ba87,db4aa473,[+] #63 : Releases now loaded on click.,"[+] #63 : Releases now loaded on click.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469191190,1469191190,c094c73a12bc19a3102a026047b06b8d438f7621
+c094c73a12bc19a3102a026047b06b8d438f7621,c094c73a,[+] #63 : INSERT and SELECT releases from database.,"[+] #63 : INSERT and SELECT releases from database.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1469109937,1469109937,e7c3271b41eb18ceea0d230b3e76dc6953eb500b
+e7c3271b41eb18ceea0d230b3e76dc6953eb500b,e7c3271b,[+] #63 : Characters are now stored in the database and retrieved upon clicking on the submenu.,"[+] #63 : Characters are now stored in the database and retrieved upon clicking on the submenu.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468941175,1468941175,b23dada32fa120a97761b24bd5911146c172b745
+b23dada32fa120a97761b24bd5911146c172b745,b23dada3,[Fix] The sockets are now reset every time the connection changes (and no longer…,"[Fix] The sockets are now reset every time the connection changes (and no longer only when it is lost) to avoid dead sockets when switching from Wifi to 3G.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468916235,1468916235,325c960235db298cece0933a9816f8b1808d6bf1
+325c960235db298cece0933a9816f8b1808d6bf1,325c9602,[+] Now displays app logo on splash screen.,"[+] Now displays app logo on splash screen.
+[#] Slightly changed the unexpected error screen message.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468870778,1468870778,775dc081e8e3eb6d7d37e7da840fe7ece7959bbc
+775dc081e8e3eb6d7d37e7da840fe7ece7959bbc,775dc081,[Fix] #58 : typo that made the details view crash if no anime.,"[Fix] #58 : typo that made the details view crash if no anime.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468849550,1468849550,10475aae7a495b26fbb3658251b9f0109ab6f538
+10475aae7a495b26fbb3658251b9f0109ab6f538,10475aae,[Fix] Upon clicking on a character with a character above hidden by the current…,"[Fix] Upon clicking on a character with a character above hidden by the current spoiler level, the wrong character details were displayed (because we always fetched the character offset from the complete list of characters). This info is now identified by the character's id to avoid these errors in the future.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468849126,1468849126,ca364823623a4b74b18b9caf61e85fa069f17a0d
+ca364823623a4b74b18b9caf61e85fa069f17a0d,ca364823,[+] #63 : Characters now load only on group click. Displays a rotating loader while loading.,"[+] #63 : Characters now load only on group click. Displays a rotating loader while loading.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468847634,1468847634,263d868f89f8ed581cdb2cdf2007c64092da61b6
+263d868f89f8ed581cdb2cdf2007c64092da61b6,263d868f,[+] Orange splash screen (instead of the default white one).,"[+] Orange splash screen (instead of the default white one).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468784132,1468784132,4724eb8dd13cf9be7316f644a161fc6d1a06b6c7
+4724eb8dd13cf9be7316f644a161fc6d1a06b6c7,4724eb8d,"[+] #58 : Added ""screens"" table to the database. Database is now fully functional.","[+] #58 : Added ""screens"" table to the database. Database is now fully functional.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468771330,1468771330,9990716a3a2f395e3e5b848924528949a71762ce
+9990716a3a2f395e3e5b848924528949a71762ce,9990716a,[#] #49 : Optimized waiting time upon throttled error.,"[#] #49 : Optimized waiting time upon throttled error.
+[Fix] #49 : When the undocumented throttling occurs, it is now treated as a standard throttling error so that it doesn't fail (though this error doesn't seem to occur anymore now).
+[FIx] #58 : Database was not properly cleared when logging out.
+[-] #58 : Removed obsolete cache files processing in Cache.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468768844,1468768844,a5a529733f3b3996c40aa8947170120c6d136afc
+a5a529733f3b3996c40aa8947170120c6d136afc,a5a52973,[+] #58 : Putting it all together : the cache is now filled and loaded from the database.,"[+] #58 : Putting it all together : the cache is now filled and loaded from the database.
+[+] #58 : Empty database upon logging out.
+[+] #58 : Put all database methods in transactions.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468705355,1468705355,8ec44812bc42ed701f4061ed82daf14da4471c3e
+8ec44812bc42ed701f4061ed82daf14da4471c3e,8ec44812,"[+] #58 : Methods to load VNLIST, VOTELIST, WISHLIST and VNS from the database…","[+] #58 : Methods to load VNLIST, VOTELIST, WISHLIST and VNS from the database into static variables.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468680990,1468680990,c7a7c77ee5e81a7dc5cd4527ec7639a23b3a5cc3
+c7a7c77ee5e81a7dc5cd4527ec7639a23b3a5cc3,c7a7c77e,[+] #58 : Insert into VN table.,"[+] #58 : Insert into VN table.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468595421,1468595421,4f4e20d409d85ce5a1c84cca077b80099570184b
+4f4e20d409d85ce5a1c84cca077b80099570184b,4f4e20d4,[+] Insert and update VOTELIST and WISHLIST table.,"[+] Insert and update VOTELIST and WISHLIST table.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468531102,1468531102,499f7c27c767af3adf32f59d974793bba492438c
+499f7c27c767af3adf32f59d974793bba492438c,499f7c27,[+] #58 : Created an SQLite database with all the necessary tables.,"[+] #58 : Created an SQLite database with all the necessary tables.
+[#] #63 : Characters and released are no longer fetched from cache at startup.
+[+] #58 : Insert and update VNLIST table.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468509007,1468509007,69d8a96c3db88605ac688ac07a8504159a61df0b
+69d8a96c3db88605ac688ac07a8504159a61df0b,69d8a96c,[Fix] #55 : Cache.shouldSendGetVn() now returns true only for items that have…,"[Fix] #55 : Cache.shouldSendGetVn() now returns true only for items that have been added (modified items are directly updated in the cache).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468444146,1468444146,b47d7e6b6af6dc9b422bbee55d6a93ea02a04ebf
+b47d7e6b6af6dc9b422bbee55d6a93ea02a04ebf,b47d7e6b,"[#] Change the socket on which ""get characters"" and ""get releases"" are sent.","[#] Change the socket on which ""get characters"" and ""get releases"" are sent.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468015087,1468015087,7c31eff8f4761f02594562b10306a6853513db8e
+7c31eff8f4761f02594562b10306a6853513db8e,7c31eff8,Minor.,"Minor.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468013861,1468013861,327931d40bde4ffacfca3683cfd22ecc8594a384
+327931d40bde4ffacfca3683cfd22ecc8594a384,327931d4,[Fix] #55 : Cache.vns now updated if a VN has been added to a list (and saved on…,"[Fix] #55 : Cache.vns now updated if a VN has been added to a list (and saved on VNDetailsActivity.onDestroy).
+[+] Now saves in characters and releases cache files only VNs that are in the lists (to gain more space and avoid having cache files bigger and bigger with time).
+[Fix] #55 : VN in Cache.vnlist but not in Cache.vns : it's not normal and shouldn't happen but we now prevent the app from crashing if it's the case when we try to buildCard().
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1468013810,1468013810,83f55e9cb9a12f23f2a755349b8a0f051855c5d4
+83f55e9cb9a12f23f2a755349b8a0f051855c5d4,83f55e9c,"[Fix] #53 : Relative links (starting with ""/"" and pointing to VNDB.org) no longer crash the app.","[Fix] #53 : Relative links (starting with ""/"" and pointing to VNDB.org) no longer crash the app.
+[Fix] #53 : Links recognition regex is now non-greedy and successive links are now recognized.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467537626,1467537626,324b46b0fcf95b9419232bb7fd1e0320f9599cb5
+324b46b0fcf95b9419232bb7fd1e0320f9599cb5,324b46b0,[Fix] #36 : now removing notes when removing VN from list (website's behavior).,"[Fix] #36 : now removing notes when removing VN from list (website's behavior).
+[Fix] #36 : auto set status = Unknown when setting notes to a VN not in the VN list.
+[Fix] #36 : NPE.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467536681,1467536681,e3fb05b030bbb675fedc86b16efe76999f4f3f7d
+e3fb05b030bbb675fedc86b16efe76999f4f3f7d,e3fb05b0,[Fix] #55 : refactored VNTypeFragment to avoid a lot of casts (actually it's not…,"[Fix] #55 : refactored VNTypeFragment to avoid a lot of casts (actually it's not faster at all but the code looks better like this).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467490608,1467490608,533207da283085ed7b4b1765b86ffb7b5a62a3c8
+533207da283085ed7b4b1765b86ffb7b5a62a3c8,533207da,[+] #55 (not fully tested yet).,"[+] #55 (not fully tested yet).
+[#] Moved ""bean"" package.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467489027,1467489027,a6f688f1576c7ccbd1ce681bb9783e76b5914d4a
+a6f688f1576c7ccbd1ce681bb9783e76b5914d4a,a6f688f1,[+] Fix #36 :  Update the notes when the user modifies the input.,"[+] Fix #36 :  Update the notes when the user modifies the input.
+[Fix] Sorting the lists every time a change has been made (avoid having a VN at the end of a list while it's not its place).
+[Fix] #36 : notes input on a single line.
+[Fix] #36 : crash when checking if notes had changed on a ""null"" VN.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467468697,1467468697,4b116f813c367550ce84d3aa0f3fc51d69646706
+4b116f813c367550ce84d3aa0f3fc51d69646706,4b116f81,[+] #36 : Get the notes from the API and display them as an input in the VN details view.,"[+] #36 : Get the notes from the API and display them as an input in the VN details view.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467310585,1467310585,ed618df8f00cbf924710f8e5d036dba2aeceb3b2
+ed618df8f00cbf924710f8e5d036dba2aeceb3b2,ed618df8,[+] Fix #54 : info button displayed after each tag in the autocomplete dropdown…,"[+] Fix #54 : info button displayed after each tag in the autocomplete dropdown list. Shows tag's modal on click.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467225161,1467225161,0fceb9c5d24e88536bf30313bd3d654a082e49ee
+0fceb9c5d24e88536bf30313bd3d654a082e49ee,0fceb9c5,"[+] Fix #32 : added ""Number of tagged VNs"" and ""aliases"" in tag modal.","[+] Fix #32 : added ""Number of tagged VNs"" and ""aliases"" in tag modal.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467219951,1467219951,a71e5e29a7f1080d73bd31218be096a98693eb72
+a71e5e29a7f1080d73bd31218be096a98693eb72,a71e5e29,[+] #32 : Click on a tag in VN details view = modal with tag description.,"[+] #32 : Click on a tag in VN details view = modal with tag description.
+[+] In tags' and characters' description, [url] links are now recognized and can be opened in Chrome Custom Tabs.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467143012,1467143012,3fe176af1eedc819b585e4476422eea2209adc95
+3fe176af1eedc819b585e4476422eea2209adc95,3fe176af,[#] #54 : set autocomplete threshold to 1.,"[#] #54 : set autocomplete threshold to 1.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467134659,1467134659,cef0edb8ecbe63a5c17ef95dc91bb6cd6eacdb73
+cef0edb8ecbe63a5c17ef95dc91bb6cd6eacdb73,cef0edb8,"[+] #54 : added a ""submit search"" button in the toolbar to enable search when…","[+] #54 : added a ""submit search"" button in the toolbar to enable search when the search box is empty.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467134522,1467134522,e0b81d748bf824626ef74eaf91058cdfd24a9e78
+e0b81d748bf824626ef74eaf91058cdfd24a9e78,e0b81d74,"[Fix] #54 : when the device is flipped, the tags and inputs hints are saved, and…","[Fix] #54 : when the device is flipped, the tags and inputs hints are saved, and the full search is exactly submitted again.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1467048419,1467048419,938d33d6b2c4db6aee6fd419aa68151a09abcb0f
+938d33d6b2c4db6aee6fd419aa68151a09abcb0f,938d33d6,"[+] #54 : implemented ""include all / include one "".","[+] #54 : implemented ""include all / include one "".
+[Fix] Progress bar is now always ""invisible"" instead of ""gone"" to avoid clipping effect.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466959934,1466959934,507e00d8eaca838fb177cb20ef5e2449c64aebf9
+507e00d8eaca838fb177cb20ef5e2449c64aebf9,507e00d8,[+] #54 : Search by tag now works along with the existing quick search!,"[+] #54 : Search by tag now works along with the existing quick search!
+[#] #54 : Moved the search options layout from an expandable view child to an independent view -> prevents the expandable view group from scrolling and enables the layout to grow in height with the number of tags it contains (which improved a lot the look & feel of the panel).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466870809,1466870809,94eaa8ca50166a4687899efd9f1102ea702191ad
+94eaa8ca50166a4687899efd9f1102ea702191ad,94eaa8ca,"[#] #54 : Redesigned tag form : floating hint, green/red icon instead of labels,…","[#] #54 : Redesigned tag form : floating hint, green/red icon instead of labels, dropdown ""include all/at least one tags"", rounded-corner background, shadow.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466794057,1466794057,bc95b87e8b9b7793b83181cbc639c916e3da1dce
+bc95b87e8b9b7793b83181cbc639c916e3da1dce,bc95b87e,#54,"#54
+[+] Added an ""x"" icon on each tag, and remove it on click.
+[#] Improved tag auto-completion with multiple words.
+[+] Structure to handle tag auto-completion list's long press event.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466708276,1466708276,e5a375a1e4dda2e9ec39077bcf7fffafac3df0e9
+e5a375a1e4dda2e9ec39077bcf7fffafac3df0e9,e5a375a1,"[+] Added a ""Search options"" panel for advanced search.","[+] Added a ""Search options"" panel for advanced search.
+[+] #54 : Added a form to specify ""including"" tags and ""excluding"" tags w/ multi-autocomplete inputs.
+[Fix] New auto-complete inputs support restoring state upon rotating device.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466622130,1466622130,29c856e53c6e24749fab808285e7ba5be788ee16
+29c856e53c6e24749fab808285e7ba5be788ee16,29c856e5,"[+] Fix #51 : ""About page"" : rate and share action buttons.","[+] Fix #51 : ""About page"" : rate and share action buttons.
+[Fix] Filter and sort action buttons now only appear in VN lists.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466261980,1466261980,9dd9d2e59ea0bfa020a600317cbaa35716f6c6ca
+9dd9d2e59ea0bfa020a600317cbaa35716f6c6ca,9dd9d2e5,"[+] #51 : ""About"" page : sending the feedback email.","[+] #51 : ""About"" page : sending the feedback email.
+[+] #44 #51 : Added VNDB username to bug and feedback emails.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466254725,1466254725,20c14e118fc8261b4b5c377d07d78300b166011a
+20c14e118fc8261b4b5c377d07d78300b166011a,20c14e11,"[-] Removed mutex, takeMutex() and freeMutex() (replaced by synchronized blocks).","[-] Removed mutex, takeMutex() and freeMutex() (replaced by synchronized blocks).
+[#] Moved synchronized blocks inside sendCommand(). so they work for all requests.
+[#] Changed activities' transition speed (300ms -> 200ms).
+[#] Minor refactoring in VNDBServer.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466242261,1466242261,e2f2b1c025a8408edbf006220f18e3ddcf69b073
+e2f2b1c025a8408edbf006220f18e3ddcf69b073,e2f2b1c0,[+] Fix #57 : sliding animation for activities for better immersion.,"[+] Fix #57 : sliding animation for activities for better immersion.
+[+] #51 : ""About page"" [3] : feedback form.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466106026,1466106026,3dfabab979a41cb1f6f4b4ddffdc8633fccd6e2b
+3dfabab979a41cb1f6f4b4ddffdc8633fccd6e2b,3dfabab9,[+] Fix #53 : opening external links in custom browser (Chrome Custom Tab) w/ user preference.,"[+] Fix #53 : opening external links in custom browser (Chrome Custom Tab) w/ user preference.
+[#] Refactored some generic methods inside Utils.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1466016864,1466016864,cc709caa2680c225a8bbf2771ebaf0f57401ca63
+cc709caa2680c225a8bbf2771ebaf0f57401ca63,cc709caa,"[+] #51 : ""About"" page [2].","[+] #51 : ""About"" page [2].
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465930348,1465930348,8aec58982a63211161614bb42ec358fae45b07ca
+8aec58982a63211161614bb42ec358fae45b07ca,8aec5898,[Fix] Fix #49 : workaround to avoid breaking the undocumented throttle limits by…,"[Fix] Fix #49 : workaround to avoid breaking the undocumented throttle limits by optimizing the waiting time between the threads.
+[Fix] #48 : set keepAlive to false to ensure the sockets are unregistered when changing network.
+[#] isConnected no longer needs a context to be called.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465843004,1465843004,0bf7de0d7da93c473be3467caeeb537b456879c8
+0bf7de0d7da93c473be3467caeeb537b456879c8,0bf7de0d,[#] Updated version to 2.0.,"[#] Updated version to 2.0.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465680343,1465680343,0e8d48e166f75aecabd564fba4a43e8b811c8224
+0e8d48e166f75aecabd564fba4a43e8b811c8224,0e8d48e1,"[+] #51 : ""About"" page [1].","[+] #51 : ""About"" page [1].
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465680330,1465680330,011a67164bdc30675a69780e613f4e728ff45d3c
+011a67164bdc30675a69780e613f4e728ff45d3c,011a6716,[+] #49 : automatic wait & retry upon throttled errors.,"[+] #49 : automatic wait & retry upon throttled errors.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465670553,1465670553,421986cadb87b802ccf5755ea8b9be88185bf9f3
+421986cadb87b802ccf5755ea8b9be88185bf9f3,421986ca,"[Fix] The characters' picture now has a fixed size, to prevent the scroll from…","[Fix] The characters' picture now has a fixed size, to prevent the scroll from flickering when ImageLoader dynamically loads them.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465582855,1465582855,b7592a670868e1c841e97df630f8ff70cc800511
+b7592a670868e1c841e97df630f8ff70cc800511,b7592a67,[Fix] The background update now also updates the menu counters.,"[Fix] The background update now also updates the menu counters.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465582214,1465582214,9e1b0a8cea45cfb2145a8fec6b76e3295b6f101b
+9e1b0a8cea45cfb2145a8fec6b76e3295b6f101b,9e1b0a8c,Fix #50,"Fix #50
+[#] Changed primary color (orange -> amber).
+[#] Changed and resized logo (color + font + added shadow).
+[#] Changed default wallpaper with a material design one.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465563143,1465563143,cac6822fc73d06f331e32e0c8c167ed2309acefb
+cac6822fc73d06f331e32e0c8c167ed2309acefb,cac6822f,[Fix] #48 : avoid sending multiple requests on a single socket (adapted the fix…,"[Fix] #48 : avoid sending multiple requests on a single socket (adapted the fix that worked before with a single socket).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465557927,1465557927,d780748c20cdd677800c0a80d8ff65458b7f8efa
+d780748c20cdd677800c0a80d8ff65458b7f8efa,d780748c,"[+] Pipelined get vnlist, get votelist and get wishlist commands (optimizing…","[+] Pipelined get vnlist, get votelist and get wishlist commands (optimizing again the time needed for login and background update).
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465497238,1465497238,86e7de1d4ebd6b54a05bae097843c47928aceb90
+86e7de1d4ebd6b54a05bae097843c47928aceb90,86e7de1d,[+] #48 : pipelining w/ socket pool for API queries : sped up A LOT login time…,"[+] #48 : pipelining w/ socket pool for API queries : sped up A LOT login time by parallelizing queries up to 5 sockets at once.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1465059129,1465059129,5099a8997801eaeeaaffef3e3871fc2c0f952a12
+5099a8997801eaeeaaffef3e3871fc2c0f952a12,5099a899,[Fix] Clearer throttled error message that explains it's normal the lists are incomplete.,"[Fix] Clearer throttled error message that explains it's normal the lists are incomplete.
+[Fix] Fixed UI behavior in case of error.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1464895866,1464895866,3c6e3326b0e9ad330ec4d114d189d83a14674676
+3c6e3326b0e9ad330ec4d114d189d83a14674676,3c6e3326,"[#] #45 : ""Please be patient"" message when logging in.","[#] #45 : ""Please be patient"" message when logging in.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1464891464,1464891464,ed4a1ebcc43fb5e3f7e411a3bb53ec556c933798
+ed4a1ebcc43fb5e3f7e411a3bb53ec556c933798,ed4a1ebc,[Fix] Fixed minor NPE that shouldn't have happened.,"[Fix] Fixed minor NPE that shouldn't have happened.
+",,,,Thomas HERBETH,thomas.herbeth@gmail.com,Thomas HERBETH,thomas.herbeth@gmail.com,1464889029,1464889029,46031bdad95e61d260945e17c4e802c694030942
+46031bdad95e61d260945e17c4e802c694030942,46031bda,[Fix] ImageLoader is now initialized in the Application class.,"[Fix] ImageLoader is now initialized in the Application class.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464510761,1464510761,d636f50cf0007c6873458f879a9b6e04689e485c
+d636f50cf0007c6873458f879a9b6e04689e485c,d636f50c,[#] Updated tags and traits.,"[#] Updated tags and traits.
+[Fix] Fixed NPE when trait didn't exist.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464510039,1464510039,125b7d39ba8d7ea5a6a47c9b24260fa0481a8cee
+125b7d39ba8d7ea5a6a47c9b24260fa0481a8cee,125b7d39,Minor.,"Minor.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464508979,1464508979,f9dc1429221752c66a31d081d85df989e5cbcf46
+f9dc1429221752c66a31d081d85df989e5cbcf46,f9dc1429,[#] Updated Jackson to 2.7.+,"[#] Updated Jackson to 2.7.+
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464434242,1464434242,dfd7c8ccb15e2dcc088c0e355dd26471468e12c9
+dfd7c8ccb15e2dcc088c0e355dd26471468e12c9,dfd7c8cc,[Fix] Quick background update fix.,"[Fix] Quick background update fix.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464372593,1464372593,68cd753463369bcfa1f1d2d67a7968a76b329e47
+68cd753463369bcfa1f1d2d67a7968a76b329e47,68cd7534,"[Fix] App crashing when sorting by ""released date"" with null dates.","[Fix] App crashing when sorting by ""released date"" with null dates.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464370758,1464370758,6b153a4530ac9c60cdb8ad406b036154afa3f1db
+6b153a4530ac9c60cdb8ad406b036154afa3f1db,6b153a45,[#] Fix #46 : sped up cache comparison algorithm : if a VN is different from the…,"[#] Fix #46 : sped up cache comparison algorithm : if a VN is different from the cached one, we no longer ""get vn"" on ALL the VNs, but only the VNs that have changed.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464205960,1464205960,fbac8f1a81401c3ee8a3f252196891930ebebdf7
+fbac8f1a81401c3ee8a3f252196891930ebebdf7,fbac8f1a,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464202091,1464202091,"84a785bf4606b8881d470766f562a53607b35ac0,5074e0545d304ba80be7b0a354ec74608df21e02"
+84a785bf4606b8881d470766f562a53607b35ac0,84a785bf,[+] Fix #40 : adding decimal votes.,"[+] Fix #40 : adding decimal votes.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464202066,1464202066,43f97cbf9748038f63663344b54b033447ad712e
+43f97cbf9748038f63663344b54b033447ad712e,43f97cbf,[+] Support for decimal votes display.,"[+] Support for decimal votes display.
+[+] #40 : ""Other"" vote button, displays a prompt, validates the input.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464118051,1464118051,3d7b2f3bd7f007dc874cf974a2e3d4fe5f0a050f
+5074e0545d304ba80be7b0a354ec74608df21e02,5074e054,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1464030825,1464030825,3d7b2f3bd7f007dc874cf974a2e3d4fe5f0a050f
+3d7b2f3bd7f007dc874cf974a2e3d4fe5f0a050f,3d7b2f3b,[Fix] Fix #43,"[Fix] Fix #43
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464029382,1464029382,a642672bd91a0c4c28e5bce5cb27f125c60bbb30
+a642672bd91a0c4c28e5bce5cb27f125c60bbb30,a642672b,"[Fix] Vote button : ""Other"" -> ""Remove vote"".","[Fix] Vote button : ""Other"" -> ""Remove vote"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464028707,1464028707,9c5ceca6183cf4c735a2d69bb7f5d12b6873abd8
+9c5ceca6183cf4c735a2d69bb7f5d12b6873abd8,9c5ceca6,[+] Fix #44 : added Android version to bug report.,"[+] Fix #44 : added Android version to bug report.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1464028448,1464028448,8255ae1274a10349db5b65c61d90dc4cb5cf3aa2
+8255ae1274a10349db5b65c61d90dc4cb5cf3aa2,8255ae12,"[+] When the app crashes, automatically sends me an email with all the bug info. :)","[+] When the app crashes, automatically sends me an email with all the bug info. :)
+[#] Applied current theme to the error activity.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463942767,1463942767,696a7a432ec9a4d326313e65faa6fd8b62ae234a
+696a7a432ec9a4d326313e65faa6fd8b62ae234a,696a7a43,[+] Uncaught errors now open a custom error activity with bug info (device…,"[+] Uncaught errors now open a custom error activity with bug info (device model, stacktrace, app version...) that enables to restart the app (and not just a corrupted MainActivity).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463913594,1463913594,a4273a63274b0748e2d599af88e2de785f3d1f8d
+a4273a63274b0748e2d599af88e2de785f3d1f8d,a4273a63,"[+] Fix #38 : hides ""wish"" button if there's a vote ; hides ""vote"" button if there's a wish.","[+] Fix #38 : hides ""wish"" button if there's a vote ; hides ""vote"" button if there's a wish.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463906830,1463906830,213760d7a7721dc3dd0d8a77f2ca1294c032bf6e
+213760d7a7721dc3dd0d8a77f2ca1294c032bf6e,213760d7,[+] Upgraded app version to 1.1.0.,"[+] Upgraded app version to 1.1.0.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463818270,1463818270,bf36abfaa5eee78289b13c3a148793b95d8b2816
+bf36abfaa5eee78289b13c3a148793b95d8b2816,bf36abfa,Merge branch 'develop',"Merge branch 'develop'
+
+Conflicts:
+	app/app-release.apk
+	app/src/main/java/com/booboot/vndbandroid/activity/LoginActivity.java
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463817545,1463817545,"32ee17c4489b02a12926cf3b8c149af5c095b520,8d6f1f493553bfab3ffa8c52158327847966142d"
+8d6f1f493553bfab3ffa8c52158327847966142d,8d6f1f49,[+] Upgraded support library to 23.4.0.,"[+] Upgraded support library to 23.4.0.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463684423,1463684423,ad46801f31a1762846821aa93350a0621432900c
+ad46801f31a1762846821aa93350a0621432900c,ad46801f,"[Fix] Fix #38 : ""Not on my list"" / ""Remove from my list"" -> ""Add to my list"".","[Fix] Fix #38 : ""Not on my list"" / ""Remove from my list"" -> ""Add to my list"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463682844,1463682844,b6a44e7e52a21f36b3ce3c563e6d5c8a9e8977f0
+b6a44e7e52a21f36b3ce3c563e6d5c8a9e8977f0,b6a44e7e,[+] #31 #33 Rankings : now uses cache to avoid sending the query again (expires…,"[+] #31 #33 Rankings : now uses cache to avoid sending the query again (expires when the app is killed).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463597299,1463597299,3e4c8e9d025b73373b43187c432ce01eecde2ddb
+3e4c8e9d025b73373b43187c432ce01eecde2ddb,3e4c8e9d,[+] Fix #37 : added scrollable scrollbars everywhere else!,"[+] Fix #37 : added scrollable scrollbars everywhere else!
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463595590,1463595590,f352654a4aa4b4c2d1f87a9af55e6882e36f49ac
+f352654a4aa4b4c2d1f87a9af55e6882e36f49ac,f352654a,[+] #37 : added a scrollable scrollbar to VN lists!,"[+] #37 : added a scrollable scrollbar to VN lists!
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463513737,1463513737,6946961168e51d2f098fee434b3c2f1ec762da99
+32ee17c4489b02a12926cf3b8c149af5c095b520,32ee17c4,[Fix] Login : other keyboard fixes.,"[Fix] Login : other keyboard fixes.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463351822,1463351822,a0d7d706847d1499cd6073d0b3320e3dc72ff65a
+a0d7d706847d1499cd6073d0b3320e3dc72ff65a,a0d7d706,[Fix] Login : changed the way the keyboard is displayed / hidden at startup.,"[Fix] Login : changed the way the keyboard is displayed / hidden at startup.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463316646,1463316646,2521c479e7d11572150b160ec28f74486a8727d7
+6946961168e51d2f098fee434b3c2f1ec762da99,69469611,[Fix] Login : changed the way the keyboard is displayed / hidden at startup.,"[Fix] Login : changed the way the keyboard is displayed / hidden at startup.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463315918,1463315918,662c9f4a46ff4b5619cddd629811f4378eaa4b35
+662c9f4a46ff4b5619cddd629811f4378eaa4b35,662c9f4a,"[Fix] Search : when the device is flipped, the search is saved and submitted…","[Fix] Search : when the device is flipped, the search is saved and submitted again (the view is no longer emptied).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463314462,1463314462,e9ea4fd62c359a0ee39c50f7d688411d0fb32467
+e9ea4fd62c359a0ee39c50f7d688411d0fb32467,e9ea4fd6,"[+] Fix #31 : added ""Top"", ""Popular"" and ""Most voted"" rankings (thanks Yorhel!).","[+] Fix #31 : added ""Top"", ""Popular"" and ""Most voted"" rankings (thanks Yorhel!).
+[+] Added swipe-to-refresh to rankings and search.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463306210,1463306210,c1cafafb96610c357de2ce5c8ea4d3df2ae00c8e
+c1cafafb96610c357de2ce5c8ea4d3df2ae00c8e,c1cafafb,[Fix] Progressive result loading now works in landscape.,"[Fix] Progressive result loading now works in landscape.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463233291,1463233291,5d06f0a56a91685f55e8d5f99d05dc33fc9776b2
+5d06f0a56a91685f55e8d5f99d05dc33fc9776b2,5d06f0a5,[Fix] Crash when there was no cover for the VN.,"[Fix] Crash when there was no cover for the VN.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463231718,1463231718,6582c45cfe21ca3e649ec50b84bb1243f340cc7f
+6582c45cfe21ca3e649ec50b84bb1243f340cc7f,6582c45c,[Fix] Resized all wallpapers so they are not distorted nor too big to load.,"[Fix] Resized all wallpapers so they are not distorted nor too big to load.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463169204,1463169204,9a8dfcf7aa999496fe48ca7808a602896dbce8e9
+9a8dfcf7aa999496fe48ca7808a602896dbce8e9,9a8dfcf7,[+] Added action bar titles to all pages! More explicit than having the good old…,"[+] Added action bar titles to all pages! More explicit than having the good old ""VNDB Android"" everywhere.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463168154,1463168154,5abf766392f11b6a7b4bc10025d5bd5a497fab8b
+5abf766392f11b6a7b4bc10025d5bd5a497fab8b,5abf7663,[+] Fix #35 : ProgressiveResultLoader now enables to quickly create activities…,"[+] Fix #35 : ProgressiveResultLoader now enables to quickly create activities which need to progressively display a lot of results (like rankings).
+[+] Fix #33 : Implemented ""Newly released"" and ""Newly added"" rankings.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463167008,1463167008,98a8a0fce7e9b0fb2916b5c52b45f5aad5bcc1d4
+98a8a0fce7e9b0fb2916b5c52b45f5aad5bcc1d4,98a8a0fc,[+] #33 #31 : Added ranking elements to the navigation drawer.,"[+] #33 #31 : Added ranking elements to the navigation drawer.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1463076634,1463076634,e1503a3c24b43ad64713062928b70dafa46fd067
+e1503a3c24b43ad64713062928b70dafa46fd067,e1503a3c,[+] #35 : Search page : displaying more results if scroll reaches bottom.,"[+] #35 : Search page : displaying more results if scroll reaches bottom.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462992240,1462992240,ee052047d880e3b480e5ce9cf9f11ee4fcee66e5
+ee052047d880e3b480e5ce9cf9f11ee4fcee66e5,ee052047,[Fix] We no longer need to scroll to top each time we add a card.,"[Fix] We no longer need to scroll to top each time we add a card.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462991593,1462991593,e4215e9a22fd69a547fca9ca1a0e5f560084cb10
+2521c479e7d11572150b160ec28f74486a8727d7,2521c479,Create LICENSE.md,Create LICENSE.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1462913152,1462913152,98870a84ca6e4781551ecd8b8e73efd0ce7889ad
+98870a84ca6e4781551ecd8b8e73efd0ce7889ad,98870a84,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1462900170,1462900170,e4215e9a22fd69a547fca9ca1a0e5f560084cb10
+e4215e9a22fd69a547fca9ca1a0e5f560084cb10,e4215e9a,[Fix] Fix #30 : going to home screen when back pressed from MainActivity.,"[Fix] Fix #30 : going to home screen when back pressed from MainActivity.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462813888,1462813888,806c06f89af6a8a3d3d22f317a406b75d69a6b69
+806c06f89af6a8a3d3d22f317a406b75d69a6b69,806c06f8,"[+] Cache : now doesn't ""get vn"" if the lists haven't changed -> speeds up a lot…","[+] Cache : now doesn't ""get vn"" if the lists haven't changed -> speeds up a lot startup and updates!
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462634351,1462634351,d4340e9f77c2fda6a57954916df1036b5afbb9e8
+d4340e9f77c2fda6a57954916df1036b5afbb9e8,d4340e9f,[+] Fix #29 : the login now always uses the cache (if present) to display the…,"[+] Fix #29 : the login now always uses the cache (if present) to display the main page as fast as possible. Updates are then fetched in the background, showing a refresh indicator, and GUI is refreshed only if there are differences from the cache.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462621820,1462621820,829687a9f410f4afed02a1fad5aaf9833d661bd9
+829687a9f410f4afed02a1fad5aaf9833d661bd9,829687a9,[#] VNListFragment.refresh() now always calls VNListFragment.refreshTitles().,"[#] VNListFragment.refresh() now always calls VNListFragment.refreshTitles().
+[Fix] Cache was not updated if the back button was pressed to leave a VN details view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462621384,1462621384,f5c3a05af6bf3fe601de6a1068a40862059a03a5
+f5c3a05af6bf3fe601de6a1068a40862059a03a5,f5c3a05a,[#] Allowed log output in Debug mode only.,"[#] Allowed log output in Debug mode only.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462621222,1462621222,15306e7254d71c251b875e477c267c57d55f0752
+15306e7254d71c251b875e477c267c57d55f0752,15306e72,[Fix] App crashed if a character didn't have a description.,"[Fix] App crashed if a character didn't have a description.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462621168,1462621168,89064fc09fe45bdb9b6520dc10a87ab0ca2c5ba9
+89064fc09fe45bdb9b6520dc10a87ab0ca2c5ba9,89064fc0,[Fix] ...Also fixed autologin when the first time failed. :),"[Fix] ...Also fixed autologin when the first time failed. :)
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462568448,1462568448,810df3feeeaad5968b5b8148faea718211ce091a
+810df3feeeaad5968b5b8148faea718211ce091a,810df3fe,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462568332,1462568332,"838eba35035953c5df1f5b77e9a4f1974e00e146,ed11cdb92d51aa3cebf928ce58852b66f1e43510"
+838eba35035953c5df1f5b77e9a4f1974e00e146,838eba35,[+] Fix #28 : changed login page's colors according to current theme.,"[+] Fix #28 : changed login page's colors according to current theme.
+[Fix] Autologin was triggered a bit too often, now only triggered at startup.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462568312,1462568312,3cba22f6fefa9b42f0cfadf83710e388468d5058
+ed11cdb92d51aa3cebf928ce58852b66f1e43510,ed11cdb9,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1462457853,1462457853,3cba22f6fefa9b42f0cfadf83710e388468d5058
+3cba22f6fefa9b42f0cfadf83710e388468d5058,3cba22f6,[+] Fix #27 : Replacing covers by placeholder pictures by changing…,"[+] Fix #27 : Replacing covers by placeholder pictures by changing PlaceholderPictureFactory.USE_PLACEHOLDER to true.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462440981,1462440981,6567375986340a90b250e0995f69b994b12d8bcb
+6567375986340a90b250e0995f69b994b12d8bcb,65673759,[#] Updated version to 1.0.1.,"[#] Updated version to 1.0.1.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462440879,1462440879,4c47c8129929be669516219058726f6daf5bd0c6
+4c47c8129929be669516219058726f6daf5bd0c6,4c47c812,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462303612,1462303612,"7661f86ccddc24c2b691a113dcb8699bd98dc147,311cc126cf0e51d2affd63fb09e876cb6d9398ab"
+7661f86ccddc24c2b691a113dcb8699bd98dc147,7661f86c,"Minor commit, related to v1 beta publication.","Minor commit, related to v1 beta publication.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462303586,1462303586,9d8dca069f44f7c0878a0b8d05ad93423f9a082d
+311cc126cf0e51d2affd63fb09e876cb6d9398ab,311cc126,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1462114076,1462114076,9d8dca069f44f7c0878a0b8d05ad93423f9a082d
+9d8dca069f44f7c0878a0b8d05ad93423f9a082d,9d8dca06,"[Fix] During a ""set"" request, the cache and GUI are updated only if the request…","[Fix] During a ""set"" request, the cache and GUI are updated only if the request succeeded (better error handling).
+[-] Removed API logs for v1 beta distribution.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462099663,1462099663,060265eb85f85b565aaa8b6df2af2a04bf2322ce
+060265eb85f85b565aaa8b6df2af2a04bf2322ce,060265eb,[Fix] VNs without description no longer crash.,"[Fix] VNs without description no longer crash.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462099578,1462099578,547a4804a57e4f7040c5c31bf970f992e262f8a1
+547a4804a57e4f7040c5c31bf970f992e262f8a1,547a4804,"[Fix] Sort : VNs with no wish, vote or status were put at the wrong place (top…","[Fix] Sort : VNs with no wish, vote or status were put at the wrong place (top of list instead of bottom).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462099547,1462099547,c47f5daa02e2a0fa34b8c68a5865167bcc5d44c7
+c47f5daa02e2a0fa34b8c68a5865167bcc5d44c7,c47f5daa,[Fix] Login crashed when the VN list was totally empty.,"[Fix] Login crashed when the VN list was totally empty.
+[#] Moved package ""db"" -> ""api"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462096182,1462096182,1ee8de73c857bbdd711c62aa20df4fc829ffa71a
+1ee8de73c857bbdd711c62aa20df4fc829ffa71a,1ee8de73,"[+] For tablets, increased the number of cards which can fit on one row if the…","[+] For tablets, increased the number of cards which can fit on one row if the device is wide enough.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462049315,1462049315,2f0b5a336f72fd6efb7cd2593c1856db6312fe5f
+2f0b5a336f72fd6efb7cd2593c1856db6312fe5f,2f0b5a33,Improved image display.,"Improved image display.
+[Fix] Images are no longer overscaled to fit the screen, but just take the space they need instead.
+[Fix] Enabled large heap to allow huge image loading without OOM.
+[Fix] Lightbox images are now displayed only when they are loaded, to better prevent loading problems.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462046280,1462046280,f7973705f897197e04177bd6caec1af274311b60
+f7973705f897197e04177bd6caec1af274311b60,f7973705,[+] Android 4.2 compatibility.,"[+] Android 4.2 compatibility.
+[#] Updated README.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462036950,1462036950,8f1aa1154cd62cfa0702583d07236af859168f67
+8f1aa1154cd62cfa0702583d07236af859168f67,8f1aa115,[Fix] Disabled autologin when logging out.,"[Fix] Disabled autologin when logging out.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462035610,1462035610,ed0bedb5150c8fe441af8e448b3ce67849f3fa01
+ed0bedb5150c8fe441af8e448b3ce67849f3fa01,ed0bedb5,[Fix] Socket closing no longer runs on the main thread (because SSL requires so).,"[Fix] Socket closing no longer runs on the main thread (because SSL requires so).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462035010,1462035010,98b62dbbcf4e458bb391556450bcc45f8fb5b751
+98b62dbbcf4e458bb391556450bcc45f8fb5b751,98b62dbb,[Fix] Initialized the default theme in the preferences.,"[Fix] Initialized the default theme in the preferences.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462033792,1462033792,f60775bd2629a3f39c7a47c13fcc71a601c8e07a
+f60775bd2629a3f39c7a47c13fcc71a601c8e07a,f60775bd,[+] Fix #25 : now uses TLS to communicate securely with the API (error message…,"[+] Fix #25 : now uses TLS to communicate securely with the API (error message if the server's certificate is not valid). :)
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462010113,1462010113,c359adb7695a5d7fc278c0a73b2f01f20359aaf9
+c359adb7695a5d7fc278c0a73b2f01f20359aaf9,c359adb7,[Fix] A VN's specific spoiler level is no longer static (caused conflicts when…,"[Fix] A VN's specific spoiler level is no longer static (caused conflicts when changing the spoiler level then going to a relation) -> now uses onSaveInstanceState to remember the spoiler level after the activity's recreate() (which is actually the proper way to do it).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462009361,1462009361,6f1daa0b4a99000ff75061d737bfc2f5bc2beb06
+6f1daa0b4a99000ff75061d737bfc2f5bc2beb06,6f1daa0b,[Fix] The API request's options upon clicking on a relation were not initialized.,"[Fix] The API request's options upon clicking on a relation were not initialized.
+[Fix] When clicking on a relation, we now always check if the relation is not already present in the cache.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462007914,1462007914,111ad7345326a9c9e9e6644e929183d025f49edb
+111ad7345326a9c9e9e6644e929183d025f49edb,111ad734,"[Fix] When a tag isn't found in the tags dump, it is ignored and the app no longer crashes.","[Fix] When a tag isn't found in the tags dump, it is ignored and the app no longer crashes.
+[+] Updated tags dump.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1462007823,1462007823,16868d89e858ecb1f0039a8340eb4597d0c47128
+16868d89e858ecb1f0039a8340eb4597d0c47128,16868d89,[Fix] Remembers login/password even if there's a connection problem because it…,"[Fix] Remembers login/password even if there's a connection problem because it was really frustrating.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461957443,1461957443,b3384c6f67c12b533c60f8190ede959e6fb34cc3
+b3384c6f67c12b533c60f8190ede959e6fb34cc3,b3384c6f,[+] #3 : Now hides spoilers in VN descriptions and character descriptions.,"[+] #3 : Now hides spoilers in VN descriptions and character descriptions.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461956694,1461956694,97f3b90d50e264437bbb3a51e54fc0f29997d6bd
+97f3b90d50e264437bbb3a51e54fc0f29997d6bd,97f3b90d,[+] Fix #24 #9 : added a user option to hide NSFW content.,"[+] Fix #24 #9 : added a user option to hide NSFW content.
+[Fix] Going to Preferences > Activate Search > Preferences made the application crash.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461955098,1461955098,2ca921361c4c15cb21bf86e52fdecd8a302d8795
+2ca921361c4c15cb21bf86e52fdecd8a302d8795,2ca92136,[Fix] Implemented a trick to avoid the blinking effect when recreating an…,"[Fix] Implemented a trick to avoid the blinking effect when recreating an activity (which is WAY smoother now).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461879593,1461879593,4eb555a26a27cc5eb70b1984d947ac85b111e763
+4eb555a26a27cc5eb70b1984d947ac85b111e763,4eb555a2,[#] Changed the primary color of the Little Busters' lemon chiffon theme (was a bit too pale).,"[#] Changed the primary color of the Little Busters' lemon chiffon theme (was a bit too pale).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461879442,1461879442,2be122c72583112124de7dce6dd55b7384a960da
+2be122c72583112124de7dce6dd55b7384a960da,2be122c7,"[+] Fixed #3, related to #9 : Show spoilers only when status = finished (user preference).","[+] Fixed #3, related to #9 : Show spoilers only when status = finished (user preference).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461871998,1461871998,7d445753c0b9ac200c382073ac74bda5790398d4
+7d445753c0b9ac200c382073ac74bda5790398d4,7d445753,[+] #3 : Action bar button to set a specific VN's spoiler level.,"[+] #3 : Action bar button to set a specific VN's spoiler level.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461869796,1461869796,a6b785d23b7977bac211f8c2843b0c5e134c98fb
+a6b785d23b7977bac211f8c2843b0c5e134c98fb,a6b785d2,"[+] #3 : added ""default spoiler level"" in the preferences and hid corresponding…","[+] #3 : added ""default spoiler level"" in the preferences and hid corresponding tags & characters based on this value.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461785106,1461785106,1b8dccb335efa5d0d7ef361c89e6eece8a2c5033
+1b8dccb335efa5d0d7ef361c89e6eece8a2c5033,1b8dccb3,"[+] Fix #23 : icon ""View on VNDB.org"".","[+] Fix #23 : icon ""View on VNDB.org"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461781002,1461781002,789b94925c0d7d78f9bbee96dc7f48366794f21e
+789b94925c0d7d78f9bbee96dc7f48366794f21e,789b9492,Refactor.,"Refactor.
+[-] ""Bitmap"" class (obsolete).
+[#] ""StringUtils"" + ""DateUtils"" -> ""Utils"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461780934,1461780934,ece1545f3b79f0621bf5862a48ef4648f7293957
+ece1545f3b79f0621bf5862a48ef4648f7293957,ece1545f,Refactor.,"Refactor.
+[#] Moved the listener that creates the info modal in a separate class.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461703909,1461703909,3dc9346095d5c87c46fb32c73c74efb8000c1b99
+3dc9346095d5c87c46fb32c73c74efb8000c1b99,3dc93460,[+] Releases : display all info in a modal on click (including producers).,"[+] Releases : display all info in a modal on click (including producers).
+Fix #6.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461702725,1461702725,10198c9e3ab561caf19eaf9767623df6930073b4
+10198c9e3ab561caf19eaf9767623df6930073b4,10198c9e,[Fix] Put mutexes inside threads so they don't block the UI.,"[Fix] Put mutexes inside threads so they don't block the UI.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461698215,1461698215,cf95e09a4e1ae1646a5286fb18666970261526a0
+cf95e09a4e1ae1646a5286fb18666970261526a0,cf95e09a,"[+] ""Releases"" submenu with releases grouped by language (+ language header w/…","[+] ""Releases"" submenu with releases grouped by language (+ language header w/ flag). Shows title, date and type by default.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461618453,1461618453,1659498c7a0c707d9c4dc450c23320ad471a26f3
+1659498c7a0c707d9c4dc450c23320ad471a26f3,1659498c,[Fix] Sort ALL the lists upon selecting a sorting state. o\,"[Fix] Sort ALL the lists upon selecting a sorting state. o\
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461515946,1461515946,8162bd21626ff02f10478ba8f57f36449e7fb4c3
+8162bd21626ff02f10478ba8f57f36449e7fb4c3,8162bd21,"[+] ""Anime"" submenu. Go to aniDB website on click.","[+] ""Anime"" submenu. Go to aniDB website on click.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461515643,1461515643,ab921311f6dca4edfa4403dca153ced09d152023
+ab921311f6dca4edfa4403dca153ced09d152023,ab921311,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461500917,1461500917,"c0940328a397daaf91c3acfb31a553b7476bb656,4746f1e4237e714b84670676646bba341ca5f890"
+c0940328a397daaf91c3acfb31a553b7476bb656,c0940328,Fix #17 List sorting.,"Fix #17 List sorting.
+[+] Sorting by id, title, release date, length, popularity, rating, status, vote or wish, ascending or descending order.
+[+] Sorting state saved when the app restarts.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461500898,1461500898,6c66a60e1b9bee96fc0bf245298327416dd38027
+6c66a60e1b9bee96fc0bf245298327416dd38027,6c66a60e,"[+] Added ""Sort"" action next to ""Filter"" action. Opens a list dialog.","[+] Added ""Sort"" action next to ""Filter"" action. Opens a list dialog.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461490233,1461490233,a3640ff15ec69e95c2020b637fd43e004a903ea4
+4746f1e4237e714b84670676646bba341ca5f890,4746f1e4,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1461394489,1461394489,a3640ff15ec69e95c2020b637fd43e004a903ea4
+a3640ff15ec69e95c2020b637fd43e004a903ea4,a3640ff1,[Fix] Fix #5 : added database statistics to cache so that they don't crash when…,"[Fix] Fix #5 : added database statistics to cache so that they don't crash when there's no connection.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461393968,1461393968,55296a26648708fb554da64ceb0adcd7668cd895
+55296a26648708fb554da64ceb0adcd7668cd895,55296a26,Fix #5 offline support.,"Fix #5 offline support.
+[#] Renamed ""DB"" -> ""Cache"" (because we didn't use a database but cache files instead).
+[+] Saved info to cache after logging in, and after fetching characters.
+[+] Retrieved info from cache when logging in if there's a connection problem during an API request.
+[+] In offline mode, disabled online operations with an error message.
+[+] Auto-logging to the API on the fly when the connection suddenly comes back while the app was offline.
+[+] Remove cache files when logging out.
+[Fix] Better error handling when the API is down (i.e. when it doesn't send back an error but simply an empty response) -> disabling login (even in offline mode because the behavior is too random).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461358529,1461358529,3a1825d57f6abc3ad1c648afdf4b3e2b6fcfecae
+3a1825d57f6abc3ad1c648afdf4b3e2b6fcfecae,3a1825d5,[#] Added options to the Options factory (duh).,"[#] Added options to the Options factory (duh).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461275038,1461275038,8bbfaed3c14c048ffd23fa3ebeb4e457891b1484
+8bbfaed3c14c048ffd23fa3ebeb4e457891b1484,8bbfaed3,"[Fix] If there were several pages for an API request, each page overwrote the…","[Fix] If there were several pages for an API request, each page overwrote the previous one. All pages are now properly displayed.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461178926,1461178926,c90eb0f21ac2d53edf1409b3da5a126ea1aa0a7c
+c90eb0f21ac2d53edf1409b3da5a126ea1aa0a7c,c90eb0f2,[-] Fix #21 : removed EXTERNAL_STORAGE permissions (useless).,"[-] Fix #21 : removed EXTERNAL_STORAGE permissions (useless).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461178846,1461178846,f740fb803077881852f3c794a99dcb2ae36e1a1c
+f740fb803077881852f3c794a99dcb2ae36e1a1c,f740fb80,[+] Code structure to save data persistently for offline support.,"[+] Code structure to save data persistently for offline support.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461087632,1461087632,ccf5dbe0844b1fc6d7b29565892094c746d093bf
+ccf5dbe0844b1fc6d7b29565892094c746d093bf,ccf5dbe0,[Fix] Fix #19 : link towards VNDB's registering page on login view.,"[Fix] Fix #19 : link towards VNDB's registering page on login view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1461000258,1461000258,c1d4be6c36a3730ec79a0b733d466325545ac86f
+c1d4be6c36a3730ec79a0b733d466325545ac86f,c1d4be6c,[#] Changed error message when sending an API request without connection.,"[#] Changed error message when sending an API request without connection.
+[Fix] Login + no connection = enabled the inputs again to avoid being stuck.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460999276,1460999276,dfafdd7c8292d4714c66c3dac487324807a573d1
+dfafdd7c8292d4714c66c3dac487324807a573d1,dfafdd7c,"[Fix] Fix #12 : when there are multiple result pages, we send as many requests…","[Fix] Fix #12 : when there are multiple result pages, we send as many requests as necessary to fetch all the pages (except for search results where we only display the first 25 results).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460913579,1460913579,20457a113ab6f99e96d122e855145d16bd176645
+20457a113ab6f99e96d122e855145d16bd176645,20457a11,"[Fix] Errors when VN's released date was null or ""TBA"" or ""YYYY"".","[Fix] Errors when VN's released date was null or ""TBA"" or ""YYYY"".
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460913468,1460913468,a678251dd0e8b2717b3e4016b7897733d3986b2d
+a678251dd0e8b2717b3e4016b7897733d3986b2d,a678251d,[+] Fix #18 : Logout.,"[+] Fix #18 : Logout.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460910788,1460910788,8fa42ba9429b904ff327236baf0fefa72f44429b
+8fa42ba9429b904ff327236baf0fefa72f44429b,8fa42ba9,[Fix] Changed cards' layout for search activity too.,"[Fix] Changed cards' layout for search activity too.
+[#] Updated README.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460885420,1460885420,e60f6f678b366a73563237c173bc977d6a0ccb7b
+e60f6f678b366a73563237c173bc977d6a0ccb7b,e60f6f67,"[#] Fix #14 : Redesigned card layout : include vote, wish, status, divider and…","[#] Fix #14 : Redesigned card layout : include vote, wish, status, divider and two-line ellipsized title.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460884731,1460884731,d5b43a26448be27a4fc43cb20d602779756f5c8a
+d5b43a26448be27a4fc43cb20d602779756f5c8a,d5b43a26,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1460827695,1460827695,8cc5257c82b722df12cd7245c36cf6526e3f0372
+8cc5257c82b722df12cd7245c36cf6526e3f0372,8cc5257c,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1460827668,1460827668,561f24b738d5359d17d18bc04226e6fc431b1993
+561f24b738d5359d17d18bc04226e6fc431b1993,561f24b7,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1460827512,1460827512,cb750f04065cff416861f844a54c4b39300fedcd
+cb750f04065cff416861f844a54c4b39300fedcd,cb750f04,[+] Fix #16 : Tab bar : number of VNs for each tab.,"[+] Fix #16 : Tab bar : number of VNs for each tab.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460827412,1460827412,f0432a520de34c8c0a5198d2721909e8b0d58a77
+f0432a520de34c8c0a5198d2721909e8b0d58a77,f0432a52,[+] Added a generic list helper to filter and select elements from a list.,"[+] Added a generic list helper to filter and select elements from a list.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460827354,1460827354,2a9461b41e1ba3af76307dc9aea2fd12976eec46
+2a9461b41e1ba3af76307dc9aea2fd12976eec46,2a9461b4,"[#] Navigation drawer : remove all text above wallpaper and replace ""My account"" with the username.","[#] Navigation drawer : remove all text above wallpaper and replace ""My account"" with the username.
+[+]  Navigation drawer : number of VNs in vnlist, wishlist and votelist (right side).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460822969,1460822969,79a8f24958ed8e508b9d69400b3ee95134d45651
+79a8f24958ed8e508b9d69400b3ee95134d45651,79a8f249,[+] Preferences menu.,"[+] Preferences menu.
+[+] Theme selection (20 themes that change wallpaper and app colors without having to restart the app).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460812154,1460812154,f8b2ec2606d10b4601439c51e44ebbfcde24f1c8
+f8b2ec2606d10b4601439c51e44ebbfcde24f1c8,f8b2ec26,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460751964,1460751964,"05fefd8ea2954c13127355e605a47d282fc389c4,29c1b595abc67deea8d786258a9ac4b647d72f1a"
+05fefd8ea2954c13127355e605a47d282fc389c4,05fefd8e,[+] Character's role displayed under character's name (thx Yorhel).,"[+] Character's role displayed under character's name (thx Yorhel).
+[+] Characters sorted with their role.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460750467,1460750467,12549acfcddabcdf2ba6730c1870334cce481162
+12549acfcddabcdf2ba6730c1870334cce481162,12549acf,[Fix] Formatted character's birthday.,"[Fix] Formatted character's birthday.
+[Fix] Displays character's info only if not null.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460745555,1460745555,b323d9a5641a775389543cd0f4408d1b232e2020
+29c1b595abc67deea8d786258a9ac4b647d72f1a,29c1b595,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1460668688,1460668688,b323d9a5641a775389543cd0f4408d1b232e2020
+b323d9a5641a775389543cd0f4408d1b232e2020,b323d9a5,"[+] Built and displayed character's traits, sorted and organized like VNDB.org.","[+] Built and displayed character's traits, sorted and organized like VNDB.org.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460667944,1460667944,8da3ec3606969ef406d9f42889d44d883577d509
+8da3ec3606969ef406d9f42889d44d883577d509,8da3ec36,[#] Updated com.android.support to 23.3.0.,"[#] Updated com.android.support to 23.3.0.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460667855,1460667855,386a87d406a1c67eeeac9748dcff47aaa9677d25
+386a87d406a1c67eeeac9748dcff47aaa9677d25,386a87d4,[#] Increased cards' corner radius.,"[#] Increased cards' corner radius.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460484265,1460484265,a7f000eb072042c6b8b73fadaa77461e02ccb828
+a7f000eb072042c6b8b73fadaa77461e02ccb828,a7f000eb,[#] Fix #13 : refactored VN details data creation to a Factory.,"[#] Fix #13 : refactored VN details data creation to a Factory.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460484046,1460484046,badaeb83c42327c128f9178ca3b4a76f5b7fa251
+badaeb83c42327c128f9178ca3b4a76f5b7fa251,badaeb83,[#] Refactored the listener inside VNDetailsActivity in a VNDetailsListener class.,"[#] Refactored the listener inside VNDetailsActivity in a VNDetailsListener class.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460483244,1460483244,5cb5726f1233d12769a3d538cb7184c58c89bd7b
+5cb5726f1233d12769a3d538cb7184c58c89bd7b,5cb5726f,[#] Refactored DatabaseStatisticsAdapter -> DoubleListAdapter and used it as the…,"[#] Refactored DatabaseStatisticsAdapter -> DoubleListAdapter and used it as the modal-that-appears-when-clicking-on-a-character adapter.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460482453,1460482453,6d1307dde775c662a54e624dde25625116853c7a
+6d1307dde775c662a54e624dde25625116853c7a,6d1307dd,[+] traits.json dump.,"[+] traits.json dump.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460402814,1460402814,9d4041bc9493a758fb55968094f42ba34cbc38cd
+9d4041bc9493a758fb55968094f42ba34cbc38cd,9d4041bc,[#] Big optimization when loading a VN details view : characters are fetched…,"[#] Big optimization when loading a VN details view : characters are fetched asynchronously and the group is blocked until the characters finished loading.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460402789,1460402789,1de557b2c7499d7d0b4aa2d235f5dd8e89d87d77
+1de557b2c7499d7d0b4aa2d235f5dd8e89d87d77,1de557b2,[+] Modal with basic character's info when clicking on their name.,"[+] Modal with basic character's info when clicking on their name.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460400986,1460400986,3c049874b2e6839f867c348867b8d8d86f2d04fe
+3c049874b2e6839f867c348867b8d8d86f2d04fe,3c049874,"[+] ""Characters"" submenu with characters' image, romaji name and jap name.","[+] ""Characters"" submenu with characters' image, romaji name and jap name.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460243948,1460243948,508eea51f327e5eac9dfcd364d9e48d7f6340dbc
+508eea51f327e5eac9dfcd364d9e48d7f6340dbc,508eea51,[#] Quick optimization for tags and relations sorting.,"[#] Quick optimization for tags and relations sorting.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460214396,1460214396,48e23ae75220291df2bde9436f32c501500b3014
+48e23ae75220291df2bde9436f32c501500b3014,48e23ae7,[-] Removed AndroidTreeView lib (not usable with API output).,"[-] Removed AndroidTreeView lib (not usable with API output).
+[+] ""Relations"" tab complete (level 1-related VNs only because that's what the API gives).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460207758,1460207758,da764b3c4f297f671a7ac8eeab16d75bd96b85cb
+da764b3c4f297f671a7ac8eeab16d75bd96b85cb,da764b3c,Minor.,"Minor.
+[#] Renamed too long resource images.
+[#] Reformat.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460195407,1460195407,2e1d3aa75c5f7d161f979837cfe6fb32d2526a85
+2e1d3aa75c5f7d161f979837cfe6fb32d2526a85,2e1d3aa7,"[+] ""Relations"" tree view : final layout with arrow, anime cover, title…","[+] ""Relations"" tree view : final layout with arrow, anime cover, title (ellipsized) and subtitle. Currently filled with dummy values, have to parse the API to complete it.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460194882,1460194882,0d2749bd04096af3cecf55a7ce225b44764c6e6d
+0d2749bd04096af3cecf55a7ce225b44764c6e6d,0d2749bd,[+] Base structure to implement a tree view.,"[+] Base structure to implement a tree view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460139386,1460139386,12cfb4f9569e106e4a6c1f879d309d8b1bd431e8
+12cfb4f9569e106e4a6c1f879d309d8b1bd431e8,12cfb4f9,[+] AndroidTreeView lib.,"[+] AndroidTreeView lib.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460139317,1460139317,3e52f2ca54021ae5c547f71594f1c429402cb1bd
+3e52f2ca54021ae5c547f71594f1c429402cb1bd,3e52f2ca,[#] Fix #11 : the search button is now a standard floating button.,"[#] Fix #11 : the search button is now a standard floating button.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460056479,1460056479,fcd2de4afb063241c36652f7487c9b296dec3952
+fcd2de4afb063241c36652f7487c9b296dec3952,fcd2de4a,[#] Updated Gradle to 2.0,"[#] Updated Gradle to 2.0
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1460056423,1460056423,a69f6c85e47c70cb63b903fc4e7c91ff3841fead
+a69f6c85e47c70cb63b903fc4e7c91ff3841fead,a69f6c85,"[Fix] When the screen rotates, we now remember the navigation (before, the…","[Fix] When the screen rotates, we now remember the navigation (before, the MainActivity was recreated and it got messed up).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459971796,1459971796,2e8e0b69595dc2dd54e0c1f235d95ae7dd17a1b7
+2e8e0b69595dc2dd54e0c1f235d95ae7dd17a1b7,2e8e0b69,"[+] ""Database statistics"" complete (w/ caching + pulling down to refresh).","[+] ""Database statistics"" complete (w/ caching + pulling down to refresh).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459967806,1459967806,d50bba9b11c3790b7da3dfc6836f282e3aa1cad0
+d50bba9b11c3790b7da3dfc6836f282e3aa1cad0,d50bba9b,[#] Improved login view's appearance when auto-logging (inputs filled with saved…,"[#] Improved login view's appearance when auto-logging (inputs filled with saved values, disabled, keyboard hidden).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459964185,1459964185,cb07e5a2ddb3530266628d6eeb96bedaa5b39f37
+cb07e5a2ddb3530266628d6eeb96bedaa5b39f37,cb07e5a2,"[+] Added ""Preferences"" item in navigation drawer.","[+] Added ""Preferences"" item in navigation drawer.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459963517,1459963517,28cddb4b64a5dc24bb5b9a633d1d8a3dbbb266c2
+28cddb4b64a5dc24bb5b9a633d1d8a3dbbb266c2,28cddb4b,"[#] Changed navigation drawer's icons. Added ""Database statistics"" item.","[#] Changed navigation drawer's icons. Added ""Database statistics"" item.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459963389,1459963389,b513e6122cfb1a99a41a974d76c2ea82875d5c02
+b513e6122cfb1a99a41a974d76c2ea82875d5c02,b513e612,[+] Copying text to clipboard when long clicking an element in VN details view.,"[+] Copying text to clipboard when long clicking an element in VN details view.
+[Fix] Fixed VN details view's elements press effect.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459883541,1459883541,32a6ad048991518a09a636e29ca61048932315bc
+32a6ad048991518a09a636e29ca61048932315bc,32a6ad04,[+] Refreshing lists when pulling down.,"[+] Refreshing lists when pulling down.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459877741,1459877741,5b1da8ec15e01c8867a1c53ca52049ab5618d27c
+5b1da8ec15e01c8867a1c53ca52049ab5618d27c,5b1da8ec,[Fix] Search : set the window background color to match the default one.,"[Fix] Search : set the window background color to match the default one.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459794257,1459794257,ab020b5ace2f5ef046919edf3552a4f3678b7d7c
+ab020b5ace2f5ef046919edf3552a4f3678b7d7c,ab020b5a,[Fix] Changed the vote button's label to match the options.,"[Fix] Changed the vote button's label to match the options.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459793840,1459793840,4422b98ed5903de9600c6ab05d89b634dcd7572b
+4422b98ed5903de9600c6ab05d89b634dcd7572b,4422b98e,"[#] When changing a VN's info, we no longer rebuild everything with loadData()…","[#] When changing a VN's info, we no longer rebuild everything with loadData() but simply update the model and refresh the view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459793554,1459793554,bb2ee28247fb9b325655682542f5cbef0c0e6760
+bb2ee28247fb9b325655682542f5cbef0c0e6760,bb2ee282,Refactoring commit.,"Refactoring commit.
+[#] Moved packages ""json"" and ""settings"" to ""util"".
+[#] Moved package ""lib.materiallistview"" to ""adapter.materiallistview"".
+[#] Renamed non-explicit classes.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459689396,1459689396,22ac3e43d57b98fa717bff8a5ef2685ea6649f42
+22ac3e43d57b98fa717bff8a5ef2685ea6649f42,22ac3e43,"[+] ""Search"" feature.","[+] ""Search"" feature.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459683674,1459683674,983d4dcfcb03b31137550e2cda1c542299402255
+983d4dcfcb03b31137550e2cda1c542299402255,983d4dcf,"[+] ""Stats"" submenu with popularity and rating (+ color image).","[+] ""Stats"" submenu with popularity and rating (+ color image).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459641043,1459641043,e952f7e14af3ca4dacbe88518df0dd6a5254ed78
+e952f7e14af3ca4dacbe88518df0dd6a5254ed78,e952f7e1,"[+] ""Information"" submenu with : title, original title, released date, aliases,…","[+] ""Information"" submenu with : title, original title, released date, aliases, length (+ image), links.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459639277,1459639277,24c636661149f5f9d24148c837252291af604084
+24c636661149f5f9d24148c837252291af604084,24c63666,"[+] Implemented the filter feature through all the lists (VN list, votelist and…","[+] Implemented the filter feature through all the lists (VN list, votelist and wishlist) and all the corresponding subtypes.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459612924,1459612924,90080d42c11661a71c6cece022d1c1da0314fcc2
+90080d42c11661a71c6cece022d1c1da0314fcc2,90080d42,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459535446,1459535446,"04a417b2d61f96db7077137e87f2998c46ec033a,f4b016e90bfba80d8a6025502fc43ab6cdcff93d"
+04a417b2d61f96db7077137e87f2998c46ec033a,04a417b2,[+] Added filter and search buttons to action bar.,"[+] Added filter and search buttons to action bar.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459535399,1459535399,5d9f1ea555ee0e5d2eca8636ba0fc76359eb3123
+f4b016e90bfba80d8a6025502fc43ab6cdcff93d,f4b016e9,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1459181669,1459181669,5d9f1ea555ee0e5d2eca8636ba0fc76359eb3123
+5d9f1ea555ee0e5d2eca8636ba0fc76359eb3123,5d9f1ea5,"[+] ""Tags"" submenu organized by category (w/ color indicating the tag's score).","[+] ""Tags"" submenu organized by category (w/ color indicating the tag's score).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459181306,1459181306,73617707eb3c8170f6c26b0d5317a216e53c3bac
+73617707eb3c8170f6c26b0d5317a216e53c3bac,73617707,"[+] Platform images in ""Platforms"" submenu.","[+] Platform images in ""Platforms"" submenu.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459164637,1459164637,b74f2077cfc52066a2f9aa63d37f71b78bda4bae
+b74f2077cfc52066a2f9aa63d37f71b78bda4bae,b74f2077,"[+] Flag images + full language name in ""Languages"" submenu.","[+] Flag images + full language name in ""Languages"" submenu.
+[#] Improved login screen's logo.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459162003,1459162003,860584da44934835465b52e229e9e820bedb7783
+860584da44934835465b52e229e9e820bedb7783,860584da,[Fix] Improved text padding and screenshots' size in VN details view.,"[Fix] Improved text padding and screenshots' size in VN details view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459102699,1459102699,6572f26adb25711fc96439f5f9dc19701919cd8d
+6572f26adb25711fc96439f5f9dc19701919cd8d,6572f26a,[+] Tags dump file.,"[+] Tags dump file.
+[+] ""Genres"" submenu in VN details view (sorted by score). :)
+[Todo] ""Tags"" submenu.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459101519,1459101519,d9a40e0ae35b0c9f42fe73d2ffef4bcf4d091f7e
+d9a40e0ae35b0c9f42fe73d2ffef4bcf4d091f7e,d9a40e0a,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1459007935,1459007935,b8c66ecf9ec569fff3c148cd32a452021e5bb50a
+b8c66ecf9ec569fff3c148cd32a452021e5bb50a,b8c66ecf,[Fix] The expandable list view items' layout is now always inflated (because it…,"[Fix] The expandable list view items' layout is now always inflated (because it may be different each time we open a sublist).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459007805,1459007805,2c7954d9767f3bef3828bb479d6a02ab73737cf6
+2c7954d9767f3bef3828bb479d6a02ab73737cf6,2c7954d9,[+] Added screenshots in VN details view!,"[+] Added screenshots in VN details view!
+[#] All URL images are now fetched with an image loader (better perf and network traffic).
+[+] Lightbox helper class to open an image in a lightbox on clic in 1 line.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1459007208,1459007208,691e06d5716eddd371147db2e2dd4a9dd26bfbb6
+691e06d5716eddd371147db2e2dd4a9dd26bfbb6,691e06d5,"[+] Revamped navigation drawer, adding ""My votelist"" and ""My wishlist""…","[+] Revamped navigation drawer, adding ""My votelist"" and ""My wishlist"" (functional, VNs are sorted in the corresponding way).
+[Todo] Add screenshots to VN details view.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458948449,1458948449,136d1affaee87b6dbae36a32ca84526594a12c7b
+136d1affaee87b6dbae36a32ca84526594a12c7b,136d1aff,[+] Votelist and wishlist are now fetched at startup.,"[+] Votelist and wishlist are now fetched at startup.
+[+] VN details view : vote and wish is properly initialized.
+[Todo] ""My votelist"" and ""My wishlist"" in the navbar.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458944517,1458944517,88f66fae98db9cdbbcb69a42904fedd41ae095ef
+88f66fae98db9cdbbcb69a42904fedd41ae095ef,88f66fae,"[+] Changing the status, wishlist or vote of a VN now works! Application is…","[+] Changing the status, wishlist or vote of a VN now works! Application is automatically refreshed to reflect all the modifications.
+[+] Status button is filled with the current status of the VN.
+[+] ""set"" method for the API.
+[#] DB results now stored in a linked hash map to increase read speed.
+[Todo] Fill wishlist and vote button with the current VN's values (have to make another call to the API).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458674531,1458674531,922dbb10e5a5c99bd9f1138ae690b89b9e70b1ba
+922dbb10e5a5c99bd9f1138ae690b89b9e70b1ba,922dbb10,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas Herbeth,thomas@zeeatelier.fr,Thomas Herbeth,thomas@zeeatelier.fr,1458652570,1458652570,"b84944f8a66cd6678bc299677d60fc30c14343a4,d55d05630e4e2b51d292e372ff350c42414a8904"
+b84944f8a66cd6678bc299677d60fc30c14343a4,b84944f8,[-] Removed .idea directory from repository.,"[-] Removed .idea directory from repository.
+",,,,Thomas Herbeth,thomas@zeeatelier.fr,Thomas Herbeth,thomas@zeeatelier.fr,1458652527,1458652527,1d281e6264422f154344ba9482ab600a16d35c75
+d55d05630e4e2b51d292e372ff350c42414a8904,d55d0563,Update README.md,Update README.md,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1458472673,1458472673,1d281e6264422f154344ba9482ab600a16d35c75
+1d281e6264422f154344ba9482ab600a16d35c75,1d281e62,"[+] Buttons to change VN's status, wishlist and vote ; display a popup menu when clicked.","[+] Buttons to change VN's status, wishlist and vote ; display a popup menu when clicked.
+[Todo] Call the API with the corresponding setter.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458472580,1458472580,f61aff548003fbde4a9da5478b5e8ac6c1ebdf99
+f61aff548003fbde4a9da5478b5e8ac6c1ebdf99,f61aff54,Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android,"Merge branch 'master' of https://github.com/herbeth1u/VNDB-Android
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458470013,1458470013,"4d6549352dc898f13c90e47697d4d5edc3920930,b1af85c8dd3e36d292a3e2e50c565165c4fb8f0e"
+4d6549352dc898f13c90e47697d4d5edc3920930,4d654935,[+] Lightbox with the VN's cover when clicking on the image.,"[+] Lightbox with the VN's cover when clicking on the image.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458469952,1458469952,d7aa1f39d722c7ad5dbd957bc1cadc3b50eaa870
+b1af85c8dd3e36d292a3e2e50c565165c4fb8f0e,b1af85c8,[#] Updated README with another super screenshot. :),[#] Updated README with another super screenshot. :),,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1458339827,1458339827,d7aa1f39d722c7ad5dbd957bc1cadc3b50eaa870
+d7aa1f39d722c7ad5dbd957bc1cadc3b50eaa870,d7aa1f39,[#] The login's progress bar is now fixed at the top.,"[#] The login's progress bar is now fixed at the top.
+[+] VN details view with ExpandableListView (header, description, platforms, languages).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458339550,1458339550,391c5ca1a70207628d8e1f67d96327d641dfc44e
+391c5ca1a70207628d8e1f67d96327d641dfc44e,391c5ca1,[+] Scrollview and progress bar in login view.,"[+] Scrollview and progress bar in login view.
+[#] Changed accent color to a dark brown/red.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458250954,1458250954,43109810bd96db20a5bea13a87d365e6a6527de3
+43109810bd96db20a5bea13a87d365e6a6527de3,43109810,[Fix] The input stream is manually flushed before each query so that (hopefully)…,"[Fix] The input stream is manually flushed before each query so that (hopefully) the results don't get messed up...
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458247195,1458247195,8f626a768a1f818f5aa6751439574d4cdef03682
+8f626a768a1f818f5aa6751439574d4cdef03682,8f626a76,"[+] When clicking on a card, a new activity appears with a back button and the…","[+] When clicking on a card, a new activity appears with a back button and the VN's title in the action bar.
+[#] Using setDrawable(url) instead of setDrawable(Drawable) ; saves network traffic and much more maintainable.
+[Todo] API returning messed up results sometimes ; mutex might be wrong.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458163710,1458163710,7076badae5cfb5ce18b7794b4ed3ce2cb879d770
+7076badae5cfb5ce18b7794b4ed3ce2cb879d770,7076bada,"[+] VNs are now properly organized by status within the tabs (Playing, Finished,…","[+] VNs are now properly organized by status within the tabs (Playing, Finished, Stalled, Dropped, Unknown).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458072932,1458072932,8272c0e34c4f1ce03f74abca318d182ae1715846
+8272c0e34c4f1ce03f74abca318d182ae1715846,8272c0e3,"[#] All VNs are now fetched only once at startup, and stored in a static…","[#] All VNs are now fetched only once at startup, and stored in a static variable accessible everywhere. :)
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458070987,1458070987,3d501c06b6bf88085b7f085795c3345a9efb54a5
+3d501c06b6bf88085b7f085795c3345a9efb54a5,3d501c06,[#] Removed useless thread creation by putting drawableFromUrl() in a separate…,"[#] Removed useless thread creation by putting drawableFromUrl() in a separate class and calling it when the response from the API is built.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458069086,1458069086,b1fc4c29c7966d03a25a260d6ef18b099f07d458
+b1fc4c29c7966d03a25a260d6ef18b099f07d458,b1fc4c29,"[Fix] All VNs are now fetched with a single query ( id = [a,b,c,d...] ).","[Fix] All VNs are now fetched with a single query ( id = [a,b,c,d...] ).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1458068623,1458068623,91d8a7bf3d27b8f697483537bc642271de423ffd
+91d8a7bf3d27b8f697483537bc642271de423ffd,91d8a7bf,[#] Updated README w/ the first WIP screenshot.,"[#] Updated README w/ the first WIP screenshot.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457887888,1457887888,b0bb58b4e2f5e5d87998306417d18512b8010cf2
+b0bb58b4e2f5e5d87998306417d18512b8010cf2,b0bb58b4,[+] The VN list is now filled with the account's data from the API.,"[+] The VN list is now filled with the account's data from the API.
+[#] Improved cards' look & feel to match the needs.
+[#] Gray background.
+[Todo] Sort VN list by status and create a list per status.
+[Todo] Create a local DB and store all information inside (and just call the API at startup to update).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457887531,1457887531,ee13f07ca767585eb6f09ad966355c226e36c7ee
+ee13f07ca767585eb6f09ad966355c226e36c7ee,ee13f07c,"[+] Implemented a tab layout inside the ""VN list"" page to navigate through…","[+] Implemented a tab layout inside the ""VN list"" page to navigate through ""Playing"", ""Finished"", ""Stalled"", ""Dropped"" and ""Unknown"" VNs.
+[#] Moved classes to packages.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457871752,1457871752,10e66bc5fc8e5205062682c4ceff5e9efa11906f
+10e66bc5fc8e5205062682c4ceff5e9efa11906f,10e66bc5,[+] Username in navigation drawer.,"[+] Username in navigation drawer.
+[+] Default background image in navigation drawer.
+[Todo] Put a background choice in the future settings.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457856550,1457856550,181f59482fc1733bbd431814f4bd5b15455dab8d
+181f59482fc1733bbd431814f4bd5b15455dab8d,181f5948,[+] Auto-login.,"[+] Auto-login.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457854184,1457854184,4bbb28c7a892d6e534bbca273f70e65b41b66021
+4bbb28c7a892d6e534bbca273f70e65b41b66021,4bbb28c7,[+] Added logo to the application.,"[+] Added logo to the application.
+[#] Changed application's colors (orange-like).
+[+] Functional login screen.
+[+] Classes to send requests to the VNDB API, parse them (w/ Jackson) and handle success/error with a callback helper.
+[Todo] Auto-connect at startup.
+[Todo] Write username in the navigation drawer (and find some other info / background image using the API ?).
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457820265,1457820265,00f08bc0ab4443e22bb7c5a451136de714fe99fb
+00f08bc0ab4443e22bb7c5a451136de714fe99fb,00f08bc0,no message,"no message
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457650304,1457650304,fef1e2671f18f197977fcd06ed03f62f3ca37501
+fef1e2671f18f197977fcd06ed03f62f3ca37501,fef1e267,[+] First successful authentication query to api.vndb.org.,"[+] First successful authentication query to api.vndb.org.
+[Todo] Put the API communication in a pretty class.
+[Todo] Implement the connection in the UI with a login screen.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457650274,1457650274,340d46b148b596130311fc6504796b4a39e8e930
+340d46b148b596130311fc6504796b4a39e8e930,340d46b1,[+] Implemented main card layout w/ MaterialListView.,"[+] Implemented main card layout w/ MaterialListView.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457643024,1457643024,f951e82b437bfe550edd7d674ac1d53ff6b25044
+f951e82b437bfe550edd7d674ac1d53ff6b25044,f951e82b,[#] Updated README with first quick summary.,"[#] Updated README with first quick summary.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457554799,1457554799,05ecba811806b75a660566d6c12473a5522826d3
+05ecba811806b75a660566d6c12473a5522826d3,05ecba81,[+] Initial commit : implemented navigation drawer.,"[+] Initial commit : implemented navigation drawer.
+[+] First draft of the grid view that will contain the VN cards.
+",,,,Thomas HERBETH,thomas.herbeth@telecomnancy.net,Thomas HERBETH,thomas.herbeth@telecomnancy.net,1457554550,1457554550,44baf52b02d3ea3c0b421f4402220abf0ee4b748
+44baf52b02d3ea3c0b421f4402220abf0ee4b748,44baf52b,Initial commit,Initial commit,,,,Thomas HERBETH,herbeth1u@users.noreply.github.com,Thomas HERBETH,herbeth1u@users.noreply.github.com,1457518946,1457518946,

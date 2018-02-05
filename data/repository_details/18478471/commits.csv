@@ -1,0 +1,253 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f28bc41e776cf79b366ed5b89adfeeb6ab314124,f28bc41e,Se actualizó la URL de consulta,"Se actualizó la URL de consulta
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1455673017,1455673017,d34a94f9ead4943d5a8e8006f95c771bde517f65
+d34a94f9ead4943d5a8e8006f95c771bde517f65,d34a94f9,Se redujo el porcentaje de tolerancia en la detección de actividad. Se actualizó…,"Se redujo el porcentaje de tolerancia en la detección de actividad. Se actualizó la versión de gradle
+",,,,rubenlop88,rubenlop88@gmail.com,rubenlop88,rubenlop88@gmail.com,1455657384,1455657384,39aea4cf0d72d249902acf4cf01499ac0fcf7134
+39aea4cf0d72d249902acf4cf01499ac0fcf7134,39aea4cf,Ya que Android puede suspender el reconocimiento de actividad cuando el teléfono…,"Ya que Android puede suspender el reconocimiento de actividad cuando el teléfono está en stand by, pero no suspende el servicio de localizaciones, se agregó un control para que el servicio de localizaciones se detenga automáticamente a sí mismo cuando ha pasado un tiempo prudencial. Si el teléfono está en stand by significa que no se está moviendo y es seguro parar el rastreo.
+",,,,rubenlop88,rubenlop88@gmail.com,rubenlop88,rubenlop88@gmail.com,1455581852,1455581852,0c62f1fed7e4a01436128f77bbef140e0a5541ad
+0c62f1fed7e4a01436128f77bbef140e0a5541ad,0c62f1fe,Se agregó un Activity para ver las localizaciones de una ruta.,"Se agregó un Activity para ver las localizaciones de una ruta.
+",,,,rubenlop88,rubenlop88@gmail.com,rubenlop88,rubenlop88@gmail.com,1455581764,1455581764,ca3d6f805307aac434bb6180676a485e83d5a7dd
+ca3d6f805307aac434bb6180676a485e83d5a7dd,ca3d6f80,Se actualizaron  las librerías y se hicieron las adaptaciones necesarias para…,"Se actualizaron  las librerías y se hicieron las adaptaciones necesarias para Android 6 y Google Play Services 8.
+",,,,rubenlop88,rubenlop88@gmail.com,rubenlop88,rubenlop88@gmail.com,1455562899,1455562899,541254e057db3249194500854d06800832cbf952
+541254e057db3249194500854d06800832cbf952,541254e0,Merge,"Merge
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1454869814,1454869814,"cc1a8cbc69ea7dbb2ebe7f76292c02a9ab32801c,43b4df11964b24e7e2fbafa97f88259120fb8159"
+cc1a8cbc69ea7dbb2ebe7f76292c02a9ab32801c,cc1a8cbc,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	autotracks/src/main/java/py/com/fpuna/autotracks/MainActivity.java
+	autotracks/src/main/java/py/com/fpuna/autotracks/receiver/BatteryReceiver.java
+	autotracks/src/main/java/py/com/fpuna/autotracks/tracking/ActivityRecognitionController.java
+	autotracks/src/main/java/py/com/fpuna/autotracks/tracking/ActivityRecognitionService.java
+	autotracks/src/main/java/py/com/fpuna/autotracks/tracking/LocationUpdatesController.java
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1454780285,1454780285,"29d872427107daa43ce944a1018aea1beaacc2e3,6b2f0c5f43300dafe62d3663cc58971153213c7a"
+43b4df11964b24e7e2fbafa97f88259120fb8159,43b4df11,Se añadió el intervalo de 45 segundos para el reconocimiento de actividad,"Se añadió el intervalo de 45 segundos para el reconocimiento de actividad
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1423449350,1423449350,e47d0ed632509d32d62ef67fd7c74afbf128ae57
+e47d0ed632509d32d62ef67fd7c74afbf128ae57,e47d0ed6,Se cambiaron los rangos de velocidad para pintar las calles,"Se cambiaron los rangos de velocidad para pintar las calles
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1423447818,1423447818,d2324eb4dda5e0694e934a76d25e24867ab2f12b
+d2324eb4dda5e0694e934a76d25e24867ab2f12b,d2324eb4,Se seteó e 30 segundos el intervalo por defecto del reconocimiento de actividad,"Se seteó e 30 segundos el intervalo por defecto del reconocimiento de actividad
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1423447780,1423447780,6b2f0c5f43300dafe62d3663cc58971153213c7a
+29d872427107daa43ce944a1018aea1beaacc2e3,29d87242,Se renombraron clases y se extrajeron segmentos de codigo en nuevas clases.,"Se renombraron clases y se extrajeron segmentos de codigo en nuevas clases.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1422892525,1422892525,1956e56e1bb9baa1bef9f081429cd0ffb35be08a
+6b2f0c5f43300dafe62d3663cc58971153213c7a,6b2f0c5f,Control de estado de batería,"Control de estado de batería
+
+Se controla el estado actual de la batería para decidir si iniciar o no
+el servicio de reconocimiento de actividad
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1419187067,1419187067,178e7331f1d3c991dc2357681e97537ac1fc54d2
+178e7331f1d3c991dc2357681e97537ac1fc54d2,178e7331,BATTERY_LOW fix,"BATTERY_LOW fix
+
+Se arregló el problema al recibir el intent BATTERY_LOW
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1419187010,1419187010,1956e56e1bb9baa1bef9f081429cd0ffb35be08a
+1956e56e1bb9baa1bef9f081429cd0ffb35be08a,1956e56e,Se agregó opción para configurar intervalo de muestreo en la toma de localizaciones.,"Se agregó opción para configurar intervalo de muestreo en la toma de localizaciones.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418585418,1418585418,31c89a1f56c8cf6b122581f28afd04fd64b34703
+31c89a1f56c8cf6b122581f28afd04fd64b34703,31c89a1f,Se modificó el mensaje del share,"Se modificó el mensaje del share
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418562112,1418562112,402df086de1bacd715787b3798e602c4b6926bf1
+402df086de1bacd715787b3798e602c4b6926bf1,402df086,"Revert ""Revert ""Se colocó la tolerancia por defecto a 10 para que coincida con…","Revert ""Revert ""Se colocó la tolerancia por defecto a 10 para que coincida con las configuraciones por defecto""""
+
+This reverts commit cfdb4dac66215a01c23db00ebbe5322225f8be0a.
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418562005,1418562005,cfdb4dac66215a01c23db00ebbe5322225f8be0a
+cfdb4dac66215a01c23db00ebbe5322225f8be0a,cfdb4dac,"Revert ""Se colocó la tolerancia por defecto a 10 para que coincida con las…","Revert ""Se colocó la tolerancia por defecto a 10 para que coincida con las configuraciones por defecto""
+
+This reverts commit c85546901215e55224094086625310c96d45f693.
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418561984,1418561984,c85546901215e55224094086625310c96d45f693
+c85546901215e55224094086625310c96d45f693,c8554690,Se colocó la tolerancia por defecto a 10 para que coincida con las configuraciones por defecto,"Se colocó la tolerancia por defecto a 10 para que coincida con las configuraciones por defecto
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418561887,1418561887,2114f16c4c942ada4ae67634bc5177155cefca5f
+2114f16c4c942ada4ae67634bc5177155cefca5f,2114f16c,Archivos faltantes,"Archivos faltantes
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418510956,1418510956,83d1a5595373371a3f95fded3ffe7c09ae11390b
+83d1a5595373371a3f95fded3ffe7c09ae11390b,83d1a559,Se agregó el Toolbar en RutasActivity.,"Se agregó el Toolbar en RutasActivity.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418508225,1418508225,9fbba46f03f59f8158056ff68d28ec4169efb427
+9fbba46f03f59f8158056ff68d28ec4169efb427,9fbba46f,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418507941,1418507941,"585ac86b8bae3d5313790cd3f076d6f78de09b1a,cab579a26f87b05ce2a1ee38816190c6713723d1"
+585ac86b8bae3d5313790cd3f076d6f78de09b1a,585ac86b,Se agregó el Toolbar en SettingsActivity.,"Se agregó el Toolbar en SettingsActivity.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418507895,1418507895,f5b9aad59b8c3d679dc6c5ec65dc9a5cad035b31
+cab579a26f87b05ce2a1ee38816190c6713723d1,cab579a2,Lista de rutas,"Lista de rutas
+
+Se agregó la opción de visualirzar la lista de rutas guardadas con su
+inicio y fin
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418507620,1418507620,9216db63aeb2b15d51520001526c0c2966e07f2d
+f5b9aad59b8c3d679dc6c5ec65dc9a5cad035b31,f5b9aad5,Conversión a Material Design.,"Conversión a Material Design.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418506588,1418506589,ff874dda17ad6894f3ab3561a00eaec6606702b4
+9216db63aeb2b15d51520001526c0c2966e07f2d,9216db63,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	autotracks/build.gradle
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418500476,1418500476,"def4a9e7650428fcb2d3072b4b22f7b196ad3aac,ff874dda17ad6894f3ab3561a00eaec6606702b4"
+def4a9e7650428fcb2d3072b4b22f7b196ad3aac,def4a9e7,recyclerview dependency,"recyclerview dependency
+
+se agregó la dependencia del recyclerview
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418500347,1418500347,7d5167350d37b2ca694e5fbf81f71039b0911089
+ff874dda17ad6894f3ab3561a00eaec6606702b4,ff874dda,Bugfix.,"Bugfix.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418490387,1418490387,9827ecadd260d0a875556e7f00fcc1f60d85fac3
+9827ecadd260d0a875556e7f00fcc1f60d85fac3,9827ecad,Los campos realizados en la configuracion ahora tienen efecto en el reconocimiento de actividad.,"Los campos realizados en la configuracion ahora tienen efecto en el reconocimiento de actividad.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418490118,1418490118,b559eec4fd21182a2336352937f50c48e121c6a0
+b559eec4fd21182a2336352937f50c48e121c6a0,b559eec4,Se creo el SettingsActivity. Falta que los campos realizados en la configuracion…,"Se creo el SettingsActivity. Falta que los campos realizados en la configuracion tengan efecto en el reconocimiento de actividad.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1418484935,1418484935,7d5167350d37b2ca694e5fbf81f71039b0911089
+7d5167350d37b2ca694e5fbf81f71039b0911089,7d516735,Fin de ruta,"Fin de ruta
+
+Se agregó la columna fin a la entidad Ruta para registrar la hora de fin
+de la misma
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418471438,1418471438,83e95b4b92abc6f1d6d8f2bd2baf418f729c83ee
+83e95b4b92abc6f1d6d8f2bd2baf418f729c83ee,83e95b4b,API 21,"API 21
+
+se realizaron las actualizaciones correspondientes para que funcione
+correctamente
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1418345500,1418345500,7690369430c9d1fd3ad3c6c47273277cf348b30d
+7690369430c9d1fd3ad3c6c47273277cf348b30d,76903694,Se limita a 200 metros la precisión de las localizaciones,"Se limita a 200 metros la precisión de las localizaciones
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1411218090,1411218090,511cfdf9362fa487fc63a8f4d2cb75074e93a8e3
+511cfdf9362fa487fc63a8f4d2cb75074e93a8e3,511cfdf9,Se aumentó la versión a 10,"Se aumentó la versión a 10
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1411089024,1411089024,fd91e4a21b03a1d2de55548e35c837791ee0abaf
+fd91e4a21b03a1d2de55548e35c837791ee0abaf,fd91e4a2,"Se guarda la precisión de cada localización, se actualizó a 2 la versión de la base de datos","Se guarda la precisión de cada localización, se actualizó a 2 la versión de la base de datos
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1411086926,1411086926,1f2b846bf5921f5ea683a223480f0d41b4b68eba
+1f2b846bf5921f5ea683a223480f0d41b4b68eba,1f2b846b,Nuevo nivel de tráfico,"Nuevo nivel de tráfico
+
+Se agregó un nuevo nivel (amarillo) de tráfico
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1411000776,1411000776,e066e6b1ae121af0438c915dd910264cd2358d28
+e066e6b1ae121af0438c915dd910264cd2358d28,e066e6b1,Se quitó el permiso de acceso a la memoria externa.,"Se quitó el permiso de acceso a la memoria externa.
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410824000,1410824000,c44532c6a32e15818ad3617471701ff3f944f8a0
+c44532c6a32e15818ad3617471701ff3f944f8a0,c44532c6,Se actualizó el código de versión a 8,"Se actualizó el código de versión a 8
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410737355,1410737355,00db201c93d7ed500db15cd416014fe4b3c85dc9
+00db201c93d7ed500db15cd416014fe4b3c85dc9,00db201c,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410734524,1410734524,"327832f3361924f8cd22f1fe7c3a784a607bd99f,567553b1acbead3b105d2c85dd8167bd658ae381"
+327832f3361924f8cd22f1fe7c3a784a607bd99f,327832f3,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410732026,1410732026,"7097828d89112b141b2a356b00d119b47fffd5f1,0e680cba0acbc7fbfb6a2fc27120d1fca57a2504"
+7097828d89112b141b2a356b00d119b47fffd5f1,7097828d,Se eliminaron imports sobrantes,"Se eliminaron imports sobrantes
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410731997,1410731997,bffa2453d87be6c8d6844755ae9e1ff0b78d9eec
+567553b1acbead3b105d2c85dd8167bd658ae381,567553b1,Se usan los tiles de MapQuest en lugar de los de OSM.,"Se usan los tiles de MapQuest en lugar de los de OSM.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410647531,1410647531,0e680cba0acbc7fbfb6a2fc27120d1fca57a2504
+0e680cba0acbc7fbfb6a2fc27120d1fca57a2504,0e680cba,Icono en alta resolucion,"Icono en alta resolucion
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410645216,1410645216,2bbd19ef657e5497a05ad6b8f8f608cc3b297066
+2bbd19ef657e5497a05ad6b8f8f608cc3b297066,2bbd19ef,Se finalizo el Activity About.,"Se finalizo el Activity About.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410645040,1410645040,7f3167d93bb0f6db140e6e763746ce6e69d28d71
+7f3167d93bb0f6db140e6e763746ce6e69d28d71,7f3167d9,Se setea la alarma solo cuando no esta seteada.,"Se setea la alarma solo cuando no esta seteada.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410638472,1410638472,16dba23f38cf32b3c41f198106db4168fcaf70fd
+bffa2453d87be6c8d6844755ae9e1ff0b78d9eec,bffa2453,Se modificó la manera de obtener las preferencias,"Se modificó la manera de obtener las preferencias
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410638080,1410638080,2abf458106ba1dad076008e6f84d5bb9971a8b44
+2abf458106ba1dad076008e6f84d5bb9971a8b44,2abf4581,Se agregó el control de batería baja para detener las actualizaciones,"Se agregó el control de batería baja para detener las actualizaciones
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410638050,1410638050,b366812ef191966160e10e821dcf0a1053f4cbd5
+16dba23f38cf32b3c41f198106db4168fcaf70fd,16dba23f,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	autotracks/src/main/AndroidManifest.xml
+	autotracks/src/main/java/py/com/fpuna/autotracks/MainActivity.java
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410637832,1410637832,"cbb7f0de21bcc2ad7e08529680888185060e8259,bffa2453d87be6c8d6844755ae9e1ff0b78d9eec"
+cbb7f0de21bcc2ad7e08529680888185060e8259,cbb7f0de,Se agrego el Activity About.,"Se agrego el Activity About.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410637180,1410637180,07ba70560c017bfb6ff420e002a1b688fb1b194d
+07ba70560c017bfb6ff420e002a1b688fb1b194d,07ba7056,Se elimino el Share Action Provider por ser dificil de customizar. Se agrego un…,"Se elimino el Share Action Provider por ser dificil de customizar. Se agrego un Intent sencillo pero se limita la lista de aplicaciones con las cuales compartir para no mostrar el Bluetooth, Wifi, etc.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410554284,1410554285,ccbb91b446f5519bea3faac3105c3671d82dc5bc
+ccbb91b446f5519bea3faac3105c3671d82dc5bc,ccbb91b4,Se agrego un estilo generado con Android Action Bar Style Generator. Se modifico…,"Se agrego un estilo generado con Android Action Bar Style Generator. Se modifico el launcher y el icono del Action Bar.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410532876,1410532876,93fa2ac86eafe0cf4887ac7fcf360e9973a8bb2b
+93fa2ac86eafe0cf4887ac7fcf360e9973a8bb2b,93fa2ac8,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	autotracks/build.gradle
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410529633,1410529633,"717b310e21a5c97750b379406c9af5097afff4f1,b366812ef191966160e10e821dcf0a1053f4cbd5"
+717b310e21a5c97750b379406c9af5097afff4f1,717b310e,"No se, se hicieron cambios automaticamente al reimportar el proyecto en Android Studio 0.8.9","No se, se hicieron cambios automaticamente al reimportar el proyecto en Android Studio 0.8.9
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1410529240,1410529240,c08fb93a55d33e75fa31d589fef052469933dbf8
+b366812ef191966160e10e821dcf0a1053f4cbd5,b366812e,Botón Refrescar,"Botón Refrescar
+
+Se añadió el botón refrescar en el action bar para refrescar la
+información de tráfico
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410489838,1410489838,621b5406d608fee9d3e5249848067151df2d669c
+621b5406d608fee9d3e5249848067151df2d669c,621b5406,Gradle,"Gradle
+
+Se actualizó la versión del gradle
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1410130429,1410130429,aaeebc21fb07a371d93309bedfed0e39afe356e0
+aaeebc21fb07a371d93309bedfed0e39afe356e0,aaeebc21,Ignore build,"Ignore build
+
+Se agregó ignorar el build de los releases
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1408799993,1408799993,528a11c26ede2440bc0d8347df3655570c594f2e
+528a11c26ede2440bc0d8347df3655570c594f2e,528a11c2,Centrado de Mapa,"Centrado de Mapa
+
+Al abrir la app, el mapa se centra en la última ubicación conocida.
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1408799791,1408799791,821b634fad5e7d213df5bce9bdd2fd32deb33b45
+821b634fad5e7d213df5bce9bdd2fd32deb33b45,821b634f,Limpieza del apk,"Limpieza del apk
+
+Se eliminaron las clases innecesarias. Se maneja el error al fallar la
+red en el ws
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1408583413,1408583413,c08fb93a55d33e75fa31d589fef052469933dbf8
+c08fb93a55d33e75fa31d589fef052469933dbf8,c08fb93a,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	gradle/wrapper/gradle-wrapper.properties
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1402258438,1402258438,"e7217e012a2fc35046c20e66eaa7bafd8d595c7a,7e89f94a8538befd231098afa0eb17a283fb69cb"
+e7217e012a2fc35046c20e66eaa7bafd8d595c7a,e7217e01,.,".
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1402258341,1402258341,dd8bb565208d6fa3b7b2947acacdc7b08ee989bd
+dd8bb565208d6fa3b7b2947acacdc7b08ee989bd,dd8bb565,se actualizó el build tools,"se actualizó el build tools
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1402258299,1402258299,9f98f938aeedc452fa5b889fc8c5578bf76bc350
+9f98f938aeedc452fa5b889fc8c5578bf76bc350,9f98f938,"se actualizó la versión del google play services, y se aumento el tiempo de toma…","se actualizó la versión del google play services, y se aumento el tiempo de toma de posiciones a 1 minuto
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1402255367,1402255367,a6bc8768744c93e8aef5dd3864331aa2612521e3
+7e89f94a8538befd231098afa0eb17a283fb69cb,7e89f94a,Se agrego Bugsense.,"Se agrego Bugsense.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1402171325,1402171325,ee77c0e22dbb69bb31df5f2edff26cb84894681a
+ee77c0e22dbb69bb31df5f2edff26cb84894681a,ee77c0e2,Antes de enviar las localizaciones se elimnan las localizaciones del dia anterior.,"Antes de enviar las localizaciones se elimnan las localizaciones del dia anterior.
+Solo se envian rutas que tengan mas de 5 localizaciones y de cada ruta solo se envian las localizaciones no enviadas aun.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1402170598,1402170598,99c761d9fff9dd7b4932056080d35aec5e2e0d86
+99c761d9fff9dd7b4932056080d35aec5e2e0d86,99c761d9,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	autotracks/build.gradle
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1402169745,1402169745,"861e950990426967ee3a9611f862ba3b81551e8c,9f98f938aeedc452fa5b889fc8c5578bf76bc350"
+861e950990426967ee3a9611f862ba3b81551e8c,861e9509,"Se actualizo a la ultima version de Google Play Services, Support Library y Gradle.","Se actualizo a la ultima version de Google Play Services, Support Library y Gradle.
+
+El porcentaje de confianza debe ser mayor a 80 para iniciar el tracking.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1402169331,1402169331,04edeb60c92560e9cab2298cfb65a87c702b2cad
+a6bc8768744c93e8aef5dd3864331aa2612521e3,a6bc8768,Se actualizó el nombre de la versión,"Se actualizó el nombre de la versión
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1401928892,1401928892,04edeb60c92560e9cab2298cfb65a87c702b2cad
+04edeb60c92560e9cab2298cfb65a87c702b2cad,04edeb60,Apunte de nuevo al servidor de Alfredo.,"Apunte de nuevo al servidor de Alfredo.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400990142,1400990142,18ddcf328360336b00b81c91223ec6281d9473e3
+18ddcf328360336b00b81c91223ec6281d9473e3,18ddcf32,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+
+Conflicts:
+	autotracks/src/main/AndroidManifest.xml
+	autotracks/src/main/java/py/com/fpuna/autotracks/RutaDetailFragment.java
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400989792,1400989792,"48c9f4692281fcc20de102cdbbf4facece301bab,fc1fb2ddc3627c771b9d7c164207f4eb30e1d25c"
+48c9f4692281fcc20de102cdbbf4facece301bab,48c9f469,Se agrego envio automatico de localizaciones nuevas cada 15 minutos aproximadamente.,"Se agrego envio automatico de localizaciones nuevas cada 15 minutos aproximadamente.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400988930,1400988930,41c979ae21b6727211d21c53f995482c13673748
+fc1fb2ddc3627c771b9d7c164207f4eb30e1d25c,fc1fb2dd,Se agregó la posibilidad de ver las rutas con un webview,"Se agregó la posibilidad de ver las rutas con un webview
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1400549567,1400549567,41c979ae21b6727211d21c53f995482c13673748
+41c979ae21b6727211d21c53f995482c13673748,41c979ae,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400357292,1400357292,"2a30e25113f74f70c7d18ad91b0a8d7859f6d27c,dd2a3154af819192b69623b33db0c928d1031cdb"
+dd2a3154af819192b69623b33db0c928d1031cdb,dd2a3154,Se eliminaron los paddings,"Se eliminaron los paddings
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1400358095,1400358095,25b0cd3eaa73cdb8c2a361ca3a79cf670f782e8a
+2a30e25113f74f70c7d18ad91b0a8d7859f6d27c,2a30e251,Nuevo icono,"Nuevo icono
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400357248,1400357248,902449931293a219cfab2155e6cb1cb9c9621124
+902449931293a219cfab2155e6cb1cb9c9621124,90244993,Nuevo icono.,"Nuevo icono.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400357152,1400357152,25b0cd3eaa73cdb8c2a361ca3a79cf670f782e8a
+25b0cd3eaa73cdb8c2a361ca3a79cf670f782e8a,25b0cd3e,Merge branch 'master' of https://github.com/rubenlop88/autotracks-android,"Merge branch 'master' of https://github.com/rubenlop88/autotracks-android
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400104135,1400104135,"33283eff38b67b1c31d14e3a7f11cf097926ba33,a6bc4d10cd535257a071281bf53c0e9a584dec45"
+a6bc4d10cd535257a071281bf53c0e9a584dec45,a6bc4d10,Se añadió el logo para la aplicación,"Se añadió el logo para la aplicación
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1400189703,1400189703,f8e829c6e5bfd51adcc2afb975d202dd1b32386e
+f8e829c6e5bfd51adcc2afb975d202dd1b32386e,f8e829c6,"Se modificó el tail del mapa, y se cambió el color del tráfico regular de amarillo a naranja.","Se modificó el tail del mapa, y se cambió el color del tráfico regular de amarillo a naranja.
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1400187462,1400187462,f336c96d2720a4466aff2e7722d12202c064e8dd
+33283eff38b67b1c31d14e3a7f11cf097926ba33,33283eff,Se agrego un BootReceiver para reiniciar el rastreo cuando inicia la aplicacion.…,"Se agrego un BootReceiver para reiniciar el rastreo cuando inicia la aplicacion. Ademas tambien se inicia el rastreo automaticamente al iniciar la app.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400104081,1400104081,e342be6326063c6be6403d8b8ff9c506815ad59d
+e342be6326063c6be6403d8b8ff9c506815ad59d,e342be63,Se agrego un BootReceiver para reiniciar el rastreo cuando inicia la aplicacion.…,"Se agrego un BootReceiver para reiniciar el rastreo cuando inicia la aplicacion. Ademas tambien se inicia el rastreo automaticamente al iniciar la app.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400104069,1400104069,5adcb3d8d12e9adb418deeb5242ff72e86287dc2
+5adcb3d8d12e9adb418deeb5242ff72e86287dc2,5adcb3d8,Se agrego una opcion para ver la lista de rutas.,"Se agrego una opcion para ver la lista de rutas.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400100097,1400100097,ca4603e9e095ac7fbbe25c4fe03c420b2fd1c635
+ca4603e9e095ac7fbbe25c4fe03c420b2fd1c635,ca4603e9,Se agrego una restriccion de velocidad para no guardar localizaciones incorrectas.,"Se agrego una restriccion de velocidad para no guardar localizaciones incorrectas.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1400099345,1400099345,f336c96d2720a4466aff2e7722d12202c064e8dd
+f336c96d2720a4466aff2e7722d12202c064e8dd,f336c96d,Tráfico,"Tráfico
+
+se agregaron los métodos necesarios para mostrar el estado del tráfcio
+",,,,Alfredo Campuzano,bandit.adcr@gmail.com,Alfredo Campuzano,bandit.adcr@gmail.com,1399342062,1399342062,581fe6186bc593d603a0b327de354b46ac988433
+581fe6186bc593d603a0b327de354b46ac988433,581fe618,"Se agrego MainActivity, contiene un WebView que muestra un mapa de ejemplo.","Se agrego MainActivity, contiene un WebView que muestra un mapa de ejemplo.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1399154385,1399154385,3c56243b96703bf3fc2ce8bc6a725b36c947ef38
+3c56243b96703bf3fc2ce8bc6a725b36c947ef38,3c56243b,"Se agrego OkHttp para evitar un java.io.EOFException, ver…","Se agrego OkHttp para evitar un java.io.EOFException, ver https://github.com/square/retrofit/issues/397
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1398574596,1398574596,3b9142bfae4c056af56559c5a51a40eecfbca0f7
+3b9142bfae4c056af56559c5a51a40eecfbca0f7,3b9142bf,Se descartan las localizaciones que esten a menos de 50 metros de la ultima localizacion guardada.,"Se descartan las localizaciones que esten a menos de 50 metros de la ultima localizacion guardada.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1398574532,1398574532,59b2fb8e051c07ba6aa754930347a661af84f21d
+59b2fb8e051c07ba6aa754930347a661af84f21d,59b2fb8e,Cada vez que se detecta un movimiento se vuelve a esperar como minimo 10 minutos…,"Cada vez que se detecta un movimiento se vuelve a esperar como minimo 10 minutos antes de volver a detectar si ya estamos quietos o seguimos en movimiento.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1398574501,1398574501,9650970b10dcbb5da516acc1f9e94912bbaa1081
+9650970b10dcbb5da516acc1f9e94912bbaa1081,9650970b,Se redujo el tiempo de toma de localizaciones a 10 segundos y se amuneto el…,"Se redujo el tiempo de toma de localizaciones a 10 segundos y se amuneto el tiempo de rastreo reconocimiento de actividad a 10 minutos cuando ya se ha iniciado el rastreo. Esto significa que una vez que se ha iniciado el rastreo, durara al menos 10 minutos.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1397360108,1397360108,3e5e7239b2eaffd3a82a8cdf2083fc3781b28a92
+3e5e7239b2eaffd3a82a8cdf2083fc3781b28a92,3e5e7239,Se agregaron a gitignore los archivos especificos de Android Studio.,"Se agregaron a gitignore los archivos especificos de Android Studio.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1397359999,1397359999,e07e9f58cbe11433732763513e1d02590637e613
+e07e9f58cbe11433732763513e1d02590637e613,e07e9f58,Se corrigio el formato del codigo.,"Se corrigio el formato del codigo.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1397186153,1397186153,bf3952a1b0d9f38450c427217784a8fc6dea5d5a
+bf3952a1b0d9f38450c427217784a8fc6dea5d5a,bf3952a1,Se eliminaron archivos especificos de Android Studio,"Se eliminaron archivos especificos de Android Studio
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1397185627,1397185627,c9c21d768b0b372ead86d588ff2ff05d5e77227d
+c9c21d768b0b372ead86d588ff2ff05d5e77227d,c9c21d76,Se actualizaron las librerias Cupboard y Retrofit. Se corrigieron errores en el envio de rutas.,"Se actualizaron las librerias Cupboard y Retrofit. Se corrigieron errores en el envio de rutas.
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1397184939,1397184939,8524daf027eed4b54b4d062030f9aa4944a15f44
+8524daf027eed4b54b4d062030f9aa4944a15f44,8524daf0,Commit inicial,"Commit inicial
+",,,,Ruben Lopez,rlopez@konecta.com.py,Ruben Lopez,rlopez@konecta.com.py,1396735558,1396735558,ce21c492598cb719542d85f4a02fd3f7e394ef19
+ce21c492598cb719542d85f4a02fd3f7e394ef19,ce21c492,Initial commit,"Initial commit
+",,,,Rubén López,rubenlop88@gmail.com,Rubén López,rubenlop88@gmail.com,1396738553,1396738553,

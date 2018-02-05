@@ -1,0 +1,107 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+13684a531c8e696a361c5399c12a9412a3acc9da,13684a53,Move chapter ID error handling for further fragment work,"Move chapter ID error handling for further fragment work
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1362413586,1398114141,3af4fa7d5e6b86de06c5b5c235989f8fc0213872
+3af4fa7d5e6b86de06c5b5c235989f8fc0213872,3af4fa7d,TOC fragmentation (fixes #9),"TOC fragmentation (fixes #9)
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1354835410,1354835500,941b1305df6255270c853d5bf7bb5299215903c1
+941b1305df6255270c853d5bf7bb5299215903c1,941b1305,ReadChapter fragmentation,"ReadChapter fragmentation
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1354587163,1354726372,f0024aa6c949ec93fc7ffb4415db9fb13a4d78e4
+f0024aa6c949ec93fc7ffb4415db9fb13a4d78e4,f0024aa6,Rename some stuff for ReadChapter fragmentation,"Rename some stuff for ReadChapter fragmentation
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1354558640,1354558640,405668cb963f692bc047b75fcf2664535ac4ac34
+405668cb963f692bc047b75fcf2664535ac4ac34,405668cb,Move DB stuff to onResume/Pause,"Move DB stuff to onResume/Pause
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1354210190,1354210190,42e1fd3c8fe001480a4da009b89fa986238a58a0
+42e1fd3c8fe001480a4da009b89fa986238a58a0,42e1fd3c,Graceful exit on missing DB,"Graceful exit on missing DB
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1353635972,1353635972,db389f3e6561eefccd88b25aec64d70e31a3f1fa
+db389f3e6561eefccd88b25aec64d70e31a3f1fa,db389f3e,Kludge to address #12 (first row in Cursor null after upgrade),"Kludge to address #12 (first row in Cursor null after upgrade)
+
+Not really a fix. Works because the first call to importAssets() comes from the
+PocketbookContent constructor, with overWrite == false, so the upgrade is not
+done. Once onUpgrade() is called (presumably from getReadableDatabase()),
+overWrite == true, the existing DB is deleted, and the new DB loaded. But
+testing reveals that File.delete() doesn't happen until the process shuts down.
+Regardless, onUpgrade() is only called once, and the File.delete() call allows
+the new DB to be copied from assets/ without overwrite problems.
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1353377937,1353377937,177192cd8a6e6c5db6471402013ae85e6b13b6d2
+177192cd8a6e6c5db6471402013ae85e6b13b6d2,177192cd,Fix formatting of 'Important Phone Numbers',"Fix formatting of 'Important Phone Numbers'
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1353352731,1353352731,141541a8fa78dfb3b19f5bf1968336293adbff56
+141541a8fa78dfb3b19f5bf1968336293adbff56,141541a8,Add missing content for pocketbook,"Add missing content for pocketbook
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1353348414,1353348414,d18bcd99dd038d628acbc17a2b3f8dcd3ff64b94
+d18bcd99dd038d628acbc17a2b3f8dcd3ff64b94,d18bcd99,Various changes to implement upgrade to 0.2,"Various changes to implement upgrade to 0.2
+
+- Move DB stuff into onResume() & run importAssets() on DB upgrade
+- Move importAssets() into PocketbookContent FWIW
+- DB/App version change
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1353193220,1353193220,d73645ab4feee0c3223dd2d001c10c15098142ac
+d73645ab4feee0c3223dd2d001c10c15098142ac,d73645ab,Repo cleanup and final English text,"Repo cleanup and final English text
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351617756,1351617756,7fe1089a076e9ac953adb5828116b4f7d01e7f8e
+7fe1089a076e9ac953adb5828116b4f7d01e7f8e,7fe1089a,Prevent installation on xlarge screens (fixes #11),"Prevent installation on xlarge screens (fixes #11)
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351261478,1351261478,bec5435152fb04a125f1f3db9623618e75aaa181
+bec5435152fb04a125f1f3db9623618e75aaa181,bec54351,Get properly scaled launcher icons (proper fix for #4),"Get properly scaled launcher icons (proper fix for #4)
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351175757,1351176541,73ca6bd0790b1390060fbec875e77f3711490542
+73ca6bd0790b1390060fbec875e77f3711490542,73ca6bd0,Close ReadChapter activity when chap ID not found in Intent (fixes #5),"Close ReadChapter activity when chap ID not found in Intent (fixes #5)
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351044739,1351044739,e7c5c583494c0539ea66e45c95b274d2e8b2fc01
+e7c5c583494c0539ea66e45c95b274d2e8b2fc01,e7c5c583,"When DB fails to import, exit","When DB fails to import, exit
+
+- display Toast to notify the user
+- calls finish()
+- fixes #6
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351006328,1351006328,7d575a4ab0f2082791500826f439a9d574db0f5c
+7d575a4ab0f2082791500826f439a9d574db0f5c,7d575a4a,Switch to dp for font sizes,"Switch to dp for font sizes
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1351003504,1351003504,32f68a75d9b6133327e1cf9301d01409c6b8aa8f
+32f68a75d9b6133327e1cf9301d01409c6b8aa8f,32f68a75,Add BCCLA icon,"Add BCCLA icon
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350939289,1350939289,d64fe914a4e67e649456ef5df034637ef854de8e
+d64fe914a4e67e649456ef5df034637ef854de8e,d64fe914,Migrate TODO/FIXMEs to github issues,"Migrate TODO/FIXMEs to github issues
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350925509,1350926181,17e440cd86d21b2447175673901ca1a79427a00b
+17e440cd86d21b2447175673901ca1a79427a00b,17e440cd,Change colour scheme & font sizes,"Change colour scheme & font sizes
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350923546,1350923546,5045d88d9cac00c9221df04d45a88f6d2a882569
+5045d88d9cac00c9221df04d45a88f6d2a882569,5045d88d,Landscape layout (that was easy),"Landscape layout (that was easy)
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350921103,1350921103,ef04cf51c63313f68129eb53a6b7db2ef704da90
+ef04cf51c63313f68129eb53a6b7db2ef704da90,ef04cf51,Some notes for TableOfContents,"Some notes for TableOfContents
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350861519,1350861519,7a44846edc3d1974ed6261a8a93911bddc2e8cac
+7a44846edc3d1974ed6261a8a93911bddc2e8cac,7a44846e,Fix spacing in read_chapter.xml layout file for readability,"Fix spacing in read_chapter.xml layout file for readability
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350009783,1350860880,2ca67ce6404c20e8fbbfe6446fa5ddbb4a96acdc
+2ca67ce6404c20e8fbbfe6446fa5ddbb4a96acdc,2ca67ce6,Re-order imports,"Re-order imports
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350860732,1350860732,9566260eea74bf05ae6fc80f3f41e968d022c0cc
+9566260eea74bf05ae6fc80f3f41e968d022c0cc,9566260e,Add v4 support library,"Add v4 support library
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350400680,1350854568,142c0ef6b06cbc9c46099fb1e6a8408b81b7481a
+142c0ef6b06cbc9c46099fb1e6a8408b81b7481a,142c0ef6,Only call importAssets() on first run,"Only call importAssets() on first run
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1350853385,1350853385,2cb8913db5c10c2c4f9d996f6664cb1a3ae2c5ce
+2cb8913db5c10c2c4f9d996f6664cb1a3ae2c5ce,2cb8913d,Add scrolling to chapter view,"Add scrolling to chapter view
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347830336,1347830336,67bac0a40adb22cfc1c84c08ca4b19af5c6a4426
+67bac0a40adb22cfc1c84c08ca4b19af5c6a4426,67bac0a4,Rename XML to avoid confusion,"Rename XML to avoid confusion
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347683010,1347683137,adfc0eb9e23ab6f9149ee23367ef8824da6c3898
+adfc0eb9e23ab6f9149ee23367ef8824da6c3898,adfc0eb9,Use XML for chapter reading layout,"Use XML for chapter reading layout
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347681793,1347682045,2d9573f5e920be75de85feb8fc420ded6ca2c71d
+2d9573f5e920be75de85feb8fc420ded6ca2c71d,2d9573f5,TODO file,"TODO file
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347645302,1347645302,8a646c10eb7965ddbc880f2b083f65f10bb83960
+8a646c10eb7965ddbc880f2b083f65f10bb83960,8a646c10,Switch to using XML for TOC layout,"Switch to using XML for TOC layout
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347481151,1347481225,ab4889ad17d59a90877ce1e0846b2818d1af7d5a
+ab4889ad17d59a90877ce1e0846b2818d1af7d5a,ab4889ad,Put English text into separate SQL file from DB schema,"Put English text into separate SQL file from DB schema
+
+Note that English text does not match publicly available PDF version. Text will
+need to be revised.
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347398765,1347398765,9c5b0ac0b63ea8509975860b198c26abf4e63875
+9c5b0ac0b63ea8509975860b198c26abf4e63875,9c5b0ac0,close() DB resources when done with them,"close() DB resources when done with them
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347301410,1347301410,33697e574be51d2c1bb95f3508a785175ff9e457
+33697e574be51d2c1bb95f3508a785175ff9e457,33697e57,Get chapter contents from DB,"Get chapter contents from DB
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347077416,1347077416,9d9f6dc3a96e9b3c9e6795d693a585fee0dd80fb
+9d9f6dc3a96e9b3c9e6795d693a585fee0dd80fb,9d9f6dc3,Get chapter titles from DB,"Get chapter titles from DB
+
+DB is unilingual (English). Sample database has a few chapter titles only. ID
+column may need to be adjusted to ensure auto_increment later.
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347048575,1347048575,5acfaa04f2f0c3758b5109932aea37abc7333987
+5acfaa04f2f0c3758b5109932aea37abc7333987,5acfaa04,Package name change missed in DB_DIR,"Package name change missed in DB_DIR
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1347048133,1347048133,bd66df39fa1358de4b1ad4c063181c537c0157cc
+bd66df39fa1358de4b1ad4c063181c537c0157cc,bd66df39,Add GPL v3.0 notice,"Add GPL v3.0 notice
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1346873849,1346873849,5547f2f01e2e28b3ab5bbd165193558970861aec
+5547f2f01e2e28b3ab5bbd165193558970861aec,5547f2f0,Rename package to org.bccla.arrest,"Rename package to org.bccla.arrest
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1346871173,1346871208,6c67274c37cc830c293d810fb3a08c6e1186c7dd
+6c67274c37cc830c293d810fb3a08c6e1186c7dd,6c67274c,Possible file copying solution,"Possible file copying solution
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1346168311,1346703839,2478e7caea700074eadee385980683e560628bb9
+2478e7caea700074eadee385980683e560628bb9,2478e7ca,Intermediate commit for machine transition,"Intermediate commit for machine transition
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1345818020,1345818020,bc6ad247cc6ce06de7f97b0b7b170472191fb8a4
+bc6ad247cc6ce06de7f97b0b7b170472191fb8a4,bc6ad247,Open ReadChapter on clicking on item in TOC,"Open ReadChapter on clicking on item in TOC
+",,,,Paul Holden,pdmholden@gmail.com,Paul Holden,pdmholden@gmail.com,1344205395,1344205395,3953bdb6e0db0d95f00a3df97ef76888ecd6d638
+3953bdb6e0db0d95f00a3df97ef76888ecd6d638,3953bdb6,Create basic TOC,"Create basic TOC
+",,,,Paul H,pholden@matrix.(none),Paul H,pholden@matrix.(none),1342985791,1342985791,7a744b349d23c384051093552572e2a2c6c60452
+7a744b349d23c384051093552572e2a2c6c60452,7a744b34,Start BCCLA Arrest Pocketbook,"Start BCCLA Arrest Pocketbook
+",,,,Paul H,pholden@matrix.(none),Paul H,pholden@matrix.(none),1342929355,1342929355,

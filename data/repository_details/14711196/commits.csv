@@ -1,0 +1,890 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+830e21d27c1d51f661e690327c01e8c1a44f180d,830e21d2,Merge pull request #173 from olzzon/DarkTheme,"Merge pull request #173 from olzzon/DarkTheme
+
+Dark theme, background color in PopUpWindow ",,,,Andrew Comminos,andrew@comminos.com,GitHub,noreply@github.com,1503612077,1503612077,"2e382f40f191113310b9964b3f31abbeeb9e2d6c,8929223f8889b5f67ba28f5cb8f2129fb86f91b4"
+2e382f40f191113310b9964b3f31abbeeb9e2d6c,2e382f40,Merge pull request #175 from olzzon/SartUpInPinnedModeV3,"Merge pull request #175 from olzzon/SartUpInPinnedModeV3
+
+StartUpInPinnedModeV3 added requested changes",,,,Andrew Comminos,andrew@comminos.com,GitHub,noreply@github.com,1503479215,1503479215,"b5f2dbcd6049f9d3e8916c2b6935a90fde31d31f,4a0e781b6b50fddeb8835a9b933d4a00a60abdeb"
+4a0e781b6b50fddeb8835a9b933d4a00a60abdeb,4a0e781b,StartUpInPinnedMode should default be false,StartUpInPinnedMode should default be false,,,,Kasper Olsson Hans,github@olzzon.dk,GitHub,noreply@github.com,1503472699,1503472699,82ccc2d075332c4ef2f10ff5adb692ec24ddaad2
+82ccc2d075332c4ef2f10ff5adb692ec24ddaad2,82ccc2d0,StartUpInPinnedMode added requested changes,"StartUpInPinnedMode added requested changes
+(This is V3 as i completely messed up the two first branches)
+
+Login ""inPinnedMode"" Setting
+When connecting to a server this setting makes it possible to start in pinned mode, especially when the server is large or the user is a non tech, this can be usefull.
+A new checkbox in settiolngs->general is added.
+
+Added in RES->XML->settings_general.xml:
+a new Checkbox called ""startupInPinnedMode”
+
+Added in settings.java:
+PREF_START_UP_IN_PINNED_MODE
+DEFAULT_START_UP_IN_PINNED_MODE
+isStartUpInPinnedMode()
+
+Added in res->values->preferences.xml:
+pref_start_up_in_pinned_mode
+pref_start_up_in_pinned_mode_sum
+
+Added in app->PlumbleActivity->JumbleObserver->OnConnected():
+status check of mSettings.shouldStartUpInPinnedMode
+
+-----------------------------
+
+ The Drawermenu has 2 changes to make it more logical.
+1: Label Server is changed to ""All Channels”
+2: Order of menu is changed so ""Pinned Channels"" are the second item.
+
+Changed in res->value->strings.xml:
+drawer_server default label changed from ""Server"" to ""All Channels”
+
+Changed in app->DrawerAdaptor:
+placement/order of add(new DrawerAdapter.DrawerItem(ITEM_PINNED_CHANNELS, context.getString(R.string.drawer_pinned), R.drawable.ic_action_comment));
+Order of ITEM_PINNED_CHANNELS, ITEM_INFO, ITEM_ACCESS_TOKENS
+",,,,olzzon,github@olzzon.dk,olzzon,github@olzzon.dk,1503470792,1503470792,1d120322c5af19646f502aa8a0b6c3ec14da47de
+b5f2dbcd6049f9d3e8916c2b6935a90fde31d31f,b5f2dbcd,Update Jumble version with UDP connectivity fixes.,"Update Jumble version with UDP connectivity fixes.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1503452427,1503452427,1d120322c5af19646f502aa8a0b6c3ec14da47de
+8929223f8889b5f67ba28f5cb8f2129fb86f91b4,8929223f,"Dark theme, background in PopUp","Dark theme, background in PopUp
+Setting the background to completely black in material design, makes it impossible to see where a popup windows are.
+
+ So the 2 background colors in Dark theme could preferable be removed.
+",,,,olzzon,github@olzzon.dk,olzzon,github@olzzon.dk,1503046533,1503046533,1d120322c5af19646f502aa8a0b6c3ec14da47de
+1d120322c5af19646f502aa8a0b6c3ec14da47de,1d120322,Avoid suppressing foreground service notifications when activity is shown.,"Avoid suppressing foreground service notifications when activity is shown.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1501793524,1501793524,3fbbef140168f6bb8bb609c7976ef572083969d4
+3fbbef140168f6bb8bb609c7976ef572083969d4,3fbbef14,"Update usage of connection-oriented calls to match new Jumble getSession API, improving stability.","Update usage of connection-oriented calls to match new Jumble getSession API, improving stability.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1488432072,1488432072,4684fadb58112368e1651dbb65847e86fb4d97d8
+4684fadb58112368e1651dbb65847e86fb4d97d8,4684fadb,Suppress connection notifications when the activity is foreground.,"Suppress connection notifications when the activity is foreground.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1488275218,1488275218,209737511276cde108a12e18013d7eda2e2259b1
+209737511276cde108a12e18013d7eda2e2259b1,20973751,Remove unused setup wizard code.,"Remove unused setup wizard code.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1488272978,1488272987,9a167aff4ab49d9bd487d51aba82229ca8bc5722
+9a167aff4ab49d9bd487d51aba82229ca8bc5722,9a167aff,Update Jumble to use jcenter for buildscript as well.,"Update Jumble to use jcenter for buildscript as well.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1483843286,1483843286,6774928ff900ed0173075e815865cdcd0fbab883
+6774928ff900ed0173075e815865cdcd0fbab883,6774928f,Update Jumble to use jcenter.,"Update Jumble to use jcenter.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1483843047,1483843047,1cc455398ec4fbe0bf290057618beb5db9f1ca57
+1cc455398ec4fbe0bf290057618beb5db9f1ca57,1cc45539,Ensure service is connected before checking session user in ChannelFragment.onCreateView.,"Ensure service is connected before checking session user in ChannelFragment.onCreateView.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1483676263,1483676263,d86e5f50b09a7d9a271d4d335132f4fd7a4a3788
+d86e5f50b09a7d9a271d4d335132f4fd7a4a3788,d86e5f50,Check service connectivity before fetching model information when updating target information.,"Check service connectivity before fetching model information when updating target information.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1483675543,1483675543,da3456712d6493e34dbdecdcf9a5817f92ebf3fb
+da3456712d6493e34dbdecdcf9a5817f92ebf3fb,da345671,Update gradle plugin version.,"Update gradle plugin version.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1482117046,1482117046,4a6030f6a34ba3b33f9ad54de83cfd1372236320
+4a6030f6a34ba3b33f9ad54de83cfd1372236320,4a6030f6,Increase connection notification priority.,"Increase connection notification priority.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1479460070,1479460070,22d3a9456aed7429b288d758e99aff9d6b3339b8
+22d3a9456aed7429b288d758e99aff9d6b3339b8,22d3a945,Issue #158 - Hide PTT when muted.,"Issue #158 - Hide PTT when muted.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1478919163,1478919163,fb0729d9c995a11d1e00a03857583d6ec3a9bd8f
+fb0729d9c995a11d1e00a03857583d6ec3a9bd8f,fb0729d9,Update Jumble with minor AudioRecord fixes.,"Update Jumble with minor AudioRecord fixes.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474359020,1474359020,82844d4142cb93f66326debb2bf40897c638128d
+82844d4142cb93f66326debb2bf40897c638128d,82844d41,Issue #121 - Turn talking off when channel fragment suspends.,"Issue #121 - Turn talking off when channel fragment suspends.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474358355,1474358355,127a9942f3b9bfa006d380d3a6163b7cc076f581
+127a9942f3b9bfa006d380d3a6163b7cc076f581,127a9942,Issue 154 - Use custom link colours for solarized themes.,"Issue 154 - Use custom link colours for solarized themes.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474357078,1474357081,447c6062bb100115e69c167cc495126f75000b29
+447c6062bb100115e69c167cc495126f75000b29,447c6062,Issue #139 - Update Jumble to block the audio input thread when PTT is inactive.,"Issue #139 - Update Jumble to block the audio input thread when PTT is inactive.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474265003,1474265003,2782416346a074c455f6df3750fb7d4692df0aa6
+2782416346a074c455f6df3750fb7d4692df0aa6,27824163,Remove Leeroy support.,"Remove Leeroy support.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474250027,1474250027,33a811b64eaad49b1c85ee42cd43940bfefe6527
+33a811b64eaad49b1c85ee42cd43940bfefe6527,33a811b6,Update Gradle plugin to 2.1.3.,"Update Gradle plugin to 2.1.3.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1474249749,1474249759,623198af0b2ed700811d97ffce1716733033ae0e
+623198af0b2ed700811d97ffce1716733033ae0e,623198af,Avoid populating the channel list when binding to a disconnected service.,"Avoid populating the channel list when binding to a disconnected service.
+
+Fixes issue #148.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1468898224,1468898224,d5994d9e6e051e9c962ec181d124bcf9544d0f5f
+d5994d9e6e051e9c962ec181d124bcf9544d0f5f,d5994d9e,Update Android build tools.,"Update Android build tools.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1468897793,1468897793,12075913dfd8feb4e4fac4a6b046f063bccfa1fe
+12075913dfd8feb4e4fac4a6b046f063bccfa1fe,12075913,Merge pull request #144 from tony2001/resizable_ptt_button,"Merge pull request #144 from tony2001/resizable_ptt_button
+
+add setting to change PTT button height",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1464500267,1464500267,"9364b481962c585e0f97ac683650aec4553a431c,800513900e5b34bb0c6543f3ecfe9e6f4db37754"
+9364b481962c585e0f97ac683650aec4553a431c,9364b481,Add whisper target to tablet layouts.,"Add whisper target to tablet layouts.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1464500164,1464500164,357261505e5b090b0afc106b642a7da4a14a223c
+800513900e5b34bb0c6543f3ecfe9e6f4db37754,80051390,add setting to change PTT button height,"add setting to change PTT button height
+",,,,Antony Dovgal,tony@daylessday.org,Antony Dovgal,tony@daylessday.org,1462960221,1462960221,357261505e5b090b0afc106b642a7da4a14a223c
+357261505e5b090b0afc106b642a7da4a14a223c,35726150,Implement support for custom voice target assignment.,"Implement support for custom voice target assignment.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1461965662,1461965662,c8df3077c1664b1217182288ec89a65457de3d88
+c8df3077c1664b1217182288ec89a65457de3d88,c8df3077,Fix link tense.,"Fix link tense.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1461874097,1461874097,1af5d2f1ffb5ae634b25a4f791b60b496dd4dea0
+1af5d2f1ffb5ae634b25a4f791b60b496dd4dea0,1af5d2f1,Consolidate linking and unlinking into a checkbox.,"Consolidate linking and unlinking into a checkbox.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1461873946,1461873946,96adf418a3ce593e9a9406b70373189c4d304502
+96adf418a3ce593e9a9406b70373189c4d304502,96adf418,Indicate linked channels with italics.,"Indicate linked channels with italics.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1461873493,1461873493,8a20ec4e78e7adc0b17fea2188f295e794ce0fcf
+8a20ec4e78e7adc0b17fea2188f295e794ce0fcf,8a20ec4e,Initial implementation of channel linking.,"Initial implementation of channel linking.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1461804414,1461804414,ddf36a291c1aff1268226f17884e17258569d370
+ddf36a291c1aff1268226f17884e17258569d370,ddf36a29,Incremented version to 3.3.0-rc1.,"Incremented version to 3.3.0-rc1.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458956586,1458956586,1eea9470d8e85fdb17a9f498b3c2e11b8a876844
+1eea9470d8e85fdb17a9f498b3c2e11b8a876844,1eea9470,Implement new message notifications.,"Implement new message notifications.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458955992,1458955992,f841ab859748909e704ab58596c2d8598cf1e799
+f841ab859748909e704ab58596c2d8598cf1e799,f841ab85,Update Jumble.,"Update Jumble.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458430520,1458430520,1c5338dcf3ddec10076eb4ec1281bcaea7e2e959
+1c5338dcf3ddec10076eb4ec1281bcaea7e2e959,1c5338dc,Force BouncyCastleProvider in settings migration too.,"Force BouncyCastleProvider in settings migration too.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458017642,1458017642,d19754fb468994476b2ca8dfc00c244a8e072b04
+d19754fb468994476b2ca8dfc00c244a8e072b04,d19754fb,Force use of BouncyCastleProvider for KeyStore.,"Force use of BouncyCastleProvider for KeyStore.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458016756,1458016756,f5d42a2cb19293be47f4e3e22ac86cb2bd147e78
+f5d42a2cb19293be47f4e3e22ac86cb2bd147e78,f5d42a2c,Jumble update.,"Jumble update.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1458015527,1458015527,9bba0dc78b55376874f5c41fc813eec9165cb261
+9bba0dc78b55376874f5c41fc813eec9165cb261,9bba0dc7,Hide reconnect notification when the error has been seen and while not reconnecting.,"Hide reconnect notification when the error has been seen and while not reconnecting.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1457761808,1457761808,c3f8558bcb78e0c1696357c998c091bd0c18bbc3
+c3f8558bcb78e0c1696357c998c091bd0c18bbc3,c3f8558b,Jumble update.,"Jumble update.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1457255634,1457255634,2db958c38d367e35274682a00a4c9e6e883c8f60
+2db958c38d367e35274682a00a4c9e6e883c8f60,2db958c3,"Update Jumble, ndk-build command no longer needed.","Update Jumble, ndk-build command no longer needed.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1456135083,1456135083,4f815874f91d3cf40e7475d98c144ac294875ef9
+4f815874f91d3cf40e7475d98c144ac294875ef9,4f815874,Jumble: fix crash on talk state change post-disconnect.,"Jumble: fix crash on talk state change post-disconnect.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1454478656,1454478656,50e8da8bf540cdd4430ad8cf908d5b491bc10d6c
+50e8da8bf540cdd4430ad8cf908d5b491bc10d6c,50e8da8b,Replaced old custom NetCipher fork with upstream.,"Replaced old custom NetCipher fork with upstream.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1454477595,1454478237,69998097a38e32255a89c6149d934b05512ba39d
+69998097a38e32255a89c6149d934b05512ba39d,69998097,Added option to show/hide channel count.,"Added option to show/hide channel count.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1454303259,1454303259,fb2cd883c385c02dbcf340ac9264e04de494a94e
+fb2cd883c385c02dbcf340ac9264e04de494a94e,fb2cd883,Add dedicated channel join button.,"Add dedicated channel join button.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1454302163,1454302163,dbd184c17977179feee9ec29577c1e2ef2820a02
+dbd184c17977179feee9ec29577c1e2ef2820a02,dbd184c1,"Revert ""Add build tools version and target SDK to .travis.yml.""","Revert ""Add build tools version and target SDK to .travis.yml.""
+
+This reverts commit 8a567929d3a73610cbffba4693a874942d0d5609.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1453192520,1453192543,8a567929d3a73610cbffba4693a874942d0d5609
+8a567929d3a73610cbffba4693a874942d0d5609,8a567929,Add build tools version and target SDK to .travis.yml.,"Add build tools version and target SDK to .travis.yml.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1453189450,1453189450,77947f40810bf90a78cbef0d179d730f7e348d1b
+77947f40810bf90a78cbef0d179d730f7e348d1b,77947f40,Add .travis.yml Android stub.,"Add .travis.yml Android stub.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1453189303,1453189303,704cc8367bf0ed6554e7a5b8821d8fea2610dff7
+704cc8367bf0ed6554e7a5b8821d8fea2610dff7,704cc836,Prompt for server password on reject.,"Prompt for server password on reject.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452922258,1452922258,d4c880a140811779c0b171fb2ff75c589f6f1ad5
+d4c880a140811779c0b171fb2ff75c589f6f1ad5,d4c880a1,Use more compact certificate select layout.,"Use more compact certificate select layout.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452736614,1452736614,41ccfe81811b21d6d5b3de7bdb884d143ff82ca4
+41ccfe81811b21d6d5b3de7bdb884d143ff82ca4,41ccfe81,"Fixed server certificate clearing, trigger settings intents without a target package.","Fixed server certificate clearing, trigger settings intents without a target package.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452735673,1452735673,b5bbbfff2a4b313668f6b60aa13b1f0d04e547a5
+b5bbbfff2a4b313668f6b60aa13b1f0d04e547a5,b5bbbfff,"Revert ""Store package name in XML to fix intent creation on other flavours.""","Revert ""Store package name in XML to fix intent creation on other flavours.""
+
+This reverts commit 0a5409035fa2447099e36fb73974f4ad9a6c7dad.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452734598,1452734598,0a5409035fa2447099e36fb73974f4ad9a6c7dad
+0a5409035fa2447099e36fb73974f4ad9a6c7dad,0a540903,Store package name in XML to fix intent creation on other flavours.,"Store package name in XML to fix intent creation on other flavours.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452667612,1452667612,3d55cdf6749b4f554a78c6a1118bbe5ba7f923c6
+3d55cdf6749b4f554a78c6a1118bbe5ba7f923c6,3d55cdf6,Use dialog theme for settings activities.,"Use dialog theme for settings activities.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452665192,1452665192,60e3f903f8a1c21ccdaf54d4b597b3ac07c171cd
+60e3f903f8a1c21ccdaf54d4b597b3ac07c171cd,60e3f903,Cleaned up legacy certificate manager.,"Cleaned up legacy certificate manager.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452664937,1452664937,2f909a3eaf5afae8aec345452ecbcfcd0efda7d8
+2f909a3eaf5afae8aec345452ecbcfcd0efda7d8,2f909a3e,Work on certificate generation.,"Work on certificate generation.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452664189,1452664189,b9733194863ec55f70d4260783dc3b914014ee26
+b9733194863ec55f70d4260783dc3b914014ee26,b9733194,Add certificate export to external storage.,"Add certificate export to external storage.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452662234,1452662242,62a52880c253ae5306ff9076425e2212a6557876
+62a52880c253ae5306ff9076425e2212a6557876,62a52880,Work on certificate migration.,"Work on certificate migration.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452653513,1452653513,9bb3c4d570df28bcd47403696e06a18b6e23e775
+9bb3c4d570df28bcd47403696e06a18b6e23e775,9bb3c4d5,Fixed certificate usage check.,"Fixed certificate usage check.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452648687,1452648733,5357c90f2758b5775e4d93e3ea474c7d6cd6a6a5
+5357c90f2758b5775e4d93e3ea474c7d6cd6a6a5,5357c90f,"Improve certificate selection, settings.","Improve certificate selection, settings.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452647063,1452647063,d1130814e6852f90f4dc97642feb5f403fa14f79
+d1130814e6852f90f4dc97642feb5f403fa14f79,d1130814,Fixed exception triggering certificate import password prompt.,"Fixed exception triggering certificate import password prompt.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452586796,1452586799,41e5134bba0a1f1c1c3bfa8f8b61275df81e5788
+41e5134bba0a1f1c1c3bfa8f8b61275df81e5788,41e5134b,Work on certificate import and selection.,"Work on certificate import and selection.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452585861,1452585861,1c1547785632e407679335719c7e761d06752090
+1c1547785632e407679335719c7e761d06752090,1c154778,Added settings method to fetch default certificate ID.,"Added settings method to fetch default certificate ID.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452563244,1452563244,dee00fc458feefbece3b3393f6307a228ffe049d
+dee00fc458feefbece3b3393f6307a228ffe049d,dee00fc4,Added methods to support certificate storage in PlumbleDatabase.,"Added methods to support certificate storage in PlumbleDatabase.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1452562563,1452562563,e6bf926889234e8553937f0676c01cb53613eefe
+e6bf926889234e8553937f0676c01cb53613eefe,e6bf9268,Remove reconnect requirement for chat notifications.,"Remove reconnect requirement for chat notifications.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1451307301,1451307301,387a8b7539cfa97a5f8a0ccb0d4e8df44c460f08
+387a8b7539cfa97a5f8a0ccb0d4e8df44c460f08,387a8b75,Switch to linear interpolation for talking indicator.,"Switch to linear interpolation for talking indicator.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1451306517,1451306517,92d0883465665d22a63bc1a04ce8ce3c28a3bc6a
+92d0883465665d22a63bc1a04ce8ce3c28a3bc6a,92d08834,Implemented new animated talking activity indicator.,"Implemented new animated talking activity indicator.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448960103,1448960103,53242acd32e5a00de33a1df17ae90b9355e2f170
+53242acd32e5a00de33a1df17ae90b9355e2f170,53242acd,Set minimum required Android version to 12 (Honeycomb 3.1).,"Set minimum required Android version to 12 (Honeycomb 3.1).
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448959878,1448959878,919e983981a2e679f113c8ba04b0604565c6d788
+919e983981a2e679f113c8ba04b0604565c6d788,919e9839,Added spinning talk indicator.,"Added spinning talk indicator.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448953117,1448953117,009905b24052a83069188214e01f2d78129fecd7
+009905b24052a83069188214e01f2d78129fecd7,009905b2,Show options menu on long click.,"Show options menu on long click.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448267155,1448267155,577a1c4f2b092fa607ddf9c866d72accb232a2ba
+577a1c4f2b092fa607ddf9c866d72accb232a2ba,577a1c4f,Prevent resetting to favourites on activity resume.,"Prevent resetting to favourites on activity resume.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448266590,1448266590,5dd576c598e4525824a54485773ffb4adf0f9a98
+5dd576c598e4525824a54485773ffb4adf0f9a98,5dd576c5,"Moved channel settings to context dropdown, refactored model options.","Moved channel settings to context dropdown, refactored model options.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1448266467,1448266467,4c9e06469fc97dd2a48c71379edef7f135713acc
+4c9e06469fc97dd2a48c71379edef7f135713acc,4c9e0646,Fixed incorrect cast in ChannelSearchProvider.,"Fixed incorrect cast in ChannelSearchProvider.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1445723220,1445723220,d8bf0a29118456b0cd6e31e348d7bddb8878e10e
+d8bf0a29118456b0cd6e31e348d7bddb8878e10e,d8bf0a29,"Update Jumble, kill more RemoteExceptions.","Update Jumble, kill more RemoteExceptions.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1445723075,1445723075,dd3fba780803b904b4e3ead2247d6f1225753728
+dd3fba780803b904b4e3ead2247d6f1225753728,dd3fba78,Ensure the service state is synchronized before updating channel list.,"Ensure the service state is synchronized before updating channel list.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1445720711,1445720711,fb30b2122eb883f750755ae4095afd89d42c9b35
+fb30b2122eb883f750755ae4095afd89d42c9b35,fb30b212,Migration towards new AIDL-less Jumble interface.,"Migration towards new AIDL-less Jumble interface.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1445720234,1445720234,91ba0f137633326e1cb073e0b358b36f2f352277
+91ba0f137633326e1cb073e0b358b36f2f352277,91ba0f13,"Properly set volume control stream for handset mode, fixes #115.","Properly set volume control stream for handset mode, fixes #115.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1444354904,1444354919,7cf15f708750d8bcd0045e076e6665a96db6eed4
+7cf15f708750d8bcd0045e076e6665a96db6eed4,7cf15f70,"Properly set audio stream after enabling handset mode, fixes #116.","Properly set audio stream after enabling handset mode, fixes #116.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1444354239,1444354919,7b2a42f39b7a8cedd3afac8e239ee6a3b2e21736
+7b2a42f39b7a8cedd3afac8e239ee6a3b2e21736,7b2a42f3,Update Jumble with https codec endpoints.,"Update Jumble with https codec endpoints.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1443306057,1443306057,2be31da5cbb75dc7d258e1d1fa02515057d0b7c1
+2be31da5cbb75dc7d258e1d1fa02515057d0b7c1,2be31da5,"Re-added Bluetooth support, updated Jumble.","Re-added Bluetooth support, updated Jumble.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1443247501,1443247501,28dca8ede295a2e801b0c59f1187e6fc8bca81ca
+28dca8ede295a2e801b0c59f1187e6fc8bca81ca,28dca8ed,Implement a discrete user dropdown menu for contextual operations.,"Implement a discrete user dropdown menu for contextual operations.
+In addition, the user action dropdown will now update to accomodate permission changes live.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1443234021,1443234021,73b2a9b1c99d043abba85c8910f1c43c9048b691
+73b2a9b1c99d043abba85c8910f1c43c9048b691,73b2a9b1,"Mute self on connection synchronization, fixes #113.","Mute self on connection synchronization, fixes #113.
+This ensures that the AudioInput instance on the Jumble side is properly
+instantiated before stopping it.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1442359882,1442359882,c471669ad27a64ae564dd47c51d061ee262b3d91
+c471669ad27a64ae564dd47c51d061ee262b3d91,c471669a,Add missing quick connect drawable resources.,"Add missing quick connect drawable resources.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1442352627,1442352627,366e5cfcc695482653837a85516f585ba70e3208
+366e5cfcc695482653837a85516f585ba70e3208,366e5cfc,Add support for quick connect to server.,"Add support for quick connect to server.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1441603345,1441603345,e3e6b5fb23f4cbb816c8dfeb79d7e5a3645086e6
+e3e6b5fb23f4cbb816c8dfeb79d7e5a3645086e6,e3e6b5fb,Refactored server edit fragment.,"Refactored server edit fragment.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1441602045,1441602990,e2fe0fa609c56bd8969503fc582461afdf4799fe
+e2fe0fa609c56bd8969503fc582461afdf4799fe,e2fe0fa6,Use EditText.setError for server creation dialog.,"Use EditText.setError for server creation dialog.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1441600723,1441600723,5f22d92b0fb7ca73caa58e083e201343e8ba6b03
+5f22d92b0fb7ca73caa58e083e201343e8ba6b03,5f22d92b,Make default audio input rate 44.1khz.,"Make default audio input rate 44.1khz.
+
+Android 'guarantees' that this rate will be supported; let's default to it to
+ensure that devices don't fail to initialize AudioRecord.
+",,,,Andrew Comminos,andrew@comminos.com,Andrew Comminos,andrew@comminos.com,1441228189,1441228189,aec4a1cba7101289b1a7dae22e7febce2a03f1b0
+aec4a1cba7101289b1a7dae22e7febce2a03f1b0,aec4a1cb,Merge pull request #104 from wKovacs64/acknowledgements,"Merge pull request #104 from wKovacs64/acknowledgements
+
+Acknowledgements",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1435724303,1435724303,"dc054904dc30786fdb7f1c7ace7b5be16ef0c866,47dce047d249343a2edb29c0e721f73c15b59eb6"
+47dce047d249343a2edb29c0e721f73c15b59eb6,47dce047,Fix acknowledgements link,"Fix acknowledgements link
+
+Link to GitHub's contributor data as the old THANKS file is no longer present.
+",,,,wKovacs64,justin.r.hall@gmail.com,wKovacs64,justin.r.hall@gmail.com,1435685907,1435685910,e3d57525cec4bb2a116a308287f07ea4fc2576dd
+e3d57525cec4bb2a116a308287f07ea4fc2576dd,e3d57525,Fix acknowledgements typos,"Fix acknowledgements typos
+",,,,wKovacs64,justin.r.hall@gmail.com,wKovacs64,justin.r.hall@gmail.com,1435685873,1435685873,dc054904dc30786fdb7f1c7ace7b5be16ef0c866
+dc054904dc30786fdb7f1c7ace7b5be16ef0c866,dc054904,Merge pull request #103 from SweetLion/patch-1,"Merge pull request #103 from SweetLion/patch-1
+
+App Install Location",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1434252688,1434252688,"dfae41dc9961d4474797bd1139f8751d7edbadca,919bb63500e0af45287fc167112ca1e5fea74444"
+919bb63500e0af45287fc167112ca1e5fea74444,919bb635,App Install Location,"App Install Location
+
+The internal memory of my device is quite small, this PR should allow users to easily move the app to the microSD.
+
+""To allow the system to install your application on the external storage, modify your manifest file to include the android:installLocation attribute in the element, with a value of either ""preferExternal"" or ""auto""."" (source: https://developer.android.com/guide/topics/data/install-location.html)
+
+Thank you very much for your awesome app :)",,,,SweetLion,SweetLion@users.noreply.github.com,SweetLion,SweetLion@users.noreply.github.com,1434204338,1434204338,dfae41dc9961d4474797bd1139f8751d7edbadca
+dfae41dc9961d4474797bd1139f8751d7edbadca,dfae41dc,Provide build status in README.md.,"Provide build status in README.md.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1432692775,1432692775,f76ec295915c24c4be5c259b126a7faa7e88301b
+f76ec295915c24c4be5c259b126a7faa7e88301b,f76ec295,Update Jumble version with user equality fixes.,"Update Jumble version with user equality fixes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1431820181,1431820181,d7537c02c51f8df166a1123b5baddae8aa472eb3
+d7537c02c51f8df166a1123b5baddae8aa472eb3,d7537c02,Add support for selectable text in messages.,"Add support for selectable text in messages.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430426761,1430426761,029489d799d91347194fc92a2cb5858ca3f3b79d
+029489d799d91347194fc92a2cb5858ca3f3b79d,029489d7,Properly parse / strip HTML in messages,"Properly parse / strip HTML in messages
+",,,,Jordan Milne,jordan.milne@saynotolinux.com,Jordan Milne,jordan.milne@saynotolinux.com,1430276198,1430304385,e46e33df2d24056e2c32147fcef2ade1bb9ea746
+e46e33df2d24056e2c32147fcef2ade1bb9ea746,e46e33df,Merge branch 'aidl-model',"Merge branch 'aidl-model'
+
+Conflicts:
+	app/src/main/java/com/morlunk/mumbleclient/service/PlumbleService.java
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430276212,1430276212,"efa1838aa32da86aea0d3115f1549bd554b916a3,14b5f30e9357ac3f398bd2c42dc451527636b28f"
+14b5f30e9357ac3f398bd2c42dc451527636b28f,14b5f30e,Fix mute/deafen state changes.,"Fix mute/deafen state changes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430275490,1430275490,6203c619e892c1f965d8551014c6bf0b949ee79c
+6203c619e892c1f965d8551014c6bf0b949ee79c,6203c619,Use new AIDL interfaces in place of old Jumble model.,"Use new AIDL interfaces in place of old Jumble model.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430274969,1430274969,b69c69d9e11c11031a400b6e9ceffb87a8730963
+efa1838aa32da86aea0d3115f1549bd554b916a3,efa1838a,"Jumble update, fixing Jumble issue #3.","Jumble update, fixing Jumble issue #3.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430271575,1430271575,5f75762d0225eeee1d6af97c4e1ba378d0d8e59b
+b69c69d9e11c11031a400b6e9ceffb87a8730963,b69c69d9,"AIDL model changes for channels, users, and messages.","AIDL model changes for channels, users, and messages.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430261519,1430261519,495ced4b6adc6b07bc522cd91a7b5abf5333be7c
+5f75762d0225eeee1d6af97c4e1ba378d0d8e59b,5f75762d,Merge pull request #88 from JordanMilne/tts_shorten_links,"Merge pull request #88 from JordanMilne/tts_shorten_links
+
+Shorten URLs to just their domain name in text-to-speech",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430105737,1430105737,"d46adc673bf0a5569605c48ccda942c55b8df787,e151d9ce0a84ee45a6e2a69d1a77ec06bd385dfd"
+495ced4b6adc6b07bc522cd91a7b5abf5333be7c,495ced4b,Jumble AIDL model changes.,"Jumble AIDL model changes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1430104924,1430104924,d46adc673bf0a5569605c48ccda942c55b8df787
+e151d9ce0a84ee45a6e2a69d1a77ec06bd385dfd,e151d9ce,Add a preference for shortened links in TTS messages,"Add a preference for shortened links in TTS messages
+",,,,Jordan Milne,jordan.milne@saynotolinux.com,Jordan Milne,jordan.milne@saynotolinux.com,1430047637,1430047637,43699a0a940e950cfeccf27af05ab9f178140ca2
+43699a0a940e950cfeccf27af05ab9f178140ca2,43699a0a,Shorten URLs to just their domain name in text-to-speech,"Shorten URLs to just their domain name in text-to-speech
+
+This was really annoying when someone pasted a link to an image hosted
+on a CDN that used hashes for filenames.
+",,,,Jordan Milne,jordan.milne@saynotolinux.com,Jordan Milne,jordan.milne@saynotolinux.com,1429959021,1429959671,d46adc673bf0a5569605c48ccda942c55b8df787
+d46adc673bf0a5569605c48ccda942c55b8df787,d46adc67,Added consistent interface in PlumbleService for talk keys.,"Added consistent interface in PlumbleService for talk keys.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1428096238,1428096238,a86eb4ed683616fc5da116a5c73f72eac05fef68
+a86eb4ed683616fc5da116a5c73f72eac05fef68,a86eb4ed,Implemented new plumbing for settings updates.,"Implemented new plumbing for settings updates.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1427860225,1427860225,4320ed785294b922d6d6b408d061fefe4bebbd80
+4320ed785294b922d6d6b408d061fefe4bebbd80,4320ed78,Translation update.,"Translation update.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1426881203,1426881203,5374a4a24d2440450ee8dc86fb034fb94d7683b5
+5374a4a24d2440450ee8dc86fb034fb94d7683b5,5374a4a2,Update Jumble with AudioHandler changes.,"Update Jumble with AudioHandler changes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1426808999,1426808999,ba9da8c11fa1276cb738fc23e2eaa3d7e46f7d47
+ba9da8c11fa1276cb738fc23e2eaa3d7e46f7d47,ba9da8c1,Safer polling for server info.,"Safer polling for server info.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1426549800,1426549800,db8c314953b65055f4f95667320b4ab719c20069
+db8c314953b65055f4f95667320b4ab719c20069,db8c3149,Jumble update with audio termination and tests.,"Jumble update with audio termination and tests.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1424224395,1424224395,a2f7bdbd7ac787fa4d7cc2237f0aeda1192ec538
+a2f7bdbd7ac787fa4d7cc2237f0aeda1192ec538,a2f7bdbd,Fix logic error in server validation.,"Fix logic error in server validation.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1422513187,1422513187,2800a8f41030f34efaf91cbc865419b100f06115
+2800a8f41030f34efaf91cbc865419b100f06115,2800a8f4,"Greatly improved TCP connection handling, fixes #83","Greatly improved TCP connection handling, fixes #83
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421971662,1421971662,8a5a782c9a59f5d5e72cefc34b57b6368c193646
+8a5a782c9a59f5d5e72cefc34b57b6368c193646,8a5a782c,"Fixes #81, alternative sample rate buffer issues.","Fixes #81, alternative sample rate buffer issues.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421794216,1421794216,67daaf4deb766fe2c915b49ad03d6f2c278583a5
+67daaf4deb766fe2c915b49ad03d6f2c278583a5,67daaf4d,Fix negligent service setting updates.,"Fix negligent service setting updates.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421707679,1421707679,5e7e048427d3664f65e6f75581b9df4bed0afea5
+5e7e048427d3664f65e6f75581b9df4bed0afea5,5e7e0484,Merge branch 'master' of github.com:Morlunk/Plumble,"Merge branch 'master' of github.com:Morlunk/Plumble
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421706955,1421706955,"d82944d206d92502382c537875cbf425e34d16f3,c42a24e724ebcef449f0b7368527e30ed56190d5"
+d82944d206d92502382c537875cbf425e34d16f3,d82944d2,Implement reconnection dependent on connectivity. Fixes #77.,"Implement reconnection dependent on connectivity. Fixes #77.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421706908,1421706930,9ae6989883901f1aad8126fb030453ad4165ba64
+c42a24e724ebcef449f0b7368527e30ed56190d5,c42a24e7,Implement reconnection dependent on connectivity.,"Implement reconnection dependent on connectivity.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421706908,1421706908,9ae6989883901f1aad8126fb030453ad4165ba64
+9ae6989883901f1aad8126fb030453ad4165ba64,9ae69898,Improved disconnect logic.,"Improved disconnect logic.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421704960,1421704960,9e596cdebb208f5b3b915ec2e7e5c7aa0df1da20
+9e596cdebb208f5b3b915ec2e7e5c7aa0df1da20,9e596cde,"More stateful reconnects, fixed service fragment lifecycle.","More stateful reconnects, fixed service fragment lifecycle.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421704256,1421704256,b3284593e1966b40f5afc1615e1ae2d5bd392510
+b3284593e1966b40f5afc1615e1ae2d5bd392510,b3284593,Add disconnect notification when auto-reconnect is disabled.,"Add disconnect notification when auto-reconnect is disabled.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421523907,1421523907,63775df14941c1ac2ff9f8fa5e585504fcd2d971
+63775df14941c1ac2ff9f8fa5e585504fcd2d971,63775df1,"More robust notifications, better reconnect notifications and disconnect handling.","More robust notifications, better reconnect notifications and disconnect handling.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421489316,1421489316,85b29b868e600eb7432b53332fb8845293c54287
+85b29b868e600eb7432b53332fb8845293c54287,85b29b86,Make PlumbleActivity accurately represent connection state.,"Make PlumbleActivity accurately represent connection state.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421485371,1421485371,6ba3ef6c8864d6995426d9f8fa935a2bf81b6511
+6ba3ef6c8864d6995426d9f8fa935a2bf81b6511,6ba3ef6c,Update Leeroy-Gradle.,"Update Leeroy-Gradle.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421117151,1421117151,eaebaec88195d227d40c1783add820627055fbe5
+eaebaec88195d227d40c1783add820627055fbe5,eaebaec8,Don't turn off toggled PTT when drawer is opened.,"Don't turn off toggled PTT when drawer is opened.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421115006,1421115006,a676e23b94a9fc5f985623699811aa8ae81bc92e
+a676e23b94a9fc5f985623699811aa8ae81bc92e,a676e23b,Merge pull request #78 from BuddyButterfly/ptt-hang,"Merge pull request #78 from BuddyButterfly/ptt-hang
+
+Check unconditionally for talking state and disable if talking is true",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1421114843,1421114843,"7a6b6d2d5c94b3162a4c68fa4c9db8767b68a027,1250f273e7b1114bba930e32bee0b23252c361a7"
+1250f273e7b1114bba930e32bee0b23252c361a7,1250f273,Check unconditionally for talking state and disable if talking is enabled when there,"Check unconditionally for talking state and disable if talking is enabled when there
+is any action on the drawer.
+",,,,buddy,buddy.butterfly@web.de,buddy,buddy.butterfly@web.de,1421093710,1421093710,7a6b6d2d5c94b3162a4c68fa4c9db8767b68a027
+7a6b6d2d5c94b3162a4c68fa4c9db8767b68a027,7a6b6d2d,Fix Leeroy configuration.,"Fix Leeroy configuration.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421034868,1421034868,d2257c8152e54c76ecb2063aae1e9b21a9fc6b05
+d2257c8152e54c76ecb2063aae1e9b21a9fc6b05,d2257c81,Add Leeroy integration.,"Add Leeroy integration.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1421034602,1421034602,fa9a4419fdd48ffdaf7f4627a291042eccf1d802
+fa9a4419fdd48ffdaf7f4627a291042eccf1d802,fa9a4419,Jumble and translation update.,"Jumble and translation update.
+Fixed audio bandwidth reporting.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1420347217,1420347217,2e3cb1512b914e6720179ac7cd489d5fd1b46e1d
+2e3cb1512b914e6720179ac7cd489d5fd1b46e1d,2e3cb151,Update Jumble with bluetooth fix.,"Update Jumble with bluetooth fix.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1419395161,1419395161,9b57e6fa56da363a1091fb8c95397c915cfc5b12
+9b57e6fa56da363a1091fb8c95397c915cfc5b12,9b57e6fa,"Update user avatars, fixes #72","Update user avatars, fixes #72
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1419394329,1419394329,55a66e55792cb6df8f0c6fed0eb663b6df097cae
+55a66e55792cb6df8f0c6fed0eb663b6df097cae,55a66e55,Update Jumble tests.,"Update Jumble tests.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1419378775,1419378775,0182c2f77afdbdcd28f17db959a0e0c1f1603a00
+0182c2f77afdbdcd28f17db959a0e0c1f1603a00,0182c2f7,"Update Jumble, encoding bitrate fixes.","Update Jumble, encoding bitrate fixes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1419377069,1419377069,ce6a9b469b1213068b2e4d73913de72780099a73
+ce6a9b469b1213068b2e4d73913de72780099a73,ce6a9b46,Update Jumble with audio bandwidth detection.,"Update Jumble with audio bandwidth detection.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1418964271,1418964271,cbd410835604ae9277b90b4ff20f5c0c0f569e77
+cbd410835604ae9277b90b4ff20f5c0c0f569e77,cbd41083,Be safer when updating chat target text. Update Jumble.,"Be safer when updating chat target text. Update Jumble.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1418958159,1418958159,3e72d35a758f1388243e285f00d81caad9b3bb05
+3e72d35a758f1388243e285f00d81caad9b3bb05,3e72d35a,Update Jumble with new encoder framework.,"Update Jumble with new encoder framework.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1418957067,1418957067,13cea4eb4c8dd72cd85a56413e1d7b3d8f6cbef5
+13cea4eb4c8dd72cd85a56413e1d7b3d8f6cbef5,13cea4eb,Updated for Android Studio 1.0.,"Updated for Android Studio 1.0.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1418073689,1418073689,de44c3c4cc3df02ab140c7f84b885e3a7b51934b
+de44c3c4cc3df02ab140c7f84b885e3a7b51934b,de44c3c4,Update Jumble with better sample rate detection.,"Update Jumble with better sample rate detection.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1417411007,1417411007,efa2de6374e4cf9845a89342dbe610d3b8cbfa07
+efa2de6374e4cf9845a89342dbe610d3b8cbfa07,efa2de63,"Added ""Stay Awake"" option to settings.","Added ""Stay Awake"" option to settings.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1416198045,1416198045,fc943cf01cfa912f8f1ecf53d952eff60abbbeb2
+fc943cf01cfa912f8f1ecf53d952eff60abbbeb2,fc943cf0,Updated translations.,"Updated translations.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1416196922,1416196922,bb3b77b0ca044fa5ebe147c54c3048a9dc16f0b8
+bb3b77b0ca044fa5ebe147c54c3048a9dc16f0b8,bb3b77b0,Merge pull request #73 from Peque/peque,"Merge pull request #73 from Peque/peque
+
+Changed ""Available on F-Droid"" image in README file",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1415087952,1415087952,"deffed3f7b6576ea02e20d155009c340dd002ab2,aef1b3a4c08d586209d916bde460e2e1c6b3f69c"
+aef1b3a4c08d586209d916bde460e2e1c6b3f69c,aef1b3a4,"Changed ""Available on F-Droid"" image in README file","Changed ""Available on F-Droid"" image in README file
+",,,,Miguel Sánchez de León Peque,msdeleonpeque@gmail.com,Miguel Sánchez de León Peque,msdeleonpeque@gmail.com,1414569984,1414569984,deffed3f7b6576ea02e20d155009c340dd002ab2
+deffed3f7b6576ea02e20d155009c340dd002ab2,deffed3f,Bumped version code.,"Bumped version code.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414478192,1414478192,3094ef20ba73c8ae4d54efca9c7149fa8950b34d
+3094ef20ba73c8ae4d54efca9c7149fa8950b34d,3094ef20,Add lighter talking drawable.,"Add lighter talking drawable.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414477390,1414477390,daf154bdb63f24ebc025ed91658210de5957d626
+daf154bdb63f24ebc025ed91658210de5957d626,daf154bd,Corrected Jumble PacketBuffer issue.,"Corrected Jumble PacketBuffer issue.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414459987,1414459987,657a4d355a900a9bb3abf98f0d17317905b2d88f
+657a4d355a900a9bb3abf98f0d17317905b2d88f,657a4d35,Add TintedMenuInflater to fix solarized icon resources.,"Add TintedMenuInflater to fix solarized icon resources.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414452042,1414452042,eedf40a7b48a03c12193e4977810a62974efca22
+eedf40a7b48a03c12193e4977810a62974efca22,eedf40a7,Bumped version code.,"Bumped version code.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414272070,1414272070,24a185962b06a86b50e1799047d5e00e6b422440
+24a185962b06a86b50e1799047d5e00e6b422440,24a18596,Better CardView visuals. Fixed DialogFragment background colour on 2.3 devices.,"Better CardView visuals. Fixed DialogFragment background colour on 2.3 devices.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414271966,1414271966,29226a0f54759770cf8a55b73e37ffb0878bfbb5
+29226a0f54759770cf8a55b73e37ffb0878bfbb5,29226a0f,Implement circular avatar drawables.,"Implement circular avatar drawables.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414269274,1414269274,d40e313d087f8b6cbadd76fa1bb926040c286f7b
+d40e313d087f8b6cbadd76fa1bb926040c286f7b,d40e313d,Use AppCompat theme's horizontal progress bar.,"Use AppCompat theme's horizontal progress bar.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414189224,1414189224,5080920ac0c3589b224b4fd2892adaa8a6a5f0b3
+5080920ac0c3589b224b4fd2892adaa8a6a5f0b3,5080920a,Use cardStyle for public servers.,"Use cardStyle for public servers.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414049822,1414049822,783c7d62145ebba95e7e3747dcf9b6f456db2b7a
+783c7d62145ebba95e7e3747dcf9b6f456db2b7a,783c7d62,Add theme-specific card styling.,"Add theme-specific card styling.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414049525,1414049525,6c37c7c4670a3b4d43d511e15abf974132f4e8d1
+6c37c7c4670a3b4d43d511e15abf974132f4e8d1,6c37c7c4,Don't overextend channel item backgrounds.,"Don't overextend channel item backgrounds.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414048176,1414048176,a2974c8f370fac2cf3a142335808680f131e3fa1
+a2974c8f370fac2cf3a142335808680f131e3fa1,a2974c8f,Correct issue with overlay crash.,"Correct issue with overlay crash.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414048128,1414048128,6f91c6464d6bbba769501586888094e3b86ffe56
+6f91c6464d6bbba769501586888094e3b86ffe56,6f91c646,Fix item highlights. Removed styling boilerplate.,"Fix item highlights. Removed styling boilerplate.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414047027,1414047027,67b1df8661f5602ffba81394debea35b89d5ed44
+67b1df8661f5602ffba81394debea35b89d5ed44,67b1df86,Remove background for talking off state drawable.,"Remove background for talking off state drawable.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1414045484,1414045484,f7a9eeb1533c5560cfb71856bf9ccc4a4ac2d285
+f7a9eeb1533c5560cfb71856bf9ccc4a4ac2d285,f7a9eeb1,Switched channel view to RecycleView with RecycleView.Adapter implementation.,"Switched channel view to RecycleView with RecycleView.Adapter implementation.
+Wow that's fancy.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413856832,1413856832,3b4b0f5168535057f9bbcfd6d8bc225b0b154bc1
+3b4b0f5168535057f9bbcfd6d8bc225b0b154bc1,3b4b0f51,"Some in-progress avatar work, better channel adapter state management.","Some in-progress avatar work, better channel adapter state management.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413777257,1413777257,95d4de3c02663c6f4c050846ae085f6be3326799
+95d4de3c02663c6f4c050846ae085f6be3326799,95d4de3c,Temporarily remove avatar display until aliasing fixed. More visible,"Temporarily remove avatar display until aliasing fixed. More visible
+outlines.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413771374,1413771374,9df3c945385f8e720e3b51321183d8c24bb563f4
+9df3c945385f8e720e3b51321183d8c24bb563f4,9df3c945,Better user state update mechanics.,"Better user state update mechanics.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413769404,1413769404,a604acd11010c645b3a65b04222afb4e7f8ead31
+a604acd11010c645b3a65b04222afb4e7f8ead31,a604acd1,"Implement new ""flipping"" talk states as part of Material rework.","Implement new ""flipping"" talk states as part of Material rework.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413766041,1413766041,8056ccf0e090f22ec4bc48cf2a644e325e1bf734
+8056ccf0e090f22ec4bc48cf2a644e325e1bf734,8056ccf0,Update talk state resources.,"Update talk state resources.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413754686,1413754686,8dc058f87ce57f7570a3a5534ce4371f3e1311c4
+8dc058f87ce57f7570a3a5534ce4371f3e1311c4,8dc058f8,New drawable resources for talk states.,"New drawable resources for talk states.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413751871,1413751871,037acc525a98a379367e8cbe391f3b3e76c3eb1c
+037acc525a98a379367e8cbe391f3b3e76c3eb1c,037acc52,Implement circle avatar clipping on Android < 5.0.,"Implement circle avatar clipping on Android < 5.0.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413674843,1413674843,fcb171f6477d2ad6db6a2291405d77039533412a
+fcb171f6477d2ad6db6a2291405d77039533412a,fcb171f6,Reimplemented mute and deafen state indicators.,"Reimplemented mute and deafen state indicators.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413671298,1413671298,a5766ba39b61ebb6a3e615b4d91a48fb03ff3a82
+a5766ba39b61ebb6a3e615b4d91a48fb03ff3a82,a5766ba3,"WIP 5.0 retheme. Half baked avatar support, channel list fixes.","WIP 5.0 retheme. Half baked avatar support, channel list fixes.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413670474,1413670474,34a251674543e18f16872663927ceb8d474bb15a
+34a251674543e18f16872663927ceb8d474bb15a,34a25167,Greatly simplified ChannelListAdapter and made model traversals simpler,"Greatly simplified ChannelListAdapter and made model traversals simpler
+and safer. WIP avatar support.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413623051,1413623051,3355176c01c45e5fd6f6de23aa1dfee5d016d810
+3355176c01c45e5fd6f6de23aa1dfee5d016d810,3355176c,"Update Jumble version, fixing public servers.","Update Jumble version, fixing public servers.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413590110,1413590110,db39d3dd5095ac91ecbcf52bc7092240a51a49e7
+db39d3dd5095ac91ecbcf52bc7092240a51a49e7,db39d3dd,Update build for Android L. Guava dependency removed.,"Update build for Android L. Guava dependency removed.
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1413588734,1413588734,ba0e36b8715bdddb37f4826229c79d7f7b833c54
+ba0e36b8715bdddb37f4826229c79d7f7b833c54,ba0e36b8,Merge branch 'l-preview',"Merge branch 'l-preview'
+",,,,Andrew Comminos,andrew@andrew-desktop,Andrew Comminos,andrew@andrew-desktop,1413586242,1413586242,"840260644a88cc38ef926ae46374c19f06cbc48d,152e46e4cfc9b628fc4e173fae2a16a527a7cd34"
+840260644a88cc38ef926ae46374c19f06cbc48d,84026064,Update Jumble with support for concurrent decodes and track pauses.,"Update Jumble with support for concurrent decodes and track pauses.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409793194,1409793194,ffd8c6daa8a52e5274ace968d63f2c6871cf85d2
+ffd8c6daa8a52e5274ace968d63f2c6871cf85d2,ffd8c6da,Upgrade Jumble with better memory usage.,"Upgrade Jumble with better memory usage.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409462897,1409462897,96c5efb983b42f3dcbd1e3393cfe3c94a497e618
+152e46e4cfc9b628fc4e173fae2a16a527a7cd34,152e46e4,Merge branch 'master' into l-preview,"Merge branch 'master' into l-preview
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409431755,1409431755,"5d820defcfe437bd396e4eef3f1ca5b3642e1a54,96c5efb983b42f3dcbd1e3393cfe3c94a497e618"
+96c5efb983b42f3dcbd1e3393cfe3c94a497e618,96c5efb9,Update Jumble with threading improvements.,"Update Jumble with threading improvements.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409431707,1409431707,74e33e3c9366dd1c5c4816749c50a9683f51c016
+74e33e3c9366dd1c5c4816749c50a9683f51c016,74e33e3c,Fixed speex preprocessor string.,"Fixed speex preprocessor string.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409317970,1409317970,0b937e3cdeb80ddf5ccd83c1f6f4dee93d6c3df7
+0b937e3cdeb80ddf5ccd83c1f6f4dee93d6c3df7,0b937e3c,Removed all localized string arrays.,"Removed all localized string arrays.
+Localized string arrays cause terrible issues with incomplete
+translations.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409272408,1409272408,a4d4081fcf9cc486c496089ade004ca945acc103
+a4d4081fcf9cc486c496089ade004ca945acc103,a4d4081f,Translation update.,"Translation update.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1409271881,1409271881,f9425baa457c292378a636a3525b2f95f94e4e3e
+f9425baa457c292378a636a3525b2f95f94e4e3e,f9425baa,Update version to 3.1.5.,"Update version to 3.1.5.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408839823,1408839823,202ee21f15b6bb028705724ac996836334b87b1e
+202ee21f15b6bb028705724ac996836334b87b1e,202ee21f,"Improve server edit dialog, back with AlertDialog.","Improve server edit dialog, back with AlertDialog.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408839723,1408839723,0d46eb14454c39f54ce7bb0f64dba488ab434f25
+0d46eb14454c39f54ce7bb0f64dba488ab434f25,0d46eb14,Updated Jumble custom SC provider,"Updated Jumble custom SC provider
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408837888,1408837888,435c6c9480d48aa94622354d88d363d164af0789
+435c6c9480d48aa94622354d88d363d164af0789,435c6c94,"Updated Jumble to use new custom SC fork, fixing loading mumble certificates. Fixes #33","Updated Jumble to use new custom SC fork, fixing loading mumble certificates. Fixes #33
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408833847,1408833847,109c424c0a7f8f29247d2669f29175c8f92e92da
+109c424c0a7f8f29247d2669f29175c8f92e92da,109c424c,Fix translation issue with audio sample rates.,"Fix translation issue with audio sample rates.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408662694,1408662694,a216ea032e59b4d95f4c40d1e70b5d37d4529937
+a216ea032e59b4d95f4c40d1e70b5d37d4529937,a216ea03,Bumped version to 3.1.4.,"Bumped version to 3.1.4.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408662165,1408662165,047c6f92b3cbbd36f7d0530473b568ff22837cbd
+047c6f92b3cbbd36f7d0530473b568ff22837cbd,047c6f92,Add new selection menu for audio per packet.,"Add new selection menu for audio per packet.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408661972,1408661972,955ba213109d4364842beaa53df077758207097e
+955ba213109d4364842beaa53df077758207097e,955ba213,Properly disable preprocessor in Jumble if checked.,"Properly disable preprocessor in Jumble if checked.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408661063,1408661063,9cfb2bc4cc353e5ff672560e4c7fab9a5e47ffca
+9cfb2bc4cc353e5ff672560e4c7fab9a5e47ffca,9cfb2bc4,Decrease default frames per packet to 2. Use new Jumble audio encoding,"Decrease default frames per packet to 2. Use new Jumble audio encoding
+work.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408660337,1408660337,72e35180e30409ac5ef70fdb91d35f35fab27350
+72e35180e30409ac5ef70fdb91d35f35fab27350,72e35180,Construct server connection intent asynchronously.,"Construct server connection intent asynchronously.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408604353,1408604353,6af320741050c31f513787e2a4550342d8620446
+6af320741050c31f513787e2a4550342d8620446,6af32074,Initial work on Plumble SQL unit testing.,"Initial work on Plumble SQL unit testing.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408511282,1408511282,26b2ab1792b77bc18868affdfeec3c6e9468a31e
+26b2ab1792b77bc18868affdfeec3c6e9468a31e,26b2ab17,Fix issue with local ignore table not created.,"Fix issue with local ignore table not created.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408443416,1408443416,1c55c8c9799074cce51eb519888a102c5f6e4cbf
+1c55c8c9799074cce51eb519888a102c5f6e4cbf,1c55c8c9,Add option for disabling speex preprocessor.,"Add option for disabling speex preprocessor.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408315341,1408315341,caffd15f1f4cc35779961f786514d4dd30ad1d5b
+caffd15f1f4cc35779961f786514d4dd30ad1d5b,caffd15f,Fix notification message display.,"Fix notification message display.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408314403,1408314403,b99e887b9dcbbfcac3adc85e08abd452bb4a5135
+b99e887b9dcbbfcac3adc85e08abd452bb4a5135,b99e887b,Add support for local ignore history. Some DB cleanup.,"Add support for local ignore history. Some DB cleanup.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408232939,1408232939,c49d39b4317a32c21c6fadc9e49c3d632f400dbe
+c49d39b4317a32c21c6fadc9e49c3d632f400dbe,c49d39b4,Bumped version number to 3.1.3.,"Bumped version number to 3.1.3.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408228776,1408228776,485345e66e8b4158ffcd8ae416c28110e078e186
+485345e66e8b4158ffcd8ae416c28110e078e186,485345e6,Update Jumble version to fix L preview libs.,"Update Jumble version to fix L preview libs.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408228402,1408228402,8169cc30e3484db9296e8f9df639bb89bb261e28
+8169cc30e3484db9296e8f9df639bb89bb261e28,8169cc30,Load server fragment in activity created by notification.,"Load server fragment in activity created by notification.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1408087993,1408087993,e4a52219ef74f49c1aeedf5e4688268c2c0b1768
+e4a52219ef74f49c1aeedf5e4688268c2c0b1768,e4a52219,Update translations.,"Update translations.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1407897354,1407897354,f9687394ebdb3b1628399be6e37213f45e19ec5b
+f9687394ebdb3b1628399be6e37213f45e19ec5b,f9687394,Move notification code into new class. Move talk IPC into new class.,"Move notification code into new class. Move talk IPC into new class.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1407749611,1407749611,3c9d5d61383cd9238daa3d5aad668c626d400efa
+3c9d5d61383cd9238daa3d5aad668c626d400efa,3c9d5d61,Update Jumble with refactored connection code.,"Update Jumble with refactored connection code.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406679890,1406679890,c22d0d1da905c65a30cf0867a6d48baf100c5224
+c22d0d1da905c65a30cf0867a6d48baf100c5224,c22d0d1d,Add support for local mute history.,"Add support for local mute history.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406509571,1406509571,56702e13642b4f22307940a341f069363ab3c333
+56702e13642b4f22307940a341f069363ab3c333,56702e13,"Connection check for PTT sound, update PTT sound ivar on service startup.","Connection check for PTT sound, update PTT sound ivar on service startup.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406266711,1406266711,9b45d36a0ddcf0bcb01ea0edc3cd39fc4b534a0c
+9b45d36a0ddcf0bcb01ea0edc3cd39fc4b534a0c,9b45d36a,Merge pull request #63 from delta-nry/feat/ptt-sound,"Merge pull request #63 from delta-nry/feat/ptt-sound
+
+Add option to play sound effect when push to talk button is pressed ",,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1406266214,1406266214,"62ec0b6c225d2c373613ca98b2ea6755387b543b,605a8e436b7ca0b4ed2ee9b5319318fa2412e828"
+605a8e436b7ca0b4ed2ee9b5319318fa2412e828,605a8e43,"Minor code formatting, push to talk and localization fixes.","Minor code formatting, push to talk and localization fixes.
+
+Push to Talk Sound preference checkbox fixed.
+",,,,Nathan Yee,delta-nry@users.noreply.github.com,Nathan Yee,delta-nry@users.noreply.github.com,1406264515,1406264515,d43db0c9b80123cab02704882a088b6169d6b05e
+d43db0c9b80123cab02704882a088b6169d6b05e,d43db0c9,Add preferences option for push to talk sound.,"Add preferences option for push to talk sound.
+",,,,Nathan Yee,delta-nry@users.noreply.github.com,Nathan Yee,delta-nry@users.noreply.github.com,1406253569,1406253569,6d87945d221fdb28e51b48df80f963079ffb7f5a
+6d87945d221fdb28e51b48df80f963079ffb7f5a,6d87945d,Add sound when push-to-talk button is pressed,"Add sound when push-to-talk button is pressed
+",,,,Nathan Yee,delta-nry@users.noreply.github.com,Nathan Yee,delta-nry@users.noreply.github.com,1406251432,1406251432,62ec0b6c225d2c373613ca98b2ea6755387b543b
+62ec0b6c225d2c373613ca98b2ea6755387b543b,62ec0b6c,Properly display local mute state updates.,"Properly display local mute state updates.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406167600,1406167600,32fa59e42a9ce96fabe6a71e5d09a3f03130088b
+32fa59e42a9ce96fabe6a71e5d09a3f03130088b,32fa59e4,Fully implement unsuppressing users.,"Fully implement unsuppressing users.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406166112,1406166112,da9aff9ead206f49e4d0c3d0f3984714f9994635
+da9aff9ead206f49e4d0c3d0f3984714f9994635,da9aff9e,Update Jumble with crash fixes.,"Update Jumble with crash fixes.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1406165264,1406165264,d4bf2c7dc330c6d63299fdc85a0bb376701c6201
+d4bf2c7dc330c6d63299fdc85a0bb376701c6201,d4bf2c7d,Updated Jumble to use opus v1.1.,"Updated Jumble to use opus v1.1.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405901773,1405901773,4456e674c617ab02d449f4d4e72e94cbc870fca1
+5d820defcfe437bd396e4eef3f1ca5b3642e1a54,5d820def,Merge branch 'master' into l-preview,"Merge branch 'master' into l-preview
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405892583,1405892583,"1e547e7173f2a201b616d5d16a2aa87fcc290ce0,4456e674c617ab02d449f4d4e72e94cbc870fca1"
+4456e674c617ab02d449f4d4e72e94cbc870fca1,4456e674,Fixed server edit dialog width on some Android versions.,"Fixed server edit dialog width on some Android versions.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405830699,1405830699,13a6d43faf33d9ce4b3528fa1e6e70e872e9e4c7
+13a6d43faf33d9ce4b3528fa1e6e70e872e9e4c7,13a6d43f,Fixed issue with TTS failure crashing app. Bumped version to 3.1.2.,"Fixed issue with TTS failure crashing app. Bumped version to 3.1.2.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405678671,1405678671,2057075c41b4900a47c2625102266fbf3720f06e
+1e547e7173f2a201b616d5d16a2aa87fcc290ce0,1e547e71,More in-progress L preview work,"More in-progress L preview work
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405553255,1405553255,bf5fcc228df3ca0750e884f1783d6bac6c70bca8
+bf5fcc228df3ca0750e884f1783d6bac6c70bca8,bf5fcc22,Merge branch 'master' into l-preview,"Merge branch 'master' into l-preview
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405409425,1405409425,"00f1ba5db77d87a42656fce0a7461c782ea51237,2057075c41b4900a47c2625102266fbf3720f06e"
+2057075c41b4900a47c2625102266fbf3720f06e,2057075c,Bumped version number to 3.1.1.,"Bumped version number to 3.1.1.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405380677,1405380677,f5c4fc2145fcfdfdd908406358c027d164b2356c
+f5c4fc2145fcfdfdd908406358c027d164b2356c,f5c4fc21,More model checks for text message logging.,"More model checks for text message logging.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405379856,1405379856,5556cfa3d4e55d56c4444ff9a7ac9de6f2c6d8c0
+5556cfa3d4e55d56c4444ff9a7ac9de6f2c6d8c0,5556cfa3,Add defensive checks in case we receive messages before ServerSync.,"Add defensive checks in case we receive messages before ServerSync.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405378261,1405378261,db48ff6daa0fd3f77de68160b5d5a10d63a2996c
+db48ff6daa0fd3f77de68160b5d5a10d63a2996c,db48ff6d,Bumped version number to 3.1.0.,"Bumped version number to 3.1.0.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405319275,1405319275,6608b4d24aafa2789522795b537882f0880de74d
+6608b4d24aafa2789522795b537882f0880de74d,6608b4d2,Update Jumble with TCP fallback when UDP fails.,"Update Jumble with TCP fallback when UDP fails.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405319027,1405319027,a782eec80a47e97626a3764ab9da45a91cff11c0
+00f1ba5db77d87a42656fce0a7461c782ea51237,00f1ba5d,Initial work on use of L preview classes.,"Initial work on use of L preview classes.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405300416,1405300416,a782eec80a47e97626a3764ab9da45a91cff11c0
+a782eec80a47e97626a3764ab9da45a91cff11c0,a782eec8,Add contribution info to readme.,"Add contribution info to readme.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405295126,1405295126,3771c7506e615f7ddd04cf003db0bd8bf4f5ee8d
+3771c7506e615f7ddd04cf003db0bd8bf4f5ee8d,3771c750,Update readme with IPC docs,"Update readme with IPC docs
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405290546,1405290546,d65c39e2a6438413f727a7fd30e9616d7ed35042
+d65c39e2a6438413f727a7fd30e9616d7ed35042,d65c39e2,Add IPC talk broadcast support via com.morlunk.mumbleclient.action.TALK.,"Add IPC talk broadcast support via com.morlunk.mumbleclient.action.TALK.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405289633,1405289633,1dcbfbd88a6340f24d6e283f99c820271e83143f
+1dcbfbd88a6340f24d6e283f99c820271e83143f,1dcbfbd8,Fixed PTT selection highlight on tablets.,"Fixed PTT selection highlight on tablets.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405287618,1405287618,1dcda9b25200505081c75466346a816a14038c29
+1dcda9b25200505081c75466346a816a14038c29,1dcda9b2,Add more audio state checks to Jumble.,"Add more audio state checks to Jumble.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405228145,1405228145,c3e2c4e0c747a7e598990063b4eb73c314489f40
+c3e2c4e0c747a7e598990063b4eb73c314489f40,c3e2c4e0,"Update Jumble, fixes threading issues in issue #28","Update Jumble, fixes threading issues in issue #28
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405219624,1405219624,870458bb683f7381987bc0f781122a939627d02c
+870458bb683f7381987bc0f781122a939627d02c,870458bb,Update Jumble gradle version.,"Update Jumble gradle version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405213417,1405213417,9cb5fb7920f55de00fb287a614674ab01bfed904
+9cb5fb7920f55de00fb287a614674ab01bfed904,9cb5fb79,Update Jumble version.,"Update Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405212958,1405212958,9595abc346543f1f29e332b022b3d1d64f37a63c
+9595abc346543f1f29e332b022b3d1d64f37a63c,9595abc3,Updated netcipher.,"Updated netcipher.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405200693,1405200693,b5d5cf7bfb26cebd891787720bb16e2f77f9de48
+b5d5cf7bfb26cebd891787720bb16e2f77f9de48,b5d5cf7b,Request to start orbot if not running.,"Request to start orbot if not running.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1405161870,1405161870,c9188d681e7dd03687f3a277c23338ab8788d336
+c9188d681e7dd03687f3a277c23338ab8788d336,c9188d68,Added field verification for server edit view.,"Added field verification for server edit view.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404964200,1404964200,9397d08ac8d8a374196bf2b291b521a87ff5bd36
+9397d08ac8d8a374196bf2b291b521a87ff5bd36,9397d08a,Removed empty translations.,"Removed empty translations.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404888495,1404888495,e11fae351dd981c9ae4c080c7e273eb007f3169d
+e11fae351dd981c9ae4c080c7e273eb007f3169d,e11fae35,Moved resource referecnes to notranslate.,"Moved resource referecnes to notranslate.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404883430,1404883430,9374303fec266eb788a2559a9c82371a30e0f14b
+9374303fec266eb788a2559a9c82371a30e0f14b,9374303f,Jumble update.,"Jumble update.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404883071,1404883071,ef81e974e76f9387e8db083e8df8effdceb762ef
+ef81e974e76f9387e8db083e8df8effdceb762ef,ef81e974,Translation update.,"Translation update.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404883019,1404883019,683fe05ee7de8fdd87c5256952d54806cd8b5b77
+683fe05ee7de8fdd87c5256952d54806cd8b5b77,683fe05e,"Added PTT state update on Jumble callback, making talk state changes","Added PTT state update on Jumble callback, making talk state changes
+from toggling and hot corners apparent.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404877946,1404877946,9b049bf089237a98988480c180640776ec44a24d
+9b049bf089237a98988480c180640776ec44a24d,9b049bf0,Fixed crash with messages sent to trees.,"Fixed crash with messages sent to trees.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404804558,1404804558,9dc537e943667bc935652659e92e5be9b6930343
+9dc537e943667bc935652659e92e5be9b6930343,9dc537e9,"Simpler untrusted certificate view with digest info, fixes #47.","Simpler untrusted certificate view with digest info, fixes #47.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404592280,1404592280,9c3eb91e3496f36b15a1eb2de8a0a68147d191a2
+9c3eb91e3496f36b15a1eb2de8a0a68147d191a2,9c3eb91e,Updated translations from Transifex.,"Updated translations from Transifex.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404545504,1404545504,552967325c13dd394dff137220a020087a5f231e
+552967325c13dd394dff137220a020087a5f231e,55296732,Made more server info strings translatable.,"Made more server info strings translatable.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404544666,1404544666,a22ea3a43e88f543c7971245d0ac55b6c66ed574
+a22ea3a43e88f543c7971245d0ac55b6c66ed574,a22ea3a4,Fixes terrible input method retrieval bug.,"Fixes terrible input method retrieval bug.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404440270,1404440270,6a4184af7eb04d4ac1ba3946be21cc6dbc36b2c3
+6a4184af7eb04d4ac1ba3946be21cc6dbc36b2c3,6a4184af,"Add checkbox for handset mode, fixes #58. Add dynamic half duplex","Add checkbox for handset mode, fixes #58. Add dynamic half duplex
+toggle.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404440190,1404440190,c86ba88378e8bc760c24019d128b88dacaa0e7b8
+c86ba88378e8bc760c24019d128b88dacaa0e7b8,c86ba883,"Upgraded to gradle plugin 0.12.+, fixed build issue, added xxhdpi","Upgraded to gradle plugin 0.12.+, fixed build issue, added xxhdpi
+indicator assets.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1404357689,1404357689,c3a83a10e5c95f7e2418a9050fb30e60ffca5c23
+c3a83a10e5c95f7e2418a9050fb30e60ffca5c23,c3a83a10,Update Jumble version with UDP crypt changes.,"Update Jumble version with UDP crypt changes.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403855788,1403855788,2326ea358abafdc91c179a0054f169dd1ea4a6d5
+2326ea358abafdc91c179a0054f169dd1ea4a6d5,2326ea35,Add contextual channel action menu.,"Add contextual channel action menu.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403834143,1403834143,359058ae5f5ef5fe2808977db69196c37f406ee4
+359058ae5f5ef5fe2808977db69196c37f406ee4,359058ae,Updated Jumble version.,"Updated Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403769516,1403769516,0293b961bae7a8ba5ea38d75cebe60fb16d6acee
+0293b961bae7a8ba5ea38d75cebe60fb16d6acee,0293b961,Request permissions update for channels upon action mode activation.,"Request permissions update for channels upon action mode activation.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403767046,1403767046,43aa1af96d9afb59b97926df265a71a926d0a49a
+43aa1af96d9afb59b97926df265a71a926d0a49a,43aa1af9,Add action mode deselection.,"Add action mode deselection.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403766818,1403766818,6aaefb17e8fe05a7c319b8853e8af2bcad40b85e
+6aaefb17e8fe05a7c319b8853e8af2bcad40b85e,6aaefb17,Add multiline support to chat.,"Add multiline support to chat.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403766643,1403766643,f9f8fdba3b21942186ec56ce15704bcc779d0716
+f9f8fdba3b21942186ec56ce15704bcc779d0716,f9f8fdba,"Use channel dropdown still, temporarily.","Use channel dropdown still, temporarily.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403766169,1403766169,4cf93862ebab21cb9fbb57027b6a52565fab8239
+4cf93862ebab21cb9fbb57027b6a52565fab8239,4cf93862,Updated user messaging mechanics.,"Updated user messaging mechanics.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403766031,1403766031,d68910dbe9b056c2304544ff95e7cf054d2b68ed
+d68910dbe9b056c2304544ff95e7cf054d2b68ed,d68910db,Fixed hint chat text bounds.,"Fixed hint chat text bounds.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403752392,1403752392,43bf14e23c66ef57f7ac855c49581677093a602d
+43bf14e23c66ef57f7ac855c49581677093a602d,43bf14e2,Update chat target text properly after changing channels.,"Update chat target text properly after changing channels.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403751947,1403751947,74799f3697549e8849a1715177bad5775b6903a9
+74799f3697549e8849a1715177bad5775b6903a9,74799f36,"Add multiline text chat support, more work on contextual users.","Add multiline text chat support, more work on contextual users.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403751583,1403751583,bca22216f8e71622772e15ca1862fc5e878dce6a
+bca22216f8e71622772e15ca1862fc5e878dce6a,bca22216,Replaced user dropdown with contextual action mode.,"Replaced user dropdown with contextual action mode.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403604462,1403604462,18b5ce0c4d28c08ef6134b049b40f14327f48076
+18b5ce0c4d28c08ef6134b049b40f14327f48076,18b5ce0c,"Update translations, added config file for transifex client.","Update translations, added config file for transifex client.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1403598811,1403598811,1a56b568be149a3eaf043fc1fe3ec6be8631e5ab
+1a56b568be149a3eaf043fc1fe3ec6be8631e5ab,1a56b568,Updated Jumble version.,"Updated Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402879733,1402879733,1f145c5da34258d4c0a5c44ba1a23d164220f40b
+1f145c5da34258d4c0a5c44ba1a23d164220f40b,1f145c5d,"Project cleanup, removing unused drawables.","Project cleanup, removing unused drawables.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402876832,1402876832,b87b3b62fa32cc0d9aa268021ea640fec7163a9d
+b87b3b62fa32cc0d9aa268021ea640fec7163a9d,b87b3b62,Updated libonionkit build.,"Updated libonionkit build.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402687767,1402687767,1d255ca285c73318537799efd0d5d3aee2e08bea
+1d255ca285c73318537799efd0d5d3aee2e08bea,1d255ca2,"Add input method chooser in overflow, fixes #54","Add input method chooser in overflow, fixes #54
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402635958,1402635958,50f53fd53087d7b65410eaf546f3b5e51ed416d9
+50f53fd53087d7b65410eaf546f3b5e51ed416d9,50f53fd5,Remove incomplete ServerProvider implementation.,"Remove incomplete ServerProvider implementation.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402631155,1402631155,604a21ac36427c4d8210ca4e0a953dddf5adf64c
+604a21ac36427c4d8210ca4e0a953dddf5adf64c,604a21ac,Added Jumble input method translation support to Settings.,"Added Jumble input method translation support to Settings.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402630571,1402630571,1279cfce8f9135a5aaf9304a11fb8eae07fce2d3
+1279cfce8f9135a5aaf9304a11fb8eae07fce2d3,1279cfce,"Update Jumble version. Fixes suppression status not displaying,","Update Jumble version. Fixes suppression status not displaying,
+bluetooth reliability.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402629482,1402629482,ebd66345256776d27523ad5cfaa1f6daf7a6c9f2
+ebd66345256776d27523ad5cfaa1f6daf7a6c9f2,ebd66345,Refactored hot corner into separate class.,"Refactored hot corner into separate class.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402213003,1402213003,43fef871309d3eb7e2cd2696c4849ef485d952e1
+43fef871309d3eb7e2cd2696c4849ef485d952e1,43fef871,Updated gradle version.,"Updated gradle version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1402127471,1402127471,fb5107675fe02843a051055b90b16df7e6d2fceb
+fb5107675fe02843a051055b90b16df7e6d2fceb,fb510767,Don't use configChanges for main activity.,"Don't use configChanges for main activity.
+Note: this is almost certain to cause issues.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1401585707,1401585707,58c3255795a1ab899adfcc367e9b59a2787306ca
+58c3255795a1ab899adfcc367e9b59a2787306ca,58c32557,Fixed chat notification showing up when disconnected.,"Fixed chat notification showing up when disconnected.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1401264202,1401264202,9691b73d25cc6e99667625c71097bd3c66924b1f
+9691b73d25cc6e99667625c71097bd3c66924b1f,9691b73d,Fixed binder returned.,"Fixed binder returned.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1401261214,1401261214,c7912ffc427bbd9182c20d634aadfbb4cb2a588f
+c7912ffc427bbd9182c20d634aadfbb4cb2a588f,c7912ffc,Added custom plumble binder extensions.,"Added custom plumble binder extensions.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1401244919,1401244919,49b60caaa3a80178ee788d0f2e4d7dafce4bf2e3
+49b60caaa3a80178ee788d0f2e4d7dafce4bf2e3,49b60caa,Added half duplex support. Fixes #50.,"Added half duplex support. Fixes #50.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400970563,1400970563,d34faf50a0c825a9019bb69b09dcfba06220b593
+d34faf50a0c825a9019bb69b09dcfba06220b593,d34faf50,Added version to about. Fixes #44.,"Added version to about. Fixes #44.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400405856,1400405856,ef33fb66dfe0b8faf790642f41ba964db43c224e
+ef33fb66dfe0b8faf790642f41ba964db43c224e,ef33fb66,Show subchannels of pinned channels. Fixes #32.,"Show subchannels of pinned channels. Fixes #32.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400405040,1400405040,91df46573970e7903d525185aa376ecd51fbb18b
+91df46573970e7903d525185aa376ecd51fbb18b,91df4657,Moved settings into navigation pane.,"Moved settings into navigation pane.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400143723,1400143723,7e0413655e35c645b277c9d8bcd1aa3e549af5bd
+7e0413655e35c645b277c9d8bcd1aa3e549af5bd,7e041365,Cleaned up card drawable code.,"Cleaned up card drawable code.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400142900,1400142900,ed83894dc6eb55f13cc79430c71191af1e7d5bf0
+ed83894dc6eb55f13cc79430c71191af1e7d5bf0,ed83894d,Cleaned up card drawable code.,"Cleaned up card drawable code.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400142764,1400142764,0505127a6d1c74de6a25ff9398e684de6eb08e01
+0505127a6d1c74de6a25ff9398e684de6eb08e01,0505127a,Refactored favourite and public server adapters.,"Refactored favourite and public server adapters.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1400141152,1400141152,e8e41cc76305fe5ce336207c0baf893976b4e5a3
+e8e41cc76305fe5ce336207c0baf893976b4e5a3,e8e41cc7,"Properly set username for favourited public server, fixes #45.","Properly set username for favourited public server, fixes #45.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1399336694,1399336694,695e4dac85a25ce1fb17e506e26f740e6820b7be
+695e4dac85a25ce1fb17e506e26f740e6820b7be,695e4dac,Update Jumble.,"Update Jumble.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1399160169,1399160169,5cf49fb018d851cba6e7ccc1063386647d70db6c
+5cf49fb018d851cba6e7ccc1063386647d70db6c,5cf49fb0,"Update jumble version, move around audio settings.","Update jumble version, move around audio settings.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1399154504,1399154504,b81a68ba3bfd9853f7af06b01011d63265577182
+b81a68ba3bfd9853f7af06b01011d63265577182,b81a68ba,Generate higher quality notification icons with android studio.,"Generate higher quality notification icons with android studio.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398938272,1398938272,b8eb05bef2db4c9576937d3fdf0d1eac29232485
+b8eb05bef2db4c9576937d3fdf0d1eac29232485,b8eb05be,Jumble update.,"Jumble update.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398935738,1398935738,d122dfd8d2a721ee18e195bbaaf761a6c1aaee14
+d122dfd8d2a721ee18e195bbaaf761a6c1aaee14,d122dfd8,Added new icons for collapse/expand.,"Added new icons for collapse/expand.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398934993,1398934993,bb737c2b77c1e61ec64231764af071d764907928
+bb737c2b77c1e61ec64231764af071d764907928,bb737c2b,"Update Jumble, hack to make color filter apply to mute/deafen.","Update Jumble, hack to make color filter apply to mute/deafen.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398933698,1398933698,3e845a12765a3f7f9ac902fd5a76debd61e3a8e3
+3e845a12765a3f7f9ac902fd5a76debd61e3a8e3,3e845a12,Prevented issue with information tab updating after destroy.,"Prevented issue with information tab updating after destroy.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398570880,1398570880,3881ee86d875f387608238f203e79b8db562c8b4
+3881ee86d875f387608238f203e79b8db562c8b4,3881ee86,Wrap channel name properly.,"Wrap channel name properly.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398570492,1398570492,34800538d6babd3a650501418f3e1d4a7ac1c162
+34800538d6babd3a650501418f3e1d4a7ac1c162,34800538,"Update jumble, upped version number, properly handle certificate","Update jumble, upped version number, properly handle certificate
+generation failure.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398569709,1398569709,42bc125182be8d31c893419b693be11edfa5b9bd
+42bc125182be8d31c893419b693be11edfa5b9bd,42bc1251,"Toggle push to talk when using hardware buttons, if enabled.","Toggle push to talk when using hardware buttons, if enabled.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1398074164,1398074164,fc123261a33fa63ecc6dbcce65c8167f075f6dbb
+fc123261a33fa63ecc6dbcce65c8167f075f6dbb,fc123261,"Updated Jumble version, fixing threading issues with network.","Updated Jumble version, fixing threading issues with network.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397890103,1397890103,4cad5882af67c6687842d546c6533617bc7e1463
+4cad5882af67c6687842d546c6533617bc7e1463,4cad5882,Updated Jumble with UDP fixes.,"Updated Jumble with UDP fixes.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397888882,1397888882,5f0dff140ad227e78d0005636d520e80a7f3b898
+5f0dff140ad227e78d0005636d520e80a7f3b898,5f0dff14,"Updated Jumble, a few edges rounded out.","Updated Jumble, a few edges rounded out.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397887212,1397887212,611c4493d1b357fdd9ca355f1bf194e7de2d63d7
+611c4493d1b357fdd9ca355f1bf194e7de2d63d7,611c4493,Cleaned up notification error response.,"Cleaned up notification error response.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397699314,1397699314,e7d16c5bd40cf815b3b4dff8f4dcaabfb9113855
+e7d16c5bd40cf815b3b4dff8f4dcaabfb9113855,e7d16c5b,Protect UDP packet thread.,"Protect UDP packet thread.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397620797,1397620797,c16decbd759ecb911be9248c2ebd920d8622d80c
+c16decbd759ecb911be9248c2ebd920d8622d80c,c16decbd,Rushed fix for connection mishandling.,"Rushed fix for connection mishandling.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397262611,1397262611,62ba17b634e057074778a7ed32d39ed6fd658455
+62ba17b634e057074778a7ed32d39ed6fd658455,62ba17b6,"Fixed some UDP issues, updated version number.","Fixed some UDP issues, updated version number.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397261375,1397261375,24bdf7d88aa91e322b9cc375cda96dddb4963aed
+24bdf7d88aa91e322b9cc375cda96dddb4963aed,24bdf7d8,"Added date format to certificate creation, fixes #40","Added date format to certificate creation, fixes #40
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397089263,1397089263,cf73b9e09c24394be2183f400ac7b7b534b327a7
+cf73b9e09c24394be2183f400ac7b7b534b327a7,cf73b9e0,Removed unused assets.,"Removed unused assets.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397020063,1397020063,c4b93bee0c1395618c7d48fe9285470eb708ad6e
+c4b93bee0c1395618c7d48fe9285470eb708ad6e,c4b93bee,Regenerate copyright.,"Regenerate copyright.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1397020013,1397020013,d0314f12e54c738e6fb0993df851600899a5040a
+d0314f12e54c738e6fb0993df851600899a5040a,d0314f12,Nicer display of certificate.,"Nicer display of certificate.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396750093,1396750093,388fa65303b83e3ca24bda883900db392c0b04dd
+388fa65303b83e3ca24bda883900db392c0b04dd,388fa653,Reconnect after validating certificate manually.,"Reconnect after validating certificate manually.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396749001,1396749001,5de5b88828e7e12ac9889755a74e5cee13cb4d2c
+5de5b88828e7e12ac9889755a74e5cee13cb4d2c,5de5b888,Added function to clear trust store.,"Added function to clear trust store.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396748738,1396748738,57bb90f03b52e93b25bd8f647a80e1fbc9237e72
+57bb90f03b52e93b25bd8f647a80e1fbc9237e72,57bb90f0,Added support for trusted certificates.,"Added support for trusted certificates.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396747681,1396747681,09f592096d8cc4e69b60a1e513c2c138ea241c9b
+09f592096d8cc4e69b60a1e513c2c138ea241c9b,09f59209,Updated translations from Transifex.,"Updated translations from Transifex.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396338579,1396338579,346e2aa6ce2492f017f54bce45a295ce703d5620
+346e2aa6ce2492f017f54bce45a295ce703d5620,346e2aa6,"Version bump, access token fix.","Version bump, access token fix.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396338056,1396338056,ab5c75bb2834dd234af00b36f7eae054376b12d3
+ab5c75bb2834dd234af00b36f7eae054376b12d3,ab5c75bb,Send mute/deafen userstate resume earlier.,"Send mute/deafen userstate resume earlier.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396337888,1396337888,f1c5c33a37193b97e4451ff36eae048f25077698
+f1c5c33a37193b97e4451ff36eae048f25077698,f1c5c33a,Fix weird back behaviour.,"Fix weird back behaviour.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396248621,1396248621,1fd05cbc1b3796edffbd88b40711c2bbb265a729
+1fd05cbc1b3796edffbd88b40711c2bbb265a729,1fd05cbc,Use prettier card drawable for light theme.,"Use prettier card drawable for light theme.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396248271,1396248271,ec9f56045e3143fe915d490000dc07d65fc5654b
+ec9f56045e3143fe915d490000dc07d65fc5654b,ec9f5604,Stop notification from disappearing when reconnecting.,"Stop notification from disappearing when reconnecting.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396246381,1396246381,9df18bcb7590552c726a3ea316050acbb02a2552
+9df18bcb7590552c726a3ea316050acbb02a2552,9df18bcb,Make sure to save hardware key dialog after resetting key.,"Make sure to save hardware key dialog after resetting key.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396241147,1396241147,36ba56ac9f7cb0a286af10d2b63c709a3fed6368
+36ba56ac9f7cb0a286af10d2b63c709a3fed6368,36ba56ac,"Okay, fixed hardware push to talk button capture for real.","Okay, fixed hardware push to talk button capture for real.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396240820,1396240820,249da0042174bdba34b686dcde1ca6ab5316e948
+249da0042174bdba34b686dcde1ca6ab5316e948,249da004,Stop redundant calls to setTalkingState with hardware PTT.,"Stop redundant calls to setTalkingState with hardware PTT.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396240675,1396240675,49a0fa84577223526ca3f071bb3c2c0aabb1753a
+49a0fa84577223526ca3f071bb3c2c0aabb1753a,49a0fa84,I don't know what I was thinking of with the onKeyDown change D:,"I don't know what I was thinking of with the onKeyDown change D:
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1396240489,1396240489,bf17864d6e46ed6747607acb963daaa6f4ba448a
+bf17864d6e46ed6747607acb963daaa6f4ba448a,bf17864d,Updated libonionkit build tools version,"Updated libonionkit build tools version
+",,,,Andrew Comminos,andrew@morlunk.com,Andrew Comminos,andrew@morlunk.com,1396039171,1396039171,a5f81fbf9b8aa1ca6078a2469d2cad7f761a317a
+a5f81fbf9b8aa1ca6078a2469d2cad7f761a317a,a5f81fbf,Fixed incomplete hardware push to talk behaviour,"Fixed incomplete hardware push to talk behaviour
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395879087,1395879087,49fea6b4067215922da955c47f1558a9709de3bd
+49fea6b4067215922da955c47f1558a9709de3bd,49fea6b4,Workaround issue with appcompat and gradle 0.9.1.,"Workaround issue with appcompat and gradle 0.9.1.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395877335,1395877335,b8868ee41ea75a383fdcbbeaf5cfecab7501ece7
+b8868ee41ea75a383fdcbbeaf5cfecab7501ece7,b8868ee4,Update Jumble version.,"Update Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395875390,1395875390,685f8ed7e10469cc741adb122ba1b3b1b1a274a0
+685f8ed7e10469cc741adb122ba1b3b1b1a274a0,685f8ed7,Prevent expand toggle for empty channels. Fixes #36,"Prevent expand toggle for empty channels. Fixes #36
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395739503,1395739503,761e8c5cd7b715c61175ffafd5023af14296f0ee
+761e8c5cd7b715c61175ffafd5023af14296f0ee,761e8c5c,Attempt to hang on to UDP connection.,"Attempt to hang on to UDP connection.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395737896,1395737896,cdc2edddcdb0bfa65bac7a8a0ea8db7b13100a11
+cdc2edddcdb0bfa65bac7a8a0ea8db7b13100a11,cdc2eddd,Another update to notranslate.,"Another update to notranslate.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395706484,1395706484,d12d0c532d62e3af2d5fbcf32cc7d52ea581f265
+d12d0c532d62e3af2d5fbcf32cc7d52ea581f265,d12d0c53,"Cleaned up string resources, moving out some resources that should not","Cleaned up string resources, moving out some resources that should not
+be translated.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395706258,1395706258,686fb9294af1ba1a2b1cecd2bab374358cc8e549
+686fb9294af1ba1a2b1cecd2bab374358cc8e549,686fb929,Added translation link,"Added translation link
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395536417,1395536417,ea1dfe93cd85146608030e3c0aecb197fa71e7fb
+ea1dfe93cd85146608030e3c0aecb197fa71e7fb,ea1dfe93,Escaped some strings in french translation.,"Escaped some strings in french translation.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395535328,1395535328,8c58c406a017e9b2df096bd8a8645a5a7cfe0f62
+8c58c406a017e9b2df096bd8a8645a5a7cfe0f62,8c58c406,Merge branch 'master' of github.com:Morlunk/Plumble,"Merge branch 'master' of github.com:Morlunk/Plumble
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395534947,1395534947,"f4187a57415ccda81eed728c76c29bb882402c11,413b50300f804e27968b0aa9b51b1f42d3edb4d8"
+f4187a57415ccda81eed728c76c29bb882402c11,f4187a57,"Update Jumble version, with support for SO_KEEPALIVE.","Update Jumble version, with support for SO_KEEPALIVE.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395534916,1395534916,d6b43f5a55ab124952d6a17a30e11c22351502e8
+413b50300f804e27968b0aa9b51b1f42d3edb4d8,413b5030,Merge pull request #38 from RyDroid/fr,"Merge pull request #38 from RyDroid/fr
+
+More french in Plumble!",,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1395534458,1395534458,"d6b43f5a55ab124952d6a17a30e11c22351502e8,21f8c2d8930782aed17501d89e2df5ebfa79c94f"
+21f8c2d8930782aed17501d89e2df5ebfa79c94f,21f8c2d8,More french in Plumble!,"More french in Plumble!
+",,,,Nicola Spanti,rydroid_dev@yahoo.com,Nicola Spanti,rydroid_dev@yahoo.com,1395444879,1395498488,d6b43f5a55ab124952d6a17a30e11c22351502e8
+d6b43f5a55ab124952d6a17a30e11c22351502e8,d6b43f5a,Upped version number for 3.0.2.,"Upped version number for 3.0.2.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395271892,1395271892,7f44ac2c6c6720a1cb5a7b603e6e600d18975b37
+7f44ac2c6c6720a1cb5a7b603e6e600d18975b37,7f44ac2c,Disabled CELT 11 until robot voices are fixed.,"Disabled CELT 11 until robot voices are fixed.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395271299,1395271299,e4c357df7ebe4e153c406f20de0f2814bf408ebb
+e4c357df7ebe4e153c406f20de0f2814bf408ebb,e4c357df,Updated Jumble to fix audio sample rate issue.,"Updated Jumble to fix audio sample rate issue.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395189547,1395189547,66b4a9b014915687970c4bcdcd1dfc31f89ee067
+66b4a9b014915687970c4bcdcd1dfc31f89ee067,66b4a9b0,Remove auto-scroll to user. Can cause issue on bind.,"Remove auto-scroll to user. Can cause issue on bind.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1395188771,1395188771,add14d258d1ded1d261e0c27580152ebbd89bab1
+add14d258d1ded1d261e0c27580152ebbd89bab1,add14d25,A good step in the french translation,"A good step in the french translation
+",,,,Nicola Spanti,rydroid_dev@yahoo.com,Nicola Spanti,rydroid_dev@yahoo.com,1395181325,1395181325,c28371be6804efcfe72cb6881b2741b7186f4104
+c28371be6804efcfe72cb6881b2741b7186f4104,c28371be,A start of a french translation,"A start of a french translation
+",,,,Nicola Spanti,nicola.spanti@etudiant.univ-reims.fr,Nicola Spanti,nicola.spanti@etudiant.univ-reims.fr,1395156532,1395156532,fd68c1c62fa638537c010f036077c4eb9cd93996
+fd68c1c62fa638537c010f036077c4eb9cd93996,fd68c1c6,"Add BROADCAST_STICKY permission, fixing bluetooth on some android 4.x","Add BROADCAST_STICKY permission, fixing bluetooth on some android 4.x
+devices.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394707826,1394707826,9c2b359466bee9a3341540d19eb8d17eaa917ee0
+9c2b359466bee9a3341540d19eb8d17eaa917ee0,9c2b3594,Updated libonionkit so it builds,"Updated libonionkit so it builds
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394704053,1394704053,2635f0b3dbd523d2adadcc5e5a7c9ed69028af13
+2635f0b3dbd523d2adadcc5e5a7c9ed69028af13,2635f0b3,Fixes scrolling bug in #30.,"Fixes scrolling bug in #30.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394694418,1394694418,82d9cdbebe21f7d09dfe4c0d19b09a068c5ec65e
+82d9cdbebe21f7d09dfe4c0d19b09a068c5ec65e,82d9cdbe,Fixed issue with channel list crash.,"Fixed issue with channel list crash.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394693255,1394693255,2c7ee2cf0ff360f9820827bca2a37fb320e2066e
+2c7ee2cf0ff360f9820827bca2a37fb320e2066e,2c7ee2cf,"Update Jumble version, catch base64 decoding issues.","Update Jumble version, catch base64 decoding issues.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394692428,1394692428,36843b7381799d13190d1f68be7a36688d0df4d1
+36843b7381799d13190d1f68be7a36688d0df4d1,36843b73,"Implemented search, changes for free distribution.","Implemented search, changes for free distribution.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394432955,1394432955,357e4cd988bc50da16da30048dae7194c50ece01
+357e4cd988bc50da16da30048dae7194c50ece01,357e4cd9,Fix issue with Android 2.3 and PopupWindow.,"Fix issue with Android 2.3 and PopupWindow.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394417303,1394417303,733363a8fae43806ea3bcffe51686385c1f1b9b0
+733363a8fae43806ea3bcffe51686385c1f1b9b0,733363a8,Upped Jumble version.,"Upped Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394268249,1394268249,4413db4bd3fcb5f6fc7a3c28a6a2f7574430eb29
+4413db4bd3fcb5f6fc7a3c28a6a2f7574430eb29,4413db4b,Updated jumble version again.,"Updated jumble version again.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394254075,1394254075,99b22ea25a7d95e16c1f5e7d8d043e04ddfbd77a
+99b22ea25a7d95e16c1f5e7d8d043e04ddfbd77a,99b22ea2,Updated Jumble libs w/ support for CELT 11.,"Updated Jumble libs w/ support for CELT 11.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394253012,1394253012,aaf52eac40c7496ce6bf8fa34e6736e6452f2b2a
+aaf52eac40c7496ce6bf8fa34e6736e6452f2b2a,aaf52eac,Updated for gradle 0.9.,"Updated for gradle 0.9.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1394238407,1394238407,07957058532f34fb56242206f8c7be099ff68eff
+07957058532f34fb56242206f8c7be099ff68eff,07957058,"Updated Jumble version, fixing CELT issue.","Updated Jumble version, fixing CELT issue.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393976328,1393976328,7c821e5e15ab0910171bf642015e9cab2594a274
+7c821e5e15ab0910171bf642015e9cab2594a274,7c821e5e,"Added channel description support, factored comment view code.","Added channel description support, factored comment view code.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393917702,1393917702,24c09a2f579d1ce4cbaec648b5dfdd86d15e4767
+24c09a2f579d1ce4cbaec648b5dfdd86d15e4767,24c09a2f,Use Jumble's new Mumble URL parser.,"Use Jumble's new Mumble URL parser.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393897972,1393897972,7101ede4aa6a2f401ec65bd35bb8d9012a7db4c3
+7101ede4aa6a2f401ec65bd35bb8d9012a7db4c3,7101ede4,Remove option to make channel permanent if we don't have permission.,"Remove option to make channel permanent if we don't have permission.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393894465,1393894465,ea38cdd0ee11e6e680f719b5345f09f4676ffe03
+ea38cdd0ee11e6e680f719b5345f09f4676ffe03,ea38cdd0,Update README with new build instructions.,"Update README with new build instructions.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393834630,1393834630,f4409ebe58c5ed0bd4a34807024aee0b9275f5eb
+f4409ebe58c5ed0bd4a34807024aee0b9275f5eb,f4409ebe,Project restructure.,"Project restructure.
+NOTE: This breaks the F-Droid build. I'll fix this as soon as I get a
+chance.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393834465,1393834465,8ec32a15ec10649559c7d762de1d0756cde38fcb
+8ec32a15ec10649559c7d762de1d0756cde38fcb,8ec32a15,Merge branch 'master' of github.com:Morlunk/Plumble,"Merge branch 'master' of github.com:Morlunk/Plumble
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393743162,1393743162,"976774563db305a8b8aee440ddc4e20c2d123776,da88f5ece8327f0dc8e2795323ae8fad16ffbb59"
+976774563db305a8b8aee440ddc4e20c2d123776,97677456,Make ChannelUserWindow not interfere with callbacks.,"Make ChannelUserWindow not interfere with callbacks.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393742556,1393742556,72dc1d300e79fd4c7cd23d0b5da82e456293c9f5
+da88f5ece8327f0dc8e2795323ae8fad16ffbb59,da88f5ec,"Fixes #19, a crash with early text messages.","Fixes #19, a crash with early text messages.
+
+The status notification is not yet initialized when we get a text message before ServerSync.",,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1393619959,1393619959,72dc1d300e79fd4c7cd23d0b5da82e456293c9f5
+72dc1d300e79fd4c7cd23d0b5da82e456293c9f5,72dc1d30,Isolated user menu to its own class.,"Isolated user menu to its own class.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393554948,1393554948,7eaa90e04f6b125d01e85da0dbc4b0b53c3e5a63
+7eaa90e04f6b125d01e85da0dbc4b0b53c3e5a63,7eaa90e0,Upped jumble version,"Upped jumble version
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393487771,1393487771,20b574e4f6a5ad6819a76394f09b2841f4eefc63
+20b574e4f6a5ad6819a76394f09b2841f4eefc63,20b574e4,Completed integration of audio bitrate control.,"Completed integration of audio bitrate control.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393487539,1393487539,37de8d96eb5574e88e0e9b2e8a35fdca1ab550ab
+37de8d96eb5574e88e0e9b2e8a35fdca1ab550ab,37de8d96,Fixed multiplier mechanic.,"Fixed multiplier mechanic.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393483147,1393483147,d6125357ccc726a9a4e1e36c2d08533f383338d8
+d6125357ccc726a9a4e1e36c2d08533f383338d8,d6125357,In-progress input rate control.,"In-progress input rate control.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393482253,1393482253,8265d12041e620c5d48fd7aa35ae2e83d837429a
+8265d12041e620c5d48fd7aa35ae2e83d837429a,8265d120,Added setting to control frames per packet.,"Added setting to control frames per packet.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393475595,1393475595,1db3eb42745d18841cdca9ede4392d6ebc39d034
+1db3eb42745d18841cdca9ede4392d6ebc39d034,1db3eb42,"Release manual control of service lifecycle on disconnect, fixes #23","Release manual control of service lifecycle on disconnect, fixes #23
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393472830,1393472830,4ac21e4a3bfcdc6ff724953f0b565f30ed808736
+4ac21e4a3bfcdc6ff724953f0b565f30ed808736,4ac21e4a,Use actor name for additional chat message safety. Should fix #19.,"Use actor name for additional chat message safety. Should fix #19.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393471371,1393471371,4aa760e998e1f1f199892753cc32b574375e2237
+4aa760e998e1f1f199892753cc32b574375e2237,4aa760e9,"Update copyright, fixes #21","Update copyright, fixes #21
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1393469577,1393469577,007e2f8464a67762d300599c0564283b57f7df4b
+007e2f8464a67762d300599c0564283b57f7df4b,007e2f84,Only update settings when connected in PlumbleService.,"Only update settings when connected in PlumbleService.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392583868,1392583868,1e871a5662fbd0216104483149bbe0a8744845b3
+1e871a5662fbd0216104483149bbe0a8744845b3,1e871a56,Added Handset input mode.,"Added Handset input mode.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392583674,1392583674,9a2ec40b282700fe57be07bd3bdcaf2e9fb2ddf8
+9a2ec40b282700fe57be07bd3bdcaf2e9fb2ddf8,9a2ec40b,"Upped build number, prepare for beta4.","Upped build number, prepare for beta4.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392449911,1392449911,ed36fdd4dbdba0a220420605d9f28569bda770e4
+ed36fdd4dbdba0a220420605d9f28569bda770e4,ed36fdd4,Add monochrome icons for action bar.,"Add monochrome icons for action bar.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392366169,1392366169,48765990a699234c6c5d5c4edf15125b0eb99ad9
+48765990a699234c6c5d5c4edf15125b0eb99ad9,48765990,Fix NPE on disconnect,"Fix NPE on disconnect
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392364658,1392364658,612bb85e8bc9d82ec00a31408c9323f57677f5a9
+612bb85e8bc9d82ec00a31408c9323f57677f5a9,612bb85e,Make mute and deafen icons state-aware.,"Make mute and deafen icons state-aware.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1392364433,1392364433,c629f71cb14b85510b48413ee32460818ec2548d
+c629f71cb14b85510b48413ee32460818ec2548d,c629f71c,Add option to disable loading external images.,"Add option to disable loading external images.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391829908,1391829908,d8107bd91420393804d49ff5bc954f8fd7e31514
+d8107bd91420393804d49ff5bc954f8fd7e31514,d8107bd9,Added support for loading images from URLs.,"Added support for loading images from URLs.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391823308,1391823308,137b37230afbffa8f282bd247e6067b8491749c1
+137b37230afbffa8f282bd247e6067b8491749c1,137b3723,Added support for amplification boost again. Upped Jumble version.,"Added support for amplification boost again. Upped Jumble version.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391818001,1391818001,4ae4a706cb8eed9fc8c10f6b3343893c9b0adbfa
+4ae4a706cb8eed9fc8c10f6b3343893c9b0adbfa,4ae4a706,Confirm disconnect when back button is pressed.,"Confirm disconnect when back button is pressed.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391762153,1391762153,c8031f955d782b0d1bdb10b920dce127206f29e0
+c8031f955d782b0d1bdb10b920dce127206f29e0,c8031f95,Updated Jumble version with much improved jitter mechanics.,"Updated Jumble version with much improved jitter mechanics.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391683830,1391683830,82bef3fcaba52947232f54a6404ae5018f496737
+82bef3fcaba52947232f54a6404ae5018f496737,82bef3fc,More concise version name for jenkins.,"More concise version name for jenkins.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391653709,1391653709,959bb95198f68df9a1f1d102ebad2d20aeb5d1c5
+959bb95198f68df9a1f1d102ebad2d20aeb5d1c5,959bb951,Possible fix to jenkins build env.,"Possible fix to jenkins build env.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391653420,1391653420,a7169ef87c6f6efa4ec2bef3debda83e1e4359f5
+a7169ef87c6f6efa4ec2bef3debda83e1e4359f5,a7169ef8,Fixed preference issue with legacy PreferenceActivity. Make Jenkins,"Fixed preference issue with legacy PreferenceActivity. Make Jenkins
+builds use Jenkins build numbers.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391652897,1391652897,bb5daad716400d5688dea0e343e19e98a9d246c3
+bb5daad716400d5688dea0e343e19e98a9d246c3,bb5daad7,"Updated Jumble version, includes mumble-sa fixes. Upped version number.","Updated Jumble version, includes mumble-sa fixes. Upped version number.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391637705,1391637705,6f57271c383780bcd8a34d3964a110d02cedde1a
+6f57271c383780bcd8a34d3964a110d02cedde1a,6f57271c,More intuitive UI for certificate password- only prompt for one if one,"More intuitive UI for certificate password- only prompt for one if one
+is needed.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391558695,1391558695,be68eceb583a9e1184c316b6f074870ab20ab1c4
+be68eceb583a9e1184c316b6f074870ab20ab1c4,be68eceb,"Updated Jumble version, a few performance fixes.","Updated Jumble version, a few performance fixes.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391498173,1391498173,8a589069818226d7782297a01f9c836f47e58d55
+8a589069818226d7782297a01f9c836f47e58d55,8a589069,"Updated jumble version, fixing bluetooth weirdness","Updated jumble version, fixing bluetooth weirdness
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391494543,1391494543,65fca8ab375963d4dfc20ca3f0f2cfc9b78c05ef
+65fca8ab375963d4dfc20ca3f0f2cfc9b78c05ef,65fca8ab,Put in hackish fix for uMurmur servers.,"Put in hackish fix for uMurmur servers.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391494144,1391494144,52894327ede0dfdeab0ba55112e0198c22f76a8b
+52894327ede0dfdeab0ba55112e0198c22f76a8b,52894327,Implemented proper PTT in overlay.,"Implemented proper PTT in overlay.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391479304,1391479304,7aba6d0bd1203e0d1a757551e482679d32ffd0d2
+7aba6d0bd1203e0d1a757551e482679d32ffd0d2,7aba6d0b,"Be more conservative with the notifications we show the user, fix bugs","Be more conservative with the notifications we show the user, fix bugs
+with notification buttons.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391477726,1391477726,3b876d7b598595426e629673bf84a3c9d81e7675
+3b876d7b598595426e629673bf84a3c9d81e7675,3b876d7b,Merge branch 'master' of github.com:Morlunk/Plumble,"Merge branch 'master' of github.com:Morlunk/Plumble
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391383210,1391383210,"6d937c76bb22905ba6005084beef3307eb1070db,1669b61f5c72ff548032133917c3d782a37f65cb"
+6d937c76bb22905ba6005084beef3307eb1070db,6d937c76,Added manifest fix for preferences.,"Added manifest fix for preferences.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391383170,1391383170,1c1f18ad4e8616fe5eddcab0cd43d04fd092a0c6
+1669b61f5c72ff548032133917c3d782a37f65cb,1669b61f,Merge pull request #7 from jannispinter/master,"Merge pull request #7 from jannispinter/master
+
+Improved German translation",,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1391115822,1391115822,"1c1f18ad4e8616fe5eddcab0cd43d04fd092a0c6,159d3adcde4e9c121228eb62df648621a5a24f2d"
+159d3adcde4e9c121228eb62df648621a5a24f2d,159d3adc,Improved German translation,"Improved German translation
+",,,,Jannis Pinter,jannis@pinterjann.is,Jannis Pinter,jannis@pinterjann.is,1391112290,1391112290,1c1f18ad4e8616fe5eddcab0cd43d04fd092a0c6
+1c1f18ad4e8616fe5eddcab0cd43d04fd092a0c6,1c1f18ad,Fixed silly bug with channel move.,"Fixed silly bug with channel move.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391065296,1391065296,cce73d4446749d996c14a820b80feef495ee01b1
+cce73d4446749d996c14a820b80feef495ee01b1,cce73d44,Merge branch 'master' of github.com:Morlunk/Plumble,"Merge branch 'master' of github.com:Morlunk/Plumble
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391065153,1391065153,"d88a1ed19249bea27dbdd08fad5483709d96a35f,d9dbb852691b1f46e73c2283fa201c4621740ceb"
+d88a1ed19249bea27dbdd08fad5483709d96a35f,d88a1ed1,Added support for moving a user.,"Added support for moving a user.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1391065120,1391065120,4dcfb6c6736502324ea61c869827bb7cbb671f11
+d9dbb852691b1f46e73c2283fa201c4621740ceb,d9dbb852,Update README.md,Update README.md,,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1391028161,1391028161,4dcfb6c6736502324ea61c869827bb7cbb671f11
+4dcfb6c6736502324ea61c869827bb7cbb671f11,4dcfb6c6,Build instructions on GNU/Linux,Build instructions on GNU/Linux,,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1390985217,1390985217,143715c60109a912341bb5e72cf6b1d3b90aa600
+143715c60109a912341bb5e72cf6b1d3b90aa600,143715c6,Prevent lint from erroring on release builds.,"Prevent lint from erroring on release builds.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1390981272,1390981272,fc52e40fe278e676d35801570c1a3e092ae66343
+fc52e40fe278e676d35801570c1a3e092ae66343,fc52e40f,Updated version number.,"Updated version number.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1390979723,1390979723,b0887d0d2c91c5ffe6e4275ee0acc294b787c3a4
+b0887d0d2c91c5ffe6e4275ee0acc294b787c3a4,b0887d0d,"Updated Jumble version, much better audio output quality.","Updated Jumble version, much better audio output quality.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1390879107,1390879107,bd92510924adb2b2f674650c76975e792f3a4a52
+bd92510924adb2b2f674650c76975e792f3a4a52,bd925109,Updated build settings for F-Droid and library versions.,"Updated build settings for F-Droid and library versions.
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1390865377,1390865377,2c267254bc6c3b3ce5cc90dcebbec2e269354147
+2c267254bc6c3b3ce5cc90dcebbec2e269354147,2c267254,Update build.gradle,Update build.gradle,,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1390862434,1390862434,9233fbfbcbe3fc4598e9c84138bc284cea6b4eff
+9233fbfbcbe3fc4598e9c84138bc284cea6b4eff,9233fbfb,Initial commit :),"Initial commit :)
+",,,,Andrew Comminos,andrewcomminos@gmail.com,Andrew Comminos,andrewcomminos@gmail.com,1390817592,1390817592,5783e30edc936d4caf874a0a55d80ddee7e77c5d
+5783e30edc936d4caf874a0a55d80ddee7e77c5d,5783e30e,Update README.md,Update README.md,,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1385455197,1385455197,6c79abf3b1431291999ff04524cc168bda2c59b3
+6c79abf3b1431291999ff04524cc168bda2c59b3,6c79abf3,Initial commit,"Initial commit
+",,,,Andrew Comminos,andrew.comminos@fullboar.ca,Andrew Comminos,andrew.comminos@fullboar.ca,1385455076,1385455076,

@@ -1,0 +1,103 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ffa1645910fe1c368e747ff777d15d35af8c1ede,ffa16459,report additional battery statistics,"report additional battery statistics
+
+In addtion to the battery level, also report the technology, health, the
+status and the temperature (some properties may be unavailable in some
+devices).
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316774910,1316774910,b79ef7f8e2939a9c19759a28fbff65dd59d4bf0c
+b79ef7f8e2939a9c19759a28fbff65dd59d4bf0c,b79ef7f8,increment version to 0.6,"increment version to 0.6
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316767148,1316767403,39bc32a2ed270953e96f97645d53b4962ccdb3f4
+39bc32a2ed270953e96f97645d53b4962ccdb3f4,39bc32a2,update memory and cpu information also in case of failure,"update memory and cpu information also in case of failure
+
+Re-try to open /proc/meminfo or /proc/stat in case of failure. This
+allows to keep informations updated also if for some strange reason
+(race on boot) the first open to one of these file fails.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316766774,1316766774,1e6ceae94eb292fa796551b3f71361b84566ad55
+1e6ceae94eb292fa796551b3f71361b84566ad55,1e6ceae9,fix a NullPointerException on close,"fix a NullPointerException on close
+
+The memFile object can be null on close, fix by catching any generic
+exception on close.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316766460,1316766460,859f9225d048b58937916216c0c5e558e87e6a81
+859f9225d048b58937916216c0c5e558e87e6a81,859f9225,increment version to 0.5,"increment version to 0.5
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316723160,1316732420,bbbf04e12c92a4c1670ac592b6158ae12958bd15
+bbbf04e12c92a4c1670ac592b6158ae12958bd15,bbbf04e1,fix a NullPointerException when updating memory statistics,"fix a NullPointerException when updating memory statistics
+
+Fix a race condition that can trigger a NullPointerException when
+updating memory statistics.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316723091,1316732420,c800f412f0ecbf11253e42968fd3f29cccfaa5f4
+c800f412f0ecbf11253e42968fd3f29cccfaa5f4,c800f412,increment version to 0.4,"increment version to 0.4
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316606502,1316606502,7434dc96555f77560930c6617837bbd8ff3efde9
+7434dc96555f77560930c6617837bbd8ff3efde9,7434dc96,fix: do not crash if we can't read the cpu frequency,"fix: do not crash if we can't read the cpu frequency
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316606415,1316606415,1db14f64cc4c1218aa3540ad526ea8f1d8c3071e
+1db14f64cc4c1218aa3540ad526ea8f1d8c3071e,1db14f64,add cpu and memory statistics,"add cpu and memory statistics
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316605804,1316605804,e56188b5a45ff74e8585f2aa6819beacc6d83e2f
+e56188b5a45ff74e8585f2aa6819beacc6d83e2f,e56188b5,fix a typo in log message,"fix a typo in log message
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316599743,1316599743,6ded63cb54795194db235f44eaf4f4835e37690e
+6ded63cb54795194db235f44eaf4f4835e37690e,6ded63cb,increment version to 0.3,"increment version to 0.3
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316164005,1316164005,e538d96f78e772d339abcedfa8e9c5a8f03c4c94
+e538d96f78e772d339abcedfa8e9c5a8f03c4c94,e538d96f,display the day of the month in the date,"display the day of the month in the date
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1316081114,1316081114,6c56f307b242d69356142ba96754fd8e5aabdb1b
+6c56f307b242d69356142ba96754fd8e5aabdb1b,6c56f307,increment version to 0.2,"increment version to 0.2
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315908997,1315908997,762b7b78c631ef0ce6b8ae96c79ac1d8b864008c
+762b7b78c631ef0ce6b8ae96c79ac1d8b864008c,762b7b78,show many other system informations,"show many other system informations
+
+Show many other system informations in the clock frame:
+ - kernel version string
+ - architecture
+ - uptime (as reported in /proc/uptime)
+ - loadavg (as reported in /proc/loadvg)
+ - battery level
+ - date and time
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315908199,1315908199,d1813e90e354b8c07135de4bdb15805b63d5cb67
+d1813e90e354b8c07135de4bdb15805b63d5cb67,d1813e90,use a solid background color (white text on black background),"use a solid background color (white text on black background)
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315907467,1315907467,5dc07d35ce830c4d76037ff9d99eb7fd98c1e8a2
+5dc07d35ce830c4d76037ff9d99eb7fd98c1e8a2,5dc07d35,add a license (GPLv2),"add a license (GPLv2)
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315869075,1315869075,0f654cca10b667f3aff903eb13cbd55eec259e27
+0f654cca10b667f3aff903eb13cbd55eec259e27,0f654cca,PicoClock: first version,"PicoClock: first version
+
+Implement the clock as a very simple widget that shows a plain text
+frame.
+
+The text frame is not updated if the screen is off; this allows to save
+power and increase battery lifetime.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315868626,1315868626,8e820ee0ade5a729a6611ff834f31aac104095f8
+8e820ee0ade5a729a6611ff834f31aac104095f8,8e820ee0,add .gitignore,"add .gitignore
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315868583,1315868583,49e598aa4bda408e64ff4c149ff08f9d7ee5c813
+49e598aa4bda408e64ff4c149ff08f9d7ee5c813,49e598aa,first commit,"first commit
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315868472,1315868472,

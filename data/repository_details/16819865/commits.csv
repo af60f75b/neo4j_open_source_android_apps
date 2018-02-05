@@ -1,0 +1,461 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+2926c1cdf5af9d46ea9614035f32c8f365c2228a,2926c1cd,General code cleanup,"General code cleanup
+
+Begin code cleanup. Should probably add more comments above certain functions and classes.
+",,,,Andreas Basurto,andreas@sonic.net,Andreas Basurto,andreas@sonic.net,1400307074,1400307074,64d0ad40225fbe4b0430ee98a050a68a65f28716
+64d0ad40225fbe4b0430ee98a050a68a65f28716,64d0ad40,/* make sure that the imageview is updated properly.. which it isnt,"/* make sure that the imageview is updated properly.. which it isnt
+                         * when the recipe item happens to have started out outside of the current
+                         * visible view.. ie the favorited recipe started at a position on the list
+                         * below the last visible item when the scroll position is 0. */
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399932978,1399932978,fd356ab1a1d2deeee938f770da7bb4dea9cff130
+fd356ab1a1d2deeee938f770da7bb4dea9cff130,fd356ab1,trim and lowercase ingredientsz before adding them to db,"trim and lowercase ingredientsz before adding them to db
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399931277,1399931277,4962decbf48bf1449f224aab266e667c19121908
+4962decbf48bf1449f224aab266e667c19121908,4962decb,copied apk to the root directory of recipe composer project directory,"copied apk to the root directory of recipe composer project directory
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399930469,1399930469,0fc2c198918990b1f3ce5d21e9b6d2469d0ac351
+0fc2c198918990b1f3ce5d21e9b6d2469d0ac351,0fc2c198,final semester build,"final semester build
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399930017,1399930017,0e052dd95991b21af544594e7fe2e4297942b51b
+0e052dd95991b21af544594e7fe2e4297942b51b,0e052dd9,removed window soft input mode adjustpan,"removed window soft input mode adjustpan
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399929916,1399929916,5edf6ead90c584d324891cb05b77c4624580329d
+5edf6ead90c584d324891cb05b77c4624580329d,5edf6ead,Merge branch 'master' of github.com:icebox-creations/RecipeComposer,"Merge branch 'master' of github.com:icebox-creations/RecipeComposer
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399613203,1399613203,"5f2b9451b618a4da1718041724aa52fb5503cbf2,4bd2ed24dfe046dbcf0c08e7d0233c31a0f68bbb"
+5f2b9451b618a4da1718041724aa52fb5503cbf2,5f2b9451,Add screenshot to README.md,"Add screenshot to README.md
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399613166,1399613166,59d86ec0c21f9f110d9de549b919780d942e954f
+4bd2ed24dfe046dbcf0c08e7d0233c31a0f68bbb,4bd2ed24,fixed button position for create a recipe.. still work in progress,"fixed button position for create a recipe.. still work in progress
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399493150,1399493150,2335c33b50488515bd3f77abcfcf601bf1caa51b
+2335c33b50488515bd3f77abcfcf601bf1caa51b,2335c33b,fixed merge conflict,"fixed merge conflict
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399492406,1399492406,"1e15e7d66f62a6c4ed79b18ddb37abd7774b2a77,59d86ec0c21f9f110d9de549b919780d942e954f"
+1e15e7d66f62a6c4ed79b18ddb37abd7774b2a77,1e15e7d6,create recipe proof of concept,"create recipe proof of concept
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399492246,1399492246,4dc02c8db8db337f7dc26e56002d1bc550bb70af
+59d86ec0c21f9f110d9de549b919780d942e954f,59d86ec0,Change ingredients background (disable resizing),"Change ingredients background (disable resizing)
+
+Disable resizing of the ingredients fragment background due to the soft
+keyboard when adding ingredients.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399441696,1399441696,c47841d405a90302aeb34afd409a5118efb1573b
+c47841d405a90302aeb34afd409a5118efb1573b,c47841d4,Add placeholder as recipe images download,"Add placeholder as recipe images download
+
+Use placeholder image as recipe images are downloaded.
+
+Handle the error related to swiping from the ingredients fragment
+quickly to the recipes fragment: ""The content of the adapter has changed
+but ListView did not receive a notification. Make sure the content of
+your adapter is not modified from a background thread, but only from the
+UI thread.""
+
+Add vodka to the search suggestions per Oriah's request. He's a
+recovering alcoholic.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399436251,1399436251,4dc02c8db8db337f7dc26e56002d1bc550bb70af
+4dc02c8db8db337f7dc26e56002d1bc550bb70af,4dc02c8d,Add more ingredient suggestions,"Add more ingredient suggestions
+
+Add more ingredients to the suggestions file.
+Remove lowercasing when adding an ingredient to the favorites table.
+Increase divider height of ingredients items in the listview.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399355507,1399355507,5c928e5951f50fa5b0735a88b23ce329b407febf
+5c928e5951f50fa5b0735a88b23ce329b407febf,5c928e59,Disable soft keyboard after add ing. dialog,"Disable soft keyboard after add ing. dialog
+
+Close the keyboard after hitting add / cancel from the add ingredient
+dialog box.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399273910,1399273910,99549fd0b751b51fd09d98d8995e17c1539c9160
+99549fd0b751b51fd09d98d8995e17c1539c9160,99549fd0,Add new star icon + background to Ingredients Frag,"Add new star icon + background to Ingredients Frag
+
+Set Ingredients Fragment ListView background to a couple delicious
+veggies. Handle transparency of ingredient items to look pretty.
+Add more modern ""star"" to recipe favorites.
+Organize imports.
+Remove errors from ingredient suggestions textfile.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1399272886,1399272886,95704af5e14129cbcbf8bad81aec732ffdbfc4bb
+95704af5e14129cbcbf8bad81aec732ffdbfc4bb,95704af5,working on stars,"working on stars
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399255368,1399255368,4e1b6bf90eea2b23021cab3e46e7bb09e3fe17a6
+4e1b6bf90eea2b23021cab3e46e7bb09e3fe17a6,4e1b6bf9,"updated recipe favorites favoriting stars. Stars are greyed out by default, long…","updated recipe favorites favoriting stars. Stars are greyed out by default, long hold and favorite will favorite that recipe and add it to your recipe favorites list. Which will also star that particular item that you had favorited
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399253904,1399253904,74b94ebc7e5370fbaa48c1ab68aa8fa240fabda4
+74b94ebc7e5370fbaa48c1ab68aa8fa240fabda4,74b94ebc,"fixed recipe favorites recipe url text, now it is only the hostname","fixed recipe favorites recipe url text, now it is only the hostname
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1399240309,1399240309,e0446e2544041daf78beef47fee46590331e38d3
+e0446e2544041daf78beef47fee46590331e38d3,e0446e25,arrow now disappears if there are ingredients and if there are none but if the…,"arrow now disappears if there are ingredients and if there are none but if the user clicks the add ingredient button
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398998874,1398998874,ec17357958d8135bf15ebd74f76a1b9975849861
+ec17357958d8135bf15ebd74f76a1b9975849861,ec173579,clear button is different slightly now,"clear button is different slightly now
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398998245,1398998245,3aa96054ae43b2987dfc96a811f6c2cb9dd5d266
+3aa96054ae43b2987dfc96a811f6c2cb9dd5d266,3aa96054,"ui tweak, widened and bolded the clear button","ui tweak, widened and bolded the clear button
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398997929,1398997929,1ce92c0160cf2c7965ebbbafce2c51159e7feb81
+1ce92c0160cf2c7965ebbbafce2c51159e7feb81,1ce92c01,"minor ui tweaks, added an arrow to the add ingredient button for fun, go ahead…","minor ui tweaks, added an arrow to the add ingredient button for fun, go ahead and remove when you get bored of it, tweaked the font size slightly and made the text centered so it doesnt look lopsided..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398997449,1398997449,09184d0dc5dd542fe601c2e1c77136fc362bbf84
+09184d0dc5dd542fe601c2e1c77136fc362bbf84,09184d0d,updated the ingredient delete code to take into acount multiple deletes..,"updated the ingredient delete code to take into acount multiple deletes..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398996489,1398996489,e86504019c076610e927dd6488ba2b11e2983afa
+e86504019c076610e927dd6488ba2b11e2983afa,e8650401,updated the delete so now it checks to see if any ingredients were selected…,"updated the delete so now it checks to see if any ingredients were selected before bringing up the popup, now it simply toasts with a response that says no ingredients selected. ALSO, changed the text in the search for recipe by keyword text so it makes moer intuitive sense
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398996305,1398996305,29c90eb1a95f9c1fc12638b8618e2e50288cb200
+29c90eb1a95f9c1fc12638b8618e2e50288cb200,29c90eb1,fixed bug where the overflow menu wasnt hiding when ingerdients search wass opened,"fixed bug where the overflow menu wasnt hiding when ingerdients search wass opened
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398995264,1398995264,cee6c474106413ad973f02ccf695fa9351a3c8b6
+cee6c474106413ad973f02ccf695fa9351a3c8b6,cee6c474,Merge pull request #3 from trance-with-me/master,"Merge pull request #3 from trance-with-me/master
+
+Base code for v1.0",,,,Andreas Basurto,amb@sonic.net,Andreas Basurto,amb@sonic.net,1398974172,1398974172,"adc04ae6f567a2786e02fbe9f602585ae78f9594,86dcd5c4755c8505adf8b87f38b0932261c6d1b1"
+86dcd5c4755c8505adf8b87f38b0932261c6d1b1,86dcd5c4,Enhance About AlertDialog,"Enhance About AlertDialog
+
+Create a custom AlertDialog for the about dialog. Cite libraries and
+resources used.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398924092,1398924092,47b8519a974dd6e9dfd5b92ba66fb4500e4f4c76
+47b8519a974dd6e9dfd5b92ba66fb4500e4f4c76,47b8519a,about dialog,"about dialog
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398885301,1398885301,b49c9ce487b79c6c2200786b91b4f741a44e7f3f
+b49c9ce487b79c6c2200786b91b4f741a44e7f3f,b49c9ce4,"Attemping to add remove recipe favorite feature, need to ensure context menu…","Attemping to add remove recipe favorite feature, need to ensure context menu events between recipe frag and recipe fav frag are distinct
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398847076,1398847076,db703f13c7bc4f0cf58bfb1c69ad381aefd1d4e1
+db703f13c7bc4f0cf58bfb1c69ad381aefd1d4e1,db703f13,"fixed spelling of spagetti to spaghetti. created about alert dialog in settings menu, for fun..","fixed spelling of spagetti to spaghetti. created about alert dialog in settings menu, for fun..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398845919,1398845919,062ba02d846c748bd24bf66942d752f1977c438f
+062ba02d846c748bd24bf66942d752f1977c438f,062ba02d,still have the star problem. recipe items in the listview for recipes have an…,"still have the star problem. recipe items in the listview for recipes have an the favorited icon, a s star, visible repeatedly for every ith mod c element..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398839233,1398839233,b6109a9f758410872610a4230d1a22c498204543
+b6109a9f758410872610a4230d1a22c498204543,b6109a9f,recipe favorites. Todo: star recipes that have been favorited to show it was favorited,"recipe favorites. Todo: star recipes that have been favorited to show it was favorited
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398831783,1398831783,3c5bd08cc65924544f3270a49bf01c7f21311e35
+3c5bd08cc65924544f3270a49bf01c7f21311e35,3c5bd08c,Add a recipe to favorites,"Add a recipe to favorites
+
+Add ability to favorite a recipe based on a long-hold click on the
+recipe's listview. In the context menu the user has the ability to 'Add
+to Favorites'.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398828058,1398828058,542723541ac64635040864a1901555bad10888cb
+542723541ac64635040864a1901555bad10888cb,54272354,added some helper and DAO methods to access recipe favorites,"added some helper and DAO methods to access recipe favorites
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398824193,1398824193,e91b7335969905186392eedea1c77be4ac6b9f04
+e91b7335969905186392eedea1c77be4ac6b9f04,e91b7335,Block broken domains,"Block broken domains
+
+Check recipe url against broken domains before adding to the listview.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398667171,1398667171,09de3a8acdb2282f33467636f85c84b968b252e6
+09de3a8acdb2282f33467636f85c84b968b252e6,09de3a8a,"Recipe Listview scroll fix, font tweaking","Recipe Listview scroll fix, font tweaking
+
+Upon scrolling to the bottom of the recipe listview for the first time,
+the asynctask would call the same url. The page variable was not
+updating properly. Temporary fix for now.
+Enlarge recipe item fonts.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398664198,1398664198,cc162d1a9656932d9102c60a773c6b8218a6c4fd
+cc162d1a9656932d9102c60a773c6b8218a6c4fd,cc162d1a,Integrate UrlImageViewHelper for recipe images,"Integrate UrlImageViewHelper for recipe images
+
+Utilize UrlImageViewHelper library for asynchronously downloading recipe
+images in the listview rather than our own asynctask.
+Clean up unneeded commented code.
+Add recipe urls back to the listview only displaying the domain name.
+Users can easily see where their favorite ingredients are hosted.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398660028,1398660028,0a03489e8c29d1e20dc8bd2a9d1eae49e16ce457
+0a03489e8c29d1e20dc8bd2a9d1eae49e16ce457,0a03489e,Disable SearchView popup of constraint,"Disable SearchView popup of constraint
+
+Disable distracting popup of constraint when searching through ingredients.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398549345,1398549345,1709d3e14c17c90c1c08c90e3451a9a82471e3a2
+1709d3e14c17c90c1c08c90e3451a9a82471e3a2,1709d3e1,Add Android-RobotoTextView to project,"Add Android-RobotoTextView to project
+
+Add Android-RobotoTextView library to project to allow changing any
+TextView's font to Roboto.
+Fix Gradle buildToolsVersion error after Android Studio update to 0.5.7
+(I was receiving an ""end of block data"" error). Change buildToolsVersion
+from 19.0.3 back to 19. Still get a warning but no errors.
+Change title of sharing message to ""Hey, let's make <recipe title>!""
+Centered TextView when user sees an empty recipe list.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1398545798,1398545798,b16ea85d900a586ff4d18968947c8b4b8384e427
+b16ea85d900a586ff4d18968947c8b4b8384e427,b16ea85d,added stars for favorites. TODO fix bug where view shows stars in the view that…,"added stars for favorites. TODO fix bug where view shows stars in the view that had been marked in places where they shouldnt be marked. the stars need to act independently. recipe images need to be cached so that they don't flicker when the images in the current viewport are loaded.. since they are redownloaded on view.
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398407566,1398407566,62e0a16f4c87b8d3df0af2d888cdcb95c523ee58
+62e0a16f4c87b8d3df0af2d888cdcb95c523ee58,62e0a16f,Fixed bug where ingredient searchView close button wasnt clickable because it…,"Fixed bug where ingredient searchView close button wasnt clickable because it was obstructed by settings menu item. Just disabled everytime the search is focused and renable when focus escapes
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398405066,1398405066,65a43c19de9e85d5af34265bbc6effaf2ca9b0ee
+65a43c19de9e85d5af34265bbc6effaf2ca9b0ee,65a43c19,"updated recipe image downloading, now updates the correct Item View","updated recipe image downloading, now updates the correct Item View
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1398397566,1398397566,14cc35ff2d7c354d2a49f37a9a53a88ea2610d86
+14cc35ff2d7c354d2a49f37a9a53a88ea2610d86,14cc35ff,Expand sharing intent functionality,"Expand sharing intent functionality
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397278018,1397278018,3ba53e9a9c8979c0158da47276bbf4116f65f649
+3ba53e9a9c8979c0158da47276bbf4116f65f649,3ba53e9a,Allow users to share recipes,"Allow users to share recipes
+
+Implement floating context menu in the recipes fragment to allow the
+user to share a recipe's info (url, ingredients list, title).
+
+Replace the recipe search keyword's searchview with edittext. This will
+be changed later on anyway but the searchview caused more UI
+difficulties than before.
+
+Tweak colors a bit more. Will it ever be tweaked enough? :P
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397170414,1397170414,5cb0a8cad64b3c41365a083b8a9021dd23610d3c
+5cb0a8cad64b3c41365a083b8a9021dd23610d3c,5cb0a8ca,"More color changes, keep keyword searchview expanded","More color changes, keep keyword searchview expanded
+
+Try out more color schemes. General code cleanup.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397100743,1397100743,996c1aded126794be440d919e957c6b5f183b336
+996c1aded126794be440d919e957c6b5f183b336,996c1ade,"Re-add settings icon, back button for pref. activity in action bar.","Re-add settings icon, back button for pref. activity in action bar.
+
+Commented out code for enabling the action bar icon as a back button in
+the pref. activity. Need to look at the Google docs to see if that's
+typical or for user's to just use their phone's back button.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397083356,1397083356,40144ef6688bba2744a667bf29ef0073b4ab143b
+40144ef6688bba2744a667bf29ef0073b4ab143b,40144ef6,Coloring the UI,"Coloring the UI
+
+Try coloring the listview ui a bit to possibly match icon?
+Commented out the progressdialog. When opening the settings activity Android
+can handle the animation transition for us.
+Use the overflow icon for settings.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397079957,1397079957,08da2b3dabe2d40a711d3d7b68310a041ba78f2b
+08da2b3dabe2d40a711d3d7b68310a041ba78f2b,08da2b3d,"changed the keyword query edit text to a search view, now we got rid of that button..","changed the keyword query edit text to a search view, now we got rid of that button..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397073558,1397073558,13da6dc193bbd7a17ce43b7889253b2f444ec9d4
+13da6dc193bbd7a17ce43b7889253b2f444ec9d4,13da6dc1,removed toast on settings selected,"removed toast on settings selected
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397072584,1397072584,606eee0da09ac5b9ef779aed295598048f68c913
+606eee0da09ac5b9ef779aed295598048f68c913,606eee0d,added a preferences activity.. also using a global container to access common…,"added a preferences activity.. also using a global container to access common static items such as a progressBar.. rather than serializing and deserializing shuff
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397072386,1397072386,7c3c7be4abba2938a00b443d0c816419c94f13bb
+7c3c7be4abba2938a00b443d0c816419c94f13bb,7c3c7be4,"modified the toast on recipe selected, nothing to see here","modified the toast on recipe selected, nothing to see here
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397070337,1397070337,38c184df2d08a2ac932042d544b92976c8d72fce
+38c184df2d08a2ac932042d544b92976c8d72fce,38c184df,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397070096,1397070096,"0f75cd4b03301c89c13495e9669c1de8024110f8,2147ab2f22a7bb6b2d130f4e48ef67ee2ef7c79a"
+0f75cd4b03301c89c13495e9669c1de8024110f8,0f75cd4b,settings menu enabled TODO: open a settings fragment view,"settings menu enabled TODO: open a settings fragment view
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397070080,1397070080,c5c3a9d355757ae0dcf37190e048a6e947e3d1e5
+2147ab2f22a7bb6b2d130f4e48ef67ee2ef7c79a,2147ab2f,"Update icon, tweak UI","Update icon, tweak UI
+
+Handle bug of replacing spaces in ingredient titles with + for the url.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1397018781,1397018781,c5c3a9d355757ae0dcf37190e048a6e947e3d1e5
+c5c3a9d355757ae0dcf37190e048a6e947e3d1e5,c5c3a9d3,added ingredient indicators. added ingredient selected states (to require or…,"added ingredient indicators. added ingredient selected states (to require or exclude selected ingredients kinda like a priority level for ingredients)
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1397014158,1397014158,52b4d31581a9d5812d2d0c7361a37c3fbb9d7e7c
+52b4d31581a9d5812d2d0c7361a37c3fbb9d7e7c,52b4d315,Handle case of user editing ingredient and swiping,"Handle case of user editing ingredient and swiping
+
+If an ingredient is checked and then edited, change the title and
+uncheck the ingredient.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396923534,1396923534,e0428c1291abe2c399a856e442187a7ea5164db3
+e0428c1291abe2c399a856e442187a7ea5164db3,e0428c12,Read ingredient suggestions from a file,"Read ingredient suggestions from a file
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396921798,1396921798,ecb511c24e5a62e79552dcdcc646aa2df55df063
+ecb511c24e5a62e79552dcdcc646aa2df55df063,ecb511c2,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396919495,1396919495,"b9bd5e0cde4ae53706153df54e6d852fd458ca7d,849e9c3c143d35a8673e42a80cccf3f9b585b4e7"
+b9bd5e0cde4ae53706153df54e6d852fd458ca7d,b9bd5e0c,"erased a semicolon, hi Mom","erased a semicolon, hi Mom
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396919490,1396919490,dbd638142ed52af8cc666b362ea61536a13cc254
+849e9c3c143d35a8673e42a80cccf3f9b585b4e7,849e9c3c,tweaked the ui for the ingredients list,"tweaked the ui for the ingredients list
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396919398,1396919398,b5c951b633d1e30dc80de4ff414d73f89a4c5f79
+b5c951b633d1e30dc80de4ff414d73f89a4c5f79,b5c951b6,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396918497,1396918497,"c3f13bea1c87848a9fc373cd4d61b2d05ba6faf7,dbd638142ed52af8cc666b362ea61536a13cc254"
+c3f13bea1c87848a9fc373cd4d61b2d05ba6faf7,c3f13bea,not sure,"not sure
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396918490,1396918490,d8d331729afb16d51f07c062728803e4be178c82
+dbd638142ed52af8cc666b362ea61536a13cc254,dbd63814,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+
+Conflicts:
+	RecipeComposer/src/main/java/creations/icebox/recipecomposer/IngredientsFragment.java
+	RecipeComposer/src/main/res/values/strings.xml
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396917117,1396917117,"4c386c2a5bd1cd42808a80053ef958e08ea440d2,d8d331729afb16d51f07c062728803e4be178c82"
+4c386c2a5bd1cd42808a80053ef958e08ea440d2,4c386c2a,Give users autocomplete ingredient suggestions,"Give users autocomplete ingredient suggestions
+
+Create an extended DialogFragment that utilizes AutoCompleteTextView to
+give suggestions to the user as he/she is adding an ingredient.
+
+Todo: Read ingredient suggestions from a file rather than hard-coding
+values in the DialogFragment.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396915158,1396915158,70a62d310d76564d4bfd8b86d15c461c81c4b63f
+d8d331729afb16d51f07c062728803e4be178c82,d8d33172,"added basic file io, again. We need to access the list of ingredient suggestions","added basic file io, again. We need to access the list of ingredient suggestions
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396839455,1396839455,70a62d310d76564d4bfd8b86d15c461c81c4b63f
+70a62d310d76564d4bfd8b86d15c461c81c4b63f,70a62d31,removed comments,"removed comments
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396836611,1396836611,2b61ede5bd02016307dfb30ee2011165f4995072
+2b61ede5bd02016307dfb30ee2011165f4995072,2b61ede5,removed comments,"removed comments
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396836574,1396836574,2073c2bc1a51d7803ec847cd03852a0fdc4d9e32
+2073c2bc1a51d7803ec847cd03852a0fdc4d9e32,2073c2bc,checkboxes work,"checkboxes work
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396835622,1396835622,bfea1669e6ec0e66ab35706207dc0df056db6383
+bfea1669e6ec0e66ab35706207dc0df056db6383,bfea1669,got edit and delete to work.. the checkboxes still need work though,"got edit and delete to work.. the checkboxes still need work though
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396834814,1396834814,98da61bd62c73d8dc0d18119103ae3b44af34e2a
+98da61bd62c73d8dc0d18119103ae3b44af34e2a,98da61bd,Begin implementing edit & delete functionality for ingredient fragment,"Begin implementing edit & delete functionality for ingredient fragment
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396827957,1396827957,15fdd1e745e0960db2540cb49c719c33cfd1de68
+15fdd1e745e0960db2540cb49c719c33cfd1de68,15fdd1e7,"Remove unneeded lines, move Ing.&Rec. classes to POJO package","Remove unneeded lines, move Ing.&Rec. classes to POJO package
+
+A little clearer organization.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396671751,1396671751,ae0da6bb63a7b1996112083c7948dfcbf6885dd0
+ae0da6bb63a7b1996112083c7948dfcbf6885dd0,ae0da6bb,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+
+Conflicts:
+	RecipeComposer/src/main/java/creations/icebox/recipecomposer/adapter/IngredientAdapter.java
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396651521,1396651521,"c9579db9c4a24cbc932b7dae202bf65636ee2495,eb9690bff936d5fe4f3024bc51900088e1d4185b"
+c9579db9c4a24cbc932b7dae202bf65636ee2495,c9579db9,Implement basic alertdialog for removing ingredients,"Implement basic alertdialog for removing ingredients
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396650075,1396650075,8a1c195b1e86efc89d5200e677e5e721cf6b45e1
+eb9690bff936d5fe4f3024bc51900088e1d4185b,eb9690bf,removed more comments,"removed more comments
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396642841,1396642841,8a1c195b1e86efc89d5200e677e5e721cf6b45e1
+8a1c195b1e86efc89d5200e677e5e721cf6b45e1,8a1c195b,Listview listeners + begin implementing imageviews,"Listview listeners + begin implementing imageviews
+
+Move the listview onclicklisteners to the ingredients fragment. This
+allows us to utilize the contextual action mode.
+
+Begin implementation of an imageview for each recipe.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396583989,1396583989,e9e4fb586e71ddec7647c6cb486ce62760b2a71c
+e9e4fb586e71ddec7647c6cb486ce62760b2a71c,e9e4fb58,removed space in front of ellipses character..,"removed space in front of ellipses character..
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396495775,1396495775,0e20e3711a9f6b1074cb3ab958419171735b33eb
+0e20e3711a9f6b1074cb3ab958419171735b33eb,0e20e371,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396495384,1396495384,"6079b21a9b1da0164a53661a7e39efb76e83a757,28d7bb704e97fba9c89619f49d767162044a4293"
+6079b21a9b1da0164a53661a7e39efb76e83a757,6079b21a,removed a comment,"removed a comment
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396495378,1396495378,e9515cf474dc273fe26606658322704723bbcb16
+28d7bb704e97fba9c89619f49d767162044a4293,28d7bb70,Implement basic progress dialog spinner during api call,"Implement basic progress dialog spinner during api call
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396495104,1396495104,e9515cf474dc273fe26606658322704723bbcb16
+e9515cf474dc273fe26606658322704723bbcb16,e9515cf4,"Ingedients adding, searching works! Searching for ingredients WORKS!","Ingedients adding, searching works! Searching for ingredients WORKS!
+
+TODO: improve ui, get longhold on item to work and bring context menu
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396470043,1396470043,1fcf1fd67dc0c1421b5f1c85bb471a991f38c960
+1fcf1fd67dc0c1421b5f1c85bb471a991f38c960,1fcf1fd6,fixed issue with view not updating on ingredient search,"fixed issue with view not updating on ingredient search
+
+Was calling notifyDataSetChanged twice, before publish results in
+perform filtering, and during publish results...
+
+Dat was de issuez matey
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396427848,1396427848,c1e7466c85118625103898a595f419d27c9ce78b
+c1e7466c85118625103898a595f419d27c9ce78b,c1e7466c,added new ingredient dialog menu,"added new ingredient dialog menu
+
+Now we can add an ingredient with a dialog menu. it performs the same way that the current functionality performs
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1396418303,1396418303,2a2edd7df0cf5e580ed1306b50a1e9150695d3db
+2a2edd7df0cf5e580ed1306b50a1e9150695d3db,2a2edd7d,Implement endless scroll + follow best practice for setting adapter,"Implement endless scroll + follow best practice for setting adapter
+
+Call asynctask when the user reaches the bottom of the recipe list. This
+gives the illusion of endless scroll.
+
+Create the recipe adapter only once on creation and then notify when
+there is a change to the recipe list to reduce overhead.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396408084,1396408084,82f83a31cbbcec77db7e1acab867916998e856ed
+82f83a31cbbcec77db7e1acab867916998e856ed,82f83a31,Handle multiple words in query search + launch browser intent on recipe click,"Handle multiple words in query search + launch browser intent on recipe click
+
+Replace spaces with ""+"" in query edit text: i.e. search for ""mexican
+chili"".
+Once a recipe is clicked, launch its url in a browser.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396312646,1396312646,890acd8e5689f038912d74d54ca03b80f0a0ffd6
+890acd8e5689f038912d74d54ca03b80f0a0ffd6,890acd8e,Sync checkbox and textview clicks,"Sync checkbox and textview clicks
+
+There was a bug where we had the checkbox onclick listener in our
+ingredients adapter while our textview onclick listener was in our
+ingredient fragment. Both appeared to sync up but they weren't in
+the background.
+Move the listener for the textview into the ingredients adapter.
+Handle all click events and send the list of selected ingredients
+over to the ingredients fragment.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396310954,1396310954,1cdfd2fdfa234b5d40ee2da719f89bb22547e4b2
+1cdfd2fdfa234b5d40ee2da719f89bb22547e4b2,1cdfd2fd,Allow users to query a recipe keyword w/ ingredients selection,"Allow users to query a recipe keyword w/ ingredients selection
+
+Add an EditText field to the ingredients fragment. recipe puppy allows
+api calls that take a keyword search in the url request. With this
+functionality users can select ingredients they want to use or just
+type in a single word query for a list of recipes; i.e. ""pancakes"".
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396294531,1396294531,e836d7a720a94806950e5ea1a4376bd38184b17f
+e836d7a720a94806950e5ea1a4376bd38184b17f,e836d7a7,Update call to AsyncTask on swipe to recipes tab,"Update call to AsyncTask on swipe to recipes tab
+
+Grab a list of checked ingredients from the parent activity and update
+the url that will be used to make the api request. Also re-call
+the asynctask's execute on swipe event. This is working normally, but
+when user unchecks one ingredient, the other ingredient is automatically
+""checked""; i.e. its isSelected() returns true although it is not checked
+in the list view.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396288199,1396288199,e9e42219d1bdd51763d4bceefa4ffb1c70575896
+e9e42219d1bdd51763d4bceefa4ffb1c70575896,e9e42219,Implement interface for fragment-to-fragment communication,"Implement interface for fragment-to-fragment communication
+
+Follow:
+https://developer.android.com/training/basics/fragments/communicating.html
+Define an interface in the Ingredient Fragment class and
+implement it within Main Activity. Use OnPageChangeListener
+as the interface. We will then be able to send the ingredient
+titles (on select) to the recipes fragment to make an API
+request.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1396230609,1396230609,59d295fdf674ef8a3f195a90bb29130f5961ce3d
+59d295fdf674ef8a3f195a90bb29130f5961ce3d,59d295fd,Tie checkboxes w/ items,"Tie checkboxes w/ items
+
+Syncronize the item checks with the item's checkboxes.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1395986487,1395986487,d14f97067e477df11979b66a6a3580a54e3441ef
+d14f97067e477df11979b66a6a3580a54e3441ef,d14f9706,Set foundation for batch contextual actions,"Set foundation for batch contextual actions
+
+Allow batch contextual actions to Ingredients ListView
+rather than enabling the contextual action mode for an
+individual view.
+https://developer.android.com/guide/topics/ui/menus.html#context-menu
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1395951101,1395951101,4953b05bf0da4d27b477bd4f2105b625353efb43
+4953b05bf0da4d27b477bd4f2105b625353efb43,4953b05b,View Holder Pattern + Contextual Action Mode,"View Holder Pattern + Contextual Action Mode
+
+Implement View Holder Pattern in the Recipe Adapter and
+begin adding contextual action mode to the ingredient
+fragment.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1395891384,1395891384,8f4684b6104c5d8faf671a86814e9c8e8bcea1f3
+8f4684b6104c5d8faf671a86814e9c8e8bcea1f3,8f4684b6,Utilize View Holder Design Pattern in Ingredients Adapter,"Utilize View Holder Design Pattern in Ingredients Adapter
+
+Begin implementing contextual menu upon clicking an
+ingredient. Deleting it from the listview works but
+also from the DB isn't working at the moment.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1395803733,1395803733,e3b18517cdbb5657137e36c1635e3a7783529773
+e3b18517cdbb5657137e36c1635e3a7783529773,e3b18517,Refactor DB,"Refactor DB
+
+Revamp the database layer. Separate DBHelper into two classes; SQLiteDAO
+and SQLiteDBHelper. The DAO will act as the interface to the database
+for other classes and be responsible for maintaining the database
+connection, inserting, deleting, etc. The DBHelper will be responsible
+for CRUD operations; creating the database, dropping tables, updating,
+reading. Hopefully this will simplify things a bit.
+
+Move loose text in xml files to the strings.xml.
+
+Rename xml files for more consistency.
+
+Remove extra buttons from ingredients fragment. Prepare for using the
+action bar.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1394944781,1394944781,2bcb037528d567c9b0c58a011bb3446c722305d4
+2bcb037528d567c9b0c58a011bb3446c722305d4,2bcb0375,Update Gradle for AS update 0.5.0,"Update Gradle for AS update 0.5.0
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1394231322,1394231322,c06038539c2ef4a54cdd4dc0f82c28757e887177
+c06038539c2ef4a54cdd4dc0f82c28757e887177,c0603853,Remove SectionsPagerAdapter class,"Remove SectionsPagerAdapter class
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1394230593,1394230593,101faa18ee00c7ef4a1822cfe2260bf6d7efbba7
+101faa18ee00c7ef4a1822cfe2260bf6d7efbba7,101faa18,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1394230055,1394230055,"ab7167cf73dc57a70915a24d7cf195f849cdce38,4b24c6ef452bc439f5a7ced7c384c0d45554ff28"
+ab7167cf73dc57a70915a24d7cf195f849cdce38,ab7167cf,before pulling,"before pulling
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1394230045,1394230045,dd2dc824c3b822dba46273b57396fc23d94dfcfc
+4b24c6ef452bc439f5a7ced7c384c0d45554ff28,4b24c6ef,"got a simple DB working, we can now add ingredients, we need to test and work…","got a simple DB working, we can now add ingredients, we need to test and work out any isues an tings
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1394185961,1394185961,dd2dc824c3b822dba46273b57396fc23d94dfcfc
+dd2dc824c3b822dba46273b57396fc23d94dfcfc,dd2dc824,Merging wit da tings,"Merging wit da tings
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393998398,1393998398,"d443318bfe08145be7d152fbd89e9215705d8c73,5119570dbe45244367b260e4f6a908ee4ca977e3"
+d443318bfe08145be7d152fbd89e9215705d8c73,d443318b,Rename SectionsPagerAdapter to TabsPagerAdapter,"Rename SectionsPagerAdapter to TabsPagerAdapter
+
+It just needed to happen sooner or later, otay?
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393997921,1393997921,0d9a789b98ad1a6e35eec50a87cdd9211cc90776
+5119570dbe45244367b260e4f6a908ee4ca977e3,5119570d,attempting a database,"attempting a database
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1393986906,1393986906,0d9a789b98ad1a6e35eec50a87cdd9211cc90776
+0d9a789b98ad1a6e35eec50a87cdd9211cc90776,0d9a789b,Set Gradle version to 1.10 for now,"Set Gradle version to 1.10 for now
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393971270,1393971270,674c81f0eed3ec0157e113ac0efb8de8a21e1eed
+674c81f0eed3ec0157e113ac0efb8de8a21e1eed,674c81f0,changed gradle version used by project to 0.7.+,"changed gradle version used by project to 0.7.+
+",,,,oulrich1,oemulrich@gmail.com,oulrich1,oemulrich@gmail.com,1393915784,1393915784,12b9f2bc5de2e61874e38b9470650c19c9d45553
+12b9f2bc5de2e61874e38b9470650c19c9d45553,12b9f2bc,Fix ingredients list layout,"Fix ingredients list layout
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393905778,1393905778,4ba3221195044fb920a0e43668b7cc4dfcaed6b5
+4ba3221195044fb920a0e43668b7cc4dfcaed6b5,4ba32211,Merge branch 'master' of github.com:trance-with-me/RecipeComposer,"Merge branch 'master' of github.com:trance-with-me/RecipeComposer
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393903325,1393903325,"49447acc674d9d1b95ce54d1886499de742d6e25,40f567f070d0ef109a35a37d2c0a0dd09783fca0"
+49447acc674d9d1b95ce54d1886499de742d6e25,49447acc,Minor tweaking,"Minor tweaking
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393903293,1393903293,9f08d63ca7c29a61758767b00f6f9aa84458447f
+40f567f070d0ef109a35a37d2c0a0dd09783fca0,40f567f0,TODO: remove the file creation since its actually useless.. TODO: create a DB…,"TODO: remove the file creation since its actually useless.. TODO: create a DB instead.. and relate ingredients to tags... which describe what an ingredient is used for.. like 'omlets', or 'breakfast' .. etc TODO: access the list of checked ingredients and append to url string to make request..
+",,,,oulrich,oemulrich@gmail.com,oulrich,oemulrich@gmail.com,1393661739,1393661739,51d12d9df7d5271c916d495821fc02d3c52f5e20
+51d12d9df7d5271c916d495821fc02d3c52f5e20,51d12d9d,added checkboxes: TODO: fix alignment of checkboxes.. added a filestorage for…,"added checkboxes: TODO: fix alignment of checkboxes.. added a filestorage for this week's assignment..
+",,,,oulrich,oemulrich@gmail.com,oulrich,oemulrich@gmail.com,1393659812,1393659812,19653cba24355d9cf0dba7048fca9dc9cef75fcc
+19653cba24355d9cf0dba7048fca9dc9cef75fcc,19653cba," added Ingredient Object, IngredientFragment.. and Ingredient Adapter.. TODO:…"," added Ingredient Object, IngredientFragment.. and Ingredient Adapter.. TODO: fix the positioning of the UI
+",,,,oulrich,oemulrich@gmail.com,oulrich,oemulrich@gmail.com,1393654704,1393654704,9f08d63ca7c29a61758767b00f6f9aa84458447f
+9f08d63ca7c29a61758767b00f6f9aa84458447f,9f08d63c,Define launch activity in Manafest,"Define launch activity in Manafest
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393396793,1393396793,e7e767ef91f76af0064464e767661011bbd71db1
+e7e767ef91f76af0064464e767661011bbd71db1,e7e767ef,Remove obsolete layout files,"Remove obsolete layout files
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393396105,1393396105,1463b1234bd5fe305c8d60798f2d440f08e2305c
+1463b1234bd5fe305c8d60798f2d440f08e2305c,1463b123,Remove unneeded files,"Remove unneeded files
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393395981,1393395981,0be70fa910b34fe67f7752d935bf3ea055edaed5
+0be70fa910b34fe67f7752d935bf3ea055edaed5,0be70fa9,Create custom adapter for recipe fragment listview,"Create custom adapter for recipe fragment listview
+
+Create the RecipeAdapter to interface between to the listview
+and the json data we receive from the api.
+General code clean up.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393395716,1393395716,1bdfbe3ca5e72d084b8674d74137e5b6c442a137
+1bdfbe3ca5e72d084b8674d74137e5b6c442a137,1bdfbe3c,Subclass the AsyncTask into the RecipesFragment,"Subclass the AsyncTask into the RecipesFragment
+
+Remove RecipeComposerActivity and the separated AsyncTask.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393371532,1393371532,f760f70a7de9a9f83b6ce62ccfdeefdd59a3a117
+f760f70a7de9a9f83b6ce62ccfdeefdd59a3a117,f760f70a,Separate the AsyncTask out from RecipeComposerActivity,"Separate the AsyncTask out from RecipeComposerActivity
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393367754,1393367754,c2e4850dbd5834383f9fd6ff0e46010f72ff1ba1
+c2e4850dbd5834383f9fd6ff0e46010f72ff1ba1,c2e4850d,Add Recipe class and clean up,"Add Recipe class and clean up
+
+Remove broken ListFragment extension for now until you
+know what you're doing. :P
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393340483,1393340483,32c9a0c2a914d35b655d97509344920bae52d4b7
+32c9a0c2a914d35b655d97509344920bae52d4b7,32c9a0c2,Separate TabAdapter from MainActivity,"Separate TabAdapter from MainActivity
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1393298786,1393298786,d99a5cba350f47e099f9b6acc59b5f1fd100ac95
+d99a5cba350f47e099f9b6acc59b5f1fd100ac95,d99a5cba,Add debug statments,"Add debug statments
+
+To better understand Activity and Fragment lifecycles.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392851363,1392851363,2d6e2941ac49fba6da84f56e9da8b3234194ad70
+2d6e2941ac49fba6da84f56e9da8b3234194ad70,2d6e2941,Add Recipes and Ingredients Fragment templates,"Add Recipes and Ingredients Fragment templates
+
+Specify fragment classes to be used by the ViewPager Adapter.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392790336,1392790336,8bd1afc679dcf1608a36efdea1772815a5d78cbe
+8bd1afc679dcf1608a36efdea1772815a5d78cbe,8bd1afc6,ViewPager template setup,"ViewPager template setup
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392774286,1392774286,9e22d0a8ba2cb3d0d65d8bdedcdbdb5f1db06acd
+9e22d0a8ba2cb3d0d65d8bdedcdbdb5f1db06acd,9e22d0a8,Initial test getting JSON,"Initial test getting JSON
+
+Get JSON from a test API call from Recipe Puppy. Parse it and set the
+last recipe's attributes to the XML layout.
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392597662,1392597662,adc04ae6f567a2786e02fbe9f602585ae78f9594
+adc04ae6f567a2786e02fbe9f602585ae78f9594,adc04ae6,Setup for collaboration,"Setup for collaboration
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392333249,1392333249,30b4dbbdcfd3f01a1ceec1aa9a66812c6c563356
+30b4dbbdcfd3f01a1ceec1aa9a66812c6c563356,30b4dbbd,Remove fragment stuff,"Remove fragment stuff
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392332452,1392332452,fd8756259bdbe88e1c5e169bf7cf5798aa4a1ea9
+fd8756259bdbe88e1c5e169bf7cf5798aa4a1ea9,fd875625,Project template,"Project template
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392332130,1392332130,5ed9479b5b87b0504a9a76f53227f83fbb3cec32
+5ed9479b5b87b0504a9a76f53227f83fbb3cec32,5ed9479b,Remove bad commit,"Remove bad commit
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392332081,1392332081,feaeb448d397392f94eb3d1e0c2d37754b779a30
+feaeb448d397392f94eb3d1e0c2d37754b779a30,feaeb448,Merge branch 'master' of github.com:icebox-creations/recipe-composer,"Merge branch 'master' of github.com:icebox-creations/recipe-composer
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392331933,1392331933,"2f5853e95e093a695124088dcce1f6da441835bb,a4772b972edb835702841c79a573c9c491185d1b"
+2f5853e95e093a695124088dcce1f6da441835bb,2f5853e9,Initial commit,"Initial commit
+",,,,trance-with-me,amb@sonic.net,trance-with-me,amb@sonic.net,1392331911,1392331911,
+a4772b972edb835702841c79a573c9c491185d1b,a4772b97,Initial commit,"Initial commit
+",,,,Andreas Basurto,amb@sonic.net,Andreas Basurto,amb@sonic.net,1392331500,1392331500,

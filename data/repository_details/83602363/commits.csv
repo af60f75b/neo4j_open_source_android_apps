@@ -1,0 +1,121 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+dc835c180f19886ba12b994a340fce53b3f4dbf2,dc835c18,Changed README,"Changed README
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1490216724,1490216724,35e6d3620236be3b52b826e0d4f94eadd4519b49
+35e6d3620236be3b52b826e0d4f94eadd4519b49,35e6d362,Version 2.1,"Version 2.1
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489305792,1489305792,c3917bb40d2290a539c510e60d02b54162d6dc74
+c3917bb40d2290a539c510e60d02b54162d6dc74,c3917bb4,Moved the outline inset to getBounds (where float rectangle is used) and enlarged the inset,"Moved the outline inset to getBounds (where float rectangle is used) and enlarged the inset
+
+(Because e.g. ""k"" in ""Droid Sans Mono"" has very sharp corners, which were outside the active text shadow)
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489262844,1489262844,68701fc5a127df9757767b9a35a48f5ff9ff0c9a
+68701fc5a127df9757767b9a35a48f5ff9ff0c9a,68701fc5,"Considered the outline in the text bounds calculation,","Considered the outline in the text bounds calculation,
+
+Renamed (forgotten) ""border"" to ""outline"",
+Removed one ""inset"" call in drawShadow
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489259346,1489259346,c3368ecd8117248cdfeda68e6530db032f5faae2
+c3368ecd8117248cdfeda68e6530db032f5faae2,c3368ecd,Added clear text button to EditText in EditTextActivity,"Added clear text button to EditText in EditTextActivity
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489251834,1489251834,d889bb574c3263eb9df65cf9a7df627ba72d4c53
+d889bb574c3263eb9df65cf9a7df627ba72d4c53,d889bb57,Re-organized activity_edit_text,"Re-organized activity_edit_text
+
+(Old Android versions throw an exception if you try to set a field marked as final using reflection.)
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489245081,1489245081,ea1eb2775e45e259312a603729b894e26deb7674
+ea1eb2775e45e259312a603729b894e26deb7674,ea1eb277,Re-organized activity_edit_text,"Re-organized activity_edit_text
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489243667,1489243667,f53c75cf2694b8fdbf72c352f68f892cfd958b9a
+f53c75cf2694b8fdbf72c352f68f892cfd958b9a,f53c75cf,Fixed color selection on the right side of the color grid,"Fixed color selection on the right side of the color grid
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1489083300,1489083300,a2911345c5541f710e70eb51e0ed08b2df292c37
+a2911345c5541f710e70eb51e0ed08b2df292c37,a2911345,Create result Label in EditTextActivity in onStart and update it on any change,"Create result Label in EditTextActivity in onStart and update it on any change
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488720069,1488720069,24c5c1804be4c5963a29bb08c50a01a7a5a63e6c
+24c5c1804be4c5963a29bb08c50a01a7a5a63e6c,24c5c180,Edit text color in color dialog (as outline color),"Edit text color in color dialog (as outline color)
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488715672,1488715672,605a34b5d332ced322ad1d95e1ecc822732b8b4b
+605a34b5d332ced322ad1d95e1ecc822732b8b4b,605a34b5,Added outline color selection (ColorFragment),"Added outline color selection (ColorFragment)
+
+Added ACTION_UP to onTouchEvent and onColorSelected and onCancel to Listener in ColorPaletteView
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488710841,1488710841,b5915841fb0e1e35ad2dd3a89c45044ef8d535bc
+b5915841fb0e1e35ad2dd3a89c45044ef8d535bc,b5915841,"Renamed ""border"" to ""outline""","Renamed ""border"" to ""outline""
+
+Renamed local variables in init*Spinner in EditTextActivity
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488639737,1488639737,7371ada115776f6ef1bf5e20d3c599123c2e79e1
+7371ada115776f6ef1bf5e20d3c599123c2e79e1,7371ada1,Added border size to EditTextActivity,"Added border size to EditTextActivity
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488638850,1488638850,6533062eb731cd5b4ca830f5352f38a32150e520
+6533062eb731cd5b4ca830f5352f38a32150e520,6533062e,"Added border (bool, size, color) to Label, added border switch to…","Added border (bool, size, color) to Label, added border switch to EditTextActivity, draw white border of fixed size
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488635308,1488635308,9e5738f80798f8c91dbd55f41b13e0c83240d86b
+9e5738f80798f8c91dbd55f41b13e0c83240d86b,9e5738f8,"Added smpte_color_bars.png as default image, removed loading image from Uri stored in Settings,","Added smpte_color_bars.png as default image, removed loading image from Uri stored in Settings,
+
+because of SecurityException in loadImage for Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488399297,1488399297,39c229434e07f38d5e4cbab686de3a7ceddbf28b
+39c229434e07f38d5e4cbab686de3a7ceddbf28b,39c22943,Moved version from Label to LabelCollection,"Moved version from Label to LabelCollection
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488297118,1488297118,949eddfeed9231795288d95148ea774665043fd1
+949eddfeed9231795288d95148ea774665043fd1,949eddfe,Added version to Settings,"Added version to Settings
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1488296300,1488296300,be8b66828b9031c6f9a786f385bb4e8af2f2c094
+be8b66828b9031c6f9a786f385bb4e8af2f2c094,be8b6682,Gradle updates,"Gradle updates
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1487181617,1487181617,f26ee7bc1d5464bf519f3d477bf15c5b88899ad0
+f26ee7bc1d5464bf519f3d477bf15c5b88899ad0,f26ee7bc,"Added ModeClassName to Settings,","Added ModeClassName to Settings,
+
+Use beginObject and endObject once while writing to and reading from settings file,
+Set image uri to null instead of empty in Settings class, if no uri is set
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486821382,1486821382,dbbfa21d7544e5b614bf60dc708e2f5aa0ad09ea
+dbbfa21d7544e5b614bf60dc708e2f5aa0ad09ea,dbbfa21d,Improved code readability in CropView and Utility,"Improved code readability in CropView and Utility
+
+Changed Utility access modifier to 'internal'
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486809877,1486809877,0e5df3571dd74029b3b97be2e3d1a0f83faa16ec
+0e5df3571dd74029b3b97be2e3d1a0f83faa16ec,0e5df357,"Moved text size factor calculation out from LabelCollection, write to file also text size factor","Moved text size factor calculation out from LabelCollection, write to file also text size factor
+
+MainActivity: Load TextOverlayTemplate before ModeSize is changed in CropView
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486805988,1486805988,d67719abd89f0076ab53f006470d58892c4c0594
+d67719abd89f0076ab53f006470d58892c4c0594,d67719ab,Invalidate CropView in setModeSize also if no image is loaded,"Invalidate CropView in setModeSize also if no image is loaded
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486805286,1486805286,780f641242d574ee01cd5c944a7b263500c140c4
+780f641242d574ee01cd5c944a7b263500c140c4,780f6412,Made the corner radius of color boxes similar displayed on devices with different resolution,"Made the corner radius of color boxes similar displayed on devices with different resolution
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486667664,1486667664,80f872e14ac57d9ec2d666f1d2cbc4c2fb187df2
+80f872e14ac57d9ec2d666f1d2cbc4c2fb187df2,80f872e1,Draw rectangle border thin,"Draw rectangle border thin
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486666517,1486666517,62fecce1d30ffa0a801dbac42c10f235aa1a93cd
+62fecce1d30ffa0a801dbac42c10f235aa1a93cd,62fecce1,Read system fonts from XML for text overlay font selection,"Read system fonts from XML for text overlay font selection
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1486501432,1486501432,27060910f62304f529ef697ae5be7f017587a5ac
+27060910f62304f529ef697ae5be7f017587a5ac,27060910,Added Version to Label,"Added Version to Label
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1485810712,1485810712,cf796fe695fa9497b1d97b68586908fdcc5039c7
+cf796fe695fa9497b1d97b68586908fdcc5039c7,cf796fe6,"New Thread and additional ProgressBar for saving of wave file,","New Thread and additional ProgressBar for saving of wave file,
+
+ProgressBarWrapper now with text
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483997837,1483997837,acaceef5b7721758e2c7a7684301f0850961f2f7
+acaceef5b7721758e2c7a7684301f0850961f2f7,acaceef5,Added ProgressBar for sending,"Added ProgressBar for sending
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483910412,1483910412,bd949f044b5a5c897bd951608d02e6ac70bc6ab3
+bd949f044b5a5c897bd951608d02e6ac70bc6ab3,bd949f04,Request permissions only on Android 6.0 or later,"Request permissions only on Android 6.0 or later
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483804962,1483804962,c08b6e7c4b28cdb0547acc337fc069a6fe4fe3fc
+c08b6e7c4b28cdb0547acc337fc069a6fe4fe3fc,c08b6e7c,Prevent ErrnoException class not found error for API level 15,"Prevent ErrnoException class not found error for API level 15
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483803718,1483803718,2e68bb431a9f34639a08f2b7b740ab31ed30d7dd
+2e68bb431a9f34639a08f2b7b740ab31ed30d7dd,2e68bb43,"Show error instead of send it, if image size is invalid (e.g. -1 x -1)","Show error instead of send it, if image size is invalid (e.g. -1 x -1)
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483797552,1483797552,82710aa7e2a19d612097757152d5651094d06df1
+82710aa7e2a19d612097757152d5651094d06df1,82710aa7,"Fixed take picture option for old Android versions,","Fixed take picture option for old Android versions,
+
+Changed ""external-path"" entry in paths.xml
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483797272,1483797272,38423f76b9a6baf1413ecb78c614ec4d5b01ddae
+38423f76b9a6baf1413ecb78c614ec4d5b01ddae,38423f76,Set empty bitmap if image could not be loaded,"Set empty bitmap if image could not be loaded
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483726314,1483726314,6cc4faf3c480f18879f2549ff3dc1aba4a64baeb
+6cc4faf3c480f18879f2549ff3dc1aba4a64baeb,6cc4faf3,Improved permission requests,"Improved permission requests
+
+for Android 6.0 (API level 23) or later
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483713190,1483713190,fbdff4d944942ba2248c2e693536fa5151ef70bf
+fbdff4d944942ba2248c2e693536fa5151ef70bf,fbdff4d9,Added forgotten invalidate after Label editing,"Added forgotten invalidate after Label editing
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483704694,1483704694,3d887e882231d4efb6298dbd49b35f88c8c66541
+3d887e882231d4efb6298dbd49b35f88c8c66541,3d887e88,"Try load image again after permission granted,","Try load image again after permission granted,
+
+added REQUEST_PERMISSION const
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483702575,1483702575,fbd4aef0649d830acdf689a94ded0e714187015a
+fbd4aef0649d830acdf689a94ded0e714187015a,fbd4aef0,"Fixes write permission for each sdk version, improved image loading","Fixes write permission for each sdk version, improved image loading
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483702351,1483702351,c14af42222c461918ece533eb23fc7f4e021edce
+c14af42222c461918ece533eb23fc7f4e021edce,c14af422,Replaced reflection method getConstructor with getDeclaredConstructor,"Replaced reflection method getConstructor with getDeclaredConstructor
+
+ (Was not functioning on a sony phone with Android version 5.1.1.)
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483698960,1483698960,eefa55bb6d725869d1a69b3366950a62f66c7559
+eefa55bb6d725869d1a69b3366950a62f66c7559,eefa55bb,Send Labels also without image,"Send Labels also without image
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483690145,1483690145,b2574a666dc713cb0c60b079da62920b5460f55c
+b2574a666dc713cb0c60b079da62920b5460f55c,b2574a66,Added configChanges and windowSoftInputMode attributes to EditTextActivity manifest,"Added configChanges and windowSoftInputMode attributes to EditTextActivity manifest
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483606825,1483606825,7af631dae6ff11c461ab944a497c2aa3f1a4a474
+7af631dae6ff11c461ab944a497c2aa3f1a4a474,7af631da,"Implemented jumping of the activated Label inside the screen, if it was outside","Implemented jumping of the activated Label inside the screen, if it was outside
+(because it could be far outside after screen orientation change),
+
+Changed the minimum for decision, whether Label is outside, to minimum of defined minimum size and one letter size,
+Added TextOverlay.Position class
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483549222,1483549222,fe487e3763ec475cb5b5be3ede6a644522820749
+fe487e3763ec475cb5b5be3ede6a644522820749,fe487e37,Added a notice,"Added a notice
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483522625,1483522625,6a5cf6b221dd31210614c92a897b8a6dff2f60c0
+6a5cf6b221dd31210614c92a897b8a6dff2f60c0,6a5cf6b2,Initial commit,"Initial commit
+",,,,Olga Miller,olga.rgb@gmail.com,Olga Miller,olga.rgb@gmail.com,1483464765,1483464765,

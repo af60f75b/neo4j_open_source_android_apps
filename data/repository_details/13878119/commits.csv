@@ -1,0 +1,87 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0a5d4d2899b109edb5e87d7fc80d0918fd259dbc,0a5d4d28,Bumped version number,"Bumped version number
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393866997,1393866997,39204d927f46ab1636097788bd2f6eb10da37e22
+39204d927f46ab1636097788bd2f6eb10da37e22,39204d92,Added a simple spinner for empty list,"Added a simple spinner for empty list
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393866717,1393866717,7d547790003070af4afa6105c11541b5d7ed40d3
+7d547790003070af4afa6105c11541b5d7ed40d3,7d547790,Something of a dirty KitKat workaround,"Something of a dirty KitKat workaround
+
+Opening and closing the stream is now done off the UI thread, so that
+these (now potentially long-blocking) calls don't freeze the device.
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393831284,1393831284,f5086624e989b3c843cc1405a63038c4a1a301f6
+f5086624e989b3c843cc1405a63038c4a1a301f6,f5086624,"Revert ""Have some screenshots""","Revert ""Have some screenshots""
+
+This reverts commit 9994da5e691808a01f4841fede3fe2015d69da09.
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393351467,1393351467,9994da5e691808a01f4841fede3fe2015d69da09
+9994da5e691808a01f4841fede3fe2015d69da09,9994da5e,Have some screenshots,"Have some screenshots
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393351370,1393351370,e40954ac711f5db3f360d2d3ef880dff647ac996
+e40954ac711f5db3f360d2d3ef880dff647ac996,e40954ac,Updated in-app licenses page,"Updated in-app licenses page
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393119677,1393119677,930d5cbf0f5507b3237b0fc584e84471fe422646
+930d5cbf0f5507b3237b0fc584e84471fe422646,930d5cbf,Updated image popup to zoomable TouchImageView,"Updated image popup to zoomable TouchImageView
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393119666,1393119666,46773c250299033d3782000abdc84db9f8593812
+46773c250299033d3782000abdc84db9f8593812,46773c25,Image popup now fades in and out,"Image popup now fades in and out
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393049790,1393049790,0e1ea6f95affff887231aa6bf6ca1c00a751abb6
+0e1ea6f95affff887231aa6bf6ca1c00a751abb6,0e1ea6f9,Can now tap in-stream images for a basic popup,"Can now tap in-stream images for a basic popup
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1393044220,1393044220,20cea9e25b9908c838b249e800e198f513701342
+20cea9e25b9908c838b249e800e198f513701342,20cea9e2,Added in-stream images from tweets,"Added in-stream images from tweets
+
+Can't click on them to enlarge yet. Swapped out Volley for Picasso.
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1392458507,1392458507,9f410425a06782d443f3d999ce7122e2e7f4a36d
+9f410425a06782d443f3d999ce7122e2e7f4a36d,9f410425,Now displaying a connectivity issues message.,"Now displaying a connectivity issues message.
+
+Closes #3
+",,,,Adam Speakman,adam.speakman@gmail.com,Adam Speakman,adam.speakman@gmail.com,1390003011,1390003011,711eb118ec2b5113dcac8c488211d8df3e4e2b93
+711eb118ec2b5113dcac8c488211d8df3e4e2b93,711eb118,Incremented versioncode,"Incremented versioncode
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1385633852,1385633852,02567013cc78c646b9e7d13eb934a790adccf216
+02567013cc78c646b9e7d13eb934a790adccf216,02567013,Set maxSdkVersion to 18,"Set maxSdkVersion to 18
+
+There's a bug with closing the stream in KitKat which causes the
+Daydream not to disappear, until the stream crashes when it tries to
+read from the network. Investigating.
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1385633677,1385633677,78fc752c3465b79d01314b035d9e33b71e49d938
+78fc752c3465b79d01314b035d9e33b71e49d938,78fc752c,Decreased font size for phones,"Decreased font size for phones
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1383117174,1383117174,201489788894a693b212c46e4c3bad7694fa4ad8
+201489788894a693b212c46e4c3bad7694fa4ad8,20148978,"Moved timestamp to bottom right, prevents overlap","Moved timestamp to bottom right, prevents overlap
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1383035885,1383035885,e828cd69e642656e4d08f8580b6ec50a371396a8
+e828cd69e642656e4d08f8580b6ec50a371396a8,e828cd69,Added licenses dialog,"Added licenses dialog
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1383024066,1383024066,3b47a44a8300190d507cd65b953d45c9f37728b5
+3b47a44a8300190d507cd65b953d45c9f37728b5,3b47a44a,Deleted some error handlers printing stack traces,"Deleted some error handlers printing stack traces
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382951814,1382951814,94a5be17860c208d7ea07ae3f6c31151c63a6609
+94a5be17860c208d7ea07ae3f6c31151c63a6609,94a5be17,"Updated launcher icon, screen name display","Updated launcher icon, screen name display
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382951578,1382951578,c660d3c7f58cb2c5661da8b865beb2d6caabf1aa
+c660d3c7f58cb2c5661da8b865beb2d6caabf1aa,c660d3c7,Sign up button now works,"Sign up button now works
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382949045,1382949045,0e94ee448ba30ff1749ca1e0abd7048c7510d0c3
+0e94ee448ba30ff1749ca1e0abd7048c7510d0c3,0e94ee44,"Added sign out, access settings buttons","Added sign out, access settings buttons
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382948221,1382948221,e275a3db24ae28596c0e8099336efdc851410b7a
+e275a3db24ae28596c0e8099336efdc851410b7a,e275a3db,Added somewhat nicer 'not signed in' message,"Added somewhat nicer 'not signed in' message
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382938167,1382938167,c28bd2ac6a10b08eb41bb67dc34d818fc9f51f49
+c28bd2ac6a10b08eb41bb67dc34d818fc9f51f49,c28bd2ac,Added link from Settings app,"Added link from Settings app
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382936266,1382936266,6d361bda49666cc84610202a654ea3192d1d805e
+6d361bda49666cc84610202a654ea3192d1d805e,6d361bda,Can now get to login screen from daydream,"Can now get to login screen from daydream
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382924735,1382924735,2deb83bf4dc0be88c695f569480abe39ab8a09e8
+2deb83bf4dc0be88c695f569480abe39ab8a09e8,2deb83bf,Modified the tweet styling in the stream,"Modified the tweet styling in the stream
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382923107,1382923107,9f3ee533a73e0e80893eefe1ec3ce21d339f85b5
+9f3ee533a73e0e80893eefe1ec3ce21d339f85b5,9f3ee533,Implemented relative timestamps,"Implemented relative timestamps
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382922103,1382922103,5e446b8c592aaf0c2338cf7f8d130b7c5a0eef10
+5e446b8c592aaf0c2338cf7f8d130b7c5a0eef10,5e446b8c,No longer underlining links,"No longer underlining links
+
+Tweet username, timestamp, etc, no longer showing link coloring either.
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382920867,1382920867,2e87eb070feee7fd9325785cf6f39864e9c3d2f9
+2e87eb070feee7fd9325785cf6f39864e9c3d2f9,2e87eb07,Added links etc to handle Twitter display reqs,"Added links etc to handle Twitter display reqs
+
+https://dev.twitter.com/terms/display-requirements
+
+Not handling all requirements yet, some of these links shouldn't be
+showing underlines (all of them except the ones in the content,
+actually), haven't implemented offset timestamps (instead of absolute),
+etc. Retweet display is working correctly now, though.
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382916338,1382916338,91eba93e4ed4f82d112af21007910aa978e2c525
+91eba93e4ed4f82d112af21007910aa978e2c525,91eba93e,Implemented clickable links,"Implemented clickable links
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382912097,1382912097,9546c705ae9dfae4cfecf03d77982a72bc77da3f
+9546c705ae9dfae4cfecf03d77982a72bc77da3f,9546c705,Twitter feed now using Google Now style cards,"Twitter feed now using Google Now style cards
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382908870,1382908870,55a567c689b465aff73c7c022193f12152707f46
+55a567c689b465aff73c7c022193f12152707f46,55a567c6,Urls are now displayed expanded,"Urls are now displayed expanded
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382771722,1382771722,b9583d27a44fd5698fd6fc29ad71f49036c1530d
+b9583d27a44fd5698fd6fc29ad71f49036c1530d,b9583d27,Tweets  now show  author image,"Tweets  now show  author image
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382769768,1382769768,3e1e7d2158ac90aa108d9bb0fb0012287e789517
+3e1e7d2158ac90aa108d9bb0fb0012287e789517,3e1e7d21,Initial commit,"Initial commit
+",,,,Adam Speakman,adam@speakman.net.nz,Adam Speakman,adam@speakman.net.nz,1382763666,1382763666,

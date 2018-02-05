@@ -1,0 +1,52 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+e258561fae7b3a1653f3fb5b5b9dd197b4fe41fb,e258561f,[build] Bump version in manifest,"[build] Bump version in manifest
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1402339788,1402339788,e0dd0cdbead00e45f09cad2707346be1d30aedab
+e0dd0cdbead00e45f09cad2707346be1d30aedab,e0dd0cdb,Delay closing the receiver app on the Pebble.,"Delay closing the receiver app on the Pebble.
+
+Recent versions of the firmware seem to have a race where a closing app message look like it's discarded. Thus we introduce a small delay before sending the actual message after receiving the battery reading.
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1402105414,1402105414,960b93195e9606cd4ab572fa59ef7e05b8f39ed8
+960b93195e9606cd4ab572fa59ef7e05b8f39ed8,960b9319,Flush project changes,"Flush project changes
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1402105396,1402105396,68137d8aaac13c0c46681051f81b32bc687489e7
+68137d8aaac13c0c46681051f81b32bc687489e7,68137d8a,Bump version,"Bump version
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1390075425,1390075425,3a7d46c562e1fbb3858b898776991386c0c81b36
+3a7d46c562e1fbb3858b898776991386c0c81b36,3a7d46c5,Finally sort out how to force f*cking Pebble app to install our bundle,"Finally sort out how to force f*cking Pebble app to install our bundle
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1390075322,1390075322,af4eb9cefc71df43ae5cf68b0a9413159ed9e9a2
+af4eb9cefc71df43ae5cf68b0a9413159ed9e9a2,af4eb9ce,[watchapp] Build a real watch app UI.,"[watchapp] Build a real watch app UI.
+
+Beta 6 seems to have increased latency in sending data which means we don't have time to receive battery value before the app kills itself. Add an interface so that we can have more time and also show the user something if he selects the watchapp directly.
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1390075224,1390075224,8be86b00a073002df4e9b7e807c5e600571cba8c
+8be86b00a073002df4e9b7e807c5e600571cba8c,8be86b00,Bump version,"Bump version
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1388413647,1388413647,73c59bee0c0cc0fc60429bedf5de6abac2dba8f3
+73c59bee0c0cc0fc60429bedf5de6abac2dba8f3,73c59bee,Use Android OnCreate rather than DashClock initialization callback to init our state,"Use Android OnCreate rather than DashClock initialization callback to init our state
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1388413609,1388413609,5b9bfe5a20c7c15a6acfb4531cc1846798924a06
+5b9bfe5a20c7c15a6acfb4531cc1846798924a06,5b9bfe5a,Protect against rare error conditions,"Protect against rare error conditions
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1388411238,1388411238,0e628306f1b7442f8ea9a9ea96e899246c6d66da
+0e628306f1b7442f8ea9a9ea96e899246c6d66da,0e628306,Tweak settings activity text. Also bring to Pebble website when wrong SDK,"Tweak settings activity text. Also bring to Pebble website when wrong SDK
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386996877,1386996877,3f723f6059209e9bea86f4ec3ac4cca57a2f9b94
+3f723f6059209e9bea86f4ec3ac4cca57a2f9b94,3f723f60,Fix expanded title to not show Charging when watch is actually Discharging,"Fix expanded title to not show Charging when watch is actually Discharging
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386996600,1386996600,c61c54d7e1d620a5ffaaa252f9cf043e6d0f16a2
+c61c54d7e1d620a5ffaaa252f9cf043e6d0f16a2,c61c54d7,Switch dash icon to 96 -nodpi,"Switch dash icon to 96 -nodpi
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386996572,1386996572,63e10493f1ae957c2c3464c01eb423b99590f028
+63e10493f1ae957c2c3464c01eb423b99590f028,63e10493,Update manifest,"Update manifest
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386915408,1386915408,1d6de6c95a5c666a0d04ad5e454155e0a9825c7c
+1d6de6c95a5c666a0d04ad5e454155e0a9825c7c,1d6de6c9,Check firmware version if available and warn user.,"Check firmware version if available and warn user.
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386914914,1386914941,ef88b648fe85e72967b89de7ced667087df801a6
+ef88b648fe85e72967b89de7ced667087df801a6,ef88b648,Use symbol for status and descriptive text for expanded title,"Use symbol for status and descriptive text for expanded title
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386914871,1386914941,f7eb03f3c46b0683a883a9704c02c156c023f5c5
+f7eb03f3c46b0683a883a9704c02c156c023f5c5,f7eb03f3,Update art,"Update art
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386914818,1386914941,ffd7744fed1205134a1a2a2b98e61a1f24072ac1
+ffd7744fed1205134a1a2a2b98e61a1f24072ac1,ffd7744f,Update README.md,Update README.md,,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386604368,1386604368,6170e738cb9c37b718c081aaac77c52f199cba22
+6170e738cb9c37b718c081aaac77c52f199cba22,6170e738,Increase the update frequency when an error/disconnection occured,"Increase the update frequency when an error/disconnection occured
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386540669,1386540669,05a4e0ef8965379b284a4f3fff8ebda866281d2f
+05a4e0ef8965379b284a4f3fff8ebda866281d2f,05a4e0ef,Add watchapp download URL,"Add watchapp download URL
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386531639,1386531639,8cbb00a893409d1a06ec65d4a724c7ca35212e21
+8cbb00a893409d1a06ec65d4a724c7ca35212e21,8cbb00a8,Update README.md,Update README.md,,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386530942,1386530942,e1055fa4b245fe823472208b8c10a7042a33b7c3
+e1055fa4b245fe823472208b8c10a7042a33b7c3,e1055fa4,Sanitize flow and add timeout cancellation,"Sanitize flow and add timeout cancellation
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386530794,1386530810,6c10f5d9fa59878bca56b22bd10feeab2dc374cc
+6c10f5d9fa59878bca56b22bd10feeab2dc374cc,6c10f5d9,Also log charging status from the watch,"Also log charging status from the watch
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386529607,1386530810,9ad8283aa339668576e453cb1db034df908e1317
+9ad8283aa339668576e453cb1db034df908e1317,9ad8283a,Update README.md,Update README.md,,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386491534,1386491534,23c4a81c2115aaa01a942732b92044eaf44c1ed2
+23c4a81c2115aaa01a942732b92044eaf44c1ed2,23c4a81c,Initial commit,"Initial commit
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386490247,1386490247,b82206684b794e375cb318f5680992332aff0b97
+b82206684b794e375cb318f5680992332aff0b97,b8220668,Initial commit,"Initial commit
+",,,,Jérémie Laval,jeremie.laval@gmail.com,Jérémie Laval,jeremie.laval@gmail.com,1386490059,1386490059,

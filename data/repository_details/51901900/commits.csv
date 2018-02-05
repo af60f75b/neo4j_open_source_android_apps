@@ -1,0 +1,384 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+822abd72f965c44a759fa50ddcc6897ab0bf2120,822abd72,v2.0.4 (#9),"v2.0.4 (#9)
+
+* Some transition work for opening the item activity
+
+* Revamp all the things
+
+- Created Crest Models for networking use only
+- Moving to AP ORM for speed and readability
+- Moved around some stuff
+- Moving to RXJava responses on Retrofit
+- Split out loaders based on their uses
+- So much more...
+
+* Started ORM Stuffs.
+
+* Rewrite Continued.
+
+- Updated all Database calls
+- Updated Loaders
+- Updated Adapters and Activities
+- Rewrote Margin code to be way more efficient
+- Updated Crest Models
+- etc.
+
+* Continued Work. Citadel Endpoints update.
+
+* Application is buildable
+
+So far the caching works, just need to figure out how to do the paging.
+Once done I need to test the subjects I have setup for the tab loading.
+
+* Make Market Type Caching More efficient.
+
+* Caching Kinda works again, Orders load, and navigation is all fixed
+
+- Caching seems to work, but some Database Transaction work needs to be
+done
+- Navigation of the groups all works
+- Opening items works again
+- Orders are now pulled with one network request and pushed to each tab
+(sell, buy, margins)
+- Regions is now cached so you don't have to continuously change it
+every time you open an item. Unless otherwise passed in (by another
+application) your region will be the same as it was before
+- Caching of regions works (still needs wormhole filter)
+- Station Margin Building works (just needs a view)
+- Moved region on change event so it shouldn't trigger multiple requests
+for orders.
+- Tons more I'm missing.
+
+* Fixed Caching
+
+- Database transaction should be broken up instead of all 13030 items at
+once
+- Added Travis CI build info
+
+* Market Margins now work
+
+- Market History is all set up with grid, it just crashes due to labels
+- Tons more done and cleaned up
+
+* Market History is working
+
+* Bug fixes, getting ready for next release
+
+- Fixed orientation bug on item screen where orders and history didn't
+repopulate after switching orientation
+- Fixed issue with timeout and navigating away from item before all the
+network calls are done
+- Partially fixed issue where it looks like the app hangs when it is
+waiting for the database queue to finish.
+- Fixed issue with mass and volume being ginormous throwing off the
+entire view
+- Removed SwipeRefreshLayouts from tabs since they will no longer be
+used
+- Cleaned up history graph (if the graph isn't crazy in the first place)
+it is much easier to read
+
+* v2.0
+
+* Fixed timeouts and x-axis label render errors
+
+* Bug Fixes
+
+- Fixed crash that happens when an item's mass is > 1 quadrillion kg
+
+* Added market order back in
+
+- Started working on creating bots
+
+* Deploy v2.0.3
+
+- Fixed CCP endpoint changes from June 14th deploy
+
+* Fix Merge Error
+
+* Fixes for loading and graph
+
+- If there is no market history the app will no longer crash
+- If getting the item info times out (which seems to happen a lot on the
+new deploy) it no longer crashes
+",,,,Jeremy Shore,w9jds@users.noreply.github.com,GitHub,noreply@github.com,1466054508,1466054508,aa60a848c0dc307eaafe93b822d549df97c7a0c5
+aa60a848c0dc307eaafe93b822d549df97c7a0c5,aa60a848,v2.0 restructure and new features (#5),"v2.0 restructure and new features (#5)
+
+* Some transition work for opening the item activity
+
+* Revamp all the things
+
+- Created Crest Models for networking use only
+- Moving to AP ORM for speed and readability
+- Moved around some stuff
+- Moving to RXJava responses on Retrofit
+- Split out loaders based on their uses
+- So much more...
+
+* Started ORM Stuffs.
+
+* Rewrite Continued.
+
+- Updated all Database calls
+- Updated Loaders
+- Updated Adapters and Activities
+- Rewrote Margin code to be way more efficient
+- Updated Crest Models
+- etc.
+
+* Continued Work. Citadel Endpoints update.
+
+* Application is buildable
+
+So far the caching works, just need to figure out how to do the paging.
+Once done I need to test the subjects I have setup for the tab loading.
+
+* Make Market Type Caching More efficient.
+
+* Caching Kinda works again, Orders load, and navigation is all fixed
+
+- Caching seems to work, but some Database Transaction work needs to be
+done
+- Navigation of the groups all works
+- Opening items works again
+- Orders are now pulled with one network request and pushed to each tab
+(sell, buy, margins)
+- Regions is now cached so you don't have to continuously change it
+every time you open an item. Unless otherwise passed in (by another
+application) your region will be the same as it was before
+- Caching of regions works (still needs wormhole filter)
+- Station Margin Building works (just needs a view)
+- Moved region on change event so it shouldn't trigger multiple requests
+for orders.
+- Tons more I'm missing.
+
+* Fixed Caching
+
+- Database transaction should be broken up instead of all 13030 items at
+once
+- Added Travis CI build info
+
+* Market Margins now work
+
+- Market History is all set up with grid, it just crashes due to labels
+- Tons more done and cleaned up
+
+* Market History is working
+
+* Bug fixes, getting ready for next release
+
+- Fixed orientation bug on item screen where orders and history didn't
+repopulate after switching orientation
+- Fixed issue with timeout and navigating away from item before all the
+network calls are done
+- Partially fixed issue where it looks like the app hangs when it is
+waiting for the database queue to finish.
+- Fixed issue with mass and volume being ginormous throwing off the
+entire view
+- Removed SwipeRefreshLayouts from tabs since they will no longer be
+used
+- Cleaned up history graph (if the graph isn't crazy in the first place)
+it is much easier to read
+
+* v2.0
+",,,,Jeremy Shore,w9jds@users.noreply.github.com,Jeremy Shore,w9jds@users.noreply.github.com,1462173395,1462173395,1fac5951fc6297fb43743ea96ca950e30f2a85bb
+1fac5951fc6297fb43743ea96ca950e30f2a85bb,1fac5951,Merge pull request #3 from awhipp/master,"Merge pull request #3 from awhipp/master
+
+Intra-station Margins Functionality",,,,Jeremy Shore,w9jds@users.noreply.github.com,Jeremy Shore,w9jds@users.noreply.github.com,1460145873,1460145873,"fd8c5db5aa35e78842045df497e73e1d93cd1afe,4ea4ed8fb75a589927c26f62ad26dcf973af0090"
+4ea4ed8fb75a589927c26f62ad26dcf973af0090,4ea4ed8f,Item Margins Fork V2,"Item Margins Fork V2
+
+* Proper formatting of the margins tab
+",,,,whipp_alexander,whipp_alexander@bah.com,whipp_alexander,whipp_alexander@bah.com,1460129941,1460129941,fdda911857905523be65a3e5d5f3ffb8b4201006
+fdda911857905523be65a3e5d5f3ffb8b4201006,fdda9118,Item Margins Fork V2,"Item Margins Fork V2
+
+* Proper formatting of the margins tab
+",,,,whipp_alexander,whipp_alexander@bah.com,whipp_alexander,whipp_alexander@bah.com,1460129597,1460129597,99c88e6a9af709e4260fed4b65be3fb42ac7ef2d
+99c88e6a9af709e4260fed4b65be3fb42ac7ef2d,99c88e6a,Item Margins Fork,"Item Margins Fork
+
+* Added ISK Margins for items
+
+* That being said this is purely calculation as it still displays in its native format with ISK for the margin percentage.
+
+* Next stage would be to make the front-end changes
+",,,,whipp_alexander,whipp_alexander@bah.com,whipp_alexander,whipp_alexander@bah.com,1460072770,1460072770,fd8c5db5aa35e78842045df497e73e1d93cd1afe
+fd8c5db5aa35e78842045df497e73e1d93cd1afe,fd8c5db5,Merge pull request #2 from w9jds/develop,"Merge pull request #2 from w9jds/develop
+
+v1.0.1 - v1.0.3",,,,Jeremy Shore,w9jds@users.noreply.github.com,Jeremy Shore,w9jds@users.noreply.github.com,1459741428,1459741428,"9b6c13e8a9c66e648a78643720af78351e466892,37abadb92a28a417c2fef87aebdc6fa6e5cbcc05"
+37abadb92a28a417c2fef87aebdc6fa6e5cbcc05,37abadb9,v1.0.3,"v1.0.3
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1459741252,1459741252,5940943d9a26d63d459bc032f04994888cad1c76
+5940943d9a26d63d459bc032f04994888cad1c76,5940943d,Fixed scope of storage,"Fixed scope of storage
+
+- info page would never show correct version if it just updated crest
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1459442744,1459442744,ec45722eb9013d21a917c1ce7187edea171b03b7
+9b6c13e8a9c66e648a78643720af78351e466892,9b6c13e8,Merge pull request #1 from w9jds/develop,"Merge pull request #1 from w9jds/develop
+
+v1.0.0 Release",,,,Jeremy Shore,w9jds@users.noreply.github.com,Jeremy Shore,w9jds@users.noreply.github.com,1459310351,1459310351,"cd1dea1eaf6599af4b1569a7d1b944204cb3c04b,ec45722eb9013d21a917c1ce7187edea171b03b7"
+ec45722eb9013d21a917c1ce7187edea171b03b7,ec45722e,v1.0.0 Release to Play Store,"v1.0.0 Release to Play Store
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1459310227,1459310227,7f2a6e992bfee6e32566122abdf6dfaedbd1cac2
+7f2a6e992bfee6e32566122abdf6dfaedbd1cac2,7f2a6e99,Fixed build sdk and region picker.,"Fixed build sdk and region picker.
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1459268218,1459268218,bbc4db096c535205ce593db704179aef6f343a33
+bbc4db096c535205ce593db704179aef6f343a33,bbc4db09,Added reciever/intent for opening item types,"Added reciever/intent for opening item types
+
+- Action name: com.w9jds.marketbot.intent.action.OPEN_TYPE
+- Long extras should have keys of: typeId and regionId
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1458778982,1458778982,1654e30d0dccdf7a756042967a588ca96ed6c369
+1654e30d0dccdf7a756042967a588ca96ed6c369,1654e30d,Added Searching,"Added Searching
+
+- Added ability to search using Google Now once app is published
+- Updated progress view when updating market cache
+- Updated vectors
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1458711314,1458711314,cd1dea1eaf6599af4b1569a7d1b944204cb3c04b
+cd1dea1eaf6599af4b1569a7d1b944204cb3c04b,cd1dea1e,Fixed version in Gradle,"Fixed version in Gradle
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457938015,1457938015,5a8bea3bed09ad125f13234b42b355e2670de7be
+5a8bea3bed09ad125f13234b42b355e2670de7be,5a8bea3b,Now Caches All Market Types until server update,"Now Caches All Market Types until server update
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457937616,1457937616,b970b0c2461be9c01b7fca2f8a24c1765bd733b0
+b970b0c2461be9c01b7fca2f8a24c1765bd733b0,b970b0c2,Groups now load.,"Groups now load.
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457918581,1457918581,7489d77f8f0715607bffcca85121ade412348d10
+7489d77f8f0715607bffcca85121ade412348d10,7489d77f,Modifying Data Manager to handle multiple loads,"Modifying Data Manager to handle multiple loads
+
+- Made storage component dependent on net component
+- Updated main activity to use no manager system
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457914048,1457914048,b82ef103da5af38260b9c197026cc7ec579d3481
+b82ef103da5af38260b9c197026cc7ec579d3481,b82ef103,Project Back.,"Project Back.
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457906845,1457906845,27e3ef9c103c0b02fb273bac25dddab44369093e
+27e3ef9c103c0b02fb273bac25dddab44369093e,27e3ef9c,re adding project,"re adding project
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457906296,1457906296,1d66993d9b45494451d0115c89767211c1be708b
+1d66993d9b45494451d0115c89767211c1be708b,1d66993d,Removing all files due to git issues,"Removing all files due to git issues
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457906095,1457906095,e5af600766f746689e2bb5a4dfefa7ca75a5f72d
+e5af600766f746689e2bb5a4dfefa7ca75a5f72d,e5af6007,Stetho Debug and more Dagger Work,"Stetho Debug and more Dagger Work
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457905857,1457905857,a84a352ff78399f869388d3ac5c0a0f7e0315d5d
+a84a352ff78399f869388d3ac5c0a0f7e0315d5d,a84a352f,Rewriting Market Group Caching System,"Rewriting Market Group Caching System
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457900642,1457900642,b7f8e68b70961d501f59f7a16023c791aa0479ea
+b7f8e68b70961d501f59f7a16023c791aa0479ea,b7f8e68b,Updated Modules,"Updated Modules
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457840138,1457840138,a48ee88a8ebaf2826a74e3caef308cfd1666f344
+a48ee88a8ebaf2826a74e3caef308cfd1666f344,a48ee88a,Dependency Injection Work,"Dependency Injection Work
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457819145,1457819145,b9829de06bb5457a8706c5accd9a80ade4f3aabc
+b9829de06bb5457a8706c5accd9a80ade4f3aabc,b9829de0,Update for Android N preview,"Update for Android N preview
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457625075,1457626045,c5d93cd880c1ee19656517a16d3da68299d783ae
+c5d93cd880c1ee19656517a16d3da68299d783ae,c5d93cd8,Started Setting Up Dagger,"Started Setting Up Dagger
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457534347,1457626044,916b865248ae536f4216fa2b79cc7be073f41710
+916b865248ae536f4216fa2b79cc7be073f41710,916b8652,Network Response Caching,"Network Response Caching
+
+- Cache for 2 months and use if you are offline.
+- Will most likely be changing to sqlite db for groups at least
+- Take into account root of crest on when to update from the server
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457483385,1457626044,7ccaf4a80314cfcf84abc609dc409857686bab51
+7ccaf4a80314cfcf84abc609dc409857686bab51,7ccaf4a8,Tons of updates,"Tons of updates
+
+- Started Database layer for creating market bots
+- Redid Market Order layout
+- Added tons of animations
+- Fixed info form for item
+- Fixed number formatting
+- Added units to values
+- Setup Action Bar for navigation activity
+- Set up base code for the bot activity that will run to check if your
+bot should notify you
+- Style fixes as well
+- Probably more I forgot already
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457244513,1457626044,5c026e829432c24609b52ad9d642e9cf1c69f093
+5c026e829432c24609b52ad9d642e9cf1c69f093,5c026e82,Toolbar Animations,"Toolbar Animations
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457189623,1457626044,09264a9f1b8848ff7cf034a33de48b1326edbd5f
+09264a9f1b8848ff7cf034a33de48b1326edbd5f,09264a9f,Buy and Sell orders where swapped,"Buy and Sell orders where swapped
+
+- Added a toolbar to the navigation
+- Toolbar title changes based on parent
+- Show the back button if you can navigate up on the market
+- Placeholder for search toolbar action
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457148391,1457626044,985a683848c8f344ce7b22bca5906754e733dd87
+985a683848c8f344ce7b22bca5906754e733dd87,985a6838,Tree building of groups fixed,"Tree building of groups fixed
+
+- Couldn't do it the cheater way I had to build a breath first search and then run through it until all the children found their parent
+- Fixed loading types even if there are groups available in current group
+- Fixed regions not properly updating
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457108032,1457108032,fd63c76ba5d4ee6ba695d9fc3c29843ce94dd8bd
+fd63c76ba5d4ee6ba695d9fc3c29843ce94dd8bd,fd63c76b,Fixed Market Order Layout,"Fixed Market Order Layout
+
+- Added range
+- Relayed out the item since the quantity can get really big
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457075058,1457075058,12f532c15af6c62d83fb80620ef83a60744be99c
+12f532c15af6c62d83fb80620ef83a60744be99c,12f532c1,Market Orders now work,"Market Orders now work
+
+- Region Spinner now works
+- Market buy and sell orders now work
+- Buy orders are ordered in asending order based on price
+- Sell orders are ordered in descending order based on price
+- Info form is now better formatted
+- Info form shows icon
+- Info form shows volume and portion size
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457072966,1457072966,10402a2804b937844e5d4299206b7faa210d0b7e
+10402a2804b937844e5d4299206b7faa210d0b7e,10402a28,Trying to fix spinner,"Trying to fix spinner
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1457037217,1457037217,c352099de9ad29fdf1d9acff103e0dd4d5c1c38b
+c352099de9ad29fdf1d9acff103e0dd4d5c1c38b,c352099d,Market Type Info Tab,"Market Type Info Tab
+
+- When you open a market type. It now shows a info tab with the name, description, mass, and capacity.
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456994439,1456994439,de3dbcb131665687d6c571bda2bd2ea425343a4a
+de3dbcb131665687d6c571bda2bd2ea425343a4a,de3dbcb1,Fixed Styles,"Fixed Styles
+
+- Regions dropdown is now populating
+- Toolbar is now styled correctly
+- Back button on toolbar now works
+- Spinner style is now correct
+- Tabs styles are now correct
+- Once spinner is working properly should default to the forge when
+regions are first pulled
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456988625,1456988625,f1f80093bad4d75f6460241683c71c6a9a6fe9a5
+f1f80093bad4d75f6460241683c71c6a9a6fe9a5,f1f80093,Started Building Orders Page,"Started Building Orders Page
+- Created Adapters for Tabs
+- Created Adapters for the orders lists
+- Created Adapter for the region spinner
+- Started setting up the toolbar and working on styling
+- Added all crest calls, along with parsing for passing data between activities
+- Setup moving to next activity
+- Setup loading orders through data loader.
+- Tons more, busy evening.
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456902380,1456902380,9c0da17900f27dca06f3f6fe742e1659d21ebfeb
+9c0da17900f27dca06f3f6fe742e1659d21ebfeb,9c0da179,Fixed DataLoader,"Fixed DataLoader
+
+- Now should indeterminate while loading data
+- Now properly notifies adapter which items where updated (used to save
+last item in list)
+- Clear the list before loading the types
+- Fixed some layout if there is no subtitle
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456817027,1456817027,c8a388eb0bcef00ea7ea342b42a3bd37d2342b9b
+c8a388eb0bcef00ea7ea342b42a3bd37d2342b9b,c8a388eb,Navigation through the tree is working,"Navigation through the tree is working
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456801611,1456801611,9aeb074f61288e58c9ccf022e41fcf2b0d7db143
+9aeb074f61288e58c9ccf022e41fcf2b0d7db143,9aeb074f,Moved full tree navigation to one activity,"Moved full tree navigation to one activity
+
+- I moved the navigation of the tree to one activity
+- Use a breath first search to find parent node on up
+- and populate the list based on the current parent group that is
+selected
+- Started on working item animations for the listview along with
+properly using notifies in the adapter (commented out for now)
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456730180,1456730180,64c75f9e29cc70190c79d698b37b868a60083165
+64c75f9e29cc70190c79d698b37b868a60083165,64c75f9e,Animations and Activity for child items,"Animations and Activity for child items
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456677096,1456677096,3590dda0e9275de6f8a81c4a7756f59d754b694b
+3590dda0e9275de6f8a81c4a7756f59d754b694b,3590dda0,ListView of base groups now populates base groups,"ListView of base groups now populates base groups
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456202984,1456202984,8adf850baf2b3bd5743e72f75686d8322f6da1e6
+8adf850baf2b3bd5743e72f75686d8322f6da1e6,8adf850b,Started Adapter,"Started Adapter
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1456103227,1456103227,887360b568f0aab92af6583f325ef5769aeea332
+887360b568f0aab92af6583f325ef5769aeea332,887360b5,Started a Data Manager,"Started a Data Manager
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1455933377,1455933377,0e9afd69658073471441873e585198926b143fff
+0e9afd69658073471441873e585198926b143fff,0e9afd69,Started Data Loaders,"Started Data Loaders
+
+- Created two line list item layout
+- Started adapter for main list
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1455863043,1455863043,3afef1dd4198e822e07ecb5b9179d64cefa435bc
+3afef1dd4198e822e07ecb5b9179d64cefa435bc,3afef1dd,Setting up Styling,"Setting up Styling
+
+- Added in layout information
+- Added in transitions
+- Added in some animations
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1455856727,1455856727,86b0bf15addeb7c4bf02016b45498b37f39fd39d
+86b0bf15addeb7c4bf02016b45498b37f39fd39d,86b0bf15,Api Works Now,"Api Works Now
+
+- Market Groups call works, also builds the tree very quickly
+- Upgraded to Retrofit 2
+- Added market types call
+- Added regions call
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1455774742,1455774742,e4c0ad4aa7fe85fe8ca934669ac2317c5212dcd4
+e4c0ad4aa7fe85fe8ca934669ac2317c5212dcd4,e4c0ad4a,Initial Push,"Initial Push
+
+- Started creating crest api layer
+- Started setting up custom UI Widgets
+",,,,Jeremy Shore,xboxmusicn3rd@gmail.com,Jeremy Shore,xboxmusicn3rd@gmail.com,1455692469,1455692469,

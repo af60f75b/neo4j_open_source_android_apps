@@ -1,0 +1,1450 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+15b9656ec0ca7ef5d2b307863eae12588c513d85,15b9656e,Removed height modifications of screenshots,"Removed height modifications of screenshots
+
+After the GitHub repository overview redesign the relative size of the
+screenshots has changed. For now I removed the height modifications.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1372899207,1372899207,9953a3f3dbd4014e7310a2a8e51dbc29b972642a
+9953a3f3dbd4014e7310a2a8e51dbc29b972642a,9953a3f3,Fix configuration when started for the first time,"Fix configuration when started for the first time
+
+When the application is started for the first time the settings activity
+will be started. But the main activity onCreate method proceeds. Hence,
+a status request is issued which results in exceptions due to missing
+configuration. This commit fixes that by adding appropriate return
+statements, etc.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365937695,1365937695,f46d63ddcb1b7268589fa5b75723e29dafad8086
+f46d63ddcb1b7268589fa5b75723e29dafad8086,f46d63dd,Publish Android application,"Publish Android application
+
+With this commit I have published the first version of this project. I
+have uploaded the Android application into the Google Play Market.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365900223,1365900223,2ed121ccd7c025170e6ab499760918bec24907eb
+2ed121ccd7c025170e6ab499760918bec24907eb,2ed121cc,Prepare release,"Prepare release
+
+This commit prepares the release. The only thing left is to put the
+Android application into the Google Play Market. I have written a more
+detailed README file, updated the version and added a change log.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365897156,1365897156,852d4cf8dd0f7d08337ca056720fef26fbd8d9a4
+852d4cf8dd0f7d08337ca056720fef26fbd8d9a4,852d4cf8,Make captures directory configurable,"Make captures directory configurable
+
+Also the captures directory needs a place of its own. Hence, I have
+added another section to the settings file. The tilde can be used for
+taking the user's home directory. This, however, needs post-processing
+by Python, otherwise a folder with name ~ is created in the server's
+directory.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365894750,1365894750,77ed9c0a8c5f63d71c0a87c7fd0e028ac0f06b27
+77ed9c0a8c5f63d71c0a87c7fd0e028ac0f06b27,77ed9c0a,Change path for token request key and secret,"Change path for token request key and secret
+
+The path for the token request key and secret needs to change as well.
+They will now be stored in /tmp.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365892441,1365892441,08759fda76abb0e8881e66aa46422892ed518965
+08759fda76abb0e8881e66aa46422892ed518965,08759fda,Change default directory for configuration files,"Change default directory for configuration files
+
+As I start to make the server component available for self-deploy the
+configuration files now move to /usr/local/etc/security-cam. Hence, I
+had to change the default path for looking up both configuration files:
+motion.conf and settings.cfg.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365890422,1365890422,ddeb5b093aafd2ad3216e87bb3c63ff91da4f5da
+ddeb5b093aafd2ad3216e87bb3c63ff91da4f5da,ddeb5b09,Wrap up server component for Python Package Index,"Wrap up server component for Python Package Index
+
+The Python Package Index (pypi) is a central repository for Python
+packages. I have wrapped up the server component. This required a
+setup.py file, some file moving and a MANIFEST file which files it
+should include.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365884872,1365884872,5a0dc1a2e9b22d78422cf7892473857ad6b8fba2
+5a0dc1a2e9b22d78422cf7892473857ad6b8fba2,5a0dc1a2,Add issue device registration to start detection,"Add issue device registration to start detection
+
+Instead of just setting the device registration state to false I change
+the behaviour so that in case of a HTTP 503 (Conflict) on a detection
+command a device registration will be issued as well.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365867620,1365867620,a2dc8bfdd1544d2dce3e5ea33dcfdc582a08c1f3
+a2dc8bfdd1544d2dce3e5ea33dcfdc582a08c1f3,a2dc8bfd,Use multiprocessing for the Dropbox backups,"Use multiprocessing for the Dropbox backups
+
+The approach with uploading the file to the Dropbox storage directly
+during the on modified event was flawed. The server became blocked and
+could not respond anymore.
+
+Hence, I have made use of Python's multiprocessing which can launch
+multiple processes to outsource heavy tasks. Also this way the Global
+Interpreter Lock is side-stepped.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365866702,1365866702,6264cb2848c95087607543757f7dfc8ecc1b3200
+6264cb2848c95087607543757f7dfc8ecc1b3200,6264cb28,Persit Dropbox's request token key and secret,"Persit Dropbox's request token key and secret
+
+Every time the server is started the application needs to authorize the
+usage of the Dropbox API. In order to avoid that tedious task the token
+key and token secret is now stored into a file for later recovery.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365863172,1365863172,32ad110770d5637ea82acbcea05a9c858d233917
+32ad110770d5637ea82acbcea05a9c858d233917,32ad1107,Add device registration action to the interface,"Add device registration action to the interface
+
+There was a fundamental problem with detecting the state of the device
+registration on the server and keeping this synchronized with the state
+of the client.
+
+Now I have added a separate action for the interface which issues a
+device registration. Especially, I forgot to set the device registered
+boolean back to false if this was the the case.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365858437,1365858437,0bad1edc044d470f593fd3df1cae288ac55b68f9
+0bad1edc044d470f593fd3df1cae288ac55b68f9,0bad1edc,Fix typo of the GCM device registration identifier,"Fix typo of the GCM device registration identifier
+
+While refactoring I forgot to rename one variable which lead to the
+problem that the registration ID was always wrong.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365858357,1365858357,6a2d06e1cb8731eb7cced44228732533895e88a9
+6a2d06e1cb8731eb7cced44228732533895e88a9,6a2d06e1,Print Dropbox authorization URL to standard output,"Print Dropbox authorization URL to standard output
+
+Not on every machine, for instance Raspberry Pi, a display is connected
+where the started browser can be displayed. Hence, I am printing now the
+URL for authenticating to the standard output as well.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365823795,1365823795,76f2672d6456beec485f8c0d754999e38502bcb3
+76f2672d6456beec485f8c0d754999e38502bcb3,76f2672d,Use Dropbox REST API for backups,"Use Dropbox REST API for backups
+
+I have implemented support for the Dropbox API. If the user registers
+for a Dropbox API key he/she can enter it into the settings file. Then
+the server will authenticate the application with the user's account.
+
+Newly created motion snapshots are then stored in the application
+folder. This commit closes #4.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365823436,1365823436,d92ed40d65728b9c507eeb2d9c6c989fe7ad82fa
+d92ed40d65728b9c507eeb2d9c6c989fe7ad82fa,d92ed40d,Complete docstring for Python modules,"Complete docstring for Python modules
+
+I have written for all the Python module the docstrings as indicated by
+pylint.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365806938,1365806938,4c390b53ce1def19d5166428bb3937cc1f1404a4
+4c390b53ce1def19d5166428bb3937cc1f1404a4,4c390b53,"Add docstring for events, notifier and util module","Add docstring for events, notifier and util module
+
+I wrote docstring for the three utility modules, namely events, notifier
+and util. I noticed that all of the three only encapsulate one class and
+it might be useful to merge one or two of them in the future.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365709453,1365709453,9c793c585300aa33cea8dd65c69a5d6bfe7aee8d
+9c793c585300aa33cea8dd65c69a5d6bfe7aee8d,9c793c58,Rename configuration folder,"Rename configuration folder
+
+I renamed the configuration folder from etc to conf for no big reasons
+but for aesthetics.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365708126,1365708126,20d34334c44ecd13b1fa09dad43cc90ca2fa8c24
+20d34334c44ecd13b1fa09dad43cc90ca2fa8c24,20d34334,Complete Javadoc,"Complete Javadoc
+
+Finally, I have added Javadoc to every part of the code I could think
+of. Hence, this commit fixes #5. The Javadoc generator finishes without
+warnings or errors. The documentation folder was still missing from the
+gitignore file. For the future the documentation could be made available
+through the gh-pages branch.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365600285,1365600285,5561e72417ff43a641eefac61365305c900c4cf7
+5561e72417ff43a641eefac61365305c900c4cf7,5561e724,Document bitmap task and detection request class,"Document bitmap task and detection request class
+
+Just added further Javadocs to these classes.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365541221,1365541221,fb87092595a36b12b45e60a371910d0eadbe2d30
+fb87092595a36b12b45e60a371910d0eadbe2d30,fb870925,Add much more Javadoc,"Add much more Javadoc
+
+Added a bunch of Javadoc comments. There are still some classes left.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365474660,1365474660,91fc1ef480f4e9276b0b15153d855949838bcc1e
+91fc1ef480f4e9276b0b15153d855949838bcc1e,91fc1ef4,Document and refactor model classes.,"Document and refactor model classes.
+
+Cleaned up and documented the model classes. The previous state field
+was removed completely as it is not required anymore. For the time being
+the model is purely cosmetic as it does not implement any logic and the
+interface does not access it for retrieving the state. But, in order to
+be flexible for changes in the future this class will of course remain.
+After all this is a complete implementation of the MVC like architecture
+for Android applications. Also added more Javadoc.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365463146,1365463146,6423e4c09facdbd125a0a5d7409720e2af88e5c1
+6423e4c09facdbd125a0a5d7409720e2af88e5c1,6423e4c0,Clean up main activity layout file,"Clean up main activity layout file
+
+I went over the XML layout file of the main activity. I have not changed
+that much, just some wrap_content instead of fill_parent values for some
+layout widths or layout heights. One thing I refactored was a portion of
+the font style. I have created a style file for the shadow font.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365299592,1365299592,9614c635d15828ba2f4d4a0722b82d680211b3f1
+9614c635d15828ba2f4d4a0722b82d680211b3f1,9614c635,Enable detection stop during snapshot loading,"Enable detection stop during snapshot loading
+
+As described in issue #3 I need the functionality to stop the motion
+detection while the current snapshot is still loading. Sometimes the
+mobile internet connection is just too slow when all I want is to
+shutdown the system before I enter my apartment.
+
+This was done by adding task cancellation to the detection state and
+enabling the toggle button when the interface is set to the detection
+mode. Hence, this commit fixes #3.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365294036,1365294036,fb11c217939f2829b6a414bd6c09cda4e8d3e302
+fb11c217939f2829b6a414bd6c09cda4e8d3e302,fb11c217,Adjust layout files to a naming convention,"Adjust layout files to a naming convention
+
+Just decided to choose the naming convention to prefix activity layout
+files with activity_ and thus I had to adjust the main layout file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365293012,1365293012,6b0416e42ad7a1894c9a7caf2b1937daceaa989b
+6b0416e42ad7a1894c9a7caf2b1937daceaa989b,6b0416e4,Implement just-once instruction activity,"Implement just-once instruction activity
+
+In order to avoid confusion about how this application works I have
+implemented a launcher activity which displays instructions. The user
+can either select 'Continue' or 'Exit'. If the user selects 'Continue'
+then the instruction will not be shown anymore.
+
+By using a translucent and no title bar theme the activity will not be
+noticed on further application starts.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365292002,1365292002,aae29ec9a121ce0f89a97b398418fe3caa52749c
+aae29ec9a121ce0f89a97b398418fe3caa52749c,aae29ec9,Fix activities package typo,"Fix activities package typo
+
+There was a typo with the activities package. This commit fixes that by
+renaming it.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365283016,1365283016,0027ce2b27c285267d7b00bb592fe91eec9aab3f
+0027ce2b27c285267d7b00bb592fe91eec9aab3f,0027ce2b,Create launcher activity,"Create launcher activity
+
+One of the last features I want to implement before release on the
+Android application client is a launcher activity.
+
+This activity should serve as an entry point to launch either the main
+or settings activity, and, what is more, it should display instructions
+when the application is started for the first time. This way users will
+not download the application and think that it can work without the
+appropriate backend.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1365208428,1365208428,db7603d606d01dc535a23f4bdee3cb3f050d1160
+db7603d606d01dc535a23f4bdee3cb3f050d1160,db7603d6,Refactor the GCM intent service,"Refactor the GCM intent service
+
+Finally I have split up the quite big onMessage method into two methods.
+I have also noticed that I removed the invocation to the method which is
+used to reset the detected motion counter. I have readded it to the main
+activity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364931974,1364931974,d9b491fee1c6101aae52531d21364a56bbbc3762
+d9b491fee1c6101aae52531d21364a56bbbc3762,d9b491fe,Add package for grouping controller states,"Add package for grouping controller states
+
+The controller package is still too crowded. Hence, I have added an
+additional package to incorporate the state related controller classes.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364931060,1364931060,44ffa3339e68575ffa09128b97578441b33ff891
+44ffa3339e68575ffa09128b97578441b33ff891,44ffa333,Refactor status task,"Refactor status task
+
+Now I have applied the same refactorings to the status task I
+have applied to all the other asynchronous tasks. Besides that
+I have renamed the alert problem action.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364930765,1364930765,6d2b35480e544d0a204bf5f4b3b58d5b8792eb10
+6d2b35480e544d0a204bf5f4b3b58d5b8792eb10,6d2b3548,Refactor detection request task,"Refactor detection request task
+
+The detection request task is the biggest asynchronous task so far. It
+contained a lot of conditional statements. I have refactored them into
+separate methods. Hence, also new methods were added to the client
+controller which are related to setting the detection state.
+
+While doing this I have also found legacy code, which set the state
+after, for instance, a request failed. This, however, is not reasonable
+anymore with the current controller-model design.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364846305,1364846305,1deec6aa4447bc4704d7dd08c3a28b37d835cab7
+1deec6aa4447bc4704d7dd08c3a28b37d835cab7,1deec6aa,Refactor the device registration task,"Refactor the device registration task
+
+Just made some small changes to the device registration task by making
+use of the client controller as well and restructuring the onPostExecute
+method.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364791819,1364791819,95824805ed5b59ce80d7e67d88f2692bff6dfaed
+95824805ed5b59ce80d7e67d88f2692bff6dfaed,95824805,Refactor the bitmap download task,"Refactor the bitmap download task
+
+The bitmap download task was lacking the use of dedicated methods from
+the client controller. I have added two methods, one for setting the
+snapshot in the interface and another one to alert problems. Until now
+exceptions in this task were swallowed.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364699172,1364699172,553d3aa74964966d8e1450b883904605e31ec206
+553d3aa74964966d8e1450b883904605e31ec206,553d3aa7,Purge further code,"Purge further code
+
+As expected I have removed the method which checks whether the network
+is currently available, for instance it might not be available due to
+activated airplane mode. I did not find a suitable place to integrate
+it. An error message is displayed anyway.
+
+Also again some small changes to the settings activity. Next I will
+start refactoring the controller task classes.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364584087,1364584087,ce186d041b01d364a7d5bbe08d955c88d1f09877
+ce186d041b01d364a7d5bbe08d955c88d1f09877,ce186d04,Complete main activity refactoring more or less,"Complete main activity refactoring more or less
+
+I do not know whether I will overhaul the main activity code again in
+the near future, but for now I have made all the changes I had in mind.
+Especially removing all the calls directly to the controller's inbox
+handler, which is now all done via the ClientController class.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364583552,1364583552,91f98ea68f33af47efd63168fbbaa49016ec4e96
+91f98ea68f33af47efd63168fbbaa49016ec4e96,91f98ea6,Unlock interface after exception occurred,"Unlock interface after exception occurred
+
+Just added an unlock interface call to the processing of problem
+alerting in the main activity so the interface does not get stuck
+in an infinite progress bar loop.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364583087,1364583087,135a7fe66390212b3970cf838fa0dc8f0b6d47a5
+135a7fe66390212b3970cf838fa0dc8f0b6d47a5,135a7fe6,Remove save instance state keys from resource file,"Remove save instance state keys from resource file
+
+In retrospective it seems ridiculous to write the string key for storing
+activity state values in the resource XML file. I have removed them and
+hard-coded the values into the source code. This way the code becomes
+shorter and to my mind more clear.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364582801,1364582801,98c26048cab2958885f572f79338a6846c949772
+98c26048cab2958885f572f79338a6846c949772,98c26048,Move update settings out of the main activity,"Move update settings out of the main activity
+
+The settings activity still contains only few lines of code. Until now I
+was forced to check whether the settings are all set twice: in onCreate
+and onResume. Everytime onCreate is invoked, onResume will be invoked as
+well.
+
+Hence, I have moved the code out and override the onPause method of the
+settings activity. This way the settings are only updated after the user
+went on the settings activity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364581632,1364581632,32a7ca6899bb960ad6cf61674a82fbe2dc6a9322
+32a7ca6899bb960ad6cf61674a82fbe2dc6a9322,32a7ca68,Fix illegal state exception,"Fix illegal state exception
+
+I have found the reason why the application sometimes crashes after
+trying to stop the detection. Apparently the controller state needs to
+be redefined when onResume is executed. Although this bug was already
+fixed with the previous commit the commit is used to document the bug
+eventually. Besides that I have added Javadoc to the onResume method.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364532520,1364532520,a76bbfa7889f11d8eab800ea7f0419c38547656f
+a76bbfa7889f11d8eab800ea7f0419c38547656f,a76bbfa7,Add controller field to the main activity,"Add controller field to the main activity
+
+Due to the fact, that the client controller is omnipresent in the main
+activity for sending requests I have added a field for referencing the
+client controller directly. This way it is not necessary to invoke
+Client.getController() anymore.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364532061,1364532061,131513dc458a2950460ef55d075ff3b1b21c045b
+131513dc458a2950460ef55d075ff3b1b21c045b,131513dc,Refactor onResume method,"Refactor onResume method
+
+I have revised the onResume method and removed unnecessary code. This
+includes the delegation of protocol actions to the client controller as
+well as adding an additional lock interface when a motion snapshot is
+requested.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364531616,1364531616,13ffcdf618157be8718d58371b5bcac5d048d5e7
+13ffcdf618157be8718d58371b5bcac5d048d5e7,13ffcdf6,Glue restore state and download snapshot together,"Glue restore state and download snapshot together
+
+With this commit I have decided again to glue two protocol actions
+together. The restore client state action and the download snapshot
+action.
+
+With this change I have also started to create methods in the client
+controller for sending messages to the handler in order to purge the
+code further and separate the responsibilities.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364432304,1364432304,fda25e70534350d0c50e0d4cbeef7e64ba9f8f94
+fda25e70534350d0c50e0d4cbeef7e64ba9f8f94,fda25e70,Refactor and document update settings methods,"Refactor and document update settings methods
+
+Just continued to refactor and document the methods responsible for
+updating the settings in the client and main activity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364424199,1364424199,c99a9861a86a562f9ed4015f3909d834a400b31a
+c99a9861a86a562f9ed4015f3909d834a400b31a,c99a9861,Replace TextView wíth Alert Dialog for errors,"Replace TextView wíth Alert Dialog for errors
+
+I think a TextView for reporting problems is rather unfitting. Hence, I
+have switched to the creation of an Alert Dialog. Until now, the action
+for alerting problems was not considered anyway.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1364158359,1364158359,6b06b64b7708b7d95f5bcef448a56045d31415ad
+6b06b64b7708b7d95f5bcef448a56045d31415ad,6b06b64b,Refactor and document Action class,"Refactor and document Action class
+
+I have refactored the Action class a little bit by renaming the
+enumeration constants to more descriptive ones and added full
+documentation.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363995250,1363995250,0bdfb9fd746d1428bc04ec9cf9bc1264ec8e5058
+0bdfb9fd746d1428bc04ec9cf9bc1264ec8e5058,0bdfb9fd,Document the settings class,"Document the settings class
+
+I have documented the settings class and since it is not really a
+utility class, but a model class to store the configuration I have
+moved it to the root package.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363912611,1363912611,0879c8f7fcca9fb89312df8c1c2e87cd41c4a0af
+0879c8f7fcca9fb89312df8c1c2e87cd41c4a0af,0879c8f7,Refactor and comment general client class,"Refactor and comment general client class
+
+I have refactored the general client class by making all its field
+private and generating appropriate getters and setters. Also I have
+added complete Javadoc comments to the class.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363907167,1363907167,441692cdc92e1d7afaa64fa540bad5016006c162
+441692cdc92e1d7afaa64fa540bad5016006c162,441692cd,Create separate model package,"Create separate model package
+
+For the model interface (abstract class), its implementation and the
+protocol I have created a separate package in order to differentiate
+them better from the rest.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363899122,1363899122,3359c4fc87aa297d645613a3b2ad01388082d2e3
+3359c4fc87aa297d645613a3b2ad01388082d2e3,3359c4fc,Add shadow to the button text,"Add shadow to the button text
+
+I thought for adding shadows to button texts one has to isolate the text
+component from the button. But apparently it simply works by setting the
+shadow attributes on the button element itself.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363826018,1363826018,4b3c06f6a8e27092479d88df14494e0d221c8aba
+4b3c06f6a8e27092479d88df14494e0d221c8aba,4b3c06f6,Increase density of button background images,"Increase density of button background images
+
+With the 2 of 4 pixel density I think the button's contrast is too
+poorly. I have increased the density to 3 of 4 pixel.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363825149,1363825149,44672092b8d02c07867220876e3ca6ce7c2201a7
+44672092b8d02c07867220876e3ca6ce7c2201a7,44672092,Reduce size of button image,"Reduce size of button image
+
+Since the button images are just a small pixel pattern, it can also be
+produced from within Android. The button images are now reduced to a
+resolution of 2x2 pixel.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363819296,1363819296,f1a2d2d8cda40c7d997938c0060d02ff2fbe4847
+f1a2d2d8cda40c7d997938c0060d02ff2fbe4847,f1a2d2d8,Update notification icon,"Update notification icon
+
+For Android 3.0 and later the guidelines for designing status bar icons
+have changed. Now these icons are composed simply of white pixels on a
+transparent backdrop, with alpha blending use for smooth edges and
+internal texture where appropriate.
+
+Instead of designing an own icon I have chosen a default icon for that.
+It is simply a camera.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363461090,1363461090,2f4bb053f9c11c4ac245b7a02f660cce4a73a988
+2f4bb053f9c11c4ac245b7a02f660cce4a73a988,2f4bb053,Update launcher icon,"Update launcher icon
+
+Again, I have created a new version of the launcher icon, this time with
+more glossy reflections to imitate the glass.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363460077,1363460077,5b2aeb6869fbb333dcb5476c471f76aa4aaefdab
+5b2aeb6869fbb333dcb5476c471f76aa4aaefdab,5b2aeb68,Remove background for landscape orientation,"Remove background for landscape orientation
+
+It looks cleaner if the background is black when the screen orientation
+is changed to landscape. Most of the space is taken by the snapshot
+anyway. Otherwise the user would see a badly scaled background image.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363293093,1363293093,59849d7ec4741fbf6491dda388b884ea6a40f79b
+59849d7ec4741fbf6491dda388b884ea6a40f79b,59849d7e,Style buttons,"Style buttons
+
+Finally I have realized a graphical concept I had in mind for the
+buttons. For that I added a XML with a selector which defines the
+button background images for the normal and pressed state.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363292454,1363292454,2efaf4543fcc93c687379b0d459bdc5ee9aa7005
+2efaf4543fcc93c687379b0d459bdc5ee9aa7005,2efaf454,Style headline,"Style headline
+
+I have changed the overall style of the headline on the main activity
+layout. Among other things I have added shadows.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363284838,1363284838,9218cd6740e5b800bc7f705efa3e8bb9f15c64d1
+9218cd6740e5b800bc7f705efa3e8bb9f15c64d1,9218cd67,Place background into DPI independent folder,"Place background into DPI independent folder
+
+As the background image has to be scaled almost always, it belongs into
+the DPI independent folder for drawable.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363282936,1363283019,4daa31bfc2c027407569e1b3da94a1235e34f3e3
+4daa31bfc2c027407569e1b3da94a1235e34f3e3,4daa31bf,Replace launcher icons by generated launcher icons,"Replace launcher icons by generated launcher icons
+
+For the launcher icons I have manually created different sizes. There
+are tools, for instance ADT, which do this automatically.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363282905,1363282905,f96780de011602cbc2ee3387ddccf43c06036ea3
+f96780de011602cbc2ee3387ddccf43c06036ea3,f96780de,Add background picture,"Add background picture
+
+Continuing to style up the user interface I have now added a background
+picture. Later I will add multiple versions in order to support
+different devices, respectively different resolutions.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363129629,1363129629,7fbc3f0720d78d27d972acb2c21f66cb8b30813e
+7fbc3f0720d78d27d972acb2c21f66cb8b30813e,7fbc3f07,Replace client icons by self-created ones,"Replace client icons by self-created ones
+
+Instead of using a foreign icon set from which I do not know the license
+I have created my own HAL 9000 icon. This commit replaces the old icons.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1363046283,1363046283,1dd2adde7f6e7621ef30146dcaec2cd6c3e6ae05
+1dd2adde7f6e7621ef30146dcaec2cd6c3e6ae05,1dd2adde,Start refactoring main activity,"Start refactoring main activity
+
+I am now getting into the process of finishing off the first version of
+this project. Hence, I have started to refactoring the classes. I start
+with the main activity and have added some more comments, removed some
+fields and started to reorder the methods.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362801778,1362801875,f2c5c34d653adc28e6db1aafadfdc731be415c62
+f2c5c34d653adc28e6db1aafadfdc731be415c62,f2c5c34d,Add GCM Sender ID to the preferences,"Add GCM Sender ID to the preferences
+
+Until now the GCM Sender ID was hard coded as a string. I have removed
+that constant from the main activity and added another option to the
+shared preferences which can be filled in the settings activity.
+
+Also I have replaced the super constructor in GCMIntentService with a
+no-args constructor. Now the sender ID is passed by the overridden
+method getSenderIds.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362800189,1362800189,ee12cc86db758ea1c1dae715cbc318d043a48478
+ee12cc86db758ea1c1dae715cbc318d043a48478,ee12cc86,Remove WaitState and restructure snapshot queries,"Remove WaitState and restructure snapshot queries
+
+As hinted in the previous commit I have removed the wait state from the
+client, not only the model state, but also the controller state. Taking
+on this I once more restructured the times when snapshot queries are
+issued.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362797688,1362797688,59380bfd671d1734eccad84e77ef81c4f33fe2f7
+59380bfd671d1734eccad84e77ef81c4f33fe2f7,59380bfd,Make snapshots always accessible,"Make snapshots always accessible
+
+For security reasons I only permitted the access of snapshots if there
+was a running Motion process. It might be the case, however, that the
+client has stopped the detection and has left alert notifications that
+can be used to download the snapshots that triggered the alert. Hence, I
+have removed that restriction.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362698836,1362698836,a30b949d1f9ffe817167d4deedd9245e59badf9d
+a30b949d1f9ffe817167d4deedd9245e59badf9d,a30b949d,Improve download motion snapshot,"Improve download motion snapshot
+
+I have improved the procedures that are run when an alert notification
+is used to to start the application. The filename is used to distinguish
+whether the latest or just some snapshot should be requested from the
+server.
+
+This, however, is still not satisfying. I believe that there is some
+natural modeling problem here. Maybe the wait state should be no state
+at all. After all, in every request the client has to wait. This has
+nothing to do with the actual state. I think there are only two real
+states: idle and detecting.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362698447,1362698447,bc1ec17cba1d6f86cddc3b9c579c0fb21d92559f
+bc1ec17cba1d6f86cddc3b9c579c0fb21d92559f,bc1ec17c,Fix on notification intent snapshot loading,"Fix on notification intent snapshot loading
+
+There were several problems with the notification intent. I admit, it is
+unfitting to use the same interface for displaying the motion detection
+snapshot as well. But for the time being I want to make it work. I have
+removed the on new intent method and moved the code into onCreate.
+
+With some modifications to the controller states I was able to make it
+work. For the future I would like to implement a different activity for
+browsing the motion detection snapshots with an available history.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362612215,1362612215,650d7adb273ebef8ffa77e896d63d7afc4c4e1df
+650d7adb273ebef8ffa77e896d63d7afc4c4e1df,650d7adb,Reinstate model and controller in onCreate,"Reinstate model and controller in onCreate
+
+Sometimes I get the error, that the inbox handler is sending messages to
+a handler on a dead thread. I can only imagine, that the previous thread
+is abandoned, but its reference is kept. I am still unsure how one has
+to handle this properly. For now I am reinstating the model and
+controller everytime at the top of onCreate.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362526066,1362526066,bf43f2868ecc55289f37fd3a49ce020e6eb9456a
+bf43f2868ecc55289f37fd3a49ce020e6eb9456a,bf43f286,Return class name dynamically,"Return class name dynamically
+
+Instead of hard coding the class name as a string I am using the class
+itself to return the name. This way it is more robust against changes
+due to refactoring, even though that does not help on the level of the
+Android manifest file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362525621,1362525621,889e1597d1daf0bbecf43c198c26897c003d6c3b
+889e1597d1daf0bbecf43c198c26897c003d6c3b,889e1597,Add retry to the status task,"Add retry to the status task
+
+I am not sure why, but sometimes after requesting the server status and
+receiving a HTTP 200 OK, the response content is null nonetheless. For
+the time being I have added an automatic retry of this task, even though
+I am not sure, if this helps at all.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362524952,1362524952,ea905a69ed1f4d90564cf557e3f0876a92ec4741
+ea905a69ed1f4d90564cf557e3f0876a92ec4741,ea905a69,Overwrite GCM receiver to permit custom package,"Overwrite GCM receiver to permit custom package
+
+In order to move the GCM intent service class into another package but
+the default application package one has to extend the GCM broadcast
+receiver class and overwrite the getGCMIntentServiceClassName method to
+return the custom class with the full package identifier.
+
+This commit does that and makes the needed changes to the Android
+manifest file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362524746,1362524746,858b4818636cab778ed61e90dc91e78c5ddf58ce
+858b4818636cab778ed61e90dc91e78c5ddf58ce,858b4818,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362521859,1362521859,"4fabbdd0f5e41803e451b80fe75e114bf50ef701,ee5ac6f50780ba743c268d352d3918f5e04b2ba4"
+4fabbdd0f5e41803e451b80fe75e114bf50ef701,4fabbdd0,Add server start script,"Add server start script
+
+I have added a shell script to launch the server using nohup so the
+process does not get terminated even though the ssh connection is closed.
+The output is written to a log file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362521643,1362521643,132f06461412b9aec86ea965792f2c586504e627
+ee5ac6f50780ba743c268d352d3918f5e04b2ba4,ee5ac6f5,Add new application icon,"Add new application icon
+
+I have removed the default Maven akquinet icon and replaced it by a
+small version of HAL 9000 from A Space Odyssey. Also the extra-high
+density screen resolution version of the icon was missing completely.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362340566,1362340566,3b56f38f52ae32fc166c8677310b08ff586c1322
+3b56f38f52ae32fc166c8677310b08ff586c1322,3b56f38f,Add appropriate download snapshot handling,"Add appropriate download snapshot handling
+
+For the detection state the protocol request to download the latest
+snapshot and an arbitrary snapshot was missing. I have added that. Now,
+the snapshot that triggered a motion can be viewed as well.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362337172,1362337172,6eaae2e039cd740e26e98efdca19493ed4b3adf9
+6eaae2e039cd740e26e98efdca19493ed4b3adf9,6eaae2e0,Fix lock and unlock interface procedures,"Fix lock and unlock interface procedures
+
+Similiar to the commit before, the appropriate invocations were missing
+to lock and unlock the interface. This has to be checked for further
+actions as well, but for starting and stoping the detection it works
+now.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362322069,1362322069,2a536474ef0190b4e5fe54a140b3db81623e0d52
+2a536474ef0190b4e5fe54a140b3db81623e0d52,2a536474,Fix start and stop detection procedures,"Fix start and stop detection procedures
+
+Due to some wrong invocations a lot of null pointer exceptions were
+thrown. This commit fixes that and once again the detection start and
+the detection stop can be performed.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362316562,1362316562,80072bee785d37e1d2c6de03828a86065ab08a16
+80072bee785d37e1d2c6de03828a86065ab08a16,80072bee,Move tasks package into controller package,"Move tasks package into controller package
+
+Even though I am not a big fan of too deep nested packages in Java, the
+tasks package is really just an extension for the code that resides in
+the controller package. This package structure should make it more clear
+as it is: the tasks code is controller code.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362315710,1362315710,e17e2eb000c0ca5363cbc883f6951b662e9ae960
+e17e2eb000c0ca5363cbc883f6951b662e9ae960,e17e2eb0,Fix controller state changes,"Fix controller state changes
+
+The application is still crashing a lot. Often the controller is not the
+correct state. I have added more state changes for the controller. Also
+I forgot to add the set snapshot action in the main activity. With this
+commit a snapshot can be displayed once again.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362280127,1362280127,5e9170a0b43398fe27c79c1e050d94b0838b5b4b
+5e9170a0b43398fe27c79c1e050d94b0838b5b4b,5e9170a0,Remove handler from controller state,"Remove handler from controller state
+
+I am not sure, why I have placed handler and a handler thread into the
+abstract class ControllerState in the first place. The controller class
+comprises the required handlers for dealing with the requests. Hence, I
+have removed the handler from ControllerState.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362279115,1362279115,31e7e4ea9d53e846380becf9289b32901ac8c498
+31e7e4ea9d53e846380becf9289b32901ac8c498,31e7e4ea,Add controller state for detecting,"Add controller state for detecting
+
+With three controller states the client controller should cover all
+states where the behavior is differently. For completion I have added
+invocations to change the controller state as well.
+
+If a request fails, like the detection request, then the controller
+state has to be set back.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362278931,1362278931,1050e41070f770ef6b79dd28bd41b29b17426b49
+1050e41070f770ef6b79dd28bd41b29b17426b49,1050e410,Add outbox message handling to the main activity,"Add outbox message handling to the main activity
+
+With this commit I have added the switch-case construct that handels
+incoming messages, sent from the asynchronous tasks to update the
+interface.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362276514,1362276514,ef7aa2ec833ad55a681718c5a92caaaf6df66410
+ef7aa2ec833ad55a681718c5a92caaaf6df66410,ef7aa2ec,Refactor asynchronous tasks to use outbox handler,"Refactor asynchronous tasks to use outbox handler
+
+I have refactored the remaining asynchronous tasks to use the outbox
+handler mechanism as well. With this I noticed the creation of redundant
+code, where the model is updated and a message is sent to the outbox
+handler. I guess I will refactor these calls into separate methods at a
+later point.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362274229,1362274229,b0e2331267197945e8acc5aaa0775f063de3179b
+b0e2331267197945e8acc5aaa0775f063de3179b,b0e23312,Add lock/unlock actions to the status task,"Add lock/unlock actions to the status task
+
+Continuing to add outbox inquiries from the tasks I have added now
+outbox notifications to the asynchronous task status task. A boolean is
+required to indicate whether the detection is currently active or not.
+Based on that the the activity elements are locked or unlocked in a
+different way.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362238258,1362238258,0394b81effe04383d5f9a86d4550ffbf676a6fd7
+0394b81effe04383d5f9a86d4550ffbf676a6fd7,0394b81e,Add outbox handling for issued activity actions,"Add outbox handling for issued activity actions
+
+Finally, I am putting the pieces together for handling the messages that
+are issued for the controller's outbox. For that I have introduced a new
+enumeration called Action which lists the different actions that are
+processed by the activity.
+
+For now I have roughly implemented the GCM registration procedure.
+Outboxing allows me to set also primitive values, like a boolean, as
+object parameter for the message.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362236232,1362236232,306ebf957637dff22c668e26a9650e15a42d9927
+306ebf957637dff22c668e26a9650e15a42d9927,306ebf95,Remove Observer pattern classes,"Remove Observer pattern classes
+
+When I removed the observer pattern from the model and activity I forgot
+that I had provided my own observer and observable classes, respectively
+interfaces. Hence, this commit removes them.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362228636,1362228636,968ab3b869cddea72dc79703010b6c16a80f577d
+968ab3b869cddea72dc79703010b6c16a80f577d,968ab3b8,Clean up main activity a bit,"Clean up main activity a bit
+
+I have added some comments to all those fields and refactored the access
+to the controller's inbox handler.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362226073,1362226073,72d4c5fe43b181393ca46fa3dfeb49e4619cda3e
+72d4c5fe43b181393ca46fa3dfeb49e4619cda3e,72d4c5fe,Remove observer pattern,"Remove observer pattern
+
+Since handlers can be used in both directions, with inbox and outbox
+handlers, I will use this mechanism for notifying the activities. Thus,
+I have removed the observer implementation from the model and main
+activity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362224525,1362224525,9db6e9e133424db7cb7b75a9aa2deb4bacf12271
+9db6e9e133424db7cb7b75a9aa2deb4bacf12271,9db6e9e1,Add device registration to the controller handling,"Add device registration to the controller handling
+
+Still, the first thing the Android application is trying to do, is to
+set up the device registration with the GCM service. Now I have added
+handling as well to the idle controller state.
+
+For the device registration message the identifier has to be passed as
+well. For now I will use the object field of the message. I have to find
+out whether it is more reasonable to use the data bundle for that task.
+
+With this commit I have also removed the set state actions from the
+protocol. Instead, I am now manipualting the model state directly from
+the main activity. Even though this violates the component separations,
+I believe that this far cleaner than cluttering the protocol enumeration
+with actions that do not belong there or creating another enumeration
+for these kind of tasks.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362185116,1362185729,e9d8d6650a6647bc2d94352f54ce2a636fa192b0
+e9d8d6650a6647bc2d94352f54ce2a636fa192b0,e9d8d665,Implement restore client state,"Implement restore client state
+
+In the process of refactoring I am looking on the actions taken when the
+main activity is instantiated. There it is checked, whether a previous
+model state can be restored. For this I have added another operation to
+the protocol.
+
+During that refactoring I noticed that I can generalize the model and
+controller classed more then before. Hence, the point where it gets more
+concrete is delayed even more. For that the generic typing had to be
+improved.
+
+For the time being I have also added a set state enumeration constants
+to the protocol. Probably they will be removed again, since setting the
+state of the model directly by the view should be implemented by setting
+the appropriate controller state.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362103406,1362103406,20219195ac3a947537c04eb049fe9451d561bd16
+20219195ac3a947537c04eb049fe9451d561bd16,20219195,Adjust Android Manifest,"Adjust Android Manifest
+
+I have moved the activies in their own package, but did not adjust the
+Android Manifest file. This way the class path was broken and Android
+could not find the activies anymore. This commit fixes the problem.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362098970,1362098970,154c3f028fe6845e80e232059f3b78b1f04132e5
+154c3f028fe6845e80e232059f3b78b1f04132e5,154c3f02,Document controller classes,"Document controller classes
+
+Since I have not touched this project for some time I am working into it
+again. I stopped with implementing the controller pattern, hence I have
+added some comments for understanding the code.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1362098679,1362098679,bf3a2c829d675f39369bea33e384bef58862c46d
+bf3a2c829d675f39369bea33e384bef58862c46d,bf3a2c82,Move invocations for downloading snapshots,"Move invocations for downloading snapshots
+
+I have integrated the bitmap download task into the wait state and
+removed the corresponding methods from the Client class. Hence, I have
+created a Bitmap field in the model class.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358888138,1358888851,1148683468c5ec87c63e873b4bfaff267f88bfb1
+1148683468c5ec87c63e873b4bfaff267f88bfb1,11486834,Add new protocol operations,"Add new protocol operations
+
+For further implementation of the wait state I have added new protocol
+operations. Especially the download latest snapshot operation will be
+needed to reach the detecting state.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358797128,1358797128,19e1d8ae0765dba58c6fafdc4bd2b10f9cf236f8
+19e1d8ae0765dba58c6fafdc4bd2b10f9cf236f8,19e1d8ae,Generalize model class,"Generalize model class
+
+Due to controller having an abstract class acting as an interface I felt
+the need for having the same for the model. For that, I have generalized
+the state, being typed as a generic enumeration, into the abstract class
+Model and renamed the previously named Model to ClientModel.
+
+Now, the Model extends Observable and defines the get and set method for
+the state. This worked out very well so far. However, everytime a switch
+statement is called on the state it has to be casted to the concrete
+enumeration type beforehand.
+
+In addition, I have simplified the model states, where I have merged
+waiting for detection start and waiting for detection stop to just a
+state named wait.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358715894,1358715894,8e34669c797b0daa31fca1b09e3049e1ef2602d2
+8e34669c797b0daa31fca1b09e3049e1ef2602d2,8e34669c,Add license and version file,"Add license and version file
+
+I have added a version file to keep track of the current version and a
+license file containing, as usual, the MIT license.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358624705,1358624758,faaa4d78e60e0919dc39f4a98ee53b99c8cc62df
+faaa4d78e60e0919dc39f4a98ee53b99c8cc62df,faaa4d78,Implement state transition Idle -> Detecting,"Implement state transition Idle -> Detecting
+
+The first two methods which were removed from the Client class dealt
+with the invocation request to start or stop the detection. In the idle
+controller state class, both of these cases, the start and stop request,
+are processed. For that reason the asynchronous task for the detection
+request is now instantiated and executed in this controller state class
+as well.
+
+The whole onPostExecute method in DetectionRequest was refactored. I
+removed all calls to the activity and replaced them with updates to the
+model. In the end, the model will notify the observer and the interface
+can then update the interface in a way that matches the model.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358563534,1358563534,9a82a1a772795dac9a087a27830b2413174a2f09
+9a82a1a772795dac9a087a27830b2413174a2f09,9a82a1a7,Implement component linking,"Implement component linking
+
+The first component linking has been implemented now. I have decided to
+make this during the static initialization of the Client class. This
+puts some more emphasis on the singleton style.
+
+Android Lint warned me about using an anonymous class to extend the
+Handler class. Hence, I have extracted that part into a new class. It
+could have been a private inner class, but for reasons of overview I
+prefer to put it into a separate file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358541413,1358541413,22d59b8e9579a01974f4b78588cd2e7b3b95b5b2
+22d59b8e9579a01974f4b78588cd2e7b3b95b5b2,22d59b8e,Continue restructuring towards MVC pattern,"Continue restructuring towards MVC pattern
+
+New classes have been added to structure the application more towards
+the MVC pattern. Especially, I have started to add classes to implement
+the state pattern.
+
+As planned I am starting now to move the client's REST API methods into
+an enumeration called Protocol. Since, the handler mechanism in Android
+works with integer values I have assigned each enumeration constant a
+unique integer value. In addition, I have added a factory method to get
+the enumeration constant by passing an integer value to it.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358538643,1358538643,432d92e6e6bf7e1fd694ba7095ac70f0b0e7cfb1
+432d92e6e6bf7e1fd694ba7095ac70f0b0e7cfb1,432d92e6,Integrate model into client and controller,"Integrate model into client and controller
+
+I have added a static reference from the only model instance which
+should exist to the Client. By this, the main activity now registers
+itself as an observer to the model during initialization.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358468947,1358468947,b7287a085f229404fc8d09992c605bd3053a1198
+b7287a085f229404fc8d09992c605bd3053a1198,b7287a08,Add interfaces for Observer pattern,"Add interfaces for Observer pattern
+
+For propagating the state I have provided a generic version of the
+Observer pattern. Also I am currently thinking about delegating the
+Client's state into the class Model which will be composed to the Client
+class (favour composition over inheritance).
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358466836,1358466836,9c6b8851411bddab22fa7adbbc14ef40e8de850b
+9c6b8851411bddab22fa7adbbc14ef40e8de850b,9c6b8851,Add abstract controller,"Add abstract controller
+
+In order to implement a MVC like structure a controller is required.
+This controller will process user requests by using a handler and
+message mechanism.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358375608,1358375608,132f06461412b9aec86ea965792f2c586504e627
+132f06461412b9aec86ea965792f2c586504e627,132f0646,Fix motion alert counter reset,"Fix motion alert counter reset
+
+The counter was reseted after each resume of the Android application,
+this should actually only happen if a notification is selected. I simply
+moved the counter reset into the appropriate method. In addition, I have
+shortened the timestamp which is generated on the server side.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358296494,1358296494,a6a82f072056e47e932de578daeb146dad132795
+a6a82f072056e47e932de578daeb146dad132795,a6a82f07,Replace example motion configuration,"Replace example motion configuration
+
+Since I am starting to use the latest Motion build I am also replacing
+the example motion configuration file. Although providing this file has
+become questionable as each user should use the Motion configuration
+file of the version installed on his/her machine.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358294435,1358294435,d58b947a9139966849799828b88722f5640f99da
+d58b947a9139966849799828b88722f5640f99da,d58b947a,Allow only one activity instance on the task stack,"Allow only one activity instance on the task stack
+
+It was possible to create multiple instances of the main activity which
+has the effect, that the user might have to press the *Back* button
+multiple times until the application is closed eventually. This change
+permits that more than one instance can be created.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358293990,1358293990,6fdcab9e8325473e052691a2ac842c412e6de607
+6fdcab9e8325473e052691a2ac842c412e6de607,6fdcab9e,Change file event trigger to on modified,"Change file event trigger to on modified
+
+Overriding the Watchdog method for on file created seemed to be
+sufficient, but on the Raspberry Pi and with large snapshots, i.e. a
+resolution of 1280x720 and with a size of around 50 KB, there is a
+certain gap between file creation and last write to that file.
+
+The result of that was the following: If the client requested a
+snapshot, the server would invoke a snapshot creation. The file was
+created and then the server immediately responded with a HTTP 200 OK,
+but since the file was still empty the response contained no bytes and
+no image could be decoded on the client side.
+
+Hence, it was clear that the relevant method to override is on file
+modified as this is invoked after the file stream is closed again. Also,
+I have added an exception case for the try-clause in the server script.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358292997,1358292997,9dbb89d55b34dc0cf8ba124d803d3e7591c73e4f
+9dbb89d55b34dc0cf8ba124d803d3e7591c73e4f,9dbb89d5,Add example configuration for Motion,"Add example configuration for Motion
+
+In the same manner as with the general settings.cfg I have created a
+copy of the motion.conf which will be used as a starting point when
+configuring Security Cam for the first time. I expect further changes to
+this example file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358200873,1358200873,bc79bfb38f68c967bff9306960298d3e75a53f13
+bc79bfb38f68c967bff9306960298d3e75a53f13,bc79bfb3,Swallow lastsnap.jpg file creation event,"Swallow lastsnap.jpg file creation event
+
+With every requested snapshot Motion updates a link from lastsnap.jpg to
+the last created snapshot. This is a handy utility, but sometimes a
+little bit too slow. Watchdog notices this event and until now it was
+interpreted as a motion alert. Hence, I have added an if-case to swallow
+this event.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358200448,1358200448,2311385f650c1caf21e8605268cec410c0fd3364
+2311385f650c1caf21e8605268cec410c0fd3364,2311385f,Replace internal HTTP messaging with inotify,"Replace internal HTTP messaging with inotify
+
+The whole motion alert and snapshot retrieval worked with additional
+Python scripts which sent requests to the web server which then would
+act upon the requests and inform the client.
+
+This implementation produced a huge overhead. For that reason I am now
+using Watchdog which makes use of inotify. inotify is Linux kernel
+subsystem that acts to extend the filesystems to notice changes to the
+filesystem, and report those changes to applications. Watchdog is one of
+many Python wrappers for that.
+
+In addition I have moved the GCM messaging into a separate class,
+respectively into another file. A snapshot event handler is registered
+with the Watchdog observer for taking the appropriate actions.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358198934,1358198934,d667b76eb51a53828ab0b2378cc300259270b912
+d667b76eb51a53828ab0b2378cc300259270b912,d667b76e,Fix unlock interface consistency,"Fix unlock interface consistency
+
+I am still not very happy with the whole locking and unlocking of the
+interface. If there is one unlocking missing, the interface will look
+like it hangs in infinite loading.
+
+I have added some unlock interface calls where I forgot them. Also added
+a null reference check for restoring the snapshot image.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358187890,1358187890,75e8104363e4cc8d3de16155e57aed13023de7f0
+75e8104363e4cc8d3de16155e57aed13023de7f0,75e81043,Refactor model and activity dependencies,"Refactor model and activity dependencies
+
+For a cleaner interoperability between the state model of the client and
+the activity I have refactored the inner structure. Especially, the
+client methods have been changed and often split to offer similiar
+functions, but with few differences in a more convenient way.
+
+This way I have also learned more details about the Android Activity
+lifecycle. If the user presses the *Back* button the current activity is
+destroyed and the instance state is not saved. Here, I have to retrieve
+the server status in order to get the client in sync again.
+
+If the user presses the *Home* button the current activity is only
+paused. If the application really gets shutdown by the operating system
+I store now the client's motion detection state, as well as the current
+snapshot, inside the Bundle for restoring it later.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358099439,1358099439,8a2a8ad658b6b484b53cf53cdc38e0c2463df10f
+8a2a8ad658b6b484b53cf53cdc38e0c2463df10f,8a2a8ad6,Provide filename on motion alert,"Provide filename on motion alert
+
+When a GCM message is issued due to an motion alert, then this message
+will now carry the filename of the generated capture as well. This way
+the client can request this capture in order to display what has
+triggered the motion alert.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1358099327,1358099327,859a9bf7a4315c3f7045385ba5f3a4a43fdbfd0c
+859a9bf7a4315c3f7045385ba5f3a4a43fdbfd0c,859a9bf7,Start implementing landscape view,"Start implementing landscape view
+
+For maximizing the snapshot I want to use the landscape mode. Hence,
+when the phone is rotated the image should fill the whole screen. For
+that I have started to override the appropriate methods and make sure
+that rotation is only enabled when the motion detection is active.
+
+By researching about this topic I have also learned about saving the
+activity state. Thus, it might not be necessary anymore to retrieve the
+server status every time.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357362827,1357362827,6c109c0e8218dd13e0519a2b15014c8c1e0ee46e
+6c109c0e8218dd13e0519a2b15014c8c1e0ee46e,6c109c0e,Add configuration folder for the server backend,"Add configuration folder for the server backend
+
+For a better structure I have added a folder to store the static
+configuration for the server backend.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357357897,1357357897,8cc0e64b6a6d96d483a0dc9e5b737712be993864
+8cc0e64b6a6d96d483a0dc9e5b737712be993864,8cc0e64b,Improve smoothness of the Android frontend,"Improve smoothness of the Android frontend
+
+There is still some unpleasant behavior in certain situations. I have
+minimized this by dealing with these cases. This was mostly done by
+reordering statements. Even though it works now better I would prefer to
+specify something like a state machine after which the client behaves to
+avoid such situations all together.
+
+Also I have changed the layout from LinearLayout to RelativeLayout
+allowing me to place the progress bar and the view for the snapshot in
+the same place. The status request task is now used in the onCreate()
+method.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357357148,1357357148,ae0487bdd8c50d218a678dada366092dd83a6c5e
+ae0487bdd8c50d218a678dada366092dd83a6c5e,ae0487bd,Refactor package structure,"Refactor package structure
+
+Finally, I have deleted the last legacy files from the prototype. I
+should have made branch in the first place to avoid this mess. All files
+are now placed in the securitas package. Hence, I have fixed some import
+statements.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357357053,1357357053,368dec9fc4d0fc9a01358756c23b6f548e573da7
+368dec9fc4d0fc9a01358756c23b6f548e573da7,368dec9f,Implement task to retrieve server status,"Implement task to retrieve server status
+
+It might happen that the Android application gets shut down, but if the
+server endpoint is still running the motion detection the Android
+application should reflect that after it is newly started. For that
+reason the server status can be retrieved.
+
+I have added a new asynchronous task which requests the status and acts
+accordingly. Also I have added an example settings file which is not on
+gitignore and which should be modified by the user.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357356343,1357356343,b97a6704670eb9e8296e72729f9b3be9acc3970b
+b97a6704670eb9e8296e72729f9b3be9acc3970b,b97a6704,Add refresh snapshot event to the ImageView,"Add refresh snapshot event to the ImageView
+
+Instead of using a button, like in the previous version of the Android
+application, I have added the refresh event to the ImageView itself.
+This way a snapshot is generated every time the user taps on the image.
+
+In another refactoring step I have created two methods to lock,
+respectively unlock the user interface. The methods are called in the
+MainActivity and the onPostExecute() methods of the asynchronous
+tasks.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1357314827,1357314827,c79eceee52fa6d71182a975bd26d15e23fd862de
+c79eceee52fa6d71182a975bd26d15e23fd862de,c79eceee,Refactor Android application,"Refactor Android application
+
+The previous Android frontend implementation was a throwaway-prototype.
+The new application was build from scratch and aims for a more
+interactive and secure usage. Heavy use of asynchronous tasks and the
+Android standard library was made.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357287636,1357287636,6c905b8a196313333c66fd930851e22e5c82d4b7
+6c905b8a196313333c66fd930851e22e5c82d4b7,6c905b8a,Improve coupling between the server and Motion,"Improve coupling between the server and Motion
+
+There are still problems which prevent a seamless interoperability
+between Motion and the server backend. I have created a script which is
+used to issue a motion alert to the server: motion_alert.py The script
+is invoked by Motion.
+
+I have created another script, snapshot_notification.py, which is used
+to tell the server backend that a new snapshot has been created. This
+needs to be done because from snapshot request to the actual file
+creation it takes a moment or two. This synchronization problem is
+solved with an Event.
+
+The Bottle server is now backed by paste in order to be executed
+multi-threaded. When the Motion process is started the camera needs a
+short warm-up phase to produce pictures with sufficient lighting. Thus,
+I have added a short sleep timer.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357287012,1357287012,ac3ae6712a2cf1ab73c6372fa9e5298ee8665514
+ac3ae6712a2cf1ab73c6372fa9e5298ee8665514,ac3ae671,Refactor setting parsing into utility module,"Refactor setting parsing into utility module
+
+There will be more Python scripts than the server itself. Hence, I have
+refactored the setting parsing into a utility module. For that I am
+using the securitas package where the old implementation still resides.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357286482,1357286482,918df92210d336b4f1c3da31835c7ab9b9992230
+918df92210d336b4f1c3da31835c7ab9b9992230,918df922,Add GET request for status,"Add GET request for status
+
+When the Android application is newly started it has to check whether
+the server backend has the motion process running in order to display
+the proper state. This request can also be used to check the
+connectivity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1357061093,1357061093,c00429c18ce51fffa52d45d126169f6ac710d6eb
+c00429c18ce51fffa52d45d126169f6ac710d6eb,c00429c1,Check for authorization in each request,"Check for authorization in each request
+
+There should be no request to the server which is not authorized. Thus,
+I have added a function decorator to perform the authentication. The
+credentials are given by a settings file. The decorator was added to
+each request.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1356836319,1356836319,1894bb8ba2bd183f39821765322b139d86e5f5e9
+1894bb8ba2bd183f39821765322b139d86e5f5e9,1894bb8b,Check for authorization in each request,"Check for authorization in each request
+
+There should be no request to the server which is not authorized. I have
+added a function decorator to perform the authentication. The
+credentials are given by a settings file. The decorator was added to
+each request.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1356836092,1356836092,33c6c9e7f3c312698a992d63b126918d5d25a492
+33c6c9e7f3c312698a992d63b126918d5d25a492,33c6c9e7,Complete implementation for basic requests,"Complete implementation for basic requests
+
+So far I have implemented now every request. I have also added a clean
+version of the motion configuration file. A local file is required,
+otherwise this application will not work properly.
+
+What is new is that the motion control port is now read from the motion
+configuration file itself allowing the user to change the control port
+without touching more than one file.
+
+The model is one class encapsulating all the functionality which is
+accessed by the Bottle route functions.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1356641629,1356641629,f57994b129267467fb4e0bc691a7dc469a3d747d
+f57994b129267467fb4e0bc691a7dc469a3d747d,f57994b1,Refactor web server to improve quality,"Refactor web server to improve quality
+
+The current structure of the web application to control the motion
+detection is very poor. The micro web framework Bottle seems the right
+approach to restructure the server application. Bottle makes use of
+function decorators.
+
+Tornado will be dropped as a web server. For now I have created a new
+Python file where I have defined the required REST commands so far.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1356572451,1356572451,49933c4bd6cf88d0cdd77e0c35b5d10209235bdb
+49933c4bd6cf88d0cdd77e0c35b5d10209235bdb,49933c4b,Format Python code for PEP 8 compliance,"Format Python code for PEP 8 compliance
+
+PEP 8 is a style guide for Python code. By using Flake8 I have checked
+the whole code of the notifier Python script. The file is now PEP 8
+compliant.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1356396799,1356396799,c454c301786b2a6da6b86380b910afa3d97b2a53
+c454c301786b2a6da6b86380b910afa3d97b2a53,c454c301,Prohibit server actions without registered device,"Prohibit server actions without registered device
+
+As the whole device registration lifecycle is not completely figured out
+yet it sometimes happen that server actions like starting the detection
+are executed without any registered device at the server. This leads to
+motion detection but without that any GCM messages will ever receive a
+device. Hence, all actions issued via GET requests are only performed if
+there is a device.
+
+Also there was an inappropriate Toast instantion in the ServerUtilities
+class which had to be removed. For the shared preferences I have replaced
+the default initialization (null) with empty strings.
+
+Signed-of-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1349890401,1349891096,40fda6121e68aaab7d03393b4e72bedd4e87a86c
+40fda6121e68aaab7d03393b4e72bedd4e87a86c,40fda612,Replace WebView with ImageView,"Replace WebView with ImageView
+
+Instead of a WebView for displaying the camera snapshots an ImageView is
+more appropriate. The WebView is more an embedded browser window where the
+image view merely displays the loaded image. For this foreign code was
+added which encapsulates the image downloading task in a class which also
+manages the image view update through an AsyncTask.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348800334,1348800334,ad1203447c053c2f1ad3343c666905811a6d3bce
+ad1203447c053c2f1ad3343c666905811a6d3bce,ad120344,Hide snapshot interface,"Hide snapshot interface
+
+If the camera respectively Motion is not running a snapshot cannot be
+requested or viewed. For that reason the web view displaying the snapshot
+and the button to issue a snapshot are hidden until the detection is
+started.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348797048,1348797048,600eeae1bb6eef9e4a15b59502ccb67c86a61c64
+600eeae1bb6eef9e4a15b59502ccb67c86a61c64,600eeae1,Refactor POST request method,"Refactor POST request method
+
+The server utilities method to issue a POST request was still written with
+the Java standard library. I have refactored the method similar to the GET
+request method to use Apache HttpComponents.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348796377,1348796377,a5f0bdf2ccf9b5cd2b66fee946cdbe0ba6a5c1cc
+a5f0bdf2ccf9b5cd2b66fee946cdbe0ba6a5c1cc,a5f0bdf2,Adjust layout,"Adjust layout
+
+The user interface layout did not fit the whole screen anymore. The
+refresh button could not be displayed anymore. Therefore I have decreased
+the margin bottom sizes.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348795343,1348795343,7372093c490c569e2cb3142de129a97518576614
+7372093c490c569e2cb3142de129a97518576614,7372093c,Refactor registration procedure,"Refactor registration procedure
+
+The device registration was executed in the UI thread which is considered
+bad practice because it can freeze the user interface. I have refactored the
+registration to be executed in an AsyncTask class.
+
+In addition I have restructured the registration invocation in the
+onResume method. The device is only registered again if the preferences
+have changed.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348789695,1348789695,54a5310516653f1169db2ec3b030b51055b31151
+54a5310516653f1169db2ec3b030b51055b31151,54a53105,Add snapshot functionality,"Add snapshot functionality
+
+Until now captured images from the webcam were only delivered on motion
+detection. I have defined another control address which forwards the
+request to the motion HTTP server to create a snapshot.
+
+Afterwards motion captures a picture and saves it. A symbolic link called
+lastsnap.jpg is created and will always point to the latest snapshot. This
+way the client always knows which URL to access for getting the current
+snapshot. For the Android application I have added a button to request
+such a snapshot.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1348539891,1348539891,12f2eee9904e4c7939bdb02540072a7fc455d117
+12f2eee9904e4c7939bdb02540072a7fc455d117,12f2eee9,Start implementing picture transmission,"Start implementing picture transmission
+
+For displaying the picture shot which triggered the motion the
+picture file name will be inserted into the message. In addition
+the picture folder will be made available, hence I have extended
+the server REST API. The base URI /picture will be used for
+accessing the pictures and /control for taking actions on the
+server.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1347550972,1347550988,a78783c354c6d1a5e1c8bd21e1a2107f123657a7
+a78783c354c6d1a5e1c8bd21e1a2107f123657a7,a78783c3,Implement process control buttons,"Implement process control buttons
+
+I have added two buttons to the main activity which can
+start or terminate the Motion process remotely. This is
+implemented by simply issuing the corresponding GET
+request.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346710325,1346710325,644ae9739c0af2c8db00ea3f37333cf4dd15f42f
+644ae9739c0af2c8db00ea3f37333cf4dd15f42f,644ae973,Add settings activity,"Add settings activity
+
+An activity was added to set preferences for the
+application for instance the host address and port
+of the server.
+
+If no server was defined yet, a Toast will be displayed.
+Also changed the Motion termination in the server
+script from terminate() to kill().
+
+For now the created Motion process cannot be a daemon
+process. Otherwise it cannot be easily killed without
+reading the pid from a file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346707690,1346707718,232556fba327f94dd7c382058f57263cb6637be9
+232556fba327f94dd7c382058f57263cb6637be9,232556fb,Add process control,"Add process control
+
+The Motion process should be started and terminated from the Python server process.
+Hence I have added a class which stores the necessary information and GET request
+cases which handle the process creation and termination.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1346677318,1346677318,a97b6ab5c6c278401b9068903b29d0dea162d5bd
+a97b6ab5c6c278401b9068903b29d0dea162d5bd,a97b6ab5,Change launcher icon,"Change launcher icon
+
+I have changed the launcher icon from the akquinet
+logo to a surveillance camera. Also renamed the
+HelloAndroidActivity into MainActivity.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346537631,1346537634,cd1e8db79bbccc05b22e77cea020a0aa38e115e7
+cd1e8db79bbccc05b22e77cea020a0aa38e115e7,cd1e8db7,Add notifactions,"Add notifactions
+
+When a message is delivered by GCM an Android notification
+is issued including default notification sound, vibration
+and flashing lights.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346536425,1346536433,6f9c22300a72386bc32fb4cf6629f43f53264a75
+6f9c22300a72386bc32fb4cf6629f43f53264a75,6f9c2230,Establish client-server communication,"Establish client-server communication
+
+When the application is started the device is registered
+with the GCM service. After registration the device's
+registration identifier has to be send to the server
+as well.
+
+This is implemented in the separate class ServerUtilities
+which will issue a POST request to do so.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346534668,1346534672,d52de32361d5486e2126564614eb834c682cb5df
+d52de32361d5486e2126564614eb834c682cb5df,d52de323,Implement RequestHandler,"Implement RequestHandler
+
+Using the Tornado web framework seems more fitting than its
+simple HTTP server. For now it is possible to register a
+device via GET request.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346534346,1346534351,525d36b7a13c4cd6dad7bfd11a17cd2025c94160
+525d36b7a13c4cd6dad7bfd11a17cd2025c94160,525d36b7,Add notifier script,"Add notifier script
+
+I have added a basic Python script files that makes use
+of a GCM Python library and Tornado. Also added key.cfg
+as pattern to gitignore. For now I will store my API key
+in this file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346428644,1346428650,08210c7b27ac7569e93e77ec27dadde5094f8b89
+08210c7b27ac7569e93e77ec27dadde5094f8b89,08210c7b,Create separate client server directories,"Create separate client server directories
+
+Since both applications are actually independent
+I decided to create separate directories for both,
+client and server application.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346418477,1346418477,945a50aed71a6a7b0f381f3e7119a44ac21fe012
+945a50aed71a6a7b0f381f3e7119a44ac21fe012,945a50ae,Add project ID and default logging,"Add project ID and default logging
+
+The client requires the project ID in order to register with GCM.
+I have also added some default loggings on the asynchronous GCM
+events.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346418256,1346418256,eb2c22d535a44453bc1eab9c6b080109295c1a81
+eb2c22d535a44453bc1eab9c6b080109295c1a81,eb2c22d5,Add GCM to project,"Add GCM to project
+
+For the client-side I have added GCM to the project. The GCM
+is will now be registered in the MainActivity of the Android
+application.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346356131,1346356147,685ae28531ab6a84b312ec784030c952474922ed
+685ae28531ab6a84b312ec784030c952474922ed,685ae285,Add project files,"Add project files
+
+I have added the initial project files for an Android
+application. Also added GitHubs's gitignore for Android
+projects.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@gmail.com,Konrad Reiche,konrad.reiche@gmail.com,1346349709,1346349709,1c1d84e486d6da629275a97169c54cf43d976e37
+1c1d84e486d6da629275a97169c54cf43d976e37,1c1d84e4,Initial commit,"Initial commit
+
+Just added the readme file.
+
+Signed-off-by: Konrad Reiche <konrad.reiche@gmail.com>
+",,,,Konrad Reiche,konrad.reiche@fu-berlin.de,Konrad Reiche,konrad.reiche@fu-berlin.de,1344523782,1344523782,

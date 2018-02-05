@@ -1,0 +1,47 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8ecb6288f33151f416c19f4d2fc84eb4559c8465,8ecb6288,Fixed broken width determination on orientation change,"Fixed broken width determination on orientation change
+
+Width determination is used for displaying the substitution information only when there is enough space (avoids horizontal scrolling). The determination will fail if the device is rotated because the activity's layout has not been fully created and therefore it will return wrong values.
+The fix determines the device's screen width on app startup by using a dummy activity (MeasureActivity) with a custom view. This dummy activity will start the MainActivity immediately.
+
+Furthermore, bump version.
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1398796246,1398805571,4fea26c383f95250c7a048bc018925a5dfa5504b
+4fea26c383f95250c7a048bc018925a5dfa5504b,4fea26c3,Added hint about account information in AuthenticatorActivity,"Added hint about account information in AuthenticatorActivity
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1398795920,1398795920,6a8e2253dae24f283065763617886216e703b7ed
+6a8e2253dae24f283065763617886216e703b7ed,6a8e2253,Fixed display of HTML line breaks in daily information,"Fixed display of HTML line breaks in daily information
+
+HTML line breaks (<br>) are stripped out by node.text(), therefore texts of all TextNodes are joined with a '\n' as separator (no '\n' at the end).
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1398794912,1398794912,63e32e9d3738c0e458121a676b9383fdd476ae67
+63e32e9d3738c0e458121a676b9383fdd476ae67,63e32e9d,Added teacher mode,"Added teacher mode
+
+Teachers can now see their own table, which has a different data structure. Therefore a separate SubstitutionTable class is needed. Teacher mode is detected by comparing the username string with ""Lehrer"".
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1398794153,1398794153,093c8624439c2921f22d4d5c208e6dd32b48e7d4
+093c8624439c2921f22d4d5c208e6dd32b48e7d4,093c8624,Bump version,"Bump version
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1397834366,1397834366,e3b7e3c8c8822c18df6d8834423ba6fb602ff8c4
+e3b7e3c8c8822c18df6d8834423ba6fb602ff8c4,e3b7e3c8,Fixed hack to ensure activity creation,"Fixed hack to ensure activity creation
+
+To ensure, that the activity has been created, call updateTable(..) only in onActivityCreated(..), not in onCreateView(..). The hack, calling fillTable(..) after a delay, has been removed as it is unnecessary now.
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1397834028,1397834028,99ad00d4fb419fbf7cba7ddac564882e05f42fda
+99ad00d4fb419fbf7cba7ddac564882e05f42fda,99ad00d4,Fixed crash caused by scrolling the entry table when no adapter has been set,"Fixed crash caused by scrolling the entry table when no adapter has been set
+
+Resulted in a NullPointerException. FIX: Hide entry table until the adapter has been set.
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1397832521,1397832521,c45e7c7439e4249117f700ce13c13c98f11b6b07
+c45e7c7439e4249117f700ce13c13c98f11b6b07,c45e7c74,Fixed displaying of daily information,"Fixed displaying of daily information
+
+The daily information table was hidden behind the entry table, it is now properly displayed.
+Furthermore, daily information entries consisting of only one column were ignored.
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1397830878,1397830878,a2cdf39025130ef26cff40d429a56be440f11c70
+a2cdf39025130ef26cff40d429a56be440f11c70,a2cdf390,Push version,"Push version
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1395753495,1395753495,4c81c5d3607854c75f35befac301b8f941dead69
+4c81c5d3607854c75f35befac301b8f941dead69,4c81c5d3,Improved networking code,"Improved networking code
+
+- Error handling: Every generic exception like NullPointerException will indicate an error, so that the reason for a failed login can be determined (either wrong password/username combination or any networking exception)
+- Code consistency: CommunicationInterface can only be instantiated via .getInstance(); a successful login will trigger a logout
+- Android 2.2 compatibility: Patched jsoup because of missing String.isEmpty() in Java std library
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1395752162,1395752162,dc3790ce0833fdf22b234a7348701482012b6fdc
+dc3790ce0833fdf22b234a7348701482012b6fdc,dc3790ce,Restored Android 2.x compatibility,"Restored Android 2.x compatibility
+
+Launcher PNG loading issue because of flag not automatically set by new build tool version
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1395751151,1395751151,cbc70df0318dc39c8f8147b603beeae5de4db36b
+cbc70df0318dc39c8f8147b603beeae5de4db36b,cbc70df0,Open source release,"Open source release
+",,,,Steffen Klee,stkl.mail@gmail.com,Steffen Klee,stkl.mail@gmail.com,1395702316,1395702336,

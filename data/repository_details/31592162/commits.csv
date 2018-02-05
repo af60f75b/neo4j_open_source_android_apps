@@ -1,0 +1,129 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c823efcbd81cf64fb70af5b863111311d2d86dc7,c823efcb,Bump version to 1.1.1 (15).,"Bump version to 1.1.1 (15).
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1435092445,1435092445,a5a0e516d48f680c247799c130bcdde8e9234236
+a5a0e516d48f680c247799c130bcdde8e9234236,a5a0e516,Merge tag 'v1.1',"Merge tag 'v1.1'
+
+Released version 1.1.
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1435092330,1435092330,"33117acd608fc71b1c50ee3f42cef2f7059cfa19,cbf0c62696bcffcf8b673506b6abf38e48a71b0e"
+33117acd608fc71b1c50ee3f42cef2f7059cfa19,33117acd,Target android-15. android-14 is no longer available.,"Target android-15. android-14 is no longer available.
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1435092135,1435092145,68797a86c14aba55a007d211d5ac68affee58c81
+68797a86c14aba55a007d211d5ac68affee58c81,68797a86,Fixed read card issues on HTC One running Lollipop,"Fixed read card issues on HTC One running Lollipop
+
+Since rollout of Android Lollipop (5.x) some HTC devices fail to read the
+card correctly and crash the app.
+This is a workaround where the tag data is repaired when this error
+occurs.
+",,,,Simon Tenbeitel,simon.tenbeitel@gmail.com,Philipp Kern,pkern@debian.org,1434885094,1435087382,2fca17da1423203d54b21882cc25203141ded6d3
+cbf0c62696bcffcf8b673506b6abf38e48a71b0e,cbf0c626,Bump version to 1.1 (14).,"Bump version to 1.1 (14).
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1363944813,1363944813,2fca17da1423203d54b21882cc25203141ded6d3
+2fca17da1423203d54b21882cc25203141ded6d3,2fca17da,Display card issuer.,"Display card issuer.
+
+The card issuer can be determined from the library number by comparing
+the prefix with a list of known values (""Hochschulschlüssel"" used for
+federal and state statistics, except for DHBW). Guest cards do not
+have a library number, hence the issuer is ""Studentenwerk Karlsruhe"".
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1363944323,1363944323,9246dc320d519463680b63aefbd7c17d21d03643
+9246dc320d519463680b63aefbd7c17d21d03643,9246dc32,LICENSE: add GPLv2 to the repository,"LICENSE: add GPLv2 to the repository
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1363943605,1363943605,7e272f2c6142c7a977c1e229ab889c4adba735b8
+7e272f2c6142c7a977c1e229ab889c4adba735b8,7e272f2c,THANKS: credit Michael Gehle,"THANKS: credit Michael Gehle
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1353587216,1353587216,97a1a0eda9446ea421a808c30be8eedd40234bba
+97a1a0eda9446ea421a808c30be8eedd40234bba,97a1a0ed,Bump version to 1.0.2 (13).,"Bump version to 1.0.2 (13).
+
+Version code 12 was used for a debug build.
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1363895993,1363896019,0cb443c626dfbcbbea2bbd625d43606e1a37b3db
+0cb443c626dfbcbbea2bbd625d43606e1a37b3db,0cb443c6,Wallet: fix card type parsing,"Wallet: fix card type parsing
+
+The card type actually consists out of two bytes in big endian.
+The XOR key is 0x3d3f. This is relevant because the employee type
+actually exceeds one byte with 400 denoting an employee of the
+university part of KIT and 403 an employee of the large-scale
+research part (to allow for different billing).
+
+200 is a regular guest, add it as such.
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,phil@philkern.de,Philipp Kern,phil@philkern.de,1363896013,1363896013,1bcb7f190efb598655ad3d8152303498f8b9a83e
+1bcb7f190efb598655ad3d8152303498f8b9a83e,1bcb7f19,Bump version to 1.0.1 (11).,"Bump version to 1.0.1 (11).
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1353618862,1353618862,461db2fe5bac7965049ac6c643c5b27dfe1cbcb7
+461db2fe5bac7965049ac6c643c5b27dfe1cbcb7,461db2fe,AndroidManifest: depend on com.nxp.mifare,"AndroidManifest: depend on com.nxp.mifare
+
+As this application reads a MIFARE Classic tag, we need hardware support
+for this. Devices containing a MIFARE-capable NFC controller are
+required to set the com.nxp.mifare feature flag.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1353618801,1353618801,19a21b95fc393d981ed0201f637dadd676414cce
+19a21b95fc393d981ed0201f637dadd676414cce,19a21b95,Wallet: use hexadecimal constants for FCC/AC block application IDs,"Wallet: use hexadecimal constants for FCC/AC block application IDs
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1349734855,1353273917,65a3425400d23c84518bbd63d41fd6669dda007d
+65a3425400d23c84518bbd63d41fd6669dda007d,65a34254,CardType: rename toString to toTranslatedString,"CardType: rename toString to toTranslatedString
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1349733261,1349733261,b24218c4d676a196f11d74be42f33cd868700022
+b24218c4d676a196f11d74be42f33cd868700022,b24218c4,Bump version to 1.0 (10).,"Bump version to 1.0 (10).
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1349640859,1349641109,3148bb6fa29dce57f6ecea614490032d748047b2
+3148bb6fa29dce57f6ecea614490032d748047b2,3148bb6f,Rename LauncherActivity to MainActivity.,"Rename LauncherActivity to MainActivity.
+
+Like this the old intent/activity name is still around, in case people have
+created shortcuts to it.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1349640829,1349641109,c53428efa85f882b4bb995a89acbfe7bf0970671
+c53428efa85f882b4bb995a89acbfe7bf0970671,c53428ef,Rename ScanActivity's landscape layout too.,"Rename ScanActivity's landscape layout too.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1349640747,1349641097,3b5ffd9ee7da1a492b7f6b049e90f534673111b6
+3b5ffd9ee7da1a492b7f6b049e90f534673111b6,3b5ffd9e,Implement an instruction screen invoked from the launcher.,"Implement an instruction screen invoked from the launcher.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1348515724,1348515724,72c04c74b8ebe7ff317b4c4811e59494b6fda4fe
+72c04c74b8ebe7ff317b4c4811e59494b6fda4fe,72c04c74,Bump version to 0.9.1 (9).,"Bump version to 0.9.1 (9).
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347897231,1347897231,a5d570591ceb33b22575df905598e00e4f899cd2
+a5d570591ceb33b22575df905598e00e4f899cd2,a5d57059,Implement detection of old-style cards.,"Implement detection of old-style cards.
+
+Old-style cards have two sectors marked with AID 3803. Detect this case and
+display a toast telling the user to reencode his card.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347897027,1347897096,3593672f42414f1ff5bed48b7d6ac674e5e3b6f2
+3593672f42414f1ff5bed48b7d6ac674e5e3b6f2,3593672f,Prefix last transaction with + if positive. Add spacing.,"Prefix last transaction with + if positive. Add spacing.
+
+Handle the prefixing explicitly and add a space between the
+operation (+/-) and its value.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347894232,1347894265,4d427e832bc93a563d970d7524e6338ab5a4ae59
+4d427e832bc93a563d970d7524e6338ab5a4ae59,4d427e83,Display balance and last transaction locale-aware.,"Display balance and last transaction locale-aware.
+
+Currently this app only supports two locales: English and German. Both
+have different rules on how to format currency values. In order to not
+surprise en_DE users, the UK locale is used for printing negative values
+in English.
+
+Signed-off-by: Philipp Kern <pkern@debian.org>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347893211,1347893211,fa94e7005220f5b81547e2464135d36f5078e243
+fa94e7005220f5b81547e2464135d36f5078e243,fa94e700,Add GPLv2+ license headers to the Java files.,"Add GPLv2+ license headers to the Java files.
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347031179,1347031179,fb4bdfb8627be3655e32eebecacbbd9a493ee071
+fb4bdfb8627be3655e32eebecacbbd9a493ee071,fb4bdfb8,Initial import of KITCard Reader 0.9.,"Initial import of KITCard Reader 0.9.
+
+This is the source code of the initial release on Google's Play Store.
+
+Signed-off-by: Philipp Kern <phil@philkern.de>
+",,,,Philipp Kern,pkern@debian.org,Philipp Kern,pkern@debian.org,1347030628,1347030628,

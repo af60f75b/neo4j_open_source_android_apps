@@ -1,0 +1,175 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+fb0685ca4bea0c8c90df436fb6e0fe8e6de1e015,fb0685ca,Update UpcomingFragment.java,Update UpcomingFragment.java,,,,kaine119,muikaien1@gmail.com,GitHub,noreply@github.com,1472647535,1472647535,bf29910990f689409915133cf37c602ab3f3f3f0
+bf29910990f689409915133cf37c602ab3f3f3f0,bf299109,Add extra filters,"Add extra filters
+
+New filters are ANIMAL_WELFARE, ARTS_HERITAGE, DISABILITY, ENVIRONMENT,
+FAMILY, PUBLIC_SERVICE and SPORTS.
+The filters in the nav bar now reflect these changes as well.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1472646609,1472646609,5bf1d4227711d45e7a26baced09f9fd1ccc398c5
+5bf1d4227711d45e7a26baced09f9fd1ccc398c5,5bf1d422,"Add info panels to upcoming page, implement back button, removed some placeholders","Add info panels to upcoming page, implement back button, removed some placeholders
+
+Upcoming page: tapping on an event now pulls up the same sliding panel
+as the map entry
+Back button: if on page other than map, brings you back to map; if
+sliding panel is open on map, closes panel
+Placeholders: the overflow menu on the titlebar
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1472645052,1472645052,0df894ca52db0578dc9797fb9409935c50457cb3
+0df894ca52db0578dc9797fb9409935c50457cb3,0df894ca,Merge pull request #1 from kaine119/app_store,"Merge pull request #1 from kaine119/app_store
+
+Merge app_store",,,,kaine119,muikaien1@gmail.com,GitHub,noreply@github.com,1472610314,1472610314,"525213c4c17f483e849031fb914a2709f6ed3e5b,3613d0de94c7aa247c9bfdb9dd32dbe762180f0c"
+3613d0de94c7aa247c9bfdb9dd32dbe762180f0c,3613d0de,Add upcoming screen,"Add upcoming screen
+
+The upcoming screen now exists; it's just a placeholder screen
+currently, does not have proper user-basis features. :smile_cat:
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471961514,1471961514,3fec471e659c0d419f0ee438f140633518b7411d
+3fec471e659c0d419f0ee438f140633518b7411d,3fec471e,Add filtering of events on map,"Add filtering of events on map
+
+EventInfo now has a new enum called Tag, which denotes what categories
+the event is in.
+The menu on the side now has actual filters.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471961461,1471961461,5bec72fa6b79b0c5f77dcc4c94b0c37390042a2f
+5bec72fa6b79b0c5f77dcc4c94b0c37390042a2f,5bec72fa,Allow title to change depending on the screen,"Allow title to change depending on the screen
+
+The title now changes to ""Voluntunity"" on the map screen, ""Profile"" on
+the profile screen, and ""Leaderboard"" on the leaderboard screen.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471872592,1471872592,0489c2c35ce8562f381cb3e888c81a3e1f2dd867
+0489c2c35ce8562f381cb3e888c81a3e1f2dd867,0489c2c3,Improve leaderboard screen with proper sorting,"Improve leaderboard screen with proper sorting
+
+Implements sorting scores on the leaderboard, as well as colouring the
+top three scores gold, silver and bronze.
+Also removes the score label on the side bar.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471872218,1471872218,e266f089324ef7c9cf2eb8b81e2a98994f3fa5a0
+e266f089324ef7c9cf2eb8b81e2a98994f3fa5a0,e266f089,Add ability to pull events from firebase,"Add ability to pull events from firebase
+
+Now the app pulls event information from a database, so no more
+hardcoding events.
+A new class has been introduced: EventInfo describes an event's info.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471438378,1471438378,dc3d159f68bc471026071b43d3b32a0868621ff3
+dc3d159f68bc471026071b43d3b32a0868621ff3,dc3d159f,Fix bug where activities edit null views,"Fix bug where activities edit null views
+
+Before this, a view might try to edit a view after it's been deleted by
+going away from the view. Now it doesn't.
+
+I've also fixed the orientation for the app to portrait. That helps too.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471268680,1471268680,258dec13877a3e98e81fb702fac77d390346dd73
+258dec13877a3e98e81fb702fac77d390346dd73,258dec13,"Add filtering of friends on leaderboard, and some bug fixes","Add filtering of friends on leaderboard, and some bug fixes
+
+Now users only see their facebook friends on the leaderboard.
+This was a rush job the night before the deadline, so it is *really*
+hacky.
+I'll get around refactoring it ... at some point. =\
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1471012302,1471012302,277dbf10b223282690fc1a26218871afca8644b4
+277dbf10b223282690fc1a26218871afca8644b4,277dbf10,Add ability to push to firebase when new user logs in,"Add ability to push to firebase when new user logs in
+
+Now, when a new user logs in, their user id, skillsets (currently
+placeholders), and reputation and scores (currently 0) is pushed to the
+firebase.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1470234853,1470234853,eb418c89eba86777975eaffd4ad74f3a0a808c9a
+eb418c89eba86777975eaffd4ad74f3a0a808c9a,eb418c89,Add support to filter list of users from db by an array of userIds,"Add support to filter list of users from db by an array of userIds
+
+This new change grabs a list of users' friends, and filters the raw list
+of users from the db according to the user's friends. This effectively
+results in only the user's friends being shown.
+Unfortunately, since I have no friends (who use this app), I'm putting
+in a sample array at the moment.
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1470227636,1470227636,1bb7ee757d8717a71d8a3346362fc3f90c05e933
+1bb7ee757d8717a71d8a3346362fc3f90c05e933,1bb7ee75,Remove unnecessary enumerable from HOME_SCREEN_STATE,"Remove unnecessary enumerable from HOME_SCREEN_STATE
+
+@PohSayKeong forgot to remove UPCOMING from HOME_SCREEN_STATE
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1470144353,1470144353,d17fa078f172c801b6b9922d7e34ec83d126cdb3
+d17fa078f172c801b6b9922d7e34ec83d126cdb3,d17fa078,Add Firebase support for leaderboard,"Add Firebase support for leaderboard
+
+I created a firebase, and populated it with random data. The leaderboard
+page pulls from there.
+Signing in doesn't actually add you to the database of users, but that
+can easily be implemented.
+This modifies gradle settings very significantly, so if gradle sync
+doesn't work, clean the project under ""Build -> Clean Project""
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1470144312,1470144312,b3e876d4e5ad11c1aed6cbbbabe18396963f4f4f
+b3e876d4e5ad11c1aed6cbbbabe18396963f4f4f,b3e876d4,Fixed error on the links,"Fixed error on the links
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470138934,1470138934,77a01d6914c87bca06bac5c2352791c08c433909
+77a01d6914c87bca06bac5c2352791c08c433909,77a01d69,Updated app icon,"Updated app icon
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470137013,1470137013,bbf86a712adb5b0613227312f46b6dd904fceff2
+bbf86a712adb5b0613227312f46b6dd904fceff2,bbf86a71,Removed upcoming and filters,"Removed upcoming and filters
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470136636,1470136636,72e46ed983157ece1fdca41fc912f077fd3d4f05
+72e46ed983157ece1fdca41fc912f077fd3d4f05,72e46ed9,Made info_panel scrollable,"Made info_panel scrollable
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470136330,1470136330,5566a59c65dab922395ec1115b99fe2b216f79e8
+5566a59c65dab922395ec1115b99fe2b216f79e8,5566a59c,Added links to buttons,"Added links to buttons
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470135396,1470135396,40eaf76a043c46967e4188d11de94aa1e8ccab77
+40eaf76a043c46967e4188d11de94aa1e8ccab77,40eaf76a,Replaced string-array with JSON,"Replaced string-array with JSON
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1470134573,1470134573,525213c4c17f483e849031fb914a2709f6ed3e5b
+525213c4c17f483e849031fb914a2709f6ed3e5b,525213c4,"Add profile picture to profile page, side menu","Add profile picture to profile page, side menu
+
+It's just two image views. The image url is stored in sharedPreferences,
+along with the profile name and email.
+Sidenote, I've had to enable multidex support; dependencies became too big
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1470054037,1470054037,8e5917872522cb29187b42c0577f774c0af288dd
+8e5917872522cb29187b42c0577f774c0af288dd,8e591787,Migrate leaderbard view to a proper adapter,"Migrate leaderbard view to a proper adapter
+
+This allows one to pipe in an array for leaderboard entries!
+",,,,Mui Kai En,muikaien1@gmail.com,Mui Kai En,muikaien1@gmail.com,1470045637,1470045637,0e6bd1cb675762fa548ca6ae843dfe16586f8fff
+0e6bd1cb675762fa548ca6ae843dfe16586f8fff,0e6bd1cb,Add hours field to profile page,"Add hours field to profile page
+
+The field labeled ""Hours"" will have a value shown underneath it when logged in.
+It's very much a placeholder value at the moment (36)
+",,,,Mui Kai En,muikaien1@gmail.com,Mui Kai En,muikaien1@gmail.com,1469972503,1469972503,c4a84fe23bbf4f2ff821202cfc68a1e53bfa8d2c
+c4a84fe23bbf4f2ff821202cfc68a1e53bfa8d2c,c4a84fe2,Add borders in upcoming page,"Add borders in upcoming page
+
+Just a border around the only item there to make it look like a list of tiles.
+",,,,Mui Kai En,muikaien1@gmail.com,Mui Kai En,muikaien1@gmail.com,1469972386,1469972386,4eca8dafeb87dddd878d99d9662a205a54122ef4
+4eca8dafeb87dddd878d99d9662a205a54122ef4,4eca8daf,Merge branch 'master' of https://github.com/kaine119/voluntunity,"Merge branch 'master' of https://github.com/kaine119/voluntunity
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469970858,1469970858,"0ef68087b63701d8e604b2afc693e97c88d67103,2d8df550ff894b50a8d7cf8ab30e6345839c7654"
+0ef68087b63701d8e604b2afc693e97c88d67103,0ef68087,Added hours counter,"Added hours counter
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469970853,1469970853,566fd50c2119bac4c120070e20de383f0529426c
+2d8df550ff894b50a8d7cf8ab30e6345839c7654,2d8df550,Update sliding up panel layout,"Update sliding up panel layout
+
+Made it look more neat, with icons and sections
+I also added location, time, role and skills icons
+",,,,Mui Kai En,muikaien1@gmail.com,Mui Kai En,muikaien1@gmail.com,1469962868,1469962868,566fd50c2119bac4c120070e20de383f0529426c
+566fd50c2119bac4c120070e20de383f0529426c,566fd50c,Icon files,"Icon files
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469952859,1469952859,292cb562308493d1ef58380dc92f6c9097f90a03
+292cb562308493d1ef58380dc92f6c9097f90a03,292cb562,Add user's value to leaderboard page,"Add user's value to leaderboard page
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469952787,1469952787,699ab9cbcf09c68473e1618d84c7b5a18c019d9d
+699ab9cbcf09c68473e1618d84c7b5a18c019d9d,699ab9cb,Added a value to upcoming page,"Added a value to upcoming page
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469952770,1469952770,c219f1c94e268383299ea7f317f1ec015a499705
+c219f1c94e268383299ea7f317f1ec015a499705,c219f1c9,Add icons for leaderboard and upcoming,"Add icons for leaderboard and upcoming
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469952751,1469952751,e1b4339f1aded8c19ada5b3a502075cce975896a
+e1b4339f1aded8c19ada5b3a502075cce975896a,e1b4339f,Merge branch 'master' of https://github.com/kaine119/voluntunity,"Merge branch 'master' of https://github.com/kaine119/voluntunity
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469896848,1469896848,"e63502d108ea2b5ed0b8df004881b437a7dfe404,4c10f8d6e78dfdb5c264bc6a2804563c63d14cce"
+e63502d108ea2b5ed0b8df004881b437a7dfe404,e63502d1,Added signup button and signup page,"Added signup button and signup page
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469896843,1469896843,7e23188c4bfc84ad989df4247f1150bce7bf4e13
+4c10f8d6e78dfdb5c264bc6a2804563c63d14cce,4c10f8d6,Merge branch 'master' of https://github.com/kaine119/voluntunity,"Merge branch 'master' of https://github.com/kaine119/voluntunity
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1469894445,1469894445,"2e87eb332bbb89006053fd1145e988dbb46549e1,7e23188c4bfc84ad989df4247f1150bce7bf4e13"
+2e87eb332bbb89006053fd1145e988dbb46549e1,2e87eb33,Add name and score in drawer,"Add name and score in drawer
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1469894413,1469894413,db3a4324e63d561225e7b7477508ac6fe85344fc
+7e23188c4bfc84ad989df4247f1150bce7bf4e13,7e23188c,Removed FAB,"Removed FAB
+",,,,PohSayKeong,pohsaykeong@dhs.sg,PohSayKeong,pohsaykeong@dhs.sg,1469892205,1469892205,db3a4324e63d561225e7b7477508ac6fe85344fc
+db3a4324e63d561225e7b7477508ac6fe85344fc,db3a4324,Added event details,"Added event details
+",,,,PohSayKeong,poh.saykeong@dhs.sg,PohSayKeong,poh.saykeong@dhs.sg,1469872799,1469872799,bc786c67ca21c266084b835649ef87e2d7e22638
+bc786c67ca21c266084b835649ef87e2d7e22638,bc786c67,Added Leaderboard Fragment,"Added Leaderboard Fragment
+",,,,PohSayKeong,poh.saykeong@dhs.sg,PohSayKeong,poh.saykeong@dhs.sg,1469872760,1469872760,fec0fb734fafdb063eee69fcca9a0bdde09b87c2
+fec0fb734fafdb063eee69fcca9a0bdde09b87c2,fec0fb73,Added sliding up panel,"Added sliding up panel
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1469709163,1469709163,96e47e9bb29fe3f44b2eecdf4bc6ede59485ae23
+96e47e9bb29fe3f44b2eecdf4bc6ede59485ae23,96e47e9b,Get rid of margins around fragment container,"Get rid of margins around fragment container
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1469708885,1469709014,6d9b43ae7d73f43b62c5724d7bbab5c871620dee
+6d9b43ae7d73f43b62c5724d7bbab5c871620dee,6d9b43ae,Added leaderboard,"Added leaderboard
+",,,,PohSayKeong,poh.saykeong@dhs.sg,PohSayKeong,poh.saykeong@dhs.sg,1469540087,1469540087,3a8b4a19bdfeafbd6230237b5f8d8ba7ea5bf48f
+3a8b4a19bdfeafbd6230237b5f8d8ba7ea5bf48f,3a8b4a19,"Fix merge conflicts that commit 32b508 caused, and fix google map implementation","Fix merge conflicts that commit 32b508 caused, and fix google map implementation
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1469458558,1469458558,32b50849dbfd5cfc33d3da7b42b42eca474727b2
+32b50849dbfd5cfc33d3da7b42b42eca474727b2,32b50849,Merge branch 'master' of https://github.com/kaine119/voluntunity,"Merge branch 'master' of https://github.com/kaine119/voluntunity
+
+# Conflicts:
+#	app/build.gradle
+#	app/src/main/AndroidManifest.xml
+",,,,PohSayKeong,poh.saykeong@dhs.sg,PohSayKeong,poh.saykeong@dhs.sg,1469453769,1469453769,"19b07a0b73fe8293e70f4bd17ae15cfcd41c376d,ad65cd4f6b322c98401807f1064b169a6d1d303c"
+19b07a0b73fe8293e70f4bd17ae15cfcd41c376d,19b07a0b,Google Maps API implementation,"Google Maps API implementation
+
+Insert your own API key. First marker placed at NYP
+",,,,PohSayKeong,poh.saykeong@dhs.sg,PohSayKeong,poh.saykeong@dhs.sg,1469453580,1469453580,4196bb919c1c30ab7d07d62ffc656c7b715432d5
+ad65cd4f6b322c98401807f1064b169a6d1d303c,ad65cd4f,Anonymise path in proguard-rules.pro,Anonymise path in proguard-rules.pro,,,,kaine119,muikaien1@gmail.com,GitHub,noreply@github.com,1469450138,1469450138,830f79fc865356aeeb3510aa50eba386634432d9
+830f79fc865356aeeb3510aa50eba386634432d9,830f79fc,Add facebook login and some dummy text,"Add facebook login and some dummy text
+",,,,Mui Kai En,muikaien1@gmail.com,Mui Kai En,muikaien1@gmail.com,1469448647,1469448647,4196bb919c1c30ab7d07d62ffc656c7b715432d5
+4196bb919c1c30ab7d07d62ffc656c7b715432d5,4196bb91,Update README.md with notes,Update README.md with notes,,,,kaine119,muikaien1@gmail.com,GitHub,noreply@github.com,1468850634,1468850634,5a4ec5eb92760f648675aecb156fc444173aec0c
+5a4ec5eb92760f648675aecb156fc444173aec0c,5a4ec5eb,"initial commit, added basic ui","initial commit, added basic ui
+",,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1468850521,1468850521,9540135126f2c6db858a53c92ec52b4259e5b67c
+9540135126f2c6db858a53c92ec52b4259e5b67c,95401351,Initial commit,Initial commit,,,,kaine119,muikaien1@gmail.com,kaine119,muikaien1@gmail.com,1468832844,1468832844,

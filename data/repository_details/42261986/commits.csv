@@ -1,0 +1,919 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ade4b1cb18d0318a614a3879af21553b2abb1276,ade4b1cb,Log touch distances to Answers,"Log touch distances to Answers
+
+This is to enable touch sloppines threshold tuning.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510548963,1510548963,eee3f4fde8ba597ca21172294b39a5d287cdf007
+eee3f4fde8ba597ca21172294b39a5d287cdf007,eee3f4fd,Handle some IntelliJ warnings,"Handle some IntelliJ warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510523530,1510523530,ab21a01b1b3d7ca5aaa963842f0e34de10a194c5
+ab21a01b1b3d7ca5aaa963842f0e34de10a194c5,ab21a01b,Enable Java 8 syntax,"Enable Java 8 syntax
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510522449,1510522449,e46eceff3c50eabe9f9a239be1ce11434242da26
+e46eceff3c50eabe9f9a239be1ce11434242da26,e46eceff,Compute our own touch slop,"Compute our own touch slop
+
+We now use ~ half a button width.
+
+This value is about twice the previous value on my phone, and I suspect
+that some of the unreliability of the keyboard comes from having a too
+low touch slop.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510521799,1510521799,a9c0e6ffd2fd609e78ce022bdec4c533f39342b8
+a9c0e6ffd2fd609e78ce022bdec4c533f39342b8,a9c0e6ff,Add missing percent sign,"Add missing percent sign
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510519982,1510519982,2c48c94e4d0003c5b5a1eb3c0eab15ebeb08ee4f
+2c48c94e4d0003c5b5a1eb3c0eab15ebeb08ee4f,2c48c94e,Fix the Travis build,"Fix the Travis build
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510347794,1510347794,"58dbeae243b7eb7b897d93f3b469a7d0619543d0,856b43afc3f4fcd53e66967b8e5a323df96959c3"
+856b43afc3f4fcd53e66967b8e5a323df96959c3,856b43af,Remove the MaxPermSize silliness,"Remove the MaxPermSize silliness
+
+It's gone in Java 8.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510347755,1510347755,9cfcca8083d091be5f89d4acf539a5b717672b38
+9cfcca8083d091be5f89d4acf539a5b717672b38,9cfcca80,Fix travis settings,"Fix travis settings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510346159,1510346159,58dbeae243b7eb7b897d93f3b469a7d0619543d0
+58dbeae243b7eb7b897d93f3b469a7d0619543d0,58dbeae2,Improve misdetected-gestures logging,"Improve misdetected-gestures logging
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510345055,1510345055,846ca157d71e0f2d29e6ca71e3333d0601c16e1a
+846ca157d71e0f2d29e6ca71e3333d0601c16e1a,846ca157,Accept not having any signing configs,"Accept not having any signing configs
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510343830,1510343830,60db3ae46305065796047a5d6f1cd3817c83a83b
+60db3ae46305065796047a5d6f1cd3817c83a83b,60db3ae4,Update to Gradle 4.1,"Update to Gradle 4.1
+
+And deal with the fallout.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510340996,1510340996,b3f9075d8137271f5d5d274fab0cc62fe895cf2e
+b3f9075d8137271f5d5d274fab0cc62fe895cf2e,b3f9075d,Update settings to a more modern Android Studio,"Update settings to a more modern Android Studio
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1510333481,1510333481,0529b6780e2e2075c53216e57bb60f6bac1400f8
+0529b6780e2e2075c53216e57bb60f6bac1400f8,0529b678,Fix the Travis build,"Fix the Travis build
+
+By going JDK8 rather than JDK7.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483551589,1483551589,b3106900257ade65a8599d6aa87894f0560804a6
+b3106900257ade65a8599d6aa87894f0560804a6,b3106900,Update dev environment,"Update dev environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483476281,1483476281,9178ba6078d2728002c4ba5304bcd94e4132d361
+9178ba6078d2728002c4ba5304bcd94e4132d361,9178ba60,Actually drop INTERNET permission from release builds,"Actually drop INTERNET permission from release builds
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471329807,1471329807,bf8a457f8cea157aaf283ce44c6a299d4ac40e16
+bf8a457f8cea157aaf283ce44c6a299d4ac40e16,bf8a457f,Fix an intermittent NPE,"Fix an intermittent NPE
+
+Go Crashlytics!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471279851,1471279851,32585dc0684e62d97d7aedd71dfdc551c1929d9b
+32585dc0684e62d97d7aedd71dfdc551c1929d9b,32585dc0,Merge branch 'crashlytics',"Merge branch 'crashlytics'
+
+This merge adds Crashlytics reporting to debug builds.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470415200,1470415200,"5ae364f42251de14143b7ea870213bb9337b32ce,a8b89565d55f94e05ddef8efeb04837ee5e9a8a0"
+a8b89565d55f94e05ddef8efeb04837ee5e9a8a0,a8b89565,Travis: Increase Permgen size,"Travis: Increase Permgen size
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470414922,1470414922,6c15a01d1783d832f1620cfd5ca2e902810ddf58
+6c15a01d1783d832f1620cfd5ca2e902810ddf58,6c15a01d,Constantize common string,"Constantize common string
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470414565,1470414565,66a7c301b1feef41edf932003e73ed7c7abe7661
+66a7c301b1feef41edf932003e73ed7c7abe7661,66a7c301,Fix Travis before_script,"Fix Travis before_script
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470414347,1470414347,c64e627b1a3ad9097b5eabf8e479b3b6a6338141
+c64e627b1a3ad9097b5eabf8e479b3b6a6338141,c64e627b,Attempt to fix Travis issues,"Attempt to fix Travis issues
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470413941,1470413941,bd5904fc9be8efa6a2c8e6b62e5b3a054b1d37aa
+bd5904fc9be8efa6a2c8e6b62e5b3a054b1d37aa,bd5904fc,Only do Crashlytics from Android,"Only do Crashlytics from Android
+
+Or to put it differenly, not while running the unit tests.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470413681,1470413681,c13185e5a838253d70aebad9f3ac6b9793ea1023
+c13185e5a838253d70aebad9f3ac6b9793ea1023,c13185e5,Internet access in Debug builds only,"Internet access in Debug builds only
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470345462,1470345462,86b4f6e23bfa490a2af13e6f46ee2d73ccbef0c2
+86b4f6e23bfa490a2af13e6f46ee2d73ccbef0c2,86b4f6e2,Log performance numbers to Crashlytics,"Log performance numbers to Crashlytics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470330925,1470330925,1c1e0de708ec56b44e314349e7f38aed77861d8c
+1c1e0de708ec56b44e314349e7f38aed77861d8c,1c1e0de7,Only do Crashlytics from Android,"Only do Crashlytics from Android
+
+Not from Java.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470330868,1470330868,587af7e2e3ce4f3eb98f6fe01b092c4e5730ac88
+587af7e2e3ce4f3eb98f6fe01b092c4e5730ac88,587af7e2,Report crashes to Crashlytics,"Report crashes to Crashlytics
+
+Not on release builds though, and not when running in the Android emulator.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470328978,1470328978,19ef3528b18ed8068ae2ac041d495f4b39fc12b3
+5ae364f42251de14143b7ea870213bb9337b32ce,5ae364f4,Merge branch 'crashlytics',"Merge branch 'crashlytics'
+
+This merge only insert Timber between our logging statements and Android's.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470304613,1470304613,"dbc9679be155c1367603e9d460039e1356055112,19ef3528b18ed8068ae2ac041d495f4b39fc12b3"
+19ef3528b18ed8068ae2ac041d495f4b39fc12b3,19ef3528,Log using the default Android logging facility,"Log using the default Android logging facility
+
+But through Timber of course.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470304482,1470304482,3cc9ffa8d7f5d7e5b4c9f2a8b2963915146a0f7e
+3cc9ffa8d7f5d7e5b4c9f2a8b2963915146a0f7e,3cc9ffa8,s/Log/Timber/g,"s/Log/Timber/g
+
+But we never set Timber up, so we probably just killed all logging.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470299951,1470299951,8e9e7c5c23a3cfb4293a0144deb72e0684ce35b8
+8e9e7c5c23a3cfb4293a0144deb72e0684ce35b8,8e9e7c5c,Add Timber dependency,"Add Timber dependency
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470299424,1470299424,dbc9679be155c1367603e9d460039e1356055112
+dbc9679be155c1367603e9d460039e1356055112,dbc9679b,Increase long long press timeout,"Increase long long press timeout
+
+This makes this sequence feel much more natural:
+* Long press ""e"" to get the numeric keyboard
+* Keep long pressing to get alternative ""e""s
+
+Before this change the duration between these two steps felt too short.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469776153,1469776153,18a33f8b3edab633dc86c3a5b1bec38a0ad396bb
+18a33f8b3edab633dc86c3a5b1bec38a0ad396bb,18a33f8b,README: Document gestures,"README: Document gestures
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469775556,1469775556,1d0fd4e2eac3eaa37a8c6bfa3d700e9a3f05a414
+1d0fd4e2eac3eaa37a8c6bfa3d700e9a3f05a414,1d0fd4e2,Merge branch 'android23',"Merge branch 'android23'
+
+Build with the latest Android tooling.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469775243,1469775243,"753858356f0317f22b1f735b29a97059d6b79795,ac99a1835488749fa1c9c91826833f08bf64b6ea"
+ac99a1835488749fa1c9c91826833f08bf64b6ea,ac99a183,Re-shuffle the Travis configuration,"Re-shuffle the Travis configuration
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469774847,1469774847,fd7ee6353cd5497d4daa31b056e7a79f3441c6d7
+fd7ee6353cd5497d4daa31b056e7a79f3441c6d7,fd7ee635,Upgrade Android tooling to level 23,"Upgrade Android tooling to level 23
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469774339,1469774339,753858356f0317f22b1f735b29a97059d6b79795
+753858356f0317f22b1f735b29a97059d6b79795,75385835,Merge branch 'fix-ci',"Merge branch 'fix-ci'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469773877,1469773877,"b3390d155dfb9337850c7dab854040a66d6d0e05,0e26383691c1b581b044724209bdcb6f1f50a691"
+0e26383691c1b581b044724209bdcb6f1f50a691,0e263836,Travis: Use the latest Android tooling,"Travis: Use the latest Android tooling
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469773642,1469773642,b3390d155dfb9337850c7dab854040a66d6d0e05
+b3390d155dfb9337850c7dab854040a66d6d0e05,b3390d15,Roll back compile target to 22,"Roll back compile target to 22
+
+Couldn't manage to get Travis to work with 23.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469738946,1469738946,6d470bb7229eb0427e1948e8cff8c1a0ef855643
+6d470bb7229eb0427e1948e8cff8c1a0ef855643,6d470bb7,Update build environment,"Update build environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1469694792,1469694792,5bf8db8df3e3286948a67fc2c621470ff7dbe70e
+5bf8db8df3e3286948a67fc2c621470ff7dbe70e,5bf8db8d,Explicitly close feedbackWindow when keyboard is hidden,"Explicitly close feedbackWindow when keyboard is hidden
+
+Once I've seen it linger, this change should take care of that hopefully.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453929088,1453929088,945a0389247019cd3321885aefca228cac90b2c6
+945a0389247019cd3321885aefca228cac90b2c6,945a0389,Merge branch 'responsiveness',"Merge branch 'responsiveness'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453929055,1453929055,"84dfcd056796d3bd80d5aed08a2ea97fd620a6c2,341dee04283d9a9be4e163157ec99e8fc6171c4d"
+341dee04283d9a9be4e163157ec99e8fc6171c4d,341dee04,Fix some potential NullPointerExceptions,"Fix some potential NullPointerExceptions
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453845216,1453845216,29fb97d6304c687397866951bacd0192891721fc
+29fb97d6304c687397866951bacd0192891721fc,29fb97d6,README: Responsiveness done,"README: Responsiveness done
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453843084,1453843084,0238a6d6e1082fcc3d5648af10de10acb818ec07
+0238a6d6e1082fcc3d5648af10de10acb818ec07,0238a6d6,Make the unit tests pass,"Make the unit tests pass
+
+This was mostly about using a fake (rather than a null) queue when running the
+tests.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453842483,1453842483,9d799f4d5271e418b730a90befb69e2aab2f0ce8
+9d799f4d5271e418b730a90befb69e2aab2f0ce8,9d799f4d,Initial implementation. Entirely untested.,"Initial implementation. Entirely untested.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453841762,1453841762,84dfcd056796d3bd80d5aed08a2ea97fd620a6c2
+84dfcd056796d3bd80d5aed08a2ea97fd620a6c2,84dfcd05,Merge branch 'multitouch',"Merge branch 'multitouch'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453834471,1453834471,"91e6354c93da686d8200b041bcab02169205a46c,be2e2f07250791627404eedd4cb7b958befe6bd2"
+be2e2f07250791627404eedd4cb7b958befe6bd2,be2e2f07,README: Implemented multi touch support,"README: Implemented multi touch support
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453753215,1453753215,5485c62fbd076c5b2098dad1b9f35f9681618102
+5485c62fbd076c5b2098dad1b9f35f9681618102,5485c62f,Fix fallout from fixing timeout handling off-by-one,"Fix fallout from fixing timeout handling off-by-one
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453750249,1453750249,5490d9e2f46fb0179eef00c56872fb170830a3b3
+5490d9e2f46fb0179eef00c56872fb170830a3b3,5490d9e2,Fix last unit test,"Fix last unit test
+
+Before this change, if a timeout handler added another timeout handler inside of
+our time limit, we never ran the new timeout handler.
+
+This change makes us run all timeout handlers until the requested time.
+
+This change also fixes an off-by-one error in our mock timeout handling code,
+and removes an erroneous call to verifyNoMoreInteractions().
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453749862,1453749862,6aa537c1dda641ebe95e485a9358acb90285725b
+6aa537c1dda641ebe95e485a9358acb90285725b,6aa537c1,Fix a forgotten case in the horrific if statement,"Fix a forgotten case in the horrific if statement
+
+Also, fix some things in a unit test. It goes through now.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453665302,1453665302,13ac8ee18cd052206d885958b15e0f16ca9c5927
+13ac8ee18cd052206d885958b15e0f16ca9c5927,13ac8ee1,Fix two (out of four) unit tests so they pass,"Fix two (out of four) unit tests so they pass
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453664631,1453664631,3ff09051a33db8a11cb4066e532cad54ecdd5150
+3ff09051a33db8a11cb4066e532cad54ecdd5150,3ff09051,Make a multi touch implementation we believe in,"Make a multi touch implementation we believe in
+
+Next step is finding out why the unit tests don't pass...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453662770,1453664540,039437b13cadd3f80516a8311a60a0e31280ff61
+039437b13cadd3f80516a8311a60a0e31280ff61,039437b1,GestureDetector: Stop passing MotionEvents around,"GestureDetector: Stop passing MotionEvents around
+
+This is in preparation for being able to handle multi touch events.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453619713,1453619713,368772ed4b0ddaf4c05d453ce90b8af7e7d36bb1
+368772ed4b0ddaf4c05d453ce90b8af7e7d36bb1,368772ed,Test what happens after the multi touches are done,"Test what happens after the multi touches are done
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453619026,1453619026,10b37830be3d345e291bd3272eeaa25a0437d70a
+10b37830be3d345e291bd3272eeaa25a0437d70a,10b37830,Use variable for pointer index,"Use variable for pointer index
+
+It's always zero right now, still no multitouch support.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453532859,1453532859,2182994945afd70b89a07119dfa19e0e64140dea
+2182994945afd70b89a07119dfa19e0e64140dea,21829949,Fix most failing unit tests,"Fix most failing unit tests
+
+By explicitly specifying we want pointer index 0 everywhere.
+
+We still have no logic for multi touch though, and those tests still fail.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453496899,1453496899,010a10e3ce6dd9ca3e25dfa713b3508bef2b5919
+010a10e3ce6dd9ca3e25dfa713b3508bef2b5919,010a10e3,Add multitouch unit tests (failing),"Add multitouch unit tests (failing)
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1453061308,1453061308,91e6354c93da686d8200b041bcab02169205a46c
+91e6354c93da686d8200b041bcab02169205a46c,91e6354c,Fix repeating backspace removing one char too many,"Fix repeating backspace removing one char too many
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1449172144,1449172144,4f2498c9a4f382405d22f97ee64bdf7c0657113c
+4f2498c9a4f382405d22f97ee64bdf7c0657113c,4f2498c9,Vibrate once when accepting new duration,"Vibrate once when accepting new duration
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1449170536,1449170536,a8326b7365ebcd49e94d4bf9239b0a99ff2c2851
+a8326b7365ebcd49e94d4bf9239b0a99ff2c2851,a8326b73,Merge branch 'vibration-setting',"Merge branch 'vibration-setting'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1449034990,1449034990,"9587c36d5c3148cdd82126299190d05cad485ff5,246e156d9e6b0f664ecc476866344c73a64ec082"
+246e156d9e6b0f664ecc476866344c73a64ec082,246e156d,Finalize vibration duration preference,"Finalize vibration duration preference
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1449034823,1449034823,f2dfaf050822949004bff0984a7c30e488475d8b
+f2dfaf050822949004bff0984a7c30e488475d8b,f2dfaf05,Increase the max allowed vibration duration,"Increase the max allowed vibration duration
+
+I want the max to be ""too long"", and now it is.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1449034764,1449034764,233c4b1f647d4302c19c2f0af36ad833aa1ef95e
+233c4b1f647d4302c19c2f0af36ad833aa1ef95e,233c4b1f,Add up navigation to the Settings activity,"Add up navigation to the Settings activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448949853,1448949853,c95a5cd7ce321318947751d6b1a7c013d297c1fc
+c95a5cd7ce321318947751d6b1a7c013d297c1fc,c95a5cd7,Expose settings activity in the system app launcher,"Expose settings activity in the system app launcher
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448839673,1448839673,d99f2207745ad4b41d768a650f22b9bdec7732db
+d99f2207745ad4b41d768a650f22b9bdec7732db,d99f2207,Add a vibration duration slider preference,"Add a vibration duration slider preference
+
+And use the configured value while typing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448839021,1448839021,2af150e5cb07b4c68e255b64671621045ced1690
+2af150e5cb07b4c68e255b64671621045ced1690,2af150e5,Inspections: Treat not annotated params as @NonNull,"Inspections: Treat not annotated params as @NonNull
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448838038,1448838038,f2297cba935967af4aae2fd18d4c8b0a2e309540
+f2297cba935967af4aae2fd18d4c8b0a2e309540,f2297cba,Add title bar to settings activity,"Add title bar to settings activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448430470,1448430470,f9102552462f454b069a077448467760f56b1ead
+f9102552462f454b069a077448467760f56b1ead,f9102552,WIP: Add a Settings activity,"WIP: Add a Settings activity
+
+It still needs work, see FIXMEs in SettingsActivity.java.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448344090,1448344090,9a44aa7bdff98b8f90909bb4d4609c115e09dd1b
+9a44aa7bdff98b8f90909bb4d4609c115e09dd1b,9a44aa7b,Don't auto detect indents,"Don't auto detect indents
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448298103,1448298103,b9f5199fe954c39d0277a338ef57056ef400c266
+b9f5199fe954c39d0277a338ef57056ef400c266,b9f5199f,TODO: Add Settings activity,"TODO: Add Settings activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448297375,1448297375,9587c36d5c3148cdd82126299190d05cad485ff5
+9587c36d5c3148cdd82126299190d05cad485ff5,9587c36d,Update dev environment,"Update dev environment
+
+Gradle -> 2.9
+Android Studio -> 1.5.0
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1448057778,1448058525,753a254dc120d4bd24a9367f5340a00142cf8a88
+753a254dc120d4bd24a9367f5340a00142cf8a88,753a254d,Fix holding-delete behavior,"Fix holding-delete behavior
+
+Before this change, when delete was held, we started out by first removing *two*
+words, then one at a time.
+
+With this change in place, we remove one word at a time all the time.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447966096,1447966096,8a55283ed0beee200c6d07aa82ca77f153d379c5
+8a55283ed0beee200c6d07aa82ca77f153d379c5,8a55283e,Make vibration code optimistic,"Make vibration code optimistic
+
+So we try to vibrate, and if we get a SecurityException we just log
+that.
+
+One beta tester didn't get any vibrations with the previous code where
+we attempted to check for permission before vibrating, this is an
+attempt at remedying that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447964543,1447964543,fa666f7338cfe47be77ddfff0b9f7d60d7ea9ca7
+fa666f7338cfe47be77ddfff0b9f7d60d7ea9ca7,fa666f73,Disable on-tap popup; none of the testers like it,"Disable on-tap popup; none of the testers like it
+
+And I don't either.
+
+It's still there while sliding around the numeric keyboard though, where it's really helpful.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447963898,1447963898,f8e99316274886d8e626b2ba7fa6df0e5912e606
+f8e99316274886d8e626b2ba7fa6df0e5912e606,f8e99316,Fix sending broken Action Events,"Fix sending broken Action Events
+
+Bitwise operations are hard, apparently...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447698980,1447698980,07d333a9d4fd0e485664e793902ee2cd22d8d370
+07d333a9d4fd0e485664e793902ee2cd22d8d370,07d333a9,Handle some static analysis warnings,"Handle some static analysis warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447610979,1447610979,102871215b36c6e197d2527f62cdc5f1f7e70b36
+102871215b36c6e197d2527f62cdc5f1f7e70b36,10287121,Merge branch 'repeat-delete',"Merge branch 'repeat-delete'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447535203,1447535203,"6c913bf309598baadc22c7a41dfe2964b29c8911,64fc26de214d5b855cb90d7d4a4e064e3d04b629"
+64fc26de214d5b855cb90d7d4a4e064e3d04b629,64fc26de,TODO: Make holding down backspace work as expected,"TODO: Make holding down backspace work as expected
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447535111,1447535111,622a111ff2efbe9d29fb8945d6462f8061669eb8
+622a111ff2efbe9d29fb8945d6462f8061669eb8,622a111f,Vibrate for every word deleted,"Vibrate for every word deleted
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447534720,1447534720,195c6f1dda8a04dffda7db44b57e4eaec5dc0da4
+195c6f1dda8a04dffda7db44b57e4eaec5dc0da4,195c6f1d,Hide feedback window while holding backspace,"Hide feedback window while holding backspace
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447527642,1447527642,44ed5395e6fbafbdc3a894c59451d3873b3b3231
+44ed5395e6fbafbdc3a894c59451d3873b3b3231,44ed5395,Fix repetition speed,"Fix repetition speed
+
+Before this change we used to post the repeat events in the past, making them
+happen immediately and very frequently, making delete too fast.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447451378,1447451378,cba265b312200b65d9d9f5dfd3c95276cefab5a3
+cba265b312200b65d9d9f5dfd3c95276cefab5a3,cba265b3,Fix mis-refactored strings,"Fix mis-refactored strings
+
+Timer said ""start"" rather than ""ms"", very confusing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447391882,1447391882,7e93a51a16874f7207f29d3ca8fae03ffbe1e582
+7e93a51a16874f7207f29d3ca8fae03ffbe1e582,7e93a51a,Implement delete-a-word-at-a-time,"Implement delete-a-word-at-a-time
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447361708,1447361708,d6c904cb2cfe8c6129cdd47e692f1ef656118297
+d6c904cb2cfe8c6129cdd47e692f1ef656118297,d6c904cb,Complete the delete-word tests,"Complete the delete-word tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447356138,1447356138,39aa620209a3fd60f7de0c516793c8a5f7d8a9b9
+39aa620209a3fd60f7de0c516793c8a5f7d8a9b9,39aa6202,Initial tests for word-by-word deletion,"Initial tests for word-by-word deletion
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447354808,1447354808,6d5496e4c0ac885961a9ae510e07937613ed2b03
+6d5496e4c0ac885961a9ae510e07937613ed2b03,6d5496e4,Don't report long (long) presses for delete,"Don't report long (long) presses for delete
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447353358,1447353358,aa7d9b1af437595336da7b3170d9077711300320
+aa7d9b1af437595336da7b3170d9077711300320,aa7d9b1a,Add tests for long (long) press vs delete,"Add tests for long (long) press vs delete
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447353097,1447353097,531651425119cf87e07f2e91ccb09d090fefaf90
+531651425119cf87e07f2e91ccb09d090fefaf90,53165142,Make sure GestureListener reports delete-held to Exactype,"Make sure GestureListener reports delete-held to Exactype
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447274562,1447274562,ce523f5b9c303c56e3bb2ee15d9d263f7013a475
+ce523f5b9c303c56e3bb2ee15d9d263f7013a475,ce523f5b,Make onHold() tests pass,"Make onHold() tests pass
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447273282,1447273282,c89c3dd579b5e3c1526fc116c207c08352d9284d
+c89c3dd579b5e3c1526fc116c207c08352d9284d,c89c3dd5,GestureDetector: Detect holding down a button,"GestureDetector: Detect holding down a button
+
+Test for reporting onHold():
+* first after the long press timeout
+* then every half long press timeout
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447134659,1447134659,6c913bf309598baadc22c7a41dfe2964b29c8911
+6c913bf309598baadc22c7a41dfe2964b29c8911,6c913bf3,Improve release instructions,"Improve release instructions
+
+Use annotated tags to get usable release descriptions at Github.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1447001000,1447001000,a4a72b03bc5bc7d91045160af429adc84df9e183
+a4a72b03bc5bc7d91045160af429adc84df9e183,a4a72b03,Don't change keyboard mode while typing,"Don't change keyboard mode while typing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446980961,1446980961,5cf6e308d1237928684f002e1af07cb351fb1b83
+5cf6e308d1237928684f002e1af07cb351fb1b83,5cf6e308,"Add 7"" tablet screenshots","Add 7"" tablet screenshots
+
+This makes us fulfill the Google Play Store Designed for Tablets criteria.
+
+Also, groom the TODO.
+
+We got our first beta installed on an actual user's device, woho!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446582707,1446582707,9963d84b7403b58341ba7693da770981f69b0b2c
+9963d84b7403b58341ba7693da770981f69b0b2c,9963d84b,Start out numlocked on non-text input,"Start out numlocked on non-text input
+
+Non-text input can be numbers, timestamps, or phone numbers:
+http://developer.android.com/reference/android/text/InputType.html#TYPE_MASK_CLASS
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446528737,1446528737,6bb9facc4369b75c4ece03c549a9905a00dbf94b
+6bb9facc4369b75c4ece03c549a9905a00dbf94b,6bb9facc,Move screenshots into their own directory,"Move screenshots into their own directory
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446526615,1446526615,9b249b84f3ab5a454e8aa763b1f1ceb634b8b476
+9b249b84f3ab5a454e8aa763b1f1ceb634b8b476,9b249b84,Add 10 inch tablet screenshots,"Add 10 inch tablet screenshots
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446496912,1446496912,6e5e8713361b33373e3bb16d42e06d275f06b923
+6e5e8713361b33373e3bb16d42e06d275f06b923,6e5e8713,Make an icon,"Make an icon
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446407573,1446407573,b557c4067c0aa96e4844b8f6ea19ea1722ea8e80
+b557c4067c0aa96e4844b8f6ea19ea1722ea8e80,b557c406,"Add a ""functional graphics"" for the Play Store","Add a ""functional graphics"" for the Play Store
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446227437,1446227551,84157bab28310cd195ae6692efcedca022cc534d
+84157bab28310cd195ae6692efcedca022cc534d,84157bab,Add screenshots for Google Play Store,"Add screenshots for Google Play Store
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446147254,1446147254,1b2d52ccc619d692cb9717f9922fb50375dcf2c7
+1b2d52ccc619d692cb9717f9922fb50375dcf2c7,1b2d52cc,Don't try to sign binaries when running in Travis,"Don't try to sign binaries when running in Travis
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446146580,1446146580,c8e449c52ce2907d6d3b46353d3d19a5f9bc0b4a
+c8e449c52ce2907d6d3b46353d3d19a5f9bc0b4a,c8e449c5,Fix NPE,"Fix NPE
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446145698,1446145698,c52ae96f3ec0ab7465c644bd679cafba5153d582
+c52ae96f3ec0ab7465c644bd679cafba5153d582,c52ae96f,Add instructions + Gradle code for making releases,"Add instructions + Gradle code for making releases
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446144714,1446144714,174d7615d4a6c2089ec2f16848dcf0385973fb16
+174d7615d4a6c2089ec2f16848dcf0385973fb16,174d7615,Handle rotating while long pressing,"Handle rotating while long pressing
+
+Make sure that both the feedback window and any popup keyboard are properly
+disposed of when the device is rotated.
+
+Before this change we could get annoying stray windows that were difficult to
+get rid of.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446060449,1446060449,88c5c1872ab749dadfe840ed6a11827585083594
+88c5c1872ab749dadfe840ed6a11827585083594,88c5c187,Remedy a number of IntelliJ warnings,"Remedy a number of IntelliJ warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1446059166,1446059284,4e05c4f3dc43de94d2bda82cc41e012d02144d2d
+4e05c4f3dc43de94d2bda82cc41e012d02144d2d,4e05c4f3,"README: Add Travis build status, now master-only","README: Add Travis build status, now master-only
+
+For our last attempt at this we had a build status for any branch (or something), but definitely not what we wanted.
+
+This time around we have build status for master only, which is exactly what we want.",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445979552,1445979552,9999466e152cc18e43acbea4a4991428163b7c04
+9999466e152cc18e43acbea4a4991428163b7c04,9999466e,Merge branch 'premerge-inspect',"Merge branch 'premerge-inspect'
+
+Have Travis run FindBugs, PMD and Android Lint for pull requests and pushes.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445978905,1445978905,"161dbb24448109e53dc6353d5e3900964a4eca0d,a8001642462c31931adf372e2fbb11bd436b1350"
+a8001642462c31931adf372e2fbb11bd436b1350,a8001642,DONE: Static code analysis in Travis,"DONE: Static code analysis in Travis
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445978814,1445978863,7230e71d666d02bc9f02e3bcba5bf92041f893a8
+7230e71d666d02bc9f02e3bcba5bf92041f893a8,7230e71d,Enable floating point warning in Android Studio,"Enable floating point warning in Android Studio
+
+It's one of the things complained about by FindBugs, having it already in
+Android studio iproves the developer feedback cycle. Yay, feedback cycles!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445977977,1445978863,09a12a1c73d9399bd580c61b15d36bf5b038e364
+09a12a1c73d9399bd580c61b15d36bf5b038e364,09a12a1c,Fix the last FindBugs detected issues,"Fix the last FindBugs detected issues
+
+Loss of precision when casting integer division to float after the division is
+done.
+
+In this particular case it could sometimes make us be one pixel off, which
+probably wasn't the end of the world, but the warning is reasonable and we can
+just as well abide by it.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445977334,1445978863,ed62781c902b71c4fd1e3b8c7a15fb26c5aa766e
+ed62781c902b71c4fd1e3b8c7a15fb26c5aa766e,ed62781c,Disable unhelpful Android Lint warning,"Disable unhelpful Android Lint warning
+
+The ClickableViewAccessibility warning wants ExactypeView to implement / call
+View.performClick() to play a sound (but we want to do that ourselves if at
+all), report accessibility events (that the keyboard was clicked, but not which
+key, which won't help anyone), and call any registered OnClickListener (don't
+care, we can do that manually if deemed important in the future).
+
+Feel free to question this reasoning, but until then I'll keep this disabled.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445975871,1445978863,906c523d7a2a14808290fcaf17406c2b9a2a6ec0
+906c523d7a2a14808290fcaf17406c2b9a2a6ec0,906c523d,KeyInfo.toString(): Explicitly use default locale,"KeyInfo.toString(): Explicitly use default locale
+
+The docs say that the default locale is fine for strings intended for human
+consumption, and this is one of those.
+
+This remedies an Android Lint warning.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445973013,1445978863,6b122bb87d410264e96ec841fab2e2ba40183fbc
+6b122bb87d410264e96ec841fab2e2ba40183fbc,6b122bb8,Document lack of Findbugs text output,"Document lack of Findbugs text output
+
+It's broken in the Gradle plugin: https://issues.gradle.org/browse/GRADLE-2994
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445893364,1445978863,add9a2c1b2361b6050be35ea4e6019d5a8b4d2cd
+add9a2c1b2361b6050be35ea4e6019d5a8b4d2cd,add9a2c1,Disable unreliable Android Lint test,"Disable unreliable Android Lint test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445892665,1445978863,8bb3c35d358a6fbabe6650fd2481c9e271c13ee7
+8bb3c35d358a6fbabe6650fd2481c9e271c13ee7,8bb3c35d,Improve Android Lint check behavior,"Improve Android Lint check behavior
+
+Treat warnings as errors and print any problems on stdout.
+
+The latter visualizes problems in the Travis build logs.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445891837,1445978863,0d2f0d925ac8a95ae5da49debfdfda586d77b923
+0d2f0d925ac8a95ae5da49debfdfda586d77b923,0d2f0d92,"Terminate ""gradle check"" on Findbugs warnings","Terminate ""gradle check"" on Findbugs warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445891128,1445978863,dc5900b691c45a5d16ebf87528ba9f4cc6959b8e
+dc5900b691c45a5d16ebf87528ba9f4cc6959b8e,dc5900b6,Make PMD run clean,"Make PMD run clean
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445887333,1445978863,26356ae5d4a34cd69e61563cfcf472fa7161ca0a
+26356ae5d4a34cd69e61563cfcf472fa7161ca0a,26356ae5,Always brace if() statements,"Always brace if() statements
+
+And for, while and do statements as well.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445886632,1445978863,496f9bd6739011bf4e14c7b18f483b594fbaa74b
+496f9bd6739011bf4e14c7b18f483b594fbaa74b,496f9bd6,`gradle check` now fails on PMD problems,"`gradle check` now fails on PMD problems
+
+On failure diagnostics is printed to stdout and Gradle terminates with a
+non-zero exit code.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445868214,1445978863,ab84ee83e7039f868fb087f244e05ad79b2f0921
+ab84ee83e7039f868fb087f244e05ad79b2f0921,ab84ee83,"Add PMD and Findbugs runs to ""./gradlew check""","Add PMD and Findbugs runs to ""./gradlew check""
+
+There are failures.
+
+Things to fix:
+* Can we get failure reports to Gradle's stdout / stderr?
+* Tune the rules; the current PMD failures don't help anybody
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445817413,1445978863,161dbb24448109e53dc6353d5e3900964a4eca0d
+161dbb24448109e53dc6353d5e3900964a4eca0d,161dbb24,README: Remove Travis build status,"README: Remove Travis build status
+
+The Travis build status shows build status for all branches, which makes it unusable for me.
+
+Having builds failing in branches is fine; that's how I do TDD, so I don't want a red blotch warning about that on my front page.
+
+If somebody can tell me how to get Travis build status for the master branch only, I promise I'll put it back.",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445885381,1445885381,5309df92503148720f6449319e3947ad7fe26c96
+5309df92503148720f6449319e3947ad7fe26c96,5309df92,README: Add a Hacking section,"README: Add a Hacking section
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445786564,1445786564,e3f22d515bc046d1b97a7f7a63addfc01bcf9953
+e3f22d515bc046d1b97a7f7a63addfc01bcf9953,e3f22d51,Upgrade Android Studio to 1.4,"Upgrade Android Studio to 1.4
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445636681,1445636681,1ca7c09ab76ea26b14efabf489eb652d13e7c2ec
+1ca7c09ab76ea26b14efabf489eb652d13e7c2ec,1ca7c09a,Upgrade to Gradle 2.8,"Upgrade to Gradle 2.8
+
+From 2.7.
+
+Gradle 2.8 promises faster builds:
+https://docs.gradle.org/2.8/release-notes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445536295,1445536295,f7f87a9afc0bc79cc69c318a784a954934de914e
+f7f87a9afc0bc79cc69c318a784a954934de914e,f7f87a9a,Merge pull request #1 from walles/travis,"Merge pull request #1 from walles/travis
+
+Add run-unit-tests config for Travis CI",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445374265,1445374265,"2faf9343d99354640a400a1d20627dba24882626,9db58929f8d10c9516e29298a2a26255a5832b76"
+9db58929f8d10c9516e29298a2a26255a5832b76,9db58929,Add Travis build status to README.md,"Add Travis build status to README.md
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445374099,1445374099,78a61ed586eb9d5db9616a608dca4550270efbfa
+78a61ed586eb9d5db9616a608dca4550270efbfa,78a61ed5,TODO: DONE: Travis configuration added,"TODO: DONE: Travis configuration added
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445373852,1445373852,da7c8c94fdd86963d1c9956852688247056068c4
+da7c8c94fdd86963d1c9956852688247056068c4,da7c8c94,Clean unneeded lines from .travis.yml,"Clean unneeded lines from .travis.yml
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445373582,1445373582,63520e122268fc2023ec517c8679b0637974708c
+63520e122268fc2023ec517c8679b0637974708c,63520e12,Add missing Travis build dependency,"Add missing Travis build dependency
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445373394,1445373394,fb3f293e524716369c13ab6c4f6ff49e385d2b0a
+fb3f293e524716369c13ab6c4f6ff49e385d2b0a,fb3f293e,Add run-unit-tests config for Travis CI,"Add run-unit-tests config for Travis CI
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445372208,1445372208,2faf9343d99354640a400a1d20627dba24882626
+2faf9343d99354640a400a1d20627dba24882626,2faf9343,Tune max keyboard height,"Tune max keyboard height
+
+It's now at 40% of screen height, down from 50%.
+
+In landscape mode, I think 40% makes more sense than 50.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445368585,1445368585,116d5819ac8f8fe6365290eab8e987a4a7c4da3f
+116d5819ac8f8fe6365290eab8e987a4a7c4da3f,116d5819,"Disable ""fullscreen"" mode on landscape orientation","Disable ""fullscreen"" mode on landscape orientation
+
+""Fullscreen"" means showing a plain text box instead of the actual UI, and I find
+that text box ugly and confusing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445368486,1445368486,8faaef05803fa6552117ebba36fd9a5642fbdd38
+8faaef05803fa6552117ebba36fd9a5642fbdd38,8faaef05,Set max height relative to screen,"Set max height relative to screen
+
+Before this change we set the max height relative to how much space we got in
+the layout process.
+
+However, since we're laid out multiple times, and the constraints we get depend
+on what we returned during the last run, doing it that way resulted in us using
+only a quarter or so of the screen height and leaving half the screen empty in
+portrait mode.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445366038,1445366038,7228f47e28a5435c5d3bd9ca8985baf9ab00cf43
+7228f47e28a5435c5d3bd9ca8985baf9ab00cf43,7228f47e,Use at most half screen for the keyboard height,"Use at most half screen for the keyboard height
+
+We used to take all of the screen, not very useful.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445363802,1445363802,39e657f0ab5085e4befdfb055babe765f0820e1b
+39e657f0ab5085e4befdfb055babe765f0820e1b,39e657f0,TODO: Postpone lots of things to remote beta testers,"TODO: Postpone lots of things to remote beta testers
+
+We're close to good enough for close beta testing, let the planning reflect
+that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445363554,1445363554,0e8c31d1378050ae05d6b833fc27c5f5a74e8c4e
+0e8c31d1378050ae05d6b833fc27c5f5a74e8c4e,0e8c31d1,Add vibration on touch,"Add vibration on touch
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445277836,1445277836,5596b05a566e8823974735c77cc0d8098349675c
+5596b05a566e8823974735c77cc0d8098349675c,5596b05a,Fade out FeedbackView on close,"Fade out FeedbackView on close
+
+Before this change we just disappeared it, which made quick taps never show up
+on screen.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445270759,1445270759,a3a96df1b87f768676e1ab7acb2300832ba239bf
+a3a96df1b87f768676e1ab7acb2300832ba239bf,a3a96df1,Balance numeric keyboard better,"Balance numeric keyboard better
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445269192,1445269192,62091367f1b5b14516736547870047f96b0d05ba
+62091367f1b5b14516736547870047f96b0d05ba,62091367,Merge branch 'feedback',"Merge branch 'feedback'
+
+This adds where-you-pressed feedback when typing on the keyboard.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445265399,1445265399,"6dde57155f2e837f094cd4549229f8ec41e7a20c,77fccfa5d57b3ca9c0fee4e2843814710e04b5a1"
+77fccfa5d57b3ca9c0fee4e2843814710e04b5a1,77fccfa5,TODO: Add remaining FeedbackWindow items,"TODO: Add remaining FeedbackWindow items
+
+Done is better than perfect; what we have now is an improvement on master so
+let's merge it.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445265294,1445265294,3db913bc593bc65fb74296780d8edac95f836365
+3db913bc593bc65fb74296780d8edac95f836365,3db913bc,"Make feedback view show the right thing, except...","Make feedback view show the right thing, except...
+
+... for the popup keyboards which it doesn't support yet.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445194466,1445194466,f137a02e0d465dc747def0663804bab19d459061
+f137a02e0d465dc747def0663804bab19d459061,f137a02e,Tune feedback window size,"Tune feedback window size
+
+It's now rougly the size of one button (whatever that means), which looks much
+better than before.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445190713,1445190713,850737baa60e4383f6fcf80529de3c45e1480894
+850737baa60e4383f6fcf80529de3c45e1480894,850737ba,Feedback now work on proof-of-concept level,"Feedback now work on proof-of-concept level
+
+It still has numerous outages, see top of FeedbackWindow.java comment for
+details.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445190461,1445190461,bd4c0439d7a906e29e78e9fa43d45acb6f8a4620
+bd4c0439d7a906e29e78e9fa43d45acb6f8a4620,bd4c0439,Fix unit tests,"Fix unit tests
+
+Unit tests needed updating now that we get events for touch down, move and up as
+well.
+
+Since we haven't been able to build until now we didn't discover this until now.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445186804,1445186804,7c8a9c3558001b209a2791e6168f9ae111520a18
+7c8a9c3558001b209a2791e6168f9ae111520a18,7c8a9c35,Implement ExactypeView.getBitmap(),"Implement ExactypeView.getBitmap()
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445113133,1445113133,9193b140523fedf0ae501e43507324e190cd95f4
+9193b140523fedf0ae501e43507324e190cd95f4,9193b140,Update FeedBack window on keyboard change,"Update FeedBack window on keyboard change
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1445025823,1445025823,f6a83a29de9665be3f8452bfd601c4ad21cf52e8
+f6a83a29de9665be3f8452bfd601c4ad21cf52e8,f6a83a29,WIP: FeedbackView: Add more code,"WIP: FeedbackView: Add more code
+
+I think the FeedbackView is now done, but we still need changes in some other
+places to get this thing compiling.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444938265,1444938265,324e3399e10f6c3c6dbf09a6203b16550d3ec82f
+324e3399e10f6c3c6dbf09a6203b16550d3ec82f,324e3399,Move feedback window logic into its own class,"Move feedback window logic into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444851472,1444851472,8f140fe1d820c282230ecb0bb2b0814acac11128
+8f140fe1d820c282230ecb0bb2b0814acac11128,8f140fe1,WIP: Feedback window popup on touching the keyboard,"WIP: Feedback window popup on touching the keyboard
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444832399,1444832399,6dde57155f2e837f094cd4549229f8ec41e7a20c
+6dde57155f2e837f094cd4549229f8ec41e7a20c,6dde5715,Log timings for text modifications,"Log timings for text modifications
+
+I suspect text modifying calls can sometimes stall.
+
+This change adds statistics collection for that, so that it will at least
+be visible in the system log if that's the case.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444831286,1444831286,ef1e1692a24afe3471f15da74905ecb89dd3b4be
+ef1e1692a24afe3471f15da74905ecb89dd3b4be,ef1e1692,Add missing mode change listener notification,"Add missing mode change listener notification
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444769901,1444769901,65485db275d107c9fcfde53b330b826c344cc9fd
+65485db275d107c9fcfde53b330b826c344cc9fd,65485db2,"Let SHIFT switch between caps, lower and numlock","Let SHIFT switch between caps, lower and numlock
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444769389,1444769389,647be8f1260b898f7057d5d11e9dfe2f43b6c425
+647be8f1260b898f7057d5d11e9dfe2f43b6c425,647be8f1,Merge branch 'modeswitchkeys',"Merge branch 'modeswitchkeys'
+
+This puts a mode switch key in the bottom left position of all keyboards.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444677521,1444677521,"b44578f7b63e972cf8431ca3d79bffd5dd463dca,898994e209ffbe18852c6b6f5e3c857943de7907"
+898994e209ffbe18852c6b6f5e3c857943de7907,898994e2,Fix mode switch key,"Fix mode switch key
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444677481,1444677481,ddcb93631e4a94d89572dd66610ce2b962eef698
+ddcb93631e4a94d89572dd66610ce2b962eef698,ddcb9363,Move switch key decorations to where they belong,"Move switch key decorations to where they belong
+
+This simplifies some code and removes the need for the ExactypeView unit test
+class.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444677165,1444677165,0090476ed11ab3862f918a1476281bd8dc47a9b6
+0090476ed11ab3862f918a1476281bd8dc47a9b6,0090476e,Pass the callback tests,"Pass the callback tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444624673,1444624673,aee7d3ea8ff00423a0f89555af0bda89385e243d
+aee7d3ea8ff00423a0f89555af0bda89385e243d,aee7d3ea,ExactypeMode: Simplify NEXT_MODE event handling,"ExactypeMode: Simplify NEXT_MODE event handling
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444624332,1444624332,d6434f9c60c78a3a8bd0c60cde36eaa81036b9af
+d6434f9c60c78a3a8bd0c60cde36eaa81036b9af,d6434f9c,Pass numlock tests,"Pass numlock tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444589763,1444589763,efa20e6b7a787011752c165f41448c0f2b22e609
+efa20e6b7a787011752c165f41448c0f2b22e609,efa20e6b,ExactypeMode.registerNumeric(): Pass tests,"ExactypeMode.registerNumeric(): Pass tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444589434,1444589434,7856ad52cb76e8618e55c59a8ed8f76d1d219b1d
+7856ad52cb76e8618e55c59a8ed8f76d1d219b1d,7856ad52,ExactypeMode.registerLowercase(): Pass tests,"ExactypeMode.registerLowercase(): Pass tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444589106,1444589106,dc8adf7117ec30feff6dd9619d8ed67d56941c65
+dc8adf7117ec30feff6dd9619d8ed67d56941c65,dc8adf71,ExactypeMode.setShifted(): Pass tests,"ExactypeMode.setShifted(): Pass tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444588911,1444588911,ca965ec9c1cb6321a60a339e5a9360910a35ef2b
+ca965ec9c1cb6321a60a339e5a9360910a35ef2b,ca965ec9,Add an ExactypeView test,"Add an ExactypeView test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444582611,1444582611,624a933c19b686bf8db8b79d65db173419ada4cd
+624a933c19b686bf8db8b79d65db173419ada4cd,624a933c,Pass the registerCaps test,"Pass the registerCaps test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444519652,1444519652,54b86942936c0e925554583b7102257c113c8e54
+54b86942936c0e925554583b7102257c113c8e54,54b86942,ExactypeMode: Report switch key only one way,"ExactypeMode: Report switch key only one way
+
+Before this change we used to report it both through getModeSwitchKey() and
+through the first keyboard symbol on the last line.
+
+After this change we report it only using getModeSwitchKey().
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444519129,1444519341,3b75ab8f7a7adab65d8c59b687788d3ba025e485
+3b75ab8f7a7adab65d8c59b687788d3ba025e485,3b75ab8f,Implement INSERT_CHAR for caps keyboard mode,"Implement INSERT_CHAR for caps keyboard mode
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444517865,1444517865,4d55c560af31bd6ec38d220994aea595831d40fe
+4d55c560af31bd6ec38d220994aea595831d40fe,4d55c560,Improve tests,"Improve tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444517811,1444517811,f7407b2dcf03985057002c4b48156a7cca14b62d
+f7407b2dcf03985057002c4b48156a7cca14b62d,f7407b2d,Add test for only calling callback on mode change,"Add test for only calling callback on mode change
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444490194,1444490194,b5d35e95c54eed5f74b38c37a58d972ce71dff35
+b5d35e95c54eed5f74b38c37a58d972ce71dff35,b5d35e95,Tests for letting mode control special keys,"Tests for letting mode control special keys
+
+ExactypeMode now decorates the keyboard with a mode switch key and a backspace
+key.
+
+Most tests fail.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444488566,1444488566,b44578f7b63e972cf8431ca3d79bffd5dd463dca
+b44578f7b63e972cf8431ca3d79bffd5dd463dca,b44578f7,Add backspace to all keyboard modes,"Add backspace to all keyboard modes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444413156,1444413156,b37c28167bbe50215a63e68305efc60db81f40fa
+b37c28167bbe50215a63e68305efc60db81f40fa,b37c2816,Have the view subscribe to mode changes,"Have the view subscribe to mode changes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444343140,1444343140,beaffc44eccafb2f56777c8fa6fdde9b3e641a55
+beaffc44eccafb2f56777c8fa6fdde9b3e641a55,beaffc44,Improve naming of some functions,"Improve naming of some functions
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444332578,1444332578,80c26674ea246913fc61a04c2193f838cebcb542
+80c26674ea246913fc61a04c2193f838cebcb542,80c26674,Add NumLock key to long press numeric keyboard,"Add NumLock key to long press numeric keyboard
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444322663,1444322663,"75adb6c4bae03f4119a22ff105d6a7e3a38974a3,1cfeac3028dd9e5a2b2b3759eaa69bacd1d4f0f5"
+1cfeac3028dd9e5a2b2b3759eaa69bacd1d4f0f5,1cfeac30,TODO: Add NumLock to numeric keyboard done,"TODO: Add NumLock to numeric keyboard done
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444322581,1444322581,118d9106d3b03c9f7ab6fd2a8811ea37a71ff792
+118d9106d3b03c9f7ab6fd2a8811ea37a71ff792,118d9106,Finish adding NumLock and Alpha keys,"Finish adding NumLock and Alpha keys
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444322337,1444322337,fda4e8c13f88ba5f188d5e52f14afc1e5505ef2d
+fda4e8c13f88ba5f188d5e52f14afc1e5505ef2d,fda4e8c1,"WIP this should work, please test it","WIP this should work, please test it
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444160946,1444160946,15dbea2221c7155ba84a89191c72b3d8e95c51e3
+15dbea2221c7155ba84a89191c72b3d8e95c51e3,15dbea22,Pass the NumLock tests,"Pass the NumLock tests
+
+Next step is to start using the ExactypeMode.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1444074489,1444074489,e9f3727f2de44d67a867924afb050be217bada97
+e9f3727f2de44d67a867924afb050be217bada97,e9f3727f,"Pass the ""numeric"" tests, only numlock left","Pass the ""numeric"" tests, only numlock left
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443987617,1443987617,aadd4ccefb6456d3e8591efc6d5f0e24438f00ed
+aadd4ccefb6456d3e8591efc6d5f0e24438f00ed,aadd4cce,"Pass the lower case tests, two to go","Pass the lower case tests, two to go
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443987480,1443987480,1cd80c1766776731889a7506c38308138976dd74
+1cd80c1766776731889a7506c38308138976dd74,1cd80c17,"Pass the ""caps"" tests, three to go","Pass the ""caps"" tests, three to go
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443987221,1443987221,123973ea4cf6081f619713433cf45898eb49ef5b
+123973ea4cf6081f619713433cf45898eb49ef5b,123973ea,"Pass the ""initial"" tests, four to go","Pass the ""initial"" tests, four to go
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443987119,1443987119,9cae698cf2e8eef546560b38a69d8f6eeb63df35
+9cae698cf2e8eef546560b38a69d8f6eeb63df35,9cae698c,Write all keyboard mode tests,"Write all keyboard mode tests
+
+None of them pass, I think this is all of them though.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443896381,1443896381,5616098981144592a827e61d519e916a5a139de8
+5616098981144592a827e61d519e916a5a139de8,56160989,Refactor keyboard mode unit tests,"Refactor keyboard mode unit tests
+
+We do have too few of them, but at least now we have a good way of writing them.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443817499,1443817499,e5e5ede678594d5e5738df1f3b55d09933be31de
+e5e5ede678594d5e5738df1f3b55d09933be31de,e5e5ede6,Upgrade to Gradle 2.7,"Upgrade to Gradle 2.7
+
+I'm hoping Gradle 2.7 is faster than Gradle 2.4 which we're upgrading from.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443817307,1443817307,b433cb6bb4a19ed6ba6041927dae7deb8df594a2
+b433cb6bb4a19ed6ba6041927dae7deb8df594a2,b433cb6b,WIP: Improve mode test design,"WIP: Improve mode test design
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443761538,1443761538,4b2a6583950476fec09011a65f97157ea07281e4
+4b2a6583950476fec09011a65f97157ea07281e4,4b2a6583,WIP: Writing tests for ExactypeMode,"WIP: Writing tests for ExactypeMode
+
+It keeps track of what mode the keyboard should be in; base, caps, numeric or
+numlocked.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443727270,1443727270,75adb6c4bae03f4119a22ff105d6a7e3a38974a3
+75adb6c4bae03f4119a22ff105d6a7e3a38974a3,75adb6c4,Add missing numlock to list of Johan's blockers,"Add missing numlock to list of Johan's blockers
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443723933,1443723933,0c8f2b962fc37b4cd5dfa04ac0e6f14fa5ba9540
+0c8f2b962fc37b4cd5dfa04ac0e6f14fa5ba9540,0c8f2b96,Move layout logic from ExactypeView -> KeyboardTheme,"Move layout logic from ExactypeView -> KeyboardTheme
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443635925,1443635925,c26fc488856e49a68ad1836c088672a13fcdf475
+c26fc488856e49a68ad1836c088672a13fcdf475,c26fc488,Document how to make popups outside keyboard view,"Document how to make popups outside keyboard view
+
+The trick is to create a PopupWindow and to call setClippingEnabled(false) on
+it. That was not obvious.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443591085,1443591085,ea901b782a7ff62edf896e3cc83bbdbb6c55e760
+ea901b782a7ff62edf896e3cc83bbdbb6c55e760,ea901b78,Add some notes about outside-keyboard popups,"Add some notes about outside-keyboard popups
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443559034,1443559034,dc746372e3f8f24c7a286f3693820b7950ab564a
+dc746372e3f8f24c7a286f3693820b7950ab564a,dc746372,Personal word list: s/exactype/Exactype/,"Personal word list: s/exactype/Exactype/
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443555399,1443555399,3969e0a9ae52c444b81d1a4d16b141c7fd7ff46d
+3969e0a9ae52c444b81d1a4d16b141c7fd7ff46d,3969e0a9,Merge branch 'popupkeyboard',"Merge branch 'popupkeyboard'
+
+This branch adds a popup keyboard for some keys (a, A, e and E) if you long long
+press them. A long long press is if you keep holding your finger in the same
+place even after the numeric keyboard pops into view.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443555105,1443555105,"f8385d3190b07ce1cedeccb2e974bee58131a50f,8f97c0ece4df1c9204e332af0031b1284e5f4890"
+8f97c0ece4df1c9204e332af0031b1284e5f4890,8f97c0ec,"Add popup keyboards for e, E and A","Add popup keyboards for e, E and A
+
+Also, this change enables us to have functioning popup keyboards for keys on the
+right hand side of the keyboard as well. Tested and found working.
+
+The result of that test is only documented here; I couldn't come up with an
+actual use case for it so there are no keys utilizing that functionality right
+now.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443554721,1443555000,e38bfe681e611c6e52afb6305e45bbee1dfcdccb
+e38bfe681e611c6e52afb6305e45bbee1dfcdccb,e38bfe68,Insert keys selected from popup keyboard,"Insert keys selected from popup keyboard
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443548050,1443548050,2b0ad75566d24dc1d7e0ee3ad05bb26c65bb2104
+2b0ad75566d24dc1d7e0ee3ad05bb26c65bb2104,2b0ad755,Improve popup keyboard position,"Improve popup keyboard position
+
+It's still not where I want it, but it's at least closer than before. See
+in-code comments.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443542773,1443542773,bd4a13d4e7a7131d1d96137bd7461f8915cc845d
+bd4a13d4e7a7131d1d96137bd7461f8915cc845d,bd4a13d4,Fix popup keyboard window size,"Fix popup keyboard window size
+
+The popup keyboard window is still in the wrong place though.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443536292,1443536292,83c88dd704e13ad52eae02906ad55865da0aaf6a
+83c88dd704e13ad52eae02906ad55865da0aaf6a,83c88dd7,Adjust frame width around the popup keyboard view,"Adjust frame width around the popup keyboard view
+
+The popup keyboard is still in the wrong place, its window is mis-sized and the
+frame around it is too thin on some sides and not visible on others.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443532091,1443532091,d4344802a9466f56bf0980be8d639718c424e1f2
+d4344802a9466f56bf0980be8d639718c424e1f2,d4344802,Fix popup keyboard keys placements,"Fix popup keyboard keys placements
+
+The popup keyboard is still in the wrong place, its window is mis-sized and the
+frame around it is too thin on some sides and not visible on others.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443530518,1443530518,ff8085d299b0f29012b3e10adfd3d412071410f6
+ff8085d299b0f29012b3e10adfd3d412071410f6,ff8085d2,Make popup keyboard actually pop up,"Make popup keyboard actually pop up
+
+The letters are mis-placed and its window is mis-sized, but it *does* pop up.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443530308,1443530308,69ddb5cfda402e260e6fb2ce1ea642e4cd7bca2e
+69ddb5cfda402e260e6fb2ce1ea642e4cd7bca2e,69ddb5cf,Launch config: Use last selected device = True,"Launch config: Use last selected device = True
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443530245,1443530245,12f6db23fbddebb421e0a8230923df904d59285e
+12f6db23fbddebb421e0a8230923df904d59285e,12f6db23,Explicitly crash if theme needs to scale popup keyboard,"Explicitly crash if theme needs to scale popup keyboard
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443529610,1443529610,20f4926e7613e25c8514300c75b091ab2917b31f
+20f4926e7613e25c8514300c75b091ab2917b31f,20f4926e,"Complete PopupKeyboardView, untested","Complete PopupKeyboardView, untested
+
+Next step is to test this and deal with the problems.
+
+After that, we should move layout logic from ExactypeView into KeyboardTheme.
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443529286,1443529286,665d28ff21ab59f0a338ecff5555d35b48ca7f3d
+665d28ff21ab59f0a338ecff5555d35b48ca7f3d,665d28ff,Use my work computer,"Use my work computer
+
+These differences seem to come from Gradle using Java 8 on my work machine.
+
+TODO: Make sure the home system doesn't change these files back
+",,,,Johan Walles,walles@spotify.com,Johan Walles,walles@spotify.com,1443529142,1443529142,4319cafdcc78588ac623f7d01189cba964118d8b
+4319cafdcc78588ac623f7d01189cba964118d8b,4319cafd,"WIP, add more code","WIP, add more code
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443467950,1443467950,c138ab669ed40bca7a2b94cd8eab558eacbf61f1
+c138ab669ed40bca7a2b94cd8eab558eacbf61f1,c138ab66,Display popup keyboard WIP,"Display popup keyboard WIP
+
+Rough draft of how to display the popup keyboard. Neither compiles nor works,
+but does provide a direction for how to proceed.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443386253,1443386253,461481d3c44ccf3d08fe8d68e62bf53c1f6af16f
+461481d3c44ccf3d08fe8d68e62bf53c1f6af16f,461481d3,Get the long long press delivered to Exactype,"Get the long long press delivered to Exactype
+
+It's the correct event with the correct content, but nothing pops up.
+
+Next step is to get something (anything!) to pop up and then go away again when
+the finger is released.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443294963,1443294963,a3064927ad4d343d0c2a3058cb16750a0371211c
+a3064927ad4d343d0c2a3058cb16750a0371211c,a3064927,Remove dead code,"Remove dead code
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443142515,1443142515,a52dc2611cbb453ca340bdf95b5eb61b79472a01
+a52dc2611cbb453ca340bdf95b5eb61b79472a01,a52dc261,Pass the long long press GestureDetectorTests,"Pass the long long press GestureDetectorTests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443142413,1443142413,a43b0ac8683ee2940c2842454f39a6f5ca3f8b8c
+a43b0ac8683ee2940c2842454f39a6f5ca3f8b8c,a43b0ac8,Gesture tests: Support multiple timers,"Gesture tests: Support multiple timers
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443142152,1443142307,cba3e8d59caddcf134eb225cff1fd74a21cec5e6
+cba3e8d59caddcf134eb225cff1fd74a21cec5e6,cba3e8d5,Add long long press tests,"Add long long press tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443122015,1443122015,43982b96e94a8abf03759c592fa4ab9bc6c6848f
+43982b96e94a8abf03759c592fa4ab9bc6c6848f,43982b96,Fix tests build error,"Fix tests build error
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443120219,1443120219,8fb7acedeb7e0b8b8df6523234cbf6d5be66db28
+8fb7acedeb7e0b8b8df6523234cbf6d5be66db28,8fb7aced,Fix build error,"Fix build error
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443119310,1443119565,f8385d3190b07ce1cedeccb2e974bee58131a50f
+f8385d3190b07ce1cedeccb2e974bee58131a50f,f8385d31,Shuffle punctuation row around a bit,"Shuffle punctuation row around a bit
+
+In particular, put , and . at the far right which is closer to where they are on
+physical keyboards.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443039292,1443039467,52880d8ddcbc8a17157af01ca445b47696788fdf
+52880d8ddcbc8a17157af01ca445b47696788fdf,52880d8d,TODO: Split the beta milestone into two,"TODO: Split the beta milestone into two
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443039232,1443039232,9a2ec34911b7145eb4016705638715c2376ca766
+9a2ec34911b7145eb4016705638715c2376ca766,9a2ec349,Swiping down now inserts newline when appropriate,"Swiping down now inserts newline when appropriate
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1443036499,1443036499,3819f2019d747a63c67af1015a341c392783b6bb
+3819f2019d747a63c67af1015a341c392783b6bb,3819f201,TODO: Fix newline action operation,"TODO: Fix newline action operation
+
+When composing a message in Inbox, swiping down slides the keyboard down out of view.
+
+Expected (and required) behavior is to insert a newline.",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442991431,1442991431,e3306a5861ec75f3febffecc0f7375f465e06a05
+e3306a5861ec75f3febffecc0f7375f465e06a05,e3306a58,Swipe down for Action operation,"Swipe down for Action operation
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442949825,1442949825,d59b062e8c1ade4579d32828d7dba6df858dc22d
+d59b062e8c1ade4579d32828d7dba6df858dc22d,d59b062e,TODO: Add Action operation,"TODO: Add Action operation
+
+Needed for saying ""go"" in the Firefox search bar for example.",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442925351,1442925351,18d3d61de6238b268595f7731a2eb13c22870381
+18d3d61de6238b268595f7731a2eb13c22870381,18d3d61d,Make the keyboard a bit higher,"Make the keyboard a bit higher
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442896776,1442896776,18b0b410a5089ecd551207dad879216fb2c9ebf2
+18b0b410a5089ecd551207dad879216fb2c9ebf2,18b0b410,Long press and hover for numbers + punctuation,"Long press and hover for numbers + punctuation
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442878594,1442878594,"4d0ad7bb78f883b3b0cb43ac1a9db108bf013fc9,6d9f4c4aba19bba42fd29a334dacd78e88637f96"
+6d9f4c4aba19bba42fd29a334dacd78e88637f96,6d9f4c4a,DONE: Long press and hold for numbers,"DONE: Long press and hold for numbers
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442878519,1442878519,6a452e9337c88454eb4e36507e3ae3c2d17890be
+6a452e9337c88454eb4e36507e3ae3c2d17890be,6a452e93,Don't replace the GestureDetector,"Don't replace the GestureDetector
+
+Before this change we used to replace the GestureDetector when the keyboard
+layout changed.
+
+That broke the long press up action though.
+
+Now we only replace the GestureListener when the keyboard changes, and long
+pressing and releasing over some number actually works!
+
+Next step is to test this on a real device, update the README and merge to
+master!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442877919,1442877919,260299b61f76eca2f3c228a4ab93ac1cbce08c96
+260299b61f76eca2f3c228a4ab93ac1cbce08c96,260299b6,Fix an NPE,"Fix an NPE
+
+Apparently View.getHandler() can return null. Make our own non-null one instead.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442877179,1442877179,059ab2c26d76c2c94a1d00b49c97c976f0bccd1a
+059ab2c26d76c2c94a1d00b49c97c976f0bccd1a,059ab2c2,Pass the slow and short swipe test,"Pass the slow and short swipe test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442863248,1442863248,1e2540462c25f46cc17b2bc65722b450e8778d70
+1e2540462c25f46cc17b2bc65722b450e8778d70,1e254046,Pass the move cancels long press test,"Pass the move cancels long press test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442863108,1442863108,18f71c26818402f5c199743ab6d1a0066dc3ef2d
+18f71c26818402f5c199743ab6d1a0066dc3ef2d,18f71c26,Pass the too fast and slow swipe tests,"Pass the too fast and slow swipe tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442862864,1442862864,5c2c2648d481aac509a9c16996862416b6f427bf
+5c2c2648d481aac509a9c16996862416b6f427bf,5c2c2648,Pass the too long single tap test,"Pass the too long single tap test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442777867,1442862068,94be117050acf0a88632f3e575e615196fd5b667
+94be117050acf0a88632f3e575e615196fd5b667,94be1170,Pass the onLongPress() test.,"Pass the onLongPress() test.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442861336,1442861336,6064f07ada64aed6e36f4ee848ffa2d0eea64417
+6064f07ada64aed6e36f4ee848ffa2d0eea64417,6064f07a,Mock Handler,"Mock Handler
+
+We still don't simulate triggering the handler during tests, so all tests fail
+now.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442860241,1442860241,95f65d3d8838ca0ab3efeb3cf32a4b7de3362be4
+95f65d3d8838ca0ab3efeb3cf32a4b7de3362be4,95f65d3d,Fix some method-not-mocked errors,"Fix some method-not-mocked errors
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442857287,1442857287,96ff633554f144ac59c482f70b3e88ae22401eb7
+96ff633554f144ac59c482f70b3e88ae22401eb7,96ff6335,Long press gestures code feels OK now,"Long press gestures code feels OK now
+
+Tests still unfinished, TODO!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442812960,1442812960,36adedacdb0dc6e3ad89879ae04a94cce2704f59
+36adedacdb0dc6e3ad89879ae04a94cce2704f59,36adedac,Fix build error,"Fix build error
+
+It was introduced during rebasing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442778085,1442778085,cf89887a67744fa9a9862ecf8051049aa41ec965
+cf89887a67744fa9a9862ecf8051049aa41ec965,cf89887a,Verify outstanding messages post gesture tests,"Verify outstanding messages post gesture tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442729448,1442777927,dc107bf01971ad0f9cb022b18c5f25e0b59d0ab2
+dc107bf01971ad0f9cb022b18c5f25e0b59d0ab2,dc107bf0,Refactor gesture tests,"Refactor gesture tests
+
+Yay, a change with a net loss of lines!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442693597,1442777927,3045e8761d56fc3c813e1df1655edbf27706dcc1
+3045e8761d56fc3c813e1df1655edbf27706dcc1,3045e876,Add a negative long press unit test,"Add a negative long press unit test
+
+We still have FIXMEs in the tests, beware!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442691323,1442777926,c644f5b797233269708d95fc625c604a9e969a4b
+c644f5b797233269708d95fc625c604a9e969a4b,c644f5b7,Start of long press gesture unit tests,"Start of long press gesture unit tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442690077,1442777926,4d9decf2161916098be2f0a648c13977a75abca0
+4d9decf2161916098be2f0a648c13977a75abca0,4d9decf2,Prepare for being able to show numeric keyboard,"Prepare for being able to show numeric keyboard
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442689977,1442777926,4d0ad7bb78f883b3b0cb43ac1a9db108bf013fc9
+4d0ad7bb78f883b3b0cb43ac1a9db108bf013fc9,4d0ad7bb,TODO: Fix keyboar size and vertical line spacing,"TODO: Fix keyboar size and vertical line spacing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442777867,1442777867,8d0dd572e78f07e8e87e1ed098c75e2330ddac5b
+8d0dd572e78f07e8e87e1ed098c75e2330ddac5b,8d0dd572,Just redraw keyboard when switching layouts,"Just redraw keyboard when switching layouts
+
+We used to resize it, which was confusing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442771357,1442771357,"457956e3720d0f86bdc8df6dab1de3cad3b3f381,6ca3f8e28edd272ec62de6d2244ff0eba307ce99"
+6ca3f8e28edd272ec62de6d2244ff0eba307ce99,6ca3f8e2,Fix keyboard size,"Fix keyboard size
+
+It used to be too large, now it's not any more.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442771238,1442771238,7feda470316156fba7f5c19991ec7fb53da19037
+7feda470316156fba7f5c19991ec7fb53da19037,7feda470,Show SHIFTED keyboard without resizing,"Show SHIFTED keyboard without resizing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442770294,1442770462,0c4d10cd25a8de82bd7d2d2327668efb43e1111c
+0c4d10cd25a8de82bd7d2d2327668efb43e1111c,0c4d10cd,Initial shot at resize-free keyboard,"Initial shot at resize-free keyboard
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442734586,1442734666,457956e3720d0f86bdc8df6dab1de3cad3b3f381
+457956e3720d0f86bdc8df6dab1de3cad3b3f381,457956e3,Roll our own gesture detection,"Roll our own gesture detection
+
+I (think and) hope we need this, otherwise it was just a waste of time...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442688264,1442688264,"8317fb36a40e08b97ab729fa62e5f45f5be79b22,7574f0d6b727d5d60ea222292050a811733d10d9"
+7574f0d6b727d5d60ea222292050a811733d10d9,7574f0d6,Rewrite gesture tests to re-use motion events,"Rewrite gesture tests to re-use motion events
+
+Motion events are re-used all the time on real devices, so we must work with
+that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442688038,1442688038,71da2be569aa16e7a6c4bc4324cea689b8db12ea
+71da2be569aa16e7a6c4bc4324cea689b8db12ea,71da2be5,Pass the swipe tests,"Pass the swipe tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442675157,1442675157,c94cb1587b8d714be680f1d3c4d28d7a0a41e15b
+c94cb1587b8d714be680f1d3c4d28d7a0a41e15b,c94cb158,Pass single tap detection tests,"Pass single tap detection tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442674210,1442674210,48efb10a33f9c1aae77f9854fec69d3ffc2e1758
+48efb10a33f9c1aae77f9854fec69d3ffc2e1758,48efb10a,Fix Mockito parenthesizing error,"Fix Mockito parenthesizing error
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442605296,1442605296,d26f10deec795933ffb294c4442898ea68651bbe
+d26f10deec795933ffb294c4442898ea68651bbe,d26f10de,Add fling tests,"Add fling tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442605084,1442605084,cfa149e79ecc7ae2b75db407432f9982a3d81ed7
+cfa149e79ecc7ae2b75db407432f9982a3d81ed7,cfa149e7,Finish up single tap tests,"Finish up single tap tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442604171,1442604171,109ae93e058e9350723260e25b4ef144eec94dc8
+109ae93e058e9350723260e25b4ef144eec94dc8,109ae93e,Add test for sloppy single tap,"Add test for sloppy single tap
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442603550,1442603550,d7b4c2f4337ede56dc4dd2f42f66ecffc5e50eb8
+d7b4c2f4337ede56dc4dd2f42f66ecffc5e50eb8,d7b4c2f4,Complete the first gesture detection test,"Complete the first gesture detection test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442602719,1442602719,876844479443cac5e0b87ff75e420b067ab407dc
+876844479443cac5e0b87ff75e420b067ab407dc,87684447,Add initial PowerMock code to the tests,"Add initial PowerMock code to the tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442601981,1442601981,e54a70ac6737ec06332d7a11b1f20ba699d142a2
+e54a70ac6737ec06332d7a11b1f20ba699d142a2,e54a70ac,Add Powermock as a test dependency,"Add Powermock as a test dependency
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442601916,1442601916,ca91ced3caa3523fbcd96d2f4f4abc67d402301d
+ca91ced3caa3523fbcd96d2f4f4abc67d402301d,ca91ced3,Add initial tests skeleton,"Add initial tests skeleton
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442551780,1442551953,df694f8f20d91d72b52a9c0ef00bfc4a7dcff0bb
+df694f8f20d91d72b52a9c0ef00bfc4a7dcff0bb,df694f8f,Start of my own gesture detection,"Start of my own gesture detection
+
+The generic one doesn't support all variants of holding down and moving around
+that I need, so I'll have to roll my own.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442517029,1442517029,8317fb36a40e08b97ab729fa62e5f45f5be79b22
+8317fb36a40e08b97ab729fa62e5f45f5be79b22,8317fb36,Automatically start out in the correct Shift mode,"Automatically start out in the correct Shift mode
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442514768,1442514768,a1dcfe0a609dc1d69bfad43561150c067e428ae3
+a1dcfe0a609dc1d69bfad43561150c067e428ae3,a1dcfe0a,Make tapping Backspace remove any selected text,"Make tapping Backspace remove any selected text
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442512396,1442512396,aa2b0a650f1d5c05dd2b601a9ea465ee5dfbd5a3
+aa2b0a650f1d5c05dd2b601a9ea465ee5dfbd5a3,aa2b0a65,Fix double tap handling,"Fix double tap handling
+
+One can now hit keys in rapid succession and get precisely what one would
+expect.
+
+As for the README, another heading for what needs to be done before I can use
+Exactype as my only IME was added. This moved the next milestone a lot closer.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442511173,1442511173,910ab5949e7a1854edce8cb9b3c420e80ef0313b
+910ab5949e7a1854edce8cb9b3c420e80ef0313b,910ab594,README: Backspace should remove selected text,README: Backspace should remove selected text,,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442392028,1442392028,d4e58eaad7ad20aabdc6ac1f5ed48b050f475919
+d4e58eaad7ad20aabdc6ac1f5ed48b050f475919,d4e58eaa,Implement basic SHIFT key handling,"Implement basic SHIFT key handling
+
+BUG: It resizes the keyboard when changing SHIFT state, otherwise works well
+enough.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442343910,1442343910,236f76cb8fbc53840cbdf37b14b7685ba9296ddc
+236f76cb8fbc53840cbdf37b14b7685ba9296ddc,236f76cb,Enable antialiasing for keyboard letters,"Enable antialiasing for keyboard letters
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442342214,1442342214,4867f4b4d799faf35396becaa916f25aad806c0d
+4867f4b4d799faf35396becaa916f25aad806c0d,4867f4b4,Treat double tap as two single taps,"Treat double tap as two single taps
+
+This is only after the full double tap has been detected though, so you get both
+taps on the second hit rather than getting one on the first and one on the
+second. Room for future improvement, it's in the TODO list.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442342129,1442342129,305aa2a97d02433dbf37a41b1732c5d53db5b914
+305aa2a97d02433dbf37a41b1732c5d53db5b914,305aa2a9,Tapping delete now deletes,"Tapping delete now deletes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442341229,1442341229,aedfe8633cdbd1a2fd51fc8b87bd375d4a26e969
+aedfe8633cdbd1a2fd51fc8b87bd375d4a26e969,aedfe863,Scale the key letters properly,"Scale the key letters properly
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442339650,1442339650,abba761b63334514fd1660389c4329cc4bdbaebb
+abba761b63334514fd1660389c4329cc4bdbaebb,abba761b,Swipe right for space,"Swipe right for space
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442271827,1442271827,06bf47a905dd78e69d2b4a7ca78d49be456b788b
+06bf47a905dd78e69d2b4a7ca78d49be456b788b,06bf47a9,Merge branch 'coordinates',"Merge branch 'coordinates'
+
+It adds inserting of characters as user presses keys.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442259198,1442259198,"e6de327a1fdb3f16a1f01e9bd16e0a9568dfbf65,7b030de39ba959cac2be877c0b9701ac2c2935d6"
+7b030de39ba959cac2be877c0b9701ac2c2935d6,7b030de3,Insert characters on keypresses,"Insert characters on keypresses
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442259146,1442259146,2fc03f28c38baa0e3f8e7cf05e6ee8d2eedb721f
+2fc03f28c38baa0e3f8e7cf05e6ee8d2eedb721f,2fc03f28,Coordinator: Add method for finding key closest to point,"Coordinator: Add method for finding key closest to point
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442254569,1442254569,b1134b0478e4514c77b80ab02d27b41dd7ad1303
+b1134b0478e4514c77b80ab02d27b41dd7ad1303,b1134b04,Remove padding around keyboard,"Remove padding around keyboard
+
+Our layout calculations were wrong before, this change corrects them.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442250873,1442250873,5ec70688d1b391e4707f377d235967f37fae4a51
+5ec70688d1b391e4707f377d235967f37fae4a51,5ec70688,Move key placement into its own class,"Move key placement into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442206142,1442206142,119464168d371d0c8558e15838038e2484bffd2b
+119464168d371d0c8558e15838038e2484bffd2b,11946416,Improve formatting settings,"Improve formatting settings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442171155,1442171292,7851d01f87bf44700fa0cb6d7ebfd6bb55b7b9f8
+7851d01f87bf44700fa0cb6d7ebfd6bb55b7b9f8,7851d01f,Add another key placement test case,"Add another key placement test case
+
+These two should have us covered placement wise.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442171096,1442171096,85844131363b9aa3840a014e133fae210b0dcb35
+85844131363b9aa3840a014e133fae210b0dcb35,85844131,Add unit testing support,"Add unit testing support
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442169499,1442169499,e6de327a1fdb3f16a1f01e9bd16e0a9568dfbf65
+e6de327a1fdb3f16a1f01e9bd16e0a9568dfbf65,e6de327a,Give the keyboard a sensible size,"Give the keyboard a sensible size
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1442152072,1442152072,40e66abf32b193f8e55fccf67ee64b99038c031d
+40e66abf32b193f8e55fccf67ee64b99038c031d,40e66abf,Add code formatting settings,"Add code formatting settings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1441999150,1441999150,aa7dfaeffbca7335683af85e85c769d4ea642d70
+aa7dfaeffbca7335683af85e85c769d4ea642d70,aa7dfaef,Draw keys on the keyboard,"Draw keys on the keyboard
+
+The drawing is correct, given a keyboard size and font size.
+
+However, neither they keyboard size nor the font size is correct, so the next
+step is to have the keyboard automatically compute what size it should have and
+what font size it should use.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1441922435,1441922435,769a767324e7cb0893a3572012adc414bd41b92f
+769a767324e7cb0893a3572012adc414bd41b92f,769a7673,Apply Apache v2.0 license to project,"Apply Apache v2.0 license to project
+
+This is the preferred license for the Android Open Source Project:
+https://source.android.com/source/licenses.html
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1441908580,1441908580,2f29a2593815a9794a3d7314e309bf3593ae0000
+2f29a2593815a9794a3d7314e309bf3593ae0000,2f29a259,Create an IME that when selected shows an empty view,"Create an IME that when selected shows an empty view
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1441907252,1441907252,59d7b3a43b3f709318944fc16d34b91d8eac5952
+59d7b3a43b3f709318944fc16d34b91d8eac5952,59d7b3a4,Initial commit,"Initial commit
+
+Plan + explanation in README.md.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1441747554,1441747653,

@@ -1,0 +1,277 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+2a41d188b75d4546f0eeed4caf10afcd61cfe775,2a41d188,Allow the Article/Comments activities to be restored. (#16),"Allow the Article/Comments activities to be restored. (#16)
+
+- Introduce RxAndroid for making requests from within fragments/activities.
+- Remove state machines from the Article & Comment fragments (which made them difficult to modify).
+- Have fragments make their own network requests so they do not depend on the containing activity (which made restore difficult and limited reuse).
+- Upgrade SDK version and build tools.
+- Upgrade gradle.
+- Upgrade dependencies.",,,,Sean Powell,sean@longdivision.co.uk,GitHub,noreply@github.com,1495907060,1495907060,f602b89e919d54ed0da7c8faaffd55a6e3bb38ce
+f602b89e919d54ed0da7c8faaffd55a6e3bb38ce,f602b89e,Add initial contribution guidelines. (#12),"Add initial contribution guidelines. (#12)
+
+",,,,Sean Powell,sean@longdivision.co.uk,GitHub,noreply@github.com,1471701564,1471701564,0d4673d451f0ae554793422e24e9425d1a63a334
+0d4673d451f0ae554793422e24e9425d1a63a334,0d4673d4,v0.1.5,"v0.1.5
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1471699763,1471699763,e25711bf0f299b9fb7917932303d4acfdbdc4d6a
+e25711bf0f299b9fb7917932303d4acfdbdc4d6a,e25711bf,Ensure device rotation is handled. (#10),"Ensure device rotation is handled. (#10)
+
+",,,,Sean Powell,sean@longdivision.co.uk,GitHub,noreply@github.com,1471699583,1471699583,3faaed8d02b7eb877d88314d7a0162afd91bfc85
+3faaed8d02b7eb877d88314d7a0162afd91bfc85,3faaed8d,Upgrade Gradle version to 2.10.,"Upgrade Gradle version to 2.10.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1466343085,1466343544,dbed34ce37ffda535833cccd81b4d576961038b1
+dbed34ce37ffda535833cccd81b4d576961038b1,dbed34ce,v0.1.4,"v0.1.4
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1466341252,1466341252,334ea41bd61152186d5604047421a94908fae581
+334ea41bd61152186d5604047421a94908fae581,334ea41b,Enable JavaScript in the Article WebView.,"Enable JavaScript in the Article WebView.
+
+Fixes #8
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1466340786,1466340786,7de82d8542f67e3077536b801ced38a9763e622c
+7de82d8542f67e3077536b801ced38a9763e622c,7de82d85,Upgrade to build tools 2.1.2.,"Upgrade to build tools 2.1.2.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1464532251,1466338517,ffa3ef1db212513b9e1baef236ef3bf34e402a15
+ffa3ef1db212513b9e1baef236ef3bf34e402a15,ffa3ef1d,Remove the `Item` interface. Use `Story` over `Item` for consistent naming.,"Remove the `Item` interface. Use `Story` over `Item` for consistent naming.
+
+Prefer the concrete `Story` over the abstract `Item` as it's only ever
+used in place of a `Story` and it removes the need to downcast
+everywhere.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1464532217,1466338330,7bf553d1e559e3e9ff9e55a9a18c634946dcf2de
+7bf553d1e559e3e9ff9e55a9a18c634946dcf2de,7bf553d1,v0.1.3,"v0.1.3
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1459004536,1459004536,5b802afebd8e3dd59dd7040695a5ddbde11da245
+5b802afebd8e3dd59dd7040695a5ddbde11da245,5b802afe,Allow Hacker News comment pages to be opened in Hex.,"Allow Hacker News comment pages to be opened in Hex.
+
+Closes #6.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1459004255,1459004255,3662bff6f85faa966ab8a8bda45a97023753ba9b
+3662bff6f85faa966ab8a8bda45a97023753ba9b,3662bff6,Add Apache License 2.0.,"Add Apache License 2.0.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1458085938,1458085938,507a00dfae16f4cc16947afd862ac5cc00d995f9
+507a00dfae16f4cc16947afd862ac5cc00d995f9,507a00df,v0.1.2,"v0.1.2
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457990695,1457990695,18ea36269562375fe67dda1722f102374125de31
+18ea36269562375fe67dda1722f102374125de31,18ea3626,Prevent article callbacks being triggering after it is closed.,"Prevent article callbacks being triggering after it is closed.
+
+Transition the state machine into an final `inactive` state when the
+view is destroyed.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457990304,1457990304,11e6e09a41f921508dbf6776cd9e0a4fd7f3f039
+11e6e09a41f921508dbf6776cd9e0a4fd7f3f039,11e6e09a,Introduce a `ObservableWebView` to allow WebView scroll observation on API 21+.,"Introduce a `ObservableWebView` to allow WebView scroll observation on API 21+.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457989550,1457989550,9e7eb177866c036036fd823160160168879f8b82
+9e7eb177866c036036fd823160160168879f8b82,9e7eb177,Only allow swipe-refresh when an article webview is scrolled to the top.,"Only allow swipe-refresh when an article webview is scrolled to the top.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457987905,1457987905,0fc4c6e8b2db79a6b51fc23a596d03fa8f6dfeb4
+0fc4c6e8b2db79a6b51fc23a596d03fa8f6dfeb4,0fc4c6e8,Update build tools version in Travis config.,"Update build tools version in Travis config.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457296524,1457296524,2fb7f0654cbecef3828cc15b84819d06cb591b55
+2fb7f0654cbecef3828cc15b84819d06cb591b55,2fb7f065,Remove finger from app screenshots. Correct alignment on Screenshot 1.,"Remove finger from app screenshots. Correct alignment on Screenshot 1.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457296409,1457296409,d2b56efc0720473b6fd60dcfa58750dfeabd23fd
+d2b56efc0720473b6fd60dcfa58750dfeabd23fd,d2b56efc,v0.1.1,"v0.1.1
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457295655,1457295655,05ae3f20078b47cafbd898f4558f92cd81fc92a0
+05ae3f20078b47cafbd898f4558f92cd81fc92a0,05ae3f20,Only delegate back control the WebView when it is in focus.,"Only delegate back control the WebView when it is in focus.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457295383,1457295383,72509e32e72721d79c95a72a7bc8656ffc661dde
+72509e32e72721d79c95a72a7bc8656ffc661dde,72509e32,Upgrade build tools version.,"Upgrade build tools version.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457294746,1457294746,9cba6445b42ec7a108b3330d7d5becef864bd634
+9cba6445b42ec7a108b3330d7d5becef864bd634,9cba6445,Ensure the refresh spinners are always visible from the Article and Comment fragments.,"Ensure the refresh spinners are always visible from the Article and Comment fragments.
+
+They were previously hidden because the SwipeRefreshLayout was hidden
+when the unavailable view was showing.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457284893,1457284893,51927f16a8b2bb2abe44a912489c749b6ffe7656
+51927f16a8b2bb2abe44a912489c749b6ffe7656,51927f16,Always show the refresh failed snackbar when loading the front page.,"Always show the refresh failed snackbar when loading the front page.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457284814,1457284814,0ec71a8bf84a4c6abc8203b3312ad7430a92e240
+0ec71a8bf84a4c6abc8203b3312ad7430a92e240,0ec71a8b,Use consistent style for resource values.,"Use consistent style for resource values.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457281737,1457281737,222a22703857bf9e27ea538605ad8bd32b709296
+222a22703857bf9e27ea538605ad8bd32b709296,222a2270,Use namespaced string resource naming.,"Use namespaced string resource naming.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457281231,1457281231,e322ae7ce8040b667a6770994c05cd56df58bdce
+e322ae7ce8040b667a6770994c05cd56df58bdce,e322ae7c,Centralise the API URL. Update to api.hexforhn.com.,"Centralise the API URL. Update to api.hexforhn.com.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457280516,1457280516,d005b3677906b7455706efad7041343046f03471
+d005b3677906b7455706efad7041343046f03471,d005b367,Correct typo and update API info in README.,"Correct typo and update API info in README.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457279867,1457279867,22f668caa4feb13253d42114e9f8a6c0e28d569e
+22f668caa4feb13253d42114e9f8a6c0e28d569e,22f668ca,Show article loading spinner until loading has finished.,"Show article loading spinner until loading has finished.
+
+Although this masks the very top of the content for a short period it
+provides the user with a clearer picture that an article is still
+loading.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457274763,1457274763,8535145750e3b36136f1b834fba32107e305b3dd
+8535145750e3b36136f1b834fba32107e305b3dd,85351457,Support use of the back button in the article web view.,"Support use of the back button in the article web view.
+
+Closes #4.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457197624,1457197624,3271e4d4fdd7120660fe0e365410a44cf2f63e0d
+3271e4d4fdd7120660fe0e365410a44cf2f63e0d,3271e4d4,Introduce state machines to the story section. Handle network unavailability.,"Introduce state machines to the story section. Handle network unavailability.
+
+Closes #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1457196248,1457196248,682061358b9144695a97e0badcf775bef1062555
+682061358b9144695a97e0badcf775bef1062555,68206135,Setup Travis CI.,"Setup Travis CI.
+
+Run unit tests only for the time being. There are currently some issues
+testing with the API 23 emulators:
+http://stackoverflow.com/q/32952413/642196
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1456690855,1456690855,a309f3925d07c012c7b92516b313e9db721472f0
+a309f3925d07c012c7b92516b313e9db721472f0,a309f392,Add missing orientation values to layouts.,"Add missing orientation values to layouts.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1456690487,1456690487,dd5dde859bfae27b9003856533bb193fa8ffb7f0
+dd5dde859bfae27b9003856533bb193fa8ffb7f0,dd5dde85,Clean up use of state machine pattern. Introduce dedicated refresh spinner manager.,"Clean up use of state machine pattern. Introduce dedicated refresh spinner manager.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1456185021,1456185021,1129ac8bc1d88e53dd399dcf2859d90db85034c2
+1129ac8bc1d88e53dd399dcf2859d90db85034c2,1129ac8b,Introduce a state machine to drive the Front Page activity.,"Introduce a state machine to drive the Front Page activity.
+
+* Extract activities into packages.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1455466448,1455466448,a22a4dc2175060efa928648c3504e18498dcb37d
+a22a4dc2175060efa928648c3504e18498dcb37d,a22a4dc2,Remove 'Content Unavailable' flicker by placing view inside the…,"Remove 'Content Unavailable' flicker by placing view inside the SwipeRefreshLayout and disabling it.
+
+Clean up the front page in the process.
+
+Related to #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1454461367,1454461367,18ecdf3041b04abf2e9dd8d22cb896b83994fa41
+18ecdf3041b04abf2e9dd8d22cb896b83994fa41,18ecdf30,Improve handling of no network on the article view.,"Improve handling of no network on the article view.
+
+* Give `WebViewFragment` a 'Content Unavailable' screen to show when
+  articles cannot be retrieved.
+
+Related to #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1454373200,1454373200,41176c7de759f5ac8ed81bf38ffa4156a21406a4
+41176c7de759f5ac8ed81bf38ffa4156a21406a4,41176c7d,Improve handling of no network on the comments view.,"Improve handling of no network on the comments view.
+
+* Introduce a failure method to the `GetItem` task.
+* Make `CommentsFragment` and `WebViewFragment` dumb.
+* Make a single service request from `StoryActivity`.
+* Route comment refresh requests through `StoryActivity`.
+* Give `CommentsFragment` a 'Content Unavailable' screen to show when
+  comments cannot be retrieved.
+
+Related to #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1454371053,1454371053,012507f64774f87c27233776c1a1da98a1ec9260
+012507f64774f87c27233776c1a1da98a1ec9260,012507f6,Show a less generic message when the front page cannot be loaded.,"Show a less generic message when the front page cannot be loaded.
+
+Related to #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453853198,1453853198,6afda82e937298ab963296fafd0350bd11cf4ff2
+6afda82e937298ab963296fafd0350bd11cf4ff2,6afda82e,"Display a ""Content Unavailable"" screen when front page items cannot be fetched.","Display a ""Content Unavailable"" screen when front page items cannot be fetched.
+
+Related to #3.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453852657,1453852657,1d7b8c06ab48e6feaf7c07c2616d5e77789d5733
+1d7b8c06ab48e6feaf7c07c2616d5e77789d5733,1d7b8c06,Rename `Try Again` I18N key to indicate it is a default value.,"Rename `Try Again` I18N key to indicate it is a default value.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453852269,1453852269,4c44f92ddbce2879e4aaf77f0a3f87ca41415dcc
+4c44f92ddbce2879e4aaf77f0a3f87ca41415dcc,4c44f92d,"Introduce a ""Content Unavailable"" view.","Introduce a ""Content Unavailable"" view.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453763156,1453763156,a453bebc7de32f5c3241cc7a17f26014e787f64d
+a453bebc7de32f5c3241cc7a17f26014e787f64d,a453bebc,Update README with API info and a demo gif.,"Update README with API info and a demo gif.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453335473,1453335473,fef24cbacedf6b5b816bc6ea944014eb71a4f0c8
+fef24cbacedf6b5b816bc6ea944014eb71a4f0c8,fef24cba,Bring in test dependencies. Add simple test for Front Page title.,"Bring in test dependencies. Add simple test for Front Page title.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453332925,1453332925,bf5bb99fe6f572a0f22860dcdc070c26234036d4
+bf5bb99fe6f572a0f22860dcdc070c26234036d4,bf5bb99f,Add Play Store link to README.,"Add Play Store link to README.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453157877,1453157877,802816c5817e16ed149af157ddedc805a2c6d7cb
+802816c5817e16ed149af157ddedc805a2c6d7cb,802816c5,v0.1.0,"v0.1.0
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453149584,1453149584,94f857c3dbc4d68b1932a9ff123299a76399fe77
+94f857c3dbc4d68b1932a9ff123299a76399fe77,94f857c3,Rename API package to `hexapi`.,"Rename API package to `hexapi`.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453074436,1453074436,2c9450e6840a0fd5db4443075cb60d07257598f8
+2c9450e6840a0fd5db4443075cb60d07257598f8,2c9450e6,Update Google Services config to use Hex account.,"Update Google Services config to use Hex account.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453073725,1453073725,61b2060a2998d221de5c14862f6f13ef8728a2e5
+61b2060a2998d221de5c14862f6f13ef8728a2e5,61b2060a,Change package name to `com.hexforhn.hex`.,"Change package name to `com.hexforhn.hex`.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453073541,1453073541,43de34a0e6bcacb41d8899116d99aaa6fd39c0d1
+43de34a0e6bcacb41d8899116d99aaa6fd39c0d1,43de34a0,Prevent sharing attempts prior to story loading.,"Prevent sharing attempts prior to story loading.
+
+This was resulting in an uncaught exception as the URL provider was
+unavailable.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453056777,1453056777,8ddb90b7fa7d961108d06b67593958fc8bacb3a0
+8ddb90b7fa7d961108d06b67593958fc8bacb3a0,8ddb90b7,Introduce Play Store listing graphics.,"Introduce Play Store listing graphics.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453056569,1453056569,b15d8301de054f55258747791826599f4d2977f5
+b15d8301de054f55258747791826599f4d2977f5,b15d8301,Introduce copy used for Play Store listing.,"Introduce copy used for Play Store listing.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453056535,1453056535,ad85385f154e73ba0c7b0045ca542f791422bc23
+ad85385f154e73ba0c7b0045ca542f791422bc23,ad85385f,Check in sketch file for screenshots.,"Check in sketch file for screenshots.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1453056026,1453056026,4f96476f416d9def950c24eed5c11932f6b5cf3e
+4f96476f416d9def950c24eed5c11932f6b5cf3e,4f96476f,Remove unused `gradle.properties` and `proguard-rules` files.,"Remove unused `gradle.properties` and `proguard-rules` files.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452901071,1452901071,107853fb3e58dadfcb65e43f6a670f54e115d0ad
+107853fb3e58dadfcb65e43f6a670f54e115d0ad,107853fb,Upgrade dependencies. Use stable google-services package.,"Upgrade dependencies. Use stable google-services package.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452900269,1452900269,ad1eb2ca06ffe12a1a2ba12164aa1caa892bb15f
+ad1eb2ca06ffe12a1a2ba12164aa1caa892bb15f,ad1eb2ca,Remove unused resources.,"Remove unused resources.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452813068,1452813068,b952f0804667b68c5676b85cf968b8546efe8b7e
+b952f0804667b68c5676b85cf968b8546efe8b7e,b952f080,Check in sketch version of logo.,"Check in sketch version of logo.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452725255,1452725255,500208c0270dae1eb8afbe64fcdf06079d94bade
+500208c0270dae1eb8afbe64fcdf06079d94bade,500208c0,Add a logo to the readme.,"Add a logo to the readme.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452725061,1452725061,537318e764f7e0c7d50399dc62bb41946dd60bf8
+537318e764f7e0c7d50399dc62bb41946dd60bf8,537318e7,Removed unused resources. Check in app graphic sketch files.,"Removed unused resources. Check in app graphic sketch files.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452724694,1452724694,ed9aba434e7b41a75499c66cb787c2411df1155a
+ed9aba434e7b41a75499c66cb787c2411df1155a,ed9aba43,Remove unused files. Clean up lint.,"Remove unused files. Clean up lint.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452724277,1452724277,47c3fe0dbdce795b8b5eb26299593d711be1f552
+47c3fe0dbdce795b8b5eb26299593d711be1f552,47c3fe0d,Use a deeper orange for the app icon.,"Use a deeper orange for the app icon.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452642499,1452642499,75b3bd52b9a618b05d3f096f2aebe26fae107c84
+75b3bd52b9a618b05d3f096f2aebe26fae107c84,75b3bd52,Stack article thumbnails on top of the missing image thumbnail.,"Stack article thumbnails on top of the missing image thumbnail.
+
+This ensures the missing thumbnail is shown immediately, and the real
+thumbnail is overlaid when loaded.
+
+* Rename `home_list_item` to `front_page_list_item`.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452642450,1452642450,112fa5fd46be17a9ffcc862e2341ef9424514a4f
+112fa5fd46be17a9ffcc862e2341ef9424514a4f,112fa5fd,Change RecyclerView list item click only handle regular clicks.,"Change RecyclerView list item click only handle regular clicks.
+
+Long clicks are not yet handled and should not result in regular click
+behaviour.
+
+* Use `RecycerView#getAdapterPosition` over deprecated
+  `RecycerView#getPosition`.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452641118,1452641170,edf73bb29da576a67a089be3ff89b69c6e89bc5d
+edf73bb29da576a67a089be3ff89b69c6e89bc5d,edf73bb2,"Show a thumbnail for each article, obtained from the Clearbit Logo API.","Show a thumbnail for each article, obtained from the Clearbit Logo API.
+
+* Download and crop the thumbnail using Picasso.
+* Include a fallback image, supplied to Picasso when a logo is not found
+  or the request fails.
+* Give visual feedback from the list items when they are clicked.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452640416,1452640416,f31787df2948e29e31e6d819014838efae05493a
+f31787df2948e29e31e6d819014838efae05493a,f31787df,Hide WebView zoom controls.,"Hide WebView zoom controls.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452500741,1452500741,2b39c4787576f8efd32c54aaaf2663ab8358e3df
+2b39c4787576f8efd32c54aaaf2663ab8358e3df,2b39c478,Ensure refresh spinners complete successfully.,"Ensure refresh spinners complete successfully.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452450571,1452450571,fbd9f20dc4340ef72d3bed7d0ac36a3d97c3823a
+fbd9f20dc4340ef72d3bed7d0ac36a3d97c3823a,fbd9f20d,Initially display mobile-unfriendly sites zoomed out. Enable zooming.,"Initially display mobile-unfriendly sites zoomed out. Enable zooming.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452448589,1452448589,26720385a1792f85714e6e7bcd3162cfb3902963
+26720385a1792f85714e6e7bcd3162cfb3902963,26720385,Make article view header static. Style article tabs. Restore share functionality.,"Make article view header static. Style article tabs. Restore share functionality.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452448082,1452448082,95b26edfceec6889d9ffaf354539ea671e140a5e
+95b26edfceec6889d9ffaf354539ea671e140a5e,95b26edf,Switch from using built-in ActionBar to Toolbar. Set article Action Bar title.,"Switch from using built-in ActionBar to Toolbar. Set article Action Bar title.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452379183,1452379183,9fe2b9422f1a620d44a10d45a1657dafe91015f8
+9fe2b9422f1a620d44a10d45a1657dafe91015f8,9fe2b942,Update tagline in README.,"Update tagline in README.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452297583,1452297583,52489aced9d005bbcf2631a068a468674ed0c467
+52489aced9d005bbcf2631a068a468674ed0c467,52489ace,Restore back functionality to the story activity.,"Restore back functionality to the story activity.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452197534,1452197534,511f1c5b8232393173d6bcab94417a5679d6f961
+511f1c5b8232393173d6bcab94417a5679d6f961,511f1c5b,Switch to a tabbed article view.,"Switch to a tabbed article view.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1452119922,1452119922,6747d246c5dc6f0f52e96ac961cd175acd126ffb
+6747d246c5dc6f0f52e96ac961cd175acd126ffb,6747d246,Remove title from article app bar.,"Remove title from article app bar.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451830600,1451830600,0b5c5a7a443c504739613db01650d6c26622f332
+0b5c5a7a443c504739613db01650d6c26622f332,0b5c5a7a,Remove options menu from landing activity.,"Remove options menu from landing activity.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451830522,1451830522,67d7b4bdfd1569bd42fa8e6a9f6866e1c7d2c42e
+67d7b4bdfd1569bd42fa8e6a9f6866e1c7d2c42e,67d7b4bd,Add colour for hidden comments tag.,"Add colour for hidden comments tag.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451770796,1451770796,93d18bf5413bbf7a8ce12f17b64f012b4eb14fb7
+93d18bf5413bbf7a8ce12f17b64f012b4eb14fb7,93d18bf5,Ensure article views are correctly torn down when hitting back.,"Ensure article views are correctly torn down when hitting back.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451770765,1451770765,f22baf8e61452390c2d919ba8b1241901cb1b2db
+f22baf8e61452390c2d919ba8b1241901cb1b2db,f22baf8e,Make comment links clickable.,"Make comment links clickable.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451471659,1451471659,92d8e4f9d6f965bba3cbcca4892423a6ee62d6b5
+92d8e4f9d6f965bba3cbcca4892423a6ee62d6b5,92d8e4f9,Follow a retry policy for API requests.,"Follow a retry policy for API requests.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451418170,1451418170,6ce38e4784f553f6c74c6d4e5af0ae6623dadf66
+6ce38e4784f553f6c74c6d4e5af0ae6623dadf66,6ce38e47,Allow comments to be collapsed.,"Allow comments to be collapsed.
+
+Show a tag displaying the collapsed count on collapsed comments.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451416908,1451416908,5b9cf526e2b4004f4dbe12800c045575c9fee7d9
+5b9cf526e2b4004f4dbe12800c045575c9fee7d9,5b9cf526,Correct API URL in service.,"Correct API URL in service.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451173821,1451173821,90f91bb24b1d8461e91e6ec4c97a9ee8874a6bf5
+90f91bb24b1d8461e91e6ec4c97a9ee8874a6bf5,90f91bb2,Make list divider lighter.,"Make list divider lighter.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451173359,1451173359,ffd7583f2c1b4a1dcf7b4da3e9222267a35d6dfe
+ffd7583f2c1b4a1dcf7b4da3e9222267a35d6dfe,ffd7583f,Update API URL.,"Update API URL.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451173002,1451173002,cbc096deb841d162d87e3f1c3d6b87fd136597d0
+cbc096deb841d162d87e3f1c3d6b87fd136597d0,cbc096de,Update app icon and primary colors.,"Update app icon and primary colors.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1451172342,1451172342,72147a0672f8eed13a33ac5f8cfbf0908a11a2c8
+72147a0672f8eed13a33ac5f8cfbf0908a11a2c8,72147a06,Update name in README.,"Update name in README.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1450715770,1450715770,03e8c4e9ee7b9ba5fa01745746c567357acff250
+03e8c4e9ee7b9ba5fa01745746c567357acff250,03e8c4e9,Delay pull-to-refresh loading bars to to prevent a flicker on fast loads.,"Delay pull-to-refresh loading bars to to prevent a flicker on fast loads.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1450076352,1450076352,b174ac10fb0c23ccdb3d2a16b19d1dc8c75b8b26
+b174ac10fb0c23ccdb3d2a16b19d1dc8c75b8b26,b174ac10,Rename application to Hex.,"Rename application to Hex.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1450043572,1450043572,9e968bc65ee981ee3275f104dac2eabe920a64f1
+9e968bc65ee981ee3275f104dac2eabe920a64f1,9e968bc6,Add basic loading icons to the item views.,"Add basic loading icons to the item views.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1449942048,1449942048,8e3d4faffbf2af659ddad33b71aece240e6b83a0
+8e3d4faffbf2af659ddad33b71aece240e6b83a0,8e3d4faf,Allow Articles and Comments to be shared via the share action.,"Allow Articles and Comments to be shared via the share action.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1449931276,1449931276,795f57294ebcf82da65ca0aeee18ebd114b09c28
+795f57294ebcf82da65ca0aeee18ebd114b09c28,795f5729,Add basic Google Analytics for auto-activity and unhandled exception tracking.,"Add basic Google Analytics for auto-activity and unhandled exception tracking.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1448718571,1448718571,3e55c2f5188f7b04c67de2f457fa098a048bc4b0
+3e55c2f5188f7b04c67de2f457fa098a048bc4b0,3e55c2f5,Guard against an empty set of Front Page items.,"Guard against an empty set of Front Page items.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1448717645,1448717645,d75ead06b4bfecc6ec65534596122e2a2438f0a9
+d75ead06b4bfecc6ec65534596122e2a2438f0a9,d75ead06,Guard against empty comments when stripping out excessive whitespace.,"Guard against empty comments when stripping out excessive whitespace.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1448717542,1448717542,f97fc27e4fed8fb27a5457372008bbf96cb5d24b
+f97fc27e4fed8fb27a5457372008bbf96cb5d24b,f97fc27e,Update app icons. Provide sketch resource.,"Update app icons. Provide sketch resource.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1448223090,1448223090,c679c57dde2ca13e2098d622da84e02919316d0e
+c679c57dde2ca13e2098d622da84e02919316d0e,c679c57d,Make front page refreshable. Show loading indicator.,"Make front page refreshable. Show loading indicator.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1448124877,1448124877,ee06febf69314d30b90ec3f07caa243c60dd74d5
+ee06febf69314d30b90ec3f07caa243c60dd74d5,ee06febf,Remove trailing newlines from comments.,"Remove trailing newlines from comments.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1447598213,1447598213,3a4b1d66a682fd939834f577626c4ba599db8eca
+3a4b1d66a682fd939834f577626c4ba599db8eca,3a4b1d66,Fix comment icon color to prevent color change on tap.,"Fix comment icon color to prevent color change on tap.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1447518903,1447518903,fd1e73729a0fd5a4888836cc56e6b886863d18cc
+fd1e73729a0fd5a4888836cc56e6b886863d18cc,fd1e7372,Plug into custom Hacker News API to retrieve real HN data.,"Plug into custom Hacker News API to retrieve real HN data.
+
+* Use Volley for network requests.
+* Use Joda for marshalling ISO8601 times.
+* Create and consume services and marshallers for the custom HN API.
+* Use ""Front Page"" over ""Top Items"" naming consistently.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1447518770,1447518821,f3a801d8183ad49de75d900377d483b5bbb1ad72
+f3a801d8183ad49de75d900377d483b5bbb1ad72,f3a801d8,Prototype UI for front page and quick-change article/comment view.,"Prototype UI for front page and quick-change article/comment view.
+",,,,Sean Powell,sean@longdivision.co.uk,Sean Powell,sean@longdivision.co.uk,1442073756,1442073756,

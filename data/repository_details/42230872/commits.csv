@@ -1,0 +1,120 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+913fff9b3513c8f5db941ac887b0577e0117ac07,913fff9b,Return watch and add some checks,"Return watch and add some checks
+",,,,Emil Suleymanov,suleymanovemil8@gmail.com,Emil Suleymanov,suleymanovemil8@gmail.com,1489125003,1489125013,11ea939d13865d76b8e2c3e0705533e05e5a5c73
+11ea939d13865d76b8e2c3e0705533e05e5a5c73,11ea939d,Some audio adjustments,"Some audio adjustments
+",,,,Emil Suleymanov,suleymanovemil8@gmail.com,Emil Suleymanov,suleymanovemil8@gmail.com,1489122469,1489122469,588f4c1c4a540f9641c6fdd5a61ddd675001f7b8
+588f4c1c4a540f9641c6fdd5a61ddd675001f7b8,588f4c1c,Fix default preferences,"Fix default preferences
+",,,,Emil Suleymanov,suleymanovemil8@gmail.com,Emil Suleymanov,suleymanovemil8@gmail.com,1489122081,1489122081,da1923371701f7f7092bb6bd1b3d56026beadd8b
+da1923371701f7f7092bb6bd1b3d56026beadd8b,da192337,Update audio stuff,"Update audio stuff
+",,,,Emil Suleymanov,suleymanovemil8@gmail.com,Emil Suleymanov,suleymanovemil8@gmail.com,1488130902,1488131234,b67eaaffaa9f2da193cf0ff014dd0dd0092ae914
+b67eaaffaa9f2da193cf0ff014dd0dd0092ae914,b67eaaff,More optimisations,"More optimisations
+",,,,sssemil,suleymanovemil8@gmail.com,sssemil,suleymanovemil8@gmail.com,1446307474,1446307474,de119d4ca309f8b7afe55c937446b1e96ba59235
+de119d4ca309f8b7afe55c937446b1e96ba59235,de119d4c,Android Wear edition,"Android Wear edition
+",,,,sssemil,suleymanovemil8@gmail.com,sssemil,suleymanovemil8@gmail.com,1441899650,1441899650,8737f2192cd8c875eaedceeadd572812403aabd4
+8737f2192cd8c875eaedceeadd572812403aabd4,8737f219,Removing commented import statements from the last change,"Removing commented import statements from the last change
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405767614,1405767614,f3bac096c4c4d48fc6b8fccef5d9082fe1aef7fc
+f3bac096c4c4d48fc6b8fccef5d9082fe1aef7fc,f3bac096,Switched from khronos.opengles.GL10 to opengl.GLES10,"Switched from khronos.opengles.GL10 to opengl.GLES10
+
+Switched the whole code to make it work with android.opengl.GLES10
+package. Since I am hoping to upgrade the code to GLES 2.0 and maybe to
+GLES 3.0, hopefully this is the first step towards it.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405715507,1405715507,73659429696e5f9fa8ba1924e5864a8cfc8a7808
+73659429696e5f9fa8ba1924e5864a8cfc8a7808,73659429,Updated the game to run in immersive/fullscreen mode,"Updated the game to run in immersive/fullscreen mode
+
+Borrowed the setImmersive function from the Touchboard application.
+Games should be run in fullscreen, so here it is.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405709749,1405709749,67d0ec3b000b2186bc83dbdfba81158d3f958bcc
+67d0ec3b000b2186bc83dbdfba81158d3f958bcc,67d0ec3b,Refactored out the OpenGLRenderer class,"Refactored out the OpenGLRenderer class
+
+Since the GLSurfaceView.Renderer is an interface and functionallity-vise
+is very similar to a view (albit a bit more specific), I found it easier
+to remove an extra layer of object-calling/message-passing
+(whatever-it-was) to be... not necessery. Hence, merged the OpenGLView
+and OpenGLRenderer classes and refactored (I have come to love that
+term) the OpenGLRenderer class completely.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405701929,1405701929,1288246e9fdd0b50d0bcb5fe06edf96433ed2835
+1288246e9fdd0b50d0bcb5fe06edf96433ed2835,1288246e,Cosmetic Changes,"Cosmetic Changes
+
+Have only added a few logging statments and changed another few
+intentations, no major refactoring yet.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405668000,1405668000,a6f26ac9d1538c3031034bd9ba86130dc0469561
+a6f26ac9d1538c3031034bd9ba86130dc0469561,a6f26ac9,Cosmetic changes to OpenGLRenderer,"Cosmetic changes to OpenGLRenderer
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405531323,1405531323,5e8949e1122f163b078ea2e437eef779dc764521
+5e8949e1122f163b078ea2e437eef779dc764521,5e8949e1,Removed variables from OpenGLView,"Removed variables from OpenGLView
+
+There were 2 variables _x and _y declared in the class as private but
+were used only in one function where there were set and then passed to
+the renderer. Could not see how they contributed to the class, so
+removed them and refactored the code to work without them.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405450150,1405450150,380cb6bc33bc54269a2d36b615e28d63b673ebcb
+380cb6bc33bc54269a2d36b615e28d63b673ebcb,380cb6bc,Removed the setUIHandler methods,"Removed the setUIHandler methods
+
+Found that the android.os.Handler object was being imported but was not
+used anywhere to do anything. So removed the references to the same from
+all places.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405449153,1405449153,7462b149192f6057391862d6435b79773808b23b
+7462b149192f6057391862d6435b79773808b23b,7462b149,commiting all the changes,"commiting all the changes
+
+The changes are all cosmetic. All I am trying to do is understand the
+code so pepering it up with the log statements and indenting the code to
+my taste. Git is still new to me, don't really know how to use it. So I
+think all these changes are not relevent for the branch ""trail"", so want
+to switch back to master. Hence, commiting all changes.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405447228,1405447228,b76e9024031083257185f6eb377959d0e046a8d2
+b76e9024031083257185f6eb377959d0e046a8d2,b76e9024,Changed the Logging mechanism,"Changed the Logging mechanism
+
+With the previous Logger, the className tag was needed to be set for
+each class in it's constructor : inconvenient and too-much to remember.
+So, made it now mandatory to pass the class when calling the Logger
+methods. Also, added wrappers to the functions in case the programmer
+gets as lazy as me and don't want to type the WHOLE name for the logging
+functions.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405445737,1405445737,1ed3bcf0182d2517f4770a016172e8b7a038c295
+1ed3bcf0182d2517f4770a016172e8b7a038c295,1ed3bcf0,Added Logging classes,"Added Logging classes
+
+Borrowed the logging mechanism from my another project TouchBoard.
+and a few cosmetic changes to the code while trying to understand it.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405422205,1405422205,5c41643bef7e567a82fb57ac9d234f5268da29ed
+5c41643bef7e567a82fb57ac9d234f5268da29ed,5c41643b,modified README,"modified README
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405362357,1405362357,a81fee659884da81f2bc8bb0471d6cf11fddfddc
+a81fee659884da81f2bc8bb0471d6cf11fddfddc,a81fee65,Updated the README file.,"Updated the README file.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405362118,1405362118,2b1cffc4d891c68ab786fdd0d55e707468d31528
+2b1cffc4d891c68ab786fdd0d55e707468d31528,2b1cffc4,Limited number of Trail,"Limited number of Trail
+
+This is my first attempt to make this game more interesting.
+In this first try, I have limited the trail left behind. Interestingly
+the trail left behind currenly is measured in number of turns (was
+already there in the code, could not help it). So, for now the max trail
+left is 10 turns.
+Should make this configurable.
+",,,,flide,flideravi@gmail.com,flide,flideravi@gmail.com,1405360798,1405360798,69c8a230d0190a4978827b85ebaa04a04c70890e
+69c8a230d0190a4978827b85ebaa04a04c70890e,69c8a230,Add Recognizer to game,"Add Recognizer to game
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1341145682,1341145682,814e6eb9fc14e9620c13bc5c8480b442d2f5350e
+814e6eb9fc14e9620c13bc5c8480b442d2f5350e,814e6eb9,Remove AdMob stuff from xml,"Remove AdMob stuff from xml
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1341145188,1341145188,caee124de676319c266809667e7193a440c1629f
+caee124de676319c266809667e7193a440c1629f,caee124d,Update Release Stuff to v1.1.2,"Update Release Stuff to v1.1.2
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1341083461,1341083461,f00afb8409b33d9cd0e6f7d0acdfa33b3437d54c
+f00afb8409b33d9cd0e6f7d0acdfa33b3437d54c,f00afb84,Update license info to GPLv3,"Update license info to GPLv3
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1341083047,1341083047,5442e0b0cfaf51ffaf9441ef13f30231a1a7b86e
+5442e0b0cfaf51ffaf9441ef13f30231a1a7b86e,5442e0b0,Update Manifest to remove Admob stuff and related permissions,"Update Manifest to remove Admob stuff and related permissions
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1341082944,1341082944,24d6f8048c9b37d14e6dfe9d18c7482109ab7dc0
+24d6f8048c9b37d14e6dfe9d18c7482109ab7dc0,24d6f804,Allow move app to SD card,"Allow move app to SD card
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340830463,1340830463,cdf8742d8fff64cae43d9eb81fcdf53b7fd0bfbe
+cdf8742d8fff64cae43d9eb81fcdf53b7fd0bfbe,cdf8742d,AdMob Libraries removed,"AdMob Libraries removed
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340829951,1340829951,564f3e0ab375511b84af1b73a2a496fb2e68eb85
+564f3e0ab375511b84af1b73a2a496fb2e68eb85,564f3e0a,Remove auto generated files from GIT,"Remove auto generated files from GIT
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340827028,1340827028,dab9ae8e8a70d9f34922b0f52a9b3baffdceb33c
+dab9ae8e8a70d9f34922b0f52a9b3baffdceb33c,dab9ae8e,Add .gitignore,"Add .gitignore
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340825851,1340825851,acea0d6d803b4e24241455090c7b454252a5e0d0
+acea0d6d803b4e24241455090c7b454252a5e0d0,acea0d6d,Update Version and release notes for v1.1.1,"Update Version and release notes for v1.1.1
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340457790,1340457790,75d61285abed4d42dc9372c2308ea5c5ac2bd1b8
+75d61285abed4d42dc9372c2308ea5c5ac2bd1b8,75d61285,Fix Back key to exit game,"Fix Back key to exit game
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340456667,1340456667,4985b21ccf500340d807addc0b34504399fed328
+4985b21ccf500340d807addc0b34504399fed328,4985b21c,Fix Birds eye Camera View,"Fix Birds eye Camera View
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340456466,1340456466,5fc9fbf76bfba8cf952913e15e233f1afde14977
+5fc9fbf76bfba8cf952913e15e233f1afde14977,5fc9fbf7,Add new files for User Prefs,"Add new files for User Prefs
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340224726,1340224726,d1c83f0e4ca3fd08080cfcf1ec915a66bca46b2f
+d1c83f0e4ca3fd08080cfcf1ec915a66bca46b2f,d1c83f0e,Add User Preferences,"Add User Preferences
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1340224445,1340224445,a7caed4dda3d1ca23b4f6c59b0d93a455bcb0f0d
+a7caed4dda3d1ca23b4f6c59b0d93a455bcb0f0d,a7caed4d,Initial Commit,"Initial Commit
+",,,,Iain Churcher,iain.linux.coding@gmail.com,Iain Churcher,iain.linux.coding@gmail.com,1326574875,1326574875,

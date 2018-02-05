@@ -1,0 +1,1382 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+32c97b528b04e8434b5b84ea5e4cb7e73f4cd1af,32c97b52,Get config from HeadsUpBase instead of getting it directly from Config,"Get config from HeadsUpBase instead of getting it directly from Config
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424552443,1424552443,1d248863c15a54f2cb5c955271564dc3b225013f
+1d248863c15a54f2cb5c955271564dc3b225013f,1d248863,Increase version to 3.1/11,"Increase version to 3.1/11
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424550738,1424550738,b4d75d3c2bf9bf1db3d1ba49a4e0ae4f1e286d8f
+b4d75d3c2bf9bf1db3d1ba49a4e0ae4f1e286d8f,b4d75d3c,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424550705,1424550705,1b6badc67d967504b09cd0389467eab88d0b5335
+1b6badc67d967504b09cd0389467eab88d0b5335,1b6badc6,Show `Never dismiss automatically` in preference's summary,"Show `Never dismiss automatically` in preference's summary
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424550083,1424550083,cdc30661bd9212070b9cedd0cfe1220c622c7a02
+cdc30661bd9212070b9cedd0cfe1220c622c7a02,cdc30661,Merge branch 'HazemAM-experiments',"Merge branch 'HazemAM-experiments'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424549347,1424549347,"95fa4f7170378a44b164ee0b32eef042d6eb25e5,6ea206c6e24b019a8109803de5cd138cd3c692a6"
+6ea206c6e24b019a8109803de5cd138cd3c692a6,6ea206c6,Make swipe-to-top swipe the whole content,"Make swipe-to-top swipe the whole content
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424549306,1424549306,336bb09e0cf71a15dc8e7bf368eb8f2ec631fe44
+336bb09e0cf71a15dc8e7bf368eb8f2ec631fe44,336bb09e,Merge branch 'experiments' of https://github.com/HazemAM/HeadsUp into HazemAM-experiments,"Merge branch 'experiments' of https://github.com/HazemAM/HeadsUp into HazemAM-experiments
+
+Conflicts:
+	project/app/src/main/java/com/achep/headsup/HeadsUpNotificationView.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424547388,1424547388,"95fa4f7170378a44b164ee0b32eef042d6eb25e5,177f418c23ae97b8250eb53b6181e3c46ceafe7a"
+95fa4f7170378a44b164ee0b32eef042d6eb25e5,95fa4f71,Increase version to 3.0.6/10,"Increase version to 3.0.6/10
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424193732,1424193732,4e38974bdbaba27ee92df065bb43c6616d76d3ad
+4e38974bdbaba27ee92df065bb43c6616d76d3ad,4e38974b,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424193655,1424193655,93b732ca07f28c6fe7e1978b8a1dd3496115f3b5
+93b732ca07f28c6fe7e1978b8a1dd3496115f3b5,93b732ca,Pause the decay timer on touch correctly,"Pause the decay timer on touch correctly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424191229,1424191229,845ad5e9a006b05dd7092c831369c6371c3dc473
+845ad5e9a006b05dd7092c831369c6371c3dc473,845ad5e9,Fix the Timeout#resume(),"Fix the Timeout#resume()
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1424191093,1424191093,deb2631022a8285c313f96e3faeadeebc99d29b1
+177f418c23ae97b8250eb53b6181e3c46ceafe7a,177f418c,Code review & cleanup,"Code review & cleanup
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423990735,1423990735,8f5e9e7d391387cbf83ec0bad3d809ce2488a6db
+8f5e9e7d391387cbf83ec0bad3d809ce2488a6db,8f5e9e7d,"Fixing a swipe problem, by fixing root cause","Fixing a swipe problem, by fixing root cause
+
+Problem: A swipe is considered a swipe to the top/bottom, while not
+allowed to.
+
+Fix: Using the second (and *actual*) solution to the root problem,
+mentioned in comment #9735718 in
+785ce060dc2b88768a33d579ff615e1e8e2e794f.
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423935846,1423935846,534ccb6759c291166d13d6c54e525b8543d08243
+534ccb6759c291166d13d6c54e525b8543d08243,534ccb67,Fixing notification timing-out while touching,"Fixing notification timing-out while touching
+
+Happens while holding a notification and not moving during the specified
+time-out duration.
+Most noticeable when time-out duration is small, and the notification
+has rich content.
+In other word, this fix allows ""holding"" notifications while reading
+them.
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423826238,1423826238,13ddbf4301d6f949a1a21dbf2866b0895ddc9ed4
+13ddbf4301d6f949a1a21dbf2866b0895ddc9ed4,13ddbf43,Fixing swipe down when not isShownAtTop,"Fixing swipe down when not isShownAtTop
+
+By:
+- Defining a new flipped shade background, based on the original shade,
+- Removing the background from the container,
+- Adding the proper background based on the container position,
+- Adding new notifications in the right direction based on the flow,
+defined by isShownAtTop.
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423821704,1423821704,84ac3a916b89b4d4f08bfb808822d3d824f7444d
+84ac3a916b89b4d4f08bfb808822d3d824f7444d,84ac3a91,Adding swipe down to hide,"Adding swipe down to hide
+
+- Hiding is now set to swiping up if isShownAtTop, and swiping down if
+shown at bottom (always swipe to edge to hide).
+- Resulted in a new setter in SwipeHelper, for setting swipe direction
+when HeadsUpBase is initialized and ready.
+- If not isShownAtTop, swiping down will hide, but will also result in a
+weird behavior, due to the double-rotation trick.
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423820254,1423820254,785ce060dc2b88768a33d579ff615e1e8e2e794f
+785ce060dc2b88768a33d579ff615e1e8e2e794f,785ce060,Defining swipe down,"Defining swipe down
+
+- New constant: BOTTOM.
+- Fix: A gesture is considered a swipe even if the translation = 0.
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423818768,1423818768,89a50ddce8011a26b25296a6859b1733c8d8a69d
+89a50ddce8011a26b25296a6859b1733c8d8a69d,89a50ddc,Adding swipe up to hide,"Adding swipe up to hide
+
+- Resulted in adding a new constant (TOP) in SwipeHelper.
+- The function is implemented without a fading effect, which resulted in
+converting FADE_OUT_DURING_SWIPE constant to a variable, and a new
+constructor deciding its value (def is true).
+",,,,Hazem AbuMostafa,hbluebrince@gmail.com,Hazem AbuMostafa,hbluebrince@gmail.com,1423742389,1423742389,deb2631022a8285c313f96e3faeadeebc99d29b1
+deb2631022a8285c313f96e3faeadeebc99d29b1,deb26310,Respect power-save mode (2),"Respect power-save mode (2)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423569675,1423569675,4b7da53bfe9603d57a9bc233af5141fde69a9ad7
+4b7da53bfe9603d57a9bc233af5141fde69a9ad7,4b7da53b,Respect power-save mode,"Respect power-save mode
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423568513,1423568513,6f222d57483a68b6b5c73238426faa383a7f60a9
+6f222d57483a68b6b5c73238426faa383a7f60a9,6f222d57,Heads-up view's attach/detach changes,"Heads-up view's attach/detach changes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423567017,1423567017,2623397b8e6ff47753c485a0e89957f56522b95c
+2623397b8e6ff47753c485a0e89957f56522b95c,2623397b,Init the swipe helper in view's constructor,"Init the swipe helper in view's constructor
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423566921,1423566921,55d71b30d9dd52203df6f7d0971156e8ee5caa81
+55d71b30d9dd52203df6f7d0971156e8ee5caa81,55d71b30,Extract the remote inputs to Action.java,"Extract the remote inputs to Action.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423318778,1423318778,1bf7bc2535a826bdc053124f4a692490ca031213
+1bf7bc2535a826bdc053124f4a692490ca031213,1bf7bc25,Remove unused libs + RemoteController.java,"Remove unused libs + RemoteController.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423313334,1423313334,778fb2fdeda7f06b7e6e1509f992a69a52ac1427
+778fb2fdeda7f06b7e6e1509f992a69a52ac1427,778fb2fd,Remove the init notification,"Remove the init notification
+
+...cause it's not that useful on pre-Lollipop and may cause some bugs.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423307393,1423307393,9b74aaf3be68e3da790276a1ed096a9b4fdb3b73
+9b74aaf3be68e3da790276a1ed096a9b4fdb3b73,9b74aaf3,Increase version to 3.0.5/9,"Increase version to 3.0.5/9
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423304614,1423304614,ffaed351d596c6c25bd18fc278dd3cc512d4f851
+ffaed351d596c6c25bd18fc278dd3cc512d4f851,ffaed351,Fix wrong bottom padding on Android 4.2 or lower,"Fix wrong bottom padding on Android 4.2 or lower
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423304435,1423304435,ce911945ab4e4210de39556fdafb0a05da88ed6d
+ce911945ab4e4210de39556fdafb0a05da88ed6d,ce911945,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423302599,1423302599,198c3013f6e58da36b0177fef46abdbd61584063
+198c3013f6e58da36b0177fef46abdbd61584063,198c3013,Set default max priority to Normal (Lollipop),"Set default max priority to Normal (Lollipop)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423265862,1423265862,f0f2458da0786211f080adf392a0784ec47e9080
+f0f2458da0786211f080adf392a0784ec47e9080,f0f2458d,Fix possible ConcurrentModificationException,"Fix possible ConcurrentModificationException
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423264042,1423264042,08e0641c280485f2e13c1fd92ef39e4508bd7cea
+08e0641c280485f2e13c1fd92ef39e4508bd7cea,08e0641c,Removed unused permissions & code clean-up,"Removed unused permissions & code clean-up
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423254725,1423254725,04be989cc8e0843650e8c57ab6fba52456d2df22
+04be989cc8e0843650e8c57ab6fba52456d2df22,04be989c,Rename remote actions to *.headsup.*,"Rename remote actions to *.headsup.*
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423254252,1423254252,3a2490560328bafb923ae2bd6786696f482f68bc
+3a2490560328bafb923ae2bd6786696f482f68bc,3a249056,Increase version to 3.0.4/8,"Increase version to 3.0.4/8
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423236128,1423236128,4749a2cc61daafd348aaafa96e08fa637ba06261
+4749a2cc61daafd348aaafa96e08fa637ba06261,4749a2cc,Rewrite the Timeout.java,"Rewrite the Timeout.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423236108,1423236108,fab9da778085e9aeaaf33233dd80246316ed353f
+fab9da778085e9aeaaf33233dd80246316ed353f,fab9da77,Fix removing preference which is inside the category,"Fix removing preference which is inside the category
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423220183,1423220183,d969659e1a5cbf5544f0151fd1a9f2cd64e669f6
+d969659e1a5cbf5544f0151fd1a9f2cd64e669f6,d969659e,Hide STR and STL for Android 4.2 or lower,"Hide STR and STL for Android 4.2 or lower
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423219620,1423219620,1bd5eec604037bb103e2a80c5c3dfd5f9a3e4e7b
+1bd5eec604037bb103e2a80c5c3dfd5f9a3e4e7b,1bd5eec6,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423217757,1423217757,a4f33c1f52e9ef9d0652785d9c385518665c74c0
+a4f33c1f52e9ef9d0652785d9c385518665c74c0,a4f33c1f,Add an option to set STR and STL actions,"Add an option to set STR and STL actions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423215570,1423215570,c5d62cc8e199fb25ae4dd9fb3a9bd944552924bb
+c5d62cc8e199fb25ae4dd9fb3a9bd944552924bb,c5d62cc8,Apply Config#isShownAtTop() setting on start,"Apply Config#isShownAtTop() setting on start
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423214604,1423214604,1468e1fa9ba1b48f4ddb151ae4de9677578d0637
+1468e1fa9ba1b48f4ddb151ae4de9677578d0637,1468e1fa,Increase version to 3.0.3/7,"Increase version to 3.0.3/7
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423141731,1423141731,03ddccd2f23a6ba14c33c1ca4a6bcbf10aac3db0
+03ddccd2f23a6ba14c33c1ca4a6bcbf10aac3db0,03ddccd2,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423141349,1423141349,e0d0e97da393382f2a1b9ba00797246b957a0fc6
+e0d0e97da393382f2a1b9ba00797246b957a0fc6,e0d0e97d,Hide the whole heads-up view on rebuild if needed,"Hide the whole heads-up view on rebuild if needed
+
+...instead of removing children one-by-one and then hiding it.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423128669,1423128669,237ad676988a62d6043103ee379024b1fd0a6b49
+237ad676988a62d6043103ee379024b1fd0a6b49,237ad676,Track the times it was attached to window,"Track the times it was attached to window
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423128502,1423128502,56c42898416c56541b7df8a83e9204d480c0b894
+56c42898416c56541b7df8a83e9204d480c0b894,56c42898,Add another second to the decay timer if notify isn't dismissible,"Add another second to the decay timer if notify isn't dismissible
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423128346,1423128346,d7adfa1f8b9b1712d42431b55ac9b465111db744
+d7adfa1f8b9b1712d42431b55ac9b465111db744,d7adfa1f,Add an option to show heads-up at the bottom,"Add an option to show heads-up at the bottom
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423127596,1423127596,20079f83ffc981ac0728d366b978521e00b9bf17
+20079f83ffc981ac0728d366b978521e00b9bf17,20079f83,Correct R.string.permissions_notifications_grant_manually,"Correct R.string.permissions_notifications_grant_manually
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423123800,1423123800,fe1b12d19abb7c59ad4a84548e7fb9abea982dca
+fe1b12d19abb7c59ad4a84548e7fb9abea982dca,fe1b12d1,Add an ability to disable the decay timer,"Add an ability to disable the decay timer
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423123734,1423123734,3d21a9ba44f95a950dd1296ffca7837d18224cf5
+3d21a9ba44f95a950dd1296ffca7837d18224cf5,3d21a9ba,Move interactivity delay const from code to resources,"Move interactivity delay const from code to resources
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423051006,1423051006,74e32ac117b75c3cbd5ff381c804c87a2ca77e38
+74e32ac117b75c3cbd5ff381c804c87a2ca77e38,74e32ac1,Hide heads-up on screen off,"Hide heads-up on screen off
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423049128,1423049128,5cedf65f834008dbefb48162f68ff744f0799847
+5cedf65f834008dbefb48162f68ff744f0799847,5cedf65f,Add on option to show heads-up on the lockscreen,"Add on option to show heads-up on the lockscreen
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423049086,1423049086,a2bfbe4e5ef95fd361ca121dff3e709da230201d
+a2bfbe4e5ef95fd361ca121dff3e709da230201d,a2bfbe4e,Increase the max decay time,"Increase the max decay time
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1423047998,1423047998,131e02537f01c998cea03d10054c149fcc43d5b7
+131e02537f01c998cea03d10054c149fcc43d5b7,131e0253,Increase version to 3.0.2/6,"Increase version to 3.0.2/6
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422990257,1422990257,51dc5f8ce735e0211f83f024575834a353ce8f8c
+51dc5f8ce735e0211f83f024575834a353ce8f8c,51dc5f8c,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422990204,1422990204,"2834ddd96fb7b3e1430467392f0ce8b3c6921a2e,5b4cc79a001e85a75d75c7e1e5bc1076f86e61a9"
+5b4cc79a001e85a75d75c7e1e5bc1076f86e61a9,5b4cc79a,Mark the whole group of notification as read if the summary is,"Mark the whole group of notification as read if the summary is
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422989831,1422989831,f057d80b385e97990c41d4a130d50adc19219861
+2834ddd96fb7b3e1430467392f0ce8b3c6921a2e,2834ddd9,Rebuild the notification list correctly,"Rebuild the notification list correctly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422989059,1422989059,09ac05986461ba17f783017ed34a056a16042e86
+f057d80b385e97990c41d4a130d50adc19219861,f057d80b,Update CheckoutInternal#disconnect() method,"Update CheckoutInternal#disconnect() method
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422985880,1422985880,3c369312face3fa5b8109a73fe148c532cf9e932
+09ac05986461ba17f783017ed34a056a16042e86,09ac0598,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422985330,1422985330,b8ba1efbe2a953a6a23137bea97bdbe55359ae30
+b8ba1efbe2a953a6a23137bea97bdbe55359ae30,b8ba1efb,Decrease icon's color reversing chance,"Decrease icon's color reversing chance
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422984049,1422984049,d504df850b4afb60862b5973474a5b0527f8f2ee
+d504df850b4afb60862b5973474a5b0527f8f2ee,d504df85,"Experimental: Create the ripples as ""non-scrollable-parent""","Experimental: Create the ripples as ""non-scrollable-parent""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422983619,1422983619,315045c25a2be76498089ccac4df329fbd8d3343
+315045c25a2be76498089ccac4df329fbd8d3343,315045c2,Update background,"Update background
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422982963,1422982963,0e7042911f8fe0d37cb0ff77f9d45539d1ec129a
+0e7042911f8fe0d37cb0ff77f9d45539d1ec129a,0e704291,Use internal method for getting a config instance,"Use internal method for getting a config instance
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422982221,1422982221,25cd28761435951dd74aa6eb46dddd4ae8c48022
+25cd28761435951dd74aa6eb46dddd4ae8c48022,25cd2876,"Add ""Overlap status bar"" option","Add ""Overlap status bar"" option
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422982055,1422982055,afa5627c680833b5f5ae69dae4d90ba1b5a196b2
+afa5627c680833b5f5ae69dae4d90ba1b5a196b2,afa5627c,Allow single-line title only,"Allow single-line title only
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422980925,1422980925,5b38044fd8f638420bff5f0bbfa341b675015bfa
+5b38044fd8f638420bff5f0bbfa341b675015bfa,5b38044f,Increase version to 3.0.1/5,"Increase version to 3.0.1/5
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422919951,1422919951,3f6e67aa173beb352cb3995c8e84ad1003b8e0da
+3f6e67aa173beb352cb3995c8e84ad1003b8e0da,3f6e67aa,Fix the issues with attaching attached view,"Fix the issues with attaching attached view
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422919585,1422919585,f19980d72b6924958e8c4b6047a049dcc1e0418d
+f19980d72b6924958e8c4b6047a049dcc1e0418d,f19980d7,Update screenshots,"Update screenshots
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422875421,1422875421,d79ef0e4a40c3737170a59ae8ae75ae1e0a1f855
+d79ef0e4a40c3737170a59ae8ae75ae1e0a1f855,d79ef0e4,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422873593,1422874351,f0deb0d0dc5e85da52397bef46f33e63bcd97d67
+f0deb0d0dc5e85da52397bef46f33e63bcd97d67,f0deb0d0,"Remove ""Restricted"" option from the blacklist","Remove ""Restricted"" option from the blacklist
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422873144,1422874350,27814af5aa41a9d68abde83207a91977e155ca0a
+27814af5aa41a9d68abde83207a91977e155ca0a,27814af5,Remove some unused strings,"Remove some unused strings
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422872760,1422874349,bbcd3b253452c845e07ebb380b5bad03a0d227c6
+bbcd3b253452c845e07ebb380b5bad03a0d227c6,bbcd3b25,Prepare for the background bug fix,"Prepare for the background bug fix
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422872598,1422874348,ada93ee67a655427e50f8bcd0b947ad674b6e585
+ada93ee67a655427e50f8bcd0b947ad674b6e585,ada93ee6,Set the action's text color to the ?textColorSecondary,"Set the action's text color to the ?textColorSecondary
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422789355,1422874347,64de54f26400ef51f9b6d88401567fa91158b8bb
+64de54f26400ef51f9b6d88401567fa91158b8bb,64de54f2,Mutate the action icon if needed,"Mutate the action icon if needed
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422789173,1422874347,bb09ac230a96c054d8bfb37417df11f62716847d
+bb09ac230a96c054d8bfb37417df11f62716847d,bb09ac23,Hide the timeout progressbar,"Hide the timeout progressbar
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422788938,1422874346,b2beb4b05f4a27c49cad2170bce3e400830e5523
+b2beb4b05f4a27c49cad2170bce3e400830e5523,b2beb4b0,Update the styling to more material,"Update the styling to more material
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422788830,1422874345,a50cce780cd755f06ee8a23eadc12dc9f4a4a057
+a50cce780cd755f06ee8a23eadc12dc9f4a4a057,a50cce78,Fix 'HeadsUp doesn't work first 10 mins after reboot',"Fix 'HeadsUp doesn't work first 10 mins after reboot'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422788326,1422874345,cb2436dc618d7c2a0ba39d3a56c2a3daebdf86bd
+cb2436dc618d7c2a0ba39d3a56c2a3daebdf86bd,cb2436dc,Reset the decay time on Heads-up attached,"Reset the decay time on Heads-up attached
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422743700,1422874344,b5c33dfa3f8d26010f7083aeacba933a5ddfddc7
+b5c33dfa3f8d26010f7083aeacba933a5ddfddc7,b5c33dfa,Hide Heads-up view on last view's removal,"Hide Heads-up view on last view's removal
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422742427,1422874344,31a6ecf62ad1a9958d5f6474f17be88b41aad26c
+31a6ecf62ad1a9958d5f6474f17be88b41aad26c,31a6ecf6,Call #resetDecayTime instead of setting the timeout manually,"Call #resetDecayTime instead of setting the timeout manually
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422742348,1422874343,06e2aa91861e4907777dd7611542620a85459538
+06e2aa91861e4907777dd7611542620a85459538,06e2aa91,Follow the Android Studio code inspector's recommendations,"Follow the Android Studio code inspector's recommendations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422741222,1422874342,2087a9dbd7fdd23a9170a29e0aca55f06005e119
+2087a9dbd7fdd23a9170a29e0aca55f06005e119,2087a9db,Change the ripples' color in different themes,"Change the ripples' color in different themes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422740803,1422874341,90c31238e86def7222299e0eb5c2490b7ebae049
+90c31238e86def7222299e0eb5c2490b7ebae049,90c31238,Change the visibility of #hasDarkTextColor to protected,"Change the visibility of #hasDarkTextColor to protected
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422740372,1422874341,54b6259372dd9bfa4b62ec67aaae9b8319380f9e
+54b6259372dd9bfa4b62ec67aaae9b8319380f9e,54b62593,Reverse equality check: variable <--> const,"Reverse equality check: variable <--> const
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422740208,1422874340,68685842f39a9e6b8d86dc56716bd56517d18a73
+68685842f39a9e6b8d86dc56716bd56517d18a73,68685842,Clean pending events on hide,"Clean pending events on hide
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422740079,1422874339,e3969b19c0e8f67e8fcff3999d37b5331d127b8d
+e3969b19c0e8f67e8fcff3999d37b5331d127b8d,e3969b19,Don't hide Heads-up if it can't remove notification,"Don't hide Heads-up if it can't remove notification
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422739792,1422874339,569160b4b50b48078b7f81bef43931a211989523
+569160b4b50b48078b7f81bef43931a211989523,569160b4,Initial Heads-up implementation,"Initial Heads-up implementation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422731116,1422874338,6b505a9225a59c9d8db539d8d90c0728483dd693
+6b505a9225a59c9d8db539d8d90c0728483dd693,6b505a92,Update icons,"Update icons
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422645476,1422874337,27539c579a1230e8be461ab87a6c52f51bc0a0b1
+27539c579a1230e8be461ab87a6c52f51bc0a0b1,27539c57,Initial clean-up,"Initial clean-up
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422566280,1422874130,3c369312face3fa5b8109a73fe148c532cf9e932
+3c369312face3fa5b8109a73fe148c532cf9e932,3c369312,Increase version 3.0.10/42,"Increase version 3.0.10/42
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422646623,1422646623,c734c401da85c53bd01cd71656b7f0f3522a9f09
+c734c401da85c53bd01cd71656b7f0f3522a9f09,c734c401,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422646596,1422646596,eb51ef5cbea276a7cada3dbe3baa8a26a8ca3588
+eb51ef5cbea276a7cada3dbe3baa8a26a8ca3588,eb51ef5c,Use 1.0.+ gradle version,"Use 1.0.+ gradle version
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422569034,1422644698,61e8d0c402d8d6ffc82996955d9286b8e184294b
+61e8d0c402d8d6ffc82996955d9286b8e184294b,61e8d0c4,Rapidly hide the alternative payments,Rapidly hide the alternative payments,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1422642322,1422642322,164c144c33f8c972979d899435654f39f392b007
+164c144c33f8c972979d899435654f39f392b007,164c144c,Remove unused WelcomeDialog,"Remove unused WelcomeDialog
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422568539,1422568539,56246ad79236121fd3be2e88a7b47f4c0eb89cc0
+56246ad79236121fd3be2e88a7b47f4c0eb89cc0,56246ad7,Make frozen EVENT_BATH event kill any other frozen events,"Make frozen EVENT_BATH event kill any other frozen events
+
+Because bath event means a complete rebuild.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422568432,1422568432,be2ff5a884dea6426927dc07360d41a0104d6714
+be2ff5a884dea6426927dc07360d41a0104d6714,be2ff5a8,Rebuild local list on group summary posted,"Rebuild local list on group summary posted
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422568053,1422568053,3b8437f82c01f7a1302b2c647934e92f5213acc8
+3b8437f82c01f7a1302b2c647934e92f5213acc8,3b8437f8,Put the ic_launcher.ai file into a zip archive,"Put the ic_launcher.ai file into a zip archive
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422566471,1422566489,1c5d11430237700039f5754b1d7507c95044d484
+1c5d11430237700039f5754b1d7507c95044d484,1c5d1143,Remove unused values-sw600dp/themes.xml,Remove unused values-sw600dp/themes.xml,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1422558187,1422558187,7b53a2cae9af499f7912819ed23bb001e2a564f4
+7b53a2cae9af499f7912819ed23bb001e2a564f4,7b53a2ca,Update accessibility settings activity,Update accessibility settings activity,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1422550503,1422550503,ce72f613ceaf10bd0c1a1f5117437c4e74dacf3f
+ce72f613ceaf10bd0c1a1f5117437c4e74dacf3f,ce72f613,Update a link to the G+ community,Update a link to the G+ community,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1422547682,1422547682,1afca2c04ca1745b8ce07e137a55a3c11e4369c4
+1afca2c04ca1745b8ce07e137a55a3c11e4369c4,1afca2c0,Disable the privacy options by default,"Disable the privacy options by default
+
+...because it _confuses_ people.",,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1422547215,1422547215,2acaaf7c028be05a937b01fd17ce1b1b0ee1a1b1
+2acaaf7c028be05a937b01fd17ce1b1b0ee1a1b1,2acaaf7c,Increase version to 3.0.9/41,"Increase version to 3.0.9/41
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422476614,1422476614,30a0b0157da24d8ca9d7c8626a2983f9259afcf0
+30a0b0157da24d8ca9d7c8626a2983f9259afcf0,30a0b015,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422476599,1422476599,83712f4cb8d9d0f5eaca85374956814e779e206a
+83712f4cb8d9d0f5eaca85374956814e779e206a,83712f4c,Move getting a package name from notification to impl-s,"Move getting a package name from notification to impl-s
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422475791,1422475791,9209b8a716d311c709d0af4b818642655f174b70
+9209b8a716d311c709d0af4b818642655f174b70,9209b8a7,Fix possible FC when pressed view isn't actually an active icon view,"Fix possible FC when pressed view isn't actually an active icon view
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422474498,1422474498,3c8253391b4fef9e0fac34580cc3b1fcf89fbf63
+3c8253391b4fef9e0fac34580cc3b1fcf89fbf63,3c825339,Fix group notifications' handling (when a group has no summary),"Fix group notifications' handling (when a group has no summary)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422471703,1422471703,a35262a987b3de11354b87425fbe4a4789086b25
+a35262a987b3de11354b87425fbe4a4789086b25,a35262a9,Add check if the widget is null,"Add check if the widget is null
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422464353,1422464353,2efe3d9f91c9a49f1314cc85a0627997e118a395
+2efe3d9f91c9a49f1314cc85a0627997e118a395,2efe3d9f,Rewrite the permissions system,"Rewrite the permissions system
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422389865,1422389865,1707f597a92b24cf5a2476825ddc31daa4c3e08a
+1707f597a92b24cf5a2476825ddc31daa4c3e08a,1707f597,Return original bitmap in cause of OutOfMemoryError,"Return original bitmap in cause of OutOfMemoryError
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422290399,1422290399,0b7de13622904dad28c51f1d18a2300c72c83cd2
+0b7de13622904dad28c51f1d18a2300c72c83cd2,0b7de136,Fix message creating,"Fix message creating
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422289912,1422289912,a4eb288d590a27569f313117a21e1b272bfbe98e
+a4eb288d590a27569f313117a21e1b272bfbe98e,a4eb288d,Follow Android Studio's recommendations,"Follow Android Studio's recommendations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422289685,1422289685,c2f2dc6dd2a83c9d9ec0f9be1cb9b92a851218c0
+c2f2dc6dd2a83c9d9ec0f9be1cb9b92a851218c0,c2f2dc6d,Remove unused method,"Remove unused method
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422289325,1422289325,31e4a40da4bb4d89f045d6bbc963a386803c3d08
+31e4a40da4bb4d89f045d6bbc963a386803c3d08,31e4a40d,Ensure that notification's message hasn't 0 size,"Ensure that notification's message hasn't 0 size
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422289292,1422289292,57d1971e1fccef73b670540ea68cf45ec3a2bcdb
+57d1971e1fccef73b670540ea68cf45ec3a2bcdb,57d1971e,Increase version to 3.0.8/40,"Increase version to 3.0.8/40
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422225059,1422225059,841311f592fadbb766329304d79c712f55c7fe97
+841311f592fadbb766329304d79c712f55c7fe97,841311f5,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422225036,1422225036,fee33c51070856bb69f8bf51f859109c618ec481
+fee33c51070856bb69f8bf51f859109c618ec481,fee33c51,Increase version to 3.0.7/39,"Increase version to 3.0.7/39
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422223398,1422223398,0c8651eef0dc54ec02557fef51b7a5f0cd7cf920
+0c8651eef0dc54ec02557fef51b7a5f0cd7cf920,0c8651ee,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422223382,1422223382,c57526c8f88fe65a180c8c91e18d300db7af5a26
+c57526c8f88fe65a180c8c91e18d300db7af5a26,c57526c8,Tweak AcDisplayFragment's lifecycle,"Tweak AcDisplayFragment's lifecycle
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422211644,1422211644,42dcd24be410908219b1d740ead72e2da89bb3af
+42dcd24be410908219b1d740ead72e2da89bb3af,42dcd24b,Create WeakHandler.java,"Create WeakHandler.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422210198,1422210198,32ad3533b165d511c729ec8830a186cae4761311
+32ad3533b165d511c729ec8830a186cae4761311,32ad3533,Correct formatting,"Correct formatting
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422210030,1422210030,556e93585a9b071eed54262e12a8dab219b15b8b
+556e93585a9b071eed54262e12a8dab219b15b8b,556e9358,Minor correction for the RunningTasksLollipop.java,"Minor correction for the RunningTasksLollipop.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422209998,1422209998,dff202df1a71337532582eccb8d338592b2525f9
+dff202df1a71337532582eccb8d338592b2525f9,dff202df,Get monthly stats when checking access,"Get monthly stats when checking access
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422209888,1422209888,471811240e7ef3ae41a36eae770b88fada77f9c8
+471811240e7ef3ae41a36eae770b88fada77f9c8,47181124,Add concurrent call warning to MediaListener,"Add concurrent call warning to MediaListener
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422205878,1422205878,982fd98c42ffc58d9fac7c2bf5e954f092a78739
+982fd98c42ffc58d9fac7c2bf5e954f092a78739,982fd98c,Allow two-lines media widget's subtitle,"Allow two-lines media widget's subtitle
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422205849,1422205849,0a4aeaa9b045efbfe3b63802a5c7451bf4ecd4d9
+0a4aeaa9b045efbfe3b63802a5c7451bf4ecd4d9,0a4aeaa9,Underline first symbols only if they're letters or digits.,"Underline first symbols only if they're letters or digits.
+
+This will probably fix the issue with displaying smileys.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422199080,1422199080,303d28706dd2356a8ef2791c0642feedbf5f1dfd
+303d28706dd2356a8ef2791c0642feedbf5f1dfd,303d2870,Separate feddback's JSON by spaces,"Separate feddback's JSON by spaces
+
+This is needed because some clients (such as stock Email) fail
+displaying long ""words"".
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422107927,1422107927,bcd35722b004b43796ee09d385f26d4a0db7bae1
+bcd35722b004b43796ee09d385f26d4a0db7bae1,bcd35722,Join subText and infoText as a subtitle text,"Join subText and infoText as a subtitle text
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422102654,1422102654,f444e270fc98ea7da5dbe221b5b29754bb878ed6
+f444e270fc98ea7da5dbe221b5b29754bb878ed6,f444e270,More compact style of the notification widget,"More compact style of the notification widget
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422101629,1422101629,b39b7a7a8554b0f643f95f328a5bd7e7eff1af57
+b39b7a7a8554b0f643f95f328a5bd7e7eff1af57,b39b7a7a,"Add ""Hide notifications' actions"" privacy option","Add ""Hide notifications' actions"" privacy option
+
+It's ENABLED by default.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422098526,1422098526,cb03e7b2526ae165077e7eb1c34f57b8684f14c2
+cb03e7b2526ae165077e7eb1c34f57b8684f14c2,cb03e7b2,Fix multi-select-lists's summary formatting,"Fix multi-select-lists's summary formatting
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422098445,1422098445,6b4c94db38b18603df236b81d7cf39d9a48da697
+6b4c94db38b18603df236b81d7cf39d9a48da697,6b4c94db,Fix initializing notifications list on Lollipop,"Fix initializing notifications list on Lollipop
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422098406,1422098406,62e5a0d74bec1081e7227396dc7a6c2e15b273e9
+62e5a0d74bec1081e7227396dc7a6c2e15b273e9,62e5a0d7,"Add ""Hide notifications' content (on secure lock)"" option","Add ""Hide notifications' content (on secure lock)"" option
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422043279,1422043279,ee52a7b7b7e7ea80ba3becec9c68b4933b7b2dfb
+ee52a7b7b7e7ea80ba3becec9c68b4933b7b2dfb,ee52a7b7,"Don't allow turning master-switch on, is app lacks of permissions & fix ""enabled""/""disabled"" toasts","Don't allow turning master-switch on, is app lacks of permissions & fix ""enabled""/""disabled"" toasts
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1422031340,1422031340,c7f77ef08ee080e98b4b3abd13c84ae077e0e997
+c7f77ef08ee080e98b4b3abd13c84ae077e0e997,c7f77ef0,Add few checks to the ActivityBase.java,"Add few checks to the ActivityBase.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421965287,1421965287,f6154b421411a4aa72dc949eabc95445da41a8e7
+f6154b421411a4aa72dc949eabc95445da41a8e7,f6154b42,Add an ability to connect & disconnect to billing service from two or more activities,"Add an ability to connect & disconnect to billing service from two or more activities
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421965113,1421965113,e24424277f7834d10840957bbf2ecd31dfcf5219
+e24424277f7834d10840957bbf2ecd31dfcf5219,e2442427,Increase version to 3.0.6/38,"Increase version to 3.0.6/38
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421949133,1421949133,896c004ac95982e1796c1653ea87d36b22e8d3c2
+896c004ac95982e1796c1653ea87d36b22e8d3c2,896c004a,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421949113,1421949113,09b4b98b0d957bdc74272f99e3cc6066c83bdb9d
+09b4b98b0d957bdc74272f99e3cc6066c83bdb9d,09b4b98b,Add #getFreshNotification() to NotificationPresenter,"Add #getFreshNotification() to NotificationPresenter
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421942999,1421942999,5793f111a9b3c5ddb424f81c84c56db5f4aba267
+5793f111a9b3c5ddb424f81c84c56db5f4aba267,5793f111,Fix 'NoNotifiesSwitch goes inactive without respecting corresponding option',"Fix 'NoNotifiesSwitch goes inactive without respecting corresponding option'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421942968,1421942968,1fcd48ed05cc90ac4b799cc4aded8fb76369a9a1
+1fcd48ed05cc90ac4b799cc4aded8fb76369a9a1,1fcd48ed,Make CircleView respect power-save mode + code clean-up,"Make CircleView respect power-save mode + code clean-up
+
+Absolutely not tested :(
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421936428,1421936428,9eb830d87314fb64a9a579ecb8ff7ab76c897327
+9eb830d87314fb64a9a579ecb8ff7ab76c897327,9eb830d8,Make unlock fade animation respect power-save mode,"Make unlock fade animation respect power-save mode
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421921263,1421921263,ad6610ea7c8e2312775caa2406da4d1d071cd621
+ad6610ea7c8e2312775caa2406da4d1d071cd621,ad6610ea,Make Option.Switch return correct #isActive value,"Make Option.Switch return correct #isActive value
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421919595,1421919595,fde0f1bc60c0016bf361e20bdd6eecaf3693c7e4
+fde0f1bc60c0016bf361e20bdd6eecaf3693c7e4,fde0f1bc,Check if it's the last notification event before updating state,"Check if it's the last notification event before updating state
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421919348,1421919348,c4c2ba31282b4e992b5d82a55382705e110379cf
+c4c2ba31282b4e992b5d82a55382705e110379cf,c4c2ba31,Check if the user has read help dialog,"Check if the user has read help dialog
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421917975,1421917975,3fb2f791561fa89004e057611fb5f54b651fd0f8
+3fb2f791561fa89004e057611fb5f54b651fd0f8,3fb2f791,Config.java refactoring & must-run-on-main-thread checks,"Config.java refactoring & must-run-on-main-thread checks
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421917942,1421917942,19d028b482c4f421a34835e37ef0a7e5b0e675d6
+19d028b482c4f421a34835e37ef0a7e5b0e675d6,19d028b4,Create method in ConfigBase for getting an option,"Create method in ConfigBase for getting an option
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421864994,1421864994,2a18fe343eb6416e25dcc9daef04ff4d75a08ece
+2a18fe343eb6416e25dcc9daef04ff4d75a08ece,2a18fe34,Increase version to 3.0.5/37,"Increase version to 3.0.5/37
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421833216,1421833216,9a0704ead4132eaa1fdc93e863fad62e9433ecd5
+9a0704ead4132eaa1fdc93e863fad62e9433ecd5,9a0704ea,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421833192,1421833192,3c4511ee2f1535f92b4238c08f7f3637f3f84e22
+3c4511ee2f1535f92b4238c08f7f3637f3f84e22,3c4511ee,Fix code formatting,"Fix code formatting
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421831638,1421831638,f518137dc03ca02ee0f492e54477a569daaf6be3
+f518137dc03ca02ee0f492e54477a569daaf6be3,f518137d,Fix issue #42 (make action's text & icon white),"Fix issue #42 (make action's text & icon white)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421831503,1421831503,5251249e609f700643520585dd1231e3126041b4
+5251249e609f700643520585dd1231e3126041b4,5251249e,Reverse icon's color without making it gray-ish,"Reverse icon's color without making it gray-ish
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421831344,1421831344,0aaa53fbd0ea6db6e1e160b1216caa840bdd828d
+0aaa53fbd0ea6db6e1e160b1216caa840bdd828d,0aaa53fb,Animate scene switching only if the container is laid out,"Animate scene switching only if the container is laid out
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421831212,1421831212,682f5a43e48475db5490ba2b0757664da5feabfe
+682f5a43e48475db5490ba2b0757664da5feabfe,682f5a43,Keyguard clean-up & fixes (2),"Keyguard clean-up & fixes (2)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421830569,1421830569,d17d4acf3e99de64c2a385f75a3dcfcb4da75ab0
+d17d4acf3e99de64c2a385f75a3dcfcb4da75ab0,d17d4acf,Merge branch 'master' of https://github.com/AChep/AcDisplay,"Merge branch 'master' of https://github.com/AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421830464,1421830464,"38e5300aaa494626877e984ef4e7e2bff3ec68e6,d4896e2a07a6f8ea27e502c16f0bbf3631127134"
+38e5300aaa494626877e984ef4e7e2bff3ec68e6,38e5300a,Keyguard clean-up & fixes,"Keyguard clean-up & fixes
+
+1. Take options mechanism from the ActiveModeService.
+2. Make notification presenter handle possible wake-up before any others
+do.
+
+PS: Keyguard is broken from the inside by its idea. There's no way for a
+stable custom keyguard.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421830457,1421830457,c6403aec8dc6e4e3f6988a0fa227b30971d0317b
+d4896e2a07a6f8ea27e502c16f0bbf3631127134,d4896e2a,Add a few JavaDocs for Build.java,Add a few JavaDocs for Build.java,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421782524,1421782524,c6403aec8dc6e4e3f6988a0fa227b30971d0317b
+c6403aec8dc6e4e3f6988a0fa227b30971d0317b,c6403aec,Cache RunningTasks instance in a soft link,"Cache RunningTasks instance in a soft link
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421684694,1421684694,050bb64dce24a6318fa6244e655129d18c569d06
+050bb64dce24a6318fa6244e655129d18c569d06,050bb64d,"[Experimental] Connect to the billing service from each activity, not from the application","[Experimental] Connect to the billing service from each activity, not from the application
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421667025,1421667025,85f22681c5a41dc78ffc0e56e469036698a2296a
+85f22681c5a41dc78ffc0e56e469036698a2296a,85f22681,Increase version to 3.0.4/36,"Increase version to 3.0.4/36
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421617338,1421617338,1936826bf5146ccd9b55ea0c7c05206471c82a36
+1936826bf5146ccd9b55ea0c7c05206471c82a36,1936826b,Fix usage stats access detection,"Fix usage stats access detection
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421617211,1421617211,c2e94218340ba032e0dd7a63665eaaa55ac8d064
+c2e94218340ba032e0dd7a63665eaaa55ac8d064,c2e94218,Increase version to 3.0.3/35,"Increase version to 3.0.3/35
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421615481,1421615481,4dd8b19b57675dcfc8cc991f370a77e34cf2b1be
+4dd8b19b57675dcfc8cc991f370a77e34cf2b1be,4dd8b19b,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421614953,1421614953,4c39e68fc5569be18eddf0c2fab57f092b370bb2
+4c39e68fc5569be18eddf0c2fab57f092b370bb2,4c39e68f,Clean-up permissions dialog,"Clean-up permissions dialog
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421609782,1421609782,450220440b33586cf397844a98a55f69196b7e42
+450220440b33586cf397844a98a55f69196b7e42,45022044,Restore donation_asked from the correct place,"Restore donation_asked from the correct place
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421599660,1421599660,80a3a4e81a8b7d9a454f67971d1df7181e547248
+80a3a4e81a8b7d9a454f67971d1df7181e547248,80a3a4e8,Merge pull request #40 from AChep/keyguard-service-fixes,"Merge pull request #40 from AChep/keyguard-service-fixes
+
+Keyguard service fixes",,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421599408,1421599408,"db0ea31369920f2899a40dcdf5b2df43c17b0326,080e7554e73b138e2d5da3cb6b621150ab86a953"
+080e7554e73b138e2d5da3cb6b621150ab86a953,080e7554,Get correct tasks & exclude system decor apps,"Get correct tasks & exclude system decor apps
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421599271,1421599271,d190d39b3a8e0a636a3e4ce2d8c1cfa44bb86539
+d190d39b3a8e0a636a3e4ce2d8c1cfa44bb86539,d190d39b,Ask for the USAGE_STATS permission on Lollipop,"Ask for the USAGE_STATS permission on Lollipop
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421597074,1421597074,eaa6a6ceb39abb74726d42cf1f13443a34b94435
+eaa6a6ceb39abb74726d42cf1f13443a34b94435,eaa6a6ce,Use RunningTasks utils for getting top activity,"Use RunningTasks utils for getting top activity
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421593682,1421593682,f47bf1de11cf24efc8e546f120d7be96ddb670f2
+f47bf1de11cf24efc8e546f120d7be96ddb670f2,f47bf1de,"Revert ""Dirty workaround for the Lollipop's GET_TASKS restrictions""","Revert ""Dirty workaround for the Lollipop's GET_TASKS restrictions""
+
+This reverts commit 6dbc502838a5c6ef2578cb1de86f37b894cba502.
+
+Conflicts:
+	project/app/src/main/AndroidManifest.xml
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421593388,1421593388,7081daeb152b626771eae9d329b4c37cec2eeb00
+7081daeb152b626771eae9d329b4c37cec2eeb00,7081daeb,Create utils for getting top running activity,"Create utils for getting top running activity
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421590737,1421590737,db0ea31369920f2899a40dcdf5b2df43c17b0326
+db0ea31369920f2899a40dcdf5b2df43c17b0326,db0ea313,Fix a phase in Russian translation,"Fix a phase in Russian translation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421531598,1421531598,9a8da37dbbe6015e83b8556080996ab837cceae7
+9a8da37dbbe6015e83b8556080996ab837cceae7,9a8da37d,Comment out DEFAULT_SMILEY_NAMES cause they're unused,"Comment out DEFAULT_SMILEY_NAMES cause they're unused
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421531433,1421531433,22e6c77a6827bc4a619e666c4a4d51c67da0ce68
+22e6c77a6827bc4a619e666c4a4d51c67da0ce68,22e6c77a,Add optional emoticons,"Add optional emoticons
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421531134,1421531134,7fd0f1849c91d811865cb4d81c4becebaad34f43
+7fd0f1849c91d811865cb4d81c4becebaad34f43,7fd0f184,"Make compat alert a dialog, change its message to more constructive one.","Make compat alert a dialog, change its message to more constructive one.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421519756,1421519756,c31f0ba2bb88e38101644d7bcd5159443ec4d3ae
+c31f0ba2bb88e38101644d7bcd5159443ec4d3ae,c31f0ba2,Remove L's device admin troubleshooting toast,"Remove L's device admin troubleshooting toast
+
+It has been fixed by correcting activity's flags.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421505207,1421505207,255bcef8dcb1604c8b31b1f3b2af0d99aaace0e7
+255bcef8dcb1604c8b31b1f3b2af0d99aaace0e7,255bcef8,Fix malformed task affinity attribute,"Fix malformed task affinity attribute
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421504671,1421504671,a362780dfe58da553f33e6d5d8aed7e60c64ab5e
+a362780dfe58da553f33e6d5d8aed7e60c64ab5e,a362780d,Correct activity flags,"Correct activity flags
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421504077,1421504077,87757bf95e61ec662e149cf19f14af1667025168
+87757bf95e61ec662e149cf19f14af1667025168,87757bf9,Clean-up notification classes,"Clean-up notification classes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421502966,1421502966,5310664bb2d25aed3618b73a7ba6bf6921144386
+5310664bb2d25aed3618b73a7ba6bf6921144386,5310664b,Increase version to 3.0.2/34,"Increase version to 3.0.2/34
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421436431,1421436431,5b748c73ee8df86201821fa55d7d53e0c6386906
+5b748c73ee8df86201821fa55d7d53e0c6386906,5b748c73,Fix translations,"Fix translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421436239,1421436239,8f4e02e6e48a404984424aefc3241ea6e64d8b8d
+8f4e02e6e48a404984424aefc3241ea6e64d8b8d,8f4e02e6,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421435637,1421435658,c9863e2fb2296ef891028f14775ab407ce6901c5
+c9863e2fb2296ef891028f14775ab407ce6901c5,c9863e2f,"Remove 'Transition Everywhere' lib, cause it probably buggy","Remove 'Transition Everywhere' lib, cause it probably buggy
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421435459,1421435658,13ff64284c18b109afffbc01b2fc4d3f23fab2e8
+13ff64284c18b109afffbc01b2fc4d3f23fab2e8,13ff6428,Fix a typo that caused 'Override fonts' to load a wrong value,Fix a typo that caused 'Override fonts' to load a wrong value,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421435118,1421435118,8f7b404ddd95697e8f148b233572a39800b4c1ee
+8f7b404ddd95697e8f148b233572a39800b4c1ee,8f7b404d,Option to turn off overriding system fonts,"Option to turn off overriding system fonts
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421430047,1421430047,42d855e8c147092008cbad7e5661bb3a008a9577
+42d855e8c147092008cbad7e5661bb3a008a9577,42d855e8,Little refactoring of notification classes,"Little refactoring of notification classes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421428697,1421428697,9a9597ffdf514a7b055b581ce7e274131353e52f
+9a9597ffdf514a7b055b581ce7e274131353e52f,9a9597ff,Clear unused imports,"Clear unused imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421426512,1421426512,58e63af01464fa93a0926042e5edce82a80ddd5c
+58e63af01464fa93a0926042e5edce82a80ddd5c,58e63af0,Follow AS Code Inspector's recommendations,"Follow AS Code Inspector's recommendations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421425514,1421425514,52dc74d978d1edbc55e0a1a70bbd6e601dff5dd8
+52dc74d978d1edbc55e0a1a70bbd6e601dff5dd8,52dc74d9,Add support for the Lollipop's ZEN modes,"Add support for the Lollipop's ZEN modes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421409738,1421409738,388e3b95eb71969f25d25af832091dbe156f1d62
+388e3b95eb71969f25d25af832091dbe156f1d62,388e3b95,Little refactoring of creating notification's actions,"Little refactoring of creating notification's actions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421357263,1421357263,0f371cc90dded53cfa001003e5a6317f4169100f
+0f371cc90dded53cfa001003e5a6317f4169100f,0f371cc9,Ignore group children correctly,"Ignore group children correctly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421356073,1421356073,d65bfe9184539ce97dfd3fcd5fe942094f4bd0bf
+d65bfe9184539ce97dfd3fcd5fe942094f4bd0bf,d65bfe91,Use the correct (a)TargetApi,"Use the correct (a)TargetApi
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421352828,1421352828,778d38cc7c897afafc75d207082fb67fc4fdeb1c
+778d38cc7c897afafc75d207082fb67fc4fdeb1c,778d38cc,Use L's API for initializing the notification list,"Use L's API for initializing the notification list
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421352730,1421352730,c8cdf2424e54ba239ffb9c3e17bbac1beff9261b
+c8cdf2424e54ba239ffb9c3e17bbac1beff9261b,c8cdf242,Fix links to the HeadGridView.java (2),"Fix links to the HeadGridView.java (2)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421328809,1421328809,a568593cc329a941a19120db6c1b39f036a2a14e
+a568593cc329a941a19120db6c1b39f036a2a14e,a568593c,Fix links to the HeaderGridView.java,"Fix links to the HeaderGridView.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421327930,1421327930,70ab8b8f5e4f9caec707688d83b42887b2df0cef
+70ab8b8f5e4f9caec707688d83b42887b2df0cef,70ab8b8f,Move HeaderGridView.java to base widgets,"Move HeaderGridView.java to base widgets
+
+Cause DonateDialog.java from base fragments uses it.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421327877,1421327877,e99b48b2c1f29822785d23f3e29a7ce1587ccb6f
+e99b48b2c1f29822785d23f3e29a7ce1587ccb6f,e99b48b2,Materialize categories in settings for KK or lower,"Materialize categories in settings for KK or lower
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421327534,1421327534,3bc9ed4a113dc9257bca678a70689696eefb6786
+3bc9ed4a113dc9257bca678a70689696eefb6786,3bc9ed4a,Mark getBilling() & getCheckout() as (a)NonNull,"Mark getBilling() & getCheckout() as (a)NonNull
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421324111,1421324111,f73539f703e06e9274eae6804efdc5acf85d4dc7
+f73539f703e06e9274eae6804efdc5acf85d4dc7,f73539f7,Replace null-check with (a)NonNull,"Replace null-check with (a)NonNull
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421324014,1421324014,6fba20ca1ff409623a01c14938c8634a28df4de3
+6fba20ca1ff409623a01c14938c8634a28df4de3,6fba20ca,Move the checkout initializing to CheckoutInternal.java,"Move the checkout initializing to CheckoutInternal.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421323249,1421323249,6a6516190dd1ce19ed33514d4ce40e80b0492f7a
+6a6516190dd1ce19ed33514d4ce40e80b0492f7a,6a651619,Increase version to 3.0.1/33,"Increase version to 3.0.1/33
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421273204,1421273204,22a5f099ddf224216d544121d6e3b096c397f0ad
+22a5f099ddf224216d544121d6e3b096c397f0ad,22a5f099,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421273161,1421273161,4473c7e80697c3ea0daad5397589eb96819724a5
+4473c7e80697c3ea0daad5397589eb96819724a5,4473c7e8,Temp comment out not working code :bug:,"Temp comment out not working code :bug:
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421272948,1421272948,6dbc502838a5c6ef2578cb1de86f37b894cba502
+6dbc502838a5c6ef2578cb1de86f37b894cba502,6dbc5028,Dirty workaround for the Lollipop's GET_TASKS restrictions,"Dirty workaround for the Lollipop's GET_TASKS restrictions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421271951,1421271951,2c9e267e12ddffae8d95ca70ba85fdffc7f9ca0f
+2c9e267e12ddffae8d95ca70ba85fdffc7f9ca0f,2c9e267e,Small refactoring of AcDIsplayFragment.java,"Small refactoring of AcDIsplayFragment.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421269087,1421269134,45eb1493f18deb847c9ce407c37a6f4f9bbecf6a
+45eb1493f18deb847c9ce407c37a6f4f9bbecf6a,45eb1493,Don't display group notifications,Don't display group notifications,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421257033,1421257033,f12fcd40a79be260106e69fba1f9efd3643fc2b2
+f12fcd40a79be260106e69fba1f9efd3643fc2b2,f12fcd40,Fix 'Media widget doesn't show album label',Fix 'Media widget doesn't show album label',,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421252559,1421252559,c41945acf75359e9ee0bad1b015cb7a19615cea2
+c41945acf75359e9ee0bad1b015cb7a19615cea2,c41945ac,Update .travis.yml,Update .travis.yml,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1421252078,1421252078,d31da82d6f84e38799359adbf08f3725b3744c45
+d31da82d6f84e38799359adbf08f3725b3744c45,d31da82d,Add some more annotations to MediaController2,"Add some more annotations to MediaController2
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421245788,1421245788,65c5aebaa29e36197edc97daa11d0781660d881a
+65c5aebaa29e36197edc97daa11d0781660d881a,65c5aeba,Remove media controller for JB2,"Remove media controller for JB2
+
+Because Jelly Bean 4.3 doesn't have the RemoteController, it's my
+mistake.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421244948,1421244948,93963687ba63c7bea89b981f455803ef704891a4
+93963687ba63c7bea89b981f455803ef704891a4,93963687,Version 3.0,"Version 3.0
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1421183643,1421183643,27d7d262e3f66c2e677e8a9295969accaec1a6c0
+27d7d262e3f66c2e677e8a9295969accaec1a6c0,27d7d262,Materialize icon,"Materialize icon
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1420668444,1420668444,195493d45226f031aadc01ebea0a452bee9c30c8
+195493d45226f031aadc01ebea0a452bee9c30c8,195493d4,Merge pull request #35 from kuyan/master,"Merge pull request #35 from kuyan/master
+
+Fix typo 'dip' --> 'dpi'",,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1418021668,1418021668,"81a7a4ff02439fc7f4d29cf2424c46e3e7d3fe19,372049d384fcc4912b87ae9063bb86f082fbeb05"
+372049d384fcc4912b87ae9063bb86f082fbeb05,372049d3,Fix typo 'dip' --> 'dpi',"Fix typo 'dip' --> 'dpi'
+",,,,kuyan,kuyanatan.nlao@gmail.com,kuyan,kuyanatan.nlao@gmail.com,1418016156,1418016156,81a7a4ff02439fc7f4d29cf2424c46e3e7d3fe19
+81a7a4ff02439fc7f4d29cf2424c46e3e7d3fe19,81a7a4ff,Specify bash encoding,Specify bash encoding,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1413586130,1413586130,4c4be36828d17e6dc58ac554c33b86fec62f3a47
+4c4be36828d17e6dc58ac554c33b86fec62f3a47,4c4be368,Run tests on Android Lollipop,Run tests on Android Lollipop,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1413585834,1413585834,379448d0a9bb86c7bb30f371154ea276b4ba9d38
+379448d0a9bb86c7bb30f371154ea276b4ba9d38,379448d0,Access new cancel notification method using new sdk,"Access new cancel notification method using new sdk
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413580920,1413580920,afb16d95e2a8b9fc7798b1ad8837416c757f8dde
+afb16d95e2a8b9fc7798b1ad8837416c757f8dde,afb16d95,Exclude annotations lib from support lib,"Exclude annotations lib from support lib
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413580633,1413580633,136453a97527944f93bf752f66e53b0d859821eb
+136453a97527944f93bf752f66e53b0d859821eb,136453a9,Fix getMediaController() conflict on Lollipop,"Fix getMediaController() conflict on Lollipop
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413578081,1413578081,c3af4a651e0f8c5e4fa7c0892b6bcfebf5e12948
+c3af4a651e0f8c5e4fa7c0892b6bcfebf5e12948,c3af4a65,"Remove some imports, fix Lollipop check","Remove some imports, fix Lollipop check
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413577916,1413577916,c7558e6612ed56dd5ff437c8e9f6c2584adf1661
+c7558e6612ed56dd5ff437c8e9f6c2584adf1661,c7558e66,Change target and compile SDK to 21,"Change target and compile SDK to 21
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413577236,1413577236,255028f69d10eb09af0a179691cc057711fb5ce3
+255028f69d10eb09af0a179691cc057711fb5ce3,255028f6,Upgrade gradle version to v0.13,"Upgrade gradle version to v0.13
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413576565,1413576565,d02f10e8593a459a0fee2b8b8513aba493a8a452
+d02f10e8593a459a0fee2b8b8513aba493a8a452,d02f10e8,Upgrade build tools to v21 (Travis-CI),"Upgrade build tools to v21 (Travis-CI)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413576534,1413576534,c4e740cb2a70c92127790921af3472f8b861f2e2
+c4e740cb2a70c92127790921af3472f8b861f2e2,c4e740cb,Upgrade build tools to v21,"Upgrade build tools to v21
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413576311,1413576311,52c883146f52b9cac327af33461e08c68749508d
+52c883146f52b9cac327af33461e08c68749508d,52c88314,Rename Lemon Cake to Lollipop,"Rename Lemon Cake to Lollipop
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413575710,1413575710,81f722784b1fea42fd2db021498dca4cebab47b3
+81f722784b1fea42fd2db021498dca4cebab47b3,81f72278,Set max size notifications list for 4.2-,"Set max size notifications list for 4.2-
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413132094,1413132094,6005af90082fe26b2d94fa20927f6e3b90a32195
+6005af90082fe26b2d94fa20927f6e3b90a32195,6005af90,Remove 'How to use the blacklist' from FAQ,"Remove 'How to use the blacklist' from FAQ
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413131577,1413131577,d04393bf4685bbe9fdf2317887f005e95b3df6bc
+d04393bf4685bbe9fdf2317887f005e95b3df6bc,d04393bf,Refresh notifications's look basing on HeadsUp's layout,"Refresh notifications's look basing on HeadsUp's layout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413121088,1413121088,81dbf8a978e9caed31ba30e67208d8812b25b3a8
+81dbf8a978e9caed31ba30e67208d8812b25b3a8,81dbf8a9,Fix Circle icon option,"Fix Circle icon option
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413120379,1413120379,1347ded4f0684cb9e8b937314c51db226ddf9ad1
+1347ded4f0684cb9e8b937314c51db226ddf9ad1,1347ded4,Fix test launch,"Fix test launch
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413118903,1413118903,22ce472995c51dc3bf2496565dc24c477d858e20
+22ce472995c51dc3bf2496565dc24c477d858e20,22ce4729,Move atomic start() & stop() methods to separate class,"Move atomic start() & stop() methods to separate class
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413047240,1413047240,de29c8cffa814b99a82fbb28b412c20441971181
+de29c8cffa814b99a82fbb28b412c20441971181,de29c8cf,Send hide/show heads-up intent,"Send hide/show heads-up intent
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413046973,1413046973,cecdafef56ed850eee09f3775f167dc527b6fd65
+cecdafef56ed850eee09f3775f167dc527b6fd65,cecdafef,Make 'Pin notification' option checked by default,Make 'Pin notification' option checked by default,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1413046096,1413046096,e9ae261062c6677928137d4cf65fe4c840529aa0
+e9ae261062c6677928137d4cf65fe4c840529aa0,e9ae2610,Create CONTRIBUTING.md,Create CONTRIBUTING.md,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1413044372,1413044372,b6920cec275b9ef3df1d9deb4ccf8c9d42269572
+b6920cec275b9ef3df1d9deb4ccf8c9d42269572,b6920cec,Remove another HeadsUp layout,"Remove another HeadsUp layout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413039451,1413039451,18909e449d4eac6821696a57a91899023d8cabe4
+18909e449d4eac6821696a57a91899023d8cabe4,18909e44,Update link to repo (repo.acdisplay.org),"Update link to repo (repo.acdisplay.org)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413038643,1413038643,4c66e6694ba32a00d2abfa545ab29698c4493f6f
+4c66e6694ba32a00d2abfa545ab29698c4493f6f,4c66e669,Update about message,"Update about message
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413038526,1413038526,0b9a9b10ac2b349293f999dca3ba2ae6117db2de
+0b9a9b10ac2b349293f999dca3ba2ae6117db2de,0b9a9b10,Remove HeadsUp,"Remove HeadsUp
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413035118,1413035118,79aaf28ca0938aeaeafb94d1441f179c2eea57b2
+79aaf28ca0938aeaeafb94d1441f179c2eea57b2,79aaf28c,Add is_translated trigger to Config,"Add is_translated trigger to Config
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413032706,1413032706,d17a0cd4d06e1c55788186b841963bd2e1b38504
+d17a0cd4d06e1c55788186b841963bd2e1b38504,d17a0cd4,Pass notification widget to its on-click-listeners,"Pass notification widget to its on-click-listeners
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1413032561,1413032561,bcf77f1cc5a530c558667fbe51b1b04263201873
+bcf77f1cc5a530c558667fbe51b1b04263201873,bcf77f1c,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411291075,1411291075,"e84538ce9ca1fcce314b829544ebd968dfd9bb48,363d52c3b9e94c1b3eb1b96457b8481ad261f47b"
+e84538ce9ca1fcce314b829544ebd968dfd9bb48,e84538ce,Clean-up extracting notify's data and fix minor issues,"Clean-up extracting notify's data and fix minor issues
+
+Conflicts:
+	project/app/src/main/java/com/achep/acdisplay/notifications/parser/Extractor.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411281525,1411291036,df6662012d10c4730a958cdff411fc49195e5afc
+df6662012d10c4730a958cdff411fc49195e5afc,df666201,[Fix] Use new API for comparing notifies on Android L,"[Fix] Use new API for comparing notifies on Android L
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411290538,1411290770,dd58b3b1a05fe47482ff9d30d8f55c6c05f2be16
+363d52c3b9e94c1b3eb1b96457b8481ad261f47b,363d52c3,Specify file encoding,Specify file encoding,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1411234446,1411234446,dd58b3b1a05fe47482ff9d30d8f55c6c05f2be16
+dd58b3b1a05fe47482ff9d30d8f55c6c05f2be16,dd58b3b1,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411230099,1411230099,"c9ca71d9cf049514239f80b82ceb2e6297dc4d83,1ab7bd95622021d4f2d878abb8792a63c9b6d8fd"
+c9ca71d9cf049514239f80b82ceb2e6297dc4d83,c9ca71d9,Fix blacklist options,"Fix blacklist options
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411230015,1411230015,98937af4d93098648c1732e920f8cc35256c44dd
+1ab7bd95622021d4f2d878abb8792a63c9b6d8fd,1ab7bd95,Try to enable masterswitch before dismissing dialog,Try to enable masterswitch before dismissing dialog,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1411228870,1411228870,98937af4d93098648c1732e920f8cc35256c44dd
+98937af4d93098648c1732e920f8cc35256c44dd,98937af4,Check every color channel instead of checking average of them,"Check every color channel instead of checking average of them
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411208007,1411208007,1417450cfdcccd12cec57595d741b7b4f4d9165e
+1417450cfdcccd12cec57595d741b7b4f4d9165e,1417450c,Don't highlight single message,"Don't highlight single message
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411207392,1411207392,d58448f4211f039505c501f22f9e1b70d13ff4e5
+d58448f4211f039505c501f22f9e1b70d13ff4e5,d58448f4,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411207306,1411207306,"33eac6fda4d00a2dbc042e6e1e2ba6a3bb420d6e,ddda92d09748e9294ae9311953dbdce7cce7c85d"
+33eac6fda4d00a2dbc042e6e1e2ba6a3bb420d6e,33eac6fd,Remove Google Plus community icon,"Remove Google Plus community icon
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411203015,1411203015,373a263c79cf9137ecbbbea2a3516f7828bd06c0
+ddda92d09748e9294ae9311953dbdce7cce7c85d,ddda92d0,Method for setting maximum NotificationList's size,Method for setting maximum NotificationList's size,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1411199357,1411199357,373a263c79cf9137ecbbbea2a3516f7828bd06c0
+373a263c79cf9137ecbbbea2a3516f7828bd06c0,373a263c,Remove apps' master switch in blacklist,"Remove apps' master switch in blacklist
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411103894,1411103894,bb42de449279e227d7c67ca311bf1e57dd4658fe
+bb42de449279e227d7c67ca311bf1e57dd4658fe,bb42de44,Change names of consts in RepoLinksBuilder to more neutral,"Change names of consts in RepoLinksBuilder to more neutral
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1411061904,1411061904,0c553f619868621aecc00db2e29c3adf91034797
+0c553f619868621aecc00db2e29c3adf91034797,0c553f61,Group permissions and remove obvious comments to some of them,Group permissions and remove obvious comments to some of them,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1411055811,1411055811,8491410e5715a713436c4da9298fb0c0a8febb6d
+8491410e5715a713436c4da9298fb0c0a8febb6d,8491410e,Try to enable the master switch on dismiss of the access dialog,Try to enable the master switch on dismiss of the access dialog,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1411053580,1411053580,c8f3f9d31c43d57d8f57277fe2c56586d66ae191
+c8f3f9d31c43d57d8f57277fe2c56586d66ae191,c8f3f9d3,Fix test notification,"Fix test notification
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410974705,1410974705,0155943bd50172f044ded3e6878ce476daa6fc76
+0155943bd50172f044ded3e6878ce476daa6fc76,0155943b,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410974294,1410974294,"e0ef0266b3fdc91bf168fa41a392d0897c960267,5c3a617d88f444cd42c0045544ba40b8c0b1ceaf"
+e0ef0266b3fdc91bf168fa41a392d0897c960267,e0ef0266,"Massive HeadsUp improvements, notification widget refresh","Massive HeadsUp improvements, notification widget refresh
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410974238,1410974238,3d7e905b709be1fd23ae67e4d4925bd5644b3991
+5c3a617d88f444cd42c0045544ba40b8c0b1ceaf,5c3a617d,Recycle TypedArray,Recycle TypedArray,,,,Artem Chepurnoy,ArtemChep@gmail.com,Artem Chepurnoy,ArtemChep@gmail.com,1410603881,1410603881,3d7e905b709be1fd23ae67e4d4925bd5644b3991
+3d7e905b709be1fd23ae67e4d4925bd5644b3991,3d7e905b,[HeadsUp] Redesign notification widget,"[HeadsUp] Redesign notification widget
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410551334,1410551334,9a658abd96f244f2306d6dd180b96788090569c7
+9a658abd96f244f2306d6dd180b96788090569c7,9a658abd,Fix 'AcDisplay doesn't wake on notification',"Fix 'AcDisplay doesn't wake on notification'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410539453,1410539453,d3fb9cff8421247284a6cfec669691b65f049a66
+d3fb9cff8421247284a6cfec669691b65f049a66,d3fb9cff,Clean messages before posting final one,"Clean messages before posting final one
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410537023,1410537023,e0a760d11e2b87ded7cb48c2ef840c4577f96505
+e0a760d11e2b87ded7cb48c2ef840c4577f96505,e0a760d1,Update style of the music widget,"Update style of the music widget
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410470665,1410470665,de63acef16d01054cf09245ae06eff96bf0253f5
+de63acef16d01054cf09245ae06eff96bf0253f5,de63acef,Hide divider when no icons showind,"Hide divider when no icons showind
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410466373,1410466373,d208d77f1abe07b1b86065d4490f230d070a8453
+d208d77f1abe07b1b86065d4490f230d070a8453,d208d77f,Use Roboto Thin from Android L on 4.1,"Use Roboto Thin from Android L on 4.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410464666,1410464666,dc44f3115c8e0bc2e63368c99ceae385fe5cbd93
+dc44f3115c8e0bc2e63368c99ceae385fe5cbd93,dc44f311,[Config] Add an ability to specify option's min SDK version,"[Config] Add an ability to specify option's min SDK version
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410464548,1410464548,0921bcac573f5f1d9469c3f6f0ac50a040ae24b9
+0921bcac573f5f1d9469c3f6f0ac50a040ae24b9,0921bcac,[HeadsUp] Fix layout on Android 4.1,"[HeadsUp] Fix layout on Android 4.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410444186,1410444186,87e1ec79f499a9c18941f83a962f2db6e4c2889f
+87e1ec79f499a9c18941f83a962f2db6e4c2889f,87e1ec79,[HeadsUp] Add simple animation for updated notification,"[HeadsUp] Add simple animation for updated notification
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410382833,1410382833,d07c9bf02856168d19c8c6185f95bf4a5f48f683
+d07c9bf02856168d19c8c6185f95bf4a5f48f683,d07c9bf0,Fix HeadsUp's service name,"Fix HeadsUp's service name
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410372339,1410372339,77a20d3ca0066e322e976a2afc605eef0b0d3b52
+77a20d3ca0066e322e976a2afc605eef0b0d3b52,77a20d3c,Include basic HeadsUp into debug builds,"Include basic HeadsUp into debug builds
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410372208,1410372208,ff635a8c4908e08e3e0f14dbefebc7f5f4f2facf
+ff635a8c4908e08e3e0f14dbefebc7f5f4f2facf,ff635a8c,[Android L] Dismiss notification correctly,"[Android L] Dismiss notification correctly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410366284,1410366284,1d3824fdde66e0d81ac0809ddb8a2ccf883d1a5a
+1d3824fdde66e0d81ac0809ddb8a2ccf883d1a5a,1d3824fd,Fix size of apps icon,"Fix size of apps icon
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410209082,1410209082,8e09df11d3b7a53aaa002dbac7e6161393e51257
+8e09df11d3b7a53aaa002dbac7e6161393e51257,8e09df11,Remove some unused parts of code,"Remove some unused parts of code
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410208797,1410208797,c712064fd462adab01ba88f4c74d5bbec6e2e9c6
+c712064fd462adab01ba88f4c74d5bbec6e2e9c6,c712064f,Respect maxchars line,"Respect maxchars line
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410208010,1410208010,19a6bf20c118728942738e215f01d08369b88f5f
+19a6bf20c118728942738e215f01d08369b88f5f,19a6bf20,Add warning about No music widget in Jelly Bean,"Add warning about No music widget in Jelly Bean
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410207969,1410207969,7a8b452e7a7bd46815bbfc56b7da03ea17d26311
+7a8b452e7a7bd46815bbfc56b7da03ea17d26311,7a8b452e,Add basic Jelly Bean 4.1 support,"Add basic Jelly Bean 4.1 support
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410207795,1410207795,fe9d987e7fe9d87e3b72969bd381cac69f1c4d36
+fe9d987e7fe9d87e3b72969bd381cac69f1c4d36,fe9d987e,Do not show compat warn for KK users (fix typo),"Do not show compat warn for KK users (fix typo)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410090044,1410090044,9d2c1fe091a13789774e8c6eefa735582c9fc4df
+9d2c1fe091a13789774e8c6eefa735582c9fc4df,9d2c1fe0,Do not show compat warn for KK users,"Do not show compat warn for KK users
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410089984,1410089984,883616fe03fcc8822bfbf66199d600bfc6f67e61
+883616fe03fcc8822bfbf66199d600bfc6f67e61,883616fe,Fix crash on Android 4.1,"Fix crash on Android 4.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410089607,1410089607,903ccb263f69b87ebd78ee058e7f7ef1b7a68451
+903ccb263f69b87ebd78ee058e7f7ef1b7a68451,903ccb26,Warn about compatibility restrictions,"Warn about compatibility restrictions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410089440,1410089440,14b845c68aad40bf15883706dfebb385fe5f8148
+14b845c68aad40bf15883706dfebb385fe5f8148,14b845c6,Make description bigger in landscape,"Make description bigger in landscape
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410083404,1410083404,20403b8040e70ba23de28446efd22fb5a82a481b
+20403b8040e70ba23de28446efd22fb5a82a481b,20403b80,Add Jelly Bean 4.2 support,"Add Jelly Bean 4.2 support
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410082943,1410082943,83c60c5a99242c34614421c8b79e6397925a3ccd
+83c60c5a99242c34614421c8b79e6397925a3ccd,83c60c5a,Fix handling switch check state change,"Fix handling switch check state change
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410080074,1410080074,d11376a5c69abbb24de8c893a63b1f3baa4eed37
+d11376a5c69abbb24de8c893a63b1f3baa4eed37,d11376a5,"Show SetupPermissionsDialog on switch's change, instead of overlaying switch with button","Show SetupPermissionsDialog on switch's change, instead of overlaying switch with button
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410078401,1410078401,65b7279f4334ebd89eb61c0789c381b6ee1a7b79
+65b7279f4334ebd89eb61c0789c381b6ee1a7b79,65b7279f,Set DEBUG_DIALOGS to false,"Set DEBUG_DIALOGS to false
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410024727,1410024727,74919095b19c97985dcd42e25b66a27193603b7a
+74919095b19c97985dcd42e25b66a27193603b7a,74919095,Change const name to fit fragment's name,"Change const name to fit fragment's name
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410024679,1410024679,2181cca65dea055aac3421ef4aae6d361459f5e5
+2181cca65dea055aac3421ef4aae6d361459f5e5,2181cca6,Show persmission panel as a dialog,"Show persmission panel as a dialog
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410024394,1410024394,b4bcccb2409e5d188054cf69b6fec0036b1fcc0c
+b4bcccb2409e5d188054cf69b6fec0036b1fcc0c,b4bcccb2,Remove debug overriding .hasJBm2Api() to false,"Remove debug overriding .hasJBm2Api() to false
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1410000351,1410000351,860ce2d307af244f9f53ec768935c0718cc1c0c9
+860ce2d307af244f9f53ec768935c0718cc1c0c9,860ce2d3,Access notifications via Acessib...Service on Jelly Bean,"Access notifications via Acessib...Service on Jelly Bean
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409999543,1409999543,4721ee1d0f4a282fe1cbe1a4aac4574b551b7b87
+4721ee1d0f4a282fe1cbe1a4aac4574b551b7b87,4721ee1d,Bring back Notification.Action's icons,"Bring back Notification.Action's icons
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409994435,1409994435,e09ae6b5966e9b6705e39b47cb63c55886474260
+e09ae6b5966e9b6705e39b47cb63c55886474260,e09ae6b5,Support Notification.java-only notifies,"Support Notification.java-only notifies
+
+This adds a possibility to support Jelly Bean and probably even Honeycomb.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409994247,1409994247,d2e852db55fcfc85e5a80e2e419fb0ccc569039a
+d2e852db55fcfc85e5a80e2e419fb0ccc569039a,d2e852db,"Override AppConfig,toString()","Override AppConfig,toString()
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409937334,1409937334,1f1bc2764d922a2f268a42a65faac67ffc567c05
+1f1bc2764d922a2f268a42a65faac67ffc567c05,1f1bc276,Remove place from placeholder when we use it,Remove place from placeholder when we use it,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409937019,1409937019,94cad0d2bb0e46e66baf90f4a8a3536e89f61814
+94cad0d2bb0e46e66baf90f4a8a3536e89f61814,94cad0d2,Do not mark my own notifications as spam,"Do not mark my own notifications as spam
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409677739,1409677739,c3a2dd0ab65679dfdd4f71770047b8f14386363c
+c3a2dd0ab65679dfdd4f71770047b8f14386363c,c3a2dd0a,Move comparing notification inside of OpenNotification class,"Move comparing notification inside of OpenNotification class
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409467854,1409467854,7f9c08692441076d17d0e60c449fcb744e676aa7
+7f9c08692441076d17d0e60c449fcb744e676aa7,7f9c0869,Specify min API version of Actions factory,"Specify min API version of Actions factory
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409465536,1409465536,4474c7514732dd68b56838cd4daa2b012f912db8
+4474c7514732dd68b56838cd4daa2b012f912db8,4474c751,Add NonNull annotation,"Add NonNull annotation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409344326,1409344326,01ab085a5c62db9fc3b4202252b01d9cd037011d
+01ab085a5c62db9fc3b4202252b01d9cd037011d,01ab085a,Notification.Action's code refactoring,"Notification.Action's code refactoring
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409344069,1409344069,36b5c5f73857e55a0f5d6e28efebdcc1aa710e1e
+36b5c5f73857e55a0f5d6e28efebdcc1aa710e1e,36b5c5f7,Clean-up options' code,"Clean-up options' code
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409341265,1409341265,737aa3c012c7622991ce83af746bd6fccfef909f
+737aa3c012c7622991ce83af746bd6fccfef909f,737aa3c0,Avoid of using StatusBarNotification directly (2),"Avoid of using StatusBarNotification directly (2)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409339943,1409339943,1ee6f9ae57bbfdf10411be9e302ab7ad41f3a415
+1ee6f9ae57bbfdf10411be9e302ab7ad41f3a415,1ee6f9ae,Avoid of using StatusBarNotification directly,"Avoid of using StatusBarNotification directly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409337078,1409337078,00477a16c57f041c2fbf1a6f0f3102254e1bbd67
+00477a16c57f041c2fbf1a6f0f3102254e1bbd67,00477a16,Clear a typo symbol,"Clear a typo symbol
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409298077,1409298077,3971611e00198e723afd2f243954e220e3a9d481
+3971611e00198e723afd2f243954e220e3a9d481,3971611e,Completely remove blacklist from action menu,"Completely remove blacklist from action menu
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409297927,1409297927,348a899f5a7937c24313fe3d611261c54d31eda9
+348a899f5a7937c24313fe3d611261c54d31eda9,348a899f,Move blacklist to Settings activity,"Move blacklist to Settings activity
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409297233,1409297233,a3b75a9ccd1f8bc0252ea6171be396dc186620a9
+a3b75a9ccd1f8bc0252ea6171be396dc186620a9,a3b75a9c,Add placeholder for controlling system screen off timeout,"Add placeholder for controlling system screen off timeout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409296098,1409296098,f7390fdc4058ebd0ea2eee27ff1ce48fee0c0a17
+f7390fdc4058ebd0ea2eee27ff1ce48fee0c0a17,f7390fdc,Add an option to show non-clearable notifications,"Add an option to show non-clearable notifications
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409295772,1409295772,567a4b95e651082d426157e713c6236550ffc4fd
+567a4b95e651082d426157e713c6236550ffc4fd,567a4b95,Refactor RepositoryUrlBuilder,"Refactor RepositoryUrlBuilder
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409235139,1409235139,90109bfa528ef06a1a1b1d56c56c16d9519928f1
+90109bfa528ef06a1a1b1d56c56c16d9519928f1,90109bfa,Fix reading text from buffered reader,"Fix reading text from buffered reader
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409178194,1409178194,fe32517809b85cae53955fa940eabc3b91a7127c
+fe32517809b85cae53955fa940eabc3b91a7127c,fe325178,Fix missing import,"Fix missing import
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409177500,1409177500,5abc49a0e0a97bbb3224e0132e37be206c2ebb80
+5abc49a0e0a97bbb3224e0132e37be206c2ebb80,5abc49a0,Trim string before checking if empty,"Trim string before checking if empty
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409164014,1409164014,da532d8d794602c2b96f6f39b2610b623f09e162
+da532d8d794602c2b96f6f39b2610b623f09e162,da532d8d,Wrap Config's map to a Soft reference; support onLowMemory(),"Wrap Config's map to a Soft reference; support onLowMemory()
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409163030,1409163030,29735654c0c65d525d9f7e8b3308accba2c449d4
+29735654c0c65d525d9f7e8b3308accba2c449d4,29735654,Move onLowMemory() method to separate interface file,"Move onLowMemory() method to separate interface file
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409162499,1409162499,60899eec23e7c3d36c5c0c32e4be2c6d954bdcf1
+60899eec23e7c3d36c5c0c32e4be2c6d954bdcf1,60899eec,Free some Blacklist's resources on low memory,"Free some Blacklist's resources on low memory
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409162279,1409162279,e02f1c088470762958b1d3b15a40d0f19ab328d4
+e02f1c088470762958b1d3b15a40d0f19ab328d4,e02f1c08,Add onLowMemory() method for BathService's childs,"Add onLowMemory() method for BathService's childs
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409161167,1409161167,f75949bc2824720ff2b13a0411801408d02f1cf3
+f75949bc2824720ff2b13a0411801408d02f1cf3,f75949bc,Add tests for FileUtils.java,"Add tests for FileUtils.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409160410,1409160410,8e8f647d327cba346c3cc3f87c489c4f6e96ab34
+8e8f647d327cba346c3cc3f87c489c4f6e96ab34,8e8f647d,Add some annotations to AcDisplay's widgets,"Add some annotations to AcDisplay's widgets
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409159770,1409159770,7dcee69f92c0490bc73f172a5626e91f26de11aa
+7dcee69f92c0490bc73f172a5626e91f26de11aa,7dcee69f,Clean-up notification list,"Clean-up notification list
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409159057,1409159057,bc55a1ea40c48b825872393505ae305a46babf73
+bc55a1ea40c48b825872393505ae305a46babf73,bc55a1ea,Fix copy-paste typo in JavaDocs,"Fix copy-paste typo in JavaDocs
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409158457,1409158457,7ddadbf7bf1db8f16fc3b5dd8eb1785c815fd277
+7ddadbf7bf1db8f16fc3b5dd8eb1785c815fd277,7ddadbf7,Clean-up proximity sensor,"Clean-up proximity sensor
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409158350,1409158350,9eb4774c696d0c5e02df80adce96751b0b160472
+9eb4774c696d0c5e02df80adce96751b0b160472,9eb4774c,Clear history on sensor's stop,"Clear history on sensor's stop
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409157751,1409157751,4d8e1bb171a08c74df37ca39246a08f835c7d4e0
+4d8e1bb171a08c74df37ca39246a08f835c7d4e0,4d8e1bb1,Make proximity sensor's pocket program able to act immediately after service start,"Make proximity sensor's pocket program able to act immediately after service start
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409157635,1409157635,67f6a642992af6c3898648e782821bd16d07737e
+67f6a642992af6c3898648e782821bd16d07737e,67f6a642,Follow Code inspector,"Follow Code inspector
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409091557,1409091557,243f13e2bce062af1f3eb39728104107204debce
+243f13e2bce062af1f3eb39728104107204debce,243f13e2,Add some (a)NonNull and (a)Nullable annotations,"Add some (a)NonNull and (a)Nullable annotations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409090981,1409090981,6f88fd4fb3ca219337e75e16f22dcd88ad7ee7d1
+6f88fd4fb3ca219337e75e16f22dcd88ad7ee7d1,6f88fd4f,Synchronize handling event's history,"Synchronize handling event's history
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409088817,1409088817,aa48093e16de80537c98927a4737d699dae175b0
+aa48093e16de80537c98927a4737d699dae175b0,aa48093e,Change screenshot's descriptions,Change screenshot's descriptions,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409069892,1409069892,32a047796dad6007fa3ad01cf478cdd95a06e44b
+32a047796dad6007fa3ad01cf478cdd95a06e44b,32a04779,Update Play Store badge,Update Play Store badge,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1409069837,1409069837,13974a1257aeb4829267698a4e503765203149ea
+13974a1257aeb4829267698a4e503765203149ea,13974a12,Increase version to 2.4.7/31,"Increase version to 2.4.7/31
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408976007,1408976007,419e19b5ad893c90844c96ad84b820eefdc6ed13
+419e19b5ad893c90844c96ad84b820eefdc6ed13,419e19b5,Mutate drawable after checking for null,"Mutate drawable after checking for null
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408975890,1408975890,99cec54f9c4676d8901ef3c5a08a0cc9019f9771
+99cec54f9c4676d8901ef3c5a08a0cc9019f9771,99cec54f,Increase version to 2.4.6/30,"Increase version to 2.4.6/30
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408967400,1408967400,aa6761e6b657618c2695354e1bc7f3a2f3732b03
+aa6761e6b657618c2695354e1bc7f3a2f3732b03,aa6761e6,Add basic sensors's data dumper code,"Add basic sensors's data dumper code
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408967246,1408967246,661a8d622cca28d2e3d1dd2a0cd8d692666d3244
+661a8d622cca28d2e3d1dd2a0cd8d692666d3244,661a8d62,Fix links in README.md,"Fix links in README.md
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408966755,1408966755,124a9a6adeff9c3ce80c2b53d889b6028f33d78e
+124a9a6adeff9c3ce80c2b53d889b6028f33d78e,124a9a6a,Fix a typo in FAQ.md,"Fix a typo in FAQ.md
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408966550,1408966550,4655c37dc90de598ced3b65e106c707bcebfe8ec
+4655c37dc90de598ced3b65e106c707bcebfe8ec,4655c37d,Update links to translation service & repository,"Update links to translation service & repository
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408966524,1408966524,6ff185930ca2d429b962f17e0dbbd89b6e276665
+6ff185930ca2d429b962f17e0dbbd89b6e276665,6ff18593,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408965675,1408965675,"3ea378ea6eb0f457dad79834297be73ed1b1464d,7596887c0200a737e15cb028a277d1b84beb2ffd"
+3ea378ea6eb0f457dad79834297be73ed1b1464d,3ea378ea,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408965626,1408965626,3b25671e037229716a006f5a4554a9666ded5b96
+7596887c0200a737e15cb028a277d1b84beb2ffd,7596887c,Add translation status icon,Add translation status icon,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408962587,1408962587,40226ea001efe011d9c1907a873b1b7e1b16a3af
+40226ea001efe011d9c1907a873b1b7e1b16a3af,40226ea0,Update README.md,"Update README.md
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408872880,1408872880,4964a8090073cec1594d6199420d61db052829dc
+4964a8090073cec1594d6199420d61db052829dc,4964a809,Update screenshots,"Update screenshots
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408872052,1408872067,3b25671e037229716a006f5a4554a9666ded5b96
+3b25671e037229716a006f5a4554a9666ded5b96,3b25671e,Add sensors's dumper skeleton,"Add sensors's dumper skeleton
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408867980,1408867980,de13c77fa59c2a802b741368917233980a1d5afa
+de13c77fa59c2a802b741368917233980a1d5afa,de13c77f,Add development section to settings,"Add development section to settings
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408865506,1408865506,006486fb56aa6ffc632e1362bfe5b533edd70b70
+006486fb56aa6ffc632e1362bfe5b533edd70b70,006486fb,Notify listener with correct (old) notification,"Notify listener with correct (old) notification
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408830420,1408830420,c1839ee22588865893ff8d826d602dbe91501edb
+c1839ee22588865893ff8d826d602dbe91501edb,c1839ee2,Recycle notification after notifying about its death,Recycle notification after notifying about its death,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408814217,1408814217,fd73d48938d7d1dae130eae05d36420d49a5770a
+fd73d48938d7d1dae130eae05d36420d49a5770a,fd73d489,Create the builder of links to remote repo,"Create the builder of links to remote repo
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408811247,1408811247,6c6c3a0b7b87b4b7f3aa5ab9667e28581ea161c2
+6c6c3a0b7b87b4b7f3aa5ab9667e28581ea161c2,6c6c3a0b,"HelpDialog: store the locale of dowloaded FAQ, clean-up","HelpDialog: store the locale of dowloaded FAQ, clean-up
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408809391,1408809391,1cc5b4c6d7d3d381c0f72b3f0fbf70d7b5ffe6f2
+1cc5b4c6d7d3d381c0f72b3f0fbf70d7b5ffe6f2,1cc5b4c6,Change module's name in links and readme,"Change module's name in links and readme
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408805718,1408805718,7d45cb70c57f9584edd1ca24c0c1a07340d33194
+7d45cb70c57f9584edd1ca24c0c1a07340d33194,7d45cb70,Partialy clean-up blacklist,"Partialy clean-up blacklist
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408804477,1408804477,35f566ad851ea98c6985dbc777b9abda47cbaa2d
+35f566ad851ea98c6985dbc777b9abda47cbaa2d,35f566ad,Rename module: AcDisplay => app,"Rename module: AcDisplay => app
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408724912,1408724982,6b473997846ad601d939374fd23fd9c6fc992511
+6b473997846ad601d939374fd23fd9c6fc992511,6b473997,Add some (a)Nullable (a)NonNull to SharedList.java,"Add some (a)Nullable (a)NonNull to SharedList.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408661273,1408661273,10efd22e7b84346e94d1c96f15c12f4e185f64a7
+10efd22e7b84346e94d1c96f15c12f4e185f64a7,10efd22e,Add android-support-annotations library,"Add android-support-annotations library
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408660925,1408660925,bf3b4e3f57679834099f4826db01cdd9c38734b6
+bf3b4e3f57679834099f4826db01cdd9c38734b6,bf3b4e3f,Optimize imports,"Optimize imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408657672,1408657672,eef28f5de50505c3c130cbed1c40d4bc48e77b06
+eef28f5de50505c3c130cbed1c40d4bc48e77b06,eef28f5d,Refactor cleaning notification,"Refactor cleaning notification
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408657502,1408657502,fe8f0693d5c42f50636c3701abc9280f831d8a47
+fe8f0693d5c42f50636c3701abc9280f831d8a47,fe8f0693,Clean-up IconLoaderThread,Clean-up IconLoaderThread,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408656616,1408656616,c26570c218a1e26a22e51988d10b5722aaaadce4
+c26570c218a1e26a22e51988d10b5722aaaadce4,c26570c2,Use AsyncTask.stop() instead of local method,Use AsyncTask.stop() instead of local method,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408654640,1408654640,d7627dba51ce960eaf7ee944fe0d8f82759a5b7a
+d7627dba51ce960eaf7ee944fe0d8f82759a5b7a,d7627dba,Clean-up notification parser's utils,Clean-up notification parser's utils,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408629894,1408629894,1edab87461842017bc65375c96004421005d8339
+1edab87461842017bc65375c96004421005d8339,1edab874,Optimize merging large message,"Optimize merging large message
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408468994,1408468994,c8ee92cb45535ed0493bf42013fdcaf06ce6a9f9
+c8ee92cb45535ed0493bf42013fdcaf06ce6a9f9,c8ee92cb,Clear 'MSG_RESET_SCENE' on touch,Clear 'MSG_RESET_SCENE' on touch,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408438891,1408438891,6f2360046e346a974f8f704d4ded9f78ff035e1a
+6f2360046e346a974f8f704d4ded9f78ff035e1a,6f236004,Fix SharedList,"Fix SharedList
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408430340,1408430340,16623f239754269702d0b9efe20a9121c58e40bc
+16623f239754269702d0b9efe20a9121c58e40bc,16623f23,Add tests for SharedList,"Add tests for SharedList
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408430313,1408430313,be4473e73ce5b36cb2e064cb5295ade01e85302d
+be4473e73ce5b36cb2e064cb5295ade01e85302d,be4473e7,Change test build command to 'gradlew clean test',Change test build command to 'gradlew clean test',,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408374986,1408374986,a63aa3d550c718744ccd83295ccd620497404fed
+a63aa3d550c718744ccd83295ccd620497404fed,a63aa3d5,Add base for Robolectric tests,"Add base for Robolectric tests
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408371899,1408371899,45676cb120d376de0e243dbb9cb6c6963e439631
+45676cb120d376de0e243dbb9cb6c6963e439631,45676cb1,"Clean-up AsyncTask, make DownloadText task multithreading","Clean-up AsyncTask, make DownloadText task multithreading
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408047710,1408047710,299e6396ebeebb33c849aaa86894771f3ddfa36b
+299e6396ebeebb33c849aaa86894771f3ddfa36b,299e6396,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1408018078,1408018078,95cd0d08cd5d370797af09f62ab3c060341ea2bf
+95cd0d08cd5d370797af09f62ab3c060341ea2bf,95cd0d08,Fix 'SharedList re-writes its size with wrong value.',"Fix 'SharedList re-writes its size with wrong value.'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407844845,1407844845,1dea6beb4fc50f62b5558a8f9372a7b4aed29e29
+1dea6beb4fc50f62b5558a8f9372a7b4aed29e29,1dea6beb,Make Travis-CI use build tools v19.1,"Make Travis-CI use build tools v19.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407270302,1407270302,a8e59b56b9cbdbef91d9c1ca8b40229cb07dc245
+a8e59b56b9cbdbef91d9c1ca8b40229cb07dc245,a8e59b56,Update 'AcDisplay services' notification on locale change,"Update 'AcDisplay services' notification on locale change
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407269238,1407269238,2be1aeaa203012e1c2f4f47583d9cd475cdf642d
+2be1aeaa203012e1c2f4f47583d9cd475cdf642d,2be1aeaa,Increase version to 2.4.5/29,"Increase version to 2.4.5/29
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407062683,1407062683,60b63899877910b02706248b187e12ba5dc08354
+60b63899877910b02706248b187e12ba5dc08354,60b63899,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407062646,1407062646,4a9f6199260876a3d1acf0e73043ef9c10d70fdf
+4a9f6199260876a3d1acf0e73043ef9c10d70fdf,4a9f6199,Add NextAlarmView.java,"Add NextAlarmView.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407061922,1407061922,7c1dbd72bb11afff4559da3aafdc521fe460da21
+7c1dbd72bb11afff4559da3aafdc521fe460da21,7c1dbd72,Do not allow empty notifications to be in local list,"Do not allow empty notifications to be in local list
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407059217,1407059217,db0255af8936333a708faea68e9453706b10d5c1
+db0255af8936333a708faea68e9453706b10d5c1,db0255af,Use grid layout for list of icons,"Use grid layout for list of icons
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407057881,1407057881,beb9fe5034f0b7cf51691ab1a037e4c2038a6c4f
+beb9fe5034f0b7cf51691ab1a037e4c2038a6c4f,beb9fe50,[Fix] Initialize non-UI fragments correctly,"[Fix] Initialize non-UI fragments correctly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1407055341,1407055341,9b7f5f72f1b74b0e28ef8ccd0b352df6adee65c9
+9b7f5f72f1b74b0e28ef8ccd0b352df6adee65c9,9b7f5f72,Increase version to 2.4.4/28,Increase version to 2.4.4/28,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406987385,1406987385,9bd999cf597873f54cb97e30669a48e37db86627
+9bd999cf597873f54cb97e30669a48e37db86627,9bd999cf,[Fix] Check if proximity sensor is available,"[Fix] Check if proximity sensor is available
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406981589,1406981589,b478d3c67361fe14a6aa88d82abe561bd08b69dc
+b478d3c67361fe14a6aa88d82abe561bd08b69dc,b478d3c6,Fix errors in view editing mode,"Fix errors in view editing mode
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406973198,1406973198,1e8f8550577fa22173112970d7a102817548bf1d
+1e8f8550577fa22173112970d7a102817548bf1d,1e8f8550,[Clean-up] Extract enable/disable code as separate method,"[Clean-up] Extract enable/disable code as separate method
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406971718,1406971718,9dc53e122704a32b9ba5d6d9c29290bc8ed70aef
+9dc53e122704a32b9ba5d6d9c29290bc8ed70aef,9dc53e12,Increase version to 2.4.3/27,Increase version to 2.4.3/27,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406917191,1406917191,311d52a76a41490fa3f045874e23a5dde587324b
+311d52a76a41490fa3f045874e23a5dde587324b,311d52a7,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406913676,1406913676,9586b7395e77d373726970acbb72d4e677239b9f
+9586b7395e77d373726970acbb72d4e677239b9f,9586b739,Check for empty text lines while merging message,"Check for empty text lines while merging message
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406913356,1406913356,fe5fa523aa7f0d320f55dabcfd5067f7ef387fdc
+fe5fa523aa7f0d320f55dabcfd5067f7ef387fdc,fe5fa523,Code clean-up,"Code clean-up
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406912743,1406912743,0b106ab715d8262571fdc295122921d1207d11b9
+0b106ab715d8262571fdc295122921d1207d11b9,0b106ab7,Clean-up AcDisplay fragments,"Clean-up AcDisplay fragments
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406727360,1406727360,f26f0c846bdbe09f56a76b541ae187db9c9d2887
+f26f0c846bdbe09f56a76b541ae187db9c9d2887,f26f0c84,Remove pin animation,"Remove pin animation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406726197,1406726197,6224ca64a65f1047e38639ecbee8eb5a62c9ab51
+6224ca64a65f1047e38639ecbee8eb5a62c9ab51,6224ca64,Turn screen off automatically if proximity sensor is closed (add missing part),"Turn screen off automatically if proximity sensor is closed (add missing part)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406726155,1406726155,c9cd241a055365034190fef05167c661473bd3f7
+c9cd241a055365034190fef05167c661473bd3f7,c9cd241a,Follow code analyser's tips,"Follow code analyser's tips
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406668125,1406668125,b7a4fb4e160a0058d105132e89f080c395154c86
+b7a4fb4e160a0058d105132e89f080c395154c86,b7a4fb4e,Turn screen off automatically if proximity sensor is closed,"Turn screen off automatically if proximity sensor is closed
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406665596,1406665596,79ee09e6edb16061064917cc45139dc4f5757a56
+79ee09e6edb16061064917cc45139dc4f5757a56,79ee09e6,Fix a typo:rename const LOG --> TAG,"Fix a typo:rename const LOG --> TAG
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406657618,1406657618,37e0764cbcd76d22b9d74d419999810ff43fe379
+37e0764cbcd76d22b9d74d419999810ff43fe379,37e0764c,Don't animate changing scene if fragment is single,"Don't animate changing scene if fragment is single
+
+This is pretty strange issue and very needs to be hunted!",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406642698,1406642698,d185bdff7b25f457b6312164f93d8bb910dee92d
+d185bdff7b25f457b6312164f93d8bb910dee92d,d185bdff,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406573580,1406573580,"4161c952d64eefef8af28bfd21e3c93f57af0c22,092759520dea42ede21147e0f2d4a880d49a58bd"
+4161c952d64eefef8af28bfd21e3c93f57af0c22,4161c952,Increase version to 2.4.2/26,"Increase version to 2.4.2/26
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406572981,1406572981,1c05a88ab99e31fc29f6fa3999ff84089d92bf6e
+1c05a88ab99e31fc29f6fa3999ff84089d92bf6e,1c05a88a,Auto-update translations,"Auto-update translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406572949,1406572949,e4e613619e85ebb2a6b259829a3660b6ccca178d
+e4e613619e85ebb2a6b259829a3660b6ccca178d,e4e61361,Clean-up motion event transformation methods,"Clean-up motion event transformation methods
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406572808,1406572808,c949bdb8d2812fd8c58768aff6ccb458ff3f4837
+c949bdb8d2812fd8c58768aff6ccb458ff3f4837,c949bdb8,Remove 'TODO: Fix random exception on switch scene' cause it has been fixed,"Remove 'TODO: Fix random exception on switch scene' cause it has been fixed
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406572775,1406572775,886792d2cb1ef46dbbe0ae249cebdb822aa4e8b4
+886792d2cb1ef46dbbe0ae249cebdb822aa4e8b4,886792d2,Animate dismissing widget properly,"Animate dismissing widget properly
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406572751,1406572751,8ed5eb4bb77db030d9f7e713add28ac4d5d9f9d0
+8ed5eb4bb77db030d9f7e713add28ac4d5d9f9d0,8ed5eb4b,Clean-up AcDisplayActivity.java,"Clean-up AcDisplayActivity.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406568701,1406568701,d24ece49f0fe1a0e24e362c8542593dd0b86b263
+d24ece49f0fe1a0e24e362c8542593dd0b86b263,d24ece49,Remove 'Screen stays on forever' (it needs to be replaced with Daydream),"Remove 'Screen stays on forever' (it needs to be replaced with Daydream)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406567248,1406567248,f0171d23139b843134dd89607c3749111d0d98b3
+092759520dea42ede21147e0f2d4a880d49a58bd,09275952,"Fix a typo ""context"" --> ""getContext()""","Fix a typo ""context"" --> ""getContext()""
+
+Coding in text editor can be troublesome, yeah.",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406564243,1406564243,f0171d23139b843134dd89607c3749111d0d98b3
+f0171d23139b843134dd89607c3749111d0d98b3,f0171d23,ProximitySensor: Remove small delay before starting AcDisplay,ProximitySensor: Remove small delay before starting AcDisplay,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406562555,1406562555,2545a0d458f12766dd825052170fdd0225146a9a
+2545a0d458f12766dd825052170fdd0225146a9a,2545a0d4,Unregister local broadcast manager on destroy active mode service,"Unregister local broadcast manager on destroy active mode service
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406536521,1406536521,5771ef5310e609981e229c4f92f164e21853d50e
+5771ef5310e609981e229c4f92f164e21853d50e,5771ef53,Do not create useless intent on hande services' state,"Do not create useless intent on hande services' state
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406535652,1406535652,0094c223c0e59783f9bd6001347932a5d2473c4f
+0094c223c0e59783f9bd6001347932a5d2473c4f,0094c223,Fix 'Consuming sensors' wake lock does not have a name',"Fix 'Consuming sensors' wake lock does not have a name'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406535451,1406535451,989eff9f373662911dc9fcff71039d561601b640
+989eff9f373662911dc9fcff71039d561601b640,989eff9f,CircleView: Reset isAimed trigger on touch down,"CircleView: Reset isAimed trigger on touch down
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406535070,1406535070,81fbf16e73a9b801101b931ba0f9ba959f09d652
+81fbf16e73a9b801101b931ba0f9ba959f09d652,81fbf16e,Fix SecurityException on #notify() on SGS4 Android 4.3,"Fix SecurityException on #notify() on SGS4 Android 4.3
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406531475,1406531475,81b34865f6bfc5748294f01cd66222bcc009adb6
+81b34865f6bfc5748294f01cd66222bcc009adb6,81b34865,Disable media widget for Android L to fix SecurityException,"Disable media widget for Android L to fix SecurityException
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406528617,1406528617,7dedaa0433666ce9a421ba7440f3fd37208dbf8c
+7dedaa0433666ce9a421ba7440f3fd37208dbf8c,7dedaa04,Add method for checking Android L,"Add method for checking Android L
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406528430,1406528430,a0ffbe8ac1ce51661b3314dcd3d6b9a92bec8e3a
+a0ffbe8ac1ce51661b3314dcd3d6b9a92bec8e3a,a0ffbe8a,Increase version to 2.4.1/25,"Increase version to 2.4.1/25
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406489511,1406489511,476252fdc68eed93b4e7af80fb54375675a01202
+476252fdc68eed93b4e7af80fb54375675a01202,476252fd,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406489463,1406489463,f2d3d98c2dc6b1aabc56d0aea56b718de483695f
+f2d3d98c2dc6b1aabc56d0aea56b718de483695f,f2d3d98c,Increase hiding media widget delay to 6 sec.,Increase hiding media widget delay to 6 sec.,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406484146,1406484146,7b06f7126222aeae9848a57f6e1886630d325ab3
+7b06f7126222aeae9848a57f6e1886630d325ab3,7b06f712,Reduce max unlocking time to 150 millis,"Reduce max unlocking time to 150 millis
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406480354,1406480354,32d7e70809b4584912f4074fa834bde2e9cba8e6
+32d7e70809b4584912f4074fa834bde2e9cba8e6,32d7e708,Add an option to disable unlock animation,"Add an option to disable unlock animation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406480296,1406480296,8c6090e2a18ed3d9c330a9affd4ffc262e5f4791
+8c6090e2a18ed3d9c330a9affd4ffc262e5f4791,8c6090e2,Ping consuming sensors on timeout,"Ping consuming sensors on timeout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406476162,1406476162,838c0c01bd10b08d8222234d48dc1ec449548a6f
+838c0c01bd10b08d8222234d48dc1ec449548a6f,838c0c01,Do not ping consuming sensors on screen off,"Do not ping consuming sensors on screen off
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406475925,1406475925,12ba3154da92c3e9507fc511c2ae88ae4a6342f0
+12ba3154da92c3e9507fc511c2ae88ae4a6342f0,12ba3154,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406475255,1406475255,7128986a76d2e72a000532233d9c58ff6e02a968
+7128986a76d2e72a000532233d9c58ff6e02a968,7128986a,Add local broadcast event for pinging consuming sensors,"Add local broadcast event for pinging consuming sensors
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406471777,1406471777,ac23b0d97230e5d3568b30b7604e3f8e07a1f339
+ac23b0d97230e5d3568b30b7604e3f8e07a1f339,ac23b0d9,Send local broadcast event on timeout,"Send local broadcast event on timeout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406471591,1406471591,2793e1058eac18b326302f3e9832407bc547141a
+2793e1058eac18b326302f3e9832407bc547141a,2793e105,Set short timeout on touch on inactive are,"Set short timeout on touch on inactive are
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406470996,1406470996,71f3a0d0f6562da21ec50f4fd1a98dc284a54e29
+71f3a0d0f6562da21ec50f4fd1a98dc284a54e29,71f3a0d0,Reduce default consuming sensors' active time to 3 seconds,Reduce default consuming sensors' active time to 3 seconds,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406470718,1406470718,5caedaf5a9d347ee418951cf2b419b2e8a1ef90d
+5caedaf5a9d347ee418951cf2b419b2e8a1ef90d,5caedaf5,Increase version code to 24,"Increase version code to 24
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406458037,1406458037,2441d4cdd256d39f0ef5269b3794d0550f58e528
+2441d4cdd256d39f0ef5269b3794d0550f58e528,2441d4cd,Disallow consuming sensors to wake-up device in your pocket,"Disallow consuming sensors to wake-up device in your pocket
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406457076,1406457076,f80170d556338e5b17448017e3b1677dd99e1569
+f80170d556338e5b17448017e3b1677dd99e1569,f80170d5,Fix 'Donation fragment: link to repo does not work',"Fix 'Donation fragment: link to repo does not work'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406451827,1406451827,9294b15cf011631be7f1f2d4b50928c0e06dca0d
+9294b15cf011631be7f1f2d4b50928c0e06dca0d,9294b15c,Tweak proximity pocket porgram to reduce accidental wake-ups,"Tweak proximity pocket porgram to reduce accidental wake-ups
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406450962,1406450962,de463e1a66da5cf36c76823a3b4c5871f036a817
+de463e1a66da5cf36c76823a3b4c5871f036a817,de463e1a,Move wave-to-wake pattern to debug builds only,"Move wave-to-wake pattern to debug builds only
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406450750,1406450750,086b70e30bd449f5de9836a7a2411ed16761b512
+086b70e30bd449f5de9836a7a2411ed16761b512,086b70e3,Disable smooth turning on animation (...until it will be fixed),"Disable smooth turning on animation (...until it will be fixed)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406450643,1406450643,a019e3051228bfa0d9c0f3c5868b377f54301d65
+a019e3051228bfa0d9c0f3c5868b377f54301d65,a019e305,Clean-up consuming sensors,"Clean-up consuming sensors
+
+Optimize power usage
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406450340,1406450340,f2a6abbf214f74e91bcd703e3689cbef71ce5290
+f2a6abbf214f74e91bcd703e3689cbef71ce5290,f2a6abbf,Add 'How to build using public test key' to README.md,Add 'How to build using public test key' to README.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406407204,1406407204,3c83aad2b78581bf3e9adcd9b8ab59de2edab37a
+3c83aad2b78581bf3e9adcd9b8ab59de2edab37a,3c83aad2,Add Travis-CI build status icon,"Add Travis-CI build status icon
+
+Which is failing at this moment, because of lack of build tools version 19.1.",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406406958,1406406958,1fc35066e2aba1803154be50c1a6902247f2ff8c
+1fc35066e2aba1803154be50c1a6902247f2ff8c,1fc35066,"Revert ""Downgrade Build tools to version 19.0.3""","Revert ""Downgrade Build tools to version 19.0.3""
+
+This reverts commit 7ca8aa0dde7f7ae279481ea6e41e97eee18a8213.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406406541,1406406541,7ca8aa0dde7f7ae279481ea6e41e97eee18a8213
+7ca8aa0dde7f7ae279481ea6e41e97eee18a8213,7ca8aa0d,Downgrade Build tools to version 19.0.3,"Downgrade Build tools to version 19.0.3
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406405820,1406405820,cebd28a6234c5feb1814f182a947d977bb5da980
+cebd28a6234c5feb1814f182a947d977bb5da980,cebd28a6,Downgrade Build tools to version 19.1,"Downgrade Build tools to version 19.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406405218,1406405218,b11d04dc3c22335af78fbe083b393c65d3b41a90
+b11d04dc3c22335af78fbe083b393c65d3b41a90,b11d04dc,Downgrade Android support library to version 19+,"Downgrade Android support library to version 19+
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406404672,1406404672,6d06b42c279d39b2ca8a4a549883d5c03ec4ced6
+6d06b42c279d39b2ca8a4a549883d5c03ec4ced6,6d06b42c,Make Travis-CI use test-key to build,"Make Travis-CI use test-key to build
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406403187,1406403187,3865ec23ea30adb58fefda253cc28e9b0827e7c2
+3865ec23ea30adb58fefda253cc28e9b0827e7c2,3865ec23,Add test-key.keystore for testing builds,"Add test-key.keystore for testing builds
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406402800,1406402800,e29dc61ccb307b74b1b8a658ec976649335dbd23
+e29dc61ccb307b74b1b8a658ec976649335dbd23,e29dc61c,Fix .travis.yml build command,"Fix .travis.yml build command
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406364803,1406364803,262a8f3d0f6300fdf08f5b92f0e6bf201b002cba
+262a8f3d0f6300fdf08f5b92f0e6bf201b002cba,262a8f3d,Downgrade target/compile sdk version to 19,Downgrade target/compile sdk version to 19,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406364728,1406364728,4df85da9a9fc4935a4c7ceea2f35b4a1786b12da
+4df85da9a9fc4935a4c7ceea2f35b4a1786b12da,4df85da9,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406360517,1406360517,01e5ed353c34d91304821cd0ef4a2fc4a9deba4b
+01e5ed353c34d91304821cd0ef4a2fc4a9deba4b,01e5ed35,Fix build script dependencies,"Fix build script dependencies
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406360396,1406360396,fb0c7b734585f8529789322d1d8964c375957192
+fb0c7b734585f8529789322d1d8964c375957192,fb0c7b73,Update .travis.yml,Update .travis.yml,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406327110,1406327110,1c8fe2e5e9a8f2fb59c038693805d95f454b4d39
+1c8fe2e5e9a8f2fb59c038693805d95f454b4d39,1c8fe2e5,Update .travis.yml,Update .travis.yml,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406325860,1406325860,c1a8050617655d234376271c2830a8e9b40fd4c6
+c1a8050617655d234376271c2830a8e9b40fd4c6,c1a80506,Remove Android L specific code from master branch,"Remove Android L specific code from master branch
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406325647,1406325647,18cea783c42b31a4e838a8b6e87ccfe708bd5bfd
+18cea783c42b31a4e838a8b6e87ccfe708bd5bfd,18cea783,Implement shake-to-wake as a consuming sensor,"Implement shake-to-wake as a consuming sensor
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406283398,1406283398,7cb62fd93d45290d55394e276b79bd4a06d30662
+7cb62fd93d45290d55394e276b79bd4a06d30662,7cb62fd9,Disable Gyroscope sensor,"Disable Gyroscope sensor
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406283281,1406283281,22c2605da651106f26fe39de4765c52008656b9f
+22c2605da651106f26fe39de4765c52008656b9f,22c2605d,Dynamically include .jar libs,Dynamically include .jar libs,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406282620,1406282620,c97ef41a6359108be61fd55a6a787b86c37f04b6
+c97ef41a6359108be61fd55a6a787b86c37f04b6,c97ef41a,Ping consuming sensors on screen off event,"Ping consuming sensors on screen off event
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406280575,1406280575,275f3440cfdbee30754570d837d13bd520cbaa4e
+275f3440cfdbee30754570d837d13bd520cbaa4e,275f3440,Fix 'AcDisplay (debug build) stays active after turning screen off and then on',Fix 'AcDisplay (debug build) stays active after turning screen off and then on',,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406278706,1406278706,13e6cdd9611a8f464b80dbde499731a71353a007
+13e6cdd9611a8f464b80dbde499731a71353a007,13e6cdd9,Follow code analyser,"Follow code analyser
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406197303,1406197303,81c5d63faee9cb7f0f39ef4aa5b30beb5a8f7043
+81c5d63faee9cb7f0f39ef4aa5b30beb5a8f7043,81c5d63f,Fix 'Dismissing notify doesn't dismiss it from system',"Fix 'Dismissing notify doesn't dismiss it from system'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406196718,1406196718,519c5fd6738e07417c4c438b6e1203ece61bfc1f
+519c5fd6738e07417c4c438b6e1203ece61bfc1f,519c5fd6,Auto-import translation,"Auto-import translation
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406196340,1406196340,215faa3d14c7267017bbf402dbb32c183737555c
+215faa3d14c7267017bbf402dbb32c183737555c,215faa3d,Remove .ai launcher icon from project directory,"Remove .ai launcher icon from project directory
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406194624,1406194624,577f4ae2b6d2b9a8765b66630ba8f13da8df5d02
+577f4ae2b6d2b9a8765b66630ba8f13da8df5d02,577f4ae2,Update support library to 20.+,"Update support library to 20.+
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406194253,1406194253,8176007adc39d4453b4904904da1f1e903e8818b
+8176007adc39d4453b4904904da1f1e903e8818b,8176007a,Move SDK properties from Manifest to build script,"Move SDK properties from Manifest to build script
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406194105,1406194105,9988a1f4c7b9dc46ae44b6d9fd5a323974064e78
+9988a1f4c7b9dc46ae44b6d9fd5a323974064e78,9988a1f4,apply plugin: 'com.android.application',"apply plugin: 'com.android.application'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406193648,1406193648,06388e3cb76b8d5a020cea54007939ba1a45dec7
+06388e3cb76b8d5a020cea54007939ba1a45dec7,06388e3c,"Pre-set DISMISS_KEYGUARD flag on unlocking, clean-up Circle","Pre-set DISMISS_KEYGUARD flag on unlocking, clean-up Circle
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406192054,1406192054,19f439eb02bf33e755c7eb8996e9c52ee040f1fa
+19f439eb02bf33e755c7eb8996e9c52ee040f1fa,19f439eb,Add @Override attr to #requestTimeoutRestart(int),"Add @Override attr to #requestTimeoutRestart(int)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406151403,1406151403,8051294cecc1608e9e75a317a9ff8a8e8ddcc307
+8051294cecc1608e9e75a317a9ff8a8e8ddcc307,8051294c,"Speed up MathUtils#range(float, float, float)","Speed up MathUtils#range(float, float, float)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406150290,1406150290,9ae075cbdfe454a305ed705bee84d0ab54c376e7
+9ae075cbdfe454a305ed705bee84d0ab54c376e7,9ae075cb,Clean-up KeyguardActivity.java,"Clean-up KeyguardActivity.java
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406149943,1406149943,32ee24367e234233bead5a3ee5030540de65489c
+32ee24367e234233bead5a3ee5030540de65489c,32ee2436,Remove debug updateIconsSize() call on touch down,"Remove debug updateIconsSize() call on touch down
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406146974,1406146974,81036f57b69760859e264b83b75ec9f6d8a7672f
+81036f57b69760859e264b83b75ec9f6d8a7672f,81036f57,Fix 'Parser of notifies FCs on empty notifications',Fix 'Parser of notifies FCs on empty notifications',,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406135227,1406135227,9baf9892d394a9b24ecd9e961bfc265377e73d5c
+9baf9892d394a9b24ecd9e961bfc265377e73d5c,9baf9892,Fix switching scenes,"Fix switching scenes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406129391,1406129391,647287d4dcad7ae8f47ba261f6358de31df3167a
+647287d4dcad7ae8f47ba261f6358de31df3167a,647287d4,Add android-L component,Add android-L component,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406047248,1406047248,6e47c10869e39d2ef2173e5e67afb8a5eeb22e36
+6e47c10869e39d2ef2173e5e67afb8a5eeb22e36,6e47c108,Create .travis.yml,Create .travis.yml,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406046215,1406046215,3e1a2b1501e7843408a621d0fd0f302cda392fbe
+3e1a2b1501e7843408a621d0fd0f302cda392fbe,3e1a2b15,Try with a workaround for Scene.go() issue,"Try with a workaround for Scene.go() issue
+
+I have no idea about it, sorry. :)",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406044784,1406044784,d4f2df929d5d9c2ece862e93e2d074107709b8c1
+d4f2df929d5d9c2ece862e93e2d074107709b8c1,d4f2df92,Add todo to fix TransitionManager.go(),Add todo to fix TransitionManager.go(),,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1406044240,1406044240,f95b727fd376467271a57d0fee1482f9d5e1eabf
+f95b727fd376467271a57d0fee1482f9d5e1eabf,f95b727f,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405975382,1405975382,"67e982989bb49937e260cab2723ed2784b15d236,5be254471f67443fbb6287d32f00461e31763011"
+67e982989bb49937e260cab2723ed2784b15d236,67e98298,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405975330,1405975330,673d74192b612953701ecfa86b5c9a20e0cc82ad
+5be254471f67443fbb6287d32f00461e31763011,5be25447,Add ripple unlock animation to CircleView,"Add ripple unlock animation to CircleView
+
+Needs code refactoring!
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405687610,1405687610,fc724e6abae0f406e600b39d3288d1cf4fa2d10e
+fc724e6abae0f406e600b39d3288d1cf4fa2d10e,fc724e6a,Animate activity's unlocking,"Animate activity's unlocking
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405686708,1405686708,c16581539538eefdb98439f158cab2c2e403f452
+c16581539538eefdb98439f158cab2c2e403f452,c1658153,Make sure that we got unlocked before #finish(),"Make sure that we got unlocked before #finish()
+
+Well, still needs another solution... This one may not work completely.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405686544,1405686544,f473560991c43cd372906056418a11084e2e3f6e
+f473560991c43cd372906056418a11084e2e3f6e,f4735609,"Update README.md: output app directory, the 'GUI of Android studio'","Update README.md: output app directory, the 'GUI of Android studio'",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405674039,1405674039,5c7ce8056302132a3bbfc21c2dc4e36b8331b6d9
+5c7ce8056302132a3bbfc21c2dc4e36b8331b6d9,5c7ce805,Use Material theme for Android L or higher,"Use Material theme for Android L or higher
+
+This is NOT complete Material design, but a first step in that
+direction. ;)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405605760,1405605760,90339e07d2ec08aafbb236cf6d54f3fa32791654
+90339e07d2ec08aafbb236cf6d54f3fa32791654,90339e07,Move status below the clock + tweak margins,Move status below the clock + tweak margins,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405604656,1405604656,d3b65d2fba199f7b60c89b49f3922817e9608e95
+d3b65d2fba199f7b60c89b49f3922817e9608e95,d3b65d2f,Hardcode Android L version code as '20',"Hardcode Android L version code as '20'
+
+Why the hell Build.VERSION_CODES.L returns 1000? This is not funny, Google...",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405603467,1405603467,b40836bbbf263b6882767f9590176b94c07f93f6
+b40836bbbf263b6882767f9590176b94c07f93f6,b40836bb,Add missing ')' to DonationFragment.java,Add missing ')' to DonationFragment.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405602785,1405602785,3bd9cd20192403983c0b5f72643e4b30085311f1
+3bd9cd20192403983c0b5f72643e4b30085311f1,3bd9cd20,Add missing variable,Add missing variable,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405279396,1405279396,e16977b488eebb4d154bdc73973658d3355d58a8
+e16977b488eebb4d154bdc73973658d3355d58a8,e16977b4,Remove warning for PA users,"Remove warning for PA users
+
+Finally ParanaidAndroid team fixed it!
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405276617,1405276617,25590f03fdffb93c4cafee0a109cb07fbbaea3b8
+25590f03fdffb93c4cafee0a109cb07fbbaea3b8,25590f03,Update #hasLemonCakeApi(),"Update #hasLemonCakeApi()
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405273986,1405273986,10b115c3ede1fc4ed7754cde8d4ec3d7a91e2479
+10b115c3ede1fc4ed7754cde8d4ec3d7a91e2479,10b115c3,Fix FAQ / Donate via PayPal links,"Fix FAQ / Donate via PayPal links
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405271309,1405271309,60ca50655a0b2979dfbcb084d476f80bb0eb579d
+60ca50655a0b2979dfbcb084d476f80bb0eb579d,60ca5065,Clean-up and slightly speed-up donation fragment,"Clean-up and slightly speed-up donation fragment
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405271077,1405271077,af5bea510faaa1bd00f667dd452c6a55b52a6915
+af5bea510faaa1bd00f667dd452c6a55b52a6915,af5bea51,Fix 'Donate-Via-Bitcoin button redirects to PayPal',"Fix 'Donate-Via-Bitcoin button redirects to PayPal'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405269332,1405269332,3e4b18ab056f745a873c2816b31794a9ec5d353d
+3e4b18ab056f745a873c2816b31794a9ec5d353d,3e4b18ab,Update Target SDK version to 'android-L',"Update Target SDK version to 'android-L'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405268865,1405268865,b4f88f89b2947bbcfd06683f81b690c3489213b6
+b4f88f89b2947bbcfd06683f81b690c3489213b6,b4f88f89,Revert back to Android Support v19.+,"Revert back to Android Support v19.+
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405268663,1405268663,6f487e614f70d5a3e3c9be01845d5d40cb4b55b4
+6f487e614f70d5a3e3c9be01845d5d40cb4b55b4,6f487e61,Update Gradle version to 0.12.+,"Update Gradle version to 0.12.+
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1405268538,1405268538,673d74192b612953701ecfa86b5c9a20e0cc82ad
+673d74192b612953701ecfa86b5c9a20e0cc82ad,673d7419,Update SDK / Gradle / Android support lib versions,"Update SDK / Gradle / Android support lib versions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403867859,1403867859,c693d25ba7dae329c269fad775d33a51dcc54ddf
+c693d25ba7dae329c269fad775d33a51dcc54ddf,c693d25b,Fix 'MediaControllera crashes on Android L',"Fix 'MediaControllera crashes on Android L'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403866217,1403866217,d8ebb7b68ea7fa1c2c03852d6401a035d9278509
+d8ebb7b68ea7fa1c2c03852d6401a035d9278509,d8ebb7b6,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403732528,1403732528,55b42a285ebcec8ff4426024c9201bc6dc5fd4d7
+55b42a285ebcec8ff4426024c9201bc6dc5fd4d7,55b42a28,Add <[CDATA[[ validating to translations fetcher,"Add <[CDATA[[ validating to translations fetcher
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403731367,1403731367,fd3e1d4b8765d52509c16afb408b049a77e1576f
+fd3e1d4b8765d52509c16afb408b049a77e1576f,fd3e1d4b,Empty Artist/Track/Album text --> null,Empty Artist/Track/Album text --> null,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403723026,1403723026,c5afa229dd79a8bb21b5a43ed605cf5276983e4a
+c5afa229dd79a8bb21b5a43ed605cf5276983e4a,c5afa229,Make 'Artist/Album' text #FFF color,Make 'Artist/Album' text #FFF color,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403722714,1403722714,c4ddf24813546f4084e453c213ffa9fc53514b17
+c4ddf24813546f4084e453c213ffa9fc53514b17,c4ddf248,Remove dynamic background transparency,Remove dynamic background transparency,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403722658,1403722658,87522291156d864eddf048572d15215e2be8c7c4
+87522291156d864eddf048572d15215e2be8c7c4,87522291,Increase artwork size,Increase artwork size,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403721979,1403721979,f157d8dc95019a6dd5d602134bd954c47779f494
+f157d8dc95019a6dd5d602134bd954c47779f494,f157d8dc,Move status above the clock.,Move status above the clock.,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403721650,1403721650,02a58698ec34c36438eb29b4e1386e134f30d0a0
+02a58698ec34c36438eb29b4e1386e134f30d0a0,02a58698,Fix 'Config.Option uses wrong class for setters',Fix 'Config.Option uses wrong class for setters',,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403719005,1403719005,c3e1ca2f17ee74e6b17899e9fd7e5571af84b7a7
+c3e1ca2f17ee74e6b17899e9fd7e5571af84b7a7,c3e1ca2f,Make Config.Option more flexible (extract config inst.),Make Config.Option more flexible (extract config inst.),,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403712704,1403712704,4e410cd5c60887c779a12de0937d83181ab35619
+4e410cd5c60887c779a12de0937d83181ab35619,4e410cd5,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403702565,1403702565,c35ddb31ee741be0252531e6b7672b98ba3d65c4
+c35ddb31ee741be0252531e6b7672b98ba3d65c4,c35ddb31,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403460729,1403460729,"2fdc0b8795a97102144e5deff57afb5468f6c1d6,2e544cfcb96959c5af07f8334e518c3eb0dc5e30"
+2fdc0b8795a97102144e5deff57afb5468f6c1d6,2fdc0b87,Fix 'Removed notification stays pinned',"Fix 'Removed notification stays pinned'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403460693,1403460693,41fa3833a675f7c11f92c1dfbf986a0c6cba0003
+2e544cfcb96959c5af07f8334e518c3eb0dc5e30,2e544cfc,Fix 'Notifications action does nothing on JB',Fix 'Notifications action does nothing on JB',,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403458972,1403458972,cb568783639de69a7beab4b241eb3a424ef5c82d
+cb568783639de69a7beab4b241eb3a424ef5c82d,cb568783,Update README.md,Update README.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403458691,1403458691,41fa3833a675f7c11f92c1dfbf986a0c6cba0003
+41fa3833a675f7c11f92c1dfbf986a0c6cba0003,41fa3833,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403457202,1403457202,d325e38d765e235bf9221024f5b5f5f2fd891687
+d325e38d765e235bf9221024f5b5f5f2fd891687,d325e38d,Rename BathService actions (remove TAb duplicate),Rename BathService actions (remove TAb duplicate),,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403457094,1403457094,b08b1f589c37e7def6d3a7827f924c54dec763cf
+b08b1f589c37e7def6d3a7827f924c54dec763cf,b08b1f58,Fix a typo in FAQ (default locale),"Fix a typo in FAQ (default locale)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403455577,1403455577,695ec2124143e11c353b9212ef2c0692295b8471
+695ec2124143e11c353b9212ef2c0692295b8471,695ec212,"Fix missing attr, follow Android Studio code inspector","Fix missing attr, follow Android Studio code inspector
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403451839,1403451839,bbd5ebb53b226dc23463d8de9aa18db6a1379f09
+bbd5ebb53b226dc23463d8de9aa18db6a1379f09,bbd5ebb5,Fix BathService sync issue,"Fix BathService sync issue
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403451406,1403451406,1ac87f6bd8c07044d7619331bedb1ca13123baf4
+1ac87f6bd8c07044d7619331bedb1ca13123baf4,1ac87f6b,Better messages for Config.Option exceptions,"Better messages for Config.Option exceptions
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403446071,1403446071,9b001ce26c10f4e746eea5449adc553d3a9567bb
+9b001ce26c10f4e746eea5449adc553d3a9567bb,9b001ce2,Fix proguard rules,"Fix proguard rules
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403445745,1403445745,77f59dadf9cfcff4715b6e512d22f05691c71f6f
+77f59dadf9cfcff4715b6e512d22f05691c71f6f,77f59dad,Add ignoring rules for proguard for compat hacks,Add ignoring rules for proguard for compat hacks,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403383281,1403383281,662a9f62996f401019b35e16ca1aee65645e61c8
+662a9f62996f401019b35e16ca1aee65645e61c8,662a9f62,Improve text getter and add action buttons for jb4.3,"Improve text getter and add action buttons for jb4.3
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403381214,1403381214,e02371c97cebb3dd0f62f522b3223e3ad1d41783
+e02371c97cebb3dd0f62f522b3223e3ad1d41783,e02371c9,Add 'Keep config' in proguard rules,"Add 'Keep config' in proguard rules
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403367086,1403367086,6fc6ef2627dd980f70ffaf92f14d3bf4eba933ed
+6fc6ef2627dd980f70ffaf92f14d3bf4eba933ed,6fc6ef26,Auto-import translations,"Auto-import translations
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403361965,1403361965,5fbe319d3006e9060db3a16f268a6ff7a7995f8f
+5fbe319d3006e9060db3a16f268a6ff7a7995f8f,5fbe319d,Rename 'localized' build to 'releaseFlavor',"Rename 'localized' build to 'releaseFlavor'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403361872,1403361872,6d5412e7a2a681ae8709d1f759ad138ee8d05c70
+6d5412e7a2a681ae8709d1f759ad138ee8d05c70,6d5412e7,"Pimp-up translations fetcher, move to Py3","Pimp-up translations fetcher, move to Py3
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403361810,1403361810,23d1fdec4c6fd9bb59b27718709859e4cc57ac50
+23d1fdec4c6fd9bb59b27718709859e4cc57ac50,23d1fdec,"Fetch FAQ from regional lang, if possible","Fetch FAQ from regional lang, if possible
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403361722,1403361722,73f4c00798065bde04cfe75ab9547a67fc6a1aea
+73f4c00798065bde04cfe75ab9547a67fc6a1aea,73f4c007,Bring Downloader an ability to download multiple files,"Bring Downloader an ability to download multiple files
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403361669,1403361669,74af46450c9d808c74721c45f3cd1498ccbbe00e
+74af46450c9d808c74721c45f3cd1498ccbbe00e,74af4645,Clean-up AcDisplay widgets' base,"Clean-up AcDisplay widgets' base
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403344885,1403344885,0abe61e96f71c27d1fa2f186ec1fed023346f344
+0abe61e96f71c27d1fa2f186ec1fed023346f344,0abe61e9,Restart timeout on music widget btn press,"Restart timeout on music widget btn press
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403298530,1403298530,4b180e4998dc9b408cc8ceb325c37e950936c358
+4b180e4998dc9b408cc8ceb325c37e950936c358,4b180e49,Add missing variable type,"Add missing variable type
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403298183,1403298183,98910105268aa13c85cf37a33275bc5575cac841
+98910105268aa13c85cf37a33275bc5575cac841,98910105,Fix 'First tap on notification can dismiss it',"Fix 'First tap on notification can dismiss it'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403293905,1403293905,0141f84f5671cdc79299f3e6ec66befce50a0b3d
+0141f84f5671cdc79299f3e6ec66befce50a0b3d,0141f84f,Fix possible issues with 'Screen off on last notify',"Fix possible issues with 'Screen off on last notify'
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403290415,1403290415,2837b7ab35b848e14a48581552d82fdb44e96977
+2837b7ab35b848e14a48581552d82fdb44e96977,2837b7ab,Fix screen goes off on dismiss one of two notifies,"Fix screen goes off on dismiss one of two notifies
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403290242,1403290242,11779cd955823899931d2fa72b002d975e7e8dd4
+11779cd955823899931d2fa72b002d975e7e8dd4,11779cd9,Fix onWidgetDismiss() is not called.,"Fix onWidgetDismiss() is not called.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403287486,1403287486,7acaa6b4ca69e6a2881189848c052f0d43f1fd1f
+7acaa6b4ca69e6a2881189848c052f0d43f1fd1f,7acaa6b4,Version 2.4,"Version 2.4
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403277225,1403277225,a86d634a6e03da6b62ac17db36f524a175cd7784
+a86d634a6e03da6b62ac17db36f524a175cd7784,a86d634a,Add empty faq.html for testing,"Add empty faq.html for testing
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1403170379,1403170379,a9ffdbc3353a8501206bda56e55a1dfa4054b07e
+a9ffdbc3353a8501206bda56e55a1dfa4054b07e,a9ffdbc3,Merge pull request #14 from JulienMaille/master,"Merge pull request #14 from JulienMaille/master
+
+Allow date format to be localized",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1402993554,1402993554,"72f02f662e441288b7215f51bdd415d067f05633,e55a2400a49ed74d05261ac6428aea7456f08424"
+72f02f662e441288b7215f51bdd415d067f05633,72f02f66,Merge pull request #17 from SMillerDev/patch-1,"Merge pull request #17 from SMillerDev/patch-1
+
+Added Q about Xposed",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1401691371,1401691371,"aeeb3f32633307033b2389108567ea870ddb6948,c17731f88630b47f474f0b102c8b5978a642df26"
+c17731f88630b47f474f0b102c8b5978a642df26,c17731f8,Update FAQ.md,Update FAQ.md,,,,Sean Molenaar,SMillerDev@users.noreply.github.com,Sean Molenaar,SMillerDev@users.noreply.github.com,1401658946,1401658946,aeeb3f32633307033b2389108567ea870ddb6948
+aeeb3f32633307033b2389108567ea870ddb6948,aeeb3f32,Add freenode channel to README.md,Add freenode channel to README.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1401206844,1401206844,b116faed496fb562be1e4caa038bd288fbc7e624
+e55a2400a49ed74d05261ac6428aea7456f08424,e55a2400,Allow date format to be localized,"Allow date format to be localized
+",,,,JulienMaille,hide@mail.com,JulienMaille,hide@mail.com,1400934035,1400934035,b116faed496fb562be1e4caa038bd288fbc7e624
+b116faed496fb562be1e4caa038bd288fbc7e624,b116faed,Change link of full FAQ to Github,Change link of full FAQ to Github,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400701657,1400701657,210edf8337e2405b142a09ce91a8f79983f4821c
+210edf8337e2405b142a09ce91a8f79983f4821c,210edf83,Merge pull request #13 from SMillerDev/master,"Merge pull request #13 from SMillerDev/master
+
+Immersive/fullscreen toggle + icon resize (needs a refactoring!)",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400514453,1400514453,"964f97823d61b53358d72f37c71d52f5ac19dcbf,de9350a402fa9dc3cbfc4dfcc00d6ee8e1160512"
+964f97823d61b53358d72f37c71d52f5ac19dcbf,964f9782,Follow Android Studio's code inspector,"Follow Android Studio's code inspector
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400514246,1400514246,ff7e65848c4d7ad68e21aa4af4cd1de588931dec
+ff7e65848c4d7ad68e21aa4af4cd1de588931dec,ff7e6584,Add placeholder methods for reading notification aloud,"Add placeholder methods for reading notification aloud
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400511845,1400511845,f2e25b9d84d703ae7506d6840ca91584275687a9
+de9350a402fa9dc3cbfc4dfcc00d6ee8e1160512,de9350a4,Merge pull request #9 from AChep/master,"Merge pull request #9 from AChep/master
+
+Update with master",,,,Sean Molenaar,SMillerDev@users.noreply.github.com,Sean Molenaar,SMillerDev@users.noreply.github.com,1400510812,1400510812,"83c64062998ee107c4e6fb866833879d85d544c3,f2e25b9d84d703ae7506d6840ca91584275687a9"
+83c64062998ee107c4e6fb866833879d85d544c3,83c64062,Resize Icons,"Resize Icons
+",,,,Sean Molenaar,sean.molenaar@hva.nl,Sean Molenaar,sean.molenaar@hva.nl,1400510617,1400510617,00bffd85b932dc596cbe3a6bea07b85ea861a0ec
+f2e25b9d84d703ae7506d6840ca91584275687a9,f2e25b9d,Fix dynamic background does not work,"Fix dynamic background does not work
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400509951,1400509951,b09835bb289cb76ba676e6444ef7ecd3abf3695f
+b09835bb289cb76ba676e6444ef7ecd3abf3695f,b09835bb,Note that you may want to put exports to .bashrc,Note that you may want to put exports to .bashrc,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400507064,1400507064,8b3939fe9a78954bcd1c0c8b5c80d3d8b9a7e9c0
+8b3939fe9a78954bcd1c0c8b5c80d3d8b9a7e9c0,8b3939fe,Fix a command to build debug version,Fix a command to build debug version,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400506946,1400506946,2a105ec5ca6e58eae004c06e545b980244d8e30b
+2a105ec5ca6e58eae004c06e545b980244d8e30b,2a105ec5,Show Google Play public key while building,"Show Google Play public key while building
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400506836,1400506836,65a96e9692604ff083f0839e8e62948144b4c70b
+00bffd85b932dc596cbe3a6bea07b85ea861a0ec,00bffd85,Categorizing the Interface settings.,"Categorizing the Interface settings.
+
+It’s cluttered and hard to read now, this might fix that.
+",,,,Sean Molenaar,sean.molenaar@hva.nl,Sean Molenaar,sean.molenaar@hva.nl,1400489595,1400489595,b114266e9a8dc593f6a80c56c5d33ad5f4a2cb71
+b114266e9a8dc593f6a80c56c5d33ad5f4a2cb71,b114266e,Back to new build tools,"Back to new build tools
+",,,,Sean Molenaar,sean.molenaar@hva.nl,Sean Molenaar,sean.molenaar@hva.nl,1400488086,1400488086,db893ae91cbbcd24421642c3cba120e29f631562
+db893ae91cbbcd24421642c3cba120e29f631562,db893ae9,Merge branch 'master' of https://github.com/SMillerDev/AcDisplay,"Merge branch 'master' of https://github.com/SMillerDev/AcDisplay
+",,,,Sean Molenaar,sean.molenaar@hva.nl,Sean Molenaar,sean.molenaar@hva.nl,1400484991,1400484991,"d8dcc58bdd6acd7274a56ebe9a66f55dcc46f651,a2b67ed41d79986bfa541458e4c963ea8310dc3f"
+a2b67ed41d79986bfa541458e4c963ea8310dc3f,a2b67ed4,Finnished fullscreen/immersive toggle,"Finnished fullscreen/immersive toggle
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1400447732,1400447732,eb787b621e890925decb1f82ac03eccb5d71e842
+eb787b621e890925decb1f82ac03eccb5d71e842,eb787b62,"Not fully out of immersive yet, showing the master","Not fully out of immersive yet, showing the master
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1400446644,1400446644,d86a6c3f7c447e28a9d4264395efd13f4fd04aca
+d86a6c3f7c447e28a9d4264395efd13f4fd04aca,d86a6c3f,Merge branch 'master' of https://github.com/AChep/AcDisplay,"Merge branch 'master' of https://github.com/AChep/AcDisplay
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1400445535,1400445535,"572499c71a0e453e44e007c523cf2ec82aa3c593,65a96e9692604ff083f0839e8e62948144b4c70b"
+572499c71a0e453e44e007c523cf2ec82aa3c593,572499c7,add Immersive toggle,"add Immersive toggle
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1400445477,1400445477,489cd8230676586d04844ac30c94794c2dafea24
+65a96e9692604ff083f0839e8e62948144b4c70b,65a96e96,Add missing imports,"Add missing imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400444794,1400444794,96f18c9a358c5078fe29de24f63ab7f7d350390a
+96f18c9a358c5078fe29de24f63ab7f7d350390a,96f18c9a,Add missing imports,"Add missing imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400444031,1400444031,489cd8230676586d04844ac30c94794c2dafea24
+489cd8230676586d04844ac30c94794c2dafea24,489cd823,Snapshot of v2.3,"Snapshot of v2.3
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400443011,1400443011,5651b14ed3cafdefc6ec5aeb2f168b866faa2401
+5651b14ed3cafdefc6ec5aeb2f168b866faa2401,5651b14e,Fix a patch to AcDisplay,Fix a patch to AcDisplay,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1400404925,1400404925,1bbdb95faa8776a834713d21a9a6c2f56f1da4ef
+1bbdb95faa8776a834713d21a9a6c2f56f1da4ef,1bbdb95f,Clean-up and improve build script,"Clean-up and improve build script
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399907650,1399907650,79648fa144301d583bbb68800d1ded169bbf54ed
+79648fa144301d583bbb68800d1ded169bbf54ed,79648fa1,Add the notes how to build project,Add the notes how to build project,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399907271,1399907271,b7109300f4b37a0a9f469b729a06cbb88c60ab12
+b7109300f4b37a0a9f469b729a06cbb88c60ab12,b7109300,Fix Active mode is always on,Fix Active mode is always on,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399613253,1399613253,c27d17047713c3fc79195197b77c457240fce309
+c27d17047713c3fc79195197b77c457240fce309,c27d1704,Create FAQ.md,Create FAQ.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399579068,1399579068,8d112fa5f951f6dcf74bd4217c5527c2b9ab9c83
+8d112fa5f951f6dcf74bd4217c5527c2b9ab9c83,8d112fa5,Add skeleton dialog's type to DialogBuilder,"Add skeleton dialog's type to DialogBuilder
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399489305,1399489305,f0a8b7527f7629d34d4fbd102c2ba8ddefa39a50
+f0a8b7527f7629d34d4fbd102c2ba8ddefa39a50,f0a8b752,Add an ability to set Dialog's custom view from layout,"Add an ability to set Dialog's custom view from layout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399476818,1399476818,df0af7dfeb10d49899ad515c86be6daf7c68326f
+df0af7dfeb10d49899ad515c86be6daf7c68326f,df0af7df,Fix sad typo in OverrideHomeButton.java,Fix sad typo in OverrideHomeButton.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399396022,1399396022,b2dfe4f96f2171edb44111128099e6004752dc37
+b2dfe4f96f2171edb44111128099e6004752dc37,b2dfe4f9,Fix wrong names in OverrideHomeButton.java,Fix wrong names in OverrideHomeButton.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399395940,1399395940,512fb40cd802b113c841f39c196d45d0379b5172
+512fb40cd802b113c841f39c196d45d0379b5172,512fb40c,Merge pull request #11 from GermainZ/master,"Merge pull request #11 from GermainZ/master
+
+Use Xposed to eat home button key presses when the lockscreen is active",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399394023,1399394023,"f80e4e9fa8c255c2dfbe62807e482feee5450fe9,e7b17d1a9df47b8fe26401c7838ef7a2103eb9d0"
+e7b17d1a9df47b8fe26401c7838ef7a2103eb9d0,e7b17d1a,Use Xposed to eat home button key presses when the lockscreen is active,"Use Xposed to eat home button key presses when the lockscreen is active
+",,,,GermainZ,germanosz@gmail.com,GermainZ,germanosz@gmail.com,1399393524,1399393524,f80e4e9fa8c255c2dfbe62807e482feee5450fe9
+f80e4e9fa8c255c2dfbe62807e482feee5450fe9,f80e4e9f,Getting Config instance no longer needs a context,"Getting Config instance no longer needs a context
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399308152,1399308152,60b63d687ae0698243140855d1e444424131e603
+60b63d687ae0698243140855d1e444424131e603,60b63d68,Start services on app create,"Start services on app create
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399307477,1399307477,76b6095a290987191c59c0f072042a66c46d2ab3
+76b6095a290987191c59c0f072042a66c46d2ab3,76b6095a,Fix proximity sensor is always on,"Fix proximity sensor is always on
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399305172,1399305172,64866dd4f57c8cad814483f7807115dc2378795e
+64866dd4f57c8cad814483f7807115dc2378795e,64866dd4,Load dynamic background and circel icon only when it is needed,"Load dynamic background and circel icon only when it is needed
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399234965,1399234965,43f3040b76ac7238bc2b45ce8f4ca40d7019a305
+43f3040b76ac7238bc2b45ce8f4ca40d7019a305,43f3040b,Option to enable circled notifications' icon,"Option to enable circled notifications' icon
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399231095,1399231095,b4fcefa9f86099898cbc7270a84faf0933849e7a
+b4fcefa9f86099898cbc7270a84faf0933849e7a,b4fcefa9,Fix missing methods in ActiveModeService.java,Fix missing methods in ActiveModeService.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399223708,1399223708,a54dd730dc5f7d49167e27b059379fa1df02550a
+a54dd730dc5f7d49167e27b059379fa1df02550a,a54dd730,Cleanup active display's sensors,"Cleanup active display's sensors
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399215345,1399215345,13126d05c07d9b6824b27ebe74cd890301b113de
+13126d05c07d9b6824b27ebe74cd890301b113de,13126d05,Remove dot-indicator of dismiss button location.,Remove dot-indicator of dismiss button location.,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399193087,1399193087,73dd4a2de196d49d2fe4d82681a0c46444f0761a
+73dd4a2de196d49d2fe4d82681a0c46444f0761a,73dd4a2d,Add <![CDATA[ typos detection to update transl. script,Add <![CDATA[ typos detection to update transl. script,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399146933,1399146933,6fbc98116586a12df61ebf60f243efa59f8e1688
+6fbc98116586a12df61ebf60f243efa59f8e1688,6fbc9811,Cleanup active mode,"Cleanup active mode
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399140814,1399140814,57db579013787b00328ea88d71dfd78d95925a0f
+57db579013787b00328ea88d71dfd78d95925a0f,57db5790,Increase version to 2.2.2,Increase version to 2.2.2,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399066821,1399066821,20e85e166f7a4048eda20ec43917d7fc5f4d5122
+20e85e166f7a4048eda20ec43917d7fc5f4d5122,20e85e16,Better translatino of my speech to English,"Better translatino of my speech to English
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399066666,1399066666,e1e78484ac04c511616285e07e0e20babc8a6730
+e1e78484ac04c511616285e07e0e20babc8a6730,e1e78484,Set my name as not translatable,Set my name as not translatable,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399065589,1399065589,f616630e1687fbae44699c7d671e864964ac5847
+f616630e1687fbae44699c7d671e864964ac5847,f616630e,Option to pause active mode while no notifications present,"Option to pause active mode while no notifications present
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399063913,1399063913,846d69dc14cb99ea6bcc9c1030a348e485e1ccf7
+846d69dc14cb99ea6bcc9c1030a348e485e1ccf7,846d69dc,Fix handling inactive time by active mode service,Fix handling inactive time by active mode service,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399063223,1399063223,a06fbb9847a6c1723166791bb990d4e0603034df
+a06fbb9847a6c1723166791bb990d4e0603034df,a06fbb98,Change init notification's title to app's name,"Change init notification's title to app's name
+
+I was a typo!",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399059749,1399059749,fb6372ef0c865dc7943c112d546e4986fbf0ea7e
+fb6372ef0c865dc7943c112d546e4986fbf0ea7e,fb6372ef,Change help dialog's style,"Change help dialog's style
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399059587,1399059587,b539f90039c828a10130b7f6444140f7b98863c8
+b539f90039c828a10130b7f6444140f7b98863c8,b539f900,Change start-up dialogs,"Change start-up dialogs
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399058967,1399058967,34bae098b3a7bf174e44e29153829bc498f2c675
+34bae098b3a7bf174e44e29153829bc498f2c675,34bae098,"Make blacklist show currently checked options, cleanup some code","Make blacklist show currently checked options, cleanup some code
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1399058539,1399058539,e24178667d8758d5550c1b43e66f48e383c621d6
+e24178667d8758d5550c1b43e66f48e383c621d6,e2417866,Remove unused utils and add some Java Docs,"Remove unused utils and add some Java Docs
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398968759,1398968759,8c0c938ccc11422a45d6d9dfc67bc6f3e05a0f55
+8c0c938ccc11422a45d6d9dfc67bc6f3e05a0f55,8c0c938c,Fix possible FC with blurring if bitmap's config is null.,Fix possible FC with blurring if bitmap's config is null.,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398966769,1398966769,a2000baedee379fa7f10d80010af2faa1ce179c2
+a2000baedee379fa7f10d80010af2faa1ce179c2,a2000bae,Change background of dismiss button to red,"Change background of dismiss button to red
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398964870,1398964870,4ab9f19bde6343af65f263441899616f2b4a7c0c
+4ab9f19bde6343af65f263441899616f2b4a7c0c,4ab9f19b,Rename oval list background transition drawable,"Rename oval list background transition drawable
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398964758,1398964758,4a91ed47c80d8154a58b1de9dbef24a235dac120
+4a91ed47c80d8154a58b1de9dbef24a235dac120,4a91ed47,"Cleanup notification widget code, move action to top","Cleanup notification widget code, move action to top
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398945619,1398945619,5902cb3951d597d81fd5364a6ec98495a6cfa2de
+5902cb3951d597d81fd5364a6ec98495a6cfa2de,5902cb39,Add missing imports,"Add missing imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398890276,1398890276,7bc5ce9793f678d0445b10786a946ebea2ed1817
+7bc5ce9793f678d0445b10786a946ebea2ed1817,7bc5ce97,Increase gradle version to 0.10.+,"Increase gradle version to 0.10.+
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398885115,1398885115,1233b2be09726812ce145dfdd926ced0ca1c0ecf
+1233b2be09726812ce145dfdd926ced0ca1c0ecf,1233b2be,Add equals() and hashCode() to Dialog builder,"Add equals() and hashCode() to Dialog builder
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398881287,1398881287,bc29a7f8b6efba26ac90adcf679f5c86de54aa72
+bc29a7f8b6efba26ac90adcf679f5c86de54aa72,bc29a7f8,Reduce target radius of the unlock-circle,"Reduce target radius of the unlock-circle
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398879839,1398879839,c52e73406cb7a75875db1535890346df7ad53c42
+c52e73406cb7a75875db1535890346df7ad53c42,c52e7340,Indicate dismiss button border,"Indicate dismiss button border
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398876046,1398876046,c240fd7b99b15d69add095b3e4d68ea12c167861
+c240fd7b99b15d69add095b3e4d68ea12c167861,c240fd7b,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398785504,1398785504,"5b5dc362e80b891fbc183f3ce89af8edb1988ecc,380917e70c13feddd2af09631e2baf1432cf4ce3"
+5b5dc362e80b891fbc183f3ce89af8edb1988ecc,5b5dc362,Increase version to 2.2.1,"Increase version to 2.2.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398785468,1398785468,1a2d03ab00e54feca78665a4c512a1c1985f6e89
+1a2d03ab00e54feca78665a4c512a1c1985f6e89,1a2d03ab,Make unlock icon transparent for touch events,"Make unlock icon transparent for touch events
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398785019,1398785019,a513f32e4df9f424cd634406bb4329744b75ea37
+380917e70c13feddd2af09631e2baf1432cf4ce3,380917e7,Fix a typo in README.md,Fix a typo in README.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398783700,1398783700,a513f32e4df9f424cd634406bb4329744b75ea37
+a513f32e4df9f424cd634406bb4329744b75ea37,a513f32e,Vibrate on forwarded event,"Vibrate on forwarded event
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398783582,1398783582,66c9a3d406a16b558d5cc137d96702cc8bad18e6
+66c9a3d406a16b558d5cc137d96702cc8bad18e6,66c9a3d4,Fix FC with motion event transforms on Jelly Bean,"Fix FC with motion event transforms on Jelly Bean
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398781491,1398781491,9eaf171dc288e4c8ba315ca6377db3d71d1508a5
+9eaf171dc288e4c8ba315ca6377db3d71d1508a5,9eaf171d,Snapshot of version 2.2,"Snapshot of version 2.2
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398717048,1398717048,4ff6fc2e3c3e4e64cb1e673f1cb15a51959cf33f
+4ff6fc2e3c3e4e64cb1e673f1cb15a51959cf33f,4ff6fc2e,"Fixed ""Clock doesn't show 00:00 on attached""","Fixed ""Clock doesn't show 00:00 on attached""",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398612169,1398612169,1afcc2983db46d6cd0e6a985bf6be53c4d1eb7d3
+1afcc2983db46d6cd0e6a985bf6be53c4d1eb7d3,1afcc298,Fix possible FC with AcDisplay's Dialog builder,Fix possible FC with AcDisplay's Dialog builder,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398443995,1398443995,84bc1735af3d570a01998c75a87b89af251a80d8
+d8dcc58bdd6acd7274a56ebe9a66f55dcc46f651,d8dcc58b,Merge pull request #6 from AChep/master,"Merge pull request #6 from AChep/master
+
+Updated",,,,Sean Molenaar,SMillerDev@users.noreply.github.com,Sean Molenaar,SMillerDev@users.noreply.github.com,1398427286,1398427286,"fe48cd844d78bd49931f74821b5aa43fe004e221,84bc1735af3d570a01998c75a87b89af251a80d8"
+84bc1735af3d570a01998c75a87b89af251a80d8,84bc1735,Move No timeout checkbox to the top of layout,"Move No timeout checkbox to the top of layout
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398372039,1398372039,26adad4a2b53ea8beb109eb2f80f02bd300ee8f6
+26adad4a2b53ea8beb109eb2f80f02bd300ee8f6,26adad4a,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398357312,1398357312,"8143211d2c966a9484f8a8795d094c331150c190,dc5ff28da98b93dd33c0554bf58f8ddf66e4261e"
+8143211d2c966a9484f8a8795d094c331150c190,8143211d,Update screenshots,"Update screenshots
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398357294,1398357294,e1b4ffcd0692054b6dd331152c393d9f32ddfad5
+dc5ff28da98b93dd33c0554bf58f8ddf66e4261e,dc5ff28d,Set min height for dialog's title,Set min height for dialog's title,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398353121,1398353121,e1b4ffcd0692054b6dd331152c393d9f32ddfad5
+e1b4ffcd0692054b6dd331152c393d9f32ddfad5,e1b4ffcd,Cleanup Timeout preference,"Cleanup Timeout preference
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398352747,1398352747,61a4fdf67126ae986e714be3264fcb4f604c26c8
+61a4fdf67126ae986e714be3264fcb4f604c26c8,61a4fdf6,Merge pull request #10 from SMillerDev/master,"Merge pull request #10 from SMillerDev/master
+
+Widget, option to disable timeout, some javadoc updates",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398352252,1398352252,"ad18f3fb0af0c24c8a3810f0b756c3be41be4379,fe48cd844d78bd49931f74821b5aa43fe004e221"
+fe48cd844d78bd49931f74821b5aa43fe004e221,fe48cd84,Fixed pull comments,"Fixed pull comments
+",,,,Sean Molenaar,sean.molenaar@hva.nl,Sean Molenaar,sean.molenaar@hva.nl,1398351470,1398351470,929fc26e54dbdbb83eef091b87a08be72321b2bf
+929fc26e54dbdbb83eef091b87a08be72321b2bf,929fc26e,fixed timeout disabling bars. Wrote Javadoc,"fixed timeout disabling bars. Wrote Javadoc
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1398284617,1398284617,d387e49916bfa0384b0f4127ef3a32163b9cb062
+d387e49916bfa0384b0f4127ef3a32163b9cb062,d387e499,Disable Timeout,"Disable Timeout
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1398266728,1398266728,35d372e01e723335d26e8d5bc0e38f12dbfaf085
+35d372e01e723335d26e8d5bc0e38f12dbfaf085,35d372e0,Better icons,"Better icons
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1398264652,1398264652,325d78361d9de75e016dc887e7f9ff062d2ebc68
+325d78361d9de75e016dc887e7f9ff062d2ebc68,325d7836,Widgets,"Widgets
+",,,,Sean Molenaar,Sean.Molenaar@hva.nl,Sean Molenaar,Sean.Molenaar@hva.nl,1398263889,1398263889,ad18f3fb0af0c24c8a3810f0b756c3be41be4379
+ad18f3fb0af0c24c8a3810f0b756c3be41be4379,ad18f3fb,Increase version to 2.1.3,Increase version to 2.1.3,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398222179,1398222179,068a3ddb051f196a24495a4f406ad8c91f459c5e
+068a3ddb051f196a24495a4f406ad8c91f459c5e,068a3ddb,Fixed FC with turned on keyguard,Fixed FC with turned on keyguard,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398222156,1398222156,68e920a6ddf28fba7d019057fdaaaa8586da8d71
+68e920a6ddf28fba7d019057fdaaaa8586da8d71,68e920a6,Increase version to 2.1.2,Increase version to 2.1.2,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398191729,1398191729,25878b7278fbec069e07645089973caf00abf77d
+25878b7278fbec069e07645089973caf00abf77d,25878b72,Fix for building from console,Fix for building from console,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398187319,1398187319,cbb43b551fd6100eb1c20e0b8f8a91dd867711f1
+cbb43b551fd6100eb1c20e0b8f8a91dd867711f1,cbb43b55,Add missing import to LocalReceiverActivity.java,Add missing import to LocalReceiverActivity.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398186511,1398186511,ab4ed0819dc9bb045c6d1f68598f1a5192dfcd05
+ab4ed0819dc9bb045c6d1f68598f1a5192dfcd05,ab4ed081,"Style status text as ""condensed""","Style status text as ""condensed""",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398184376,1398184376,7ac683556f5166c31ebab4a5faa832a8f5278e37
+7ac683556f5166c31ebab4a5faa832a8f5278e37,7ac68355,"Replace Toast.makeToast(,,SHORT).show() with ToastUtils.showShort(,,)","Replace Toast.makeToast(,,SHORT).show() with ToastUtils.showShort(,,)
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398163882,1398163882,97bdb8605f0903d022661389a04cef352686bda6
+97bdb8605f0903d022661389a04cef352686bda6,97bdb860,Add error-toast to Remote actions activity,"Add error-toast to Remote actions activity
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398163452,1398163452,cfaf6109bea55d307046832160c5216a08394209
+cfaf6109bea55d307046832160c5216a08394209,cfaf6109,Merge Add missing code from SmillerDev,"Merge Add missing code from SmillerDev
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398162226,1398162226,88fd715c648c23ae8eb6ba56471848aad564a657
+88fd715c648c23ae8eb6ba56471848aad564a657,88fd715c,Remove partial copy of Android Support lib from project,"Remove partial copy of Android Support lib from project
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398075925,1398075925,8d2b433b11d2492884a431f2ae508745695e3416
+8d2b433b11d2492884a431f2ae508745695e3416,8d2b433b,"Add import of Android Support lib to build script, remove its partial copy from project","Add import of Android Support lib to build script, remove its partial copy from project
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398075702,1398075702,62e1b10067693a1199cb3ec0b091602f73f415a2
+62e1b10067693a1199cb3ec0b091602f73f415a2,62e1b100,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398014443,1398014443,"687d7c1abc94e3fbc8444f46294ed419dc3b8aa4,b922afe41f4dcb776dc6d897f1af9b49efbc640c"
+687d7c1abc94e3fbc8444f46294ed419dc3b8aa4,687d7c1a,separate messages by styling their first letters,"separate messages by styling their first letters
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1398014373,1398014373,2eaa681f367c514e13d414158ad9f8db57c4fe0b
+b922afe41f4dcb776dc6d897f1af9b49efbc640c,b922afe4,fix FC is activity monitor is null,fix FC is activity monitor is null,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397991613,1397991613,ee0f0aabb08bba13a73ab39b25d2267096ffd1d3
+2eaa681f367c514e13d414158ad9f8db57c4fe0b,2eaa681f,remove debug output when adding or removing listeners to notification data class,"remove debug output when adding or removing listeners to notification data class
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397905555,1397905555,ee0f0aabb08bba13a73ab39b25d2267096ffd1d3
+ee0f0aabb08bba13a73ab39b25d2267096ffd1d3,ee0f0aab,"move ""pending finish"" from fragment to activity","move ""pending finish"" from fragment to activity
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397904861,1397904861,c925be3a6edaf0e8e04f1a38749e36d9cf2733ee
+c925be3a6edaf0e8e04f1a38749e36d9cf2733ee,c925be3a,change color of subtext to #9eee,"change color of subtext to #9eee
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397901534,1397901534,b75bda7415173779d07e931afeac8863d4cfbc38
+b75bda7415173779d07e931afeac8863d4cfbc38,b75bda74,Merge branch 'master' of github.com:AChep/AcDisplay,"Merge branch 'master' of github.com:AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397887275,1397887275,"e11a571d720b34ba679adb062851922e9441670d,c6410db8f75a9636718039c51b9e4065d6ece662"
+c6410db8f75a9636718039c51b9e4065d6ece662,c6410db8,fix the FC if post-unlock runnable is null,fix the FC if post-unlock runnable is null,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397887259,1397887259,6a902509cd7f29203e24b1ba62428fddf9770328
+e11a571d720b34ba679adb062851922e9441670d,e11a571d,stop notification data loading on dismissed,"stop notification data loading on dismissed
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397886836,1397886836,6a902509cd7f29203e24b1ba62428fddf9770328
+6a902509cd7f29203e24b1ba62428fddf9770328,6a902509,replace RS bluring with canvas based Stack Blur,"replace RS bluring with canvas based Stack Blur
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397829557,1397829557,9e30242057335542ce22cfa8d1b67336ecd6933c
+9e30242057335542ce22cfa8d1b67336ecd6933c,9e302420,"fix ""Lockscreen / Active mode are continuing to run after unplugging device with…","fix ""Lockscreen / Active mode are continuing to run after unplugging device with [Only while charging] option enabled""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397743926,1397743926,2e1fc5630125a195f1fa2556b1bc34862a1acad6
+2e1fc5630125a195f1fa2556b1bc34862a1acad6,2e1fc563,"clean-up lockscreen service, fix minor bug with app monitoring feature","clean-up lockscreen service, fix minor bug with app monitoring feature
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397741854,1397741854,a3aa48b7aec23a0ee70facd053d7a30e10c280f7
+a3aa48b7aec23a0ee70facd053d7a30e10c280f7,a3aa48b7,"Fix \""AcDisplay appears at top of some apps such as alarms if lockscreen feature is enabled\""","Fix \""AcDisplay appears at top of some apps such as alarms if lockscreen feature is enabled\""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397677714,1397677714,1f7fd03711a9a5acda1b0817d80fdbb6c1499d61
+1f7fd03711a9a5acda1b0817d80fdbb6c1499d61,1f7fd037,remove unneeded @TargetApi() from SceneCompat.java,remove unneeded @TargetApi() from SceneCompat.java,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397499238,1397499238,5109b51cdcf444960ab95c16c0874b9de860b436
+5109b51cdcf444960ab95c16c0874b9de860b436,5109b51c,cleanup license text,"cleanup license text
+",,,,Artem Chepurnoy,achep@achep-home.(none),Artem Chepurnoy,achep@achep-home.(none),1397498038,1397498038,895f66ce86d1bf6583080bcd1d3fb7b72956c7ac
+895f66ce86d1bf6583080bcd1d3fb7b72956c7ac,895f66ce,increase version,increase version,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397299785,1397299785,52e4723aaa4b539fab43bfb27e33265818358519
+52e4723aaa4b539fab43bfb27e33265818358519,52e4723a,update README.md,update README.md,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397299704,1397299704,dcc7bae490c80dc76741b54d7208749637029809
+dcc7bae490c80dc76741b54d7208749637029809,dcc7bae4,make [shadow] & [mirrored timeout] options enabled by default,"make [shadow] & [mirrored timeout] options enabled by default
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397291819,1397291819,ef85fdfa839bc487c0145c7c57f378210a029552
+ef85fdfa839bc487c0145c7c57f378210a029552,ef85fdfa,remove unused imports,"remove unused imports
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397290943,1397290943,b55d4da0aa87e7c021fddf0ed4ad47244fd25fb8
+b55d4da0aa87e7c021fddf0ed4ad47244fd25fb8,b55d4da0,remove unused DebugLayerView,"remove unused DebugLayerView
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397290228,1397290228,ab77bf69f21354a4d48ca00119b54fb2dca10bf8
+ab77bf69f21354a4d48ca00119b54fb2dca10bf8,ab77bf69,add missing strings,"add missing strings
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397244150,1397244150,eeac492bb913d9f9c570727a07ffd1f488307d10
+eeac492bb913d9f9c570727a07ffd1f488307d10,eeac492b,update icons,"update icons
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397244118,1397244118,387606849aac9fa719dc5135b6811e65a9ef4e92
+387606849aac9fa719dc5135b6811e65a9ef4e92,38760684,make dynamic bg option working,"make dynamic bg option working
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397225810,1397225810,67adb07254567c911264cd925ac0b4634322fdd5
+67adb07254567c911264cd925ac0b4634322fdd5,67adb072,style the text of notify's action as a subtext,style the text of notify's action as a subtext,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397147342,1397147342,0bfa6015f1242cbb5a4edac87551c3dab2b26577
+0bfa6015f1242cbb5a4edac87551c3dab2b26577,0bfa6015,"replace ""Space"" in multi-list divider with ""No-break space"" so it will not be removed by compiler.","replace ""Space"" in multi-list divider with ""No-break space"" so it will not be removed by compiler.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397145890,1397145890,7833b9104c147ff36a8f2aa06c940ccf150504dc
+7833b9104c147ff36a8f2aa06c940ccf150504dc,7833b910,refactor notifications handling,"refactor notifications handling
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397142496,1397142496,d01dc32bcd1e169f5a078bd1093f6a33dbce0445
+d01dc32bcd1e169f5a078bd1093f6a33dbce0445,d01dc32b,slightly increase the size of status text,slightly increase the size of status text,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1397066572,1397066572,7f94f857428f9cb449ce154f52b82edc8ec37433
+7f94f857428f9cb449ce154f52b82edc8ec37433,7f94f857,remove .debug suffix of debug build,"remove .debug suffix of debug build
+
+No real sense of that, because Android notification listener service doesn't support it. That's sad.",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396963573,1396963573,24c6d8f7ec60d6f529db6b5507c41d1765a7ee5e
+24c6d8f7ec60d6f529db6b5507c41d1765a7ee5e,24c6d8f7,"fix ""Some notifications' icons are empty""","fix ""Some notifications' icons are empty""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396896229,1396896229,f3172249f19f9684ea82aec81bf23409eb8fe8d9
+f3172249f19f9684ea82aec81bf23409eb8fe8d9,f3172249,refactor Settings code,"refactor Settings code
+
+I also want to get rid of those two clones: config preference file /
+settings preference file. Hopefully I'll do it someday...
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396888518,1396888518,c4884d0a20c8dc7280f9a8a8b180029011e89f1c
+c4884d0a20c8dc7280f9a8a8b180029011e89f1c,c4884d0a,update SwipeDismissTouchListener copyright,"update SwipeDismissTouchListener copyright
+
+It was automatically changed by Android Studio.",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396883191,1396883191,14fe6ef294b6cc7abc2e280188d5b5001fe48765
+14fe6ef294b6cc7abc2e280188d5b5001fe48765,14fe6ef2,"fix ""Enabled shadow preference shows wrong value""","fix ""Enabled shadow preference shows wrong value""
+
+Over copy-pasted.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396866453,1396866453,2031b05e4d0656b5cd20ef820b2a772822304ff8
+2031b05e4d0656b5cd20ef820b2a772822304ff8,2031b05e,add an option to make timeout bar disappear from both sides to center,"add an option to make timeout bar disappear from both sides to center
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396810297,1396810297,e1a1dd9cb907a52e099db74b3bbc0b42f6b148c1
+e1a1dd9cb907a52e099db74b3bbc0b42f6b148c1,e1a1dd9c,fix for the mirroring ProgressBar,"fix for the mirroring ProgressBar
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396801075,1396801075,90c47e037cce1c21ec3d9b8ea6f77cd024420850
+90c47e037cce1c21ec3d9b8ea6f77cd024420850,90c47e03,cleanup and add [shadow] support to timeout progressbar,"cleanup and add [shadow] support to timeout progressbar
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396769512,1396769512,2eac00d92e86321bc2ea21e9d70623a891876ec6
+2eac00d92e86321bc2ea21e9d70623a891876ec6,2eac00d9,snapshot of v2.1,"snapshot of v2.1
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1396733168,1396733168,733168c2f297c5dcce85b9e81fa1d2cb3b747909
+733168c2f297c5dcce85b9e81fa1d2cb3b747909,733168c2,snapshot of v2.0,"snapshot of v2.0
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1395073969,1395073969,b41fb4b147226365a679e6b8bab5f265698c0a3f
+b41fb4b147226365a679e6b8bab5f265698c0a3f,b41fb4b1,remove crowdin translations from project,"remove crowdin translations from project
+
+If you need them - use update_translations.py script.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1395072939,1395072939,fc21117caff5036a0c6e2419a4824dd028828536
+fc21117caff5036a0c6e2419a4824dd028828536,fc21117c,update Google Play link,update Google Play link,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1393785265,1393785265,a560cc52ad5055a46a6fd89101a2e7a214395b29
+a560cc52ad5055a46a6fd89101a2e7a214395b29,a560cc52,fix readme links,"fix readme links
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1393771200,1393771200,8c42e282d1ec08361bb442cfc9be6e12c47e3c0d
+8c42e282d1ec08361bb442cfc9be6e12c47e3c0d,8c42e282,update readme & screenshots,"update readme & screenshots
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1393770041,1393770041,caa5a429c49606135f73107b107eae78aceb6127
+caa5a429c49606135f73107b107eae78aceb6127,caa5a429,Merge branch 'master' of https://github.com/AChep/AcDisplay,"Merge branch 'master' of https://github.com/AChep/AcDisplay
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392927847,1392927847,"88c7a4154f67bb62a02d47b5610ac2bf15346772,107893c0aacab9d0b74fdab8030de2b95b53cc9c"
+88c7a4154f67bb62a02d47b5610ac2bf15346772,88c7a415,"add basic translations check, write some output to console","add basic translations check, write some output to console
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392927827,1392927828,23c2a8eb94063e9e551effc929615dc9d32b5af3
+107893c0aacab9d0b74fdab8030de2b95b53cc9c,107893c0,fix build.gradle,fix build.gradle,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392749510,1392749510,23c2a8eb94063e9e551effc929615dc9d32b5af3
+23c2a8eb94063e9e551effc929615dc9d32b5af3,23c2a8eb,snapshot of v1.2.4,"snapshot of v1.2.4
+
+Version 1.2.4 (18.02.2014)
+- Option to use app only while charging
+- Option to enable low-priority notifications
+- Option to configure timeouts.
+- Swipe to dismiss notification
+- Fixes for test notification.
+- Ability to hide date
+- New icon
+- Translations (thanks to all who helped me!): Greek, Hebrev, Romanian,
+Serbian (cyr.), Arabic, Chinese Simp., Chinese Trad., Dutch, French,
+German, Italian, Polish, Portuguese, Brazilian, Slovenian, Spanish,
+Swedish
+- Some improverments and fixes
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392749329,1392749329,d1df60a72a9185ae9414a5c9fba80f2793faa855
+d1df60a72a9185ae9414a5c9fba80f2793faa855,d1df60a7,fix build.gradle,fix build.gradle,,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392652767,1392652767,1f21a72a701b4fa3934f71a531f72a5d9b7fa21b
+1f21a72a701b4fa3934f71a531f72a5d9b7fa21b,1f21a72a,push new icon and its vector file,"push new icon and its vector file
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392419572,1392419572,f1a820394261345ef2276a7f3805a4fd8c9357f9
+f1a820394261345ef2276a7f3805a4fd8c9357f9,f1a82039,"fix ""ADFragment does not lock selected notification correctly""","fix ""ADFragment does not lock selected notification correctly""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392150625,1392150625,8a4e5af7b91a80fc396233b16afa09345077dd5d
+8a4e5af7b91a80fc396233b16afa09345077dd5d,8a4e5af7,"Revert ""fix ""Selected notification can be changed while i\'m looking on it (touched)""""","Revert ""fix ""Selected notification can be changed while i\'m looking on it (touched)""""
+
+This reverts commit 5868599b514b481658154526401f83ce6f1b2301.
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392150479,1392150479,5868599b514b481658154526401f83ce6f1b2301
+5868599b514b481658154526401f83ce6f1b2301,5868599b,"fix ""Selected notification can be changed while i\'m looking on it (touched)""","fix ""Selected notification can be changed while i\'m looking on it (touched)""
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392136699,1392136699,447716cdb3a7df0abe59529f3379dcbd9b63965b
+447716cdb3a7df0abe59529f3379dcbd9b63965b,447716cd,"add ""Placeholder"" item to the settings","add ""Placeholder"" item to the settings
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392067399,1392067399,ab3d0fbc9c44475036931b71b0d4993bf22a2aab
+ab3d0fbc9c44475036931b71b0d4993bf22a2aab,ab3d0fbc,remove ETA from readme,"remove ETA from readme
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392066431,1392066431,48da255ecf797e73dfd469e20883f4582b2b9884
+48da255ecf797e73dfd469e20883f4582b2b9884,48da255e,"fixed Russian translation, added thanks to Apache","fixed Russian translation, added thanks to Apache
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392066291,1392066291,1151074ef5724a36f9c07ede4153016141b15e72
+1151074ef5724a36f9c07ede4153016141b15e72,1151074e,push the sources,"push the sources
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1392065421,1392065421,74e915cc5433b0473c6278b5a3105febcf15543b
+74e915cc5433b0473c6278b5a3105febcf15543b,74e915cc,add missing screenshot,"add missing screenshot
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1391902588,1391902588,0ddb22193a4b532444cf88ae7f12bd63870e18bb
+0ddb22193a4b532444cf88ae7f12bd63870e18bb,0ddb2219,remove spy screens,"remove spy screens
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1391901834,1391901834,f959829970c986dfd85d1520e42df9331c5bb7d2
+f959829970c986dfd85d1520e42df9331c5bb7d2,f9598299,update readme,"update readme
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1391900860,1391900860,e4d721733621a81953ac4b341d88dd652b875ab1
+e4d721733621a81953ac4b341d88dd652b875ab1,e4d72173,init repo,"init repo
+",,,,Artem Chepurnoy,artemchep@gmail.com,Artem Chepurnoy,artemchep@gmail.com,1391900668,1391900668,

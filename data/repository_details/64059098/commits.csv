@@ -1,0 +1,421 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+6724f9b368574baedff7666e7dfb59274679d2fc,6724f9b3,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,GitHub,noreply@github.com,1513340711,1513340711,8b7a3f7e1607ed7fa8741eb2430532dd65f62edf
+8b7a3f7e1607ed7fa8741eb2430532dd65f62edf,8b7a3f7e,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,GitHub,noreply@github.com,1513340612,1513340612,908e7825140e1ffd901c6d4131f92245242c2ca5
+908e7825140e1ffd901c6d4131f92245242c2ca5,908e7825,Merge branch 'Unstable',"Merge branch 'Unstable'
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1507756327,1507756327,"8b318b8c25b123035d8a6ee165ca2377019b1256,a8ab920aace83b07c89e6203b90515fb45616649"
+a8ab920aace83b07c89e6203b90515fb45616649,a8ab920a,--Change Log:-,"--Change Log:-
+-The mouse cursor will be shown in the 3D scenes. If the escape key is pressed, the mouse cursor will be hidden in the FPS camera.
+-Now there are five different shaders and mesh structs that will represent five different types of meshes that can be rendered. These are
+---Mesh::PVertexData which only contains position vertex data.
+---Mesh::PUVVertexData which contains position and UV vertex data.
+---Mesh::PNVertexData which contains position and normal vertex data.
+---Mesh::PUVNVertexData which contains position, UV, and normal vertex data.
+---Mesh::PUVNTBVertexData which contains position, UV, normal, tangent, and binormal vertex data.
+
+When converting FBX to BFX, the editor will figure out which vertex version the mesh needs and will pick the correct one and write it to the BFX file. In the engine, the BFXLoader will load the correct vertex struct and shader and renders the mesh accordingly.
+
+The next step would be to sort and render all meshes with similar data structs that use a similer shader to avoid swapping shaders.
+
+-Xinput controller is fully supported now. All that is left is a way to control the vibration.
+-Updated the demos.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1507755492,1507755492,112dc6473e40a6f7ea6906b7a832d2b2ac26bb04
+112dc6473e40a6f7ea6906b7a832d2b2ac26bb04,112dc647,--Change Log:-,"--Change Log:-
+-Updated engine version. I really need to find a way to automate that. Too lazy...
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1506732497,1506732497,6c1154f94ce12d0a875d573b3f42cdc4d8918ce5
+6c1154f94ce12d0a875d573b3f42cdc4d8918ce5,6c1154f9,--Change Log:-,"--Change Log:-
+-Fixed the collision issue with the physics engine where rigid bodies could be inside each other.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1506732299,1506732299,9b2ef7b0a794b581cfa68c6ac0a6d583460ba4f1
+9b2ef7b0a794b581cfa68c6ac0a6d583460ba4f1,9b2ef7b0,--Change Log:-,"--Change Log:-
+-The SwapRedBlue32 function inside the FreeImage library is now exported and renamed to FreeImage_SwapRedBlue32.
+-Terrain now uses the TextureData struct.
+-The texture class now has a load function. This function will check the ResourceManager if the desired texture to be loaded is already in memory. If it is, it will fetch it instead of loading it again from the disk. If it doesn't exist, it will load it and insert it in the ResourceManager unsored_map to be used later on. At some point, this unsorted_map needs to be freed. I'm thinking of freeing it when a new scene loads. I'm not sure though.
+-Texture2D load function now simply calls the Texture class load function instead of loading things on its own.
+-TextureCube is now broken. It needs to be fixed.
+-TextureData and FontAtlas now inheritances from the Resource class.
+-The FontAtlasFactory class now sends the FontAtlas to the ResourceManager just like Texture class does when the user loads a font.
+-All resources like Textures, Fonts, XML files, Audio files and more will be managed by the ResourceManager.
+-ImageLoader now has the ability to unload and DeInitialise the FreeImage library. FreeImage doesn't have to be reinitialized every single time you need to load an image now. The library still needs to be DeInitialised when the engine cleans up.
+-Overloaded the following operators for the following classes:-
+--Overloaded operators ""<"", "">"", ""<="", "">="", ""!="", ""=="", ""/="", ""*="", ""-="", ""+="" for Rectangle, Vector2, Vector3, Vector4 classes.
+-Added a function called Area to calculate the area of a Rectangle.
+-Added a function that calculates the area of two intersecting rectangles.
+-Added a small simple physics engine. Right now all it does is adds gravity to a sprite and allow it to fall until it collides with another sprite. This needs a lot of work. It is still work in progress.
+-Added a Rigidbody2D class that allows a sprite interact with the physics engine.
+-Added a PhysicsScene to test out the physics engine.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1506487932,1506487932,ed77802a50c2f38a9953507bfd6e7a3873cb8167
+ed77802a50c2f38a9953507bfd6e7a3873cb8167,ed77802a,--Change Log:-,"--Change Log:-
+Font class will now only deal with calling the FontFactory to load the font. if the font already created and loaded, FontFactory will return that font instead of creating a new one. If that font does not exist FontFactory will create one and return it.
+-Fixed a bug where the text position would be offset by few extra pixels depending on the text size. Therefor the position was never correct. Before when you set the text to 0, 0 the text position would actually be something like 0, 20. Now when you set the text position to 0, 0, the text would be at 0, 0.
+-StyleSheet now can load default font and text and text alignment for GUI.
+-Text is now rendered by creating a Text object from the Text class and passing it to the spriteRenderer to be rendered.
+-Now in order to render Text you need a Font and a Text objects.
+-Added Label class that deals with rendering the GUI Text. ***This is work in progress***
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1502656067,1502656067,1c259652a76e17c5455a3eef7eaf844f7d4030f2
+1c259652a76e17c5455a3eef7eaf844f7d4030f2,1c259652,--Change Log:-,"--Change Log:-
+-If a widget is on top of another widget you won't be able to click both of them at the same time. The widget on top takes Priority. This is done using the zLayer variable. It checks which widget is on top. I think in the future ray casting on widgets is better. idk.
+-Fixed Renderable sorting BackToFront. FrontToBack still needs to be fixed.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1501463238,1501463238,5977d043220afd00251536ebf18496461bfaace4
+5977d043220afd00251536ebf18496461bfaace4,5977d043,--Change Log:-,"--Change Log:-
+-Override the = operator for SpriteRenderer.
+-Added Distance and Direction functions to Vector2, Vector3 and Vector4.
+-Added TwinStickShooter to the demo games.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1499049475,1499049475,44159814b873e38cee5616ed375b05393e6c7315
+44159814b873e38cee5616ed375b05393e6c7315,44159814,--Change Log:-,"--Change Log:-
+-Added Single Light Test Scene.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1497477961,1497477961,99d1b4e015bc124ea085857e97cfa56f0c9f1884
+99d1b4e015bc124ea085857e97cfa56f0c9f1884,99d1b4e0,--Change Log:-,"--Change Log:-
+-Engine state was moved from platform specific EngineEntryPoint to Engine.h.
+-Now when you close the window in Windows OS the game will close. You won't have to also close the console for the game to exit.
+-Math functions in Math.h were not being exported in the dll. Now they are.
+-Added Pong game demo.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1497392044,1497392044,e42471fc90c43099655b83344358160a06e36564
+e42471fc90c43099655b83344358160a06e36564,e42471fc,--Change Log:-,"--Change Log:-
+-Added Tangent and Binormal to the mesh class.
+-Added Normal mapping support. Still needs work.
+-Added forward rendering support. still needs work.
+-BFX file now support Tangent and Binormal.
+-Added Attenuation to the light shader.
+-Added few extra lines in the GLContext and GLTexture2D for testing. those will be cleaned up later on.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1496591087,1496591087,8b318b8c25b123035d8a6ee165ca2377019b1256
+8b318b8c25b123035d8a6ee165ca2377019b1256,8b318b8c,--Change Log:-,"--Change Log:-
+-Fixed typo of ConstentBuffer to ConstantBuffer.
+-Moved all GLSL-Core4.5 shaders from an external file to the dll. **Still haven't moved HLSL or GLSL-ES3.0.
+-Fixed a bug with the View Matrix where the positive X axis would move an object to the left instead of the right.
+-Now when you press Escape the mouse will no longer be locked to the center of the screen in the _3D scene.
+-Added Two new functions to the Keyboard class, IsKeyDown and IsKeyUp and modified the existing IsKeyPressed.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1494989514,1494989514,cf26fbdb94d1338f04e57ba88f0bbfc8b77c969b
+cf26fbdb94d1338f04e57ba88f0bbfc8b77c969b,cf26fbdb,--Change Log:-,"--Change Log:-
+-Tracked .rar files.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1494719263,1494719263,54912bb1f17c07177199b879d152c810bb5050ee
+54912bb1f17c07177199b879d152c810bb5050ee,54912bb1,--Change Log:-,"--Change Log:-
+-Better support for Web, Linux and Windows.
+-Cleaned up Font class a bit. Still needs a lot more work.
+-Made Font rendering work in the SpriteRenderer class.
+-Added GLContext as base class for all other Context classes.
+-Snake demo game is 90% done.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1494719143,1494719143,133cdf42b9aaf27daf0e06fec4cde18bebd82e75
+133cdf42b9aaf27daf0e06fec4cde18bebd82e75,133cdf42,--Change Log:-,"--Change Log:-
+-Temporarily removed FixedUpdate function.
+-Added the ability to limit the engine frame rate and update rate.
+-Added deltaTime. The time it takes for a single frame to render.
+-Added equal and not equal operator comparison to Color, Vector2, 3 and 4.
+-Added Lerp function to Math.cpp.
+-Made more progress on the Snake game demo.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1493720544,1493720544,2bab8cde4591930d6beff046a028f6762123be0f
+2bab8cde4591930d6beff046a028f6762123be0f,2bab8cde,--Change Log:-,"--Change Log:-
+-Standard GLSL shaders are now compiled into the DLL.
+-Added a Demos project to show off what can the engine do.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1493151856,1493151856,c14b69f5eee47a6e02fbdbd7fa3a74ee756f60f9
+c14b69f5eee47a6e02fbdbd7fa3a74ee756f60f9,c14b69f5,Merge branch 'master' into Unstable,"Merge branch 'master' into Unstable
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1492391077,1492391077,"b4258da6b5bfeda98b47474342d719528260ebc7,949ddab6ca5e1a1d799f4ec1a825693341844456"
+b4258da6b5bfeda98b47474342d719528260ebc7,b4258da6,--Change Log:-,"--Change Log:-
+-Cleaned .git folder.
+-Updated LFS tracking.
+-Reconfigured the project to only need Core folder to be included to build any game using the engine.
+-Verified that Web, Window OpenGL and Android builds all working.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1492389878,1492389878,817e7a92db17cfd28279f821b7b0702fe8c9265a
+949ddab6ca5e1a1d799f4ec1a825693341844456,949ddab6,Merge branch 'Unstable',"Merge branch 'Unstable'
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1492170262,1492170262,"32b6493def0673e8b5ee4808b344e4666177f278,817e7a92db17cfd28279f821b7b0702fe8c9265a"
+817e7a92db17cfd28279f821b7b0702fe8c9265a,817e7a92,--Change Log:-,"--Change Log:-
+-Dependency and Assets folder were removed from Git tracking and was added to Git LFS tracking.
+-Fix author and commit names.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1492161625,1492161625,6795aec099ccd5e5225df4e5419eb46d98523888
+6795aec099ccd5e5225df4e5419eb46d98523888,6795aec0,--Change Log:-,"--Change Log:-
+-Allowed dll's for be commited.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491996467,1491996467,54e890f0300b6fcf76ebbab6fbe19ab632a0d15e
+54e890f0300b6fcf76ebbab6fbe19ab632a0d15e,54e890f0,--Change Log:-,"--Change Log:-
+-Added shader for gles 3.0 for the SpriteRenderer.
+-Keyboard now fully works with Web.
+-Improved Web support.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491995786,1491995786,ec777f7c18a6156717604a22bb15b59c2790d03d
+ec777f7c18a6156717604a22bb15b59c2790d03d,ec777f7c,--Change Log:-,"--Change Log:-
+-Fixed all unresolved symbol for the web build of the engine.
+-Rebuilt FreeType, FreeImage and TinyXML using the new emc version.
+-Fixed the web version of the engine.
+-If OpenGL context fail the engine will exit.
+-Fetal errors now crash the application with a message in console.
+-Minor engine maintenance.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491868521,1491868521,72714e637b1475fa632e2d40c1cf931e732e549b
+72714e637b1475fa632e2d40c1cf931e732e549b,72714e63,--Change Log:-,"--Change Log:-
+-Added emscripten v.1.37.9.
+-Updated EGL and GELS in emscripten.
+-Removed X11 and EGL and GLES from dependency folder because they already exist inside emscripten.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491844355,1491844355,ce3f0da37298652ea26d4d19261ff4bbc4ae15e3
+32b6493def0673e8b5ee4808b344e4666177f278,32b6493d,Updated .gitignore,"Updated .gitignore
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491781878,1491781878,7845a8c2b702a538181d4978507eb417f476d1c5
+ce3f0da37298652ea26d4d19261ff4bbc4ae15e3,ce3f0da3,--Change Log:-,"--Change Log:-
+-Added the ability to pick a tile from the tilesheet and place it into the map scene. So essentially now you can create maps using the editor.
+-Removed the Linux project. Will be added again soon.
+-Android now works again. Finally.
+-Added SetViewport function in the window version of opengl.
+-Now when you resize the window opengl viewport, scissor and camera will adjust accordingly. Note:- Camera projection matrix is being calculated every frame. that is bad. Should only be calculated when windows is resized.
+-Compiled FreeType and TinyXML for Android and Web.
+-Added Window support and Web.
+-Added Keyboard and mouse support for web.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1491781774,1491781774,7845a8c2b702a538181d4978507eb417f476d1c5
+7845a8c2b702a538181d4978507eb417f476d1c5,7845a8c2,--Change Log:-,"--Change Log:-
+-Update FreeType library from 2.7.0 to version 2.7.1.
+-Updated and compiled the entire engine and it's dependancy to visual studio 2017 and MSVC v141.
+-Added partial Normal map support.
+-WebGL now works partially.
+-Added loging to WebGL.
+-Added different entery points to the engine for each platform.
+-Added Mouse support for Web.
+-Now you can add rendering order for lines and regular polygons to the SpriteRender.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1489571264,1489571264,ffe42673f410c6531d9f305e56529d65484927fd
+ffe42673f410c6531d9f305e56529d65484927fd,ffe42673,Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine,"Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1488816574,1488816574,"47deea8bedf2e53c59870c400acef35b30257636,6a544e51068116f8d146e2dfd2041c8d23980f1e"
+47deea8bedf2e53c59870c400acef35b30257636,47deea8b,--Change Log:-,"--Change Log:-
+-Window class now takes a rectangle instead of 4 separate variables for position and size.
+-Changed texture::textureWrap and texture::textureFilter names to texture::Wrap and texture::Filter.
+-Added Clamp and Min and Max functions in the math class and added overload functions for them that both take and return int and float.
+-Added tilesheet panel and scene panel in the map editor.
+-Added Bilinear and Trilinear and Anisotropic filtering to opengl.
+-Added reflection to glsl. Now models can reflect the cube map or environment map.
+-Added panel class with scrollbar and scrollbar sliders.
+-Added Checkbox.
+-Widget can have two sets of states and textures.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1488816428,1488816428,77f8503b2b38eacb491a4253db5cf21304f8d370
+6a544e51068116f8d146e2dfd2041c8d23980f1e,6a544e51,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1488097026,1488097026,8d60cf1d735b64f7ed9bb5a5305f841fd0b08ebc
+8d60cf1d735b64f7ed9bb5a5305f841fd0b08ebc,8d60cf1d,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487950459,1487950459,78755608c092edea7f0fd9fbdc53088857e1ee1f
+78755608c092edea7f0fd9fbdc53088857e1ee1f,78755608,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487635279,1487635279,7f1b70670b99b769bbe55576bfd2e664ec78037d
+7f1b70670b99b769bbe55576bfd2e664ec78037d,7f1b7067,Set theme jekyll-theme-hacker,Set theme jekyll-theme-hacker,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487635182,1487635182,87e158a026d2683e0d7cf4ef4efd8cf5474d17f8
+87e158a026d2683e0d7cf4ef4efd8cf5474d17f8,87e158a0,Create LICENSE,Create LICENSE,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487635054,1487635054,e2361fcd5ab0ff3f42882b26ac57c729cbd5c426
+e2361fcd5ab0ff3f42882b26ac57c729cbd5c426,e2361fcd,Set theme jekyll-theme-slate,Set theme jekyll-theme-slate,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487634899,1487634899,77f8503b2b38eacb491a4253db5cf21304f8d370
+77f8503b2b38eacb491a4253db5cf21304f8d370,77f8503b,Change Log:-,"Change Log:-
+-Added Scissor to OpenGL. The scissor rectangle starts on the top left corner instead of the default lower left corner that OpenGL supports.
+-Added the ability to specify a Scissor rectangle to SpriteRenderer.
+-Added MinWidth and MinHeight to GUI widget. A Widget cannot be smaller than MinWidth and MinHeight.
+-Added Light ambientColor, diffuseColor and specularColor.
+-Added Material ambientColor, diffuseColor and specularColor.
+-Added diffuseMap and specularMap support for Material.
+-Added Framebuffer to OpenGL. Now you can render to a texture2D.
+-Added RenderTarget class as an abstraction for Framebuffer and future buffers like depth buffer.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487563262,1487563262,135a14a247f09fe74a5e690bf3893b25cae7a9d2
+135a14a247f09fe74a5e690bf3893b25cae7a9d2,135a14a2,Engine:-,"Engine:-
+-Made the engine more Android compatible. Still needs a lot of work.
+-Added Terrain generation through reading height maps.
+-Added a Normalize function in the math class.
+-Made performance improvements and code clean up to the Controller class.
+-Removed the ability for the FileLoader class to throw an exception. Now instead it displays an error message into the console instead.
+-Added Color class instead of using the Vector4 class.
+-Renamed Draw function in TileMap class to Render like all the other classes.
+-Moved the ConstentBuffer from the SpriteRenderer class to the camera class.
+-Removed the TextureID if statments from the glsl shader and SpriteRenderer since they are very poor performance to parallel processing of the GPU. Now we only use one big texture instead.
+-Sprites are now submitted every frame and sorted every frame. SpriteRenderer no longer modifies Sprites ability to be submitted every frame.
+-Binding a texture in the SpriteRenderer is now only called when the texture is changed. Not every frame. This improved performance.
+-Added state to the engine. Initializing state, rendering state and Exiting state so you can re Initialize the engine while running without the need to restart the application. This is still not fully implemented and still needs work.
+-Scene class is no longer an abstract class and now has implementation. It now class the WidgetManager and renders the GUI.
+-Sprite now supports zlayering.
+-Sprite now sorts the sprite position and zlayer.
+-Added SetPosition and SetRectangle functions to the widget class.
+-Added Waypoint class that doesn't function yet.
+-Added basic TCP server/client networking. Still does not function. Needs more work.
+-Added Panel Widget.
+
+Editor:-
+-Added PatinTile class.
+-Added TileMap class.
+-Added Grid class.
+-Basic tile editor.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1487190947,1487190947,724b9dc6f6d724bdb8107e11fbc3b7b74416526f
+724b9dc6f6d724bdb8107e11fbc3b7b74416526f,724b9dc6,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1485631111,1485631111,f560b882f115db3b9078d175ce18ee6378b84c48
+f560b882f115db3b9078d175ce18ee6378b84c48,f560b882,--Change Log:-,"--Change Log:-
+-Added the ability to set mouse position on Windows platform.
+-Moved the SpriteRenderer Shader into the SpriteRenderer.cpp files. SpriteRenderer no longer require the Shader to be passed as a parameter.
+-You can now sort the Sprites in the SpriteRenderer either from front to back or back to front.
+-Added sorting structs for the Sprite class.
+-Currently SpriteRenderer only support 1 texture. This will be fixed later on. The reason the SpriteRenderer is now only supports one texture is because I removed the if statements in the Shader since this is very slow. A better solution will be found and added later on.
+-Both DirectX and OpenGL now have better error reporting using DXCall and GLCall functions.
+-Added the ability to Enable or Disable DeapthBuffer and Blending and Vsync for both OpenGL and DirectX.
+-Widget now render the correct texture depending on the mouse event, Example when hovering or pressing on the widget.
+-Added OnClickListener even for the Widget.
+-Fonts can now be colored.
+-Added controller support for windows using Xinput v1.4.
+-Updated GLES 3 header files and added GLES 3.1.
+-FPS camera finally functions correctly.
+-Added partial Android support. This only uses GLES 3.0+ and Android 5.0+. So far, the Android app of the engine only creates a GLES 3.0 context and clears the screen to red. More work needed.
+-All textures now use TextureData struct.
+-Added TextureCubes for OpenGL.
+-Added Skybox.
+
+**Note:-
+So far the only build that works is windows with OpenGL. DirectX is broken. Linux and Web are broken.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1485629601,1485629601,c1223923b878e9a88cd490ac3ba93dd87587af1f
+c1223923b878e9a88cd490ac3ba93dd87587af1f,c1223923,--Change Log:-,"--Change Log:-
+-Added support to up to ten different mouse buttons.
+-Changed how mouse position gets called from WinAPI.
+-Now you can detect whether or not the mouse is inside the client window.
+-Added Widget class. Now every GUI widget has to inherit from this class.
+-Added WidgetManager class that is responsible for rendering, updating and loading all GUI widgets.
+-Added do-while loop in Log file to fix some problems.
+-Added TextRendering function in the SpriteRenderer.
+-Added the ability to render quads without textures in the SpriteRenderer class.
+-Added Editor project.
+-Removed BFX Tool and moved that to the Editor project.
+-Added BFA a sprite animation file format.
+-Added BFM a map file format.
+-Added some Vulkan code.
+-Added SpriteAnimation.
+-Added TileMap.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1483054325,1483054325,d3383c57fdfe9185c3cb0bfc3f71cd13a5f34e3e
+d3383c57fdfe9185c3cb0bfc3f71cd13a5f34e3e,d3383c57,--Change Log:-,"--Change Log:-
+-Cured my pointer syndrome. I have replaced all pointers with either member reference or normal object.
+-Major code clean up.
+-Now you don't have to keep passing the Context and Window around everywhere. Now they are static objects.
+-Added Geters and Seters to the Sprite class.
+-Added TinyXML2 library to read XML files.
+-Added GUI system.
+-Added StyleSheet class to read the GUI StyleSheet.
+-Added a Button GUI class.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481797304,1481797304,05dc16ded1af48704c62f0e1f5d6e046c4cc394f
+05dc16ded1af48704c62f0e1f5d6e046c4cc394f,05dc16de,Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine,"Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481479497,1481479497,"819d457f0cb25ff08cee4e4ea31e68b55ca6f5e2,fb90af422416aeff4a573fc17846c0cb371b02ed"
+819d457f0cb25ff08cee4e4ea31e68b55ca6f5e2,819d457f,--Change Log:-,"--Change Log:-
+-Moved game loop into the Engine class which is responsible for the main game loop.
+-Added a FixedUpdate function in the game loop that always runs 60 times a second no matter how high the frame rate is.
+-Fixed a bug where OpenGL context was not created on some devices.
+-Added an abstract Scene class which allows the engine user to create a new scene and manage all his Initializing, loading, updating and rendering.
+-Added a SceneManager to manage scenes.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481479411,1481479411,99505715001b7810fee138006e02bda969dad77b
+fb90af422416aeff4a573fc17846c0cb371b02ed,fb90af42,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481250256,1481250256,d9f3f16dd427d8fd55c9f3a50dabd3319bd41338
+d9f3f16dd427d8fd55c9f3a50dabd3319bd41338,d9f3f16d,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481249667,1481249667,483831b86ac2eec3af5d777a737f2bc4a0ebb059
+99505715001b7810fee138006e02bda969dad77b,99505715,--Change Log:-,"--Change Log:-
+-Minor code cleanup.
+-Added a logging system.
+-Create a new binary file format for loading models called BFX. This format is what the engine uses to load models.
+-BFX Tool now converts FBX files to the new custom BFX binary file format that is used by the engine.
+-Added simple AABB collision detection to Rectangle class.
+-SpriteRenderer now does a render call if there are more than 32 unique textures and creates a new buffer for the next set of unique textures.
+-The DynamicSubmit can support as many unique textures as needed. however, the StaticSubmit is only limited to 32 unique textures in the SpriteRenderer.
+-Fonts now creates a texture atlas of all Latin characters. This is still work in progress.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1481092397,1481092397,483831b86ac2eec3af5d777a737f2bc4a0ebb059
+483831b86ac2eec3af5d777a737f2bc4a0ebb059,483831b8,--Change Log:-,"--Change Log:-
+-SpriteRnderer now works with DirectX.
+-Added FreeType library.
+-Added Font class that loads ttf fonts using FreeType library.
+-Now both OpenGL and DirectX can render FreeType bitmap font's.
+-Added TextureAtlas class that can merge more than one texture into one large texture.
+-Added base class called Texture that TextureAtlas and Texture2D inherit from.
+-Added a way to create a texture2D from a buffer of int8_t for both OpenGL and DirectX.
+-Now you can disable Depth Test with DirectX as well as OpenGL.
+-Removed all const basic data types like int, float, double references.
+-Removed all C like strings and replaced them with C++ std::string.
+-Cleaned up the code base a bit.
+-Added FBX library.
+-Now meshes support multitexturing in OpenGL.
+-Added a new project called BFX Tool that imports an FBX binary file format and exports a custom 3D model binary file format called BFX. This should allow the engine to load 3D models much faster.
+-Deprecated OBJ loader. Will be deleted eventually.
+-Linux and WebGL are broken. I will fix them next build hopefully.
+-Added Material class. Right now, all it holds is a texture name.
+-Upgraded the project and all its dependencies to Visual Studio 2017
+-Added the Sponza scene into the engine.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1480456230,1480456230,3ea35b4267f4a992333f7bd4ffd4d64ac7a24906
+3ea35b4267f4a992333f7bd4ffd4d64ac7a24906,3ea35b42,-Change Log:-,"-Change Log:-
+-Added 2D and 3D scene in Sandbox to easily switch between them.
+-Moved width and height variables from DXTexture2D and GLTexture2D to Texture2D class.
+-Moved Texture Loading from DX and GL Texture2D class to Texture2D.
+-Added the ability to bind more than one texture at a time aka Texture Units.
+-ConstentBuffers no longer require data on creation. Only on update.
+-You can enable or disable depth test for opengl only for now.
+-Added more sprite constructors.
+-Added the ability to only draw part of a texture using the SpriteRenderer.
+-SpriteRenderer can now render multiple textures at the same time. As of right now it only works up to 5 textures. I will add the ability to bind up to 32 unique textures.
+-Added different shader for 2D and 3D scenes.
+----- NOTE !! ----
+-SpriteRenderer does not work in DirectX anymore. It will be fixed next build.
+-I have broken directx :( Will be fixed later.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1479205898,1479205898,9fb177884261a6ef71b7d5b97208f4368da1ee3b
+9fb177884261a6ef71b7d5b97208f4368da1ee3b,9fb17788,Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine,"Merge branch 'master' of github.com:Vault16Software/Blue-Flame-Engine
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1478860479,1478860479,"463b25e91ff2860f57fa76af1386474dde03613c,d8e6b366f4cda3a51078e4c4a908330e31b91a23"
+463b25e91ff2860f57fa76af1386474dde03613c,463b25e9,--Change Log:-,"--Change Log:-
+-SpriteRenderer now supports colors and single textures.
+-SpriteRenderer now works in DirectX.
+-Added Map functions to DXVertexBuffer class for DirectX.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1478860311,1478860311,55cd4643f3a3c350c66679600f422edd5b757552
+d8e6b366f4cda3a51078e4c4a908330e31b91a23,d8e6b366,-Change Log:-,"-Change Log:-
+-Removed all .obj files from freeimage folder.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1478727494,1478727494,55cd4643f3a3c350c66679600f422edd5b757552
+55cd4643f3a3c350c66679600f422edd5b757552,55cd4643,--Change Log:-,"--Change Log:-
+-Added LookAt view matrix.
+-Uncommented rotation matrix.
+-Added Cross function in Vector3 class.
+-Removed VertexArray class.
+-Models now can renderer meshes with multiple textures.
+-Fixed a bug where only a single mesh will rendered. That was due to the VertexArray class.
+-Changed All IO classes names from Readxxxx to Loadxxxx.
+-Moved DirectX and OpenGL spesific code from Context to GLContext and DXContext.
+-Added OpenAL-Soft API.
+-Added WAV Loader class that loads 16bits and 32bits and 32bit IEEE float format.
+-Added a simple Sound class with SoundManager. This is still not finished.
+-Moved everything to an Assets folder.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1478727111,1478727111,bfed86454d08e4a3c9a94a99e56307d839383a4c
+bfed86454d08e4a3c9a94a99e56307d839383a4c,bfed8645,Update README.md,Update README.md,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1478087784,1478087784,2ad045ea741fc1adfa2eb86b90735784d80064ed
+2ad045ea741fc1adfa2eb86b90735784d80064ed,2ad045ea,--Change Log:-,"--Change Log:-
+-Added mouse support for windows.
+-Remove duplicated variables from WINWindow and LXWindow.
+-Now when you ask for a specific window size you will get that window size.
+-Added Sprite Renderer.
+-Added Sprite class.
+-Matrix4 class now has a column major memory layout and a column major vector.
+-Fixed perspective matrix.
+-Added Orthographic matrix.
+-Moved Vector2, 3 and 4 classes implementation to a cpp file and added dot, Magnitude and normalize functions.
+-Did a major code cleanup and code style change. Like changed the pointer and reference position from right to left.
+-Added resizableWindow style.
+-Added Timer class.
+-Added VertexArray class.
+-Added FPS Camera. Still not functional.
+-Added X11 source files as dependencies.
+-Added GLES3 source files added
+-Added EGL source files added
+-DirectX is broken.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1477612499,1477612499,a3afcfc97f38ee5a0f0995766bf3b6a2fde04f17
+a3afcfc97f38ee5a0f0995766bf3b6a2fde04f17,a3afcfc9,--Change Log:-,"--Change Log:-
+-Added IndexBuffer.
+-Changed BufferLayout name to VertexLayout.
+-Added OBJ Model loading with multiple mesh support.
+-Added temporary vsync for Windows.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1476249419,1476249419,ac7364baee738d67368b63011e5127daed06ee84
+ac7364baee738d67368b63011e5127daed06ee84,ac7364ba,--Change Log:-,"--Change Log:-
+-Added support for EGL/WebGL/GLES3.
+-Now the engine compiles with Emscripten and runs on the web.
+-Added Texture2D for OpenGL.
+-Added FreeImage lib.
+
+*Notes:-
+*FreeImage for Emscripten does not include OpenEXR or JXR. However the Desktop version does.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1475925207,1475925207,27919d3234199a5276a7573efc765aa413ad98b9
+27919d3234199a5276a7573efc765aa413ad98b9,27919d32,--Change Log:-,"--Change Log:-
+-Fixed a bug where window client width was larger than intended therefore the viewport was larger than the window itself.
+-Added support for WebGL using Emscripten.
+-Android build is not functional.
+-Added dpeth buffer for both OpenGL and DirectX.
+-Made OpenGL code compatible with both GLES2 and OpenGL 4.5.
+-Finished restructuring the code.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1475760217,1475760217,7f0344bf39b52105fb061649bb04a51b0b85bb3b
+7f0344bf39b52105fb061649bb04a51b0b85bb3b,7f0344bf,--Change Log:-,"--Change Log:-
+-Restructured the project to better work in cross platform.
+-DX11 no longer works for now.
+-Disabled a lot of the existing code for now while I finish restructuring the code and finish adding linux support.
+-Added Linux support. Now the engine works in linux !
+-Updated GLEW to version 2.0.
+
+--Plans:-
+-Add Android support.
+-Re-enable DX11 and all the other classes.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1474569754,1474569754,cf918cd1ead15f1500f5d93457f17dd5fb2730c1
+cf918cd1ead15f1500f5d93457f17dd5fb2730c1,cf918cd1,--Change Log:-,"--Change Log:-
+-Matrix class now uses row major matrices for both opengl and directx.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1473191594,1473191594,be4aa4ae7615ed183931d3f3e291f11cdc036024
+be4aa4ae7615ed183931d3f3e291f11cdc036024,be4aa4ae,--Change Log:-,"--Change Log:-
+-Added window system.
+-Added mouse class.
+-Added text and binary file reader class.
+-Added math library which has Rectangle, Vector2, 3, 4, Matrix4x4.
+-Added DirectX11 and OpenGL 4.5.
+-Added abstraction layer on top of OpenGL and DirectX shader code and created the shader class.
+-Added abstraction layer on top of OpenGL and DirectX rendering code and create the renderer class.
+-Added abstraction layer on top of OpenGL and DirectX buffer code and create the buffer and buffer mapper class.
+",,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1469354495,1469354495,5112e2328665e87b37fec40e15f67357c15fc329
+5112e2328665e87b37fec40e15f67357c15fc329,5112e232,Initial commit,Initial commit,,,,Mustafa Sibai,mustafa@vault16software.com,Mustafa Sibai,mustafa@vault16software.com,1469354057,1469354057,

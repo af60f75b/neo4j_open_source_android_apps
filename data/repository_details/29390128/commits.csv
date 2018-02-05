@@ -1,0 +1,81 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+4b1f91bda6657703080eabc7be2ac211245ba332,4b1f91bd,Fix broken Markdown headings,"Fix broken Markdown headings
+",,,,Santiago Castro,santi.1410@hotmail.com,Antonio Leiva,antonioleivag@gmail.com,1492396229,1492438588,cef33bc7b41139882038f8c2d496535a6200c5bc
+cef33bc7b41139882038f8c2d496535a6200c5bc,cef33bc7,:wrench: Upgrade build dependencies,":wrench: Upgrade build dependencies
+
+  - Android SDK 25
+  - Android Build Tools 25.0.2
+  - Android Support Library v25.3.0
+  - Gradle Plugin v2.3.0
+",,,,JP Ventura,contact@jpventura.com,Antonio Leiva,antonioleivag@gmail.com,1490018885,1490027192,4d2de946da145c79fa274a09db232a2810e0f73d
+4d2de946da145c79fa274a09db232a2810e0f73d,4d2de946,Use AppCompat resource for foreground (close #16),"Use AppCompat resource for foreground (close #16)
+
+It was using android resource, which is not available on old android versions",,,,Antonio Leiva,antonioleivag@gmail.com,GitHub,noreply@github.com,1468134760,1468134760,f01c04bb14e325d7bfbfd95c02998c8a7d749521
+f01c04bb14e325d7bfbfd95c02998c8a7d749521,f01c04bb,"Add ""snap"" to toolbar scroll flags","Add ""snap"" to toolbar scroll flags
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1463986319,1463986319,cc2d73fb1db3a9a5fbe93e8c4b1120c5fa9c88c3
+cc2d73fb1db3a9a5fbe93e8c4b1120c5fa9c88c3,cc2d73fb,Fix RecyclerView items issue wih new library version,"Fix RecyclerView items issue wih new library version
+
+Latest recyclerview library versions don't work very well with items that use match_parent for height instead of wrap_content.
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1463986246,1463986246,e3ecbd75a45babd724ec6f12a44265a311b69476
+e3ecbd75a45babd724ec6f12a44265a311b69476,e3ecbd75,"Update dependency and gradle versions, and remove release signing config","Update dependency and gradle versions, and remove release signing config
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1463986170,1463986170,b3f3d0181424ce029384eed1085030a852e48304
+b3f3d0181424ce029384eed1085030a852e48304,b3f3d018,Update README.md,"Update README.md
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1451568264,1451568264,d8964dcf9a3cc4534728f28158effbf41b010bf3
+d8964dcf9a3cc4534728f28158effbf41b010bf3,d8964dcf,Remove click delay (closes #6),"Remove click delay (closes #6)
+
+It was causing that some detail activities could be open in a short period of time, and provoked a problem in return animation. It seems it's no longer necessary to add a delay to be able to see the ripple, so just removed it.
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1451567313,1451567313,15ae1fcfdda3574640815e245e8528ec477b8427
+15ae1fcfdda3574640815e245e8528ec477b8427,15ae1fcf,Fix crash on avatar when finding view (closes #12),"Fix crash on avatar when finding view (closes #12)
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1451566710,1451566794,afa209187e777e7976d711de260198e6568f1f3c
+afa209187e777e7976d711de260198e6568f1f3c,afa20918,Bump gradle and library versions to latest,"Bump gradle and library versions to latest
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1451566684,1451566794,38f40a1e5c937a56aebb22f53865feb1ad9cd7cf
+38f40a1e5c937a56aebb22f53865feb1ad9cd7cf,38f40a1e,Merge pull request #11 from rafaeltoledo/master,"Merge pull request #11 from rafaeltoledo/master
+
+Fix project build on guest machines and update libraries",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1443474731,1443474731,"aaf26a02e8ba041abd0b9570aadcb399365257c8,b523748370407efb79299b341cdf4d7d6761e63c"
+b523748370407efb79299b341cdf4d7d6761e63c,b5237483,"Added a default debug key, so build will not fail","Added a default debug key, so build will not fail
+",,,,Rafael Toledo,rafaeldtoledo@gmail.com,Rafael Toledo,rafaeldtoledo@gmail.com,1443472138,1443472138,fc3cc4cb5b5e2208781b51e88fc5b708d00f3854
+fc3cc4cb5b5e2208781b51e88fc5b708d00f3854,fc3cc4cb,"Added Gradle wrapper exec files. Updated Gradle to 2.7, Support Libs to 23.0.1 and Picasso to 2.5.2","Added Gradle wrapper exec files. Updated Gradle to 2.7, Support Libs to 23.0.1 and Picasso to 2.5.2
+",,,,Rafael Toledo,rafaeldtoledo@gmail.com,Rafael Toledo,rafaeldtoledo@gmail.com,1443471849,1443471849,aaf26a02e8ba041abd0b9570aadcb399365257c8
+aaf26a02e8ba041abd0b9570aadcb399365257c8,aaf26a02,Merge pull request #8 from jpventura/issue-183166,"Merge pull request #8 from jpventura/issue-183166
+
+Fix CoordinatorLayout NullPointerException in onTouchEvent.",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1442181213,1442181213,"4a66a35f811cd4552ba54d7539b77345300c9d57,d0b67b5e08568193a8c49d45948c30d50ae339db"
+d0b67b5e08568193a8c49d45948c30d50ae339db,d0b67b5e,Fix CoordinatorLayout NullPointerException in onTouchEvent.,"Fix CoordinatorLayout NullPointerException in onTouchEvent.
+
+Summary:
+On some devices, a touch event triggered while the toolbar is half-way
+collapsed, causes a NullPointerException.
+
+This issue was detected after upgrading the support libraries to version 23 and
+reported at Android Open Source Project issue tracker. For more information,
+please check https://code.google.com/p/android/issues/detail?id=183166.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442177981,1442178436,4a66a35f811cd4552ba54d7539b77345300c9d57
+4a66a35f811cd4552ba54d7539b77345300c9d57,4a66a35f,Add GridLayoutAnimation to the RecyclerView.,"Add GridLayoutAnimation to the RecyclerView.
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1441258316,1441258316,a64fec6df1a31917f9aae9753d1639997524e596
+a64fec6df1a31917f9aae9753d1639997524e596,a64fec6d,Use CollapsingToolbarLayout in DetailsActivity,"Use CollapsingToolbarLayout in DetailsActivity
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1436300492,1436300492,caef311598eae7cb74fc41e9a34805bab32ba270
+caef311598eae7cb74fc41e9a34805bab32ba270,caef3115,Use CoordinatorLayout and AppBarLayout to show and hide the Toolbar in Main Activity.,"Use CoordinatorLayout and AppBarLayout to show and hide the Toolbar in Main Activity.
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1435389476,1435389476,79efe5a9cf90efbf952e9369319ebffba7d0e54a
+79efe5a9cf90efbf952e9369319ebffba7d0e54a,79efe5a9,Update deprecated code.,"Update deprecated code.
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1433797359,1433797359,26db614215a4afbe337eadafdd360c31990f3333
+26db614215a4afbe337eadafdd360c31990f3333,26db6142,Fix license year,"Fix license year
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1433797341,1433797341,c32834fc685d4ba72f92ea51a74c32218aee3cdf
+c32834fc685d4ba72f92ea51a74c32218aee3cdf,c32834fc,Make use of FloatingActionButton from Design Support Library,"Make use of FloatingActionButton from Design Support Library
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1433797093,1433797093,b892d291a04fd558fbff6b145e890fe9844e46d7
+b892d291a04fd558fbff6b145e890fe9844e46d7,b892d291,Add drawer header background,"Add drawer header background
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1433258146,1433258146,a74e84ce2ed4feb94804163363baf43bb06ec154
+a74e84ce2ed4feb94804163363baf43bb06ec154,a74e84ce,Use of the new NavigationView in design support library to create a navigation drawer,"Use of the new NavigationView in design support library to create a navigation drawer
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1433064763,1433068086,64ce73f8e472e2f7ef76c8de937844e3963c5a7f
+64ce73f8e472e2f7ef76c8de937844e3963c5a7f,64ce73f8,Merge pull request #2 from antoniolg/revert-1-patch-1,"Merge pull request #2 from antoniolg/revert-1-patch-1
+
+Revert ""Made link clickable""",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1430749672,1430749672,"bd6d5ef7fa8235b1dccc76178676b63a8ca5f224,610bc30091c39c8aa996dfa77ce6bb710d1af65a"
+610bc30091c39c8aa996dfa77ce6bb710d1af65a,610bc300,"Revert ""Made link clickable""","Revert ""Made link clickable""
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1430749623,1430749623,bd6d5ef7fa8235b1dccc76178676b63a8ca5f224
+bd6d5ef7fa8235b1dccc76178676b63a8ca5f224,bd6d5ef7,Merge pull request #1 from francislewis/patch-1,"Merge pull request #1 from francislewis/patch-1
+
+Made link clickable",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1430749550,1430749550,"e46fa6e316f0b9de4e2df22edaaad9873af91f9d,56a51d850d83f1b84075d4e9a28146cb03ca4b5d"
+56a51d850d83f1b84075d4e9a28146cb03ca4b5d,56a51d85,Made link clickable,Made link clickable,,,,Francis Lewis,francislewis@users.noreply.github.com,Francis Lewis,francislewis@users.noreply.github.com,1430591161,1430591161,e46fa6e316f0b9de4e2df22edaaad9873af91f9d
+e46fa6e316f0b9de4e2df22edaaad9873af91f9d,e46fa6e3,Initial commit,"Initial commit
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1422183703,1422183703,0aa78e74b2b8bef675ec553589259881a289e551
+0aa78e74b2b8bef675ec553589259881a289e551,0aa78e74,Update README.md,Update README.md,,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1421497363,1421497363,ba07c1808f0355e05e8eeb5b47753eba4ef31034
+ba07c1808f0355e05e8eeb5b47753eba4ef31034,ba07c180,Initial commit,"Initial commit
+",,,,Antonio Leiva,antonioleivag@gmail.com,Antonio Leiva,antonioleivag@gmail.com,1421497032,1421497032,

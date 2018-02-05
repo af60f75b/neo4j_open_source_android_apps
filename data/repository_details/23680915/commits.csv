@@ -1,0 +1,695 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+695a044c89ea0472f3c7b92a91d2b8aa6e9b75d6,695a044c,"Pref patch, updated README, images, & versionCode for release","Pref patch, updated README, images, & versionCode for release
+
+[Fix]: Last minute patch to the PreferenceUtil & MainActivity to ensure
+preference migration goes smoothly from the old scheme to the new one.
+[Fix]: Changed from margin to padding to ensure 720dp views rendered
+correctly on 5.0.
+
+[Mod]: Updated versionCode/name for next release
+
+[Mod]: Crushed the refresh icon.
+[Doc]: Added new screenshots. Updated the README to better describe the
+project and show new screenshots.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432779476,1432782411,78972f25be9a169275615cc06781abbebb1811e6
+78972f25be9a169275615cc06781abbebb1811e6,78972f25,Added new sort by to MainFragment to restore sort order,"Added new sort by to MainFragment to restore sort order
+
+[Fix][Mod]: Added new sorting method to MainFragment & check to ensure
+the starting currency is never empty. 
+
+This resets the behaviour to be the same of that of the last release of:
+USD, CAD, EUR, GBP, JPY. 
+
+This should finish up the refactoring.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432769783,1432769783,a8351ae95640a40376e843e80b0eac204a7b0da4
+a8351ae95640a40376e843e80b0eac204a7b0da4,a8351ae9,Added new table to enable a default sort order for output,"Added new table to enable a default sort order for output
+
+[Mod][Add]: Added to the Contract, Database Helper, and Content Provider
+a second table & column: def_display_order. This column will allows the
+pre-specified order defined in the xml to be honour at query time. 
+
+[Mod]: Updated tests to honour the new column & foreign key constraint.
+In addition, one enhanced the remaning tests to use a non-application
+context (via ProviderTestCase2 & RenamingDelegatingContext). This allows
+tests to be done without cross contaminating the database or content
+provider.
+
+[Mod]: Changed the ExchangeRateUpdateLoader to ensure that the sort
+order is added on first run.
+[Mod]: Changed selection projection for the CursorAdapter to exclude the
+source currency & specify which _ID to use.
+
+This also lays the groundwork for issue #8 (additional columns may be
+used for custom sorts).",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432769364,1432769364,fd06bb1fb0693a48074b3608e15be7e3a6a91d14
+fd06bb1fb0693a48074b3608e15be7e3a6a91d14,fd06bb1f,Added anim. refresh action to MainFrag & fixed warning rotations,"Added anim. refresh action to MainFrag & fixed warning rotations
+
+[Add]: Image resources & animation for refresh button.
+[Mod]: Added styles for refresh button and removed actionabr shadow for
+main activity.
+
+[Mod]: The refresh button now animates when loading in the background
+and users can demand an update. Additionally, the warning message (if
+visibile) remains visible until the next update check is performed.
+
+[Mod]: Removed default image from layout.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432693971,1432693971,22a7b7e1121a1a86899729cf373e907579e580cc
+22a7b7e1121a1a86899729cf373e907579e580cc,22a7b7e1,"[Mod]:Updated YahooApiExchangeRatesUpdate to retry 3x, every second","[Mod]:Updated YahooApiExchangeRatesUpdate to retry 3x, every second
+
+That way a spotty connection doesn't completely botch the attempt. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432682525,1432682525,44fe9c8fa7e5b2c034c9bf64e7fdc30dd2a155c4
+44fe9c8fa7e5b2c034c9bf64e7fdc30dd2a155c4,44fe9c8f,"Split Settings from MainActivity, moved the set def. to Activity.","Split Settings from MainActivity, moved the set def. to Activity.
+
+[Add][Ref]: Made Settings activity its own. This is to simplify the
+coding and potentially add some new animations later.
+Additionally, moved the ""resetDefaults"" to MainActivity.
+
+[Mod]: Additionally, fixed the progress wheel to only ever spin when the
+Loader is running. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432681974,1432682118,f357bcc190f31c21af58363d860c907e8866da60
+f357bcc190f31c21af58363d860c907e8866da60,f357bcc1,Removed old holo resources & began work on material design,"Removed old holo resources & began work on material design
+
+This commit begins to address issue #7.
+
+[Rem]: Remove lots of image resources, styles, themes, and state
+drawables used for the old holo look.
+[Rem]: Removed the support-v4 jar as it is given via support-v7
+
+[Mod]: Added colours for the material design look. 
+[Ref]: Renamed fragment_currency_value to more accurate
+list_item_currency_value
+[Mod]: Added drawables for the CursorAdapter list.
+
+[Ref]: Moved application icons to the mipmap directories, as per new
+spec. See:
+http://android-developers.blogspot.com/2014/10/getting-your-apps-ready-for-nexus-6-and.html",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432681912,1432681912,ce032efc102efde835d18bbc95216207f25867e9
+ce032efc102efde835d18bbc95216207f25867e9,ce032efc,"Restruct. prefs, fixed MainFragment's date setting, & other edits","Restruct. prefs, fixed MainFragment's date setting, & other edits
+
+[Ref]: Merged settings_info, strings_auth, update_periods into
+strings_config.xml
+[Mod]: Reworked the PreferenceUtil and Preference structure; no more
+boxing, now only default preferences. More importantly, update interval
+is now a String which can be readily parsed via the fetch method:
+getUpdateInterval(Context).
+
+[Ref][Mod]: ExchangeRateUpdateLoader restructured to appropriately:
+- Use the correct JSON preference
+- Moved the set/get the update time to PreferenceUtils
+
+[Rea]: Minor simplification of CurrencyCursorAdapter output.
+[Mod]: Added method CurrencyCalculator to calculate + format
+conversions.
+
+[Rea][Mod]: Update the MainFragment's flow:
+- Remove some dead code/comments
+- Moved calculation/formatting of conversion to CurrencyCalculator
+- Fixed the date formatting
+- Fixed the times the progress bar shows/hides",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432674912,1432674912,59ed41f41687265fab02eb938d7d8130a98dafd6
+59ed41f41687265fab02eb938d7d8130a98dafd6,59ed41f4,Added IntEditTextPreference & updated methods in DateFormatter,"Added IntEditTextPreference & updated methods in DateFormatter
+
+[Mod][Rem]: Removed deprecated actions from DateFormatter, added new
+function for dates as longs.
+[Add]: Added the work around class IntEditTextPreference for easy
+setting (may be useful for other projects).",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432674356,1432674356,6f5ce8b341f6ee1134c5dbf5806d5152dd95465d
+6f5ce8b341f6ee1134c5dbf5806d5152dd95465d,6f5ce8b3,[Rem][Doc] Deleted oldmodel & added commit id to oldmodel README,[Rem][Doc] Deleted oldmodel & added commit id to oldmodel README,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432609152,1432609152,c6f8a5ac2cfd248b613011edd5b49e894c18a542
+c6f8a5ac2cfd248b613011edd5b49e894c18a542,c6f8a5ac,Changed functionality flow; majority of app refactor has been done,"Changed functionality flow; majority of app refactor has been done
+
+[Mod]: Added Preference for most recent update time & array of default
+preferences; i.e. array of arrays.
+[Add]: ExchangeRateUpdateLoader is an AsyncTaskLoader for the purposes
+of intializing/updating the database.
+[Rem][Mod]: CurrencyCalculator - deleted a couple methods, and reworked
+how currency formating is done.
+[Ref][Add]: Created new adapters based off old ones
+- CurrencyDataFilterListAdapter -> CurrencyCursorAdapter; a cursor
+adapter to display the output of conversions
+- CurrencyDataSpinnerAdapter -> CurrencySpinnerAdapter; a string adapter
+to display the currency choices
+
+[Mod]: While still incomplete, the MainFragment loads and updates
+appropriately. The update message and currency order still need to be
+dealt with.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432608571,1432608571,1f653bcab8c3e67fab12a0c0fb6765dd28037ba0
+1f653bcab8c3e67fab12a0c0fb6765dd28037ba0,1f653bca,"Fixed content provider, added exchange rates update, & updated tests","Fixed content provider, added exchange rates update, & updated tests
+
+[Fix]: CurrencyConverterProvider now works with upper or lowercase
+database contents.
+[Add]: YahooApiExchangeRatesUpdate performs both request and parsing. 
+[Ref][Mod]: Unit test changes -
+- Moved PollingCheck and content observer to test package (renaming
+observer to UtilityTestContentObserver)
+- Added additional for ContentProvider to test uppercase, lowercase,
+item and dir queries.
+- Added tests for YahooApiExchangeRatesUpdate
+
+All new tests now pass.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432603495,1432603495,a0c4f7542c03b61b90ad24a8d44a9147261bb12d
+a0c4f7542c03b61b90ad24a8d44a9147261bb12d,a0c4f754,Renamed ResourceMap & updated some documentation,"Renamed ResourceMap & updated some documentation
+
+[Mod][Ref]: renamed CurrencyConvertResourceMap to CurrencyResourceMap
+for clarity and added symbol resource
+[Doc]: Updated documentation for AbstractSimpleHttpRequest and Yahoo
+Parsers.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432517973,1432517973,44e44f6ce83c28e569734d17474628d78028dbee
+44e44f6ce83c28e569734d17474628d78028dbee,44e44f6c,Simplifed abstract parsers;set parsers to ContentValues;added tests,"Simplifed abstract parsers;set parsers to ContentValues;added tests
+
+[Mod]: Simiplifed the Abstract XML & JSON parsers for single thread use.
+Removing all pause and cancel methods. 
+[Mod]: CodeRatePair was modified to be more reliable and return
+ContentValues, in both directions.
+[Mod]: Both JSON & XML parsers were re-worked to use ContentValues
+
+[Add]: Added tests for:
+-CodeRatePair 
+-YahooApiCurrencyJsonParser
+-YahooApiCurrencyXmlParser
+All tests pass.
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432445326,1432445326,909fb9be99dca7334a79555fceaf1885d273942a
+909fb9be99dca7334a79555fceaf1885d273942a,909fb9be,Added test & implementation for ContentProvider,"Added test & implementation for ContentProvider
+
+[Add]: ContentProvider provides a simple way to add and remove records
+via ContentResolver.
+[Mod]: Updated manifest to support the ContentProvider and api 22.
+
+[Add]: PollingCheck was copy/pasted to help test providers. (Source:
+Android CTS Tests)
+[Add]: Tested ContentResolver and test passes.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432332766,1432332766,b389a4117a21e16153f1777c2d32f89f2d0bea04
+b389a4117a21e16153f1777c2d32f89f2d0bea04,b389a411,Added tests & implementations for Contract & DBhelper,"Added tests & implementations for Contract & DBhelper
+
+[Add]: Added -
+- CurrencyConverterContract: Defines the SQLite contract and provides
+utility methods for URI building
+- CurrencyConverterDbHelper: DBhelper uses said contract to build new
+database and delete old one.
+
+[Add]: Added Curren to map currency codes to resource names and images;
+decoupling them from database.
+
+[Add]: Added utility test class for testing similiar methods.
+[Add]: Added tests for:
+-CurrencyConverterContract
+-CurrencyConverterDbHelper
+
+All tests pass.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432260734,1432260734,81a6cc0a45b993722fb14a9c75b2168fb236516e
+81a6cc0a45b993722fb14a9c75b2168fb236516e,81a6cc0a,Modified HttpRequests to work with URIs & added test project,"Modified HttpRequests to work with URIs & added test project
+
+[Mod]: Modified AbstractSimpleHttpRequest to demain a uri
+[Mod]: Made Yahoo request build using URIs.
+
+[Add]: Added test case for YahooRequests; passes.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432254277,1432254277,c5d5824dedf15e435df0098a358046c25b5cc7ef
+c5d5824dedf15e435df0098a358046c25b5cc7ef,c5d5824d,Moved & deprecated entire old model in favour of ContentProviders,"Moved & deprecated entire old model in favour of ContentProviders
+
+[Dep][Ref]: Deprecated the old model in favour of a rebuild. Note that
+this move is done for an easier historical referencing.
+
+[Mod]: Changed some references to old model.
+
+[Add]: Added a new README.md for the old model to explain the moves
+motive.
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432250072,1432250072,2f0f630537990c90c57af621360efbaad296a823
+2f0f630537990c90c57af621360efbaad296a823,2f0f6305,[Doc]: Updated Copyright from 2014 to 2015,[Doc]: Updated Copyright from 2014 to 2015,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1432248569,1432248569,462aee8707f38825e2f9c3d989d8bf2f15a6c8f3
+462aee8707f38825e2f9c3d989d8bf2f15a6c8f3,462aee87,[Doc]: Updated screenshots for project's README,[Doc]: Updated screenshots for project's README,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415666697,1415666697,39995ef4ed9b57d774905f4d962996f128dacfd3
+39995ef4ed9b57d774905f4d962996f128dacfd3,39995ef4,[Mod]: Updated versionCode/name for next release,"[Mod]: Updated versionCode/name for next release
+
+Version 3.1:
+- Updated settings/preference screen graphics + text colors
+- Update date formating
+- Tweaked feature handling
+
+Additionally, added android:anyDensity=""true"" to supported screens.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415664843,1415664843,122de9bf1b598be8bf3c3fee9c8375ad0e0440b0
+122de9bf1b598be8bf3c3fee9c8375ad0e0440b0,122de9bf,[Fix]: Added safety to MainFragment to activity was not null,"[Fix]: Added safety to MainFragment to activity was not null
+
+In the method, updateSourceCurrency() a null check is performed on the
+activity to prevent potential null errors. 
+
+[Mod][Rea]: Additionally turned off debugging to remove Log ""noise"".",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415664801,1415664801,2bbad94e7601dff9ef7e5b89456377ba7a2f466a
+2bbad94e7601dff9ef7e5b89456377ba7a2f466a,2bbad94e,Merge branch 'feature.preftweak',Merge branch 'feature.preftweak',,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415572751,1415572751,"411dc88215a462508bc04b6d3877c41dc314642f,8202d61b19f237de974fa5cad3e4f48f69c741b5"
+8202d61b19f237de974fa5cad3e4f48f69c741b5,8202d61b,[Fix]: Integers are set separately to other preferences,"[Fix]: Integers are set separately to other preferences
+
+The attempted shift to an xml based preference system hit a snag:
+EditPreference, ListPreference, Preference, etc. None of these will
+store in a manner than can be retrieved by getInt(String, int). This is
+quite bothersome.
+
+So, in meantime, falling back to old methods until extending the
+PreferenceClasses.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415572717,1415572717,a811a899a20e8c16d317849fffd2946b7513c5c9
+411dc88215a462508bc04b6d3877c41dc314642f,411dc882,Simplified DateFormatter & removed plurals,"Simplified DateFormatter & removed plurals
+
+[Mod][Dep]: Simplified the DateFormatter by moving to DateUtils;
+previously it was a nice experiment to see how to create a relative time
+display. However, to tidy it up moved to use DateUtils. As such
+deprecated old methods.
+[Mod]: Removed deprecated methods from mainfragment
+
+[Rem]: Removed the now unused plurals from strings.xml",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415309563,1415309563,a811a899a20e8c16d317849fffd2946b7513c5c9
+a811a899a20e8c16d317849fffd2946b7513c5c9,a811a899,[Mod]: Added explicit support for large screens,"[Mod]: Added explicit support for large screens
+
+This is required for pre-API 13",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415137843,1415137843,0b59ba75049a1cade1491dba6d306c2ff2dfb678
+0b59ba75049a1cade1491dba6d306c2ff2dfb678,0b59ba75,[Mod]: Changed method of setting pref defaults,"[Mod]: Changed method of setting pref defaults
+
+Taken from the project CareerStack, its an easier way to maintain
+preference defaults
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415136063,1415136063,0a85f327ad9ca405b7994251426a5947361181a0
+0a85f327ad9ca405b7994251426a5947361181a0,0a85f327,"Adjusted the horizontal padding for xlarge, w700dp, w820dp","Adjusted the horizontal padding for xlarge, w700dp, w820dp
+
+[Add][Mod]: Reduced the horizontal padding for 820dp and added it for
+xlarge/700dp",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415136003,1415136003,e4fe2ee8e8056567a8e2d5519d7bc85fba7c2296
+e4fe2ee8e8056567a8e2d5519d7bc85fba7c2296,e4fe2ee8,Added checkbox drawables & set secondary text colour,"Added checkbox drawables & set secondary text colour
+
+[Add]: Added the drawables for the checkbox and set it in theme/styles.
+[Fix]: Set the secondary text colour to be grey, primary to be black.
+
+This closes issue #6",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415135991,1415135991,e7515bd1be7f97879b2fe70a805d530d46652d57
+e7515bd1be7f97879b2fe70a805d530d46652d57,e7515bd1,"Moved listview, added padding to listview, fixed colouring issue","Moved listview, added padding to listview, fixed colouring issue
+
+[Ref]: Moved the listview into its own file for easier maintaince
+[Fix][Mod]: Added vertical padding to bottom of listview & fixed
+flashing listview issue in 2.3.3",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1415135927,1415135927,086e2ecbcdcb19eaee569e4b2a1aef59e8665bf6
+086e2ecbcdcb19eaee569e4b2a1aef59e8665bf6,086e2ecb,Applied non-button dismiss fix to Confirm Dialog,"Applied non-button dismiss fix to Confirm Dialog
+
+[Fix][Mod]: Confirm Dialog now sends a negative button press whenever
+cancelled. Additionally, on click interface now dismisses automatically.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412976419,1412976419,f0f02665966df03f0a54a2528db560b07c0fbca2
+f0f02665966df03f0a54a2528db560b07c0fbca2,f0f02665,[Rea][Ref]: Renamed all variables to be shorter for readablity,"[Rea][Ref]: Renamed all variables to be shorter for readablity
+
+Renamed variables that started ""com_ovrhere_currConv_..."" to just
+""currConv_..."" or ""currconv_..."". ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412719961,1412719961,9ee714e203566ed5231c3e2b4030a99bdbae8554
+9ee714e203566ed5231c3e2b4030a99bdbae8554,9ee714e2,[Add]: Added copy of tablet layout for main fragment ,"[Add]: Added copy of tablet layout for main fragment 
+
+This allows older versions to use the tablet layout.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412719836,1412719836,26c882e9371abe50d98f43ee105d406562fe7850
+26c882e9371abe50d98f43ee105d406562fe7850,26c882e9,[Rem]: Removed unecessary resolutions duplicates for limits,"[Rem]: Removed unecessary resolutions duplicates for limits
+
+Both values-large and values-xlarge would be covered by -normal, in this
+case",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412719774,1412719774,95c70a901bf44356e8d93fc6b838f602514523f1
+95c70a901bf44356e8d93fc6b838f602514523f1,95c70a90,[Mod]: Updated versionCode/name for next release,[Mod]: Updated versionCode/name for next release,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412026718,1412026718,5b93c0ef56b8477991d6616ac51c29ffce67a0b2
+5b93c0ef56b8477991d6616ac51c29ffce67a0b2,5b93c0ef,Tweaked the colours of the results rows & added higher res icon,"Tweaked the colours of the results rows & added higher res icon
+
+[Mod]: Removed colours for odd numbers, added a different blue for evens
+[Add]: Larger resolution launcher icon for tablets and the like.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412026704,1412026704,d7b0d4cfc3d97e09a816e662574959c77d16bc8a
+d7b0d4cfc3d97e09a816e662574959c77d16bc8a,d7b0d4cf,"Added Json parsing setting & ability to launch ""More Apps"" intent","Added Json parsing setting & ability to launch ""More Apps"" intent
+
+[Add]: Added MarketIntent utility which allows for more robust launching
+of market intents
+[Mod]: Added strings for use in settings fragment
+[Mod]: ""Use JSON"" preference & ""More Apps"" added to settings frag.
+
+This should close issues #1 and #2",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412026430,1412026430,8d021abfd1fbea90b52e94cdbc58a9524d41e4d2
+8d021abfd1fbea90b52e94cdbc58a9524d41e4d2,8d021abf,Add Json parsing pref & implemented it in async model + minor fix,"Add Json parsing pref & implemented it in async model + minor fix
+
+See issue #2
+
+[Mod]: Added JSON preference defaults (true)
+[Fix]: Ensured only one request can run at a time in model.
+[Mod]: Added Json preference to model allow it to set the request to
+JSON and parse it.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412025837,1412025837,025369cbc48d935b9122e74a32d13c1182c102c5
+025369cbc48d935b9122e74a32d13c1182c102c5,025369cb,"Moved CodeRatePair,tweaked Xml parser,add JSON parser & fix request","Moved CodeRatePair,tweaked Xml parser,add JSON parser & fix request
+
+See issue #2
+
+[Ref]: Moved CodeRatePair to its own class. Additionally, added the
+method to split the id tag (e.g. USDEUR) to the code pair object.
+[Add]: Added the json parser to parse the json response and return the
+results
+[Doc]: Added more explicity documentation to the xml parser about the
+expected content
+
+[Fix]: Fixed the json option in the yahoo request. It would have never
+triggered in its former state; I had never finished it. Whoops!
+
+Then again, I only just added the json so, no harm?",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412025627,1412025749,fdfcff1decef10fc27db16c658149b51217c884c
+fdfcff1decef10fc27db16c658149b51217c884c,fdfcff1d,Added gson (2.3) & AbstractJsonParser for parsing json response ,"Added gson (2.3) & AbstractJsonParser for parsing json response 
+
+See issue #2
+
+[Add]: gson 2.3 jar library + the source, documentation, & properties
+files for easy of use in Eclipse
+[Add]: AbstractJsonParser provides a slightly easier way to use Json
+Reader and a means to pause/resume (if implemented).
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412025360,1412025360,5efbdd3c0ecf18909f26924d51831bc83810a479
+5efbdd3c0ecf18909f26924d51831bc83810a479,5efbdd3c,"Improved thread safety in helper, updated model methods to close","Improved thread safety in helper, updated model methods to close
+
+[Doc][Rea]: Improved readablity in the open helper, rearranged tags,
+etc.
+[Fix]: The returning of helpers is now synch'ed & the list of helpers
+made final (we don't intend to let anyone modify it)
+[Fix]: Read/write methods now close in the finally{} tag
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412025274,1412025274,8009e4ef7193287e1a706c5189e5a4028e0d3f1b
+8009e4ef7193287e1a706c5189e5a4028e0d3f1b,8009e4ef,[Fix]: MainActivity backbutton press to give consistent results,"[Fix]: MainActivity backbutton press to give consistent results
+
+The hardware button was not giving the same results as actionbar; forgot
+to called onSupportNavigateUp() in onBackPressed()",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1412024960,1412024960,f003fb14346b1d0bce12e5add55c0475c28eb553
+f003fb14346b1d0bce12e5add55c0475c28eb553,f003fb14,[Doc]: Corrected some documentation typos & short-sights ,"[Doc]: Corrected some documentation typos & short-sights 
+
+Includes the default time in the doc.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411930128,1411930128,976e14886a57be11987492f10188cf56f23dc9d7
+976e14886a57be11987492f10188cf56f23dc9d7,976e1488,[Mod][Add]: Updated README to reflect additions & added screenshots,"[Mod][Add]: Updated README to reflect additions & added screenshots
+
+These include the screenshots for tablet/small mode & the use of the
+PreferenceFragment library.
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411767270,1411768293,3bfd76521dbd491139126cc500129f105ee094e5
+3bfd76521dbd491139126cc500129f105ee094e5,3bfd7652,Fixed small screen support on 2.3.3 & changed tablet screen layout,"Fixed small screen support on 2.3.3 & changed tablet screen layout
+
+[Add][Mod][Ref]: dp based screen support won't work on pre-3.0 so thus
+added limits to:
++ values-small-land
++ values-normal
++ values-large
++ values-xlarge
+which all point to/duplicate the values in w320dp (new width from
+w300dp)
+
+[Mod][Ref]: Changed the ""wide"" tablet mode to be for 720dp. This means a
+7in tablet will only use it in landscape, not portrait (which looks too
+crowded). Additionally, added padding to the list in portrait mode.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411766971,1411766971,d7fcc12098578cda8df6d214f2405ac3ea04185f
+d7fcc12098578cda8df6d214f2405ac3ea04185f,d7fcc120,Set Main to handle multiple fragments ,"Set Main to handle multiple fragments 
+
+[Mod]: MainActivity now handles the loading of both Settings & Main
+fragments. Including the hiding of settings and managament of the action
+bar button. This allows settings to be accessible as per issue #1
+
+[Mod]: Updated version number to prepare for next potential release",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411689031,1411691823,9b89d10926ddc45a9da49af9e3bb54fa3591b378
+9b89d10926ddc45a9da49af9e3bb54fa3591b378,9b89d109,Added better support for diff sizes & mild redesigns - #5,"Added better support for diff sizes & mild redesigns - #5
+
+[Add]: Added limits to remove flag image on smaller screens; default
+disables, w300dp enables.
+[Mod]: MainFragment now ensures to check it's view is visible (required
+for backstack). Additionally, it adds and removes its model based on
+view not fragment.
+[Mod][Ref]: Moved main input views into their own view stub & made the
+view hidden resistent. Additionally, removed spacing from list and set
+it only on inputs
+[Add]: Added layout for large sizes (540dp). Minimal testing thus far.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411688978,1411688978,815d12640193ae4365e1e9e01402e932c54d7efa
+815d12640193ae4365e1e9e01402e932c54d7efa,815d1264,"Added settings fragment, various update times, & ToastManager ","Added settings fragment, various update times, & ToastManager 
+
+[Add]: Added ConfirmationDialogFragment from CareerStack; rotation
+resistent, fragment + activity compatible dialog.
+[Add]: ToastManager was added from CareerStack; manages toast.
+
+[Add]: Added SettingsFragment using PreferenceFragment library
+(https://github.com/kolavar/android-support-v4-preferencefragment). This
+addresses some issues in #1 including:
+-Software Version number
+-10 different update times (5 min, 15 min, 30, 1 hr, 2hr, 6hr, 12hr,
+24hr, 2 days, 1 week)
+&
+-Reset all settings",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411688653,1411688653,88c9366c448a822af54672f39ffef5cf502a3e14
+88c9366c448a822af54672f39ffef5cf502a3e14,88c9366c,Moved strings from currency_codes to & added new val for settings,"Moved strings from currency_codes to & added new val for settings
+
+[Ref]: Moved currency string names to strings.xml
+[Mod]: Added strings for various times for settings
+[Add]: Added the list of times parallel to those strings",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411688530,1411688611,73928244b6b190c7ac5a876b5dc57e0f1828ae58
+73928244b6b190c7ac5a876b5dc57e0f1828ae58,73928244,Extended abstract parser & request into YahooApi & updated asyncmodel,"Extended abstract parser & request into YahooApi & updated asyncmodel
+
+[Mod]: YahooApiCurrencyRequest now extends AbstractSimpleHttpRequest,
+making it safer and tidier.
+[Mod]: YahooApiCurrencyXmlParser now extends AbstractXmlParser, making
+it cleaner and mmore useful.
+[Doc][Mod]: The async model now implements the updated interface from
+AbstractSimpleHttpRequest and has better comments to explain how it
+works.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411687727,1411687727,6614cb3f257ff882a6406f1c739530f0cecace88
+6614cb3f257ff882a6406f1c739530f0cecace88,6614cb3f,Added Abstract XmlParser & SimpleHttpRequest from CareerStack,"Added Abstract XmlParser & SimpleHttpRequest from CareerStack
+
+[Add]: AbstractXmlParser is a base for simple xml parsing. Can be paused
+and resumed (if correctly extended).
+[Add]: AbstractSimpleHttpRequest is a base for the entire request mark
+the request building. Can be cancelled.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411687687,1411687687,341b4450c6ad84f68698be10415c1d3a3b6468ac
+341b4450c6ad84f68698be10415c1d3a3b6468ac,341b4450,"Applied fix to asyncmodel, minor changes to pref util & doc changes","Applied fix to asyncmodel, minor changes to pref util & doc changes
+
+[Rea][Fix]: AsyncModel - Removed some clutter comments. Fixed a
+potential issue with send(int,Bundle) not casting before moving on
+(would give a stack overflow)
+[Mod]: Changed the first run preference of Pref Util; this will
+technically cause all current settings to reset again but, considering
+the lack of user set preferences, this is a non-issue.
+[Doc]: Added todo in the formatter
+[Doc]: Update comment in the preference info",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1411687663,1411687663,99972f881855ec0901a133e0da1ff81f5c2f69a4
+99972f881855ec0901a133e0da1ff81f5c2f69a4,99972f88,"Added thread safety, corrected Handler usage, fixed potential leak","Added thread safety, corrected Handler usage, fixed potential leak
+
+[Fix]: AsyncModel - Added threadsafety to dispose()
+[Rea][Fix]: CurrencyExchangeRateAsyncModel - 
+- Added thread safety to dispose (only dispose if no update is running)
+& fixed potential context leak
+- Reworked headless fragment to reattach the listener on recreation
+- Removed some junk comments
+[Rea][Fix]: MainFragment - 
+- Ensured to dispose AsyncModel properly in onDestroy()
+- Added Debugging bool and log in handleMessage
+- Ensured that the progress bar displayed and hide at the appropriate
+times
+- Corrected spelling of asycModel to asyncModel
+
+[Mod]: Updated version+build number & set softkeyboard to be
+""adjustNothing""",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410747051,1410747051,68eecf7b68ac6531752b180f958c9bb33fc65dd7
+68eecf7b68ac6531752b180f958c9bb33fc65dd7,68eecf7b,"[Mod]: Made listener volatile, added safety to setTimeout method","[Mod]: Made listener volatile, added safety to setTimeout method
+
+setTimeout now forbid input < 0. Also updated some comments",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410746171,1410746171,ee94a1a010922b6ebcb76b7f33e257c9ad496ec0
+ee94a1a010922b6ebcb76b7f33e257c9ad496ec0,ee94a1a0,"Added screenshots + graphics, updated README to point to Play Store","Added screenshots + graphics, updated README to point to Play Store
+
+[Add]: Added screenshots + graphics.
+[Mod]: README now links to the App in store.
+[Doc]: Added proguard to .gitignore",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410479327,1410556841,6b1ff7d3d3f6a2f8ae6291ab3ae4523d4c382713
+6b1ff7d3d3f6a2f8ae6291ab3ae4523d4c382713,6b1ff7d3,"Removed deprecated methods, hide keyboards on background click","Removed deprecated methods, hide keyboards on background click
+
+[Add]: Added simple keyboard util for the purposes of hiding the
+keyboard.
+[Mod]: Added a toucher listener to the rootView to hide the keyboard
+when the background is touched.
+
+[Mod][Rem]: Removed the deprecated constructors from
+YahooApiCurrencyRequest. Additionally, updates some doc and added a
+debug boolean (set false).",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410473515,1410473893,d038d66ceb4e159ef8e9c4069b09c42490dcb3ea
+d038d66ceb4e159ef8e9c4069b09c42490dcb3ea,d038d66c,[Doc]: Updated readme to be actually useful ,"[Doc]: Updated readme to be actually useful 
+
+Gives brief write up, shows off launcher image.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410309082,1410309200,0d20cd25f425678c56916159061cb9f377999d6e
+0d20cd25f425678c56916159061cb9f377999d6e,0d20cd25,Crushed resources that needed crushing & added alternative res.,"Crushed resources that needed crushing & added alternative res.
+
+[Add]: Added alternative resoltions for the flags
+[Mod]: Applied pngcrush to those files that needed it",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410308638,1410308638,3e51a3814a01622e33898099687b72f473da8a42
+3e51a3814a01622e33898099687b72f473da8a42,3e51a381,[Add]: Added resources to be holo-compatible,"[Add]: Added resources to be holo-compatible
+
+Using http://android-holo-colors.com/
+generated and added resources for:
+-EditText
+-Spinners (sans radioes)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410307216,1410307216,653bd0bd32c650f8bd586a7f7689160e4bb2ead7
+653bd0bd32c650f8bd586a7f7689160e4bb2ead7,653bd0bd,"Updated doc, tweaked Async model behaviour, Main updates by time","Updated doc, tweaked Async model behaviour, Main updates by time
+
+[Mod]: Changed behaviour of Async model when requesting with true:
+-Will force an update and only respond after it gets up.
+[Mod]: Added ability to main to:
+-Check if it is time to update and, if so, force update (i.e. proper
+update behaviour)
+-show and hide progress-spinny based upon if looking for update
+Additionally tidied some code
+[Doc]: Updated adapter documentation.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410306333,1410306333,9cf01e60e50fae4ef5d02d59ffb7037fe5f169b5
+9cf01e60e50fae4ef5d02d59ffb7037fe5f169b5,9cf01e60,"Updated iconography, edited actionbar styles, added new flags imgs","Updated iconography, edited actionbar styles, added new flags imgs
+
+[Add][Mod]: Added & replaced images for flags including a new error flag
+to serve as default (in the occurrance of errors).
+[Mod]: Added error flag to row views.
+[Mod]: Added error flag to main frag & a progress spinner.
+[Mod]: Changed actionbar color
+[Mod]: Updated styling of actionbar & background (light.darkbar + blue
+background)
+[Mod]: Added new launcher icons",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410306217,1410306217,20cd7f810bb2a548fc30f675fd820009abd9d038
+20cd7f810bb2a548fc30f675fd820009abd9d038,20cd7f81,Updated Currency Calc. & adapter to use new currency methods,"Updated Currency Calc. & adapter to use new currency methods
+
+[Mod][Dep]: Updated CurrencyCalculator to use the new exchange rates.
+Deprecated the old USD methods.
+[Mod]: Updated the output adapter to use the new currency rates.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410219176,1410219176,fa814a684513d7927bbc82e8f623aa55e65eed21
+fa814a684513d7927bbc82e8f623aa55e65eed21,fa814a68,"YahooApi Request & Parser,Async model; now use multiple rates","YahooApi Request & Parser,Async model; now use multiple rates
+
+[Mod]: YahooApi Request take in a source (currency) list and builds the
+smallest possible request possible (via removing redundant requests).
+Addition gave it the option to request JSON if desired.
+[Mod]: YahooApi parser now parses out the multiple sources of currency
+via SimpleExchangeRates. Also added toString method to internal dao's
+for debugging.
+
+[Mod]: Updated the default currency rates to be arrays in line with
+re-design.
+[Mod]: Updated Async model to make use of the new parser + request. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410219080,1410219080,b582895fd465c472e4d76a20e606f5a0618d8eaa
+b582895fd465c472e4d76a20e606f5a0618d8eaa,b582895f,Begun redesign of how currency rates are stored & calculated,"Begun redesign of how currency rates are stored & calculated
+
+[Add]: Added SimpleExchangeRates to contain exchange rates. This is
+mostly a class for fun. It can: 
+-Auto generate complement pairs
+-Be compact or verbose (i.e. store only half pairs but give both
+directions)
+[Mod]: Edited the CurrencyData dao to use a hashmap of rates rather than
+depending on USD rates. Added functions to set, update and validate the
+rates.
+[Dep]: getRateFromUSD() now deprecated.
+[Mod]: Normalized the database schemea; rates now go into their own
+table.
+[Mod]: Updated local model to make use of the new CurrencyData methods &
+schema redesign.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410218848,1410218848,f8a77acff6321e3f438a56658d7199c1f81e08c3
+f8a77acff6321e3f438a56658d7199c1f81e08c3,f8a77acf,Fixes to local model & database.Add asyncmodel capablity to update,"Fixes to local model & database.Add asyncmodel capablity to update
+
+[Mod]: Added manifest permission for Internet.
+[Fix][Mod]: Adjusted schema to give give valid ids to the rows 
+[Fix]: Fixed model such that undated data was given a date
+[Mod]: Async model now uses a headless fragment to make
+YahooApiCurrencyRequest & processes the response via the
+YahooApiCurrencyRequest.YahooApiCurrencyRequest implemented interface. 
+
+At this point it is just proof of concept, major refactoring to follow.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410059362,1410059362,5f8eb89c63c8f0ffe945529235ccb913c98b8298
+5f8eb89c63c8f0ffe945529235ccb913c98b8298,5f8eb89c,Add YahooApi request creator & xml parser. Add Runnable fragment,"Add YahooApi request creator & xml parser. Add Runnable fragment
+
+[Add]: Created starting point for YahooApiCurrencyXmlParser to parse the
+xml response and return parsed rates
+[Add]: Created starting point for YahooApiCurrencyRequest to perform the
+xml request and get currency results based on a single base curreny.
+[Add]: RunnableHeadlessFragment can take a runnable and run it at a
+later date. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1410059184,1410059184,965d18019e24f727395193afefa9fc3fae0b5c8c
+965d18019e24f727395193afefa9fc3fae0b5c8c,965d1801,Added some synchronzation to main frag & updated the time warning,"Added some synchronzation to main frag & updated the time warning
+
+[Mod]: strings - Added plurals for times & changed phrasing of timestamp
+warning
+[Mod]: MainFragment -
+-All calls made to currencyList are now synchronized
+-The timestamp now updates makes use of DateFormatter & only shows if
+the preference time has elapsed.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409955201,1409955201,7ea786e19412c5387f008a2781d1374667fd31b4
+7ea786e19412c5387f008a2781d1374667fd31b4,7ea786e1,"Added preferences for update interval, def. values & date formatter","Added preferences for update interval, def. values & date formatter
+
+[Mod]: Added preference for update frequency & default values
+[Add]: Created DateFormatter to produce dates in the form of:
+-5 hours ago
+-3 days ago
+-2014-08-09 6:09 pm
+[Mod]: Added strings/plurals for date formating ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409867853,1409867853,304177429569d7e8b113228528d9683cc03e48e5
+304177429569d7e8b113228528d9683cc03e48e5,30417742,"Added PreferenceUtils,used them in main + organized & fixed code","Added PreferenceUtils,used them in main + organized & fixed code
+
+[Add]: Added PreferenceUtils to store preferences.
+[Mod][Fix]: strings.xml - Corrected the spelling of the app & moved
+""View All"" to resource
+[Mod][Ref]: MainFragment :
+- Included preferences for the two spinners
+- Organized initialzation code 
+- Format the currency values from context copy
+- Included new method to copy detailed values
+[Fix]: Ensured that the text input is NEVER empty (less an error is
+triggered)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409794875,1409795580,df211e13cd659b7b7d777a9bba83776ec989ae3c
+df211e13cd659b7b7d777a9bba83776ec989ae3c,df211e13,Added currency codes to list adapter & images to spinner adapter,"Added currency codes to list adapter & images to spinner adapter
+
+[Mod]: CurrencyDataSpinnerAdapter - Added images to spinner adapter.
+[Mod]: Added to CurrencyDataFilterListAdapter:
+- Currency codes to output listview adapter.
+- Colours to alternating rows of the views
+- Format the output currency values
+[Mod]: fragment_currency_value - Made currency codes visible.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409794664,1409794664,89ebd0a67ce77cd6244fd3dac2013c4f2d29e0f6
+89ebd0a67ce77cd6244fd3dac2013c4f2d29e0f6,89ebd0a6,"Added colors, styled actionbar, tweaked & ref. main frag","Added colors, styled actionbar, tweaked & ref. main frag
+
+[Mod]: colors - Added colours for background, actionbar, warnings, &
+list items.
+[Mod][Ref]: Moved various measurments to dimens.
+[Ref][Mod]: fragment_main - moved dimens & included new colours for
+warning & list view.
+[Doc]: Updated documentation",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409784265,1409784265,a4e06109a3b4a87382ac9cc3754da7100f94057a
+a4e06109a3b4a87382ac9cc3754da7100f94057a,a4e06109,Added Currency object to CurrenyData & Currency calc can now format,"Added Currency object to CurrenyData & Currency calc can now format
+
+[Mod]: CurrencyData added ability to parse the Currency from the ISO
+shortcode.
+[Mod]: CurrencyCalculator now can format the currency according the
+details of said currency.
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409782215,1409782215,3742c575c2a7ad896ca460fa80284a45ef05eb68
+3742c575c2a7ad896ca460fa80284a45ef05eb68,3742c575,"Adjusted layout,added strings for context & implemented main","Adjusted layout,added strings for context & implemented main
+
+[Mod][Add]: Added strings for the context menu copying of currencies
+[Mod]: Added a listview to the layout, adjusted various values for
+better use with smaller screens, adjusted workings of layout.
+[Mod]: MainFragment - Major functionality added:
+-Can switch source currency and update accordingly (symbols, flags, etc)
+-Can switch destination currency and update according
+-Can convert currencies on the fly
+-Can rotate and maintain values
+-Can long-press for context menu on listview",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409708780,1409708780,0ed41c322116fb699069f6a4efc31d4e109eaeb7
+0ed41c322116fb699069f6a4efc31d4e109eaeb7,0ed41c32,Created basic filter list adapter for viewing currency output,"Created basic filter list adapter for viewing currency output
+
+[Add]: fragment_currency_value specifies the basic outline of a
+compatible layout with CurrencyDataFilterListAdapter.
+[Add]: CurrencyDataFilterListAdapter provides a way to:
+-Load all the support currencies
+-Filter out select currencies
+-Update the calculate values ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409708464,1409708464,b54c279fce0413b685e1f81ce6dc53474a1fe6cc
+b54c279fce0413b685e1f81ce6dc53474a1fe6cc,b54c279f,[Add]: Created compat. util for copying text to the clipboard,[Add]: Created compat. util for copying text to the clipboard,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409707978,1409707978,4ed05844b68a40e8740f4bd276a03df01c183cc5
+4ed05844b68a40e8740f4bd276a03df01c183cc5,4ed05844,Fixed AsyncModel's flag issue.Added spinner adapter & calc.utility,"Fixed AsyncModel's flag issue.Added spinner adapter & calc.utility
+
+[Fix]: Fixed bug with Async Model where it was not fetching the flag
+drawables in all instances.
+[Mod]: CurrencyDataSpinnerAdapter provides a way to select either a
+single currency or all currencies for spinners.
+[Add]: CurrencyCalculator performs the calculations for conversions
+using the USD rates as the base.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409704058,1409704058,770ef86422a9026fbe4c8ee86c545376d490630f
+770ef86422a9026fbe4c8ee86c545376d490630f,770ef864,"Add: Flag map,local model for currency exchange & async model start","Add: Flag map,local model for currency exchange & async model start
+
+[Add]: FlagResourceMap provides functionality to set flags to
+appropriate currency dao.
+[Add]: CurrencyExchangeRateModel is the local model that stores
+fetched/generated values to the local database.
+[Add]: CurrencyExchangeRateAsyncModel currently only intializes local
+datatabase with default values. Will eventually fetch them from web.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409615566,1409615566,ebf8e5dcb724825c17c00fb012c54d0d8a2e2a8a
+ebf8e5dcb724825c17c00fb012c54d0d8a2e2a8a,ebf8e5dc,"Added license, strings, color file, basic layout start, & ""flags""","Added license, strings, color file, basic layout start, & ""flags""
+
+[Add]: Added colors.xml
+[Add]: Added the 5 flag place holders of the 5 support country
+currencies.
+[Mod][Doc]: Added license and the cache warning formatted string.
+[Mod]: Setup basic layout of fragment_main
+[Mod]: Removed the context menu from activity_main",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409615371,1409615371,a33f9f47f2842aad4736a7bbfbf1d6820135b786
+a33f9f47f2842aad4736a7bbfbf1d6820135b786,a33f9f47,Added some safety & fixed exceptions in DatabaseOpenHelpers,"Added some safety & fixed exceptions in DatabaseOpenHelpers
+
+[Mod]: DatabaseOpenHelper: introduced check for nulls in softClose()
+[Ref][Fix]: DatabaseOpenHelper: Renamed getWritableDatabase() to
+getWritableDatabaseOrThrow() as getReadableDatabase() apparently makes
+indirect use of getWritableDatabase() and so would always throw. 
+[Fix]: CurrencyConvertDatabaseOpenHelper: Removed problematic class
+casting.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409614960,1409614960,27c1b6f7ecaaf5bef780bff224b5de195255603c
+27c1b6f7ecaaf5bef780bff224b5de195255603c,27c1b6f7,[Mod]: Implemented Parcelable interface & added mutator,"[Mod]: Implemented Parcelable interface & added mutator
+
+-Added mutator for the flag drawable id.
+-Implemented interface to make the data paracelable",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1409614624,1409614624,ec9a0153917cda0379754650e41b940b333d187f
+ec9a0153917cda0379754650e41b940b333d187f,ec9a0153,Defined the interfaces for local models & class for async model,"Defined the interfaces for local models & class for async model
+
+[Add]: ReadModel- A model for basic single read operations
+[Add]: WriteModel- A model for basic single write operations
+[Add]: ReadWriteModel - extends both the above, also allows a get all
+records.
+[Add]: AsyncModel- Used to define models that take an unknown amount of
+time. This is based on the Handler object and so is Android dependent.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403045136,1403045136,1845cd7c92d5167ecdff47492d6de534fddd4373
+1845cd7c92d5167ecdff47492d6de534fddd4373,1845cd7c,[Add]: Defined the basic structure of currency data access object,[Add]: Defined the basic structure of currency data access object,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403044394,1403044394,1415e13bec33910c4ca2d0a150db6575fd8cef79
+1415e13bec33910c4ca2d0a150db6575fd8cef79,1415e13b,Defined the basic start of the database structure,"Defined the basic start of the database structure
+
+[Add]: CurrencyConvertDatabaseOpenHelper defines a helper for this
+application. Making use of CurrencyConvertDatabaseSchema.
+[Add]: CurrencyConvertDatabaseSchema defines the schema for the
+database.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403044359,1403044359,98e2dd112ec889daf21ceb1686f275239e1a78ea
+98e2dd112ec889daf21ceb1686f275239e1a78ea,98e2dd11,[Add]: Added timestamp utility,"[Add]: Added timestamp utility
+
+Simple timestamp utility that can:
+-create UTC/GMT timestamps or local timestamps.
+-parse timestamps into dates
+-compare timestamps with each other or current time",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403044280,1403044280,dbb37e64fb38faea76ac938c43ba21e31793eb0a
+dbb37e64fb38faea76ac938c43ba21e31793eb0a,dbb37e64,"Fixed timestamp & types for default rates,change v14 style to light","Fixed timestamp & types for default rates,change v14 style to light
+
+[Mod][Fix]: Changed the form of the timestamp to be compatible with
+application. Changed floats to strings.
+[Mod]: Changed v14 styles.xml to be actionbar light",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403044172,1403044172,89e079e8fcc4311fef9db373613c2cee51d3dd58
+89e079e8fcc4311fef9db373613c2cee51d3dd58,89e079e8,Moved MainActivity to new sub-package & abstracted out fragment,"Moved MainActivity to new sub-package & abstracted out fragment
+
+[Ref]: 
+-MainActivity now resides in ""ui""
+-Created MainFragment from PlaceHolderFragment to inflate
+fragment_main.xml
+[Mod]: Updated mainfest to account for main activty's new location.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402864458,1402864524,d80b059224c4291377d15cc2e5ee6ff843c31265
+d80b059224c4291377d15cc2e5ee6ff843c31265,d80b0592,Added basic reusable classes for database handling,"Added basic reusable classes for database handling
+
+[Add]: DatabaseOpenHelper:
+-Safely creates readonly + read+write database helpers
+-Prevents a ""read-only"" opener from opening a writable handle
+-keeps single instance of writeHelper per schema.
+[Add]: DatabaseSchema provides an abstraction for defining database
+attributes. These include:
+-Tables been creates
+-Database name
+-Database version",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402864306,1402864306,ba71e30f7ace6ccd0e6367e17cf8d15e64c87b23
+ba71e30f7ace6ccd0e6367e17cf8d15e64c87b23,ba71e30f,Added starting currency info & exchange rates,"Added starting currency info & exchange rates
+
+[Add]: currency_codes_symbols contains basic information on each
+currency such as:
+-Symbol
+-Code (e.g. CAD)
+-Name
+[Add]: default_exchange_rates defines the starting exchange rates to use
+if the web is not accessible. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402863799,1402863799,66a4003cc0e287c360bbd1c217b7e0d3f360f1ad
+66a4003cc0e287c360bbd1c217b7e0d3f360f1ad,66a4003c,Initial commit.,"Initial commit.
+
+[Add][Mod]: Set Mainfest to be installLocation=""auto""",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402342564,1402342588,

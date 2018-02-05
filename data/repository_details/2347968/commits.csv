@@ -1,0 +1,973 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0c75e04b82c6cbea19b701045881fdc4b97aa186,0c75e04b,Merge pull request #81 from gkaklas/badges,"Merge pull request #81 from gkaklas/badges
+
+Add badges with download links",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,GitHub,noreply@github.com,1483902970,1483902970,"0ab8b3160193e1ef5a1cd52a93ab4842c77627b9,8deda9cc5e9382c316c28347a9b3c21aecd37dc0"
+8deda9cc5e9382c316c28347a9b3c21aecd37dc0,8deda9cc,Add badges with download links,"Add badges with download links
+",,,,George Kaklamanos,gkaklas1@gmail.com,George Kaklamanos,gkaklas1@gmail.com,1483889188,1483889188,0ab8b3160193e1ef5a1cd52a93ab4842c77627b9
+0ab8b3160193e1ef5a1cd52a93ab4842c77627b9,0ab8b316,Fixes #70: Fix IW layout by adding missing upload icon,"Fixes #70: Fix IW layout by adding missing upload icon
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1479673391,1479673679,8f837940b1252c914f81319cc553a3ab6baa2380
+8f837940b1252c914f81319cc553a3ab6baa2380,8f837940,Merge branch 'upgrade-osmdroid',"Merge branch 'upgrade-osmdroid'
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1479673573,1479673573,"1396f4431b4b7b2ab82319ec9c65a61b676160fc,1a4b0933cfc11ddc23e547e9b2540295b9814a40"
+1a4b0933cfc11ddc23e547e9b2540295b9814a40,1a4b0933,Fixes #70: Fix IW layout by adding missing upload icon,"Fixes #70: Fix IW layout by adding missing upload icon
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1479673391,1479673497,fd1d941adaa92f50d7f6fa50d80573af866b605e
+1396f4431b4b7b2ab82319ec9c65a61b676160fc,1396f443,Merge pull request #79 from nguillaumin/upgrade-osmdroid,"Merge pull request #79 from nguillaumin/upgrade-osmdroid
+
+Fixes #61: Upgrade OSMDroid to latest 5.5",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,GitHub,noreply@github.com,1479672576,1479672576,"f1f88426a3883efd0eb9ce5ae41389646eedd10f,fd1d941adaa92f50d7f6fa50d80573af866b605e"
+fd1d941adaa92f50d7f6fa50d80573af866b605e,fd1d941a,Update Travis CI to JDK 8 seemingly needed by latest Gradle tools,"Update Travis CI to JDK 8 seemingly needed by latest Gradle tools
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1479668518,1479668518,c4d8f6dabb5cec96f5fc38f6bbe1e04ba810480f
+c4d8f6dabb5cec96f5fc38f6bbe1e04ba810480f,c4d8f6da,Fixes #61: Upgrade OSMDroid to latest 5.5,"Fixes #61: Upgrade OSMDroid to latest 5.5
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1479666412,1479666412,f1f88426a3883efd0eb9ce5ae41389646eedd10f
+f1f88426a3883efd0eb9ce5ae41389646eedd10f,f1f88426,Merge pull request #75 from andrew659/master,"Merge pull request #75 from andrew659/master
+
+fix potential database cursor leaks ",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,GitHub,noreply@github.com,1476052533,1476052533,"d80dea16e456defe5ab62ed8b5bc35ede363415e,9c162aa63d4736928ae53eb5f964a1f59688a05e"
+9c162aa63d4736928ae53eb5f964a1f59688a05e,9c162aa6,fix database cursor leak in DataHelper class,"fix database cursor leak in DataHelper class
+
+I moved the cursor closing code outside the if block to make sure the cursor is closed even when it is empty (when getCount() returns 0).",,,,Yepang Liu,andrew659@users.noreply.github.com,GitHub,noreply@github.com,1475987332,1475987332,63cac7e67a503b9a31905122c15de4efb3943c3c
+63cac7e67a503b9a31905122c15de4efb3943c3c,63cac7e6,fix database cursor leak in DatabaseHelper class,"fix database cursor leak in DatabaseHelper class
+
+I moved the cursor closing code outside the if block. The previous code may fail to close the cursor if it is empty (when moveToFirst() returns false).",,,,Yepang Liu,andrew659@users.noreply.github.com,GitHub,noreply@github.com,1475987079,1475987079,d80dea16e456defe5ab62ed8b5bc35ede363415e
+d80dea16e456defe5ab62ed8b5bc35ede363415e,d80dea16,Added Travis CI build status,"Added Travis CI build status
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1451997572,1451997572,6cd821a6c169cca8465aa1b546d00abd87e72fc9
+6cd821a6c169cca8465aa1b546d00abd87e72fc9,6cd821a6,Configure Travis CI,"Configure Travis CI
+
+Fix failing unit test:
+* Fix lookup of file by path
+* Force timezone to make test not dependent of the environment
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1451981879,1451997256,21d475b4edd0f25114e4bdd7353fa1497dcf3395
+21d475b4edd0f25114e4bdd7353fa1497dcf3395,21d475b4,Prepare v0.6.11,"Prepare v0.6.11
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1440206330,1440206330,286cd3f03d65f838a8519e42b50149466f3154de
+286cd3f03d65f838a8519e42b50149466f3154de,286cd3f0,Pull latest translations,"Pull latest translations
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1440206298,1440206298,40931782dbab7ca3d7e73e1909db9b0fffd452e2
+40931782dbab7ca3d7e73e1909db9b0fffd452e2,40931782,Change all URLs to point to GitHub,"Change all URLs to point to GitHub
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1440205177,1440205177,e80e4a68f48840d04a306fb1864e7c0dd3097890
+e80e4a68f48840d04a306fb1864e7c0dd3097890,e80e4a68,Merge pull request #46 from RealRancor/jcenter_deps,"Merge pull request #46 from RealRancor/jcenter_deps
+
+Pull dependencies from jcenter",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1438680001,1438680001,"83b52b72f9b05e46fbe69b1cc9e4d3654b97c112,da80a9085f195eca3154372f55f77c48cab07ab9"
+da80a9085f195eca3154372f55f77c48cab07ab9,da80a908,Pull dependencies from jcenter,"Pull dependencies from jcenter
+",,,,RealRancor,Fisch.666@gmx.de,RealRancor,Fisch.666@gmx.de,1438361190,1438361190,83b52b72f9b05e46fbe69b1cc9e4d3654b97c112
+83b52b72f9b05e46fbe69b1cc9e4d3654b97c112,83b52b72,Updated translations,"Updated translations
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432966276,1432966724,fc86ad66c432af6905fe2a017171f04423eea948
+fc86ad66c432af6905fe2a017171f04423eea948,fc86ad66,Added configs to sign the APK,"Added configs to sign the APK
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432965488,1432965488,656c997b5f86ab8c5641d9419cb94289cd42b3ad
+656c997b5f86ab8c5641d9419cb94289cd42b3ad,656c997b,Added button to export the database,"Added button to export the database
+
+Should help to debug user problems.
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432963860,1432963860,7c34cd3582223c8a22f547b3a835d0373b41e036
+7c34cd3582223c8a22f547b3a835d0373b41e036,7c34cd35,Added task to copy NB to NO resources (#6),"Added task to copy NB to NO resources (#6)
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432727464,1432727464,62b1c12931cbff33e8bf76e1f7759ef4418f3fb0
+62b1c12931cbff33e8bf76e1f7759ef4418f3fb0,62b1c129,Migrated to Android Studio project layout,"Migrated to Android Studio project layout
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432722841,1432723244,137ebb2edefe7d262d99c4241c2446ddf3b9ee88
+137ebb2edefe7d262d99c4241c2446ddf3b9ee88,137ebb2e,Prepare Android Studio migration: Fix XML headers,"Prepare Android Studio migration: Fix XML headers
+
+Android Studio will convert XML:
+* Replace UTF-8 with utf-8 in the header
+* Use double quotes instead of single ones in the header
+* Remove the Byte Order Mark
+
+Doing that in advance will allow Git to find back the files after they will
+get moved in the new structure and preserve history.
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1432717960,1432718604,dc58aaf8764e1266295811db24490655028baf00
+dc58aaf8764e1266295811db24490655028baf00,dc58aaf8,Merge branch 'mvglasow-mediascanner',"Merge branch 'mvglasow-mediascanner'
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1426673911,1426673911,"94182a4756735d9a695b33052bf9ebf89efae8ea,cdf97e729ed8f5055fb8a675230be75c9aa590b4"
+cdf97e729ed8f5055fb8a675230be75c9aa590b4,cdf97e72,[issue #261] Minor fixes for style consistency,"[issue #261] Minor fixes for style consistency
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1426673612,1426673612,5a882249b2e6500d3656c7516dd22b8f7f40e5f1
+5a882249b2e6500d3656c7516dd22b8f7f40e5f1,5a882249,[issue #261] Remove non-Javadoc @brief markup,"[issue #261] Remove non-Javadoc @brief markup
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1426673467,1426673590,09783a16c98a0c1ad237c42d980c4d8d4f35c3dd
+09783a16c98a0c1ad237c42d980c4d8d4f35c3dd,09783a16,[issue #261] Document requirement for subsequent media scan,[issue #261] Document requirement for subsequent media scan,,,,mvglasow,michael -at- vonglasow.com,mvglasow,michael -at- vonglasow.com,1426189749,1426190026,c569a8cac9216c38b388340dbf3f85d53dd9de63
+c569a8cac9216c38b388340dbf3f85d53dd9de63,c569a8ca,[issue #261] Run media scanner on all exported files,"[issue #261] Run media scanner on all exported files
+
+Signed-off-by: mvglasow <michael -at- vonglasow.com>
+",,,,mvglasow,michael -at- vonglasow.com,mvglasow,michael -at- vonglasow.com,1424903905,1424903905,94182a4756735d9a695b33052bf9ebf89efae8ea
+94182a4756735d9a695b33052bf9ebf89efae8ea,94182a47,Updated translations,"Updated translations
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1423266708,1423266708,d0aa1ed79e22bd860c93b66ad8e95341ab54098c
+d0aa1ed79e22bd860c93b66ad8e95341ab54098c,d0aa1ed7,[issue #256] Fix media button receiver conflict with other apps,"[issue #256] Fix media button receiver conflict with other apps
+
+Stop forcing the priority on the intent filter
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1423266555,1423266555,6c1eb906a137aef821e188497bf0742fe854cbbb
+6c1eb906a137aef821e188497bf0742fe854cbbb,6c1eb906,"Prepare release v0.6.8, updated translations","Prepare release v0.6.8, updated translations
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1421455104,1421455104,1e404a41ae241b02603643ddfbf11230cddab305
+1e404a41ae241b02603643ddfbf11230cddab305,1e404a41,Fix dialog progress when exporting multiple tracks,"Fix dialog progress when exporting multiple tracks
+
+The progress dialog never really worked when exporting multiple tracks,
+fix it by making the export task able to take a list of tracks and
+manage the dialog by itsef.
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418899468,1418899468,4b0e792307a34913d07c675192008f4580251318
+4b0e792307a34913d07c675192008f4580251318,4b0e7923,[issue #254] Upgraded OSMDroid to fix a Mapnik tile issue,"[issue #254] Upgraded OSMDroid to fix a Mapnik tile issue
+
+Mapnik tiles were broken in the version of OSMDroid we use because of
+https://code.google.com/p/osmdroid/issues/detail?id=515 . Upgraded to
+the latest version to fix it.
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418892461,1418892461,497313baca6624d8b2a6081c0415814065719eed
+497313baca6624d8b2a6081c0415814065719eed,497313ba,Merge pull request #43 from zdila/master,"Merge pull request #43 from zdila/master
+
+add support for media button for android 3.0 and later",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418722987,1418722987,"7fb3ebc7c2a5f9e9435ab5dda8717e52aabe0d38,981a81051486c73ba5fe0b42345ad17286cbd761"
+7fb3ebc7c2a5f9e9435ab5dda8717e52aabe0d38,7fb3ebc7,Fix custom lint rule to run after 'compile',"Fix custom lint rule to run after 'compile'
+
+It seems the default build rules have changed, or 'lint' now check the
+classes as it needs to be run after the compile target
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418718755,1418718755,415ec58adf84660201c9f78ea94975fbe796aa40
+415ec58adf84660201c9f78ea94975fbe796aa40,415ec58a,Updated translations,"Updated translations
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418718750,1418718750,b72c2ac413ec9d52ad63f708a64f6c60a6290a07
+b72c2ac413ec9d52ad63f708a64f6c60a6290a07,b72c2ac4,[issue #253] Do not update the dialog on the background thread,"[issue #253] Do not update the dialog on the background thread
+
+I guess this has always been an issue but Android 5 might be stricter and
+crashes when that happens. Unfortunately I was unable to reproduce the
+initial bug on the emulator, so fingers crossed...
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418717929,1418717929,e115b2008cca2e848ea3419054100bb212218229
+981a81051486c73ba5fe0b42345ad17286cbd761,981a8105,add support for media button for android 3.0 and later,"add support for media button for android 3.0 and later
+",,,,Martin Ždila,m.zdila@gmail.com,Martin Ždila,m.zdila@gmail.com,1418676449,1418676449,345315766873630a04a2824d9c658fb49d0cac0c
+e115b2008cca2e848ea3419054100bb212218229,e115b200,Fix local names,"Fix local names
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1418636418,1418636418,345315766873630a04a2824d9c658fb49d0cac0c
+345315766873630a04a2824d9c658fb49d0cac0c,34531576,Merge branch 'master' of github.com:nguillaumin/osmtracker-android,"Merge branch 'master' of github.com:nguillaumin/osmtracker-android
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1401582424,1401582424,"e3c24c9bff89a3e7e11e6240956ea147f083a4b5,587a99e03c425466ff9a6b840f16cf371ca51d28"
+e3c24c9bff89a3e7e11e6240956ea147f083a4b5,e3c24c9b,Fixed labels as suggested by Evropi on Transifex,"Fixed labels as suggested by Evropi on Transifex
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1401582160,1401582160,23386a9becd4951af81e4eb8e66e1e69be5ff794
+23386a9becd4951af81e4eb8e66e1e69be5ff794,23386a9b,Fix lowercase as suggested by Evropi on Transifex,"Fix lowercase as suggested by Evropi on Transifex
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1401581366,1401581366,893d65dd8f30ecb1be7db589472ba336720ae0be
+893d65dd8f30ecb1be7db589472ba336720ae0be,893d65dd,Replace 'picture' with 'photo' as suggested by Evropi on Transifex,"Replace 'picture' with 'photo' as suggested by Evropi on Transifex
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1401581285,1401581285,85e05760ac7f7c15022e85acfee79a3678f0150c
+587a99e03c425466ff9a6b840f16cf371ca51d28,587a99e0,Merge pull request #41 from SuborbitalPigeon/master,"Merge pull request #41 from SuborbitalPigeon/master
+
+Add some more icons",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1397785208,1397785208,"85e05760ac7f7c15022e85acfee79a3678f0150c,82f8eb58627f076188b02391d2328dd175f94dc7"
+85e05760ac7f7c15022e85acfee79a3678f0150c,85e05760,Updated translations,"Updated translations
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1397785132,1397785132,4dddb0fd0f8a15deae9d1b98fa0070007e790465
+4dddb0fd0f8a15deae9d1b98fa0070007e790465,4dddb0fd,Minor changes to compass patch,"Minor changes to compass patch
+
+- Minor label changes
+- Minor code style changes (consistency)
+- Restore ""various_accuracy"" string used in GPX export
+- Ensure encapsulation of class fields
+- Initialise waiting message for GpsStatusRecord otherwise it will display the placeholders until the GPS wakes up
+- Keep logic of checking for a valid heading before returing the azimuth into SensorListener rather than having to implement it on the caller side
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1397783936,1397783936,268d9e730ee2aa2732365e8141937682096665cf
+268d9e730ee2aa2732365e8141937682096665cf,268d9e73,Merge branch 'compass' of https://github.com/chrisgee/osmtracker-android into chrisgee-compass,"Merge branch 'compass' of https://github.com/chrisgee/osmtracker-android into chrisgee-compass
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1397778234,1397778234,"d69252cfc860d78b0ddbb46a5faf1fff38c9fa18,d1a54f2e44e5ff0549e1bcd1aa0ec55f329935d1"
+d1a54f2e44e5ff0549e1bcd1aa0ec55f329935d1,d1a54f2e,change sort order in waypoint list to descending (like this the last taken waypoint appears on top),"change sort order in waypoint list to descending (like this the last taken waypoint appears on top)
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397412633,1397412633,e88743f8b9ec5aa4adfe3534e023403a08b66a3c
+e88743f8b9ec5aa4adfe3534e023403a08b66a3c,e88743f8,add compass accuracy to way- and trackpoints.,"add compass accuracy to way- and trackpoints.
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397412582,1397412582,32dca3f901eff10d7030faf3dcb3cedd25fa9fac
+32dca3f901eff10d7030faf3dcb3cedd25fa9fac,32dca3f9,removed some unused imports from GPSLogger,"removed some unused imports from GPSLogger
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397407176,1397407176,12574b892fdef532cce404e370350ad1f0d5a90d
+12574b892fdef532cce404e370350ad1f0d5a90d,12574b89,some more clean up,"some more clean up
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397406894,1397406894,e6826b3316f7c8c3681c5dd31a4b1ec44cb2e5fe
+e6826b3316f7c8c3681c5dd31a4b1ec44cb2e5fe,e6826b33,use AZIMUTH_INVALID in MockData and TAG in ExportTrackTask,"use AZIMUTH_INVALID in MockData and TAG in ExportTrackTask
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397403344,1397403344,c55d99a89b3a2ff6ba3fd0f10f2479f14fe5b507
+c55d99a89b3a2ff6ba3fd0f10f2479f14fe5b507,c55d99a8,various small style fixes,"various small style fixes
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397402467,1397402467,1c5410e80131f349b0676aa6095a253c914761f8
+1c5410e80131f349b0676aa6095a253c914761f8,1c5410e8,sensor listener code now is only contained in SensorListener (to avoid duplication in GPSLogger),"sensor listener code now is only contained in SensorListener (to avoid duplication in GPSLogger)
+some sanity modifications
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397398315,1397398315,c1a52c216767b942e66ed737a96caee889360268
+c1a52c216767b942e66ed737a96caee889360268,c1a52c21,include compass heading value into waypoint list,"include compass heading value into waypoint list
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397383565,1397383565,754bcbe8228cf04cebdbc9b3ae593260e572805f
+82f8eb58627f076188b02391d2328dd175f94dc7,82f8eb58,Add some more icons,"Add some more icons
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1397225711,1397225958,cb8e8fad8503061ed34c6747876bc72ceb35193e
+754bcbe8228cf04cebdbc9b3ae593260e572805f,754bcbe8,compas now uses TYPE_COMPASS sensor since it provides meaningful accuracy info…,"compas now uses TYPE_COMPASS sensor since it provides meaningful accuracy info and has no problems when the phone is lying.
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397100099,1397100099,8be32d60dbddcb53bc76a5e4bb5f0c4aaddaf5a0
+8be32d60dbddcb53bc76a5e4bb5f0c4aaddaf5a0,8be32d60,Add a compass heading display to the Logger activity,"Add a compass heading display to the Logger activity
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1397092802,1397092802,fac906355fa5275772be12bca5705ebb3e7d6f7e
+fac906355fa5275772be12bca5705ebb3e7d6f7e,fac90635,"onGpsStatusChanged now uses satellites that are used in fix for the bar graph,…","onGpsStatusChanged now uses satellites that are used in fix for the bar graph, and disables buttons if there is no fix (0 satelites)
+onGpsStatusChanged also updates the accuracy text box when there is no fix
+Satellites are displayed in accuracy text box (used/visible)
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396869694,1396869694,53af6decc9c492f049f28d1ea970e0f039c68eb0
+53af6decc9c492f049f28d1ea970e0f039c68eb0,53af6dec,adjust MockData to the new calls of track and wayPoint,"adjust MockData to the new calls of track and wayPoint
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396832914,1396832914,7831f3c762cbf4787ee3312fd383cc65823bd3ec
+7831f3c762cbf4787ee3312fd383cc65823bd3ec,7831f3c7,export of compass heading to gpx implemented,"export of compass heading to gpx implemented
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396832342,1396832342,8c5ed715eddbb61e5a7dd94dec9ee01f57c6b50b
+8c5ed715eddbb61e5a7dd94dec9ee01f57c6b50b,8c5ed715,compass heading is now also being logged in the track,"compass heading is now also being logged in the track
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396832305,1396832305,285f9504257ec98a25a58566d931024706134432
+285f9504257ec98a25a58566d931024706134432,285f9504,compass heading is now being logged to the database (cleanup and testing needed),"compass heading is now being logged to the database (cleanup and testing needed)
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396825533,1396825533,d541ce95d8d2bd56627cb2747989c46db91cca4b
+d541ce95d8d2bd56627cb2747989c46db91cca4b,d541ce95,add a preference setting to export compass heading in the gpx file (non functional yet),"add a preference setting to export compass heading in the gpx file (non functional yet)
+",,,,Christoph Gohle,ctg@mpq.mpg.de,Christoph Gohle,ctg@mpq.mpg.de,1396788675,1396788675,cb8e8fad8503061ed34c6747876bc72ceb35193e
+d69252cfc860d78b0ddbb46a5faf1fff38c9fa18,d69252cf,"Preparing release v0.6.6, updated translations","Preparing release v0.6.6, updated translations
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1379330972,1379330972,cb8e8fad8503061ed34c6747876bc72ceb35193e
+cb8e8fad8503061ed34c6747876bc72ceb35193e,cb8e8fad,[pull #36] Copy chosen picture from gallery into OSMTracker data folder,"[pull #36] Copy chosen picture from gallery into OSMTracker data folder
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1379325579,1379325579,100112209727c821f647bbf3c3e96ce3bc728c3e
+100112209727c821f647bbf3c3e96ce3bc728c3e,10011220,[issue #227] Added setting to select picture source,"[issue #227] Added setting to select picture source
+
+Possible choices are always gallery, always camera, or always ask. Defaults
+to always camera if not set for upgrading users
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1379324455,1379324455,ae27df02a60cbbb4299ff86c8987d5eb9e0fef62
+ae27df02a60cbbb4299ff86c8987d5eb9e0fef62,ae27df02,[issue #226] Ensure picture is correctly saved in OSM folder,"[issue #226] Ensure picture is correctly saved in OSM folder
+
+This regression has been introduced with the ability to choose pictures from
+the gallery
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1379322769,1379322769,718dbe8039d9697699a9c72b5db17fa5bfcdffbb
+718dbe8039d9697699a9c72b5db17fa5bfcdffbb,718dbe80,"Preparing release v0.6.5, fixing layout problems","Preparing release v0.6.5, fixing layout problems
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1378527756,1378527756,2b8cff3b3a2998a4126ada8cf1c60465bc51d393
+2b8cff3b3a2998a4126ada8cf1c60465bc51d393,2b8cff3b,"Updated translations from Transifex, fix mapping for some locales","Updated translations from Transifex, fix mapping for some locales
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1378526268,1378526268,ee07db80cc1eb08529730195d17cbe0fbc1f89fd
+ee07db80cc1eb08529730195d17cbe0fbc1f89fd,ee07db80,Updated translations from Transifex,"Updated translations from Transifex
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377928197,1377928197,132b19a8c316318b379439a7ef407cf8962ec211
+132b19a8c316318b379439a7ef407cf8962ec211,132b19a8,[pull #27] Tweak strings a bit,"[pull #27] Tweak strings a bit
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377927428,1377927428,d39560905ae674928b18c15083997e1b80b80f21
+d39560905ae674928b18c15083997e1b80b80f21,d3956090,Merge branch 'misc' of https://github.com/jdmonin/osmtracker-android into jdmonin-misc,"Merge branch 'misc' of https://github.com/jdmonin/osmtracker-android into jdmonin-misc
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377926756,1377926756,"5a00dd3b941c120fe2bdbe5d41fca00353a9567f,fb4514eff058845275b753eab7b63d913ee7b97a"
+5a00dd3b941c120fe2bdbe5d41fca00353a9567f,5a00dd3b,Merge branch 'master' of https://github.com/andyhelp/osmtracker-android into andyhelp-master,"Merge branch 'master' of https://github.com/andyhelp/osmtracker-android into andyhelp-master
+
+[pull #32] Updated tests for new <speed> tag
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377925978,1377925995,"a2bf9c62ac3318704040fbc956c349f5d89a9dda,22645b01777849a5c84bd91eae48b355d53935cc"
+a2bf9c62ac3318704040fbc956c349f5d89a9dda,a2bf9c62,Fix tabs/spaces: Keep tabs only,"Fix tabs/spaces: Keep tabs only
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377923689,1377923689,cc517538cb2a5c4ce508d6adeb2da07d1298ebaf
+cc517538cb2a5c4ce508d6adeb2da07d1298ebaf,cc517538,"[issue #105] Fix some whitespaces, choose tile provider using reflection","[issue #105] Fix some whitespaces, choose tile provider using reflection
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377922549,1377922618,97c3656be2b20ca5e57d1f2f5ba422fec0dc7dc3
+97c3656be2b20ca5e57d1f2f5ba422fec0dc7dc3,97c3656b,Merge branch 'mapSelection' of…,"Merge branch 'mapSelection' of https://github.com/jakobmoellers/osmtracker-android into jakobmoellers-mapSelection
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377920324,1377920324,"093eab163d38525374c5f877f1f1755ff2b2d659,791627c759eec0b24c36c1bfc054c7d496e38710"
+093eab163d38525374c5f877f1f1755ff2b2d659,093eab16,Fix .classpath for new SDK,"Fix .classpath for new SDK
+",,,,nguillaumin,nguillaumin@funnelback.com,nguillaumin,nguillaumin@funnelback.com,1377920193,1377920193,1869d411fc0f32e613637eeb4f9fd93c755fda0a
+1869d411fc0f32e613637eeb4f9fd93c755fda0a,1869d411,Merge pull request #36 from jakobmoellers/selectPicture,"Merge pull request #36 from jakobmoellers/selectPicture
+
+Address Issue 86: Ability to use a photo from the gallery for a waypoint, instead of taking a new one ",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1377920018,1377920018,"5419f9281a5271d9b0bb20c86d71ec0126221ef6,7368040549ce9c4abaed497e9fdc483f86039c47"
+791627c759eec0b24c36c1bfc054c7d496e38710,791627c7,add setting to select map tile provider. this allows the user to choose between…,"add setting to select map tile provider. this allows the user to choose between mapnik (default), cyclemap and mapquestosm. 
+
+sadly, the other tile providers do not seem to work anymore (URL changed?).",,,,Jakob Moellers,jakob.moellers@gmail.com,Jakob Moellers,jakob.moellers@gmail.com,1376987714,1376987714,5419f9281a5271d9b0bb20c86d71ec0126221ef6
+7368040549ce9c4abaed497e9fdc483f86039c47,73680405,removed imports,"removed imports
+",,,,Jakob Moellers,jakob.moellers@gmail.com,Jakob Moellers,jakob.moellers@gmail.com,1376657388,1376657388,9f8fc0fbe8c635f4519b5799e4538854a4be4b2a
+9f8fc0fbe8c635f4519b5799e4538854a4be4b2a,9f8fc0fb,include option to select whether to take a photo or select an image from the gallery,include option to select whether to take a photo or select an image from the gallery,,,,Jakob Moellers,jakob.moellers@gmail.com,Jakob Moellers,jakob.moellers@gmail.com,1376657138,1376657138,5419f9281a5271d9b0bb20c86d71ec0126221ef6
+5419f9281a5271d9b0bb20c86d71ec0126221ef6,5419f928,Preparing release v0.6.4,"Preparing release v0.6.4
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1365296931,1365296931,b0263c822b9dd999a49524fa5cafb220465f75a7
+b0263c822b9dd999a49524fa5cafb220465f75a7,b0263c82,Updated translations,"Updated translations
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1365296885,1365296885,6d227ae8f52a8f11d3c6f6c80858ac2519640b91
+6d227ae8f52a8f11d3c6f6c80858ac2519640b91,6d227ae8,Merge pull request #33 from SuborbitalPigeon/icons,"Merge pull request #33 from SuborbitalPigeon/icons
+
+Add icon sources",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1365296635,1365296635,"98ce28d2bf1dae5e63692171c6cb6012dd54afcf,c1bafd34ccb8d8cef43e73e57c4958c45a37dd87"
+c1bafd34ccb8d8cef43e73e57c4958c45a37dd87,c1bafd34,Add icon sources,"Add icon sources
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1365258135,1365258775,98ce28d2bf1dae5e63692171c6cb6012dd54afcf
+22645b01777849a5c84bd91eae48b355d53935cc,22645b01,Update database to v15 with new TBL_TRACKPOINT.COL_SPPED,"Update database to v15 with new TBL_TRACKPOINT.COL_SPPED
+",,,,Andrzej Bieniek,andyhelp@gmail.com,Andrzej Bieniek,andyhelp@gmail.com,1359898445,1359898445,45049875874100b31450bc2683256c369a5ae22a
+45049875874100b31450bc2683256c369a5ae22a,45049875,Fix to use tabs and brackets on the same line (coding convention),"Fix to use tabs and brackets on the same line (coding convention)
+
+Introduced in:
+commit 179fce535d3c5d29fb62f74305be27db091e60d6 Add speed extension to track point
+",,,,Andrzej Bieniek,andyhelp@gmail.com,Andrzej Bieniek,andyhelp@gmail.com,1359896120,1359896120,179fce535d3c5d29fb62f74305be27db091e60d6
+179fce535d3c5d29fb62f74305be27db091e60d6,179fce53,Add speed extension to track point,"Add speed extension to track point
+",,,,Andrzej Bieniek,andyhelp@gmail.com,Andrzej Bieniek,andyhelp@gmail.com,1359839817,1359839817,98ce28d2bf1dae5e63692171c6cb6012dd54afcf
+98ce28d2bf1dae5e63692171c6cb6012dd54afcf,98ce28d2,Fix invalide locale codes,"Fix invalide locale codes
+",,,,Nicolas,nicolas@plop.(none),Nicolas,nicolas@plop.(none),1359090308,1359090308,f6d6b61777082a039e9727f29ac1bba41fd643e3
+f6d6b61777082a039e9727f29ac1bba41fd643e3,f6d6b617,Updated translations from Transifex,"Updated translations from Transifex
+
+Added mapping for Android-specific resource naming.
+",,,,Nicolas,nicolas@plop.(none),Nicolas,nicolas@plop.(none),1359089249,1359089249,7a6dd88e60ef5e910988f27df2d5eadd8b536c71
+7a6dd88e60ef5e910988f27df2d5eadd8b536c71,7a6dd88e,Merge pull request #30 from SuborbitalPigeon/icons,"Merge pull request #30 from SuborbitalPigeon/icons
+
+Add new launcher and notification icons",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1359087142,1359087142,"b087272fdb878f175a40b8532b327116379817c1,c52f643148bf889717e0c23d5917ff3c24651a2e"
+b087272fdb878f175a40b8532b327116379817c1,b087272f,Merge pull request #31 from naoliv/patch-1,"Merge pull request #31 from naoliv/patch-1
+
+Enable the app to be movable to external storage - issue #170",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1359086416,1359086416,"086180d009cbdc9d78449323e817bc36612668ac,851f2f3adc361e43b138f4ef90d1f5409c5caf2d"
+851f2f3adc361e43b138f4ef90d1f5409c5caf2d,851f2f3a,Enable the app to be movable to external storage,Enable the app to be movable to external storage,,,,Nelson A. de Oliveira,naoliv@gmail.com,Nelson A. de Oliveira,naoliv@gmail.com,1358122213,1358122213,086180d009cbdc9d78449323e817bc36612668ac
+c52f643148bf889717e0c23d5917ff3c24651a2e,c52f6431,Add new launcher and notification icons,"Add new launcher and notification icons
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1357739824,1357739824,086180d009cbdc9d78449323e817bc36612668ac
+fb4514eff058845275b753eab7b63d913ee7b97a,fb4514ef,DisplayTrack: Move pref to shared KEY_UI_ASKED_DISPLAYTRACK_OSM,"DisplayTrack: Move pref to shared KEY_UI_ASKED_DISPLAYTRACK_OSM
+",,,,Jeremy D Monin,jdmonin@nand.net,Jeremy D Monin,jdmonin@nand.net,1347593481,1347593481,385afe27723470b1ea20d0ed748fefc36805e5d3
+385afe27723470b1ea20d0ed748fefc36805e5d3,385afe27,DisplayTrack: javadocs,"DisplayTrack: javadocs
+",,,,Jeremy D Monin,jdmonin@nand.net,Jeremy D Monin,jdmonin@nand.net,1347420427,1347420427,2a7e2d07187ac61abd285ff6bd51cb3da509c46a
+2a7e2d07187ac61abd285ff6bd51cb3da509c46a,2a7e2d07,"DisplayTrack: If first use, ask if would rather use OSM DisplayTrackMap","DisplayTrack: If first use, ask if would rather use OSM DisplayTrackMap
+",,,,Jeremy D Monin,jdmonin@nand.net,Jeremy D Monin,jdmonin@nand.net,1347420410,1347420410,086180d009cbdc9d78449323e817bc36612668ac
+086180d009cbdc9d78449323e817bc36612668ac,086180d0,Preparing release v0.6.3,"Preparing release v0.6.3
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1347357363,1347357363,847ddb746cfa2f88a58335dd2019b565e105472c
+847ddb746cfa2f88a58335dd2019b565e105472c,847ddb74,Updated translations from Transifex,"Updated translations from Transifex
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1347357216,1347357216,5cbed6e22c435f48cb7d8174cebe34e47416cf8a
+5cbed6e22c435f48cb7d8174cebe34e47416cf8a,5cbed6e2,[issue #206] Do not make OAuth request on the UI thread,"[issue #206] Do not make OAuth request on the UI thread
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1347357048,1347357048,f0aaa9655fe95408d2faf041bcdb9977de6ea522
+f0aaa9655fe95408d2faf041bcdb9977de6ea522,f0aaa965,[issue #43] Use proper filename when uploading,"[issue #43] Use proper filename when uploading
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345357950,1345357950,6b4c96a3a1193ff456b5b74135a7ee8bb29a56ed
+6b4c96a3a1193ff456b5b74135a7ee8bb29a56ed,6b4c96a3,[issue #43] Use platform charset when uploading traces to OSM,"[issue #43] Use platform charset when uploading traces to OSM
+
+Fixes issues with non-ascii characters in description and/or tags.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345341701,1345341701,343f225e98107b7ba6f3e6515d24bfdad50c655d
+343f225e98107b7ba6f3e6515d24bfdad50c655d,343f225e,Move some non-translatable strings to separate values file,"Move some non-translatable strings to separate values file
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345340538,1345340538,fe697a2bfd2ff1d6e9c673640dd34ec172781bb1
+fe697a2bfd2ff1d6e9c673640dd34ec172781bb1,fe697a2b,Merge pull request #25 from jdmonin/misc,"Merge pull request #25 from jdmonin/misc
+
+TrackContentProvider allow custom queries",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1345339571,1345339571,"87464360a9142871f638950c035f825cef618539,a4088a2823627938e0069274caaa68031a1e7017"
+a4088a2823627938e0069274caaa68031a1e7017,a4088a28,TrackContentProvider.getType: Throw if uri not recognized; easier to debug than…,"TrackContentProvider.getType: Throw if uri not recognized; easier to debug than a NullPointerException later
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1345298205,1345298205,2abaa6108c283da5e1cd1462313415ebe4f4f2fa
+2abaa6108c283da5e1cd1462313415ebe4f4f2fa,2abaa610,TrackContentProvider.query: use custom projection if provided,"TrackContentProvider.query: use custom projection if provided
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1345297849,1345297849,87464360a9142871f638950c035f825cef618539
+87464360a9142871f638950c035f825cef618539,87464360,Restore copy of 'no' from 'nb',"Restore copy of 'no' from 'nb'
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345277359,1345278261,6706c885fd7187489ebfcf09129415a099060cec
+6706c885fd7187489ebfcf09129415a099060cec,6706c885,Preparing release v0.6.2,"Preparing release v0.6.2
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345277023,1345277023,d2325015a345f1b88fc7d190d0c7dfb4d8bc834d
+d2325015a345f1b88fc7d190d0c7dfb4d8bc834d,d2325015,Layout cleanup,"Layout cleanup
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345275887,1345275887,592bdcb3db5f279ba849710b608f0c382d9f10df
+592bdcb3db5f279ba849710b608f0c382d9f10df,592bdcb3,[issue #196] Validate theme for people coming from previous versions.,"[issue #196] Validate theme for people coming from previous versions.
+
+Aside: Added link to translation project in about page.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345275148,1345275148,c14a8ba005bd5bece1f78a92e9d7577902a0d0b0
+c14a8ba005bd5bece1f78a92e9d7577902a0d0b0,c14a8ba0,[issue #195] Removed Transifex config for unused renderers resource,"[issue #195] Removed Transifex config for unused renderers resource
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345268616,1345268616,bd1d44e1fe7fbc0988de02ccad51ef838e24529c
+bd1d44e1fe7fbc0988de02ccad51ef838e24529c,bd1d44e1,Removed prefs values from translation files,"Removed prefs values from translation files
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345268357,1345268357,dcd9cce1bd4f45a0ba2cffed6f435d68bdb347b7
+dcd9cce1bd4f45a0ba2cffed6f435d68bdb347b7,dcd9cce1,Moved prefs values in their own non-translatable file,"Moved prefs values in their own non-translatable file
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345267876,1345267876,6da500957094f5a27947598c30d6b22abdeba396
+6da500957094f5a27947598c30d6b22abdeba396,6da50095,[issue #197] Some strings tweaks,"[issue #197] Some strings tweaks
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345267604,1345267604,2438ebe333414ac096fa1a664a0b349a3dad3c60
+2438ebe333414ac096fa1a664a0b349a3dad3c60,2438ebe3,Merge pull request #24 from dittaeva/message-tweaks,"Merge pull request #24 from dittaeva/message-tweaks
+
+Message tweaks",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1345267378,1345267378,"600f3d8c3d1153653b831b03fcb496f8792d645d,8c828238dab6532d2bbbce461d9d7534d04d260e"
+600f3d8c3d1153653b831b03fcb496f8792d645d,600f3d8c,[issue #195] Removed unused resource,"[issue #195] Removed unused resource
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345267199,1345267199,eb1a2aba691b0f49643c67f8b5b7530121c1775f
+eb1a2aba691b0f49643c67f8b5b7530121c1775f,eb1a2aba,Removed summary for storage dir.,"Removed summary for storage dir.
+
+It's replaced by the actual storage dir in the Preferences activity.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345266952,1345266952,0e7dd52507afec12dca67827937360dea32b4305
+8c828238dab6532d2bbbce461d9d7534d04d260e,8c828238,Message tweaks,"Message tweaks
+",,,,Guttorm Flatabø,post@guttormflatabo.com,Guttorm Flatabø,post@guttormflatabo.com,1345227605,1345245043,0e7dd52507afec12dca67827937360dea32b4305
+0e7dd52507afec12dca67827937360dea32b4305,0e7dd525,"Fixed en-rGB name again, fixed minor other issues","Fixed en-rGB name again, fixed minor other issues
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345156343,1345156343,034ee77db60227044fa886e71014127f0cde5733
+034ee77db60227044fa886e71014127f0cde5733,034ee77d,"Updated translations from Transifex, fix en-GB folder name","Updated translations from Transifex, fix en-GB folder name
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345155806,1345155806,10cb736ecd9b58f925ffebd3d76bc73fdabebf39
+10cb736ecd9b58f925ffebd3d76bc73fdabebf39,10cb736e,Merge pull request #23 from damndog/master,"Merge pull request #23 from damndog/master
+
+Update res/values-pl/strings.xml",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1345154938,1345154938,"f762127cd43c0bfb62e407760b70a0523b33a318,a5873d96b45a497d78879d146feeac47263ffa5c"
+f762127cd43c0bfb62e407760b70a0523b33a318,f762127c,Merge pull request #22 from damndog/patch-1,"Merge pull request #22 from damndog/patch-1
+
+Update res/values-pl/strings-preferences.xml",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1345154887,1345154887,"050c79f67ec317c9ad59942af385bdcbb14ee917,65bc35cac861d96f7b79e3844c9d388d267192aa"
+050c79f67ec317c9ad59942af385bdcbb14ee917,050c79f6,Remove copy of 'no' from 'nb' now that 'no' lives on its own @ Transifex,"Remove copy of 'no' from 'nb' now that 'no' lives on its own @ Transifex
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345122646,1345122646,21c292ad05db47dd518541326e3aee0fc8300609
+21c292ad05db47dd518541326e3aee0fc8300609,21c292ad,Fixed typo in Transifex config,"Fixed typo in Transifex config
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345122156,1345122156,a0e58b8ce43375b207136f8f61c0c89eb0ff237a
+a0e58b8ce43375b207136f8f61c0c89eb0ff237a,a0e58b8c,[issue #189] Added Transifex config + note in Readme,"[issue #189] Added Transifex config + note in Readme
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345121180,1345121180,6db6de256dba1be1e6a586c1ce426896e9bf3d3e
+6db6de256dba1be1e6a586c1ce426896e9bf3d3e,6db6de25,"[issue #52, #189] Put labels in separate translation files","[issue #52, #189] Put labels in separate translation files
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345119555,1345119555,469c8c1f4e158e59a74020a0698a894624af52fd
+469c8c1f4e158e59a74020a0698a894624af52fd,469c8c1f,Updated DA translation thanks to jesperfjoelner,"Updated DA translation thanks to jesperfjoelner
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345031836,1345031836,4b345b24daa1d5a6f4846e6b063a2d002366bbdd
+4b345b24daa1d5a6f4846e6b063a2d002366bbdd,4b345b24,Preparing release v0.6.1,"Preparing release v0.6.1
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345031496,1345031496,1673cbf04eac54ba9acb27978cb29c6196cea79f
+1673cbf04eac54ba9acb27978cb29c6196cea79f,1673cbf0,Minor cleanup,"Minor cleanup
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345031147,1345031147,cea9a529204a4cfc30ee82c7441018ff009ee589
+cea9a529204a4cfc30ee82c7441018ff009ee589,cea9a529,Merge remote-tracking branch 'SuborbitalPigeon/honeycomb' into honeycomb,"Merge remote-tracking branch 'SuborbitalPigeon/honeycomb' into honeycomb
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345025831,1345025831,"d653f14e00d9bd1cb34bbe4b47ec2f3a4b94da51,cfe33f0773bccbc2192911a74914b49d195ee810"
+d653f14e00d9bd1cb34bbe4b47ec2f3a4b94da51,d653f14e,Merge pull request #20 from jdmonin/trackmap,"Merge pull request #20 from jdmonin/trackmap
+
+DisplayTrackMap: Pinch to zoom; set bounds to show entire track if inactive; WaypointListAdapter UTC",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1345025595,1345025595,"947ec9040a567ea22ab0962c451eb364ae475528,d542394cfbe34e5a083c45190188b232c611fca0"
+947ec9040a567ea22ab0962c451eb364ae475528,947ec904,Fix NPE when updating status icon,"Fix NPE when updating status icon
+
+The ImageView was initially removed from the parent to hide it, but then when
+we try to get a reference to it again to change the drawable, it's NULL.
+
+Instead of removing the view, hide it using View.GONE which has the desired
+effect (no space taken on the layout).
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1345024604,1345024604,7b3baa5c29207c826f17feadfa8d4bec039b8eed
+cfe33f0773bccbc2192911a74914b49d195ee810,cfe33f07,Fix a couple of menu issues,"Fix a couple of menu issues
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1343388087,1344878782,53d52739981b5262b49dd597ff59b00c37e273a3
+53d52739981b5262b49dd597ff59b00c37e273a3,53d52739,"Change ""new track"" hint for Honeycomb","Change ""new track"" hint for Honeycomb
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1342698484,1344878782,108e22940625cb6a4c2644bda1175727602d32aa
+108e22940625cb6a4c2644bda1175727602d32aa,108e2294,Fix theme changing,"Fix theme changing
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1342698303,1344878782,3a3bf20033014d03a801666d667854aac56d2ec8
+3a3bf20033014d03a801666d667854aac56d2ec8,3a3bf200,Add some menu items to the ActionBar,"Add some menu items to the ActionBar
+
+Also fixes the dynamic menu items
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1342698244,1344878782,d96467bd5718cdc5e3fe5c1a0f8914b8119743a3
+d96467bd5718cdc5e3fe5c1a0f8914b8119743a3,d96467bd,Target Jellybean,"Target Jellybean
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1342695289,1344878674,7b3baa5c29207c826f17feadfa8d4bec039b8eed
+d542394cfbe34e5a083c45190188b232c611fca0,d542394c,pathChanged: clean up initial bounds check,"pathChanged: clean up initial bounds check
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1344857013,1344857013,10cf779a98a88028e53b960f57705b99ff8b57d7
+7b3baa5c29207c826f17feadfa8d4bec039b8eed,7b3baa5c,Preparing release v0.6.0,"Preparing release v0.6.0
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1344847303,1344847303,9f29f65dfdba0680f5c5e91073b95c1a732de02d
+10cf779a98a88028e53b960f57705b99ff8b57d7,10cf779a,"WaypointListAdapter use UTC, not local timezone","WaypointListAdapter use UTC, not local timezone
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1344828622,1344828679,3accf803186fe049a23089cc4ee507291d855cbc
+3accf803186fe049a23089cc4ee507291d855cbc,3accf803,"For inactive tracks, set initial zoom level so track fills the screen","For inactive tracks, set initial zoom level so track fills the screen
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1344820604,1344820604,34473ad23fe4250ede3e932b022183c1c8e8c320
+34473ad23fe4250ede3e932b022183c1c8e8c320,34473ad2,DisplayTrackMap javadocs,"DisplayTrackMap javadocs
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1344819323,1344819323,99cfab30981aaa6e08d48d395635b44a3793f876
+99cfab30981aaa6e08d48d395635b44a3793f876,99cfab30,Enable osmdroid's built-in pinch-to-zoom,"Enable osmdroid's built-in pinch-to-zoom
+",,,,Jeremy,jdmonin@nand.net,Jeremy,jdmonin@nand.net,1344818680,1344818680,cd53d979b4c29782aa35875ac69e616002d86561
+9f29f65dfdba0680f5c5e91073b95c1a732de02d,9f29f65d,[issue #43] Further work on OSM upload,"[issue #43] Further work on OSM upload
+
+Store upload date in DB, display it in track details, display upload icon in
+track list.
+Minor other UI tweaks.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1344256690,1344256690,72383967fb4a635b1da748829875174a664daafe
+72383967fb4a635b1da748829875174a664daafe,72383967,"[issue #43] Further work on OSM upload: Error handling, UI.","[issue #43] Further work on OSM upload: Error handling, UI.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1344248911,1344248911,f26c39527944fda0eb63a882b6bd2e1ec7eef0bb
+a5873d96b45a497d78879d146feeac47263ffa5c,a5873d96,Update res/values-pl/strings.xml,Update res/values-pl/strings.xml,,,,damndog,damndog@o2.pl,damndog,damndog@o2.pl,1344085085,1344085085,cd53d979b4c29782aa35875ac69e616002d86561
+65bc35cac861d96f7b79e3844c9d388d267192aa,65bc35ca,Update res/values-pl/strings-preferences.xml,"Update res/values-pl/strings-preferences.xml
+
+corrected mindless string translations :)",,,,damndog,damndog@o2.pl,damndog,damndog@o2.pl,1344081335,1344081335,cd53d979b4c29782aa35875ac69e616002d86561
+f26c39527944fda0eb63a882b6bd2e1ec7eef0bb,f26c3952,[issue #43] Store OAuth token/secret in preferences,"[issue #43] Store OAuth token/secret in preferences
+
+Will prevent OSMTracker to ask the user to log in OSM and authorize OSMTracker
+for each upload.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343822331,1343822331,759a0f021bb2722d0ea0f28a62698b2eb1856ea6
+759a0f021bb2722d0ea0f28a62698b2eb1856ea6,759a0f02,[issue #43] Further work on OSM upload,"[issue #43] Further work on OSM upload
+
+Implemented OAuth and upload. Basics are working but still needs a lot of
+work (error handling, better UI, ...).
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343741924,1343741924,3b9946d3f1f324cd856089fb527c94397b12088b
+3b9946d3f1f324cd856089fb527c94397b12088b,3b9946d3,[issue #43] Initial work on OSM upload: Additional track fields,"[issue #43] Initial work on OSM upload: Additional track fields
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343652196,1343652196,cd53d979b4c29782aa35875ac69e616002d86561
+cd53d979b4c29782aa35875ac69e616002d86561,cd53d979,[issue #179] Mass export of tracks,"[issue #179] Mass export of tracks
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343548988,1343548988,1a2c660b971ccc87bdf3089d3ed0619d344cf1cf
+1a2c660b971ccc87bdf3089d3ed0619d344cf1cf,1a2c660b,[issue #168] Fix for GPX files not visible on external storage,"[issue #168] Fix for GPX files not visible on external storage
+
+Force the media scanner to scan the newly created GPX file.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343538358,1343538358,623453d4f0a648d4761a873ac889f5236d54e531
+623453d4f0a648d4761a873ac889f5236d54e531,623453d4,Preparing release v0.5.8,"Preparing release v0.5.8
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343479129,1343479129,87f202416aa4f2754d22e5ad23ed7a98fb74d661
+87f202416aa4f2754d22e5ad23ed7a98fb74d661,87f20241,Added project URL in GPX header,"Added project URL in GPX header
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343478931,1343478931,f64e2cd7b093ddd0196722cfaa30d2597ce2e381
+f64e2cd7b093ddd0196722cfaa30d2597ce2e381,f64e2cd7,Fixed Lint warnings + added accessibility descriptions,"Fixed Lint warnings + added accessibility descriptions
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343476156,1343478441,c3b4c8c122f74e65f94d6710263971e689cc4ee6
+c3b4c8c122f74e65f94d6710263971e689cc4ee6,c3b4c8c1,[issues #158 #161 #182] Possible fix for background service stopping,"[issues #158 #161 #182] Possible fix for background service stopping
+
+Use Service.startForeground() as it's intended for services that are not
+supposed to be killed like media players, or GPS trackers. Seems to fix
+the issue in my manual tests with the emulator.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343475022,1343475022,4155e1db6275ace376f69da983ddc76e52044623
+4155e1db6275ace376f69da983ddc76e52044623,4155e1db,[issue #158] Possible fix for service being killed by ActivityManager,"[issue #158] Possible fix for service being killed by ActivityManager
+
+Applied workaround from http://code.google.com/p/android/issues/detail?id=14340
+I had to bump the SDK version to 7 (Android 2.1) unfortunately.
+
+Hard to test unfortunately, but it can't hurt.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343464151,1343472173,cd4f5c7557cf2e09e088407b4283d191d2e67fa3
+cd4f5c7557cf2e09e088407b4283d191d2e67fa3,cd4f5c75,[issue #185] Sort track list by descending date by default,"[issue #185] Sort track list by descending date by default
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343461236,1343461236,9d92d5a98caaf2805b050aff998c4972ef1d7c64
+9d92d5a98caaf2805b050aff998c4972ef1d7c64,9d92d5a9,"[issue #180] View waypoints list in track details, thanks to jdmonin","[issue #180] View waypoints list in track details, thanks to jdmonin
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343460905,1343460905,912d4dd34ff169fdcfbf666473e9a5133ee8888c
+912d4dd34ff169fdcfbf666473e9a5133ee8888c,912d4dd3,[issue #177] Minor FR fixes thanks to christophegragnic,"[issue #177] Minor FR fixes thanks to christophegragnic
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343458759,1343458759,755a216b3006ce9c87deda50134b109c8ced60cf
+755a216b3006ce9c87deda50134b109c8ced60cf,755a216b,Updated build.xml to latest SDK version,"Updated build.xml to latest SDK version
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343395552,1343395552,52cf7b3cf73f6d9c7eca54908bef581db3f4a84d
+52cf7b3cf73f6d9c7eca54908bef581db3f4a84d,52cf7b3c,Added Eclipse project files for test project,"Added Eclipse project files for test project
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343395030,1343395030,ca59d0770a2e47b152ce6b504b2a1ff67bbd46a8
+ca59d0770a2e47b152ce6b504b2a1ff67bbd46a8,ca59d077,[issue #154] Ensure exported tracks comply to GPX schema,"[issue #154] Ensure exported tracks comply to GPX schema
+
+Aside: Added tests project to start writing unit tests.
+
+Added GPX export test that compares output with an expected file. I also tried
+to validate the XML file against the GPX schema, but that looks to be a pain
+on Android as there's no built-in validator implementation.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343394421,1343394421,cc2809380277646078d13f2fa3824a67b44a2a67
+cc2809380277646078d13f2fa3824a67b44a2a67,cc280938,[issue #174] Japanese translation thanks to hayashi.yuu,"[issue #174] Japanese translation thanks to hayashi.yuu
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343380036,1343380036,d26f5e9deb484979f9af74acf3d146ecda078414
+d26f5e9deb484979f9af74acf3d146ecda078414,d26f5e9d,Updated build script to run Lint,"Updated build script to run Lint
+
+The build will fail if Lint exits with an error, that should ensure for example
+that APIs incompatible with the target are not used.
+",,,,Nicolas,nicolas+github@guillaumin.me,Nicolas,nicolas+github@guillaumin.me,1343305096,1343305096,05f44e7da114190e77288920035e854525aaec30
+05f44e7da114190e77288920035e854525aaec30,05f44e7d,Merge pull request #16 from littlesavage/recordingDurationFix,"Merge pull request #16 from littlesavage/recordingDurationFix
+
+Ensure changing voice duration setting is taking into account",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1340012601,1340012601,"a3e46c5732ffa3833a7779126503c0fac689e25a,f805e6205e80a61a154fa50c9bfa600e2c937032"
+f805e6205e80a61a154fa50c9bfa600e2c937032,f805e620,Fallback to default values,Fallback to default values,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339931713,1339931713,04101f4eeefe4f1f9497f0474c7770e06cbda5bd
+04101f4eeefe4f1f9497f0474c7770e06cbda5bd,04101f4e,Remove assertion,Remove assertion,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339930595,1339930595,683e8f808e5298a3d8e947dbfa182e364631a225
+a3e46c5732ffa3833a7779126503c0fac689e25a,a3e46c57,Merge pull request #17 from littlesavage/osmdroid-308,"Merge pull request #17 from littlesavage/osmdroid-308
+
+Update osmdroid JAR to 3.0.8",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1339912558,1339912558,"dc7ce8dba783c59a594dee0262d4c298e5efc5d4,e982d704937fd1e7a1c7ff159abab3be9db3b060"
+dc7ce8dba783c59a594dee0262d4c298e5efc5d4,dc7ce8db,Merge pull request #15 from littlesavage/firstGpsPos,"Merge pull request #15 from littlesavage/firstGpsPos
+
+Center to the first known gps location",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1339897116,1339897116,"a71f4d008c0d06e7471d558e8da9bdd16f1f9de4,cc7afb7ac90bd20c89957edc168f87e2a99f1907"
+cc7afb7ac90bd20c89957edc168f87e2a99f1907,cc7afb7a,Center to the first known gps location,Center to the first known gps location,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339863047,1339863047,a71f4d008c0d06e7471d558e8da9bdd16f1f9de4
+683e8f808e5298a3d8e947dbfa182e364631a225,683e8f80,Fixed change of a voice recording duration,Fixed change of a voice recording duration,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339853906,1339853906,a71f4d008c0d06e7471d558e8da9bdd16f1f9de4
+a71f4d008c0d06e7471d558e8da9bdd16f1f9de4,a71f4d00,Merge pull request #14 from littlesavage/scrolledPosition,"Merge pull request #14 from littlesavage/scrolledPosition
+
+Save scrolled position of OSM view across activity re-creation",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1339805354,1339805354,"7df502624732357cde43a94e48af8fa2029969b7,34ee91bf999a78da0847453412f0bda9a4a5e351"
+34ee91bf999a78da0847453412f0bda9a4a5e351,34ee91bf,Save scrolled position of OSM view across activity re-creation,Save scrolled position of OSM view across activity re-creation,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339793133,1339793133,7df502624732357cde43a94e48af8fa2029969b7
+e982d704937fd1e7a1c7ff159abab3be9db3b060,e982d704,WayPointsOverlay class,"WayPointsOverlay class
+",,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339714016,1339776377,469db0dfaecb9418eb81574d0404de9bb17696ff
+469db0dfaecb9418eb81574d0404de9bb17696ff,469db0df,Fix waypoints drawing,"Fix waypoints drawing
+",,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339702886,1339776367,fa799e1ba4f5f0e6b92c31084bf5347fea116fad
+fa799e1ba4f5f0e6b92c31084bf5347fea116fad,fa799e1b,Update osmdroid-android to 3.0.8,"Update osmdroid-android to 3.0.8
+",,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339508354,1339776348,7df502624732357cde43a94e48af8fa2029969b7
+7df502624732357cde43a94e48af8fa2029969b7,7df50262,Merge pull request #13 from littlesavage/ru,"Merge pull request #13 from littlesavage/ru
+
+Updated Russian translation",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1339539043,1339539043,"2d219cc5b2276564088d9852f67db112f3af5dfc,7c963a0cc1f26c26b92e4ce99048c1de597fa6e4"
+7c963a0cc1f26c26b92e4ce99048c1de597fa6e4,7c963a0c,Updated Russian translation,Updated Russian translation,,,,Alexey Illarionov,littlesavage@rambler.ru,Alexey Illarionov,littlesavage@rambler.ru,1339530496,1339530496,2d219cc5b2276564088d9852f67db112f3af5dfc
+2d219cc5b2276564088d9852f67db112f3af5dfc,2d219cc5,Merge pull request #12 from SuborbitalPigeon/minor-fixes,"Merge pull request #12 from SuborbitalPigeon/minor-fixes
+
+Minor fixes",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1335584760,1335584760,"4d506de84bd589dba66f4c101c81cf1efa73e35b,76f2b8cb411462bb984f8fc4dd43d343c52b85f8"
+76f2b8cb411462bb984f8fc4dd43d343c52b85f8,76f2b8cb,Changes suggested by Lint,"Changes suggested by Lint
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1335539679,1335539679,780db3ea3cd4128859574ecca6f612b35da1ccaf
+780db3ea3cd4128859574ecca6f612b35da1ccaf,780db3ea,"Get rid of titleCondensed, was the same as title anyway","Get rid of titleCondensed, was the same as title anyway
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1330795511,1335539627,09c25ddbfd15ccaa958645537b267b5fd2ffb0ae
+09c25ddbfd15ccaa958645537b267b5fd2ffb0ae,09c25ddb,Fix theme preference default,"Fix theme preference default
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1330787905,1335537011,0c0436efecd69765c3afdd01c96771474fdfc517
+0c0436efecd69765c3afdd01c96771474fdfc517,0c0436ef,String fixes,"String fixes
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1330787185,1335537011,83544f99f50b0b76cdb86aa7de31ad409c7178b1
+83544f99f50b0b76cdb86aa7de31ad409c7178b1,83544f99,Add default button layout for en_GB region,"Add default button layout for en_GB region
+
+More suitable speed limits
+",,,,Bruce Cowan,bruce@bcowan.me.uk,Bruce Cowan,bruce@bcowan.me.uk,1330786890,1335537011,4d506de84bd589dba66f4c101c81cf1efa73e35b
+4d506de84bd589dba66f4c101c81cf1efa73e35b,4d506de8,[pulls #8 #9 #10 #11] Polish translation thanks to poipolska,"[pulls #8 #9 #10 #11] Polish translation thanks to poipolska
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1333017081,1333017081,b07830e0350ab821e250a281a7e68a2738a44a9f
+b07830e0350ab821e250a281a7e68a2738a44a9f,b07830e0,[pull #6] Copy 'nb' resources to 'no',"[pull #6] Copy 'nb' resources to 'no'
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1332928589,1332928589,f6c5cd3de10e483c037b441e1472888b824588f0
+f6c5cd3de10e483c037b441e1472888b824588f0,f6c5cd3d,[issue #20] Updated IT translation thanks to diego.pierotto,"[issue #20] Updated IT translation thanks to diego.pierotto
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328931166,1328931166,eac27c8a37066988f784cbc2ad7e7a2ab0326839
+eac27c8a37066988f784cbc2ad7e7a2ab0326839,eac27c8a,Preparing release 0.5.7,"Preparing release 0.5.7
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328417448,1328417448,a4617bc3d49ddd5afd216e14dc88d213126080fc
+a4617bc3d49ddd5afd216e14dc88d213126080fc,a4617bc3,Chasing down unclosed Cursors,"Chasing down unclosed Cursors
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328415306,1328415306,f66282f5c702cb313ad1d12be83b23af9e255187
+f66282f5c702cb313ad1d12be83b23af9e255187,f66282f5,[issue #168] Try to workaround storage issues on Nexus S,"[issue #168] Try to workaround storage issues on Nexus S
+
+Inspired by http://code.google.com/p/androidconfigurableupdater/source/browse/trunk/src/org/m1cha/android/configurableupdater/Util.java?spec=svn112&r=112#490
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328414469,1328414469,e12fe3b8a1a1e17d70224b18d7b8b799f10c0042
+e12fe3b8a1a1e17d70224b18d7b8b799f10c0042,e12fe3b8,Merge branch 'master' of github.com:nguillaumin/osmtracker-android,"Merge branch 'master' of github.com:nguillaumin/osmtracker-android
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328095691,1328095691,"e1ef65d31ffa2c67caf7704449e027c8eca2906f,822a5cd60d6314168803bb049126f08b24759bdc"
+e1ef65d31ffa2c67caf7704449e027c8eca2906f,e1ef65d3,"[issue #163] Display way points on ""Display Track"" view","[issue #163] Display way points on ""Display Track"" view
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328095572,1328095572,7b42aa06ad6f40131c69439966a3ebe5af6f2054
+822a5cd60d6314168803bb049126f08b24759bdc,822a5cd6,Merge pull request #5 from dittaeva/master,"Merge pull request #5 from dittaeva/master
+
+Minor changes to NN/NB translations",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328087994,1328087994,"7b42aa06ad6f40131c69439966a3ebe5af6f2054,c7185aff41d963ffdac511f1ce54696e7fa568e0"
+c7185aff41d963ffdac511f1ce54696e7fa568e0,c7185aff,Changed to more popular speed limit as per…,"Changed to more popular speed limit as per http://lists.nuug.no/pipermail/kart/2012-January/003173.html
+",,,,Guttorm Flatabø,post@guttormflatabo.com,Guttorm Flatabø,post@guttormflatabo.com,1328085086,1328085086,7b42aa06ad6f40131c69439966a3ebe5af6f2054
+7b42aa06ad6f40131c69439966a3ebe5af6f2054,7b42aa06,Minor changes after running 'lint' from SDK tools,"Minor changes after running 'lint' from SDK tools
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328009554,1328009554,75ac51d08817ecb39852fa6da08014c162eaecb0
+75ac51d08817ecb39852fa6da08014c162eaecb0,75ac51d0,[issue #167] Fixed ambiguous string,"[issue #167] Fixed ambiguous string
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328008002,1328008002,2cb71a0a3ed8ef46794272262ca58f4b2034a9bc
+2cb71a0a3ed8ef46794272262ca58f4b2034a9bc,2cb71a0a,[issue #166] Removed unused string,"[issue #166] Removed unused string
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328007718,1328007718,88e18a199b8e6747c78620f36a26356ca135099f
+88e18a199b8e6747c78620f36a26356ca135099f,88e18a19,Updated project configuration with latest SDK tools,"Updated project configuration with latest SDK tools
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1328007684,1328007684,47c714f0b7269d26026421c20c6be62912015056
+47c714f0b7269d26026421c20c6be62912015056,47c714f0,Merge pull request #4 from dittaeva/master,"Merge pull request #4 from dittaeva/master
+
+Completed nn translation, added nb translation and did minor corrections to english original. Market descriptions included here.",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1327918447,1327918447,"87feb58486a614a4048303dfcaf6171e9341a905,c847d8dfeac7e3fe9d4a126e94da56fa0ef8426c"
+c847d8dfeac7e3fe9d4a126e94da56fa0ef8426c,c847d8df,A few minor string corrections,"A few minor string corrections
+",,,,Guttorm Flatabø,post@guttormflatabo.com,Guttorm Flatabø,post@guttormflatabo.com,1327790482,1327790482,4a0e7ae1bef549d2455e65afc7e9edfb5977d683
+4a0e7ae1bef549d2455e65afc7e9edfb5977d683,4a0e7ae1,"Completed nn translation, added nb translation","Completed nn translation, added nb translation
+",,,,Guttorm Flatabø,post@guttormflatabo.com,Guttorm Flatabø,post@guttormflatabo.com,1327789968,1327789968,87feb58486a614a4048303dfcaf6171e9341a905
+87feb58486a614a4048303dfcaf6171e9341a905,87feb584,Merge pull request #3 from pshiryaev/master,"Merge pull request #3 from pshiryaev/master
+
+Russian translation update",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1324038509,1324038509,"87e78c7b6a7a50d50065c523ae49baf1cd666118,a8f5058cfe06fe50511542f0af19a8ef8ff09653"
+a8f5058cfe06fe50511542f0af19a8ef8ff09653,a8f5058c,Russian translation,"Russian translation
+",,,,Pavel S.Shiryaev,pshiryaev@hill30.com,Pavel S.Shiryaev,pshiryaev@hill30.com,1323453193,1324033582,87e78c7b6a7a50d50065c523ae49baf1cd666118
+87e78c7b6a7a50d50065c523ae49baf1cd666118,87e78c7b,Merge pull request #2 from haggaie/master,"Merge pull request #2 from haggaie/master
+
+Hebrew translation",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1316606036,1316606036,"320cc5cf552ef1bcd110e3d75c1cefa8a6d3aab0,f37d6a5b684c3da4e23231e41ed4d0a374ec1f0c"
+f37d6a5b684c3da4e23231e41ed4d0a374ec1f0c,f37d6a5b,Add apostrophe to the meters unit in Hebrew.,"Add apostrophe to the meters unit in Hebrew.
+",,,,Haggai Eran,haggai.eran@gmail.com,Haggai Eran,haggai.eran@gmail.com,1316506127,1316506127,a67d3cbd6d249f243254df6a368e3e433965de4b
+320cc5cf552ef1bcd110e3d75c1cefa8a6d3aab0,320cc5cf,[issue #20] Updated IT translation thanks to diego.pierotto,"[issue #20] Updated IT translation thanks to diego.pierotto
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1316422166,1316422166,9c5b076ac43f80050aeae5335ed4703a3e50740b
+a67d3cbd6d249f243254df6a368e3e433965de4b,a67d3cbd,Translate the # signs.,"Translate the # signs.
+",,,,Haggai Eran,haggai.eran@gmail.com,Haggai Eran,haggai.eran@gmail.com,1316333777,1316333777,d99b115c69d8b02502fee9ed29c01877030db155
+d99b115c69d8b02502fee9ed29c01877030db155,d99b115c,Hebrew translation.,"Hebrew translation.
+",,,,Haggai Eran,haggai.eran@gmail.com,Haggai Eran,haggai.eran@gmail.com,1316333338,1316333338,9c5b076ac43f80050aeae5335ed4703a3e50740b
+9c5b076ac43f80050aeae5335ed4703a3e50740b,9c5b076a,[issue #47] Updated FR translation thanks to bruno.besson,"[issue #47] Updated FR translation thanks to bruno.besson
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315952557,1315952557,c3701237f0a352e5fc37b3a8de31b78edc2ff672
+c3701237f0a352e5fc37b3a8de31b78edc2ff672,c3701237,Preparing release v0.5.6,"Preparing release v0.5.6
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315913754,1315913754,87825b72fa57bc07314d2196ec134741c2c89f5c
+87825b72fa57bc07314d2196ec134741c2c89f5c,87825b72,"Merge branch 'master', remote-tracking branch '151/master'","Merge branch 'master', remote-tracking branch '151/master'
+
+Minor changes to gwrtheyrn's patch:
+* Don't display ""delete all"" menu if there are no tracks
+* Changed confirmation button to delete all tracks from ""ok"" to ""delete all
+  tracks""
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315912790,1315912927,0ff7e311ecd42997c0d7fed802a245467619b342
+0ff7e311ecd42997c0d7fed802a245467619b342,0ff7e311,[issue #151] Added button to delete all tracks,"[issue #151] Added button to delete all tracks
+",,,,Danilo Bargen,gezuru@gmail.com,Danilo Bargen,gezuru@gmail.com,1315904429,1315904429,43780a0c0b188d405e087b02b9fd85d39978bb46
+43780a0c0b188d405e087b02b9fd85d39978bb46,43780a0c,Deleted unused wiki/ folder,"Deleted unused wiki/ folder
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315618223,1315618223,f40306b9e28fabec520be9cc04e8c421582bc39e
+f40306b9e28fabec520be9cc04e8c421582bc39e,f40306b9,Added readme,"Added readme
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315482902,1315482902,4238a2eebaf3415d1806cd008159c89fc1336c92
+4238a2eebaf3415d1806cd008159c89fc1336c92,4238a2ee,Converted svn:ignore to .gitignore,"Converted svn:ignore to .gitignore
+",,,,nguillaumin,nicolas+github@guillaumin.me,nguillaumin,nicolas+github@guillaumin.me,1315482619,1315482619,6d9518933adad04a73f4911604b74240cfff36f9
+6d9518933adad04a73f4911604b74240cfff36f9,6d951893,[issue #125] Added partial Norwegian Nynorsk translation thanks to dittaeva,"[issue #125] Added partial Norwegian Nynorsk translation thanks to dittaeva
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1311077648,1311077648,1bc8212b5f74f900b4760b5674072df06e660325
+1bc8212b5f74f900b4760b5674072df06e660325,1bc8212b,[issue #142] Added Eclipse project files to SVN,"[issue #142] Added Eclipse project files to SVN
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1311077524,1311077524,26bce4f9b8ce41649a3329d537de19c1510ca3da
+26bce4f9b8ce41649a3329d537de19c1510ca3da,26bce4f9,[issue #148] Possible perf. improvement thanks to huebner.nils,"[issue #148] Possible perf. improvement thanks to huebner.nils
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1311076941,1311076941,58043db36d00ec5015301d278c38b67e1aab68f3
+58043db36d00ec5015301d278c38b67e1aab68f3,58043db3,[issue #149] [issue #103] Updated Slovak translation thanks to prescott66,"[issue #149] [issue #103] Updated Slovak translation thanks to prescott66
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1311076417,1311076417,c1d8765811f3c9443e99c137812ed97185435a1c
+c1d8765811f3c9443e99c137812ed97185435a1c,c1d87658,[issue #123] Fixed possible issue when building path to custom layouts,"[issue #123] Fixed possible issue when building path to custom layouts
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1309095851,1309095851,10a1ba0cfe5bd5859289d23626389c7639495208
+10a1ba0cfe5bd5859289d23626389c7639495208,10a1ba0c,"Added ant script, moved external JARs to libs/ folder to comply with Android SDK ant script","Added ant script, moved external JARs to libs/ folder to comply with Android SDK ant script
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1309052396,1309052396,778b0a9a548ec021b286eaeaf8c73a1b296421bd
+778b0a9a548ec021b286eaeaf8c73a1b296421bd,778b0a9a,Preparing release v0.5.5,"Preparing release v0.5.5
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1309049316,1309049316,39c14d9723f0905e020ad95c1a7b6e8bbf3ec313
+39c14d9723f0905e020ad95c1a7b6e8bbf3ec313,39c14d97,Preparing release v0.5.4,"Preparing release v0.5.4
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308970834,1308970834,9f99120b39872972cd75f1c458981c2d60da17bf
+9f99120b39872972cd75f1c458981c2d60da17bf,9f99120b,[issue #144] Removed '.xml' suffix from layout list thanks to peter.kindstrom,"[issue #144] Removed '.xml' suffix from layout list thanks to peter.kindstrom
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308970618,1308970618,1dfa6241febf9c4ed28e8296c039073ae4197cb0
+1dfa6241febf9c4ed28e8296c039073ae4197cb0,1dfa6241,[issue #143] Updated Swedish translation thanks to peter.kindstrom,"[issue #143] Updated Swedish translation thanks to peter.kindstrom
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308970040,1308970040,45df85eaf6bd23f62102fa9cd0ccbec33f8e9ce8
+45df85eaf6bd23f62102fa9cd0ccbec33f8e9ce8,45df85ea,[issue #97] Dramatic export speed improvement thanks to oshea.paul,"[issue #97] Dramatic export speed improvement thanks to oshea.paul
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308832009,1308832009,8df6c729763a65879ec6197c6e42a8b627bb4001
+8df6c729763a65879ec6197c6e42a8b627bb4001,8df6c729,"Added message ""Waiting GPS fix..."" when starting/resuming a track, it's then…","Added message ""Waiting GPS fix..."" when starting/resuming a track, it's then replaced with the accuracy once the fix is ok.
+That should help new users not understanding why the buttons are still greyed even if the GPS indicators is green.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308749093,1308749093,6da3b1ca32b57a7002c0a1c4b1d50eae229a620b
+6da3b1ca32b57a7002c0a1c4b1d50eae229a620b,6da3b1ca,[issue #115] [issue #59] Accounted for media players object possibly null if user disabled sounds,"[issue #115] [issue #59] Accounted for media players object possibly null if user disabled sounds
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308747921,1308747921,0e619c3056b88429893d3097e0c7bfa8defd6080
+0e619c3056b88429893d3097e0c7bfa8defd6080,0e619c30,[issue #115] [issue #59] Fixes to audio recording / beep notifications,"[issue #115] [issue #59] Fixes to audio recording / beep notifications
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308747600,1308747600,a752b3fd547604f7e8f8e6cf6e028a3c0f6730c2
+a752b3fd547604f7e8f8e6cf6e028a3c0f6730c2,a752b3fd,[issue #134] [issue #30] [issue #67] Explicitly set the permission to write to…,"[issue #134] [issue #30] [issue #67] Explicitly set the permission to write to the external storage, as it seems needed by SDK 1.6
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308745008,1308745008,1823b61261948da273ed1b90c184d698f72ad36b
+1823b61261948da273ed1b90c184d698f72ad36b,1823b612,[issue #123] Initial crude version of a debug info screen,"[issue #123] Initial crude version of a debug info screen
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308693710,1308693710,54c107ae2aa45b9bd20be0e0998243b58b86873e
+54c107ae2aa45b9bd20be0e0998243b58b86873e,54c107ae,"[issue #77] Fix to disable buttons when continuing a track. Removed ""start tracking"" menu entries","[issue #77] Fix to disable buttons when continuing a track. Removed ""start tracking"" menu entries
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308660005,1308660005,e01c4a41604ea8f62dfd7f1020d33c220d71ae3b
+e01c4a41604ea8f62dfd7f1020d33c220d71ae3b,e01c4a41,[issue #134] [issue #30] [issue #67] Bumping the SDK version to 1.6 at last,"[issue #134] [issue #30] [issue #67] Bumping the SDK version to 1.6 at last
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308608326,1308608326,4355eb113e3f971e8b041e35b3eb6d65a9f91ce5
+4355eb113e3f971e8b041e35b3eb6d65a9f91ce5,4355eb11,[issue #77] Track recording now starts immediately after starting a new track.,"[issue #77] Track recording now starts immediately after starting a new track.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1308608312,1308608312,658d73f1be6cdbb85e5858a4ba62916c8064e8fd
+658d73f1be6cdbb85e5858a4ba62916c8064e8fd,658d73f1,[issue #138] Translation fixes thanks to huebner.nils,"[issue #138] Translation fixes thanks to huebner.nils
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308607867,1308607867,b8858a8da4c58762bfe54d75b2ff15c4ece9a005
+b8858a8da4c58762bfe54d75b2ff15c4ece9a005,b8858a8d,[issue #139] Updated zoom PNG with full transparency thanks to huebner.nils,"[issue #139] Updated zoom PNG with full transparency thanks to huebner.nils
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308607610,1308607610,da37297516cbfae43498a9949127e9620e53e32d
+da37297516cbfae43498a9949127e9620e53e32d,da372975,[issue #140] Update PNG with optimized versions thanks to huebner.nils,"[issue #140] Update PNG with optimized versions thanks to huebner.nils
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308607154,1308607154,545b3607ef504f897d65f815e3d46a436fccfc8b
+545b3607ef504f897d65f815e3d46a436fccfc8b,545b3607,Added 'gen' folder to svn ignore (Generate resource classes),"Added 'gen' folder to svn ignore (Generate resource classes)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1308575707,1308575707,4529d475754689bdeefc05bae9d54a9acb944780
+4529d475754689bdeefc05bae9d54a9acb944780,4529d475,"[issue #103, issue #122] updated Slovak translation","[issue #103, issue #122] updated Slovak translation
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1303933894,1303933894,dbea6a3832cbd9f5571f106cc6ce2793865050f0
+dbea6a3832cbd9f5571f106cc6ce2793865050f0,dbea6a38,[issue #111] Added preference to deactivate automatic screen rotation. Thanks to Paul O'Shea. ,"[issue #111] Added preference to deactivate automatic screen rotation. Thanks to Paul O'Shea. 
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1300129822,1300129822,2d27744488e018439245f14e41ac900bad11a85e
+2d27744488e018439245f14e41ac900bad11a85e,2d277444,[issue #117] Fixed wrong extra data trackId for INTENT_UPDATE_WP in TextNoteDialog.,"[issue #117] Fixed wrong extra data trackId for INTENT_UPDATE_WP in TextNoteDialog.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1298931901,1298931901,5ed760e81f8ad08f2b2ba302621a67007191a49a
+5ed760e81f8ad08f2b2ba302621a67007191a49a,5ed760e8,[issue #115] Added preference to play some short beeps when voice recording…,"[issue #115] Added preference to play some short beeps when voice recording starts and ends. This patch also includes some changes to reload the preferences for a voice recording when the dialog shows up.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1298848121,1298848121,bfb12083631034465820d94e3497c0c6d7cb65cb
+bfb12083631034465820d94e3497c0c6d7cb65cb,bfb12083,[issue #59] Modified voice recording behavior. Voice recording can now be…,"[issue #59] Modified voice recording behavior. Voice recording can now be started during track logger view by either pressing DPAD_CENTER for 1 second or by pressing HEADSETHOOK. Voice recording can also be stopped by pressing DPAD_CENTER or HEADSETHOOK during a voice recording. Additionally voice recording duration preference has been extended to allow 10, 20 and 30 seconds of recording time.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1297624120,1297624120,fba6e0caa77b665cbc458c2a70d188e551e783f1
+fba6e0caa77b665cbc458c2a70d188e551e783f1,fba6e0ca,"[issue #112, issue #108] Tracks can now be exported to the same directory. A…","[issue #112, issue #108] Tracks can now be exported to the same directory. A user preference to handle the behavior was added. Spaces at the beginning and the end of export directory will be ignored during export.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1296860915,1296860915,1902baf1a7f115f971ad98a76c862858319d7fb3
+1902baf1a7f115f971ad98a76c862858319d7fb3,1902baf1,[issue #114] Cancel button in track details fixed. (Thanks to Paul O'Shea),"[issue #114] Cancel button in track details fixed. (Thanks to Paul O'Shea)
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1296859291,1296859291,31e717b43babac7efe4029543270a83bb728edb6
+31e717b43babac7efe4029543270a83bb728edb6,31e717b4,[issue #96] Manage a new storage path to save all track related files.,"[issue #96] Manage a new storage path to save all track related files.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1296599895,1296599895,66b9b1079bbefd44ef66bb8f15a33b4963026b3c
+66b9b1079bbefd44ef66bb8f15a33b4963026b3c,66b9b107,Updated osmdroid jar to version 3.0.1 and added smoother animation when centering to gps location.,"Updated osmdroid jar to version 3.0.1 and added smoother animation when centering to gps location.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1296310051,1296310051,c4fbc9e98fc38903b4dd4d534db501df371df1a5
+c4fbc9e98fc38903b4dd4d534db501df371df1a5,c4fbc9e9,Preparing release v0.5.3,"Preparing release v0.5.3
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1296003922,1296003922,66b6843a23c992787c6b23cda37ef76afd24ee98
+66b6843a23c992787c6b23cda37ef76afd24ee98,66b6843a,"[issue #94, r279] Changed behavior of GPS logging interval for GPS status changes.","[issue #94, r279] Changed behavior of GPS logging interval for GPS status changes.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1295104452,1295104452,e774023ceadd94f3d026971f961a3707e2f6739c
+e774023ceadd94f3d026971f961a3707e2f6739c,e774023c,"[issue #94, r257] Reimplemented GPS logging interval. It now uses some kind of a…","[issue #94, r257] Reimplemented GPS logging interval. It now uses some kind of a ""simulated interval"".
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1295096549,1295096549,9064a9846219c1a89897f551bffc61689200f9f4
+9064a9846219c1a89897f551bffc61689200f9f4,9064a984,"[issue #109] Added translation for Brazilian Portuguese. (Thanks to Djavan ""dnoway"")","[issue #109] Added translation for Brazilian Portuguese. (Thanks to Djavan ""dnoway"")
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1294349465,1294349465,c5e7f51fbeda767452a4730425d512f73f0b1b68
+c5e7f51fbeda767452a4730425d512f73f0b1b68,c5e7f51f,[issue #24] Updated German translation.,"[issue #24] Updated German translation.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1294278649,1294278649,3b3ccbc634eb898ea4984735e2f1c36b51ae5f02
+3b3ccbc634eb898ea4984735e2f1c36b51ae5f02,3b3ccbc6,[issue #20] Updated Italian translation. (Thanks to Diego Pierotto),"[issue #20] Updated Italian translation. (Thanks to Diego Pierotto)
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1294276991,1294276991,6ba8a263112413fe7085fd92177e834e44e5000b
+6ba8a263112413fe7085fd92177e834e44e5000b,6ba8a263,[issue #28] TrackManager now sends an intend every time a new track is activated…,"[issue #28] TrackManager now sends an intend every time a new track is activated to prevent an issue that caused GPSLogger not to change the active track if it was already logging another track.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1294101625,1294101625,e553d483f7ed6763834ded87a2c0a5d7b8e6d9b1
+e553d483f7ed6763834ded87a2c0a5d7b8e6d9b1,e553d483,[issue #100] removed layout wrappers that have been used to keep screen on or…,"[issue #100] removed layout wrappers that have been used to keep screen on or off and changed DisplayTrackMap to make use of the preference ""Screen always on"".
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1293752837,1293752837,21ef695112f126e353d3aa820eb35cb629aa3367
+21ef695112f126e353d3aa820eb35cb629aa3367,21ef6951,"Fixed a ""typo"" in javadoc.","Fixed a ""typo"" in javadoc.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1293412819,1293412819,d6274bfe2288c3cd1659531b7353ded94ba6454d
+d6274bfe2288c3cd1659531b7353ded94ba6454d,d6274bfe,[issue #91] Changed the way to get information about a track. This improves…,"[issue #91] Changed the way to get information about a track. This improves performance of the TrackManager.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1293320221,1293320221,3044f89c03fabd11eb3d84bb7507cd94ad6847b6
+3044f89c03fabd11eb3d84bb7507cd94ad6847b6,3044f89c,"[issue #28, issue #85, issue #89] It is now possible to stop the active track or…","[issue #28, issue #85, issue #89] It is now possible to stop the active track or resume an old track from the track manager context menu.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292802113,1292802113,8d4da22441bc5738031c1cc1fe77b5b11b347146
+8d4da22441bc5738031c1cc1fe77b5b11b347146,8d4da224,[issue #87] changed handling of trackpoint updates in Map view to improve…,"[issue #87] changed handling of trackpoint updates in Map view to improve performance. Thanks to Paul O'Shea.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292714325,1292714325,6a40e00d24718385fea2f38503027e4b70227400
+6a40e00d24718385fea2f38503027e4b70227400,6a40e00d,changed behavior of TrackListAdapter to update trackpoints and waypoints only…,"changed behavior of TrackListAdapter to update trackpoints and waypoints only once within a screen update.
+
+measured difference:
+before:
+INFO/ActivityManager(1284): Displayed activity me.guillaumin.[...]/.activity.TrackManager: 1432 ms (total 1432 ms)
+after:
+INFO/ActivityManager(1284): Displayed activity me.guillaumin.[...]/.activity.TrackManager: 938 ms (total 938 ms)
+
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292552905,1292552905,26184d3e1ac5e6f332b0967c4658c45d31e76f21
+26184d3e1ac5e6f332b0967c4658c45d31e76f21,26184d3e,Fixed some imports that have been automatically added during development.,"Fixed some imports that have been automatically added during development.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292543329,1292543329,d5fe4effc5c733a028a7b7fab05e0f06dfe6135d
+d5fe4effc5c733a028a7b7fab05e0f06dfe6135d,d5fe4eff,[issue #104] fixed crash in DisplayTrackMap when there is no GPS fix while…,"[issue #104] fixed crash in DisplayTrackMap when there is no GPS fix while trying to center the map to GPS position.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292543190,1292543190,a0843acf40fcc83786f7daf6957031391222e036
+a0843acf40fcc83786f7daf6957031391222e036,a0843acf,[issue #46] removed service element of osmdroid from AndroidManifest.xml,"[issue #46] removed service element of osmdroid from AndroidManifest.xml
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292446364,1292446364,b0056e98f7452704982d186a9c94d35c5e1e6cba
+b0056e98f7452704982d186a9c94d35c5e1e6cba,b0056e98,[issue #69] Minor cleanup: removed remaining warning when it made sense to use…,"[issue #69] Minor cleanup: removed remaining warning when it made sense to use @SuppressWarning(unused)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1292407798,1292407798,5b201b2abca66ff74274e4d3467bf3b8bbdc5f3c
+5b201b2abca66ff74274e4d3467bf3b8bbdc5f3c,5b201b2a,[issue #46] Removed empty directories,"[issue #46] Removed empty directories
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1292407556,1292407556,b883261abcce7364ca0ac75a6f302b1e7dfcf15a
+b883261abcce7364ca0ac75a6f302b1e7dfcf15a,b883261a,[issue #46] Now using JAR library of osmdroid instead of the source.,"[issue #46] Now using JAR library of osmdroid instead of the source.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292360006,1292360006,65fdd2119e81b48a4d38ee365ee8db3c50e0f748
+65fdd2119e81b48a4d38ee365ee8db3c50e0f748,65fdd211,[ issue 103 ] added translation to Slovak (thanks to prescott66),"[ issue 103 ] added translation to Slovak (thanks to prescott66)
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1292343026,1292343026,7f963cabbaf0b7fc79ccffa7b024c5262174a96d
+7f963cabbaf0b7fc79ccffa7b024c5262174a96d,7f963cab,[issue #100] Added preference to choose if the screen keeps on during tracking…,"[issue #100] Added preference to choose if the screen keeps on during tracking or not. Changed handling of shared preferences in TrackLogger.java.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1291754133,1291754133,c7bd643c15b787e73df83a8b92e8eac4f5ebd8f9
+c7bd643c15b787e73df83a8b92e8eac4f5ebd8f9,c7bd643c,[issue #99] Replaced dodgy notification system by a single un-cleareable…,"[issue #99] Replaced dodgy notification system by a single un-cleareable notification  that stays displayed when a track recording is in progress.
+Ensured we start tracking with the correct track id, instead of relying on the fact that the service will be destroyed/recreated each time (currentTrackId was read only in onCreate() )
+Ensured that if the TrackLogger activity is brought on top again, we're using the correct trackId.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291724074,1291724074,068edd074ab51e0e6834726bb63b43b9d612ce6d
+068edd074ab51e0e6834726bb63b43b9d612ce6d,068edd07,[issue #94] Removed GPS logging interval option as the way it's implemented in…,"[issue #94] Removed GPS logging interval option as the way it's implemented in Android is not suitable for OSMTracker
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291717719,1291717719,27a8b3be8444d270cd4eb3a041627abe3b1cd3b1
+27a8b3be8444d270cd4eb3a041627abe3b1cd3b1,27a8b3be,[issue #61] Modified TextNoteDialog to correctly handle waypoint deletion if the…,"[issue #61] Modified TextNoteDialog to correctly handle waypoint deletion if the user cancels the dialog by pressing the 'back' button.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1291672715,1291672715,d05e49e3ad6b4aea3a6929d098113272d840b6cb
+d05e49e3ad6b4aea3a6929d098113272d840b6cb,d05e49e3,[issue #61] Minor cleanup (mostly fixed comments),"[issue #61] Minor cleanup (mostly fixed comments)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291622710,1291622710,43e86f3a877bb498b30499b1b577c92454c1cf82
+43e86f3a877bb498b30499b1b577c92454c1cf82,43e86f3a,typo in javadoc,"typo in javadoc
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1291595361,1291595361,5cc32f3949e99f43ff0838e7e6ab65ef6c53b782
+5cc32f3949e99f43ff0838e7e6ab65ef6c53b782,5cc32f39,[issue #61] Changed handling of text note dialog. The dialog will now remember…,"[issue #61] Changed handling of text note dialog. The dialog will now remember the text when screen orientation changes. The text note will be deleted if the user cancels the dialog to avoid invalid waypoints.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1291594847,1291594847,fc12de5798618d5f891861f977d43aaeafdd2aa0
+fc12de5798618d5f891861f977d43aaeafdd2aa0,fc12de57,Preparing release v0.5.2,"Preparing release v0.5.2
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291537552,1291537552,e0ce5384101ca832749aaaa0eb5e5ed8b739d649
+e0ce5384101ca832749aaaa0eb5e5ed8b739d649,e0ce5384,[issue #26] Updated Danish translation,"[issue #26] Updated Danish translation
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291515557,1291515557,812d3a0f5de564378de17763d019020bd834001d
+812d3a0f5de564378de17763d019020bd834001d,812d3a0f,"[issue #81] Added partial Thai translation thanks to arthit,  lewcpe, kitty.in.th, theppitak.","[issue #81] Added partial Thai translation thanks to arthit,  lewcpe, kitty.in.th, theppitak.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291514681,1291514681,4cd3245b329975d6f4a09c8ef99de676133f2b69
+4cd3245b329975d6f4a09c8ef99de676133f2b69,4cd3245b,[issue #94] Used seconds instead of ms for GPS logging interval,"[issue #94] Used seconds instead of ms for GPS logging interval
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291514126,1291514126,2c3f81ac113bbcb9ba50688ded271839686546b3
+2c3f81ac113bbcb9ba50688ded271839686546b3,2c3f81ac,[issue #82] Added track ID to the export directory name,"[issue #82] Added track ID to the export directory name
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291513556,1291513556,a623470871af97013bcf9ad42c4ab6ff30be2bec
+a623470871af97013bcf9ad42c4ab6ff30be2bec,a6234708,[issue #82] Layout rework. Used a list to display track information to match…,"[issue #82] Layout rework. Used a list to display track information to match some other Android screens using this UI (See Android ""about"" screen for example)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291512922,1291512922,2d789de21f9e1abff8dbfe732664712a68eff88f
+2d789de21f9e1abff8dbfe732664712a68eff88f,2d789de2,[issue #94] Code cleanup + added dialog message thanks to Matthias advice,"[issue #94] Code cleanup + added dialog message thanks to Matthias advice
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291363686,1291363686,8770f90b5d3ab98e97be25f1fc0980f195778858
+8770f90b5d3ab98e97be25f1fc0980f195778858,8770f90b,[issue #82] Layout rework. Probably more in the Android look & feel but still…,"[issue #82] Layout rework. Probably more in the Android look & feel but still needs some more tweaking.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291292814,1291292814,746d6d55da770e8b5efad9e73f0c7e5a8fc6c221
+746d6d55da770e8b5efad9e73f0c7e5a8fc6c221,746d6d55,"[issue #88] Added Finnish translation, thanks to sloworks.fi","[issue #88] Added Finnish translation, thanks to sloworks.fi
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291289508,1291289508,e8230e1201e81b71270c40373ced45319dd089bd
+e8230e1201e81b71270c40373ced45319dd089bd,e8230e12,[issue #94] Added option for GPS logging interval,"[issue #94] Added option for GPS logging interval
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291287976,1291287976,22b28989134e84e24c4bf82cbae06d1b9e5be9a1
+22b28989134e84e24c4bf82cbae06d1b9e5be9a1,22b28989,[issue #82] Dealt with dodgy notification system,"[issue #82] Dealt with dodgy notification system
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291105616,1291105616,53ed295d7da244cc37e4b39eb0bef7f042eb621f
+53ed295d7da244cc37e4b39eb0bef7f042eb621f,53ed295d,[issue #73] Used constant for Preference key,"[issue #73] Used constant for Preference key
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291104675,1291104675,28af0bd28063a62c357ced52f4daf0d9bae1022c
+28af0bd28063a62c357ced52f4daf0d9bae1022c,28af0bd2,"[issue#73] When displaying track with OSM background enabled, zoomLevel will…","[issue#73] When displaying track with OSM background enabled, zoomLevel will always be set to the last used zoomLevel
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1291076889,1291076889,a8ff5bc9fc6cb08ddbff61c41f6efe8a34353dd3
+a8ff5bc9fc6cb08ddbff61c41f6efe8a34353dd3,a8ff5bc9,"[issue #82] Replaced ""anonymous"" String array by ""Track"" object when querying…","[issue #82] Replaced ""anonymous"" String array by ""Track"" object when querying for track info, allowing separation of the data, and the way it's displayed.
+Tried to address issue with timezone between the ""track date"" (uses default Locale) and the GPS timestamps (UTC) by using the first GPS timestamp as ""start time"". Not ideal though...
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1291030672,1291030672,8c5a52fcfc592751a1c87408adbc881159349e08
+8c5a52fcfc592751a1c87408adbc881159349e08,8c5a52fc,fixed a bad symbol in javadoc of method db.DataHelper.formatDegreesAsDMS (issue#82),"fixed a bad symbol in javadoc of method db.DataHelper.formatDegreesAsDMS (issue#82)
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1290987321,1290987321,fecdeefde133508168ebe456b6bfb4b7cd767085
+fecdeefde133508168ebe456b6bfb4b7cd767085,fecdeefd,Added ability to view Track details when clicking on a track within the…,"Added ability to view Track details when clicking on a track within the trackmanager (see issue#82. Thanks to Jeremy D Monin.
+Fixed naming of trackpoints and waypoints in tracklist.
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1290890054,1290890054,5c55ad4216424ed108a7114b5f99b170a6b4b12a
+5c55ad4216424ed108a7114b5f99b170a6b4b12a,5c55ad42,changed link element in GPX export to fit GPX specification (see issue#93). thanks to Niels Giesen,"changed link element in GPX export to fit GPX specification (see issue#93). thanks to Niels Giesen
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1290877499,1290877499,999bf5c7e7c0f48dab51cd9b3768bc4acdea462a
+999bf5c7e7c0f48dab51cd9b3768bc4acdea462a,999bf5c7,Added possibility to change the position of icons depending on screen orientation. see issue#42,"Added possibility to change the position of icons depending on screen orientation. see issue#42
+",,,,Matthias Glaub,matthias.glaub@googlemail.com,Matthias Glaub,matthias.glaub@googlemail.com,1290874801,1290874801,49265a66449695e3d8e449d36a834a849ccc9824
+49265a66449695e3d8e449d36a834a849ccc9824,49265a66,Preparing release 0.5.1,"Preparing release 0.5.1
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286173104,1286173104,79ea69778a269e5d6d714d645f6918fea572644d
+79ea69778a269e5d6d714d645f6918fea572644d,79ea6977,[issue #39] Properly manage write errors on SD card,"[issue #39] Properly manage write errors on SD card
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286172886,1286172886,d7965edbe9c2c118a56c2cbe453b47c9a5e6a560
+d7965edbe9c2c118a56c2cbe453b47c9a5e6a560,d7965edb,Updated DE translation thanks to matthias.glaub ,"Updated DE translation thanks to matthias.glaub 
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286169358,1286169358,da4bf72b428fbeb2b31fb3c24be28bc037bd184c
+da4bf72b428fbeb2b31fb3c24be28bc037bd184c,da4bf72b,[issue #72] Fixed cut off text in portrait mode in TrackManager thanks to matthias.glaub,"[issue #72] Fixed cut off text in portrait mode in TrackManager thanks to matthias.glaub
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286168833,1286168833,bb5b9291e50adc6c96f8cacbc7bf4aed9ec8f0d3
+bb5b9291e50adc6c96f8cacbc7bf4aed9ec8f0d3,bb5b9291,[issue #68] Deal with an possible unknown value for the accuracy setting,"[issue #68] Deal with an possible unknown value for the accuracy setting
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286167570,1286167570,63ef4b64fe2e8661d437a5aef139db0cffc024ee
+63ef4b64fe2e8661d437a5aef139db0cffc024ee,63ef4b64,[issue #70] Fixed boolean comparison issue thanks to jdmonin,"[issue #70] Fixed boolean comparison issue thanks to jdmonin
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286164807,1286164807,77bef3e11848ac592b342a68ceeb988f30795797
+77bef3e11848ac592b342a68ceeb988f30795797,77bef3e1,[issue #71] Fixed export progress dialog thanks to matthias.glaub,"[issue #71] Fixed export progress dialog thanks to matthias.glaub
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286164201,1286164201,07acdf62f06bc32cd9a0862186af56bb9195fee6
+07acdf62f06bc32cd9a0862186af56bb9195fee6,07acdf62,[issue #63] Display tack from track list thanks to jdmonin,"[issue #63] Display tack from track list thanks to jdmonin
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286163882,1286163882,b0b5ad0a375fe221af2987afc9844900495886c8
+b0b5ad0a375fe221af2987afc9844900495886c8,b0b5ad0a,"[issue #58] Kept zoom level after orientation change in OSM view, thanks to matthias.glaub.","[issue #58] Kept zoom level after orientation change in OSM view, thanks to matthias.glaub.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286163001,1286163001,85276aa2d2e7348fdef22d3202530bfe9744dc5e
+85276aa2d2e7348fdef22d3202530bfe9744dc5e,85276aa2,[issue #76] Prevented active track from being deleted,"[issue #76] Prevented active track from being deleted
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1286162356,1286162356,951e3d11ed4e24ee870e7d87d31d6eab7e8d526e
+951e3d11ed4e24ee870e7d87d31d6eab7e8d526e,951e3d11,Added list of contributors,"Added list of contributors
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1285853998,1285853998,65a1704f268bc80c19f6f65b630f5870f67f4305
+65a1704f268bc80c19f6f65b630f5870f67f4305,65a1704f,[issue #54] Integrated patch from jdmonin to deal with active track.,"[issue #54] Integrated patch from jdmonin to deal with active track.
+Preparing release v0.5.0
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1285851659,1285851659,d43f5f6665adbdf5afcb91579e84b7bad758865a
+d43f5f6665adbdf5afcb91579e84b7bad758865a,d43f5f66,"[issue #54] First draft of managing the ""active"" status of a track","[issue #54] First draft of managing the ""active"" status of a track
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1284987799,1284987799,2a45babc4a16b453afa5f00b6d3e40fd23fe3141
+2a45babc4a16b453afa5f00b6d3e40fd23fe3141,2a45babc,[issue #64] Escaped apostrophes causing compilation problems,"[issue #64] Escaped apostrophes causing compilation problems
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1284899042,1284899042,8b40fc12986816e8607f5de6057bca23d3881dad
+8b40fc12986816e8607f5de6057bca23d3881dad,8b40fc12,[issue #54] Added proper GPX export using AsyncTask and a nice progress bar. Minor UI tweaks.,"[issue #54] Added proper GPX export using AsyncTask and a nice progress bar. Minor UI tweaks.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1283346765,1283346765,5495eac028e20aa0f427e1cb7164a352975fcb53
+5495eac028e20aa0f427e1cb7164a352975fcb53,5495eac0,[issue #54] Added support for exporting tracks + propagated current track id on…,"[issue #54] Added support for exporting tracks + propagated current track id on every activity/code to deal with multiple tracks.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1283071041,1283071041,cd605b04045a3987231e6ac7b037a7945f6e122f
+cd605b04045a3987231e6ac7b037a7945f6e122f,cd605b04,"[issue #54] Track manager enhancements, added ability to delete track. Added…","[issue #54] Track manager enhancements, added ability to delete track. Added some multi-track awareness to other activity (waypoints list)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1281860434,1281860434,cfcff02523222552fa88569a7d1059a4e2b4abe9
+cfcff02523222552fa88569a7d1059a4e2b4abe9,cfcff025,[issue #54] First effort to deal with multiple tracks,"[issue #54] First effort to deal with multiple tracks
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280649854,1280649854,a8181b3ad75c7f537b7b3c9a6bc78afd0c3f80d3
+a8181b3ad75c7f537b7b3c9a6bc78afd0c3f80d3,a8181b3a,Fixed orientation issue #53 thanks to matthias.glaub,"Fixed orientation issue #53 thanks to matthias.glaub
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280632770,1280632770,d6bf915f922d13bbc8a86a8c18d15d3dcb4bbbf2
+d6bf915f922d13bbc8a86a8c18d15d3dcb4bbbf2,d6bf915f,Removed labels for special buttons as they're not read but retrieved from string resources,"Removed labels for special buttons as they're not read but retrieved from string resources
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280627651,1280627651,5aa72c6b834c020c0db1dc89d53b6071c24d5b2f
+5aa72c6b834c020c0db1dc89d53b6071c24d5b2f,5aa72c6b,"Allowed buttons labels to point to a string resource, thanks to matthias.glaub","Allowed buttons labels to point to a string resource, thanks to matthias.glaub
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280626954,1280626954,469795a21e7c0278d67fcafa304f921380165bea
+469795a21e7c0278d67fcafa304f921380165bea,469795a2,Preparing release 0.4.3,"Preparing release 0.4.3
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280044036,1280044036,24fc27d4a5d6cb3561bf231c42bf7e4ef1ed9957
+24fc27d4a5d6cb3561bf231c42bf7e4ef1ed9957,24fc27d4,Fixed issue #21: Location is now recorded right when user clicks Voice or…,"Fixed issue #21: Location is now recorded right when user clicks Voice or TextNote button, not at the end of the user interaction (end of recording, or validating text input)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280043378,1280043378,5409dd2bef4aab6117ef4d1f9e9231514fd9b606
+5409dd2bef4aab6117ef4d1f9e9231514fd9b606,5409dd2b,Added french translation thanks to Josue.Saury,"Added french translation thanks to Josue.Saury
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280039711,1280039711,101b917a5f05daf12a804f494c851da8588e9bc4
+101b917a5f05daf12a804f494c851da8588e9bc4,101b917a,Added Russian translation thanks to alastor.ru,"Added Russian translation thanks to alastor.ru
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1280038205,1280038205,3e6052a5e80dd5cef7d633b73223044ef443b74b
+3e6052a5e80dd5cef7d633b73223044ef443b74b,3e6052a5,Fixed issue #37 by adding a setting to use device clock instead of GPS one,"Fixed issue #37 by adding a setting to use device clock instead of GPS one
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1276594060,1276594060,f2026a4cd382063a12cabdf5b18ce3e5d9932186
+f2026a4cd382063a12cabdf5b18ce3e5d9932186,f2026a4c,Added new screenshot with OSM background,"Added new screenshot with OSM background
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272686164,1272686164,56236884d0083ae27f5d4843a7ab2c32fe9dda83
+56236884d0083ae27f5d4843a7ab2c32fe9dda83,56236884,Removed debuggable attribute,"Removed debuggable attribute
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272685458,1272685458,0be9a156d492e2e624e274c8a257dc1edd9c45d9
+0be9a156d492e2e624e274c8a257dc1edd9c45d9,0be9a156,Preparing v0.4.2,"Preparing v0.4.2
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272685214,1272685214,725e2109897694b0bc3e35dd83167f3493ef0fa7
+725e2109897694b0bc3e35dd83167f3493ef0fa7,725e2109,Added preference to display or not OSM data in track display background,"Added preference to display or not OSM data in track display background
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272685092,1272685092,081ec333a23a3fbdb69ba40e941b078468542cdf
+081ec333a23a3fbdb69ba40e941b078468542cdf,081ec333,Added Swedish translation thanks to strickz.,"Added Swedish translation thanks to strickz.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272683311,1272683311,0a07917cb499d047bb452dbbb0fce2e0c6bfb6a8
+0a07917cb499d047bb452dbbb0fce2e0c6bfb6a8,0a07917c,Updated Danish translation,"Updated Danish translation
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1272277003,1272277003,d413aadb702a1c860b3ead8642e515f2f39f9791
+d413aadb702a1c860b3ead8642e515f2f39f9791,d413aadb,First effort to integrate viesturz patch for real time OpenStreetMap track display.,"First effort to integrate viesturz patch for real time OpenStreetMap track display.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1271939016,1271939016,a077b8c1d7e38fee6a7fa4af4175acbcf2dbc01c
+a077b8c1d7e38fee6a7fa4af4175acbcf2dbc01c,a077b8c1,Added Spanish translation thanks to benjavalero.,"Added Spanish translation thanks to benjavalero.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1271849566,1271849566,c873c070b7e463d0ba899a9a8881f5eb31ee042b
+c873c070b7e463d0ba899a9a8881f5eb31ee042b,c873c070,Tried to reduce coupling between Activity & Service to prevent crashing behaviour (See issue #22).,"Tried to reduce coupling between Activity & Service to prevent crashing behaviour (See issue #22).
+Updated TrackContentProvider to manage querying the current track directory.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270954195,1270954195,4142a8429698c1a1533379705b9ef13a3ed739c8
+4142a8429698c1a1533379705b9ef13a3ed739c8,4142a842,Updated IT translation,"Updated IT translation
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270949672,1270949672,412e64fbec0423d70d9847ee373b29c0f9ff0ce3
+412e64fbec0423d70d9847ee373b29c0f9ff0ce3,412e64fb,Preparing v0.4.1,"Preparing v0.4.1
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270881082,1270881082,6b2b435663d1f483bd5c0dd4a9f2ea1dcca6a61d
+6b2b435663d1f483bd5c0dd4a9f2ea1dcca6a61d,6b2b4356,Updated IT translation,"Updated IT translation
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270880914,1270880914,4e0667b395ead3c47087209a4d1c85b179510c9b
+4e0667b395ead3c47087209a4d1c85b179510c9b,4e0667b3,Import cleanup,"Import cleanup
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270879556,1270879556,bed7afbeea90a57ece69c32966fd2935d97d4425
+bed7afbeea90a57ece69c32966fd2935d97d4425,bed7afbe,Added DE translation thanks to miji2biji.,"Added DE translation thanks to miji2biji.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270877175,1270877175,984129bd253daf65233e953a457f1c7112a81d18
+984129bd253daf65233e953a457f1c7112a81d18,984129bd,Updated DA translation,"Updated DA translation
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270876179,1270876179,0df11060600c92a430098b221e06c7a0f9345731
+0df11060600c92a430098b221e06c7a0f9345731,0df11060,Added safeguard to prevent some crashes (see issue #22) ,"Added safeguard to prevent some crashes (see issue #22) 
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270634693,1270634693,3c2e58437eab4177d00eace19cf56e484ce977ce
+3c2e58437eab4177d00eace19cf56e484ce977ce,3c2e5843,Added Danish translation thanks to jesperfjoelner.,"Added Danish translation thanks to jesperfjoelner.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270634653,1270634653,f294d77d13d70fb49d6c0bda0889a02a03f0547d
+f294d77d13d70fb49d6c0bda0889a02a03f0547d,f294d77d,Added screenshot for custom layouts,"Added screenshot for custom layouts
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270538645,1270538645,6a211bb8ddc1059ac73bdc3eca3904ec742ac727
+6a211bb8ddc1059ac73bdc3eca3904ec742ac727,6a211bb8,Merged from branch 0.4.x,"Merged from branch 0.4.x
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270535083,1270535083,"83131ac408ffef8497fae1e1d0654f496c9e6de8,a3faf4f3a941d187b97eb19093fe91391f3b291d"
+a3faf4f3a941d187b97eb19093fe91391f3b291d,a3faf4f3,Preparing release 0.4.0,"Preparing release 0.4.0
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270533859,1270533859,6db8f1aee5bad7cfbd75280137a1351171948b5e
+6db8f1aee5bad7cfbd75280137a1351171948b5e,6db8f1ae,Included last version of IT translation thanks to diego.pierotto.,"Included last version of IT translation thanks to diego.pierotto.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270533284,1270533284,aac5f65cc46c504390be8c65f6af4494c48d17ba
+aac5f65cc46c504390be8c65f6af4494c48d17ba,aac5f65c,Added a recording status indicator,"Added a recording status indicator
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270529066,1270529066,d7005eaab4833ad6a1c70fd1d3bf19f2585e8216
+d7005eaab4833ad6a1c70fd1d3bf19f2585e8216,d7005eaa,Added support for user-customizable buttons layout,"Added support for user-customizable buttons layout
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270525942,1270525942,865f553bbdfc6307e905b498cfa0f4fb54504863
+865f553bbdfc6307e905b498cfa0f4fb54504863,865f553b,Cleaning,"Cleaning
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270123811,1270123811,23112fb5546d21713484006abd65620cce8ed114
+23112fb5546d21713484006abd65620cce8ed114,23112fb5,Reduced coupling between UserDefinedLayoutReader and TrackLogger,"Reduced coupling between UserDefinedLayoutReader and TrackLogger
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270122743,1270122743,d3e89790186ee578983a60e1952e27f7a9d3a000
+d3e89790186ee578983a60e1952e27f7a9d3a000,d3e89790,Repeated 3 special action buttons on each page,"Repeated 3 special action buttons on each page
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270122721,1270122721,6a92fa178fec8d71ac0306bf6872f9e65dc1dee5
+6a92fa178fec8d71ac0306bf6872f9e65dc1dee5,6a92fa17,Removed coupling between TrackLogger activity and TextNoteOnClickListener,"Removed coupling between TrackLogger activity and TextNoteOnClickListener
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270122017,1270122017,0406b3597236951fb13d86d88e87eeaa7c8ecf9e
+0406b3597236951fb13d86d88e87eeaa7c8ecf9e,0406b359,Completed defaut layout with all buttons.,"Completed defaut layout with all buttons.
+Moved special action buttons into the default layout and remove them from GpsStatusRecordLayout.
+Deleted all pre-userlayout files.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270121688,1270121688,4b5d93812848f82907450b57acb645dfe092aa17
+4b5d93812848f82907450b57acb645dfe092aa17,4b5d9381,"First steps to user customized button layout. Works, but is not stable.","First steps to user customized button layout. Works, but is not stable.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270109955,1270109955,1abef76dbb153ddb7ffd5f972853d29cf827ed6d
+1abef76dbb153ddb7ffd5f972853d29cf827ed6d,1abef76d,Branching from trunk for v0.4.x (User customized buttons),"Branching from trunk for v0.4.x (User customized buttons)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270109736,1270109736,83131ac408ffef8497fae1e1d0654f496c9e6de8
+83131ac408ffef8497fae1e1d0654f496c9e6de8,83131ac4,Delete all data after saving track.,"Delete all data after saving track.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270072471,1270072471,f8f70c3dcfaf4d4bc9b6d32e318595be788524ca
+f8f70c3dcfaf4d4bc9b6d32e318595be788524ca,f8f70c3d,Display track is no updated in realtime,"Display track is no updated in realtime
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270021745,1270021745,74e1e63f9466b22086a4da9e6bf826ec3134c74e
+74e1e63f9466b22086a4da9e6bf826ec3134c74e,74e1e63f,Refactored data access to conform to Android's ContentProvider mechanism.…,"Refactored data access to conform to Android's ContentProvider mechanism. Removes some inappropriate coupling and should help for developing future features.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270018332,1270018332,0d3432b4b7acaeb2da070d341888af8083b32dac
+0d3432b4b7acaeb2da070d341888af8083b32dac,0d3432b4,Added a small safeguard when writing <sat> tag,"Added a small safeguard when writing <sat> tag
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1270009181,1270009181,cd778d7c09cfbd0aaea6220d325d5bf095fd022b
+cd778d7c09cfbd0aaea6220d325d5bf095fd022b,cd778d7c,Added italian localization thanks to diego.pierotto.,"Added italian localization thanks to diego.pierotto.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269987683,1269987683,2c1e0a3304879e6e73be5e9f3abebd638cb73e36
+2c1e0a3304879e6e73be5e9f3abebd638cb73e36,2c1e0a33,Preparing v0.3.5,"Preparing v0.3.5
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269924557,1269924557,5c6d0c6058a3a1b19b70cc979fd2ad8d1b9aa7e1
+5c6d0c6058a3a1b19b70cc979fd2ad8d1b9aa7e1,5c6d0c60,Fixed issue #12: Media files uses now timestamp of the corresponding waypoint,"Fixed issue #12: Media files uses now timestamp of the corresponding waypoint
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269923902,1269923902,9df19a7fc6ea27c1d1b29d267ee0a0b6c46c99e7
+9df19a7fc6ea27c1d1b29d267ee0a0b6c46c99e7,9df19a7f,Fixed issue #15: Added ability to fill <hdop> tags in GPX with approximation…,"Fixed issue #15: Added ability to fill <hdop> tags in GPX with approximation from location accuracy.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269907778,1269907778,4866092e9d497cd6139421cb669e355474dd5607
+4866092e9d497cd6139421cb669e355474dd5607,4866092e,Added support for screen orientation in main screen. That should fix issue #14:…,"Added support for screen orientation in main screen. That should fix issue #14: crash on devices with hardware keyboard.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269904643,1269904643,1542b6d8768927f7da7a2321925a775958948073
+1542b6d8768927f7da7a2321925a775958948073,1542b6d8,Fixed issue #13: Bad Timezone for timestamps.,"Fixed issue #13: Bad Timezone for timestamps.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269901343,1269901343,0d0f8a114a0c3e16feee0c0e7c8ff0bfc517d775
+0d0f8a114a0c3e16feee0c0e7c8ff0bfc517d775,0d0f8a11,Fixed issue #10: Remove accuracy info when GPS signal is lost,"Fixed issue #10: Remove accuracy info when GPS signal is lost
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269901285,1269901285,c5b1c9d622a2d0f42769d72f7fae560c854769b8
+c5b1c9d622a2d0f42769d72f7fae560c854769b8,c5b1c9d6,Changed screenshots for front page,"Changed screenshots for front page
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269834018,1269834018,1683e951ef3650ddc2deafb83c89975460e9a866
+1683e951ef3650ddc2deafb83c89975460e9a866,1683e951,Preparing v0.3.4,"Preparing v0.3.4
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269833682,1269833682,c0130c7b9472e104507370dc2effc941538e0d1b
+c0130c7b9472e104507370dc2effc941538e0d1b,c0130c7b,"Added recording of number of satellites for waypoints, and output to GPX","Added recording of number of satellites for waypoints, and output to GPX
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269831293,1269831293,a6cec9a45c024439d2990cbd2e3f1fe9cdcd9065
+a6cec9a45c024439d2990cbd2e3f1fe9cdcd9065,a6cec9a4,Added accuracy info in GPX and corresponding setting.,"Added accuracy info in GPX and corresponding setting.
+Added CDATA around text values.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269830505,1269830505,a82a16ab51c7988f87d529bf1443facf29a4030d
+a82a16ab51c7988f87d529bf1443facf29a4030d,a82a16ab,Added accuracy info and GPS strength info on main screen.,"Added accuracy info and GPS strength info on main screen.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269824923,1269824923,a63d306be45f0107df06c048b1ed53f4905bc653
+a63d306be45f0107df06c048b1ed53f4905bc653,a63d306b,Added ability to record accuracy for way/track points. Accuracy is saved as a…,"Added ability to record accuracy for way/track points. Accuracy is saved as a commentary in the GPX file.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269671646,1269671646,27780fd1dedf701b8e78840a5efcea10692942f7
+27780fd1dedf701b8e78840a5efcea10692942f7,27780fd1,"Adding Camera app screenshot of Android 1.5, for explaining issue #11","Adding Camera app screenshot of Android 1.5, for explaining issue #11
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269606501,1269606501,199f8bf5fc0c127771830c785d49809ed4480099
+199f8bf5fc0c127771830c785d49809ed4480099,199f8bf5,Changed screenshots,"Changed screenshots
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269575839,1269575839,1ccc95fce91bbd07afa9ba675350686334b68f6e
+1ccc95fce91bbd07afa9ba675350686334b68f6e,1ccc95fc,Added display track screen,"Added display track screen
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269573620,1269573620,d6ae5879a36481269affff559cc846802b5fce37
+d6ae5879a36481269affff559cc846802b5fce37,d6ae5879,Added user-input text waypoint tagging.,"Added user-input text waypoint tagging.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269388562,1269388562,a9d300048df1840cb17368ecb064a24be218738e
+a9d300048df1840cb17368ecb064a24be218738e,a9d30004,Fixed a bug of a component not releasing properly GPS when quitting.,"Fixed a bug of a component not releasing properly GPS when quitting.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269138765,1269138765,bac90965585037b89ed592cfcd28d23f82814967
+bac90965585037b89ed592cfcd28d23f82814967,bac90965,Dummy commit,"Dummy commit
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1269138606,1269138606,b71559ad3bd3018555d330862a9306af0939b037
+b71559ad3bd3018555d330862a9306af0939b037,b71559ad,Changed screenshots for Google Code page.,"Changed screenshots for Google Code page.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1268705056,1268705056,73e6c7d04da419528c4fdfa8210f1a9ae0c1fd13
+73e6c7d04da419528c4fdfa8210f1a9ae0c1fd13,73e6c7d0,Added a GPS status check on startup and it's corresponding setting (allowing…,"Added a GPS status check on startup and it's corresponding setting (allowing user to enable GPS if it's disabled).
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1268703410,1268703410,3dbd3077b37d886e3570db264b2ffc31f08e5627
+3dbd3077b37d886e3570db264b2ffc31f08e5627,3dbd3077,Improved notification system. Added a link in settings screen to the system GPS settings screen.,"Improved notification system. Added a link in settings screen to the system GPS settings screen.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1268696897,1268696897,f076969fadf7785021e56df4d3c29651f1644587
+f076969fadf7785021e56df4d3c29651f1644587,f076969f,First steps to implement a notification system when service is still tracking in background.,"First steps to implement a notification system when service is still tracking in background.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1268351575,1268351575,04ce88d9e1c41a17bd4556e5f28095b1c200f9f1
+04ce88d9e1c41a17bd4556e5f28095b1c200f9f1,04ce88d9,appVersion must be a String a not a reference...,"appVersion must be a String a not a reference...
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267611470,1267611470,74f7c9d48f83d23beed639ea07d8dd0324f5b912
+74f7c9d48f83d23beed639ea07d8dd0324f5b912,74f7c9d4,Preparing release 0.3.0,"Preparing release 0.3.0
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267610300,1267610300,cc0a102c2ed053bd386b50eea1e886f82079d8f6
+cc0a102c2ed053bd386b50eea1e886f82079d8f6,cc0a102c,Added high-contrast custom theme,"Added high-contrast custom theme
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267610185,1267610185,be869aacb13aeaf0a83d92205f757ea10633d772
+be869aacb13aeaf0a83d92205f757ea10633d772,be869aac,Minor label changes,"Minor label changes
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267595250,1267595250,29d9902d6b7d3714c72fa66c638950cf3838134b
+29d9902d6b7d3714c72fa66c638950cf3838134b,29d9902d,Added a graphic theme settings for the main window. For the moment works with…,"Added a graphic theme settings for the main window. For the moment works with default system themes.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267590497,1267590497,ed0456213c9e28449056c20ef9a5827a514b6b2a
+ed0456213c9e28449056c20ef9a5827a514b6b2a,ed045621,Added photo waypoint tracking with built-in camera app,"Added photo waypoint tracking with built-in camera app
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267587573,1267587573,cefc24f5ae196fcec5a0e73fc52d2715d3ef08bf
+cefc24f5ae196fcec5a0e73fc52d2715d3ef08bf,cefc24f5,Added an about screen.,"Added an about screen.
+Remove code to try to restore the current page of buttons displayed when coming back to the activity. Wasn't working well and not really necessary.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267579592,1267579592,546a9564008bf001934fb1cb8540ad1bcf39ce53
+546a9564008bf001934fb1cb8540ad1bcf39ce53,546a9564,Solved issue #1 by managing the hardware back button. The legacy back…,"Solved issue #1 by managing the hardware back button. The legacy back soft-button can be enabled/disabled with a setting. 
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267576904,1267576904,02008c03c7a4c3075b319d9685f8f03f06680503
+02008c03c7a4c3075b319d9685f8f03f06680503,02008c03,Preparing release 0.2.3,"Preparing release 0.2.3
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530793,1267530793,849cfcceaabf157f9c0c65b740c25c8da78d7c50
+849cfcceaabf157f9c0c65b740c25c8da78d7c50,849cfcce,Small bugfixes around cursor management,"Small bugfixes around cursor management
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530705,1267530705,51a39002899fd94b58cad1a367bf78cf7781dbc7
+51a39002899fd94b58cad1a367bf78cf7781dbc7,51a39002,Prevent crash if logging a waypoint with null location,"Prevent crash if logging a waypoint with null location
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530679,1267530679,d15cadb245a9796c640e4ff76b457aefbb647a5a
+d15cadb245a9796c640e4ff76b457aefbb647a5a,d15cadb2,Added a Toast to inform user that a waypoint was recorded,"Added a Toast to inform user that a waypoint was recorded
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530633,1267530633,a4d9866d25100be5dac02faffd7e437a0e9465d4
+a4d9866d25100be5dac02faffd7e437a0e9465d4,a4d9866d,Added a Toast to inform user that a waypoint was recorded,"Added a Toast to inform user that a waypoint was recorded
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530574,1267530574,c3cc32fe3fa623840cf1c682f7b43377d8a9ae15
+c3cc32fe3fa623840cf1c682f7b43377d8a9ae15,c3cc32fe,Fixed a but on timestamp format (Thanks B. Sieper),"Fixed a but on timestamp format (Thanks B. Sieper)
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267530518,1267530518,c439ee398df6c80c6262531029ce1dabb915d3c1
+c439ee398df6c80c6262531029ce1dabb915d3c1,c439ee39,Fixed a crash when accessing waypoint list just after stop tracking.,"Fixed a crash when accessing waypoint list just after stop tracking.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267089588,1267089588,4b689f3ad54f6ee82a5c0759c7ae66104b1f9525
+4b689f3ad54f6ee82a5c0759c7ae66104b1f9525,4b689f3a,Added an activity to display recorded waypoints,"Added an activity to display recorded waypoints
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267088457,1267088457,32f2409ac4ecdd654aa1163c8e59d75b919ed359
+32f2409ac4ecdd654aa1163c8e59d75b919ed359,32f2409a,Managed unaivalability of SD card when starting tracking,"Managed unaivalability of SD card when starting tracking
+Try some hacks to prevent voice recording problems
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1267053935,1267053935,199236dca65f89d98a40b88a6e8f3904ebdb9cfd
+199236dca65f89d98a40b88a6e8f3904ebdb9cfd,199236dc,Upgrading to v0.2.1,"Upgrading to v0.2.1
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266986313,1266986313,6f1e90eff3bbdbf63e097a133d292083677b74a1
+6f1e90eff3bbdbf63e097a133d292083677b74a1,6f1e90ef,Updated screenshots for v0.2.1,"Updated screenshots for v0.2.1
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266985600,1266985600,262534d33d0a9e43148cd7f2cf5d51989f587fa3
+262534d33d0a9e43148cd7f2cf5d51989f587fa3,262534d3,"Added missing graphics for ""way"" and ""tracks"" buttons","Added missing graphics for ""way"" and ""tracks"" buttons
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266985079,1266985079,0360c1d9f66d38b4bec5e66e5268255d2c653615
+0360c1d9f66d38b4bec5e66e5268255d2c653615,0360c1d9,Added graphics for Bench button,"Added graphics for Bench button
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266976313,1266976313,d5c088603ebfafc7d4ea04c81e0a884fd56c4b6f
+d5c088603ebfafc7d4ea04c81e0a884fd56c4b6f,d5c08860,"Added graphics for nearly each button. Still missing for ""way"" and ""track"" page.","Added graphics for nearly each button. Still missing for ""way"" and ""track"" page.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266975725,1266975725,3befb0d4f6594d4b1d15229b3f694ec335fb84d7
+3befb0d4f6594d4b1d15229b3f694ec335fb84d7,3befb0d4,"First attempt to have the service work in background when user quits UI. Works,…","First attempt to have the service work in background when user quits UI. Works, but lacks a notification system.
+Preferences screen now display the values of preferences.
+Incremented version number.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266966299,1266966299,2a48ed6afc1932c1f14622a2d265c3459c65c2e8
+2a48ed6afc1932c1f14622a2d265c3459c65c2e8,2a48ed6a,Introduced a Intent-base communication between Activity and Service to reduce…,"Introduced a Intent-base communication between Activity and Service to reduce complexity, and prepare backgrounding of service.
+Some minor changes in preferences UI.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266924218,1266924218,da88528cf25ea1920c3549e4263692bade85849f
+da88528cf25ea1920c3549e4263692bade85849f,da88528c,Refactored things to reduce complexity. No more GPS Listener dedicated class and…,"Refactored things to reduce complexity. No more GPS Listener dedicated class and GPSStatus custom bean. Must be tested, though...
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266904970,1266904970,2928f5101e0066e470224a8a898d09c03f615cd6
+2928f5101e0066e470224a8a898d09c03f615cd6,2928f510,Moved the todo list to the project wiki,"Moved the todo list to the project wiki
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266875398,1266875398,d33b5a8ebf42fc0fdf5de8a245e9983e8dcf6125
+d33b5a8ebf42fc0fdf5de8a245e9983e8dcf6125,d33b5a8e,Cleaning & comments,"Cleaning & comments
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266824938,1266824938,c65a698bce41a7930945c21a7a6fe5eaa8174370
+c65a698bce41a7930945c21a7a6fe5eaa8174370,c65a698b,Resized screenshots,"Resized screenshots
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266821087,1266821087,089295cbb6e578c71440a61517391c5e1b29ed8b
+089295cbb6e578c71440a61517391c5e1b29ed8b,089295cb,Creating directory for wiki media,"Creating directory for wiki media
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266817287,1266817287,151bf294a86748c8cd134a4a8ff51dc9c2751624
+151bf294a86748c8cd134a4a8ff51dc9c2751624,151bf294,Initial import,"Initial import
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266816562,1266816562,49c363d886099dd085184ba111c92277c043d4c5
+49c363d886099dd085184ba111c92277c043d4c5,49c363d8,Initial import,"Initial import
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266816511,1266816511,42e9763ecdae9dd6df6273ea3ff463475c2b554b
+42e9763ecdae9dd6df6273ea3ff463475c2b554b,42e9763e,Initial import,"Initial import
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266816402,1266816402,48c874fe64016d549f4c02bb92c576f61bfcbbf2
+48c874fe64016d549f4c02bb92c576f61bfcbbf2,48c874fe,Initial directory structure.,"Initial directory structure.
+",,,,Nicolas Guillaumin,nicolas+github@guillaumin.me,Nicolas Guillaumin,nicolas+github@guillaumin.me,1266815428,1266815428,

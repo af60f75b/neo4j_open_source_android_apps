@@ -1,0 +1,401 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+9155f274f7a31402ab91ceba3b39858ba7168b3d,9155f274,Fix issue due to dismiss placeholder notification setting,"Fix issue due to dismiss placeholder notification setting
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1510192853,1510192853,726a0ea954091f375f8e098482c6e1d2992b7100
+726a0ea954091f375f8e098482c6e1d2992b7100,726a0ea9,Fixed a null issue with line app (actual user issue not fixed),"Fixed a null issue with line app (actual user issue not fixed)
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1509508868,1509508868,c599b6e25e5857ba75ddd4d5ea193b8d45d2b358
+c599b6e25e5857ba75ddd4d5ea193b8d45d2b358,c599b6e2,"Improved priority mode support, fixed bug due to LINE group summary notifications","Improved priority mode support, fixed bug due to LINE group summary notifications
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1505105092,1505105092,3241a6567b9bdfb643040662c2399ec405eba21e
+3241a6567b9bdfb643040662c2399ec405eba21e,3241a656,App version 2.9.9-oreo-beta (33),"App version 2.9.9-oreo-beta (33)
+
+Changes include:
+* Compatibility with Android Oreo (8.0.0). Implemented new Notification Channel.
+* Remember previous Notification service state between phone reboots.
+* Add new Farsi transliterations.
+* New (round) app icon.
+* Fixed (potentially) issue with WhatsApp and LINE group summary notifications.
+* Enabled ""Dismiss Placeholder Notifcation"" setting by default.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1504584737,1504588079,c9578089f3b077bc413762646b276f9fde9c9aeb
+c9578089f3b077bc413762646b276f9fde9c9aeb,c9578089,Trying to fix issues with Android O,"Trying to fix issues with Android O
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1504461252,1504461252,2c6469abb66f3e30c650ec14c0677154c02165c3
+2c6469abb66f3e30c650ec14c0677154c02165c3,2c6469ab,Fix one-time crash after DB upgrade,"Fix one-time crash after DB upgrade
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1501912962,1501916195,1d804b630587d00cb01c48616b29db4ec4f09735
+1d804b630587d00cb01c48616b29db4ec4f09735,1d804b63,"New prod version 2.9.8 (31): Logging, day of week scheduling, bug fixes, improvements","New prod version 2.9.8 (31): Logging, day of week scheduling, bug fixes, improvements
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1501473904,1501473904,5b06fb0e10115cc727883932a2fab5dd1b87f717
+5b06fb0e10115cc727883932a2fab5dd1b87f717,5b06fb0e,FIX issue with All Day Schedule column! (Version 30),"FIX issue with All Day Schedule column! (Version 30)
+
+I forgot a comma. Therefore the db had a managled column name!
+This answers everything! And I found out because I finally tried
+a clean install!
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500961369,1500961369,9e37741146c08af4ed3dbf04b7d4fb4340e25557
+9e37741146c08af4ed3dbf04b7d4fb4340e25557,9e377411,Add exception handling when inserting to DB,"Add exception handling when inserting to DB
+
+Now, we also handle exceptions when inserting to DB. Previously,
+they were ignored. But that has caused issues of not seeing apps for
+users. Provide useful guidance to users to submit logs when there are
+errors. Also, change version number.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500958458,1500958458,a33e209c2f2f14e14df432ed3d7e0ed7c7a8b774
+a33e209c2f2f14e14df432ed3d7e0ed7c7a8b774,a33e209c,Fix DB upgrade issues,"Fix DB upgrade issues
+
+Now use a more fool-proof way to upgrade DB:
+1. Search for missing columns and add them.
+2. Use exception handling when upgrading/downgrading db.
+3. Look for any exception in db handling and for logcat extracting
+4. Remove annoying toast in NLService.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500956227,1500956429,c4f0de7b7f9ca6a22527601dac768cfea5e74e01
+c4f0de7b7f9ca6a22527601dac768cfea5e74e01,c4f0de7b,Logcat logging and more debug logging for empty app list,"Logcat logging and more debug logging for empty app list
+
+New in version 2.9.7-BETA (version 28)
+Logcat logging is allowed and okay. Can only see self logs
+which is what we need.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500851893,1500851970,dab6c26da2e24f62d99bcc363cab80805e5aff77
+dab6c26da2e24f62d99bcc363cab80805e5aff77,dab6c26d,Add a lot more verbose debug logging for empty app list,"Add a lot more verbose debug logging for empty app list
+
+This is to debug the empty app list bug some users experience.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500847107,1500847107,cb6e7a6432b62082e95f0d29cd4983cf6ac5b624
+cb6e7a6432b62082e95f0d29cd4983cf6ac5b624,cb6e7a64,Update BETA version to 2.9.6-BETA (version 27),"Update BETA version to 2.9.6-BETA (version 27)
+
+New features include:
+1. Improve implementation of debug log collection
+2. Fix bug in message extractor (complaint from user)
+3. Improve coding style in message extractor
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1500767665,1500767665,a7d436513f8db3a0e131190286c74d3a3f30d0d2
+a7d436513f8db3a0e131190286c74d3a3f30d0d2,a7d43651,Updated to beta version 26 (2.9.5-BETA),"Updated to beta version 26 (2.9.5-BETA)
+
+New features include:
+1. Debug logging
+2. Add new column in DB to store day of week schedule info
+3. Add day of week schedule selection
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1498439247,1500767472,0d208bcba79791f06f5a1ac64709212613dbc6ae
+0d208bcba79791f06f5a1ac64709212613dbc6ae,0d208bcb,Update version number and changelog,"Update version number and changelog
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1496894503,1496894503,397d7e9b27a9bcbfd38a36a0bcf1860db0cc239c
+397d7e9b27a9bcbfd38a36a0bcf1860db0cc239c,397d7e9b,Fix the widget bug,"Fix the widget bug
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1496893665,1496893665,4e20140f0921e8b2a26658a48f8e3cf8517e3685
+4e20140f0921e8b2a26658a48f8e3cf8517e3685,4e20140f,Donation feature + repeat setup prompt + add new fitbit devices + bug fixes,"Donation feature + repeat setup prompt + add new fitbit devices + bug fixes
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1496891812,1496893615,345e25f3dd1c0f1538dec9e82a3708d5d4c68a00
+345e25f3dd1c0f1538dec9e82a3708d5d4c68a00,345e25f3,Add latest release apk,"Add latest release apk
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1495325483,1495325483,39410d051a697b543193e0b07dc3567706647651
+39410d051a697b543193e0b07dc3567706647651,39410d05,Merge branch 'ongoingnotifications' of github.com:benjymous/fitnotifications into richard-ongoing,"Merge branch 'ongoingnotifications' of github.com:benjymous/fitnotifications into richard-ongoing
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1493600666,1493600695,"3fa5f4132a1e58242d28cab3d9d8a78dc6bfb645,b659dd61c13788fe70a93c6915eea863a2e53c27"
+3fa5f4132a1e58242d28cab3d9d8a78dc6bfb645,3fa5f413,Added some more misc unsupported characters to translit_data (#8),"Added some more misc unsupported characters to translit_data (#8)
+
+* Added some more misc unsupported characters to translit_data
+
+* Fixed tabs -> spaces
+
+* TM -> (tm) to prevent words running together
+
+BLAH™ -> BLAH(tm)
+",,,,Richard Munn,rm.github@grapefruitopia.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1493596779,1493596779,57f3045adeadbc031c32bc1a9f94fe2bf792239c
+57f3045adeadbc031c32bc1a9f94fe2bf792239c,57f3045a,"Only show ""sent you a photo"" text once for multiple photos received at once","Only show ""sent you a photo"" text once for multiple photos received at once
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490464029,1493596273,192670aa371cf05ed394929adf5d8fa0376db3a7
+192670aa371cf05ed394929adf5d8fa0376db3a7,192670aa,"Fixed skipping messages in case of repeated text (as in ""Ok"" followed by [""I'll do it"", ""Ok""])","Fixed skipping messages in case of repeated text (as in ""Ok"" followed by [""I'll do it"", ""Ok""])
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490463709,1493596273,dcb5c0c4d299f173d2362eba5bfe3edf5ac97bde
+dcb5c0c4d299f173d2362eba5bfe3edf5ac97bde,dcb5c0c4,Ignore group summary notifications from GMail as they don't provide any…,"Ignore group summary notifications from GMail as they don't provide any additional useful information
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490302905,1493596273,e7872e0be20b531efa192abab14cf887253364c7
+e7872e0be20b531efa192abab14cf887253364c7,e7872e0b,Google Calendar does not post duplicate notifications - use…,"Google Calendar does not post duplicate notifications - use BasicMessageExtractor to avoid blocking recurrent reminders / events notifications
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490301181,1493596273,1a2df1e39c14ee31ee55c85a24955f78b6d013dd
+1a2df1e39c14ee31ee55c85a24955f78b6d013dd,1a2df1e3,Moved notifications rate check down so that it only applies to notifications…,"Moved notifications rate check down so that it only applies to notifications that would have been shown
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490300117,1493596273,7ab9ee22e42c2e11ab9268236aabc23814943a11
+7ab9ee22e42c2e11ab9268236aabc23814943a11,7ab9ee22,Added safeguard try-catch when compiling localized patterns,"Added safeguard try-catch when compiling localized patterns
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1490128333,1493596273,1858a0c24101a2a153df09d65ef478b8d4e17a89
+1858a0c24101a2a153df09d65ef478b8d4e17a89,1858a0c2,Fixed patterns escaping in strings.xml,"Fixed patterns escaping in strings.xml
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489891402,1493596273,3582728d2a7b4f5e93196697bf2e0a9295e6108e
+3582728d2a7b4f5e93196697bf2e0a9295e6108e,3582728d,Unit test code cleanup,"Unit test code cleanup
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489890822,1493596273,31f46fcd1f4b933317edc541a24101a46731eb25
+31f46fcd1f4b933317edc541a24101a46731eb25,31f46fcd,Added localized summary message patterns (compatible with Telegram and WhatsApp)…,"Added localized summary message patterns (compatible with Telegram and WhatsApp) for several European languages
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489888627,1493596273,45f0189fb27120e66e5e03fc8d2d4166547f0b94
+45f0189fb27120e66e5e03fc8d2d4166547f0b94,45f0189f,Avoid omitting (legitimate) repeating messages from apps with a specialized extractor,"Avoid omitting (legitimate) repeating messages from apps with a specialized extractor
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489865339,1493596273,e627d1b5afb724eaa8997ad5b29b886665bb39c3
+e627d1b5afb724eaa8997ad5b29b886665bb39c3,e627d1b5,Fix for the case when the same message arrives to two different chats,"Fix for the case when the same message arrives to two different chats
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489859635,1493596273,6e7840e3bb184c1cc91df92446373730bf4c61a7
+6e7840e3bb184c1cc91df92446373730bf4c61a7,6e7840e3,Implemented handling of new messages from several senders,"Implemented handling of new messages from several senders
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489857719,1493596273,5c7083d7c427fd38fe52719e70ad952be1713520
+5c7083d7c427fd38fe52719e70ad952be1713520,5c7083d7,Implemented MessageExtractor for WhatsApp,"Implemented MessageExtractor for WhatsApp
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489851717,1493596273,5393bd7b0bf189792a5b08fb69fccfe1e4f14e8b
+5393bd7b0bf189792a5b08fb69fccfe1e4f14e8b,5393bd7b,Implemented MessageExtractor for Telegram,"Implemented MessageExtractor for Telegram
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489850608,1493596273,2b334cbb3b38b43d47485103a3b471e1d96bef94
+2b334cbb3b38b43d47485103a3b471e1d96bef94,2b334cbb,Implemented mechanism to use app-specific extractors,"Implemented mechanism to use app-specific extractors
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489793527,1493596273,16cea5010b93e1fb5c2ae602bafe737658575897
+16cea5010b93e1fb5c2ae602bafe737658575897,16cea501,Introduced 'extractors' concept as the basis for app-specific notifications text handling,"Introduced 'extractors' concept as the basis for app-specific notifications text handling
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1489793206,1493596273,2b23c2973722a55a8260e287c07c4239c1792510
+2b23c2973722a55a8260e287c07c4239c1792510,2b23c297,Version 23,"Version 23
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1493596037,1493596037,8baf1960d3ec5b2a2695aa3cbefb4768111f22c1
+b659dd61c13788fe70a93c6915eea863a2e53c27,b659dd61,"Added per-app ""discard ongoing notifications"" option","Added per-app ""discard ongoing notifications"" option
+
+This allows ongoing notifications to be relayed for chosen apps -
+allowing things like ""now playing"" notifications from Spotify.
+
+This new option defaults to ""on"" so as to maintain the existing
+""non-spammy"" behaviour, so a user has to explicitly turn off the switch
+to allow ongoing notifications to be relayed.
+",,,,benjymous,rm.github@grapefruitopia.com,benjymous,rm.github@grapefruitopia.com,1492460573,1492460573,2ef47ca9177c066852293d2baa49a155938b52af
+8baf1960d3ec5b2a2695aa3cbefb4768111f22c1,8baf1960,Improve transliterations for Polish and Lithuanian and bug fix,"Improve transliterations for Polish and Lithuanian and bug fix
+
+Remove extraneous intent-filters in manifest that
+caused some unintended consequences (such as app
+being presented as a choice for ""sharing"" and as
+a ""dialer/phone"" app.
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1490226594,1490226594,2ef47ca9177c066852293d2baa49a155938b52af
+2ef47ca9177c066852293d2baa49a155938b52af,2ef47ca9,Add new all day schedule column to db and update main page,"Add new all day schedule column to db and update main page
+
+Add a link to rate the app and also add a link to give feedback
+to improve transliterations
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1488853939,1488864200,8b37a9a4acc0bd39ca4c5fdd812af20715c1cbd7
+8b37a9a4acc0bd39ca4c5fdd812af20715c1cbd7,8b37a9a4,Add fixes for Hebrew,"Add fixes for Hebrew
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1488850897,1488850897,6dd0124f8acbf1efa2fc28127fe6de1f2dc2c7a9
+6dd0124f8acbf1efa2fc28127fe6de1f2dc2c7a9,6dd0124f,Improve app schedule setting implementation,"Improve app schedule setting implementation
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1488778502,1488778502,d192a0177da26f403d61b8c8fa5df28b43f2847b
+d192a0177da26f403d61b8c8fa5df28b43f2847b,d192a017,Fix TranslitUtil initialization.,"Fix TranslitUtil initialization.
+
+TranslitUtil needs access to Resources which only becomes available
+after Context has been initialized.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1488043693,1488740962,d5043f72b3c7ed0d6d57722ecc580ea648e7bc2d
+d5043f72b3c7ed0d6d57722ecc580ea648e7bc2d,d5043f72,Add transliteration support for Unicode surrogate pairs (e.g. emojis).,"Add transliteration support for Unicode surrogate pairs (e.g. emojis).
+
+Extend TranslitUtil to support Unicode surrogate pairs.
+Add popular emojis transliterations to emoticon equivalents.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487890444,1488740962,caf5f9cfcb16aa9e14ad97a4886359020309f877
+caf5f9cfcb16aa9e14ad97a4886359020309f877,caf5f9cf,Improve transliterated text compatibility with Fitbit.,"Improve transliterated text compatibility with Fitbit.
+
+ Some Latin symbols returned by ICU4J ""Any-Latin"" transliterator
+ (e.g. for some Russian characters) are not supported by Fitbit.
+ Use different replacements for such characters.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487889398,1488740962,57feeaf9f7510adbde7183ebebc4b97dd0bdf5ad
+57feeaf9f7510adbde7183ebebc4b97dd0bdf5ad,57feeaf9,Update app.iml,"Update app.iml
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1488740876,1488740876,880406d544f64fa223fa3a72b0b541d6d48da2dd
+880406d544f64fa223fa3a72b0b541d6d48da2dd,880406d5,Add icu4j.iml to version control,"Add icu4j.iml to version control
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1488044548,1488740647,3be0257b52f0ee51bf2b54cc8cdfb0b571af66d3
+3be0257b52f0ee51bf2b54cc8cdfb0b571af66d3,3be0257b,Updated Android Studio project to match the new layout,"Updated Android Studio project to match the new layout
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487249673,1487689829,82638f859a9b87cff38715399d92d0ef8dec8b4c
+82638f859a9b87cff38715399d92d0ef8dec8b4c,82638f85,Extracted ICU4J code into a separate module.,"Extracted ICU4J code into a separate module.
+
+ICU4J code and resources were extracted into a separate 'icu4j' module.
+They were also updated to the latest ICU4J release - 58.2.
+
+A unit-test was added to the 'app' module to check that transliteration works as expected.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487245557,1487689829,cd9d0ee4e9a109c3b2a17b12761a276e6e0e5cd2
+cd9d0ee4e9a109c3b2a17b12761a276e6e0e5cd2,cd9d0ee4,Fixed lint errors,"Fixed lint errors
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487243833,1487689829,2294d89445b0e894eebda8138dc474e671946696
+2294d89445b0e894eebda8138dc474e671946696,2294d894,Build configuration improvement (UTF-8 + lint),"Build configuration improvement (UTF-8 + lint)
+
+Make sure UTF-8 encoding is used for the source files.
+Exclude ICU4J code from lint checks. Do not abort the build on lint errors.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487241189,1487689829,9304e987af661254c2f274b227995be9638bb611
+9304e987af661254c2f274b227995be9638bb611,9304e987,Fixed old 'other time' value appearing in the error message.,"Fixed old 'other time' value appearing in the error message.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487457549,1487458877,5e8b57ecae8f1280b8b0575218fd787d37e764e4
+5e8b57ecae8f1280b8b0575218fd787d37e764e4,5e8b57ec,Fixed syntax error typo,"Fixed syntax error typo
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487358377,1487458877,4e66c30d841d035917a93ee263e5c82bc094cd75
+4e66c30d841d035917a93ee263e5c82bc094cd75,4e66c30d,Update buttons text with properly formatted time,"Update buttons text with properly formatted time
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487348454,1487458877,888a90ed02752ed61723b29263f23e9d0d97a0ad
+888a90ed02752ed61723b29263f23e9d0d97a0ad,888a90ed,Take user 12h/24h preference into account for time selection in app settings,"Take user 12h/24h preference into account for time selection in app settings
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,1487334838,1487458877,e2fdd7a76e510700278e42d64dcdf69b0f8973a7
+e2fdd7a76e510700278e42d64dcdf69b0f8973a7,e2fdd7a7,Update .gitignore,"Update .gitignore
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1487458174,1487458174,81ad0c93e1afa30b21d6f9846efc7b73914218c5
+81ad0c93e1afa30b21d6f9846efc7b73914218c5,81ad0c93,Add progressbar animation when waiting for app list to load,"Add progressbar animation when waiting for app list to load
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1487457736,1487457736,8acc9da8a6c29accf703130a999f9600a5332ed0
+8acc9da8a6c29accf703130a999f9600a5332ed0,8acc9da8,Merge pull request #2 from sabi0/notifications,"Merge pull request #2 from sabi0/notifications
+
+Various placeholder notifications improvements",,,,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,GitHub,noreply@github.com,1487455823,1487455823,"70029a45689d63fab48e74fa118340944ff61fa0,910d8e49abb5878c045f7a11e11a45c9168855e1"
+910d8e49abb5878c045f7a11e11a45c9168855e1,910d8e49,Removed `isNotEmpty()` helper method,"Removed `isNotEmpty()` helper method
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487362418,1487362418,54f0155948fdd633d5f15ad34b17ffe553ee14bd
+54f0155948fdd633d5f15ad34b17ffe553ee14bd,54f01559,Changed filter patterns separator to semicolon.,"Changed filter patterns separator to semicolon.
+
+Added multiple patterns tip to the hint on the app settings page.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487332132,1487332132,6e9771499dc0695e8f72f358aa088c39e02a29c1
+6e9771499dc0695e8f72f358aa088c39e02a29c1,6e977149,Further 'onNotificationPosted()' code cleanup,"Further 'onNotificationPosted()' code cleanup
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487331006,1487331006,308930ba261e13e7bb0b3bafb953603484c42ff6
+308930ba261e13e7bb0b3bafb953603484c42ff6,308930ba,Extracted notification text building into a separate method.,"Extracted notification text building into a separate method.
+
+This makes the 'onNotificationPosted' code cleaner. And also insures
+the application name is also transliterated if needed.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487329857,1487329857,e327068684ef77f404249e5b99f9b6b1f01c6706
+e327068684ef77f404249e5b99f9b6b1f01c6706,e3270686,Avoid creating view and builder if we are going to skip this notification anyway,"Avoid creating view and builder if we are going to skip this notification anyway
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487328617,1487328617,72252853451d1221c620a8b209ef22fa5af51fc2
+72252853451d1221c620a8b209ef22fa5af51fc2,72252853,Code review fixes #1,"Code review fixes #1
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487326941,1487326941,d13b56cf9e378efdf4b3d48d0e04c5f493459357
+d13b56cf9e378efdf4b3d48d0e04c5f493459357,d13b56cf,Just use the big text in case it has normal text as the prefix.,"Just use the big text in case it has normal text as the prefix.
+
+This addresses the issue of artificial separator inserted after the prefix
+(e.g. ""small text"" + ""small text and some more"" => ""small text -- and some more"")
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487282188,1487282188,eef68036368e8df18d8c819f88b9b2090d4d06da
+eef68036368e8df18d8c819f88b9b2090d4d06da,eef68036,"Changed split notification suffixes from ""... [3]"" to "" (3/5)""","Changed split notification suffixes from ""... [3]"" to "" (3/5)""
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487280972,1487280972,2c898a324c79f1a5e16d2d3c813500a9693eb827
+2c898a324c79f1a5e16d2d3c813500a9693eb827,2c898a32,Support multiple filter texts per application (comma-separated),"Support multiple filter texts per application (comma-separated)
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487280415,1487280415,d699bfcca2c44e648d5058ec0d393dba64a2029e
+d699bfcca2c44e648d5058ec0d393dba64a2029e,d699bfcc,Make notifications less visible.,"Make notifications less visible.
+
+Use the minimal priority for the notifications.
+Set visibility to SECRET to prevent notification from appearing on the lock screen.
+Prevent notifications from showing up on other devices.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487280208,1487280208,ce74640598f650e5c6fb5fa9744da18696f86e3e
+ce74640598f650e5c6fb5fa9744da18696f86e3e,ce746405,NLService code refactoring,"NLService code refactoring
+
+Extracted several methods, simplified the code overall.
+Avoid creating new Transliterator instances every time.
+",,,,Dmitry Cherniachenko,d.cherniachenko@gmail.com,Dmitry Cherniachenko,d.cherniachenko@gmail.com,1487279898,1487279898,70029a45689d63fab48e74fa118340944ff61fa0
+70029a45689d63fab48e74fa118340944ff61fa0,70029a45,Bug fixes and UI improvements,"Bug fixes and UI improvements
+
+Fixed bugs in Notification Schedule app setting, ""Setup Apps"" page
+regarding badly sorted app list and with the ""What's New"" section not
+showing up on app update correctly. Additionally, made UI improvements.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1486532039,1486532973,84d46d694276fb29435843b8f5687543900eaad7
+84d46d694276fb29435843b8f5687543900eaad7,84d46d69,Fix bug with incorrect storing of new apps in AppSelectionStore,"Fix bug with incorrect storing of new apps in AppSelectionStore
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1486513675,1486513675,a35b2fb059ff531e130b0d44d1dddf0418680390
+a35b2fb059ff531e130b0d44d1dddf0418680390,a35b2fb0,Fix bug with text filtering,"Fix bug with text filtering
+
+Accidentally forgot to filter notifications based on title text
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1486324564,1486324564,952669f588f9d7859391b2ba250a988071953c13
+952669f588f9d7859391b2ba250a988071953c13,952669f5,Implement new app specific settings,"Implement new app specific settings
+
+New settings allow users to filter notifications containing specific
+text, discard empty notifications and specify schedule during which
+time notifications from a specific app are forwarded.
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1486272002,1486272002,d6783a645510d990e7a00254777422c457b4463f
+d6783a645510d990e7a00254777422c457b4463f,d6783a64,Update version to 2.6.2,"Update version to 2.6.2
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1485405790,1485405790,6e8adf0ca3d95e4b5724b28f1ceef7dbad18c5e2
+6e8adf0ca3d95e4b5724b28f1ceef7dbad18c5e2,6e8adf0c,Update Do Not Disturb mode slide for Nougat,"Update Do Not Disturb mode slide for Nougat
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1485395560,1485395560,4ae7ecbdcc0fdb71b2723bb9357fa5d5c2351c9b
+4ae7ecbdcc0fdb71b2723bb9357fa5d5c2351c9b,4ae7ecbd,Fix: Duplicate notification occuring one after another,"Fix: Duplicate notification occuring one after another
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1485393713,1485393869,6d74ed870dd588beb6ce1618b31996f7d6effa4b
+6d74ed870dd588beb6ce1618b31996f7d6effa4b,6d74ed87,Update README.md,Update README.md,,,,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,GitHub,noreply@github.com,1485127658,1485127658,832c09146536623c01a1807936f315587f6ecefd
+832c09146536623c01a1807936f315587f6ecefd,832c0914,Create README.md,Create README.md,,,,Abhijit Kiran Valluri,abhijitvalluri@users.noreply.github.com,GitHub,noreply@github.com,1485127411,1485127411,0635da40eb76cea6812824d029dafcda84fb0f52
+0635da40eb76cea6812824d029dafcda84fb0f52,0635da40,Add license information to the code,"Add license information to the code
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1485126782,1485126782,4d11b2fd65e5a263ea4999f767662bd12605174b
+4d11b2fd65e5a263ea4999f767662bd12605174b,4d11b2fd,Version 16: Revert the filtering of notifications using some flags,"Version 16: Revert the filtering of notifications using some flags
+
+This is causing major problems and blocking some useful notifications.
+It looks like there is no clean way to block useless notifications
+automatically! Strange, given that Fitbit's native implementation for
+Blaze seems to take care of this already... may be they hardcoded it
+for many typical apps?? Anyway, we should just give users a string
+filter choice. So, implement that next may be.
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1476336030,1476336030,5c7f02b2eaca65f43386e96aa7f11e4b2f9505bd
+5c7f02b2eaca65f43386e96aa7f11e4b2f9505bd,5c7f02b2,Some changes to version 15 (late commit),"Some changes to version 15 (late commit)
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1476325458,1476325458,0561c632f41d917001c9682ccb87b4d71f95b3db
+0561c632f41d917001c9682ccb87b4d71f95b3db,0561c632,Minor fixes to changelog text and update version,"Minor fixes to changelog text and update version
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475975614,1475975614,6baa0f5db10ad084085c45336feec2a0a6557754
+6baa0f5db10ad084085c45336feec2a0a6557754,6baa0f5d,Update the UI to look nicer!,"Update the UI to look nicer!
+
+Create a navigation drawer for better home screen organization
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475974043,1475974063,f2ce8f300ca98026c56a8e206a2b4b73a114aad1
+f2ce8f300ca98026c56a8e206a2b4b73a114aad1,f2ce8f30,Make minor changes to strings & update app version,"Make minor changes to strings & update app version
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475551566,1475551566,5c0cf317a52de886cad719b5febcfa37b09f8a38
+5c0cf317a52de886cad719b5febcfa37b09f8a38,5c0cf317,Add more files to ICU4J lib to avoid crash + 2 new features,"Add more files to ICU4J lib to avoid crash + 2 new features
+
+Allow users to hide the app name in the notification. Also,
+use the Notification flags to discard spammy notifications
+automatically.
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475550754,1475550754,486c0092c04df970670bf334bc9d675f05492c81
+486c0092c04df970670bf334bc9d675f05492c81,486c0092,"Add ICU4J license info, update version number","Add ICU4J license info, update version number
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475386695,1475386695,db6070a2ba1633a5cc522ad8d5b298fd8bf046ea
+db6070a2ba1633a5cc522ad8d5b298fd8bf046ea,db6070a2,Disable split screen on Android 7.0,"Disable split screen on Android 7.0
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475381342,1475381342,b01d1bd451706642efc6dce241957abb3b01bd1a
+b01d1bd451706642efc6dce241957abb3b01bd1a,b01d1bd4,Implement split notification feature,"Implement split notification feature
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475380830,1475380830,dda07f3ad119bc3409bc4b814133861376c021a7
+dda07f3ad119bc3409bc4b814133861376c021a7,dda07f3a,Implement Notification transliteration feature,"Implement Notification transliteration feature
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1475353705,1475353705,e537faa90d1aff0d20ddd5aeb1b2064fd2ba6cfb
+e537faa90d1aff0d20ddd5aeb1b2064fd2ba6cfb,e537faa9,Release 11: Improve settings page and fix important crash,"Release 11: Improve settings page and fix important crash
+
+Gray out settings when they are disabled. Fix a crash when
+in landscape mode in the main page. Change version name and code
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1474087564,1474087564,7239335df0899fe79cf38d16f5f0674d07496b6a
+7239335df0899fe79cf38d16f5f0674d07496b6a,7239335d,Add open source licenses and new setting in setting page,"Add open source licenses and new setting in setting page
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1474003712,1474004140,9f20b790cd1bc814c1227617d3f8a7272efa53f2
+9f20b790cd1bc814c1227617d3f8a7272efa53f2,9f20b790,Customize the NumberPickerPreference class,"Customize the NumberPickerPreference class
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473996460,1474003672,57afd365ee466b52d95e23185f06c908c1b792a4
+57afd365ee466b52d95e23185f06c908c1b792a4,57afd365,Improve the text in Settings page,"Improve the text in Settings page
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473993530,1473993530,a2f9260ede47a42cb8204b9ea394f360844893f1
+a2f9260ede47a42cb8204b9ea394f360844893f1,a2f9260e,Fix the NullPointerException when using troubleshoot setting from notification intent,"Fix the NullPointerException when using troubleshoot setting from notification intent
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473993505,1473993505,2b7cb7533597e419e9e7f113af23d7543c527212
+2b7cb7533597e419e9e7f113af23d7543c527212,2b7cb753,Update what's new string and add the release .apk,"Update what's new string and add the release .apk
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473820434,1473820434,2e54197640975406e8536ac8b8647338820b926f
+2e54197640975406e8536ac8b8647338820b926f,2e541976,Add better notification icon and improve layout,"Add better notification icon and improve layout
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473650081,1473650081,cbce4b408a4a76965d0157412830d1c922be1a59
+cbce4b408a4a76965d0157412830d1c922be1a59,cbce4b40,Fix the AppIntroActivity,"Fix the AppIntroActivity
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473626974,1473626974,0e76360e191dc2428521971c027e1d8a870c750f
+0e76360e191dc2428521971c027e1d8a870c750f,0e76360e,Implement a widget,"Implement a widget
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473576343,1473576393,3c07d9e71405f4cbff2b9bab62cdfe5995c7944d
+3c07d9e71405f4cbff2b9bab62cdfe5995c7944d,3c07d9e7,Implement two new features.,"Implement two new features.
+
+Click on the placeholder notification to go to settings to enable
+auto-dismiss. Also, notifications are not relayed when screen is on.
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473546505,1473546505,1fe86dbaa6e433ecb1411106c324e3ca44f690e8
+1fe86dbaa6e433ecb1411106c324e3ca44f690e8,1fe86dba,Update to Android 7.0 SDK,"Update to Android 7.0 SDK
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1473533201,1473533201,1f106e6c72bb6477db7d6896c2f063d73d98b0be
+1f106e6c72bb6477db7d6896c2f063d73d98b0be,1f106e6c,Add fit notifications launcher icons archive,"Add fit notifications launcher icons archive
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1469254908,1469254908,bc8eb1fc0ff46b8673f854bad9da831709896acb
+bc8eb1fc0ff46b8673f854bad9da831709896acb,bc8eb1fc,Provide interactive setup and do bug fixes,"Provide interactive setup and do bug fixes
+
+This is a bad git commit btw. But I just checked in all my changes to my
+local repo. That's it. I provided an interactive setup and then also added
+a troubleshooting setting to selectively disable it and then also did
+some refactoring and some UX bug fixes [unnecessary "":"", modify changelog
+menu, add a pop-up when installing new version].
+
+TODO: Modify InfoActivity to make use of a menu like structure inside it
+and leverage the single activity idea?
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1468657998,1468657998,95a4a29824b61b292a530b2c904914306108cb95
+95a4a29824b61b292a530b2c904914306108cb95,95a4a298,Changes to Android Studio project due to git,"Changes to Android Studio project due to git
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1468128031,1468128031,c9b471cf4707c950156fa1a775d3f6eb49196d5f
+c9b471cf4707c950156fa1a775d3f6eb49196d5f,c9b471cf,Initial commit: Fit Notifications app as of v2.2,"Initial commit: Fit Notifications app as of v2.2
+
+Signed-off-by: Abhijit Kiran Valluri <me@abhijitvalluri.com>
+",,,,Abhijit Kiran Valluri,me@abhijitvalluri.com,Abhijit Kiran Valluri,me@abhijitvalluri.com,1468119218,1468119218,

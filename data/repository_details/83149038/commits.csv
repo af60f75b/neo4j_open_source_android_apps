@@ -1,0 +1,57 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c25fdab0847a6db666dfc8572ebea7a481bd2c9d,c25fdab0,Release v2.0,"Release v2.0
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1511540327,1511540327,1b2868c979895932777c95f65411c4c7304f0b08
+1b2868c979895932777c95f65411c4c7304f0b08,1b2868c9,Fix non-functioning enter key on gboard.,"Fix non-functioning enter key on gboard.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1511539302,1511539302,7ebf3c81b4faedae38577c5b49307fe5ec92ddc6
+7ebf3c81b4faedae38577c5b49307fe5ec92ddc6,7ebf3c81,Upgrade android dependencies.,"Upgrade android dependencies.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1511523675,1511523675,df9a73f484a3bab2dd247a8d38e0129f564993cf
+df9a73f484a3bab2dd247a8d38e0129f564993cf,df9a73f4,"Add keybindings to all edit fields, by creating specific class.","Add keybindings to all edit fields, by creating specific class.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1494892075,1494892075,8e64a1d8c7c600ce5cb2f813474aec9184e27e00
+8e64a1d8c7c600ce5cb2f813474aec9184e27e00,8e64a1d8,Add vcs config.,"Add vcs config.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1494888189,1494888189,1ec5cfaaa4f92845d5f1445fcbd12ba60ee32f92
+1ec5cfaaa4f92845d5f1445fcbd12ba60ee32f92,1ec5cfaa,Remove unneeded member variable.,"Remove unneeded member variable.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1494888134,1494888134,6b42978fd8466657029d8d4b15e6ce99a40e6cd7
+6b42978fd8466657029d8d4b15e6ce99a40e6cd7,6b42978f,"Upgrade to newer release of gradle, because why not.","Upgrade to newer release of gradle, because why not.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1494888104,1494888104,fbaccc9cece6617162d81b3d6423840dff7ef28f
+fbaccc9cece6617162d81b3d6423840dff7ef28f,fbaccc9c,"Apparently, module was misconfigured at project creation time.","Apparently, module was misconfigured at project creation time.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1494888077,1494888077,e6637d7a0a845a7eda25bb185cffdb40412b3bcb
+e6637d7a0a845a7eda25bb185cffdb40412b3bcb,e6637d7a,Make text-to-speech work on buttons.,"Make text-to-speech work on buttons.
+
+Move text-to-speech engine to a singleton that is shared between all components.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488671317,1488671317,3ffbb6e09011a8fafa802422b3c4ebd23a533fba
+3ffbb6e09011a8fafa802422b3c4ebd23a533fba,3ffbb6e0,Create the screen with the buttons.,"Create the screen with the buttons.
+
+15 buttons.
+Top left button always goes to free mode speaking.
+Bottom right button is always red.
+All buttons except for the free mode speaking button (14 buttons) are configurable using long press.
+
+Still need to hook up the text to actually speak, currently it just displays what it would do.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488670204,1488670204,e536792a78714a743075a8114d909573b395fe14
+e536792a78714a743075a8114d909573b395fe14,e536792a,Merge pull request #1 from nahratzah/button_screen,"Merge pull request #1 from nahratzah/button_screen
+
+Menu functionality",,,,Ariane van der Steldt,ariane@stack.nl,GitHub,noreply@github.com,1488649192,1488649192,"7b9c4b2c7586f38907fa4702005e10aa86cc412f,5e701c59fed69b9c37e0a60dbb30d6d3545ff681"
+5e701c59fed69b9c37e0a60dbb30d6d3545ff681,5e701c59,Make toolbar work.,"Make toolbar work.
+
+Turns out, the documentation I was following was broken and incorrectly said the toolbar was not supported natively (and required the Toolbar class instead).
+But the v7 compatibility library already contains the right logic to make this work.
+
+Since there are no actions associated with the toolbar, it's only item is disabled for now.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488647912,1488647912,1dad073defc70118e9389be95d7e102527d48f21
+1dad073defc70118e9389be95d7e102527d48f21,1dad073d,Use a fancy toolbar.,"Use a fancy toolbar.
+
+Still needs settings, I guess.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488639263,1488639263,7b9c4b2c7586f38907fa4702005e10aa86cc412f
+7b9c4b2c7586f38907fa4702005e10aa86cc412f,7b9c4b2c,Make text input use vertical wrapping of text.,"Make text input use vertical wrapping of text.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488637429,1488637429,9b52ca18229bc95a482ebfeee1986a1c67a86e70
+9b52ca18229bc95a482ebfeee1986a1c67a86e70,9b52ca18,Fix nullpointer exception.,"Fix nullpointer exception.
+
+(This bug had been causing me lots of panic last week.)
+While here, remove unused imports.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488634587,1488634587,592c1f26f896eaa6e5f65f19addd8da301bdf626
+592c1f26f896eaa6e5f65f19addd8da301bdf626,592c1f26,Remove unused imports.,"Remove unused imports.
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488055433,1488055433,313590e40145680ead40b1c1c599a8c3c17fc121
+313590e40145680ead40b1c1c599a8c3c17fc121,313590e4,Declare a license (BSD 2-clause).,"Declare a license (BSD 2-clause).
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488044175,1488044175,4271a71fd7d68023be626ec79097c78c35fed171
+4271a71fd7d68023be626ec79097c78c35fed171,4271a71f,Initial commit,"Initial commit
+",,,,Ariane van der Steldt,ariane@stack.nl,Ariane van der Steldt,ariane@stack.nl,1488043707,1488043707,

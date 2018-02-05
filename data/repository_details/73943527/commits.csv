@@ -1,0 +1,656 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8939c0e23b1b550645ba3a0ea5dcef75f8de15cd,8939c0e2,Version 0.3.0f,"Version 0.3.0f
+
+",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1507586317,1507586317,80ae33345e07102de9f67d78315e1b775577c1e6
+80ae33345e07102de9f67d78315e1b775577c1e6,80ae3334,Version 0.3.0f,"Version 0.3.0f
+
+",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1507585958,1507585958,39f02cbf6487adb4f471d90c4b536d9b086866ba
+39f02cbf6487adb4f471d90c4b536d9b086866ba,39f02cbf,Merge branch 'test',"Merge branch 'test'
+
+",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1507585833,1507585833,"e795418de5e5f0749c36314ddc4a08d1e5de3f64,57d3e9812ac5779077750761199a20766892e299"
+57d3e9812ac5779077750761199a20766892e299,57d3e981,Version 0.3.0f,"Version 0.3.0f
+
+- fixed confirmation window on tapping on a chasm
+- fixed some more minor stuff",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1507585765,1507585765,e795418de5e5f0749c36314ddc4a08d1e5de3f64
+e795418de5e5f0749c36314ddc4a08d1e5de3f64,e795418d,Version 0.3.0d,"Version 0.3.0d
+
+CHARACTERS
+
+- changed Wand skill attribute into Magic skill, which affects your accuracy with wands and power of some of the scrolls
+
+- changed Detection attribute into Perception, which affects your chances to expose your enemy to counter attacks instead of your chances to prevent equipping a cursed item
+
+- changed Magic power attribute into Willpower, which affects your chances to prevent equipping a cursed item instead of determining scroll's power
+
+- Warrior now gets increased amount of hp only on every 6th level instead of every 3rd level
+
+- Acolyte now gets decreased amount of hp only on every 6th level instead of every 3rd level
+
+- shields now apply their armor class bonus only with 50% chance or on failed guard attempts
+
+- shields now degrade and proc only when applying their bonus or when guarding
+
+- debuffs now affect chance to apply shield's bonus AC instead of the shield's AC
+
+- guard effectiveness is now affected by your base strength instead of excess strength
+
+- hero's remains are now separated by difficulties
+
+MOBS & BOSSES
+
+- all enemies in the fifth chapter now count as magical (but not necessarily having body or mind immunity)
+
+- third boss does not counts as magical, while still having body and mind immunity
+
+- evil eyes now drop raw meat instead of cave scorpions
+
+- fire elementals and evil eyes now only partially pierce target's armor instead of completely ignoring it
+
+- imps now deal physical damage and don't have fire resistance anymore
+
+- imps now will steal random amount of stackable items instead of the full stack
+
+ITEMS & SHOPS
+
+- ankhs now weaken curses on all of your items on activation
+
+- waterskins now can be used to wash away caustic ooze and douze burning effct on self
+
+- potions of Mending now heal 25% of health immediately
+
+- base duration of the effect of potions of Mending decreased to 15 turns instead of 20
+
+- base duration of effect of potions of Levitation increased to 20 turns (from 15 turns)
+
+- first four shops will not sell same repair tools in stock
+
+- first four shops will not have more than two of the same type of ammunition in stock
+
+RANGED WEAPONS
+
+- flintlock weapons now can be reloaded while moving
+
+- fixed issue with flintlock weapons being almost unable to deal sneak attacks
+
+- trying to shoot from a non-loaded flintlock weapon now will reload it instead of showing a warning
+
+- increased durability of ranged weapons
+
+- decreased price modifier when purchasing throwing weapons and ammunitions in shops
+
+- rebalanced amount of throwing weapons and ammunitions when generated in a wrong chapter
+
+WANDS & RINGS
+
+- wands of Disintegration/Firebolt do not completely ignore target's armor class anymore
+
+- wand of Entanglement is twice as effective now
+
+- rings of Perception were renamed into rings of Awareness and now affect bonus damage from counter attacks instead of view distance
+
+- rings of Energy were renamed into rings of Concentration and now increase mind resistance chance instead of enchantment's proc chance
+
+- rings of Sorcery now affect enchantment's proc chance instead of wand's miscast/squeeze chance
+
+- rings of Protection do not affect your mind and body resistance chance anymore
+
+SCROLLS
+
+- scrolls are now affected by your Magic skill instead of Willpower
+
+- scrolls of Challenge will not affect passive animated statues 
+
+- scrolls of Enchantment now can be used to transmute fully upgraded rings/wands into another ones
+
+- scrolls of Torment are more powerful and reliable now, but their radius of effect is limited
+
+- scrolls of Transmutation can be used on ammunition and throwing weapons
+
+- scrolls of Transmutation should be way more useful now
+
+GENERAL
+
+- added confirmation window when trying to step on a revealed trap
+
+- added confirmation window when trying to equip obviously cursed item
+
+- added confirmation window when trying to drink water while your health is greater than 50%
+
+- added new lore about winners of The Impossible Contest into the game ;)
+
+BUGFIXES & MINOR TWEAKS
+
+- fixed issue when explosions destroyed items which drop on the hero's death
+
+- partial proguard activation
+
+- improved title screen background
+
+- improved Goo's sprite
+
+- slightly improved sprite of ambitious imp NPC
+
+- thunderstrikes will now occasionally hit in diagonal directions instead of cardinal
+
+- slightly improved thunderstrike's visuals and visibility
+
+- hopefully fixed issue with successive hits not stacking combo counter
+
+- combo attacks now will apply their bonus only from the third hit
+
+- fixed combo counter being visible through fog of war
+
+- healing effect from the scroll of Sunlight cannot be resisted anymore
+
+- being exposed to counter attacks now lasts exactly one turn instead of until the beginning of target's turn
+
+- moved durability loss to hero's attack and defense procs
+
+- slightly simplified durability loss logic
+
+- cannot guard against ranged attacks without a shield anymore
+
+- cannot guard against armor piercing opponents anymore
+
+- game now indicates failed guard attempts
+
+- missed attacks now interrupt hero's actions
+
+- slightly changed character descriptions
+
+- fixed issue with shopkeepers reacting to effects of scroll of Sunlight
+
+- increased blink delay of succubi to 6 turns (from 5 turns)
+
+- mobs will not drain health on successful guards
+
+- adjusted bonus armor class from the Durability enchantment
+
+- adjusted bonus weapon damage from the Tempered enchantment
+
+- adjusted some of the item's descriptions
+
+- fixed issue were unidentified rings were labeled as cursed in their descriptions
+
+- wand of FIrebolt will not ignite non-flammable tiles anymore
+
+- wand of Freezing now can affect chasm tiles
+
+- fixed issue with wands of Phasing being able to teleport entities which are supposd to be immovable
+
+- fixed a bug when falling into a chasm while having a DoT on your character
+
+- fixed a bug where brewing a potion in a flooded alchemy lab crashed the game
+
+- fixed a bug where enemies on the edge of the view sometimes were revealed to the player
+
+- storage rooms now have their food in the main part and bonus item hidden behind the shelves
+
+- treasury rooms will not be guaranteed to have a mimic chest all the time now (except in a fifth chapter)
+
+- lightning traps will now occasionally hit in diagonal directions instead of cardinal
+
+- reworked the final floor (mostly to remove that door-shaped red herring)
+
+- reworked dead end floor (for the same reasons as above)
+
+- increased width of some of the description windows when in landscape mode
+
+- fixed issue where shooting from a flintlock weapon alarmed targets around the targeted cell instead of shooter
+
+- player can't use waterskins on full health anymore
+
+- slightly improved visuals of Thunderstorm cloud
+
+- added scrolling indicators to some of the lists",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1505671209,1505671209,14ff0511c0d390fa82de7c1f405a51471f8580d1
+14ff0511c0d390fa82de7c1f405a51471f8580d1,14ff0511,Version 0.3.0c,"Version 0.3.0c
+
+- reworked the ""Enchanted item with +X bonus acquired"" badge into ""X scrolls of Upgrade used"" badge
+- scrolls of Banishment and potions of Blessing now affect wands in the wand holder
+- potions of Strength now give 2 bonus health points regardless of your class
+- you can double tap the Search button to search now (with default behaviour set)
+- decreased skeleton respawn rate in the fourth boss fight
+
+- fixed scroll of Challenge freezing the game on floors with no mobs
+- fixed Harpoons crashing the game when used on immovable target
+- fixed the search button switch in the settings having incorrect text
+- fixed ""Nevermind"" button when the game asks you which quickslot to replace
+- fixed DM-300's boulders crashing the game in rare cases
+- NPCs are immovable now",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1490423652,1490423652,421b085c734911ead25fa084957b4f946b4b6dea
+421b085c734911ead25fa084957b4f946b4b6dea,421b085c,"Revert ""Version 0.3.0b""","Revert ""Version 0.3.0b""
+
+This reverts commit c13b24dcbc8ea22b1bf73e3b61020d4b3c9d2132.",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488934137,1488934285,c13b24dcbc8ea22b1bf73e3b61020d4b3c9d2132
+c13b24dcbc8ea22b1bf73e3b61020d4b3c9d2132,c13b24dc,Version 0.3.0b,"Version 0.3.0b
+
+- added an option to change the ""Search"" button behaviour in the game settings
+- wandmaker now shows actual wand names even if they were not identified yet
+- completing the sad ghost quest will not crash the game anymore (restart the run if he still does)
+- some loading tips were reworded (thanks to Dustin Jacobsen)
+- fixed some of the descriptions and issues",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488934137,1488934227,71fa8989c2cb6fd10302a38821023da98622c75e
+71fa8989c2cb6fd10302a38821023da98622c75e,71fa8989,Version 0.3.0b,"Version 0.3.0b
+
+
+- added an option to change the ""Search"" button behaviour in the game settings
+- player character now receives 33% less damage on Easy difficulty
+- player character now receives 33% more damage on Impossible difficulty
+- wandmaker now shows actual wand names even if they were not identified yet
+- completing the sad ghost quest will not crash the game anymore (restart the run if he still does)
+- some loading tips were reworded (thanks to Dustin Jacobsen)
+- fixed some of the descriptions and issues",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488934133,1488934133,1eb47c3d90b13a9e76ba08ecdd80f25cf85b54ee
+1eb47c3d90b13a9e76ba08ecdd80f25cf85b54ee,1eb47c3d,Merge pull request #1 from thefifthsetpin/patch-1,"Merge pull request #1 from thefifthsetpin/patch-1
+
+Many minor adjustments to the TIPS array",,,,ConsideredHamster,soleiz@mail.ru,GitHub,noreply@github.com,1488912245,1488912245,"d59a8c9d142d961117b89d0082d686ff52c9f2c8,8e2121e4c4a996237df3456ab417a7deb8646de9"
+d59a8c9d142d961117b89d0082d686ff52c9f2c8,d59a8c9d,Merged branch master into master,Merged branch master into master,,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488911902,1488911902,"50034556f991735c3f430da8202b77c97b445bbe,19fd339704d40e3016af7a4074ccbfba3b4b3b67"
+50034556f991735c3f430da8202b77c97b445bbe,50034556,Version 0.3.0a,"Version 0.3.0a
+
+General
+
+- you can hit targets out of your field of view again, but with 50% accuracy penalty
+- rebalanced rewards of sad ghost and ambitious imp quests
+- rewards of sad ghost and old wandmaker quests are visible to the player now
+- player character now receives 50% less damage on Easy difficulty
+- player character now receives 50% more damage on Impossible difficulty
+
+Items & Shops
+
+- all basic shops now sell arrows or quarrels
+- all basic shops now sell bullets or gunpowder
+- decreased base price of ammunitions
+- partially identified (non-cursed) items now cost less than fully identified ones
+- rebalanced bomb damage, bomb sticks are less powerful than bundles now
+- scrolls of Enchantment now can be used to upgrade/uncurse wands and rings
+- scrolls of Enchantment now upgrade already enchanted weapons/armors
+- scrolls of Enchantment now re-enchant only if item is already at +3
+- scrolls of Sunlight now heal more the longer you stay in their area of effect
+- effect of scrolls of Sunlight now lasts less longer
+- thunderstorm clouds now deal low damage to the fire elementals
+
+Mobs & Bosses
+
+- mob damage is not affected by difficulty anymore
+- mob respawn rate is not affected by difficulty anymore
+- tweaked last boss battle to be a bit more difficult
+- buffed damage growth rate of miasma cloud
+- carrion swarms now drain 1% of your satiety per hit
+- fire elementals do not drop gunpowder anymore
+- golems now become less armored while burning
+- wraiths now deal physical damage in melee instead of unholy, but still ignore target's armor
+- increased drop chance of raw meat from sewer crabs, giant spiders and cave scorpions
+
+
+Minor tweaks and bugfixes
+
+- shopkeepers are immovable now
+- last boss is immovable now
+- haunted floors now generate bonus items in cursed bone heaps instead of tombs
+- slightly tweaked messages when upgrading unidentified items
+- tweaked pitch of the player character's scream when playing as Acolyte
+- removed wall sign from the floor 25
+- fixed evil eyes being stupid in melee (again)
+- fixed ""Search"" button being active during search animation 
+- fixed bug with cursed items disappearing when equipped while inventory is full 
+- fixed attack/movement speed penalty values in item descriptions being overly recise
+- item descriptions now tell item's rarity to better understand item's intended chapter
+- fixed carpaccio and raw meat being partially useable even while overfed
+- fixed duplication bug with win/total count on the rankings screen
+- fixed some possible issues with attack/danger buttons
+- fixed some typos",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488911804,1488911880,02746971c608a016e659d7c6871b7dd8d6ed4717
+19fd339704d40e3016af7a4074ccbfba3b4b3b67,19fd3397,Version 0.3.5a,"Version 0.3.5a
+
+General
+
+- you can hit targets out of your field of view again, but with 50% accuracy penalty
+- rebalanced rewards of sad ghost and ambitious imp quests
+- rewards of sad ghost and old wandmaker quests are visible to the player now
+- player character now receives 50% less damage on Easy difficulty
+- player character now receives 50% more damage on Impossible difficulty
+
+Items & Shops
+
+- all basic shops now sell arrows or quarrels
+- all basic shops now sell bullets or gunpowder
+- decreased base price of ammunitions
+- partially identified (non-cursed) items now cost less than fully identified ones
+- rebalanced bomb damage, bomb sticks are less powerful than bundles now
+- scrolls of Enchantment now can be used to upgrade/uncurse wands and rings
+- scrolls of Enchantment now upgrade already enchanted weapons/armors
+- scrolls of Enchantment now re-enchant only if item is already at +3
+- scrolls of Sunlight now heal more the longer you stay in their area of effect
+- effect of scrolls of Sunlight now lasts less longer
+- thunderstorm clouds now deal low damage to the fire elementals
+
+Mobs & Bosses
+
+- mob damage is not affected by difficulty anymore
+- mob respawn rate is not affected by difficulty anymore
+- tweaked last boss battle to be a bit more difficult
+- buffed damage growth rate of miasma cloud
+- carrion swarms now drain 1% of your satiety per hit
+- fire elementals do not drop gunpowder anymore
+- golems now become less armored while burning
+- wraiths now deal physical damage in melee instead of unholy, but still ignore target's armor
+- increased drop chance of raw meat from sewer crabs, giant spiders and cave scorpions
+
+
+Minor tweaks and bugfixes
+
+- shopkeepers are immovable now
+- last boss is immovable now
+- haunted floors now generate bonus items in cursed bone heaps instead of tombs
+- slightly tweaked messages when upgrading unidentified items
+- tweaked pitch of the player character's scream when playing as Acolyte
+- removed wall sign from the floor 25
+- fixed evil eyes being stupid in melee (again)
+- fixed ""Search"" button being active during search animation 
+- fixed bug with cursed items disappearing when equipped while inventory is full 
+- fixed attack/movement speed penalty values in item descriptions being overly recise
+- item descriptions now tell item's rarity to better understand item's intended chapter
+- fixed carpaccio and raw meat being partially useable even while overfed
+- fixed duplication bug with win/total count on the rankings screen
+- fixed some possible issues with attack/danger buttons
+- fixed some typos",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1488911804,1488911804,02746971c608a016e659d7c6871b7dd8d6ed4717
+8e2121e4c4a996237df3456ab417a7deb8646de9,8e2121e4,Many minor adjustments to the TIPS array,"Many minor adjustments to the TIPS array
+
+ * Clarifying ""animated"" statues.
+ * Several grammar fixes.
+ * Rewording a couple of tips to sound more natural",,,,Dustin Jacobsen,thefifthsetpin@users.noreply.github.com,GitHub,noreply@github.com,1486761223,1486761223,02746971c608a016e659d7c6871b7dd8d6ed4717
+02746971c608a016e659d7c6871b7dd8d6ed4717,02746971,Version 0.3.0,"Version 0.3.0
+
+- all classes are unlocked by default now
+- added in-game tutorial, it is available from the game menu
+- added in-game changelog, it is available from the title screen
+- added third quickslot, improved quickslot selection by pressing on item in inventory
+- you can read potion/scroll/ring/wand descriptions from the journal
+- had to remove ""Rankings"" button from game menu when dead
+- the ""examine"" button now searches on a single tap and examines on a long press
+
+- respawn time is now increased on every mob respawned instead of every mob killed
+- base respawn time was increased from 30/35/40/45/50 to 40/45/50/55/60 turns
+- hearing other mobs will not reveal their location anymore
+- evil eyes now will stop running away when not on full health
+- succubi now will charm you only for 3-6 turns instead of 5-10 turns
+- Goo now will not regenerate health from standing on the water while enraged
+- spawns of Goo now have random amounts of health, depending on difficulty
+- while frozen, Goo is now more susceptible only to physical damage
+- Goo is now more susceptible to shock and energy damage
+
+- decreased chance to succesfully block
+- counter attacks now deal bonus 50% damage
+- ""blocked"" now means that the attack was blocked
+- ""parried"" now means that the attack was blocked and you can counterattack
+- accuracy is now decreased by 12.5% for every tile of distance except first one
+- dexterity is now decreased by 6.25% for every occupied/impassable adjacent tile instead of 10%
+- combo attacks now apply their bonus damage before it will be decreased by armor class
+- combo attacks now increase damage by 12.5% per stack after first two
+- attacks on targets which are out of field of view are automatic misses
+- decreased weight penalties reduction from excessive strength to 2.5% per point of strength
+- decreased proc chance of Revival enchantment from 10% per level to 6.25% per level
+- explosions and thunderstorms now deal only half damage to the player character
+
+- reworked item generation algorithm, now it will spawn less cursed items for expected items
+- there are now at least one guaranteed spawn of ammunition/explosives in every chapter
+- items which are known to be not cursed are now sold for appropriate price
+- items which are known to be enchanted are now sold for appropriate price
+- added chance to prevent cursed item from being equipped which depends on your detection
+- upgrade level of ambitious imp reward now depends on amount of completed quests
+- removed ring of Haste from the game, it was overpowered and unbalanceable
+- added ring of Durability, which makes your equipment and ammunition last longer
+
+- scrolls of Enchantment now dispel 1-3 negative levels from cursed item and keep item enchantment
+- scrolls of Banishment now do not dispel enchantments on cursed items if item is still cursed
+- scrolls of Transmutation will not work on cursed items anymore
+- scrolls of Transmutation now can work on ranged/flintlock weapons
+- potions of Blessing now dispel only 1-3 negative levels when thrown
+- potions of Blessing now affect all of your inventory when thrown
+
+- bridge rooms now will always have basic doors
+- burned rooms now will have increased chance of having secret doors
+- garden rooms will not have their doors to be secret when generated on the first depth
+- items from behind the storage rooms now will always spawn in one heaps
+
+- increased travelling speed of missiles
+- added visual clue that item is revealed to be non-cursed
+- added messages when spawns of Goo become entranced or absorbed
+- added some text, visual and audio clues to blocking/parrying and sneak/counter attacks
+- DM-300 now causes screen to shake when moves while enraged
+
+- fixed shopkeepers being visible from anywhere
+- fixed succubi teleporting to occupied tiles
+- fixed closed doors being shown as opened
+- fixed Goo's damage being slightly lower than it should have been
+- equipped light one-handed weapons will be now become unequipped if transmuted into something else",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1482695390,1482695390,bcc9e361985a622e01be67befc1d4d6b5d4e7fb6
+bcc9e361985a622e01be67befc1d4d6b5d4e7fb6,bcc9e361,Version 0.2.9h,"Version 0.2.9h
+
+- All classes are unlocked by default now
+- moved rooms with wells to a 4th floor of every chapter instead of 2nd floor
+
+- decreased chance for a spawn of Goo to appear on hit
+- spawns of Goo which appear after the boss becomes exhausted now have 8-16 HP (instead of 16)
+- Goo now receives double damage from fire, lightning and disintegration
+- skeletons and undead dwarves will apply Withered less often
+
+- healing from potions of Mending/scrolls of Sunlight will not cause you to oversleep anymore
+- scrolls of Raise Dead now will summon 2-4 wraiths instead of 3-4
+
+- fixed Goo damage being slightly less than it should have been
+- fixed Goo dexterity being higher than it should have been
+- fixed ranged/throwing weapons not applying their weight penalty
+- fixed shops generating rings/wands with too high upgrade level
+- fixed doors in the first boss arena not becoming locked doors if destroyed
+- fixed attribute values not being obfuscated properly when wearing unidentified cloth armors
+- fixed some other minor problems
+
+- (0.2.9g) fixed attack indicator crashing the game then tapped while not being visible
+- (0.2.9g) Increased chance for raw meat to drop from sewer crabs from 10% to 12.5%
+- (0.2.9g) Increased chance for raw meat to drop from giant spiders from 10% to 15%
+- (0.2.9g) Increased chance for raw meat to drop from cave scorpions from 10% to 17.5%
+- (0.2.9g) Increased chance for small ration to drop from dwarf monks from 5% to 10%",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1481674317,1481674317,83ef703d1d4c4f0f08cfdf9ddd05550d6b6e5c9f
+83ef703d1d4c4f0f08cfdf9ddd05550d6b6e5c9f,83ef703d,Version 0.2.9f,"Version 0.2.9f
+
+- changed some descriptions
+- added messages when being awakened
+- decreased chance of finding a cursed item
+- throwing/shooting now happens only at the end of attacking animation
+
+- scrolls of Banishment now can remove several negative levels when used
+- scrolls of Banishment now remove negative levels even if item was enchanted
+- removed minimum teleportation distance for a scrolls of Phase Warp
+- removed chance to erase known map when using scrolls of Phase Warp
+
+- fixed scrolls of Banishment not affecting equipped items sometimes
+- fixed strength requirement sometimes incorrectly being shown with a ""?"" symbol
+- fixed mimics attacking you when devouring items sometimes
+- fixed teleportation issues in first two boss levels
+- attack button now should be more stable
+- fixed scroll prices and rarities
+- fixed other minor/unlikely bugs
+- fixed several typos",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1481132390,1481132390,51ffc5cd7a5ddf45c0c3a1ec916d33ff9e565010
+51ffc5cd7a5ddf45c0c3a1ec916d33ff9e565010,51ffc5cd,Version 0.2.9e,"Version 0.2.9e
+
+- Fixed game freezing during generating boss levels if there were items dropped into a into a chasm on a previous depth
+
+- Fixed wands from heros' remains not having their sprite synced with current wand materials
+
+- Fixed incorrect strength requirement shown when weapon in the off hand was identified, but item in the main hand was not",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1480423256,1480423406,43421594e4178f5adabb93eaba5c5d252e32a6d0
+43421594e4178f5adabb93eaba5c5d252e32a6d0,43421594,Version 0.2.9d,"Version 0.2.9d
+
+- Game now identifies items before saving your equipment in ranking file
+- Mimic chest and cursed remains will not be spawned on the first floor now
+- Fixed game crashing when hitting yourself with wands or ranged weapons
+- Fixed lightning traps being triggered twice when they shock your weapon out of your hands
+- Fixed scrolls appearing on the top of bookshelves when examining bookshelves
+- Fixed minor problem where moving characters were basically at two places at once for a short moment
+- Warlocks and shamans spellcasting effects are not visible through fog of war anymore
+- Fixed some other minor things",,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1480254131,1480254131,53493dcb7b7708ba1fb104752152d94089c9f165
+53493dcb7b7708ba1fb104752152d94089c9f165,53493dcb,Version 0.2.9c,"Version 0.2.9c
+
+General
+
+- attack indicator now targets nearby mobs first
+
+- attack indicator now changes its target after ranged attacks
+
+Bugfixes
+
+- fixed Goo particles being visible through fog of war
+
+- fixed attack button crashing the game
+
+- fixed wraiths/Tengu teleportation issues",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1480232948,1480232948,dc1ea82afed9ce6cf6ba800e6b4ccd64e73e69c8
+dc1ea82afed9ce6cf6ba800e6b4ccd64e73e69c8,dc1ea82a,Version 0.2.9b,"Version 0.2.9b
+
+General
+
+- long tap on the attack indicator will open mob description window
+- long tap on the attack indicator will open mob description window
+
+- attack indicator now can choose any visible mob, not just adjacent ones
+- scrolling through mobs by tapping the danger indicator will change your attack target
+
+- moved status indicators to the bottom side of the screen
+- updated lore
+
+
+Mobs & Bosses
+
+- ranged mob attacks now interrupt current action
+
+- flying mobs can spawn on trap tiles now
+
+- evil eyes will not try to attack in melee anymore
+
+- evil eye will flee more in a smarter manner
+
+- evil eyes now have proper attack speed
+
+- DM-300 will never damage himself with avalanches anymore
+
+- DM-300 will not repair itself while enraged
+
+
+Bugfixes
+
+- fixed game crashing when Goo's miasma fails to work
+
+- fixed crafting kit and armorer's kit repairing/not repairing cloth armors
+
+- fixed bomb crafting when inventory is full
+
+- fixed health bars staying after death of wraiths in rare occasions
+
+- fixed wraiths teleporting out of boss arena
+
+- fixed some descriptions",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1480169891,1480169891,09db3df8e9995f99080b3a3ccfb53daa1e4225f7
+09db3df8e9995f99080b3a3ccfb53daa1e4225f7,09db3df8,Version 0.2.9a,"Version 0.2.9a
+
+General
+
+- Slightly updated the main menu screen
+- Added difficulty selection before starting the game
+- Redesigned screen passed games results
+
+- On Easy difficulty, mobs have decreased maximum damage and minimal amount of health
+- On Normal difficulty, mobs have normal damage range and randomized amount of health
+- On Hardcore difficulty, mobs have increased minimum damage and maximized amount of health
+- On Impossible difficulty, mobs spawn twice as often (in addition to Hardcore features)
+
+- On Easy difficulty, bosses have a 80% health
+- On Normal difficulty, bosses have a 100% health
+- On Hardcore difficulty, bosses have a 120% health
+- On Impossible difficulty, bosses have a 150% health
+
+- Rankings screen is now divided into four pages, one for each difficulty
+- To unlock the Hardcore diffculty, you must beat the game on Normal difficulty first
+- To unlock the Impossible diffculty, you must beat the game on Hardcore difficulty first
+
+- Introduced new medals for completing the game on various difficulties
+- Badges are not earned when you play on Easy difficulty
+- Some badges were removed from the game
+
+
+Characters
+
+- Character avatars were slightly redrawn
+- Now classes are unlocked gradually
+
+- To unlock Brigand, you must defeat the first boss on Normal difficulty or higher
+- To unlock Scholar, you must defeat the second boss on Normal difficulty or higher
+- To unlock Acolyte, you must defeat the third boss on Normal difficulty or higher
+
+- Brigand now starts with a ring of Shadows
+- Scholar now starts with a scroll of Raise Dead
+- Acolyte now starts with a potion of Overgrowth
+
+- Warrior now gets extra strength on levels 11/21/31 (instead of every sixth level)
+- Detection/stealth/magic power attribute were rebalanced and now grow more slowly
+- Magic power parameter now has much more drastic effect on wands recharge rate
+
+
+Dungeon
+
+- Loading tips now appear regardless of the current floor
+- Examining bookshelves now has a chance to get a piece of lore
+- Shopkeepers are now marked in the journal (and removed from it when they run away)
+
+- Traps and secret doors will be more difficult to detect now
+- Deliberately generated items will no longer spawn on the first level
+- Torches and all kinds of repair kits were added to the list of randomly generated items
+
+- Imp shopkeeper will now always appear, regardless of his quest completion
+- Imp shopkeeper now always sells items +3 (perhaps temporarily)
+
+
+Items & Equipment
+
+- Reduced degradation rate of weapons
+- Character now uses throwing weapon automatically when tapping on the enemy
+- Reduced weight penalties of throwing knives
+
+- Cloth armors now increase corresponding attributes by 5% (+5% for every upgrade level)
+- Armorer's kits can no longer be used to repair cloth armors
+- Crafting kits can now be used to repair cloth armors
+
+- The amount of gunpowder in randomly generated stacks is always a multiple of 5 now
+- Reduced the amount of powder in the fourth shop
+
+
+Scrolls and potions
+
+- Brewing potions now allows to automatically identify brewed potion
+- Duration of effect of beneficial potions is increased for every known potion
+- Strength of effect of harmful potions is increased for every known potion
+- Potions of Strength and Wisdom are ignored for this calculation
+
+- The base effectiveness of most potions has been rebalanced
+- Potions of Liquid Flame can now set fire to eight cells around the target
+- Potions of Frigid Vapours now affect random cells in area of their effect
+
+- Effectiveness of scrolls of Raise Dead/Torment/Banishment/Phase Warp/Sunlight/Darkness is now dependent on the Magic power attribute
+- Wraiths summoned by the scroll of Raise Dead are no longer temporary (also they give EXP now)
+- Scrolls of Raise Dead now temporarily charms summoned ghosts instead of pevious effect
+
+
+Mobs and bosses
+
+- Tengu boss now can become enraged, receiving a bonus accuracy, attack speed and blink frequency
+- DM-300 boss now can become enraged, receiving a bonus accuracy, move speed and damage
+- DM-300 boss is now causing rockfalls only when moving while enraged
+
+- Evil eyes will now avoid close combat only when on full health
+- Armor class of succubus was decreased to one third of previous value
+- Armor class of fire elementals has been reduced to zero
+
+
+
+Fixes & Miscellanous
+
+- Beautitude of wands and rings is no longer automatically visible
+- Fixed a bug which caused the game to crash when you zap yourself with wand of Lightning
+- Fixed a bug which caused the game to crash when trying to pickup burned items
+
+- Ranged weapons will now allow to attack in melee when no ammunition is provided
+- Withered and Charmed effects now have a visual display
+
+- Fixed some bugs with mobs/NPCs animations 
+- Fixed some typos and descriptions",,,,ConsideredHamster,consideredhamster@gmail.com,ConsideredHamster,consideredhamster@gmail.com,1479827486,1479827486,54f14bfd0dd2d9505f5bf976915be67de63cabb0
+54f14bfd0dd2d9505f5bf976915be67de63cabb0,54f14bfd,Initial commit,Initial commit,,,,ConsideredHamster,soleiz@mail.ru,ConsideredHamster,soleiz@mail.ru,1479316910,1479316910,

@@ -1,0 +1,1792 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ff253da19a94ca1222265b6966f27d4a75de4eac,ff253da1,Advance version number to 2.9.0,"Advance version number to 2.9.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1510258722,1510258722,0e5d29fe2d1b90ab08c8107d292f59c3503ea1eb
+0e5d29fe2d1b90ab08c8107d292f59c3503ea1eb,0e5d29fe,Add a preference to choose the default new shader,"Add a preference to choose the default new shader
+
+Choose any shader as the template for new shaders.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1510257799,1510257799,786a063b023ccb38c18cdb5228953d3b6505e095
+786a063b023ccb38c18cdb5228953d3b6505e095,786a063b,Initialize camera only after onSurfaceChanged(),"Initialize camera only after onSurfaceChanged()
+
+Because we need the dimensions of the surface to pick a
+preview resolution.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1510256318,1510256318,51310435e3fe2e880856082193a027af27c199a3
+51310435e3fe2e880856082193a027af27c199a3,51310435,Link CI badge with corresponding Travis page,"Link CI badge with corresponding Travis page
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1509831497,1509831497,75ba97238c1cf493820fafa2adb1cb123b21d68a
+75ba97238c1cf493820fafa2adb1cb123b21d68a,75ba9723,Remove F-Droid banner from README,"Remove F-Droid banner from README
+
+Apparently, this app is no longer available on F-Droid.
+No idea why.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1509830301,1509830301,0b5fc60a2d225708d48521115a0aaadbd5bc2d84
+0b5fc60a2d225708d48521115a0aaadbd5bc2d84,0b5fc60a,Move build status below headline in README,"Move build status below headline in README
+
+Probably a better place.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1509207957,1509207957,53b7faf9fe06679e486ef73798f89b5994c151d9
+53b7faf9fe06679e486ef73798f89b5994c151d9,53b7faf9,Use accessor methods instead of public fields,"Use accessor methods instead of public fields
+
+Better encapsulation.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508963458,1508963458,bfbb0ddf3f7c7c85bb817ecec50314932c8560d8
+bfbb0ddf3f7c7c85bb817ecec50314932c8560d8,bfbb0ddf,Lower visibility of ViewHolder members,"Lower visibility of ViewHolder members
+
+Always try to keep member visibility as low as possible.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508963410,1508963410,97ff0d5b6fefd5744a62cb8d48ad182c5dd1d475
+97ff0d5b6fefd5744a62cb8d48ad182c5dd1d475,97ff0d5b,Add casts to avoid automatic type conversions,"Add casts to avoid automatic type conversions
+
+Better be explicit.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508962929,1508962929,ea90be086b71df55a675a4a75d35c6f294a634a9
+ea90be086b71df55a675a4a75d35c6f294a634a9,ea90be08,Re-interrupt thread after InterruptedException,"Re-interrupt thread after InterruptedException
+
+InterruptedExceptions should never be ignored so it's better
+to re-interrupt the current thread instead of loosing that info.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508880359,1508880359,649551a28b32af7d6fe8f8ae62900a27c574d051
+649551a28b32af7d6fe8f8ae62900a27c574d051,649551a2,Close InputStream in a finally clause,"Close InputStream in a finally clause
+
+InputStream needs to be closed after use.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508880276,1508880276,ed3551b9c366bc1d841e552e1d5fd0c542057e77
+ed3551b9c366bc1d841e552e1d5fd0c542057e77,ed3551b9,Close MatrixCursor in a finally clause,"Close MatrixCursor in a finally clause
+
+MatrixCursor needs to be closed after use.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508880109,1508880109,f589d7f93befdfcbaaa5ec53162cdc59ea9b9764
+f589d7f93befdfcbaaa5ec53162cdc59ea9b9764,f589d7f9,Explicity cast to double for clarity,"Explicity cast to double for clarity
+
+Add a cast to make clear integer conversion is intentional.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508879447,1508879447,2a69dda5049648c2aa20e5cbeae15400a44010b2
+2a69dda5049648c2aa20e5cbeae15400a44010b2,2a69dda5,Make sure camera size is not null before use,"Make sure camera size is not null before use
+
+Can't happen in reality because parameters.getSupportedPreviewSizes()
+will always return at least one item and so will findBestSize().
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508879261,1508879261,cb868dbb0813959beac1e559223bf98a33f0721d
+cb868dbb0813959beac1e559223bf98a33f0721d,cb868dbb,Fix indent in travis yml,"Fix indent in travis yml
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508878571,1508878571,6e8423b9511dd43769cf10e62e9505be7864f650
+6e8423b9511dd43769cf10e62e9505be7864f650,6e8423b9,Add SonarQube integration,"Add SonarQube integration
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508878396,1508878396,292a6695b8abc29822a1e84966cae9b9292ff015
+292a6695b8abc29822a1e84966cae9b9292ff015,292a6695,Add a Build Passing icon to the README,"Add a Build Passing icon to the README
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508876474,1508876474,e73e908b8c3b14a7dd1693d8189406b0f71971e9
+e73e908b8c3b14a7dd1693d8189406b0f71971e9,e73e908b,Use bash to start gradlew,"Use bash to start gradlew
+
+Just `sh` doesn't work for Travis ...
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508876435,1508876435,9b07e3e37cd99074d95497b29643c7c685982b84
+9b07e3e37cd99074d95497b29643c7c685982b84,9b07e3e3,Add Travis continuous integration,"Add Travis continuous integration
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1508876038,1508876038,dc82ac5dd0ebd8b2959c633f6d7526b3153491b7
+dc82ac5dd0ebd8b2959c633f6d7526b3153491b7,dc82ac5d,Remap orientation uniform when device is rotated,"Remap orientation uniform when device is rotated
+
+Because SensorManager.getRotationMatrix() returns values
+relative to the default orientation of the device.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1504025180,1504025180,bb25f3ae9dc5a751b460160b79eedbf0c4247fc3
+bb25f3ae9dc5a751b460160b79eedbf0c4247fc3,bb25f3ae,Better use selectionArgs instead of adding strings,"Better use selectionArgs instead of adding strings
+
+selectionArgs can be filtered while simple Strings aren't.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1503139082,1503139082,fcfe628b14ef8810bfae748e8e66d221369733cd
+fcfe628b14ef8810bfae748e8e66d221369733cd,fcfe628b,Put Abstract before SamplerPropertiesFragment,"Put Abstract before SamplerPropertiesFragment
+
+Because it's an abstract class and so its name should
+reflect that. Like it is with all other abstract classes.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1503137048,1503137048,9bb2749349cbf3fb7e40028a2c2fa858af32395b
+9bb2749349cbf3fb7e40028a2c2fa858af32395b,9bb27493,Removed unused import,"Removed unused import
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1503083230,1503083230,959d82dd0e31b263c333533e6dba0cffbb852e85
+959d82dd0e31b263c333533e6dba0cffbb852e85,959d82dd,Show shader name in settings summary too,"Show shader name in settings summary too
+
+Forgot to update the settings summary when shaders
+got names.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1503082612,1503082612,f128b09d2801150dca522ccb20a90addc5e101f0
+f128b09d2801150dca522ccb20a90addc5e101f0,f128b09d,Removed redundant null check in CameraListener,"Removed redundant null check in CameraListener
+
+According to the docs, Camera.Parameter.getSupportedPreviewSizes()
+always returns at least one item so there's no null check
+necessary.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1503082121,1503082121,d8fe004c286c084f116d1ae654d18bc4539f463d
+d8fe004c286c084f116d1ae654d18bc4539f463d,d8fe004c,Advanced version number to 2.8.1,"Advanced version number to 2.8.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502906834,1502906834,095e89f1590029786efe1238b596caf86f2c58a8
+095e89f1590029786efe1238b596caf86f2c58a8,095e89f1,Removed running infer in release rule,"Removed running infer in release rule
+
+FB infer doesn't return false when it finds issues
+so there's no point in having it in the chain.
+
+Also it hasn't learned to deal with Cursors in
+Adapters yet.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502906586,1502906586,9cdb7745c867bcc42e26dd2276da3c9b26f7593c
+9cdb7745c867bcc42e26dd2276da3c9b26f7593c,9cdb7745,Clearing backbuffer texture needs to be last,"Clearing backbuffer texture needs to be last
+
+Or the (blank) backbuffer texture won't be cleared.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502906442,1502906442,817ce7f3fcc7e4aba4c6944d32824e5a3a086b4b
+817ce7f3fcc7e4aba4c6944d32824e5a3a086b4b,817ce7f3,Fixed floating action button icon,"Fixed floating action button icon
+
+Needs to be dark, not white.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502906336,1502906336,b4ee23185927da8dc600ac430daf44ebe902ffb9
+b4ee23185927da8dc600ac430daf44ebe902ffb9,b4ee2318,Advanced version number to 2.8.0,"Advanced version number to 2.8.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502825666,1502825666,d7786e8186edd5f1b81ff9d7744eb974fd2bdc18
+d7786e8186edd5f1b81ff9d7744eb974fd2bdc18,d7786e81,Add preset bitmap in backbuffer texture properties,"Add preset bitmap in backbuffer texture properties
+
+Also fixed texture properties default values.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502824753,1502824753,9945d6b32163236929d544ca2cce982193c83137
+9945d6b32163236929d544ca2cce982193c83137,9945d6b3,Use constants for uniform names,"Use constants for uniform names
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502819690,1502819690,0cd2ee95eb69da060435b55f95ac512e39f3cb74
+0cd2ee95eb69da060435b55f95ac512e39f3cb74,0cd2ee95,Remove already existing uniform statement,"Remove already existing uniform statement
+
+Before inserting a new uniform statement, check if that
+uniform already exists and if so remove it before inserting
+the new one.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502746054,1502746054,d0d609e030d1c5c160106811b73ed336327e1038
+d0d609e030d1c5c160106811b73ed336327e1038,d0d609e0,Set an initial backbuffer texture,"Set an initial backbuffer texture
+
+Use the texture parameter comment like this:
+
+	uniform sampler2D backbuffer;///p:noise
+
+Where `noise` is the name of the texture.
+Can be combined with all the other texture parameters.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502743837,1502743837,e04001b59a394c674f81ebb5ab420ff6b7bb10fc
+e04001b59a394c674f81ebb5ab420ff6b7bb10fc,e04001b5,Samples may use a custom quality level,"Samples may use a custom quality level
+
+Some shaders may perform not very well on older devices
+so it's better to use them with a lower quality setting.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502735954,1502735954,90d8ed27e2ccc4b499c049da08709fbf41f24e6f
+90d8ed27e2ccc4b499c049da08709fbf41f24e6f,90d8ed27,Fixed two possible NPEs,"Fixed two possible NPEs
+
+When cropping a bitmap for a cube map and when
+selecting a shader when there's no adapater set.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502657226,1502657226,3162818bb9212af90aa43dfb2319b93c7f2fed67
+3162818bb9212af90aa43dfb2319b93c7f2fed67,3162818b,Added a privacy policy,"Added a privacy policy
+
+Because Google wants one because of the CAMERA permission.
+This app is open source and does not collect any personal
+information at the time of writing.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502650429,1502650429,0c6a66b22216ed644e0945cf4d48e20bd23eebc3
+0c6a66b22216ed644e0945cf4d48e20bd23eebc3,0c6a66b2,Advanced version number to 2.7.0,"Advanced version number to 2.7.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502649317,1502649317,2c1fc495d44fead34adaef2ff5b6eb3ba45704b5
+2c1fc495d44fead34adaef2ff5b6eb3ba45704b5,2c1fc495,"Removed light, magnetic, pressure & prox samples","Removed light, magnetic, pressure & prox samples
+
+Those are more tests than actual samples of how to
+use those uniforms. Will add them later when I have
+better samples.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502649225,1502649225,59873f1d86346aa3c04a9c911a4da1918e7e54f6
+59873f1d86346aa3c04a9c911a4da1918e7e54f6,59873f1d,Load sample shaders from the menu,"Load sample shaders from the menu
+
+And moved the gravity demo into samples.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502643621,1502643621,da5fe2f7e0da28cd651258d63c71e3f0fca67ec7
+da5fe2f7e0da28cd651258d63c71e3f0fca67ec7,da5fe2f7,Set SVG sources for action icons to target color,"Set SVG sources for action icons to target color
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502625306,1502625306,bd1ed4a8fe0127d2a0ac4f9dfef623f954627a44
+bd1ed4a8fe0127d2a0ac4f9dfef623f954627a44,bd1ed4a8,Renamed DataSource to Database,"Renamed DataSource to Database
+
+Clear enough and probably less confusing.
+Also renamed the App's shorthand to ""db"".
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502623062,1502623062,223822d0d94854ef857b97ed710982c9102e36a0
+223822d0d94854ef857b97ed710982c9102e36a0,223822d0,Joined lines on ShaderEditorApp.preferences.*,"Joined lines on ShaderEditorApp.preferences.*
+
+Since ShaderEditorApplication was renamed to ShaderEditorApp,
+those additional line breaks aren't making too much sense.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502227150,1502227150,c0b0cd6b4a9bbc68298b397212df234ef9cf62a9
+c0b0cd6b4a9bbc68298b397212df234ef9cf62a9,c0b0cd6b,Added a Makefile rule to run dumpsys meminfo,"Added a Makefile rule to run dumpsys meminfo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502227085,1502227085,004b31933ee982f2b4471c67f62181fc554e47ec
+004b31933ee982f2b4471c67f62181fc554e47ec,004b3193,Made TabWidthSpan static to not leak memory,"Made TabWidthSpan static to not leak memory
+
+What a silly mistake ... TabWidthSpan wasn't static so it
+kept a reference to its parent instance, the View, which
+in turn has a reference to its Activity. And so neither
+the View nor the Activity can get ever released.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502226452,1502226452,d1cc5a501b6781b1c132e3343e6a8ed11ab22ce7
+d1cc5a501b6781b1c132e3343e6a8ed11ab22ce7,d1cc5a50,Remember if code was toggled off,"Remember if code was toggled off
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502220795,1502220795,17b17a66b6e5a5297a4d54f29ec928080c477031
+17b17a66b6e5a5297a4d54f29ec928080c477031,17b17a66,Uniforms to transform ST for camera texture,"Uniforms to transform ST for camera texture
+
+Added two new uniforms - a multiplication matrix (cameraOrientation)
+and an addent (cameraAddent) - to transform the camera texture
+coordinates to match the camera orientation with the device
+orientation.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502053691,1502053691,37e8d767007b6119df80cb46984b0dad39395e28
+37e8d767007b6119df80cb46984b0dad39395e28,37e8d767,Renamed camera uniforms,"Renamed camera uniforms
+
+Use camelCase to match with the other uniforms.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1502036262,1502036262,d5e929e5239900400b5305d4f111f18a8dcaadce
+d5e929e5239900400b5305d4f111f18a8dcaadce,d5e929e5,Use filtered values for orientation uniform,"Use filtered values for orientation uniform
+
+Raw sensor data varies too much to be useful.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501956616,1501956616,a359a8e9fec09a7937398883673e76604483c918
+a359a8e9fec09a7937398883673e76604483c918,a359a8e9,Replaced if() with switch() blocks,"Replaced if() with switch() blocks
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501880746,1501880746,92063be7c67c5e22d1e0f11919b20e0a289a6ae0
+92063be7c67c5e22d1e0f11919b20e0a289a6ae0,92063be7,Removed unnecessary import statement,"Removed unnecessary import statement
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501880732,1501880732,9c66fe8108bd9b3400d3826dabcaf3b8896b97e0
+9c66fe8108bd9b3400d3826dabcaf3b8896b97e0,9c66fe81,Lowered method/property visibility,"Lowered method/property visibility
+
+Where possible and not too confusing.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501880641,1501880641,23fbbb6dc2ca1effd54fab52516eff9911449439
+23fbbb6dc2ca1effd54fab52516eff9911449439,23fbbb6d,Removed casts where unnecessary,"Removed casts where unnecessary
+
+View.findViewById() returns a generic form SDK 26 on so
+explicit casting isn't required anymore everywhere.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501880513,1501880513,21d676bb909be59a217aef4923b61debca3e9778
+21d676bb909be59a217aef4923b61debca3e9778,21d676bb,Updated to SDK 26,"Updated to SDK 26
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501880434,1501880434,fe4975a13ce47ab6cc96f8f4d8eeb1e0fcef1e15
+fe4975a13ce47ab6cc96f8f4d8eeb1e0fcef1e15,fe4975a1,Don't close cursor silently when getting a texture,"Don't close cursor silently when getting a texture
+
+getTextureBitmap(Cursor) shouldn't close the cursor because
+nobody would know that and the method cannot be used on
+cursors that should remain available.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501182892,1501182892,795dd1fa85e719b1a1d9ef7551a95dbe4dd01bb9
+795dd1fa85e719b1a1d9ef7551a95dbe4dd01bb9,795dd1fa,Convert tabs to spaces when sharing,"Convert tabs to spaces when sharing
+
+Because Gmail - for example - can't handle tab indents.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501178425,1501178425,f2aa94f4b28200861f89e0ddd0cdaa74b4846fe6
+f2aa94f4b28200861f89e0ddd0cdaa74b4846fe6,f2aa94f4,Updated tools version,"Updated tools version
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1501002329,1501002329,8ae6d46482bbd179ea4e78863bae600557423e19
+8ae6d46482bbd179ea4e78863bae600557423e19,8ae6d464,Renamed ShaderEditorApplication to ShaderEditorApp,"Renamed ShaderEditorApplication to ShaderEditorApp
+
+Short form is enough.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1500828672,1500828672,760ae4970f6d1ae5f55a35b2f87a7004b1e92d52
+760ae4970f6d1ae5f55a35b2f87a7004b1e92d52,760ae497,Updated README and CHANGELOG with latest changes,"Updated README and CHANGELOG with latest changes
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1500811339,1500811339,6b69399704b721a768d8e803e9fb4d4df96ae72f
+6b69399704b721a768d8e803e9fb4d4df96ae72f,6b693997,Front and back camera textures,"Front and back camera textures
+
+Two new sampler uniforms: camera_back and camera_front.
+Only for API 14+ unfortunately.
+
+Also ask for texture properties when adding the backbuffer
+sampler.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1500810556,1500810556,4795e9fa39379d7312750c07b190c3b719675466
+4795e9fa39379d7312750c07b190c3b719675466,4795e9fa,Give shaders a name,"Give shaders a name
+
+Long pressing a shader in the list will open a dialog
+to edit a shader's name.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1498424235,1498424235,136b61e7e4d7e3bd908286f0e9f250f7ec24e777
+136b61e7e4d7e3bd908286f0e9f250f7ec24e777,136b61e7,Synchronized updates on volatile members,"Synchronized updates on volatile members
+
+Increments (++foo) and compound assignments (foo += bar) are
+non-atomic which is why updates need to be synchronized.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1498302906,1498302906,9668d209357512cf7569956506fbdb0d02f9173c
+9668d209357512cf7569956506fbdb0d02f9173c,9668d209,Fixed a NPE when parsing fTime when source is null,"Fixed a NPE when parsing fTime when source is null
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1498302725,1498302725,a24af4fadb8cd72e63e07b7594e7deb785b57cec
+a24af4fadb8cd72e63e07b7594e7deb785b57cec,a24af4fa,Added Error Prone static analyzer,"Added Error Prone static analyzer
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1496162999,1496162999,67d58afbad6cf9ac6a0583d50b4a6f45ea904592
+67d58afbad6cf9ac6a0583d50b4a6f45ea904592,67d58afb,Replaced standard labels for alert buttons,"Replaced standard labels for alert buttons
+
+Exchanged yes with ok and no with cancel because
+android.R.string.yes is ""Ok"" actually.
+
+And added missing override annotations.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1496162849,1496162849,16f0d4e295c6f8a019894e2c9d3e40ff55c3dfa5
+16f0d4e295c6f8a019894e2c9d3e40ff55c3dfa5,16f0d4e2,Added a link to docs.gl in README,"Added a link to docs.gl in README
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1494959761,1494959761,136c660f231ca4f76fe518f5f2b169839fba927a
+136c660f231ca4f76fe518f5f2b169839fba927a,136c660f,Advanced version number to 2.6.1,"Advanced version number to 2.6.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493933474,1493933474,200d5de4e001d52dbdf386905d324a680e801c05
+200d5de4e001d52dbdf386905d324a680e801c05,200d5de4,Use previous defaults for sampler texture params,"Use previous defaults for sampler texture params
+
+Don't break existing shaders.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493928543,1493928543,c80fbb0828eedaf92dff76a04e679b651f45c6a1
+c80fbb0828eedaf92dff76a04e679b651f45c6a1,c80fbb08,Converted shader samples to 1TBS too,"Converted shader samples to 1TBS too
+
+For consistency with the rest of this project.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493928342,1493928342,e9a32015a6162374b03d72289672c7e3d78ddd7d
+e9a32015a6162374b03d72289672c7e3d78ddd7d,e9a32015,Advanced version number to 2.6.0,"Advanced version number to 2.6.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493843421,1493843421,eaf64b64effd830b6bd60b2b6f57cbde3d2fa85d
+eaf64b64effd830b6bd60b2b6f57cbde3d2fa85d,eaf64b64,Removed laser lines sample shader,"Removed laser lines sample shader
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493843012,1493843012,e9277bae4ba693a64d5bf98e0eafd8e75a701a92
+e9277bae4ba693a64d5bf98e0eafd8e75a701a92,e9277bae,Use .glsl extension on included sample sources,"Use .glsl extension on included sample sources
+
+It sure isn't .txt after all.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493842249,1493842249,9dd8e1af7517e11784c84cc2251a619839af7edd
+9dd8e1af7517e11784c84cc2251a619839af7edd,9dd8e1af,Support custom texture parameters for each sampler,"Support custom texture parameters for each sampler
+
+Use something like ""///min:n;mag:l;s:c;t:c"" after a sampler2D or
+samplerCube to set parameters for glTexParameteri(). This way each
+shader can define custom parameters for each sampler.
+
+Also there's a widget to choose from the possible values when a
+new texture is added or inserted into the source.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493841423,1493841423,40c50f77bba31db0e9307ddf102f927192c5d677
+40c50f77bba31db0e9307ddf102f927192c5d677,40c50f77,Show texture size above SeekBar,"Show texture size above SeekBar
+
+Otherwise the size is covered by a finger when using
+the SeekBar.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493581057,1493581057,c76e1f645905e472a20dba947cf1939ca1a48be1
+c76e1f645905e472a20dba947cf1939ca1a48be1,c76e1f64,Updated support library to 25.3.1,"Updated support library to 25.3.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1493581024,1493581024,ebd8c7f383956d034854a483479ca1f45ebfa352
+ebd8c7f383956d034854a483479ca1f45ebfa352,ebd8c7f3,Updated list of contributors,"Updated list of contributors
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491994243,1491994243,f3683a3e8f76e114e18b7cef84e00c571fb70d41
+f3683a3e8f76e114e18b7cef84e00c571fb70d41,f3683a3e,Advanced version number to 2.5.3,"Advanced version number to 2.5.3
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491508649,1491508649,e2ccdfb6c45a495942661eafcc830d1e8c7e34ce
+e2ccdfb6c45a495942661eafcc830d1e8c7e34ce,e2ccdfb6,Enable/disable BatteryLevelReceiver,"Enable/disable BatteryLevelReceiver
+
+So it won't call ShaderWallpaperService unnecessary.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491507498,1491507498,98d34e2c8a858c0c13e2d90eea0bab16d98bb736
+98d34e2c8a858c0c13e2d90eea0bab16d98bb736,98d34e2c,Advanced version number to 2.5.2,"Advanced version number to 2.5.2
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491409253,1491409253,c461444e466f5341d7b377ed6f480ed37302b626
+c461444e466f5341d7b377ed6f480ed37302b626,c461444e,Call stopSelf() when wallpaper engine is destroyed,"Call stopSelf() when wallpaper engine is destroyed
+
+Documentation on Service says it's necessary although I can't
+see any difference if it's called or not. Try to be a good
+citizen.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491409107,1491409107,af9d77f14f38757857180270c93fe6971ed6a81f
+af9d77f14f38757857180270c93fe6971ed6a81f,af9d77f1,Updated support library to 25.3.0,"Updated support library to 25.3.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1491409066,1491409066,7494325721e709735661a96d5e8af7e2050a7d1a
+7494325721e709735661a96d5e8af7e2050a7d1a,74943257,Moved version code and name into build.gradle,"Moved version code and name into build.gradle
+
+The modern place to put those values.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1489523169,1489523169,28cddcd0298984fcfa179bff42a4d6b0b321bb86
+28cddcd0298984fcfa179bff42a4d6b0b321bb86,28cddcd0,Don't check findViewById() return values for null,"Don't check findViewById() return values for null
+
+Given we test every change, findViewById() can only return null
+in development but not in production. Once the wiring is correct,
+findViewById() cannot fail.
+
+Even worse, if findViewById() returns null because we make a
+mistake while developing, there won't be a telling exception if
+we check for null and just finish the activity.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1489435840,1489435840,33e2d81471a6826f8fcf0210bac65641364b6149
+33e2d81471a6826f8fcf0210bac65641364b6149,33e2d814,Set view holder on item view,"Set view holder on item view
+
+Somehow I forgot to actually set the view holder on
+the item view. Shame.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1489435653,1489435653,b03d6b8b739586afcea0bd34d3d0a84c14eea098
+b03d6b8b739586afcea0bd34d3d0a84c14eea098,b03d6b8b,Don't transfer shader query over config changes,"Don't transfer shader query over config changes
+
+Don't keep a static (hard) reference to the latest Activity object
+because that would keep the GC from recycling it long after its
+use. Of course, it'd be possible to use a WeakReference and avoid
+leaking that Activity, but there's really no point in worrying
+about having a new configuration querying shaders again.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1488579047,1488579047,99395680ae0652ca0aa1fa2aa4184e348ae985b6
+99395680ae0652ca0aa1fa2aa4184e348ae985b6,99395680,Updated tools and gradle wrapper,"Updated tools and gradle wrapper
+
+And better use appcompat custom widgets.
+
+Also put SDK and tool versions in top build script to ease updating.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1488573379,1488573379,739db55e2a70d1e45d28ec9a4fe21de902a90c06
+739db55e2a70d1e45d28ec9a4fe21de902a90c06,739db55e,Advanced version number to 2.5.1,"Advanced version number to 2.5.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1487016620,1487016620,bc54cf6e2bf34d7231a70bc35dd17c7e8bd4d467
+bc54cf6e2bf34d7231a70bc35dd17c7e8bd4d467,bc54cf6e,Load external images with openInputStream(),"Load external images with openInputStream()
+
+Using openAssetFileDescriptor() can result in incomplete images,
+at least with a release build on a Yotaphone 2.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1487016017,1487016017,60514c7f81ec4c58b7303bc57794211293c183bc
+60514c7f81ec4c58b7303bc57794211293c183bc,60514c7f,Added a splash screen,"Added a splash screen
+
+To give feedback while loading.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486911132,1486911132,9b9cfb224cc4443ea06fbbcec2a97ab515d137f6
+9b9cfb224cc4443ea06fbbcec2a97ab515d137f6,9b9cfb22,Use textNoSuggestions to suppress suggestions,"Use textNoSuggestions to suppress suggestions
+
+Instead of textVisiblePassword what was used to suppress the
+suggestion bar on top of the keyboard too.
+
+Unfortunately, GBoard (formerly Google Keyboard) swipe shortcuts
+do not work with textVisiblePassword set (e.g. swipe spacebar to
+scroll cursor).
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486909891,1486909891,dfe9eda854518f9b7845ea9cf13db32e144e7fc2
+dfe9eda854518f9b7845ea9cf13db32e144e7fc2,dfe9eda8,Advanced version number to 2.5.0,"Advanced version number to 2.5.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486216509,1486216509,707b8c1797503158e4ad6376c84d516a65e85f03
+707b8c1797503158e4ad6376c84d516a65e85f03,707b8c17,Double tap to zoom/restore an image,"Double tap to zoom/restore an image
+
+Also renamed some symbols for ease of understanding.
+
+And use one Point object instead of two Float's to
+cache touch positions.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486212406,1486212406,7924307b8bfb795801610dcf2b80dbc259bd5111
+7924307b8bfb795801610dcf2b80dbc259bd5111,7924307b,Updated gradle build tool and support libs,"Updated gradle build tool and support libs
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486212028,1486212028,acdfe7f736d94e4c9aba9db830c111ebd227a15e
+acdfe7f736d94e4c9aba9db830c111ebd227a15e,acdfe7f7,Lowered method visibility where possible,"Lowered method visibility where possible
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1486211979,1486211979,a728e448082a6dcbee86eaa102ea0cb567e90d80
+a728e448082a6dcbee86eaa102ea0cb567e90d80,a728e448,Added a dedicated launcher icon for debug build,"Added a dedicated launcher icon for debug build
+
+To easily tell what app is the debug build.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485805279,1485805279,21e6636e58a0fb9d9e684c640fcf095c0fee7f0b
+21e6636e58a0fb9d9e684c640fcf095c0fee7f0b,21e6636e,Fixed target paths in svg to png update script,"Fixed target paths in svg to png update script
+
+And resolved a couple of shellcheck issues along the way.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485805106,1485805106,0c1ab1a76e7b0cab09adbcb5ffbf53566431e037
+0c1ab1a76e7b0cab09adbcb5ffbf53566431e037,0c1ab1a7,Added uniform to expose device orientation,"Added uniform to expose device orientation
+
+The new uniform describes azimuth, pitch and roll of the device.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485804814,1485804814,b1aa2d70059226377302ba491a3100569e9d3025
+b1aa2d70059226377302ba491a3100569e9d3025,b1aa2d70,Fixed concatenation of rotation matrix,"Fixed concatenation of rotation matrix
+
+The rotation matrix needs to be multiplied with the previous
+rotation values.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485804499,1485804499,5cfe1ca125a62bd389f0ecc77a46accd67898961
+5cfe1ca125a62bd389f0ecc77a46accd67898961,5cfe1ca1,Use the same item style for all uniform list items,"Use the same item style for all uniform list items
+
+android.R.layout.simple_list_item_2 becomes really ugly when
+the secondary line wraps. Rationales can easily be two lines
+long so it's better to have a dedicated layout for that.
+
+Also matched style of sampler2d and sampleCube list items.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485700565,1485700565,05245343c2408623c96da57ce5c5584843f81517
+05245343c2408623c96da57ce5c5584843f81517,05245343,Use string resource to compose preset text label,"Use string resource to compose preset text label
+
+Texts are supposed to translatable.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485700478,1485700478,194c745f57c50220117c70706a8bea6e8c2c2927
+194c745f57c50220117c70706a8bea6e8c2c2927,194c745f,Better description for rotation & magnetic sensors,"Better description for rotation & magnetic sensors
+
+`rotation` was incomplete and misleading.
+`magnetic` did lack its unit.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485697084,1485697084,5c358148c8b94ed30e3f1b1f880981d1dc17cdd0
+5c358148c8b94ed30e3f1b1f880981d1dc17cdd0,5c358148,Sort by preset uniforms by name,"Sort by preset uniforms by name
+
+And put uniform type in parenthesis behind the name to
+improve overview.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1485696621,1485696621,d6c1f93cb89716a2b920c9b1dd45551857362852
+d6c1f93cb89716a2b920c9b1dd45551857362852,d6c1f93c,Phased out getting system bar metrics,"Phased out getting system bar metrics
+
+Put getting system bar metrics in its own class.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1484405539,1484405539,3dc562a0657e9dbcda95991ea004fd73cfaeb523
+3dc562a0657e9dbcda95991ea004fd73cfaeb523,3dc562a0,Removed unused imports and fixed some style issues,"Removed unused imports and fixed some style issues
+
+Quite a lot style issues actually. Since reformatting everything
+to 1TBS, there were quite a few spots that while syntactically
+correct could be formulated better.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483722740,1483722740,9f88deac802c31eacf331b9c26a294ba13ed8e4d
+9f88deac802c31eacf331b9c26a294ba13ed8e4d,9f88deac,Improved setting of initial shader,"Improved setting of initial shader
+
+Avoid invoking getShadersAsync() a second time after
+initial creation of ShaderAdapter.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483722558,1483722558,6fa8f63c8cb16778c2629b35f4b92e1277e0c4ce
+6fa8f63c8cb16778c2629b35f4b92e1277e0c4ce,6fa8f63c,Transfer delayed results from background tasks,"Transfer delayed results from background tasks
+
+Into the currently active UI object. When a device is rotated
+while an AsyncTask is running, the result of that AsyncTask
+should be transferred to the new Activity/Fragment.
+
+The simplest way to do this is to use a static reference to
+a private listener that is initialized in onCreate/View().
+Since AsyncTask.onPostExectue() and onCreate()/onCreateView()
+are both running on the main thread, they can never overlap
+and the result is always realized in the latest active object.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483721550,1483721550,3b94612266aa7e703684144fbac183ee4fbb49cf
+3b94612266aa7e703684144fbac183ee4fbb49cf,3b946122,Updated build tools and support libs,"Updated build tools and support libs
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483720802,1483720802,f91b5822002ddb93d52f838e6b3ca09877318ad1
+f91b5822002ddb93d52f838e6b3ca09877318ad1,f91b5822,Don't run debug build with --opengl-trace,"Don't run debug build with --opengl-trace
+
+May freeze the app.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483611426,1483611426,dfee6dcd548590cb240e382c5b5a713288cd9bef
+dfee6dcd548590cb240e382c5b5a713288cd9bef,dfee6dcd,Use an applicationId suffix for debug builds,"Use an applicationId suffix for debug builds
+
+Allows simultaneous installs of release and debug builds.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483385641,1483385641,e9b796f301c4da6afec00647349816bf13e96dc1
+e9b796f301c4da6afec00647349816bf13e96dc1,e9b796f3,Improved code style and added a comment,"Improved code style and added a comment
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1483385182,1483385182,640f8d31e8b2271304b1c43396bf1dfe3d421ba6
+640f8d31e8b2271304b1c43396bf1dfe3d421ba6,640f8d31,Added some helpful links on shader programming,"Added some helpful links on shader programming
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1482401572,1482401572,4f5a5bbfe3cec7b50eb63bf4d01641a280640327
+4f5a5bbfe3cec7b50eb63bf4d01641a280640327,4f5a5bbf,Updated build tools and support libs to 25.0.1,"Updated build tools and support libs to 25.0.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1482401509,1482401509,ffb1b60f39ff95e2ba59a1f4e724acb151e9f54e
+ffb1b60f39ff95e2ba59a1f4e724acb151e9f54e,ffb1b60f,Lowered method visibility,"Lowered method visibility
+
+Always go with the lowest possible visibility
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1482401365,1482401365,6feb9615e548ee2224ffc568b9432ad7209f7c58
+6feb9615e548ee2224ffc568b9432ad7209f7c58,6feb9615,Updated Android build tool for gradle to 2.2.2,"Updated Android build tool for gradle to 2.2.2
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476986945,1476986945,7d732770183ec90dadaf0fa47117c77ce8e8a055
+7d732770183ec90dadaf0fa47117c77ce8e8a055,7d732770,Updated to SDK and support libs 25,"Updated to SDK and support libs 25
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476986649,1476986649,7bb9fbabee3d3cc16bbe6852617eb81e9c4e84cd
+7bb9fbabee3d3cc16bbe6852617eb81e9c4e84cd,7bb9fbab,Initialize strict mode before anything else,"Initialize strict mode before anything else
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476986622,1476986622,d3e32639eb4a7a299e4a3c54f544aa4b98f33c75
+d3e32639eb4a7a299e4a3c54f544aa4b98f33c75,d3e32639,Show info log for surface program errors too,"Show info log for surface program errors too
+
+Simply return'ing doesn't make sense here anymore.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476910643,1476910643,91e3b948fc18dccbdf9ead0e52f19c0412f4b91c
+91e3b948fc18dccbdf9ead0e52f19c0412f4b91c,91e3b948,Lowered visibility where possible,"Lowered visibility where possible
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476910234,1476910234,56c219b9129bc573fdccb4daa823eeea291c827e
+56c219b9129bc573fdccb4daa823eeea291c827e,56c219b9,Declared symbols final where possible,"Declared symbols final where possible
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476910185,1476910185,9900a25e7e40ab7540eba0cd2d4f4d28db6773f6
+9900a25e7e40ab7540eba0cd2d4f4d28db6773f6,9900a25e,Check ActionBar for null before use,"Check ActionBar for null before use
+
+Makes Android Studio's Lint happy.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476907291,1476907291,a11b6526a9f9a2ed1b10d7e504f6ee51c0dbd35b
+a11b6526a9f9a2ed1b10d7e504f6ee51c0dbd35b,a11b6526,Updated Android gradle build tools to 2.2.1,"Updated Android gradle build tools to 2.2.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476907090,1476907090,08b07238f2a778e45f7e6115520daf6dc353f05d
+08b07238f2a778e45f7e6115520daf6dc353f05d,08b07238,Removed unused attribute from preference values,"Removed unused attribute from preference values
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1476906955,1476906955,5af7129d05a1d122923ae78d110a55a09597589f
+5af7129d05a1d122923ae78d110a55a09597589f,5af7129d,Replaced n with i in loops,"Replaced n with i in loops
+
+Again, for ease of collaboration. Many people seem to prefer
+""i"" as counter variable. I always liked ""n"" better because
+it's easier to recognize.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475435511,1475435511,07374533e822c81ada3f70c1dd7b33a6cde5dcc3
+07374533e822c81ada3f70c1dd7b33a6cde5dcc3,07374533,Restored ScrollView around EditText,"Restored ScrollView around EditText
+
+Yes, TextView can scroll already, but it's not possible to set a
+padding on it's contents only. Instead, contents will be cut off
+at the specified padding but before the visible border leaving
+an ugly gap between text and border.
+
+The only way to avoid this seems to be putting the TextView inside
+a ScrollView.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475425420,1475425420,e85cef18946c25c5a8c23213ec6fe07467779788
+e85cef18946c25c5a8c23213ec6fe07467779788,e85cef18,Added a change log,"Added a change log
+
+Better keep a manual change log to make it easier to see
+what relevant changes have been made between versions.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475422668,1475422668,dd951a384626934903a33c4af4560c4c6d171f7b
+dd951a384626934903a33c4af4560c4c6d171f7b,dd951a38,Use one-line form of JavaDoc,"Use one-line form of JavaDoc
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475422243,1475422243,4df1f5381d091b83f39f88a1fe5930f072adf834
+4df1f5381d091b83f39f88a1fe5930f072adf834,4df1f538,Reformatted gradle files to standard style,"Reformatted gradle files to standard style
+
+Again, for a better and easier collaboration.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475411234,1475411234,ea6d60237e8135946cde06c4d00fd57d43379e6d
+ea6d60237e8135946cde06c4d00fd57d43379e6d,ea6d6023,Don't keep a reference to Context in DataSource,"Don't keep a reference to Context in DataSource
+
+Lint complains because keeping a Context in a static place usually
+leads to a memory leak. In this case, however, context was the
+application context (which never gets garbage collected anyway).
+
+Because it'd leave a bad smell, the reference was removed.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475410362,1475410362,9888fc0ffa55229c3707a8c97d4d457e03ada0dd
+9888fc0ffa55229c3707a8c97d4d457e03ada0dd,9888fc0f,Replace fragment in just one place,"Replace fragment in just one place
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475410085,1475410085,35517e178c7ee602bc36bfb4fdc977dc587348a0
+35517e178c7ee602bc36bfb4fdc977dc587348a0,35517e17,Reformatted to standard Android coding style,"Reformatted to standard Android coding style
+
+For a better and easier collaboration.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475409807,1475409807,198e086f320feaf78bc819235a3287244af42ba3
+198e086f320feaf78bc819235a3287244af42ba3,198e086f,Updated gradle wrapper and build tools,"Updated gradle wrapper and build tools
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475404108,1475404108,71cd2572ff1a34432f754e149a7cb5bbf7ef72f2
+71cd2572ff1a34432f754e149a7cb5bbf7ef72f2,71cd2572,Use left/right padding for editor only,"Use left/right padding for editor only
+
+Top/bottom padding makes text appear into nothing.
+Same problem horizontally but less noticeable.
+How to set a padding around the scrollable content?
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1475403881,1475403881,b052c57d8403af5dfd6cb1d8eef348946ab2551e
+b052c57d8403af5dfd6cb1d8eef348946ab2551e,b052c57d,Updated to latest support libraries,"Updated to latest support libraries
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1474747405,1474747405,b4234f1a5d9fb05bc111c2915645399461ddebd7
+b4234f1a5d9fb05bc111c2915645399461ddebd7,b4234f1a,Explicitly invoke independent init methods,"Explicitly invoke independent init methods
+
+Don't hide independent invocations in just one method but
+invoke them separately on the top level.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1473505176,1473505176,19a1c72a7b3df3fb7cc096fbec17954d702d5e0e
+19a1c72a7b3df3fb7cc096fbec17954d702d5e0e,19a1c72a,And again because I'm an idiot,"And again because I'm an idiot
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472995177,1472995177,4e2fdfc3c767f9b25c9256b873b712ec7844decb
+4e2fdfc3c767f9b25c9256b873b712ec7844decb,4e2fdfc3,Fixed markdown typo,"Fixed markdown typo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472995129,1472995129,a30335ae204e49bb6ce589f3268c3346fb939fc4
+a30335ae204e49bb6ce589f3268c3346fb939fc4,a30335ae,Note about mediump and the time uniform,"Note about mediump and the time uniform
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472995060,1472995060,098fb5a5278da58109f9fc2b6c1b05511024a0ed
+098fb5a5278da58109f9fc2b6c1b05511024a0ed,098fb5a5,Advanced version number to 2.4.6,"Advanced version number to 2.4.6
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472993461,1472993461,e7c44b1da1344097e6d80487364bb8889fac648b
+e7c44b1da1344097e6d80487364bb8889fac648b,e7c44b1d,Set current shader as wallpaper shader,"Set current shader as wallpaper shader
+
+Change the current wallpaper shader from inside the app.
+If the current shader is the wallpaper shader, the menu
+item will say ""Update wallpaper"". Otherwise it will read
+""Set as wallpaper"".
+
+Note that this only works if Shader Editor is already set
+as live wallpaper. Android doesn't allow apps to set a
+live wallpaper directly (so we'd need to fire an intent
+for the wallpaper chooser; but that's probably too much).
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472993136,1472993136,0584e8d2551680965a1475d83f435fecb5fe1177
+0584e8d2551680965a1475d83f435fecb5fe1177,0584e8d2,Advanced version number to 2.4.5,"Advanced version number to 2.4.5
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472665482,1472665482,7291522828198da79ade493b5daf3d2bd155005d
+7291522828198da79ade493b5daf3d2bd155005d,72915228,New setting to open preview activity in new task,"New setting to open preview activity in new task
+
+Since FLAG_ACTIVITY_NEW_TASK cannot be combined with
+startActivityForResult(), see
+
+https://developer.android.com/reference/android/content/Intent.html#FLAG_ACTIVITY_NEW_TASK
+
+  ""This flag can not be used when the caller is requesting
+   a result from the activity being launched.""
+
+and because FLAG_ACTIVITY_LAUNCH_ADJACENT does nothing
+without FLAG_ACTIVITY_NEW_TASK and FLAG_ACTIVITY_NEW_TASK
+causes multiple preview activities < Nougat, it's probably
+best to have a dedicated setting for this.
+
+So if you want support for Nougat's multi-window mode, you
+need to choose ""Run as a new task"" in Settings -> Run Mode.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472665177,1472665177,b9b9986f53ea11c459b8d7ec3c468169b8e40347
+b9b9986f53ea11c459b8d7ec3c468169b8e40347,b9b9986f,Advanced version number to 2.4.4,"Advanced version number to 2.4.4
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472124011,1472124011,f56617a66849bd5c06521c938b616a721b8ccdb9
+f56617a66849bd5c06521c938b616a721b8ccdb9,f56617a6,Support Nougat's multi-window mode,"Support Nougat's multi-window mode
+
+Basic support only. PreviewActivity cannot be made to do
+live updates right now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472067137,1472067137,3a086f5e71b2af59623e00a18fbe885629706029
+3a086f5e71b2af59623e00a18fbe885629706029,3a086f5e,Removed superfluous ScrollView around EditText,"Removed superfluous ScrollView around EditText
+
+TextView can scroll already so there's no need to use
+a ScrollView around it.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472066956,1472066956,6f0b31e7c1977324869795c5e77812d24987f90a
+6f0b31e7c1977324869795c5e77812d24987f90a,6f0b31e7,Updated support libraries to latest version,"Updated support libraries to latest version
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472066929,1472066929,b4bc0c92bfa24207fe27dd3307eb6c2f6aa4712f
+b4bc0c92bfa24207fe27dd3307eb6c2f6aa4712f,b4bc0c92,Update highlighting after setting an error line,"Update highlighting after setting an error line
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1472066895,1472066895,23ad020ffd62af954c79e18fbe10a7862bd520d0
+23ad020ffd62af954c79e18fbe10a7862bd520d0,23ad020f,Advanced version number to 2.4.3,"Advanced version number to 2.4.3
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471784495,1471784495,7ce2835f1d49c805b64154832d0d68c104006593
+7ce2835f1d49c805b64154832d0d68c104006593,7ce2835f,Don't set shader after editorFragment.setText(),"Don't set shader after editorFragment.setText()
+
+setText() triggers onTextChanged() which will set the fragment
+shader so there's no need to invoke setFragmentShader() directly
+after editorFragment.setText().
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471781731,1471781731,d9e5e9bb4fe52df1341aaaedf6bb1623fa20a2e7
+d9e5e9bb4fe52df1341aaaedf6bb1623fa20a2e7,d9e5e9bb,Made ftime's period definable in shader source,"Made ftime's period definable in shader source
+
+Simply define FTIME_PERIOD in the shader to configure
+ftime's period.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471779677,1471779677,2d75f4e44ee6e92162a538848061425650d8a9a5
+2d75f4e44ee6e92162a538848061425650d8a9a5,2d75f4e4,Advanced version number to 2.4.2,"Advanced version number to 2.4.2
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471693564,1471693564,e04ef7274ff3aa95f1625b2ae75805be0d59896e
+e04ef7274ff3aa95f1625b2ae75805be0d59896e,e04ef727,Only refresh syntax highlighting when necessary,"Only refresh syntax highlighting when necessary
+
+Check if there is an error line before refreshing syntax.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471693317,1471693317,90d649dffebf4c6d8bf4153638995fa7e6599b8d
+90d649dffebf4c6d8bf4153638995fa7e6599b8d,90d649df,"New second and subsecond uniform, changed ftime","New second and subsecond uniform, changed ftime
+
+To better cope with mediump float precision limitations,
+there are two new uniforms: int second and float subsecond.
+subsecond contains only the fractional part of the seconds
+since start.
+
+ftime ranges between -1.0 and +1.0 and wraps every PI seconds
+now. This gives mediump devices a couple of opportunities to
+avoid rounding errors.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471615243,1471615243,fb61f0da84c866e81f3c36ad87fd97579ba2c83a
+fb61f0da84c866e81f3c36ad87fd97579ba2c83a,fb61f0da,Extra uniform to transfer fractional part of time,"Extra uniform to transfer fractional part of time
+
+Since precision problems of a mediump float (time) arise
+quite early. Transferring just the fractional part gives
+more precision because the precision limitation for decimals
+between -1.0 and +1.0 are much lower than with higher
+decimals.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471606227,1471606227,f21a91bb1fcd4f5d05e1388f1add5ce74217a4a9
+f21a91bb1fcd4f5d05e1388f1add5ce74217a4a9,f21a91bb,Resolved a couple of style issues,"Resolved a couple of style issues
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471171975,1471171975,1fc89b0a90cd5b1ede500a855be6bdf063b9bc66
+1fc89b0a90cd5b1ede500a855be6bdf063b9bc66,1fc89b0a,Updated gradle build tool and support libraries,"Updated gradle build tool and support libraries
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1471171952,1471171952,516afbb1003c658f1aba8128cb9b4495f8e71c7d
+516afbb1003c658f1aba8128cb9b4495f8e71c7d,516afbb1,Removed duplicate file,"Removed duplicate file
+
+Apple's HFS is the worst file system ever. What sane person
+would like to have case insensivity in file names?
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1469390757,1469390757,0e4ab8df3e0cb91ac572aef457e46bc5822f6d83
+0e4ab8df3e0cb91ac572aef457e46bc5822f6d83,0e4ab8df,Merge pull request #29 from JFonS/master,"Merge pull request #29 from JFonS/master
+
+Fixed date uniform, now updates properly every second",,,,Markus Fisch,mf@markusfisch.de,GitHub,noreply@github.com,1469390163,1469390163,"4457f9b4ba194107fbceab3d0b49c4bc105b0d36,8d51742eaf6f814066f36b5afe1fa423d99f6b66"
+8d51742eaf6f814066f36b5afe1fa423d99f6b66,8d51742e,"Fixed date uniform, now updates properly every second","Fixed date uniform, now updates properly every second
+",,,,JFonS,joan.fonssanchez@gmail.com,JFonS,joan.fonssanchez@gmail.com,1469382632,1469382632,4457f9b4ba194107fbceab3d0b49c4bc105b0d36
+4457f9b4ba194107fbceab3d0b49c4bc105b0d36,4457f9b4,Use version name instead of version number,"Use version name instead of version number
+
+Easier to read and understand.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1468261472,1468261472,ce6b8767f3b7e15e34cc6edbf2b743ade22e702c
+ce6b8767f3b7e15e34cc6edbf2b743ade22e702c,ce6b8767,Updated to API version 24,"Updated to API version 24
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1467745640,1467745640,fd06e78dc04eb2b339158a7ccb4c338ada222a04
+fd06e78dc04eb2b339158a7ccb4c338ada222a04,fd06e78d,Removed deprecated flag for adb install,"Removed deprecated flag for adb install
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1467745613,1467745613,efcc010f81281a518e167239a0504af04dab07a9
+efcc010f81281a518e167239a0504af04dab07a9,efcc010f,Advanced to version number 2.4.1,"Advanced to version number 2.4.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1465362524,1465362524,0bf0e182e841475bb5244cfa72eb6a0efa75db70
+0bf0e182e841475bb5244cfa72eb6a0efa75db70,0bf0e182,Fixed typo in TouchThruDrawerLayout,"Fixed typo in TouchThruDrawerLayout
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1465153992,1465153992,45adb01adc51129242d19f26b1a6d4f31541c5de
+45adb01adc51129242d19f26b1a6d4f31541c5de,45adb01a,Updated README and CONTRIBUTORS,"Updated README and CONTRIBUTORS
+
+And simplified CONTRIBUTING.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1465153123,1465153123,92eb8affadefea7ffdf24bd537d49e3f1e9a607c
+92eb8affadefea7ffdf24bd537d49e3f1e9a607c,92eb8aff,Fixed inserting code from texture fragment,"Fixed inserting code from texture fragment
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1464985697,1464985697,eded2e2ac9bf74d159e0bf5874363f5eb0ad1be9
+eded2e2ac9bf74d159e0bf5874363f5eb0ad1be9,eded2e2a,Advanced version number to 2.4.0,"Advanced version number to 2.4.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1464527400,1464527400,2b8dee4dfb34195b3ff7fd5503ce35375e657862
+2b8dee4dfb34195b3ff7fd5503ce35375e657862,2b8dee4d,Fixed lay out of faces in cube map,"Fixed lay out of faces in cube map
+
+And use 3 by 2 layout for landscape views.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1464523333,1464523333,b167f926116678e270f9e19b8f834ebd8498c1c3
+b167f926116678e270f9e19b8f834ebd8498c1c3,b167f926,Access smallestScreenWidthDp from HONEYCOMB_MR2+,"Access smallestScreenWidthDp from HONEYCOMB_MR2+
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1464467502,1464467502,285b1a7cb19ad355736939f36d53f94d8d365950
+285b1a7cb19ad355736939f36d53f94d8d365950,285b1a7c,Support for samplerCube,"Support for samplerCube
+
+Now you can add textures as sampler2D or samplerCube.
+There's an editor to compose a cube map from six images.
+
+All uniforms, presets, textures, cube maps, are in one
+ViewPager now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1464466920,1464466920,23565ad8b627346e30685eb9f34c1b939d6ecd6f
+23565ad8b627346e30685eb9f34c1b939d6ecd6f,23565ad8,Make preview activity a separate task,"Make preview activity a separate task
+
+Should make it possible to have both activities side-by-side
+if the system supports multi-window.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1463694811,1463694811,002784a464927b03bbf8e5f4f6c8fe5dbc26889c
+002784a464927b03bbf8e5f4f6c8fe5dbc26889c,002784a4,Updated gradle build tool and support libs,"Updated gradle build tool and support libs
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1463694740,1463694740,2f5b051b4bca792dc307ab2b64e39b778440175a
+2f5b051b4bca792dc307ab2b64e39b778440175a,2f5b051b,Explicitly use a Locale for String.format(),"Explicitly use a Locale for String.format()
+
+Or lint will cry.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1460134746,1460134746,83d8e0dc09f3663a7ff092c7ef63d459184ddc0e
+83d8e0dc09f3663a7ff092c7ef63d459184ddc0e,83d8e0dc,Updated android gradle plugin and gradle wrapper,"Updated android gradle plugin and gradle wrapper
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1460134496,1460134496,e635f5301424933647b33b9168cb35985e210c5e
+e635f5301424933647b33b9168cb35985e210c5e,e635f530,Use latest build tools,"Use latest build tools
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1460134479,1460134479,053bdee0eee0bfa9eb6278dd1d16388a8505f07c
+053bdee0eee0bfa9eb6278dd1d16388a8505f07c,053bdee0,Use latest support libraries,"Use latest support libraries
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1460134436,1460134436,8c22661fb8ccea6def31fba4e72938eb552aafbb
+8c22661fb8ccea6def31fba4e72938eb552aafbb,8c22661f,Replaced deprecated method and fixed lint issue,"Replaced deprecated method and fixed lint issue
+
+Use DrawerLayout.addDrawerListener() instead of setDrawerListener().
+
+StrictMode.VmPolicy.Builder().detectLeakedClosableObjects() requires
+API 11+.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1458938125,1458938125,78d59e243aee83d0fd0bed4c4944ac4a257cee15
+78d59e243aee83d0fd0bed4c4944ac4a257cee15,78d59e24,Use strict mode in debug build,"Use strict mode in debug build
+
+Try to find possible issues early.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1458924910,1458924910,9b588b00cf19a74495ed465418bef93d400e858b
+9b588b00cf19a74495ed465418bef93d400e858b,9b588b00,Updated support libs to 23.2.1,"Updated support libs to 23.2.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457783852,1457783852,2cf6439f3445b7808af35541c282d9338f463b36
+2cf6439f3445b7808af35541c282d9338f463b36,2cf6439f,Configurable tab width,"Configurable tab width
+
+Style tabs to be multiple ""m"" characters wide.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457297002,1457297002,f415f061fcba81bfbdbbdcfa4a17a80796af8a27
+f415f061fcba81bfbdbbdcfa4a17a80796af8a27,f415f061,Simplified opening database,"Simplified opening database
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457268787,1457268787,8378f1f35ff76d7d26de68e24a1b7396fa2a5171
+8378f1f35ff76d7d26de68e24a1b7396fa2a5171,8378f1f3,Run lint and FindBugs when building for release,"Run lint and FindBugs when building for release
+
+Can't forget and can't overlook something stupid.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457196307,1457196307,00b6137a3c9ac5e7f160c62ed70cf49aad4461b0
+00b6137a3c9ac5e7f160c62ed70cf49aad4461b0,00b6137a,Renamed project directory to app,"Renamed project directory to app
+
+To be more standard compliant.
+
+Normally, with gradle, the name of the directory is the
+name of the build. But it's probably better to have a
+standard app directory.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457042163,1457042163,14b9227244258cd5a2e8197cd3265652a759814e
+14b9227244258cd5a2e8197cd3265652a759814e,14b92272,Use FindBugs for static analysis,"Use FindBugs for static analysis
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457041829,1457041829,9dccc72157ebaf77a1b4a8ddc3b710efea665104
+9dccc72157ebaf77a1b4a8ddc3b710efea665104,9dccc721,Added note about returning a mutable reference,"Added note about returning a mutable reference
+
+The thumbnail is generated on the fly on the drawing thread.
+The data doesn't need to be protected from modification and
+doing so (by copying) would only mean to use more memory
+than necessary.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457041636,1457041636,c7f6d27d5d916b10b98d77962c1f0246bb2252c9
+c7f6d27d5d916b10b98d77962c1f0246bb2252c9,c7f6d27d,Update render mode with startService(),"Update render mode with startService()
+
+Avoids the mutable static member. More complex and probably
+more fragile but considered to be better style.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457040972,1457040972,cfb35cbe32142018d3d3a39ace8b5ffa554d1b0c
+cfb35cbe32142018d3d3a39ace8b5ffa554d1b0c,cfb35cbe,Explicitly specify charset,"Explicitly specify charset
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457040623,1457040623,eac10b14ae377a8ab001eb5988c0e0aa1e87d7d8
+eac10b14ae377a8ab001eb5988c0e0aa1e87d7d8,eac10b14,Use a final object to transfer render status,"Use a final object to transfer render status
+
+Better style because there are no mutable public static
+members anymore.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457040513,1457040513,1d60727d6136517d1b18720341bfbccc2c617d58
+1d60727d6136517d1b18720341bfbccc2c617d58,1d60727d,Added a Deep Link for App Indexing,"Added a Deep Link for App Indexing
+
+To make lint happy. Frankly speaking, there's nothing the
+internet may link to in this app yet.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1457040310,1457040310,a2981a2ef56f503bfe030c224314373e78773459
+a2981a2ef56f503bfe030c224314373e78773459,a2981a2e,Improved loading raw text resource,"Improved loading raw text resource
+
+Doesn't require a ByteArrayOutputStream.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456784842,1456784842,3c85afde6adfc58e6c64615977cd8762e9148b19
+3c85afde6adfc58e6c64615977cd8762e9148b19,3c85afde,Use parseInt() instead of valueOf(),"Use parseInt() instead of valueOf()
+
+It's more efficient to just use parseInt() instead of
+box then unbox the value.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456784242,1456784242,5843fab8513a888251da333e513f7249beef8f63
+5843fab8513a888251da333e513f7249beef8f63,5843fab8,Removed manual invocation of garbage collector,"Removed manual invocation of garbage collector
+
+Probably unnecessary.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456784137,1456784137,909edc53639cdf555f37199cd8ebd854feaec565
+909edc53639cdf555f37199cd8ebd854feaec565,909edc53,Removed unused/unread fields,"Removed unused/unread fields
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456784090,1456784090,d4664f8059dc65fb0bcda70e4717036897293ad0
+d4664f8059dc65fb0bcda70e4717036897293ad0,d4664f80,Made inner class static,"Made inner class static
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456783330,1456783330,349140b274d56d1689909da04914ad92f550d2dd
+349140b274d56d1689909da04914ad92f550d2dd,349140b2,Make static members of application context final,"Make static members of application context final
+
+Declaring the static members of the application context as
+final is syntactically better because those members will
+never change. The only reason they weren't final was, that
+I preferred to make the objects only constructable with a
+context object. Switched to late initialization because
+it's probably more important to have the static members
+to be final.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456782783,1456782783,7fa077f42ba56b96fa60fcadeafaffc0d43c9263
+7fa077f42ba56b96fa60fcadeafaffc0d43c9263,7fa077f4,Run lint before release,"Run lint before release
+
+Just a precaution so I cannot forget that.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456581106,1456581106,0edd4b01a7768076094a0e19f5d3457ec254e006
+0edd4b01a7768076094a0e19f5d3457ec254e006,0edd4b01,Updated android gradle plugin to 1.5,"Updated android gradle plugin to 1.5
+
+Fixes a false positive lint warning claiming use of
+a private resource.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456577750,1456577750,31e1e0f70372a90d52144e9fc9fe34fc12a602cb
+31e1e0f70372a90d52144e9fc9fe34fc12a602cb,31e1e0f7,Open database in DataSource,"Open database in DataSource
+
+Originally put in Application because of error handling.
+But since there's nothing that can be done if the database
+would not open, it's probably better to put that where it
+belongs.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456577726,1456577726,db3d918dbc03a97d8bae511511c8f2ee3c60b5ad
+db3d918dbc03a97d8bae511511c8f2ee3c60b5ad,db3d918d,Removed unused imports,"Removed unused imports
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456570735,1456570735,c15171f6c419ff7a0d6563b833d53fd3437fa203
+c15171f6c419ff7a0d6563b833d53fd3437fa203,c15171f6,Removed double null check,"Removed double null check
+
+The first check doesn't make much sense now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456349158,1456349158,7680f87eb68fc89f358521b73eabf42e90e4d913
+7680f87eb68fc89f358521b73eabf42e90e4d913,7680f87e,Mark switch/case fall through as intentional,"Mark switch/case fall through as intentional
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456349133,1456349133,90d5083241f9c7551035758e33ddc825cac2a174
+90d5083241f9c7551035758e33ddc825cac2a174,90d50832,Advanced version number to 2.3.1,"Advanced version number to 2.3.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456066549,1456066549,5d9a5a4cb952d87eacf9d9a69f2eed3e6f564451
+5d9a5a4cb952d87eacf9d9a69f2eed3e6f564451,5d9a5a4c,Add READ_EXTERNAL_STORAGE permission for API < 19,"Add READ_EXTERNAL_STORAGE permission for API < 19
+
+Required to import textures on API < 19 from gallery apps
+that do not use grantUriPermission(). Later API's will not
+see that permission.
+
+Hard decision. I don't really want to add that permission
+but people (on API's < 19, especially Samsung devices)
+keep running into this limitation and I just don't see a
+better way to fix this.
+
+At the time of writing, about 25% of installs will be
+affected by this and will need to manually confirm the
+update containing this change.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456065745,1456065745,42f13b9be9630dbf8ce772cca7dc2f76688be444
+42f13b9be9630dbf8ce772cca7dc2f76688be444,42f13b9b,Show texture name in texture view,"Show texture name in texture view
+
+And cleaned up database functions dealing with textures.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456065628,1456065628,2b124066e31547684710203fc779e0a88d850bff
+2b124066e31547684710203fc779e0a88d850bff,2b124066,Match texture menu item with uniform menu item,"Match texture menu item with uniform menu item
+
+Better use ""Add ..."" pattern for both. I'm always tapping
+on ""Add uniform"" because I'm thinking add texture.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456065450,1456065450,cc39f412af90648f768bb964db7224f9905bd1f6
+cc39f412af90648f768bb964db7224f9905bd1f6,cc39f412,Removed hyphen from texture name pattern,"Removed hyphen from texture name pattern
+
+Hyphens are not allowed in GLSL names.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456065261,1456065261,08c8213d4fdc03f7f42e5bbbdce7cbe79d098fe9
+08c8213d4fdc03f7f42e5bbbdce7cbe79d098fe9,08c8213d,Null static member when service is destroyed,"Null static member when service is destroyed
+
+Don't leak the old WallpaperService.Engine beyond
+service death. Just a precaution. Shouldn't make
+a difference.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456061812,1456061812,0acc9f2ce2b56d1bb8c89942e998e8c01955d55e
+0acc9f2ce2b56d1bb8c89942e998e8c01955d55e,0acc9f2c,Filter invalid characters from name input,"Filter invalid characters from name input
+
+Only allow alphanumeric texture names with underscores and hyphens.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1456000547,1456000547,1b7bb6ebeb672dce13caa0ff45d693159b78d8ef
+1b7bb6ebeb672dce13caa0ff45d693159b78d8ef,1b7bb6eb,Allow underscores and hyphens in texture names,"Allow underscores and hyphens in texture names
+
+Should filter characters in EditText to avoid invalid
+names in the first place.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1455996592,1455996592,32dd16875f6a208df78aa20d1c8cd4ae20c8245a
+32dd16875f6a208df78aa20d1c8cd4ae20c8245a,32dd1687,Updated badges for Google Play and F-Droid,"Updated badges for Google Play and F-Droid
+
+Wish those guys would decide on a URL and keep it.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1455568332,1455568332,ced177f1075a99429ea3bf210f64e30fb4a9bb18
+ced177f1075a99429ea3bf210f64e30fb4a9bb18,ced177f1,Added date/time and startRandom uniform,"Added date/time and startRandom uniform
+
+New uniform vec4 date containing year, month, date and time
+in seconds.
+
+And uniform float startRandom initialized to a random value
+at each load.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1453750880,1453750880,1b565f44010645ca6ee429179525010f87220cb3
+1b565f44010645ca6ee429179525010f87220cb3,1b565f44,Clean up remains of static instance reference,"Clean up remains of static instance reference
+
+Removed now unused static instance reference.
+
+Reference to EditorFragment does not need to be static.
+
+Reset static result members in PreviewActivity::onCreate().
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452806012,1452806012,4b467fa7f90b88d5cd4a69d1e405748feed0fae0
+4b467fa7f90b88d5cd4a69d1e405748feed0fae0,4b467fa7,Use static members to transfer fps and info log,"Use static members to transfer fps and info log
+
+Better because it doesn't require a static reference to
+MainActivity.
+
+Can't use setResult() to transfer fps, info log and the thumbnail
+because going back from the preview will result in RESULT_CANCELLED
+and data is null no matter if setResult() was run before.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452640463,1452640463,1e25a5cfa2e7d82cf49cbf56f3de567e78615ce2
+1e25a5cfa2e7d82cf49cbf56f3de567e78615ce2,1e25a5cf,Made texture arrays final,"Made texture arrays final
+
+Won't change so they should be final.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452549421,1452549421,4a4aae94b3b40bec4c5277d7d75628df5fa9610b
+4a4aae94b3b40bec4c5277d7d75628df5fa9610b,4a4aae94,Fixed typo,"Fixed typo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452545620,1452545620,d89b0d74600aaaf68733f93e37ae0970f961874d
+d89b0d74600aaaf68733f93e37ae0970f961874d,d89b0d74,Initialize start time on surface change,"Initialize start time on surface change
+
+It's probably more correct to reset the start time
+whenever the surface changes. On Android < 5, this
+means that showing or hiding the soft keyboard resets
+the start time which is better.
+
+Also moved onSurfaceChanged() before onDrawFrame()
+because that is the order of execution.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452436704,1452436704,5e650abbfdf05986e5e0077aed4b1e17e0eda051
+5e650abbfdf05986e5e0077aed4b1e17e0eda051,5e650abb,Advanced version number to 2.3.0,"Advanced version number to 2.3.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452342513,1452342513,849e90730f1f74b8e03ecb89c19dcc73dc453e82
+849e90730f1f74b8e03ecb89c19dcc73dc453e82,849e9073,Create sensor listeners on demand,"Create sensor listeners on demand
+
+Only create sensor listener objects if they're used.
+
+Maybe they should even be null'ed in unregisterListeners()
+to drop unrequired listeners when browsing between shaders.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452342143,1452342143,374b5d1822f4650d84d278c06e4332baf3084386
+374b5d1822f4650d84d278c06e4332baf3084386,374b5d18,Fixed binding of multiple textures,"Fixed binding of multiple textures
+
+The mapping between uniform locations and texture IDs was missing.
+And glActiveTexture() was missing. Bad.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452298824,1452298824,0b61117139e0ba4171322128f0a3b2ab2383de19
+0b61117139e0ba4171322128f0a3b2ab2383de19,0b611171,"Exposure of light, pressure and proximity sensors","Exposure of light, pressure and proximity sensors
+
+Added missing sensors available down to minSdkVersion (API 9).
+
+The proximity sensor very often only supports a binary ""near""
+or ""far"" measurement. The light sensor has very often only a
+few levels too. And I guess many devices don't even have a
+pressure sensor but anyway.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452192229,1452192229,7399fd5ca168b1b146ee7b72d3de6e397fd192b8
+7399fd5ca168b1b146ee7b72d3de6e397fd192b8,7399fd5c,Transparent background color in error highlighting,"Transparent background color in error highlighting
+
+Because EditText draws the cursor before the background of
+Spannables, an opaque background color will make the cursor
+disappear. There's an issue about that:
+
+https://code.google.com/p/android/issues/detail?id=172001
+
+For the time being, the simplest solution is to make the
+background color transparent. It may not be as eye-catching
+as before but it's probably still good enough to clearly see
+where the error is.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452190066,1452190066,c18ff8f7f282c00869b4677f6b7709fe0486dd3f
+c18ff8f7f282c00869b4677f6b7709fe0486dd3f,c18ff8f7,Expose magnetic field sensor,"Expose magnetic field sensor
+
+Added a new uniform magnetic that exposes the geomagnetic
+field strength along the x, y and z axis.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452113702,1452113702,0a01261c2dc04bef27189e2bd79d15839eeae5e4
+0a01261c2dc04bef27189e2bd79d15839eeae5e4,0a01261c,Advanced version number to 2.2.0,"Advanced version number to 2.2.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452108431,1452108431,ef6e62def5e49a2f17df315ec9d934610a4834f2
+ef6e62def5e49a2f17df315ec9d934610a4834f2,ef6e62de,Added feature graphic SVG source,"Added feature graphic SVG source
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452108136,1452108136,f9ac3196d8dbf264af54d3bcdaef97dbef783724
+f9ac3196d8dbf264af54d3bcdaef97dbef783724,f9ac3196,Fixed monitoring battery level,"Fixed monitoring battery level
+
+The battery level was only updated when the GLSL program was
+loaded which does only happen once in the wallpaper service.
+Hence, a shader in a live wallpaper didn't get the current
+battery level.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452106130,1452106130,8e3f1cfed99dfb59245f4d34b3ad9d8855d954f3
+8e3f1cfed99dfb59245f4d34b3ad9d8855d954f3,8e3f1cfe,Hide checkbox if there's no calling activity,"Hide checkbox if there's no calling activity
+
+The add uniform checkbox requires a calling activity that
+evaluates the result.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452019125,1452019125,8cddda1f492b110de04ed200ab7a49d21d820452
+8cddda1f492b110de04ed200ab7a49d21d820452,8cddda1f,Insert new uniform after last #endif block,"Insert new uniform after last #endif block
+
+If there is no block of uniform statements already that is.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452018615,1452018615,e28e42a4421e36912a9fa19c731b9087e306a35b
+e28e42a4421e36912a9fa19c731b9087e306a35b,e28e42a4,Moved quality spinner to the right/end,"Moved quality spinner to the right/end
+
+Better for landscape mode or tablet displays.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1452014593,1452014593,3ba88ccff7224323c052baef0c18502427e98d68
+3ba88ccff7224323c052baef0c18502427e98d68,3ba88ccf,Add uniforms by picking them form a list,"Add uniforms by picking them form a list
+
+This is probably a lot better than enumerating available
+uniforms in the new shader.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451946144,1451946144,bba8c4e75b6478aa60c2f6e3dc74117268a7e5d1
+bba8c4e75b6478aa60c2f6e3dc74117268a7e5d1,bba8c4e7,Drop glClear() to preserve pixel buffer,"Drop glClear() to preserve pixel buffer
+
+According to the OpenGL ES specification, using the discard keyword
+should not update the buffer. So glClear() needs to be dropped because
+it clears the buffer between renders.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451938905,1451938905,531e8e773163614166f919598f7b4a5262a6ed4b
+531e8e773163614166f919598f7b4a5262a6ed4b,531e8e77,Set title after inserting a new shader,"Set title after inserting a new shader
+
+Also, clear thumbnail when accepting text from other apps.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451937544,1451937544,f151e9a6b82367b285d83550df9df11afb7fc07a
+f151e9a6b82367b285d83550df9df11afb7fc07a,f151e9a6,Only show update wallpaper if set as wallpaper,"Only show update wallpaper if set as wallpaper
+
+Only show ""Update wallpaper"" menu item if the current shader
+is set as wallpaper shader.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451917676,1451917676,4f646fefd343e2270fb4416cfe427d6dd8e1c2c7
+4f646fefd343e2270fb4416cfe427d6dd8e1c2c7,4f646fef,Cleaned up string resources,"Cleaned up string resources
+
+And put in comments for easy mapping.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451916937,1451916937,6ea9961b4fe39c1af8eabe4e55a44949815aeb4e
+6ea9961b4fe39c1af8eabe4e55a44949815aeb4e,6ea9961b,Ignore lint warning about typography fractions,"Ignore lint warning about typography fractions
+
+All labels should look the same even if there are typography
+fractions available for *some* of them.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451659245,1451659245,e986ef27e7efd967e09b2d83f43b1582208661b4
+e986ef27e7efd967e09b2d83f43b1582208661b4,e986ef27,Updated features,"Updated features
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451588460,1451588460,972f009cfc67cbb96d31d17136aef108521c416b
+972f009cfc67cbb96d31d17136aef108521c416b,972f009c,Advanced version number to 2.1.0,"Advanced version number to 2.1.0
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451587935,1451587935,6e27afbd955b5383782d56b06f011f66d3b615f5
+6e27afbd955b5383782d56b06f011f66d3b615f5,6e27afbd,Change render resolution/quality,"Change render resolution/quality
+
+There's a spinner inside the toolbar to change render
+resolution now. The chosen quality is stored with the
+fragment shader in the database so it's possible to
+set a preferred resolution for the wallpaper shader.
+
+But the spinner is quite ugly. Searching for a better
+way to it.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451587703,1451587703,08315c2b54f5b80390c6c24ae28b5949d74bf8b7
+08315c2b54f5b80390c6c24ae28b5949d74bf8b7,08315c2b,Basic checks and filtering for accepted text,"Basic checks and filtering for accepted text
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451585256,1451585256,63c6868b681584af882c98d3360043cfc18dbc62
+63c6868b681584af882c98d3360043cfc18dbc62,63c6868b,Fixed inserting sampler2D statement,"Fixed inserting sampler2D statement
+
+The activity result needs to be set again in TexturesFragment
+because picking a texture happens in a subsequent activity now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451498254,1451498254,ffc08882e3d300c446c72f3bad52679abde17fbf
+ffc08882e3d300c446c72f3bad52679abde17fbf,ffc08882,Finish activity after removing texture,"Finish activity after removing texture
+
+TextureViewFragment is no longer part of a fragment history
+so the activity needs to be finished when the texture is
+removed.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451496358,1451496358,f19a1bce61b562806291d426d5cb24b4b6614cc1
+f19a1bce61b562806291d426d5cb24b4b6614cc1,f19a1bce,Cleaned up handling of PICK_IMAGE_REQUEST,"Cleaned up handling of PICK_IMAGE_REQUEST
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451494920,1451494920,5010e7a64644089ffa40762e9dd2f748a5bd8398
+5010e7a64644089ffa40762e9dd2f748a5bd8398,5010e7a6,No need to re-initialize vertex buffer,"No need to re-initialize vertex buffer
+
+The local vertex buffer may life beyond multiple surface
+life cycles.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451248208,1451248208,0d7b678a3fddc37757675f9455f5aa2478d5da8b
+0d7b678a3fddc37757675f9455f5aa2478d5da8b,0d7b678a,Simplified setting wallpaper shader,"Simplified setting wallpaper shader
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451157160,1451157160,e0b16c1a77699c7a1f7e0e6096648e6c5442eecf
+e0b16c1a77699c7a1f7e0e6096648e6c5442eecf,e0b16c1a,Improved setting of shader according to state,"Improved setting of shader according to state
+
+Handle incoming text intents when there are no shaders.
+Remain EditText state when selectedShaderId is 0.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451150372,1451150372,b29b34f029b8d60c299362c88f4a2b2c58b69c0e
+b29b34f029b8d60c299362c88f4a2b2c58b69c0e,b29b34f0,Fixed order of methods,"Fixed order of methods
+
+initSystemBars() is called before (and does call) setSystemBarColor().
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1451150218,1451150218,bdc59554c21e440064a5819a4ab85679702a52e7
+bdc59554c21e440064a5819a4ab85679702a52e7,bdc59554,Advanced version number to 2.0.3,"Advanced version number to 2.0.3
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450957094,1450957094,a6fce9629323a09aee810ef13af9a5f06ec8bca3
+a6fce9629323a09aee810ef13af9a5f06ec8bca3,a6fce962,Handle out of memory exception,"Handle out of memory exception
+
+Don't try to get a bigger image for a better quality
+cut out because that breaks on some of my devices.
+Apparently, 2048px can already be too much.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450957017,1450957017,b6140542e086dddf99a0f305e9635280cd26e9b7
+b6140542e086dddf99a0f305e9635280cd26e9b7,b6140542,Don't toast when not on the main thread,"Don't toast when not on the main thread
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450956468,1450956468,b4086e4701d6509634122575cfa08b30b61548dc
+b4086e4701d6509634122575cfa08b30b61548dc,b4086e47,Advanced version number to 2.0.2,"Advanced version number to 2.0.2
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450901491,1450901491,fca90db22fd8c57069631ebee6d04308e0fa7ea4
+fca90db22fd8c57069631ebee6d04308e0fa7ea4,fca90db2,Removed conway sample shader,"Removed conway sample shader
+
+You need to touch the shader to see it working and
+it's *very* slow on some devices. So it's probably
+not a good sample.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450901391,1450901391,7509f6477c4eee1f928c3f50c2fea7d8eadeb64c
+7509f6477c4eee1f928c3f50c2fea7d8eadeb64c,7509f647,Put ImageView's behind translucent system bars,"Put ImageView's behind translucent system bars
+
+Looks better but takes more code.
+
+App's get judged by the looks, so let's go for it.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450897200,1450897200,709ad4640d5169440888d98f5a5e66c9803831c1
+709ad4640d5169440888d98f5a5e66c9803831c1,709ad464,Additional sample shaders,"Additional sample shaders
+
+Added Conway's Game of Life and a demo shader using the
+gravity uniform.
+
+Also, all samples will get inserted in database version 1
+to make them available when updating.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450802445,1450802445,0fc9b9c01a662c50c1bd3c1c1e4787c831c5bba7
+0fc9b9c01a662c50c1bd3c1c1e4787c831c5bba7,0fc9b9c0,Improved wording of labels,"Improved wording of labels
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450802384,1450802384,1a28e4fdfffced1d3a842bab84d92dc390b384b9
+1a28e4fdfffced1d3a842bab84d92dc390b384b9,1a28e4fd,Better names for time constants,"Better names for time constants
+
+Got confused and thought the time uniform would contain
+milliseconds when in fact it contains seconds. So I tried
+to clarify what the constants actually mean and removed
+that wrapping (because it would only wrap after ~18 hours).
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450801930,1450801930,36222c80d83b5acd5dab502c29e7b38425d68a17
+36222c80d83b5acd5dab502c29e7b38425d68a17,36222c80,Fixed typo,"Fixed typo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450801265,1450801265,2ff570ab21567cfd13dc6997af9f1a1ecd8b8f32
+2ff570ab21567cfd13dc6997af9f1a1ecd8b8f32,2ff570ab,Refactored queryThings() into getThings(),"Refactored queryThings() into getThings()
+
+To match the naming convention of all the other query
+methods that return only one item. No reason to use
+a different verb for bulk queries.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450724891,1450724891,2c09e10acccdd2d23d17775b697aae16fa408034
+2c09e10acccdd2d23d17775b697aae16fa408034,2c09e10a,Advanced version number to 2.0.1,"Advanced version number to 2.0.1
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450650702,1450650702,bbc218d481a508720732006bd50215eafc722187
+bbc218d481a508720732006bd50215eafc722187,bbc218d4,Cleaned up default shaders,"Cleaned up default shaders
+
+Improved readability.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450650627,1450650627,c397fdd1f4417d03c768411a5925df1344f096ce
+c397fdd1f4417d03c768411a5925df1344f096ce,c397fdd1,Changed order of initial shaders,"Changed order of initial shaders
+
+It's probably better to have the simpler shader first.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450650544,1450650544,4759bb5131a17e2ef04a45ad395ee8c022b9f30b
+4759bb5131a17e2ef04a45ad395ee8c022b9f30b,4759bb51,Button to rotate source image for texture,"Button to rotate source image for texture
+
+Good for photos using EXIF orientation data or just any image
+you want to use with another orientation.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1450212784,1450212784,8651579976bae3143b563356ba9081728dc8a61e
+8651579976bae3143b563356ba9081728dc8a61e,86515799,Intent filter for text/plain and image/*,"Intent filter for text/plain and image/*
+
+Accept data from other apps. Can be used to import
+textures or source code.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449700078,1449700078,e888ad49f3fa693efb12f6bb16ee90ce194f64c3
+e888ad49f3fa693efb12f6bb16ee90ce194f64c3,e888ad49,Removed apk target,"Removed apk target
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449696454,1449696454,33a2dc37e5fb66ef26e5273098ab1b4ca56e6266
+33a2dc37e5fb66ef26e5273098ab1b4ca56e6266,33a2dc37,Removed infer rule,"Removed infer rule
+
+Unfortunately, Infer isn't quite there yet.
+
+It's a pain to install (compliation breaks with 0.4.0) and
+(at least 0.2.0) can't see if you're closing a cursor in a
+method and not in the current context:
+
+	Cursor cursor = ...
+
+	if( closeIfEmpty( cursor ) )
+		return;
+
+You can close the cursor in closeIfEmpty() but that won't
+keep Infer from complaining. There are other situations
+like when you're putting a cursor into an adapter that
+trigger the same kind of warning altough you're calling
+adapter.changeCursor( null ); to close it.
+
+Looking for other static analysis tools.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449508784,1449508784,f8b83781673873c25bef24deb8b581ecf3557c36
+f8b83781673873c25bef24deb8b581ecf3557c36,f8b83781,Added a release target to build and sign,"Added a release target to build and sign
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449435461,1449435461,696892905f3ebd7db723c643e0c2e2efc5d15ad2
+696892905f3ebd7db723c643e0c2e2efc5d15ad2,69689290,Simplified showing toasts,"Simplified showing toasts
+
+No need to add a tool method in just one fragment.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449432582,1449432582,33a9b5f67dc8598d3c1fd186f942e95de99c7fb9
+33a9b5f67dc8598d3c1fd186f942e95de99c7fb9,33a9b5f6,Remove color from drawer background,"Remove color from drawer background
+
+A simple, translucent black probably works better on
+colorful backgrounds.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449429447,1449429447,6713387cace20d67cec9525da3d93234dc0f3a2b
+6713387cace20d67cec9525da3d93234dc0f3a2b,6713387c,Save thumbnail after preview activity did run,"Save thumbnail after preview activity did run
+
+Makes sure the thumbnail is from the most recent run.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449428567,1449428567,b00cd8bcba8f3440521cafdbb47ee85c03eb5be9
+b00cd8bcba8f3440521cafdbb47ee85c03eb5be9,b00cd8bc,Fixed a crash when removing last shader,"Fixed a crash when removing last shader
+
+Check source for null before use. It may very well be null
+if there is no source availabe.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449417431,1449417431,72f3644448629e1a2596ef27cc5eed878a049296
+72f3644448629e1a2596ef27cc5eed878a049296,72f36444,Show message when no textures are available,"Show message when no textures are available
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449415533,1449415533,2211d5a1b85ed71295508148e43d9b314a0cb2c6
+2211d5a1b85ed71295508148e43d9b314a0cb2c6,2211d5a1,Setting to save on run,"Setting to save on run
+
+Automatically save the source when running a shader manually.
+This explicitly excludes auto running on change.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449414546,1449414546,ef6c0533476fc7cdab947974be21c05c30aa3a22
+ef6c0533476fc7cdab947974be21c05c30aa3a22,ef6c0533,Set toolbar title if there is a selected shader,"Set toolbar title if there is a selected shader
+
+After rotating the device, when the stored instance state
+contains a selected shader ID, it's required to set the toolbar
+title to the name of the shader.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449413074,1449413074,235dbb52dea2f003f446aac061f82e99f2d16da8
+235dbb52dea2f003f446aac061f82e99f2d16da8,235dbb52,Option to insert uniform sampler2D statement,"Option to insert uniform sampler2D statement
+
+When importing a new texture, there's now a checkbox to
+have the ""uniform sampler2D name;"" statement inserted for
+you.
+
+When viewing a texture, there's now a menu item to do
+the same for the currently displayed texture.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449411844,1449411844,39e4ede5b823c0454978da4f1dc6170bf1b994b7
+39e4ede5b823c0454978da4f1dc6170bf1b994b7,39e4ede5,Decreased margin of floating action bar,"Decreased margin of floating action bar
+
+Looks better.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449407764,1449407764,9a8988ad1afe59124c3d808cff07690c3c78561b
+9a8988ad1afe59124c3d808cff07690c3c78561b,9a8988ad,Setting to hide insert tab button,"Setting to hide insert tab button
+
+I've got a hunch some people don't like tabs.
+Those guys probably prefer to hide that button and
+use the space for other menu icons.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449407630,1449407630,89717fd49d257a1754539dd0b343c9efee21c108
+89717fd49d257a1754539dd0b343c9efee21c108,89717fd4,Fixed ScaleType.CENTER_INSIDE for smaller images,"Fixed ScaleType.CENTER_INSIDE for smaller images
+
+CENTER_INSIDE means the image is (proportionally) scaled
+to the shorter dimension of the view. Before that change,
+that was only true for images that have a larger length
+than one dimension of the view.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449407448,1449407448,3cfa2d38e81391f907e7dbd698b8d09c368ef358
+3cfa2d38e81391f907e7dbd698b8d09c368ef358,3cfa2d38,Catch security exception when choosing an image,"Catch security exception when choosing an image
+
+Content providers that do no grant permission for the transferred
+image URI will cause a security exception. Samsung's image gallery
+on the Galaxy Note 2 is such a bad example.
+
+Since all other gallery apps I've tried so far (not too many) do
+grant the permission, I chose to add a toast informing the user
+to use another gallery app to pick the image.
+
+If this problem has a broader scope, there's no way around
+READ_EXTERNAL_STORAGE what I would like to avoid because it's
+a ""dangerous permission"" on Marshmallow and it's simply not
+really required.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449348579,1449348579,6e74c466714adc94e52578f7a116a1b17cdb4d68
+6e74c466714adc94e52578f7a116a1b17cdb4d68,6e74c466,Removed unused texture file path option,"Removed unused texture file path option
+
+Originally I played with the idea of using a texture
+from a file path. But since textures need to have
+dimensions of the power of two, that's probably too
+hard to handle.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449339637,1449339637,ddc6a12a521b074be0ab639378d51cacbe888c21
+ddc6a12a521b074be0ab639378d51cacbe888c21,ddc6a12a,Better texture name hint,"Better texture name hint
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449339051,1449339051,f1b2774fd00da9a5b1a699979e5387c9795ca318
+f1b2774fd00da9a5b1a699979e5387c9795ca318,f1b2774f,Refactored (texture) details to properties,"Refactored (texture) details to properties
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449338805,1449338805,8438584373af3a76842c1d451df0ceb5b6881151
+8438584373af3a76842c1d451df0ceb5b6881151,84385843,Updated documentation in new shader source,"Updated documentation in new shader source
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449338630,1449338630,5432599cb5b4c39da61b5e567a38d95b9b5d8ea2
+5432599cb5b4c39da61b5e567a38d95b9b5d8ea2,5432599c,Refuse textures named backbuffer,"Refuse textures named backbuffer
+
+To avoid collision with the built-in back buffer texture.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449338563,1449338563,91b244190ba82de6be77edd19b2587a9d3e3a935
+91b244190ba82de6be77edd19b2587a9d3e3a935,91b24419,Fixed version code,"Fixed version code
+
+Advanced too far. There never was a version 13 so far.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449335065,1449335065,7e1247ff76dd0cf3fda44d28253f32ddf6ecde6e
+7e1247ff76dd0cf3fda44d28253f32ddf6ecde6e,7e1247ff,Updated features and description,"Updated features and description
+
+Also removed screen shot. I need a better one.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449334484,1449334484,7bf2728fd009722bc0a7969063532571b6b8d991
+7bf2728fd009722bc0a7969063532571b6b8d991,7bf2728f,Moved toggle code before save in menu,"Moved toggle code before save in menu
+
+I *think* toggle code is required more often than save.
+May be wrong. We'll see.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449334307,1449334307,518c4cec312d2c693ce8ef8772f7c14f4ff7acd4
+518c4cec312d2c693ce8ef8772f7c14f4ff7acd4,518c4cec,Uniform status and navigation bar color,"Uniform status and navigation bar color
+
+All activities, except the extra preview activity, do now
+share the same status and navigation bar color.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449332692,1449332692,241ad324475b92856757a41f86306a7f87a8a1e4
+241ad324475b92856757a41f86306a7f87a8a1e4,241ad324,Menu item to insert tab character,"Menu item to insert tab character
+
+Brought back the menu item to insert a tab character.
+Works better for me.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449328641,1449328641,2cd396b6599aa8f2c6e067ba873d5b08bf945851
+2cd396b6599aa8f2c6e067ba873d5b08bf945851,2cd396b6,Moved settings from drawer into menu,"Moved settings from drawer into menu
+
+It's probably a bit confusing having settings in the
+drawer at the left (start) and the rest of the options
+in the overflow menu at the right (end).
+
+Then, when the keyboard is visible, the list of shaders
+becomes quite small on small screens or landscape with
+additional menu items in the drawer.
+
+After trying the textures menu item in the drawer, it
+became quite clear, that the drawer should only contain
+the list of shaders and nothing else.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449327152,1449327152,0e563594714f0023786563226d6158edea245cb5
+0e563594714f0023786563226d6158edea245cb5,0e563594,Show toast just below toolbar,"Show toast just below toolbar
+
+Because the default position at the bottom of the display
+interferes with the keyboard while editing.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449325179,1449325179,033c413019249e982c6cbd795034fba4c4a73aec
+033c413019249e982c6cbd795034fba4c4a73aec,033c4130,Use a dark gray for transparent drawer background,"Use a dark gray for transparent drawer background
+
+Looks better when the shader is running in an extra
+activity.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449321211,1449321211,1310661f19a4f133aa24766791355a17cd843082
+1310661f19a4f133aa24766791355a17cd843082,1310661f,Show errors and fps when running in extra activity,"Show errors and fps when running in extra activity
+
+Show error messages (if any) and frames per second in
+MainActivity when the shader is running in PreviewActivity.
+
+Also fixed order of some public methods.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449321055,1449321055,01437a8b39f3a7076257d45b6161e969f9d9fbf9
+01437a8b39f3a7076257d45b6161e969f9d9fbf9,01437a8b,Fixed indent,"Fixed indent
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449264872,1449264872,dea9dc6e013559d7265dc5486d24b620ff8f2ee3
+dea9dc6e013559d7265dc5486d24b620ff8f2ee3,dea9dc6e,Use wrap_content instead of a fixed height,"Use wrap_content instead of a fixed height
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449262343,1449262343,63c78f0957699e398aede2aa2bd016485b331b0b
+63c78f0957699e398aede2aa2bd016485b331b0b,63c78f09,Use Android naming convention,"Use Android naming convention
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449262249,1449262249,0b2e8977edfae2a1f3ef06476ca0f449818c6aaf
+0b2e8977edfae2a1f3ef06476ca0f449818c6aaf,0b2e8977,Save texture in a background task,"Save texture in a background task
+
+And show a progress bar while doing so.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449262171,1449262171,3565ecfbcff0b8331c37400c7885c82968aca64f
+3565ecfbcff0b8331c37400c7885c82968aca64f,3565ecfb,Use fully qualified symbol name,"Use fully qualified symbol name
+
+Since we're calling ScalingImageView::getRectInBounds(),
+it's better to use a fully qualified symbol name.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449261842,1449261842,89c46bab28dd67068f72f739efdab9a1fbb41e99
+89c46bab28dd67068f72f739efdab9a1fbb41e99,89c46bab,Changed expression to match with other occurences,"Changed expression to match with other occurences
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449261704,1449261704,7df883f7725fe0293c44948191acfe1f058785cd
+7df883f7725fe0293c44948191acfe1f058785cd,7df883f7,Inspect already imported textures,"Inspect already imported textures
+
+Tapping on a texture from the list will open a texture
+viewer now.
+
+Removing a texture also went into this activity.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449261349,1449261349,ba2987ab893ff03d8118af22ccc6d45a8d9604a9
+ba2987ab893ff03d8118af22ccc6d45a8d9604a9,ba2987ab,Translucent navigation bar on Lollipop and higher,"Translucent navigation bar on Lollipop and higher
+
+Having a translucent status bar is only half of the story.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449091419,1449091419,e99e4e32acf5a8cac4ef1e7b1aa5881309da5441
+e99e4e32acf5a8cac4ef1e7b1aa5881309da5441,e99e4e32,Generic error messages if creating a shader fails,"Generic error messages if creating a shader fails
+
+Shouldn't ever happen but you never know.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449091336,1449091336,c0830fcb44fd3d41e2b5d2e4f0934909a47bedca
+c0830fcb44fd3d41e2b5d2e4f0934909a47bedca,c0830fcb,Use a Toast to display GLSL error message,"Use a Toast to display GLSL error message
+
+Probably far better than using a hidden layout because
+it won't trigger a re-layout. What makes the cursor in
+the editor jump.
+
+The pre Material Design version used a pop up window
+because I thought it would be bad if the error message
+vanishes by itself. On the other hand, the user can
+recompile at any time so that's probably not a big
+problem.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449090837,1449090837,282eace878150b107f8d95673b39f8447326cb6f
+282eace878150b107f8d95673b39f8447326cb6f,282eace8,Updated build tools and app compat,"Updated build tools and app compat
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449090400,1449090400,5ec93e234cb67bcfff3a3bc7ce93f4b0fb529353
+5ec93e234cb67bcfff3a3bc7ce93f4b0fb529353,5ec93e23,Don't reset editor content on orientation change,"Don't reset editor content on orientation change
+
+selectedShaderId should correspond to the instance
+state and can therefore not be static.
+
+This solves the problem of the editor loosing cursor
+position and any unsaved text on orientation changes
+because the content was always set anew for every
+new activity instance.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1449008767,1449008767,4452f07831155a6e0fdd2e04bc35fe5c8d0c6459
+4452f07831155a6e0fdd2e04bc35fe5c8d0c6459,4452f078,Removed debug logging,"Removed debug logging
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448830900,1448830900,81c8f9cea2282537b4fdee12dcd6a0794e6464c3
+81c8f9cea2282537b4fdee12dcd6a0794e6464c3,81c8f9ce,Better use a JPG screenshot,"Better use a JPG screenshot
+
+Size matters.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448829453,1448829453,d62796879dc6eb2719d43a8339f5eba770d95cf2
+d62796879dc6eb2719d43a8339f5eba770d95cf2,d6279687,Show a screenshot,"Show a screenshot
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448829262,1448829262,74c7d1baa8bf9ad807a74c92446322a200367a5e
+74c7d1baa8bf9ad807a74c92446322a200367a5e,74c7d1ba,Added a CONTRIBUTORS file,"Added a CONTRIBUTORS file
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448828796,1448828796,8af297f797a8a7e7d82800d949b01e7db9460cd3
+8af297f797a8a7e7d82800d949b01e7db9460cd3,8af297f7,Try to get the highest available precision,"Try to get the highest available precision
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448828398,1448828398,63534312ad9acf0aaa6bdd2e2b48ec173a00c18f
+63534312ad9acf0aaa6bdd2e2b48ec173a00c18f,63534312,Nudged the cursor a tiny bit to the right,"Nudged the cursor a tiny bit to the right
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448827568,1448827568,637fbbc36353e02a1a69475ec680c56b530c62d5
+637fbbc36353e02a1a69475ec680c56b530c62d5,637fbbc3,Import and use textures from images on the device,"Import and use textures from images on the device
+
+There's a basic texture manager you can use to add new
+textures from local image files. Every texture needs
+to have a unique name.
+
+Use that name in a sampler2D input to use the texture
+from a shader.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1448823655,1448823655,05e342603c36fc7ffd7fc1117af2738c0c16638f
+05e342603c36fc7ffd7fc1117af2738c0c16638f,05e34260,Use latest appcompat libraries,"Use latest appcompat libraries
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1445180427,1445180427,3ef28aa3c85b018b410c8ab8808f96cd23cc51b8
+3ef28aa3c85b018b410c8ab8808f96cd23cc51b8,3ef28aa3,Use full name for fragment shader symbol,"Use full name for fragment shader symbol
+
+In case I find enough time to support models and editing
+the vertex shader.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1445177503,1445177503,b4db7d7c9e252a452404d86e33574fe3596b8719
+b4db7d7c9e252a452404d86e33574fe3596b8719,b4db7d7c,Use default shared preferences,"Use default shared preferences
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1443719420,1443719420,59c85a9966e2e0dde65246d82c904bcce71b0926
+59c85a9966e2e0dde65246d82c904bcce71b0926,59c85a99,Close activity on navigate up (top left arrow),"Close activity on navigate up (top left arrow)
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1443719238,1443719238,31d258686fc7a419ee050d66f4d8209c5fdec062
+31d258686fc7a419ee050d66f4d8209c5fdec062,31d25868,Fixed typo,"Fixed typo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1443719138,1443719138,e4d26122b3f2fb51e5ecb6a2675b214b3c5b54aa
+e4d26122b3f2fb51e5ecb6a2675b214b3c5b54aa,e4d26122,Updated to use latest build tools,"Updated to use latest build tools
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1443719108,1443719108,6f278fb920072f85c6fc23a30724127b99333a7f
+6f278fb920072f85c6fc23a30724127b99333a7f,6f278fb9,Restart rendering when the device is plugged in,"Restart rendering when the device is plugged in
+
+The docs are a bit unclear what BATTERY_OKAY really means.
+According to my tests, BATTERY_OKAY is not sent when the
+device is plugged in. Not even when the power level raised
+above BATTERY_LOW.
+
+So it's probably a good idea to listen for
+ACTION_POWER_CONNECTED too.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442515425,1442515425,c58d750a235c8c5220f50ffbde4585d8156a4ae4
+c58d750a235c8c5220f50ffbde4585d8156a4ae4,c58d750a,Fixed passing array of pointers,"Fixed passing array of pointers
+
+Of course, the array of pointers should be passed as an array
+of vec3's and not as a matrix. What fool wrote this code? :)
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442513492,1442513492,e26d5b13c4aa5a10f33cab9b7aa08bb9f052b5d9
+e26d5b13c4aa5a10f33cab9b7aa08bb9f052b5d9,e26d5b13,Use TARGET in all rules running adb,"Use TARGET in all rules running adb
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442348203,1442348203,1b13fd48ebcc967196992c62b32432f14cbfdc06
+1b13fd48ebcc967196992c62b32432f14cbfdc06,1b13fd48,Use v7 preference support library,"Use v7 preference support library
+
+Unfortunately, PreferenceFragmentCompat doesn't look like
+PreferenceFragment yet.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442347476,1442347476,c85cee36e55f50a05c595496a687f5b13cd1db91
+c85cee36e55f50a05c595496a687f5b13cd1db91,c85cee36,Updated to latest appcompat version,"Updated to latest appcompat version
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442346910,1442346910,4cc3071573b6eea3462a47d3d04f8b9ef6e20cf9
+4cc3071573b6eea3462a47d3d04f8b9ef6e20cf9,4cc30715,Lowered visibility of some Activity methods,"Lowered visibility of some Activity methods
+
+Doesn't make much difference but it's always better
+to keep the visibility as low as possible.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442346740,1442346740,fa131fac19383230d8fe5f339667196b7bb35871
+fa131fac19383230d8fe5f339667196b7bb35871,fa131fac,Cleaned up and fixed a typo,"Cleaned up and fixed a typo
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1442336064,1442336064,8c0201b1a8695757b83c89e6f75239b4ccd08212
+8c0201b1a8695757b83c89e6f75239b4ccd08212,8c0201b1,Updated outdated links,Updated outdated links,,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1441803739,1441803739,827929be819afea783c38e7f464cf993b204affa
+827929be819afea783c38e7f464cf993b204affa,827929be,Highlight preprocessor directives,"Highlight preprocessor directives
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440700983,1440700983,f39869bdd2d864b613013dc95aef0173b404686c
+f39869bdd2d864b613013dc95aef0173b404686c,f39869bd,Better names for Shader and ShaderError,"Better names for Shader and ShaderError
+
+What was a Shader object is really a shader Program object.
+
+And error messages are not just errors, but info logs as
+they are called by the OpenGL doc.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440615091,1440615091,086677b8bba217f74639a31a70d5333f18d50262
+086677b8bba217f74639a31a70d5333f18d50262,086677b8,Fixed preparing options menu,"Fixed preparing options menu
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440098468,1440098468,5de472fc5e15e38debf00884cd2b7670e0911c28
+5de472fc5e15e38debf00884cd2b7670e0911c28,5de472fc,Fixed loading of shaders after removal,"Fixed loading of shaders after removal
+
+Don't use obsolete adapter after a shader was removed from
+the database.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440094756,1440094756,877c9c8cc1f05b8688637820e083befe0f5f1f3a
+877c9c8cc1f05b8688637820e083befe0f5f1f3a,877c9c8c,Destroy shader program for empty shaders,"Destroy shader program for empty shaders
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440094700,1440094700,d9a829e401b6f7ad715bf39932eb87663092da91
+d9a829e401b6f7ad715bf39932eb87663092da91,d9a829e4,Use highp where available,"Use highp where available
+
+According to the spec, GL_FRAGMENT_PRECISION_HIGH is only
+defined if highp is available. highp is optional, default
+is mediump.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440094581,1440094581,c178383d71e011ab06fa337fb0e32b2ee4178976
+c178383d71e011ab06fa337fb0e32b2ee4178976,c178383d,Intercept all events when touch should go through,"Intercept all events when touch should go through
+
+Otherwise pointer move events can cause a crash.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440094406,1440094406,056511f8b6799d1e6c8600f11aea657434d7e0e9
+056511f8b6799d1e6c8600f11aea657434d7e0e9,056511f8,Fixed manifest receiver constant,"Fixed manifest receiver constant
+
+While the docs say, you should use ACTION_BATTERY_LOW when
+registering the broadcast receiver in the manifest, what you
+really should do is use the value of the constant which is
+BATTERY_LOW.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440017141,1440017141,ac14af1fb63da111ca705b82a95e6b97636d214d
+ac14af1fb63da111ca705b82a95e6b97636d214d,ac14af1f,Wrap time value at exactly 60 seconds,"Wrap time value at exactly 60 seconds
+
+Makes possibly more sense.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440004772,1440004772,35e5203891c65bfd095677c683168862b252339d
+35e5203891c65bfd095677c683168862b252339d,35e52038,Better use ContextCompat.getColor(),"Better use ContextCompat.getColor()
+
+Resources.getColor( int ) is deprecated from API 23 on.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440004706,1440004706,fa466ce76b71218e684953d1a35b48c0c62fc8a8
+fa466ce76b71218e684953d1a35b48c0c62fc8a8,fa466ce7,Moved handling of menu items into MainActivity,"Moved handling of menu items into MainActivity
+
+Less complex and gives better control.
+
+For example, when the users prefers to run the shader in an
+extra activity but toggled off the sources, it's now possible
+to make the code visible after changing the preference.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1440004487,1440004487,27628f615cf97688f40f601c0ea315bb60f0db91
+27628f615cf97688f40f601c0ea315bb60f0db91,27628f61,Turn wallpaper black when battery is low,"Turn wallpaper black when battery is low
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439925862,1439925862,aeab1e9a4d4a1114baf4affb4b649e7705a182a9
+aeab1e9a4d4a1114baf4affb4b649e7705a182a9,aeab1e9a,Updated to API 23,"Updated to API 23
+
+Android Marshmallow!
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439915112,1439915112,4b7106b157ed082038d8f2cfe587ec898dac6f3f
+4b7106b157ed082038d8f2cfe587ec898dac6f3f,4b7106b1,Use postfix for asynchronous methods,"Use postfix for asynchronous methods
+
+Makes asynchronous methods stand out.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439914971,1439914971,75bd43c62c7e97871a3682a743e100c8e081585f
+75bd43c62c7e97871a3682a743e100c8e081585f,75bd43c6,Better keep old behaviour of touch/mouse uniforms,"Better keep old behaviour of touch/mouse uniforms
+
+Don't reset touch/mouse coordinates when there's no touch.
+The coordinates need to be somewhere and resetting them
+would be just wrong.
+
+If you want to recognize ACTION_UPs, use the pointer* uniforms.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439914763,1439914763,0989ec3b742e78352f5bafcfbe215c824a24bebc
+0989ec3b742e78352f5bafcfbe215c824a24bebc,0989ec3b,Support multiple touches,"Support multiple touches
+
+There are two new uniforms that hold the available pointers:
+
+uniform int pointerCount;
+uniform mat3 pointers;
+
+The third member contains the touch major.
+
+Also, finally proper handling of ACTION_UP and ACTION_CANCEL.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439846748,1439846748,649a6bb03b736fe529163f401a3be581a6904c04
+649a6bb03b736fe529163f401a3be581a6904c04,649a6bb0,Fixed duplicating shader & generating thumbnails,"Fixed duplicating shader & generating thumbnails
+
+Generate a thumbnail when running in another activity too.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439844937,1439844937,a798321d3c973a402a550d5868e5099a3edfc603
+a798321d3c973a402a550d5868e5099a3edfc603,a798321d,Run shader in extra activity,"Run shader in extra activity
+
+Some people don't like having the shader running behind
+the code so there's a setting to run the shader in an
+extra activity now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439757708,1439757708,0056b931636b8d061c751bc49bd0bc0ab4391118
+0056b931636b8d061c751bc49bd0bc0ab4391118,0056b931,Wrap time variable,"Wrap time variable
+
+Time holds the number of milliseconds since the creation of the
+OpenGL surface. This number can get quickly very big what pretty
+soon will result in rounding errors because a mediump float is
+not very long.
+
+When that happens, results from calculations that rest on the
+uniformity of the time variable will jump. The animation stutters.
+
+To avoid this, the time variable wraps early now.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439756567,1439756567,d257fb6c0b3a707a455bbbe5914039670038711a
+d257fb6c0b3a707a455bbbe5914039670038711a,d257fb6c,Use a dedicated wallpaper thumbnail icon,"Use a dedicated wallpaper thumbnail icon
+
+One size fits all (nodpi) because there's no size specification.
+It really depends on the launcher. So one image of reasonable
+size will do.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439755751,1439755751,d57a809f35f72030a20c435dfadc1881e6bc156c
+d57a809f35f72030a20c435dfadc1881e6bc156c,d57a809f,Rephrased to be more inviting,"Rephrased to be more inviting
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439722797,1439722797,082461d119317f72085d3e762b079bd27c3634f6
+082461d119317f72085d3e762b079bd27c3634f6,082461d1,"F-Droid badge, CONTRIBUTING and LICENSE file","F-Droid badge, CONTRIBUTING and LICENSE file
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439678855,1439678855,bb324bab706b3bd03359b882bd48d392c18acdec
+bb324bab706b3bd03359b882bd48d392c18acdec,bb324bab,Material Design refactoring,"Material Design refactoring
+
+New design, new layout, and a lot of improvements:
+
+* use a drawer layout instead of a spinner
+* editor is now in a fragment
+* use icons from the Material Design icon library
+* better database management
+* close all cursors
+* fewer allocations
+* better preference management
+* improved sensor listeners
+* improved adapters
+* removed broken zoom/pinch to adjust font size
+* new material launcher icon
+* minify release builds
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1439677245,1439677245,5682df9c16a6a34472f53e211d5a2189f28a38bf
+5682df9c16a6a34472f53e211d5a2189f28a38bf,5682df9c,Removed dependency for appcompat,"Removed dependency for appcompat
+
+appcompat was added in preparation for the upcomming UI rework.
+Will be added again as soon as there are classes that use it.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1430344185,1430344185,55f093da6af8b8e45f283e644f4b141033599a9f
+55f093da6af8b8e45f283e644f4b141033599a9f,55f093da,Update wallpaper shader from menu,"Update wallpaper shader from menu
+
+Quickly update the shader running in the live wallpaper from
+the current source.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1430343435,1430343435,2db933ad60b8d7cce12da444317dba664568550a
+2db933ad60b8d7cce12da444317dba664568550a,2db933ad,Converted to gradle,"Converted to gradle
+
+Because gradle has become the de facto standard for Android.
+
+Personally I think gradle is unnecessarily complex and far too slow
+but there's not really a choice anymore.
+
+Also refactored classes into a more mature structure.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1430338730,1430338730,cb9d0a2b812af9934fd9e97ff4bbbd36c8a82b5e
+cb9d0a2b812af9934fd9e97ff4bbbd36c8a82b5e,cb9d0a2b,Merge pull request #8 from stuartpb/patch-1,"Merge pull request #8 from stuartpb/patch-1
+
+glsl.heroku.com has moved",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1430321633,1430321633,"8496bab7cb8435bdf5832e0b4e6c7dad975b006f,b4070375e7e003dcdffd0ac8ee80355a23780a20"
+b4070375e7e003dcdffd0ac8ee80355a23780a20,b4070375,glsl.heroku.com has moved,"glsl.heroku.com has moved
+
+It's GLSL Sandbox now",,,,Stuart P. Bentley,stuart@testtrack4.com,Stuart P. Bentley,stuart@testtrack4.com,1430318671,1430318671,8496bab7cb8435bdf5832e0b4e6c7dad975b006f
+8496bab7cb8435bdf5832e0b4e6c7dad975b006f,8496bab7,Added open source license,"Added open source license
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1429741448,1429741448,91410ec21af35b18adfcb7464c3c4bbb6b3ff638
+91410ec21af35b18adfcb7464c3c4bbb6b3ff638,91410ec2,Advanced version number for release,"Advanced version number for release
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1427039115,1427039115,82ed68b1e6482eb6802d359ff95a025ba8f38a1a
+82ed68b1e6482eb6802d359ff95a025ba8f38a1a,82ed68b1,Bind texture again for drawing into framebuffer,"Bind texture again for drawing into framebuffer
+
+Some drivers (e.g. on the Fairphone 1) require binding
+the texture again after glDrawArrays() was called for
+some reason.
+
+Also removed the depth buffer of the framebuffer since
+it's completely unnecessary for what this app does.
+
+The backbuffer texture is cleared before use now.
+Some drivers start with uninitialized texture data.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1427038633,1427038633,3547a2bea0493f264fe95be685a5ef3d1251b045
+3547a2bea0493f264fe95be685a5ef3d1251b045,3547a2be,Removed unnecessary imports,"Removed unnecessary imports
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1427038594,1427038594,4a7de0166f9a0c645a7e38f61bff1cc56e1ddd0a
+4a7de0166f9a0c645a7e38f61bff1cc56e1ddd0a,4a7de016,Removed proguard template,"Removed proguard template
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1427038533,1427038533,f45b759dc9658212094d0b5e82c85d2871dc6eb7
+f45b759dc9658212094d0b5e82c85d2871dc6eb7,f45b759d,Advanced version number,"Advanced version number
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425495985,1425495985,1d88d21a290441bd85f1f5ce61422b205dbb6f47
+1d88d21a290441bd85f1f5ce61422b205dbb6f47,1d88d21a,Show overflow icon in action bar for Lollipop,"Show overflow icon in action bar for Lollipop
+
+Since some devices don't show nor have a menu button
+to open the shader menu, it's vital to have a overflow
+icon in the action bar to open the menu.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425495630,1425495630,2990ae25bd8de6ab55926b6951c6675e192a74be
+2990ae25bd8de6ab55926b6951c6675e192a74be,2990ae25,Advanced version for release,"Advanced version for release
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425149477,1425149477,a888141218cb05df462d7598314756ee0661023c
+a888141218cb05df462d7598314756ee0661023c,a8881412,Show source if it's hidden and there's an error,"Show source if it's hidden and there's an error
+
+Tapping on the bug symbol when the source is hidden
+does now show the source.
+
+Useful when compile-on-change is disabled, the source
+is edited, get's hidden and then compiled.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425149210,1425149210,52bc55e327a5888e89069a6cec53f757be5d85c2
+52bc55e327a5888e89069a6cec53f757be5d85c2,52bc55e3,Advanced version for release,"Advanced version for release
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425138501,1425138501,cfffe31eaa34e09c98afdfee03f5eaae19ad23bc
+cfffe31eaa34e09c98afdfee03f5eaae19ad23bc,cfffe31e,Updated comments with latest features,"Updated comments with latest features
+
+Added battery and rotation values.
+
+Gave a sample for how to access the backbuffer.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425137854,1425137854,d40226acb05fa838ced827cefa9be08a3380c138
+d40226acb05fa838ced827cefa9be08a3380c138,d40226ac,Refactored gyroscope for rotation,"Refactored gyroscope for rotation
+
+The value contains rotation values.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425137776,1425137776,d6595f5627d0924268792529396785e45d16a478
+d6595f5627d0924268792529396785e45d16a478,d6595f56,Concat rotation delta instead of multiplication,"Concat rotation delta instead of multiplication
+
+Since rotation.xys starts with 0, multiplying by 0 doesn't
+give anything of course.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425137686,1425137686,92b4f347cf0d6ca8a56cdff142c6b346b3aecc72
+92b4f347cf0d6ca8a56cdff142c6b346b3aecc72,92b4f347,Added proper line-breaks,"Added proper line-breaks
+
+So it's better to read on the console.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425137629,1425137629,797e1313c90504b7b8e0d0071e6e12458a922d48
+797e1313c90504b7b8e0d0071e6e12458a922d48,797e1313,Use fixed alpha for low pass filter,"Use fixed alpha for low pass filter
+
+Previous calculation was wrong. t is the low pass' filter
+time constant (!) and dT is the event delivery rate in nano
+seconds.
+
+Chose to use a constant for now (and to ignore delta time).
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425137322,1425137322,9339caa05257b603b9dbec43f147f3fd08616c99
+9339caa05257b603b9dbec43f147f3fd08616c99,9339caa0,Fixed y-flipped rendering when using a frame buffer,"Fixed y-flipped rendering when using a frame buffer
+
+If the texture frame buffer (backbuffer) is rendered first,
+rendering to frame buffer 0 (the screen) next will result in
+a flipped image (on the y axis).
+
+Maybe that's because rendering into a texture is (by default?)
+y-flipped because a textures origin (0/0) is always in the
+bottom left. And maybe the transformation matrix does not get
+reset on glBindFramebuffer( GL_FRAMEBUFFER, 0 ).
+
+Anyway, rendering into frame buffer 0 first does fix the
+problem.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1425134502,1425134502,342f44b2b3a67aaaa19a76349440a6b152a532ff
+342f44b2b3a67aaaa19a76349440a6b152a532ff,342f44b2,Support for gyroscope and battery,"Support for gyroscope and battery
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1380746494,1380746494,365a6f2e7e9c84fec381da82f283f348d96328a8
+365a6f2e7e9c84fec381da82f283f348d96328a8,365a6f2e,Updated version number,"Updated version number
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1376338090,1376338090,b92b2a74032f77dadc3f129e033462b82432fe17
+b92b2a74032f77dadc3f129e033462b82432fe17,b92b2a74,Remove trailing white space on save,"Remove trailing white space on save
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1376337466,1376337466,a44d959df6516a3321ca3097cd9ee54721a2cf88
+a44d959df6516a3321ca3097cd9ee54721a2cf88,a44d959d,Improved auto indenting,"Improved auto indenting
+
+It's more suitable to check for certain characters than to indent always
+in the middle of the line. Still, this is a very simple approximation to
+auto indenting but it should do in this context.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1376336841,1376336841,726f2ad7aa958528daf9ce4bd96f2e21123c7fb1
+726f2ad7aa958528daf9ce4bd96f2e21123c7fb1,726f2ad7,Fixed resetting of soft keyboard,"Fixed resetting of soft keyboard
+
+At first, I don't need to call setText() to update the text. It's enough
+to change the Editable.
+
+TextView.setText() will restart the InputMethodManager which will reset
+the soft keyboard.
+
+Second, don't use Editable.clearSpans() as it will remove too much.
+Removing only the spans I added is enough.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1376223525,1376223525,8a0693e8eec35b305189ad9c1c775b51a9ec6b92
+8a0693e8eec35b305189ad9c1c775b51a9ec6b92,8a0693e8,Updated version code,"Updated version code
+
+I always forget this one.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375546311,1375546311,8c47437e7fcaffc555ec39c9aa5ea8f355d39cec
+8c47437e7fcaffc555ec39c9aa5ea8f355d39cec,8c47437e,Version update,"Version update
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375546141,1375546141,cfbd466b700fdb468ef29c7dda5ae8be936d54b5
+cfbd466b700fdb468ef29c7dda5ae8be936d54b5,cfbd466b,Note about resetting soft keyboards,"Note about resetting soft keyboards
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375546041,1375546041,b22ae73690d6ab0bd164e01bb76a28f5d4399267
+b22ae73690d6ab0bd164e01bb76a28f5d4399267,b22ae736,Removed invalidate() after text size change,"Removed invalidate() after text size change
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375545934,1375545934,c829bc11554af2c258d0e2101fd83e11a5160a0c
+c829bc11554af2c258d0e2101fd83e11a5160a0c,c829bc11,Made error text more visible,"Made error text more visible
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375545854,1375545854,b09f42c61a8bcb711c6f691874b9d64817afa7bb
+b09f42c61a8bcb711c6f691874b9d64817afa7bb,b09f42c6,Removed targetSdkVersion to show Menu button,"Removed targetSdkVersion to show Menu button
+
+On tablets sporting Android >= 3.0 there is often no physical menu button
+but a soft one which does only appear if you don't give the targetSdkVersion
+option.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375545605,1375545605,7dfecc5ef692c3fa139c22331f8b5f4c4731a242
+7dfecc5ef692c3fa139c22331f8b5f4c4731a242,7dfecc5e,Preference to set editor text size,"Preference to set editor text size
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375544796,1375544796,b48429642c0e1010017e97d532e548401df6534e
+b48429642c0e1010017e97d532e548401df6534e,b4842964,Preference to change update delay of editor,"Preference to change update delay of editor
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375542046,1375542046,9dc693516dbde23edac5ce4b9bd0cb202be69871
+9dc693516dbde23edac5ce4b9bd0cb202be69871,9dc69351,Implemented back buffer,"Implemented back buffer
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375538872,1375538872,fcd2fb601ce170e2d9463473d38b0165ac0bcb52
+fcd2fb601ce170e2d9463473d38b0165ac0bcb52,fcd2fb60,Removed white space,"Removed white space
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1375538535,1375538535,059c697c8ad63397dc6960060b014eb3eb571222
+059c697c8ad63397dc6960060b014eb3eb571222,059c697c,Version update,"Version update
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1372796165,1372796165,e211d7b66eef29fd988ae87e57a25539e20a1d7a
+e211d7b66eef29fd988ae87e57a25539e20a1d7a,e211d7b6,Set rate of sensor events,"Set rate of sensor events
+",,,,Markus Fisch,markus.fisch@metz.de,Markus Fisch,markus.fisch@metz.de,1372677982,1372677982,dbcc2082f3c0530fcd4bdf935e6f5c32f89717e7
+dbcc2082f3c0530fcd4bdf935e6f5c32f89717e7,dbcc2082,Updated version number,"Updated version number
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371673079,1371673079,714088e92e714df5b531efebc9f16140657c80c6
+714088e92e714df5b531efebc9f16140657c80c6,714088e9,Reset accelerometer timer,"Reset accelerometer timer
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371673026,1371673026,9c1235bc15d2ddd42379a4c7763ae0a8cc160390
+9c1235bc15d2ddd42379a4c7763ae0a8cc160390,9c1235bc,Moved save shader method into ListPreference,"Moved save shader method into ListPreference
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371670886,1371670886,0463bf97900d40d599f9684536c12ebc8be56123
+0463bf97900d40d599f9684536c12ebc8be56123,0463bf97,Added offset and comments,"Added offset and comments
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371592690,1371592690,1ac8d1dd7da5025edeb16d98be43edaf45d91d8f
+1ac8d1dd7da5025edeb16d98be43edaf45d91d8f,1ac8d1dd,Improved auto-indenting,"Improved auto-indenting
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371592663,1371592663,0262a8f89b6e40ce55dcf049c07efd24dfc84fd5
+0262a8f89b6e40ce55dcf049c07efd24dfc84fd5,0262a8f8,Fixed error highlighting in compile on save mode,"Fixed error highlighting in compile on save mode
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371591912,1371591912,00af7b9d6f4372dfec64ce89db5d20a6f52b6947
+00af7b9d6f4372dfec64ce89db5d20a6f52b6947,00af7b9d,Exposed wallpaper offset,"Exposed wallpaper offset
+
+onOffsetChanged() is now propagated into shaders via the ""offset"" vector.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371590718,1371590718,e291bf947c6e0abe71b45776d83be0838d1894cf
+e291bf947c6e0abe71b45776d83be0838d1894cf,e291bf94,Version updated,"Version updated
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371420117,1371420117,a838bf233f94e4868fecdb243290d13fe25d4a02
+a838bf233f94e4868fecdb243290d13fe25d4a02,a838bf23,Fixed dead-lock when no program is running,"Fixed dead-lock when no program is running
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371420022,1371420022,c593e3f86df65c018308de68c0908ed6e6a11545
+c593e3f86df65c018308de68c0908ed6e6a11545,c593e3f8,Updated version,"Updated version
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371160240,1371160240,b5a5cdfacf2b8e888b7937813dcc07323237b960
+b5a5cdfacf2b8e888b7937813dcc07323237b960,b5a5cdfa,Replaced String.isEmpty(),"Replaced String.isEmpty()
+
+Because apparently that's not available on some devices. Weird.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371160171,1371160171,4a8e7dd062ee88b3ad74cd903752122f4da7108b
+4a8e7dd062ee88b3ad74cd903752122f4da7108b,4a8e7dd0,Updated version number,"Updated version number
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371159079,1371159079,7f7357b7c906cca8a3c390c5064d4ef93640787d
+7f7357b7c906cca8a3c390c5064d4ef93640787d,7f7357b7,Set values only if locations are found,"Set values only if locations are found
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157554,1371157554,0fa5fe304c1c6f444e8ea1342676a4ce598c6d40
+0fa5fe304c1c6f444e8ea1342676a4ce598c6d40,0fa5fe30,Added method to get a random shader,"Added method to get a random shader
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157518,1371157518,3e4293074d99fcea72ba061f0d47456e70fdcf99
+3e4293074d99fcea72ba061f0d47456e70fdcf99,3e429307,Fixed loading of missing shaders,"Fixed loading of missing shaders
+
+If a shader isn't available anymore choose another one at random.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157424,1371157424,ad65a4924f284cb71bde45049488a10450c7d65f
+ad65a4924f284cb71bde45049488a10450c7d65f,ad65a492,Made highlighting colors constants,"Made highlighting colors constants
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157337,1371157337,7aa2d27baf369ecd119a1f26c69b0f615b551eef
+7aa2d27baf369ecd119a1f26c69b0f615b551eef,7aa2d27b,Get fps view every time anew instead of saving it,"Get fps view every time anew instead of saving it
+
+It's better to not save the view returned for R.id.fps because it's
+impossible to know when Spinner does change the selected view; especially
+when the adapter changes which may update the spinner not immediately.
+
+Anyway, getSelectedView() and findViewById() are just lookups and this
+method is only called every ShaderRenderer.FPS_UPDATE_FREQUENCY milliseconds
+and if fps did actually change so that shoudln't be problem
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157217,1371157217,a77947aa8316733205c97a61b7b4193b5c646adb
+a77947aa8316733205c97a61b7b4193b5c646adb,a77947aa,Updated comment to be more verbose,"Updated comment to be more verbose
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157164,1371157164,895a87ddc2cff7f3d8d46b4d9226aa3577099f0c
+895a87ddc2cff7f3d8d46b4d9226aa3577099f0c,895a87dd,Renamed duplicate for clarity,"Renamed duplicate for clarity
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371157139,1371157139,c3cb1dd24839b72ff99b4dd4824fb5f793ad287d
+c3cb1dd24839b72ff99b4dd4824fb5f793ad287d,c3cb1dd2,New icon,"New icon
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371155852,1371155852,5ad3a352ce40136e8368093037cbaf2cd604cf88
+5ad3a352ce40136e8368093037cbaf2cd604cf88,5ad3a352,Improved performance for mobile GPUs,"Improved performance for mobile GPUs
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371155806,1371155806,2c345bfa1e589247e218074af2a30cdb737328a7
+2c345bfa1e589247e218074af2a30cdb737328a7,2c345bfa,Use uv instead of p,"Use uv instead of p
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371155789,1371155789,a0279f6e4eefe1c0b8d03dc8567cb37750b9eb32
+a0279f6e4eefe1c0b8d03dc8567cb37750b9eb32,a0279f6e,Show all available values in comments,"Show all available values in comments
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371155749,1371155749,4e92a4edb4d6b3e7b80dd0a9a3a01e1343e69d4a
+4e92a4edb4d6b3e7b80dd0a9a3a01e1343e69d4a,4e92a4ed,Updated description,"Updated description
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1371155663,1371155663,cb3e2184efdbd780a8f1b4ff9814beed208e1ec2
+cb3e2184efdbd780a8f1b4ff9814beed208e1ec2,cb3e2184,Made fps members volatile,"Made fps members volatile
+
+Those members get reset from UI thread.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370970657,1370970657,5b1bb64c0b6002136d82fcdf08e9147b2bcbddef
+5b1bb64c0b6002136d82fcdf08e9147b2bcbddef,5b1bb64c,Show FPS in spinner label,"Show FPS in spinner label
+
+Plus minor improvements on the optional FPS gauge.
+
+Also, only register listener for acceleration sensor if variable is located
+in program.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370897158,1370897158,6341df01ca884c6d50afed07dc1c8dbbf25a1f6f
+6341df01ca884c6d50afed07dc1c8dbbf25a1f6f,6341df01,Added compiler arguments,"Added compiler arguments
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370894444,1370894444,76eb9154485e45a14fab96bf89c74125e093b4d4
+76eb9154485e45a14fab96bf89c74125e093b4d4,76eb9154,Added FPS gauge,"Added FPS gauge
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370644887,1370644887,15226150fb0dc2352d424f0b1d328a2a62029227
+15226150fb0dc2352d424f0b1d328a2a62029227,15226150,Use onTouchEvent instead of OnTouchListener,"Use onTouchEvent instead of OnTouchListener
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370634964,1370634964,002b8f28a73ab233aba2db372be50d358d2588a0
+002b8f28a73ab233aba2db372be50d358d2588a0,002b8f28,Added simple auto indenting,"Added simple auto indenting
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370466002,1370466002,a3d564016e56f545e517601ea588e6295b7c7ddc
+a3d564016e56f545e517601ea588e6295b7c7ddc,a3d56401,Long touch to switch btw compile on change/save,"Long touch to switch btw compile on change/save
+
+Long touch the save icon to switch between compile on change and compile
+on save.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370374281,1370374281,e86e5423ad61c9c2f0b451667361315ff908ade5
+e86e5423ad61c9c2f0b451667361315ff908ade5,e86e5423,Simplification,"Simplification
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370374034,1370374034,65f6a2c1d4792e3846e9ff407f3f6a176174a4b6
+65f6a2c1d4792e3846e9ff407f3f6a176174a4b6,65f6a2c1,New show source icon,"New show source icon
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370373964,1370373964,27201b8758354315f3b7e315d1fd5a5b01b91e83
+27201b8758354315f3b7e315d1fd5a5b01b91e83,27201b87,Single top launch mode,"Single top launch mode
+
+Avoid having the activity loaded more than once for each orientation.
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370373815,1370373815,3fe83b1b7ebc5f4028987f194dec173cbc0878ee
+3fe83b1b7ebc5f4028987f194dec173cbc0878ee,3fe83b1b,Initial commit,"Initial commit
+",,,,Markus Fisch,mf@markusfisch.de,Markus Fisch,mf@markusfisch.de,1370207579,1370207579,

@@ -1,0 +1,408 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8f5ebadd5f8549ba4b64d72202c319f5d71334fa,8f5ebadd,Arreglado layout de juego3 y titulos en el menu de juegos,"Arreglado layout de juego3 y titulos en el menu de juegos
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1442517145,1442517145,4a5466e5a9ff91c56697611033b46bfe89039f58
+4a5466e5a9ff91c56697611033b46bfe89039f58,4a5466e5,"Añadiendo iconos de lista de juegos, y pantallas de ayuda dentro de los tableros","Añadiendo iconos de lista de juegos, y pantallas de ayuda dentro de los tableros
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1442275607,1442275607,d31e0648ecdca0c62afb6605087b29017c3a53a8
+d31e0648ecdca0c62afb6605087b29017c3a53a8,d31e0648,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1442275496,1442275496,"cb37e95463ea8b583883545aabf0088a0ba8d319,92aa7a8e25fa3764f85d1c0887a3ec7700fb0f99"
+cb37e95463ea8b583883545aabf0088a0ba8d319,cb37e954,"Añadiendo iconos de lista de juegos, y pantallas de ayuda dentro de los tableros","Añadiendo iconos de lista de juegos, y pantallas de ayuda dentro de los tableros
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1442275469,1442275469,669abef7f38f872232a91c665d0ba40acb91f9d9
+92aa7a8e25fa3764f85d1c0887a3ec7700fb0f99,92aa7a8e,Después de algún quebradero de cabez ya tenemos operativo el Ranking,"Después de algún quebradero de cabez ya tenemos operativo el Ranking
+con indentificación única por usuario. Ahora, y aunque puede
+rediseñarse para se más eficiente, cada vez que el usuario entra en la actividad
+principal se busca en la base de datos si existe ese usuario
+y si existe se modifica su puntuación (actualizandola) eviantando así 1º que el usuario
+tenga que decir explicitamente que quiere subir la puntuacion y 2º
+que existan datos duplicados. Además de esto el ranking coge
+el nombre de usuario cuando este lo cambia con el diálogo de
+cambio de usuario y lo modifica en la base de datos. Así
+si el usuario decide cambiar su nombre de usuario su puntuación no se pierde, ya que queda asociado con el ID de su dispositivo.
+Todo esto de forma totalmente transparente para el usaurio y ejecutado
+todo dentro de la hebra paralela. :relaxed:
+
+Por lo tanto puedo decir... resolved #25  siiii!!!
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1442145152,1442145152,864413c56021bab693c3265c5fcd51ef2b2f9610
+864413c56021bab693c3265c5fcd51ef2b2f9610,864413c5,Terminada la actividad de ajustes que necesitaba la app se han realizado las…,"Terminada la actividad de ajustes que necesitaba la app se han realizado las siguientes implementaciones:
+
+1.Se ha implementado la función que borra todos los datos de la BD del usuario por si quiere borrar todas sus jugadas.
+2.Se ha creado un diálogo para que el usuario pueda cambiar su nombre de usuario que ahora es una SharedPreference en la app,
+además ahora se muestra en la pantalla de inicio siendo más personalizada. Cuando se arranca la app por primera vez pide
+un nombre de usuario por no encontarlo en las sharedPreferences.
+3.Se ha referenciado el color del background de todas las actívities a un valor SharedPeference, así se usa para el color
+unas variables en colors.xml color_fondoA, .. , color_fondoB y en todas las actividades se consulta y se modifica el propio
+cuando se inician en el onCreate. Así el usuario puede cambiar el color de fondo de la app en Ajustes y que esto afecte a todas
+las pantallas.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441990174,1441990174,607ba48fb00ff60594a4458feb4e093aad9ab913
+607ba48fb00ff60594a4458feb4e093aad9ab913,607ba48f,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+
+Conflicts:
+	.idea/encodings.xml
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441793763,1441793763,"975d1b34b387c5e0a73ad8bd1c51eb265a5dc5e0,669abef7f38f872232a91c665d0ba40acb91f9d9"
+975d1b34b387c5e0a73ad8bd1c51eb265a5dc5e0,975d1b34,Add file required for merge,"Add file required for merge
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441793618,1441793618,fb56e8a9a9c508aa9d11dc01e0f5339f123e58c3
+fb56e8a9a9c508aa9d11dc01e0f5339f123e58c3,fb56e8a9,Creada actividad de ajustes y enlazada. Antes de merge.,"Creada actividad de ajustes y enlazada. Antes de merge.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441793390,1441793390,c8c0355b5cf9b5439419bb3c70b152b7295528ba
+669abef7f38f872232a91c665d0ba40acb91f9d9,669abef7,Implementando multihebra en la pantalla principal. Los tiempos de carga son ahora mucho menores,"Implementando multihebra en la pantalla principal. Los tiempos de carga son ahora mucho menores
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1441792560,1441792560,c8c0355b5cf9b5439419bb3c70b152b7295528ba
+c8c0355b5cf9b5439419bb3c70b152b7295528ba,c8c0355b,"Creado icono de la app, resolved #18","Creado icono de la app, resolved #18
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441784091,1441784091,9c6439884d1f27804bb0d47a431e3d687459ee81
+9c6439884d1f27804bb0d47a431e3d687459ee81,9c643988,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441734000,1441734000,"e4950569f1083929c49ac9b2ed25542d489d1e1b,8031e1ad6aecf623315c9e53bf9bfac598250d4e"
+e4950569f1083929c49ac9b2ed25542d489d1e1b,e4950569,resolved #23,"resolved #23
+Modificado un poco el aspecto de la actividad principal para alojar mejor los elementos. Modificado
+el icono del cerebro añadiéndolo la palabra PLAY para que se sobreentienda que hay que pulsar en el.
+Creado método public boolean hayRed() en esa misma para saber si el dispositivo tiene conexión a la red
+para que si no lo tiene no deje acceder al ranking mundial de jugadores mostrando un frament dialog y
+no calcule su posición en el y en lugar del la pos aparezca un mensaje de sin conexión de red.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1441733759,1441733759,5bacdec6b479b38c863cf7d00f8e68c2c9600a23
+8031e1ad6aecf623315c9e53bf9bfac598250d4e,8031e1ad,Añadiendo animación de carga a Ranking y obteniendo lista en una segunda hebra,"Añadiendo animación de carga a Ranking y obteniendo lista en una segunda hebra
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1438712150,1438712150,2e7545c38c2837d8a6b851b4cdca262b0541dd4f
+2e7545c38c2837d8a6b851b4cdca262b0541dd4f,2e7545c3,Algunas correcciones en el layout de Ranking,"Algunas correcciones en el layout de Ranking
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1438514070,1438514070,5bacdec6b479b38c863cf7d00f8e68c2c9600a23
+5bacdec6b479b38c863cf7d00f8e68c2c9600a23,5bacdec6,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1438076735,1438076735,"41b181015a36cd1838725226b6d6604ee6a93141,2064bcf91da44ae872dfbdd48d11075a7211e7e4"
+41b181015a36cd1838725226b6d6604ee6a93141,41b18101,Añadido drawable,"Añadido drawable
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1438076729,1438076729,ae4f423a58fa264af1cb5b09ce4d4d17b0f31852
+2064bcf91da44ae872dfbdd48d11075a7211e7e4,2064bcf9,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1437042170,1437042170,"29da4d1f8596200b1486ec7b10ff62cb9833c5b9,ae4f423a58fa264af1cb5b09ce4d4d17b0f31852"
+29da4d1f8596200b1486ec7b10ff62cb9833c5b9,29da4d1f,Añadiendo backup de firma,"Añadiendo backup de firma
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1437042153,1437042153,bde3f3415c1c2e2968d7070628293fb7cbc36ce0
+ae4f423a58fa264af1cb5b09ce4d4d17b0f31852,ae4f423a,Terminada app,"Terminada app
+
+Commit de fin de app para entrega. Terminada la implementación del list de los jugadores
+en el Ranking. Creado un diálogo nuevo para gestionar la introducción de datos del usuario.
+Cuando el usuario pulsa sobre la posición del ranking en la activity principal le informa
+de que por los puntos que tiene está en esa posición  y que si quiere subir los datos.
+En el caso de pulsar en aceptar se envian los datos al server y en caso contrario
+se aborta el proceso.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435685299,1435685299,bde3f3415c1c2e2968d7070628293fb7cbc36ce0
+bde3f3415c1c2e2968d7070628293fb7cbc36ce0,bde3f341,Subiendo icono de pruebasfacebook,"Subiendo icono de pruebasfacebook
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435661147,1435661147,1b0b20a63cd5deb25444ab0585d7a26f351a5e41
+1b0b20a63cd5deb25444ab0585d7a26f351a5e41,1b0b20a6,Retoques en la clase Facebook para que haga referencia a BrainStudio,"Retoques en la clase Facebook para que haga referencia a BrainStudio
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435659853,1435659853,2af30eb2fe15f6f10c632535f725e276b6db6e7f
+2af30eb2fe15f6f10c632535f725e276b6db6e7f,2af30eb2,Añadiendo boton de share,"Añadiendo boton de share
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435657769,1435657769,155340d2fe31dc223b1de5c02a40105d7f763a92
+155340d2fe31dc223b1de5c02a40105d7f763a92,155340d2,Añadiendo metodos onPause a todas las ACtivity para que Facebook deje de contar el tiempo.,"Añadiendo metodos onPause a todas las ACtivity para que Facebook deje de contar el tiempo.
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435657013,1435657013,23a338533a2c6d1abd10571b6b6987d64ede7799
+23a338533a2c6d1abd10571b6b6987d64ede7799,23a33853,Terminada la conexión de toda la base de datos con todos los elementos de la aplicación.,"Terminada la conexión de toda la base de datos con todos los elementos de la aplicación.
+Ahora ya se ven las medallas en la pagina principal, todas las ganadas. Se han tenido que
+crear algunos metodos nuevos en el helper de la BD para ayudar a evitar datos duplicados
+y se ha modificado el xml del diseño de la actividad principal.  Hay varias secciones
+del código que pueden ser optimizadas pero por ahora es funcional y cumple con los
+requisitos.
+Cambio y corto.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435618825,1435618825,02ee3b905fa6f753afe9314197eca8e234f446ab
+02ee3b905fa6f753afe9314197eca8e234f446ab,02ee3b90,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+
+Conflicts:
+	app/src/main/java/butterflydevs/brainstudio/Juego3niveln.java
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435606486,1435606486,"dacb5c3154f9d1cc782c2f006b7089f1c993a0e6,b2bedc9b40611308efa479608fc5cf910f98a723"
+dacb5c3154f9d1cc782c2f006b7089f1c993a0e6,dacb5c31,Realizadas bastantes modificaciones.,"Realizadas bastantes modificaciones.
+Modificados juegos 3, 4 y 5 soluciando los últimos detalles. Configurando los mensajes
+de estado. Haciendo que en la pantalla principal funcione la puntuación general como
+suma de las de todos los juegos así como el calculo del porcentaje general.
+En la vista de los juegos también se ha actualizado la forma de presentarse los datos.
+Se han eliminado un par de clases que no servían y añadido elementos a algunas que
+lo necesitaban.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435606275,1435606275,abe0613275f5dce5bb5f5a72b12081a979dca70a
+b2bedc9b40611308efa479608fc5cf910f98a723,b2bedc9b,Dando formato a los textos de ayuda #14,"Dando formato a los textos de ayuda #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435576094,1435576094,ce65a671ef763b99f5d02488c5458af8c6af8807
+ce65a671ef763b99f5d02488c5458af8c6af8807,ce65a671,Finalizando implementacion clase Help y retocando las llamadas a esta clase desde los juegos #14,"Finalizando implementacion clase Help y retocando las llamadas a esta clase desde los juegos #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435573822,1435573822,5ba3bc60143d45b2fe732ec75d526442b627ddf9
+5ba3bc60143d45b2fe732ec75d526442b627ddf9,5ba3bc60,Subiendo fotos de ayuda #14,"Subiendo fotos de ayuda #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435573202,1435573202,7889c576bbe2e0d73cd1f67d611227259f5402c0
+7889c576bbe2e0d73cd1f67d611227259f5402c0,7889c576,Subiendo fotos de ayuda y todos los String de ayuda #14,"Subiendo fotos de ayuda y todos los String de ayuda #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435572867,1435572867,e491d5b8d0b270baa38dbf0f590846be286d6b5e
+e491d5b8d0b270baa38dbf0f590846be286d6b5e,e491d5b8,Castigando al mono programador que contraté al rincón por no implementar el…,"Castigando al mono programador que contraté al rincón por no implementar el boton back en Help. Solucionando también la implementación, y algunos retoques más en declaraciones de las vistas.
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435448890,1435448890,b3064330184d4b3fd256e5eb11c50bc1e9aeb9d4
+b3064330184d4b3fd256e5eb11c50bc1e9aeb9d4,b3064330,"Implementando nueva versión de Ayuda, tomando de ejemplo juego2 #14","Implementando nueva versión de Ayuda, tomando de ejemplo juego2 #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435447826,1435447826,84e9f522f7a5cc3f7fd2dacdbddfca0606afda05
+84e9f522f7a5cc3f7fd2dacdbddfca0606afda05,84e9f522,Adaptando todas las clases a las llamadas a Help #14,"Adaptando todas las clases a las llamadas a Help #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435434288,1435434288,abe0613275f5dce5bb5f5a72b12081a979dca70a
+abe0613275f5dce5bb5f5a72b12081a979dca70a,abe06132,Añadida licencia a todos los ficheros #20.,"Añadida licencia a todos los ficheros #20.
+Además mejorado el dialog de fin de juego y algunos detalles
+que se han ido resolviendo de varios juegos.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435423222,1435423222,a5173f6d36924b934afa3aeea5b6b6d59eb8a2e3
+a5173f6d36924b934afa3aeea5b6b6d59eb8a2e3,a5173f6d,Creada activity de entrada a la aplicación estilo splash.,"Creada activity de entrada a la aplicación estilo splash.
+Una actividad con su xml y una modificación en en AndroidManifest.xml.
+A falta de mejorarla cierro issue, closes #2
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435417412,1435417412,1f75b7c1d832535982e3a408c5923d8b861c9509
+1f75b7c1d832535982e3a408c5923d8b861c9509,1f75b7c1,"Terminando juego 4, creados los dialogos de aviso y la lógica y dinámica","Terminando juego 4, creados los dialogos de aviso y la lógica y dinámica
+del juego para el avance de dificultad.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435415393,1435415393,2bc6f4fe7f935a798f0f7e917947e11dbe8f8cff
+2bc6f4fe7f935a798f0f7e917947e11dbe8f8cff,2bc6f4fe,Modificaciones,"Modificaciones
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435247391,1435247391,5cddcb5b8470bae3c698788aedb08f046de4100d
+5cddcb5b8470bae3c698788aedb08f046de4100d,5cddcb5b,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435245512,1435245512,"23774569f0812855cff71598a7b3b66dd39ec9aa,524d985409f0ca5447751708f44578ee35cc0cb5"
+23774569f0812855cff71598a7b3b66dd39ec9aa,23774569,Añadidas medalls juego4.,"Añadidas medalls juego4.
+Añadidas las medallas de juego 4, asociadas al juego y adaptados
+los colores de los circular meter a los colores principales
+de las propias medallas. Añadidas tablas de juego 4 y 5 en el
+helper de la base de datos.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435245414,1435245414,7a6dc1999e1bde5ded17874fd15e8bf237dfac0e
+524d985409f0ca5447751708f44578ee35cc0cb5,524d9854,Arreglando el desajuste de la imagen en Help en menos de 1 minuto like a pro #14,"Arreglando el desajuste de la imagen en Help en menos de 1 minuto like a pro #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435232019,1435232019,9cf773e0bf80d8322f0d39dfed782d51826a5b6d
+9cf773e0bf80d8322f0d39dfed782d51826a5b6d,9cf773e0,Primera implementación de Help (por ahora solo recoge Juego1). Si se mete una…,"Primera implementación de Help (por ahora solo recoge Juego1). Si se mete una imagen, se desconfigura un poco el tema
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435231917,1435231917,6ee0fbe3f3cb96a6d557b53578b4c7b4001a52cc
+6ee0fbe3f3cb96a6d557b53578b4c7b4001a52cc,6ee0fbe3,Push pa ver si revienta después de tocar el gradle y volver ale stado anterior,"Push pa ver si revienta después de tocar el gradle y volver ale stado anterior
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435227075,1435227075,7a6dc1999e1bde5ded17874fd15e8bf237dfac0e
+7a6dc1999e1bde5ded17874fd15e8bf237dfac0e,7a6dc199,Terminado nivel 2 de Juego 5.,"Terminado nivel 2 de Juego 5.
+
+Se ha termindo el nivel 2, creada toda la dinamica del juego.
+EN un punto se pide al usuario que introduzca la secuencia en
+orden inverso a como se muestra. Para conseguir eso se ha creado un dialogo general
+para el juego 5 que con métodos se modifica para que sea de tipo
+fin de juego o de información. Además se ha creado un tipo enum
+dentro para poder simplificarlo.
+Se ha creado un metodo bloqueante que bloquea el proceso del
+juego para que desde el diálogo se pueda continuar con la ejecuión. Esto se ha conseguido pasando el propipo objeto
+Juego5niveln al dialogo para que pueda mandarle mensajes.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435224610,1435224610,f52afa5ed9feba88affdcce3e4801bcd96a55fc5
+f52afa5ed9feba88affdcce3e4801bcd96a55fc5,f52afa5e,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435178466,1435178466,"8a32a69c5ec803f6d113cc6a954432eac232b70a,46f4e20520ca4ccc20f871c33afbe337934fe0d5"
+8a32a69c5ec803f6d113cc6a954432eac232b70a,8a32a69c,Terminando juego 5.,"Terminando juego 5.
+
+Creadas las medallas después de dos rediseños. Añadida la
+jugabilidad completa solo para el nivel 1 y a punto de
+terminar las del resto. Creadas las tablas en la base de datos
+y gestionado los nuevos fragments que indican la salida del juego 5 con cierta información interesante, como el
+porcentaje completado y cual ha sido el error cometido. Esto
+podría exportarse al resto de juegos y niveles.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435178369,1435178369,992a8049096fd494cb659d99dcce5ce24dbd91d9
+46f4e20520ca4ccc20f871c33afbe337934fe0d5,46f4e205,Primera implementación de Help #14,"Primera implementación de Help #14
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435175602,1435175602,7f06c64dcf73765f7361bbb6318f3b4064b4f303
+7f06c64dcf73765f7361bbb6318f3b4064b4f303,7f06c64d,Retocando las condiciones para poder obtener medallas. ¿Como demonios vamos a…,"Retocando las condiciones para poder obtener medallas. ¿Como demonios vamos a conseguir antes la medalla de oro que la de plata? :@ :@  #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435170405,1435170405,3909f175609e33c80b473358ca572facdb704221
+3909f175609e33c80b473358ca572facdb704221,3909f175,Añadidas medallas de Juego2. También están ayñadidas en el fragment y en la clase,"Añadidas medallas de Juego2. También están ayñadidas en el fragment y en la clase
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435169678,1435169678,89b5d1951804a66cbef8024db6ae695a8c11b73a
+89b5d1951804a66cbef8024db6ae695a8c11b73a,89b5d195,Juego2 acabado en programacion,"Juego2 acabado en programacion
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435161306,1435161306,47d04fe2ddaf48411e0f8b468d63b9bab425f9e4
+47d04fe2ddaf48411e0f8b468d63b9bab425f9e4,47d04fe2,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435161208,1435161208,"1e4b1d96b11cd795192f1e10b404d8bfef7a6bc6,992a8049096fd494cb659d99dcce5ce24dbd91d9"
+1e4b1d96b11cd795192f1e10b404d8bfef7a6bc6,1e4b1d96,Juego2 acabado en programacion,"Juego2 acabado en programacion
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435161183,1435161183,e3832bb9ac3105c994229cf7ccd99eb14a9c31b7
+992a8049096fd494cb659d99dcce5ce24dbd91d9,992a8049,Último juego 5 funcionando.,"Último juego 5 funcionando.
+Ahora hay que seguir con la lógica de evolución de las jugadas,
+de la subida de dificultad y crear las medallas.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435155844,1435155844,e3832bb9ac3105c994229cf7ccd99eb14a9c31b7
+e3832bb9ac3105c994229cf7ccd99eb14a9c31b7,e3832bb9,Creado algoritmo para juego 5,"Creado algoritmo para juego 5
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435085638,1435085638,4b14bac19dd61084c9c9f38511ba08f143add78e
+4b14bac19dd61084c9c9f38511ba08f143add78e,4b14bac1,Reparaciones por la nueva interfaz mySQL.,"Reparaciones por la nueva interfaz mySQL.
+
+Necesarias algunas reparaciones en ficheros nuevos con la
+plantila antigua. Además se ha recuperado la animaicón original
+de juego1 modificada para juego2 por error.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435076320,1435076320,e1daecb5e69391c81978ca51ad52a233e1aa79f6
+e1daecb5e69391c81978ca51ad52a233e1aa79f6,e1daecb5,Fusionando a tope y resolviendo conflictos like a pro!,"Fusionando a tope y resolviendo conflictos like a pro!
+Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+
+Conflicts:
+	app/src/main/java/butterflydevs/brainstudio/extras/matrixHelper.java
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435074798,1435074798,"19ae6fe86c74ce666da107843aee4e85426f583a,4e52250853380b9cdda7689a6865705e0c5740e4"
+19ae6fe86c74ce666da107843aee4e85426f583a,19ae6fe8,Antes del fusionado con la ultima versión del servidor.,"Antes del fusionado con la ultima versión del servidor.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435074488,1435074488,aa93454d77d180c7d311a6f6277a314093378e2d
+aa93454d77d180c7d311a6f6277a314093378e2d,aa93454d,Añadidos los juegos 3 y 4. Casi terminados.,"Añadidos los juegos 3 y 4. Casi terminados.
+
+Añadido el juego 3 funcionando a falta de programar el
+ganado de niveles. Se ha diseñado sus medallas y se han
+cambiado los colores de los contadores. Se han reparado
+algunos botones que no apuntaban bien y se han creado las clases
+para el juego 4 que también está implementado y funcionando
+y para el último juego 5 de esta primera versión de la aplicación.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1435074375,1435074375,fcdcfb8f91b291cb72248fc4e026a99210fa98eb
+4e52250853380b9cdda7689a6865705e0c5740e4,4e522508,Implementado algoritmo de subida nivel juego2 #6,"Implementado algoritmo de subida nivel juego2 #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435059087,1435059087,25fecc3c19edbdde1b274454570a8cc38a623973
+25fecc3c19edbdde1b274454570a8cc38a623973,25fecc3c,Adaptación de Juego2 a lo implementado en Juego1 #6,"Adaptación de Juego2 a lo implementado en Juego1 #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435057032,1435057032,b89b7c21d205eaad5f8ffdb0982327970f0ede3a
+b89b7c21d205eaad5f8ffdb0982327970f0ede3a,b89b7c21,"Correcciones en MySQL, juego2 y juegos para que la base de datos funcione en juego2","Correcciones en MySQL, juego2 y juegos para que la base de datos funcione en juego2
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435046320,1435046320,3604c3dfebdd68cdc187826ecb5365b77b8e2929
+3604c3dfebdd68cdc187826ecb5365b77b8e2929,3604c3df,Juego 1 y Juego1niveln adaptados a la nueva interfaz de la clase de la BD,"Juego 1 y Juego1niveln adaptados a la nueva interfaz de la clase de la BD
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435002613,1435002613,4d5a770e463380c6b06d53d21eec872ffc528f3e
+4d5a770e463380c6b06d53d21eec872ffc528f3e,4d5a770e,Modificacion de MySQLHelper para que tenga en cuenta el juego desde el cuál se…,"Modificacion de MySQLHelper para que tenga en cuenta el juego desde el cuál se está llamando a esa clase. También hay algunas modificaciones en Juego2niveln. EN ESTE ESTADO NO COMPILA.
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1435002497,1435002497,621475d248fe55b0e9b237668e56f4bd1da33489
+621475d248fe55b0e9b237668e56f4bd1da33489,621475d2,Correcciones en los fragments y Juegoniveln2. Ahora el fondo del fragment es del…,"Correcciones en los fragments y Juegoniveln2. Ahora el fondo del fragment es del color a preguntar #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434992322,1434992322,2364df0f6861fc8cf2d7f773c4b6ee5e31c100e3
+2364df0f6861fc8cf2d7f773c4b6ee5e31c100e3,2364df0f,Creación de diálogo personalizado para juegos e implementación correcta dentro del Juego2 #6,"Creación de diálogo personalizado para juegos e implementación correcta dentro del Juego2 #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434987674,1434987674,622f577362b266335f9a5759c2d6c7e79cbabf32
+622f577362b266335f9a5759c2d6c7e79cbabf32,622f5773,Implementando modificaciones en el Fragment personalizado y añadiendo Fragment…,"Implementando modificaciones en el Fragment personalizado y añadiendo Fragment al final de la animación 2 para preguntar por el color escogido #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434971014,1434971014,ea3bbe2f922a7206cbe238bd81286f324bd652f3
+fcdcfb8f91b291cb72248fc4e026a99210fa98eb,fcdcfb8f,Conseguida animación secuencial para ColorMemo.,"Conseguida animación secuencial para ColorMemo.
+
+Se ha conseguido programar animaciones consecutivas en
+grid de botones mediante la ejecución en una hebra
+de un disparador que las activa en secuencia. Ahora solo es
+cuestión de terminal todo el juego añadiendo la lógica y las
+situaciones que pueden darse.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434967531,1434967531,cfd4fc0c1a51282aa152cf70ce2b1eca80596beb
+ea3bbe2f922a7206cbe238bd81286f324bd652f3,ea3bbe2f,Solucionando fallos en Juego2 y en juego2niveln. Añadiendo animaciones dedicadas…,"Solucionando fallos en Juego2 y en juego2niveln. Añadiendo animaciones dedicadas al grid de Juego 2 #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434964807,1434964807,14b253e4396b92882628960f8d9ef555a8bf4477
+14b253e4396b92882628960f8d9ef555a8bf4477,14b253e4,Primera implementación de Juego 2. Solucionado fallos en la comprobació. Falta…,"Primera implementación de Juego 2. Solucionado fallos en la comprobació. Falta implementar el diseño de subida de nivel, y arreglar las animaciones cuando el usuario acierta el tablero #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434906867,1434906867,cfd4fc0c1a51282aa152cf70ce2b1eca80596beb
+cfd4fc0c1a51282aa152cf70ce2b1eca80596beb,cfd4fc0c,"Fusión del server con versió local de Juan Antonio, añadidas","Fusión del server con versió local de Juan Antonio, añadidas
+todas la modificaciones excepto la del fichero .idea/misc.xml
+en el valor project-jdk-name=""1.8"" que yo tengo la 1.7 y
+no se hasta que punto puede afectar, por eso ese cambio lo he
+rechazado y me quedo con la 1.7.
+
+Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+
+Conflicts:
+	.idea/misc.xml
+	app/src/main/java/butterflydevs/brainstudio/Juego2.java
+	app/src/main/java/butterflydevs/brainstudio/Juego2niveln.java
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434819579,1434819579,"79a3e939daaa083a89a4e06079ce2126ee71a7fc,abfa1e8a1c51d640644865f36781d3c44eb093e5"
+79a3e939daaa083a89a4e06079ce2126ee71a7fc,79a3e939,Solucionados varios problemas en juego1:,"Solucionados varios problemas en juego1:
+1º. El tiempo ahora no da fallo cuando se sale de la actividad
+porque el countdown timer se para manualmente.
+2º. Se han añadido las medallas (iconos) que se ganan y la dinámica
+de ganado en Juego1.java. Los límites con los que se gana, la forma
+de ganarlos y su notificación.
+3º. Para la notificación de estos se han usado fragments (ventanas flotaantes
+de diálogo) y para ello se han tenido que crear algunas clases propias.
+4º. Se ha creado en la base de datos las tablas que faltaban, tanto
+para el nivel 3 como el para las propias medallas.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434818945,1434818945,cdf1d0d9f8a5c09aaf3b3c523d8bb107f8403556
+abfa1e8a1c51d640644865f36781d3c44eb093e5,abfa1e8a,Tocando manifiesto para habilitar la aceleración hardware para las animaciones #6,"Tocando manifiesto para habilitar la aceleración hardware para las animaciones #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434711978,1434711978,9f4b769027cabf8b08ef6ec984a9a73660bdbedb
+9f4b769027cabf8b08ef6ec984a9a73660bdbedb,9f4b7690,"Ampliada duración de matriz solución. El juego va lento. De hecho, aparecen…","Ampliada duración de matriz solución. El juego va lento. De hecho, aparecen mensajes de advertencia de que se han eliminado frames por que la hebra principal está haciendo demasiado trabajo #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434705057,1434705057,65d80e523f127e2acb068e954dca46acba96ae44
+65d80e523f127e2acb068e954dca46acba96ae44,65d80e52,"Se ha puesto un Toast que sale al pulsar el botón INFO durante el juego, para no…","Se ha puesto un Toast que sale al pulsar el botón INFO durante el juego, para no tapar la animación #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434570396,1434570396,b8a25ffabe7c694a2153039dea73d255db99833e
+b8a25ffabe7c694a2153039dea73d255db99833e,b8a25ffa,Juego2 y Juego2niveln sin fallos de compilación en su primera implementación. Se…,"Juego2 y Juego2niveln sin fallos de compilación en su primera implementación. Se han arreglado también algunos fallos en la función para rellenar la matriz solución. #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434569826,1434569826,4a6172995f1ce3af27856c59fce322c320e18201
+4a6172995f1ce3af27856c59fce322c320e18201,4a617299,Primera implementación de Juego2 y Juego2niveln sin fallos de compilación,"Primera implementación de Juego2 y Juego2niveln sin fallos de compilación
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434568829,1434568829,5dcd22e6e898c8f0b9c39e6bc164a8840eb92e7e
+cdf1d0d9f8a5c09aaf3b3c523d8bb107f8403556,cdf1d0d9,Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio,"Merge branch 'master' of github.com:ButterFlyDevs/BrainStudio
+
+Conflicts:
+	app/src/main/AndroidManifest.xml
+	app/src/main/res/values/strings.xml
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434563619,1434563619,"6adc7cf83818ef6d398544b80da44407cf904943,5dcd22e6e898c8f0b9c39e6bc164a8840eb92e7e"
+6adc7cf83818ef6d398544b80da44407cf904943,6adc7cf8,Antes del merge,"Antes del merge
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434562887,1434562887,1dc5fd28a2e20a1120cbe64c3c9f62169b722ef3
+1dc5fd28a2e20a1120cbe64c3c9f62169b722ef3,1dc5fd28,Modificaciones antes del intento de merge,"Modificaciones antes del intento de merge
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1434529666,1434529666,09d3ced6ab3f41d28a8bdc214e359d083fc19502
+5dcd22e6e898c8f0b9c39e6bc164a8840eb92e7e,5dcd22e6,Implementando Juego2 (aún incompleta) #6,"Implementando Juego2 (aún incompleta) #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434474399,1434474399,9ecc9b169fa3cf67c46e627087be691f75114bf4
+9ecc9b169fa3cf67c46e627087be691f75114bf4,9ecc9b16,Implementación de metodos para obtener aleatoriamente las figuras y comprobar…,"Implementación de metodos para obtener aleatoriamente las figuras y comprobar que las figuras contestads son las crrectas. También se incorporan iconos de un triangulo, cuadrado y circulo #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434469396,1434469396,aeabf8766d2837237e5bc442721c1543ecf68b19
+aeabf8766d2837237e5bc442721c1543ecf68b19,aeabf876,Juego2 con todas las funciones de Juego1 y algunas correcciones. Falta por…,"Juego2 con todas las funciones de Juego1 y algunas correcciones. Falta por implementar el algoritmo de juego2 #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434443356,1434443356,db1b0ee94060ba5f6e8fb8ba1264c2a54a2b27e9
+db1b0ee94060ba5f6e8fb8ba1264c2a54a2b27e9,db1b0ee9,Adaptando Juego2niveln. Falta adaptar el MyListener y el algoritmo de juego. #6,"Adaptando Juego2niveln. Falta adaptar el MyListener y el algoritmo de juego. #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434306652,1434306652,3bb383198a4fe76180967aa28efddfdc75ecbf8f
+3bb383198a4fe76180967aa28efddfdc75ecbf8f,3bb38319,"Acceso a juego2niveln desde el Activity ""juegos"" (HAY QUE IMPLEMENTAR JUEGO2)#6","Acceso a juego2niveln desde el Activity ""juegos"" (HAY QUE IMPLEMENTAR JUEGO2)#6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434302989,1434302989,f14570347eb53b9a62792f2f4ee01a92ea5023a9
+f14570347eb53b9a62792f2f4ee01a92ea5023a9,f1457034,"Creación de clase y la descripción de Juego2niveln para implementar el juego2,…","Creación de clase y la descripción de Juego2niveln para implementar el juego2, igual que el 1 pero preguntando por figuras, no por cuadros iluminados #6
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1434299138,1434299138,1e66a5ee25a04817584fc1f1511d7507dc8053aa
+1e66a5ee25a04817584fc1f1511d7507dc8053aa,1e66a5ee,Ejemplo FaceBook funcionando correctamente (resubido para ponerlo en el issue) #1,"Ejemplo FaceBook funcionando correctamente (resubido para ponerlo en el issue) #1
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1433953005,1433953005,f4515355cc0d0d7d625f6a61fda38785586d696c
+f4515355cc0d0d7d625f6a61fda38785586d696c,f4515355,Ejemplo FaceBook funcionando correctamente,"Ejemplo FaceBook funcionando correctamente
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1433951712,1433951712,fe86d146ddb4be82913142dd1820b51c4cbac8a7
+fe86d146ddb4be82913142dd1820b51c4cbac8a7,fe86d146,Incorporando eemplo de Facebook. No hay errores señalados en el editor,"Incorporando eemplo de Facebook. No hay errores señalados en el editor
+",,,,JA-Gonz,jagonccc@gmail.com,JA-Gonz,jagonccc@gmail.com,1433868526,1433868531,ad5c6bb2db75e8c64e5293ea59a695ec61719421
+ad5c6bb2db75e8c64e5293ea59a695ec61719421,ad5c6bb2,Segunda prueba,"Segunda prueba
+",,,,Jose Antonio,jagonccc@gmaio.com,Jose Antonio,jagonccc@gmaio.com,1433845160,1433845160,e1f06741818ff6c7dc3f714a6e5d1d2bc7b979bf
+e1f06741818ff6c7dc3f714a6e5d1d2bc7b979bf,e1f06741,Probando logueo con comentario,"Probando logueo con comentario
+",,,,Jose Antonio,jagonccc@gmaio.com,Jose Antonio,jagonccc@gmaio.com,1433844641,1433844641,488a040ca56e452fad1b85b46a1779b09d86d390
+488a040ca56e452fad1b85b46a1779b09d86d390,488a040c,Incluyendo la clase de PruebasFacebook,"Incluyendo la clase de PruebasFacebook
+",,,,Jose Antonio,jagonccc@gmaio.com,Jose Antonio,jagonccc@gmaio.com,1433844422,1433844422,c7dfcbb0df07bd7618e34ae6032def5ce3551d9c
+c7dfcbb0df07bd7618e34ae6032def5ce3551d9c,c7dfcbb0,Cambiadas propiedades del gradle y del build para poder incorporar Facebook al proyecto.,"Cambiadas propiedades del gradle y del build para poder incorporar Facebook al proyecto.
+",,,,Jose Antonio,jagonccc@gmaio.com,Jose Antonio,jagonccc@gmaio.com,1433843999,1433843999,09d3ced6ab3f41d28a8bdc214e359d083fc19502
+09d3ced6ab3f41d28a8bdc214e359d083fc19502,09d3ced6,Solucionados algunos problemas. Añadido vector de colores para que,"Solucionados algunos problemas. Añadido vector de colores para que
+en cada grid se juege con un color de forma aleatoria en este vector.
+Además se ha implementando un poco el uso de la base de datos y
+la sección del juego se ve el porcentaje que el usuario lleva
+en ese momento pasado de juego y su putuación máxima. Todo esto
+gracias a funciones diseñadas especificamente para esto.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433706788,1433706788,c234ca00c7814277e75ef2acc51a333900177cbe
+c234ca00c7814277e75ef2acc51a333900177cbe,c234ca00,Implementada la base de datos general para la aplicación y probada,"Implementada la base de datos general para la aplicación y probada
+en ActivityPrincipal.java. Aún no está siendo funcional en la app
+pero ya funciona. Ahora hay que basándose en lo ya hecho empezar
+a usarla en las distintas partes y para eso será neceario
+ir añadiendo funcionalidad a la clase MySQLiteHelper, que
+es donde reside el nucleo de la gestión.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433672282,1433672282,1db105addd13b4727c6aab2180fa612b0ac87c7e
+1db105addd13b4727c6aab2180fa612b0ac87c7e,1db105ad,Terminada la abstracción a una sola clase configurable en tiempo de,"Terminada la abstracción a una sola clase configurable en tiempo de
+ejecución para el juego número 1 (ahora se pueden hacer tantos niveles y de tantas formas como se quiera) y
+creada las estructura de ficheros (Adaptador personalizado, layout
+personalizado y tipo de dato personalizado ""Nivle"") para la creación del
+listView de Juegos. Ahora podemos tener una lista de elmentos
+que puede crecer dinámicamente, tener el aspecto que queramos
+y configurarse en tiempo de ejeucución por completo.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433626230,1433626230,108817e35e5efbadaef59530c5943cc988f2354d
+108817e35e5efbadaef59530c5943cc988f2354d,108817e3,Creada estructura de activties más sencilla y limpia. Intentando,"Creada estructura de activties más sencilla y limpia. Intentando
+dejas las pantallas más limpias.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433533846,1433533846,0d665f34fd535850357e7f8743d9e01bf04e1b2b
+0d665f34fd535850357e7f8743d9e01bf04e1b2b,0d665f34,Añadido layout de 24 elementos antes del cambio brusco de diseño a una,"Añadido layout de 24 elementos antes del cambio brusco de diseño a una
+sola clase que genera todos los niveles que queramos.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433525421,1433525421,20d649852a0367731a5aba6089ee16cf9d2b6947
+20d649852a0367731a5aba6089ee16cf9d2b6947,20d64985,Añadido esquema hecho en .odt (Libre Office) y jpg para ver,"Añadido esquema hecho en .odt (Libre Office) y jpg para ver
+detalle del diseño del comportamiento de la gui del usuario
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433495142,1433495142,f70f1a59475dcdd3cc5308ef8e39c0014ab68143
+f70f1a59475dcdd3cc5308ef8e39c0014ab68143,f70f1a59,Creada activity eliminame para la prueba de librerías externa.,"Creada activity eliminame para la prueba de librerías externa.
+Ahora mismo tiene implementada la librería Android-RoundCornerProgressBar
+ [aqui](https://github.com/akexorcist/Android-RoundCornerProgressBar)
+para pasarla a las activitys. Ya podemos guardar esta activity para probar cosas.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433458630,1433458630,41d0ac8a73fd93170b7ae5e818c8b19a372ada8f
+41d0ac8a73fd93170b7ae5e818c8b19a372ada8f,41d0ac8a,Terminado grid de 40 elementos a falta de clarificar un poco el código.,"Terminado grid de 40 elementos a falta de clarificar un poco el código.
+Creado también el recurso colors.xml en la carpeta /values para
+no tener que estar cambiando los colores en mil sitios y
+poder modificarlo después de forma muy sencilla.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433454210,1433454210,c5b951a10175093ce3462b21e6cd0654db5c999a
+c5b951a10175093ce3462b21e6cd0654db5c999a,c5b951a1,Continuando con la integración en grid40,"Continuando con la integración en grid40
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433414824,1433414824,002f1bc715c46bfd3d6e978aeaae847bee8b4ba8
+002f1bc715c46bfd3d6e978aeaae847bee8b4ba8,002f1bc7,Creada clase para abstraer algunas funciones que necestiamos,"Creada clase para abstraer algunas funciones que necestiamos
+para trabajar con matrices para que puedan ser usadas desde
+cualquier clase y no tengamos que duplicar código. Además se ha conseguido
+montar el layout complejo de 40 elementos de forma dinámica en java. Ahora se pueden
+modificar de forma sencilla todos los elementos del grid. resolved #4
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433412955,1433412955,f3ce6d5ef6de33ed5d681e3ca8260c1b9c124369
+f3ce6d5ef6de33ed5d681e3ca8260c1b9c124369,f3ce6d5e,Añadidos igonos y realizada la implementación de la puntuación y del uso de una,"Añadidos igonos y realizada la implementación de la puntuación y del uso de una
+librería para que el incremento de puntos se haga gradualmente y de forma
+más vistosa. A falta de ajustar una regla de tres para que la barra de progreso
+inversa no sea de rango [0-100] sino [0-t], t: tiempo de jugada.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433282812,1433282812,81a273281d0be876b3c8c4ca301f324267ea3e12
+81a273281d0be876b3c8c4ca301f324267ea3e12,81a27328,Añadida actividad grid de 40 elementos y puesto que habrá que realizar muchas pruebas,"Añadida actividad grid de 40 elementos y puesto que habrá que realizar muchas pruebas
+antes de cogerlo como definitivo para no tener que adaptar el de 12 se ha creado
+una actividad prueba para probar la densidad de pantalla y temas de jugabilidad.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433259601,1433259601,6b32a82b00a95c051c93f6744011c1488f53fed7
+6b32a82b00a95c051c93f6744011c1488f53fed7,6b32a82b,"Teminado flujo de juego de faseA->nivel1, a falta de controlar la puntuación,…","Teminado flujo de juego de faseA->nivel1, a falta de controlar la puntuación, mostrarla al final y grabarla en la base de datos
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433258652,1433258652,3f692d3cc24e00e1f33b027ba87f2174b7ae0c92
+3f692d3cc24e00e1f33b027ba87f2174b7ae0c92,3f692d3c,Añadida progressBar super simple y creación de la dinámica del juego de forma infinita (por ahora),"Añadida progressBar super simple y creación de la dinámica del juego de forma infinita (por ahora)
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433241694,1433241694,b281fb9b9509f745dd2bffeaa6a7f428f4b7dcfc
+b281fb9b9509f745dd2bffeaa6a7f428f4b7dcfc,b281fb9b,Conseguida animación del demonio: Se introduce el grid de botones,"Conseguida animación del demonio: Se introduce el grid de botones
+con la celdas marcadas para que el usuario recuerde y después se
+oscurece para volver a iluminarse el mismo grid pero con
+todas las celdas oscuras.
+Ahora a seguir con la lógica del juego.
+
+¡¡¡¡ Malditas animaciones en Android !!!!
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433237570,1433237570,6faef842a4a13f8f893675c4cc0a9b8cb17f3ea4
+6faef842a4a13f8f893675c4cc0a9b8cb17f3ea4,6faef842,Modificado grid12,"Modificado grid12
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433161517,1433161517,f393535669a9eafec3879d74d54cb3acad9a5207
+f393535669a9eafec3879d74d54cb3acad9a5207,f3935356,Terminado primer algoritmo y pasado a AndroidStudio,"Terminado primer algoritmo y pasado a AndroidStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433110062,1433110062,c0d55f1604e1c890fe71d2364ae8de135a06a87a
+c0d55f1604e1c890fe71d2364ae8de135a06a87a,c0d55f16,Añadido proyecto en netbeans para trabajar más comodamente con los algoritmos…,"Añadido proyecto en netbeans para trabajar más comodamente con los algoritmos antes de pasarlos a AndroidStudio
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433100413,1433100413,44a921fd262bfb5cb913059b8b0e6c8a7ce896b7
+44a921fd262bfb5cb913059b8b0e6c8a7ce896b7,44a921fd,Añadida actividad de grid12 con botones y asociación rápida de elementos de la vista en el .java,"Añadida actividad de grid12 con botones y asociación rápida de elementos de la vista en el .java
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1433070349,1433070349,9a070fcaa374ef195a50dfd6428c906185851524
+9a070fcaa374ef195a50dfd6428c906185851524,9a070fca,Añadidas las mismas clases que en IVChecker para la conexión y gestión de Jugadores.,"Añadidas las mismas clases que en IVChecker para la conexión y gestión de Jugadores.
+Ajustada interfaz con el ListView para que los jugadores salgan
+en la lista. Se ha tenido que eliminar un pequeño detalle que hacía
+(por usar el código de un tutorial, no porque nos interesase) que
+al pulsar sobre un botón se eliminara de la lista. Se ha hecho
+esto por incompatibilidades con el SDK que requería. Ahora
+el proyecto está ajustado al 14 IceCream.
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1432984510,1432984510,4f4b5d4f2dc77a5e93dd846f35a355da25e81f14
+4f4b5d4f2dc77a5e93dd846f35a355da25e81f14,4f4b5d4f,Creadas las clases para niveles y ranking. Implementado un ListView para ver la…,"Creadas las clases para niveles y ranking. Implementado un ListView para ver la lista de puntuaciones
+de una forma un poco mejor y tener mejor control sobre ella.
+Se ha conseguido añadir un boton en tiempo de ejcución para el
+tema de los niveles pero no se consigue hacer los mismo con el
+circularProgress, hay que seguir intentandolo
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1432976159,1432976159,e464d1008454f6dff53bff3440b81cf4a81685bf
+e464d1008454f6dff53bff3440b81cf4a81685bf,e464d100,Modificada actividad principal,"Modificada actividad principal
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1432924804,1432924804,1a09fdd4c8d24869ce5b54c8aa670a959f1ca957
+1a09fdd4c8d24869ce5b54c8aa670a959f1ca957,1a09fdd4,Iniciando el proyecto con actividad principal,"Iniciando el proyecto con actividad principal
+",,,,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,juanAFernandez,juan.antonio.fernandez.sanchez.88@gmail.com,1432924133,1432924133,dabd86e08f65c5ea51fe2bf9c8120fb4063f6669
+dabd86e08f65c5ea51fe2bf9c8120fb4063f6669,dabd86e0,Initial commit,"Initial commit
+",,,,Juan Antonio,juan.antonio.fernandez.sanchez.88@gmail.com,Juan Antonio,juan.antonio.fernandez.sanchez.88@gmail.com,1432922740,1432922740,

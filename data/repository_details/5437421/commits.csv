@@ -1,0 +1,1057 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b8d77424e46144f6549593096548186e48693d56,b8d77424,Bump version to 6.7,"Bump version to 6.7
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504637145,1504637145,e81b76eeb40bf3ae210a04b31456404ccc096712
+e81b76eeb40bf3ae210a04b31456404ccc096712,e81b76ee,Update the credits in help,"Update the credits in help
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504636963,1504636963,bcb37aef44d2cfa1c6ab020d817aa590456d1383
+bcb37aef44d2cfa1c6ab020d817aa590456d1383,bcb37aef,Add @cketti in credits,"Add @cketti in credits
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504636826,1504636826,975f336246e269dbd4b47e085cc5dd2f496d947c
+975f336246e269dbd4b47e085cc5dd2f496d947c,975f3362,Fix #74 data reset bug on background app install,"Fix #74 data reset bug on background app install
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1504326585,1504467328,57ff89b117f607ab1b3e045279bf3911d6202166
+57ff89b117f607ab1b3e045279bf3911d6202166,57ff89b1,Update README.md and play.txt,"Update README.md and play.txt
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1504313235,1504467328,2eb8865794f7f26c5d8682692dc4da7375b4989b
+2eb8865794f7f26c5d8682692dc4da7375b4989b,2eb88657,"Manifest: Add android:configChanges=""orientation"" to SearchActivity","Manifest: Add android:configChanges=""orientation"" to SearchActivity
+This prevents the Activity from being restarted on orientation changes
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1504317950,1504467328,e6a2e04a955f8e3e8026e2267a8c65601a83a41d
+e6a2e04a955f8e3e8026e2267a8c65601a83a41d,e6a2e04a,Implement Aliasing and Renaming. Closes #50,"Implement Aliasing and Renaming. Closes #50
+Offers an option to change the displayed label.
+An override label is used to achieve this, the original
+label is kept and also gets updated if it changes.
+An entry can be reset to use the original label again.
+There is also an option to add aliases.
+In this case a modified copy of the entry is created.
+Due to the nature of hashes aliases get identified
+by their labelMode and then handled accordingly.
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1503796543,1504467243,88983ce0d23f8b41fe1160fd983d0ed8ed2a5e6a
+88983ce0d23f8b41fe1160fd983d0ed8ed2a5e6a,88983ce0,Fix #35: Vertical icon alignment when scrolling up,"Fix #35: Vertical icon alignment when scrolling up
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1503762446,1504395208,e4c8ec14553688a42928d2385ad8628c29808508
+e4c8ec14553688a42928d2385ad8628c29808508,e4c8ec14,Merge branch 'ShadowKyogre-feature-implementations',"Merge branch 'ShadowKyogre-feature-implementations'
+Hide and Pin function
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1503241583,1504395208,"630ab96207daea42bd7774fe1d58d0dd3d09725f,0d8a89feaedf1898470cf9ce76dd0705eb811ac4"
+630ab96207daea42bd7774fe1d58d0dd3d09725f,630ab962,Add CATEGORY_LAUNCHER to intent when starting an app,"Add CATEGORY_LAUNCHER to intent when starting an app
+Without adding this category in some cases the referenced
+activity might be recreated and placed on top of the current
+back stack. Then the user needs to press the back button to
+get to the last used activity. After adding this category the
+last used activity is brought to front automatically.
+",,,,Sebastian,SebiderSushi@t-online.de,Sebastian,SebiderSushi@t-online.de,1503178701,1504387990,b53e81bc4540a921129c74c3161fcde64b4e3d6b
+b53e81bc4540a921129c74c3161fcde64b4e3d6b,b53e81bc,Use Kotlin 1.1.4-3,"Use Kotlin 1.1.4-3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358993,1504359320,ded772dce2b1d59f19cecb68069218f5ea8b6cd5
+ded772dce2b1d59f19cecb68069218f5ea8b6cd5,ded772dc,Use spoon-client 1.7.1,"Use spoon-client 1.7.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358922,1504359320,07a113ea83151f5e680b34378ce2d86192d83111
+07a113ea83151f5e680b34378ce2d86192d83111,07a113ea,Use assertj 1.2.0,"Use assertj 1.2.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358879,1504359320,55f1a332c785be39980f0d74ee97d0459ecec9f0
+55f1a332c785be39980f0d74ee97d0459ecec9f0,55f1a332,Use trulesk 0.20,"Use trulesk 0.20
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358852,1504359320,f3c2b89c5ed24d12a8b47fdea80ba90d77a41aac
+f3c2b89c5ed24d12a8b47fdea80ba90d77a41aac,f3c2b89c,Target 26,"Target 26
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358514,1504359320,63b4a9917dbfb5f0d7774c8b40048579676d05f1
+63b4a9917dbfb5f0d7774c8b40048579676d05f1,63b4a991,Use google repository,"Use google repository
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358531,1504359320,f8beb945eed476a6ae354ada3c6f38fa6142ff38
+f8beb945eed476a6ae354ada3c6f38fa6142ff38,f8beb945,Use versions plugin 0.15.0,"Use versions plugin 0.15.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504358493,1504359319,4631d03c1cdcc27a90182e5fc0bc5c6ad4d90d78
+4631d03c1cdcc27a90182e5fc0bc5c6ad4d90d78,4631d03c,Use buildTools 25.0.3,"Use buildTools 25.0.3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504357852,1504359319,07031dd0df018b30a13b169bd38b223a6a53e238
+07031dd0df018b30a13b169bd38b223a6a53e238,07031dd0,Added Japanese translation,"Added Japanese translation
+",,,,naofum,naofum@gmail.com,ligi,ligi@ligi.de,1483971152,1504313959,86d3b0efaf103f753206bd640d53be758c670c01
+86d3b0efaf103f753206bd640d53be758c670c01,86d3b0ef,Use build-plugin 2.3.3,"Use build-plugin 2.3.3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504203084,1504203084,50c323676f3b2191aea4bbe9683793bd194c56e0
+50c323676f3b2191aea4bbe9683793bd194c56e0,50c32367,Add support for icons that are not BitmapDrawables,"Add support for icons that are not BitmapDrawables
+",,,,cketti,ck@cketti.de,ligi,ligi@ligi.de,1503967897,1504099089,127f58c40564953b99c28b165e86f3aca987d57e
+127f58c40564953b99c28b165e86f3aca987d57e,127f58c4,Extract BitmapDrawable scaling/conversion code to separate classes,"Extract BitmapDrawable scaling/conversion code to separate classes
+
+No functional changes.
+",,,,cketti,ck@cketti.de,ligi,ligi@ligi.de,1503963774,1504099088,375bdd7f8b1f18c483a9dab3edb83467809941a3
+375bdd7f8b1f18c483a9dab3edb83467809941a3,375bdd7f,Add singleFlavor option,"Add singleFlavor option
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1491761518,1504099088,e0ac7efb6529b61827907160232aab45852e7daf
+e0ac7efb6529b61827907160232aab45852e7daf,e0ac7efb,Use gradle 4.1,"Use gradle 4.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1504097566,1504099088,e9a8e8e310bd499f3f8469e163a8c09b0b1c476d
+e9a8e8e310bd499f3f8469e163a8c09b0b1c476d,e9a8e8e3,Use latest spoon plugin and configure to grant all permissions,"Use latest spoon plugin and configure to grant all permissions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1491761027,1491774484,0c9a1db0cfba15ce800c1bcc091b1ec855feb336
+0c9a1db0cfba15ce800c1bcc091b1ec855feb336,0c9a1db0,Add kontinuum configuration,"Add kontinuum configuration
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1491759723,1491774483,7c9f32a0d236eb946dc0a8f126b16abba5b85f24
+7c9f32a0d236eb946dc0a8f126b16abba5b85f24,7c9f32a0,Use build plugin 2.3.1,"Use build plugin 2.3.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1491774316,1491774483,204373e582a0d70203a62ae30e9f3d2e408891ce
+204373e582a0d70203a62ae30e9f3d2e408891ce,204373e5,Use kotlin 1.1 and trulesk 0.16,"Use kotlin 1.1 and trulesk 0.16
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1488711236,1488711236,189e4fe6b6ab95e8cbbf83ce3b442f0c6cfaa534
+189e4fe6b6ab95e8cbbf83ce3b442f0c6cfaa534,189e4fe6,Use unmock 0.6,"Use unmock 0.6
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1488711170,1488711170,19ddddeee1adb962e7790a54021e8ede5d731f60
+19ddddeee1adb962e7790a54021e8ede5d731f60,19ddddee,Remove snap-ci badge ( they stop their service ),"Remove snap-ci badge ( they stop their service )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1488711097,1488711097,315ab33ffa31443e31d3e8ddad9f37e57e9560af
+315ab33ffa31443e31d3e8ddad9f37e57e9560af,315ab33f,Use latest build-tools and gradle,"Use latest build-tools and gradle
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1488710120,1488710120,af920cf43de5024234119e3a23069b36ca113996
+af920cf43de5024234119e3a23069b36ca113996,af920cf4,Use build-toos 25.0.2,"Use build-toos 25.0.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1481814185,1481814185,ec0ffb28467204e74fb7327626ce6d910ff3b906
+ec0ffb28467204e74fb7327626ce6d910ff3b906,ec0ffb28,Bump version to 6.6,"Bump version to 6.6
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480366089,1480366089,d3587234f233840fe3cfb86863df5bbddb5f6d81
+d3587234f233840fe3cfb86863df5bbddb5f6d81,d3587234,Cleanup,"Cleanup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480365050,1480365050,bcd0f64644d36321a84b4e9785f3df6b25fa3e3f
+bcd0f64644d36321a84b4e9785f3df6b25fa3e3f,bcd0f646,Use trulesk 0.9 so we leverage TestButler,"Use trulesk 0.9 so we leverage TestButler
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480356972,1480363125,503a5fd6f82a71d721723ad22113cb3227d5d2d4
+503a5fd6f82a71d721723ad22113cb3227d5d2d4,503a5fd6,Remove the help button for no-extras also from preferences-activity,"Remove the help button for no-extras also from preferences-activity
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480208140,1480208140,ef7c9194feb67ca2c49e0851f1090b79fcfbafb1
+ef7c9194feb67ca2c49e0851f1090b79fcfbafb1,ef7c9194,Improve the test-setup,"Improve the test-setup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480032935,1480042889,cdfdc6271a61fe8e057bafa2c5258bf0c0ba8c0e
+cdfdc6271a61fe8e057bafa2c5258bf0c0ba8c0e,cdfdc627,Use buildToolsVersion 25.0.1,"Use buildToolsVersion 25.0.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480031590,1480042889,fd49fe53ac6f74afb89a66229d20edcf9fcb5abf
+fd49fe53ac6f74afb89a66229d20edcf9fcb5abf,fd49fe53,Use support annotations 25.0.1,"Use support annotations 25.0.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480031488,1480042889,f9eae1fbcc9f24bfbe46c591c3ae441ee22245e8
+f9eae1fbcc9f24bfbe46c591c3ae441ee22245e8,f9eae1fb,Use gradle 3.2,"Use gradle 3.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480031292,1480042889,7ea55d46dbb6d4f98d1cd68f8fe5cfd6b0e8e4ad
+7ea55d46dbb6d4f98d1cd68f8fe5cfd6b0e8e4ad,7ea55d46,Use SDK 25,"Use SDK 25
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1477001104,1480042889,84427c5b4617b6c3fb3b46cd5f35e9f6ae944a55
+84427c5b4617b6c3fb3b46cd5f35e9f6ae944a55,84427c5b,Use unmock 0.5.0,"Use unmock 0.5.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1477000328,1480042889,a5b4a184c454b9316bc8c67799919594a6988db7
+a5b4a184c454b9316bc8c67799919594a6988db7,a5b4a184,Use build-plugin 2.2.1,"Use build-plugin 2.2.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1476219952,1480042889,e7645c10c2830a77b90bff82d33a7ac172d4e9f8
+e7645c10c2830a77b90bff82d33a7ac172d4e9f8,e7645c10,Really Archive both flavors,"Really Archive both flavors
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480039898,1480041253,21bdd718f8f0345e8073bfe520bf82239de3de77
+21bdd718f8f0345e8073bfe520bf82239de3de77,21bdd718,Build NoExtras and WithExtras,"Build NoExtras and WithExtras
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1480035828,1480039113,8e49696d6f73a87276ccad6dd9ffe6d27df66b9f
+8e49696d6f73a87276ccad6dd9ffe6d27df66b9f,8e49696d,Use spoon-client 1.6.4,"Use spoon-client 1.6.4
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1473687312,1473687312,6afc3d5d039ab92e58831674f72deea6bb49a924
+6afc3d5d039ab92e58831674f72deea6bb49a924,6afc3d5d,Use support-annotations 24.2.0,"Use support-annotations 24.2.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1473687292,1473687292,2d520c0f9dc9d5531833683abc260c1915454da7
+2d520c0f9dc9d5531833683abc260c1915454da7,2d520c0f,Bump version to 6.5,"Bump version to 6.5
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470655763,1470655763,811e03d45da6b37b7e54d52a7e4661e18bde8b20
+811e03d45da6b37b7e54d52a7e4661e18bde8b20,811e03d4,Archive the mapping file,"Archive the mapping file
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470654645,1470654645,252f9c899ee5a59a8b14f0cbea7888afc1a1382d
+252f9c899ee5a59a8b14f0cbea7888afc1a1382d,252f9c89,Add Jenkinsfile,"Add Jenkinsfile
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470650305,1470652832,e834a9cd9fda21eb24358233d47aa79bed4c1e20
+e834a9cd9fda21eb24358233d47aa79bed4c1e20,e834a9cd,Change spoon plugin,"Change spoon plugin
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470652193,1470652828,6aabf7a9eadd2a53d89d81449850cc80af1125c7
+6aabf7a9eadd2a53d89d81449850cc80af1125c7,6aabf7a9,Target SDK 24 and use spoon 1.6.2,"Target SDK 24 and use spoon 1.6.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470649092,1470649092,dd2a36ead348ec02b4773104a966e32aaddf7ab8
+dd2a36ead348ec02b4773104a966e32aaddf7ab8,dd2a36ea,Use gradle 2.14.1,"Use gradle 2.14.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1470603312,1470603312,46b2b793b956767f221c9757920dadf8b0a068cd
+46b2b793b956767f221c9757920dadf8b0a068cd,46b2b793,Use gradle 2.14,"Use gradle 2.14
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1468320910,1468320910,1f39cb2e040a3f0bdefa79d1e06f59b264e7862a
+1f39cb2e040a3f0bdefa79d1e06f59b264e7862a,1f39cb2e,Use build plugin 2.1.2,"Use build plugin 2.1.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1465590855,1465590855,22a4d69953b4ce3317d89a9d74855baafe3fc1ae
+22a4d69953b4ce3317d89a9d74855baafe3fc1ae,22a4d699,Use latest build-tools and adapt to them,"Use latest build-tools and adapt to them
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1462574735,1462574735,2ab924bc65af1e2071a5b953e59ab51297581902
+2ab924bc65af1e2071a5b953e59ab51297581902,2ab924bc,Use gradle 2.12,"Use gradle 2.12
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1459103709,1459103709,97563179ad4a2352dcffaf484834aee4f14d1e94
+97563179ad4a2352dcffaf484834aee4f14d1e94,97563179,Use build-plugin 1.5.0,"Use build-plugin 1.5.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1459103690,1459103690,ae893896a43c5e069d09730f1597cf2806fc106c
+ae893896a43c5e069d09730f1597cf2806fc106c,ae893896,Use compileSdkVersion 23 and buildToolsVersion 23.0.2,"Use compileSdkVersion 23 and buildToolsVersion 23.0.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1459103639,1459103639,d801fee2fd8be872439bb275163511c032b6e467
+d801fee2fd8be872439bb275163511c032b6e467,d801fee2,Change source of badge images,"Change source of badge images
+
+the old ones 404ed - we need ipfs ;-)
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1454089199,1454089199,280d3cff6326ec8e054c1359b497910e9c3e3ed8
+280d3cff6326ec8e054c1359b497910e9c3e3ed8,280d3cff,Use assertj 1.1.1 and spoon 1.2.0,"Use assertj 1.1.1 and spoon 1.2.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1446144302,1446144302,a634de3b023d7df0ead5e1eabe5ae6628324141f
+a634de3b023d7df0ead5e1eabe5ae6628324141f,a634de3b,Deal with broken cache data,"Deal with broken cache data
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1446143575,1446143575,794c057260ea788b7f3abfa410a1fd43c603531e
+794c057260ea788b7f3abfa410a1fd43c603531e,794c0572,Use build-plugin 1.3.1,"Use build-plugin 1.3.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1446139135,1446139135,4c4a65e1f12936ecbf66770c50832adcdcab7e01
+4c4a65e1f12936ecbf66770c50832adcdcab7e01,4c4a65e1,Fix flag,"Fix flag
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1442354547,1442354547,96a58820d8f92858f84ee95af0d80ec2a9ea523c
+96a58820d8f92858f84ee95af0d80ec2a9ea523c,96a58820,Use gradle 2.7,"Use gradle 2.7
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1442352729,1442352729,352c0ee946d23b22f76358d5fd2c3a5503a22000
+352c0ee946d23b22f76358d5fd2c3a5503a22000,352c0ee9,Bump version to 6.4,"Bump version to 6.4
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436653121,1436653121,987ffce2ab069ac745b1635ed2f1aebfb5b12855
+987ffce2ab069ac745b1635ed2f1aebfb5b12855,987ffce2,Cleanup and make sure we are Backwards compatible,"Cleanup and make sure we are Backwards compatible
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436651540,1436651540,693072dee75ff2391e631440685e1bdca06246b9
+693072dee75ff2391e631440685e1bdca06246b9,693072de,Make sure we can deal with the old data-format,"Make sure we can deal with the old data-format
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436651204,1436651204,4702602a875d958548e3d3bab60776d20fe90770
+4702602a875d958548e3d3bab60776d20fe90770,4702602a,Bump spoon deps,"Bump spoon deps
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436651049,1436651049,8b46d176d6bdca905e2334462bb42aa9e8534e43
+8b46d176d6bdca905e2334462bb42aa9e8534e43,8b46d176,Merge pull request #81 from KennethPrentiss/master,"Merge pull request #81 from KennethPrentiss/master
+
+Ńew sorting mode and bug fix of unsorted mode",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436648311,1436648311,"086b3dd493416aef37bf24003a75f2e601fd8441,5299a5543aea98eb8e71c773039e5930a2c8e51b"
+086b3dd493416aef37bf24003a75f2e601fd8441,086b3dd4,Change how the version is brought to the apk-filename,"Change how the version is brought to the apk-filename
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1436648116,1436648116,d2e2506c5df84a86b88a0129c530c73e1f43ef60
+5299a5543aea98eb8e71c773039e5930a2c8e51b,5299a554,removed one tab for indentation fix (very useful commit),"removed one tab for indentation fix (very useful commit)
+",,,,KennethPrentiss,kennethprentiss@mailinator.com,KennethPrentiss,kennethprentiss@mailinator.com,1436018747,1436018747,7c49c1b73e78116000403bdc21135b12cbaa3c0a
+7c49c1b73e78116000403bdc21135b12cbaa3c0a,7c49c1b7,missed file,"missed file
+",,,,KennethPrentiss,kennethprentiss@mailinator.com,KennethPrentiss,kennethprentiss@mailinator.com,1436018584,1436018584,0ccd4876a597cf34c5d2cd449bfeaa53086b34d2
+0ccd4876a597cf34c5d2cd449bfeaa53086b34d2,0ccd4876,new mode and bug fix,"new mode and bug fix
+",,,,KennethPrentiss,kennethprentiss@mailinator.com,KennethPrentiss,kennethprentiss@mailinator.com,1435395153,1435395153,d2e2506c5df84a86b88a0129c530c73e1f43ef60
+d2e2506c5df84a86b88a0129c530c73e1f43ef60,d2e2506c,Bump version to 6.3,"Bump version to 6.3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434295485,1434295485,ea87c66908cf3c482e05a28d9a37df15c7aa7f10
+ea87c66908cf3c482e05a28d9a37df15c7aa7f10,ea87c669,Do saving in onPause as it is guaranteed to be called instead of onStop,"Do saving in onPause as it is guaranteed to be called instead of onStop
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434295158,1434295158,62a2c1031d99c18ab681a34c5fb6f911a0257ea9
+62a2c1031d99c18ab681a34c5fb6f911a0257ea9,62a2c103,We need to pass an applicationInfo for the test to run on all ( or at least more ) devices,"We need to pass an applicationInfo for the test to run on all ( or at least more ) devices
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434288844,1434288844,5a35b16ec09addbef9a9431eb624d6ccba20019c
+5a35b16ec09addbef9a9431eb624d6ccba20019c,5a35b16e,Fix typo,"Fix typo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434287245,1434287245,7e0bb29928a616d405fab03beae65a86e981f1b2
+7e0bb29928a616d405fab03beae65a86e981f1b2,7e0bb299,Fix a problem with screenshots+spoon ( external storage permission ),"Fix a problem with screenshots+spoon ( external storage permission )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434286724,1434286724,deb96380cc653bd9c9887715e7e917e5fb9866f1
+deb96380cc653bd9c9887715e7e917e5fb9866f1,deb96380,flavorDimension -> dimension,"flavorDimension -> dimension
+
+ as flavorDimension will be gone in 2.0
+ and I get rid of the warning
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434285966,1434285966,807ebacab94ee86d33063513ec28f8eb4eb6ede0
+807ebacab94ee86d33063513ec28f8eb4eb6ede0,807ebaca,Use latest support-annotations and spoon-client,"Use latest support-annotations and spoon-client
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434285077,1434285077,8239d3a542a75b2eea72c7a912fa49e87f6e51bd
+8239d3a542a75b2eea72c7a912fa49e87f6e51bd,8239d3a5,Merge pull request #71 from ShadowKyogre/patch-1,"Merge pull request #71 from ShadowKyogre/patch-1
+
+Allow FAST(ER) to be set as default search assistant",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1434283488,1434283488,"6d92a99b7ce7dc9e4f99c03e15d99f55369aa5ff,ae07b994ae80a23405683c899786bd7b27792640"
+6d92a99b7ce7dc9e4f99c03e15d99f55369aa5ff,6d92a99b,Use gradle 2.4,"Use gradle 2.4
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1431289313,1431289313,6df6ac3267f99c06e0c8ad17c80e4c26ab0b8a04
+6df6ac3267f99c06e0c8ad17c80e4c26ab0b8a04,6df6ac32,Bump build-tools version,"Bump build-tools version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1430949129,1430949129,290984a59cb6cf886c66bfb451fed024ce270888
+290984a59cb6cf886c66bfb451fed024ce270888,290984a5,Bump version to 6.2,"Bump version to 6.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1430767773,1430767773,beff7a56857ec241a1fac7f4c9711d2982002ad6
+beff7a56857ec241a1fac7f4c9711d2982002ad6,beff7a56,Modernize,"Modernize
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1430767752,1430767752,4885ee4cdf54e90e80da689a54ffbf51dc74842f
+4885ee4cdf54e90e80da689a54ffbf51dc74842f,4885ee4c,Use build-plugin 1.2.0,"Use build-plugin 1.2.0
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1430430384,1430430384,7bd69e5530f5fe40efbbdf6612c67ce78aab7e1f
+7bd69e5530f5fe40efbbdf6612c67ce78aab7e1f,7bd69e55,Merge pull request #76 from jpamills/master,"Merge pull request #76 from jpamills/master
+
+Add flag to edittext to prevent suggestions bar of keyboard appearing.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1429365632,1429365632,"fe9aacaf590e89b9d405a59582f3aedb9d6a8c58,f5a6a81fae83c2ce81d86cb02ecb17bcf35dc40a"
+f5a6a81fae83c2ce81d86cb02ecb17bcf35dc40a,f5a6a81f,add flag to edittext to prevent suggestions bar of keyboard appearing to,"add flag to edittext to prevent suggestions bar of keyboard appearing to
+save vertical space. We probably don't want to autocorrect app names
+anyway.
+",,,,Jonathan Mills,jpamills@gmail.com,Jonathan Mills,jpamills@gmail.com,1429348561,1429348561,fe9aacaf590e89b9d405a59582f3aedb9d6a8c58
+fe9aacaf590e89b9d405a59582f3aedb9d6a8c58,fe9aacaf,Remove travis config,"Remove travis config
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1428785184,1428785184,16dbc1b5a7d1d56554572fd96454b6867bfa201d
+16dbc1b5a7d1d56554572fd96454b6867bfa201d,16dbc1b5,Use latest build plugin,"Use latest build plugin
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1428702041,1428702041,3c31a5791a9d1a4649efe1425d75ca1285615c91
+3c31a5791a9d1a4649efe1425d75ca1285615c91,3c31a579,Latest version is .0 not .2,"Latest version is .0 not .2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1428688832,1428688832,f689cb88b74d14d388b4a0aa615585c3c27a235a
+f689cb88b74d14d388b4a0aa615585c3c27a235a,f689cb88,Use snap-ci build badge,"Use snap-ci build badge
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1428686124,1428686124,fd6a0b9bee9178fa5286bfa2605cafe1e11d3307
+fd6a0b9bee9178fa5286bfa2605cafe1e11d3307,fd6a0b9b,Use latest support-annotations,"Use latest support-annotations
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1428686105,1428686105,b8e01a308b3a06126b5d98157467d4e2ee92aa66
+b8e01a308b3a06126b5d98157467d4e2ee92aa66,b8e01a30,Bump SDK to 22,"Bump SDK to 22
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1426719073,1426719073,7b0078a653e1ca00b2ee9fed9d18805933f078c5
+7b0078a653e1ca00b2ee9fed9d18805933f078c5,7b0078a6,Migrate to the new unit-testing that is now released with 1.1,"Migrate to the new unit-testing that is now released with 1.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1424301565,1424301565,679579e96a211ee4282b8c0ef24f192e029ee251
+0d8a89feaedf1898470cf9ce76dd0705eb811ac4,0d8a89fe,"Attempt to get pinning working with ""unsorted"" mode (this is still a work","Attempt to get pinning working with ""unsorted"" mode (this is still a work
+in progress). Also, add some Log entries to help with finding the source
+of the bug that wipes launch count and pin count. Trying to add the
+setPinMode call next to the setCallCount call didn't seem to fix
+that bug.
+",,,,ShadowKyogre,shadowkyogre@aim.com,ShadowKyogre,shadowkyogre@aim.com,1423161541,1423161541,6aebfca0874f2b5611b69dd286d3c5417e8aabc5
+679579e96a211ee4282b8c0ef24f192e029ee251,679579e9,This can be private,"This can be private
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1423141182,1423141182,2ff239726f02a8840970d8e0afa617cff8a26ced
+6aebfca0874f2b5611b69dd286d3c5417e8aabc5,6aebfca0,Implements #62 and #59,"Implements #62 and #59
+When one longtaps on an icon, it shows applicable show/hide/pin
+entries for each application. An additional configuration parameter
+for showing the hidden entries was added so that way. The pin comparator
+is also used to shuffle ""hidden"" entries to the back if the user wants
+to see hidden entries. For now, unsorted mode doesn't consider pinning.
+",,,,ShadowKyogre,shadowkyogre@aim.com,ShadowKyogre,shadowkyogre@aim.com,1422911694,1422911694,ae07b994ae80a23405683c899786bd7b27792640
+ae07b994ae80a23405683c899786bd7b27792640,ae07b994,Allow FAST(ER) to be set as default search assistant,"Allow FAST(ER) to be set as default search assistant
+
+The manifest.xml file was missing the lines I added, which also consider SEARCH_LONG_PRESS
+and the category DEFAULT for these actions.",,,,ShadowKyogre,shadowkyogre.public@gmail.com,ShadowKyogre,shadowkyogre.public@gmail.com,1422688368,1422688368,2ff239726f02a8840970d8e0afa617cff8a26ced
+2ff239726f02a8840970d8e0afa617cff8a26ced,2ff23972,fix typo,"fix typo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421671271,1421671271,f6e35feeef12f9ca2e3009fec2babf8e7de5e138
+f6e35feeef12f9ca2e3009fec2babf8e7de5e138,f6e35fee,Merge pull request #70 from rangzen/patch-1,"Merge pull request #70 from rangzen/patch-1
+
+Update strings.xml",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421429303,1421429303,"e7d154838159a85dead1ec5462323d1f1eaf918a,1f0909c5cc368b7cd51d76f57ab63597b21d4c38"
+1f0909c5cc368b7cd51d76f57ab63597b21d4c38,1f0909c5,Update strings.xml,Update strings.xml,,,,rangzen,rangzen@gmx.fr,rangzen,rangzen@gmx.fr,1421334358,1421334358,e7d154838159a85dead1ec5462323d1f1eaf918a
+e7d154838159a85dead1ec5462323d1f1eaf918a,e7d15483,unify all the test names,"unify all the test names
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421263578,1421263578,fda74be7ba13a609517f06dfb110f5ce90616720
+fda74be7ba13a609517f06dfb110f5ce90616720,fda74be7,bump version to 6.1,"bump version to 6.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421103484,1421103484,bd7cdab98e2a542a48755a21a4b9e8f59579827c
+bd7cdab98e2a542a48755a21a4b9e8f59579827c,bd7cdab9,fix #69 and add a test to cover this - especially as i happily would write the…,"fix #69 and add a test to cover this - especially as i happily would write the style in the old way - looks legit ..
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421103366,1421103366,d3f8637213060d6f9ea45107de80089aae4b34a0
+d3f8637213060d6f9ea45107de80089aae4b34a0,d3f86372,some love for the tests,"some love for the tests
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421096913,1421096913,31734dac0309ba065b5a636017feda2240ab4045
+31734dac0309ba065b5a636017feda2240ab4045,31734dac,expose defaults ( to use in mutable settings later ),"expose defaults ( to use in mutable settings later )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1421013063,1421013063,9e414fbef19e1a39c964ffc1e2619777232cca01
+9e414fbef19e1a39c964ffc1e2619777232cca01,9e414fbe,fix a problem with lint,"fix a problem with lint
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420670749,1420670749,212e815ab7daab4266d41fd6da8912de4dcd5cb6
+212e815ab7daab4266d41fd6da8912de4dcd5cb6,212e815a,Merge pull request #67 from cketti/help_dialog_padding,"Merge pull request #67 from cketti/help_dialog_padding
+
+Use proper layout for help dialog",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420668026,1420668026,"7fa5792b7619ffad4e01ddaf93d113ee82aa4312,a53aed5e6ea910f11dcd61ef085c6773a772587a"
+7fa5792b7619ffad4e01ddaf93d113ee82aa4312,7fa5792b,Merge pull request #68 from cketti/holo_loading_dialog,"Merge pull request #68 from cketti/holo_loading_dialog
+
+Use Holo theme for loading dialog on newer devices",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420667891,1420667891,"6f6e789575fb9d60cc693e0e5d11d00a3d8c6abb,dc9e628ddb94f2ee87f0a60750ef8be2b4187fd8"
+dc9e628ddb94f2ee87f0a60750ef8be2b4187fd8,dc9e628d,Use Holo theme for loading dialog on newer devices,"Use Holo theme for loading dialog on newer devices
+",,,,cketti,cketti@gmail.com,cketti,cketti@gmail.com,1420611799,1420611850,6f6e789575fb9d60cc693e0e5d11d00a3d8c6abb
+a53aed5e6ea910f11dcd61ef085c6773a772587a,a53aed5e,Use proper layout for help dialog,"Use proper layout for help dialog
+
+This way we can easily add padding in DIPs.
+",,,,cketti,cketti@gmail.com,cketti,cketti@gmail.com,1420607765,1420608932,6f6e789575fb9d60cc693e0e5d11d00a3d8c6abb
+6f6e789575fb9d60cc693e0e5d11d00a3d8c6abb,6f6e7895,bump version to 6.0 and indent,"bump version to 6.0 and indent
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420306490,1420306490,97b1b2323e152aeb5219a2fd66a0f83b5ca9ccd1
+97b1b2323e152aeb5219a2fd66a0f83b5ca9ccd1,97b1b232,can be private,"can be private
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420306449,1420306449,41bb2c8345bed57ea1e2741cd3455d6f96ee254f
+41bb2c8345bed57ea1e2741cd3455d6f96ee254f,41bb2c83,cs,"cs
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420306301,1420306301,d0da51626fc3ffb509cfed2c95ad5fabff313af3
+d0da51626fc3ffb509cfed2c95ad5fabff313af3,d0da5162,cs,"cs
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420306280,1420306280,0020422c63854c35761b8c165d70dc5260e016b1
+0020422c63854c35761b8c165d70dc5260e016b1,0020422c,fix a problem when app was installed/removed when fast is in background,"fix a problem when app was installed/removed when fast is in background
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420305685,1420305685,86fba05521581414035f69de73c2abf023522a07
+86fba05521581414035f69de73c2abf023522a07,86fba055,cs,"cs
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420305561,1420305561,e6708e0ad73711b69cf3bf360a3d6e3246885c95
+e6708e0ad73711b69cf3bf360a3d6e3246885c95,e6708e0a,add orientation ( mainly for lint ),"add orientation ( mainly for lint )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420305522,1420305522,d0d4ac455844c2ae06abc4aa432fb687c906f5b1
+d0d4ac455844c2ae06abc4aa432fb687c906f5b1,d0d4ac45,cleanup fix a problem that list was not updated,"cleanup fix a problem that list was not updated
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1420305478,1420305478,f5b5defa8766c0be5dcd9b9ba7977a99c07fe1c6
+f5b5defa8766c0be5dcd9b9ba7977a99c07fe1c6,f5b5defa,use newest tooling,"use newest tooling
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1419169763,1420115480,ad27083c824a4b85d6f49b3065aa99b362cd8886
+ad27083c824a4b85d6f49b3065aa99b362cd8886,ad27083c,bump versions,"bump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1415997423,1420115441,6bb5b41a17ea86cb73f77d6a0cabfbfd2d03774a
+6bb5b41a17ea86cb73f77d6a0cabfbfd2d03774a,6bb5b41a,Merge pull request #65 from johnjohndoe/bugfix/resource-error,"Merge pull request #65 from johnjohndoe/bugfix/resource-error
+
+Fix undiscoverable resource error.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1417341300,1417341300,"1571a6a3d1928dd6fdb0f743d09531902b000c72,4e4059ae3f9551c03ac23547e36e562b843dabe9"
+4e4059ae3f9551c03ac23547e36e562b843dabe9,4e4059ae,Fix undiscoverable resource error.,"Fix undiscoverable resource error.
+
++ Error: `No resource found that matches the given name
+  (at 'android:textColor' with value '?android:attr/textColorInverse')`
++ Not sure if this is the color setting which you want.
+",,,,Tobias Preuss,tobias.preuss@googlemail.com,Tobias Preuss,tobias.preuss@googlemail.com,1417009170,1417009170,1571a6a3d1928dd6fdb0f743d09531902b000c72
+1571a6a3d1928dd6fdb0f743d09531902b000c72,1571a6a3,Merge pull request #64 from johnjohndoe/bugfix/xml-syntax-error,"Merge pull request #64 from johnjohndoe/bugfix/xml-syntax-error
+
+Fix syntax error in XML style definition.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1417008612,1417008612,"702b92f880de6faf8232b42723770f7002f5abab,9b28a2afa51d5e75541c31d0f26c5b649bf67abd"
+9b28a2afa51d5e75541c31d0f26c5b649bf67abd,9b28a2af,Fix syntax error in XML style definition.,"Fix syntax error in XML style definition.
+",,,,Tobias Preuss,tobias.preuss@googlemail.com,Tobias Preuss,tobias.preuss@googlemail.com,1417007888,1417007888,702b92f880de6faf8232b42723770f7002f5abab
+702b92f880de6faf8232b42723770f7002f5abab,702b92f8,Merge pull request #60 from easyaspi314/master,"Merge pull request #60 from easyaspi314/master
+
+Added Holo theme for the Wallpaper theme",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1414934855,1414934855,"2f0f51d271af23a3459cafb102ff3a43693e7e0d,93d94d3df7dfae304faacc0dd867cc4e50f8e1d1"
+93d94d3df7dfae304faacc0dd867cc4e50f8e1d1,93d94d3d,Added Holo theme for the Wallpaper theme,"Added Holo theme for the Wallpaper theme
+
+Changed the parent theme to Theme.Holo.Wallpaper and set text colors. The Gingerbread theme was kinda getting to me, especially when there was a way around it.",,,,Devin,easyaspi314@users.noreply.github.com,Devin,easyaspi314@users.noreply.github.com,1414910241,1414910241,2f0f51d271af23a3459cafb102ff3a43693e7e0d
+2f0f51d271af23a3459cafb102ff3a43693e7e0d,2f0f51d2,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1413139277,1413139277,4e8f1ce960aa308669da1518c26d57898cb1647a
+4e8f1ce960aa308669da1518c26d57898cb1647a,4e8f1ce9,different name for FASTER to differentiate them,"different name for FASTER to differentiate them
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1413139269,1413139269,99d8df2997397afd211a265e51d2870e2cfb832b
+99d8df2997397afd211a265e51d2870e2cfb832b,99d8df29,catch the case that an app is gone,"catch the case that an app is gone
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1413138630,1413138630,7e3428a2fcf4c2b9af9639422c35187652b5961c
+7e3428a2fcf4c2b9af9639422c35187652b5961c,7e3428a2,bump version to 5.8,"bump version to 5.8
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1413138330,1413138330,4d597d6044f16f4015adc29875d8bb5f0bad0ef3
+4d597d6044f16f4015adc29875d8bb5f0bad0ef3,4d597d60,remove the one last thing,"remove the one last thing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411417656,1411417656,7190bf43cc77b92f5db41c9f5c4cd2b158942650
+7190bf43cc77b92f5db41c9f5c4cd2b158942650,7190bf43,declare final,"declare final
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411417639,1411417639,415c7b4bc92a12b896cd2807596af5ec1dd3d0b2
+415c7b4bc92a12b896cd2807596af5ec1dd3d0b2,415c7b4b,fix a bug that appinfolist was not saved completely,"fix a bug that appinfolist was not saved completely
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411417615,1411417615,d167b6da3f3c62a2ab7acf8a0b4203f5623eb62d
+d167b6da3f3c62a2ab7acf8a0b4203f5623eb62d,d167b6da,add languages for withExtras,"add languages for withExtras
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411301464,1411301464,f00ece96bac271167c82590fd571c7ad1bd209e0
+f00ece96bac271167c82590fd571c7ad1bd209e0,f00ece96,bump version to 5.7,"bump version to 5.7
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411300179,1411300179,93b3764252e521eb17152bb6b55b353fa5fb5781
+93b3764252e521eb17152bb6b55b353fa5fb5781,93b37642,no more help in FASTER,"no more help in FASTER
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411299801,1411299801,7b51984e274e1b59979adab3e66343a402b28aed
+7b51984e274e1b59979adab3e66343a402b28aed,7b51984e,cleanup and prepare faster ( small version of FAST ) - fix icon caching,"cleanup and prepare faster ( small version of FAST ) - fix icon caching
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411222128,1411222128,c0243fff1f0f6060aeff8523bea18fb7adb2eb9b
+c0243fff1f0f6060aeff8523bea18fb7adb2eb9b,c0243fff,Merge pull request #53 from djura-san/master,"Merge pull request #53 from djura-san/master
+
+added serbian translation",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411133300,1411133300,"e79c99534db9852967755732400a39952419e9ae,64bf05d38cffadc8193aa26e80ad863ded0985bb"
+64bf05d38cffadc8193aa26e80ad863ded0985bb,64bf05d3,added serbian translation,"added serbian translation
+",,,,djura-san,office@lab21.net,djura-san,office@lab21.net,1411090477,1411090477,e79c99534db9852967755732400a39952419e9ae
+e79c99534db9852967755732400a39952419e9ae,e79c9953,Merge pull request #52 from valerio-bozzolan/master,"Merge pull request #52 from valerio-bozzolan/master
+
+Localization support Italian language strings.xml",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411070696,1411070696,"d73d74e35fd96090021ed22fc85d5315a5c2abd0,df1f0a0dfa81f9a901bcf5235958bb7a3d608043"
+d73d74e35fd96090021ed22fc85d5315a5c2abd0,d73d74e3,use categories - closes #40,"use categories - closes #40
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411070559,1411070559,aa02e14843b6181d46a0c550de06b2204901640c
+aa02e14843b6181d46a0c550de06b2204901640c,aa02e148,bump version to 5.6 and fix typo,"bump version to 5.6 and fix typo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411068666,1411068666,2808b3e1f2a931706f325479b65504dc87ba34a8
+2808b3e1f2a931706f325479b65504dc87ba34a8,2808b3e1,add icon caching thread,"add icon caching thread
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411068136,1411068136,6c248293126530ff49ecf1e68d8a31c792fcd6c2
+6c248293126530ff49ecf1e68d8a31c792fcd6c2,6c248293,merge in new information rather than a hard replace,"merge in new information rather than a hard replace
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411067817,1411067817,6476105b8516838b30e668bea02de3e3654064d9
+6476105b8516838b30e668bea02de3e3654064d9,6476105b,cleanup,"cleanup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411065275,1411065275,a2747649d4cd4900ba0aea33f436360fba19d18c
+a2747649d4cd4900ba0aea33f436360fba19d18c,a2747649,this did not work as expected,"this did not work as expected
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411063303,1411063303,e9255fe62003d2434c38ddd1d694bdb9e85c3dad
+e9255fe62003d2434c38ddd1d694bdb9e85c3dad,e9255fe6,use assertj,"use assertj
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1411063282,1411063282,7d0616433676d7726a6bdb93447d5fab0add119b
+df1f0a0dfa81f9a901bcf5235958bb7a3d608043,df1f0a0d,Localization support Italian language strings.xml,Localization support Italian language strings.xml,,,,Valerio Bozzolan,valerio-bozzolan@users.noreply.github.com,Valerio Bozzolan,valerio-bozzolan@users.noreply.github.com,1410947669,1410947669,7d0616433676d7726a6bdb93447d5fab0add119b
+7d0616433676d7726a6bdb93447d5fab0add119b,7d061643,remember the sort mode - closes #45,"remember the sort mode - closes #45
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1410262561,1410262561,5e946640017f1af6c90a6acc0e3d40bca6cc3413
+5e946640017f1af6c90a6acc0e3d40bca6cc3413,5e946640,target 20,"target 20
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409867658,1409867658,075e6377a9985b4784195f60fa516e77e4a3fa63
+075e6377a9985b4784195f60fa516e77e4a3fa63,075e6377,start emulator as seen here http://docs.travis-ci.com/user/languages/android/,"start emulator as seen here http://docs.travis-ci.com/user/languages/android/
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409866806,1409866806,19eba0dd6a7aa4d506996c53a057b848a5f6cd40
+19eba0dd6a7aa4d506996c53a057b848a5f6cd40,19eba0dd,add gradlewrapper,"add gradlewrapper
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409866210,1409866210,e8098371c6fe5833d415c93f8af5e8c6fe7f491e
+e8098371c6fe5833d415c93f8af5e8c6fe7f491e,e8098371,rn emu from travis - does not work atm,"rn emu from travis - does not work atm
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409865281,1409865281,42c4d0ea4c1dc571edfbc80412c748916471c2ae
+42c4d0ea4c1dc571edfbc80412c748916471c2ae,42c4d0ea,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409864634,1409864634,b846dbc431e808b71c865d326df20a5fff0de9eb
+b846dbc431e808b71c865d326df20a5fff0de9eb,b846dbc4,fix some lint issues - migrate to jcenter - bump versions,"fix some lint issues - migrate to jcenter - bump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409864576,1409864576,00c2a59a00af0196db1d3900bb7e95d91d0dda8b
+00c2a59a00af0196db1d3900bb7e95d91d0dda8b,00c2a59a,hide keyboard when starting app - closes #48,"hide keyboard when starting app - closes #48
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409864051,1409864051,534ff3f564dc143715e441621956ec3b1c116cdb
+534ff3f564dc143715e441621956ec3b1c116cdb,534ff3f5,rm unused import,"rm unused import
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409863836,1409863836,b91c1d9be7ba72aa2db9bb7512c48a04b367fa89
+b91c1d9be7ba72aa2db9bb7512c48a04b367fa89,b91c1d9b,bump tooling to 20,"bump tooling to 20
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1409156410,1409156439,119dff0ec9cbd1a9f9ecf45144d1ee2958db2854
+119dff0ec9cbd1a9f9ecf45144d1ee2958db2854,119dff0e,badge for FDroid,badge for FDroid,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1408097359,1408097359,dbc27c279f5c3b2ad78e6f1299e75e5554ecde46
+dbc27c279f5c3b2ad78e6f1299e75e5554ecde46,dbc27c27,add travis-ci build badge,"add travis-ci build badge
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1407882461,1407882461,0c2535c73d262c4114c904728ce743c5558caefe
+0c2535c73d262c4114c904728ce743c5558caefe,0c2535c7,add a empty build.gradle - hopefully travis picks it up then,"add a empty build.gradle - hopefully travis picks it up then
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1407881635,1407881635,c573bb96c418c54e208138a2a540258d642306d2
+c573bb96c418c54e208138a2a540258d642306d2,c573bb96,add travis.yml,"add travis.yml
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1407880075,1407880075,2f5c2fc5b3956cd35a42951875b7b6e0da0e144c
+2f5c2fc5b3956cd35a42951875b7b6e0da0e144c,2f5c2fc5,use new tooling and move tests to integration-tests,"use new tooling and move tests to integration-tests
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1406745438,1406745438,3638f3092e8d00dff432be178a76fd9de17d5ff6
+3638f3092e8d00dff432be178a76fd9de17d5ff6,3638f309,use latest tooling,"use latest tooling
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1401066835,1401066835,efc19bf10f801cc9c33911f2deb6f1630c22cb8a
+efc19bf10f801cc9c33911f2deb6f1630c22cb8a,efc19bf1,use sdk manager,"use sdk manager
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1401062799,1401062799,c694233f8972225f85fba69a33d1dba6661bd290
+c694233f8972225f85fba69a33d1dba6661bd290,c694233f,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1400705378,1400705378,a678f8a5010f0c7c628a1643b454af133ca44afd
+a678f8a5010f0c7c628a1643b454af133ca44afd,a678f8a5,allow adjustment of icon resolution,"allow adjustment of icon resolution
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1400705348,1400705348,063956d7b0dd75df469974c76e0fdc16ab2a4293
+063956d7b0dd75df469974c76e0fdc16ab2a4293,063956d7,use maxSize here as intended,"use maxSize here as intended
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1400702770,1400702770,4ce61f46aa66c94977c6079588b54d13a45d47e8
+4ce61f46aa66c94977c6079588b54d13a45d47e8,4ce61f46,better default settings,"better default settings
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1400701255,1400701255,1527aefe721d0c3bbd48fea04eee2c13fc3c1da1
+1527aefe721d0c3bbd48fea04eee2c13fc3c1da1,1527aefe,migrate to RoboLectric 2.3,"migrate to RoboLectric 2.3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1400698875,1400698875,8f6c568afc2060c407abf4436fa4d3a4f23078bf
+8f6c568afc2060c407abf4436fa4d3a4f23078bf,8f6c568a,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1398849435,1398849435,c1bc803528b71528d60fbaac7df3ff9b05c713c2
+c1bc803528b71528d60fbaac7df3ff9b05c713c2,c1bc8035,exclude from recents,"exclude from recents
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1398849407,1398849407,515bd940959a7607abfb40f4f877cffd9640bc87
+515bd940959a7607abfb40f4f877cffd9640bc87,515bd940,move stuff from manifest to build.gradle,"move stuff from manifest to build.gradle
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1398849378,1398849378,893692dcc2e0a9c3904fcd69ca4f65665a398703
+893692dcc2e0a9c3904fcd69ca4f65665a398703,893692dc,test the latest build tools on cloudbees,"test the latest build tools on cloudbees
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394628187,1394628187,35c72a968009b0efedd237c55d3ce9b5602fa784
+35c72a968009b0efedd237c55d3ce9b5602fa784,35c72a96,fix impl,"fix impl
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394627064,1394627064,eaa5d9e9f5979211c350497964d1aac2ef541ce2
+eaa5d9e9f5979211c350497964d1aac2ef541ce2,eaa5d9e9,use new build plugin,"use new build plugin
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394612671,1394612671,a24f193ff8453a26a729974ce7659ba29b73b5b5
+a24f193ff8453a26a729974ce7659ba29b73b5b5,a24f193f,correction,"correction
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394612650,1394612650,6055338b8e04c953dfd853f59c84b6bfcdcfd158
+6055338b8e04c953dfd853f59c84b6bfcdcfd158,6055338b,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394033417,1394033458,ff33ab4131b4c6864bb8c44fc9fdabe0c8783fee
+ff33ab4131b4c6864bb8c44fc9fdabe0c8783fee,ff33ab41,big redesign of list handling,"big redesign of list handling
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1394021075,1394033449,f7aa5aff1acacf623e37d7283546d0d631a5df41
+f7aa5aff1acacf623e37d7283546d0d631a5df41,f7aa5aff,declare final  var as final,"declare final  var as final
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393679318,1393679318,783f43c4f439fccdff5045d141c769feb96f9cfc
+783f43c4f439fccdff5045d141c769feb96f9cfc,783f43c4,also add launchers in the app-list,"also add launchers in the app-list
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393660053,1393660053,92fec11e693cd3186e91e2df79cda7ddf09dd33c
+92fec11e693cd3186e91e2df79cda7ddf09dd33c,92fec11e,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393572019,1393572019,16e9f01e60825fd4a2cbd4f04cb8a1df0e79e73d
+16e9f01e60825fd4a2cbd4f04cb8a1df0e79e73d,16e9f01e,bump to new build-tools version,"bump to new build-tools version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393571984,1393571984,685b0ab4f93bf99ed576852273765edb4e5e4377
+685b0ab4f93bf99ed576852273765edb4e5e4377,685b0ab4,don't ignore all warnings - only some,"don't ignore all warnings - only some
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393571947,1393571947,35b0cf1d7ae4ab8b4f5b82cbe1eb5c7ac9f1fff6
+35b0cf1d7ae4ab8b4f5b82cbe1eb5c7ac9f1fff6,35b0cf1d,fix lint problems regarding api-usage,"fix lint problems regarding api-usage
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393571889,1393571889,dfde1a6028bb61ebd02f722822df616117610efb
+dfde1a6028bb61ebd02f722822df616117610efb,dfde1a60,deal with lint errors for api-stuff,"deal with lint errors for api-stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393571859,1393571859,a1c9a6d1c8be5e227ca0b337c9e8dffbd8279d7e
+a1c9a6d1c8be5e227ca0b337c9e8dffbd8279d7e,a1c9a6d1,mainly add forced Locale to case conversions - also some code style improvements,"mainly add forced Locale to case conversions - also some code style improvements
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393568161,1393568161,8bc22012ed95fb9709a431ae653a3dcf3042195f
+8bc22012ed95fb9709a431ae653a3dcf3042195f,8bc22012,add TargetApi annotations,"add TargetApi annotations
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393568122,1393568122,12e79b582a1deaf2c304892bff881df419dfa3df
+12e79b582a1deaf2c304892bff881df419dfa3df,12e79b58,add sine missing translations to prevent inconsistent arrays,"add sine missing translations to prevent inconsistent arrays
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393564509,1393564509,e8f0ac8f46fd60336fcfe9a1722797e0e23ea433
+e8f0ac8f46fd60336fcfe9a1722797e0e23ea433,e8f0ac8f,prevent user from closing the caching dialog ( closes #43 ),"prevent user from closing the caching dialog ( closes #43 )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393560461,1393560461,af866c2d89d13bef52b04e07ccde4cd697ce0a81
+af866c2d89d13bef52b04e07ccde4cd697ce0a81,af866c2d,bump version number,"bump version number
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393055856,1393055856,d153c0712db87400e55677aa79bfd114f6f56e13
+d153c0712db87400e55677aa79bfd114f6f56e13,d153c071,ability to select 0 text-lines - was a feature request my Mark Bold,"ability to select 0 text-lines - was a feature request my Mark Bold
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1393055841,1393055841,ccf282ca6ea35f9db32dd6f72f1b50c3efd78172
+ccf282ca6ea35f9db32dd6f72f1b50c3efd78172,ccf282ca,target latest SDK,"target latest SDK
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1392716340,1392716340,e9befda271e6188bcd9a96359322e85c5cbe3e76
+e9befda271e6188bcd9a96359322e85c5cbe3e76,e9befda2,remove obsolete stuff,"remove obsolete stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1392716312,1392716312,88046d5a8f2420ccc18567ad4fe80371633939f8
+88046d5a8f2420ccc18567ad4fe80371633939f8,88046d5a,unify the base-dir - and do not use cache-dir - this should remove the problem…,"unify the base-dir - and do not use cache-dir - this should remove the problem of constantly reindexing when the storage is full
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1392711452,1392711452,d8ab9c7c3b36eb2053c2a5c68e724daf9919c140
+d8ab9c7c3b36eb2053c2a5c68e724daf9919c140,d8ab9c7c,pin versions as I have problems without network at the moment,"pin versions as I have problems without network at the moment
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1392710420,1392710420,01d003e8fd8a267d7090a227c8c8b4b1ee291f6f
+01d003e8fd8a267d7090a227c8c8b4b1ee291f6f,01d003e8,bump version ( need this for fdroid at the moment ),"bump version ( need this for fdroid at the moment )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1389822262,1389822262,6c14124b99914a8b66e2b2c27e5dfb05b8df770c
+6c14124b99914a8b66e2b2c27e5dfb05b8df770c,6c14124b,bump tooling,"bump tooling
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1388691053,1388691053,f35bf2c45ff9ffd67bb359b7b3bdcc00dae918ec
+f35bf2c45ff9ffd67bb359b7b3bdcc00dae918ec,f35bf2c4,revert a change from the pull request as discussed here:…,"revert a change from the pull request as discussed here: https://github.com/pserwylo/FAST/commit/f8287e3112a8cade1d17eb959a8db4e856801a1e#android-src-main-java-org-ligi-fast-model-appinfo-java-P12
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387692584,1387692584,41306bde3cb8379d0c37536cb427aa6ccfbd3d44
+41306bde3cb8379d0c37536cb427aa6ccfbd3d44,41306bde,bump tooling versions,"bump tooling versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387692341,1387692425,cec4f0dba2384b7825a8693897dca89bf4acbeda
+cec4f0dba2384b7825a8693897dca89bf4acbeda,cec4f0db,rm getString calls that are not needed here,"rm getString calls that are not needed here
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387251050,1387692424,0dd9e5d1f3565ea00c5aa3de4488f50653c97178
+0dd9e5d1f3565ea00c5aa3de4488f50653c97178,0dd9e5d1,cleaning,"cleaning
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387250846,1387692424,53334c93569bfeb27ea2d5376c72ea2f4d978426
+53334c93569bfeb27ea2d5376c72ea2f4d978426,53334c93,bump version and ignore inner classes for tests,"bump version and ignore inner classes for tests
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387250820,1387692424,83b39b513b67b8cb8960a73a446aa53ef67a15aa
+83b39b513b67b8cb8960a73a446aa53ef67a15aa,83b39b51,Merge pull request #37 from pserwylo/new-feature/sort-popularity-updated,"Merge pull request #37 from pserwylo/new-feature/sort-popularity-updated
+
+Sort by most used. Alphabetical sort is case-insensitive (Rebased and Updated)",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387692296,1387692296,"5cec8d8ee84731e4c26bd656a99d6a6582b5fe15,b3f49dbae16a2746d29a1820e8c6c4bbc1df9a25"
+b3f49dbae16a2746d29a1820e8c6c4bbc1df9a25,b3f49dba,Fixed issue with uninstalled apps causing cache to be rewritten and overwrite the call count.,"Fixed issue with uninstalled apps causing cache to be rewritten and overwrite the call count.
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1387391645,1387391645,e0222da1bbc4ac6b502ab6284855f75db6e66315
+e0222da1bbc4ac6b502ab6284855f75db6e66315,e0222da1,Merge branch 'master' into new-feature/sort-popularity-updated,"Merge branch 'master' into new-feature/sort-popularity-updated
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1387390351,1387390351,"f8287e3112a8cade1d17eb959a8db4e856801a1e,5cec8d8ee84731e4c26bd656a99d6a6582b5fe15"
+f8287e3112a8cade1d17eb959a8db4e856801a1e,f8287e31,Sort by most used. Alphabetical sort is case-insensitive.,"Sort by most used. Alphabetical sort is case-insensitive.
+
+The most used apps are calculated by incrementing a counter (in a shared
+preferences file called launch_history.xml) each time an app is launched
+via FAST. Also changed the alphabetical search to be case-insensitive.
+
+Changed 'most popular' to 'by usage'
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1370426752,1387279403,0211095b214e2d5bb28722041c293d84f59d3dcc
+5cec8d8ee84731e4c26bd656a99d6a6582b5fe15,5cec8d8e,Merge pull request #38 from pserwylo/improvement/capitalisation,"Merge pull request #38 from pserwylo/improvement/capitalisation
+
+More text changes, mainly related to capitalisation.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1387250743,1387250743,"0211095b214e2d5bb28722041c293d84f59d3dcc,e7d845fd01390a1baea9fa333b9e1ee4ace8847d"
+e7d845fd01390a1baea9fa333b9e1ee4ace8847d,e7d845fd,"More text changes, mainly related to capitalisation.","More text changes, mainly related to capitalisation.
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1387289174,1387289174,0211095b214e2d5bb28722041c293d84f59d3dcc
+0211095b214e2d5bb28722041c293d84f59d3dcc,0211095b,go down to android-18 - android-19 does not seem to be on cloudbees yet,"go down to android-18 - android-19 does not seem to be on cloudbees yet
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385299479,1385299479,476ed954afa23233e3ee75ee21cdc2db3d20b752
+476ed954afa23233e3ee75ee21cdc2db3d20b752,476ed954,add files from AXT,"add files from AXT
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385298786,1385298786,0dc1589396e542a62862269e11e086561d887616
+0dc1589396e542a62862269e11e086561d887616,0dc15893,mention @ptrv in contributors section,"mention @ptrv in contributors section
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385298011,1385298011,7b148bac767613678ad25be9f63769250555e6f8
+7b148bac767613678ad25be9f63769250555e6f8,7b148bac,bump versions,"bump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385250812,1385250812,d570190d7e8539d36c2e8c4734cd9c4edb545838
+d570190d7e8539d36c2e8c4734cd9c4edb545838,d570190d,cleanup / indent,"cleanup / indent
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385250584,1385250596,fb364ec582b896841dab5df067f865ad71b01a99
+fb364ec582b896841dab5df067f865ad71b01a99,fb364ec5,remove not needed libs and pump versions,"remove not needed libs and pump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385249483,1385249483,04a2bf9d77ecabc23fb4f4bfc8bbde5237b5bd00
+04a2bf9d77ecabc23fb4f4bfc8bbde5237b5bd00,04a2bf9d,bump versions,"bump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385249462,1385249462,7ec05775791ed8aa0d9a2dd858afb1c1b30398f9
+7ec05775791ed8aa0d9a2dd858afb1c1b30398f9,7ec05775,inline lib functionality to reduce size,"inline lib functionality to reduce size
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385249440,1385249440,5bdd81d3d6a76737e7875670ff406d029cc3165d
+5bdd81d3d6a76737e7875670ff406d029cc3165d,5bdd81d3,use newer support lib,"use newer support lib
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385245213,1385245213,79c20f06e972c4c40c71bf6721126706dc7a0286
+79c20f06e972c4c40c71bf6721126706dc7a0286,79c20f06,do not set bg to black - allow gradient,"do not set bg to black - allow gradient
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385245200,1385245200,d6ab055e11a89cde0d83ef0029b03bbd4dca546c
+d6ab055e11a89cde0d83ef0029b03bbd4dca546c,d6ab055e,enable HW accel to make FAST even FASTer ( no in deed because:…,"enable HW accel to make FAST even FASTer ( no in deed because: http://www.motzwrit.es/post/26949575100/making-theme-holo-look-awesome-with-gradients )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385245172,1385245172,ccc6d84dd59bf916e9e8014c2f42606d375182dc
+ccc6d84dd59bf916e9e8014c2f42606d375182dc,ccc6d84d,indent res,"indent res
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385244337,1385244337,9f22a94e7df82ce0551b8f4d5eb6935983b7f264
+9f22a94e7df82ce0551b8f4d5eb6935983b7f264,9f22a94e,minor design stuff,"minor design stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385244211,1385244211,3adb24821a2d078ceeab188e5366466f96176bf7
+3adb24821a2d078ceeab188e5366466f96176bf7,3adb2482,better handling of iconDimensions,"better handling of iconDimensions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385138574,1385138574,1df3b32422124ea6db40a7c437818d47dee17ba3
+1df3b32422124ea6db40a7c437818d47dee17ba3,1df3b324,rename fuzzy -> gap,"rename fuzzy -> gap
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385136369,1385136369,2157619f8cfccc1a3122c2c79bb9d1b0a860651e
+2157619f8cfccc1a3122c2c79bb9d1b0a860651e,2157619f,test and bugfix for the problem that fuzzy search was failing when package-search is activate,"test and bugfix for the problem that fuzzy search was failing when package-search is activate
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385135296,1385135296,c51d9e72c0d352166c247e5b9af903eba30b9550
+c51d9e72c0d352166c247e5b9af903eba30b9550,c51d9e72,rm test for method that is gone,"rm test for method that is gone
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385135208,1385135208,b90669935beb9043398c3a96ef49b82c68d81eb8
+b90669935beb9043398c3a96ef49b82c68d81eb8,b9066993,simplify & speed_up,"simplify & speed_up
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385131556,1385131556,42f2a894dbb527d074aa1ce764fbcd1a0e312bbd
+42f2a894dbb527d074aa1ce764fbcd1a0e312bbd,42f2a894,simplify highlighting,"simplify highlighting
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1385084861,1385084861,bf236fb33248cdd435cc7316207463fb7621e2a6
+bf236fb33248cdd435cc7316207463fb7621e2a6,bf236fb3,Add tests for fuzzy search and StringUtils,"Add tests for fuzzy search and StringUtils
+",,,,ptrv,mail@petervasil.net,ptrv,mail@petervasil.net,1384636484,1384636484,1076fbdeb6550d3f68929c4b3c39eb31e16672ce
+1076fbdeb6550d3f68929c4b3c39eb31e16672ce,1076fbde,Add preferences option to set fuzzy search on/off,"Add preferences option to set fuzzy search on/off
+",,,,ptrv,mail@petervasil.net,ptrv,mail@petervasil.net,1384636277,1384636277,ce376131b66044684293c648e6c0644c3dffdd3a
+ce376131b66044684293c648e6c0644c3dffdd3a,ce376131,Highlight matched characters of query,"Highlight matched characters of query
+",,,,ptrv,mail@petervasil.net,ptrv,mail@petervasil.net,1384567770,1384567770,4962b03cecef467b719463aedce0cfec4d6abc90
+4962b03cecef467b719463aedce0cfec4d6abc90,4962b03c,Add basic fuzzy string matching,"Add basic fuzzy string matching
+",,,,ptrv,mail@petervasil.net,ptrv,mail@petervasil.net,1384462478,1384462478,196a67e4a2772c3d34ae8f601e545d67edea648f
+196a67e4a2772c3d34ae8f601e545d67edea648f,196a67e4,fulfill the interface for the test settings mock,"fulfill the interface for the test settings mock
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1383183764,1383183764,63f5103ffaf81a07bca0fb557d505f52b692c081
+63f5103ffaf81a07bca0fb557d505f52b692c081,63f5103f,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1383182875,1383182875,885663a0e44faccb895dd28fe79929dd79c7b914
+885663a0e44faccb895dd28fe79929dd79c7b914,885663a0,add setting to finish FAST after launching the wanted app,"add setting to finish FAST after launching the wanted app
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1383182783,1383182783,ae93b1e6666cc02c0a304b13cc11434eb811a01f
+ae93b1e6666cc02c0a304b13cc11434eb811a01f,ae93b1e6,care for spanish umlauts ; add tests ; convert query to lower,"care for spanish umlauts ; add tests ; convert query to lower
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1383180116,1383180116,f72af0d34e6b654fc25a6ddbb3457cdddfce1d9e
+f72af0d34e6b654fc25a6ddbb3457cdddfce1d9e,f72af0d3,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382807548,1382807548,621f3a132ef1b98a675e417cbb6a46151d9443e4
+621f3a132ef1b98a675e417cbb6a46151d9443e4,621f3a13,new approach to icon handling ( scale down cache icons & nicer code ),"new approach to icon handling ( scale down cache icons & nicer code )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382807445,1382807445,0f36f2783bbaa39817b4c8fc0614e0d27fe8bd65
+0f36f2783bbaa39817b4c8fc0614e0d27fe8bd65,0f36f278,cleaner packaging,"cleaner packaging
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382702754,1382702754,832c4efdb1d85749d22145102e7ecde088064a87
+832c4efdb1d85749d22145102e7ecde088064a87,832c4efd,new test for testing the scaling of the IconCache & move the tests inside the android project,"new test for testing the scaling of the IconCache & move the tests inside the android project
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382624648,1382624648,32dff87b866183ceb234beaeb320486d9934b006
+32dff87b866183ceb234beaeb320486d9934b006,32dff87b,new approach to icon handling ( scale down cache icons & nicer code ),"new approach to icon handling ( scale down cache icons & nicer code )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382559843,1382559843,dc5184a6926ab879190dabd4813025d176e1b193
+dc5184a6926ab879190dabd4813025d176e1b193,dc5184a6,styling,"styling
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382559736,1382559736,dd9feec6fe38008968142f40357ab092ddbeefaa
+dd9feec6fe38008968142f40357ab092ddbeefaa,dd9feec6,preference to clear the cache,"preference to clear the cache
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1382035186,1382035186,5826d79998fabad56c5e5600db6f74fa0996e997
+5826d79998fabad56c5e5600db6f74fa0996e997,5826d799,code style and sorting,"code style and sorting
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1381530045,1381530045,3cdfc1ad0a5a359074feb5e6022f12f2dfacddc1
+3cdfc1ad0a5a359074feb5e6022f12f2dfacddc1,3cdfc1ad,test&fix,"test&fix
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1381423818,1381423818,91f9c74e194c5952fecad9f3d1b80935862d170e
+91f9c74e194c5952fecad9f3d1b80935862d170e,91f9c74e,prevent a IAOB when changing lists,"prevent a IAOB when changing lists
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1381423241,1381423275,06cbb3365eb6f7f8173742cc610b8f10a3db7793
+06cbb3365eb6f7f8173742cc610b8f10a3db7793,06cbb336,nice up code and fix a problem after list update,"nice up code and fix a problem after list update
+",,,,Jens Dieskau,jfreax@googlemail.com,ligi,ligi@ligi.de,1381422881,1381422881,87ebb29cefaf2f17fbd0550bd5b0f2f9e4390895
+87ebb29cefaf2f17fbd0550bd5b0f2f9e4390895,87ebb29c,nicer code,"nicer code
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1381422812,1381422812,9a7a04089ecdc9b558be998566cbac3c18aa02ac
+9a7a04089ecdc9b558be998566cbac3c18aa02ac,9a7a0408,from old struct,"from old struct
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380817287,1380817287,6b5ddbd81ea3b4048fbcddea6b1827215a39bfe5
+6b5ddbd81ea3b4048fbcddea6b1827215a39bfe5,6b5ddbd8,adapt to project struct,"adapt to project struct
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380817244,1380817244,ad0ca5c3e7966d1aaa383a24ce41822172cae2e1
+ad0ca5c3e7966d1aaa383a24ce41822172cae2e1,ad0ca5c3,Merge branch 'struct',"Merge branch 'struct'
+
+Conflicts:
+	android/src/main/java/org/ligi/fast/util/PackageListSerializer.java
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380811052,1380811052,"8061261b512174439e57a6774fd18b72dc3bd8ce,b497047ffcf128795ee8ab29f1200db7616bfe6a"
+b497047ffcf128795ee8ab29f1200db7616bfe6a,b497047f,unify struct of projects,"unify struct of projects
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380809746,1380809746,592bb35264c06e0bcf3b16fb36ef82eaa0e94f91
+592bb35264c06e0bcf3b16fb36ef82eaa0e94f91,592bb352,add most recent android build plugin,"add most recent android build plugin
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380808617,1380808617,4f11f0f8efd40de95b1db916141bcd66fee79d2d
+8061261b512174439e57a6774fd18b72dc3bd8ce,8061261b,inc version,"inc version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380279407,1380279407,6c4b753da6aa1b5b4e1685420751da50724734a7
+6c4b753da6aa1b5b4e1685420751da50724734a7,6c4b753d,use SEPARATOR const,"use SEPARATOR const
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380279395,1380279395,dc19feb6c1622ffed2c3c86ca25cc31bcef3c8ac
+dc19feb6c1622ffed2c3c86ca25cc31bcef3c8ac,dc19feb6,Merge branch 'rcv_app_chg',"Merge branch 'rcv_app_chg'
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380234319,1380234319,"8929eabfc301dacaccdc91d02eaff88860e67a6f,107c1313c37c8bc32a32c613e2b9a39d0c14a555"
+107c1313c37c8bc32a32c613e2b9a39d0c14a555,107c1313,cleanup & implement packagelist change via broadcast receiver,"cleanup & implement packagelist change via broadcast receiver
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380234301,1380234301,d239537d5e353a2e52d7d5db347d94b47b56a719
+8929eabfc301dacaccdc91d02eaff88860e67a6f,8929eabf,use new versions to check if it works with cloudbees,"use new versions to check if it works with cloudbees
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380142737,1380142737,0d9697c83a581e852b781314298fd014d81bfa99
+d239537d5e353a2e52d7d5db347d94b47b56a719,d239537d,try with new buildToolsVersion - check if it works on cloudbees,"try with new buildToolsVersion - check if it works on cloudbees
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380142216,1380142227,022a3150c861add47822fe38872fa2ae150a4fa2
+022a3150c861add47822fe38872fa2ae150a4fa2,022a3150,CamelCase,"CamelCase
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380065664,1380065664,3390ac9e706acddbadaa0a7e10224a487495ff46
+3390ac9e706acddbadaa0a7e10224a487495ff46,3390ac9e,CamelCase,"CamelCase
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380064191,1380064191,6779ecacc472f6b74c0ac113d639a0cbcc27eeed
+6779ecacc472f6b74c0ac113d639a0cbcc27eeed,6779ecac,use AXT for writing the file,"use AXT for writing the file
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380063922,1380063922,bd2e15ea8cb0a3929809f73f29b1a1c027141677
+bd2e15ea8cb0a3929809f73f29b1a1c027141677,bd2e15ea,add package-change-listener,"add package-change-listener
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380063691,1380063691,b636d3117ab40e80de249ad621cc05580824be9b
+b636d3117ab40e80de249ad621cc05580824be9b,b636d311,Merge branch 'master' into rcv_app_chg,"Merge branch 'master' into rcv_app_chg
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380059097,1380059097,"48eda9091ca925473789bb002df3f115004273c0,0d9697c83a581e852b781314298fd014d81bfa99"
+0d9697c83a581e852b781314298fd014d81bfa99,0d9697c8,finish on back-press only if we are not the default browser,"finish on back-press only if we are not the default browser
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380057029,1380057029,9672c6f46734f91f3eecb2f5bb80bb65f3891224
+48eda9091ca925473789bb002df3f115004273c0,48eda909,initial hook into the broadcast,"initial hook into the broadcast
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1380055722,1380055722,9672c6f46734f91f3eecb2f5bb80bb65f3891224
+9672c6f46734f91f3eecb2f5bb80bb65f3891224,9672c6f4,do not add FAST as app in list,"do not add FAST as app in list
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379973312,1379973312,2ccdc76a6429ae751d6aa0f70d021d5d80070656
+2ccdc76a6429ae751d6aa0f70d021d5d80070656,2ccdc76a,obey code analysis results and make things super safe ;-),"obey code analysis results and make things super safe ;-)
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379869763,1379869763,0cb367ce7d030b629d9f1671ebb5b2e71f7349d3
+0cb367ce7d030b629d9f1671ebb5b2e71f7349d3,0cb367ce,AndroidHelper -> AXT,"AndroidHelper -> AXT
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379869335,1379869335,4f11f0f8efd40de95b1db916141bcd66fee79d2d
+4f11f0f8efd40de95b1db916141bcd66fee79d2d,4f11f0f8,be more verbose,"be more verbose
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379242570,1379242570,1a52bec28eefc62ae32882d17292dd62875d08ea
+1a52bec28eefc62ae32882d17292dd62875d08ea,1a52bec2,fight OOM I got reported,"fight OOM I got reported
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379241149,1379241149,7136f2fc7077d3f79dcbd299d57b79cd6e75984b
+7136f2fc7077d3f79dcbd299d57b79cd6e75984b,7136f2fc,unify app project layout,"unify app project layout
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1379014390,1379014390,0ea00f87753b3e7b463a8c5f45714e5e8e4b5815
+0ea00f87753b3e7b463a8c5f45714e5e8e4b5815,0ea00f87,keyboard show/hide feature,"keyboard show/hide feature
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378990289,1378990289,384c6d26f6f79efcc189bdedb8f01c78c2e33e7e
+384c6d26f6f79efcc189bdedb8f01c78c2e33e7e,384c6d26,test that setAppsList works fine,"test that setAppsList works fine
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378498565,1378498565,65b82ae15b8aefe16bcd027f4a6f82532a143f2b
+65b82ae15b8aefe16bcd027f4a6f82532a143f2b,65b82ae1,add interface to fulfill interface,"add interface to fulfill interface
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378498544,1378498544,24ef68e2a47278ffee2ed97f4fa4eef7c203f8f1
+24ef68e2a47278ffee2ed97f4fa4eef7c203f8f1,24ef68e2,add new method to fulfill interface,"add new method to fulfill interface
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378498203,1378498519,d19e1b348c3b92b51781a0a96afaf407693d9d2d
+d19e1b348c3b92b51781a0a96afaf407693d9d2d,d19e1b34,implement the show keyboard setting,"implement the show keyboard setting
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378407245,1378407245,938bb8425e8b821cf1ee192820717e4d0c3c490a
+938bb8425e8b821cf1ee192820717e4d0c3c490a,938bb842,bump AndroidHelper version,"bump AndroidHelper version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378402917,1378402917,b6dd3c2590f774d1db97bb27de24b0c3525437bc
+b6dd3c2590f774d1db97bb27de24b0c3525437bc,b6dd3c25,ignore test manifest,"ignore test manifest
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378321144,1378321144,ed145d90888ecda6ac49585c0c53227ade0c996b
+ed145d90888ecda6ac49585c0c53227ade0c996b,ed145d90,expose the feature to the user,"expose the feature to the user
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378320491,1378320491,97fcacc95c5bf6ef882da6c3f5a09d2bd98e8c46
+97fcacc95c5bf6ef882da6c3f5a09d2bd98e8c46,97fcacc9,formatting & style,"formatting & style
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378320146,1378320146,561e4568a854f26cc2c8873671f7114d89fc9e67
+561e4568a854f26cc2c8873671f7114d89fc9e67,561e4568,rename for consistency,"rename for consistency
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378319850,1378319850,db363f777680213f1a86d2412accfe6f74e25160
+db363f777680213f1a86d2412accfe6f74e25160,db363f77,implement and test the space after word feature,"implement and test the space after word feature
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378319261,1378319261,89cdf95764ff44bbea0f9cb207f06a34360389f0
+89cdf95764ff44bbea0f9cb207f06a34360389f0,89cdf957,test stuff,"test stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378317888,1378317888,5ffdb43c1d0e0f919263057503869e9b67c78a45
+5ffdb43c1d0e0f919263057503869e9b67c78a45,5ffdb43c,code style,"code style
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378288334,1378288334,2847b258b1f05cbf254eb4670039cdbb71b375b9
+2847b258b1f05cbf254eb4670039cdbb71b375b9,2847b258,rm ego,"rm ego
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1378285558,1378285558,df72d3b63d7f3327028a1c330ea713d4adebaacd
+df72d3b63d7f3327028a1c330ea713d4adebaacd,df72d3b6,bump,"bump
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377556304,1377556304,9d0a3f123af1aa4b4d5f99cb66c4c58bcb7db9ec
+9d0a3f123af1aa4b4d5f99cb66c4c58bcb7db9ec,9d0a3f12,bump,"bump
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377556244,1377556244,12a312083cffe4015f320be6fe5310839780b4fb
+12a312083cffe4015f320be6fe5310839780b4fb,12a31208,bump to latest version,"bump to latest version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377556223,1377556223,8845353b08372bfc653ba604dc5e7dbc5d2324a5
+8845353b08372bfc653ba604dc5e7dbc5d2324a5,8845353b,bring back proguard,"bring back proguard
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377541581,1377541581,ec01d406996c7accbf2881295222a44794b3be41
+ec01d406996c7accbf2881295222a44794b3be41,ec01d406,use markdown instead of HTML,"use markdown instead of HTML
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377541550,1377541550,00fac786533373a33139e9885a03037fc361c0a6
+00fac786533373a33139e9885a03037fc361c0a6,00fac786,fix problems with some chars in french,"fix problems with some chars in french
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1377541522,1377541522,58ffd4ebdfae4a92bc8ca16ada26b493caae9956
+58ffd4ebdfae4a92bc8ca16ada26b493caae9956,58ffd4eb,ignore new properties file,"ignore new properties file
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376478022,1376478022,d9cef455bb184851cc3f2d1d1e80084eda7cb786
+d9cef455bb184851cc3f2d1d1e80084eda7cb786,d9cef455,correct version,"correct version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376469383,1376469383,56aade4318dd1e4b3c80841e5cdaff84b152a8a0
+56aade4318dd1e4b3c80841e5cdaff84b152a8a0,56aade43,correct the url for ligis maven repo and make configurable,"correct the url for ligis maven repo and make configurable
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376468450,1376469186,ff1ae6519f3d1644ac21049fac825cbcdb34b31f
+ff1ae6519f3d1644ac21049fac825cbcdb34b31f,ff1ae651,rm hardcoded OK,"rm hardcoded OK
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376137623,1376137623,6565a505a3003b879b123c8f6b7c803477dcb90e
+6565a505a3003b879b123c8f6b7c803477dcb90e,6565a505,refactor out class,"refactor out class
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376137557,1376137557,4d27892d4b6ef6541d09298565ddbb10fafed5c3
+4d27892d4b6ef6541d09298565ddbb10fafed5c3,4d27892d,concreter name,"concreter name
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376137305,1376137305,88256022c61949416c593a5f7baba626dd803ec7
+88256022c61949416c593a5f7baba626dd803ec7,88256022,testing frame and initial tests on AppInfo,"testing frame and initial tests on AppInfo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376100811,1376100811,69019e96aa67195889670699b2e965544719ac55
+69019e96aa67195889670699b2e965544719ac55,69019e96,tidy up,"tidy up
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376087134,1376087134,45876eed25ff849f8437b7d7c043c779cd781a4a
+45876eed25ff849f8437b7d7c043c779cd781a4a,45876eed,use AndroidHelper to get the label in a safe manner,"use AndroidHelper to get the label in a safe manner
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376070890,1376070890,00c209452b5166d8bb1bea815e0930b810d10599
+00c209452b5166d8bb1bea815e0930b810d10599,00c20945,tidy up,"tidy up
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376069937,1376069937,0d1b1081400d6d893d3cd59102db6caf5e5f4eda
+0d1b1081400d6d893d3cd59102db6caf5e5f4eda,0d1b1081,tidy up,"tidy up
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376065559,1376065559,6f030e3b7aa8ff5c0c430f7a1c26c70357c4f1c8
+6f030e3b7aa8ff5c0c430f7a1c26c70357c4f1c8,6f030e3b,we can get rid of the broad library include from lib now,"we can get rid of the broad library include from lib now
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376062275,1376062275,af1457e8206bf5e2823487e7009a2b999419714a
+af1457e8206bf5e2823487e7009a2b999419714a,af1457e8,buildTools to 17 as cloudbees does not yet seem to have 18x,"buildTools to 17 as cloudbees does not yet seem to have 18x
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376062203,1376062203,69ed50ade14e3a5bfcd5c5b3b21a3c7675766d3b
+69ed50ade14e3a5bfcd5c5b3b21a3c7675766d3b,69ed50ad,bump versions,"bump versions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376061743,1376061743,bdbaf556319fbef3f3a4c8a6a6f913097be27016
+bdbaf556319fbef3f3a4c8a6a6f913097be27016,bdbaf556,use tracedroid 1.1,"use tracedroid 1.1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376014295,1376014295,d67a50c853bf7a7df88a962d67dcba8f8b82f79a
+d67a50c853bf7a7df88a962d67dcba8f8b82f79a,d67a50c8,nicing up code,"nicing up code
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376014278,1376014278,8a48b700b64aa6354b6aa77b48d448b22a67d1da
+8a48b700b64aa6354b6aa77b48d448b22a67d1da,8a48b700,correct mvn repo url,"correct mvn repo url
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376009762,1376009762,b4d013a8661f5178f6c6013ad35920194b269f97
+b4d013a8661f5178f6c6013ad35920194b269f97,b4d013a8,move libs to mave repo,"move libs to mave repo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376007725,1376007725,7f90d5867c14efccfae2891208cf2e1b36b7ad59
+7f90d5867c14efccfae2891208cf2e1b36b7ad59,7f90d586,testing to pull AndroidHelper from own mvn repo,"testing to pull AndroidHelper from own mvn repo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1376004797,1376004797,e54cf3cb8b935d72aa184276ca866c717b80f446
+e54cf3cb8b935d72aa184276ca866c717b80f446,e54cf3cb,escaping of some chars in french strings,"escaping of some chars in french strings
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375955535,1375955535,fd11ac74991fec14a25edf6aca1e7690ac70e2b6
+fd11ac74991fec14a25edf6aca1e7690ac70e2b6,fd11ac74,deduplicate - use AndroidHelper to load the file,"deduplicate - use AndroidHelper to load the file
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375955512,1375955512,e9e2ee71480d0a79b692f33fab97cc98fe87d783
+e9e2ee71480d0a79b692f33fab97cc98fe87d783,e9e2ee71,rm proguard for a fdroid,"rm proguard for a fdroid
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375544180,1375544180,8ab3dd89402449536d806b27d5153fbf07173eac
+8ab3dd89402449536d806b27d5153fbf07173eac,8ab3dd89,initial fdroid as flavor test,"initial fdroid as flavor test
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375543875,1375543875,70f882d0f3cf2e03c220751c76d13a286d2490a1
+70f882d0f3cf2e03c220751c76d13a286d2490a1,70f882d0,remove the m prefix for member vars for nicer code,"remove the m prefix for member vars for nicer code
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375364678,1375364678,3946142ad2d05a246f87c3638cc05123d018609b
+3946142ad2d05a246f87c3638cc05123d018609b,3946142a,simplify,"simplify
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375364229,1375364229,9276608b41051505c38d245ef529a8eb4c3b5281
+9276608b41051505c38d245ef529a8eb4c3b5281,9276608b,link to this app in f-droid,"link to this app in f-droid
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375364146,1375364205,dcf1bac013985cb2d45481f0d749b7c2f3302d90
+dcf1bac013985cb2d45481f0d749b7c2f3302d90,dcf1bac0,use new AndroidHelper,"use new AndroidHelper
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375363938,1375363938,a1a236194b2141058fdc5f75f7b6dbdf25ab60da
+a1a236194b2141058fdc5f75f7b6dbdf25ab60da,a1a23619,remove proguard-project from gitignore,"remove proguard-project from gitignore
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375208848,1375208848,0d7d4c187743b83d037b4703e24bed4caf550a34
+0d7d4c187743b83d037b4703e24bed4caf550a34,0d7d4c18,inc version number,"inc version number
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375208828,1375208828,bf8f3a0e2f2c9a8e9a4bc7aef818a85b97b17cb7
+bf8f3a0e2f2c9a8e9a4bc7aef818a85b97b17cb7,bf8f3a0e,add cloudbees/jenkins build status badge,"add cloudbees/jenkins build status badge
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375208786,1375208786,923313a2abd40e8deb4feb2c104157ad0af7a391
+923313a2abd40e8deb4feb2c104157ad0af7a391,923313a2,add french translations,"add french translations
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375146255,1375146255,de5ea210f61beaa0371fddaf80c489a2a92fa65a
+de5ea210f61beaa0371fddaf80c489a2a92fa65a,de5ea210,add proguard-project - also for cloudbees jenkins,"add proguard-project - also for cloudbees jenkins
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375143862,1375143862,db326d0765235175725112efba76e25db8ce7bb1
+db326d0765235175725112efba76e25db8ce7bb1,db326d07,rm signing stuff from build.gradle to test something with jenkins on cloudbees,"rm signing stuff from build.gradle to test something with jenkins on cloudbees
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1375143597,1375143597,802681232342d229a9720d323006c773fb4ec1e7
+802681232342d229a9720d323006c773fb4ec1e7,80268123,bump version,"bump version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373132132,1373132132,ee09d4245ec75198ec3258b5d184a390775149d3
+ee09d4245ec75198ec3258b5d184a390775149d3,ee09d424,there was one user sending me a stacktrace with a weird IOOBE - this fixes FCing…,"there was one user sending me a stacktrace with a weird IOOBE - this fixes FCing with this input data - still have to figure out the root cause
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373131400,1373131400,8d832de6be797367291771390b35c65ae699cece
+8d832de6be797367291771390b35c65ae699cece,8d832de6,we cannot use the new getSize function - or we would get a NoSuchMethod error on newer devices,"we cannot use the new getSize function - or we would get a NoSuchMethod error on newer devices
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373131272,1373131272,a028335f079b5a9b9d6dfc80a3920857fbdc1331
+a028335f079b5a9b9d6dfc80a3920857fbdc1331,a028335f,bumping to 4.0 - proguard was not running for 3.9 release,"bumping to 4.0 - proguard was not running for 3.9 release
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373105587,1373105587,8ed871082ad33fb4747b6fa6bc0a91f2219eef62
+8ed871082ad33fb4747b6fa6bc0a91f2219eef62,8ed87108,bump version to 3.9,"bump version to 3.9
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373101398,1373101398,ba1e20f8b2bc185be2586f3ecac4e5baaa42e3bf
+ba1e20f8b2bc185be2586f3ecac4e5baaa42e3bf,ba1e20f8,add credits,"add credits
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373101387,1373101387,42e48b82ea117acc1f58fdc105a6bce67b1e1412
+42e48b82ea117acc1f58fdc105a6bce67b1e1412,42e48b82,Merge branch 'pserwylo-improvement/tiny-icons',"Merge branch 'pserwylo-improvement/tiny-icons'
+
+Conflicts:
+	src/main/res/values/strings.xml
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373100650,1373100650,"64d14bd50b954a88033065fbbf383db624efc4f9,b65de3ef031defa5b52f50fc7f400957567772ae"
+64d14bd50b954a88033065fbbf383db624efc4f9,64d14bd5,use latest bugfix release for gradle android plugin,"use latest bugfix release for gradle android plugin
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1373095441,1373095441,c737fcde43ab423fbf3b6a734cb4fb37f769ab9e
+c737fcde43ab423fbf3b6a734cb4fb37f769ab9e,c737fcde,change the assit-icon ( didn't know this was possible - thanks to HomeButtonLauncher to be OSS ;-),"change the assit-icon ( didn't know this was possible - thanks to HomeButtonLauncher to be OSS ;-)
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1371986866,1371986866,4201e4fe27413eba1dde1b17104435b0d96b81f8
+4201e4fe27413eba1dde1b17104435b0d96b81f8,4201e4fe,Merge branch 'master' of github.com:ligi/FAST,"Merge branch 'master' of github.com:ligi/FAST
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1371663737,1371663737,"a9ab81ed9373d61e601c94f30eb5905a32df5277,75ccdaa5d70c47729a313f3f3a0da15ece455662"
+a9ab81ed9373d61e601c94f30eb5905a32df5277,a9ab81ed,bump gradle android plugin version to 0.4.2,"bump gradle android plugin version to 0.4.2
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1370517436,1370517436,0f3d8ad8b181ef12e2ec91889fefcc79629faf35
+75ccdaa5d70c47729a313f3f3a0da15ece455662,75ccdaa5,nice up readme,nice up readme,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1370470965,1370470965,0f3d8ad8b181ef12e2ec91889fefcc79629faf35
+0f3d8ad8b181ef12e2ec91889fefcc79629faf35,0f3d8ad8,Merge pull request #21 from pserwylo/improvement/english,"Merge pull request #21 from pserwylo/improvement/english
+
+Updated strings.xml with minor changes to English.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1370423735,1370423735,"fda1814f87df47624c60b8a44620ac642c608730,d4366ff41988bcb155b07a7ef5d15c28a409b894"
+b65de3ef031defa5b52f50fc7f400957567772ae,b65de3ef,"Added ""tiny"" icon view","Added ""tiny"" icon view
+
+Also refactored views so there's only one item_* view required.
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1370418983,1370418983,fda1814f87df47624c60b8a44620ac642c608730
+d4366ff41988bcb155b07a7ef5d15c28a409b894,d4366ff4,Updated strings.xml with minor changes to English.,"Updated strings.xml with minor changes to English.
+",,,,Peter Serwylo,peter@ivt.com.au,Peter Serwylo,peter@ivt.com.au,1370394682,1370395063,fda1814f87df47624c60b8a44620ac642c608730
+fda1814f87df47624c60b8a44620ac642c608730,fda1814f,different markets as gradöe flavours,"different markets as gradöe flavours
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1370104038,1370104038,552c0c5c8997de02ef3d8bd00fe53564c1096442
+552c0c5c8997de02ef3d8bd00fe53564c1096442,552c0c5c,adapt to new gradle plugin and dir structure,"adapt to new gradle plugin and dir structure
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1370012475,1370012475,8c1140074e2f7a5fd6f38a1e96f2aee3d7e2262d
+8c1140074e2f7a5fd6f38a1e96f2aee3d7e2262d,8c114007,disable rotation when in LoadingDialog,"disable rotation when in LoadingDialog
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368478159,1368478159,933a1094631ecdc815be144d5109a892319e3714
+933a1094631ecdc815be144d5109a892319e3714,933a1094,externalize string,"externalize string
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368207603,1368207603,b5c78877af510389b954ac4053c1574428dee10c
+b5c78877af510389b954ac4053c1574428dee10c,b5c78877,rework to have the Dialog as a Activity ( to prevent rotate in a 2. step ),"rework to have the Dialog as a Activity ( to prevent rotate in a 2. step )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368207562,1368207562,3b738f0a317d6ac77711d4c6181c22b4d12a767f
+3b738f0a317d6ac77711d4c6181c22b4d12a767f,3b738f0a,fix typo,"fix typo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368155903,1368155903,0b1502d146615a5b42eeddf5726cb233e8676910
+0b1502d146615a5b42eeddf5726cb233e8676910,0b1502d1,nice up code & resolve in try block ( can fail ),"nice up code & resolve in try block ( can fail )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368155846,1368155846,af99453310aeb0d053fbbe89096d13d55b23fd74
+af99453310aeb0d053fbbe89096d13d55b23fd74,af994533,fix a IOOBE,"fix a IOOBE
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1368155755,1368155755,30d3a46e40684534aa0ed860513900a320723c30
+30d3a46e40684534aa0ed860513900a320723c30,30d3a46e,javadoc & rm flag,"javadoc & rm flag
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366796220,1366796220,837e5a9db9280818c7a4526a0e3205dff19cc250
+837e5a9db9280818c7a4526a0e3205dff19cc250,837e5a9d,fix the matching when it comes to umlauts,"fix the matching when it comes to umlauts
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366796191,1366796191,1861a0a25a69cb50cdff1b741d0f22cf2442a070
+1861a0a25a69cb50cdff1b741d0f22cf2442a070,1861a0a2,add progress indicator when caching,"add progress indicator when caching
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366795116,1366795116,17e2f60cbc0aa88064738c33044a2519bb7e889b
+17e2f60cbc0aa88064738c33044a2519bb7e889b,17e2f60c,add note,"add note
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366792874,1366792874,41648c6c111073d2c3ac20821869d8777f60c2ea
+41648c6c111073d2c3ac20821869d8777f60c2ea,41648c6c,org imports,"org imports
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366792531,1366792531,c18bc7e9f0bececbbe0104238e449c82f6b2ea94
+c18bc7e9f0bececbbe0104238e449c82f6b2ea94,c18bc7e9,rm typo,"rm typo
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1366792472,1366792472,08a118e8bfd4c7f8b1608c87de27fe45de657e78
+08a118e8bfd4c7f8b1608c87de27fe45de657e78,08a118e8,add gradle build file,"add gradle build file
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365891483,1365891483,6808d632d66938631c8a9f0c743638363dc9f460
+6808d632d66938631c8a9f0c743638363dc9f460,6808d632,rename some member,"rename some member
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365885266,1365885266,e7601ad9b1761fc6007776d2037d3bc7f49dcdb6
+e7601ad9b1761fc6007776d2037d3bc7f49dcdb6,e7601ad9,use tracedroid logging / remove tag,"use tracedroid logging / remove tag
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365884833,1365884833,c7d12f462ec441a37acc2bd53ca92028a6c598bc
+c7d12f462ec441a37acc2bd53ca92028a6c598bc,c7d12f46,code formating,"code formating
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365884708,1365884708,7757fd6ad7d010601aafcf50c9463f31bab9554f
+7757fd6ad7d010601aafcf50c9463f31bab9554f,7757fd6a,Merge branch 'master' of github.com:ligi/FAST,"Merge branch 'master' of github.com:ligi/FAST
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365884480,1365884480,"be42a26e5098bd216aae06708e8888eef62d6a71,319375dd7d88684bc0c4e1f5c6f7c475221ff367"
+319375dd7d88684bc0c4e1f5c6f7c475221ff367,319375dd,Merge pull request #18 from talexop/master,"Merge pull request #18 from talexop/master
+
+Changes discussed over email",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365884437,1365884437,"7193fc9b077beee9eab26cda469099323023bea7,7dd2cb18bf978f3fb9c6d7a17bd5d64ff6c24b19"
+be42a26e5098bd216aae06708e8888eef62d6a71,be42a26e,use tracedroid logging and log some more,"use tracedroid logging and log some more
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365883472,1365883472,43e3286ba59b9b9d5c553e68dfe3c0cb456c401c
+43e3286ba59b9b9d5c553e68dfe3c0cb456c401c,43e3286b,close stuff,"close stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1365794168,1365794168,7193fc9b077beee9eab26cda469099323023bea7
+7dd2cb18bf978f3fb9c6d7a17bd5d64ff6c24b19,7dd2cb18,Update BaseAppGatherAsyncTask.java,Update BaseAppGatherAsyncTask.java,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364985795,1364985795,0be74f20b378de2613c03556544a4a9c0ee00e97
+0be74f20b378de2613c03556544a4a9c0ee00e97,0be74f20,Update styles.xml,Update styles.xml,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364985499,1364985499,d409222d04a0106ac0f773ed8584175b90fc3805
+d409222d04a0106ac0f773ed8584175b90fc3805,d409222d,Update styles.xml,Update styles.xml,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364985309,1364985309,5c73a0b93c51da34c3b400f9f01915a30905ca78
+5c73a0b93c51da34c3b400f9f01915a30905ca78,5c73a0b9,Update AndroidManifest.xml,Update AndroidManifest.xml,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364984983,1364984983,5492cf3994cdb1afb256c4a102e1060319a65a09
+5492cf3994cdb1afb256c4a102e1060319a65a09,5492cf39,Update ApplicationContext.java,Update ApplicationContext.java,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364984847,1364984847,b27207903e8c3b94e055490a3f186fa2df9d432a
+b27207903e8c3b94e055490a3f186fa2df9d432a,b2720790,Create strings.xml,Create strings.xml,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364984712,1364984712,8d6d26e5386e955b10d33fb02a42c2cb78ed4e37
+8d6d26e5386e955b10d33fb02a42c2cb78ed4e37,8d6d26e5,Update AppInfo.java,Update AppInfo.java,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364984306,1364984306,e1905a3da903a3d1bda181d36b66443218c80fce
+e1905a3da903a3d1bda181d36b66443218c80fce,e1905a3d,Update SearchActivity.java,Update SearchActivity.java,,,,talexop,talexop@gmail.com,talexop,talexop@gmail.com,1364984037,1364984037,7193fc9b077beee9eab26cda469099323023bea7
+7193fc9b077beee9eab26cda469099323023bea7,7193fc9b,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1362653685,1362653685,73500cf455cb3c3d6a21a90fcc7c2d15c8d4e0b7
+73500cf455cb3c3d6a21a90fcc7c2d15c8d4e0b7,73500cf4,use the member variable context instead of getContext for backward compatibility,"use the member variable context instead of getContext for backward compatibility
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1362653452,1362653452,70383fa9e5ab2f0444ac6026dc132cba1864fee9
+70383fa9e5ab2f0444ac6026dc132cba1864fee9,70383fa9,code style,"code style
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1362652979,1362652979,82b993a6141a940983841bd5c02b095692a6833c
+82b993a6141a940983841bd5c02b095692a6833c,82b993a6,cleanup,"cleanup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1362652900,1362652900,c66d36dd8ccf6c71bc3ec99a249d19529979592d
+c66d36dd8ccf6c71bc3ec99a249d19529979592d,c66d36dd,externalize strings,"externalize strings
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361831513,1361831513,b1b5abb4bd226a4f6c8a888c4801f51f3443bd60
+b1b5abb4bd226a4f6c8a888c4801f51f3443bd60,b1b5abb4,instantly apply the theme after change,"instantly apply the theme after change
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361831328,1361831328,94b6a948d51f50b32e903b580b2e8271ccd5abba
+94b6a948d51f50b32e903b580b2e8271ccd5abba,94b6a948,option to convert umlauts - closes #16,"option to convert umlauts - closes #16
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361830929,1361830929,b69780ad56474244d928c18b6cf6fb00dbd511cf
+b69780ad56474244d928c18b6cf6fb00dbd511cf,b69780ad,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361726705,1361726705,aa8fa1d171353c600cad942016a21916dd85d764
+aa8fa1d171353c600cad942016a21916dd85d764,aa8fa1d1,initial caching dialog not cancelable anymore,"initial caching dialog not cancelable anymore
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361726686,1361726686,a76a9ffe8a5b107a47837846e704316eabd444f1
+a76a9ffe8a5b107a47837846e704316eabd444f1,a76a9ffe,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361635208,1361635208,61e1c9faf37ea5505a685966f4dce5ee62014d68
+61e1c9faf37ea5505a685966f4dce5ee62014d68,61e1c9fa,add tracedroid,"add tracedroid
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361635100,1361635100,52498353e68f00d0422a3e9808a3a945c2e30f7b
+52498353e68f00d0422a3e9808a3a945c2e30f7b,52498353,add tracedroid crash reporting,"add tracedroid crash reporting
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361634997,1361634997,a95a2712c64125dfcd251ca33fad1f94203c42b8
+a95a2712c64125dfcd251ca33fad1f94203c42b8,a95a2712,add hint to Applaunch-O-Meter,"add hint to Applaunch-O-Meter
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361634894,1361634966,6d54acd2005989aaebbece162fa6b6ae93c7dcce
+6d54acd2005989aaebbece162fa6b6ae93c7dcce,6d54acd2,there was a crash reported in the comments - could not reproduce and no crash…,"there was a crash reported in the comments - could not reproduce and no crash log in play - these are the only parts where this could happen imho
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361633638,1361633638,e468686d821e758af820bc6ffad450a9f45fc2a2
+e468686d821e758af820bc6ffad450a9f45fc2a2,e468686d,hint to applaunchometer,"hint to applaunchometer
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1361633549,1361633549,345f568ff5672947bb60f952eae39a2c7d098abe
+345f568ff5672947bb60f952eae39a2c7d098abe,345f568f,try to track down the rebuild problem i get from time to time,"try to track down the rebuild problem i get from time to time
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1360966718,1360966718,75ab59c9dfa6e1e2e5876f6dc1a75de19ce7707b
+75ab59c9dfa6e1e2e5876f6dc1a75de19ce7707b,75ab59c9,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1360880060,1360880060,67b9fc6908a09e7329d18c6f4ce8cf624b188582
+67b9fc6908a09e7329d18c6f4ce8cf624b188582,67b9fc69,add share option,"add share option
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1360771601,1360771601,8da04fba62d30a7cdb5dfc1352322eb40880754c
+8da04fba62d30a7cdb5dfc1352322eb40880754c,8da04fba,introduce help and cleanup,"introduce help and cleanup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1360771343,1360771343,6e431abffbc3f8c029fc2c89b3b92fa608d5af3e
+6e431abffbc3f8c029fc2c89b3b92fa608d5af3e,6e431abf,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359115835,1359115835,00e77e85dce803ff8085c9f3726d3cb1731c389d
+00e77e85dce803ff8085c9f3726d3cb1731c389d,00e77e85,fix a prolem for devices with Holo Theme,"fix a prolem for devices with Holo Theme
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359115805,1359115805,533ff0ba33cb65c3742054c21c8238c5d7c94427
+533ff0ba33cb65c3742054c21c8238c5d7c94427,533ff0ba,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359065948,1359065948,753e8b53fde29ee7c349b76b3f7a9af177c3602f
+753e8b53fde29ee7c349b76b3f7a9af177c3602f,753e8b53,one more theme ( for light live wallpapers ),"one more theme ( for light live wallpapers )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359065894,1359065894,ab217e1e0de64d6f080fcaf944bb1a60a1a68278
+ab217e1e0de64d6f080fcaf944bb1a60a1a68278,ab217e1e,the new styles also for < HC,"the new styles also for < HC
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359065294,1359065294,82d68620c71cb83ae0eef6e3b1b6f859dd01ae45
+82d68620c71cb83ae0eef6e3b1b6f859dd01ae45,82d68620,fix problem with edittext bg on < HC and prepare new theme,"fix problem with edittext bg on < HC and prepare new theme
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359065221,1359065221,795120c2390a0583790604b5d22c54cd70a6c05a
+795120c2390a0583790604b5d22c54cd70a6c05a,795120c2,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359062745,1359062745,f7065b3f12939acb09b75c8d13da12f39be7680b
+f7065b3f12939acb09b75c8d13da12f39be7680b,f7065b3f,set the theme before calling super - gave problems on < Honeycomb devices,"set the theme before calling super - gave problems on < Honeycomb devices
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359062711,1359062711,d8beb012ad7026f85baa74324317348ec8e9ad5f
+d8beb012ad7026f85baa74324317348ec8e9ad5f,d8beb012,add a picture for the g+ comunity,"add a picture for the g+ comunity
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1359062656,1359062656,5cf806105add08887552d163eb9fac02393df9ce
+5cf806105add08887552d163eb9fac02393df9ce,5cf80610,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358798141,1358798141,955e748cf75759b86367940c31b39244c13ebaa0
+955e748cf75759b86367940c31b39244c13ebaa0,955e748c,initial sort settings,"initial sort settings
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358797808,1358797808,80e44bbb8e7a31c764ea206d2ad74ca84c06edaf
+80e44bbb8e7a31c764ea206d2ad74ca84c06edaf,80e44bbb,initial sorting ability,"initial sorting ability
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358796894,1358796894,c0a90f21689cf1ef39061558cc8e15826d4c508a
+c0a90f21689cf1ef39061558cc8e15826d4c508a,c0a90f21,use holo theme on v11+,"use holo theme on v11+
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358633322,1358633322,fdbe50b633d4fa3fba211238616c094773b48c57
+fdbe50b633d4fa3fba211238616c094773b48c57,fdbe50b6,reenable overscroll,"reenable overscroll
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358633238,1358633238,6aca406230105781bc0f29ab9372248cb997e744
+6aca406230105781bc0f29ab9372248cb997e744,6aca4062,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358601334,1358601334,31a543743f02e4f8e257e078ec223d71051bcaaa
+31a543743f02e4f8e257e078ec223d71051bcaaa,31a54374,some padding for the actionbar icons,"some padding for the actionbar icons
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358601205,1358601205,de2d648f1e028adcde93abedf3af50e4773f5376
+de2d648f1e028adcde93abedf3af50e4773f5376,de2d648f,inc version to publish,"inc version to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358601138,1358601138,22bd762312ebaab827a51f8a855e642208578b01
+22bd762312ebaab827a51f8a855e642208578b01,22bd7623,first start the new activity - then finish the old one - otherwise there was a…,"first start the new activity - then finish the old one - otherwise there was a problem when invoked via google now gesture
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358601115,1358601115,0e4cb0c387c5af82881be605ed6c3329c11dc1c8
+0e4cb0c387c5af82881be605ed6c3329c11dc1c8,0e4cb0c3,inc verstion to publish,"inc verstion to publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358472078,1358472078,7cb3d42047561c5bd061337a574bae311ea75919
+7cb3d42047561c5bd061337a574bae311ea75919,7cb3d420,more space,"more space
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358472070,1358472070,ddab9fd6c8a6191f12de41049359a8a1f642f232
+ddab9fd6c8a6191f12de41049359a8a1f642f232,ddab9fd6,layouting and bring back extended functions,"layouting and bring back extended functions
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358470789,1358470789,3c5e637bc7e807d597151a1660216336ce134bf9
+3c5e637bc7e807d597151a1660216336ce134bf9,3c5e637b,add theme support and remove ABS ( now 1/4 the size ),"add theme support and remove ABS ( now 1/4 the size )
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358464169,1358464169,10c4b8cfc1b5838417749717e55eafd8e037dda9
+10c4b8cfc1b5838417749717e55eafd8e037dda9,10c4b8cf,consolidating dimen(s) files (2->1),"consolidating dimen(s) files (2->1)
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358450796,1358450796,2501181085f9df315d269d8c0c9b16edaa3294b3
+2501181085f9df315d269d8c0c9b16edaa3294b3,25011810,remove unused styles,"remove unused styles
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358437977,1358437977,9fa770bc446aaaba6a600cf1b4be9e0e34f1a250
+9fa770bc446aaaba6a600cf1b4be9e0e34f1a250,9fa770bc,Merge pull request #12 from jfreax/landscape_keyboard,"Merge pull request #12 from jfreax/landscape_keyboard
+
+No fullscreen keyboard in landscape mode.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358422473,1358422473,"870d8abbd0f955f2c95bfd7a6167417805a55e93,11ecbfb4ff4d26adc87a4e7d5c55f9ad162d4211"
+11ecbfb4ff4d26adc87a4e7d5c55f9ad162d4211,11ecbfb4,No fullscreen keyboard in landscape mode.,"No fullscreen keyboard in landscape mode.
+
+The keyboard covered the whole screen in landscape mode. So no results were
+showed. I disabled the ""extra ui"" to avoid this.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358418308,1358418308,870d8abbd0f955f2c95bfd7a6167417805a55e93
+870d8abbd0f955f2c95bfd7a6167417805a55e93,870d8abb,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358373774,1358373774,44e703c6cb6ddb5b96153f3f9877702c59996e1a
+44e703c6cb6ddb5b96153f3f9877702c59996e1a,44e703c6,cleanup,"cleanup
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358363576,1358363576,d76471a747a07af349053e9e0c29a902d4c3c7d6
+d76471a747a07af349053e9e0c29a902d4c3c7d6,d76471a7,Merge pull request #10 from jfreax/minor,"Merge pull request #10 from jfreax/minor
+
+Minor layout changes",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358363395,1358363395,"cf18c93ec671160f1c0fe74277c4c000b6afdded,9441920cbe6dbad4d89e7c23d3ae603a22bcd7a8"
+cf18c93ec671160f1c0fe74277c4c000b6afdded,cf18c93e,Merge pull request #11 from jfreax/preload_icons,"Merge pull request #11 from jfreax/preload_icons
+
+Pre-cache icons at app start in sperate thread.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358358306,1358358306,"d399447d26d5d776a5ae11324f1ee8a78a0c6054,24dd1ab4c2a5e2a281edd5ff14ce77090444e12f"
+d399447d26d5d776a5ae11324f1ee8a78a0c6054,d399447d,shorten app-name,"shorten app-name
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358358196,1358358196,b4368bdbfa077abfdd21f64fc100c234a5110310
+24dd1ab4c2a5e2a281edd5ff14ce77090444e12f,24dd1ab4,Pre-cache icons at app start in sperate thread.,"Pre-cache icons at app start in sperate thread.
+
+Instead of different threads for each icon, there is now only one extra
+thread to load all icon images at once in the background.
+This will reduce lags and displaying wrong images when scrolling at 'warp' speed.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358352062,1358352062,b4368bdbfa077abfdd21f64fc100c234a5110310
+9441920cbe6dbad4d89e7c23d3ae603a22bcd7a8,9441920c,Use padding instead of html <br> to pull the icons apart.,"Use padding instead of html <br> to pull the icons apart.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358294204,1358294204,2d02a2402196be12dc69e84b0e9e96c03d1a3216
+2d02a2402196be12dc69e84b0e9e96c03d1a3216,2d02a240,Let the search bar expand to the whole width.,"Let the search bar expand to the whole width.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358293089,1358293089,b4368bdbfa077abfdd21f64fc100c234a5110310
+b4368bdbfa077abfdd21f64fc100c234a5110310,b4368bdb,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358291190,1358291190,1e6c744230d1bdcfd4c03376de94049a670c28ab
+1e6c744230d1bdcfd4c03376de94049a670c28ab,1e6c7442,Merge branch 'master' of github.com:ligi/FAST,"Merge branch 'master' of github.com:ligi/FAST
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358290396,1358290396,"3c652e01cc4cdaf7da29530f4c7243ef5e4891e8,a35712f7d008f8c4f5c06e7203c2e78a1889c632"
+a35712f7d008f8c4f5c06e7203c2e78a1889c632,a35712f7,Merge pull request #9 from jfreax/async_at_scrolling,"Merge pull request #9 from jfreax/async_at_scrolling
+
+Async at scrolling",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358290345,1358290345,"86ec095375a7122864b60fa11514d037a07a4939,ad1150b8c99899318b23c74143d80cc1af15a44f"
+3c652e01cc4cdaf7da29530f4c7243ef5e4891e8,3c652e01,better handling of the shortcut functionality - dynamic checking - no more commenting out of code,"better handling of the shortcut functionality - dynamic checking - no more commenting out of code
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358290246,1358290246,86ec095375a7122864b60fa11514d037a07a4939
+ad1150b8c99899318b23c74143d80cc1af15a44f,ad1150b8,Only load icon asynchronous when scrolling.,"Only load icon asynchronous when scrolling.
+
+This reduces flickery and cpu usage when searching throu all the apps.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358289943,1358289943,86ec095375a7122864b60fa11514d037a07a4939
+86ec095375a7122864b60fa11514d037a07a4939,86ec0953,inc version for publishing,"inc version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358276364,1358276364,dedcc2ec30fb9f210bb592a6b2ee6febe843bf93
+dedcc2ec30fb9f210bb592a6b2ee6febe843bf93,dedcc2ec,cleanup & acknowledge jfreax for his nice work in there,"cleanup & acknowledge jfreax for his nice work in there
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358276287,1358276287,74851cf15d1b1d4afe427061d60ea385b22e95af
+74851cf15d1b1d4afe427061d60ea385b22e95af,74851cf1,add comment why this one permission is commented out,"add comment why this one permission is commented out
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358276262,1358276262,d37733cfafccd1d43d66b2097210a16906bad038
+d37733cfafccd1d43d66b2097210a16906bad038,d37733cf,Merge pull request #6 from jfreax/async_loading_fix,"Merge pull request #6 from jfreax/async_loading_fix
+
+Async loading fix",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358274629,1358274629,"39f4c4adc07cd2ecabeef038bb85689309263231,94c939bfd3ca94e810804af31ff38d77be8abdab"
+94c939bfd3ca94e810804af31ff38d77be8abdab,94c939bf,Fix for not loading icon image the first time after starting the app.,"Fix for not loading icon image the first time after starting the app.
+
+This will fix my last performance patch.
+
+Load the first icons after startup synchron. This will show the icons
+immediately.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358273453,1358274349,0ab72f3ab33e68ce24b3a3c2f3caac1ec377a07b
+0ab72f3ab33e68ce24b3a3c2f3caac1ec377a07b,0ab72f3a,Load icons asynchron. Much better initial scrolling performance.,"Load icons asynchron. Much better initial scrolling performance.
+
+But the icons will not refresh until you begin to scroll or trigger
+getView() otherwise. Its possible to fix this by using
+AppInfoAdapter::notifyDataSetChanged() in the right moment.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358270852,1358270852,8860fd2301711b2030ec350e1567d17ba567d390
+8860fd2301711b2030ec350e1567d17ba567d390,8860fd23,Cache the color string and avoid unnecessary html conversion.,"Cache the color string and avoid unnecessary html conversion.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358269414,1358269414,15e55eaed34d2a9995ee662b69868f44e5c22b62
+15e55eaed34d2a9995ee662b69868f44e5c22b62,15e55eae,Use the viewHolder pattern to increase performance.,"Use the viewHolder pattern to increase performance.
+
+Reducing the number of (relative expensive) findViewById() calls by
+holding direct references to all inner views in a small extra class.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358268550,1358268550,40d97d8743bacf1224f885cce6c2a46f9e87ca3a
+39f4c4adc07cd2ecabeef038bb85689309263231,39f4c4ad,inc version for publish,"inc version for publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358246881,1358246881,3fc107a6bd814a752f24564631219823baba2f50
+3fc107a6bd814a752f24564631219823baba2f50,3fc107a6,Merge pull request #3 from jfreax/german_translation,"Merge pull request #3 from jfreax/german_translation
+
+More german translation.",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358246713,1358246713,"06721ce6baa27b87bd38198b8c19ac43cb4092fd,40d97d8743bacf1224f885cce6c2a46f9e87ca3a"
+06721ce6baa27b87bd38198b8c19ac43cb4092fd,06721ce6,Merge branch 'master' of github.com:ligi/FAST,"Merge branch 'master' of github.com:ligi/FAST
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358246652,1358246652,"512e152d2e91f2b8cc666899c1777b20b0e48fe0,230af8989cae47bf7a020192078831872019db03"
+512e152d2e91f2b8cc666899c1777b20b0e48fe0,512e152d,give some padding,"give some padding
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358246610,1358246610,329c1dbdf94c2478149fc92ade20b78e7115af76
+329c1dbdf94c2478149fc92ade20b78e7115af76,329c1dbd,add launcher app intent,"add launcher app intent
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358246593,1358246593,1efcc0a1abdc304ccde61c92a9d2517fc102c9c8
+40d97d8743bacf1224f885cce6c2a46f9e87ca3a,40d97d87,More german translation.,"More german translation.
+",,,,Jens Dieskau,jfreax@googlemail.com,Jens Dieskau,jfreax@googlemail.com,1358203692,1358203692,230af8989cae47bf7a020192078831872019db03
+230af8989cae47bf7a020192078831872019db03,230af898,Merge pull request #2 from jfreax/patch-1,"Merge pull request #2 from jfreax/patch-1
+
+Better german translation",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1358200600,1358200600,"1efcc0a1abdc304ccde61c92a9d2517fc102c9c8,6446ad659fffda84a436e621c70c84cc9eee26b4"
+6446ad659fffda84a436e621c70c84cc9eee26b4,6446ad65,Better german translation,Better german translation,,,,jfreax,jfreax@googlemail.com,jfreax,jfreax@googlemail.com,1358197286,1358197286,1efcc0a1abdc304ccde61c92a9d2517fc102c9c8
+1efcc0a1abdc304ccde61c92a9d2517fc102c9c8,1efcc0a1,really make icon size adjustable,"really make icon size adjustable
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357943364,1357943364,0c14bd8b3c7581bb25c810763310a8748b6bb8d3
+0c14bd8b3c7581bb25c810763310a8748b6bb8d3,0c14bd8b,initial support for multiple icon sizes - a wish from @zaubernerd,"initial support for multiple icon sizes - a wish from @zaubernerd
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357844457,1357844457,b92aa0fb21adfb83a541d1d6afb3dbb342fe727a
+b92aa0fb21adfb83a541d1d6afb3dbb342fe727a,b92aa0fb,inc version and target and disable permission - ready for publish,"inc version and target and disable permission - ready for publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357777522,1357777522,0b441cd6524943c4c877256b1739a4bca62a79e2
+0b441cd6524943c4c877256b1739a4bca62a79e2,0b441cd6,better code and disable shortcut ( needs permission ) will do as different…,"better code and disable shortcut ( needs permission ) will do as different flavour when gradle is ready
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357777487,1357777487,12419eb14991ca50a409391062f0478c3187434a
+12419eb14991ca50a409391062f0478c3187434a,12419eb1,reenable the up-affordance,"reenable the up-affordance
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357777395,1357777395,faeb85251aae6c3555b110666393b780e9be03a8
+faeb85251aae6c3555b110666393b780e9be03a8,faeb8525,indent,"indent
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357775221,1357775221,b591024f00ef6b6dbadfacbf67490e7ffaa9d781
+b591024f00ef6b6dbadfacbf67490e7ffaa9d781,b591024f,indent,"indent
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1357775084,1357775084,"4bad1f13322c27652e4b07476500f7d29ae55eb0,7a96fb315c571008d73063121e5a98cbda275800"
+4bad1f13322c27652e4b07476500f7d29ae55eb0,4bad1f13,market stuff,market stuff,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1354728091,1354728091,6ee1349eed6f52e0f27d83e347920c7418e9bbfa
+6ee1349eed6f52e0f27d83e347920c7418e9bbfa,6ee1349e,generalize appstore to also be on amazon,generalize appstore to also be on amazon,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1354728080,1354728080,c7d2a6bf4754889a9b1aebab23b867406595bb37
+7a96fb315c571008d73063121e5a98cbda275800,7a96fb31,better multi market support ( play + amazon ) + bugfix in context-menu,"better multi market support ( play + amazon ) + bugfix in context-menu
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1347922898,1347922898,c3dd2ef690dd5d6f5d186e397f3cf0a7d1896227
+c7d2a6bf4754889a9b1aebab23b867406595bb37,c7d2a6bf,add option to create shortcuts for apps - closes #1,"add option to create shortcuts for apps - closes #1
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1347294970,1347294970,c3dd2ef690dd5d6f5d186e397f3cf0a7d1896227
+c3dd2ef690dd5d6f5d186e397f3cf0a7d1896227,c3dd2ef6,rm unused member variable,"rm unused member variable
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1347031088,1347031088,e74b84665a2ed35bcbe1226a1aab090ac33f9c9a
+e74b84665a2ed35bcbe1226a1aab090ac33f9c9a,e74b8466,rest of german translation,"rest of german translation
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1347019556,1347019556,2699e3ffcc9169a9a8730cfecd02f726b074895b
+2699e3ffcc9169a9a8730cfecd02f726b074895b,2699e3ff,add 114x114 png - for amazon,"add 114x114 png - for amazon
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1347019531,1347019531,2436e89b3cac4044e8b252fc34f49572e03a17c7
+2436e89b3cac4044e8b252fc34f49572e03a17c7,2436e89b,more settings and stuff,more settings and stuff,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346949052,1346949052,fac8edda7745bfc669c0762ba2c1f9d46782b099
+fac8edda7745bfc669c0762ba2c1f9d46782b099,fac8edda,another promo image,"another promo image
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346948994,1346948994,2b5fac1a3bce5179f2794fa487d3d4d880b7879c
+2b5fac1a3bce5179f2794fa487d3d4d880b7879c,2b5fac1a,increase version to publish,increase version to publish,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346502218,1346502218,42390fc2998cb2d57a978b0049bc76ebd784f2af
+42390fc2998cb2d57a978b0049bc76ebd784f2af,42390fc2,add some more actions to the overflow menu,add some more actions to the overflow menu,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346502204,1346502204,aec843e88c59fa4edd305eec68fefffa53f9d44c
+aec843e88c59fa4edd305eec68fefffa53f9d44c,aec843e8,more images,"more images
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346501718,1346501718,8bb2973a0f77c0db3e58cda6ff28ea214ac85509
+8bb2973a0f77c0db3e58cda6ff28ea214ac85509,8bb2973a,add option to search in package,add option to search in package,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346457397,1346457397,ed5f271c422025f51918b078b7cb924eb9ecf8e7
+ed5f271c422025f51918b078b7cb924eb9ecf8e7,ed5f271c,refactor,refactor,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346456523,1346456523,c4a777092250832a8f8ac6276fc31ba6d377649d
+c4a777092250832a8f8ac6276fc31ba6d377649d,c4a77709,add javadoc,add javadoc,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346456478,1346456478,c6bcfb86723a28701e62e22cbeef3b61d046d3ca
+c6bcfb86723a28701e62e22cbeef3b61d046d3ca,c6bcfb86,Add settings & option to launch an app automatically when only one app left in list,Add settings & option to launch an app automatically when only one app left in list,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346456409,1346456409,f3bd8beea0ddc0189fdfc62534346c4314c2d48e
+f3bd8beea0ddc0189fdfc62534346c4314c2d48e,f3bd8bee,add links to README,"add links to README
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346277088,1346277088,52e0433e4c4df2b6a634e17a14b49e4f8b503a69
+52e0433e4c4df2b6a634e17a14b49e4f8b503a69,52e0433e,complete promo images,"complete promo images
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346277078,1346277078,121eb56a22f090a1bea9708bbb443ec4426d300b
+121eb56a22f090a1bea9708bbb443ec4426d300b,121eb56a,increasing version for publishing,"increasing version for publishing
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346275146,1346275146,0b639a5c1925f3839a9851422919abd6ba86939a
+0b639a5c1925f3839a9851422919abd6ba86939a,0b639a5c,add a privacy policy,"add a privacy policy
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346275116,1346275116,37edbce6adb8823e257497108bff2466916eb406
+37edbce6adb8823e257497108bff2466916eb406,37edbce6,single line search field and utilize the now free enter function,"single line search field and utilize the now free enter function
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346274525,1346274525,795a9133c0a521c802ca6f87ed554f6aacaca787
+795a9133c0a521c802ca6f87ed554f6aacaca787,795a9133,rm last warning,rm last warning,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346273568,1346273568,6ad93b85a6afe1c3ce05f284d013c958fba7f734
+6ad93b85a6afe1c3ce05f284d013c958fba7f734,6ad93b85,bugfix,bugfix,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346273545,1346273545,1698bf866831d6a24b205dd402bd9f2544c1c21d
+1698bf866831d6a24b205dd402bd9f2544c1c21d,1698bf86,increase version for publishing,increase version for publishing,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1346273513,1346273513,471118bd477720ffd3557efba4e263cd6a56fe9f
+471118bd477720ffd3557efba4e263cd6a56fe9f,471118bd,correct images,"correct images
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345811429,1345811429,d9b3bb359237fa9433376697105b359bf96e8b13
+d9b3bb359237fa9433376697105b359bf96e8b13,d9b3bb35,rename,"rename
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345811350,1345811350,e83cf8e0a8431237bf92ea78b4fa7835d1c30bc7
+e83cf8e0a8431237bf92ea78b4fa7835d1c30bc7,e83cf8e0,adding README,"adding README
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345811253,1345811253,87f18e4f6aac40d8770672aec2f9eed6da3ead21
+87f18e4f6aac40d8770672aec2f9eed6da3ead21,87f18e4f,adding the promo stuff,"adding the promo stuff
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345810520,1345810520,22f1a358679e36066c4028b6ecc2f85f297e4017
+22f1a358679e36066c4028b6ecc2f85f297e4017,22f1a358,put the refreshing part in OnResume so we get uninstalls/installs faster if we only where in BG,"put the refreshing part in OnResume so we get uninstalls/installs faster if we only where in BG
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345810407,1345810407,73c816db697eb8236f641b98bea8a5c8b26596c7
+73c816db697eb8236f641b98bea8a5c8b26596c7,73c816db,increasing version for publish,"increasing version for publish
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345753052,1345753052,f7b7bccbfd895f3bc471650c6bc2e48da5a43f8a
+f7b7bccbfd895f3bc471650c6bc2e48da5a43f8a,f7b7bccb,add longclick actions,add longclick actions,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345752730,1345752730,1ea7c54ef328f41c0194bde72731e9a3ec5aa34a
+1ea7c54ef328f41c0194bde72731e9a3ec5aa34a,1ea7c54e,add important flag so that next	start the search app comes up and not the last,"add important flag so that next	start the search app comes up and not the last
+started
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345134465,1345134465,2fc948dab5e6340bc3836adab4f0d88b647c7b57
+2fc948dab5e6340bc3836adab4f0d88b647c7b57,2fc948da,increase version to publish and make avail for more devices,increase version to publish and make avail for more devices,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345134382,1345134382,c7ff186a0fc3c809b0cf313861773eb420dd3534
+c7ff186a0fc3c809b0cf313861773eb420dd3534,c7ff186a,remove the last warnings,remove the last warnings,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345110521,1345110521,3752cac128b723e5f0734f342d17ad95dd681186
+3752cac128b723e5f0734f342d17ad95dd681186,3752cac1,use the right Log Tag and add TODO,use the right Log Tag and add TODO,,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345110448,1345110448,f8e92d2bce639cd87d62e466075acaa3249a391b
+f8e92d2bce639cd87d62e466075acaa3249a391b,f8e92d2b,cleanup & fix of a small glitch ( doubling of entrys ),cleanup & fix of a small glitch ( doubling of entrys ),,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345110284,1345110284,e32f072047e4c8586a06159024275cfbc71b0701
+e32f072047e4c8586a06159024275cfbc71b0701,e32f0720,add GPLv3,"add GPLv3
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345109183,1345109183,1a3963912e478537c4573316c306c4877414a17d
+1a3963912e478537c4573316c306c4877414a17d,1a396391,nicing up the code and add a loading dialog for initial index building - cahing…,"nicing up the code and add a loading dialog for initial index building - cahing now also app labels and stuff so startup times after first time are way faster
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1345108493,1345108493,ac8fa7a01b36bee2929ccfeb7f4bc301fdeb5ec7
+ac8fa7a01b36bee2929ccfeb7f4bc301fdeb5ec7,ac8fa7a0,initial version,"initial version
+",,,,ligi,ligi@ligi.de,ligi,ligi@ligi.de,1344954872,1344954872,

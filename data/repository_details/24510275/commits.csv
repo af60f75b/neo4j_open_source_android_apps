@@ -1,0 +1,969 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8cdf672fd5a1553d9ea36c84ca2d8340a15280f8,8cdf672f,Unversion some auto generated files,"Unversion some auto generated files
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1474475064,1474475064,0f1a8e8d36ab474930bb2e060e1e319753ef01a3
+0f1a8e8d36ab474930bb2e060e1e319753ef01a3,0f1a8e8d,Improve handling of sampling problems,"Improve handling of sampling problems
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471890935,1471890935,ba0c7362f4f2f64c8079d4a96015a9d8fab1b523
+ba0c7362f4f2f64c8079d4a96015a9d8fab1b523,ba0c7362,Remove unused code,"Remove unused code
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471802004,1471802004,95ab48769cbb06da0366fc30702db53cfc885229
+95ab48769cbb06da0366fc30702db53cfc885229,95ab4876,Use broadcast alarm rather than service alarm,"Use broadcast alarm rather than service alarm
+
+I'm hoping this fixes the sampling-stops-after-a-while problems.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471741615,1471741615,eaa403755683e27e3ae965d4722669952994e10b
+eaa403755683e27e3ae965d4722669952994e10b,eaa40375,Don't log large sampling gaps right after reboots,"Don't log large sampling gaps right after reboots
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471641734,1471641734,e15cd07362c694722b12950aad3eaa1def6fe765
+e15cd07362c694722b12950aad3eaa1def6fe765,e15cd073,Gracefully handle another IAE,"Gracefully handle another IAE
+
+And log it so that we'll know if it's a common problem. If it is, let's look
+into it.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471640582,1471640582,e384157540c879a2ffe1cbb3cdac696f425b562a
+e384157540c879a2ffe1cbb3cdac696f425b562a,e3841575,Don't log exception stack traces twice,"Don't log exception stack traces twice
+
+When logging locally only (no Crashlytics).
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471640421,1471640421,2f0ead5154923fc5dec07a19d41cd8dbaff9d684
+2f0ead5154923fc5dec07a19d41cd8dbaff9d684,2f0ead51,Handle BatteryLogger not being installed,"Handle BatteryLogger not being installed
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471549668,1471549668,761fca87c06665334776805e0c461a4f816800fa
+761fca87c06665334776805e0c461a4f816800fa,761fca87,Update Android build tools,"Update Android build tools
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471549092,1471549092,bdee5024765eb240b3a5e44e2bfcb9e6371b7945
+bdee5024765eb240b3a5e44e2bfcb9e6371b7945,bdee5024,Gradle: Add jcenter package source,"Gradle: Add jcenter package source
+
+See: http://stackoverflow.com/a/39013389/473672
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471545273,1471545273,cfb15c3e76904f3c67db52c04b70304b4e6f9f14
+cfb15c3e76904f3c67db52c04b70304b4e6f9f14,cfb15c3e,Update release instructions,"Update release instructions
+
+Setting JVM memory options used to be necessary but is not any more.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471544949,1471544949,ac55820f979813647871ea045d27c35072f6157f
+ac55820f979813647871ea045d27c35072f6157f,ac55820f,Log unexpectedly large sampling gaps,"Log unexpectedly large sampling gaps
+
+This is an attempt at tracking down why sampling seems to stop sporadically.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471543222,1471543222,11d81ee721fc12ad324f4a04e265b0ff8c553736
+11d81ee721fc12ad324f4a04e265b0ff8c553736,11d81ee7,Update copyright,"Update copyright
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471542733,1471542733,08030d777775505399603a4596901a740f66fa1c
+08030d777775505399603a4596901a740f66fa1c,08030d77,Merge branch 'replace-androidplot',"Merge branch 'replace-androidplot'
+
+This replaces AndroidPlot with roll-my-own-graphs.
+
+This:
+* Re-adds the gone-missing text events in the graph
+* Makes the graph much more resolution independent
+* Improves scroll and zoom performance
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471542533,1471542533,"318604961b842f7109cf4d6bb9ef744975f7eed8,12492be5c5b4cde03933e1bb59a911ed82061e37"
+12492be5c5b4cde03933e1bb59a911ed82061e37,12492be5,Update README,"Update README
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471542497,1471542497,9f75431655a838c5c2f5271d5c4e76142d4ce1c5
+9f75431655a838c5c2f5271d5c4e76142d4ce1c5,9f754316,Fix unit tests post AndroidPlot removal,"Fix unit tests post AndroidPlot removal
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471542328,1471542328,238f8e59519ba26ba6cc3f9c673c7c99bec7b800
+238f8e59519ba26ba6cc3f9c673c7c99bec7b800,238f8e59,Hide some history problems from the user,"Hide some history problems from the user
+
+But we still send them to Crashlytics.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471465898,1471465898,01149da6adf4437c8104cd9b6b2dc8c22e7aa2d3
+01149da6adf4437c8104cd9b6b2dc8c22e7aa2d3,01149da6,Plot packaging events,"Plot packaging events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471464967,1471464967,ef549156dc958d6bb3f4fe2df237ff75f894870d
+ef549156dc958d6bb3f4fe2df237ff75f894870d,ef549156,Draw X axis tick labels,"Draw X axis tick labels
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471462436,1471462436,6a8bf99485f9411bb5b1ed412d8da9db1729717b
+6a8bf99485f9411bb5b1ed412d8da9db1729717b,6a8bf994,Draw Y axis tick labels,"Draw Y axis tick labels
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471459724,1471459724,68359565d37fad8ebe1a5f86c08d768466636b79
+68359565d37fad8ebe1a5f86c08d768466636b79,68359565,Upgrade build environment,"Upgrade build environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471459030,1471459030,0a278a2db579315913f48dcfd9a3c98752df7c71
+0a278a2db579315913f48dcfd9a3c98752df7c71,0a278a2d,Draw the Y axis label,"Draw the Y axis label
+
+Not the tick labels.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471458656,1471458656,b223908d04082b4a4724770c0c9a76c2c0ef309e
+b223908d04082b4a4724770c0c9a76c2c0ef309e,b223908d,Draw the X and Y axes,"Draw the X and Y axes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471456261,1471456261,a9b0c23ac7956c3db029ba2a1a8aa2065388db5a
+a9b0c23ac7956c3db029ba2a1a8aa2065388db5a,a9b0c23a,Properly save / restore canvas config when drawing,"Properly save / restore canvas config when drawing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471452234,1471452234,2350d090a3979bfa1b0b836b406ebfa5a1236e37
+2350d090a3979bfa1b0b836b406ebfa5a1236e37,2350d090,Fix double-tap zoom amount,"Fix double-tap zoom amount
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471438406,1471438406,6674746a3e938a743d3fc6cfab4146ef31fa3147
+6674746a3e938a743d3fc6cfab4146ef31fa3147,6674746a,Fix pinch zoom,"Fix pinch zoom
+
+By fixing the screen X to value X conversion.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471405469,1471405469,fa2697a1b05cac5f031e18e488d75d29f4131cb5
+fa2697a1b05cac5f031e18e488d75d29f4131cb5,fa2697a1,Attempt to draw reboots,"Attempt to draw reboots
+
+We haven't been able to demonstrate that this works, could be because we didn't
+try hard enough though.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471404773,1471404773,af21723f5dee95c883c6b510fe28a7f01778ba62
+af21723f5dee95c883c6b510fe28a7f01778ba62,af21723f,Draw drain dots,"Draw drain dots
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471404089,1471404089,e4ed0e687d6f144ddc4e27c419438f561d60bf53
+e4ed0e687d6f144ddc4e27c419438f561d60bf53,e4ed0e68,Set plot bounds correctly when initializing,"Set plot bounds correctly when initializing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471404022,1471404022,f5d0cb04af47cadee5018310070e7c2ed252dae0
+f5d0cb04af47cadee5018310070e7c2ed252dae0,f5d0cb04,Make us show something in the graph,"Make us show something in the graph
+
+The lines don't look like they should, but at least something is there and
+that's a start.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471380643,1471380643,2e765b10c18129245e8918a8f3e7c8e1bd3280dc
+2e765b10c18129245e8918a8f3e7c8e1bd3280dc,2e765b10,Fix the last main code build errors,"Fix the last main code build errors
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471367235,1471367235,e0f8293c9ab6684dd510aa65c15b3f6f17a1ebf4
+e0f8293c9ab6684dd510aa65c15b3f6f17a1ebf4,e0f8293c,Delete some AndroidPlot specific classes,"Delete some AndroidPlot specific classes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471207992,1471207992,645cac2b6e161a6547b85f5a612160927400fe1f
+645cac2b6e161a6547b85f5a612160927400fe1f,645cac2b,Tell XYPlot about history events,"Tell XYPlot about history events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471207827,1471207827,804f00110319e2ec5d6bf3d53e92176cd33f00dc
+804f00110319e2ec5d6bf3d53e92176cd33f00dc,804f0011,Fix History.getDrainLines() and .getBatteryDrain(),"Fix History.getDrainLines() and .getBatteryDrain()
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471193779,1471193779,11409a4de641f6250708708100b1f30d82762ee7
+11409a4de641f6250708708100b1f30d82762ee7,11409a4d,WIP,"WIP
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471161222,1471161222,fc1a608a225fa281f83057f968b9accb5ca8a927
+fc1a608a225fa281f83057f968b9accb5ca8a927,fc1a608a,onDraw() skeleton,"onDraw() skeleton
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471160197,1471160197,20900e9840bd40cbfc800d6784681f22de387b7e
+20900e9840bd40cbfc800d6784681f22de387b7e,20900e98,WIP,"WIP
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1471159641,1471159641,c36a69d723c107216ff5041197b6888b55e19824
+c36a69d723c107216ff5041197b6888b55e19824,c36a69d7,Remove Androidplot dependency,"Remove Androidplot dependency
+
+It's been nothing but trouble.
+
+Of course this makes the whole thing not build any more, so we need to replace
+Androidplot with something.
+
+My current thinking is DIY; our needs with the vertical reboot bars, the text
+for app upgrades and the horizontal lines are pretty specific to us.
+
+The current thinking is that just having a canvas with scaling and clipping
+should get us quite far.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1470299237,1470299237,318604961b842f7109cf4d6bb9ef744975f7eed8
+318604961b842f7109cf4d6bb9ef744975f7eed8,31860496,Update build environment,"Update build environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1468000462,1468000462,15a4515ec27be213fd3a8708efd4891868e3f3f5
+15a4515ec27be213fd3a8708efd4891868e3f3f5,15a4515e,"Automatic update, don't know","Automatic update, don't know
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467997635,1467997635,847d65d2b9620e69154fc7f688840ed8b92923f0
+847d65d2b9620e69154fc7f688840ed8b92923f0,847d65d2,Log sampling durations to Crashlytics,"Log sampling durations to Crashlytics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467996979,1467996979,57da634d0dcf9522b6e2fe61c26641ebe644bc8f
+57da634d0dcf9522b6e2fe61c26641ebe644bc8f,57da634d,Log when we skip sampling events,"Log when we skip sampling events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467917917,1467918268,0e30fa6b12b257bcafad53adab678181be11f3ac
+0e30fa6b12b257bcafad53adab678181be11f3ac,0e30fa6b,Use IntentService rather than rolling our own queue,"Use IntentService rather than rolling our own queue
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467917652,1467917652,e0d3486c7765d4bdb02b5b1ba01558591a9051f2
+e0d3486c7765d4bdb02b5b1ba01558591a9051f2,e0d3486c,Try to prevent duplicate alarms,"Try to prevent duplicate alarms
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467916833,1467917600,4271eabad37012c9d17a5ef7a9b12742b2891022
+4271eabad37012c9d17a5ef7a9b12742b2891022,4271eaba,Update dev dependencies,"Update dev dependencies
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1467916283,1467916283,fc8616668d1436be9f7f7dc2ddce2dbbeab6d7bc
+fc8616668d1436be9f7f7dc2ddce2dbbeab6d7bc,fc861666,Improve logging of failed file renames,"Improve logging of failed file renames
+
+For some user file renames keep failing, meaning that all sampling on his / her
+tablet doesn't work.
+
+This change is an attempt to understand *why* the renaming fails, by being more
+verbose about the status of the source and destination path names on failure.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461067392,1461067392,e5ae5c9283c8c40fb78d24aec5a862612e5cf702
+e5ae5c9283c8c40fb78d24aec5a862612e5cf702,e5ae5c92,Upgrade build environment,"Upgrade build environment
+
+Triggered by me upgrading to Android Studio 2.0.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461065982,1461065982,86e3d566351db1041c032eede132580fba527b12
+86e3d566351db1041c032eede132580fba527b12,86e3d566,Remove flaky LogCollector tests,"Remove flaky LogCollector tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460723473,1460723473,67bda7c96ff24c5c2315004d57d6947dfcb94525
+67bda7c96ff24c5c2315004d57d6947dfcb94525,67bda7c9,Attempt to work around Android issue 69276,"Attempt to work around Android issue 69276
+
+You can get a TransactionTooLargeException from
+PackageManager.getInstalledPackages().
+
+Workaround from http://stackoverflow.com/a/30062632/473672, thanks!
+
+https://code.google.com/p/android/issues/detail?id=69276
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460722434,1460722434,c749267ccbfa4930469421e18e21a819791dde58
+c749267ccbfa4930469421e18e21a819791dde58,c749267c,Improve getEventsSince() logging,"Improve getEventsSince() logging
+
+Seems like the previous system state is newer than the current one.
+
+With this change in place, when that happens we include both the previous
+state's timestamp and the current state's timestamp in the exception message.
+And at least part of the system timestamp is included as part of the log
+message.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460721181,1460721181,a51cae92b324c9c23a52a1c5f2a528fe8924dee4
+a51cae92b324c9c23a52a1c5f2a528fe8924dee4,a51cae92,DONE: Enable debug builds without Crashlytics keys,"DONE: Enable debug builds without Crashlytics keys
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460617039,1460617039,6565bf241fc2a5161996f1e9bb0159d30afb2166
+6565bf241fc2a5161996f1e9bb0159d30afb2166,6565bf24,s/PrintWriter/FileWriter/ to get proper exceptions reporting,"s/PrintWriter/FileWriter/ to get proper exceptions reporting
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460615347,1460615515,5693d90c0c679cddfb0c6c1ab4de52312ab66e69
+5693d90c0c679cddfb0c6c1ab4de52312ab66e69,5693d90c,Log everything to Crashlytics,"Log everything to Crashlytics
+
+It's only sent if we crash, so we can just send all of it. Let's revisit this
+decision if it turns out to be a bad one.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460554162,1460554162,4aba578636fde1542a03f6c1d52e9b5a3161feec
+4aba578636fde1542a03f6c1d52e9b5a3161feec,4aba5786,Handle empty log files,"Handle empty log files
+
+Before this change, if a log file was empty we logged an exception instead of
+just showing an empty file.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460487918,1460487918,460ad37eb344a529d08c47a6cc407bce712eb34c
+460ad37eb344a529d08c47a6cc407bce712eb34c,460ad37e,Make logging setup poke the LogCollector as well,"Make logging setup poke the LogCollector as well
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460469141,1460469141,885073b7668f3a0a23efaaaa4d04062bd8abb862
+885073b7668f3a0a23efaaaa4d04062bd8abb862,885073b7,Disable Linter warning about non-indexability,"Disable Linter warning about non-indexability
+
+AFAIU we need a web page on the public Internet with information similar to what
+the app shows.
+
+As long as we don't have that Google won't find us anyway, and they won't launch
+our app for us either.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460465256,1460465256,e483011015538a1e9670ff3ad6203c9206eb79d4
+e483011015538a1e9670ff3ad6203c9206eb79d4,e4830110,Listen to MY_PACKAGE_REPLACED to survive upgrades,"Listen to MY_PACKAGE_REPLACED to survive upgrades
+
+Without this code the sampling service is never restarted after upgrades.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460464397,1460464397,0064376f47b7d817ad4b55d748063b9a50325c64
+0064376f47b7d817ad4b55d748063b9a50325c64,0064376f,README: Update build instructions,"README: Update build instructions
+
+Now includes a dummy Crashlytics setup to not require people to have Crashlytics
+accounts to be able to contribute.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460444005,1460444005,0cc072d86ab7d64ff59fe539429f220a95bc81f3
+0cc072d86ab7d64ff59fe539429f220a95bc81f3,0cc072d8,README: Add link to Google Play,"README: Add link to Google Play
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460441105,1460441105,909c2f765144ef066f8507921b4c0c95e961166d
+909c2f765144ef066f8507921b4c0c95e961166d,909c2f76,Fix a crash,"Fix a crash
+
+An uncommon one, but I have seen it live.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460368623,1460368623,2a1a5a310d19b126edc25afdde74cff473faefb1
+2a1a5a310d19b126edc25afdde74cff473faefb1,2a1a5a31,Merge branch 'crashlytics',"Merge branch 'crashlytics'
+
+Make debug and release builds behavior more similar.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460359152,1460359152,"a7542918f7f7322efc1dd431406c71ead5f8911c,70dd723e91575676801cc0aaea5081215f2614af"
+70dd723e91575676801cc0aaea5081215f2614af,70dd723e,Don't source control the Crashlytics API keys,"Don't source control the Crashlytics API keys
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460355713,1460355845,ab743577f0735bc5c513f1adb5fab4392a423437
+ab743577f0735bc5c513f1adb5fab4392a423437,ab743577,Simplify logging destination,"Simplify logging destination
+
+Always log through Crashlytics, both in debug and release builds. This makes it
+more obvious during development what the release code will do.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460354728,1460354728,7e91e6996d00e4f730fc060b3b8ed44030f5c162
+a7542918f7f7322efc1dd431406c71ead5f8911c,a7542918,Merge branch 'crashlytics',"Merge branch 'crashlytics'
+
+With this code in place we'll now do Crashlytics reporting.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460321777,1460321777,"4a8a28b3167b15881edc10318ec55e85751f3ee2,7e91e6996d00e4f730fc060b3b8ed44030f5c162"
+7e91e6996d00e4f730fc060b3b8ed44030f5c162,7e91e699,Do Android logging the same way in prod and debug builds,"Do Android logging the same way in prod and debug builds
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460321712,1460321712,c355311c2795bdad03b72fa9f329b77b99e9ecbb
+c355311c2795bdad03b72fa9f329b77b99e9ecbb,c355311c,Fix LogCollector.isAlive() false positive,"Fix LogCollector.isAlive() false positive
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460321646,1460321646,0b39bd9d8d69953069158cbdf9a59e68deb3db78
+0b39bd9d8d69953069158cbdf9a59e68deb3db78,0b39bd9d,"In release builds, log to Crashlytics","In release builds, log to Crashlytics
+
+What we actually log here is:
+* Warnings and higher
+* Exceptions, regardless of log level
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460320531,1460320531,4bb497a2d371148d795ec2a62a067fdfad5f3a12
+4bb497a2d371148d795ec2a62a067fdfad5f3a12,4bb497a2,Init Crashlytics,"Init Crashlytics
+
+This is step 3 of the Crashlytics install instructions:
+https://www.fabric.io/kits/android/crashlytics/install
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460320077,1460320077,3c98c9670a112b202357c5e4ab8be3d1782868f3
+3c98c9670a112b202357c5e4ab8be3d1782868f3,3c98c967,No comment.,"No comment.
+
+This is step 2 of the Crashlytics install instructions:
+https://www.fabric.io/kits/android/crashlytics/install
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460319576,1460319576,3bb33176f08ee06e4552d40dc1ec7375d982dec2
+3bb33176f08ee06e4552d40dc1ec7375d982dec2,3bb33176,Add Crashlytics dependencies,"Add Crashlytics dependencies
+
+This is step one of the instructions:
+https://fabric.io/kits/android/crashlytics/install
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460319320,1460319320,4a8a28b3167b15881edc10318ec55e85751f3ee2
+4a8a28b3167b15881edc10318ec55e85751f3ee2,4a8a28b3,Merge branch 'timber',"Merge branch 'timber'
+
+Replace Android logging with Timber.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460318738,1460318738,"de06fc0d9f7502588d6b47bd565ec9a5ddac80ee,2c35e4672f522935aa8e121883829038fadc47c4"
+2c35e4672f522935aa8e121883829038fadc47c4,2c35e467,Remedy Timber linter warnings,"Remedy Timber linter warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460318679,1460318679,9bc9137b36a15d8f9d158252714bc728b0433ee8
+9bc9137b36a15d8f9d158252714bc728b0433ee8,9bc9137b,Timber: Always use the debug logger,"Timber: Always use the debug logger
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460317656,1460317656,0b3fe99bd6b9983771aa38aaf6544a29fd85e9cc
+0b3fe99bd6b9983771aa38aaf6544a29fd85e9cc,0b3fe99b,s/Android logging/Timber/g,"s/Android logging/Timber/g
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460305568,1460305568,becb5aa12103762762e3c8b8a45d368a57146da5
+becb5aa12103762762e3c8b8a45d368a57146da5,becb5aa1,Add Timber dependency,"Add Timber dependency
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460296081,1460296081,de06fc0d9f7502588d6b47bd565ec9a5ddac80ee
+de06fc0d9f7502588d6b47bd565ec9a5ddac80ee,de06fc0d,Make code buildable again,"Make code buildable again
+
+Oh, the joy of having -SNAPSHOT dependencies.
+
+Don't remember why we do, maybe I should just have done my own graphing instead.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460293283,1460293283,f6d3118f024dd9a73ee7df8350dba4afacc08c4d
+f6d3118f024dd9a73ee7df8350dba4afacc08c4d,f6d3118f,New Android Studio => New build environment,"New Android Studio => New build environment
+
+I honestly don't know what most of this is :/
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460293240,1460293240,5a452f7df978a718e95bdec10c953bc18b237ad9
+5a452f7df978a718e95bdec10c953bc18b237ad9,5a452f7d,Toggle legend without restarting BatteryPlotFragment,"Toggle legend without restarting BatteryPlotFragment
+
+Instead we ask it nicely to enable or disable its legend.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1427221979,1427221979,56a1912dc13c4d2d071b0c5cff661aeb76f66cdb
+56a1912dc13c4d2d071b0c5cff661aeb76f66cdb,56a1912d,Load legend HTML in background,"Load legend HTML in background
+
+This speeds up initial loading time a lot.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426797333,1426797333,2515006fa6bca24e0df2b7a704b8212eb25c2f72
+2515006fa6bca24e0df2b7a704b8212eb25c2f72,2515006f,Enable another AndroidLint warning,"Enable another AndroidLint warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426705174,1426705174,4f4cc7f87240a30a15861f942e38098f18179735
+4f4cc7f87240a30a15861f942e38098f18179735,4f4cc7f8,Fix icon generation,"Fix icon generation
+
++ Add xxxdpi sized icons
+- Don't generate the bogus ""mhdpi"" directory
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426704722,1426704722,9ab13730549fe6fc55750698432a0c94d5bb985a
+9ab13730549fe6fc55750698432a0c94d5bb985a,9ab13730,Update copyright statements,"Update copyright statements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426704032,1426704076,150582736482c39529e73862257f0dd7c1241d75
+150582736482c39529e73862257f0dd7c1241d75,15058273,Tune log collector keep-alive for common case,"Tune log collector keep-alive for common case
+
+The common case is that the log collector is already running, in which
+case just checking for the age of the newest log file should be good
+enough.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426616760,1426616760,e547c10ec1a77709470f18561036c21a8b2184c4
+e547c10ec1a77709470f18561036c21a8b2184c4,e547c10e,Improve logcat PIDs listing performance,"Improve logcat PIDs listing performance
+
+This was actually a bottle neck.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426541786,1426541786,52d6f1bc54fd742d694b29016b868846a7578368
+52d6f1bc54fd742d694b29016b868846a7578368,52d6f1bc,Fix startup race in LogViewerActivity,"Fix startup race in LogViewerActivity
+
+If the log loading finished before setting up the options menu we'd
+crash.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426432010,1426432010,f85f98a72a22d93d04476e1d7f96e98136b211dc
+f85f98a72a22d93d04476e1d7f96e98136b211dc,f85f98a7,Improve log viewing activity startup,"Improve log viewing activity startup
+
+Don't enable e-mail developer button until the logs have been loaded.
+
+Also, after the logs have been loaded, smooth scroll the page to the
+bottom to hint the user that the log view is scrollable.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426431015,1426431015,c756925c478ba5b6e8d1dffd41657925614136a2
+c756925c478ba5b6e8d1dffd41657925614136a2,c756925c,Improve troubleshooting UI,"Improve troubleshooting UI
+
+There's now one ""Support"" entry on the main page showing you the
+application name and version. It also gives you the options of viewing
+application logs and contacting the developer.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426429987,1426429987,dfad558476a1c0e3cd96f1fa6788ef57dd5fa50e
+dfad558476a1c0e3cd96f1fa6788ef57dd5fa50e,dfad5584,"Upgrade development environment, fix more issues","Upgrade development environment, fix more issues
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426426720,1426426720,68edb2833d32dadbe620a2b6df21d76af6f23bdd
+68edb2833d32dadbe620a2b6df21d76af6f23bdd,68edb283,Remedy a number of inspections,"Remedy a number of inspections
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426425513,1426425513,8d95b4cce9cec452d1270139f9fe3238e053b7f4
+8d95b4cce9cec452d1270139f9fe3238e053b7f4,8d95b4cc,Use Android nullability annotations,"Use Android nullability annotations
+
+Changed from the Jetbrains ones.
+
+This feels more appropriate somehow when developing for Android.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426424474,1426424474,a4a6e523161509d56c83d3f127e446725b4f8d84
+a4a6e523161509d56c83d3f127e446725b4f8d84,a4a6e523,Collect app logs and offer sending them to Johan,"Collect app logs and offer sending them to Johan
+
+Yay supportability!
+
+Ported and improved from the Thermometer Widget.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426423983,1426423983,"47193dca95d9cd61836a60f28803e00c068296ad,f150ab618ea23631f906c8354783b2b3a14837ec"
+f150ab618ea23631f906c8354783b2b3a14837ec,f150ab61,Fix some warnings,"Fix some warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426423614,1426423614,54376484cd252bb88123e860c103d25929200273
+54376484cd252bb88123e860c103d25929200273,54376484,Use content provider to pass attachemnt to mailer,"Use content provider to pass attachemnt to mailer
+
+Thank you http://stephendnicholas.com/archives/974, this is how to do it
+properly.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426368391,1426368391,91c5f17f59fe6d2776907e49353993a6ba77cbe9
+91c5f17f59fe6d2776907e49353993a6ba77cbe9,91c5f17f,Silence counter productive warning,"Silence counter productive warning
+
+""Unnecessary local variable"" when returning it right after assignment is
+now not warned about any more.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426271683,1426271683,f3ba3841f063df1f9a55e4cf8d63218fdfff78f3
+f3ba3841f063df1f9a55e4cf8d63218fdfff78f3,f3ba3841,Contact Developer menu item cosmetics,"Contact Developer menu item cosmetics
+
+If it's unavailable, disable it.
+
+If it resolves to one app exactly, show the icon of that app.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426101731,1426101731,f71c151a79e232fa245e260f56c5b6eb10d402fa
+f71c151a79e232fa245e260f56c5b6eb10d402fa,f71c151a,"Disable ""unnecessary return"" warning","Disable ""unnecessary return"" warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426099138,1426099138,0bba5de13f1dbb300b86abc4a2e2704f669f8246
+0bba5de13f1dbb300b86abc4a2e2704f669f8246,0bba5de1,Add option menu item for viewing logs,"Add option menu item for viewing logs
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426015627,1426015627,1025cf3ad6278ef08b350a6305cb74b6e03caaec
+1025cf3ad6278ef08b350a6305cb74b6e03caaec,1025cf3a,"""Contact Developer"" now goes directly to e-mail","""Contact Developer"" now goes directly to e-mail
+
+""View Application Logs"" will just have to get its own menu entry.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1426013202,1426013202,83020cab7ae861d0659804405fbee1628142c855
+83020cab7ae861d0659804405fbee1628142c855,83020cab,Only show mail app selector if needed,"Only show mail app selector if needed
+
+Before this change we used to explicitly ask the system to show an
+activity chooser before e-mailing the developer.
+
+That is now gone, and if the user has already selected their preferred
+e-mail app, we just use that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425878480,1425878480,7ec3ccd522e9fe89116115f60636844132c5ad6b
+7ec3ccd522e9fe89116115f60636844132c5ad6b,7ec3ccd5,Improve ContactDeveloperActivity start performance,"Improve ContactDeveloperActivity start performance
+
+By moving log file reading into the background.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425847239,1425847239,c09d97aa23706933f1b71b77cb88eb76ca691791
+c09d97aa23706933f1b71b77cb88eb76ca691791,c09d97aa,Add button for sending logs to developer,"Add button for sending logs to developer
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425846671,1425846671,706d7c4c7863c389367446c5e63def1ce4988fe8
+706d7c4c7863c389367446c5e63def1ce4988fe8,706d7c4c,Add a button to the contact-developer activity,"Add a button to the contact-developer activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425752278,1425752278,6ba3ffc1778ea7f561f1e5651e5e825e2406cb59
+6ba3ffc1778ea7f561f1e5651e5e825e2406cb59,6ba3ffc1,Show log files in the contact developer view,"Show log files in the contact developer view
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425736729,1425736729,2cafafacabd2bc06cb8406c5d20c3c4e126fe102
+2cafafacabd2bc06cb8406c5d20c3c4e126fe102,2cafafac,Add (placeholder) content to the log view,"Add (placeholder) content to the log view
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425734527,1425734527,d51f8e84b90fb4384da64faad4e7d1d043ac215a
+d51f8e84b90fb4384da64faad4e7d1d043ac215a,d51f8e84,Add back navigation to Contact Developer activity,"Add back navigation to Contact Developer activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425734008,1425734008,e7a015f2019edd5397d73c8f7adae677f3142a07
+e7a015f2019edd5397d73c8f7adae677f3142a07,e7a015f2,Add a Contact Developer activity,"Add a Contact Developer activity
+
+It's empty for now. Please fill in the blanks.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425675508,1425675508,db9536213b3d6348200b8809361844b587ec97f7
+db9536213b3d6348200b8809361844b587ec97f7,db953621,Uninvent our own private logging,"Uninvent our own private logging
+
+We used to log sampling exceptions to a world-readable file to be able
+to find exceptions thrown by the sampling service on a real device.
+
+But considering the whole point of this branch is to make logs
+accessible even on real devices, that functionality has no value here.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425235313,1425235313,97c49f933e92924b0271aabf42945b1ada8b552e
+97c49f933e92924b0271aabf42945b1ada8b552e,97c49f93,Try to keep the log collector going,"Try to keep the log collector going
+
+With this change, we start the log collector:
+* Before the sampling service samples
+* Before the main app starts
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425070618,1425223925,2ce1a492a850c2ae2d46da9da323f0eff122b6c1
+2ce1a492a850c2ae2d46da9da323f0eff122b6c1,2ce1a492,Fix LogCollector.isAlive() to be more trustable,"Fix LogCollector.isAlive() to be more trustable
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1424376875,1425223805,5e0426d710a476fa002a136276694a2f043b5fcc
+5e0426d710a476fa002a136276694a2f043b5fcc,5e0426d7,Add failing log collection unit tests,"Add failing log collection unit tests
+
+The ambition for this branch is that we should be collecting the
+messages we log ourselves, and add something to the UI where you can:
+* View the log
+* E-mail the log to the developer (me)
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1424029418,1425223805,47193dca95d9cd61836a60f28803e00c068296ad
+47193dca95d9cd61836a60f28803e00c068296ad,47193dca,Avoid sampling service ANRs,"Avoid sampling service ANRs
+
+Avoid sampling service ANRs by performing the sampling in a background
+thread.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425186861,1425186861,241015da7cb296af34360a31ddf38736743ffd8b
+241015da7cb296af34360a31ddf38736743ffd8b,241015da,Fix ClassCastException,"Fix ClassCastException
+
+Introduced when fixing some IntelliJ warnings. You learn something new
+every day...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425070396,1425070450,d40f8d69d2b0819412885c3a8650b41fb11b0467
+d40f8d69d2b0819412885c3a8650b41fb11b0467,d40f8d69,Make tests pass reliably again,"Make tests pass reliably again
+
+Tests started to fail intermittently due to rounding issues showing up
+when we started basing our timestamps on [now] rather than on some
+arbitrary time in the past.
+
+This change adds +-5s fuzz when comparing timestamps, which hides the
+rounding errors (and is fine as a margin anyway since we're talking hour
+long intervals).
+
+Yay, reliable tests!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1425067377,1425067377,237bac67c8184dd46fcc821f4f40ec0ccd09a2bb
+237bac67c8184dd46fcc821f4f40ec0ccd09a2bb,237bac67,Prettify HistoryTest a bit,"Prettify HistoryTest a bit
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1424378035,1424378035,96155752a6d28c7d6ed4e3e00d7f6d9834ca7f9c
+96155752a6d28c7d6ed4e3e00d7f6d9834ca7f9c,96155752,Remedy a number of warnings,"Remedy a number of warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423687436,1423687436,b0f4b93e5dec3c805203276718642ffedb4ba581
+b0f4b93e5dec3c805203276718642ffedb4ba581,b0f4b93e,Upgrade development environment,"Upgrade development environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423686876,1423686876,1dad8ce17ada1f7d98840d02b4510fe8c5ac98c7
+1dad8ce17ada1f7d98840d02b4510fe8c5ac98c7,1dad8ce1,Auto generate version info from git describe,"Auto generate version info from git describe
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423600283,1423600283,3c9fdd8249975f2c4effc95c6c41514a2965bd6d
+3c9fdd8249975f2c4effc95c6c41514a2965bd6d,3c9fdd82,TODO: List apps + battery drain over installed time,"TODO: List apps + battery drain over installed time
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423420619,1423420619,531351c5a0b8d886b2bdebbf4f11efae9ab6908d
+531351c5a0b8d886b2bdebbf4f11efae9ab6908d,531351c5,Prepare for releasing version 1.0.1,"Prepare for releasing version 1.0.1
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423333787,1423333787,00bc92633771b29ceff307fd26ab1edf55204bc6
+00bc92633771b29ceff307fd26ab1edf55204bc6,00bc9263,Truncate history if it's longer than 34 days,"Truncate history if it's longer than 34 days
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423314321,1423314586,fbdecb4ea68f682676fbe7ad3344402837d5a6db
+fbdecb4ea68f682676fbe7ad3344402837d5a6db,fbdecb4e,Fix IAE seen in the Google Developer Console,"Fix IAE seen in the Google Developer Console
+
+Thanks for pressing the Report Problem button!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1423164806,1423164806,b48041c519e1cfda279010584acb6560717825c5
+b48041c519e1cfda279010584acb6560717825c5,b48041c5,Upgrade development environment,"Upgrade development environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1422823680,1423081802,bff5ffea749dc085a3f6394d1edc59e2158842b0
+bff5ffea749dc085a3f6394d1edc59e2158842b0,bff5ffea,Refactor series hidability into its own class,"Refactor series hidability into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414992058,1414992058,8d8e18505a34b7deed22cb13f1db5a772b47c820
+8d8e18505a34b7deed22cb13f1db5a772b47c820,8d8e1850,TODO: Travis CI and fix old samples removal,"TODO: Travis CI and fix old samples removal
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414956981,1414956981,7c7368688572e376a1553161116ef14f0b6d7b63
+7c7368688572e376a1553161116ef14f0b6d7b63,7c736868,Android Studio library metadata update,"Android Studio library metadata update
+
+After upgrading Android Studio to 0.8.14 and changing the SDK location.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414866640,1414866640,b16c9552463e4e3cb602ed1cb14ebb902b0e0941
+b16c9552463e4e3cb602ed1cb14ebb902b0e0941,b16c9552,Make restart lines narrower,"Make restart lines narrower
+
+They look better this way.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414823881,1414823881,2a6d2961a64588662b198ad627f6abc77a02c5ca
+2a6d2961a64588662b198ad627f6abc77a02c5ca,2a6d2961,Explain restart lines in the legend,"Explain restart lines in the legend
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414823831,1414823831,cd9b283d3ce133cf3926700c7f73a45589b2fde9
+cd9b283d3ce133cf3926700c7f73a45589b2fde9,cd9b283d,Mark restarts with vertical red lines,"Mark restarts with vertical red lines
+
+This is to make it easier to spot restart related behaviors.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414821469,1414821469,6c9d923ad9cd77b5f03e4500cf4d241c89e21f05
+6c9d923ad9cd77b5f03e4500cf4d241c89e21f05,6c9d923a,Rewrite isRunningOnEmulator(),"Rewrite isRunningOnEmulator()
+
+The new version should be more resilient to future changes in the
+emulator's Build.PRODUCT string.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414819685,1414819685,8f0dc8915238b47a45121ba472f2a1e54d5a6d30
+8f0dc8915238b47a45121ba472f2a1e54d5a6d30,8f0dc891,README.md: Link to Google Play app listing,README.md: Link to Google Play app listing,,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1414523068,1414523068,4ee7aae0db6095b20cc5fad1b95077b748ca1cc6
+4ee7aae0db6095b20cc5fad1b95077b748ca1cc6,4ee7aae0,Prepare for releasing version 1.0,"Prepare for releasing version 1.0
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1413393589,1413393589,12a02b8b35ef8451a0721ac2f1dca2e29e3503c1
+12a02b8b35ef8451a0721ac2f1dca2e29e3503c1,12a02b8b,Prepare for version 0.9.4.,"Prepare for version 0.9.4.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412878417,1412878417,32bc466c237131e1a326d246c1da2cd9676e6dab
+32bc466c237131e1a326d246c1da2cd9676e6dab,32bc466c,Improve previous flicker remedy,"Improve previous flicker remedy
+
+We now count all times relative to [now] rather than to some arbitrary
+fixed date.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412797240,1412797240,ad0e7d630ceb9a243e23ac662331015dc4d94492
+ad0e7d630ceb9a243e23ac662331015dc4d94492,ad0e7d63,Hide sample dots while zooming,"Hide sample dots while zooming
+
+This doubles zoom framerate on my SGS4 Mini.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412707792,1412707792,f4a0471f6e7659f2fb9b796b03ebc1997181ec08
+f4a0471f6e7659f2fb9b796b03ebc1997181ec08,f4a0471f,Fix some uses of deprecated code,"Fix some uses of deprecated code
+
+The deprecation happened in one of the 0.6.2 Androidplot snapshots.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412707717,1412707717,ca70a741e7228dcf5114ad39ed0e8d7dbdeca0ff
+ca70a741e7228dcf5114ad39ed0e8d7dbdeca0ff,ca70a741,Fix problem with X axis label resolution,"Fix problem with X axis label resolution
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412707643,1412707643,651a68228e38155585d7fa319242477bae2ee681
+651a68228e38155585d7fa319242477bae2ee681,651a6822,Improve zoom animation performance,"Improve zoom animation performance
+
+This change basically puts all sample dots in the same series, which
+when tested on a real-world phone improved the (lousy) zoom performance
+from about 140ms/frame to about 100ms/frame.
+
+Still not very good but a lot better.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412539011,1412539011,1df7084d7e95348a1fe346f836ef939b659e0e33
+1df7084d7e95348a1fe346f836ef939b659e0e33,1df7084d,Make initial animation a bit less jerky,"Make initial animation a bit less jerky
+
+This is done by delaying it 250ms. It gets the worst pause down from
+about 140ms to about 70ms in my tests.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412536957,1412536957,22e065b059220e3188c3a254d8b5355577fda6ff
+22e065b059220e3188c3a254d8b5355577fda6ff,22e065b0,Log animation performance numbers after zooming,"Log animation performance numbers after zooming
+
+The zoom animations can sometimes feel jerky, this is an attempt at
+getting metrics for that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412532592,1412536248,5b3b95b1f841bae24a744e9f1745357e0cfdc47a
+5b3b95b1f841bae24a744e9f1745357e0cfdc47a,5b3b95b1,Prepare for version 0.9.3,"Prepare for version 0.9.3
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412507141,1412507141,fabe539ad64c40e4747d97e63ee5f966e4fed84b
+fabe539ad64c40e4747d97e63ee5f966e4fed84b,fabe539a,Attempt to remedy some event labels flickering,"Attempt to remedy some event labels flickering
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412493165,1412506450,4e8b3cbc69a84e60e6274438ee61c0bec3357c07
+4e8b3cbc69a84e60e6274438ee61c0bec3357c07,4e8b3cbc,Don't show more than one dialog at a time,"Don't show more than one dialog at a time
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412455394,1412455394,b964f8a290f6b4fdf357b65d2410dba693d672e7
+b964f8a290f6b4fdf357b65d2410dba693d672e7,b964f8a2,Fix up legend coloring and zoom tip,"Fix up legend coloring and zoom tip
+
+Before this change we used colors like ""green"" and ""gray"" in the legend,
+but they worked differently / not at all on some tested devices. With
+this change we specify the RGB values in hex instead.
+
+Also add text about that you can double tap to zoom.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412355967,1412355967,7d2f06c1866aa776bda42aa1c4ff10909b445fa5
+7d2f06c1866aa776bda42aa1c4ff10909b445fa5,7d2f06c1,Prepare for releasing 0.9.2,"Prepare for releasing 0.9.2
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412289278,1412289278,f900097d778daff78b031371482124677ea4508f
+f900097d778daff78b031371482124677ea4508f,f900097d,Animate a zoom out from 24h to max on startup,"Animate a zoom out from 24h to max on startup
+
+This is to hint people that they can zoom.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412273995,1412273995,a197e147b2e5db5918230cf1ddd1bb0881f3a72a
+a197e147b2e5db5918230cf1ddd1bb0881f3a72a,a197e147,Make legend show up at once,"Make legend show up at once
+
+This change replaces a WebView (which loads its contents in the
+background) with a TextView (that loads its contents immediately).
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412193402,1412193402,7cb899cfc2e8a5b226f446dfdfa2f5b223b6b2a8
+7cb899cfc2e8a5b226f446dfdfa2f5b223b6b2a8,7cb899cf,Give animations 1s rather than 0.5s,"Give animations 1s rather than 0.5s
+
+This looks better.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412188921,1412188921,4bf1a18d3690edb9f5e9921b748ff59e2c56e3d5
+4bf1a18d3690edb9f5e9921b748ff59e2c56e3d5,4bf1a18d,Fix an edge case crash,"Fix an edge case crash
+
+The edge case happens when you charge your phone short enough that both
+the before and after samples says ""draining"", but long enough that the
+after sample has higher charge percentage than the before one.
+
+Closes #1
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412186006,1412186006,7be2ef02f1df7d85f00dc6b2510e24462dc56b0f
+7be2ef02f1df7d85f00dc6b2510e24462dc56b0f,7be2ef02,Animate double-tapping zooms,"Animate double-tapping zooms
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412155141,1412155141,f9ac9ce05ff1248cbfcb2e668c63f8c0bb9353cc
+f9ac9ce05ff1248cbfcb2e668c63f8c0bb9353cc,f9ac9ce0,Make double tap toggle between two zoom levels,"Make double tap toggle between two zoom levels
+
+One is max zoomed out (as before) and one is zoomed in on the last two
+days.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412141788,1412141788,3b460e05d155bdd733d78811c2c1fc019f4b6c37
+3b460e05d155bdd733d78811c2c1fc019f4b6c37,3b460e05,Merge branch 'add-legend',"Merge branch 'add-legend'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412141112,1412141112,"c38d5450c10d36a31f39ebb3cadf969947f2e287,ab741015e598ff5e3d857e0f3db43265f914e99a"
+ab741015e598ff5e3d857e0f3db43265f914e99a,ab741015,Make legend work in landscape mode,"Make legend work in landscape mode
+
+With this change in place, the legend looks fine even when the device is
+in landscape mode.
+
+Previously the legend was only usable in portrait orientation.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412141003,1412141003,edeeb325cbe4228867acdfefee6803e6bdb53737
+edeeb325cbe4228867acdfefee6803e6bdb53737,edeeb325,Make it possible to toggle legend visibility,"Make it possible to toggle legend visibility
+
+This change adds an options menu with a ""Show legend"" checkbox.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1412023196,1412023196,4274bec36cb3b0dc0029d2385d56af4cb827dc68
+4274bec36cb3b0dc0029d2385d56af4cb827dc68,4274bec3,Make the legend informative,"Make the legend informative
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411930930,1411930930,718819f77a29acfaae88e7d9ba1f6663cf0f9efc
+718819f77a29acfaae88e7d9ba1f6663cf0f9efc,718819f7,Get a way to write an HTML legend,"Get a way to write an HTML legend
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411843650,1411844572,c38d5450c10d36a31f39ebb3cadf969947f2e287
+c38d5450c10d36a31f39ebb3cadf969947f2e287,c38d5450,Re-plan TODO a bit after feedback on the beta,"Re-plan TODO a bit after feedback on the beta
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411836655,1411836655,63b1586185ffa423b9647b31c053c4bed032227d
+63b1586185ffa423b9647b31c053c4bed032227d,63b15861,Apply Apache-2.0 licensing terms,"Apply Apache-2.0 licensing terms
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411755068,1411755068,310771cabc0bc7e7015fb7efa1bafd8749ba6cea
+310771cabc0bc7e7015fb7efa1bafd8749ba6cea,310771ca,Prepare for releasing 0.9.1,"Prepare for releasing 0.9.1
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411663660,1411663660,467c0c01f3f137ec6f979ea7fad6893753aedb99
+467c0c01f3f137ec6f979ea7fad6893753aedb99,467c0c01,Hint people about using two finger zoom get the details back,"Hint people about using two finger zoom get the details back
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411586888,1411663340,b8043ac5baf791f679d38bc3e74d5366f70d0e45
+b8043ac5baf791f679d38bc3e74d5366f70d0e45,b8043ac5,Suppress unwanted warning,"Suppress unwanted warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411577438,1411577438,dcd00ebdc7049f9567e040f13ff8c17957d534b0
+dcd00ebdc7049f9567e040f13ff8c17957d534b0,dcd00ebd,Merge branch 'fix-graph-margins',"Merge branch 'fix-graph-margins'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411577178,1411577178,"42d3307bc6f1468a80a61a8f41e61403dcc339e1,db7c47424748e07616988701084aea91c88eb722"
+db7c47424748e07616988701084aea91c88eb722,db7c4742,Give suitable room for the range labels,"Give suitable room for the range labels
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411577043,1411577121,e540a37204b2a0dae15758a2716630108d9c05a6
+e540a37204b2a0dae15758a2716630108d9c05a6,e540a372,Fix three of four graph margins,"Fix three of four graph margins
+
+Top, bottom and right now scale properly with label text sizes.
+
+Left margin is still wonky.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411335261,1411335261,42d3307bc6f1468a80a61a8f41e61403dcc339e1
+42d3307bc6f1468a80a61a8f41e61403dcc339e1,42d3307b,Fix dialog spam for new users,"Fix dialog spam for new users
+
+Before this change, if you were a new user you'd get the
+very-litte-history dialogs over and over if you turned your phone while
+one was showing.
+
+After this change, a dialog is never shown again after you OK it once.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411288492,1411288492,525873ece90ba43b715a09550c50931cab5a1005
+525873ece90ba43b715a09550c50931cab5a1005,525873ec,Emphasize drain lines more over drain points,"Emphasize drain lines more over drain points
+
+The points started looking too important with two weeks of data present.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411216411,1411216411,5c212e31092fa07ce5dfacfe2ddfdd6dd61eefee
+5c212e31092fa07ce5dfacfe2ddfdd6dd61eefee,5c212e31,Only show text events if we're zoomed in enough,"Only show text events if we're zoomed in enough
+
+Otherwise the graph becomes too cluttered / hard to read.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1411215251,1411215251,27b5d777e5a323bff77c0e5b4ef4b4ab770a9c5a
+27b5d777e5a323bff77c0e5b4ef4b4ab770a9c5a,27b5d777,Add a gradient to the logo,"Add a gradient to the logo
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410980697,1410980697,37b500cff42a3e56cc0138347118c58b304f6f88
+37b500cff42a3e56cc0138347118c58b304f6f88,37b500cf,Prepare for releasing 0.9 to Google Play,"Prepare for releasing 0.9 to Google Play
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410773753,1410774613,15510586a6ac314708cd055f70c6d2b4cac353e0
+15510586a6ac314708cd055f70c6d2b4cac353e0,15510586,Upgrade Android Studio to 0.8.9,"Upgrade Android Studio to 0.8.9
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410773718,1410773718,c32db63ac1c0b3971a07d948f83d5a42ddcfc521
+c32db63ac1c0b3971a07d948f83d5a42ddcfc521,c32db63a,"Add 10"" tablet screenshot","Add 10"" tablet screenshot
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410723246,1410723246,1fefa1c04990cc8bb522c76f3f0533189bedc7fd
+1fefa1c04990cc8bb522c76f3f0533189bedc7fd,1fefa1c0,Add feature graphics,"Add feature graphics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410723123,1410723123,31bb24531691b58326e0a8df07dccec79512f191
+31bb24531691b58326e0a8df07dccec79512f191,31bb2453,"Add 7"" tablet screenshot","Add 7"" tablet screenshot
+
+For Google Play.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410720116,1410720116,3aedd158b1bd3bd57788e7a10fe18c55bb0a859f
+3aedd158b1bd3bd57788e7a10fe18c55bb0a859f,3aedd158,Add a screenshot from a phone,"Add a screenshot from a phone
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410717294,1410717294,33cb6e661dbb0ddd548b6e398bdc89e8033c09a5
+33cb6e661dbb0ddd548b6e398bdc89e8033c09a5,33cb6e66,Make logo 32bit color rather than indexed,"Make logo 32bit color rather than indexed
+
+Still looks exactly the same though.
+
+The reason is that Google Play doesn't accept indexed pngs.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410716247,1410716247,082ba205a2c51dd51d71dd501466f6e73f48d628
+082ba205a2c51dd51d71dd501466f6e73f48d628,082ba205,Fix startup and orientation-change performance,"Fix startup and orientation-change performance
+
+Before this change we happened to (not by design) perform a sampling
+during app startup. We now delay that sampling by at least 30s,
+improving startup time and orientation-change performance by a lot.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410610010,1410610010,816424135da27e1b155275ff1b1460dea4907c20
+816424135da27e1b155275ff1b1460dea4907c20,81642413,Startup time improvements,"Startup time improvements
+
+Speed up in-the-fast-simulator startup time from about 300ms for setting
+up the plot to 100-150ms for setting up the plot.
+
+This change basically switches AndroidPlot from reading settings from
+XML files to storing the settings in the Java source code.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410583509,1410583596,8bcf242942733f8612a53c852e8b4fb39538ade1
+8bcf242942733f8612a53c852e8b4fb39538ade1,8bcf2429,Find out why the simulator showed no graph,"Find out why the simulator showed no graph
+
+It was because it had real data, albeit only a little. If there's any
+real data, it won't show the fake data.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410376853,1410376853,a764cfb2c9905c177e15db41f376a544505afa8d
+a764cfb2c9905c177e15db41f376a544505afa8d,a764cfb2,Add units to the Y axis,"Add units to the Y axis
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410374229,1410374229,e59379265ba50b348ab6726836959350304270c8
+e59379265ba50b348ab6726836959350304270c8,e5937926,Remove unused import,"Remove unused import
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410372222,1410372222,1fcca4a6ec5f64dd34b852a80ca31f397b8bc223
+1fcca4a6ec5f64dd34b852a80ca31f397b8bc223,1fcca4a6,Remove the settings menu entry,"Remove the settings menu entry
+
+We don't have any settings, so having a settings menu item is just
+confusing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410372115,1410372151,a2f2e9541debf7e768b1a965a69fe0edee27d2f4
+a2f2e9541debf7e768b1a965a69fe0edee27d2f4,a2f2e954,Make an icon,"Make an icon
+
+Before building the project for the first time you need to run
+render-graphics.sh to convert the logo.xcf file into icon resources.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410369918,1410371522,f05391280bc5f817376d50ee3c251e0db103a518
+f05391280bc5f817376d50ee3c251e0db103a518,f0539128,Use averages rather than medians for drain lines,"Use averages rather than medians for drain lines
+
+The numbers we're trying to summarize are quantized, so averages will
+give us a much truer representation of what the drain has actually been
+over a period.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410149642,1410149642,d535e055d1a768a2f2b054b4954de95297f435f0
+d535e055d1a768a2f2b054b4954de95297f435f0,d535e055,Implement average() to be able to do average lines,"Implement average() to be able to do average lines
+
+But I decided I still like medians better, so the actual app won't
+change its behavior because of this...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410118610,1410118610,60831f4bc949dfbeb792d1c41982c97f4a34370d
+60831f4bc949dfbeb792d1c41982c97f4a34370d,60831f4b,Add test for drainless discharge,"Add test for drainless discharge
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410025763,1410025763,e7a15e28ac3896b507e07a8512476d04f06c2e76
+e7a15e28ac3896b507e07a8512476d04f06c2e76,e7a15e28,Fix incomplete exception message,"Fix incomplete exception message
+
+About non-positive drain while drawing median lines.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410004528,1410004528,1c2344f4bd22962e032a7465790bc4495a5c3117
+1c2344f4bd22962e032a7465790bc4495a5c3117,1c2344f4,Actually resume sampling after reboot,"Actually resume sampling after reboot
+
+There was code for it before this change, but it didn't work. The
+version committed in this change has been tested and verified to work.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410004043,1410004043,e60021171e31bbf957765a54ced115fea7cd5885
+e60021171e31bbf957765a54ced115fea7cd5885,e6002117,Fix missing drain lines,"Fix missing drain lines
+
+It was a rounding error in computing the number of hours from a
+millisecond value; the division was done with integers but must be done
+with doubles.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410003360,1410003360,5ca90be6e344f69ecdb5231010aeeb2c32cc1b40
+5ca90be6e344f69ecdb5231010aeeb2c32cc1b40,5ca90be6,Add test for y=0 drain line while charging,"Add test for y=0 drain line while charging
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410002556,1410002556,2f8f8d11e44b9181b8f3061c3b6a82d40457069b
+2f8f8d11e44b9181b8f3061c3b6a82d40457069b,2f8f8d11,Re-prioritize what needs to be done to release,"Re-prioritize what needs to be done to release
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1410002528,1410002528,71a0c6fed9f77e8d0f6b780509c0b17c548b7186
+71a0c6fed9f77e8d0f6b780509c0b17c548b7186,71a0c6fe,Draw lines at Y=0 while charging,"Draw lines at Y=0 while charging
+
+And drop the ""Start charging"" and ""Stop charging"" messages that just
+make the graph hard to read.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409853746,1409853746,"4a0b727fb1a8f7b4b9021ede266bf10b92a6448b,b8dd00784b46736054c7b8c68373390245686392"
+b8dd00784b46736054c7b8c68373390245686392,b8dd0078,Update README with new start/stop charging UI,"Update README with new start/stop charging UI
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409853694,1409853694,a54e29f7fceb4abea24acfc700e757418fe5ee4c
+a54e29f7fceb4abea24acfc700e757418fe5ee4c,a54e29f7,Add more DrainLineCreator tests,"Add more DrainLineCreator tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409853496,1409853496,5e57708753905e0fac2f271f938f36933b9c62b3
+5e57708753905e0fac2f271f938f36933b9c62b3,5e577087,Add more DrainLinesCreator tests,"Add more DrainLinesCreator tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409771824,1409771824,1aec7c0cefbd1b3fc2ca2583bd588d29ef9ea02e
+1aec7c0cefbd1b3fc2ca2583bd588d29ef9ea02e,1aec7c0c,Add more DrainLinesCreator tests,"Add more DrainLinesCreator tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409771303,1409771303,eacca4ae3bd6653fdcca008cd96713f59da30e3b
+eacca4ae3bd6653fdcca008cd96713f59da30e3b,eacca4ae,Start writing DrainLinesCreator tests,"Start writing DrainLinesCreator tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409770668,1409770668,280c453ea8c2a9123bdcee23f5c95229549be34e
+280c453ea8c2a9123bdcee23f5c95229549be34e,280c453e,Move drain line creation into its own class,"Move drain line creation into its own class
+
+This change also replaces the start / stop charging messages with having
+lines at y=0 while charging.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409770462,1409770462,86121ec65c55fa99b53259843d82936ffac4e669
+86121ec65c55fa99b53259843d82936ffac4e669,86121ec6,Update warning settings,"Update warning settings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409770342,1409770342,8b24cfa2adce82888393391f2cdbd3b8504d2b0e
+8b24cfa2adce82888393391f2cdbd3b8504d2b0e,8b24cfa2,Record battery levels if we is or were chariging,"Record battery levels if we is or were chariging
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1409479244,1409479796,4a0b727fb1a8f7b4b9021ede266bf10b92a6448b
+4a0b727fb1a8f7b4b9021ede266bf10b92a6448b,4a0b727f,Include charging state in system boot event,"Include charging state in system boot event
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408881226,1408881226,0d18fd897acce924dd50118ce954dcc188ae4943
+0d18fd897acce924dd50118ce954dcc188ae4943,0d18fd89,Give start/stop charging their own event types,"Give start/stop charging their own event types
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408879266,1408880146,7d9e970e0e3d5dca652a20cade3a99c8072081bf
+7d9e970e0e3d5dca652a20cade3a99c8072081bf,7d9e970e,Add some downtime to the fake history,"Add some downtime to the fake history
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408878356,1408878356,9a7175688c733625c75ef4cf9088c66dab59938f
+9a7175688c733625c75ef4cf9088c66dab59938f,9a717568,Make createFakeHistory() closer to real behavior,"Make createFakeHistory() closer to real behavior
+
+Instead of just adding history events, we create system states and add
+the differences between them, just like the actual history is built up.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408815103,1408815103,1a98a73b362971bf8eb972d158589cd8cc9abc03
+1a98a73b362971bf8eb972d158589cd8cc9abc03,1a98a73b,Update isRunningOnEmulator() for Android L Intel,"Update isRunningOnEmulator() for Android L Intel
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408815007,1408815007,fdde29cda7308a9f0bc9c200c59111db12e97ed9
+fdde29cda7308a9f0bc9c200c59111db12e97ed9,fdde29cd,Update plan,"Update plan
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408795307,1408795307,a7ccac6a761a529582f846b56dc1bb9af0dc4ed8
+a7ccac6a761a529582f846b56dc1bb9af0dc4ed8,a7ccac6a,Log sampling errors to a publicly readable file,"Log sampling errors to a publicly readable file
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408387500,1408387500,68c59dcbbcfc99cc9ea7bfacd3c5c1531d7e3bb1
+68c59dcbbcfc99cc9ea7bfacd3c5c1531d7e3bb1,68c59dcb,Refresh chart if too old,"Refresh chart if too old
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408385364,1408385364,2e404b6e04a9da858ba3270c92b2a3798ff4b54d
+2e404b6e04a9da858ba3270c92b2a3798ff4b54d,2e404b6e,Alert dialog cosmetics,"Alert dialog cosmetics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408260956,1408260956,94d5253337d3bad0ddcedb59a9880bfc5d52e10e
+94d5253337d3bad0ddcedb59a9880bfc5d52e10e,94d52533,Test too-little-data messages,"Test too-little-data messages
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408216971,1408216971,492469ff036808c8e203854a971caf1004de792f
+492469ff036808c8e203854a971caf1004de792f,492469ff,Set in-graph labels size to 12SP,"Set in-graph labels size to 12SP
+
+SP is related to the system font size setting.
+
+To be able to test this, I also implemented a fake history that's shown
+when we run in the emulator.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408216627,1408216627,af23af46085bc2c662f76c2836f91a472e9a3bc7
+af23af46085bc2c662f76c2836f91a472e9a3bc7,af23af46,Switch to pinch-zoom,"Switch to pinch-zoom
+
+The previous zoom implementation made it too hard to scroll sideways
+without zooming.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408175355,1408175355,ba3e881f9ab25ade308d2cc4bc51ba3448f18efb
+ba3e881f9ab25ade308d2cc4bc51ba3448f18efb,ba3e881f,Throw away old events to keep history small enough,"Throw away old events to keep history small enough
+
+At 400kb history file size we throw away the 25% oldest events.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408134136,1408134136,b5635f2af00240b8fc295ddab3be406624db77b4
+b5635f2af00240b8fc295ddab3be406624db77b4,b5635f2a,Warn user on too little or no data,"Warn user on too little or no data
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408044744,1408044744,862af84f7fcad4c63c99a65360efba7a5186f579
+862af84f7fcad4c63c99a65360efba7a5186f579,862af84f,Deal with some inspection warnings,"Deal with some inspection warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408042507,1408042507,64c068d5da2a566da32754046c17b04319741100
+64c068d5da2a566da32754046c17b04319741100,64c068d5,Upgrade build environment,"Upgrade build environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1408040332,1408040332,2203e1084476cad0e0ffa0d3da66e73ba82024dd
+2203e1084476cad0e0ffa0d3da66e73ba82024dd,2203e108,Draw a median line across each series,"Draw a median line across each series
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1406884946,1406884946,8f5bc41191c2d2881e99f0567004491663c2929c
+8f5bc41191c2d2881e99f0567004491663c2929c,8f5bc411,Update README.md after some real-world testing,"Update README.md after some real-world testing
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1406800159,1406800159,602e0726b5cbb55908a9091333075de00ef20df0
+602e0726b5cbb55908a9091333075de00ef20df0,602e0726,Always compare boot timestamps with wiggle room,"Always compare boot timestamps with wiggle room
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1406747557,1406747785,b7cf2748a2c48005c5249f8b904b146ff6465b66
+b7cf2748a2c48005c5249f8b904b146ff6465b66,b7cf2748,Add test for getting the boot timestamp,"Add test for getting the boot timestamp
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1406747127,1406747127,893f4edb0528cda405931ef0af3657fea35a8822
+893f4edb0528cda405931ef0af3657fea35a8822,893f4edb,Fix issues with InstalledApp persistence,"Fix issues with InstalledApp persistence
+
+Tests added
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1406723439,1406723439,5021ff182d201ef0dd3872dc6a4b82aedda58355
+5021ff182d201ef0dd3872dc6a4b82aedda58355,5021ff18,Add test for SystemState.readFromSystem(),"Add test for SystemState.readFromSystem()
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405662630,1405662630,7070cede777a923f8e3f11764f6fb71a96599eb7
+7070cede777a923f8e3f11764f6fb71a96599eb7,7070cede,Improve sampling logging,"Improve sampling logging
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405579621,1405579621,c5bc176f876d2bb536d9898106fdb2f7d8f9ff4c
+c5bc176f876d2bb536d9898106fdb2f7d8f9ff4c,c5bc176f,Remove empty method,"Remove empty method
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405577670,1405577670,1aa0d9d82f69799189326a143139fa4f318123ca
+1aa0d9d82f69799189326a143139fa4f318123ca,1aa0d9d8,Make writing system state more transactional,"Make writing system state more transactional
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405577415,1405577415,a3a110b970b77715bf7ec7d4ae56ea0afdc71906
+a3a110b970b77715bf7ec7d4ae56ea0afdc71906,a3a110b9,Sample system state rather than subscribing to updates,"Sample system state rather than subscribing to updates
+
+The idea is that this should be more reliable.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405572376,1405572376,ef1556b6979ae912d7c6523a29d9c227f92bf0b0
+ef1556b6979ae912d7c6523a29d9c227f92bf0b0,ef1556b6,Add code for reading SystemState from the system,"Add code for reading SystemState from the system
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405487279,1405487279,2c7156b020fe6323f8636bf75a4080aa905d28f2
+2c7156b020fe6323f8636bf75a4080aa905d28f2,2c7156b0,Add some vingelmån when comparing boot timestamps,"Add some vingelmån when comparing boot timestamps
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405434117,1405434117,560719fb53ffa036d7afff771aa014e35a5aecf5
+560719fb53ffa036d7afff771aa014e35a5aecf5,560719fb,Suppress an unwanted warning,"Suppress an unwanted warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405407639,1405407639,cc8bfd788b162cbf1efdbc79208072a2e247e4f2
+cc8bfd788b162cbf1efdbc79208072a2e247e4f2,cc8bfd78,Implement SystemState persistence,"Implement SystemState persistence
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405407597,1405407597,d6c744c338e6b5f26752cc4c2569d817822e090d
+d6c744c338e6b5f26752cc4c2569d817822e090d,d6c744c3,Enable another warning,"Enable another warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405407483,1405407483,59ea8ca71fde1e7d9e9077bb5a347230dbbfb165
+59ea8ca71fde1e7d9e9077bb5a347230dbbfb165,59ea8ca7,Adapt prevent-overlaps test to reality,"Adapt prevent-overlaps test to reality
+
+Updated the order encoded in the test to match reality. But the order
+was arbitrary to begin with, so changing it in the test is no worse than
+changing it in the implementation.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405365648,1405365648,5fcfeb29c18965443fa36af512190f7b91361e93
+5fcfeb29c18965443fa36af512190f7b91361e93,5fcfeb29,Implement packaging events,"Implement packaging events
+
+Installs, uninstalls and removals
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405363878,1405363878,4a89c8756d1e27cd6d480fe6e65d0cca87f449bf
+4a89c8756d1e27cd6d480fe6e65d0cca87f449bf,4a89c875,Special-case charging event timestamps at reboot,"Special-case charging event timestamps at reboot
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405363008,1405363008,95009a4978caf36b2f4e9d503a0fd58f81248302
+95009a4978caf36b2f4e9d503a0fd58f81248302,95009a49,Fix broken halt-and-reboot test,"Fix broken halt-and-reboot test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405362770,1405362770,0e8bb63cc03b3638e595d87585b56ce786b68bc4
+0e8bb63cc03b3638e595d87585b56ce786b68bc4,0e8bb63c,Implement stop-charging and start-charging,"Implement stop-charging and start-charging
+
+Also implement distributing info events over the sample interval.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405360990,1405360990,c6a6c840987550e008942712796236aa147bcfa6
+c6a6c840987550e008942712796236aa147bcfa6,c6a6c840,Report system halt and boot events,"Report system halt and boot events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405319154,1405319154,29bcf480a9588ff4f266e55144f4d379a7a50df3
+29bcf480a9588ff4f266e55144f4d379a7a50df3,29bcf480,Generate proper battery events.,"Generate proper battery events.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405280167,1405280167,9e1bd61bbc175f6e7a9f61b090688cadb711e027
+9e1bd61bbc175f6e7a9f61b090688cadb711e027,9e1bd61b,Properly implement SystemState.equals().,"Properly implement SystemState.equals().
+
+This makes two more unit tests pass.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405278458,1405278458,14e3483350a0613425f94635fe39236209044f37
+14e3483350a0613425f94635fe39236209044f37,14e34833,Implement HistoryEvent.toString(),"Implement HistoryEvent.toString()
+
+This makes unit test failures more understandable.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405278417,1405278417,b6e6dcda646ab625290e543fdccb43e00866e5ee
+b6e6dcda646ab625290e543fdccb43e00866e5ee,b6e6dcda,Pass the SystemState constructor unit test,"Pass the SystemState constructor unit test
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405257225,1405257225,93a96063cf80ccba3cceacbf48af9a66e79ceb38
+93a96063cf80ccba3cceacbf48af9a66e79ceb38,93a96063,Add (failing) tests for SystemState boot events,"Add (failing) tests for SystemState boot events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405257073,1405257073,9cecb95342a413eb583508d33e559cddcdea58a4
+9cecb95342a413eb583508d33e559cddcdea58a4,9cecb953,Add a SystemState class with (failing) unit tests,"Add a SystemState class with (failing) unit tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1405194815,1405194815,fb816d2ad6c93590dcc6ab7b9bd0c9bec8c5fffb
+fb816d2ad6c93590dcc6ab7b9bd0c9bec8c5fffb,fb816d2a,Improve X axis tick distances,"Improve X axis tick distances
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404989954,1404989954,0e1a1f4736087d24a4505c767800c7508cb5fb0a
+0e1a1f4736087d24a4505c767800c7508cb5fb0a,0e1a1f47,Improve Y axis scaling and labelling,"Improve Y axis scaling and labelling
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404989327,1404989327,c917af7cc3215faa809e688e739ca9769dd949c3
+c917af7cc3215faa809e688e739ca9769dd949c3,c917af7c,Don't crash when clicking outside of the graph,"Don't crash when clicking outside of the graph
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404988733,1404988733,2a15fdca68e92e2b91fa506ff25c4afde39c60a2
+2a15fdca68e92e2b91fa506ff25c4afde39c60a2,2a15fdca,Make X axis labels look nicer,"Make X axis labels look nicer
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404985017,1404985017,8bd60101dc431884776ba0f736cf0176d96b296f
+8bd60101dc431884776ba0f736cf0176d96b296f,8bd60101,Remove the lines between the vertices,"Remove the lines between the vertices
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404970072,1404970072,6b58a331226285f3065c53d13e32c95727abc4a2
+6b58a331226285f3065c53d13e32c95727abc4a2,6b58a331,"Zoom around the finger, not around the midpoint","Zoom around the finger, not around the midpoint
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404932162,1404932162,e07d858f4efbf3207238dbb16a0d0cb714100880
+e07d858f4efbf3207238dbb16a0d0cb714100880,e07d858f,Restyle the lines and points of the graph,"Restyle the lines and points of the graph
+
+Emphasize the points more and the lines less.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404929413,1404929413,5bfa830ae65db149f51ca5beb1d17490760d2460
+5bfa830ae65db149f51ca5beb1d17490760d2460,5bfa830a,Don't print numbers at the points in the graph,"Don't print numbers at the points in the graph
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404928651,1404928651,ecf2561e3adb4d7a3784d4e3e84a541ccd13157f
+ecf2561e3adb4d7a3784d4e3e84a541ccd13157f,ecf2561e,"Log app adds, removals and upgrades","Log app adds, removals and upgrades
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404913383,1404913383,d76cfe601379f623987018eded554124696c858b
+d76cfe601379f623987018eded554124696c858b,d76cfe60,Don't show > 25%/h battery usage,"Don't show > 25%/h battery usage
+
+We sometimes get outliers all the way up to 400%/h. This change prevents
+them from making the graph unreadable.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404814934,1404814934,a828c23f8ccfa442695c37b1d856bbd3374001b5
+a828c23f8ccfa442695c37b1d856bbd3374001b5,a828c23f,Make double tapping zoom out as much as possible,"Make double tapping zoom out as much as possible
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404814712,1404814712,b80998c3f2916e722e5598c65213ccb51925c4d3
+b80998c3f2916e722e5598c65213ccb51925c4d3,b80998c3,Tune the zoom sensitivity,"Tune the zoom sensitivity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404814294,1404814294,3267d4b30dbd308fee028dbf8128f955adcc3269
+3267d4b30dbd308fee028dbf8128f955adcc3269,3267d4b3,Don't show zero drain,"Don't show zero drain
+
+If the service is restarted we can get several readings at the same
+battery level. Gaps in the graph are more representative of what
+actually happened there than getting zeros in the battery plot.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404813519,1404813519,ef27c9bb0dd1109afa82a3c9a7145ba3ac89e9b5
+ef27c9bb0dd1109afa82a3c9a7145ba3ac89e9b5,ef27c9bb,Auto-start service after device reboot,"Auto-start service after device reboot
+
+And log shutdown and boot events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404813345,1404813345,c809d537b980415275080e1e031e18768f35a1c0
+c809d537b980415275080e1e031e18768f35a1c0,c809d537,Improve initial plot sizing,"Improve initial plot sizing
+
+The plot is now at least 0-5 units high and at least five minutes wide.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404797152,1404797152,65bbb3383baaacd2dc2bd2080b321060b9e83e43
+65bbb3383baaacd2dc2bd2080b321060b9e83e43,65bbb338,Improve logging,"Improve logging
+
+Fix a warning that shouldn't be logged, and log when we read history
+from file.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404760390,1404760390,1f6d98996870e993e5e297c269ff40bceaf3a24c
+1f6d98996870e993e5e297c269ff40bceaf3a24c,1f6d9899,Fix Y axis range when we have no data,"Fix Y axis range when we have no data
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404760336,1404760336,c3e63335b3d87ee46390543cac5146ccbe703933
+c3e63335b3d87ee46390543cac5146ccbe703933,c3e63335,Fix questionable speling,"Fix questionable speling
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404758553,1404758553,fa9c42b33947f669f4fde0a0ed2fb776b82e4330
+fa9c42b33947f669f4fde0a0ed2fb776b82e4330,fa9c42b3,Log an event when battery logging starts,"Log an event when battery logging starts
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404754842,1404754842,b72f2f4c15d7967f198aaaa836c98f5e808af648
+b72f2f4c15d7967f198aaaa836c98f5e808af648,b72f2f4c,Don't keep charger state,"Don't keep charger state
+
+Instead, just add informational events for start / stop charging and
+don't report negative battery drain.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404739148,1404739148,148034102e728c1ea7bdefd6d5769c5a08d8ff10
+148034102e728c1ea7bdefd6d5769c5a08d8ff10,14803410,Report start / stop charging events,"Report start / stop charging events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404737302,1404737302,049e4720dd2cbb3b6b200cd99920c741b48c6433
+049e4720dd2cbb3b6b200cd99920c741b48c6433,049e4720,Plot the data we actually logged,"Plot the data we actually logged
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404718946,1404718946,0f0528a0a5a6fdf889a4c8c5c3f070677bfb009c
+0f0528a0a5a6fdf889a4c8c5c3f070677bfb009c,0f0528a0,Add a Service that logs battery level changes,"Add a Service that logs battery level changes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404717325,1404717325,26330e51cf8b8b494a8d8e5955d681d628ddec37
+26330e51cf8b8b494a8d8e5955d681d628ddec37,26330e51,Require specifying charging status on boot,"Require specifying charging status on boot
+
+Since anything can happen while the system is down, require reporting charging status as part of the boot event.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404714326,1404714326,fe6ef8dffc39d68d7ae1db00499ff41f80892501
+fe6ef8dffc39d68d7ae1db00499ff41f80892501,fe6ef8df,Fix missorted modifiers,"Fix missorted modifiers
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404714161,1404714161,12a7dfeaef318a507addaed6b6e310d91bc50db4
+12a7dfeaef318a507addaed6b6e310d91bc50db4,12a7dfea,Try to report unclean shutdowns nicely,"Try to report unclean shutdowns nicely
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404711623,1404711623,378a9b4a992c0be131956175280c592642ed4c74
+378a9b4a992c0be131956175280c592642ed4c74,378a9b4a,Enable missorted-modifiers warning,"Enable missorted-modifiers warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404711579,1404711579,77243f89cb3feec6b9d7cdbdbe1e138d1d973f42
+77243f89cb3feec6b9d7cdbdbe1e138d1d973f42,77243f89,Implement file-backed History,"Implement file-backed History
+
+When you add() events they get appended to a file, and when you ask for
+stats they get read from that file.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404671593,1404671593,fe80014811b613a93375deb4cfdd491630ed4015
+fe80014811b613a93375deb4cfdd491630ed4015,fe800148,Disable annoying warning,"Disable annoying warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404671396,1404671396,872f95fe34a44149b0a80fb1591f93c2ec20b838
+872f95fe34a44149b0a80fb1591f93c2ec20b838,872f95fe,Rewrite the History tests to test persistence,"Rewrite the History tests to test persistence
+
+But we don't have any persistence so now they all fail again.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404622587,1404622587,9fcce51875310c79c9bc1b7af81d515f5f290fd8
+9fcce51875310c79c9bc1b7af81d515f5f290fd8,9fcce518,Extract HistoryEvents into their own class,"Extract HistoryEvents into their own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404587297,1404587297,200d7bfef11b639a6df87cebac2cedf1d0728ffd
+200d7bfef11b639a6df87cebac2cedf1d0728ffd,200d7bfe,Tune declaration-strength warnings,"Tune declaration-strength warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404587270,1404587270,dc6d7259e79069fb3ca3e8932c85ca757a5586ad
+dc6d7259e79069fb3ca3e8932c85ca757a5586ad,dc6d7259,Handle missing shutdown and start-charging events,"Handle missing shutdown and start-charging events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404586430,1404586430,8ddcddb273ce1d7f229cc3dbf428f354fdd66c25
+8ddcddb273ce1d7f229cc3dbf428f354fdd66c25,8ddcddb2,Handle system shutdown and boot events,"Handle system shutdown and boot events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404586224,1404586224,5b8ec205d898dded4800d11f5d2810363df8ecc8
+5b8ec205d898dded4800d11f5d2810363df8ecc8,5b8ec205,History now handles charging events,"History now handles charging events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404586050,1404586050,7e4057534ef886f8fdd185e54c015e8163998354
+7e4057534ef886f8fdd185e54c015e8163998354,7e405753,Enable switch statement warnings,"Enable switch statement warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404586003,1404586003,fd6ac244a20ce7f72d1e443871d9820a74626221
+fd6ac244a20ce7f72d1e443871d9820a74626221,fd6ac244,Start implementing the History class,"Start implementing the History class
+
+This implementation passes two out of six test cases.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404566163,1404566163,4990a92ee595c03aa18c8c6bc9f6cdf3f9e1d96a
+4990a92ee595c03aa18c8c6bc9f6cdf3f9e1d96a,4990a92e,Test missing shutdown / start-charging events,"Test missing shutdown / start-charging events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404565055,1404565055,0a8516907e3189ba32dcb0cbc8a6a6d6a3275c0d
+0a8516907e3189ba32dcb0cbc8a6a6d6a3275c0d,0a851690,Add reboot and charging tests,"Add reboot and charging tests
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404563160,1404563160,ca5ecb56bc98bb7dc6bda165638381e447794cee
+ca5ecb56bc98bb7dc6bda165638381e447794cee,ca5ecb56,Add IntelliJ metadata for annotations.jar,"Add IntelliJ metadata for annotations.jar
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404563131,1404563131,73331fad707486d29feff9b42c05137388f5cb3d
+73331fad707486d29feff9b42c05137388f5cb3d,73331fad,Start writing tests for event history,"Start writing tests for event history
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404562237,1404562237,4c46e357dc34252b92227ac6cc5d3d0d04172b22
+4c46e357dc34252b92227ac6cc5d3d0d04172b22,4c46e357,Add @Nullable + @NotNull annotations to project,"Add @Nullable + @NotNull annotations to project
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404562132,1404562132,efbc5024b85199ce494129b6359d3453a5a7ac74
+efbc5024b85199ce494129b6359d3453a5a7ac74,efbc5024,Make the graph pannable and zoomable,"Make the graph pannable and zoomable
+
+Pan by dragging sideways, zoom by dragging vertically.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404394508,1404394508,d26b088fae2afc1165272d47e8378da3fabc74d6
+d26b088fae2afc1165272d47e8378da3fabc74d6,d26b088f,Remove unsupported AndroidPlot option,"Remove unsupported AndroidPlot option
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404391624,1404391624,57d022f79b179e3ce1bfad3f0f78ebcb8afbf634
+57d022f79b179e3ce1bfad3f0f78ebcb8afbf634,57d022f7,Demonstrate adding events to the graph,"Demonstrate adding events to the graph
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404366301,1404366301,3a01849eb5927ec82693f00e7d53b1d5400743e1
+3a01849eb5927ec82693f00e7d53b1d5400743e1,3a01849e,Show a graph with holes in the data,"Show a graph with holes in the data
+
+The trick is to divvy the data up into different series, then format
+them the same way and hide the legend.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404302268,1404302268,c6eb2c0b3a43dbd210d72ba6f6e57a87d6135329
+c6eb2c0b3a43dbd210d72ba6f6e57a87d6135329,c6eb2c0b,Implement the AndroidPlot Quickstart example,"Implement the AndroidPlot Quickstart example
+
+From here: http://androidplot.com/docs/quickstart/
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404300638,1404300638,fa8f819d65f4b1d172a9b930dffa4c7d7f0697ab
+fa8f819d65f4b1d172a9b930dffa4c7d7f0697ab,fa8f819d,Make Androidplot a proper Gradle dependency,"Make Androidplot a proper Gradle dependency
+
+Remove the .aar file from /libs and have Gradle handle the downloading
+for us.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404298149,1404298149,aefb8a045e7a3d2d01855a6797a23a2c37a7902d
+aefb8a045e7a3d2d01855a6797a23a2c37a7902d,aefb8a04,Enable IntelliJ Git integration,"Enable IntelliJ Git integration
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404278311,1404278311,44c334ef10c036fc8414a5b4a17bd9899b462bb1
+44c334ef10c036fc8414a5b4a17bd9899b462bb1,44c334ef,Initial commit.,"Initial commit.
+
+The plan is in README.md, have fun :)
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1404243615,1404243615,

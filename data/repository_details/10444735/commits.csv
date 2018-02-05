@@ -1,0 +1,273 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ec6208ea18e5414174724109b57b7323b407da26,ec6208ea,Updated license header for ColorGFX.java.,"Updated license header for ColorGFX.java.
+
+The lines explicitly reference line numbers to identify blocks of code
+and this had to be updated since the code moved around.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374194024,1374194024,4dc87a1ca9ee25c9f5fa05347ad36e7706cf4cc4
+4dc87a1ca9ee25c9f5fa05347ad36e7706cf4cc4,4dc87a1c,Updated the nuke script to fix the credits image path.,"Updated the nuke script to fix the credits image path.
+
+The credits image uses underscores, but dashes were used, making the
+nuke script fail in deleting all credit images.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374193974,1374193974,1834c227d4aa4879a13f187fd6fc985fa7a09e47
+1834c227d4aa4879a13f187fd6fc985fa7a09e47,1834c227,Updated build and versioning info to v1.1.0,"Updated build and versioning info to v1.1.0
+
+The AndroidManifest also has been set to install the application,
+preferring the use of internal storage over external storage.
+Additionally, all submodule repositories have been updated.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374189770,1374189770,ba298dcfe586809accf1f20f0a5f1da6058de563
+ba298dcfe586809accf1f20f0a5f1da6058de563,ba298dcf,Added credits images to the nuke script.,"Added credits images to the nuke script.
+
+All credits images contains custom information as well as the logo.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374183370,1374183370,7b3fd69f3f05d3bf1769ad68a6670cc2d10a0025
+7b3fd69f3f05d3bf1769ad68a6670cc2d10a0025,7b3fd69f,Build script has further safeguards against null values.,"Build script has further safeguards against null values.
+
+This is for future convenience in case the values are made optional.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374178795,1374178795,309c6fed8f1bde40d48a8b88af40c8f655f5c99a
+309c6fed8f1bde40d48a8b88af40c8f655f5c99a,309c6fed,Changed ShopActivity placeholder for build script.,"Changed ShopActivity placeholder for build script.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374176724,1374176724,04f8bc4bc487ec448c642765eef3c4c9b5de7d34
+04f8bc4bc487ec448c642765eef3c4c9b5de7d34,04f8bc4b,Created a DBUpgradeTask which creates a worker thread for DDL execution.,"Created a DBUpgradeTask which creates a worker thread for DDL execution.
+
+Since all database setup and upgrades occur via DDL statements stored in
+local files, complex setups may take a little bit longer. This will
+create a worker thread for these setup and upgrades ops. The user will
+see a notification on the screen stating that an upgrade is in progress
+and an indeterminate progress indicator is displayed.
+
+In addition to these database updates, the SplashActivity will now wait
+for any necessary updates to occur before displaying the MainActivity
+(which will require a completely setup database).
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1374176392,1374176392,83d0f072fc72ebf6a40d0171068c583ecc18b951
+83d0f072fc72ebf6a40d0171068c583ecc18b951,83d0f072,Removed unnecessary import.,"Removed unnecessary import.
+
+This import was never used. It was intended to be used by a dynamic
+database-path getter. This is because different devices may have
+different database paths. However, a different approach to database
+installation has been taken. Instead of copying the .db file to this
+""dynamic"" path (the path can vary by device), the database itself and
+all database updateds occur through execution of DDL statements via
+changescripts.
+
+Thus, this import is not necessary now, nor has it ever been in the
+past. It just happened to get committed.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373501666,1373501666,4cdacaf3f132c809ee2a4931db84e4a42a662c7e
+4cdacaf3f132c809ee2a4931db84e4a42a662c7e,4cdacaf3,Improved floodfill optimizations by removing redundancies.,"Improved floodfill optimizations by removing redundancies.
+
+Booleans are automatically set to false, so filling them is unnecessary.
+Also, both boolean arrays will contain the same number of elements, so
+it makes sense to use one loop that iterates through both of them at
+once instead of using two loops, each iterating through one array.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373500960,1373500960,33132f8f015597733cc5481aa439e91d85ce9d1f
+33132f8f015597733cc5481aa439e91d85ce9d1f,33132f8f,"Updated InApp Billing API, which fixes some crashing bugs.","Updated InApp Billing API, which fixes some crashing bugs.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373325323,1373325323,fa754a135fe1609d4d48418a0bc8a0ca1a3a8dba
+fa754a135fe1609d4d48418a0bc8a0ca1a3a8dba,fa754a13,Updated ColorGFX pause to signal an interrupt instead of calling join().,"Updated ColorGFX pause to signal an interrupt instead of calling join().
+
+Calling join() blocks the thread that calls it. In this case, the UI
+thread was being blocked which is bad and has the potential in resulting
+in an ANR. Interrupt is now used to signal the end of a thread's life.
+It does not block the thread that calls it.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373008080,1373008080,51c20acadfa8320210abb97df9c13da3cddb450c
+51c20acadfa8320210abb97df9c13da3cddb450c,51c20aca,Merge branch 'feature-optimize' into github,"Merge branch 'feature-optimize' into github
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373006231,1373006231,"be2bda5de3bc2c941216363744306b529501e1f9,f2ad1823bd4ed836831c3db5284c7d95494dd964"
+f2ad1823bd4ed836831c3db5284c7d95494dd964,f2ad1823,Optimized the flood-fill algorithm.,"Optimized the flood-fill algorithm.
+
+Instead of using ArrayLists, which can dynamically allocate memory up to
+arbitrary size and cause OOM errors, the algorithm is now using boolean
+arrays that are preallocated with the maximum width and height of the
+images dimensions. The boolean arrays are multidimensional and default
+to false values. When a pixel is to be filled with a color, the
+corresponding boolean[x][y] value is set to true.
+
+This is faster than using ArrayLists and ultimately uses much less
+heap memory.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1373005142,1373005142,be2bda5de3bc2c941216363744306b529501e1f9
+be2bda5de3bc2c941216363744306b529501e1f9,be2bda5d,Cleaned up badly formatted comments caused by an IDE formatter.,"Cleaned up badly formatted comments caused by an IDE formatter.
+
+The comments were split at around colum 80, resulting in many lines
+containing only a single word. This commit fixes a lot of that.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372994171,1372994171,2f1c51f27d706288d0d76458d5bccddc5c9232ec
+2f1c51f27d706288d0d76458d5bccddc5c9232ec,2f1c51f2,Fixed a bug where a SharedPreferences object may be accessed while null.,"Fixed a bug where a SharedPreferences object may be accessed while null.
+
+The original implementation did not use any form of null-checking when
+accessing that static SharedPreferences object. While it should be set
+on launch of the applicaiton, there are no guarantees. Thus, it is much
+safer to perform a null check and set the object when necessary.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372994051,1372994051,f3a96fa13e434c3a47f189fe14daf5e75762fd1d
+f3a96fa13e434c3a47f189fe14daf5e75762fd1d,f3a96fa1,Removed the hard-coded path to the database.,"Removed the hard-coded path to the database.
+
+This path can actually differ on different Android devices. Fortunately,
+the application is now using on the fly generation, so a path to the
+database is no longer required.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372993969,1372993969,3639394f3424bc3dbd5bd5a52fa5082c9d89f81b
+3639394f3424bc3dbd5bd5a52fa5082c9d89f81b,3639394f,Removed extra variable from NodeDatabase.java,"Removed extra variable from NodeDatabase.java
+
+The extra variable was previously used in debug logging for
+determining array size for the sql DDL file statements. It is no longer
+needed.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372834198,1372834198,47d053649b7e2bc71bb70745207cb73fe6ec9f01
+47d053649b7e2bc71bb70745207cb73fe6ec9f01,47d05364,Updated the application so that it can generate database and all updates,"Updated the application so that it can generate database and all updates
+
+The application will now generate the database on first launch as
+opposed to being pregenerated. This will allow for easy updates in the
+future via change scripts. Precautions have been taken for all users who
+have previously installed the application with the pre-generated
+database.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372728369,1372728369,9107e99c4f4dbc76d044c3fbcffcb727121807aa
+9107e99c4f4dbc76d044c3fbcffcb727121807aa,9107e99c,Updated various files for v1.0 release.,"Updated various files for v1.0 release.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372394275,1372394275,501ffa19ebdb9434a51884ae5255676354b77cc2
+501ffa19ebdb9434a51884ae5255676354b77cc2,501ffa19,Added the nuke script.,"Added the nuke script.
+
+The nuke script removes content that has not been licensed to other
+developers for re-use. The content remains in the repository because it
+ensures the application is buildable, but if any other developer wants
+to have their own distribution (e.g., via a binary file), the
+copyrighted material MUST be removed.
+
+So the nuke script facilitates this.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372391752,1372391752,0e1487494f60d278040fa2c8c1c6bf4016304a0a
+0e1487494f60d278040fa2c8c1c6bf4016304a0a,0e148749,Updated custom_rules.xml to match LICENSES.,"Updated custom_rules.xml to match LICENSES.
+
+This will ensure that any file or directory with the name LICENSES will
+not be packaged for the compile process.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372359072,1372359072,548a418a0092a3fdfc42deef52c81cf82794e0ec
+548a418a0092a3fdfc42deef52c81cf82794e0ec,548a418a,Added the initial project build.sh script.,"Added the initial project build.sh script.
+
+The build script prepares a freshly cloned repository for compilation.
+There are several custom components the application uses that cannot be
+version controlled, because they are specific to the developer(s). This
+includes things like public keys tied to a Google account. Thus, the
+build script assists developers in getting this sorted out so they can
+successfully compile the application.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372354617,1372354617,668a055103d32d91ffd2675847cbe82109ce3346
+668a055103d32d91ffd2675847cbe82109ce3346,668a0551,Added custom_rules.xml for the compile process.,"Added custom_rules.xml for the compile process.
+
+This file has some project-specific customizations for the application
+build process at compile time. Specifically, we are ignoring files
+from directories that will get packaged into the application. This
+includes README and COPYING files from the resource submodule.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372305336,1372305336,c433c06d672cd520181a7fa3745d41bc9422d5b2
+c433c06d672cd520181a7fa3745d41bc9422d5b2,c433c06d,Updated gitignore to remove extra files.,"Updated gitignore to remove extra files.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372305271,1372305271,5bae10e534a5c0c34edc76be0d3045b22f109072
+5bae10e534a5c0c34edc76be0d3045b22f109072,5bae10e5,Updated submodules (dependencies and resources).,"Updated submodules (dependencies and resources).
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1372304164,1372304164,7ec4b6c9076a66be89f4a9a44af6f8dd656b07a4
+7ec4b6c9076a66be89f4a9a44af6f8dd656b07a4,7ec4b6c9,Updated license headers for all source files with url.,"Updated license headers for all source files with url.
+
+Added the associated developer URL next to the name.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370502245,1370502245,ed321d8fb8d41c3f7a71cd1d9d4b70e0fce56508
+ed321d8fb8d41c3f7a71cd1d9d4b70e0fce56508,ed321d8f,"Updated common project files, fixed whitespace issues and added urls.","Updated common project files, fixed whitespace issues and added urls.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370502182,1370502182,9dbb3c05d4d232264cd42405348a38c74ac2bd8b
+9dbb3c05d4d232264cd42405348a38c74ac2bd8b,9dbb3c05,Updated every file license header to be GPLv2.,"Updated every file license header to be GPLv2.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370303473,1370303473,fa8319e708ad1adb3faa6d7479ef2926ee6ed063
+fa8319e708ad1adb3faa6d7479ef2926ee6ed063,fa8319e7,Added source files and updated common project files.,"Added source files and updated common project files.
+
+The source files contain almost the entirety of the Coloring Book app.
+There are a few things that would need to be implemeneted (or
+alternatively, removed) for a clean build. So as of this commit,
+the application isn't automatically buildable when the repository is
+cloned. This will need to be addressed.
+
+The common project files have been updated to reflect additional
+license requirements.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370302273,1370302273,dbf7206542009b72827c36f4824285b9033ec445
+dbf7206542009b72827c36f4824285b9033ec445,dbf72065,Added all source files.,"Added all source files.
+
+ShopActivity's public key is not being committed, so technically, this
+makes Coloring Book not fully functional at start up.
+
+Beyond this, the application SHOULD work if a public key is provided.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370283319,1370283319,d5052586187fa668b8f4c347790428a82fe79e3f
+d5052586187fa668b8f4c347790428a82fe79e3f,d5052586,Added the database dump file.,"Added the database dump file.
+
+To create the actual database, run the following command:
+
+sqlite3 coloring_book.db < coloring-book.sql
+
+An entire dump file is sufficient as there is not much data in the
+database. However, if it ever gets huge, consider using change scripts.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370241360,1370241360,b92b72c7be40ede8d6938984e232d9f22819e70a
+b92b72c7be40ede8d6938984e232d9f22819e70a,b92b72c7,Added standard Android project files.,"Added standard Android project files.
+
+The Android Manifest contains the overall structure of the app, declares
+device compatibility and defines the necessary permissions to run the
+app. The other files are used at build time.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370240901,1370240901,9fd81ba8e9f64af15e6f84320aea34493ac346bc
+9fd81ba8e9f64af15e6f84320aea34493ac346bc,9fd81ba8,Added common project files.,"Added common project files.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370239721,1370239721,43a2033ab1ea059a8c5a1fa137d2f278e8b62e73
+43a2033ab1ea059a8c5a1fa137d2f278e8b62e73,43a2033a,Added resources and dependencies submodules.,"Added resources and dependencies submodules.
+
+By splitting the resources directory and the libs directory into their
+own seperate repos, we can manage the inevitable bloat of each
+repository by isolating the bloat by type.
+
+This has tradeoffs, but the point is to be able to download source code
+quickly without the need of pulling in dependencies or resources.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370234122,1370234122,547b9a90be2100194982bac487eb903652e462c1
+547b9a90be2100194982bac487eb903652e462c1,547b9a90,Added .gitignore file.,"Added .gitignore file.
+
+Signed-off-by: Byron Sanchez <bfs5030@gmail.com>
+",,,,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,bfs5030@gmail.com,1370233982,1370233982,

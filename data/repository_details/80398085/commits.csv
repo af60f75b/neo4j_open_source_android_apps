@@ -1,0 +1,1938 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+335be1f4a3d376e36b68cdbae2217cab90136c97,335be1f4,feat: Settings screen,"feat: Settings screen
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1503362116,1503362116,c17e2d949ea06ec185189b02d9670d8da437ae3c
+c17e2d949ea06ec185189b02d9670d8da437ae3c,c17e2d94,feat: Show settings menu option,"feat: Show settings menu option
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1503359268,1503359268,a84868daf358770cb9b5d106729bc328f13cd4a8
+a84868daf358770cb9b5d106729bc328f13cd4a8,a84868da,chore: Update Support library version,"chore: Update Support library version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1503356162,1503356162,dda66fbfbaf73d13ea1b96866584fb691e6adc83
+dda66fbfbaf73d13ea1b96866584fb691e6adc83,dda66fbf,chore: Update Kotlin version,"chore: Update Kotlin version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1503356100,1503356100,6cace9a14ade68cf0c7e34d16ed42cc6267847ea
+6cace9a14ade68cf0c7e34d16ed42cc6267847ea,6cace9a1,chore: Update Espresso version,"chore: Update Espresso version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502938682,1502938682,8b78538489c3693d8b704b3da6e8d4e85f12452d
+8b78538489c3693d8b704b3da6e8d4e85f12452d,8b785384,refactor: Use ScrollingViewBehavior for FAB,"refactor: Use ScrollingViewBehavior for FAB
+
+When hiding and showing the FAB upon scroll, use the
+ScrollingViewBehavior rather than set the event directly on the
+recyclerView. This is cleaner and moves the code to the XML (plus
+one extra Java class).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502847115,1502847115,c681ef3d4ae3b8b8e3cfcf8b5fbe1bb1bf0e737f
+c681ef3d4ae3b8b8e3cfcf8b5fbe1bb1bf0e737f,c681ef3d,feat: Hide FAB when scrolling down and vice versa,"feat: Hide FAB when scrolling down and vice versa
+
+When user is scrolling the items list the FAB should not get in the
+way of the items.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502843747,1502843747,748fbe582f32d4791de62e2ae0ad33093c27223e
+748fbe582f32d4791de62e2ae0ad33093c27223e,748fbe58,fix: Searched items don't restore on tablet,"fix: Searched items don't restore on tablet
+
+When doing a search on a tablet and then opening one of the searched
+items, if the user presses back to return to the search list it clears the
+results such that they have to enter the search term again.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502760743,1502760743,819f7fc0faf5c568a617149b066b01a3696bec64
+819f7fc0faf5c568a617149b066b01a3696bec64,819f7fc0,refactor: Replace deprecated method,"refactor: Replace deprecated method
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502759920,1502759920,4191552bd6460e2530175fe7d3a16d5337bffd25
+4191552bd6460e2530175fe7d3a16d5337bffd25,4191552b,fix: User is able to press back while editing,"fix: User is able to press back while editing
+
+When an item is edited (even a new one) it is automatically saved.
+If the user presses back during editing they may not be aware
+that the item was already saved.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502699503,1502699503,264ab497d096997e53e8195e6a886fe6fe3600ef
+264ab497d096997e53e8195e6a886fe6fe3600ef,264ab497,fix: Widget margins don't work correctly pre 24,"fix: Widget margins don't work correctly pre 24
+
+On pre API 24, for some reason the margins don't work correctly
+if set at the root level. Using child layouts resolves the issue.
+Seems like a bug.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502697807,1502697807,dbda9097f4aa835f6d1f81fda5851f142ddbc451
+dbda9097f4aa835f6d1f81fda5851f142ddbc451,dbda9097,fix: Widget list divider not showing pre API 24,"fix: Widget list divider not showing pre API 24
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502695329,1502695329,0ea0bda23bc1276d46516c7ffd962edc62833e86
+0ea0bda23bc1276d46516c7ffd962edc62833e86,0ea0bda2,fix: Widget text not visible on pre API 24,"fix: Widget text not visible on pre API 24
+
+For some reason ""?android:attr/textColorPrimary"" returns opposite
+values (e.g. black vs white) depending on the API version. With a
+white background on the widget the pre API 24 devices were showing
+white text which is invisible.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502692619,1502692619,f6a4698da7a153eef3928e286e00e83d6a8d1cb9
+f6a4698da7a153eef3928e286e00e83d6a8d1cb9,f6a4698d,test: Null pointer error causing failing test,"test: Null pointer error causing failing test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502495809,1502495809,9e473658682ed43311b1d273093d1d3cc4dea802
+9e473658682ed43311b1d273093d1d3cc4dea802,9e473658,test: Test can't see menu options on small screen,"test: Test can't see menu options on small screen
+
+When testing on a small 3.5"" display, some of the menu options
+appear in the overflow menu, whereas they're normally shown as icons.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502495365,1502495365,dc15755989212cd0ecef2ea37cd878f77ab79d87
+dc15755989212cd0ecef2ea37cd878f77ab79d87,dc157559,fix: Long headings don't look good on small screens,"fix: Long headings don't look good on small screens
+
+Based on testing with 3.5"" screen.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502438383,1502438383,dac7c35b6a4d43cace96944d4d31942dfb0e448b
+dac7c35b6a4d43cace96944d4d31942dfb0e448b,dac7c35b,chore: Update Kotlin version,"chore: Update Kotlin version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502438243,1502438243,c386205f0d3016df9357f195951f6882c6372e84
+c386205f0d3016df9357f195951f6882c6372e84,c386205f,fix: AdMob keeps refreshing ads after ad is gone,"fix: AdMob keeps refreshing ads after ad is gone
+
+After closing the details activity where the ad is displayed, adMob
+continues to try to refresh the adView which no longer exists.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502196973,1502196973,a9f987931d2b3d805af5d594e3baa71f425d6738
+a9f987931d2b3d805af5d594e3baa71f425d6738,a9f98793,chore: Update app versionCode for release,"chore: Update app versionCode for release
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502177728,1502177728,ed85b990bb60acde1650ac87004b84584bca4039
+ed85b990bb60acde1650ac87004b84584bca4039,ed85b990,chore: Update app version for release,"chore: Update app version for release
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502177250,1502177250,74cb55e210691bbdfa339826c8af481752bfd9df
+74cb55e210691bbdfa339826c8af481752bfd9df,74cb55e2,fix: Can't see items on first open after install,"fix: Can't see items on first open after install
+
+When first installing the app it will ask the user to signin, but it
+won't show any items until it is closed and reopened (it must be
+signed in before opening).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502173216,1502173216,9d6599737cb8a6bee14223d4e44b502bb078816f
+9d6599737cb8a6bee14223d4e44b502bb078816f,9d659973,chore: Update libraries,"chore: Update libraries
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1502083520,1502083520,f44e38fa05a97b67677163a0e70c51e065608126
+f44e38fa05a97b67677163a0e70c51e065608126,f44e38fa,chore: Delete misc.xml from repo,"chore: Delete misc.xml from repo
+
+Don't want to track this file.",,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1501393160,1501393160,182ccca2752462f3d715e89ee87c2f0cbcd330dc
+182ccca2752462f3d715e89ee87c2f0cbcd330dc,182ccca2,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497330656,1497330656,dae2e8242701fa5efc69af4d5c5e7c5aa874bdf2
+dae2e8242701fa5efc69af4d5c5e7c5aa874bdf2,dae2e824,chore: Update library versions,"chore: Update library versions
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497330487,1497330487,5f80466ea227993341acebdbf1d3a3589ed242c8
+5f80466ea227993341acebdbf1d3a3589ed242c8,5f80466e,chore: Add annoying misc file to .gititnore,"chore: Add annoying misc file to .gititnore
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497330459,1497330459,694dfd6d5b84fb553b68ca8ae0f2d8e68ea12231
+694dfd6d5b84fb553b68ca8ae0f2d8e68ea12231,694dfd6d,fix: Travis doesn't run if no emulators,"fix: Travis doesn't run if no emulators
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497059522,1497059522,94ab7463c091b3cfde4380cd45963862f3378c8e
+94ab7463c091b3cfde4380cd45963862f3378c8e,94ab7463,fix: Travis not able to run UI tests properly,"fix: Travis not able to run UI tests properly
+
+Tests that pass locally on on cloud test lab fail on travis. Not sure
+what it is but will run locally for now. Might be too slow and
+generally unpredictable on travis anyway.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497058349,1497058349,240619492d7a2f670bc5c9609382821d69ce3e38
+240619492d7a2f670bc5c9609382821d69ce3e38,24061949,fix: Widget still showing red for almost expired,"fix: Widget still showing red for almost expired
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497057212,1497057212,ec593410be1e92fe59a62f1006bcba795583cca8
+ec593410be1e92fe59a62f1006bcba795583cca8,ec593410,feat: Set items almost expiring to orange,"feat: Set items almost expiring to orange
+
+Instead of using red for items expired and also for almost expired,
+use orange for almost expired items (expiring in the next month).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497056861,1497056861,aa0bac582a845545ad3e12aed110ad0c5ecd8743
+aa0bac582a845545ad3e12aed110ad0c5ecd8743,aa0bac58,test: Try to get Travis to run UI tests 9,"test: Try to get Travis to run UI tests 9
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497056783,1497056783,d75a4ece1704901bbc09022067d3590fcc6235aa
+d75a4ece1704901bbc09022067d3590fcc6235aa,d75a4ece,test: Try to get Travis to run UI tests 8,"test: Try to get Travis to run UI tests 8
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497055380,1497055380,96373597aba5b189a20b5de53f8000909fb8a13d
+96373597aba5b189a20b5de53f8000909fb8a13d,96373597,test: Try to get Travis to run UI tests 7,"test: Try to get Travis to run UI tests 7
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497054091,1497054091,3a4b39ae4f5be7db5440babb439f500ac8d94765
+3a4b39ae4f5be7db5440babb439f500ac8d94765,3a4b39ae,test: Try to get Travis to run UI tests 6,"test: Try to get Travis to run UI tests 6
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497052563,1497052563,1bf8dbb92aeb3fd5227be6af0d66c6f4d95f519d
+1bf8dbb92aeb3fd5227be6af0d66c6f4d95f519d,1bf8dbb9,test: Try to get Travis to run UI tests 5,"test: Try to get Travis to run UI tests 5
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497012799,1497012799,f4be1d8b4513a4304c01493cc9d43d75cc318c81
+f4be1d8b4513a4304c01493cc9d43d75cc318c81,f4be1d8b,test: Try to get Travis to run UI tests 4,"test: Try to get Travis to run UI tests 4
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497012606,1497012606,ac5b20b9ccb00bae5b327b3934c24fd46c06bc14
+ac5b20b9ccb00bae5b327b3934c24fd46c06bc14,ac5b20b9,test: Try to get Travis to run UI tests 3,"test: Try to get Travis to run UI tests 3
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497012506,1497012506,e19d1b4fec4296c11c60821b78adf852d7ecce50
+e19d1b4fec4296c11c60821b78adf852d7ecce50,e19d1b4f,test: Try to get Travis to run UI tests 2,"test: Try to get Travis to run UI tests 2
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497011442,1497011442,7926e1eced279412df40702b9eb05c8a5fec0acc
+7926e1eced279412df40702b9eb05c8a5fec0acc,7926e1ec,test: Try to get Travis to run UI tests,"test: Try to get Travis to run UI tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497011404,1497011404,b29d61bd097f8325a02a64db556c515047e3a08e
+b29d61bd097f8325a02a64db556c515047e3a08e,b29d61bd,test: A connected test had a warning,"test: A connected test had a warning
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497011210,1497011210,242ba373653a16309ad77939365aaf9436b8b8c3
+242ba373653a16309ad77939365aaf9436b8b8c3,242ba373,chore: Set min SDK to 21,"chore: Set min SDK to 21
+
+I've found out that API 19 needs me to create PNG's for all icons
+which I don't want to do right now. Should I have a legitimate
+need to support this version I might consider adding support.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497009315,1497009315,48ddcaebbae64e97ce47e66730b82d6fec9eba6b
+48ddcaebbae64e97ce47e66730b82d6fec9eba6b,48ddcaeb,fix: Travis not working with SDK26,"fix: Travis not working with SDK26
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497007931,1497007931,fc1def642353918c8d23db7dccdc8797f815131d
+fc1def642353918c8d23db7dccdc8797f815131d,fc1def64,chore: Update target and compile SDK to 26,"chore: Update target and compile SDK to 26
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1497007111,1497007111,119041d6321118d253b7d58a33e7b1be2f0a38f6
+119041d6321118d253b7d58a33e7b1be2f0a38f6,119041d6,fix: Sort not working,"fix: Sort not working
+
+I think I may have broke this when removing the sharedPreferences
+loader. Currently there's no test for it :(.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496992895,1496992895,42d44182f586bbacf01f6f15a3f10ce41d96c9ba
+42d44182f586bbacf01f6f15a3f10ce41d96c9ba,42d44182,feat: Use sharedPreferencesHelper for sortBy,"feat: Use sharedPreferencesHelper for sortBy
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496992818,1496992818,d7b0460b391492061d686241ae9ad4016826f0d5
+d7b0460b391492061d686241ae9ad4016826f0d5,d7b0460b,chore: Update Gradle version,"chore: Update Gradle version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496982689,1496982689,a9723109091531c4cecdbe31677faedd21b08f64
+a9723109091531c4cecdbe31677faedd21b08f64,a9723109,style: Remove duplicate closeKeyboard calls,"style: Remove duplicate closeKeyboard calls
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496966106,1496966106,3ff1e8fa0aa1353d0250070737a25a4acfcf5c19
+3ff1e8fa0aa1353d0250070737a25a4acfcf5c19,3ff1e8fa,fix: App can crash when setting show noItems text,"fix: App can crash when setting show noItems text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496895275,1496895275,ce720fa5478f1670ff196b2d54fbec8873b6bff4
+ce720fa5478f1670ff196b2d54fbec8873b6bff4,ce720fa5,test: Update ItemsPresenter tests,"test: Update ItemsPresenter tests
+
+Update the ItemsPresenter tests to reflect changes. During
+development I stopped doing tests as they were taking too long
+and weren't part of the rubric requirements.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496893465,1496893465,c1e40e22428956c7229f70eb1885307181d7e038
+c1e40e22428956c7229f70eb1885307181d7e038,c1e40e22,test: Update ItemDetailsPresenter tests,"test: Update ItemDetailsPresenter tests
+
+Update the ItemDetailsPresenter tests to reflect changes. During
+development I stopped doing tests as they were taking too long
+and weren't part of the rubric requirements.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496891817,1496891817,54a3b30743fb736584a9a6313c8bacf1ecd0abf1
+54a3b30743fb736584a9a6313c8bacf1ecd0abf1,54a3b307,test: Update EditItemPresenter tests,"test: Update EditItemPresenter tests
+
+Update the EditItemPresenter tests to reflect changes. During
+development I stopped doing tests as they were taking too long
+and weren't part of the rubric requirements.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496883619,1496883619,ea23e2d67dfc3ee10a8c38a3915ecd05bacf2beb
+ea23e2d67dfc3ee10a8c38a3915ecd05bacf2beb,ea23e2d6,test: Update repository tests,"test: Update repository tests
+
+Update the repository tests to reflect changes. During development
+I stopped doing tests as they were taking too long and weren't part
+of the rubric requirements.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496883089,1496883089,927d1185602469fd3b87f7a9e8f690b01f9d6097
+927d1185602469fd3b87f7a9e8f690b01f9d6097,927d1185,fix: Item hashCode not set,"fix: Item hashCode not set
+
+In case the items are used in a map, the hashCode would have been
+wrong.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496879357,1496879357,dccde0b70f4fc6646ef2f225512f399e0eb264e2
+dccde0b70f4fc6646ef2f225512f399e0eb264e2,dccde0b7,test: Update ItemDetailsScreenTestP for robot,"test: Update ItemDetailsScreenTestP for robot
+
+Use the robot pattern for the paramaterised ItemDetails UI tests.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496816367,1496816367,26d4ae1eb6a9a5de69a1ba7c5cbd0b278877c05b
+26d4ae1eb6a9a5de69a1ba7c5cbd0b278877c05b,26d4ae1e,test: One test still has visibility issue,"test: One test still has visibility issue
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496813157,1496813157,6af752e3cd290ec563803c618a6e786efbb2244e
+6af752e3cd290ec563803c618a6e786efbb2244e,6af752e3,test: Some tests failing intermittently,"test: Some tests failing intermittently
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496812519,1496812519,770e34a3e90307c391e1586334c8c3b64be109c2
+770e34a3e90307c391e1586334c8c3b64be109c2,770e34a3,test: Not finding title on tablet dialog,"test: Not finding title on tablet dialog
+
+Same test works on phone version.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496811170,1496811170,105284b30e55d556ebb3425e2600cbe7a62e39b6
+105284b30e55d556ebb3425e2600cbe7a62e39b6,105284b3,test: Old test using Auth instead of fake UID,"test: Old test using Auth instead of fake UID
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496810400,1496810400,52dcae7d067d480b61e420c227b219ef1118ca92
+52dcae7d067d480b61e420c227b219ef1118ca92,52dcae7d,refactor: Remove calls to Firebase in code,"refactor: Remove calls to Firebase in code
+
+The uid should only be injected so that a fake one can be passed in.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496807469,1496807469,816a3613753ee2252e1cc4e1e39eb4881f5f76c6
+816a3613753ee2252e1cc4e1e39eb4881f5f76c6,816a3613,test: Use fake auth,"test: Use fake auth
+
+Fake the signin for tests.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496806952,1496806952,26a59e79bb43acd5d92aef3eeb97037b9dd0eddb
+26a59e79bb43acd5d92aef3eeb97037b9dd0eddb,26a59e79,test: Use fake ImageUploadService,"test: Use fake ImageUploadService
+
+Since I need to refer to the class name in the EditItemFragment class
+I've kept the name the same for mock and prod.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496791174,1496791174,e5469130a19f17025d37ccbd75e6e5d17c133b16
+e5469130a19f17025d37ccbd75e6e5d17c133b16,e5469130,test: Update ItemsScreentestP for robot and KT,"test: Update ItemsScreentestP for robot and KT
+
+Update ItemsScreenTestP (paramaterised) to use the robot pattern and
+Kotlin.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496788017,1496788017,9b0f15302b7a6dd0839945a4c923f4be6ef5b3d0
+9b0f15302b7a6dd0839945a4c923f4be6ef5b3d0,9b0f1530,test: Update ItemsScreentest for robot and KT,"test: Update ItemsScreentest for robot and KT
+
+Update ItemsScreenTest to use the robot pattern and Kotlin. Also
+have fixed some of the tests that were failing.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496787136,1496787136,de2f94081cd611611f5f47a89c089b10eeb724c6
+de2f94081cd611611f5f47a89c089b10eeb724c6,de2f9408,fix: App crashes when undoing item deletion,"fix: App crashes when undoing item deletion
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496744518,1496744518,7c296aac03f76786c74a04197bf88796601c1430
+7c296aac03f76786c74a04197bf88796601c1430,7c296aac,test: Add more ItemDetails UI tests,"test: Add more ItemDetails UI tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496720878,1496720878,0acbac773572bb448f378ff910eb02c7704ba7fe
+0acbac773572bb448f378ff910eb02c7704ba7fe,0acbac77,test: ItemDetails tests to robot and KT,"test: ItemDetails tests to robot and KT
+
+Update ItemDetails tests to use the robot pattern and Koltin.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496708786,1496708786,7d07eb9ada9281cafbb981aac40371cb1610a5a4
+7d07eb9ada9281cafbb981aac40371cb1610a5a4,7d07eb9a,test: EditItem paramatised tests to robot and KT,"test: EditItem paramatised tests to robot and KT
+
+Update editItem paramatised tests to use the robot pattern and
+Koltin.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496707277,1496707277,bb70b68b84cc4661577fc2fef8702923e382c800
+bb70b68b84cc4661577fc2fef8702923e382c800,bb70b68b,fix: Nullable value not initialised,"fix: Nullable value not initialised
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496698220,1496698220,6f924c1c941bf1af26349007d60ee8396eb495fa
+6f924c1c941bf1af26349007d60ee8396eb495fa,6f924c1c,test: Check up navigation displayed on EditItem,"test: Check up navigation displayed on EditItem
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496661997,1496661997,4caf9b4a4a4d3230dc44a33599c8830bc975013f
+4caf9b4a4a4d3230dc44a33599c8830bc975013f,4caf9b4a,test: EditItem std UI tests with robot and kt,"test: EditItem std UI tests with robot and kt
+
+Update the non paramatised EditItem UI tests to use the robot pattern
+and Kotlin.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496661629,1496661629,319461feadccb05b59789ac243fc7e5a79980a8b
+319461feadccb05b59789ac243fc7e5a79980a8b,319461fe,test: Use robot pattern for about screen,"test: Use robot pattern for about screen
+
+Also switch to Kotlin for easy to read test.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496012381,1496012381,511d2edd9efe5224945ca46dbb08fcff778ea949
+511d2edd9efe5224945ca46dbb08fcff778ea949,511d2edd,chore: Add Kotlin to project,"chore: Add Kotlin to project
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1496008643,1496008643,84676d020136b46e29b1414f4929e5ab45467502
+84676d020136b46e29b1414f4929e5ab45467502,84676d02,test: Remove image test not working,"test: Remove image test not working
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495841113,1495841113,a0528dcf5a06795a28a34bca5f89f4ca5c87bc9b
+a0528dcf5a06795a28a34bca5f89f4ca5c87bc9b,a0528dcf,test: Test trying to access auth,"test: Test trying to access auth
+
+Test should not access auth stuff.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495839925,1495839925,e041cfd3927c9364319df0f63403f99e0ae1f5af
+e041cfd3927c9364319df0f63403f99e0ae1f5af,e041cfd3,test: Paramatised test not working,"test: Paramatised test not working
+
+Activity not being recreated properly after the first parameter is
+run. I'm not sure if it's something I'm doing or if it's a bug, but
+will leave it until the next version of Espresso. Based on I/O talk
+it looks like maybe this will work better with the next release.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495839174,1495839174,659d6968a2ad4797cf15bf2b032b38bb622a063e
+659d6968a2ad4797cf15bf2b032b38bb622a063e,659d6968,test: AddItem test not working,"test: AddItem test not working
+
+Fake items not getting updated on the UI. This commit was supposed to
+go with the last one.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495838974,1495838974,49605bcd48387e2aad72bfc6f471c40f802b83be
+49605bcd48387e2aad72bfc6f471c40f802b83be,49605bcd,test: AddItem test not working,"test: AddItem test not working
+
+Fake items not getting updated on the UI
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495838893,1495838893,89c605d84fa18ede0a09ca3e26deac2d49e0b408
+89c605d84fa18ede0a09ca3e26deac2d49e0b408,89c605d8,style: Forgot to delete the actual loader class,"style: Forgot to delete the actual loader class
+
+In the previous commit I removed code using this loader.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495771815,1495771815,0994f79348d81c2d63b7e44fba8eb50fb7493594
+0994f79348d81c2d63b7e44fba8eb50fb7493594,0994f793,refactor: Don't use sharedPrefsLoader now,"refactor: Don't use sharedPrefsLoader now
+
+Since the project was passed with the sharedPreferencesLoader I'm no
+longer required to have a loader and so I'm taking it out to make it
+easier to understand (and it's not really helping much anyway).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495771661,1495771661,f73b586ab9d41a2d91085b92f70cc90c37a40d8b
+f73b586ab9d41a2d91085b92f70cc90c37a40d8b,f73b586a,test: Items Test crashes,"test: Items Test crashes
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495758461,1495758461,7090eb6fc3a1c482f557c1a2660682e78013c720
+7090eb6fc3a1c482f557c1a2660682e78013c720,7090eb6f,test: New date format in another test,"test: New date format in another test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495757622,1495757622,d7f7db36c6327a8c525ba5c069d7fb3514e56936
+d7f7db36c6327a8c525ba5c069d7fb3514e56936,d7f7db36,test: Fakedata callbacks not updated for items,"test: Fakedata callbacks not updated for items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495757403,1495757403,8b6123f461bfa8763699bdd6e8815cd7fd79862e
+8b6123f461bfa8763699bdd6e8815cd7fd79862e,8b6123f4,test: Not using new fake uid,"test: Not using new fake uid
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495755150,1495755150,a345457419f6a2476d327564c4441284853d7f4c
+a345457419f6a2476d327564c4441284853d7f4c,a3454574,fix: Idling resource not being decremented,"fix: Idling resource not being decremented
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495754231,1495754231,060d801efb0884bb76a7eb27401b41be58d3dbcf
+060d801efb0884bb76a7eb27401b41be58d3dbcf,060d801e,test: Some more tests still using old date format,"test: Some more tests still using old date format
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495753427,1495753427,98674311c0543243bfbed2821a3073fa3a0432e9
+98674311c0543243bfbed2821a3073fa3a0432e9,98674311,test: Upload not able to use fake file,"test: Upload not able to use fake file
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495752121,1495752121,c72cd2b676c9bc86edf0b5589fdb163bd133901e
+c72cd2b676c9bc86edf0b5589fdb163bd133901e,c72cd2b6,fix: Can't use menu on new item,"fix: Can't use menu on new item
+
+When creating a new item all the menu options are disabled. They work
+when re-opening the same item.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495692096,1495692096,3581a769039b96823f617e6ab20418761c6af837
+3581a769039b96823f617e6ab20418761c6af837,3581a769,test: Dates in test not using new format,"test: Dates in test not using new format
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495692042,1495692042,1cd2246dd6792655c8e76dcc54b681d4882db85d
+1cd2246dd6792655c8e76dcc54b681d4882db85d,1cd2246d,test: Fake datasource not replacing items,"test: Fake datasource not replacing items
+
+Instead of replacing an item it adds it as a new one.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495687058,1495687058,4827287117139b2c72e4629f3fd04b23217afe97
+4827287117139b2c72e4629f3fd04b23217afe97,48272871,test: Use fake uid for editItem tests,"test: Use fake uid for editItem tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495672981,1495672981,87561a432760eb5eced38b71acca564202572889
+87561a432760eb5eced38b71acca564202572889,87561a43,refactor: Remove UI auth tests,"refactor: Remove UI auth tests
+
+Now that auth is decoupled from the items module the tests don't
+work. There doesn't seem to be an easy way to write these tests,
+especially with smartlock involved. Will move this to manual testing.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495669117,1495669117,5e86072577741457645838bb1b1cd14acce9b7c9
+5e86072577741457645838bb1b1cd14acce9b7c9,5e860725,style: Remove unused XML names spaces,"style: Remove unused XML names spaces
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495596366,1495596366,8df041f196e19ff4b569c6e9edfd4c3a88708e72
+8df041f196e19ff4b569c6e9edfd4c3a88708e72,8df041f1,chore: Update auth and firebase versions,"chore: Update auth and firebase versions
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495586730,1495586730,54dffef09c0635e8f1f52b430aeefafbb0e9f6fd
+54dffef09c0635e8f1f52b430aeefafbb0e9f6fd,54dffef0,fix: Resolve lint errors,"fix: Resolve lint errors
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495586240,1495586240,146068c0e64cb26adc5edf19047888de77946e20
+146068c0e64cb26adc5edf19047888de77946e20,146068c0,refactor: Use foreground service for uploading,"refactor: Use foreground service for uploading
+
+For uploading or removing images, use a foreground service so it
+doesn't get killed in Android O.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495583868,1495583868,73c845f531e278084ec475d46ca5dfc17a7c3d3d
+73c845f531e278084ec475d46ca5dfc17a7c3d3d,73c845f5,test: Auth test broken after last change,"test: Auth test broken after last change
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495579865,1495579865,7dd7d48b55510c536996a3d6138019902c6de338
+7dd7d48b55510c536996a3d6138019902c6de338,7dd7d48b,refactor: Decouple auth from items module,"refactor: Decouple auth from items module
+
+Auth always loads items, but in the future that may not be desirable
+as another module may be loaded first and might need to call the
+auth module.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495577888,1495577888,164eb9f8489f2683a1ea7b3fe8ec41b2c6ba353d
+164eb9f8489f2683a1ea7b3fe8ec41b2c6ba353d,164eb9f8,test: Update about test,"test: Update about test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495513077,1495513077,ff4fe291055d12ac0076b3d449d452e468b91cb7
+ff4fe291055d12ac0076b3d449d452e468b91cb7,ff4fe291,fix: Travis using incorrect build tools version,"fix: Travis using incorrect build tools version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495408182,1495408182,ddae3dd87e59e1654b81308f1d4a7c7a3c7daed5
+ddae3dd87e59e1654b81308f1d4a7c7a3c7daed5,ddae3dd8,chore: Add roboElectric library,"chore: Add roboElectric library
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495407466,1495407466,d105c1a1541255c56d18b9eba7b37f54f5f06e25
+d105c1a1541255c56d18b9eba7b37f54f5f06e25,d105c1a1,chore: Update build tools version,"chore: Update build tools version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495406472,1495406472,f86409821ea6061bc37eadad76d58290d6315d48
+f86409821ea6061bc37eadad76d58290d6315d48,f8640982,chore: Update Gradle version,"chore: Update Gradle version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1495058147,1495058147,1e0d2dbeca2ff259ee1ccf47d5e5ab2ca01abee8
+1e0d2dbeca2ff259ee1ccf47d5e5ab2ca01abee8,1e0d2dbe,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1494958611,1494958611,8a6ef5ec6aa06a85e7aeba29b68998b5cf05b145
+8a6ef5ec6aa06a85e7aeba29b68998b5cf05b145,8a6ef5ec,fix: App crashes if pressing option before loaded,"fix: App crashes if pressing option before loaded
+
+When on the EditItemFragment screen and the user presses a menu
+option before the item has loaded the app will crash.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1494958054,1494958054,c58418816c240a6751e96f9b0af60266914a5be9
+c58418816c240a6751e96f9b0af60266914a5be9,c5841881,fix: App crashes if pressing edit before loaded,"fix: App crashes if pressing edit before loaded
+
+When on the ItemDetailsFragment screen and the user presses the edit
+menu option before the item has loaded the app will crash.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1494957723,1494957723,ddcd501c0a3e397a29f8a7138316be0f611e9a03
+ddcd501c0a3e397a29f8a7138316be0f611e9a03,ddcd501c,fix: App crashes if fragment not attached,"fix: App crashes if fragment not attached
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1494951333,1494951333,b50d346fae6363c9ec24b67b828aa97b950c1653
+b50d346fae6363c9ec24b67b828aa97b950c1653,b50d346f,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493792853,1493792853,fced1300350012bdbd1937026bff90cc4d670919
+fced1300350012bdbd1937026bff90cc4d670919,fced1300,fix: Search not working,"fix: Search not working
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493792707,1493792707,52cd65708a403e72404e40f879080b8586c2b5d5
+52cd65708a403e72404e40f879080b8586c2b5d5,52cd6570,docs: Update readme,docs: Update readme,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1493730799,1493730799,1feb57ad4ff92214670287a3d354b91f12553e77
+1feb57ad4ff92214670287a3d354b91f12553e77,1feb57ad,docs: Update phone details screenshot,docs: Update phone details screenshot,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1493730292,1493730292,f0345abfdbdc94111ff0334c072fdb0581d60cab
+f0345abfdbdc94111ff0334c072fdb0581d60cab,f0345abf,chore: Update app version.,"chore: Update app version.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493729931,1493729931,8d6775cc4e7354de87be9e0ccdb0c9b6d843e103
+8d6775cc4e7354de87be9e0ccdb0c9b6d843e103,8d6775cc,fix: Can't see the bottom of the y character,"fix: Can't see the bottom of the y character
+
+In the phone list, can't see the bottom of the y character for the
+colour grey. It's cut off.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493729316,1493729316,1516827b7036b0db63e1b8b285dec7079f7eceba
+1516827b7036b0db63e1b8b285dec7079f7eceba,1516827b,fix: Added item not in correct spot initially,"fix: Added item not in correct spot initially
+
+When adding an item it doesn't show in the correct spot until config
+change or other reload.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493728904,1493728904,a05a87ed57dbbe3df3c5a2c894a5e431a31f4521
+a05a87ed57dbbe3df3c5a2c894a5e431a31f4521,a05a87ed,fix: Loads items twice on phone after delete,"fix: Loads items twice on phone after delete
+
+If deleting an item via a phone then the list shows each item twice.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493725560,1493725560,91c17c7cdb0254eba6f8630c0c99b5b74e655ddc
+91c17c7cdb0254eba6f8630c0c99b5b74e655ddc,91c17c7c,chore: Update build version,"chore: Update build version
+
+Forgot to use live ads on play store version. Need new version for
+each upload.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493632021,1493632021,79789c19373564baf9a1457114cefeeba15d7d86
+79789c19373564baf9a1457114cefeeba15d7d86,79789c19,fix: Mock method not implemented,"fix: Mock method not implemented
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493630346,1493630346,c5b788f9e1b58fd9c11d475018fd0f89ea056f10
+c5b788f9e1b58fd9c11d475018fd0f89ea056f10,c5b788f9,fix: About version incorrect,"fix: About version incorrect
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493629967,1493629967,ce3346ce510c442036690325bb20746ffd688c75
+ce3346ce510c442036690325bb20746ffd688c75,ce3346ce,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493629828,1493629828,321ade9577e5b7571ac82a3712a36a43809bccd1
+321ade9577e5b7571ac82a3712a36a43809bccd1,321ade95,chore: Restore keystore settings after passing,"chore: Restore keystore settings after passing
+
+Now that capstone is passed, don't need temp udacity keystore.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493629453,1493629453,5c07725f1e07fb9d07b4ede61f364fd8d4097dc2
+5c07725f1e07fb9d07b4ede61f364fd8d4097dc2,5c07725f,chore: Update gitignore to allow Udacity keystore,"chore: Update gitignore to allow Udacity keystore
+
+Keystore didn't upload previously, only the keys for it.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493616441,1493616441,57560b28b3710b3af69c26c103f5f24b375380f9
+57560b28b3710b3af69c26c103f5f24b375380f9,57560b28,fix: App keeps showing loading if no items,"fix: App keeps showing loading if no items
+
+If the user doesn't have any items the app keeps showing progress bar
+indefinitely until they add an item.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493616154,1493616154,0aab71fe748fe7cce21fdca560246259f8f9989b
+0aab71fe748fe7cce21fdca560246259f8f9989b,0aab71fe,chore: Add Udacity keystore for submission,"chore: Add Udacity keystore for submission
+
+Uses a test firebase project.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493610253,1493610253,5d7348b5abca5403a4b91c73d81fb3ca3dc537c5
+5d7348b5abca5403a4b91c73d81fb3ca3dc537c5,5d7348b5,fix: App version wrong.,"fix: App version wrong.
+
+Have moved the version back to 1.0 but forgot to update in about
+page.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493558969,1493558969,04f7cfbbdd14e508bb715ddf648a12106b9e3980
+04f7cfbbdd14e508bb715ddf648a12106b9e3980,04f7cfbb,Merge branch 'master' of github.com:mvescovo/item-reaper,"Merge branch 'master' of github.com:mvescovo/item-reaper
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493558282,1493558282,"6b4a57916325d2c70886c73f351e1db6bbf4f8c3,55a9f84843b4199d5fc976675648d998e7fbd1d7"
+6b4a57916325d2c70886c73f351e1db6bbf4f8c3,6b4a5791,fix: No content description on add item FAB,"fix: No content description on add item FAB
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493558253,1493558253,6a32b3ea30ddb55cc1e53574988bc3311ff2838c
+55a9f84843b4199d5fc976675648d998e7fbd1d7,55a9f848,docs: Update readme,"docs: Update readme
+
+Fix dimensions on new 7"" tablet images.",,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1493535013,1493535013,eaa9691d3ceea988527e291bae5552998dce54fa
+eaa9691d3ceea988527e291bae5552998dce54fa,eaa9691d,docs: Update readme,docs: Update readme,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1493534671,1493534671,6a32b3ea30ddb55cc1e53574988bc3311ff2838c
+6a32b3ea30ddb55cc1e53574988bc3311ff2838c,6a32b3ea,docs: Add project 7 pdf,"docs: Add project 7 pdf
+
+For Udacity reviewer.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493532814,1493532814,22a730a3ccd0fa61807be6653abb4e61ef772897
+22a730a3ccd0fa61807be6653abb4e61ef772897,22a730a3,fix: Widget expiry unknown sometimes red,"fix: Widget expiry unknown sometimes red
+
+Unknown question mark should always be black.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493531848,1493531848,e28729011ac9ded29e5a17b0e2c048df390ac70a
+e28729011ac9ded29e5a17b0e2c048df390ac70a,e2872901,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493531263,1493531263,09c7a8a063688a3b6d7d476fc3238a56d8ab3cdc
+09c7a8a063688a3b6d7d476fc3238a56d8ab3cdc,09c7a8a0,fix: Sort doesn't work during search,"fix: Sort doesn't work during search
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493529576,1493529576,de3d9862185aaba8792ec3c7029317a0105c921b
+de3d9862185aaba8792ec3c7029317a0105c921b,de3d9862,fix: Search stops after opening dialogs,"fix: Search stops after opening dialogs
+
+When opening dialogs such as item details, edit item, or the about
+page on the tablet version, the items search stops working after the
+dialog is closed.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493528470,1493528470,7ead51edbcf4b18b70bb067c30679e867404fd3b
+7ead51edbcf4b18b70bb067c30679e867404fd3b,7ead51ed,fix: EditItem not close if remote delete,"fix: EditItem not close if remote delete
+
+If deleting an item while the same item is in edit mode on another
+device, the other device doesn't show the item as deleted but also
+it won't save it and the user won't know.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493359250,1493359250,614bdcb9da202c76a7aae43962040424687d4978
+614bdcb9da202c76a7aae43962040424687d4978,614bdcb9,fix: need to press back twice to exit,"fix: need to press back twice to exit
+
+On first open of the app, it's required to press back twice from
+the items screen to exit the app.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493341422,1493341422,1f4c4371c0d7de01ab26ecd4cf5f291f7f30f4f8
+1f4c4371c0d7de01ab26ecd4cf5f291f7f30f4f8,1f4c4371,fix: Search doesn't clear items properly,"fix: Search doesn't clear items properly
+
+If searching for an item and then clicking to close the search box
+it still shows the searched item in the normal list, and as a
+consequence does not show the item that should be at the same
+index position since there's already something there.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493339029,1493339029,3d417c5c81411c559713b0690fe155a73999ba30
+3d417c5c81411c559713b0690fe155a73999ba30,3d417c5c,fix: Widget doesn't prompt to signin,"fix: Widget doesn't prompt to signin
+
+If the widget is created when not signed in it doesn't prompt
+the use to sign in.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493336653,1493336653,023cf53a0d7c82427f7302839517b7bd344092d6
+023cf53a0d7c82427f7302839517b7bd344092d6,023cf53a,fix: Widget doesn't update if created before sign,"fix: Widget doesn't update if created before sign
+
+If the widget was created before signing in, then it will never
+update.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493335401,1493335401,1f4a0019f5e41e46d61b90c206769427d8a3e10b
+1f4a0019f5e41e46d61b90c206769427d8a3e10b,1f4a0019,fix: Crash if loading from widget not signed in,"fix: Crash if loading from widget not signed in
+
+If the user tries to open the app from the widget while not signed in
+the app will crash.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493335056,1493335056,5f60ac02768203a5ec68201dd98c1e0c527f97be
+5f60ac02768203a5ec68201dd98c1e0c527f97be,5f60ac02,fix: Sometimes no expiry is red,"fix: Sometimes no expiry is red
+
+When there is no expiry it shows as a question mark which is
+sometimes red when it should only ever be set to the primary text
+colour.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493285607,1493285607,5861dee36b425ba842563f2ff20eb0eb821cff4f
+5861dee36b425ba842563f2ff20eb0eb821cff4f,5861dee3,fix: Currency crashes with number larger than int,"fix: Currency crashes with number larger than int
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493285070,1493285070,c5358dea1412da7d6dc966b0b782f59abcaebf4f
+c5358dea1412da7d6dc966b0b782f59abcaebf4f,c5358dea,fix: Doesn't set empty on other device,"fix: Doesn't set empty on other device
+
+If setting a field to empty and the editor of the same item is open
+on another device, the other device won't be set to empty.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493272534,1493272534,ef2e402da6caa13aca99b47af15855c40b95473e
+ef2e402da6caa13aca99b47af15855c40b95473e,ef2e402d,docs: Add screenshots to readme,docs: Add screenshots to readme,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1493258475,1493258475,d8e99aa215d4715eaebc82ececbc915e411bb746
+d8e99aa215d4715eaebc82ececbc915e411bb746,d8e99aa2,docs: Update readme,"docs: Update readme
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493256947,1493256947,92dd87e1cafd1d89c5cbee230d0770bb6d0d6c5a
+92dd87e1cafd1d89c5cbee230d0770bb6d0d6c5a,92dd87e1,refactor: Stop search before starting new one,"refactor: Stop search before starting new one
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493201394,1493201394,f823810f191b0828f2cd0120d73d5f170e904492
+f823810f191b0828f2cd0120d73d5f170e904492,f823810f,fix: Done icon not showing white,"fix: Done icon not showing white
+
+The done icon should appear white but instead is showing in dark
+mode.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493201135,1493201135,4bdcbc8f37a58010bac7aa2ad38de59a3c6e3145
+4bdcbc8f37a58010bac7aa2ad38de59a3c6e3145,4bdcbc8f,fix: Add icon not showing white,"fix: Add icon not showing white
+
+The add icon should appear white but instead is showing in dark
+mode.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493199653,1493199653,3fcae551da7d2f5142e3e00c799c4ef1065c99d8
+3fcae551da7d2f5142e3e00c799c4ef1065c99d8,3fcae551,fix: Close icon not showing white,"fix: Close icon not showing white
+
+The close icon should appear white but instead is showing in dark
+mode.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493198183,1493198183,43b3f3ea8561ddc01f07fec768666d52cdc90a31
+43b3f3ea8561ddc01f07fec768666d52cdc90a31,43b3f3ea,refactor: Use ?attr/colorControlNormal for vector,"refactor: Use ?attr/colorControlNormal for vector
+
+For vector drawables use ?attr/colorControlNormal and don't use
+the colour name in the file name.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493190007,1493190007,0ecba37bb4960fd09b799c2ff9197fcb26cd3e9f
+0ecba37bb4960fd09b799c2ff9197fcb26cd3e9f,0ecba37b,feat: Update about with version number,"feat: Update about with version number
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493013333,1493013333,a8c5f0dd7375a6891002c117c74ee8c02c106ef8
+a8c5f0dd7375a6891002c117c74ee8c02c106ef8,a8c5f0dd,fix: Ad in the way of snackbar,"fix: Ad in the way of snackbar
+
+When expiring an item on the itemDetails screen the adMob add is
+directly behind the snackbar making it hard to read and probably
+violating usage policies.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493012737,1493012737,90bff3fae081bdf65e5b4c10d407b5b6a3f3fba9
+90bff3fae081bdf65e5b4c10d407b5b6a3f3fba9,90bff3fa,test: Test failing after changes,"test: Test failing after changes
+
+Just commenting out for now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493012270,1493012270,621721d62e8ebe23170759dffce5a98b1384021a
+621721d62e8ebe23170759dffce5a98b1384021a,621721d6,refactor: Don't save useId,"refactor: Don't save useId
+
+When I first created the app I didn't know there was a FirebaseUser
+object that I could get from anywhere.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493011196,1493011196,486aaf6ca7179b014c54755ba34d36322dc69fe8
+486aaf6ca7179b014c54755ba34d36322dc69fe8,486aaf6c,fix: Mock file broken after changes,"fix: Mock file broken after changes
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493006723,1493006723,dda4f492a9cbb20290d32173fa01a49e2aea2160
+dda4f492a9cbb20290d32173fa01a49e2aea2160,dda4f492,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493006363,1493006363,8e69fb918317ca1ac7d38ed74daaaf671f3ba3df
+8e69fb918317ca1ac7d38ed74daaaf671f3ba3df,8e69fb91,feat: Log sorting events,"feat: Log sorting events
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493006253,1493006253,8c160f0b80c9ed339b391e7f08c0c1f28ea44bcd
+8c160f0b80c9ed339b391e7f08c0c1f28ea44bcd,8c160f0b,feat: Sort items,"feat: Sort items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1493005882,1493005882,b228b741b6d0105a13589239943210015fe27e99
+b228b741b6d0105a13589239943210015fe27e99,b228b741,feat: Don't have ok button on sort,"feat: Don't have ok button on sort
+
+It's an extra click for no reason.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492995867,1492995867,5e26a0bee832bbd034c1516318e05e08dfe659f6
+5e26a0bee832bbd034c1516318e05e08dfe659f6,5e26a0be,feat: Save and restore sort option,"feat: Save and restore sort option
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492922348,1492922348,16fa458c8c4019534766f2fca45780c272027ac6
+16fa458c8c4019534766f2fca45780c272027ac6,16fa458c,feat: Add sort menu option,"feat: Add sort menu option
+
+Actual sorting not yet implemented.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492920420,1492920420,b7344ca0ffc65b7196cdd205bc9125a251e4eb70
+b7344ca0ffc65b7196cdd205bc9125a251e4eb70,b7344ca0,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492878646,1492878646,a97c1702e44bf346db85671bb356ac988ae86cd6
+a97c1702e44bf346db85671bb356ac988ae86cd6,a97c1702,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492878485,1492878485,8164b079079141780205da2e769402df7a924382
+8164b079079141780205da2e769402df7a924382,8164b079,fix: Item doesn't move properly when updated,"fix: Item doesn't move properly when updated
+
+On the current device only, when an item changes position in the list
+because it's order-by field changed it is not updated in the view.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492878287,1492878287,904d95d1f152f8aa7462f3e830dca884e505741b
+904d95d1f152f8aa7462f3e830dca884e505741b,904d95d1,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492876112,1492876112,1315300fcd8c4efd2a5fdf491e5a011224512eec
+1315300fcd8c4efd2a5fdf491e5a011224512eec,1315300f,fix: App crashes when starting if already open,"fix: App crashes when starting if already open
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492875050,1492875050,a0b8df4cd4116cdd64ba0a60d7a774db2b346259
+a0b8df4cd4116cdd64ba0a60d7a774db2b346259,a0b8df4c,refactor: Update app for new database version,"refactor: Update app for new database version
+
+A lot of changes since the app no longer first gets itemId's. Have
+commented out some tests for the time being since a lot needs to be
+fixed in the mock side of things.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492871352,1492871352,02d1c7c8e6c7963cf50a8699c6dd45c87355126d
+02d1c7c8e6c7963cf50a8699c6dd45c87355126d,02d1c7c8,fix: Log deleted item sometimes null,"fix: Log deleted item sometimes null
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492707434,1492707434,454b8c1b402ae2240985e95cadad69f96f234388
+454b8c1b402ae2240985e95cadad69f96f234388,454b8c1b,refactor: Get items using new DB version,"refactor: Get items using new DB version
+
+Items are now stored differently in the database.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492700456,1492700456,287f186d59a8d1685bdfb859311ea0cc4fd8bb6d
+287f186d59a8d1685bdfb859311ea0cc4fd8bb6d,287f186d,chore: Update app version,"chore: Update app version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492539598,1492539598,e720a019f708b61d76de4a49fc5615dc6afd0812
+e720a019f708b61d76de4a49fc5615dc6afd0812,e720a019,feat: Add log event undoDeleteItem,"feat: Add log event undoDeleteItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492537668,1492537668,1c88846592132701a9fb3073287ee4c04f66cbe6
+1c88846592132701a9fb3073287ee4c04f66cbe6,1c888465,feat: Add log event deleteItem,"feat: Add log event deleteItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492537512,1492537512,8addb1cfc8c47d241e9c502e894d613dabc2c78c
+8addb1cfc8c47d241e9c502e894d613dabc2c78c,8addb1cf,feat: Add log event removeItemImage,"feat: Add log event removeItemImage
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492537358,1492537358,54e5ce7a7679ecbaf597f0371eaf1a080cdc6af3
+54e5ce7a7679ecbaf597f0371eaf1a080cdc6af3,54e5ce7a,feat: Add log event selectItemImage,"feat: Add log event selectItemImage
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492536933,1492536933,374e98de445f6f7b911ff027eb90ecddedc98216
+374e98de445f6f7b911ff027eb90ecddedc98216,374e98de,feat: Add log event takeItemPhoto,"feat: Add log event takeItemPhoto
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492536810,1492536810,32d0cc6aa103fb66592a80905bb7bc74dd00dbba
+32d0cc6aa103fb66592a80905bb7bc74dd00dbba,32d0cc6a,feat: Add log event editItem,"feat: Add log event editItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492536374,1492536374,7bc5f9195a74f24630ddad3dd4fdfc513ed6c77f
+7bc5f9195a74f24630ddad3dd4fdfc513ed6c77f,7bc5f919,feat: Add log event undoExpireItem,"feat: Add log event undoExpireItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492536159,1492536159,855d6928ae8a0dfa6aafe272eb6eb9641fa677a0
+855d6928ae8a0dfa6aafe272eb6eb9641fa677a0,855d6928,feat: Add log event expireItem,"feat: Add log event expireItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492535363,1492535363,5b0f82f9cf8641b449a11f55edfe7e5ee49bc28f
+5b0f82f9cf8641b449a11f55edfe7e5ee49bc28f,5b0f82f9,feat: Add log event addItem,"feat: Add log event addItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492535171,1492535171,a407b069af07af3fe9bfcb0dc53928976deacabf
+a407b069af07af3fe9bfcb0dc53928976deacabf,a407b069,feat: Add log event undoExpireListItem,"feat: Add log event undoExpireListItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492534964,1492534964,e981c5bc8a8592439b1972ea086aef7aee8e02d3
+e981c5bc8a8592439b1972ea086aef7aee8e02d3,e981c5bc,feat: Add log event expireListItem,"feat: Add log event expireListItem
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492534134,1492534134,b162cc94d874d25e41356e0fcf1ab47a11e3397b
+b162cc94d874d25e41356e0fcf1ab47a11e3397b,b162cc94,feat: Add log event viewSearchResults,"feat: Add log event viewSearchResults
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492533759,1492533759,14076f5a08632f46b9973a7fde6be6c2c8252ee3
+14076f5a08632f46b9973a7fde6be6c2c8252ee3,14076f5a,feat: Add log event viewReaperSoundAttribution,"feat: Add log event viewReaperSoundAttribution
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492533009,1492533009,4b5c67e874ee07a55a7b196e8aca9b76ff829e66
+4b5c67e874ee07a55a7b196e8aca9b76ff829e66,4b5c67e8,feat: Add log event viewReaperAttribution,"feat: Add log event viewReaperAttribution
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492532782,1492532782,950a34ebb7f9ba1fa04b0f2d5ead99618fdbc50d
+950a34ebb7f9ba1fa04b0f2d5ead99618fdbc50d,950a34eb,feat: Add log event viewPrivacyPolicy,"feat: Add log event viewPrivacyPolicy
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492532508,1492532508,b05e044e73ee1d8594b0ae229f717a278bf78b98
+b05e044e73ee1d8594b0ae229f717a278bf78b98,b05e044e,feat: Add log event viewAboutPage,"feat: Add log event viewAboutPage
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492528835,1492528835,b328827c93e0e36cfa9ec6f1db4511df12a328e5
+b328827c93e0e36cfa9ec6f1db4511df12a328e5,b328827c,feat: Add log event viewItemList,"feat: Add log event viewItemList
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492528369,1492528369,1bbaa02823d4dd8ee6694855820c6a51d71f9797
+1bbaa02823d4dd8ee6694855820c6a51d71f9797,1bbaa028,feat: Add log event logout,"feat: Add log event logout
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492527960,1492527960,753f9f42779def74deedcc323a68ed1c786b1d19
+753f9f42779def74deedcc323a68ed1c786b1d19,753f9f42,docs: Update privacy policy,docs: Update privacy policy,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1492523228,1492523228,b0ea1b6ba69494405f5e2ae7bb57c2cce5efd2f6
+b0ea1b6ba69494405f5e2ae7bb57c2cce5efd2f6,b0ea1b6b,chore: Add Firebase crash reporting library,"chore: Add Firebase crash reporting library
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492521900,1492521900,7e7705e1bc1f04ef63fea884cedbf977d342be5b
+7e7705e1bc1f04ef63fea884cedbf977d342be5b,7e7705e1,feat: Add log event view_item,"feat: Add log event view_item
+
+For Firebase analytics.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492504746,1492504746,cd47d7c2c8cf3e56b7e715e5b1b9aac8f5a7a2d0
+cd47d7c2c8cf3e56b7e715e5b1b9aac8f5a7a2d0,cd47d7c2,chore: Add Firebase analytics library,"chore: Add Firebase analytics library
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492498003,1492498003,af793687a8f51d66dc7c5707553e670cacae66e2
+af793687a8f51d66dc7c5707553e670cacae66e2,af793687,chore: Update app version,"chore: Update app version
+
+New play store version now has ads.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492345682,1492345682,19dcaa253c8d8d3273fb4c5cafabd2b08574f513
+19dcaa253c8d8d3273fb4c5cafabd2b08574f513,19dcaa25,feat: Ad test ad to item details,"feat: Ad test ad to item details
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492344617,1492344617,409f84db661c13362bdbee980324a7001459c2ab
+409f84db661c13362bdbee980324a7001459c2ab,409f84db,chore: Update manifest to support AdMob,"chore: Update manifest to support AdMob
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492078640,1492078640,4edf6b9e8dc0ca5303561be96e24bc2bda076418
+4edf6b9e8dc0ca5303561be96e24bc2bda076418,4edf6b9e,chore: Add adMob library,"chore: Add adMob library
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492068141,1492068141,5f7e0f77e9abbb673334f053796cde7bcd605b70
+5f7e0f77e9abbb673334f053796cde7bcd605b70,5f7e0f77,fix: Image not looking right in portrait tablet,"fix: Image not looking right in portrait tablet
+
+Not enough columns.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492013591,1492013591,9bcbc89a12f191a9f3e4f98633c8ecb5c30e93c0
+9bcbc89a12f191a9f3e4f98633c8ecb5c30e93c0,9bcbc89a,chore: Update build version,"chore: Update build version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492012726,1492012726,b0c86043934c23bc2924484f78786b882c630fe0
+b0c86043934c23bc2924484f78786b882c630fe0,b0c86043,fix: Can't see image correctly in 10 inch tablet,"fix: Can't see image correctly in 10 inch tablet
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492012693,1492012693,d90ecb23bfd1862b6589a24a30f74b56ac6f00d6
+d90ecb23bfd1862b6589a24a30f74b56ac6f00d6,d90ecb23,chore: Update version,"chore: Update version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492012016,1492012016,be7874f3c0c078fc0d9337ed60abb33c9f77d2a6
+be7874f3c0c078fc0d9337ed60abb33c9f77d2a6,be7874f3,style: Remove redundant helper methods,"style: Remove redundant helper methods
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492008835,1492008835,f82464c28fc3a7493b2f2e776f03a7a2663e7320
+f82464c28fc3a7493b2f2e776f03a7a2663e7320,f82464c2,fix: Widget can't display long date,"fix: Widget can't display long date
+
+When the widget is at it's smallest width and the month is december
+it can't fit it in. However there seems to be a bug such that the
+default isn't detected correct (in my case) and puts a dot at the
+end.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492008794,1492008794,86f41538e2f30be1820d80a16a2fa9b84a2c4bc1
+86f41538e2f30be1820d80a16a2fa9b84a2c4bc1,86f41538,feat: Update widget preview,"feat: Update widget preview
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492007784,1492007784,5a54d929a2bfd729c47297fe4b50542492965e1a
+5a54d929a2bfd729c47297fe4b50542492965e1a,5a54d929,fix: Widget shows expired items,"fix: Widget shows expired items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492007054,1492007054,0f90fd43ce77ed7cc8a3586225a5d86734529e91
+0f90fd43ce77ed7cc8a3586225a5d86734529e91,0f90fd43,feat: Adjust widget margins,"feat: Adjust widget margins
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492006074,1492006074,d17de40a4b82ece9962ebe70fe36223c05f09d42
+d17de40a4b82ece9962ebe70fe36223c05f09d42,d17de40a,fix: Expiry sometimes red when it's unknown,"fix: Expiry sometimes red when it's unknown
+
+When expiry unknown should be black.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492004887,1492004887,80a9809c47a52354cd7877be1ed15e5c3d6d3539
+80a9809c47a52354cd7877be1ed15e5c3d6d3539,80a9809c,fix: Add item from widget not opening in dialog,"fix: Add item from widget not opening in dialog
+
+In tablet mode the add item button doesn't open in a dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1492003813,1492003813,4bdb39b7e5f58fc1be1843de137fc95a528f06e4
+4bdb39b7e5f58fc1be1843de137fc95a528f06e4,4bdb39b7,fix: multiple item dialogs via widget on rotation,"fix: multiple item dialogs via widget on rotation
+
+When opening an item from a widget and rotating the device or opening
+again from recents the item opens an additional dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491994410,1491994410,79a4f8143f72e41838fee6e59822e78f823018f7
+79a4f8143f72e41838fee6e59822e78f823018f7,79a4f814,fix: Item now showing in tablet mode from widget,"fix: Item now showing in tablet mode from widget
+
+When opening an item from the widget it doesn't show as a dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491990773,1491990773,249828ca2ae8c37002f33054d1dd67b04fcc1efa
+249828ca2ae8c37002f33054d1dd67b04fcc1efa,249828ca,fix: Back not intuitive if opening item in widget,"fix: Back not intuitive if opening item in widget
+
+Back button on first open of app after install requires two presses
+to get out of app. After that it doesn't even go to the main list and
+just exits back to widget. Not consistent or expected.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491986959,1491986959,43ac4144790a4c240701bc2bae35d559bc4763f2
+43ac4144790a4c240701bc2bae35d559bc4763f2,43ac4144,feat: Be able to add an item from widget,"feat: Be able to add an item from widget
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491982083,1491982083,85c8212183583d7d31b38ed5f19537cc90f09406
+85c8212183583d7d31b38ed5f19537cc90f09406,85c82121,docs: Add comment to explain refresh,"docs: Add comment to explain refresh
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491911975,1491911975,b91a90408a6590fca7a9005b1d7e2ae14f1f590e
+b91a90408a6590fca7a9005b1d7e2ae14f1f590e,b91a9040,fix: Widget doesn't modify items,"fix: Widget doesn't modify items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491909584,1491909584,30b0c27ab2011b20cc6742388bb0ed2dc610aa25
+30b0c27ab2011b20cc6742388bb0ed2dc610aa25,30b0c27a,fix: App crashes deleting firebase image if local,"fix: App crashes deleting firebase image if local
+
+If the image is local it can't delete the firebase version since it
+doesn't exist.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491563968,1491563968,98667f17328031e58f2c7ba1c3c99714a2c69fc1
+98667f17328031e58f2c7ba1c3c99714a2c69fc1,98667f17,test: Test not updated with correct case,"test: Test not updated with correct case
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491534641,1491534641,37adcdb72b32749e953ac5a5e89f7fc1702cb4c8
+37adcdb72b32749e953ac5a5e89f7fc1702cb4c8,37adcdb7,feat: Add basic widget,"feat: Add basic widget
+
+Update not yet working.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491479708,1491479708,85a7b16051ef8e06084c550e24cfb22a3389ec43
+85a7b16051ef8e06084c550e24cfb22a3389ec43,85a7b160,refactor: Caller should catch exception,"refactor: Caller should catch exception
+
+For these new to and from byte array methods, I think it's better
+with the code from the linked source where the caller handles the
+exception.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491473188,1491473188,e01c1a71c3a4edbd1d6900de9643da76be54325c
+e01c1a71c3a4edbd1d6900de9643da76be54325c,e01c1a71,feat: Add to and from byte[] helper methods,"feat: Add to and from byte[] helper methods
+
+For some reason the system won't let me pass a serializable or
+parcelable in an intent to a widget list service.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491472699,1491472699,d91c512c1f84c9835ea4520e8debe08c825d7d3a
+d91c512c1f84c9835ea4520e8debe08c825d7d3a,d91c512c,fix: Travis failing,"fix: Travis failing
+
+Forgot to also commit other files in the last commit (didn't notice
+them amongst all the other changed files).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491445016,1491445016,792f5578f39c0e85c3316602bc713a0002c7382e
+792f5578f39c0e85c3316602bc713a0002c7382e,792f5578,fix: Some fields don't have correct case,"fix: Some fields don't have correct case
+
+There was an error in the logs telling of this. Error gone as of this fix.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491442986,1491442986,87f347a0c94d5d02c98f53c5c3bc24573620ca2a
+87f347a0c94d5d02c98f53c5c3bc24573620ca2a,87f347a0,chore: Update gradle,"chore: Update gradle
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491356464,1491356464,0059b3b1aac082ae8028dca80621421098f24085
+0059b3b1aac082ae8028dca80621421098f24085,0059b3b1,test: Test failing,"test: Test failing
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491221397,1491221397,a82a2629bb53a7c11373d3bdb67cce563f1bb020
+a82a2629bb53a7c11373d3bdb67cce563f1bb020,a82a2629,chore: Update version,"chore: Update version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491220527,1491220527,85bcd10183a19ffd367b1efdee0e6cdd97d3003e
+85bcd10183a19ffd367b1efdee0e6cdd97d3003e,85bcd101,fix: Search not working in prod,"fix: Search not working in prod
+
+In debug the items come back so fast it appeared to be working.
+However since it can take some time to get the items via firebase the
+search can finish before the items come back; search doesn't wait for
+getItems to finish.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491220285,1491220285,3705401d434edd73f761cbe4b1e954262cd94489
+3705401d434edd73f761cbe4b1e954262cd94489,3705401d,chore: Update gradle,"chore: Update gradle
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491214763,1491214763,cde72aef1c6676be50fb8cc3ea0901e4acee6d57
+cde72aef1c6676be50fb8cc3ea0901e4acee6d57,cde72aef,feat: Enable search for all item fields,"feat: Enable search for all item fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491213864,1491213864,6616eac1fc1dfaf2c5dfc72341e22c7c596e7331
+6616eac1fc1dfaf2c5dfc72341e22c7c596e7331,6616eac1,fix: While searching all items flash,"fix: While searching all items flash
+
+When doing a search and getting all items, all items flash on the
+screen between entering characters.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491211305,1491211305,2d4030d17c23bb29b77140bfc78ddd14a1c74ffd
+2d4030d17c23bb29b77140bfc78ddd14a1c74ffd,2d4030d1,refactor: Use AsyncTask for search for rubric,"refactor: Use AsyncTask for search for rubric
+
+As part of the rubric requirements, use an AsyncTask. Search is a
+good use of an AsyncTask. As the search task gets larger with more
+items it will prove useful.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491195419,1491195419,4caef474318aa226db777a9eb0b026bda93115a8
+4caef474318aa226db777a9eb0b026bda93115a8,4caef474,feat: Search as user types and maintain state,"feat: Search as user types and maintain state
+
+Search as the user types each character and also maintain the state
+on rotation.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491193730,1491193730,7213a3f33acbae3b15482c6a09c2e699a8560fe2
+7213a3f33acbae3b15482c6a09c2e699a8560fe2,7213a3f3,fix: Clearing search doesn't persist on rotation,"fix: Clearing search doesn't persist on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491124626,1491124626,6dbf7eb5518692119ee202eb2e564e0a0d8cfaf3
+6dbf7eb5518692119ee202eb2e564e0a0d8cfaf3,6dbf7eb5,fix: Search crashes app on rotation,"fix: Search crashes app on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491123022,1491123022,d754ecdc32ac7b46cd886a0e4b7d754c8a819211
+d754ecdc32ac7b46cd886a0e4b7d754c8a819211,d754ecdc,feat: Basic search by type,"feat: Basic search by type
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491113301,1491113301,cbdf41f12319a56c92259c27f004b4614c3f9b4e
+cbdf41f12319a56c92259c27f004b4614c3f9b4e,cbdf41f1,feat: Add search icon,"feat: Add search icon
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491109895,1491109895,f23c6d22200b43fe1b9c330cc0aa5b237d8023e3
+f23c6d22200b43fe1b9c330cc0aa5b237d8023e3,f23c6d22,test: Add more mock items for screenshots,"test: Add more mock items for screenshots
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491040139,1491040139,585c94fa11d374d0cc9a0aaa0c77e4134f1f6be1
+585c94fa11d374d0cc9a0aaa0c77e4134f1f6be1,585c94fa,feat: Update about page,"feat: Update about page
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491036368,1491036368,c687bfd64c98f08dcbeb88cba988e5214ddb8b73
+c687bfd64c98f08dcbeb88cba988e5214ddb8b73,c687bfd6,docs: Update privacy policy,"docs: Update privacy policy
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491036006,1491036006,145a931572b6f400cd2015177f850cbc7ac4ee2e
+145a931572b6f400cd2015177f850cbc7ac4ee2e,145a9315,fix: Travis still not able to decrypt files 3,"fix: Travis still not able to decrypt files 3
+
+Need to archive for multiple files in the same directory.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491033889,1491033889,f5a2399e828af6cfb2941f35b6a28bdbde9e3ca1
+f5a2399e828af6cfb2941f35b6a28bdbde9e3ca1,f5a2399e,fix: Travis still not able to decrypt files 2,"fix: Travis still not able to decrypt files 2
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491032034,1491032034,18803f0fad8aea4c1e59cf6b7fe19daac59b375d
+18803f0fad8aea4c1e59cf6b7fe19daac59b375d,18803f0f,fix: Travis still not able to decrypt files,"fix: Travis still not able to decrypt files
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491031423,1491031423,ca5d773f96a1b6c896bfc920d87da7d959f8567f
+ca5d773f96a1b6c896bfc920d87da7d959f8567f,ca5d773f,docs: Update about page with privacy policy,"docs: Update about page with privacy policy
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491026307,1491026307,586959254b89e4628a8dc1e7d6dbe96b4ce30b32
+586959254b89e4628a8dc1e7d6dbe96b4ce30b32,58695925,docs: Update privacy policy,"docs: Update privacy policy
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491025236,1491025236,572646649510e375fceef472d5ef07d81cc1ca21
+572646649510e375fceef472d5ef07d81cc1ca21,57264664,docs: Update privacy policy,"docs: Update privacy policy
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491025135,1491025135,5aca3d43eb22b70fdf4084dcbac3dabc999230fc
+5aca3d43eb22b70fdf4084dcbac3dabc999230fc,5aca3d43,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491025072,1491025072,"9d3530829a651dd19bc7c731950343dfbbea5db2,4361009ceda94fc98854450d4f605f15fd890822"
+9d3530829a651dd19bc7c731950343dfbbea5db2,9d353082,fix: Travis complaining about encryption,"fix: Travis complaining about encryption
+
+Try encryption again
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491025054,1491025054,00ca6a1858f89fa8d3919693a68b912ffac54461
+4361009ceda94fc98854450d4f605f15fd890822,4361009c,Set theme jekyll-theme-midnight,Set theme jekyll-theme-midnight,,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491024425,1491024425,54da317103446b024c5dc5116ad7514bd558563a
+54da317103446b024c5dc5116ad7514bd558563a,54da3171,docs: Add stylesheet stylesheet,docs: Add stylesheet stylesheet,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1491024159,1491024159,599f8ecb1508a1c3ad68f61e65aa30bda14fcc41
+599f8ecb1508a1c3ad68f61e65aa30bda14fcc41,599f8ecb,docs: Add normalize stylesheet,docs: Add normalize stylesheet,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1491024118,1491024118,28ffe4e58b975308df44529b2d9c27e07b49965d
+28ffe4e58b975308df44529b2d9c27e07b49965d,28ffe4e5,style: Add github light stylesheet,style: Add github light stylesheet,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1491024067,1491024067,d969ad1bc4e89559bfb23baa80fba04a040da688
+d969ad1bc4e89559bfb23baa80fba04a040da688,d969ad1b,feat: Add privacy policy,feat: Add privacy policy,,,,Michael Vescovo,m.vescovo@gmail.com,GitHub,noreply@github.com,1491023919,1491023919,00ca6a1858f89fa8d3919693a68b912ffac54461
+00ca6a1858f89fa8d3919693a68b912ffac54461,00ca6a18,fix: Travis can't see new file,"fix: Travis can't see new file
+
+Missed the file in the last commit
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491020090,1491020090,488d2ec6ee10f02db8399cc7899be6929fece084
+488d2ec6ee10f02db8399cc7899be6929fece084,488d2ec6,fix: Travis can't see new file,"fix: Travis can't see new file
+
+File not encrypted and uploaded for Travis.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491020046,1491020046,323d4c2f0d60db94f9ff2ddd8c242619254e4e69
+323d4c2f0d60db94f9ff2ddd8c242619254e4e69,323d4c2f,chore: Remove logs,"chore: Remove logs
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491019381,1491019381,9839f3daf7817d48b4d6b6c9f78fe323d1d26936
+9839f3daf7817d48b4d6b6c9f78fe323d1d26936,9839f3da,chore: Update misc config files,"chore: Update misc config files
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491017125,1491017125,4985f7213e7963d09f2988daa2899fef994c9d9e
+4985f7213e7963d09f2988daa2899fef994c9d9e,4985f721,chore: Update build.gradle for release version,"chore: Update build.gradle for release version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491016988,1491016988,218e87cd38463ef7f1a670632382fd3768122bf0
+218e87cd38463ef7f1a670632382fd3768122bf0,218e87cd,chore: Update gitignore,"chore: Update gitignore
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1491016860,1491016860,76a720c329685d49d65facd6773dfa07a5a1cb7f
+76a720c329685d49d65facd6773dfa07a5a1cb7f,76a720c3,feat: Change path name,"feat: Change path name
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490954874,1490954874,519d493d80c099ea4cd760702aa6695b457a812c
+519d493d80c099ea4cd760702aa6695b457a812c,519d493d,feat: Allow user based storage rules,"feat: Allow user based storage rules
+
+Use path to allow user based firebase storage rules.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490954566,1490954566,ba5174128c1352651afc246d460f0cc2210e4e4a
+ba5174128c1352651afc246d460f0cc2210e4e4a,ba517412,fix: Firebase database rules not working,"fix: Firebase database rules not working
+
+Uid is coming from Google signin rather than Firebase auth.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490931897,1490931897,169d6d20e696462cab616199b47d96e32dc8f840
+169d6d20e696462cab616199b47d96e32dc8f840,169d6d20,feat: Use full bleed images on tablet cards,"feat: Use full bleed images on tablet cards
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490916522,1490916522,a203f1e358810f205ec698d50081f8a5ab551b50
+a203f1e358810f205ec698d50081f8a5ab551b50,a203f1e3,feat: Use less confusing colour names,"feat: Use less confusing colour names
+
+Rather than primary and secondary which are terms in respect of
+colours themselves, use main and accent.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490833909,1490833909,0dc1ca2e18203c20e537c123f34301c6c52e247f
+0dc1ca2e18203c20e537c123f34301c6c52e247f,0dc1ca2e,feat: Rename unexpire message,"feat: Rename unexpire message
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490831831,1490831831,3bd12e3845318389688b9fa574069db60212132c
+3bd12e3845318389688b9fa574069db60212132c,3bd12e38,fix: Progress bar doesn't stay on rotation,"fix: Progress bar doesn't stay on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490831424,1490831424,9e832cf8ee268b8f07bab983e997b63545c11146
+9e832cf8ee268b8f07bab983e997b63545c11146,9e832cf8,fix: The same image can be uploaded many times,"fix: The same image can be uploaded many times
+
+When rotating the device, the image is uploaded again if it wasn't
+uploaded when the image was displayed.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490829118,1490829118,6cfccfa4085aaf3b3d68b4ab1b70bc07628635dc
+6cfccfa4085aaf3b3d68b4ab1b70bc07628635dc,6cfccfa4,fix: App crashes if deleting file during compress,"fix: App crashes if deleting file during compress
+
+Deleting of a file can occur while the same file is being compressed.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490776462,1490776462,6cca10cc787c7db36b054b9c0403f0962d0ec878
+6cca10cc787c7db36b054b9c0403f0962d0ec878,6cca10cc,refactor: Use service to upload files,"refactor: Use service to upload files
+
+This way the upload takes place even if the user exits the edit item
+screen before the image is compressed and the upload doesn't get
+called yet.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490518776,1490518776,61951b665d022f8cf77f6adfcf1ef0f52af36483
+61951b665d022f8cf77f6adfcf1ef0f52af36483,61951b66,fix: Images can appear black or grey,"fix: Images can appear black or grey
+
+The multiple compression seems to occasionally mess up the images.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490507410,1490507410,2a04826542ffa33020f26d837bffba964c3813bf
+2a04826542ffa33020f26d837bffba964c3813bf,2a048265,feat: Delete image from firebase if item deleted,"feat: Delete image from firebase if item deleted
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490486069,1490486069,0a3b753d0a7d3fda5fe76be6fa861ff8eb9a0d0a
+0a3b753d0a7d3fda5fe76be6fa861ff8eb9a0d0a,0a3b753d,feat: Upload image to firebase storage,"feat: Upload image to firebase storage
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490427060,1490427060,b7b64b4b14cd64f9c1e062d9e49dd3980a7c3aac
+b7b64b4b14cd64f9c1e062d9e49dd3980a7c3aac,b7b64b4b,fix: Firebase auth failing with new auth version,"fix: Firebase auth failing with new auth version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490315673,1490315673,160a6d9f9756fd0692fec1f9d59365d5bff03be9
+160a6d9f9756fd0692fec1f9d59365d5bff03be9,160a6d9f,chore: Add firebase storage dependency,"chore: Add firebase storage dependency
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490313885,1490313885,7b01e658278ae300390af273561ef428b7075d18
+7b01e658278ae300390af273561ef428b7075d18,7b01e658,"fix: Mock version not updated, tests failing","fix: Mock version not updated, tests failing
+
+Forgot to update mock version with fix for camera rotation.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490313433,1490313433,2860e69107f61a83428e9763845e3d8e02aa1b9d
+2860e69107f61a83428e9763845e3d8e02aa1b9d,2860e691,fix: Camera image not available on rotation,"fix: Camera image not available on rotation
+
+If the device is in a different rotation than it was before launching
+the camera the image is not saved.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490312452,1490312452,3e67dc77760134693f8a53281b66a7d0e994c2dd
+3e67dc77760134693f8a53281b66a7d0e994c2dd,3e67dc77,feat: Use background thread for compression,"feat: Use background thread for compression
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490227270,1490227270,6c42ff88228a47f781deb4110f4b442bb1ebcab9
+6c42ff88228a47f781deb4110f4b442bb1ebcab9,6c42ff88,feat: Compress image,"feat: Compress image
+
+Files don't need to be large in this app; the idea is to identify a
+product, not showcase it.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490226483,1490226483,81182e57e74c0080fe25460beae77ded8e81e35e
+81182e57e74c0080fe25460beae77ded8e81e35e,81182e57,feat: Delete file when replacing image,"feat: Delete file when replacing image
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490214977,1490214977,1c4712307a73f398886cfc88bc0009eb72814089
+1c4712307a73f398886cfc88bc0009eb72814089,1c471230,feat: Delete image file when image is removed,"feat: Delete image file when image is removed
+
+This is for the local file only at the moment (no cloud version yet).
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490213376,1490213376,0834890051d6ea2c3cda8ab84c978f6540be7765
+0834890051d6ea2c3cda8ab84c978f6540be7765,08348900,fix: Firebase infinite loop when replacing image,"fix: Firebase infinite loop when replacing image
+
+If replacing an existing image it loops endlessly between the two
+ images.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490211537,1490211537,c758566c4abd62ab815e9709ae512d6cf4498aa3
+c758566c4abd62ab815e9709ae512d6cf4498aa3,c758566c,feat: Use permanent file over temp in prod,"feat: Use permanent file over temp in prod
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490140252,1490140252,4d73ae9a9207f39f13929df5f5330ca6117f05e2
+4d73ae9a9207f39f13929df5f5330ca6117f05e2,4d73ae9a,fix: Image set to null when saving to firebase,"fix: Image set to null when saving to firebase
+
+ImagePath gets set to null. Firebase is very sensitive about setters
+and getters.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490129261,1490129261,3f9e9d42ef7dcc2e63646ab767459d0d4d3b7ee4
+3f9e9d42ef7dcc2e63646ab767459d0d4d3b7ee4,3f9e9d42,feat: Show snackbar when capture image fails,"feat: Show snackbar when capture image fails
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490129191,1490129191,abbab2237dee4dbafa21ecbc84255ae7f4b2afdf
+abbab2237dee4dbafa21ecbc84255ae7f4b2afdf,abbab223,fix: items not refreshed if item removed or null,"fix: items not refreshed if item removed or null
+
+When getting items, if the cache is larger than the remote data
+source, the item removed from the remote datasource is not removed
+from the view. Also, if the remote data source is null, the view is
+not cleared.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490117035,1490117035,c3a480af03644115a9641ea6d7925599583e9c27
+c3a480af03644115a9641ea6d7925599583e9c27,c3a480af,fix: App can crash if Fragment not active,"fix: App can crash if Fragment not active
+
+If firebase calls back when the fragment is not attached the app
+crashes.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490056601,1490056601,b48b4f44f1d64a204baad93e0cd4080cea8e2d61
+b48b4f44f1d64a204baad93e0cd4080cea8e2d61,b48b4f44,feat: Remove firebase callbacks when new created,"feat: Remove firebase callbacks when new created
+
+It's not clear what happens to the remaining listener when the app
+is closed but better to at least remove duplicates.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490056502,1490056502,6e7ebbb1117dd378b2b9a67d7e143a7f8acc1762
+6e7ebbb1117dd378b2b9a67d7e143a7f8acc1762,6e7ebbb1,feat: Save and load data to Firebase,"feat: Save and load data to Firebase
+
+So far the app has only worked locally with mock data.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490055382,1490055382,f9da9722716e27e8ecb055b21f187a1166319e70
+f9da9722716e27e8ecb055b21f187a1166319e70,f9da9722,chore: Add firebase realtime database library,"chore: Add firebase realtime database library
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490048862,1490048862,4337c142c1236823c56b8a71a9ec137575f1b6dd
+4337c142c1236823c56b8a71a9ec137575f1b6dd,4337c142,fix: Prod version can't see some references,"fix: Prod version can't see some references
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490048415,1490048415,4a5fd10f423ea5dfbbc0570e7791307eb5a21db0
+4a5fd10f423ea5dfbbc0570e7791307eb5a21db0,4a5fd10f,fix: About text size not increased on tablet,"fix: About text size not increased on tablet
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490042760,1490042760,81e85db045133a2b3b6e31335182e88ee4a209d3
+81e85db045133a2b3b6e31335182e88ee4a209d3,81e85db0,feat: Increase font size on tablet details,"feat: Increase font size on tablet details
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490042353,1490042353,e24643205d743c17b6b14d1b2846c216806a17a6
+e24643205d743c17b6b14d1b2846c216806a17a6,e2464320,feat: Hide expire menu when expiring item,"feat: Hide expire menu when expiring item
+
+For tablet mode when the expire button is in the menu.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490039262,1490039262,6bb497bad4ba8a393e872b0be1ae900ab18e7c89
+6bb497bad4ba8a393e872b0be1ae900ab18e7c89,6bb497ba,fix: Details not set to null when field emptied,"fix: Details not set to null when field emptied
+
+When editing an item and erasing text from a field, the item gets
+saved as the empty string rather than null. This causes the details
+screen to show the empty string rather than the ""empty value string"".
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490035066,1490035066,8b49d428855925a63d598595f27947e56531611e
+8b49d428855925a63d598595f27947e56531611e,8b49d428,fix: ItemDetails doesn't update after editing,"fix: ItemDetails doesn't update after editing
+
+If editing an item from itemDetails, the details are not updated
+until the details screen is re-opened.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490032699,1490032699,a3ba0c9072443042b99ad093e46feb2fd784f4d2
+a3ba0c9072443042b99ad093e46feb2fd784f4d2,a3ba0c90,test: Create ItemDetailsScreenTest  first test,"test: Create ItemDetailsScreenTest  first test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490029791,1490029791,297cc645873086ab480f49ef86ab05d3199c3817
+297cc645873086ab480f49ef86ab05d3199c3817,297cc645,fix: Wrong menu actions can show on details menu,"fix: Wrong menu actions can show on details menu
+
+When on tablet and returning to item details from edit item then the
+menu from edit item is still displayed.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490005460,1490005460,016eda9042efb5627027edb3757f107062d9d95b
+016eda9042efb5627027edb3757f107062d9d95b,016eda90,feat: Show item values in details screen,"feat: Show item values in details screen
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1490004189,1490004189,22b8edece64bbc574feb355b89cd3747c22edacd
+22b8edece64bbc574feb355b89cd3747c22edacd,22b8edec,feat: Close details if deleting item via details,"feat: Close details if deleting item via details
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489951992,1489951992,d447904e600158818df0a0be4270d09a578b83bd
+d447904e600158818df0a0be4270d09a578b83bd,d447904e,fix: No items text does not display on rotation,"fix: No items text does not display on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489947123,1489947123,ba1481c0036e134ae352a00dada0f372d3201e32
+ba1481c0036e134ae352a00dada0f372d3201e32,ba1481c0,feat: Be able to expire item from details screen,"feat: Be able to expire item from details screen
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489945486,1489945486,1db373bb4f65e9a107a5f116667f9ad8ef43d068
+1db373bb4f65e9a107a5f116667f9ad8ef43d068,1db373bb,test: Tablet add item test hangs,"test: Tablet add item test hangs
+
+I think it may be an Espresso bug but the idling resource hangs.
+Since the image was just displayed it should be cached at this point
+anyway so it should be ok to leave these commented out.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489932904,1489932904,9dc2a09b2743e53d70321181ecbfefabfa75b500
+9dc2a09b2743e53d70321181ecbfefabfa75b500,9dc2a09b,refactor: Recommended layout optimisations,"refactor: Recommended layout optimisations
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489931642,1489931642,61f7a275dbc2192f04bc7c90becc13ef9a139ed2
+61f7a275dbc2192f04bc7c90becc13ef9a139ed2,61f7a275,fix:  Date selection not kept after rotation,"fix:  Date selection not kept after rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489930470,1489930470,b3d4f138c5b0700abeb3822bd070c5453b51d97c
+b3d4f138c5b0700abeb3822bd070c5453b51d97c,b3d4f138,refactor: Separate some code,"refactor: Separate some code
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489917374,1489917374,a032f1bca18c6884dda27d28d65b686eef71da81
+a032f1bca18c6884dda27d28d65b686eef71da81,a032f1bc,test: Test can't open spinner from dialogFragment,"test: Test can't open spinner from dialogFragment
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489916056,1489916056,4dd766b00ac3496349b13fa2dac45c13b577daf0
+4dd766b00ac3496349b13fa2dac45c13b577daf0,4dd766b0,test: Update test to match updated text,"test: Update test to match updated text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489906823,1489906823,bafd0d8fafe60d6eae10349a97d6c31098b96e22
+bafd0d8fafe60d6eae10349a97d6c31098b96e22,bafd0d8f,test: Due to bug separate parameterised tests,"test: Due to bug separate parameterised tests
+
+Espresso is not able to run individual tests inside an inner class.
+All tests within @RunWith(Enclosed.class) must be run, which is far
+too slow.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489904738,1489904754,1f69de7867db0cb67e79eb789fc87b37d9e383fa
+1f69de7867db0cb67e79eb789fc87b37d9e383fa,1f69de78,fix: Dates not being set correctly,"fix: Dates not being set correctly
+
+Non custom dates not set and today, yesterday and uknown not being
+matched when the spinner is displayed.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489862282,1489862282,9cd26081b366e8027fffe842f8c1d67dcb30549d
+9cd26081b366e8027fffe842f8c1d67dcb30549d,9cd26081,feat: Opening edit via details shows correct item,"feat: Opening edit via details shows correct item
+
+When clicking an item from the list, and then clicking edit, it opens
+the item that was clicked in edit mode.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489856606,1489856606,dc4443de1034ae2eb97118c648e528072f6b3723
+dc4443de1034ae2eb97118c648e528072f6b3723,dc4443de,fix: Can't read noItems text on phone version,"fix: Can't read noItems text on phone version
+
+The day night theme seems to have a bug, however the accent colour
+is an ok compromise for now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489854644,1489854644,70ab710b7db911e452cf35163e96ab27a21b89f5
+70ab710b7db911e452cf35163e96ab27a21b89f5,70ab710b,feat: Be able to open editItem from itemDetails,"feat: Be able to open editItem from itemDetails
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489853345,1489853345,001b2b0f5ac94ff80567d987a2024b29221e79f4
+001b2b0f5ac94ff80567d987a2024b29221e79f4,001b2b0f,fix: ItemDetails title not displaying,"fix: ItemDetails title not displaying
+
+Shows Edit Item instead.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489850440,1489850440,fbec276b10d7e444f3ff1e63fcef81bdd06a1530
+fbec276b10d7e444f3ff1e63fcef81bdd06a1530,fbec276b,fix: Items doesn't show noItems test after expire,"fix: Items doesn't show noItems test after expire
+
+If expiring all items the no items text does not display; only when
+starting from no items.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489849739,1489849739,116f644222191d87f7a480ae8c78159d01aa2f3a
+116f644222191d87f7a480ae8c78159d01aa2f3a,116f6442,fix: Tiles show corners in night mode,"fix: Tiles show corners in night mode
+
+Tiles are not supposed to have corners. It wasn't apparent without
+night mode.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489843589,1489843589,ae96c1d99181a6f51d126aa209c52c8713567ce0
+ae96c1d99181a6f51d126aa209c52c8713567ce0,ae96c1d9,feat: Re-enable daynight theme,"feat: Re-enable daynight theme
+
+Made necessary changes to accommodate the theme and re-enabled.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489843261,1489843261,2586daf96b8760e726797fd0ec1c7932de3a7ab5
+2586daf96b8760e726797fd0ec1c7932de3a7ab5,2586daf9,fix: ItemDetailsPresenterTest not setup,"fix: ItemDetailsPresenterTest not setup
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489840405,1489840405,2ca6fcad675206f7ec6df22a0e0e66f0360b2ce2
+2ca6fcad675206f7ec6df22a0e0e66f0360b2ce2,2ca6fcad,feat: Add expire menu option on itemDetails,"feat: Add expire menu option on itemDetails
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489839680,1489839680,bba8ac6cc069c263028c04b58fbaa2181acbf0d8
+bba8ac6cc069c263028c04b58fbaa2181acbf0d8,bba8ac6c,feat: Add editItem menu option on itemDetails,"feat: Add editItem menu option on itemDetails
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489839269,1489839269,3746eae0133488942fc5f5deb39feb6148e419cc
+3746eae0133488942fc5f5deb39feb6148e419cc,3746eae0,feat: Create initial ItemDetails screen,"feat: Create initial ItemDetails screen
+
+Can launch item details screen but the actual content is to be
+created.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489838318,1489838318,4c577f432b0531ba362cc8ef87d9537d7ba2440b
+4c577f432b0531ba362cc8ef87d9537d7ba2440b,4c577f43,feat: Don't use prefix for expiry on phone,"feat: Don't use prefix for expiry on phone
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489827437,1489827437,cbcd3c3745a0075a8aeda8b49d6c827a0a1bbbb9
+cbcd3c3745a0075a8aeda8b49d6c827a0a1bbbb9,cbcd3c37,feat: Play sound effect when expiring item,"feat: Play sound effect when expiring item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489825690,1489825690,264c4dba7d5fec40f6d538786b281f56ea053bf5
+264c4dba7d5fec40f6d538786b281f56ea053bf5,264c4dba,feat: Be able to undo expire item via snackbar,"feat: Be able to undo expire item via snackbar
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489819535,1489819535,28fcf998de162baf92db3defb1db8ef8b1889a08
+28fcf998de162baf92db3defb1db8ef8b1889a08,28fcf998,feat: Don't show expired items in the list,"feat: Don't show expired items in the list
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489818212,1489818212,6ee52796f0cdc586ee2232ec00b3f2f49205f14b
+6ee52796f0cdc586ee2232ec00b3f2f49205f14b,6ee52796,feat: Be able to expire an item from the list,"feat: Be able to expire an item from the list
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489817990,1489817990,52f8d49db56150c17de6c5ec4a7b99e1c08ddd94
+52f8d49db56150c17de6c5ec4a7b99e1c08ddd94,52f8d49d,feat: Sort items by expiry ascending,"feat: Sort items by expiry ascending
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489816446,1489816446,079584b44de3a1f2b0966431c788cfb50e7840c7
+079584b44de3a1f2b0966431c788cfb50e7840c7,079584b4,feat: Set expiry to red when almost expired,"feat: Set expiry to red when almost expired
+
+If item is one month from expiry, set the expiry text to red.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489771404,1489771404,e580abd76b9666e0267a3844b8c98ddf50a77d85
+e580abd76b9666e0267a3844b8c98ddf50a77d85,e580abd7,fix: Non custom dates not being applied,"fix: Non custom dates not being applied
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489770031,1489770031,6be30e61ed8e3dea8afcfbd9aad0634e5ea86b44
+6be30e61ed8e3dea8afcfbd9aad0634e5ea86b44,6be30e61,fix: Default dates not being set,"fix: Default dates not being set
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489769919,1489769919,9fe30548ee946d7877f87066f30f98c09c9dbc38
+9fe30548ee946d7877f87066f30f98c09c9dbc38,9fe30548,feat: Set default expiry 1 year from entry,"feat: Set default expiry 1 year from entry
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489768085,1489768085,96f65bd742e5362218468c1c6cd04f5f47cc54f4
+96f65bd742e5362218468c1c6cd04f5f47cc54f4,96f65bd7,feat: Show question marks for empty fields,"feat: Show question marks for empty fields
+
+For the list, mark empty fields with a question mark.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489766910,1489766910,cd55b36cf673a0e52ac42482d2fc4ee488de34a1
+cd55b36cf673a0e52ac42482d2fc4ee488de34a1,cd55b36c,test: Date format not updated in test,"test: Date format not updated in test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489753117,1489753117,7a07c767acb810d4f92d0cb6f33871eddd9047cc
+7a07c767acb810d4f92d0cb6f33871eddd9047cc,7a07c767,style: Add comment to date long value,"style: Add comment to date long value
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489752087,1489752087,93f0db431a8b99280d726440a22edd8d6eb8e80a
+93f0db431a8b99280d726440a22edd8d6eb8e80a,93f0db43,fix: Selecting a date does not trigger a save,"fix: Selecting a date does not trigger a save
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489751960,1489751960,9287d7c82bf445cfd07c98fb7e2c0f57383aaf9e
+9287d7c82bf445cfd07c98fb7e2c0f57383aaf9e,9287d7c8,fix: Date format seems to have a bug,"fix: Date format seems to have a bug
+
+For some reason MMM displays a period  when printed on the screen.
+For now just print the entire month as it looks nicer.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489751925,1489751925,2e978f6c019e6386530cf2ea088c8c5e7a52a459
+2e978f6c019e6386530cf2ea088c8c5e7a52a459,2e978f6c,fix: Edits not being added to view,"fix: Edits not being added to view
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489751251,1489751251,7842c19083b2afb5f8aaa665bbcf90c120fe144f
+7842c19083b2afb5f8aaa665bbcf90c120fe144f,7842c190,fix: Item image disappears when editing on tablet,"fix: Item image disappears when editing on tablet
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489751202,1489751202,6df9745072ec6819aabf2a2ed886c81b5ec95065
+6df9745072ec6819aabf2a2ed886c81b5ec95065,6df97450,refactor: No need for map in recyclerView,"refactor: No need for map in recyclerView
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489749310,1489749310,93459569002415546541ed873d8b71a3d367037a
+93459569002415546541ed873d8b71a3d367037a,93459569,style: Useless line of code,"style: Useless line of code
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489748425,1489748425,4e92e6ab0fab89956d1293eeb0d31f4d000dac8a
+4e92e6ab0fab89956d1293eeb0d31f4d000dac8a,4e92e6ab,test: Not finding spinner after rotation,"test: Not finding spinner after rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489743822,1489743822,f5de8f005f81a777fa30fa0e44ddb3a155e92829
+f5de8f005f81a777fa30fa0e44ddb3a155e92829,f5de8f00,test: Test not using new price data,"test: Test not using new price data
+
+Price is now stored in cents.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489742528,1489742528,f721c3cb4fc009131581dbe655a97c0d06db3340
+f721c3cb4fc009131581dbe655a97c0d06db3340,f721c3cb,fix: App crashes on backpress from editItem,"fix: App crashes on backpress from editItem
+
+Happens on the phone version only.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489737152,1489737152,ab79ae0879777de4da5e8bc1eac727454d07b48d
+ab79ae0879777de4da5e8bc1eac727454d07b48d,ab79ae08,feat: Create a new item even if all fields empty,"feat: Create a new item even if all fields empty
+
+To be consistent with the delete and undo function. Either an item is
+always created, or it can only be deleted/undeleted if it wasn't
+empty (not saved). I'm choosing to always create an item similar
+to how Google docs works.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489736779,1489736779,4cd3e499d19ae3a0e513740f48eed26bced99995
+4cd3e499d19ae3a0e513740f48eed26bced99995,4cd3e499,feat: Be able to undo delete item via snackbar,"feat: Be able to undo delete item via snackbar
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489736137,1489736156,d3ce71726b34ca1739faa1228b262eb2efd12dd1
+d3ce71726b34ca1739faa1228b262eb2efd12dd1,d3ce7172,chore: Update support library version,"chore: Update support library version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489727948,1489727948,dd36c367587795306e473192d0e55b1a9dd8ee1c
+dd36c367587795306e473192d0e55b1a9dd8ee1c,dd36c367,fix: forgot to comment temp code,"fix: forgot to comment temp code
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489655809,1489655809,8a23fb9b04452ef4810e1b0b55ef0699a7ef23f6
+8a23fb9b04452ef4810e1b0b55ef0699a7ef23f6,8a23fb9b,feat: Delete item in view,"feat: Delete item in view
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489655644,1489655644,09df097c927aaed5a1c2d6ab492c2fe21c841149
+09df097c927aaed5a1c2d6ab492c2fe21c841149,09df097c,fix: Fake data not deleting id,"fix: Fake data not deleting id
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489655411,1489655411,77bd958c83df0108b3dd702d5380d36d7bba8733
+77bd958c83df0108b3dd702d5380d36d7bba8733,77bd958c,feat: show items list after deleting,"feat: show items list after deleting
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489649213,1489649213,7ddf269ab8b2df6b58ebb809a8c6a622166c4489
+7ddf269ab8b2df6b58ebb809a8c6a622166c4489,7ddf269a,refactor: Pass userId from presenter,"refactor: Pass userId from presenter
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489641508,1489641508,99246ecbea8201fd4d8ce004616e417d30026cb4
+99246ecbea8201fd4d8ce004616e417d30026cb4,99246ecb,fix: Fake data source not deleting item,"fix: Fake data source not deleting item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489640006,1489640006,9db92ff837711f144d86ec90e7f9c61c404885a0
+9db92ff837711f144d86ec90e7f9c61c404885a0,9db92ff8,feat: Presenter can delete item,"feat: Presenter can delete item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489639906,1489639906,8e0dae8d7b7c3d2066136695f454aa5a554d319a
+8e0dae8d7b7c3d2066136695f454aa5a554d319a,8e0dae8d,feat: Set max length on input fields,"feat: Set max length on input fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489639179,1489639179,4904018d1678f3f32af9d844098124c4ac4b8f64
+4904018d1678f3f32af9d844098124c4ac4b8f64,4904018d,fix: Items image disappears when editing new item,"fix: Items image disappears when editing new item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489577608,1489577608,1d921c3fc8b4c1925a06d1c3c3f3ec845dad8476
+1d921c3fc8b4c1925a06d1c3c3f3ec845dad8476,1d921c3f,fix: cents errors,"fix: cents errors
+
+10 cents can show as 1 cent. 1 cent can appear as 10 cents.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489573255,1489573255,2fa4e5f4df460bf49f17c8580d19d2f513a6a073
+2fa4e5f4df460bf49f17c8580d19d2f513a6a073,2fa4e5f4,refactor: Update items for new price format,"refactor: Update items for new price format
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489569005,1489569005,e3dd22a5b1440c8e173d23d239861e7f5fc2770c
+e3dd22a5b1440c8e173d23d239861e7f5fc2770c,e3dd22a5,test: Update tests for new currency validation,"test: Update tests for new currency validation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489568466,1489568466,4ba5c9e3567652eb7b4691375bdfb76d33fcbfac
+4ba5c9e3567652eb7b4691375bdfb76d33fcbfac,4ba5c9e3,feat: Validate price and discount fields,"feat: Validate price and discount fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489567767,1489567767,acfa93e50cc13f881daed6667e558b5264667c32
+acfa93e50cc13f881daed6667e558b5264667c32,acfa93e5,test: Add items list test for new date spinner,"test: Add items list test for new date spinner
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489491620,1489491620,0a5e489c41c16bd5d665e0b85f0ab24ca1c99722
+0a5e489c41c16bd5d665e0b85f0ab24ca1c99722,0a5e489c,test: Add tests for new expiry date spinner,"test: Add tests for new expiry date spinner
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489476930,1489476930,a9d09626456993be386a3668afd83f107137a282
+a9d09626456993be386a3668afd83f107137a282,a9d09626,test: Confirm purchase date on existing item,"test: Confirm purchase date on existing item
+
+Using the new spinner, make the test work for showing an existing
+ date.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489474253,1489474253,753936fa7d0804325b231dea9c26ef02ad14945c
+753936fa7d0804325b231dea9c26ef02ad14945c,753936fa,test: Refactor some tests,"test: Refactor some tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489473632,1489473632,60503c7e4e1ee1b8e0eedd32db2e80c3fe1fc6ae
+60503c7e4e1ee1b8e0eedd32db2e80c3fe1fc6ae,60503c7e,test: Different date removes current custom date,"test: Different date removes current custom date
+
+When a custom purhcaseDate is selected and then a different option is
+selected, the custom date is removed from the spinner.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489387090,1489387090,4467502567e95885e59f60742cdc1ea59bf6e1a9
+4467502567e95885e59f60742cdc1ea59bf6e1a9,44675025,test: Datepicker cancel doesn't change selection,"test: Datepicker cancel doesn't change selection
+
+Make sure that pressing cancel on the date picker reverts to the
+ previous selection. This bug has actually been fixed already.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489385457,1489385457,8c40413efd79c7b999c7d0087ec88fb7de41b028
+8c40413efd79c7b999c7d0087ec88fb7de41b028,8c40413e,fix: Custom date not restored on rotation,"fix: Custom date not restored on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489287437,1489287437,ce58c6cb1005682a470a9bfdd3a3f5d36469b1d0
+ce58c6cb1005682a470a9bfdd3a3f5d36469b1d0,ce58c6cb,test: Update expiryDate visible with new spinner,"test: Update expiryDate visible with new spinner
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489199981,1489199981,c4728a3ad7dbd935342a6a8a7a802aa7635e0a57
+c4728a3ad7dbd935342a6a8a7a802aa7635e0a57,c4728a3a,test: Update purchaseDate visible with new spinner,"test: Update purchaseDate visible with new spinner
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489195420,1489195442,dc142b7d13fd0d92e1ef5474a2599f0662a8fbef
+dc142b7d13fd0d92e1ef5474a2599f0662a8fbef,dc142b7d,fix: Comment out test line,"fix: Comment out test line
+
+Forgot.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489149740,1489149740,7db8f64de595476d82737b1f3f59b0d242345c09
+7db8f64de595476d82737b1f3f59b0d242345c09,7db8f64d,feat: Use spinner and date picker for dates,"feat: Use spinner and date picker for dates
+
+This allows prevention of selecting an invalid date and I think is
+easier for the user.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489149651,1489149651,f13762c712dc8fadd858012d806e04f64253560f
+f13762c712dc8fadd858012d806e04f64253560f,f13762c7,test: Delete menu appears in edit dialog,"test: Delete menu appears in edit dialog
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489048833,1489048833,ad7f5b53c48f4561a1c2221be43088ab0e6b36be
+ad7f5b53c48f4561a1c2221be43088ab0e6b36be,ad7f5b53,fix: Activity menu gone after rotating dialog 2,"fix: Activity menu gone after rotating dialog 2
+
+This time for the About dialog.
+
+When opening a dialogFragment and then rotating, the background
+Activity's menu disappears and does not reappear on dismiss of the
+dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489039513,1489039513,39340b70885bcc17e038e5eb9e0ef5139c16a85f
+39340b70885bcc17e038e5eb9e0ef5139c16a85f,39340b70,fix: Activity menu gone after rotating dialog,"fix: Activity menu gone after rotating dialog
+
+When opening a dialogFragment and then rotating, the background
+Activity's menu disappears and does not reappear on dismiss of the
+dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489038359,1489038359,7a8f09f2dd520caba6c022b7d341f55b8d7d406d
+7a8f09f2dd520caba6c022b7d341f55b8d7d406d,7a8f09f2,refactor: Presenter not called up EditDialog up,"refactor: Presenter not called up EditDialog up
+
+When pressing up on the EditDialog it dismisses without calling the
+presenter.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489029449,1489029449,e3251ab2ed6abd2116fdf5d37e25c2712229798a
+e3251ab2ed6abd2116fdf5d37e25c2712229798a,e3251ab2,fix: DialogFragment menu gone on rotation,"fix: DialogFragment menu gone on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489028440,1489028440,76dbc1c0f626e6c28f5d1d5466b7d2b06f27b576
+76dbc1c0f626e6c28f5d1d5466b7d2b06f27b576,76dbc1c0,test: Separate parameterised tests using Enclosed,"test: Separate parameterised tests using Enclosed
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489012857,1489012857,cca9ad5bf077677ee479381cfe5ea332b36dbb6d
+cca9ad5bf077677ee479381cfe5ea332b36dbb6d,cca9ad5b,test: Sometimes tests fail after rotation,"test: Sometimes tests fail after rotation
+
+So far I'm not sure of the exact cause or if I should be running the
+tests differently, but putting a long enough delay after rotating
+does work. Normally 500ms is enough but even then occasionally
+some fail. Even at 1500ms! So far nothing has ever failed with
+2000ms which seems very high.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1489008335,1489008335,8bd97137f5126fe521dc9b7b8abe914e2a02e8f3
+8bd97137f5126fe521dc9b7b8abe914e2a02e8f3,8bd97137,fix: Keyboard not closing sometimes,"fix: Keyboard not closing sometimes
+
+The ViewAction method is only for chaining in ViewActions. Strangely,
+the problem only showed up after rotation was added.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488958252,1488958252,c1d580d89b1b0d2894e709604c611313a3323988
+c1d580d89b1b0d2894e709604c611313a3323988,c1d580d8,refactor: Use single method for rotation,"refactor: Use single method for rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488957807,1488957807,0de5ee47f3ff63358e3a65df9c86b5a5ffdd1c25
+0de5ee47f3ff63358e3a65df9c86b5a5ffdd1c25,0de5ee47,refactor: Remove now redundant method,"refactor: Remove now redundant method
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488883293,1488883293,c1f20594e55e208d92fbf2795585af9577c3860b
+c1f20594e55e208d92fbf2795585af9577c3860b,c1f20594,test: Add rotation to Items screen tests,"test: Add rotation to Items screen tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488874972,1488874972,69bf68b1eae1bf23bfaf470352e4ce67dbaaf125
+69bf68b1eae1bf23bfaf470352e4ce67dbaaf125,69bf68b1,fix: IdlingResource counting one too many times,"fix: IdlingResource counting one too many times
+
+Glide is smart enough to only load images if they aren't already
+loaded.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488868597,1488868597,7c2474e586164fa80e5c3e35fd88913d3b80fa8f
+7c2474e586164fa80e5c3e35fd88913d3b80fa8f,7c2474e5,style: Remove old unused line,"style: Remove old unused line
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488863856,1488863856,b8dc22dc3a60e880aabd31e502b1c3700ccfb0ea
+b8dc22dc3a60e880aabd31e502b1c3700ccfb0ea,b8dc22dc,fix: EditItem images not shown on rotation,"fix: EditItem images not shown on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488863775,1488863775,367f0e23bd1589b79808f23f82274e8856318789
+367f0e23bd1589b79808f23f82274e8856318789,367f0e23,test: Add rotation to EditItem screen tests,"test: Add rotation to EditItem screen tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488858910,1488858910,0d00041e3587b88a3adc13eaf7c1d4d82ea2480b
+0d00041e3587b88a3adc13eaf7c1d4d82ea2480b,0d00041e,test: Add rotation to Auth screen tests,"test: Add rotation to Auth screen tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488857819,1488857819,e1161376da886a329219ec0e70e3ca1d09eed2f5
+e1161376da886a329219ec0e70e3ca1d09eed2f5,e1161376,test: Add rotation to About screen tests,"test: Add rotation to About screen tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488856807,1488856807,939a257a5530038210aa7609709086abefbbe049
+939a257a5530038210aa7609709086abefbbe049,939a257a,fix: Failing tests,"fix: Failing tests
+
+This is final solution to the Espresso issues. All tests passing as
+ of this commit.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488845426,1488845426,7bddfe2d94cb2420ffcb6e3447b6f9b6fb5b98a6
+7bddfe2d94cb2420ffcb6e3447b6f9b6fb5b98a6,7bddfe2d,fix: Image not displaying on result,"fix: Image not displaying on result
+
+Due to previous issues with Espresso, this will allow the callbacks
+which are now cleared in onPause instead of onDetach, to be
+re-established before showing and saving the image after
+onActivityResult.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488770920,1488770920,9642f90522c45a5737e4b0e224f5fe2ea92b3459
+9642f90522c45a5737e4b0e224f5fe2ea92b3459,9642f905,fix: Espresso doesn't call onDestroy quick enough,"fix: Espresso doesn't call onDestroy quick enough
+
+Tests are still failing because of this issue. However I've realised
+that since clearing callbacks now only clears them for the caller
+rather than all callers, I'm able to move this code up to onPause.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488718272,1488718272,48dae8453bf4902a76e4befd7c9c85f9235b7938
+48dae8453bf4902a76e4befd7c9c85f9235b7938,48dae845,chore: Update Gradle,"chore: Update Gradle
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488585778,1488585778,9666adb7f5ae405fa01754a691742a55f3b39786
+9666adb7f5ae405fa01754a691742a55f3b39786,9666adb7,fix: Adding image stops updating view,"fix: Adding image stops updating view
+
+When editing and item and adding an image, the view stops updating
+with new content.
+
+Note: this is a reversal of a workaround to fix an Espresso bug.
+I have since logged a bug with Google issue tracker number 235247.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488497004,1488497004,156b44bfe2863c09db73b88218a3ce348c8fe1bf
+156b44bfe2863c09db73b88218a3ce348c8fe1bf,156b44bf,feat: Save images to items,"feat: Save images to items
+
+Removing images also saves to the item.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488494769,1488494769,d5fc6090785ce3f1bd9c99c6ad31973d22c35857
+d5fc6090785ce3f1bd9c99c6ad31973d22c35857,d5fc6090,docs: Update readme,"docs: Update readme
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488452233,1488452233,407ee05d92867e5bf3357e81fc44627f883e1189
+407ee05d92867e5bf3357e81fc44627f883e1189,407ee05d,test: Test does not include difference in card,"test: Test does not include difference in card
+
+Since using cards in tablet mode there was an adjustment to the text
+so it would fit two columns in a 600dp width without looking too
+weird.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488343355,1488343355,16bb313ac9444bc16ee39a7adb5d37da04eabb4f
+16bb313ac9444bc16ee39a7adb5d37da04eabb4f,16bb313a,fix: Scrolling reveals padding on about screen,"fix: Scrolling reveals padding on about screen
+
+When scrolling in the tablet version it can be seen that there is
+padding/margins around the scrollView.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488339951,1488339951,acf3daf98b8533b7cdd7969066d52ddaf29c5dbf
+acf3daf98b8533b7cdd7969066d52ddaf29c5dbf,acf3daf9,fix: Scrolling reveals padding,"fix: Scrolling reveals padding
+
+When scrolling in the tablet version it can be seen that there is
+padding/margins around the recyclerView.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488339039,1488339039,1674606ef53228a6fe14d14f2df8385b66e8de1f
+1674606ef53228a6fe14d14f2df8385b66e8de1f,1674606e,refactor: Set editItem image size in dimens.xml,"refactor: Set editItem image size in dimens.xml
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488333371,1488333371,65f9c6f638d0eacb4c526850bc79672bb921ffcd
+65f9c6f638d0eacb4c526850bc79672bb921ffcd,65f9c6f6,feat: Show items as cards on large screens,"feat: Show items as cards on large screens
+
+Aimed at tablets, this feature also shows the item image in the card
+if it has one.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488331684,1488331684,ae04cdb716abbc59d00da8e93e97b8c0a52c386d
+ae04cdb716abbc59d00da8e93e97b8c0a52c386d,ae04cdb7,fix: Temp code for testing saved to repo,"fix: Temp code for testing saved to repo
+
+This line should not have been committed in the uncommented state.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488251849,1488251849,18a8521d5b803209e74707e531e09509fb909bbb
+18a8521d5b803209e74707e531e09509fb909bbb,18a8521d,chore: Update library versions,"chore: Update library versions
+
+Also remove powermockito since it's not being used. It also
+apparently suggests bad design if it's required. I.e. a red flag.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488251138,1488251353,2e90a0ec8302df3c4eb5f608f05aa7eccab3e2e4
+2e90a0ec8302df3c4eb5f608f05aa7eccab3e2e4,2e90a0ec,fix: EditItem dialog does not show newest text,"fix: EditItem dialog does not show newest text
+
+On rotation the dialog version of editItem doesn't show changes.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488166714,1488166714,b8f0790d1854125e058b873ee8c1317432effd80
+b8f0790d1854125e058b873ee8c1317432effd80,b8f0790d,fix: EditItem dialog crashes on rotation,"fix: EditItem dialog crashes on rotation
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488124772,1488124772,a28f155e5a4dd9531f9bc9f84a6eff31ae10cb79
+a28f155e5a4dd9531f9bc9f84a6eff31ae10cb79,a28f155e,style: Strings around the wrong way,"style: Strings around the wrong way
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488122376,1488122376,e34f4e79880216601aab83565e6bad2d00b0f2f7
+e34f4e79880216601aab83565e6bad2d00b0f2f7,e34f4e79,fix: Edit listener going to items callback,"fix: Edit listener going to items callback
+
+Need to separate listeners for items and editItem.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1488067981,1488067981,86f23f44de1963709db981fcd4bd7a5e036e8c5e
+86f23f44de1963709db981fcd4bd7a5e036e8c5e,86f23f44,test: Test missing in ItemPresenter,"test: Test missing in ItemPresenter
+
+Add the missing test.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487971136,1487971136,e3f2eb9824e7d91a1d7405ce4f0fd6415a2f2fda
+e3f2eb9824e7d91a1d7405ce4f0fd6415a2f2fda,e3f2eb98,fix: Espresso is running OnDestroy weirdly,"fix: Espresso is running OnDestroy weirdly
+
+For some reason Espresso is running OnDestroy for the previous test
+after onResume in the current test, nullifying the listeners.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487970775,1487970775,586f48f0325e6cd24c4397ea4278738a3509a0b1
+586f48f0325e6cd24c4397ea4278738a3509a0b1,586f48f0,fix: ItemsActivity not cleaning listeners,"fix: ItemsActivity not cleaning listeners
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487941070,1487941070,6989946e1c7f4e480916f35a71c12d4805f4e17c
+6989946e1c7f4e480916f35a71c12d4805f4e17c,6989946e,feat: Implement listeners on fake data,"feat: Implement listeners on fake data
+
+When and item is added or modified, the view is called to update.
+This also required modifying the way the presenter handles getting
+items.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487844149,1487844149,46a78e272676fabd93827c0e3bb3278dd6216054
+46a78e272676fabd93827c0e3bb3278dd6216054,46a78e27,feat: Update validateItem,"feat: Update validateItem
+
+Don't force any fields; e.g. allow saving with no category.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487687081,1487687081,609a182e091ddbd578371b76baec82b9390add45
+609a182e091ddbd578371b76baec82b9390add45,609a182e,feat: Set item id in the view for new items,"feat: Set item id in the view for new items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487685604,1487685604,0a447aecab5d65e428e89dfc946f5c10fb06cbe6
+0a447aecab5d65e428e89dfc946f5c10fb06cbe6,0a447aec,test: Remove old redundant test,"test: Remove old redundant test
+
+There is no save button any more.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487683260,1487683294,e9a3b9090e2f8417e09979cf39de51646fcc3da2
+e9a3b9090e2f8417e09979cf39de51646fcc3da2,e9a3b909,feat: Show delete item only in overflow,"feat: Show delete item only in overflow
+
+The delete option is not meant to be used frequently but should be
+available.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487682799,1487682799,cc354a03b5d8a2577aa418005188a65f3e5fbdb1
+cc354a03b5d8a2577aa418005188a65f3e5fbdb1,cc354a03,feat: Add delete item menu option,"feat: Add delete item menu option
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487681428,1487681428,cbfff88f70a928bda5c6e6a4e4c792f807632510
+cbfff88f70a928bda5c6e6a4e4c792f807632510,cbfff88f,feat: Update editItem layout and headings,"feat: Update editItem layout and headings
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487681043,1487681043,605241951a909c249752069b5fab202db0cc15d9
+605241951a909c249752069b5fab202db0cc15d9,60524195,feat: Be able to remove an image,"feat: Be able to remove an image
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487678701,1487678701,d6e2322e6eba83745afe22d51579ff3b2795fc31
+d6e2322e6eba83745afe22d51579ff3b2795fc31,d6e2322e,feat: Be able to select an image,"feat: Be able to select an image
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487666130,1487666130,a4a4570e11903000b4158c8603bdf36cb877a9ec
+a4a4570e11903000b4158c8603bdf36cb877a9ec,a4a4570e,feat: Make the FakeImageFile copy the sample,"feat: Make the FakeImageFile copy the sample
+
+To help with testing, copy the sample image in the assets directory
+to the FakeImageFile.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487665819,1487665819,35e6356f53b1f96023b545bae8e136e22dbac498
+35e6356f53b1f96023b545bae8e136e22dbac498,35e6356f,fix: New EditItem contract not implemented,"fix: New EditItem contract not implemented
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487583282,1487583351,7a47131a2b62dedbd267f815d015f3f0fb37ec13
+7a47131a2b62dedbd267f815d015f3f0fb37ec13,7a47131a,feat: Validate item when changed,"feat: Validate item when changed
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487582508,1487582508,afc35dae77c661cf7e034309a808987299136a47
+afc35dae77c661cf7e034309a808987299136a47,afc35dae,feat: Be able to take a picture with the camera,"feat: Be able to take a picture with the camera
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487522311,1487522311,13b1cd1d733164f2ee88b38d7414542919aa7f3c
+13b1cd1d733164f2ee88b38d7414542919aa7f3c,13b1cd1d,fix: Directory accidentally moved to wrong spot,"fix: Directory accidentally moved to wrong spot
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487520592,1487520592,cf99a1781a104047ab4698b72552ea9f569b8091
+cf99a1781a104047ab4698b72552ea9f569b8091,cf99a178,refactor: Use different ImageFile for mock,"refactor: Use different ImageFile for mock
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487520548,1487520548,27bf775d9c117d1aed974fc4772183ec35606d92
+27bf775d9c117d1aed974fc4772183ec35606d92,27bf775d,feat: Add ImageViewHasDrawableMatcher,"feat: Add ImageViewHasDrawableMatcher
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487519688,1487519688,f5354835b90492762b966ff652b73a41a96f9af0
+f5354835b90492762b966ff652b73a41a96f9af0,f5354835,feat: Add ImageFile for creating image files,"feat: Add ImageFile for creating image files
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487519630,1487519630,f62f36caef11d94fe06b94d75273e1c1f3a0123c
+f62f36caef11d94fe06b94d75273e1c1f3a0123c,f62f36ca,feat: Add local sample image,"feat: Add local sample image
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487519448,1487519448,3ed4dcdd9c4800d19aacf1c7529cb0f053ccd16e
+3ed4dcdd9c4800d19aacf1c7529cb0f053ccd16e,3ed4dcdd,refactor: Update file provider paths,"refactor: Update file provider paths
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487506007,1487506007,1d59834161faae4cb9677b1402bde2a26ddf43bc
+1d59834161faae4cb9677b1402bde2a26ddf43bc,1d598341,test: Update test name for clarity,"test: Update test name for clarity
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487397100,1487397100,458e47751427a1f45695ca10d38ffdce5122c25a
+458e47751427a1f45695ca10d38ffdce5122c25a,458e4775,docs: Add some descriptions to fake data,"docs: Add some descriptions to fake data
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487397018,1487397018,60ad1dd51f0b20719c0a2e5183cecddbf66ea7a4
+60ad1dd51f0b20719c0a2e5183cecddbf66ea7a4,60ad1dd5,feat: Change my mind. ItemId notNull.,"feat: Change my mind. ItemId notNull.
+
+After reviewing the tests it seems there's no valid case for a
+null id in an actual item. The null id is for the activity/fragment
+to indicate if there is an existing item. This can be null. But once
+the item is created it should have an id.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487396970,1487396970,ab57dfa83571130641e8b24389887c5b72012eeb
+ab57dfa83571130641e8b24389887c5b72012eeb,ab57dfa8,feat: ItemId can be nullable,"feat: ItemId can be nullable
+
+This way the null check is all that's required to check invalid id
+for when checking if a new id needs to be created.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487395740,1487395740,765e8a428ca2da77e24d8498db2719cadb304d3e
+765e8a428ca2da77e24d8498db2719cadb304d3e,765e8a42,feat: Show existing item image in EditItem,"feat: Show existing item image in EditItem
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487392875,1487392875,d17298dfd8fcd06fff59d75a2cf4e6c3808e6eb4
+d17298dfd8fcd06fff59d75a2cf4e6c3808e6eb4,d17298df,feat: Show existing item in EditItem,"feat: Show existing item in EditItem
+
+Create test and implement.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487391535,1487391535,cde317ba1a526e1f7c14905e8ae10606ad1f09d3
+cde317ba1a526e1f7c14905e8ae10606ad1f09d3,cde317ba,test: Update fake dates,"test: Update fake dates
+
+Dates are not different enough from each other. Needs to be
+unique for each view so the test doesn't get an ambiguous matcher
+exception.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487340754,1487340754,2972a48768f5b1d50bc5682d3506cffe2b2083d2
+2972a48768f5b1d50bc5682d3506cffe2b2083d2,2972a487,fix: Some fields still nonnull,"fix: Some fields still nonnull
+
+Only id should not nonnull now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487334409,1487334409,77c4cb407c2a651c6aef83ae862d3428288de20f
+77c4cb407c2a651c6aef83ae862d3428288de20f,77c4cb40,Feat: Update close icon to done icon,"Feat: Update close icon to done icon
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487331607,1487331607,798aba341d6308941a84c8e9e68e6469825fe91d
+798aba341d6308941a84c8e9e68e6469825fe91d,798aba34,fix: TestImage URL incorrect,"fix: TestImage URL incorrect
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487330910,1487330910,eed23da91b736fda8acd1e5b008c4137b73446a4
+eed23da91b736fda8acd1e5b008c4137b73446a4,eed23da9,test: Add test for displaying images,"test: Add test for displaying images
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487330807,1487330807,d64ccbe0951378d5ab1428f066019bbfc7532c28
+d64ccbe0951378d5ab1428f066019bbfc7532c28,d64ccbe0,fix: Deceased not set on new items,"fix: Deceased not set on new items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487328350,1487328350,b034ddc3743f29042d35c7c7f911168197cf94a0
+b034ddc3743f29042d35c7c7f911168197cf94a0,b034ddc3,refactor: Only have one image,"refactor: Only have one image
+
+In version 1 there will only be 1 image. In the future there may be
+""additional images"".
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487327935,1487327935,1d516ef06009cb48c5c9e44e54574a2ddbff40e9
+1d516ef06009cb48c5c9e44e54574a2ddbff40e9,1d516ef0,test: Open EditScreenTest from items,"test: Open EditScreenTest from items
+
+This way it will use a dialog when testing on large screens.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487326964,1487326964,4723a06eee815c3c44ec156f7fe663184d349990
+4723a06eee815c3c44ec156f7fe663184d349990,4723a06e,test: Update Items test to not call old save menu,"test: Update Items test to not call old save menu
+
+The save menu is gone.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487326334,1487326334,0d72b29fdc4df14cea3fb88ec2e75cac3b82210a
+0d72b29fdc4df14cea3fb88ec2e75cac3b82210a,0d72b29f,feat: Update EditItem view to not call save,"feat: Update EditItem view to not call save
+
+Since the save menu option no longer exists this is broken and should
+not be called.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487326264,1487326264,7607dbe0a524b49a476a5d937db8acae9cf1c303
+7607dbe0a524b49a476a5d937db8acae9cf1c303,7607dbe0,test: Update EditItemScreenTest,"test: Update EditItemScreenTest
+
+To reflect some UI changes
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487326170,1487326170,2141f6c21859aab46f559b2594d1ca81574e35bc
+2141f6c21859aab46f559b2594d1ca81574e35bc,2141f6c2,feat: Allow at least one to be ifRoom,"feat: Allow at least one to be ifRoom
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487325735,1487325735,58a140c9b70da235221a15b4b717c3a35568d172
+58a140c9b70da235221a15b4b717c3a35568d172,58a140c9,feat: Always show add photo an edit item options,"feat: Always show add photo an edit item options
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487325635,1487325635,2437a13a3908b84b184c7edaa526a7c74a046b50
+2437a13a3908b84b184c7edaa526a7c74a046b50,2437a13a,feat: Add select image menu option,"feat: Add select image menu option
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487325582,1487325582,05da42893b5585db7e347b4d9f558ee9b078dfb2
+05da42893b5585db7e347b4d9f558ee9b078dfb2,05da4289,feat: Remove save menu option,"feat: Remove save menu option
+
+Now everything will always be automatically saved.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487325514,1487325514,6f6a47d99fed1aa1d67d2337201c07ecc980f68c
+6f6a47d99fed1aa1d67d2337201c07ecc980f68c,6f6a47d9,feat: Update edit item to always create new item,"feat: Update edit item to always create new item
+
+Now when editing items, an item is always created or loaded.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487321790,1487321790,812309f96323c3b3e8438598d5b210e6d3ab6ce0
+812309f96323c3b3e8438598d5b210e6d3ab6ce0,812309f9,feat: Items no longer need anything except ID,"feat: Items no longer need anything except ID
+
+Items will be saved immediately with the ID being the only required field.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487319546,1487319546,7df8d75ff8ebbb5e7a94354cebaa175d55c45c41
+7df8d75ff8ebbb5e7a94354cebaa175d55c45c41,7df8d75f,chore: Add file provider,"chore: Add file provider
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487309192,1487309192,fe6197e0b7620245850b9f3a8f5d52d32e6336eb
+fe6197e0b7620245850b9f3a8f5d52d32e6336eb,fe6197e0,feat: Add add photo menu option,"feat: Add add photo menu option
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487308809,1487308809,da80167a600c4f99ddb1ed7c10868b6b940e719b
+da80167a600c4f99ddb1ed7c10868b6b940e719b,da80167a,chore: Add Glide library,"chore: Add Glide library
+
+For downloading and caching images.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487305224,1487305224,45d790c64234c57c91fadc880309be171a848493
+45d790c64234c57c91fadc880309be171a848493,45d790c6,refactor: Put editItem menu in fragment,"refactor: Put editItem menu in fragment
+
+Since the menu is always there in the design of this app, it seems
+simpler to always have the menu in the fragment in the layout.
+
+In other designs it may be desirable to show the fragment with no
+menu but that's not the case here.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487149450,1487149450,163668522cbd09f28523afd62107474b98756899
+163668522cbd09f28523afd62107474b98756899,16366852,fix: editItem phone version can't find toolbar,"fix: editItem phone version can't find toolbar
+
+The toolbar is only supposed to be for the dialog version and so it
+doesn't exist in the phone version.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487144572,1487144572,8160f4def4b729444cb2ab0d6988affaadc3ce14
+8160f4def4b729444cb2ab0d6988affaadc3ce14,8160f4de,test: Only check intent when not using dialog,"test: Only check intent when not using dialog
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487143472,1487143472,2f0a38afa7418b01d6aa918d390c1f83716937d8
+2f0a38afa7418b01d6aa918d390c1f83716937d8,2f0a38af,fix: Can't see items after saving from dialog,"fix: Can't see items after saving from dialog
+
+When saving an item using the dialog version the hosting activity
+closes and doesn't refresh.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487141442,1487141442,4dcf1859d6a47f2e61280ed4927a3b414647d96a
+4dcf1859d6a47f2e61280ed4927a3b414647d96a,4dcf1859,feat: Enable options menu in editItem dialog,"feat: Enable options menu in editItem dialog
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487138572,1487138572,58130f524168881797a23d04f1351267bf535633
+58130f524168881797a23d04f1351267bf535633,58130f52,feat: Enable appbar in editItem dialog,"feat: Enable appbar in editItem dialog
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487137977,1487137977,88ea8204ec72bf13473a236b573dbcbbc5691c86
+88ea8204ec72bf13473a236b573dbcbbc5691c86,88ea8204,refactor: Use local variable,"refactor: Use local variable
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487137725,1487137725,df9a40b05de2da1a6474d24d84936aff397dc816
+df9a40b05de2da1a6474d24d84936aff397dc816,df9a40b0,feat: Set editItem dialog to not cancel,"feat: Set editItem dialog to not cancel
+
+Prevent the user from accidentally cancelling the dialog and losing
+edits if they click outside the dialog or hit back.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487136811,1487136811,6edea7f16f3d31d331fbeefad3f2556bb273728b
+6edea7f16f3d31d331fbeefad3f2556bb273728b,6edea7f1,feat: Make editItem open as dialog on tablets,"feat: Make editItem open as dialog on tablets
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487134952,1487134952,1612e428a5b9c3af50c64e2d63066acd71918b88
+1612e428a5b9c3af50c64e2d63066acd71918b88,1612e428,refactor: Rename listener,"refactor: Rename listener
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487134927,1487134927,5c755a3adb836acb7da696bf74b9f8e654d279f7
+5c755a3adb836acb7da696bf74b9f8e654d279f7,5c755a3a,refactor: pass code to editItem to Activity,"refactor: pass code to editItem to Activity
+
+This will allow the Activity to choose how to open it. E.g. in an
+Activity or Dialog.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487134541,1487134541,96eaa410aa903a9f8361c4bcc35696b14054e928
+96eaa410aa903a9f8361c4bcc35696b14054e928,96eaa410,refactor: Use dialogFragment for editItems,"refactor: Use dialogFragment for editItems
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487133595,1487133595,669fe0a331bc843deaf890bc0029517eb595afdb
+669fe0a331bc843deaf890bc0029517eb595afdb,669fe0a3,refactor: Move FAB code to Activity,"refactor: Move FAB code to Activity
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487133567,1487133567,ad7d827d8ae05f30dc6f60c795312a265323f126
+ad7d827d8ae05f30dc6f60c795312a265323f126,ad7d827d,fix: Missed some name changes,"fix: Missed some name changes
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487133488,1487133488,598f497bb269153476612432175fe5ff09e32361
+598f497bb269153476612432175fe5ff09e32361,598f497b,refactor: Rename method,"refactor: Rename method
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487132567,1487132567,6a89be3de0c4dc645ca66e31cf1a2e1aa24099b2
+6a89be3de0c4dc645ca66e31cf1a2e1aa24099b2,6a89be3d,fix: Screentest using -1 for month,"fix: Screentest using -1 for month
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487086956,1487086956,05ff4e848b93ec3e0cc28ab1e0449e3aaf55bb1e
+05ff4e848b93ec3e0cc28ab1e0449e3aaf55bb1e,05ff4e84,feat: Add validation for invalid symbols in dates,"feat: Add validation for invalid symbols in dates
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487084157,1487084157,0c4e042b2c9f5c05ccd2c458fe4d9752f48ee78d
+0c4e042b2c9f5c05ccd2c458fe4d9752f48ee78d,0c4e042b,fix: Date not working correctly,"fix: Date not working correctly
+
+Date month is off and some other bugs.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487083702,1487083702,fe249dbe5ddde3bd50313b4421d3042a16587547
+fe249dbe5ddde3bd50313b4421d3042a16587547,fe249dbe,style: Update styles.xml,"style: Update styles.xml
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487079573,1487079573,c1f4495bff646fea1ab50856342275d01a4e7ecf
+c1f4495bff646fea1ab50856342275d01a4e7ecf,c1f4495b,refactor: Update edit item layout,"refactor: Update edit item layout
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487079474,1487079474,a7678df9d3a9a91be39db4b25fd6848566f0ed4a
+a7678df9d3a9a91be39db4b25fd6848566f0ed4a,a7678df9,test: Adding item shows correctly in list,"test: Adding item shows correctly in list
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487067253,1487067253,092493c1ccb8c6090742d4a2a92309b4e34ba527
+092493c1ccb8c6090742d4a2a92309b4e34ba527,092493c1,fix: Should use parse rather than get for numbers,"fix: Should use parse rather than get for numbers
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487066062,1487066062,68b47bf465d4d25d0e587be8cb5107771e4cdfa1
+68b47bf465d4d25d0e587be8cb5107771e4cdfa1,68b47bf4,refactor: Allow access to the fake dataSource,"refactor: Allow access to the fake dataSource
+
+All test classes to be able to use the data in the FakeDataSource
+class.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487063431,1487063431,23dc9dfa6a2fc1ab4330710e813a1b1c8eedeee7
+23dc9dfa6a2fc1ab4330710e813a1b1c8eedeee7,23dc9dfa,feat: Save all fields,"feat: Save all fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487063313,1487063313,b373ba5e1b23e7f1531a205d2d69c6e57a5f0667
+b373ba5e1b23e7f1531a205d2d69c6e57a5f0667,b373ba5e,refactor: Use FakeDatasource for all fakes,"refactor: Use FakeDatasource for all fakes
+
+Don't create duplicate fakes in each test.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487063212,1487063212,a8b01462fb283c9c2fd61eea2f081ba335e68826
+a8b01462fb283c9c2fd61eea2f081ba335e68826,a8b01462,refactor: Use long for dates,"refactor: Use long for dates
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487062203,1487062203,b8711b663d123532d66193ac13f2a1ee2994d00d
+b8711b663d123532d66193ac13f2a1ee2994d00d,b8711b66,test: Use parmatised tests over manual iteration,"test: Use parmatised tests over manual iteration
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487059638,1487059638,6026e0ad41a69e76a7f0a3388328c57f81391ae2
+6026e0ad41a69e76a7f0a3388328c57f81391ae2,6026e0ad,fix: FakeDataSource not setting new ItemId,"fix: FakeDataSource not setting new ItemId
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487058061,1487058061,a6e0de4a15ca86e4a4d247d626f0f640e34ff2b9
+a6e0de4a15ca86e4a4d247d626f0f640e34ff2b9,a6e0de4a,test: After adding a second item it can be seen,"test: After adding a second item it can be seen
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487051361,1487051361,9e754be78b2cafcae7dae118b1cfdee917b3ff49
+9e754be78b2cafcae7dae118b1cfdee917b3ff49,9e754be7,refactor: Move assignment of new itemId,"refactor: Move assignment of new itemId
+
+Set the id for new items at the remote data source.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487050788,1487050788,d037dc373dd25272dd9e80dc7383870301354313
+d037dc373dd25272dd9e80dc7383870301354313,d037dc37,style: Move after block up the top,"style: Move after block up the top
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1487050578,1487050578,0dbca07cfb40bfbbd440575eee50a1712e91ab6e
+0dbca07cfb40bfbbd440575eee50a1712e91ab6e,0dbca07c,feat: Add vertical margins for no items text,"feat: Add vertical margins for no items text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486958666,1486958666,5317b80eac1f3558410ead446a86a2dfff6e9a00
+5317b80eac1f3558410ead446a86a2dfff6e9a00,5317b80e,feat: Hide no items text when there are items,"feat: Hide no items text when there are items
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486958523,1486958523,8b77268996fa3b574e6e3b96dd8546d825c48960
+8b77268996fa3b574e6e3b96dd8546d825c48960,8b772689,feat: Use temporary unique id,"feat: Use temporary unique id
+
+Item id's will be replaced with firebase push id later but on
+creation use a temp unique id.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486957967,1486957967,135ea09ee7cda5224c50e9715938667ea8544e7e
+135ea09ee7cda5224c50e9715938667ea8544e7e,135ea09e,test: Check correct category is displayed,"test: Check correct category is displayed
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486957422,1486957422,883c6e44befcca89557a63c324949778e786cda3
+883c6e44befcca89557a63c324949778e786cda3,883c6e44,fix: CashedItemIds can't be cleared,"fix: CashedItemIds can't be cleared
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486956000,1486956000,8b74ae18ba9ecf8e777fafdf2e14f68032403582
+8b74ae18ba9ecf8e777fafdf2e14f68032403582,8b74ae18,test: Add test to refresh items on resume,"test: Add test to refresh items on resume
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486955414,1486955414,20e43c7e39e239101bc45f033044084ac22b755a
+20e43c7e39e239101bc45f033044084ac22b755a,20e43c7e,feat: Close editItems after saving item.,"feat: Close editItems after saving item.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486951380,1486951380,723aefb6192c12c1af619fdf3aa57bc4d1dc4718
+723aefb6192c12c1af619fdf3aa57bc4d1dc4718,723aefb6,fix: Presenter not being set,"fix: Presenter not being set
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486951308,1486951308,e90c19da2425109b45c212bad529043e739c1f9f
+e90c19da2425109b45c212bad529043e739c1f9f,e90c19da,fix: Progress bar widget not in layout,"fix: Progress bar widget not in layout
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486951144,1486951144,453a65e512eef76b6219d5fcfc62a295e350b0f5
+453a65e512eef76b6219d5fcfc62a295e350b0f5,453a65e5,feat: Add validation to save item,"feat: Add validation to save item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486950608,1486950608,ef4e76e6ec9bb3110ec08cc4abd4f964e259f73a
+ef4e76e6ec9bb3110ec08cc4abd4f964e259f73a,ef4e76e6,test: Add test to show items after saving item,"test: Add test to show items after saving item
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486949598,1486949598,de1c38b62c300992c188b0e04e423dfa25cabcd0
+de1c38b62c300992c188b0e04e423dfa25cabcd0,de1c38b6,feat: Add mandatory field asterisk,"feat: Add mandatory field asterisk
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486948924,1486948924,e2c9f94fb5e09a63f72aeb4fd0d3ecf67593c0d1
+e2c9f94fb5e09a63f72aeb4fd0d3ecf67593c0d1,e2c9f94f,test: Add tests to see all  fields,"test: Add tests to see all  fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486948394,1486948394,6edb51fc3c391fcc9e0774aa6a906dc3fffcabec
+6edb51fc3c391fcc9e0774aa6a906dc3fffcabec,6edb51fc,refactor: NestedScrollView doesn't support scroll,"refactor: NestedScrollView doesn't support scroll
+
+Can't use scrollTo in tests for NestedScrollView as it's not a
+descendant of ScrollView. There is a bug filed but for now will just
+use regular ScrollView since that's all that's needed currently.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486948225,1486948225,65da64d4bebee702cf8d72cb77f64013b2a51f00
+65da64d4bebee702cf8d72cb77f64013b2a51f00,65da64d4,feat: Add save menu option visible test,"feat: Add save menu option visible test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486899740,1486899838,ce96a6e01329b855b9a560d0899ba766709b5d5a
+ce96a6e01329b855b9a560d0899ba766709b5d5a,ce96a6e0,feat: Add save item test and method,"feat: Add save item test and method
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486899670,1486899670,ec2b597d72fcd4ce07ab61252abddd06796b0eba
+ec2b597d72fcd4ce07ab61252abddd06796b0eba,ec2b597d,feat: Add done icon,"feat: Add done icon
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486899484,1486899484,ad4dce97c683c7e55717f0fe5eff8db7b8d056b9
+ad4dce97c683c7e55717f0fe5eff8db7b8d056b9,ad4dce97,refactor: Set detach on listener,"refactor: Set detach on listener
+
+Not sure if this is really required but probably a good idea since
+that's what the template does.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486896535,1486896535,f152bb2d2356ff1117bcf4a712d4d33b9288c1c6
+f152bb2d2356ff1117bcf4a712d4d33b9288c1c6,f152bb2d,fix: Remove old activity - I thought I did this,"fix: Remove old activity - I thought I did this
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486888242,1486888242,f85c8a0bacbbca12119d7e818c619f07e8d362f1
+f85c8a0bacbbca12119d7e818c619f07e8d362f1,f85c8a0b,fix: Old name still lying around,"fix: Old name still lying around
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486887624,1486887624,2753eab75b637c5101d5574c358082ab871e3adc
+2753eab75b637c5101d5574c358082ab871e3adc,2753eab7,refactor: Rename addItem to EditItem,"refactor: Rename addItem to EditItem
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486887337,1486887337,e614749d33b8f01c2b6c04637b05a704ae030619
+e614749d33b8f01c2b6c04637b05a704ae030619,e614749d,feat: Update items layout,"feat: Update items layout
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885497,1486885497,ffe53de42144cd19d4f315e9a77d34c28cf76291
+ffe53de42144cd19d4f315e9a77d34c28cf76291,ffe53de4,feat: Update styles,"feat: Update styles
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885445,1486885445,d6d0a829d9f0504793a499a2560b8aa6807c2dd4
+d6d0a829d9f0504793a499a2560b8aa6807c2dd4,d6d0a829,feat: Update strings,"feat: Update strings
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885417,1486885417,44878fa78859621e4b8642b68524d3dec855e9e3
+44878fa78859621e4b8642b68524d3dec855e9e3,44878fa7,feat: Update colours,"feat: Update colours
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885394,1486885394,2396acaceac656814f9e21f46ab636a39cff1a78
+2396acaceac656814f9e21f46ab636a39cff1a78,2396acac,feat: Add card layout,"feat: Add card layout
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885192,1486885311,bf869c433b16649620166dc610da9010486dcccc
+bf869c433b16649620166dc610da9010486dcccc,bf869c43,feat: Update dimens,"feat: Update dimens
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885155,1486885155,0678654f14fa11845cd808bb6b41943e03435e56
+0678654f14fa11845cd808bb6b41943e03435e56,0678654f,feat: Add scythe icon,"feat: Add scythe icon
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486885017,1486885017,3e06f5a5f45921676a21b4b63bab33533f4f91a5
+3e06f5a5f45921676a21b4b63bab33533f4f91a5,3e06f5a5,feat: Add divider resource,"feat: Add divider resource
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486884993,1486884993,b7d8441a5f34fbc7ec3af816d2ba255ea2806b12
+b7d8441a5f34fbc7ec3af816d2ba255ea2806b12,b7d8441a,test: Delete all items before running tests,"test: Delete all items before running tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486882988,1486882988,0d94ad5f24b64b66433aaefbe6777d5448bed7f9
+0d94ad5f24b64b66433aaefbe6777d5448bed7f9,0d94ad5f,refactor: Reduce class accessibility,"refactor: Reduce class accessibility
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486881954,1486881954,3cf71a1e407f5fd6b4bacd56b6dab6200e2d1791
+3cf71a1e407f5fd6b4bacd56b6dab6200e2d1791,3cf71a1e,refactor: Use Item constructor will all fields,"refactor: Use Item constructor will all fields
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486881812,1486881812,90ac0972e0d72607e701da43adf338a75dec6f2f
+90ac0972e0d72607e701da43adf338a75dec6f2f,90ac0972,feat: Datasource is being recreated each time,"feat: Datasource is being recreated each time
+
+When running tests the fakeDataSource is being recreated each time
+and so when I delete all the items it doesn't stick.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486881256,1486881256,07b765bfeddf516f21f13784fb8b361f1851a546
+07b765bfeddf516f21f13784fb8b361f1851a546,07b765bf,feat: Add deleteAllItems method for using testing,"feat: Add deleteAllItems method for using testing
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486880967,1486880967,27f0f2695b4889a99425e0b3190182ddc5a2e2d0
+27f0f2695b4889a99425e0b3190182ddc5a2e2d0,27f0f269,fix: Duplicate application name,"fix: Duplicate application name
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486880807,1486880807,cd1642d154c69ba19a4cc4b22e7f60c6f8d099b1
+cd1642d154c69ba19a4cc4b22e7f60c6f8d099b1,cd1642d1,chore: Can't distinguish mock and prod versions,"chore: Can't distinguish mock and prod versions
+
+When the app is installed on a device, there is no convenient way to
+see which is the prod and which is the mock version.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486879670,1486879670,226b247f1a55ef4212d092a9e571bef061a817b2
+226b247f1a55ef4212d092a9e571bef061a817b2,226b247f,feat: Day night theme doesn't look good for item list,"feat: Day night theme doesn't look good for item list
+
+After seeing an item in a list in night mode, it looks terrible.
+Disabling this feature for now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486879394,1486879394,dee6f85847deafdc4d5460dd71c52eb6792822dc
+dee6f85847deafdc4d5460dd71c52eb6792822dc,dee6f858,fix: Day night theme in wrong spot,"fix: Day night theme in wrong spot
+
+I noticed that the place I thought I'd put this code was actually in
+the wrong class. It was meant to be in the Application class not the
+Application module. Must have been asleep at the wheel.
+
+It works fine in the correct spot so there's no need for it to be in
+the ItemsActivity now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486879277,1486879277,800a283e51e5decee7f16b9078659340410c3b3c
+800a283e51e5decee7f16b9078659340410c3b3c,800a283e,fix: Day night theme not working,"fix: Day night theme not working
+
+Doesn't seem to work from the application block. I seem to have taken
+it out of there anyway but forgot to put it in the Activities. Seems
+to work ok from just the items Activity only.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486729092,1486729092,406a683b9ac38a96760946be30551587feb4ce0d
+406a683b9ac38a96760946be30551587feb4ce0d,406a683b,feat: Show not items text when list is empty,"feat: Show not items text when list is empty
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486727886,1486727886,9c4894127dee3bd7bfcaf7efa806d777de652d97
+9c4894127dee3bd7bfcaf7efa806d777de652d97,9c489412,style: Don't need toolbar height,"style: Don't need toolbar height
+
+The default heights are correct for the use cases of this app
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486715802,1486715802,dbad559c53e90bd61f001d44453fd3d47c6e97ca
+dbad559c53e90bd61f001d44453fd3d47c6e97ca,dbad559c,fix: Margins trying to reference old margin names,"fix: Margins trying to reference old margin names
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486711815,1486711815,00ca577567ee21bd5e1a1bda06bce2e0bd4d72f1
+00ca577567ee21bd5e1a1bda06bce2e0bd4d72f1,00ca5775,feat: Separate integers into separate file,"feat: Separate integers into separate file
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486711334,1486711334,0d51f66a90bab143b8e4bba2d9f46ef6ecb21783
+0d51f66a90bab143b8e4bba2d9f46ef6ecb21783,0d51f66a,feat: Update dimensions with material design spec,"feat: Update dimensions with material design spec
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486711045,1486711045,9fd87924cab95428bfb9dc269836a237d80606d0
+9fd87924cab95428bfb9dc269836a237d80606d0,9fd87924,feat: Reduce height of About dialog,"feat: Reduce height of About dialog
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486637329,1486637329,f27f77fb20447738bb7c940272b2f8547f756271
+f27f77fb20447738bb7c940272b2f8547f756271,f27f77fb,fix: About fragment does dismiss when not dialog,"fix: About fragment does dismiss when not dialog
+
+The fragment should only do dismiss on up pressed when in dialog
+mode. Otherwise it should do the normal navigate up.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486635808,1486635808,553a08971153528a1c3b4aa9fa4d5b34921a5924
+553a08971153528a1c3b4aa9fa4d5b34921a5924,553a0897,feat: Update string text,"feat: Update string text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486634060,1486634060,1efc83e428ca556b5366ea9090b8c36f84b3cc81
+1efc83e428ca556b5366ea9090b8c36f84b3cc81,1efc83e4,test: Dialog mode doesn't use intent,"test: Dialog mode doesn't use intent
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486633526,1486633526,7ad393d45a5dd309bec835a5dbacaf12bb1925e7
+7ad393d45a5dd309bec835a5dbacaf12bb1925e7,7ad393d4,feat: Open About as dialog in tablet mode,"feat: Open About as dialog in tablet mode
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486632804,1486632804,ad2b27fb3a5981025da90b6fe7d4688426c618b7
+ad2b27fb3a5981025da90b6fe7d4688426c618b7,ad2b27fb,fix: Items Activity being launched twice,"fix: Items Activity being launched twice
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486552373,1486552373,dae5ec7e692399df98c858d4b4998f5ee1527596
+dae5ec7e692399df98c858d4b4998f5ee1527596,dae5ec7e,feat: Set new font on all appbarTitles,"feat: Set new font on all appbarTitles
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486549587,1486549587,38b7bf956e0566cefa128a7929aab358c6a61680
+38b7bf956e0566cefa128a7929aab358c6a61680,38b7bf95,feat: Enable night mode,"feat: Enable night mode
+
+Set to follow system.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486540553,1486540553,68b249d9ae15d659fcccea9001a367c7470038f7
+68b249d9ae15d659fcccea9001a367c7470038f7,68b249d9,feat: Add Nosifer font,"feat: Add Nosifer font
+
+Set on about appbar title.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486534715,1486534715,43eee321642ffe49590cca382e22fd0be12ffc9d
+43eee321642ffe49590cca382e22fd0be12ffc9d,43eee321,refactor: Firebase Auth not mocked,"refactor: Firebase Auth not mocked
+
+Pass firebaseauth as a dependency so it can be mocked for tests.
+This way it can be confirmed if the user signed out, and also the
+sign out call doesn't cause the test to crash if there is no valid
+auth object.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486527922,1486527922,d2cdb2bdc9f130dadfe83eb39c8dae1c6775bd24
+d2cdb2bdc9f130dadfe83eb39c8dae1c6775bd24,d2cdb2bd,feat: Add sign out,"feat: Add sign out
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486526499,1486526499,a367d0526ceb3f899a7e8eb6dc05458c14579b80
+a367d0526ceb3f899a7e8eb6dc05458c14579b80,a367d052,style: Incorrect name,"style: Incorrect name
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486515691,1486515691,8555f56cc323fc22657fed6f4f375043c4359dce
+8555f56cc323fc22657fed6f4f375043c4359dce,8555f56c,style: Incorrect name,"style: Incorrect name
+
+Was using the method name of a previous project after copy and
+paste.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486512029,1486512029,4217a7da578e36ea428104b2313e10889762d9b9
+4217a7da578e36ea428104b2313e10889762d9b9,4217a7da,feat: Add links to About page,"feat: Add links to About page
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486511284,1486511284,56191d10b833da718e3c825572986dae2e980ce1
+56191d10b833da718e3c825572986dae2e980ce1,56191d10,feat: Set maxEms and bottom margin for text,"feat: Set maxEms and bottom margin for text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486462026,1486462026,2f5d95062fbefd3693c09d3d114f06fe8e9402c2
+2f5d95062fbefd3693c09d3d114f06fe8e9402c2,2f5d9506,refactor: Ems not enabled,"refactor: Ems not enabled
+
+Need to use wrap_content on TextViews for them to use maxems.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486461293,1486461293,5f485d20a65393e1b57565466780af17d07b244d
+5f485d20a65393e1b57565466780af17d07b244d,5f485d20,feat: Use close button for addItem feature,"feat: Use close button for addItem feature
+
+Rather than the normal home up button, use a cross to imply a cancel
+operation. The behaviour will still be the same.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486451138,1486451138,06752277af5d8b872887cb17937463bc814c9fa4
+06752277af5d8b872887cb17937463bc814c9fa4,06752277,feat: Add up button to AddItem feature,"feat: Add up button to AddItem feature
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486443465,1486443465,40eb114d5f63d845ceee3ebfe29133cd211e23dd
+40eb114d5f63d845ceee3ebfe29133cd211e23dd,40eb114d,feat: Add up button to About page,"feat: Add up button to About page
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486442999,1486442999,9cf95e84f147e704ba76d55da72f3e5b7a46b371
+9cf95e84f147e704ba76d55da72f3e5b7a46b371,9cf95e84,feat: Add info about app in about page,"feat: Add info about app in about page
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486442620,1486442620,d44924d6fb5f1a2017052e54431613127528a63d
+d44924d6fb5f1a2017052e54431613127528a63d,d44924d6,feat: Add content text style,"feat: Add content text style
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486438880,1486438880,6ec5aa3da379fffb69a4f13fc265c608755abb05
+6ec5aa3da379fffb69a4f13fc265c608755abb05,6ec5aa3d,feat: Add content title style,"feat: Add content title style
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486438852,1486438852,822dd812bd3f9a3bf25b71a09716fde3796ff49e
+822dd812bd3f9a3bf25b71a09716fde3796ff49e,822dd812,test: Add tests for feature title,"test: Add tests for feature title
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486438280,1486438280,b5648a49e334ced270631db58a5ffa4a32f443c3
+b5648a49e334ced270631db58a5ffa4a32f443c3,b5648a49,feat: No toolbar on Auth,"feat: No toolbar on Auth
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486437799,1486437799,8841c5442444a9aadb5eac4760f5fc1f642b64c6
+8841c5442444a9aadb5eac4760f5fc1f642b64c6,8841c544,feat: Set correct title on about page,"feat: Set correct title on about page
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486437525,1486437525,5072990ac16f0f8c165c7985af61d920fea2b865
+5072990ac16f0f8c165c7985af61d920fea2b865,5072990a,refactor: Set custom app theme,"refactor: Set custom app theme
+
+Use standard NoActionBar theme and set support action bar on the
+views.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486437386,1486437386,47a2602f9b8282521e05538718e7bf4558f61b11
+47a2602f9b8282521e05538718e7bf4558f61b11,47a2602f,refactor: Simplify tests for displaying text,"refactor: Simplify tests for displaying text
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486433634,1486433634,0cf17740731327f0e15c5ec3f373946bc64dbefe
+0cf17740731327f0e15c5ec3f373946bc64dbefe,0cf17740,feat: About page opens from items View,"feat: About page opens from items View
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486433136,1486433136,50b77d1aa03f896cef596d7182ec69d76263dd33
+50b77d1aa03f896cef596d7182ec69d76263dd33,50b77d1a,feat: Add attributions to about feature,"feat: Add attributions to about feature
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486431738,1486431738,867e5878d861418436ff29590085a2e0415cb3b5
+867e5878d861418436ff29590085a2e0415cb3b5,867e5878,feat: Add About menu option to Items View,"feat: Add About menu option to Items View
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486427407,1486427407,91e9d5efbfb9cc97943517a4ce59603d23990c3e
+91e9d5efbfb9cc97943517a4ce59603d23990c3e,91e9d5ef,fix: Travis can't find google-services file,"fix: Travis can't find google-services file
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486423004,1486423004,bf9146e4a5a5165b00b9f132fcc48cd7dc0c4f6b
+bf9146e4a5a5165b00b9f132fcc48cd7dc0c4f6b,bf9146e4,feat: Add showAddItemIU to Items View,"feat: Add showAddItemIU to Items View
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486421200,1486421200,587243caecd6507fc296649f5aed61443c0bc3f1
+587243caecd6507fc296649f5aed61443c0bc3f1,587243ca,fix: Two encrypted files with the same name,"fix: Two encrypted files with the same name
+
+Travis can't handle two encrypted files with the same name even if
+they're in different directories.
+
+Since I can include both mock and prod in one google-services.json
+file there's no need to have two.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486420843,1486420843,e3b76097d7a58f45da4acba6b6f8e958db7db09d
+e3b76097d7a58f45da4acba6b6f8e958db7db09d,e3b76097,test: Don't check package in intended,"test: Don't check package in intended
+
+To make sure tests work across both prod and mock packages, don't
+check the package and also instead use className over shortClassName.
+
+Checking package only really makes sense for external calls.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486419622,1486419622,4e1a75711ea1013a5dc6408965a2400ecf0c9b6d
+4e1a75711ea1013a5dc6408965a2400ecf0c9b6d,4e1a7571,chore: Use encrypted google-service over fake,"chore: Use encrypted google-service over fake
+
+Instead of using fake google-services for mock, use a real one and
+encrypt it with Travis. That way the app can still use Firebase when
+in mock flavour.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486418246,1486418246,f797c68040776e0692d16f204a471f66e43aa88b
+f797c68040776e0692d16f204a471f66e43aa88b,f797c680,feat: Add addItem button to Items View,"feat: Add addItem button to Items View
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486412926,1486412926,c2e52d29223106d1f7625d2e0eb8f2b9c1d06d9b
+c2e52d29223106d1f7625d2e0eb8f2b9c1d06d9b,c2e52d29,feat: Add openAddItem to ItemsPresenter,"feat: Add openAddItem to ItemsPresenter
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486411519,1486411519,5badecabc9e2281d6c5947b3c85fe344fa5c83ff
+5badecabc9e2281d6c5947b3c85fe344fa5c83ff,5badecab,feat: Add openItemDetails to ItemsPresenter,"feat: Add openItemDetails to ItemsPresenter
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486411405,1486411405,5ce9f4e66a37d3eae661576ec18c88d5ddc21d71
+5ce9f4e66a37d3eae661576ec18c88d5ddc21d71,5ce9f4e6,fix: Dagger2 scope missing,"fix: Dagger2 scope missing
+
+For components using the singleton RepositoryComponent, they also
+need to be scoped or else Dagger2 complains.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486366604,1486366604,1eb8c4af443d9aa89dbb46905dc5d978da1008d6
+1eb8c4af443d9aa89dbb46905dc5d978da1008d6,1eb8c4af,style: Add Singleton annotation,"style: Add Singleton annotation
+
+Even though the code itself makes the singleton it can be helpful to
+know by looking at the annotation.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486364915,1486364915,1a1b6bccfc3c4b0ccad39ecf80034ec1083a932d
+1a1b6bccfc3c4b0ccad39ecf80034ec1083a932d,1a1b6bcc,feat: Add getItems to ItemsPresenter,"feat: Add getItems to ItemsPresenter
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486364272,1486364272,c6b1c76948ab62fa53b9399ac8c1b03e07dc296b
+c6b1c76948ab62fa53b9399ac8c1b03e07dc296b,c6b1c769,feat: Update Auth to use SharedPreferencesHelper,"feat: Update Auth to use SharedPreferencesHelper
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486364062,1486364062,a99951a76554a8d5dc8a2481993cfb3b2d77b97e
+a99951a76554a8d5dc8a2481993cfb3b2d77b97e,a99951a7,feat: Add SharedPreferencesHelper,"feat: Add SharedPreferencesHelper
+
+Currently used to save and retrieve the userId in a testable manner.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486363896,1486363896,bf8f2980d74bb378176ac5f72ce8362de2a5d524
+bf8f2980d74bb378176ac5f72ce8362de2a5d524,bf8f2980,fix: Travis needs Google repository,"fix: Travis needs Google repository
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486268340,1486268340,8cceb1cd4ae2fcd4a9d2c5ba683f1b0de1ac3dea
+8cceb1cd4ae2fcd4a9d2c5ba683f1b0de1ac3dea,8cceb1cd,refactor: Travis taking too long to build,"refactor: Travis taking too long to build
+
+Try removing things that probably aren't needed since emulators
+aren't actually supported yet as originally thought.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486267939,1486267939,17510b88a1278bae4f24217762239ef5f85a8725
+17510b88a1278bae4f24217762239ef5f85a8725,17510b88,fix: Variable is too long,"fix: Variable is too long
+
+Turns out Travis can only store 128 bits for encrypted variables.
+Trying again now with encrypted file option.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486267052,1486267052,756171bd73f3170ae847435d9e7cac948e4b4271
+756171bd73f3170ae847435d9e7cac948e4b4271,756171bd,fix: Travis having issue with variable,"fix: Travis having issue with variable
+
+Maybe syntax was wrong. The doco has two versions. Trying the other
+ version.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486262807,1486262807,681c844dcf8a1e297b72492a1f7215ca0b277b41
+681c844dcf8a1e297b72492a1f7215ca0b277b41,681c844d,fix: Travis needs webclientid,"fix: Travis needs webclientid
+
+As I don't want to publish the webclientid I've tried the Travis
+encrypted variable approach. Travis hopefully will not complain now
+about finding the variable and will build ok.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486259284,1486259284,72c219d0c5a9335563fd9a3d45bc8b8a218f8b44
+72c219d0c5a9335563fd9a3d45bc8b8a218f8b44,72c219d0,chore: Misc file changed,"chore: Misc file changed
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486245491,1486245491,558918bd5f5e205a502b1a31f8a7786cbca33872
+558918bd5f5e205a502b1a31f8a7786cbca33872,558918bd,fix: Travis can't find clientId from buildConfig,"fix: Travis can't find clientId from buildConfig
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486245466,1486245466,22740915f2d09b11774a3ca0c3c4286866a12022
+22740915f2d09b11774a3ca0c3c4286866a12022,22740915,fix: Signin button not shown after login,"fix: Signin button not shown after login
+
+If user logs in successfully to firebase then goes back to auth
+activity the signin button is not visible.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486244403,1486244403,eb755da83fcb869d96cc78915fb2512a948523a1
+eb755da83fcb869d96cc78915fb2512a948523a1,eb755da8,feat: Add ItemsActivity,"feat: Add ItemsActivity
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486242879,1486242879,4d376e63f1df0d29437ab5725d6c60229fecc45d
+4d376e63f1df0d29437ab5725d6c60229fecc45d,4d376e63,feat: Add Auth layout,"feat: Add Auth layout
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486242835,1486242835,cb5270a856d4c36f1c4c1d49a593be633a618c48
+cb5270a856d4c36f1c4c1d49a593be633a618c48,cb5270a8,feat: Add Auth view,"feat: Add Auth view
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486242732,1486242732,131c63a9a95e3c7740e6d9f6770c9ddb3642848b
+131c63a9a95e3c7740e6d9f6770c9ddb3642848b,131c63a9,feat: Add AuthActivity,"feat: Add AuthActivity
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239820,1486239820,616d4933384a1c8cfcdf2bf07ce8a7e73f6df870
+616d4933384a1c8cfcdf2bf07ce8a7e73f6df870,616d4933,test: Add AuthScreenTest,"test: Add AuthScreenTest
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239745,1486239745,d317d7e429d972d359f443bed64eaabee80a06a4
+d317d7e429d972d359f443bed64eaabee80a06a4,d317d7e4,refactor: Update AuthContract,"refactor: Update AuthContract
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239468,1486239468,4641158b84aa4d2882b59fffc091dbda59eb8295
+4641158b84aa4d2882b59fffc091dbda59eb8295,4641158b,feat: Add AuthPresenter,"feat: Add AuthPresenter
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239440,1486239440,29395d6dfebfa48e766e65ae580f1786c6b2fad4
+29395d6dfebfa48e766e65ae580f1786c6b2fad4,29395d6d,feat: Add Auth module and component,"feat: Add Auth module and component
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239420,1486239420,4a59df5070ddea8680677cdd67b272eb6b981878
+4a59df5070ddea8680677cdd67b272eb6b981878,4a59df50,test: Add AuthPresenterTest,"test: Add AuthPresenterTest
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486239176,1486239176,173256c5edf36a1d78dbc6e0584cfde004776d17
+173256c5edf36a1d78dbc6e0584cfde004776d17,173256c5,chore: Add fake google-services plugin for Travis,"chore: Add fake google-services plugin for Travis
+
+Firebase needs google-services.json however there is no way to use
+the google-services plugin only for mock; it's all or nothing.
+
+Using a fake google-services.json file in the mock flavour with no
+API key seems to work ok so far. This way Travis is happy as gradle
+will not complain, and with Travis only running mock tests it won't
+need the real json file which is in prod.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486238757,1486238757,b335960028d40be94a23a72161ce0ee928ce8d9e
+b335960028d40be94a23a72161ce0ee928ce8d9e,b3359600,test: Remove example test,"test: Remove example test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486238160,1486238160,1275ba3afebcb3b4846893d4f8fc4fcd877bd5b4
+1275ba3afebcb3b4846893d4f8fc4fcd877bd5b4,1275ba3a,chore: Remove google-services plugin,"chore: Remove google-services plugin
+
+See previous commit message for more explanation.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486053546,1486053546,5d2b8c0f4548a92b8ce32ff42ff18b8eb94b4e23
+5d2b8c0f4548a92b8ce32ff42ff18b8eb94b4e23,5d2b8c0f,fix: Travis breaks without google-services.json,"fix: Travis breaks without google-services.json
+
+When using the Google services plugin it needs the
+google-services.json file. However this file contains my API key so I
+don't want to upload it to Github.
+
+If I don't use the google-services plugin at all I can supply the API
+key manually from a properties file. Since mock tests don't need the
+API key I can have Travis only run MockDebug tests so I don't need to
+store the API key on Github. Since Travis doesn't need to run prod
+tests this should be an acceptable solution for now providing
+everything still works. So far so good.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486053474,1486053474,c9c84d9cba0101f4ca52bd5c05594e3959c79484
+c9c84d9cba0101f4ca52bd5c05594e3959c79484,c9c84d9c,Feat: Add AuthContract,"Feat: Add AuthContract
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486048718,1486048718,4446c3bce3f93723bc25aa712fe1025827084fb8
+4446c3bce3f93723bc25aa712fe1025827084fb8,4446c3bc,chore: Update Gradle files for auth dependencies,"chore: Update Gradle files for auth dependencies
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486048133,1486048133,ce7d77d5740fec5881f47b3b74071106b584b52b
+ce7d77d5740fec5881f47b3b74071106b584b52b,ce7d77d5,chore: Update .gitIgnore,"chore: Update .gitIgnore
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1486047937,1486047937,3ca3c21f59de462ab2d3bbf2af148255f605e1a4
+3ca3c21f59de462ab2d3bbf2af148255f605e1a4,3ca3c21f,feat: Implement FakeDataSource,"feat: Implement FakeDataSource
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485961511,1485961511,92d50681c16c97f60b8c6944eee8eede2abf170b
+92d50681c16c97f60b8c6944eee8eede2abf170b,92d50681,refactor: Check for null in repo getter methods,"refactor: Check for null in repo getter methods
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485959994,1485959994,602f7187c9e79aee54e0413dee5f8eab9481425e
+602f7187c9e79aee54e0413dee5f8eab9481425e,602f7187,feat: Implement repository methods,"feat: Implement repository methods
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485959607,1485959607,41f6044b1d94ac4e640073d397971eb1010a573c
+41f6044b1d94ac4e640073d397971eb1010a573c,41f6044b,test: Add repository tests,"test: Add repository tests
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485950438,1485950438,99539355b0b01438e94fefa0804c50ab0ecb4ca4
+99539355b0b01438e94fefa0804c50ab0ecb4ca4,99539355,chore: Update support library version,"chore: Update support library version
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485947974,1485947974,735290ad04c7c89d47962a44281619ae5e9a6e68
+735290ad04c7c89d47962a44281619ae5e9a6e68,735290ad,chore: Delete example unit test,"chore: Delete example unit test
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485946664,1485946664,252ab73098ed8fc1645c5f51c59f510030e3d8e4
+252ab73098ed8fc1645c5f51c59f510030e3d8e4,252ab730,feat: Add methods to cancel listeners,"feat: Add methods to cancel listeners
+
+Add methods to cancel Firebase listeners. Also added userId parameter
+for save and delete items.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485946503,1485946503,cee75c4bc1e16d06394aa0cf0b01301192639548
+cee75c4bc1e16d06394aa0cf0b01301192639548,cee75c4b,feat: Add ItemReaper Application class,"feat: Add ItemReaper Application class
+
+Holds the RepositoryComponent.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485885166,1485885166,983315d746f74adb3f95da0d834b6befb1e9af71
+983315d746f74adb3f95da0d834b6befb1e9af71,983315d7,feat: Add Dagger2 RepositoryComponent,"feat: Add Dagger2 RepositoryComponent
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485885102,1485885102,464564cef5f034255e5e38f78f5a9bff5be3b1d8
+464564cef5f034255e5e38f78f5a9bff5be3b1d8,464564ce,feat: Add Repository skeleton,"feat: Add Repository skeleton
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485885039,1485885039,0190bfd1b7fbffd7031a34658023974f48b8eeaa
+0190bfd1b7fbffd7031a34658023974f48b8eeaa,0190bfd1,feat: Add Dagger2 DataSourceModule,"feat: Add Dagger2 DataSourceModule
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485884423,1485884423,9c90064c6da6d61b2123a71a6deff58f73203b26
+9c90064c6da6d61b2123a71a6deff58f73203b26,9c90064c,feat: Add DataSource interface and skeleton,"feat: Add DataSource interface and skeleton
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485883998,1485883998,3ddecac9023bac8d6f36c8be8eb5d00bec3bf0a2
+3ddecac9023bac8d6f36c8be8eb5d00bec3bf0a2,3ddecac9,feat: Add Item data type,"feat: Add Item data type
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485853270,1485853270,788839163a9f5bd7978f70efab13fb6a9f19fc93
+788839163a9f5bd7978f70efab13fb6a9f19fc93,78883916,feat: Set main app colours,"feat: Set main app colours
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485846619,1485846619,c476a3ad74f0639b8985bafdff1bf8ea8b74f706
+c476a3ad74f0639b8985bafdff1bf8ea8b74f706,c476a3ad,chore: Add Espresso idling resource,"chore: Add Espresso idling resource
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485776732,1485776732,5b42f8450393cff5dbcbf6e7f6f8b94d2812daa8
+5b42f8450393cff5dbcbf6e7f6f8b94d2812daa8,5b42f845,chore: Add initial library dependencies,"chore: Add initial library dependencies
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485776338,1485776338,c708269d9d6b29fa5d5aef9e0679b5393d899f4c
+c708269d9d6b29fa5d5aef9e0679b5393d899f4c,c708269d,chore: Add mock and prod flavours,"chore: Add mock and prod flavours
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485771747,1485771747,18668762a48f0926d13d798df37fa282da3a1892
+18668762a48f0926d13d798df37fa282da3a1892,18668762,feat: Add launcher icons,"feat: Add launcher icons
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485770388,1485770388,5c3ac6b4b514e111887e0985bcb469f323d588c1
+5c3ac6b4b514e111887e0985bcb469f323d588c1,5c3ac6b4,docs: Update readme,"docs: Update readme
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485768945,1485768945,9dd0e0ae0455981dccb649e57662e4d5aac2fae6
+9dd0e0ae0455981dccb649e57662e4d5aac2fae6,9dd0e0ae,docs: Update readme,"docs: Update readme
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485768745,1485768745,c010c4696fdc6cdb3e6dfccc89c44e79a9bf9882
+c010c4696fdc6cdb3e6dfccc89c44e79a9bf9882,c010c469,fix: Travis not working with emulator,"fix: Travis not working with emulator
+
+Since emulators are not yet fully supported by Travis, only do unit tests for now.
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485767197,1485767197,5b04c07ea97a9388474e75d9808e911f3006f85d
+5b04c07ea97a9388474e75d9808e911f3006f85d,5b04c07e,chore: Add travis yml file,"chore: Add travis yml file
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485766012,1485766012,7c099f380df6890b1cdcbabf2420d3cafb2c5ff7
+7c099f380df6890b1cdcbabf2420d3cafb2c5ff7,7c099f38,feat: Add hello world project,"feat: Add hello world project
+",,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485764372,1485764372,5d258fcd81b304af03135e185cbf6f75700e5fbd
+5d258fcd81b304af03135e185cbf6f75700e5fbd,5d258fcd,Initial commit,Initial commit,,,,Michael Vescovo,m.vescovo@gmail.com,Michael Vescovo,m.vescovo@gmail.com,1485756835,1485756835,

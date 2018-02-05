@@ -1,0 +1,141 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+3d836d90f0ebab96778aac1c9052ab2f9f785ea3,3d836d90,Converted favorites and notifications to use RxJava. Minor cleanup of previous changes.,"Converted favorites and notifications to use RxJava. Minor cleanup of previous changes.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1506920498,1506920498,8264eca84b6e3a77830e6b0c7f56b3960a321a9a
+8264eca84b6e3a77830e6b0c7f56b3960a321a9a,8264eca8,"Initial migration to RxJava, Retrofit and Dagger. Other minor improvements.","Initial migration to RxJava, Retrofit and Dagger. Other minor improvements.
+
+Network calls are now done through Retrofit, using RxJava to facilitate actions and move the project to a more reactive style.
+
+DI via Dagger has been introduced to manage the various shared dependencies in the project.
+
+Added round icon attribute missing from previous version.
+Bumped version and SDK numbers.
+Pointing to the Google maven repo for Android SDK depends.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1502609869,1502609869,d7f2e4d9881bcfa8614644e3b5dedec71b2e0eda
+d7f2e4d9881bcfa8614644e3b5dedec71b2e0eda,d7f2e4d9,Fixed tab persistence issue. Updated tests and LoadingCache interface. Updated…,"Fixed tab persistence issue. Updated tests and LoadingCache interface. Updated app for 1.0.1 release.
+
+The tab persistence issue was caused by setting the selected tab to Home in the onResume method. This meant every time the app was backgrounded then foregrounded, the home view would be loaded despite the selected tab being something else.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1496003479,1496003479,156580faa92792e7660dddcd37dfe8f53788af23
+156580faa92792e7660dddcd37dfe8f53788af23,156580fa,Completely took out the roughike bottombar stuff.,"Completely took out the roughike bottombar stuff.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1495955886,1495955886,708a7bd6ea63b4707c3d62f922d61e8a3f3d6198
+708a7bd6ea63b4707c3d62f922d61e8a3f3d6198,708a7bd6,Updated proguard rules. This required swapping out the roughike bottombar…,"Updated proguard rules. This required swapping out the roughike bottombar library for the design support bottom nav view. The bottombar lib caused a missing reference issue when minifying.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1495949787,1495949787,f2b95d92ead93a4ef97b900f3f8617144fb83bef
+f2b95d92ead93a4ef97b900f3f8617144fb83bef,f2b95d92,Updated launcher icons to custom sized ones.,"Updated launcher icons to custom sized ones.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494740139,1494740139,767764a9c6e6257b4e3966c87a1b263866af3140
+767764a9c6e6257b4e3966c87a1b263866af3140,767764a9,Massively restructured the app service architecture.,"Massively restructured the app service architecture.
+
+The repos now only store remote or cached information. Local saves were causing syncing issues and do not necessarily have a use in an app that is supposed to provide real-time info.
+
+The favorite routes service calls are now significantly lowered in scope by simply grabbing the full list of trains + buses, rather than making calls for each route. This fixes an issue related to concurrent requests.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494737947,1494737947,e18d2426f26461512d1ebc67f64819cb9388463e
+e18d2426f26461512d1ebc67f64819cb9388463e,e18d2426,Fixed a few bugs related to the cached fav routes.,"Fixed a few bugs related to the cached fav routes.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494652383,1494652383,b3a3688c666c2f28c5fa71bb330fb3a536f2b562
+b3a3688c666c2f28c5fa71bb330fb3a536f2b562,b3a3688c,Implemented a mildly redundant favorite routes headless fragment that acts as a…,"Implemented a mildly redundant favorite routes headless fragment that acts as a cache. This is mainly to load favorite routes outside of any lifecycle.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494646232,1494646232,bb85cdf421e48b001898a8f803369802417379b0
+bb85cdf421e48b001898a8f803369802417379b0,bb85cdf4,Refactored the Home and Favorites business logic. This includes a fix for the…,"Refactored the Home and Favorites business logic. This includes a fix for the timing and order of calls for fetching the latest arrival times from the cache.
+
+Also, removed the CachedDataMap class and just added simple hasCachedData methods to each repo class.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494640123,1494640123,6d422fd5fba0996703a3dd18df84e37e30be9453
+6d422fd5fba0996703a3dd18df84e37e30be9453,6d422fd5,Updated the unit tests. Still need to write tests for Home and Favorites. Made…,"Updated the unit tests. Still need to write tests for Home and Favorites. Made improvements based on findings.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494561432,1494561432,02aec9aba53cceaa0bed2f40a78f4e010334edaa
+02aec9aba53cceaa0bed2f40a78f4e010334edaa,02aec9ab,Massive fixes to how trains are handled. Previous use of line + station as a…,"Massive fixes to how trains are handled. Previous use of line + station as a unique pair would obfuscate trains of the same line headed to the same station at different times.
+
+Fixed other bugs related to general use. Added feedback option.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1494474883,1494474883,70203db62a5fe958b3f72462a3ee635d547df2d6
+70203db62a5fe958b3f72462a3ee635d547df2d6,70203db6,Seemingly fixed the stale info bug by making sure to carry over the db Id when saving fav routes.,"Seemingly fixed the stale info bug by making sure to carry over the db Id when saving fav routes.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1492661764,1492661764,ec705daee5d4cbd57db498e0163a8a3a818b51fc
+ec705daee5d4cbd57db498e0163a8a3a818b51fc,ec705dae,Branded the UI and finished styling the layouts. Fixed some fav route duplication bugs.,"Branded the UI and finished styling the layouts. Fixed some fav route duplication bugs.
+
+There still remains some issues with keeping the db copy of fav routes current.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1492661345,1492661345,8dc07227de1321075f1adfd72f08087bd6eb0015
+8dc07227de1321075f1adfd72f08087bd6eb0015,8dc07227,Still messing around with Jacoco.,"Still messing around with Jacoco.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1491538577,1491538577,0e4be4dea36d51992b39166c5494106480cf98f7
+0e4be4dea36d51992b39166c5494106480cf98f7,0e4be4de,Took out the androidDebugTest portions of the jacoco task.,"Took out the androidDebugTest portions of the jacoco task.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1491538344,1491538344,bc6d2cea02549185cd4dbb00c22985046467f30e
+bc6d2cea02549185cd4dbb00c22985046467f30e,bc6d2cea,Testing out how to enable jacoco.,"Testing out how to enable jacoco.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1491537558,1491537558,a96ec855c4b1d0db11e248bce2de805ca3c1ebe9
+a96ec855c4b1d0db11e248bce2de805ca3c1ebe9,a96ec855,Enabling coverage reports.,"Enabling coverage reports.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1491531589,1491531589,81422eeec538d5842ec698efc9529ad7672bc860
+81422eeec538d5842ec698efc9529ad7672bc860,81422eee,Updated dependencies. Added some tests. Added aspect ratio tag for larger Android phones.,"Updated dependencies. Added some tests. Added aspect ratio tag for larger Android phones.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1491360134,1491360134,0f3c76ae3a31c848c8557dcbfc2b9ca71fbc86c7
+0f3c76ae3a31c848c8557dcbfc2b9ca71fbc86c7,0f3c76ae,Implemented the updating logic for routes on the Home screen. This led to a fix…,"Implemented the updating logic for routes on the Home screen. This led to a fix for the Favorites screen.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1488166413,1488166413,32cfd0c591bf9fdc4c5ff31450814a73c9538a24
+32cfd0c591bf9fdc4c5ff31450814a73c9538a24,32cfd0c5,Re-did the Favorites logic so it mostly works. Added IntentServices to be used…,"Re-did the Favorites logic so it mostly works. Added IntentServices to be used for polling up-to-date route info. Refactored Views and Presenters to remove as many Android dependencies from the Presenters.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1487736936,1487736936,c28a5f9b83fab38aa75e8a3cc5dfc1d111ef6ceb
+c28a5f9b83fab38aa75e8a3cc5dfc1d111ef6ceb,c28a5f9b,Favorites working for the most part. Updated some home screen layouts.,"Favorites working for the most part. Updated some home screen layouts.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1487301542,1487301542,f7d1a76506c27f59985d6d7a5c6601c2109421bb
+f7d1a76506c27f59985d6d7a5c6601c2109421bb,f7d1a765,Favorites is now somewhat working. Still has tons of problems. Database issues…,"Favorites is now somewhat working. Still has tons of problems. Database issues related to buses and trains now resolved.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1486441797,1486441797,cdb486f4a4366266c326ffeafe5cbab3725172df
+cdb486f4a4366266c326ffeafe5cbab3725172df,cdb486f4,Got most of the favoriting logic laid out and implemented. Added empty state…,"Got most of the favoriting logic laid out and implemented. Added empty state screens for favorites, buses, and trains.
+
+The favoriting logic is subject to crashing and other issues. More on this in later commits.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1486280271,1486280271,c720b302085a6c7d0e3358c7ce3d219d6eeb2b44
+c720b302085a6c7d0e3358c7ce3d219d6eeb2b44,c720b302,Updated how caching and presentation is done for trains and buses. Added swipe…,"Updated how caching and presentation is done for trains and buses. Added swipe to refresh and a loading screen for buses and trains.
+
+Previously, I wasn't distinguishing based on lines for trains. This made the same line show up multiple times, which doesn't accurately reflect how a rider normally takes public transit.
+
+There was another issue with duplicate requests for the same data. This was fixed by using tags and canceling the previous request with the same tag.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485747087,1485747087,215f98c37881ee7334aabbc0813f3e5a0459b002
+215f98c37881ee7334aabbc0813f3e5a0459b002,215f98c3,"Implemented favoriting, updating train and bus models to track favorite status.…","Implemented favoriting, updating train and bus models to track favorite status. Changed caching key for trains, since trainId was not unique in the returned list.
+
+Added some new drawables and renamed the HtmlUtil class.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485673812,1485673812,4ed840c995369be9984440dd98acbd3ef6d8ed3d
+4ed840c995369be9984440dd98acbd3ef6d8ed3d,4ed840c9,Implemented AsyncTasks for parsing the responses from the bus and train remote sources.,"Implemented AsyncTasks for parsing the responses from the bus and train remote sources.
+
+Also, HTML entities are now escaped in the notification text.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485667902,1485667902,0b2dbdd0aebac6058443999660bdc86578172782
+0b2dbdd0aebac6058443999660bdc86578172782,0b2dbdd0,Improved performance of the bus and train repo calls by offloading the non-UI…,"Improved performance of the bus and train repo calls by offloading the non-UI work to a background thread.
+
+Previously, all of the parsing, saving, and caching was handled in the UI thread- blocking it.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485406917,1485406917,b97f62e7edfa197737cd0bde5c409b5594467d23
+b97f62e7edfa197737cd0bde5c409b5594467d23,b97f62e7,Fleshed out the See & Say informational screen. Fixed a bug related to how items…,"Fleshed out the See & Say informational screen. Fixed a bug related to how items are added to the Home tab.
+
+The Home tab bug was related to a lack of uniqueness checks in the adapter. If the same items are added to the adapter they would be added even if they already are in the list. This was fixed by concurrently using a list and map.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485145068,1485145068,0672e8fa884a854728e2b41db03cd6cc69e02b7c
+0672e8fa884a854728e2b41db03cd6cc69e02b7c,0672e8fa,Added a DateHelper class for formatting and parsing dates.,"Added a DateHelper class for formatting and parsing dates.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485067178,1485067178,72b8291470227d604fa0d1afd5b4301612558834
+72b8291470227d604fa0d1afd5b4301612558834,72b82914,Updated the FavoriteRoutes interface and cleaned up the project structure a bit.,"Updated the FavoriteRoutes interface and cleaned up the project structure a bit.
+
+Other minor bug fixes.
+
+Updated dependencies.
+
+README now has set up instructions.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1485063968,1485063968,e1ee575ea22644f0af92c7f6f58a5424180f3132
+e1ee575ea22644f0af92c7f6f58a5424180f3132,e1ee575e,Home tab now has visible content. Notification caching is now used. Other code…,"Home tab now has visible content. Notification caching is now used. Other code improvements and refinements.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1484880238,1484880238,589d1aa82c00f17c401b1d71c9e46c3b5ef61641
+589d1aa82c00f17c401b1d71c9e46c3b5ef61641,589d1aa8,Moved crashlytics stuff to the fabric file.,"Moved crashlytics stuff to the fabric file.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1484021701,1484021701,1f2ece461ca74b3930bcf0c0c4ea3f74e83af609
+1f2ece461ca74b3930bcf0c0c4ea3f74e83af609,1f2ece46,Began implementing the home tab's layout. Switching to using environment…,"Began implementing the home tab's layout. Switching to using environment variables for the API_KEYs and SECRETs.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1484019805,1484019805,9dec1aa2422b4dedc77081885a2414fdec5de29f
+9dec1aa2422b4dedc77081885a2414fdec5de29f,9dec1aa2,"Updated layouts for bus, train and alert row items.","Updated layouts for bus, train and alert row items.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1482810665,1482810665,abc8a8d55c8c1055645b6d0d6e77f607914c5431
+abc8a8d55c8c1055645b6d0d6e77f607914c5431,abc8a8d5,Began implementing the favoriting feature. This required some restructuring to…,"Began implementing the favoriting feature. This required some restructuring to prevent excessive database calls.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1482804095,1482804095,2df979aabceb9445f19edd8ac65476b33c8ffc1a
+2df979aabceb9445f19edd8ac65476b33c8ffc1a,2df979aa,Minor updates to the BreezeBalanceActivity.,"Minor updates to the BreezeBalanceActivity.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1480905382,1480905382,0208774b26aecdaa1a7ec9acb4beacd0372e6045
+0208774b26aecdaa1a7ec9acb4beacd0372e6045,0208774b,BreezeCard WebView now working. Accepting all certs if URL matches breeze card balance url.,"BreezeCard WebView now working. Accepting all certs if URL matches breeze card balance url.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1480905114,1480905114,d8a36241a25f13260ccc54bf84a346ca3b6d424a
+d8a36241a25f13260ccc54bf84a346ca3b6d424a,d8a36241,BreezeCard WebView now working. Accepting all certs if URL matches breeze card balance url.,"BreezeCard WebView now working. Accepting all certs if URL matches breeze card balance url.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1480904397,1480904397,7b47d14e834b73e22496b176167bf6df49b05b00
+7b47d14e834b73e22496b176167bf6df49b05b00,7b47d14e,Beginning to build out the favorite routes implementation. Updated dependencies.,"Beginning to build out the favorite routes implementation. Updated dependencies.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1480902914,1480902914,1b751f7af00bc80a39297f54603fe67ee0df3325
+1b751f7af00bc80a39297f54603fe67ee0df3325,1b751f7a,Beginning to build out the favorite routes implementation.,"Beginning to build out the favorite routes implementation.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1479351945,1479351945,cc998cad211eb97959f9b8bb8df159593b3a3215
+cc998cad211eb97959f9b8bb8df159593b3a3215,cc998cad,"Implemented local sources for Notifications, Buses, and Trains and session-limited cache use logic.","Implemented local sources for Notifications, Buses, and Trains and session-limited cache use logic.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1479095627,1479095627,2081d46f101c4a4ad6c52213479ce4f9babd45aa
+2081d46f101c4a4ad6c52213479ce4f9babd45aa,2081d46f,Updated README. Added a test suite class.,"Updated README. Added a test suite class.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1478927172,1478927172,878f8443cbce1811001a45f79653e55abdc88aac
+878f8443cbce1811001a45f79653e55abdc88aac,878f8443,Integrated with Fabric for Twitter stuff. Implemented Notification stuff. Updated travis.yml.,"Integrated with Fabric for Twitter stuff. Implemented Notification stuff. Updated travis.yml.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1478925290,1478925290,204bce8de84ead5cc9a31a5e40f5e1720ad36560
+204bce8de84ead5cc9a31a5e40f5e1720ad36560,204bce8d,Started integration with Fabric for Twitter stuff. Updated travis.yml.,"Started integration with Fabric for Twitter stuff. Updated travis.yml.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1478921126,1478921126,1fa95d5320e7519610ba096a92e770b8e38a740e
+1fa95d5320e7519610ba096a92e770b8e38a740e,1fa95d53,Implemented layouts for bus and train tabs. Implemented remote data calls for…,"Implemented layouts for bus and train tabs. Implemented remote data calls for bus and trains. Defined db schemas.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1478833658,1478833658,2ada172a23fa9c18639cc6299b351a0e0fcfa281
+2ada172a23fa9c18639cc6299b351a0e0fcfa281,2ada172a,"Fleshed out interfaces. Added models, repo classes, and layouts.","Fleshed out interfaces. Added models, repo classes, and layouts.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1477273965,1477273965,54ad955b5683d767138b87afee2f5f09a46d6f7a
+54ad955b5683d767138b87afee2f5f09a46d6f7a,54ad955b,Updated travis.yml build-tools-version.,"Updated travis.yml build-tools-version.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1477188332,1477188332,8cef69ce789839c2c09f45e5b6a634ced2976a6b
+8cef69ce789839c2c09f45e5b6a634ced2976a6b,8cef69ce,Added a travis build badge to README.,"Added a travis build badge to README.
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1477187385,1477187385,3f6abe5ddd0177abaf3c1fe6543b811c2bca869a
+3f6abe5ddd0177abaf3c1fe6543b811c2bca869a,3f6abe5d,Initial commit. Yay!,"Initial commit. Yay!
+",,,,Andrew Vorakrajangthiti,andrewjvora@gmail.com,Andrew Vorakrajangthiti,andrewjvora@gmail.com,1477183633,1477183633,

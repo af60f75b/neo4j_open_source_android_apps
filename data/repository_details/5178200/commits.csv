@@ -1,0 +1,924 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+185af643e2c4c73bca56c6183382ed3f54cb3b72,185af643,Version 2.6,"Version 2.6
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1506505152,1506505152,9f79cce78dc57396f5a77758753f8e4d4d161dbc
+9f79cce78dc57396f5a77758753f8e4d4d161dbc,9f79cce7,Merge pull request #68 from tasn/fix-no-end-date,"Merge pull request #68 from tasn/fix-no-end-date
+
+Fix export of all day events without an end date.",,,,Dominik Schürmann,dominik@schuermann.eu,GitHub,noreply@github.com,1506504293,1506504293,"0afd5c9581d3d5f65a32a01c0ec1cbafead7c277,0af183bb2626cb01a340828ea18c6d37c6110bd5"
+0afd5c9581d3d5f65a32a01c0ec1cbafead7c277,0afd5c95,Update URLs,"Update URLs
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1503904290,1503904290,6ebd4276797cae6571ea15ec43d6e8ead2fa5af6
+0af183bb2626cb01a340828ea18c6d37c6110bd5,0af183bb,Fix export of all day events without an end date.,"Fix export of all day events without an end date.
+
+I don't know why this would happen, but a user managed to encounter an
+issue related to this.
+
+This fix assumes that if there's no end date, we should assume it's one
+day long.
+
+This should fix #66.
+",,,,Tom Hacohen,tom@stosb.com,Tom Hacohen,tom@stosb.com,1499009204,1499009204,6ebd4276797cae6571ea15ec43d6e8ead2fa5af6
+6ebd4276797cae6571ea15ec43d6e8ead2fa5af6,6ebd4276,Version 2.5,"Version 2.5
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1489701514,1489701514,4b9a4f82c19883bc648eeaf99980b300c03a724e
+4b9a4f82c19883bc648eeaf99980b300c03a724e,4b9a4f82,Merge pull request #64 from tasn/fix-allday,"Merge pull request #64 from tasn/fix-allday
+
+Fix all day events",,,,Dominik Schürmann,dominik@schuermann.eu,GitHub,noreply@github.com,1489701420,1489701420,"28182f4c5adb47278bd47f73205b564b86a91aaf,68868a84c00c3709b38abb9a8636957fb643a5fd"
+68868a84c00c3709b38abb9a8636957fb643a5fd,68868a84,Fix all day events import.,"Fix all day events import.
+
+If an event's start date is a date (and not datetime) we can assume the
+end date would be one too, and that means it's an all day event.
+
+The previous code was forcing the event to be a one day event although
+this was completely unnecessary.
+
+Fixes #50
+",,,,Tom Hacohen,tom@stosb.com,Tom Hacohen,tom@stosb.com,1487260991,1487261109,947edd17e04a90a810214934837478c55cfb57a0
+947edd17e04a90a810214934837478c55cfb57a0,947edd17,Fix all day events export.,"Fix all day events export.
+
+The code was creating a datetime object, but all day events should have
+a date object for both the start and the end dates.
+
+Fixes #50
+",,,,Tom Hacohen,tom@stosb.com,Tom Hacohen,tom@stosb.com,1487260729,1487261013,28182f4c5adb47278bd47f73205b564b86a91aaf
+28182f4c5adb47278bd47f73205b564b86a91aaf,28182f4c,Update license section in README,"Update license section in README
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1483009008,1483009008,56a6f0b83b3aa13497bddbeb6f76bed1a2875487
+56a6f0b83b3aa13497bddbeb6f76bed1a2875487,56a6f0b8,"Remove LICENSE.iCal4j, confuses license display on GitHub","Remove LICENSE.iCal4j, confuses license display on GitHub
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1483008913,1483008913,3a0f01a31a4897c8471378898cc69557d0a6591f
+3a0f01a31a4897c8471378898cc69557d0a6591f,3a0f01a3,Version 2.4,"Version 2.4
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1478004161,1478004161,70fe67aec22a8e2d5878f6a02572f4317d3cd589
+70fe67aec22a8e2d5878f6a02572f4317d3cd589,70fe67ae,Pull from transifex,"Pull from transifex
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1465196806,1465196806,4f5f8fa40abe6bab5cdb3d11e59a9f43cf08c59e
+4f5f8fa40abe6bab5cdb3d11e59a9f43cf08c59e,4f5f8fa4,Update the changelog for issue #47 changes,"Update the changelog for issue #47 changes
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464919151,1464919151,a5bfa2b71cbe542c98f2f10382fb8b234703d97d
+a5bfa2b71cbe542c98f2f10382fb8b234703d97d,a5bfa2b7,Avoid updating our calendar info if nothing has changed,"Avoid updating our calendar info if nothing has changed
+
+For issue #47. In the typical case of no changes when resuming this
+makes the behaviour the same as previous versions. If there any issues
+around changing the calendar list they should now only occur after the
+calendar is actually changed.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464918800,1464919049,552237a12515dd358636990bd3f4f0d7aa3c2f01
+552237a12515dd358636990bd3f4f0d7aa3c2f01,552237a1,"Log the received action, not our filters (which we know)","Log the received action, not our filters (which we know)
+
+For issue #47.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464826560,1464826561,5eb6f484776e397d80bf073f607fbfb368c4ec41
+5eb6f484776e397d80bf073f607fbfb368c4ec41,5eb6f484,Listen and respond to broadcast calendar changes,"Listen and respond to broadcast calendar changes
+
+Part 1 of issue #47. The code to (re)initialise the calendar info is now
+called from app init, activity resume and broadcast receive so needs to be
+made safe and efficient for all three cases.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464826078,1464826202,000c9449a7f6d9c4723ce76e7e5f7cc1db168766
+000c9449a7f6d9c4723ce76e7e5f7cc1db168766,000c9449,Clean up new permission handling code,"Clean up new permission handling code
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464749844,1464749844,6949507f5815330d54e48b575d0a48a2a2017820
+6949507f5815330d54e48b575d0a48a2a2017820,6949507f,Initial support for reloading the calendar on app resume,"Initial support for reloading the calendar on app resume
+
+Part 1 of issue #47. Per the FIXMEs this needs to be smarter about
+avoiding updates where possible and part 2 still needs implementing.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464748654,1464748654,a30206f479d348c7ddbbabea1efa8afae5c96ac6
+a30206f479d348c7ddbbabea1efa8afae5c96ac6,a30206f4,Update changelog,"Update changelog
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464704143,1464704143,1f13e44aecb7952f2ce4a315c9e5c4fb081bdc22
+1f13e44aecb7952f2ce4a315c9e5c4fb081bdc22,1f13e44a,Add a developer setting for querying all columns,"Add a developer setting for querying all columns
+
+This causes the debug log to contain all available values from
+the provider which can hopefully help with debugging issue #44.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464703936,1464703938,538c45533ab0f3c12789db06e3561d9d6f522627
+538c45533ab0f3c12789db06e3561d9d6f522627,538c4553,Default/Suggest filename when saving,"Default/Suggest filename when saving
+
+Fixes issue #38
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464662066,1464662208,74e2bc3877d9f98f673e2828fda2bf8e6f07ecae
+74e2bc3877d9f98f673e2828fda2bf8e6f07ecae,74e2bc38,Dont abort on missing translations,"Dont abort on missing translations
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1464449197,1464449197,3a802f53919d385d8daeb92ff74cc2bd3cc6cb42
+3a802f53919d385d8daeb92ff74cc2bd3cc6cb42,3a802f53,Pull from transifex,"Pull from transifex
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1464449111,1464449111,ac8d8381cfd16beb4b981673af6befa93a045007
+ac8d8381cfd16beb4b981673af6befa93a045007,ac8d8381,Include suggested fixes from Alain-Olivier,"Include suggested fixes from Alain-Olivier
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1464335875,1464335875,41c20a1a575078ad35b0da385970f86ba0972722
+41c20a1a575078ad35b0da385970f86ba0972722,41c20a1a,Handle cancel via back-button/clicking outside the export dialog,"Handle cancel via back-button/clicking outside the export dialog
+
+Fixes issue #45.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464229811,1464229811,d09a76240cb0652ad8a5daee71efdfc40c69ad3d
+d09a76240cb0652ad8a5daee71efdfc40c69ad3d,d09a7624,Fix imports,"Fix imports
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464229644,1464229644,b63ffbb274a7781c0a13de4ba31168e5beaf4d42
+b63ffbb274a7781c0a13de4ba31168e5beaf4d42,b63ffbb2,Use our internal logging methods,"Use our internal logging methods
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464158964,1464158964,fa203a136bcbee13da30a897ec40a77070ca4621
+fa203a136bcbee13da30a897ec40a77070ca4621,fa203a13,Allow calendars missing columns to initially load,"Allow calendars missing columns to initially load
+
+For Issue #43. Also some minor cleanup around this code to make it
+more like the saving code.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464151012,1464151142,c1b0bb0687c114e32c2bd35845f652f2de3905f0
+c1b0bb0687c114e32c2bd35845f652f2de3905f0,c1b0bb06,Broaden our catch to Exception from NullPointerException,"Broaden our catch to Exception from NullPointerException
+
+Some providers may throw SQLiteException when asked for columns
+they don't provide (Issue #43 shows this happening when initialising).
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1464149703,1464151142,5e9eac0d971f39a7c70891bc0bd8433d9b0c8d0d
+5e9eac0d971f39a7c70891bc0bd8433d9b0c8d0d,5e9eac0d,Version 2.3,"Version 2.3
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1463839410,1463839410,a99fb944fb3eb9c68dde015e8858d2f7788eef37
+a99fb944fb3eb9c68dde015e8858d2f7788eef37,a99fb944,Integrate runtime permissions,"Integrate runtime permissions
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1463839255,1463839255,169fcf7b9505053f873cb2868626d633d7c00d48
+169fcf7b9505053f873cb2868626d633d7c00d48,169fcf7b,google play graphics,"google play graphics
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1463836935,1463836935,1be674716df68c366345c17e64f210194817cf4e
+1be674716df68c366345c17e64f210194817cf4e,1be67471,Update build env,"Update build env
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1463836912,1463836912,08d02c35a961a49352eb922dbd71d439d4399988
+08d02c35a961a49352eb922dbd71d439d4399988,08d02c35,Changelog 2.3,"Changelog 2.3
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1463725726,1463725847,d12cdf4ad1437b164dd8ec48d244f5c1fafbb607
+d12cdf4ad1437b164dd8ec48d244f5c1fafbb607,d12cdf4a,Only log each failed organizer mailTo conversion once,"Only log each failed organizer mailTo conversion once
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1463708520,1463708520,2fb77ae77e16ac7554abc0ad9c7d311fda24a142
+2fb77ae77e16ac7554abc0ad9c7d311fda24a142,2fb77ae7,Add better logging and defend against possible failures in getDateTime,"Add better logging and defend against possible failures in getDateTime
+
+For #42. May fix the issue, if not hopefully tells us what is going wrong.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1463707579,1463707579,10aab3f676da4983ce25b5869843b80ab62ba3ce
+10aab3f676da4983ce25b5869843b80ab62ba3ce,10aab3f6,Try again with a null projection if the provider throws an NPE,"Try again with a null projection if the provider throws an NPE
+
+It seems that either one of the query column names has become null (the docs
+on the API level supporting it, and thus our backwards compatiblity shim are
+wrong), or some phone makers have customised the calendar store and removed
+columns that the query is meant to provide (perhaps failing to keep up with
+underlying AOSP improvements to the calendar model).
+
+Add some logging to differentiate these cases. If the former case holds, we
+should be able to fix the shim (good since its used by others).
+
+Hopefully fixes #33.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1463704946,1463706150,5efa3be595c87a6d38ef72a4ae817107dce7b05c
+5efa3be595c87a6d38ef72a4ae817107dce7b05c,5efa3be5,Merge pull request #41 from SufficientlySecure/ics_from_email,"Merge pull request #41 from SufficientlySecure/ics_from_email
+
+Handle attachments from emails by using the URI data provided.",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1463035411,1463035411,"bca3ffd85a0d488c0e85287a1a654a8db67697bd,942a82d6aaa14a47d0a57849c830769363734702"
+942a82d6aaa14a47d0a57849c830769363734702,942a82d6,Handle attachments from emails by using the URI data provided.,"Handle attachments from emails by using the URI data provided.
+
+This is still slightly counter-intuitive interface-wise, but it allows
+an important use case and fixes #8.
+
+merged-with-changes-by: Jon Griffiths <jon_p_griffiths@yahoo.com>
+",,,,fred dupont,frederic.dupont44@yahoo.fr,Jon Griffiths,jon_p_griffiths@yahoo.com,1463013905,1463013905,bca3ffd85a0d488c0e85287a1a654a8db67697bd
+bca3ffd85a0d488c0e85287a1a654a8db67697bd,bca3ffd8,Default to the last selected calendar on load/save,"Default to the last selected calendar on load/save
+",,,,fred dupont,frederic.dupont44@yahoo.fr,Jon Griffiths,jon_p_griffiths@yahoo.com,1455358084,1463009718,f0645bf6732da15087fdcb32d3f1e055c6ce90f2
+f0645bf6732da15087fdcb32d3f1e055c6ce90f2,f0645bf6,Add two new settings for remembering the last calendars name,"Add two new settings for remembering the last calendars name
+",,,,fred dupont,frederic.dupont44@yahoo.fr,Jon Griffiths,jon_p_griffiths@yahoo.com,1455351506,1463008994,71dbfae8906b62b912a10bc3e64a4f521760f086
+71dbfae8906b62b912a10bc3e64a4f521760f086,71dbfae8,Update build deps,"Update build deps
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1463007728,1463008602,d8d94339e3c19d4c2a341f626a30460c01f243e2
+d8d94339e3c19d4c2a341f626a30460c01f243e2,d8d94339,Merge branch 'master' of github.com:SufficientlySecure/ical-import-export,"Merge branch 'master' of github.com:SufficientlySecure/ical-import-export
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1462172805,1462172805,"8475c20d8599065161b0caf8f756dd258a73d453,d09503018d4df3801956056596f666bf7d0bce71"
+8475c20d8599065161b0caf8f756dd258a73d453,8475c20d,Version 2.2,"Version 2.2
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1462172756,1462172756,3f3d61aa765149ab507c9b792953f49e8771a67c
+d09503018d4df3801956056596f666bf7d0bce71,d0950301,Add a sort by argument to try to prevent CM 10 (#33),"Add a sort by argument to try to prevent CM 10 (#33)
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1455140315,1455140401,394b37c7314e91e489889de5b35626b59ff11c7b
+394b37c7314e91e489889de5b35626b59ff11c7b,394b37c7,Regenerate Settings.java with latest prefgen,"Regenerate Settings.java with latest prefgen
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1454362135,1454362154,3f3d61aa765149ab507c9b792953f49e8771a67c
+3f3d61aa765149ab507c9b792953f49e8771a67c,3f3d61aa,New icon,"New icon
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1449135407,1449135407,ee10d359164a2ba3787ffcbee51b6222d0955724
+ee10d359164a2ba3787ffcbee51b6222d0955724,ee10d359,Changelog 2.1,"Changelog 2.1
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1443424625,1443424625,76dcd362493fa824a627b7fa28bbf3d90182c067
+76dcd362493fa824a627b7fa28bbf3d90182c067,76dcd362,"Change app name, remove slash","Change app name, remove slash
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1443424470,1443424470,8214b41532c95f54a0ea6d3c84b9f334bee756c9
+8214b41532c95f54a0ea6d3c84b9f334bee756c9,8214b415,Update version to 2.1 for new release,"Update version to 2.1 for new release
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1443396170,1443396170,faa7622fdd917c6992fa1caca9cf052439557730
+faa7622fdd917c6992fa1caca9cf052439557730,faa7622f,Scroll the view down when Load is clicked,"Scroll the view down when Load is clicked
+
+Issue #27 was not an app error but user confusion due to the Insert/Delete
+buttons being hidden on their screen. Scroll the view to make the buttons
+visible when shown in order to prevent confusion in the future.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1443395969,1443395969,eb3be9137a0f6a89c5b231205fb9f1bfdb0821e3
+eb3be9137a0f6a89c5b231205fb9f1bfdb0821e3,eb3be913,Update the version code for the #29 organizer fix,"Update the version code for the #29 organizer fix
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1443074815,1443074815,a8018ce6d255a73194c16af8f5a97c1d89e2bee0
+a8018ce6d255a73194c16af8f5a97c1d89e2bee0,a8018ce6,"Fix organizer handling, add test.","Fix organizer handling, add test.
+
+This fixes the parsing and output of organizer so that it contains just the
+actual to: part of the mailto: URI. This should fix the value in the Android
+DB and so fix any check where the calendar owner is compared to the
+organizer. It doesn't tell us why GUESTS_CAN_MODIFY isn't working however.
+Lets see if this is enough to fix #29 for the reporting user.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1443074061,1443074061,60d90cbee1e6deb2dd30344f5f91f1bed863f365
+60d90cbee1e6deb2dd30344f5f91f1bed863f365,60d90cbe,Add a tool to munge test files.,"Add a tool to munge test files.
+
+caltool.py converts test files into .ics files for importing. It allows test
+cases to remain minimal by excluding irrelevant items. Valid .ics files are
+generated by supplying missing properties.
+
+Test files can also be converted into 'real' calendars to test round-tripping
+of the various test cases via other s/w.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1443065072,1443066098,aec0be83fe91874e8dd3b1116ceb56346cf134a4
+aec0be83fe91874e8dd3b1116ceb56346cf134a4,aec0be83,calender -> calendar,"calender -> calendar
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442288105,1442288105,11aad4e8f0a739f09a5d4bf72fe152999848f238
+11aad4e8f0a739f09a5d4bf72fe152999848f238,11aad4e8,Update the remaining test files,"Update the remaining test files
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442279023,1442279023,25a12643f87df74576087e2312d3369755c5d382
+25a12643f87df74576087e2312d3369755c5d382,25a12643,Support for testing non-null values,"Support for testing non-null values
+
+This is for the case where we want to ensure a value is present but don't
+particularly care what its actual value is.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442277578,1442277581,64f4845d9c31ef2af620d0c8b11950b5bc1348e0
+64f4845d9c31ef2af620d0c8b11950b5bc1348e0,64f4845d,Remove build outputs,"Remove build outputs
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442221498,1442221498,7c1b1cae5ad9fa12e20e855b569f794b61eb45e6
+7c1b1cae5ad9fa12e20e855b569f794b61eb45e6,7c1b1cae,Fix .gitignore and prefgen settings after rename,"Fix .gitignore and prefgen settings after rename
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442221297,1442221297,7a98a3655582c6f35870984946d4d27ec27593b7
+7a98a3655582c6f35870984946d4d27ec27593b7,7a98a365,Version 2.0,"Version 2.0
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1442215891,1442215891,11c33ee198357775a1b787f80b90b6fa8d0f108a
+11c33ee198357775a1b787f80b90b6fa8d0f108a,11c33ee1,Rename to Calendar Import/Export,"Rename to Calendar Import/Export
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1442215709,1442215709,db6cbb4654a1238da0884cd1cd31061daa60ce49
+db6cbb4654a1238da0884cd1cd31061daa60ce49,db6cbb46,Add FREEBUSY tests,"Add FREEBUSY tests
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442193812,1442193812,a813516d342420463da2ab2dd2c62776200358d1
+a813516d342420463da2ab2dd2c62776200358d1,a813516d,Support minimum API versions in tests,"Support minimum API versions in tests
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442192935,1442192935,a6d5f46d6be8a1ce1b272512e0cdbe51b86e8c8b
+a6d5f46d6be8a1ce1b272512e0cdbe51b86e8c8b,a6d5f46d,Make the export filename dialog consistent with the RL import dialog,"Make the export filename dialog consistent with the RL import dialog
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442191420,1442191420,4d1f57826ef8924c7bd7b789c9ba7d5ad3c4d6a6
+4d1f57826ef8924c7bd7b789c9ba7d5ad3c4d6a6,4d1f5782,Fix alarms relative to the end of events,"Fix alarms relative to the end of events
+
+Testing finds its first bug. Update alarm.ics to add a test for this
+case and several other alarm related issues.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442149572,1442151122,3aaeeb0199355b0463531bf336208b2f883c1844
+3aaeeb0199355b0463531bf336208b2f883c1844,3aaeeb01,Support empty and null test values,"Support empty and null test values
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442147718,1442147718,fe30dbf2e22ede5a3b7c702dc9ee42988a612f53
+fe30dbf2e22ede5a3b7c702dc9ee42988a612f53,fe30dbf2,Support for testing alarms,"Support for testing alarms
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442147101,1442147101,b0d0e8e68ec1f2993b0aa2fa19c78dc3554481a6
+b0d0e8e68ec1f2993b0aa2fa19c78dc3554481a6,b0d0e8e6,"Initial, fairly minimal support for import testing","Initial, fairly minimal support for import testing
+
+This works by using events containing an X-TEST-NAME and then
+one or more X-TEST-VALUE properties. The X-TEST-VALUE properties are
+checked against the resulting ContentValues that (in non-test mode)
+would be inserted into the DB.
+
+This approach has its limitations but it allows us to start testing
+the many permutations of inputs and to prevent regressions. The test
+support can be incrementally improved as tests are added.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442062741,1442142936,8b4f9d585d12c477ff524a6b5898facfc2fbcf17
+8b4f9d585d12c477ff524a6b5898facfc2fbcf17,8b4f9d58,Add options for developer mode and testing,"Add options for developer mode and testing
+
+Move debug logging to require developer mode to be enabled.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442056021,1442056021,48a74963fd69d703b44c5dd78bc57964e2cec968
+48a74963fd69d703b44c5dd78bc57964e2cec968,48a74963,Add METHOD:PUBLISH to the calendar,"Add METHOD:PUBLISH to the calendar
+
+This is needed for outlook imports apparently.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442044099,1442044099,74cbc9fe7b16189cd7e98d9b8c46cb413a7b22e8
+74cbc9fe7b16189cd7e98d9b8c46cb413a7b22e8,74cbc9fe,Add a setting for MS extensions on export,"Add a setting for MS extensions on export
+
+No extensions are output yet but this gets the string into the resources
+for translation.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442043553,1442043754,88bf7a3ef1457e15bec3b189be272bd56891e923
+88bf7a3ef1457e15bec3b189be272bd56891e923,88bf7a3e,Address one FIXME and delete another,"Address one FIXME and delete another
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442028551,1442028551,86212b1bfc00221455e2115bb08f09f5c1161fbd
+86212b1bfc00221455e2115bb08f09f5c1161fbd,86212b1b,Change member var to local var,"Change member var to local var
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442027914,1442027914,4b76523b371e072503f3313f607f2bbf0ea824d1
+4b76523b371e072503f3313f607f2bbf0ea824d1,4b76523b,Remove debug code for issue #22,"Remove debug code for issue #22
+
+Also audit/clean up logging for which messages should be debug/info/warn.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442027431,1442027579,05be7a540f5876959c6b8f401d23b1030aa0292e
+05be7a540f5876959c6b8f401d23b1030aa0292e,05be7a54,Set RunnableWithProgress message on construction,"Set RunnableWithProgress message on construction
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442025589,1442025589,3975caed5fbb72d62089dda1e7ed33af54b65230
+3975caed5fbb72d62089dda1e7ed33af54b65230,3975caed,Derive RunnableWithProgress from ProgressDialog,"Derive RunnableWithProgress from ProgressDialog
+
+Unify ctor and simplify. Its more of a ProgressWithRunnable now.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442024661,1442024661,86c9f3f8ea85f3e4c045fe7464d739c96f159512
+86c9f3f8ea85f3e4c045fe7464d739c96f159512,86c9f3f8,Avoid pointless activity casting in RunnableWithProgress,"Avoid pointless activity casting in RunnableWithProgress
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442022620,1442022620,4aa8c7f7653967a14d66c44725ffe5c06a35ef50
+4aa8c7f7653967a14d66c44725ffe5c06a35ef50,4aa8c7f7,Contruct CalendarSources directly when searching for loadable files,"Contruct CalendarSources directly when searching for loadable files
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442021931,1442021931,18f06ca938aa2df0a7be0481e799b21323f24e33
+18f06ca938aa2df0a7be0481e799b21323f24e33,18f06ca9,Add a setting for network TZ updates,"Add a setting for network TZ updates
+
+These updates are disabled by default since they use data. We
+could add a setting to only allow on wifi but this would require
+a new permission.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442019393,1442019400,4d7466bfcef32bd24accf84d25261d212071ca81
+4d7466bfcef32bd24accf84d25261d212071ca81,4d7466bf,"Set compatibility hints unconditionally, make setHint private","Set compatibility hints unconditionally, make setHint private
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442015397,1442015397,d168f2d82cbc5a2f6369c538340a30b93fa4e0e2
+d168f2d82cbc5a2f6369c538340a30b93fa4e0e2,d168f2d8,Always construct dates from date proprties using a deep copy,"Always construct dates from date proprties using a deep copy
+
+This is the final part of issue #22. The date passed into the Period
+ctor for FREEBUSY periods gets changed. If thats not a deep copy them
+we end up changing the property it came from (in this case, DTSTART/END).
+
+Also actually output the FREEBUSY element which was missing.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1442014587,1442014587,46704bcbde1c4eb59b8c87a9352a55e347c2dba7
+46704bcbde1c4eb59b8c87a9352a55e347c2dba7,46704bcb,Check UTC mismatches at every step of date initialisation,"Check UTC mismatches at every step of date initialisation
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441979849,1441979849,6e2f2e8c0d6a958175146e389eb9cdcd4cbbadab
+6e2f2e8c0d6a958175146e389eb9cdcd4cbbadab,6e2f2e8c,Temp hack to validate as events are converted,"Temp hack to validate as events are converted
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441977841,1441977841,beab9d7e2d340c82493829e5f3f3217343c5894e
+beab9d7e2d340c82493829e5f3f3217343c5894e,beab9d7e,Extra logging for date creation,"Extra logging for date creation
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441977660,1441977660,9a1e42dcefa86d268bb45fdd2ec79bcba37de026
+9a1e42dcefa86d268bb45fdd2ec79bcba37de026,9a1e42dc,Various minor cleanups,"Various minor cleanups
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441974069,1441975006,6e6943a8108beeeba534f65c8932ed399dc83544
+6e6943a8108beeeba534f65c8932ed399dc83544,6e6943a8,Reorganise MainActivity to make onClick sensible,"Reorganise MainActivity to make onClick sensible
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441971952,1441972906,67d2bfb9ae6eefe87be7a16a282e6d0f33bdb4ec
+67d2bfb9ae6eefe87be7a16a282e6d0f33bdb4ec,67d2bfb9,Correct tag and a missed expensive Log call,"Correct tag and a missed expensive Log call
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441971621,1441972906,97d1d824bcf085246eef34aa74cf382729f2289c
+97d1d824bcf085246eef34aa74cf382729f2289c,97d1d824,Checkstyle fixes,"Checkstyle fixes
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441970828,1441972906,d28054b05d8f3d40a3c8af72e78c0556e304616c
+d28054b05d8f3d40a3c8af72e78c0556e304616c,d28054b0,Update transifex config,"Update transifex config
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441970975,1441970975,16704a7d81e77fafe48888a28459c97d35f03f2c
+16704a7d81e77fafe48888a28459c97d35f03f2c,16704a7d,Get rid of one time init message,"Get rid of one time init message
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441968190,1441968190,88e3fa0c377e2d0fd028987b88b85be5aca5695e
+88e3fa0c377e2d0fd028987b88b85be5aca5695e,88e3fa0c,Reorder import,"Reorder import
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441967599,1441967788,86f80eee0eb522df614e69c4b636de168b1aba3e
+86f80eee0eb522df614e69c4b636de168b1aba3e,86f80eee,Set user logging on startup,"Set user logging on startup
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441967777,1441967788,500c847da7de3e2973700a379ada89aa16857b2b
+500c847da7de3e2973700a379ada89aa16857b2b,500c847d,Move controller functionality into MainActivity,"Move controller functionality into MainActivity
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441966242,1441966247,065e920c175349494c78e433118d3c9ef84c07d6
+065e920c175349494c78e433118d3c9ef84c07d6,065e920c,Use a tag prefix for logging,"Use a tag prefix for logging
+
+Useful for grepping without other context.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441963515,1441963518,3604c2b66ba7ad3268b974a84d352e72260c8753
+3604c2b66ba7ad3268b974a84d352e72260c8753,3604c2b6,Move exception handling for RunnableWithProgress to a single place.,"Move exception handling for RunnableWithProgress to a single place.
+
+This makes the handling more consistent and we can improve it in a
+simgle place now.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441962689,1441962689,7ff95ae1fb075264f8d93d51232a4013fba86ac2
+7ff95ae1fb075264f8d93d51232a4013fba86ac2,7ff95ae1,Fix typo in User logging setting,"Fix typo in User logging setting
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441953653,1441953653,7306937676dcc904c787cacea203f2ab447f88cc
+7306937676dcc904c787cacea203f2ab447f88cc,73069376,Only output expensive logging if the user setting is enabled,"Only output expensive logging if the user setting is enabled
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441952581,1441952766,dd72bd7ddd8d0a8d518ff62d510d2ea94135cb77
+dd72bd7ddd8d0a8d518ff62d510d2ea94135cb77,dd72bd7d,Enable debug logging option for users,"Enable debug logging option for users
+
+We will need extended logging to debug user issues.
+
+When enabled, verbose and debug messages are output as information messages
+so they are not filtered nor is the code stripped out at runtime. In debug
+builds the option has no effect.
+
+Also information level logging was being filtered in debug builds which is
+counter to the logging documentation on usage. Information messages are
+now always output.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441947476,1441952766,1ae862fcc759916fc7b88febcb411f6f5604857c
+1ae862fcc759916fc7b88febcb411f6f5604857c,1ae862fc,Add text for dynamic boolean preferences.,"Add text for dynamic boolean preferences.
+
+This should minimise any further translation changes after initial release.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441943802,1441952766,ac1a20a38a70bc9fd431c2972b41fd19ab7d8ff4
+ac1a20a38a70bc9fd431c2972b41fd19ab7d8ff4,ac1a20a3,Add dynamic summary to duplication options (via prefgen update),"Add dynamic summary to duplication options (via prefgen update)
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441939441,1441939441,f946016cc87c0e3b8a7654431dd80aa84cbcf617
+f946016cc87c0e3b8a7654431dd80aa84cbcf617,f946016c,Explicitly exclude commons-logging,"Explicitly exclude commons-logging
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441881505,1441881505,a1e5e7db56b30649d3579737fdbf1eeb1de9f000
+a1e5e7db56b30649d3579737fdbf1eeb1de9f000,a1e5e7db,Create DateTimes as UTC or non-UTC from the start,"Create DateTimes as UTC or non-UTC from the start
+
+See discussion in issue #22.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441880650,1441880716,3dd4c1094983f7bd064c6183ae67c2d54d5b88a1
+3dd4c1094983f7bd064c6183ae67c2d54d5b88a1,3dd4c109,Get rid of now-uneeded getInt helper,"Get rid of now-uneeded getInt helper
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441841165,1441841165,786aeb12e793aa4516854c15f42650fc848e734a
+786aeb12e793aa4516854c15f42650fc848e734a,786aeb12,Add a menu entry for debug logging,"Add a menu entry for debug logging
+
+Not yet implemented but make it available to translators for when it is.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441840490,1441840490,5dbe326357ccdd5d2811348b14d4ed704cf92cad
+5dbe326357ccdd5d2811348b14d4ed704cf92cad,5dbe3263,Update README following issue #19 changes,"Update README following issue #19 changes
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441838881,1441838881,9ab6ba79729fe2e343b12741c11049bc70ae8f48
+9ab6ba79729fe2e343b12741c11049bc70ae8f48,9ab6ba79,Issue #22 - Accept posix style UTC+/-0 as UTC synonyms also,"Issue #22 - Accept posix style UTC+/-0 as UTC synonyms also
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441838148,1441838148,91c148979ccb42b06cf2e7be29b5ccb76543b811
+91c148979ccb42b06cf2e7be29b5ccb76543b811,91c14897,Replace local lib jar files with maven dependencies,"Replace local lib jar files with maven dependencies
+
+Per the recipe from k3b/CalendarIcsAdapter, updated to ical4j-1.0.6.
+This completes the changes required for issue #19.
+
+Unfortunately this also means we get the build warnings and language
+rule bloat that were fixed in our local copies. Someone should rebuild
+mavens backport-util-concurrent-3.1 file ideally.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441837654,1441837654,a5ebde025dbb9d4149a30fb5d886a2f29b998a32
+a5ebde025dbb9d4149a30fb5d886a2f29b998a32,a5ebde02,Try harder to recognise UTC timezones,"Try harder to recognise UTC timezones
+
+Etc/UTC was not being recognised as a UTC timezone, it is an historic
+alias. Accept any tz ending in /UTC and also ignore case when checking.
+This hopefully fixes issue #22.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441836004,1441836004,7a40d01ce5b307643fad113d61b73de181fcdb2d
+7a40d01ce5b307643fad113d61b73de181fcdb2d,7a40d01c,Various minor fixes,"Various minor fixes
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441807350,1441834810,c7265ec17e424fa073c11871c4e7b8fd2b5b7bdf
+c7265ec17e424fa073c11871c4e7b8fd2b5b7bdf,c7265ec1,Be explicit about build directories in .gitignore,"Be explicit about build directories in .gitignore
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441805466,1441805466,734f28195c91a62c623e19c1d4c0b2c8595e1065
+734f28195c91a62c623e19c1d4c0b2c8595e1065,734f2819,Fix README b0rked by rename. Transifex config is still wrong,"Fix README b0rked by rename. Transifex config is still wrong
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441802434,1441802434,7e8e648ff86b46a99a53dd1d306b6b6c50bdca4f
+7e8e648ff86b46a99a53dd1d306b6b6c50bdca4f,7e8e648f,Fix prefgen settings b0rked by rename,"Fix prefgen settings b0rked by rename
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441802342,1441802342,1ae7beaeb8c71212b087c039dc6d63915642e1e7
+1ae7beaeb8c71212b087c039dc6d63915642e1e7,1ae7beae,Fix duplicate handling for Issue #23,"Fix duplicate handling for Issue #23
+
+Add an option for UID's to be global across all calendars, defaulting to off.
+Add another duplicate handling option to replace duplicate events in the
+calendar they came from (this is not the default).
+
+Although UIDs are meant to be globally unique, it can be counter-intuitive
+to have events in other calendars changed without having configured the app
+to do so.
+
+This change reworks the processing code to hide some of the added complexity,
+and prevents the query for duplicates being run twice. It also fixes the
+id types from int to long.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441773068,1441801908,769a9e179e1f817594b84b85162049536dd1146d
+769a9e179e1f817594b84b85162049536dd1146d,769a9e17,Rename app,"Rename app
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441742986,1441742986,7dade75db991c591a2b46362e888b5aac73a834e
+7dade75db991c591a2b46362e888b5aac73a834e,7dade75d,Dont use deprecated Time class,"Dont use deprecated Time class
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441737200,1441737200,849371814a03ce7e2a54845220c2da0ff26c4d0a
+849371814a03ce7e2a54845220c2da0ff26c4d0a,84937181,"Simplify code, log with own logger class","Simplify code, log with own logger class
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441735404,1441735404,57c90e8f3702b62ee53435a7456abdd8d54e986b
+57c90e8f3702b62ee53435a7456abdd8d54e986b,57c90e8f,Use more switch case,"Use more switch case
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441735048,1441735048,95f56b4c3e53e658af19704fe640d857461f1f6d
+95f56b4c3e53e658af19704fe640d857461f1f6d,95f56b4c,Fix CANCELED status,"Fix CANCELED status
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441735015,1441735015,726ec896c52d48de8a57ed6b6a263125c86a2092
+726ec896c52d48de8a57ed6b6a263125c86a2092,726ec896,Add function graphic for G Play,"Add function graphic for G Play
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441733419,1441733419,6df7097f73ed89a7e48fbee810692f04e5776471
+6df7097f73ed89a7e48fbee810692f04e5776471,6df7097f,Exclude LICENSE.txt etc,"Exclude LICENSE.txt etc
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441732761,1441732761,3f0ab5f35b9dae1e8e210e970f6d1b3fd9e5b030
+3f0ab5f35b9dae1e8e210e970f6d1b3fd9e5b030,3f0ab5f3,Fix Intent,"Fix Intent
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441713300,1441713300,0c49a007217b6901f6d0a74fa61bf68f595d20b3
+0c49a007217b6901f6d0a74fa61bf68f595d20b3,0c49a007,Fix website links,"Fix website links
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441710862,1441710862,cafc7de6e6bffb45473e75e2d8d1268da3e4fd39
+cafc7de6e6bffb45473e75e2d8d1268da3e4fd39,cafc7de6,Add transifex config,"Add transifex config
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441709338,1441709338,8f8526812fda394719114d923c28e389bfd4db67
+8f8526812fda394719114d923c28e389bfd4db67,8f852681,Add information/translations link to README.md,"Add information/translations link to README.md
+
+I'm assuming transifex will be set up for this app before release.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441704163,1441704420,9e1aabd6263122b290d7e11b6e7c520f3bb0610e
+9e1aabd6263122b290d7e11b6e7c520f3bb0610e,9e1aabd6,Replace support-v4 jar file with a dependency,"Replace support-v4 jar file with a dependency
+
+Update the build instructions to accommodate this. This takes care of
+option a) in issue #19.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441696129,1441696307,6ada4c875c4f5272feed46b5940c99ed78d002b9
+6ada4c875c4f5272feed46b5940c99ed78d002b9,6ada4c87,Move icons to mipmap folders and rename to ic_launcher,"Move icons to mipmap folders and rename to ic_launcher
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441694548,1441694548,cf11e6da4c329837aeed76fc3018918d506b1f75
+cf11e6da4c329837aeed76fc3018918d506b1f75,cf11e6da,Add a test file containing umlauts,"Add a test file containing umlauts
+
+This shows that issue #4 is fixed. The exported file also contains the
+correct accented characters.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441693038,1441693038,400fadc2636f6cfc167e2fde195310866b5a20d8
+400fadc2636f6cfc167e2fde195310866b5a20d8,400fadc2,Regenerate settings to fix escaping,"Regenerate settings to fix escaping
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441682519,1441682519,662549b43154b6523abfc52fdc21559db76bab33
+662549b43154b6523abfc52fdc21559db76bab33,662549b4,Fix README linebreaks,Fix README linebreaks,,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441622049,1441622049,a0a63085cdba623e0639142569a5f56ed4b7f9a2
+a0a63085cdba623e0639142569a5f56ed4b7f9a2,a0a63085,Merge pull request #18 from jgriffiths/major_refactoring_and_fixes,"Merge pull request #18 from jgriffiths/major_refactoring_and_fixes
+
+Major refactoring and fixes",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1441621991,1441621991,"ed9d4c21740c2e921e2e4736df624bda74020db2,ddfdcb5c557ca624c3bf89e48d7a3d930d0e827f"
+ddfdcb5c557ca624c3bf89e48d7a3d930d0e827f,ddfdcb5c,Remove unuse import,"Remove unuse import
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441619242,1441619242,cd5df5055743e02098caabedde39a9a2795d9eb8
+cd5df5055743e02098caabedde39a9a2795d9eb8,cd5df505,Add a missing cursor close() call,"Add a missing cursor close() call
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441614225,1441614225,90ad7acbfb819aff5de2a5a856457796e4ae0cad
+90ad7acbfb819aff5de2a5a856457796e4ae0cad,90ad7acb,Various consistency and formatting changes,"Various consistency and formatting changes
+
+Most notably, try to use the same variable names for the same types,
+and remove unneeded braces from single statement ifs. This makes the
+code read more consistently.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441613805,1441613805,65406bd44507e19d1e1d083c8539a97df9dfb2ce
+65406bd44507e19d1e1d083c8539a97df9dfb2ce,65406bd4,Get rid of DialogTools.ask(),"Get rid of DialogTools.ask()
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441515341,1441515341,acd06a62bcaf46eb3f7fd998ea3b04e2a92d55db
+acd06a62bcaf46eb3f7fd998ea3b04e2a92d55db,acd06a62,Implement tri-state duplicate handling,"Implement tri-state duplicate handling
+
+These are 1) replace duplicates with the imported version 2) Ignore
+duplicates when found and 3) Don't even check.
+
+If you enable 1) (which is now the default) then you can repeatedly import
+an external calendar to pick up its changes and have your entries updated
+to pick up changes, without any dupes being created.  A logical further step
+at some point would be to allow these settings to be grouped with a source
+and then scheduled for regular imports/exports/.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441461055,1441461055,7af79eadac9bc5ae6ad5da8e6c0486d239c53b4b
+7af79eadac9bc5ae6ad5da8e6c0486d239c53b4b,7af79ead,Fix reminders settings dialog for new prefs,"Fix reminders settings dialog for new prefs
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441458778,1441458778,fbab527b446a844de8ed44a3df809f83084771ad
+fbab527b446a844de8ed44a3df809f83084771ad,fbab527b,"prefgen update, use key constants","prefgen update, use key constants
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441323229,1441323229,fcb025879e7bd4d95484486bf67fb9f9991e199b
+fcb025879e7bd4d95484486bf67fb9f9991e199b,fcb02587,make members reflect option method names,"make members reflect option method names
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441242437,1441242437,70f53478b6625b69e12f6c229eb7ae19f80a54ee
+70f53478b6625b69e12f6c229eb7ae19f80a54ee,70f53478,Use generated settings class for all key value and to set preferences,"Use generated settings class for all key value and to set preferences
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441237815,1441238222,d7059406b8e42705ae4256474731abdfba0ecfab
+d7059406b8e42705ae4256474731abdfba0ecfab,d7059406,Remove accidental checkin of generated asciidoc html.,"Remove accidental checkin of generated asciidoc html.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441186248,1441237414,67eea50f1ea082eb3c03130385396fe071d4ff68
+67eea50f1ea082eb3c03130385396fe071d4ff68,67eea50f,More settings documentation,"More settings documentation
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441184593,1441184593,04b8a9250f0242267c5e2b005a448f2af693b94f
+04b8a9250f0242267c5e2b005a448f2af693b94f,04b8a925,"Update to latest prefgen, use it for internal preferences","Update to latest prefgen, use it for internal preferences
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441180484,1441180484,4b72f35d5dcd40a8072a407ee54ec5947ddb22ca
+4b72f35d5dcd40a8072a407ee54ec5947ddb22ca,4b72f35d,Add a config file for generating settings,"Add a config file for generating settings
+
+Settings can now be generated using:
+
+prefgen.py @Resources/ical_settings.config
+
+prefgen is available at https://github.com/jgriffiths/prefgen.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441152024,1441152024,590dbca9718bf89a2f04e2ff45c8bb2e334c8662
+590dbca9718bf89a2f04e2ff45c8bb2e334c8662,590dbca9,Initial checkin of auto-generated settings,"Initial checkin of auto-generated settings
+
+Settings code/resources etc is now generated from the documentation source
+Resources/ical_settings.asciidoc. As part of this change the static
+preferences in MainActivity are replaced by a generated non-static Settings
+class.
+
+The tool used to generate these files is prefgen.py which will be released
+shortly. The command to generate the output files is the rather verbose:
+
+export MAIN=iCalImportExport/src/main/
+export SRC=${MAIN}java/org/sufficientlysecure/ical/
+
+prefgen.py --package_name org.sufficientlysecure.ical,org.sufficientlysecure.ical.ui --layout_file ${MAIN}res/xml/settings.xml --resource_file ${MAIN}res/values/settings.xml --settings_file ${SRC}Settings.java --activity_file ${SRC}ui/SettingsActivityBase.java Resources/ical_settings.asciidoc
+
+Still to do are adding more documentation for the settings and adding some new settings.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1441120290,1441121286,73e37f7078e0035c402d7a64b705beeb993a83ce
+73e37f7078e0035c402d7a64b705beeb993a83ce,73e37f70,Update CalendarContractWrapper for better backwards compatibility,"Update CalendarContractWrapper for better backwards compatibility
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440752919,1441105550,75a5093b7324637a03236b7e2b058c930a1a4820
+75a5093b7324637a03236b7e2b058c930a1a4820,75a5093b,Move CalendarContract to CalendarContractWrapper,"Move CalendarContract to CalendarContractWrapper
+
+It seems otherwise that the class is unused and/or stripped out,
+possibly by proguard. In any case it seems more explicit.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440750854,1441105495,7c27da3176e4923fb2f23e8ce09480077e312a98
+7c27da3176e4923fb2f23e8ce09480077e312a98,7c27da31,More minor fixes and cleanups,"More minor fixes and cleanups
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440740208,1440740208,8eb8dd93475ca80782d0212e016a1a737fa5d813
+8eb8dd93475ca80782d0212e016a1a737fa5d813,8eb8dd93,Update versionCode/versionName,"Update versionCode/versionName
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440735691,1440735691,dfe1a841fd63e868122c44ba33618208ddf18967
+dfe1a841fd63e868122c44ba33618208ddf18967,dfe1a841,Implement most cleanups suggested by Android Studio,"Implement most cleanups suggested by Android Studio
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440735478,1440735478,d271c857de2ef9d4238b5adb38b618290f51a63a
+d271c857de2ef9d4238b5adb38b618290f51a63a,d271c857,Rename variable to follow coding style,"Rename variable to follow coding style
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440732979,1440732979,ad652543e7bc0d9e7f8e87eb4368a80a42ba1387
+ad652543e7bc0d9e7f8e87eb4368a80a42ba1387,ad652543,Minor cleanup to styles.xml,"Minor cleanup to styles.xml
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440732420,1440732420,8eaedcc703f5f4a621a4103267e465b28e66da97
+8eaedcc703f5f4a621a4103267e465b28e66da97,8eaedcc7,Use a custom dialog for entering source URLs,"Use a custom dialog for entering source URLs
+
+The previous method of using 3 consecutive dialogs for url, user and
+password was highly unintuitive, e.g. Cancel meant different things in
+each dialog (""cancel the action"", ""proceed without using auth"", and ""use
+auth but leave password blank"" respectively). It also presented too many
+interaction elements to the user and didnt cope well with typos.
+
+Instead of this, use a single dialog which makes it more clear/explicit
+when we want to supply authentication information.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440636957,1440732279,f8cc1ecba4790d730102b10a0173b882b6bb97dc
+f8cc1ecba4790d730102b10a0173b882b6bb97dc,f8cc1ecb,Fix last minute typo,"Fix last minute typo
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440588216,1440588216,8ef8ab0ec2ac050315b625f23752465dd0a1e0e6
+8ef8ab0ec2ac050315b625f23752465dd0a1e0e6,8ef8ab0e,Phase 2 RunnableWithProgress cleanup,"Phase 2 RunnableWithProgress cleanup
+
+Now move the progress dialog handling and task starting completely inside
+RunnableWithProgress and make most of its interface private as a result.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440583777,1440583777,68deb4c8bc204c31221786f2467eeb589501ff54
+68deb4c8bc204c31221786f2467eeb589501ff54,68deb4c8,Initial cleanup of RunnableWithProgress,"Initial cleanup of RunnableWithProgress
+
+e.g. It doesn't make sense to have a setProgressDialog() method when the
+progress dialog must be passed to run() as well. Take it in the ctor instead.
+Also get rid of DialogTools.process() since all instances are called from the
+controller.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440581535,1440581535,562ffa031ee2cc9752a585859f5202684453ed9d
+562ffa031ee2cc9752a585859f5202684453ed9d,562ffa03,More resource updates,"More resource updates
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440579550,1440579550,6c21722064293606c3ea9d67b397582e7ca85963
+6c21722064293606c3ea9d67b397582e7ca85963,6c217220,Update resources,"Update resources
+
+Get rid of the hungarian notation style naming and name the strings by their
+content instead - this makes the code read much more naturally. Move the
+settings strings out to their own file as the settings dialog and associated
+resource text will eventually be auto-generated.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440545683,1440546634,cb7cb5ab409890a86f0fa038b3e5a480d14cb559
+cb7cb5ab409890a86f0fa038b3e5a480d14cb559,cb7cb5ab,Various checkstyle fixes,"Various checkstyle fixes
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440543325,1440543325,e502c16d1333bfa7abb2b83e5840e22e3a10ab0f
+e502c16d1333bfa7abb2b83e5840e22e3a10ab0f,e502c16d,Use projection columns to do less work when reading from the DB,"Use projection columns to do less work when reading from the DB
+
+This is e.g. around 25% faster for reading events from large calendars.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440540306,1440541702,7c18d02bd186d020b7616f6ac6c7ff8a19171a90
+7c18d02bd186d020b7616f6ac6c7ff8a19171a90,7c18d02b,Minor code cleanup in MainActivity,"Minor code cleanup in MainActivity
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440516948,1440516976,d65a453cda5f356270094c8c21d0fd05d82b9316
+d65a453cda5f356270094c8c21d0fd05d82b9316,d65a453c,Return immediately once a calendar is selected,"Return immediately once a calendar is selected
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440516071,1440516071,4a683c5b065b9b5f27fd4e57034a86da598683d1
+4a683c5b065b9b5f27fd4e57034a86da598683d1,4a683c5b,Further Spinner simplificaction,"Further Spinner simplificaction
+
+Use the calendar list directly instead of mapping it to and from a
+list of strings, since we already have array adapter code that does
+this for free.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440515555,1440515810,488ea72f07e8d7a23d01386a80b3dabfb87affef
+488ea72f07e8d7a23d01386a80b3dabfb87affef,488ea72f,Get rid of SpinnerTools,"Get rid of SpinnerTools
+
+Simplify the logic somewhat as the input lists can't be null as previously
+assumed, and we can enable the buttons in the spinner setup rather than
+having two consecutive bits of code run against the UI thread.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440505672,1440505704,1c65725248e60763c922a0b7f8301ea108f741b9
+1c65725248e60763c922a0b7f8301ea108f741b9,1c657252,Remove unused imports,"Remove unused imports
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440499790,1440499790,7e34856ecbc3d98db924fadc5e98af8845dd62f8
+7e34856ecbc3d98db924fadc5e98af8845dd62f8,7e34856e,Move CredentialInputAdapter into MainActivity and make it private,"Move CredentialInputAdapter into MainActivity and make it private
+
+This also fixes a thinko with ftps URLs where the protocal length
+wasn't taken into account properly.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440494439,1440496248,cae397d857d8333b57a2fd54d7c15ef072cac40e
+cae397d857d8333b57a2fd54d7c15ef072cac40e,cae397d8,Remove knowledge of CredentialInputAdapter outside of MainActivity,"Remove knowledge of CredentialInputAdapter outside of MainActivity
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440493147,1440493147,96a30f3932729c4a551041db0aa1c27247ab22f6
+96a30f3932729c4a551041db0aa1c27247ab22f6,96a30f39,Don't export recurrence events until proper support for them is added,"Don't export recurrence events until proper support for them is added
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440471845,1440471845,86c1a6902d1e6036c8ae2c91698bb161d375f670
+86c1a6902d1e6036c8ae2c91698bb161d375f670,86c1a690,Rename member variables as per README's coding style,"Rename member variables as per README's coding style
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440468165,1440468165,cd28af9ff11895a62ffbdd41e9df5433ab45e67b
+cd28af9ff11895a62ffbdd41e9df5433ab45e67b,cd28af9f,Get rid of Credentials class,"Get rid of Credentials class
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440465089,1440465089,f93689feaeff941bcc5f481869b5468a05471e5a
+f93689feaeff941bcc5f481869b5468a05471e5a,f93689fe,Remove a ctor,"Remove a ctor
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440464221,1440464221,535902b195bcb3aa4e91215c3be41f5b486085aa
+535902b195bcb3aa4e91215c3be41f5b486085aa,535902b1,Get rid of BasicInputAdapter,"Get rid of BasicInputAdapter
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440461529,1440461529,c65c496b8e12474ae2622991570cfbfb5d745041
+c65c496b8e12474ae2622991570cfbfb5d745041,c65c496b,Get rid of CalendarUtils class,"Get rid of CalendarUtils class
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440457697,1440457697,f3ed658a7d0e86e723308351e9ce64bceb61113b
+f3ed658a7d0e86e723308351e9ce64bceb61113b,f3ed658a,Remove unused imports,"Remove unused imports
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440231761,1440231761,f54ad9c393db31efaa3da48fb1e162f50f4ed887
+f54ad9c393db31efaa3da48fb1e162f50f4ed887,f54ad9c3,"Fix FBTYPE import, add test file","Fix FBTYPE import, add test file
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440231700,1440231700,0152818da6237a5a15c7617dee010a57582815c0
+0152818da6237a5a15c7617dee010a57582815c0,0152818d,Add support for exporting alarms,"Add support for exporting alarms
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440215886,1440215886,4c459d7b9d95aae4dff1072ac13a11440fa56fca
+4c459d7b9d95aae4dff1072ac13a11440fa56fca,4c459d7b,Remove unused xml element,"Remove unused xml element
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440210504,1440210504,95c6b5bbe4a4b8725e2b3b94487738794a21d849
+95c6b5bbe4a4b8725e2b3b94487738794a21d849,95c6b5bb,Further export changes,"Further export changes
+
+We now output most properties. Also fixes the zero-time duration in order
+to match what Android returns.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1440085095,1440085872,2c2084d0543580d75d43fcfb7950708e48d2bfe3
+2c2084d0543580d75d43fcfb7950708e48d2bfe3,2c2084d0,Initial rewrite of calendar export,"Initial rewrite of calendar export
+
+This fixes several issues including unique UIDs, re-using the timestamp, many
+missing properties, including used timezones, non date-time dates, etc, etc.
+As with the import rewrite, the code is now much simpler.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439991420,1440041971,3e36642a15c5195f3372e93d9ca3677a75591a58
+3e36642a15c5195f3372e93d9ca3677a75591a58,3e36642a,Rebuild backport-util-concurrent-3.1.jar to remove warnings,"Rebuild backport-util-concurrent-3.1.jar to remove warnings
+
+From the sources of the Java 1.4 version, build with target = 1.6. This
+removes the pages of warnings previously generated during debug builds.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439994158,1440030893,291c60854c5e93a2e9a6bd994c4dd0c29c265b71
+291c60854c5e93a2e9a6bd994c4dd0c29c265b71,291c6085,Shorten UIDs slightly,"Shorten UIDs slightly
+
+This is so ical4j outputs them on one line instead of breaking them,
+which helps with readability when checking them and using shell tools
+to manipulate them.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439994956,1440030888,7e4e8b5edf89722460594c1a2070ed52e1cca26d
+7e4e8b5edf89722460594c1a2070ed52e1cca26d,7e4e8b5e,Generate UIDs on event insertion,"Generate UIDs on event insertion
+
+Also minor refactor of query code.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439978939,1439979064,5101cdeecedc847dac59f5b9cab64363913b06c0
+5101cdeecedc847dac59f5b9cab64363913b06c0,5101cdee,Ignore recurrence events until proper support for them is added,"Ignore recurrence events until proper support for them is added
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439956960,1439956960,b9751993cd6e9b7adb5d1106549e68ddf93c7a4e
+b9751993cd6e9b7adb5d1106549e68ddf93c7a4e,b9751993,Support UIDs for event identification/duplicate detection,"Support UIDs for event identification/duplicate detection
+
+There is an option to keep the old behaviour of matching on start time
+and title, but we default to using UIDs where present since this is
+much more reliable and works across calendars without risk of deleting
+events it shouldn't.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439947792,1439948123,411500c89aa4dee2cb0aa9a6acbd82be83bbfc54
+411500c89aa4dee2cb0aa9a6acbd82be83bbfc54,411500c8,Remove a duplicated deprecation warning,"Remove a duplicated deprecation warning
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439944058,1439944058,eedaa227153cd1696e23f04b7f07b2609fab7421
+eedaa227153cd1696e23f04b7f07b2609fab7421,eedaa227,Fix progress text when deleting entries,"Fix progress text when deleting entries
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439941958,1439941958,7c59717880ba4783e7f530af3f46fe2818f60d26
+7c59717880ba4783e7f530af3f46fe2818f60d26,7c597178,Minor tweak to README.md,"Minor tweak to README.md
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439940961,1439940961,a068bc37d4fbbb32ca41aeb9839406e70086d3b7
+a068bc37d4fbbb32ca41aeb9839406e70086d3b7,a068bc37,Generalise all day and repeating event code,"Generalise all day and repeating event code
+
+Fixes a couple of issues with calendars seen in the wild, e.g. repeating
+events where an end time is given and not a duration, and all day events.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439900805,1439900805,48cc83abc0f67ed21b0dead1342918d82a2c9ecb
+48cc83abc0f67ed21b0dead1342918d82a2c9ecb,48cc83ab,Fix a misplaced brace,"Fix a misplaced brace
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439891734,1439891734,5750913d65d19fda0ba4fd76249e57bbc3acc9c3
+5750913d65d19fda0ba4fd76249e57bbc3acc9c3,5750913d,"Disable proguard for debug builds, enable debugging for all builds","Disable proguard for debug builds, enable debugging for all builds
+
+There now are some annoying warnings in the debug build following this
+change, but being able to debug is more important. Rebuilding the 3rd
+party lib with a newer compiler will fix them and so might be worth
+doing at some point.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439890512,1439890512,bfd3d341d8584908fcc48adc1eade99b9a8c3d78
+bfd3d341d8584908fcc48adc1eade99b9a8c3d78,bfd3d341,Correctly handle events without a SUMMARY: item,"Correctly handle events without a SUMMARY: item
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439889905,1439889905,16bfcb6c43f0c27ee62ef0ec6eb44bbe1617b7bc
+16bfcb6c43f0c27ee62ef0ec6eb44bbe1617b7bc,16bfcb6c,Update android-support-v4.jar to the latest release,"Update android-support-v4.jar to the latest release
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439881869,1439881869,50452d01bff61336afcfd90685728a7e3d095a00
+50452d01bff61336afcfd90685728a7e3d095a00,50452d01,Update README.md,"Update README.md
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439863660,1439863660,4099e4f6bfa8c8c054482508da0279086c109857
+4099e4f6bfa8c8c054482508da0279086c109857,4099e4f6,Cleanup .gitignore,"Cleanup .gitignore
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439861856,1439861856,f94785f8970e8b05029e97662e38c36c0996de65
+f94785f8970e8b05029e97662e38c36c0996de65,f94785f8,Remove old release resources,"Remove old release resources
+
+Add google code and play store icons, screen shots need to wait until the
+UI firms up.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439813817,1439855285,d82c7d32aead7c1ef171f3d72ddebbbaf5fda92d
+d82c7d32aead7c1ef171f3d72ddebbbaf5fda92d,d82c7d32,Copy gradle signing config from Offline Calendar,"Copy gradle signing config from Offline Calendar
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439812040,1439855285,22a3d9bf404f7493f023bc6e3480482d4a63d5f6
+22a3d9bf404f7493f023bc6e3480482d4a63d5f6,22a3d9bf,Use Toasts to show imported/deleted/exported results,"Use Toasts to show imported/deleted/exported results
+
+This removes the need for the user to interact with a dialog, continuing the
+work to reduce user interaction.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439807305,1439855285,8e7b7e2895b3a888bf3d1c73e168ceb3ca0ac00c
+8e7b7e2895b3a888bf3d1c73e168ceb3ca0ac00c,8e7b7e28,"Minor cleanups, unused code removal and formatting consistency","Minor cleanups, unused code removal and formatting consistency
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439782282,1439855285,d5900d45ff3621b0acd61d8a7f81c14e757c96d7
+d5900d45ff3621b0acd61d8a7f81c14e757c96d7,d5900d45,Remove old calendar dump files,"Remove old calendar dump files
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439732178,1439855285,565808e057bede41c07a0ae29457a10f1d0cb8da
+565808e057bede41c07a0ae29457a10f1d0cb8da,565808e0,Add support for importing alarms,"Add support for importing alarms
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439732053,1439855285,369ab22339a25f8908cc5e2bedc49271d7b93e26
+369ab22339a25f8908cc5e2bedc49271d7b93e26,369ab223,Fix overriding TRANSP and computing DTEND from DURATION,"Fix overriding TRANSP and computing DTEND from DURATION
+
+Also simplify the test cases for this event and add more to cover
+non-recurring events.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439730105,1439855285,ac63356db001617bd54b3419a254f77a0412b1ec
+ac63356db001617bd54b3419a254f77a0412b1ec,ac63356d,Minor cleanups following refactoring,"Minor cleanups following refactoring
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439709681,1439855285,caa930ca1320b73bddee775f8697e25b97bde391
+caa930ca1320b73bddee775f8697e25b97bde391,caa930ca,Move InsertVEvents up into ProcessVEvent,"Move InsertVEvents up into ProcessVEvent
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439701728,1439855285,6f257973fa3597051d64c424aa26522efa63b2fb
+6f257973fa3597051d64c424aa26522efa63b2fb,6f257973,Reinstate event deletion,"Reinstate event deletion
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439700207,1439855285,665a0b5205027794843f15f33bfd48a07f8b5671
+665a0b5205027794843f15f33bfd48a07f8b5671,665a0b52,add test calendar for cases where no end date or duration are given,"add test calendar for cases where no end date or duration are given
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439696796,1439855285,d846657ac5acf64d4e554d4461540bfa2485adfc
+d846657ac5acf64d4e554d4461540bfa2485adfc,d846657a,Rewrite import code to fix multiple issues,"Rewrite import code to fix multiple issues
+
+This new version is simpler than the old wrappers. It supports almost all of
+the properties that can be saved. Support for importing alarms is almost
+complete. All day and recurring events are properly supported as are
+availability, organiser etc. This should fix github issues 1, 3, 14 and 15.
+
+Event deletion is disabled temporarily since it needs refactoring that would
+conflict with these changes. Also the behaviour of Timezones under the new
+code needs investigation.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439695697,1439855284,102a22ca31b495f1ea241b7116254c4d1d3bb85c
+102a22ca31b495f1ea241b7116254c4d1d3bb85c,102a22ca,"Fix duplicated key for setting, update setting description","Fix duplicated key for setting, update setting description
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439695031,1439855284,6c51df184705d714d171375dba8cb98a9b351faf
+6c51df184705d714d171375dba8cb98a9b351faf,6c51df18,Add missing UID_2445 column to CalendarContract,"Add missing UID_2445 column to CalendarContract
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439689379,1439855284,8ee468a3a60a165c68aa11d70a95563642ae806f
+8ee468a3a60a165c68aa11d70a95563642ae806f,8ee468a3,Move CalendarContract.java to where it will actually be used,"Move CalendarContract.java to where it will actually be used
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439470313,1439855284,dcb366984862b033a18ca0d52c6c0547b224ac26
+dcb366984862b033a18ca0d52c6c0547b224ac26,dcb36698,Add a setting to control storage of passwords.,"Add a setting to control storage of passwords.
+
+Since preference storage files are not encrypted on Android we should allow
+the user to opt-out of/make the user opt-in to storing their passwords there.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439469607,1439855284,55a125e443467368857df0079155059d93bd452f
+55a125e443467368857df0079155059d93bd452f,55a125e4,UI updates for usability.,"UI updates for usability.
+
+Update the displayed number of calendar entries following import/delete. Show
+the number of items to insert/delete on the buttons instead of a text label.
+Hide the insert/delete buttons after they are clicked and when a new file is
+chosen for loading.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439372478,1439855284,2f58fbb82167aeecc72ec2ac4486542724537753
+2f58fbb82167aeecc72ec2ac4486542724537753,2f58fbb8,Only enable the export button when the chosen calendar is not empty,"Only enable the export button when the chosen calendar is not empty
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439364721,1439855284,3c9396eee079a7f8b00868d58eaf47ba478178de
+3c9396eee079a7f8b00868d58eaf47ba478178de,3c9396ee,Various minor cleanups,"Various minor cleanups
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439358501,1439855284,e059a793deb003a74231d4fd5fdf7b0ab85ab865
+e059a793deb003a74231d4fd5fdf7b0ab85ab865,e059a793,Fix hardcoded strings,"Fix hardcoded strings
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439337092,1439855284,19c47e7dc6e2556c324a87d90e8555eb0cf685da
+19c47e7dc6e2556c324a87d90e8555eb0cf685da,19c47e7d,Ignore rows marked deleted when iterating calendars.,"Ignore rows marked deleted when iterating calendars.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439336701,1439855284,c52c397eb589a646e419cbefb63a1af33c45ddf8
+c52c397eb589a646e419cbefb63a1af33c45ddf8,c52c397e,"Display calendar info on screen, remove the information dialog box.","Display calendar info on screen, remove the information dialog box.
+
+Also refactor things a bit so that the code to load AndroidCalendars lives in
+one place only, and add a couple more fields to it.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439336275,1439855284,8c48887346f0f61b2580a3d942e4a0a187033819
+8c48887346f0f61b2580a3d942e4a0a187033819,8c488873,Pre-select text and bring up the keyboard in Question Dialogs for usability,"Pre-select text and bring up the keyboard in Question Dialogs for usability
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439212643,1439855284,d00cc923147b8b4d24176b9c1d8a42bf9594b099
+d00cc923147b8b4d24176b9c1d8a42bf9594b099,d00cc923,Fix the cancel button not cancelling in Question Dialogs,"Fix the cancel button not cancelling in Question Dialogs
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439211269,1439855284,c30b329a8455aa94d5499b40b9a74607a93e7680
+c30b329a8455aa94d5499b40b9a74607a93e7680,c30b329a,Refactor help,"Refactor help
+
+Move help to resources and re-write to simplify the instructions somewhat. Get rid of the
+global constants file since none of them are used globally.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439201349,1439855284,8409133552b718eb9531258f69d584d5693df4f8
+8409133552b718eb9531258f69d584d5693df4f8,84091335,Initial refactoring of the main view.,"Initial refactoring of the main view.
+
+Simplify the layout with the intention to further reduce interaction elements
+(buttons and dialogs in particular) shortly. Also remember our previous export
+file name a-la the import URL.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439196526,1439855284,c56e2f944fb23dac7252fc45ea9bbeaedb783935
+c56e2f944fb23dac7252fc45ea9bbeaedb783935,c56e2f94,Update license menu,"Update license menu
+
+Include the licenses from all the libraries used.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439179058,1439855284,2dedf877c7929599a8a0c9c6c53fd36fe1701e29
+2dedf877c7929599a8a0c9c6c53fd36fe1701e29,2dedf877,Add settings for reminders and reorganise settings a bit,"Add settings for reminders and reorganise settings a bit
+
+This means you now dont need to re-enter reminders for every import or
+calculate minutes per day/week in your head, and the previous behaviour
+of popping up the same dialog in a loop before importing can be removed.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439098677,1439855284,6e57bea348fa221a57b5abbe6a73cd90950f5d4d
+6e57bea348fa221a57b5abbe6a73cd90950f5d4d,6e57bea3,Prefer match_parent to fill_parent,"Prefer match_parent to fill_parent
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439097633,1439855284,f50ec5724d6722f0824d59150831a08a9b33547d
+f50ec5724d6722f0824d59150831a08a9b33547d,f50ec572,Remove unwanted language rules files from commons-codec.,"Remove unwanted language rules files from commons-codec.
+
+This reduces the release apk by a further 120k. The command to reproduce is
+zip -d iCalImportExport/libs/commons-codec-1.10.jar 'org/apache/commons/codec/language/bm/*.txt'
+from the project root directory.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439016352,1439855284,1574b458261b8cb713ba55aa5ffa79b9a713a547
+1574b458261b8cb713ba55aa5ffa79b9a713a547,1574b458,Add proguard support,"Add proguard support
+
+This shrinks the release apk in half.
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439010588,1439855284,bf0c0f2185e7dcb70ca1dfa5de1e67525ad4a60f
+bf0c0f2185e7dcb70ca1dfa5de1e67525ad4a60f,bf0c0f21,"Update ical4j, commons-codec and commons-logging. Enable vCard setting as a result","Update ical4j, commons-codec and commons-logging. Enable vCard setting as a result
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1439004227,1439855284,8c5215c291789110108d3a0d84b3f3e2181e0daf
+8c5215c291789110108d3a0d84b3f3e2181e0daf,8c5215c2,Initial support for app settings,"Initial support for app settings
+
+Settings for ical4j parsing options and whether to discard duplicates when importing
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438999257,1439855284,bc3eac2b861bb49a85e69393812331ed4e5f0f21
+bc3eac2b861bb49a85e69393812331ed4e5f0f21,bc3eac2b,Don't re-specify package name in AndroidManifest.xml elements,"Don't re-specify package name in AndroidManifest.xml elements
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438993128,1439855283,41a800211b28ccac569fdee5a9497a498250a612
+41a800211b28ccac569fdee5a9497a498250a612,41a80021,Get rid of the changelog,"Get rid of the changelog
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438956316,1439855283,b773cfd595fdacaa5a77a36babdb53227cfba61e
+b773cfd595fdacaa5a77a36babdb53227cfba61e,b773cfd5,Only expose a single init() method from the controller,"Only expose a single init() method from the controller
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438953029,1439855283,4b6c537b1f1e4177d861894b43c9a7b5b7d9bdf5
+4b6c537b1f1e4177d861894b43c9a7b5b7d9bdf5,4b6c537b,Provide the calendar id when querying the calendar,"Provide the calendar id when querying the calendar
+
+This fixes a variety of strange bugs when importing and we have multiple calendars present
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438949183,1439855283,226773d6c913177ee0f5aad410da8144d96f6482
+226773d6c913177ee0f5aad410da8144d96f6482,226773d6,Refactor event insertion,"Refactor event insertion
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438949116,1439855283,90ea50817eb299546849762b7d0acc643a1f8c36
+90ea50817eb299546849762b7d0acc643a1f8c36,90ea5081,Avoid magic number,"Avoid magic number
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438942055,1439855283,90aacfc359ce974486d177aabb5026b0e5b137bd
+90aacfc359ce974486d177aabb5026b0e5b137bd,90aacfc3,"Enforce resource id's for Decision Dialog titles and text, remove button overrides","Enforce resource id's for Decision Dialog titles and text, remove button overrides
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438934492,1439855283,f9664c55b816dd70d4dede35e420dd780f5b5113
+f9664c55b816dd70d4dede35e420dd780f5b5113,f9664c55,Use built in android resource ids where possible,"Use built in android resource ids where possible
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438927403,1439855283,b72326c2b6e5ee3a4c6211dc60c49451e777ab46
+b72326c2b6e5ee3a4c6211dc60c49451e777ab46,b72326c2,"Enforce resource id's for Question Dialog titles, text and buttons","Enforce resource id's for Question Dialog titles, text and buttons
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438926751,1439855283,e4273f03c709400e9af33589ea081211876b703c
+e4273f03c709400e9af33589ea081211876b703c,e4273f03,Enforce resource id's for Information Dialog titles and prefer them for text,"Enforce resource id's for Information Dialog titles and prefer them for text
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438921655,1439855283,a1bb2bd71b2e774d57c38b1b3d1ddbecd76862d6
+a1bb2bd71b2e774d57c38b1b3d1ddbecd76862d6,a1bb2bd7,"Use resources for Progres Dialog title and text, remove methods supporting raw strings","Use resources for Progres Dialog title and text, remove methods supporting raw strings
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438920446,1439855283,8c9a170cc300f4c5fc2318a1b25dd6df8ebd36fa
+8c9a170cc300f4c5fc2318a1b25dd6df8ebd36fa,8c9a170c,Remove unused resources,"Remove unused resources
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438917910,1439855283,000d1cc5a98cfbf237edf06d5764433f2a02f435
+000d1cc5a98cfbf237edf06d5764433f2a02f435,000d1cc5,Pluralise resources,"Pluralise resources
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438917501,1439855283,3a6b65ddd09f45b05750ae43057823d7aa79bb11
+3a6b65ddd09f45b05750ae43057823d7aa79bb11,3a6b65dd,Use US locale when uppercasing ASCII key names,"Use US locale when uppercasing ASCII key names
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438915054,1439855283,47e44212d1f6f32c5468948481475c7c4e36ec53
+47e44212d1f6f32c5468948481475c7c4e36ec53,47e44212,Fix Copyright symbol,"Fix Copyright symbol
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438914574,1439855283,166494cdc4e01d9fc66a1b65c507eba7a971a701
+166494cdc4e01d9fc66a1b65c507eba7a971a701,166494cd,Add xxhdpi and xxxhdpi icons and pngcrush all icons,"Add xxhdpi and xxxhdpi icons and pngcrush all icons
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438912248,1439855283,f6dbf7138d6865c5cdb6d058b63bb0f3ace59327
+f6dbf7138d6865c5cdb6d058b63bb0f3ace59327,f6dbf713,Set ical4j.validation.relaxed programatically,"Set ical4j.validation.relaxed programatically
+
+In the future these properties should be set from user chosen options so add a FIXME for this
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438910477,1439855283,7cb4766a6ccea5775275e05ee4a2e18bb389760d
+7cb4766a6ccea5775275e05ee4a2e18bb389760d,7cb4766a,Add Privacy Guard/App Ops warning to fix github issue #17,"Add Privacy Guard/App Ops warning to fix github issue #17
+
+Also a couple of minor changes in the code around this - fix method spelling, make private, fix Android Studio warnings
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438907181,1439855283,5655eb9b28bb42e7064e67543b9b4ac68026601f
+5655eb9b28bb42e7064e67543b9b4ac68026601f,5655eb9b,Fix compilation with the latest ic4j,"Fix compilation with the latest ic4j
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438906020,1439855283,dce988d57a472ca8d11d656f8709a7fb2234ae79
+dce988d57a472ca8d11d656f8709a7fb2234ae79,dce988d5,Ignore case and check for ftps/https in user submitted URL's (per google code issue #11),"Ignore case and check for ftps/https in user submitted URL's (per google code issue #11)
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438905819,1439855283,00e0a550c8c61bf1f4428571b9e93d24f6dae0ad
+00e0a550c8c61bf1f4428571b9e93d24f6dae0ad,00e0a550,"ical4j has moved to github, update its link","ical4j has moved to github, update its link
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438882730,1439855283,3394ac65f42502f623e7f71693accce49c98d45c
+3394ac65f42502f623e7f71693accce49c98d45c,3394ac65,Fix preferences to prevent null ptr exception when clicking SetURL,"Fix preferences to prevent null ptr exception when clicking SetURL
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438880813,1439855283,530274924835ee142a514041901fc3803359e43e
+530274924835ee142a514041901fc3803359e43e,53027492,Move to gradle for building,"Move to gradle for building
+",,,,Jon Griffiths,jon_p_griffiths@yahoo.com,Jon Griffiths,jon_p_griffiths@yahoo.com,1438875600,1439855283,ed9d4c21740c2e921e2e4736df624bda74020db2
+ed9d4c21740c2e921e2e4736df624bda74020db2,ed9d4c21,Update license section in readme,"Update license section in readme
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376170860,1376170860,84daa073bae4bd1bf702e95967471cb7eae99ae8
+84daa073bae4bd1bf702e95967471cb7eae99ae8,84daa073,New icon,"New icon
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376170487,1376170487,99cb61b54d1bc2372a184ac4ba0313beb330ecfc
+99cb61b54d1bc2372a184ac4ba0313beb330ecfc,99cb61b5,Add intent filter and fix calendar selection via intent,"Add intent filter and fix calendar selection via intent
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376169165,1376169165,5f07642462f5fcbb51fe19732ddc8519fa72c14a
+5f07642462f5fcbb51fe19732ddc8519fa72c14a,5f076424,Intent to load specific calendar,"Intent to load specific calendar
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376161546,1376161546,9420660a517af54af568bf02bf0a81f24c75fb7c
+9420660a517af54af568bf02bf0a81f24c75fb7c,9420660a,"fixes, comments","fixes, comments
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376160148,1376160148,617005b9906bc423928c34df7627a46dbf884a72
+617005b9906bc423928c34df7627a46dbf884a72,617005b9,Fix timezone for calendar,"Fix timezone for calendar
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376159779,1376159779,643b7047d3905d12f827b14fded1631fd1da5018
+643b7047d3905d12f827b14fded1631fd1da5018,643b7047,"restructuring, many bug fixes, including timezone","restructuring, many bug fixes, including timezone
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376157028,1376157028,436c4dd29695ba0313ef91cdcf927d79811df10e
+436c4dd29695ba0313ef91cdcf927d79811df10e,436c4dd2,"Rename COPYING to LICENSE, remove leftover class","Rename COPYING to LICENSE, remove leftover class
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1376138744,1376138744,876ea7f1ba0f4b6837a077b500ad8942a315af44
+876ea7f1ba0f4b6837a077b500ad8942a315af44,876ea7f1,"Updates to licenses, help, changelog","Updates to licenses, help, changelog
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366484358,1366484358,783eaead9926c1db3e3156bc38bdb14e0f466413
+783eaead9926c1db3e3156bc38bdb14e0f466413,783eaead,Fix layout,"Fix layout
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482954,1366482954,8055db57bfd356a853be3de874a81ffd10f167e7
+8055db57bfd356a853be3de874a81ffd10f167e7,8055db57,Fix readme,"Fix readme
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482752,1366482752,8099e6437a1e3601291619249167147d9c5e3059
+8099e6437a1e3601291619249167147d9c5e3059,8099e643,Add readme and license,"Add readme and license
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482675,1366482675,b3bc909b37429c20bf2d010f82cc6d39f3c255ab
+b3bc909b37429c20bf2d010f82cc6d39f3c255ab,b3bc909b,Add license headers,"Add license headers
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482425,1366482425,9ca88b4c23015825ade28e2e29e4122b14be36f6
+9ca88b4c23015825ade28e2e29e4122b14be36f6,9ca88b4c,Do not show changelog on first start,"Do not show changelog on first start
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482102,1366482102,c9a287fcc32fd1df58e6ed05a5ae84b3c686863e
+c9a287fcc32fd1df58e6ed05a5ae84b3c686863e,c9a287fc,rename project to prevent conflicting with original project,"rename project to prevent conflicting with original project
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366482012,1366482012,09bdc81db260818c77c83f467ce42e0c27165d19
+09bdc81db260818c77c83f467ce42e0c27165d19,09bdc81d,Fix dialog when no calendar is present,"Fix dialog when no calendar is present
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366481762,1366481762,ac3a5050df23f3963091f20e84037d67f5d48d18
+ac3a5050df23f3963091f20e84037d67f5d48d18,ac3a5050,Add support lib,"Add support lib
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366481306,1366481306,e41f752ce80be5b146f5337f8a97307804d919af
+e41f752ce80be5b146f5337f8a97307804d919af,e41f752c,More redesign,"More redesign
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366480887,1366480887,25014ffe3f1afc604cc311c4af7ef29409cc0be6
+25014ffe3f1afc604cc311c4af7ef29409cc0be6,25014ffe,Redesign main layout,"Redesign main layout
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366480703,1366480703,fbdd435e86a00a070b0e2dd9ff2e2c9daa1bfe33
+fbdd435e86a00a070b0e2dd9ff2e2c9daa1bfe33,fbdd435e,Fix design of question dialog by using AlertDialog.Builder instead of own layout,"Fix design of question dialog by using AlertDialog.Builder instead of own layout
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366475138,1366475138,e93d1c353e9e7b8259f4a6bfd2b9911d7a686901
+e93d1c353e9e7b8259f4a6bfd2b9911d7a686901,e93d1c35,Fixes,"Fixes
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366474448,1366474448,7c688a386dca2f2dc4b0c6b01999e76a17aef966
+7c688a386dca2f2dc4b0c6b01999e76a17aef966,7c688a38,"remove posibility to create local calendar, this is achieved better with Local Calendar app","remove posibility to create local calendar, this is achieved better with Local Calendar app
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366473512,1366473512,05e920a21505d105178056d707119835574b89c8
+05e920a21505d105178056d707119835574b89c8,05e920a2,"Reformat code from tab to 4 spaces, following Android Style,…","Reformat code from tab to 4 spaces, following Android Style, http://source.android.com/source/code-style.html
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366472941,1366472941,4df9a6c50bf8ca6e77d9a4caeb614e02b3b9dd55
+4df9a6c50bf8ca6e77d9a4caeb614e02b3b9dd55,4df9a6c5,remove quit and beer menu item,"remove quit and beer menu item
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366472842,1366472842,5b6e1b0134eb7e46a097ccf91490176b228e5d77
+5b6e1b0134eb7e46a097ccf91490176b228e5d77,5b6e1b01,"remove unused constants, remove hidden const (not needed)","remove unused constants, remove hidden const (not needed)
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366472515,1366472515,166806caa96a7fb41b8758fa5b6771f867104fc8
+166806caa96a7fb41b8758fa5b6771f867104fc8,166806ca,Update ical4j libs,"Update ical4j libs
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366306373,1366306373,0551541bd9248fc75dfe0fe95b7640cf0d29aa01
+0551541bd9248fc75dfe0fe95b7640cf0d29aa01,0551541b,Move other files into Resource folder,"Move other files into Resource folder
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366306171,1366306171,00c175bef081b22694d52a6f1e07d08f826e8a30
+00c175bef081b22694d52a6f1e07d08f826e8a30,00c175be,remove eclipse settings dir,"remove eclipse settings dir
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366306007,1366306007,b91745b9dc5bcebbe70fbf831357a79c2589dfe3
+b91745b9dc5bcebbe70fbf831357a79c2589dfe3,b91745b9,Fix most constants in GoogleCalendar.java,"Fix most constants in GoogleCalendar.java
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366305941,1366305941,c03975ad9588670309565c46b3781df0535b41ce
+c03975ad9588670309565c46b3781df0535b41ce,c03975ad,target sdk 17,"target sdk 17
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366305410,1366305410,fbfe783b3f69ddab31a170d2cc7c1a64caa03acb
+fbfe783b3f69ddab31a170d2cc7c1a64caa03acb,fbfe783b,Add compatibility CalendarContract class,"Add compatibility CalendarContract class
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366305341,1366305341,ba3b281b5e98679fad58f49f81f6f0ce8ad9796f
+ba3b281b5e98679fad58f49f81f6f0ce8ad9796f,ba3b281b,"target min sdk 8, start removing sdk 7 stuff","target min sdk 8, start removing sdk 7 stuff
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366305284,1366305284,c5be003e829861d0f252ca56493f57ab1dbf2676
+c5be003e829861d0f252ca56493f57ab1dbf2676,c5be003e,Target newest sdk and fix AndroidManifest,"Target newest sdk and fix AndroidManifest
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304925,1366304925,41d8fb29a0718315e997e1d83d0ea9d4e0d42a2d
+41d8fb29a0718315e997e1d83d0ea9d4e0d42a2d,41d8fb29,remove .classpath and .project,"remove .classpath and .project
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304885,1366304885,73123c6d9a5434e498727d474d01173a9a8c561e
+73123c6d9a5434e498727d474d01173a9a8c561e,73123c6d,Add project.properties,"Add project.properties
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304726,1366304726,a6d698bc9bf7b3a8d1465fffd37e7f5b159e7730
+a6d698bc9bf7b3a8d1465fffd37e7f5b159e7730,a6d698bc,Add gitignore,"Add gitignore
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304709,1366304709,f90cea915f73bb8902877211e7058cd0d641ef30
+f90cea915f73bb8902877211e7058cd0d641ef30,f90cea91,Readd classes from tools project,"Readd classes from tools project
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304679,1366304679,e14be8ebcf45f3cc0d9f9d0f451eace71e03a820
+e14be8ebcf45f3cc0d9f9d0f451eace71e03a820,e14be8eb,rename lib directory to android convention libs,"rename lib directory to android convention libs
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304655,1366304655,227c78d7192df30c21511bc5d755ee32c5ad5757
+227c78d7192df30c21511bc5d755ee32c5ad5757,227c78d7,Integrate AndroidTools into main project,"Integrate AndroidTools into main project
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304607,1366304607,cf8a96376f18a332c0b58451370ec541c8ad5153
+cf8a96376f18a332c0b58451370ec541c8ad5153,cf8a9637,remove project in assets. Why was it there?,"remove project in assets. Why was it there?
+",,,,Dominik Schürmann,dominik@dominikschuermann.de,Dominik Schürmann,dominik@dominikschuermann.de,1366304483,1366304483,6ca7533a56bd16341275ee7cc82d9e0a9b05d69a
+6ca7533a56bd16341275ee7cc82d9e0a9b05d69a,6ca7533a,manual alarm insertion via reminder table.,"manual alarm insertion via reminder table.
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294670381,1294670381,ac3bab5fcdfbf22b87b2f83ac1e0ae98f0f095e5
+ac3bab5fcdfbf22b87b2f83ac1e0ae98f0f095e5,ac3bab5f,1.5,"1.5
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294335970,1294335970,7495e68b00efe5dd3b55e13c0e1a2269ff982cbd
+7495e68b00efe5dd3b55e13c0e1a2269ff982cbd,7495e68b,initial projekt import.,"initial projekt import.
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294310259,1294310259,1e93ca880b60c6e55e086842a7121a41b2a5cdbe
+1e93ca880b60c6e55e086842a7121a41b2a5cdbe,1e93ca88,"Share project ""AndroidTools"" into ""https://ical-import-export.googlecode.com/svn""","Share project ""AndroidTools"" into ""https://ical-import-export.googlecode.com/svn""
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294310244,1294310244,1becd37615f199a5c9fea41f1bbcd7449d06df0c
+1becd37615f199a5c9fea41f1bbcd7449d06df0c,1becd376,initial projekt import.,"initial projekt import.
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294309688,1294309688,f53aa28f984cf8c97ccddc9c92e6fb816c36f058
+f53aa28f984cf8c97ccddc9c92e6fb816c36f058,f53aa28f,"Share project ""iCalImportExport"" into ""https://ical-import-export.googlecode.com/svn""","Share project ""iCalImportExport"" into ""https://ical-import-export.googlecode.com/svn""
+",,,,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,lukas.aichbauer,lukas.aichbauer@4c49f839-c939-ba67-4618-a04585e5f014,1294309632,1294309632,e787fb50b6e78aeb3ada1155dfb61e6c0c78b04b
+e787fb50b6e78aeb3ada1155dfb61e6c0c78b04b,e787fb50,Initial directory structure.,"Initial directory structure.
+",,,,(no author),(no author)@4c49f839-c939-ba67-4618-a04585e5f014,(no author),(no author)@4c49f839-c939-ba67-4618-a04585e5f014,1291135259,1291135259,

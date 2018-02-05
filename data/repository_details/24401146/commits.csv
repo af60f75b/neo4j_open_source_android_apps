@@ -1,0 +1,515 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+34d3a10cf84dbc81cec6a461a26454bafdc24c75,34d3a10c,[python] Change 2016 to 2017 for copyrights,"[python] Change 2016 to 2017 for copyrights
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1498542163,1498542163,0a5e2c1ad832c93422ed519a44d94b717dc887fc
+0a5e2c1ad832c93422ed519a44d94b717dc887fc,0a5e2c1a,Move Android Programming 2e execises to a folder,"Move Android Programming 2e execises to a folder
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1492468249,1492468280,54a8af6eec9127e7d5f03f7257f26305cb9e1468
+54a8af6eec9127e7d5f03f7257f26305cb9e1468,54a8af6e,update some gradle files,"update some gradle files
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1485807490,1485807490,c4997bb52e67e28174ac1092a32e59d617725279
+c4997bb52e67e28174ac1092a32e59d617725279,c4997bb5,[minfirebaseapp] Making Employee works with firebase-database,"[minfirebaseapp] Making Employee works with firebase-database
+
+Both setters and getters have to be overriden for firebase to ""see"" the
+parent's fields.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1470788073,1470788073,f50c980cd1a61628dc243f9874416b8d7d0ea5ff
+f50c980cd1a61628dc243f9874416b8d7d0ea5ff,f50c980c,[MinFirebaseApp] See why Employee cannot be fetched with id and updatedAt,"[MinFirebaseApp] See why Employee cannot be fetched with id and updatedAt
+
+To reproduce:
+
+1) Put the google-services.json file in the app folder
+2) Start the app
+3) Click on login to sign in anonymously
+4) Click on ""create employee"", see that the employee is created
+5) Go to console.firebase.google.com to check that the employee is
+created with id, name and updatedAt
+6) Click on ""show employee"" from the app, see the ""updatedAt"" and ""id""
+are not set.
+7) Check the logcat to find something like ""No setter/field for id found""
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1470522409,1470522450,998d07967372e5c188f4fe11b0313193f671c5ba
+998d07967372e5c188f4fe11b0313193f671c5ba,998d0796,[loc8r] Some more stuff,"[loc8r] Some more stuff
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1470522317,1470522317,a5310fddc432a12d4c4855e62e128827a15ed313
+a5310fddc432a12d4c4855e62e128827a15ed313,a5310fdd,[loc8r] Implement reviewsDeleteOne,"[loc8r] Implement reviewsDeleteOne
+
+Finished Ch.6 of the book ""Getting MEAN with Mongo, Express, Angular, and
+Node"".
+
+Add sample curl calls for creating and updating reviews.
+
+Minor changes in other files.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1463289101,1463289195,26ed1da4c3b2bb526464d6a90b4da434f7ad1231
+26ed1da4c3b2bb526464d6a90b4da434f7ad1231,26ed1da4,"[loc8r] Implement reviewsUpdateOne, locationsDeleteOne","[loc8r] Implement reviewsUpdateOne, locationsDeleteOne
+
+It's part of Ch.6 of the book ""Getting MEAN with Mongo, Express,
+Angular, and Node"".
+
+Add sample curl calls for creating and updating reviews.
+
+Refactor some response methods to responseutil.js
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1461789025,1461789257,623321cd30a841a38e723de73ed82d4c379ba576
+623321cd30a841a38e723de73ed82d4c379ba576,623321cd,update MockWalker gradle version,"update MockWalker gradle version
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1461545737,1461545737,e8cbf4a2cf47abd64d5eadde8ffc1796de39fccf
+e8cbf4a2cf47abd64d5eadde8ffc1796de39fccf,e8cbf4a2,"[loc8r] Implement locationsCreate, locationsUpdateOne, reviewsCreate","[loc8r] Implement locationsCreate, locationsUpdateOne, reviewsCreate
+
+It's part of Ch.6 of the book ""Getting MEAN with Mongo, Express,
+Angular, and Node"". For some reason, openingTimes cannot be persisted. I
+suspect that I need to update them the way that I create a review,
+menaing it needs a separate step to update them instead of saving them
+along with the rest of a location.
+
+Add sample_http_calls folder to contain sample http calls to the api for
+testing purpose.
+
+Use the ""underscore"" library to make the code cleaner.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1461343037,1461343105,6daa65d49bc1e67601865962ac3274f3bb07d0f3
+6daa65d49bc1e67601865962ac3274f3bb07d0f3,6daa65d4,Move stuff to GCP,"Move stuff to GCP
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1461086621,1461086621,bf255ae69af9b9baa698b50ded6fdc09751f8bd1
+bf255ae69af9b9baa698b50ded6fdc09751f8bd1,bf255ae6,[loc8r] Implement locationsListByDistance,"[loc8r] Implement locationsListByDistance
+
+It's part of Ch.6 of the book ""Getting MEAN with Mongo, Express,
+Angular, and Node"".
+
+Implement locationsListByDistance by using geoNear method of mongoose
+model. Notice that the implementation does not use the
+getDistanceFromRads and getRadsFromDistance methods as shown in the book
+because the book probably has some inconsistent information. Since we
+are parsing a GeoJSON to geoNear, the parameters should be in meters,
+same as the distance from the output.
+
+Fix some error handling code.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1461078455,1461078544,42feb23920aac749ec36b05764845c78f9b11a5d
+42feb23920aac749ec36b05764845c78f9b11a5d,42feb239,[loc8r] Add api's for reading a location or a review,"[loc8r] Add api's for reading a location or a review
+
+It's part of Ch.6 of the book ""Getting MEAN with Mongo, Express, Angular, and
+Node"".
+
+I found that the subdocument needs to have the field ""_id"" instead of
+""id"" in order for a method call like location.reviews.id(<id value
+here>) to work, so I modified the data in db_setup.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460963556,1460963556,ed3eb2fe8cb6e002610cab52cb5a5d2a67ef0699
+ed3eb2fe8cb6e002610cab52cb5a5d2a67ef0699,ed3eb2fe,[loc8r] Add a protip to check heroku log,"[loc8r] Add a protip to check heroku log
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460786617,1460786617,560ae472b6cdfe2912415ee0c8aafd2db7626b7c
+560ae472b6cdfe2912415ee0c8aafd2db7626b7c,560ae472,"[loc8r] Finish Ch.5 of ""Getting MEAN with Mongo, Express, Angular, and Node""","[loc8r] Finish Ch.5 of ""Getting MEAN with Mongo, Express, Angular, and Node""
+
+Add some locations schema.
+Add connection to mongodb.
+Add initial fake data for db setup.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460786291,1460786317,ebfdf83b89a1ced7759aa2c01d9fa207812fbe0d
+ebfdf83b89a1ced7759aa2c01d9fa207812fbe0d,ebfdf83b,"[loc8r] Finish up to Ch.4 of ""Getting MEAN with Mongo, Express, Angular, and Node""","[loc8r] Finish up to Ch.4 of ""Getting MEAN with Mongo, Express, Angular, and Node""
+
+Get a Node.js with Express and MVC framework working using hard-coded data.
+Add a README.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460617820,1460617938,79eba1adadc9df3875623ae2ec6adfc40695750b
+79eba1adadc9df3875623ae2ec6adfc40695750b,79eba1ad,[mean-stack][loc8r] Add bin directory to the repo,"[mean-stack][loc8r] Add bin directory to the repo
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460514915,1460514915,6a46a371f296b1e82d7785fc88ecbf175b8fadc1
+6a46a371f296b1e82d7785fc88ecbf175b8fadc1,6a46a371,[loc8r] First version for deploying to Heroku,"[loc8r] First version for deploying to Heroku
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460510699,1460510699,cc2e060a05aec90dba19b313157bc83559d5dc24
+cc2e060a05aec90dba19b313157bc83559d5dc24,cc2e060a,[gcp/movefast] Create a sample echo service,"[gcp/movefast] Create a sample echo service
+
+Add creation of a sample echo service.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1460247001,1460247081,6ea7e4421621d72fefa74b85f96dc9f44225a4f5
+6ea7e4421621d72fefa74b85f96dc9f44225a4f5,6ea7e442,[gcp][movefast] Initial version,"[gcp][movefast] Initial version
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459294212,1460247081,3ac9cd3d20159a609ed8ad27bb42410623169f65
+3ac9cd3d20159a609ed8ad27bb42410623169f65,3ac9cd3d,[cherrypy_web_server] Remove -h since it is in conflict with helpwq,"[cherrypy_web_server] Remove -h since it is in conflict with helpwq
+",,,,root,root@movefast-echo-service.c.alpha-programs.internal,root,root@movefast-echo-service.c.alpha-programs.internal,1460245657,1460245657,29022b91fdd0583ccee8c90e2dfd09bfd3187f45
+29022b91fdd0583ccee8c90e2dfd09bfd3187f45,29022b91,[cherrypy_web_server] Add --host option,"[cherrypy_web_server] Add --host option
+",,,,Heung Ming Tai,htaihm@gmail.com,Heung Ming Tai,htaihm@gmail.com,1460243925,1460243925,316fddadde9750414f2cc3e10ace799c2cd0808c
+316fddadde9750414f2cc3e10ace799c2cd0808c,316fddad,[cherrypy_web_server] Add --port option to specify the port number of the server,"[cherrypy_web_server] Add --port option to specify the port number of the server
+",,,,Heung Ming Tai,htaihm@gmail.com,Heung Ming Tai,htaihm@gmail.com,1460241732,1460241732,be031b367037543f5d37260a927cd8d63f36a3fe
+be031b367037543f5d37260a927cd8d63f36a3fe,be031b36,[python] Add mentioning of sorno-py-scripts in some sample scripts,"[python] Add mentioning of sorno-py-scripts in some sample scripts
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459294403,1459294403,77f5d1bd88dd6307b3ceb3f5d6b2a64efbc6db36
+77f5d1bd88dd6307b3ceb3f5d6b2a64efbc6db36,77f5d1bd,[cherrypy_web_server.py] Add an echo method,"[cherrypy_web_server.py] Add an echo method
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459289241,1459289241,2916a198c9ffa772e48c806b401a07e1fc7a1116
+2916a198c9ffa772e48c806b401a07e1fc7a1116,2916a198,[retry...] Unfinished project becomes a sample...,"[retry...] Unfinished project becomes a sample...
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459288950,1459288950,fe2f65346ed65b2ab997efd5ee5e07099a5fff9b
+fe2f65346ed65b2ab997efd5ee5e07099a5fff9b,fe2f6534,Remove,"Remove
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459288920,1459288920,f91e79de48e655203455b653e1dfaac70a1034ef
+f91e79de48e655203455b653e1dfaac70a1034ef,f91e79de,Unfinished project becomes a sample...,"Unfinished project becomes a sample...
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1459288821,1459288821,8dff6a26728860c2d882fba8fd8ee744608c3e8e
+8dff6a26728860c2d882fba8fd8ee744608c3e8e,8dff6a26,"Make the individual demos ""more standalone"". Explain on leaking sessions.","Make the individual demos ""more standalone"". Explain on leaking sessions.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458912039,1458912083,1b4bd5693c4413032895dfc865048d4cc6fe644b
+1b4bd5693c4413032895dfc865048d4cc6fe644b,1b4bd569,Move connecting to db in its separate method,"Move connecting to db in its separate method
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458910097,1458910139,3289515864a2c7219e8b48b6e48ff369c1ffbef9
+3289515864a2c7219e8b48b6e48ff369c1ffbef9,32895158,"Mention the creation of ""db1""","Mention the creation of ""db1""
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458883408,1458883504,dc1e6fe545856e13844b3e12a767a08e8d337b72
+dc1e6fe545856e13844b3e12a767a08e8d337b72,dc1e6fe5,add the db back,"add the db back
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458883307,1458883335,439fa11afb1d78dcaf3dac581924f2ce0eed0458
+439fa11afb1d78dcaf3dac581924f2ce0eed0458,439fa11a,revert back to non-standalone demo,"revert back to non-standalone demo
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458883040,1458883040,b29bdbedff5ab75c89de700615e3fb433db94c77
+b29bdbedff5ab75c89de700615e3fb433db94c77,b29bdbed,close db,"close db
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458882685,1458882710,7ac458ea68540e069080bf43c54b21f73e6c08c9
+7ac458ea68540e069080bf43c54b21f73e6c08c9,7ac458ea,Need to leak the db connection properly,"Need to leak the db connection properly
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458881443,1458881443,6ef00b64276dba2566151d2d4a5ada7d7c10e260
+6ef00b64276dba2566151d2d4a5ada7d7c10e260,6ef00b64,move stuff around,"move stuff around
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458880968,1458881137,5d284233e72986fac12952322a9a500859b4e184
+5d284233e72986fac12952322a9a500859b4e184,5d284233,fix small error,"fix small error
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458880615,1458880615,72a4ac98f54ba60c6cc2673ae90ee3c810c23ca5
+72a4ac98f54ba60c6cc2673ae90ee3c810c23ca5,72a4ac98,Make each demo more standalone,"Make each demo more standalone
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458879951,1458879951,61e9de23676741bd3a318d0f59b1eb09bb33838d
+61e9de23676741bd3a318d0f59b1eb09bb33838d,61e9de23,Create a README for this demo,"Create a README for this demo
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458876661,1458876661,acb64e4a233976cc368fcd28a84b8ada1ae7d44a
+acb64e4a233976cc368fcd28a84b8ada1ae7d44a,acb64e4a,Demo of how to use Cloud SQL with pooling in python on Google App Engine,"Demo of how to use Cloud SQL with pooling in python on Google App Engine
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458861691,1458861691,d2bee62713481a5f334f58a2f37da0e19975ecd5
+d2bee62713481a5f334f58a2f37da0e19975ecd5,d2bee627,Add script_with_simple_logging_template.py,"Add script_with_simple_logging_template.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458844945,1458844945,e97e7586bed77d781694ae04ebd52de932f22f1f
+e97e7586bed77d781694ae04ebd52de932f22f1f,e97e7586,add some comment to simple_no_logging_script_template.py,"add some comment to simple_no_logging_script_template.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1458844804,1458844804,8741cd85f9da14b211e527dad17f623fc5c6da41
+8741cd85f9da14b211e527dad17f623fc5c6da41,8741cd85,Change license owner from Herman Tai to Heung Ming Tai,"Change license owner from Herman Tai to Heung Ming Tai
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1455586732,1455586767,392a70c779471a4179beb5d7eb0c985f3f64ce7a
+392a70c779471a4179beb5d7eb0c985f3f64ce7a,392a70c7,Always pass in parsed args to App's constructors,"Always pass in parsed args to App's constructors
+
+Fix up the styling of the code
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1455214390,1455214390,73a74b875643ed78e864100d3211bd70a88ffde3
+73a74b875643ed78e864100d3211bd70a88ffde3,73a74b87,"[android][Locatr] ""Android Programming"" Ch 32. Maps","[android][Locatr] ""Android Programming"" Ch 32. Maps
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454372284,1454372284,7beae3de5bb237084307ab94d0db5b8dc3fc70ce
+7beae3de5bb237084307ab94d0db5b8dc3fc70ce,7beae3de,"[android][Locatr] Finished ""Android Programming"" Ch 31 Locations and Play Services","[android][Locatr] Finished ""Android Programming"" Ch 31 Locations and Play Services
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454343245,1454343245,2f8a60742edf851457ccc10cbea4d39e0b3c65a3
+2f8a60742edf851457ccc10cbea4d39e0b3c65a3,2f8a6074,"[android][Sunset] Finished ""Android Programming"" Ch 30. Property Animation","[android][Sunset] Finished ""Android Programming"" Ch 30. Property Animation
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454304274,1454304274,a1dfe28706e1f666200201fef4af3583a0db9272
+a1dfe28706e1f666200201fef4af3583a0db9272,a1dfe287,"[android][DragAndDraw] Finished ""Android Programming"" Ch 29. Custom Views and Touch Events","[android][DragAndDraw] Finished ""Android Programming"" Ch 29. Custom Views and Touch Events
+
+Did the ""saving state"" challenge.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454283824,1454283824,3e8f0bb187e9ad6cde9389402246f9359bb9d766
+3e8f0bb187e9ad6cde9389402246f9359bb9d766,3e8f0bb1,"[android][PhotoGallery] Finished ""Android Programming"" Ch 28. Browsing the Web and WebView","[android][PhotoGallery] Finished ""Android Programming"" Ch 28. Browsing the Web and WebView
+
+Did the ""back button"" and ""non-http links"" challenges.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454280300,1454280300,41584c08972c07e91b21985c8e34062d90ff5f79
+41584c08972c07e91b21985c8e34062d90ff5f79,41584c08,"[android][PhotoGallery] Finished ""Android Programming"" Ch 27. Broadcast Intents","[android][PhotoGallery] Finished ""Android Programming"" Ch 27. Broadcast Intents
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454270692,1454270718,31b654382fc0457a2d50602302d156b0b8a05154
+31b654382fc0457a2d50602302d156b0b8a05154,31b65438,"[android][PhotoGallery] Finished ""Android Programming"" Ch 26. Background Services","[android][PhotoGallery] Finished ""Android Programming"" Ch 26. Background Services
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454221743,1454221743,1183de7264246263726bebed22a5e2b0059828fa
+1183de7264246263726bebed22a5e2b0059828fa,1183de72,"[android][PhotoGallery] Finished Android Programming ""Ch 25. Search""","[android][PhotoGallery] Finished Android Programming ""Ch 25. Search""
+
+Implemented the clear search view and hide keyboard when a query is submitted.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454203908,1454203908,501fe9a16dea36c5949159b711c801400c44a222
+501fe9a16dea36c5949159b711c801400c44a222,501fe9a1,"[android][PhotoGallery] Finished Android Programming Ch 24. Loopers, Handlers, and HandlerThread","[android][PhotoGallery] Finished Android Programming Ch 24. Loopers, Handlers, and HandlerThread
+
+I did the preload and caching challenge as well.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1454193666,1454193666,61e0f68638bed0c3012e6e7adc16e98c542b8f8b
+61e0f68638bed0c3012e6e7adc16e98c542b8f8b,61e0f686,[android][PhotoGallery] Created PhotoGallery and finished Ch 23. HTTP & Background Tasks,"[android][PhotoGallery] Created PhotoGallery and finished Ch 23. HTTP & Background Tasks
+
+I implemented a way to hide api key while open sourcing my code by storing the
+api key in the device in the first run, so subsequent runs can just read the
+api key from the file.
+
+I implemented the third challenge that uses dynamic columns.
+
+I did not implement the paging challenge because it is a bit time consuming.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453966196,1453966196,4446d2d79cd116340fdfdf953abadab2598cf02f
+4446d2d79cd116340fdfdf953abadab2598cf02f,4446d2d7,"[android][NerdLauncher] Finished ""Android Programming"" Ch 22. More About Intents and Tasks","[android][NerdLauncher] Finished ""Android Programming"" Ch 22. More About Intents and Tasks
+
+Also remove some debugging stuff from CriminalIntent
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453877682,1453877682,d3541dce8b2dfa29659fdd3166b8088b39f54037
+d3541dce8b2dfa29659fdd3166b8088b39f54037,d3541dce,"[android][BeatBox] Finished ""Android Programming"" Ch 20 styles and themes, Ch 21. XML Drawables","[android][BeatBox] Finished ""Android Programming"" Ch 20 styles and themes, Ch 21. XML Drawables
+
+This check-in finished up the work for BeatBox. Next chapter will be another
+new app.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453820379,1453820379,64866aedaded8195e64ff2fdd496ca63353d39e4
+64866aedaded8195e64ff2fdd496ca63353d39e4,64866aed,"[android][BeatBox] Finished ""Android Programming"" Chapter 19 audio playback with soundpool","[android][BeatBox] Finished ""Android Programming"" Chapter 19 audio playback with soundpool
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453739621,1453739621,39b14ac4943a9c584b598799b722b94e961502bc
+39b14ac4943a9c584b598799b722b94e961502bc,39b14ac4,"[android][BeatBox] Initial version of BeatBox, finished ""Android Programming"" Chapter 18 Assets","[android][BeatBox] Initial version of BeatBox, finished ""Android Programming"" Chapter 18 Assets
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453702687,1453702687,2ac168e074a7b1b6ab563cd0959104ac13b3bf26
+2ac168e074a7b1b6ab563cd0959104ac13b3bf26,2ac168e0,"[android][CriminalIntent] Finished ""Android Programming"" Ch 17: Two-pane master-detail interfaces","[android][CriminalIntent] Finished ""Android Programming"" Ch 17: Two-pane master-detail interfaces
+
+Also solve rotation issue when decoding the image and shown on ImageView.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453680486,1453680486,c37ac971528e27f46126dc38812451bb184444e2
+c37ac971528e27f46126dc38812451bb184444e2,c37ac971,[android][Permissions] Add an example of how to request permissions in with…,"[android][Permissions] Add an example of how to request permissions in with MarshMallow best practice
+
+From: https://blog.stylingandroid.com/permissions-part-3/
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453658200,1453658200,305763a5a7cff63004d81c13ac8cbd594c7e4515
+305763a5a7cff63004d81c13ac8cbd594c7e4515,305763a5,"[android][CriminalIntent] Finished ""Android Programming"" Ch 16. Taking Pictures with Intents","[android][CriminalIntent] Finished ""Android Programming"" Ch 16. Taking Pictures with Intents
+
+Also did the challenges after looking at the solutions from the bignerdranch
+forum...
+http://forums.bignerdranch.com/viewforum.php?f=567
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453630471,1453630471,216ae27929875533aec9ac9fe098638670b054cb
+216ae27929875533aec9ac9fe098638670b054cb,216ae279,[android][CriminalIntent] Finished Chapter 14 SQLite Databases and 15 Implicit Intents,"[android][CriminalIntent] Finished Chapter 14 SQLite Databases and 15 Implicit Intents
+
+I did the ""delete crime"" challenge and the ""dialing suspect"" challenge. The
+""dialing suspect"" feature has serious bugs of the phone number not being
+persisted, so the phone number is only available for dialing if you just
+chose a suspect. If you don't see the number appear, try to choose the suspect
+again even you may have chosen one.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453613112,1453613112,530bc359ab7d42d7c1a632ad69fc2ccd43a24b13
+530bc359ab7d42d7c1a632ad69fc2ccd43a24b13,530bc359,[android][CriminalIntent] Finished Chapter 7 to Chapter 13 of Android Programming,"[android][CriminalIntent] Finished Chapter 7 to Chapter 13 of Android Programming
+
+Chapter 7 is UI Fragments and the Fragment Manager. It introduces the
+CriminalIntent app. The app is not done, yet, so future commits will be about
+the CriminalIntent app as well.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453574426,1453574426,ddfdff4ea3633d16a6fbc2cbb7b627d5b4254a86
+ddfdff4ea3633d16a6fbc2cbb7b627d5b4254a86,ddfdff4e,[android][GeoQuiz] Finished up the GeoQuiz with the finishing of Chapter 6 of Android Programming,"[android][GeoQuiz] Finished up the GeoQuiz with the finishing of Chapter 6 of Android Programming
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453194572,1453194572,4c404aa4a27cec46a6c1176c84d54dc694299031
+4c404aa4a27cec46a6c1176c84d54dc694299031,4c404aa4,[android][GeoQuiz] Finished Chapter 5 of Android Programming: The big nerd ranch guide,"[android][GeoQuiz] Finished Chapter 5 of Android Programming: The big nerd ranch guide
+
+The application can be installed to a emulator with ./gradlew installDebug
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1453184442,1453184442,11476a520dd8370a95eb0fd385b7a4164e95eab7
+11476a520dd8370a95eb0fd385b7a4164e95eab7,11476a52,Not tracking idea files any more,"Not tracking idea files any more
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1452989801,1452989801,3f1d4b4c5562e7e9b64f64bf24fbf674d8a5b79e
+3f1d4b4c5562e7e9b64f64bf24fbf674d8a5b79e,3f1d4b4c,[python] Update all the license years to 2016,"[python] Update all the license years to 2016
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1452894642,1452894659,44f62add58f8e4052f592c4ff28fbc35b105ce7a
+44f62add58f8e4052f592c4ff28fbc35b105ce7a,44f62add,[android] Add the solutions for the book Android Programming: The Big Nerd Ranch Guide 2nd Edition,"[android] Add the solutions for the book Android Programming: The Big Nerd Ranch Guide 2nd Edition
+
+This replaces the solutions for the first edition of the book.
+
+I also add appropriate pattern in .gitignore for Android files.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1452783750,1452785371,7cfbcffe0eb4f1bbd7670add5440013b8f4e49ca
+7cfbcffe0eb4f1bbd7670add5440013b8f4e49ca,7cfbcffe,Add benchmark and example samples for the stringutil module,"Add benchmark and example samples for the stringutil module
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1449990882,1449990976,00fd2d131f89b68df30583f4df77138e9f2e58ab
+00fd2d131f89b68df30583f4df77138e9f2e58ab,00fd2d13,fix the indentation of simple_no_logging_script_template.py,"fix the indentation of simple_no_logging_script_template.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1448835874,1448835874,c5c4352fead3fe1b9ed54331456071c846c5e51b
+c5c4352fead3fe1b9ed54331456071c846c5e51b,c5c4352f,basic_server_using_socket.py,"basic_server_using_socket.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1447904265,1447904768,52e3196cb305c7ffa423ec8d32ad5db89325ef04
+52e3196cb305c7ffa423ec8d32ad5db89325ef04,52e3196c,[chainofios] Add two more ways to write a file,"[chainofios] Add two more ways to write a file
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442676605,1442676605,4ed8a58f1159a607e3a36bf677746cef5c7af27c
+4ed8a58f1159a607e3a36bf677746cef5c7af27c,4ed8a58f,[chainofios] Chain of IOs demos various server/client and file IOs,"[chainofios] Chain of IOs demos various server/client and file IOs
+
+Test Plan:
+go run chainofios/chainofios.go -base-port-number=9000
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442624862,1442624995,2ee4d96e25edbb8cf2cf26b438126d8e56bb283f
+2ee4d96e25edbb8cf2cf26b438126d8e56bb283f,2ee4d96e,[eatingrace] Rename concurrencyrace to eatingrace since it's more descriptive,"[eatingrace] Rename concurrencyrace to eatingrace since it's more descriptive
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442508188,1442508188,f88abf2b61875250716b203d96307e475f4c8287
+f88abf2b61875250716b203d96307e475f4c8287,f88abf2b,[README][concurrencyrace] Simplifies the use of math/rand in concurrencyrace,"[README][concurrencyrace] Simplifies the use of math/rand in concurrencyrace
+
+Summary:
+Simplifies the use of math/rand in concurrencyrace by using the functions in
+the math/rand module instead of using an object.
+
+Follow a convention for the symbols used for headings in README.rst.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442424671,1442424720,a5cedc85881a6797c9c0e3523df4f0d6f175b704
+a5cedc85881a6797c9c0e3523df4f0d6f175b704,a5cedc85,[go] Put a copyright notice to all files,"[go] Put a copyright notice to all files
+
+Summary:
+Add base/base.go for a template of Go files.
+
+Put a copyright notice to all files.
+
+Modify a the documentation of each Go files a little bit
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442385677,1442385700,e811a233b82430cb1c4d09df3bbaa7e2d07beb26
+e811a233b82430cb1c4d09df3bbaa7e2d07beb26,e811a233,[go][concurrencyrace] Let everyone has a chance to get good food for each race,"[go][concurrencyrace] Let everyone has a chance to get good food for each race
+
+Summary:
+Let everyone has a chance to get good food for each race by getting a random
+sleep before getting his/her food.
+
+Remove the unnecessary ""sync.Once"" for getting the food.
+
+Adjust the time duration, the text, and the number of people to make the
+program a little bit more interesting.
+
+Make sure history is done before the main program exits, so each line of code
+in the program is guaranteed to be run (previously main exits before the
+goroutine that prints out history can print that its done).
+
+Test Plan:
+Run the following a few times and see that everyone has a chance to get an
+apple.
+go run concurrencyrace.go
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442383460,1442383460,d15b5a920748307336dccbed5fd6e2a7e606d23e
+d15b5a920748307336dccbed5fd6e2a7e606d23e,d15b5a92,"[go][concurrencyrace] A demo of concurrency using math/rand, sync.Once,…","[go][concurrencyrace] A demo of concurrency using math/rand, sync.Once, time.Tick, time.After, goroutines and channels.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442379678,1442379703,53c2f266760ebd3f061783f6bc5f9b53c0e2c4ea
+53c2f266760ebd3f061783f6bc5f9b53c0e2c4ea,53c2f266,[go][webserver] demos how to start a web server in go,"[go][webserver] demos how to start a web server in go
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442365943,1442365943,7101f49da6265b6c383bcbcaf890e76177038889
+7101f49da6265b6c383bcbcaf890e76177038889,7101f49d,[python] Update the Copyright year to 2015,"[python] Update the Copyright year to 2015
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1442336442,1442336442,fd6614d771cb82d8ea2c65da9ad476d5610deaf1
+fd6614d771cb82d8ea2c65da9ad476d5610deaf1,fd6614d7,[html] Add titles to the base samples,"[html] Add titles to the base samples
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441744508,1441744508,63abe0ac3d8f4c8a3d6316cb2c51ee5f745cc85d
+63abe0ac3d8f4c8a3d6316cb2c51ee5f745cc85d,63abe0ac,[python] Take out the name when getting a logger for the scripts,"[python] Take out the name when getting a logger for the scripts
+
+Summary:
+Scripts should use root logger.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441385561,1441385561,28664f19d62804d1b9f520ec1dac03b1135cd129
+28664f19d62804d1b9f520ec1dac03b1135cd129,28664f19,[README] Add a section for go,"[README] Add a section for go
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441305430,1441305430,55cd1f5a4a8458ecca538938e73dbe52c257d56c
+55cd1f5a4a8458ecca538938e73dbe52c257d56c,55cd1f5a,"[go] Finished the ""How to Write Go Code"" in https://golang.org/doc/code.html","[go] Finished the ""How to Write Go Code"" in https://golang.org/doc/code.html
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441305224,1441305224,3a3ec621d7f3d894c572b3217600a97210aecd81
+3a3ec621d7f3d894c572b3217600a97210aecd81,3a3ec621,[go]Add reverse.go,"[go]Add reverse.go
+
+Still working on https://golang.org/doc/code.html ...
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441287068,1441287068,9b684a285bc30ffed1746ef7f61191630eb7624e
+9b684a285bc30ffed1746ef7f61191630eb7624e,9b684a28,[go] hello example,"[go] hello example
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441285440,1441285440,17eec45380aae791909b8c422a1d6984a6ed3e75
+17eec45380aae791909b8c422a1d6984a6ed3e75,17eec453,[script_template.py][script_with_subparsers_template.py] Import…,"[script_template.py][script_with_subparsers_template.py] Import sorno.loggingutil instead of sorno.logging
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441178218,1441178218,643d06c87169a8dadc1ce5058e0b5e9883a54807
+643d06c87169a8dadc1ce5058e0b5e9883a54807,643d06c8,[func_with_test.py] Use two calling of function style to prepare for long argument,"[func_with_test.py] Use two calling of function style to prepare for long argument
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441153772,1441153772,f5c023f1ead85212232cce8c23aa2929694d567f
+f5c023f1ead85212232cce8c23aa2929694d567f,f5c023f1,Touch up on the descriptions of some python script templates,"Touch up on the descriptions of some python script templates
+
+Summary:
+Remove the script names from the doctsrings. Reuse the docstrings for the
+scripts' descriptions.
+
+Test Plan:
+python script_template.py -h
+python script_with_subparsers_template.py -h
+python simple_no_logging_script_template.py -h
+python web_client.py -h
+python func_with_test.py
+python cherrypy_web_server.py
+python playground_script.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1441127680,1441128032,b1efd424ff7a078fcde60c7ed5a56c772e1b9f07
+b1efd424ff7a078fcde60c7ed5a56c772e1b9f07,b1efd424,[script_with_subparsers_template.py] Some more touchup's of the comments,"[script_with_subparsers_template.py] Some more touchup's of the comments
+
+Summary:
+Use the term ""business logic"" to mean ""actual work"" of each subcommand.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440839357,1440839357,2d079e66c507a632e4aacb2ccade982de4b3cea7
+2d079e66c507a632e4aacb2ccade982de4b3cea7,2d079e66,[script_template.py][script_with_subparsers_template.py] Add comments to classes and methods,"[script_template.py][script_with_subparsers_template.py] Add comments to classes and methods
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440835017,1440835111,9dec5ec918002c319fd0ef5db97569739c076601
+9dec5ec918002c319fd0ef5db97569739c076601,9dec5ec9,[python] Some documentation touchup's and variables renaming,"[python] Some documentation touchup's and variables renaming
+
+Summary:
+Some documentation touchup's, mainly for merging the three opening quotes in a
+module docstring to the second line.
+
+Lower cases the variables _LOG, _PLAIN_LOGGER and _PLAIN_ERROR_LOGGER to stick
+to the _protected_variable_name convention, even for the module level.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440834348,1440834348,3d3718c021fa54b528d905f7c74ca8e1405c49a9
+3d3718c021fa54b528d905f7c74ca8e1405c49a9,3d3718c0,[script_template.py][script_with_subparsers_template.py] Take out dependencies,"[script_template.py][script_with_subparsers_template.py] Take out dependencies
+
+Since the imports already tell the dependencies, it does not make sense to
+repeat them in the docstrings.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440831852,1440831852,44acc22558c8d3f7a2929d39d2e6664cff5db530
+44acc22558c8d3f7a2929d39d2e6664cff5db530,44acc225,[python][script_template.py][simple_no_logging_script_template.py] add the use of return_code,"[python][script_template.py][simple_no_logging_script_template.py] add the use of return_code
+
+Test Plan:
+
+  $ python script_template.py && echo hi
+  2015-08-28 20:13:18 INFO __main__:58: hello world
+  plain hello world
+  hi
+  $ python simple_no_logging_script_template.py && echo hi
+  hello world
+  hi
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440818016,1440818016,e888349846035dbdcce7b2f55b53da13af1f4f91
+e888349846035dbdcce7b2f55b53da13af1f4f91,e8883498,[python][script_with_subparsers_template.py] Add the practice of using return code,"[python][script_with_subparsers_template.py] Add the practice of using return code
+
+Test Plan:
+
+  $ python script_with_subparsers_template.py action1 && echo hi
+  2015-08-28 20:10:28 INFO __main__:61: action1
+  plain action1
+  hi
+  $ python script_with_subparsers_template.py action2 && echo hi
+  2015-08-28 20:10:34 INFO __main__:70: action2
+  plain action2
+  $
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440817853,1440817853,6635b2c2268d3fd390a81e722c0caeaad7817084
+6635b2c2268d3fd390a81e722c0caeaad7817084,6635b2c2,[python] Add #!/usr/bin/env python in a few script samples,"[python] Add #!/usr/bin/env python in a few script samples
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440797148,1440797148,6e04a1c55a49eb737eaecbd3b54392ca2c6a021d
+6e04a1c55a49eb737eaecbd3b54392ca2c6a021d,6e04a1c5,[python][playground_script.py][func_with_test.py] Create playground_script.py,"[python][playground_script.py][func_with_test.py] Create playground_script.py
+
+Summary:
+playground_script.py: A template to let you quickly insert code and try them
+out, with ipython at the end to explore stuff.
+
+Add necessary __future__ imports in func_with_test.py
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440731665,1440731665,0ed1603c2143be61cdd7b9bb3dd4e727af0aa24b
+0ed1603c2143be61cdd7b9bb3dd4e727af0aa24b,0ed1603c,[bootstrap-with-jquery-ui-base] Initial version of bootstrap-with-jquery-ui-base/,"[bootstrap-with-jquery-ui-base] Initial version of bootstrap-with-jquery-ui-base/
+
+Summary:
+This sample contains the framework of a webapp with bootstrap and and jquery
+ui
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440373190,1440373190,a1f6fb2e4ec913db05fe136f52069714d056d5bc
+a1f6fb2e4ec913db05fe136f52069714d056d5bc,a1f6fb2e,[python][simple_no_logging_script_template.py] Remove logger related stuff,"[python][simple_no_logging_script_template.py] Remove logger related stuff
+
+Test Plan:
+python simple_no_logging_script_template.py
+and sees ""hello world"" printed out
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1440190751,1440190751,82ff3f746558d1f182514c8c3cda2ac5a622ecc9
+82ff3f746558d1f182514c8c3cda2ac5a622ecc9,82ff3f74,[sorno][script_template.py][script_with_subparsers_template.py] Use the debug…,"[sorno][script_template.py][script_with_subparsers_template.py] Use the debug parameter for create_plain_logger
+
+Test Plan:
+  $ python script_template.py
+  2015-08-06 22:12:20 INFO __main__:58: hello world
+  plain hello world
+  $ python script_with_subparsers_template.py
+  usage: script_with_subparsers_template.py [-h] [--debug] {action1,action2} ...
+  script_with_subparsers_template.py: error: too few arguments
+  $ python script_with_subparsers_template.py action1
+  2015-08-06 22:12:31 INFO __main__:57: action1
+  plain action1
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1438924371,1438924371,32b466bf5f1da830812bc30e19925fe0362803bf
+32b466bf5f1da830812bc30e19925fe0362803bf,32b466bf,[python][sqlalchemy_project] Rename the folder from sqlalchemy to sqlalchemy_project,"[python][sqlalchemy_project] Rename the folder from sqlalchemy to sqlalchemy_project
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1438921390,1438921390,899885f23ce6287a4efd52899b2524f5434b4d5f
+899885f23ce6287a4efd52899b2524f5434b4d5f,899885f2,[python][script_with_subparsers_template.py] A template for a script with subparsers,"[python][script_with_subparsers_template.py] A template for a script with subparsers
+
+Test Plan:
+
+  $ python script_with_subparsers_template.py --help
+  usage: script_with_subparsers_template.py [-h] [--debug] {action1,action2} ...
+
+  Put some description of the script here
+
+  optional arguments:
+    -h, --help         show this help message and exit
+    --debug
+
+  Subcommands:
+    Some description for subcommands
+
+    {action1,action2}
+      action1          Help for action1
+      action2          Help for action2
+
+  $ python script_with_subparsers_template.py action1 --help
+  usage: script_with_subparsers_template.py action1 [-h] [files [files ...]]
+
+  Description for action1
+
+  positional arguments:
+    files       Take action1 on files
+
+  optional arguments:
+    -h, --help  show this help message and exit
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1438921087,1438921335,1340c8396c662d05cad7f65c54b8aca591890eb8
+1340c8396c662d05cad7f65c54b8aca591890eb8,1340c839,[python/script_template.py] Faster for writing dirty scripts by passing the whole args,"[python/script_template.py] Faster for writing dirty scripts by passing the whole args
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1438909064,1438909064,a3cf3d12ed67686b45fe3d66b28e8d0654a90ee2
+a3cf3d12ed67686b45fe3d66b28e8d0654a90ee2,a3cf3d12,"[README] Change the description from ""Templates..."" to ""Templates and code snippets...""","[README] Change the description from ""Templates..."" to ""Templates and code snippets...""
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1438622364,1438622507,ff84ac6463f5c98056d1111ea3236e2255342739
+ff84ac6463f5c98056d1111ea3236e2255342739,ff84ac64,[javascript] A sample nodejs simple-http-server,"[javascript] A sample nodejs simple-http-server
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1437773228,1437773738,6a223726b2351452d0a64d2a0b20ec36a2d37929
+6a223726b2351452d0a64d2a0b20ec36a2d37929,6a223726,[script_template.py] remove unnecessary blank lines,"[script_template.py] remove unnecessary blank lines
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1427844111,1427844111,9e930a49dca7e06384bf165d418486b57bb6bbb6
+9e930a49dca7e06384bf165d418486b57bb6bbb6,9e930a49,[script_template.py] remove unnecessary comment,"[script_template.py] remove unnecessary comment
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1427842780,1427842780,c1d479d99ccf6d6e6f7d0a2976a0a85488233b3d
+c1d479d99ccf6d6e6f7d0a2976a0a85488233b3d,c1d479d9,[python/script_template.py] Depends on sorno.logging library instead of defining…,"[python/script_template.py] Depends on sorno.logging library instead of defining the logging functions inside the script
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1427744237,1427744365,b803f754ebb230bc9498f14922f88c3197ec326f
+b803f754ebb230bc9498f14922f88c3197ec326f,b803f754,[.vimrc] remove it because it's too personal,"[.vimrc] remove it because it's too personal
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1426364717,1426364748,b60da185a304faddd9eee92bee498edd19fce8fe
+b60da185a304faddd9eee92bee498edd19fce8fe,b60da185,[html5_appcache] Add a sample of html5 application cache,"[html5_appcache] Add a sample of html5 application cache
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1424113038,1424113197,f5d0bbcb8ee4c6a5e6352d278b00ce278a3f9545
+f5d0bbcb8ee4c6a5e6352d278b00ce278a3f9545,f5d0bbcb,[func_with_test.py] A template for creating functions or classes with unit…,"[func_with_test.py] A template for creating functions or classes with unit tests.  It's mainly used for rapid protyping several functions or classes
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1423869959,1423870225,2c595f7d4518911126ff4a0a0ce7f14ab5f5b584
+2c595f7d4518911126ff4a0a0ce7f14ab5f5b584,2c595f7d,[vim] personal vimrc file,"[vim] personal vimrc file
+",,,,Herman (Heung) Tai,htaihm@gmail.com,Herman (Heung) Tai,htaihm@gmail.com,1417296618,1417296666,3ed71ced95f0d45786cb88f6daf7c0b00cb859f4
+3ed71ced95f0d45786cb88f6daf7c0b00cb859f4,3ed71ced,[simple_no_logging_script_template.py] initial version,"[simple_no_logging_script_template.py] initial version
+
+Summary:
+
+A template for a python script without using the logging module. It has a
+parser boilerplate.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1413742722,1413742754,83272b8dfa004593501e1f1dc76f17595e4ad45f
+83272b8dfa004593501e1f1dc76f17595e4ad45f,83272b8d,[android][big-nerd-ranch] solutions,"[android][big-nerd-ranch] solutions
+
+http://www.bignerdranch.com/we-write/android-programming.html
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1412483793,1412483793,9e7d87ad4bceca21b5c0dc02f01533f5c167c21e
+9e7d87ad4bceca21b5c0dc02f01533f5c167c21e,9e7d87ad,[java][app-configuration] App Configuration by Johannes Brodwall,"[java][app-configuration] App Configuration by Johannes Brodwall
+
+Summary:
+It's from the article:
+http://www.javacodegeeks.com/2014/10/dead-simple-configuration.html
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1412367524,1412367567,154a333d41a056e43d0b79e72299f65888ba04cd
+154a333d41a056e43d0b79e72299f65888ba04cd,154a333d,[killpg] A unix utility to kill a process group given a PID,"[killpg] A unix utility to kill a process group given a PID
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411963894,1411963894,e8db039771cb94987d15af726bfa4212d4f6e9e6
+e8db039771cb94987d15af726bfa4212d4f6e9e6,e8db0397,[sqlalchemy][basic] print headers,"[sqlalchemy][basic] print headers
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411591656,1411591656,1b9dc5793483afde9049c4f14e2c2f842dd717cd
+1b9dc5793483afde9049c4f14e2c2f842dd717cd,1b9dc579,[sqlalchemy] Organize sqlalchemy projects to allow for multiple of them,"[sqlalchemy] Organize sqlalchemy projects to allow for multiple of them
+
+Summary:
+Organize sqlalchemy projects to allow for multiple of them. Also add more
+operations in the basic project main module.
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411585426,1411585426,10bf167a5ba459951dcd74ed846b263cd84e0f62
+10bf167a5ba459951dcd74ed846b263cd84e0f62,10bf167a,Rename Templates to Samples in the header,"Rename Templates to Samples in the header
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411534544,1411534544,1447cdd3acd617f9d6f353a4daa2cc861afd789e
+1447cdd3acd617f9d6f353a4daa2cc861afd789e,1447cdd3,[sqlalchemy_project] Add the corresponding README,"[sqlalchemy_project] Add the corresponding README
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411534471,1411534471,bc07a5d9dcd753b81956307734999805a77d10eb
+bc07a5d9dcd753b81956307734999805a77d10eb,bc07a5d9,Copy from templates to samples,"Copy from templates to samples
+",,,,Herman Tai,htaihm@gmail.com,Herman Tai,htaihm@gmail.com,1411534398,1411534398,cc33f104ee8a78777fc6c790cfc8c55b6bf91ad7
+cc33f104ee8a78777fc6c790cfc8c55b6bf91ad7,cc33f104,Initial commit,"Initial commit
+",,,,Herman (Heung) Tai,htaihm@gmail.com,Herman (Heung) Tai,htaihm@gmail.com,1411534130,1411534130,

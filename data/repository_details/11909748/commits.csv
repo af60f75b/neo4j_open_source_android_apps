@@ -1,0 +1,117 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c122bf2767bfc32ce12f899418563d0e0011f696,c122bf27,Use a fixed pixel budget for rendering,"Use a fixed pixel budget for rendering
+
+I chose 262144 pixels per RS invocation. This should go in far
+less than 1 second per invocation and prevent Android restarting
+phone because GPU appears to be stuck.
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1421577451,1421577451,4a82ffc63ebc1772d5601e6fee3e94d39b34997f
+4a82ffc63ebc1772d5601e6fee3e94d39b34997f,4a82ffc6,Get rid of other bitmap,"Get rid of other bitmap
+
+Tried to directly create allocations and use the allocations API
+to extract pixel data but that went to hell
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1421577148,1421577148,451053ddb880f3bd4c60b4f2e3030b86161f3f83
+451053ddb880f3bd4c60b4f2e3030b86161f3f83,451053dd,Some additional hacks:,"Some additional hacks:
+
+- request render when screen turns on to workaround the delay on the first
+  frame render due to reloading the textures in case they have changed
+
+- be more optimistic about the distance to the mandelbox set when estimating
+  surface normal. This should significantly increase surface detail available
+  for lighting calculations.
+
+- give up on trying to stabilize distance to the set; just take the last
+  half-step at iteration's end normally. It seems to be better to get reliably
+  close to the set than to attempt to use unreliable estimates to generate a
+  fixed distance to the set. The gradual change in the maximum distance metric
+  results in pixel-sized jumps when viewing holes on surface at an angle, though.
+  The only fix I can think of is to get closer than necessary to the set in order
+  to step back reliably.
+
+- need to improve performance. My Android phone becomes unusable when RS is running,
+  and sometimes phone even reboots abruptly. I think it's probably because the RS
+  hogs the GPU, where accelerable. I could try rendering the world in smaller
+  chunks maybe, to give Android more opportunities to interact with the GPU. This
+  RS shit is still half-baked, and it doesn't even help that I'm using a forEach
+  loop as I'm supposed to.
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1421574611,1421574611,5f523c3d47e9a52404a9b285df549020454f6424
+5f523c3d47e9a52404a9b285df549020454f6424,5f523c3d,Add rs.finish() to be sure,"Add rs.finish() to be sure
+
+Update the distance estimator to walk back more precisely
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419495633,1419495633,5dd65eb2985eff4ae4103f400afb73c9485ffd8e
+5dd65eb2985eff4ae4103f400afb73c9485ffd8e,5dd65eb2,Get the surface to update when viewed,"Get the surface to update when viewed
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419493949,1419493949,aff89775b401951a19422d45713d3ceee7b04cb4
+aff89775b401951a19422d45713d3ceee7b04cb4,aff89775,Add new feature: random scale,"Add new feature: random scale
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419490948,1419490948,7bd99d7cbf070b4aec138a5bc9ff472389bbb5be
+7bd99d7cbf070b4aec138a5bc9ff472389bbb5be,7bd99d7c,Pass the surface created/destroyed hooks on,"Pass the surface created/destroyed hooks on
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419490002,1419490002,b8f81fd46176aa8b1c2c0982af78adee5af6b69a
+b8f81fd46176aa8b1c2c0982af78adee5af6b69a,b8f81fd4,"Fix app id, remove generated files","Fix app id, remove generated files
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419427950,1419427950,a255dc535e648724f6b28a49885a9a938e35c701
+a255dc535e648724f6b28a49885a9a938e35c701,a255dc53,Migrate to gradle + AS,"Migrate to gradle + AS
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1419427259,1419427259,ba60fb212f69db87f6400cb295ce70670efe8856
+ba60fb212f69db87f6400cb295ce70670efe8856,ba60fb21,Don't reference livemandelbox settings,"Don't reference livemandelbox settings
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1390593788,1390593788,c4c9404cc27e592bc0bdf6380f5e220f798bea2e
+c4c9404cc27e592bc0bdf6380f5e220f798bea2e,c4c9404c,Rename because of the old apk,"Rename because of the old apk
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1390042679,1390042679,46f0e8fa5d6ed70fa5bdd84d5a5614b8230b5fde
+46f0e8fa5d6ed70fa5bdd84d5a5614b8230b5fde,46f0e8fa,Another untested approach,"Another untested approach
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1389451238,1389451238,046a4950260b5cef95dde6fa08d4061dfb47791d
+046a4950260b5cef95dde6fa08d4061dfb47791d,046a4950,Remove finish etc. in a vain hope to avoid crash,"Remove finish etc. in a vain hope to avoid crash
+
+KK keeps on killing the mandelbox render because the RS object
+GC takes too long to finalize an object. Running out of ideas.
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1389450843,1389450843,2b8884f1be7fdbaaf0b9665d88e5e0ad7e5ae149
+2b8884f1be7fdbaaf0b9665d88e5e0ad7e5ae149,2b8884f1,Workaround crash due to allocation GC,"Workaround crash due to allocation GC
+
+rs.finish() before any GC-like action avoids the finalizerdaemon
+crash due to timeout.
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1388929948,1388929948,159f7dfc671a350ffd55f392a74117c2f4d37218
+159f7dfc671a350ffd55f392a74117c2f4d37218,159f7dfc,Try to get this shit to work on 4.4,"Try to get this shit to work on 4.4
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1388926203,1388926203,f4449400d8ba33b0be81ab348cab5634e21f45a0
+f4449400d8ba33b0be81ab348cab5634e21f45a0,f4449400,Update to android-19,"Update to android-19
+
+Giving up on Android Studio for now. It can't seem to build
+renderscript for android 17+ no matter what I do
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1388698297,1388698297,ab35eaa340e09e42ea76ec560800fb2004d68016
+ab35eaa340e09e42ea76ec560800fb2004d68016,ab35eaa3,Merge branch 'master' of github.com:alankila/live-mandelbox,"Merge branch 'master' of github.com:alankila/live-mandelbox
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1387396359,1387396359,"d64359821394fe873bab642f641be71cdb23c8dd,36c8ac47ddb8b339202973b50da728ac24360d16"
+d64359821394fe873bab642f641be71cdb23c8dd,d6435982,Small shit,"Small shit
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1387396352,1387396352,d93edc55b736c8cd160fc007a3639cc96700b4a1
+36c8ac47ddb8b339202973b50da728ac24360d16,36c8ac47,Small fixes,"Small fixes
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1387392362,1387392362,d93edc55b736c8cd160fc007a3639cc96700b4a1
+d93edc55b736c8cd160fc007a3639cc96700b4a1,d93edc55,Search for good coloration func continues,"Search for good coloration func continues
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376814549,1376814549,3006d9865c186681c3bbae2cbe9f44f0e5924f51
+3006d9865c186681c3bbae2cbe9f44f0e5924f51,3006d986,Upd,"Upd
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376748878,1376748878,8a76c6a147d7b99a515626f7da99c3b4a416f60e
+8a76c6a147d7b99a515626f7da99c3b4a416f60e,8a76c6a1,Small tweaks,"Small tweaks
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376531783,1376531783,32a75149743de51f7eb27d97410893cdedc4bdee
+32a75149743de51f7eb27d97410893cdedc4bdee,32a75149,Increase iterations,"Increase iterations
+
+Saw that 18 iterations allows some scenes to show the point cloud
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376180848,1376180848,7b9a3351939697db2c03f95f772bc76a14094ed0
+7b9a3351939697db2c03f95f772bc76a14094ed0,7b9a3351,Add iteration orbit vector into coloration too,"Add iteration orbit vector into coloration too
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376081421,1376081421,29eef0673ff0928085a57621a60371c3ef8076ec
+29eef0673ff0928085a57621a60371c3ef8076ec,29eef067,Upd,"Upd
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376070974,1376070974,210fe6beaf8114c4cfac5156e9e5a3878c9bfc43
+210fe6beaf8114c4cfac5156e9e5a3878c9bfc43,210fe6be,Fix some stupid issues,"Fix some stupid issues
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1376049366,1376049366,1fdbfb8c8d3004f8361c3a39db2285b41023a9ac
+1fdbfb8c8d3004f8361c3a39db2285b41023a9ac,1fdbfb8c,Small meaningless changes,"Small meaningless changes
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375980488,1375980488,00463400eaafdbb599c9952cb5f541e78356ada0
+00463400eaafdbb599c9952cb5f541e78356ada0,00463400,Various fixes,"Various fixes
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375907174,1375907174,2da74993164c2997780055099c34ae0297fe3f4e
+2da74993164c2997780055099c34ae0297fe3f4e,2da74993,Move the front cut plane closer to camera,"Move the front cut plane closer to camera
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375904771,1375904771,3d2de7e79a24bb1d195378f14392ac9225ec9b9b
+3d2de7e79a24bb1d195378f14392ac9225ec9b9b,3d2de7e7,Use mathematically chosen values for scale,"Use mathematically chosen values for scale
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375901011,1375901011,bcba2bfea88b1fa722c227cfdfe396e930968c64
+bcba2bfea88b1fa722c227cfdfe396e930968c64,bcba2bfe,Updates to lighting and surface tracking,"Updates to lighting and surface tracking
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375896744,1375896744,cf37ddbb02fd9365d2425f8add1e2342c1cb625e
+cf37ddbb02fd9365d2425f8add1e2342c1cb625e,cf37ddbb,Upd,"Upd
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375829770,1375829770,bb1275acc720f9a13992af32ec41f3835b2f0d53
+bb1275acc720f9a13992af32ec41f3835b2f0d53,bb1275ac,Missed 1/day value,"Missed 1/day value
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375820845,1375820845,5e3e82783edb458a6f7bf5a02fa116c19de6c9a6
+5e3e82783edb458a6f7bf5a02fa116c19de6c9a6,5e3e8278,Finish importing,"Finish importing
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375740503,1375740503,f70912da7cd283283d7edd7c3607c1c413eaf6e7
+f70912da7cd283283d7edd7c3607c1c413eaf6e7,f70912da,Explain what this is,"Explain what this is
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375740029,1375740029,84a70cfde14076073881771b9c6d064e27ceba22
+84a70cfde14076073881771b9c6d064e27ceba22,84a70cfd,Initial import,"Initial import
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375739783,1375739852,5bde9ac6ac22c2a34566f92a4d8480bab6273f2e
+5bde9ac6ac22c2a34566f92a4d8480bab6273f2e,5bde9ac6,Initial commit,"Initial commit
+",,,,Antti S. Lankila,alankila@bel.fi,Antti S. Lankila,alankila@bel.fi,1375739663,1375739663,

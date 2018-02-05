@@ -1,0 +1,308 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+2f1f9ef491eb335dcd2d3fbe3401089992523ae1,2f1f9ef4,Re-enable the backupAgent.,"Re-enable the backupAgent.
+
+It turns out that a backupAgent actually does inhibit fullbackup (and
+the resulting service death), provided that you reset the fullbackup
+queue by rebooting the device.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1453357025,1453620809,875c3f22b18a8ad24c2fe108d67a9f68a031c5db
+875c3f22b18a8ad24c2fe108d67a9f68a031c5db,875c3f22,Disable the backup feature entirely.,"Disable the backup feature entirely.
+
+Downgrading to targetSdkVersion 22 broke the Play Store upgrade process,
+so this is my only remaining option.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1453083516,1453083516,6428bf15c209443243775e2d1601b6c78eb129aa
+6428bf15c209443243775e2d1601b6c78eb129aa,6428bf15,Increment version code to 20.,"Increment version code to 20.
+
+19 was never released, but I was experimenting with the Play Store's alpha
+test feature.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1453019504,1453019504,643a6a1bde923bb51689d7b5a8b14d1d815e53b7
+643a6a1bde923bb51689d7b5a8b14d1d815e53b7,643a6a1b,Delete the spinner_dropdown color hack.,"Delete the spinner_dropdown color hack.
+
+This is no longer needed, because ActionBarCompat is now able to render
+the white-on-black spinner correctly in API 8.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1453018146,1453018146,ef9dc675944c051fd051652931c61683102d532b
+ef9dc675944c051fd051652931c61683102d532b,ef9dc675,Roll back to targetSdkVersion 22,"Roll back to targetSdkVersion 22
+
+This turns ""bmgr fullbackup net.pmarks.chromadoze"" into a no-op, which
+will hopefully fix the bug where Android 6.0 kills the service in the
+middle of the night.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1453000590,1453000590,48fb3f13833b38d473b6f4d38115fb6a7e82b99e
+48fb3f13833b38d473b6f4d38115fb6a7e82b99e,48fb3f13,Fix some warnings.,"Fix some warnings.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452850520,1452850520,d5d7fed35178e3f668ef924f2d5337c9937761f3
+d5d7fed35178e3f668ef924f2d5337c9937761f3,d5d7fed3,Add a simple BackupAgent.,"Add a simple BackupAgent.
+
+Hopefully, this will prevent Android 6.0 from killing the service in the
+middle of the night.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452849512,1452849512,0bb835dac2710fef23f1f0671c9ccd1c2171c8fa
+0bb835dac2710fef23f1f0671c9ccd1c2171c8fa,0bb835da,Set version to 3.5.2,"Set version to 3.5.2
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452482479,1452482479,19c19b2ffa802483beb903c0c815917c3aa6f992
+19c19b2ffa802483beb903c0c815917c3aa6f992,19c19b2f,Update to JTransforms 3.1,"Update to JTransforms 3.1
+
+To reduce third-party dependencies, all parts of this library not
+required for float IDCT have been deleted.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452477826,1452477826,d7fd52d470cd2f1574717184184489501d324014
+d7fd52d470cd2f1574717184184489501d324014,d7fd52d4,Update to targetSdkVersion 23,"Update to targetSdkVersion 23
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452418388,1452418388,ddb289947866f172ccaf46a48bf971cfa1202dca
+ddb289947866f172ccaf46a48bf971cfa1202dca,ddb28994,"Use START_REDELIVER_INTENT, so Android will restart the service if the","Use START_REDELIVER_INTENT, so Android will restart the service if the
+kernel decides to kill it for whatever reason.
+
+Whenever the service is stopped or restarted, add some text to the main
+interface indicating why.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1452415004,1452415004,de76fb73729723e22cd65c562f3da4cc73b8b053
+de76fb73729723e22cd65c562f3da4cc73b8b053,de76fb73,Delete unnecessary volume scaling.,"Delete unnecessary volume scaling.
+
+The setStereoVolume() documentation says 0.0 is silence, and 1.0 is
+unity gain, so scaling by the Min/Max is redundant.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1429165285,1429165285,a1be467caa4ed972cfec175b154dc675499c4400
+a1be467caa4ed972cfec175b154dc675499c4400,a1be467c,"Update ""readme"" for Android Studio, and delete a redundant COPYING file.","Update ""readme"" for Android Studio, and delete a redundant COPYING file.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427662962,1427662962,bf7f40b3551e69eff06ef9cfe9df1281d5b13d5f
+bf7f40b3551e69eff06ef9cfe9df1281d5b13d5f,bf7f40b3,Remove IDEA-specific junk from version control.,"Remove IDEA-specific junk from version control.
+
+It's not required to run a Gradle build, and Android Studio generates
+this stuff automatically when you import the project.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427661657,1427662023,f0bcc5d38a6ff61317d351a0e2dfd7b6c1193cbb
+f0bcc5d38a6ff61317d351a0e2dfd7b6c1193cbb,f0bcc5d3,Pin support/appcompat to a more-specific version.,"Pin support/appcompat to a more-specific version.
+
+These libraries have made breaking changes in the past, so it makes
+sense for major updates to need human intervention.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427661519,1427661519,e87a1c7debb189ec1a2b1c679adbf63b6e7f50d1
+e87a1c7debb189ec1a2b1c679adbf63b6e7f50d1,e87a1c7d,Tag version 3.5.1,"Tag version 3.5.1
+
+This version has no new features, but now it builds with Android Studio,
+and the About screen points to the new GitHub URL.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427612656,1427612656,7477cacced1b0539fbed48285489c2b8af19708f
+7477cacced1b0539fbed48285489c2b8af19708f,7477cacc,"Run ""Reformat Code...""","Run ""Reformat Code...""
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427612509,1427612509,555c296780153f9cca2673d6efbaff4ccbeed6f5
+555c296780153f9cca2673d6efbaff4ccbeed6f5,555c2967,Give up on Android 2.1 (API 7).,"Give up on Android 2.1 (API 7).
+
+Android Studio considers it ""deprecated"", and something (perhaps the
+Toolbar) is causing a mysterious crash on startup.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427611614,1427611614,bf702d91a9ce859b8cfad2d834ccf9bf7b4dd289
+bf702d91a9ce859b8cfad2d834ccf9bf7b4dd289,bf702d91,Fix some lint warnings.,"Fix some lint warnings.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427610629,1427610629,c2df5e8f6d890dd7ae21cd23238a0b32de697c4c
+c2df5e8f6d890dd7ae21cd23238a0b32de697c4c,c2df5e8f,Make the Toolbar icon work with the latest support library.,"Make the Toolbar icon work with the latest support library.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427607089,1427607089,5c0d260ebcc7cd65e545bc814cec7c6c2d14e104
+5c0d260ebcc7cd65e545bc814cec7c6c2d14e104,5c0d260e,Point to the new GitHub URL.,"Point to the new GitHub URL.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427605259,1427605259,565c0f751db950723d342722d3a9feec024a0f33
+565c0f751db950723d342722d3a9feec024a0f33,565c0f75,Migrate project to Android Studio.,"Migrate project to Android Studio.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1427603932,1427604788,5ca34f906c1e2cf4e0625a750f8e30ec9029c067
+5ca34f906c1e2cf4e0625a750f8e30ec9029c067,5ca34f90,Fix alignment on first line of GPLv3 text.,Fix alignment on first line of GPLv3 text.,,,,pmarks-net,paul@pmarks.net,pmarks-net,paul@pmarks.net,1426385567,1426385567,6f91de0eba97a770bc1ac604464ec5924e68bcae
+6f91de0eba97a770bc1ac604464ec5924e68bcae,6f91de0e,Create LICENSE,Create LICENSE,,,,pmarks-net,paul@pmarks.net,pmarks-net,paul@pmarks.net,1426385349,1426385349,4fe7a0b9b99dbaf1dfd0594fb492c98c1109a086
+4fe7a0b9b99dbaf1dfd0594fb492c98c1109a086,4fe7a0b9,Create README.md,Create README.md,,,,pmarks-net,paul@pmarks.net,pmarks-net,paul@pmarks.net,1426384384,1426384384,058c2944c3496eb2f386fc0472bc7cd9b0a7cad1
+058c2944c3496eb2f386fc0472bc7cd9b0a7cad1,058c2944,- Add AutoPlay feature (included in version 3.5),"- Add AutoPlay feature (included in version 3.5)
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1418611591,1418611591,f987bef487dad8a344331c72fe479a3bd74cfc07
+f987bef487dad8a344331c72fe479a3bd74cfc07,f987bef4,"- Set version to 3.5, and update screenshots.","- Set version to 3.5, and update screenshots.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1418607710,1418607710,69280900b243670e0e067f829cde5e2f3d374f12
+69280900b243670e0e067f829cde5e2f3d374f12,69280900,"Use a Holo accent color, so pre-Lollipop SeekBars look consistent.","Use a Holo accent color, so pre-Lollipop SeekBars look consistent.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1418605956,1418605956,bb9aa6f34f746027f6b59eeab50b41856c3676cf
+bb9aa6f34f746027f6b59eeab50b41856c3676cf,bb9aa6f3,Make notification visible on the Lollipop lock screen.,"Make notification visible on the Lollipop lock screen.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1417422115,1417422115,d0ee63e4077b61ff66ad63650bb7e870f8ec209f
+d0ee63e4077b61ff66ad63650bb7e870f8ec209f,d0ee63e4,Update to the v21 API and Support library.,"Update to the v21 API and Support library.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1417420535,1417420535,962acee40fd1337ada115926f51ee31e85bc026f
+962acee40fd1337ada115926f51ee31e85bc026f,962acee4,- Add 1024x500 feature graphic (now required by Play Store).,"- Add 1024x500 feature graphic (now required by Play Store).
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1410058065,1410058065,a6c83b960adc532f28667a8c0927ff195715215e
+a6c83b960adc532f28667a8c0927ff195715215e,a6c83b96,- Make the Notification readable in Android L.,"- Make the Notification readable in Android L.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1407726425,1407726425,134cb25c61f1e818195d0169fe3fc993850062e4
+134cb25c61f1e818195d0169fe3fc993850062e4,134cb25c,- Comments,"- Comments
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1395118445,1395118445,29bbe91dfc76954f3eafe6971d8262129a542627
+29bbe91dfc76954f3eafe6971d8262129a542627,29bbe91d,- Set version to 3.3,"- Set version to 3.3
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1395118232,1395118232,bdcafdf86932f12be580169321391a777c1df964
+bdcafdf86932f12be580169321391a777c1df964,bdcafdf8,- Add option to disable AudioFocus.,"- Add option to disable AudioFocus.
+- Add option to reduce the volume level internally.
+
+The idea is that you can play white noise on top of music, in order
+to drown out background chatter during the quiet parts.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1395042195,1395042195,746e9950774b72adecd6be758001d2bf1722f646
+746e9950774b72adecd6be758001d2bf1722f646,746e9950,- Set version to 3.2,"- Set version to 3.2
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1394690741,1394690741,5b57fc9f0014ccac9b761f53e587c945b7710d81
+5b57fc9f0014ccac9b761f53e587c945b7710d81,5b57fc9f,- Fix a memory leak in requestAudioFocus() / abandonAudioFocus().,"- Fix a memory leak in requestAudioFocus() / abandonAudioFocus().
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1394689678,1394689678,72c1b11ad8d3577f45b73d911760d1960167206e
+72c1b11ad8d3577f45b73d911760d1960167206e,72c1b11a,- Add a ShuffleBag class to prevent near-consecutive replays of the same chunk.,"- Add a ShuffleBag class to prevent near-consecutive replays of the same chunk.
+- Fix a stereo glitch when mChunk0 and mChunk1 differ in size.
+- Add withPcm() function to avoid lots of repeated code.
+- Misc cleanups.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1394611399,1394611399,071bcdd48a5ea993802a8aa9b2990304e8f6cf70
+071bcdd48a5ea993802a8aa9b2990304e8f6cf70,071bcdd4,"- Implement stereo sound, by playing the same data backwards.","- Implement stereo sound, by playing the same data backwards.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1394420433,1394420433,d5e0f790ad48d6d061a43f4fa39014fb69792c89
+d5e0f790ad48d6d061a43f4fa39014fb69792c89,d5e0f790,- Respect the Audio Focus on >=Froyo,"- Respect the Audio Focus on >=Froyo
+- Watch for STOP/PAUSE media buttons, mainly for Sleep Timer compatibility.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1394351566,1394351566,4f5ed108c76e9f664f74e520fa04a023f0e92d45
+4f5ed108c76e9f664f74e520fa04a023f0e92d45,4f5ed108,"- Turn ""singleTask"" back on, so the Notification still works correctly even","- Turn ""singleTask"" back on, so the Notification still works correctly even
+  if we launched from the .apk installer.
+- Hopefully this marks the 3.1 release.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376899516,1376899516,a5354858aba9fd94b9653e5777a291df9fa4aa2b
+a5354858aba9fd94b9653e5777a291df9fa4aa2b,a5354858,- Add a retry loop which might fix the mTrack.play() crash.,"- Add a retry loop which might fix the mTrack.play() crash.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376894237,1376894237,d0fc8cd0f91abb30a38d3274c65bc0343901f1ab
+d0fc8cd0f91abb30a38d3274c65bc0343901f1ab,d0fc8cd0,- Update screenshots for v3.1,"- Update screenshots for v3.1
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376892470,1376892470,e9caca240d162652f48d5222292f202c1a1cd0ab
+e9caca240d162652f48d5222292f202c1a1cd0ab,e9caca24,- Update icons.,"- Update icons.
+- Add a stop button to the notification bar for >= ICS
+- Make the notification Intent less weird.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376891844,1376891844,e6fa0081a00d210ec307eb4ac609f630ee1f5ee3
+e6fa0081a00d210ec307eb4ac609f630ee1f5ee3,e6fa0081,- SampleShuffler: replace callback spaghetti with an explicit loop.,"- SampleShuffler: replace callback spaghetti with an explicit loop.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376869531,1376869531,e87abdc7b5f4d24e987f7ec3fa1c41e00251d13f
+e87abdc7b5f4d24e987f7ec3fa1c41e00251d13f,e87abdc7,"- New icons, for eventual use.","- New icons, for eventual use.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376724090,1376724090,343be5b09541fb74423bbaf3acd0da253d4e247e
+343be5b09541fb74423bbaf3acd0da253d4e247e,343be5b0,- Update screenshots,"- Update screenshots
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376267216,1376267216,1c86a9fa3ed4d5286ed7ec8927e739f98de2afcb
+1c86a9fa3ed4d5286ed7ec8927e739f98de2afcb,1c86a9fa,"- If the service is killed due to memory pressure, let it stay dead.","- If the service is killed due to memory pressure, let it stay dead.
+  Previously it would restart and immediately NPE because I increased
+  targetSdkVersion without migrating to onStartCommand().
+- Hopefully this commit marks the 3.0 release.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376206143,1376206143,15e7a9870c5f377523edc7d57bf123dacc3cfc74
+15e7a9870c5f377523edc7d57bf123dacc3cfc74,15e7a987,- Set version to 3.0,"- Set version to 3.0
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376199055,1376199055,67e253376b73fe832300914d795a27995131fadc
+67e253376b73fe832300914d795a27995131fadc,67e25337,- Implement load/save.,"- Implement load/save.
+- Move Amp Wave icons to ldpi, so they're drawn larger.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376197177,1376197177,865c90b3c13fc10c95e6d45a132644ad2613022b
+865c90b3c13fc10c95e6d45a132644ad2613022b,865c90b3,- Delete obsolete strings.,"- Delete obsolete strings.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376184798,1376184798,f948535e3025eaaaab5af0c65b6b4ab9057c424e
+f948535e3025eaaaab5af0c65b6b4ab9057c424e,f948535e,- No sense keeping these interfaces in separate files.,"- No sense keeping these interfaces in separate files.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376182615,1376182615,95e8be0250d1dd8f84dcaa032fce672fcac6f9ad
+95e8be0250d1dd8f84dcaa032fce672fcac6f9ad,95e8be02,"- Implement most of the ""Memory"" UI.","- Implement most of the ""Memory"" UI.
+- Note that this can't actually save/load anything yet.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1376182176,1376182176,c4d1d4686bdf9c3ae252dfe40d59c8c3ee01c369
+c4d1d4686bdf9c3ae252dfe40d59c8c3ee01c369,c4d1d468,"- Add EqualizerViewLite, which represents a spectrum using a small squiggly line.","- Add EqualizerViewLite, which represents a spectrum using a small squiggly line.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375684027,1375684027,8df9dad93b03d10414db76226e0aaee16a5921bb
+8df9dad93b03d10414db76226e0aaee16a5921bb,8df9dad9,- Merge in DragSortListView,"- Merge in DragSortListView
+- Partially implement a UI for the ""Memory"" fragment.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375612723,1375612723,2025b59ac835a4dd1f7e981623bf15d43350842d
+2025b59ac835a4dd1f7e981623bf15d43350842d,2025b59a,"Partial revert of last commit; ""Saved Sounds"" was just a stub.","Partial revert of last commit; ""Saved Sounds"" was just a stub.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375344803,1375344803,544cdd802b5535d61b6ac5b227ccc52016e756a7
+544cdd802b5535d61b6ac5b227ccc52016e756a7,544cdd80,Make a cramped title behave more sanely.,"Make a cramped title behave more sanely.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375344147,1375344147,1883fb5d969f333a67324364924564654f853d47
+1883fb5d969f333a67324364924564654f853d47,1883fb5d,Implement dropdown list navigation.,"Implement dropdown list navigation.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375343181,1375343181,8865bff08e1fde20d6c4563cb13e79fd0e3b8de6
+8865bff08e1fde20d6c4563cb13e79fd0e3b8de6,8865bff0,Fix fragment+rotation bugs:,"Fix fragment+rotation bugs:
+- Let the framework reload fragments automatically.
+- Don't touch mUiState until onActivityCreated().
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375161558,1375161558,3b7dadd5f48f483c4f85477b8a98faeb0412a06a
+3b7dadd5f48f483c4f85477b8a98faeb0412a06a,3b7dadd5,- Note some bugs that I'll fix later.,"- Note some bugs that I'll fix later.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375078555,1375078555,b643f50f62df39fe815a1a9272778829c228f680
+b643f50f62df39fe815a1a9272778829c228f680,b643f50f,Replace the Dialogs with Fragments.  This should keep the UI,"Replace the Dialogs with Fragments.  This should keep the UI
+more consitent if I ever get around to implementing a preset list.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1375077275,1375077275,e55acdbcd4bbc505f246fb3053824c63d2059d99
+e55acdbcd4bbc505f246fb3053824c63d2059d99,e55acdbc,- Replace ActionBarSherlock with the new/official ActionBarCompat,"- Replace ActionBarSherlock with the new/official ActionBarCompat
+- Turn off obfuscation when Proguard is enabled
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1374737857,1374737857,79017aba5f96ee41452c9fcd2517352020e6486e
+79017aba5f96ee41452c9fcd2517352020e6486e,79017aba,"- AudioTrack has a built-in thread-safe stop() mechanism, so use that","- AudioTrack has a built-in thread-safe stop() mechanism, so use that
+  instead of the custom StopThread exception.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1372577620,1372577620,55d9fc89c68b2ce4799cad51a232523716027d79
+55d9fc89c68b2ce4799cad51a232523716027d79,55d9fc89,"- Support 8000Hz sample rate, for the heck of it.","- Support 8000Hz sample rate, for the heck of it.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1372573702,1372573702,ac76a0c8e764f6761c9834d34fc506c35125919a
+ac76a0c8e764f6761c9834d34fc506c35125919a,ac76a0c8,"Use the native sample rate, instead of hard-coding 44100.","Use the native sample rate, instead of hard-coding 44100.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1372559418,1372559418,dd7379d2ed9e9b4036bfdbfcfd39dcc5253153bd
+dd7379d2ed9e9b4036bfdbfcfd39dcc5253153bd,dd7379d2,- Avoid NullPointerException in the GUI editor.,"- Avoid NullPointerException in the GUI editor.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1372140533,1372140533,3a8efeb32421d6c351947f179d04d411e0359a70
+3a8efeb32421d6c351947f179d04d411e0359a70,3a8efeb3,- Update screenshots,"- Update screenshots
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366877933,1366877933,d174b7918ca654e29ec9c2a12103bd801f2b5335
+d174b7918ca654e29ec9c2a12103bd801f2b5335,d174b791,"- Move images to the hdpi directory, so they're sized correctly.","- Move images to the hdpi directory, so they're sized correctly.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366795415,1366795415,b159b8ea3a496d58298d669fe1720e1127262582
+b159b8ea3a496d58298d669fe1720e1127262582,b159b8ea,- Resolve action vs. state confusion by putting arrows on the locks.,"- Resolve action vs. state confusion by putting arrows on the locks.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366784132,1366784132,38bcab1be23ecc5ecf02480029a54da89a9f6c1b
+38bcab1be23ecc5ecf02480029a54da89a9f6c1b,38bcab1b,- Fix an almost-a-bug.,"- Fix an almost-a-bug.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366703681,1366703681,66443c901e0989b67ee940970af6ff1088faa27a
+66443c901e0989b67ee940970af6ff1088faa27a,66443c90,"Add a ""Lock Input"" feature for v2.1","Add a ""Lock Input"" feature for v2.1
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366703421,1366703421,25198b367860ac2620429a5ca74018e9da759b79
+25198b367860ac2620429a5ca74018e9da759b79,25198b36,- Delete old status icon.,"- Delete old status icon.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366603503,1366603503,77bbdecbcaba83ebb6c2d8949e45a188c254e6a9
+77bbdecbcaba83ebb6c2d8949e45a188c254e6a9,77bbdecb,- Set version to 2.0 before release,"- Set version to 2.0 before release
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366603230,1366603230,e62589435aa555a356419374eaffae75ed50250e
+e62589435aa555a356419374eaffae75ed50250e,e6258943,- Update screenshots with Holo theme.,"- Update screenshots with Holo theme.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366602925,1366602925,881335f73c1f46ee1f401e8e6bc0e14509f651ce
+881335f73c1f46ee1f401e8e6bc0e14509f651ce,881335f7,"Add new status bar icon, generated by:","Add new status bar icon, generated by:
+http://android-ui-utils.googlecode.com/hg/asset-studio/dist/icons-notification.html
+
+Also tweak the notification behavior a bit.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366602055,1366602055,8ef9bcff9f5cb851bfc3c4b68676aeb040ba7196
+8ef9bcff9f5cb851bfc3c4b68676aeb040ba7196,8ef9bcff,"Switch to a modern-looking theme, with an ActionBar.  ActionBarSherlock only","Switch to a modern-looking theme, with an ActionBar.  ActionBarSherlock only
+goes back to API version 7, which means dropping support for Cupcake and Donut.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1366597692,1366597692,78f0ee2cc5b6c39a2a39881920b774e3b813132f
+78f0ee2cc5b6c39a2a39881920b774e3b813132f,78f0ee2c,"- Update version to 1.1.1, for the popping fix.","- Update version to 1.1.1, for the popping fix.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315815310,1315815310,8f67b1d8be96327ab8c64407038e7b13aedfa88b
+8f67b1d8be96327ab8c64407038e7b13aedfa88b,8f67b1d8,"- Whoops, the pop-stopper wasn't quite working.","- Whoops, the pop-stopper wasn't quite working.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315815086,1315815086,18603525fc0deb505368348fd82d7fe131e28791
+18603525fc0deb505368348fd82d7fe131e28791,18603525,- Do the AmpWave multiplication using integer math.,"- Do the AmpWave multiplication using integer math.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315806929,1315806929,499c4e871e568305f7f6d7ee322156280be3ad92
+499c4e871e568305f7f6d7ee322156280be3ad92,499c4e87,- Map the period bar to more human-friendly points.,"- Map the period bar to more human-friendly points.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315803555,1315803555,5249077bd9b22d6faee0a8d5979f3ceb0ea4b196
+5249077bd9b22d6faee0a8d5979f3ceb0ea4b196,5249077b,- Style fixes,"- Style fixes
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315800441,1315800441,d25dc32369d9aea27c5d264e8867f7af6c5dcb8a
+d25dc32369d9aea27c5d264e8867f7af6c5dcb8a,d25dc323,"- When the user modifies the spectrum, do an on-demand crossfade to","- When the user modifies the spectrum, do an on-demand crossfade to
+  avoid popping sounds.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315799999,1315799999,992de241c76ce998ec835545eb576e44412e1d43
+992de241c76ce998ec835545eb576e44412e1d43,992de241,- Add some rounding to the period value.,"- Add some rounding to the period value.
+- Add an AmpWave screenshot.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315794197,1315794197,0a6e00e730cd5bc08bad9f951e0002c96b6470f1
+0a6e00e730cd5bc08bad9f951e0002c96b6470f1,0a6e00e7,- Use the XORShift random number generator.,"- Use the XORShift random number generator.
+- Avoid playing the same chunk twice in a row.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315792990,1315792990,3fd629dc837c89680a17b58ba6ec412a47fd6161
+3fd629dc837c89680a17b58ba6ec412a47fd6161,3fd629dc,- Make the period bar disabling work better.,"- Make the period bar disabling work better.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315741015,1315741015,daf89f6fefd9e0c37b04e209ecf9527b6e602d28
+daf89f6fefd9e0c37b04e209ecf9527b6e602d28,daf89f6f,"- Add an ""Amplitude Wave"" generator.","- Add an ""Amplitude Wave"" generator.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315740393,1315740393,23cfea2654b65b22e4ea20805877b1c94cdd0395
+23cfea2654b65b22e4ea20805877b1c94cdd0395,23cfea26,"- Add NoiseServicePercentListener.java, which I forgot before.","- Add NoiseServicePercentListener.java, which I forgot before.
+- Refactor the audio generation loop.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315202571,1315202571,f1b21bcf1e8a2401a471b7a9b676533b66ddcb96
+f1b21bcf1e8a2401a471b7a9b676533b66ddcb96,f1b21bcf,- Fix some new Eclipse warnings.,"- Fix some new Eclipse warnings.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1315190048,1315190048,8621b477c7663fed2eb07dc4d61c8126674ea1d8
+8621b477c7663fed2eb07dc4d61c8126674ea1d8,8621b477,- Set min/target SDK so this will run on 1.5 without demanding 1.5's default,"- Set min/target SDK so this will run on 1.5 without demanding 1.5's default
+  permissions.
+- Tweak the about dialog.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1298274996,1298274996,046781b443b4da463dabd2166e2e5acae0b08934
+046781b443b4da463dabd2166e2e5acae0b08934,046781b4,- Automatically stop the service if the activity is paused with the equalizer,"- Automatically stop the service if the activity is paused with the equalizer
+  set to silent.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1295748452,1295748452,5185b85278cd9d54b8ff4aae0efd47a3fc8dead9
+5185b85278cd9d54b8ff4aae0efd47a3fc8dead9,5185b852,Run as a foreground service.  This makes the OS less likely to kill the,"Run as a foreground service.  This makes the OS less likely to kill the
+process while it's busy making noise.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1294627422,1294627422,49049c11059ba8cf66fb62311e261a6fc40ddab5
+49049c11059ba8cf66fb62311e261a6fc40ddab5,49049c11,Add a stupid gigantic icon because Android Market requires it.,"Add a stupid gigantic icon because Android Market requires it.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1291187210,1291187210,adcae16a021b7c2289181af75dcc4582f95c10b9
+adcae16a021b7c2289181af75dcc4582f95c10b9,adcae16a,- 1.0.2 should have a different version code.,"- 1.0.2 should have a different version code.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1284952260,1284952260,9c26b5afded91c9d82975b31dc7b0371d5ad1b85
+9c26b5afded91c9d82975b31dc7b0371d5ad1b85,9c26b5af,"- Make sure the buffer is never smaller than getMinBufferSize(), since","- Make sure the buffer is never smaller than getMinBufferSize(), since
+  I'm not sure my default is appropriate for every device.
+- Add a progress bar for block generation.
+- Manage the wake lock and notification icon in onCreate/onDestroy, since
+  those callbacks are always paired 1:1.
+- Get rid of the special layout for landscape; it was ugly and pointless.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1284951395,1284951395,16fcef72538da1630f2f7b4684c1f780bd9980dd
+16fcef72538da1630f2f7b4684c1f780bd9980dd,16fcef72,Add note about 4-space tabs in Eclipse.,"Add note about 4-space tabs in Eclipse.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1281857747,1281857747,6b28d54cc88f799b10ccce0bc5c43fc584aa3653
+6b28d54cc88f799b10ccce0bc5c43fc584aa3653,6b28d54c,"Wait, Eclipse uses hard tabs by default?","Wait, Eclipse uses hard tabs by default?
+Change all tabs to 4 spaces.
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1281857208,1281857208,48a52a900695a93a98d99b8443743d0edabcef2b
+48a52a900695a93a98d99b8443743d0edabcef2b,48a52a90,- Move all human-readable strings to about.xml and strings.xml.,"- Move all human-readable strings to about.xml and strings.xml.
+- Run the XML files through Eclipse's cleanup tool.
+- Set version to 1.0.1
+
+I probably won't push this to the Market, since none of the changes
+are user-visible.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1265865435,1265865435,d2fff0f308414628387171e42a3e90309ef6f9cd
+d2fff0f308414628387171e42a3e90309ef6f9cd,d2fff0f3,- Tweak the versioning; Android Market didn't like it.,"- Tweak the versioning; Android Market didn't like it.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1265531052,1265531052,a543785db711f530252f59691f71a4ccb1bdcdd0
+a543785db711f530252f59691f71a4ccb1bdcdd0,a543785d,- Added a version number (1.0).,"- Added a version number (1.0).
+- Added an About dialog.
+- Cleaned up some superfluous Log output.
+- Added a screenshot.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1265529530,1265529530,9bfe48af26c202975bd2a6102013c85d0330725d
+9bfe48af26c202975bd2a6102013c85d0330725d,9bfe48af,Initial pile of code.,"Initial pile of code.
+
+",,,,Paul Marks,paul@pmarks.net,Paul Marks,paul@pmarks.net,1265268833,1265268833,

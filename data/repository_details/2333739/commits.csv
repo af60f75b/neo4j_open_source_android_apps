@@ -1,0 +1,88 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+488bf4d2f3a137191e5c8188cfc44832f671874d,488bf4d2,increment version to 0.5,"increment version to 0.5
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315492638,1315492638,a3981d1fdbf581dea6720080a1c56979ab27ecdd
+a3981d1fdbf581dea6720080a1c56979ab27ecdd,a3981d1f,more realistic time left evaluation,"more realistic time left evaluation
+
+Evaluate the time left only when a percentage point of the total battery
+level changes.
+
+Otherwise we end up to have very bad fluctuations in the time left
+estimation: the measure of the battery level in percentage points is too
+coarse grained, so we end up to have an estimation more close the real
+value when the battery level changes and a too much optimistic when the
+battery is actually discharging but the percentage point is not yet
+changed.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315492350,1315492350,2b9b19534b58f795bfdbad96397e123609f2ec7c
+2b9b19534b58f795bfdbad96397e123609f2ec7c,2b9b1953,increment version to 0.4,"increment version to 0.4
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315420802,1315420802,c86d2e418914db1d48ac5959c78ed3ebbcac73b5
+c86d2e418914db1d48ac5959c78ed3ebbcac73b5,c86d2e41,add sensor consumption statistics,"add sensor consumption statistics
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315420716,1315420716,1286a8f59e0d9db88866626f054d0be32bb7087d
+1286a8f59e0d9db88866626f054d0be32bb7087d,1286a8f5,increment version to 0.3,"increment version to 0.3
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315322600,1315322600,b166ebfcbaab7fa3bc8b426b196235adac8f6149
+b166ebfcbaab7fa3bc8b426b196235adac8f6149,b166ebfc,"print ""evaluating"" instead of ""unknown"" during time left evaluation","print ""evaluating"" instead of ""unknown"" during time left evaluation
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315322510,1315322510,9dedca9ba9d406c870b7d00e579ce2eb7dcc88de
+9dedca9ba9d406c870b7d00e579ce2eb7dcc88de,9dedca9b,rewrite the time left evaluation heuristic,"rewrite the time left evaluation heuristic
+
+Do not consider voltage at all when evaluting the depletion time of the
+battery. It's just incorrect and it doesn't give realistic results.
+
+Better to use the battery level, even if it's a bit slower, it should
+gives more realistic results.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315322161,1315322161,8cd22c85b04d5bc3b9fa57009eae820af654f1d9
+8cd22c85b04d5bc3b9fa57009eae820af654f1d9,8cd22c85,increment version in AndroidManifest.xml,"increment version in AndroidManifest.xml
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315318205,1315318221,676d05e3fe23ff23ed5538b6599c1ced27226f8e
+676d05e3fe23ff23ed5538b6599c1ced27226f8e,676d05e3,provide a human readable description for the known battery informations,"provide a human readable description for the known battery informations
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315317775,1315318191,3022a9f3787a7b31546122461e1059bddde608f1
+3022a9f3787a7b31546122461e1059bddde608f1,3022a9f3,move battery information retrieval code into a separate class,"move battery information retrieval code into a separate class
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315316958,1315317037,99a46c993de6bd52bd8ce1d28f064d3f16cdc7ac
+99a46c993de6bd52bd8ce1d28f064d3f16cdc7ac,99a46c99,more accurate depletion time evaluation,"more accurate depletion time evaluation
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315313486,1315313486,924884fb347283426571de64a2f7d979d495850c
+924884fb347283426571de64a2f7d979d495850c,924884fb,specify the Android API levels used by the application,"specify the Android API levels used by the application
+
+Market requires the minSdkVersion to be set in AndroidManifest.xml.
+Do it.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315306939,1315306939,d50fc4d35a7c2990bb0dcabf2cbb58ecaeddca78
+d50fc4d35a7c2990bb0dcabf2cbb58ecaeddca78,d50fc4d3,add a license (GPLv2),"add a license (GPLv2)
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315305887,1315305887,72e575d964b90533f0ff32053c0b5f0ed6401d5e
+72e575d964b90533f0ff32053c0b5f0ed6401d5e,72e575d9,add a note in the README on how to specify the SDK path in local.properties,"add a note in the README on how to specify the SDK path in local.properties
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315305167,1315305167,4b7ee899f15b2647ae2e0f2a79cb7de6c9a7694a
+4b7ee899f15b2647ae2e0f2a79cb7de6c9a7694a,4b7ee899,BatteryTop: initial version,"BatteryTop: initial version
+
+Dump detailed information in a top-like format.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315305011,1315305011,2da41a3f350f91f084930db98c9db9d184bc6a19
+2da41a3f350f91f084930db98c9db9d184bc6a19,2da41a3f,first commit,"first commit
+
+Add a README to describe the project.
+
+Signed-off-by: Andrea Righi <andrea@betterlinux.com>
+",,,,Andrea Righi,andrea@betterlinux.com,Andrea Righi,andrea@betterlinux.com,1315304936,1315304936,

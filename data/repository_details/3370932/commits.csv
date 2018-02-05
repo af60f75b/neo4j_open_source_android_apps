@@ -1,0 +1,1327 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+2e79b0a3c05c59d2f1b0e13898c93bb736f1fbf1,2e79b0a3,Merge pull request #395 from 19379/whitespace-spelling,"Merge pull request #395 from 19379/whitespace-spelling
+
+Fix spelling/whitespace in 394",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1505727475,1505727475,"4d53988929fa37f7404466ae160fd24a36fdda1e,fdd1854dee44fd35321cf17c5a098cc6423ef992"
+fdd1854dee44fd35321cf17c5a098cc6423ef992,fdd1854d,Fix spelling/whitespace in 394,"Fix spelling/whitespace in 394
+",,,,marc,19379@users.noreply.github.com,marc,19379@users.noreply.github.com,1505599859,1505599859,4d53988929fa37f7404466ae160fd24a36fdda1e
+4d53988929fa37f7404466ae160fd24a36fdda1e,4d539889,Update For Oreo,"Update For Oreo
+
+Dropped android < 4.0
+",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,1505588473,1505588473,c6207d23388a22839509883893ec41293b2463b0
+c6207d23388a22839509883893ec41293b2463b0,c6207d23,fix,"fix
+",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,1505584152,1505584152,b3818cb996d5d8d42fda88e3afdeb5d141469802
+b3818cb996d5d8d42fda88e3afdeb5d141469802,b3818cb9,Update,"Update
+
+New Version
+",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,1505569786,1505569786,c78ceb25ca6b303362fe1586589f9b720924b878
+c78ceb25ca6b303362fe1586589f9b720924b878,c78ceb25,Merge pull request #394 from 19379/listenbrainz-fixes,"Merge pull request #394 from 19379/listenbrainz-fixes
+
+Listenbrainz fixes",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1505565779,1505565779,"c8cf316df079194731fb574a9ab4828df44de184,8fb70a39e787652d40d429d98ab20068507d7ea3"
+8fb70a39e787652d40d429d98ab20068507d7ea3,8fb70a39,Listenbrainz: update server response checks,"Listenbrainz: update server response checks
+",,,,marc,19379@users.noreply.github.com,marc,19379@users.noreply.github.com,1505559282,1505559282,a25e114f50eb37b0b710e48eb16761c33a6e88d4
+a25e114f50eb37b0b710e48eb16761c33a6e88d4,a25e114f,"Listenbrainz: check for new style server response on successful ""listen""","Listenbrainz: check for new style server response on successful ""listen""
+
+This stops the app caching and retrying listens that have been succesfully submitted.
+",,,,marc,19379@users.noreply.github.com,marc,19379@users.noreply.github.com,1505518290,1505518290,ac315f456541d9dbcdcc2e312c8d44f9b658819a
+ac315f456541d9dbcdcc2e312c8d44f9b658819a,ac315f45,"Listenbrainz: Don't send ""listened_at"" with ""playing_now""","Listenbrainz: Don't send ""listened_at"" with ""playing_now""
+
+It's not documented but the server responds with a 400 bad request
+",,,,marc,19379@users.noreply.github.com,marc,19379@users.noreply.github.com,1505518006,1505518006,c8cf316df079194731fb574a9ab4828df44de184
+c8cf316df079194731fb574a9ab4828df44de184,c8cf316d,Merge pull request #366 from Freso/update-musicbrainz-stuff,"Merge pull request #366 from Freso/update-musicbrainz-stuff
+
+Update a few *Brainz related things",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1496065737,1496065737,"656cd46d1bc3adfb71c386595d9adb8a9f13a57b,10d26f902710ee3a4296acd7e625efb977f21d9a"
+10d26f902710ee3a4296acd7e625efb977f21d9a,10d26f90,"Replace ""Listen Brainz"" with ""ListenBrainz""","Replace ""Listen Brainz"" with ""ListenBrainz""
+
+Just like ""MusicBrainz"" is one word, so is ""ListenBrainz"".
+",,,,Frederik “Freso” S. Olesen,freso.dk@gmail.com,Frederik “Freso” S. Olesen,freso.dk@gmail.com,1489318692,1489318692,44406badeccdf3864b6862559b3629e7efc3ebb4
+44406badeccdf3864b6862559b3629e7efc3ebb4,44406bad,Update note about `mbid` in Developer's API.md,"Update note about `mbid` in Developer's API.md
+
+The MBIDs ingested by Last.FM *used* to be the MusicBrainz IDs for
+MusicBrainz Track entities. However, Tracks were renamed to Recordings
+with the MusicBrainz NGS overhaul[1], but since no one was interested in
+breaking all the files already tagged with MusicBrainz identifiers, the
+tag continues to be ""MusicBrainz Track ID""/mb-trackid.
+
+Note that some time later, a new pseudo-entity for Tracks for
+introduced. These are saved as ""MusicBrainz Release Track
+ID""/mb-releasetrackid, but are not ingested by Last.FM. Last.FM only
+takes Recording MBIDs.
+
+[1] https://wiki.musicbrainz.org/History:Next_Generation_Schema
+",,,,Frederik “Freso” S. Olesen,freso.dk@gmail.com,Frederik “Freso” S. Olesen,freso.dk@gmail.com,1489317858,1489317858,cf590f596278675546140d31f622e3fcbf906e17
+cf590f596278675546140d31f622e3fcbf906e17,cf590f59,Make ….TrackTestUtils.TEST_MBID an actual MBID,"Make ….TrackTestUtils.TEST_MBID an actual MBID
+
+From https://musicbrainz.org/recording/a1aa722e-06e4-4464-a585-c93471ecb449
+",,,,Frederik “Freso” S. Olesen,freso.dk@gmail.com,Frederik “Freso” S. Olesen,freso.dk@gmail.com,1489317709,1489317709,656cd46d1bc3adfb71c386595d9adb8a9f13a57b
+656cd46d1bc3adfb71c386595d9adb8a9f13a57b,656cd46d,Merge pull request #349 from aaharu/lang-ja,"Merge pull request #349 from aaharu/lang-ja
+
+add japanese strings",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1487464430,1487464430,"18a7f3356a68bc03fe0c76aee31a0f21fdb16721,607bd761e04fc0a38a0a4fd337c4e2606821f66e"
+607bd761e04fc0a38a0a4fd337c4e2606821f66e,607bd761,update japanese translation,"update japanese translation
+",,,,Haruaki OTAKE,aaharu@hotmail.com,Haruaki OTAKE,aaharu@hotmail.com,1486864562,1486864562,7ca912279ec97b864573fb4ea1980601060c458a
+18a7f3356a68bc03fe0c76aee31a0f21fdb16721,18a7f335,Small Update,"Small Update
+
+Better warning system.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1486848986,1486848986,36dceaff43ee9c6871d3d6c65e7e0ce2198a4bc5
+7ca912279ec97b864573fb4ea1980601060c458a,7ca91227,add japanese strings,"add japanese strings
+",,,,Haruaki OTAKE,aaharu@hotmail.com,Haruaki OTAKE,aaharu@hotmail.com,1486277726,1486480862,36dceaff43ee9c6871d3d6c65e7e0ce2198a4bc5
+36dceaff43ee9c6871d3d6c65e7e0ce2198a4bc5,36dceaff,Merge pull request #353 from inverse/add-ukrainian,"Merge pull request #353 from inverse/add-ukrainian
+
+Add Ukrainian translations",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1486317104,1486317104,"f1dfdd4f71a1595642e210d8501bd91ba49ea9b1,58b1849a22207487746f504fabfafd4d996c896e"
+f1dfdd4f71a1595642e210d8501bd91ba49ea9b1,f1dfdd4f,Merge pull request #350 from cmpute/master,"Merge pull request #350 from cmpute/master
+
+Chinese Translation Strings",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1486317089,1486317089,"af6d0dc82a7a21d90bd7cbf15333a1ff0f3af8c9,1e1901d0ca02701242783a62bed43f7092399b58"
+58b1849a22207487746f504fabfafd4d996c896e,58b1849a,Add Ukrainian translations,"Add Ukrainian translations
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1486316779,1486316779,af6d0dc82a7a21d90bd7cbf15333a1ff0f3af8c9
+1e1901d0ca02701242783a62bed43f7092399b58,1e1901d0,Fix Space,"Fix Space
+
+",,,,Jacob C,cmpute@qq.com,Jacob C,cmpute@qq.com,1486284308,1486284308,bc5cd619967517a26aa9164f5e027c71cf830e71
+bc5cd619967517a26aa9164f5e027c71cf830e71,bc5cd619,Chinese Translation,"Chinese Translation
+
+",,,,Jacob C,cmpute@qq.com,Jacob C,cmpute@qq.com,1486281477,1486281477,48936d18e5c510d81827f0caee643b4818d97241
+af6d0dc82a7a21d90bd7cbf15333a1ff0f3af8c9,af6d0dc8,Love Track in Notification,"Love Track in Notification
+",,,,stduser,stduser@localhost.localdomain,stduser,stduser@localhost.localdomain,1486242498,1486242498,87136dca27208f1cb5150398e842be6515ed78e5
+87136dca27208f1cb5150398e842be6515ed78e5,87136dca,"Vanilla Music, Deezer","Vanilla Music, Deezer
+",,,,stduser,stduser@localhost.localdomain,stduser,stduser@localhost.localdomain,1486235657,1486235657,48936d18e5c510d81827f0caee643b4818d97241
+48936d18e5c510d81827f0caee643b4818d97241,48936d18,Update Gradle,"Update Gradle
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1481292154,1481292154,f81c91117cf6c3c073a0272549ad0c222aafc0dc
+f81c91117cf6c3c073a0272549ad0c222aafc0dc,f81c9111,Merge pull request #336 from iandioch/patch-4,"Merge pull request #336 from iandioch/patch-4
+
+Fix typo in Google Play link in README.md",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1481290011,1481290011,"05eb059ebd66298ff0e793d10b912690a7aa71a1,56431798cffcf0d1a1c61b31aab8bb5306039ea3"
+56431798cffcf0d1a1c61b31aab8bb5306039ea3,56431798,Fix typo in Google Play link in README.md,"Fix typo in Google Play link in README.md
+
+PLay -> play",,,,Noah Ó Donnaile,iandioch@users.noreply.github.com,GitHub,noreply@github.com,1481051280,1481051280,05eb059ebd66298ff0e793d10b912690a7aa71a1
+05eb059ebd66298ff0e793d10b912690a7aa71a1,05eb059e,Preparing Next Release,"Preparing Next Release
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479734906,1479734906,32a189bd2ccd0e4bc1f80d39878096a0344fcdff
+32a189bd2ccd0e4bc1f80d39878096a0344fcdff,32a189bd,Only Authenticated Services In Status View,"Only Authenticated Services In Status View
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479644990,1479644990,aa49db45e07b7b9b0c812a7a88d039cc626f885d
+aa49db45e07b7b9b0c812a7a88d039cc626f885d,aa49db45,Fixed Some UI Problems,"Fixed Some UI Problems
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479563989,1479563989,c04e652a8523dc150788e12b56999152ef6d2cd8
+c04e652a8523dc150788e12b56999152ef6d2cd8,c04e652a,Update Readme,"Update Readme
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479560646,1479560646,d7ab95f7bbaa6f654ab5c7147c3198e13feaed8f
+d7ab95f7bbaa6f654ab5c7147c3198e13feaed8f,d7ab95f7,Listen Brainz Fix,"Listen Brainz Fix
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479560225,1479560225,f6887fde16f2a21607236871b4a05fe24d4f1399
+f6887fde16f2a21607236871b4a05fe24d4f1399,f6887fde,Listen Brainz custom server,"Listen Brainz custom server
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479500767,1479500767,11f06bcfa9d5ea356cb78c2fd3fb08db19e0f147
+11f06bcfa9d5ea356cb78c2fd3fb08db19e0f147,11f06bcf,Fix Token issues.,"Fix Token issues.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479496728,1479496728,2d5585387b03c417b36c1aacca8dc81a00131a6f
+2d5585387b03c417b36c1aacca8dc81a00131a6f,2d558538,Listen Brainz Alpha Testing,"Listen Brainz Alpha Testing
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479479054,1479479054,0ad1dd15780bdfc1544d8f088529dd14aa168ac5
+0ad1dd15780bdfc1544d8f088529dd14aa168ac5,0ad1dd15,Small patch,"Small patch
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479379284,1479379284,d60bf310a0425e8a4d18bc87d0e7c95947bc7692
+d60bf310a0425e8a4d18bc87d0e7c95947bc7692,d60bf310,Code Auto Formatted to Android Studio Specifications,"Code Auto Formatted to Android Studio Specifications
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479215087,1479215087,8f7123d8053c4a3605fb21a1a165ff77cbcb98cf
+8f7123d8053c4a3605fb21a1a165ff77cbcb98cf,8f7123d8,Code Auto Formatted to Android Studio Specifications,"Code Auto Formatted to Android Studio Specifications
+
+Code Formatting Update
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479215037,1479215037,d36870709880a6542c06e32ed948f888c427e9c1
+d36870709880a6542c06e32ed948f888c427e9c1,d3687070,LibreFm Heart Track GNU fm user misunderstanding,"LibreFm Heart Track GNU fm user misunderstanding
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1479213411,1479213411,c772a6410a9a32b6a8d91c6cade9798d65f109a2
+c772a6410a9a32b6a8d91c6cade9798d65f109a2,c772a641,Merge pull request #314 from ksz16/polish-translation,"Merge pull request #314 from ksz16/polish-translation
+
+PL translation - Update strings.xml",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1476043064,1476043064,"0256682481436a4f55a6747a85e43e2b9658ab52,f7621be09fd3f15a45efff3631ced52b06f0ed89"
+f7621be09fd3f15a45efff3631ced52b06f0ed89,f7621be0,Update strings.xml,Update strings.xml,,,,ksz16,ksz.krk@yahoo.com,GitHub,noreply@github.com,1476038755,1476038755,0256682481436a4f55a6747a85e43e2b9658ab52
+0256682481436a4f55a6747a85e43e2b9658ab52,02566824,Merge pull request #311 from bajituka/master,"Merge pull request #311 from bajituka/master
+
+Minor RU translation fix",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1475251773,1475251773,"f59bd1e874aed213724df62c68c3304ca59a5279,5fb163645bf13beb57f4ef7b1a40e8390f4907f7"
+5fb163645bf13beb57f4ef7b1a40e8390f4907f7,5fb16364,minor RU translation fix,"minor RU translation fix
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1475251589,1475251589,c52287e617ff326d5416c7ecc3de5296a69b4760
+f59bd1e874aed213724df62c68c3304ca59a5279,f59bd1e8,Merge pull request #309 from Argoday/patch-2,"Merge pull request #309 from Argoday/patch-2
+
+Remove M2D2 from list (defunct)",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1474909261,1474909261,"ebfcc007cb718b6597b3dd60cc5ec66800056bee,97d0492d89fbe9527a3b002e30612f153f29c223"
+97d0492d89fbe9527a3b002e30612f153f29c223,97d0492d,Remove M2D2 from list (defunct),Remove M2D2 from list (defunct),,,,Jonathan Word,argoday@argoday.com,GitHub,noreply@github.com,1474908696,1474908696,ebfcc007cb718b6597b3dd60cc5ec66800056bee
+ebfcc007cb718b6597b3dd60cc5ec66800056bee,ebfcc007,A Patch For Notifications,"A Patch For Notifications
+
+May need some fixes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1474730509,1474730509,08f7a8980a9973de96ac6ff9f37a86edfb0858eb
+08f7a8980a9973de96ac6ff9f37a86edfb0858eb,08f7a898,Next Release Preparation,"Next Release Preparation
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1474721368,1474721368,746ecae8179bea02e312f37a4863c0bf0f617ba9
+746ecae8179bea02e312f37a4863c0bf0f617ba9,746ecae8,Merge branch 'master' of https://github.com/tgwizard/sls,"Merge branch 'master' of https://github.com/tgwizard/sls
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1474718927,1474718927,"28ce699dc120425576f9be58371be6c774d10279,f92ed414cc286fe11bd4f840ebfae448d781af28"
+28ce699dc120425576f9be58371be6c774d10279,28ce699d,Battery and Data Usage Issues,"Battery and Data Usage Issues
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1474718924,1474718924,37d8e96270921e1eb07594bf4a7e3b908f61a63d
+f92ed414cc286fe11bd4f840ebfae448d781af28,f92ed414,Merge pull request #304 from ejegg/master,"Merge pull request #304 from ejegg/master
+
+Scrobble to arbitrary GNU-FM server",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1474718720,1474718720,"2ae9350302988ece914371af25d8e56829ec2314,1f205df06c39851c0b9fff9c52fee79654dad5a2"
+1f205df06c39851c0b9fff9c52fee79654dad5a2,1f205df0,Potential Error With Libre.fm login,Potential Error With Libre.fm login,,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1474718370,1474718370,ea84db9d55a31b5ee12304f97a7711d20e9e7830
+ea84db9d55a31b5ee12304f97a7711d20e9e7830,ea84db9d,Scrobble to arbitrary GNU-FM server,"Scrobble to arbitrary GNU-FM server
+
+Not ideal, but it seems to work. Adds a 'CUSTOM' netapp type that
+gets a couple extra settings - urls for the nixtape and gnukebox
+installs.
+",,,,Elliott Eggleston,ejegg@ejegg.com,Elliott Eggleston,ejegg@ejegg.com,1473318195,1474618157,37d8e96270921e1eb07594bf4a7e3b908f61a63d
+2ae9350302988ece914371af25d8e56829ec2314,2ae93503,Merge pull request #299 from bajituka/master,"Merge pull request #299 from bajituka/master
+
+Minor RU translation fix",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1474451322,1474451322,"37d8e96270921e1eb07594bf4a7e3b908f61a63d,c52287e617ff326d5416c7ecc3de5296a69b4760"
+c52287e617ff326d5416c7ecc3de5296a69b4760,c52287e6,minor RU translation fix,"minor RU translation fix
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1474290690,1474290690,dff741cc71ae6e8de4868acda7b265b35ffb2aa8
+dff741cc71ae6e8de4868acda7b265b35ffb2aa8,dff741cc,Merge remote-tracking branch 'refs/remotes/tgwizard/master',"Merge remote-tracking branch 'refs/remotes/tgwizard/master'
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1474290483,1474290483,"b682e76f69d9e80860729d61948b0918561be04c,37d8e96270921e1eb07594bf4a7e3b908f61a63d"
+b682e76f69d9e80860729d61948b0918561be04c,b682e76f,Merge remote-tracking branch 'refs/remotes/tgwizard/master',"Merge remote-tracking branch 'refs/remotes/tgwizard/master'
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1474290139,1474290139,"c0a571647ea0560f5dec3a30cebc465d075be5df,51ae57467d2a344fe977c75653bbd892d0754004"
+37d8e96270921e1eb07594bf4a7e3b908f61a63d,37d8e962,Merge pull request #298 from bshillingford/patch-1,"Merge pull request #298 from bshillingford/patch-1
+
+TroubleShooting.md: remind to turn broadcasting on",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1473279357,1473279357,"81ca6ddbab4ae3909432f2a3a287c3b36b709a61,ca1a56c9a3b4dbb7e4c191d67d9527d7878627a0"
+ca1a56c9a3b4dbb7e4c191d67d9527d7878627a0,ca1a56c9,TroubleShooting.md: remind to turn broadcasting on,TroubleShooting.md: remind to turn broadcasting on,,,,Brendan Shillingford,brendan2609@gmail.com,GitHub,noreply@github.com,1473256793,1473256793,81ca6ddbab4ae3909432f2a3a287c3b36b709a61
+81ca6ddbab4ae3909432f2a3a287c3b36b709a61,81ca6ddb,Merge pull request #295 from FacundoCerezo/patch-1,"Merge pull request #295 from FacundoCerezo/patch-1
+
+Spanish translation corrections",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1473248949,1473248949,"5d6ca8b4c855379155aeef869d1f860062f21726,0c8035aaf394f92948a574f3f938169ea8258611"
+0c8035aaf394f92948a574f3f938169ea8258611,0c8035aa,Update strings.xml,"Update strings.xml
+
+minor corrections",,,,Facundo Cerezo,fmcerezo2000@gmail.com,GitHub,noreply@github.com,1473231787,1473231787,a6c3e6553b6b3ea7ccd9ad8684b0d51148c1f525
+a6c3e6553b6b3ea7ccd9ad8684b0d51148c1f525,a6c3e655,Translation corrections,"Translation corrections
+
+Some corrections in the Spanish translation, following official Last.fm terminology as seen in www.last.fm/es including: using lower case for ""scrobble"" and any other word that is not a proper noun or the first word of a sentence, using ""tema"" as a translation of 'song' and replacing some idioms with more neutral ones.",,,,Facundo Cerezo,fmcerezo2000@gmail.com,GitHub,noreply@github.com,1473231546,1473231546,5d6ca8b4c855379155aeef869d1f860062f21726
+5d6ca8b4c855379155aeef869d1f860062f21726,5d6ca8b4,Merge pull request #289 from inverse/patch-1,"Merge pull request #289 from inverse/patch-1
+
+Tidy up readme",,,,Debugs,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1472582328,1472582328,"51ae57467d2a344fe977c75653bbd892d0754004,51ac67bc4e5aedbb0eea76608012c1cbb755e7f8"
+51ac67bc4e5aedbb0eea76608012c1cbb755e7f8,51ac67bc,Tidy up readme,"Tidy up readme
+
+Add licence, tidy up test devices
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1472577138,1472577580,51ae57467d2a344fe977c75653bbd892d0754004
+51ae57467d2a344fe977c75653bbd892d0754004,51ae5746,Network Error Crash Fix,"Network Error Crash Fix
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1471878199,1471878199,955325e9fa2d984908243b58154e48d799bc6c88
+955325e9fa2d984908243b58154e48d799bc6c88,955325e9,Fix,"Fix
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1471379759,1471379759,799a7ee85d5b36425c4519ab1b416b8c336c8fe7
+799a7ee85d5b36425c4519ab1b416b8c336c8fe7,799a7ee8,Small Update,"Small Update
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1471378202,1471378202,0aae2633fd80e9cdc4fae5ce85ef4df83e98a269
+0aae2633fd80e9cdc4fae5ce85ef4df83e98a269,0aae2633,Fix Networking,"Fix Networking
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1471298071,1471298071,6e404a02c6bdd131721690351c2b47ae52ebeb44
+6e404a02c6bdd131721690351c2b47ae52ebeb44,6e404a02,Bugs API 2.0 Features,"Bugs API 2.0 Features
+
+Fix Bugs, Update API, Workaround Cipher Bug, Drop Unnec
+Continued testing.
+What's next?
+More testing of scrobble now button. (user toast/snackbars)
+Foreground hack alternative.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1471218527,1471218527,ad57e549fd7d7d14db2dcba342229811815cddef
+ad57e549fd7d7d14db2dcba342229811815cddef,ad57e549,Sleeper,"Sleeper
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470423950,1470423950,e7479ee73712414bd44f4df65fb0ed34817a84bb
+e7479ee73712414bd44f4df65fb0ed34817a84bb,e7479ee7,Scrobble Now,"Scrobble Now
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470409610,1470409610,743d515ea072a12ca3b649be39e78ef47bca3d3f
+743d515ea072a12ca3b649be39e78ef47bca3d3f,743d515e,NetWork Waiter and Sleeper,"NetWork Waiter and Sleeper
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470400206,1470400206,5429a4c5cbeaa74b169a9fab383629ff8e9fcf8f
+5429a4c5cbeaa74b169a9fab383629ff8e9fcf8f,5429a4c5,Sleeper,"Sleeper
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470314661,1470314661,4992358843c61460a34898fe5e91169f971e0fcc
+4992358843c61460a34898fe5e91169f971e0fcc,49923588,Username/Password warnings.,"Username/Password warnings.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470254148,1470254148,0baa289bcd82b6ea052cbd1438e5c84adef1d460
+0baa289bcd82b6ea052cbd1438e5c84adef1d460,0baa289b,Lint & API 24,"Lint & API 24
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470252048,1470252048,9564e056e4e92c4ecb84a5a466ce5f61c14e5558
+9564e056e4e92c4ecb84a5a466ce5f61c14e5558,9564e056,Optimize Imports,"Optimize Imports
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470244977,1470244977,1f6413e193ac01b7a7a668f9c0812b253a4b38df
+1f6413e193ac01b7a7a668f9c0812b253a4b38df,1f6413e1,Fixed Scrobble Now Button.,"Fixed Scrobble Now Button.
+
+Power Saving Mode fix.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470241387,1470241387,0151e52a7b9bb93e24cbf512fcc58dd515681022
+0151e52a7b9bb93e24cbf512fcc58dd515681022,0151e52a,Loved Track Toast,"Loved Track Toast
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470142463,1470142463,268e2c51125837f71ad90123f19c83097f7229ac
+268e2c51125837f71ad90123f19c83097f7229ac,268e2c51,Format,"Format
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470087445,1470087445,7b191bdb348bd98c761d1d9b945350813b099d34
+7b191bdb348bd98c761d1d9b945350813b099d34,7b191bdb,Notification Can Hide,"Notification Can Hide
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1470087326,1470087330,861aaceb5099ff11f5cb9761ee861faa961acd27
+861aaceb5099ff11f5cb9761ee861faa961acd27,861aaceb,Merge pull request #285 from bajituka/master,"Merge pull request #285 from bajituka/master
+
+Fixed RU translation",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1470058397,1470058397,"aadc533f4d219d464722d960e8c1c832ecdd238d,c0a571647ea0560f5dec3a30cebc465d075be5df"
+c0a571647ea0560f5dec3a30cebc465d075be5df,c0a57164,Fixed machine translation,"Fixed machine translation
+
+Fixed machine translation of heart, copy, permission
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1470045131,1470045131,37bbbcf75583ec21fad40f613b284d71087c75f1
+37bbbcf75583ec21fad40f613b284d71087c75f1,37bbbcf7,Merge remote-tracking branch 'refs/remotes/tgwizard/master',"Merge remote-tracking branch 'refs/remotes/tgwizard/master'
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1470044917,1470044917,"b616cb1ea3bab1a10039acfa7c41a5d56303237d,aadc533f4d219d464722d960e8c1c832ecdd238d"
+b616cb1ea3bab1a10039acfa7c41a5d56303237d,b616cb1e,"Translate copy, permissions, heart","Translate copy, permissions, heart
+
+Translate copy, permissions, heart
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1470044914,1470044914,7aff385cadf6de13a5b67a22951345bec115d3a0
+aadc533f4d219d464722d960e8c1c832ecdd238d,aadc533f,Translations and README,"Translations and README
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469972287,1469972287,67b9b7b7be78dedc1bdf591debe8a7ca20f734f8
+67b9b7b7be78dedc1bdf591debe8a7ca20f734f8,67b9b7b7,Merge pull request #284 from inverse/small-tidy,"Merge pull request #284 from inverse/small-tidy
+
+Small Tidy",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1469965416,1469965416,"58840a3f4c50dd096a29e922d88ab88d0c82ebfa,d12e810d6857aa8798774da2eda43567fdde0047"
+d12e810d6857aa8798774da2eda43567fdde0047,d12e810d,"Remove unused imports, tidy up db logic","Remove unused imports, tidy up db logic
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1469965177,1469965177,58840a3f4c50dd096a29e922d88ab88d0c82ebfa
+58840a3f4c50dd096a29e922d88ab88d0c82ebfa,58840a3f,Merge pull request #283 from tgwizard/HumbleBeeBumbleBee-HumbleBeeBumbleBee-master,"Merge pull request #283 from tgwizard/HumbleBeeBumbleBee-HumbleBeeBumbleBee-master
+
+App Update",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1469927538,1469927538,"b50f6ba64967dc21b9e611ac51715dbf05b1a64a,ec0f33c7b90692c3d6762e5be40b83bf38416d1c"
+ec0f33c7b90692c3d6762e5be40b83bf38416d1c,ec0f33c7,Updates,"Updates
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469927423,1469927423,"b50f6ba64967dc21b9e611ac51715dbf05b1a64a,3a2827e7fc322412919d6c3098068a6870a2c64a"
+3a2827e7fc322412919d6c3098068a6870a2c64a,3a2827e7,Changelog Scrobble Now Debugging,"Changelog Scrobble Now Debugging
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469926119,1469926119,34642fb3c1f741db50a1f91e6300b209e97c8b27
+34642fb3c1f741db50a1f91e6300b209e97c8b27,34642fb3,Missing Scrobbles fix,"Missing Scrobbles fix
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469900224,1469900224,7f454fbc489303ecbb650610c6af1acf788ac299
+7f454fbc489303ecbb650610c6af1acf788ac299,7f454fbc,Testing New Bugs,"Testing New Bugs
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469884850,1469884850,1f85aca8940eca15698675d3e9b6ad3327297e34
+1f85aca8940eca15698675d3e9b6ad3327297e34,1f85aca8,Settings Fix Connectivity Change Receiver,"Settings Fix Connectivity Change Receiver
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469662953,1469662953,dc2d4b897bd9998144ba9352a62377f53995714a
+dc2d4b897bd9998144ba9352a62377f53995714a,dc2d4b89,Network Changes,"Network Changes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469641287,1469641287,ddea8c67205e3a682df74bd74c7d9d22489c8e00
+ddea8c67205e3a682df74bd74c7d9d22489c8e00,ddea8c67,Czech,"Czech
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469363298,1469363298,522d14011db5a961dcbcda568056dbd36fd9bad6
+522d14011db5a961dcbcda568056dbd36fd9bad6,522d1401,Czech,"Czech
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469362622,1469362622,de191c250614d54d7a2139ea7fe7091ff73a3a4a
+de191c250614d54d7a2139ea7fe7091ff73a3a4a,de191c25,Update Network and build.gradle,"Update Network and build.gradle
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469322502,1469322502,679953a9d7957ee4708f12640ac7e373eddcb88c
+679953a9d7957ee4708f12640ac7e373eddcb88c,679953a9,Update translations.,"Update translations.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469209307,1469209307,1bdd1e16787e7dae6c2d2a3374a47560de6e1e33
+1bdd1e16787e7dae6c2d2a3374a47560de6e1e33,1bdd1e16,Some bad translations and markdown update.,"Some bad translations and markdown update.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469209047,1469209047,18c4adff70ea6cdf0ab04e419b83aa0fe821b8d1
+18c4adff70ea6cdf0ab04e419b83aa0fe821b8d1,18c4adff,Markdown,"Markdown
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469204557,1469204557,790c564e48110d0959ccbdc6e97adb34035d44ef
+790c564e48110d0959ccbdc6e97adb34035d44ef,790c564e,Markdown,"Markdown
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469204474,1469204474,29b1e070a3fbd25fffd5d42e6550d12e3dc97fb0
+29b1e070a3fbd25fffd5d42e6550d12e3dc97fb0,29b1e070,MIUI Update,"MIUI Update
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1469195979,1469195979,851c9944f79e3ab75001f8a4cb2d3d15b496eb4e
+b50f6ba64967dc21b9e611ac51715dbf05b1a64a,b50f6ba6,Merge pull request #276 from bajituka/master,"Merge pull request #276 from bajituka/master
+
+ru localization",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1469110338,1469110338,"40e394d9c4c813dc26c32a3a2abdeacf77de8be3,7aff385cadf6de13a5b67a22951345bec115d3a0"
+7aff385cadf6de13a5b67a22951345bec115d3a0,7aff385c,ru localization,"ru localization
+
+Russian language localization
+",,,,Mikhail Terentiev,anhungered@gmail.com,Mikhail Terentiev,anhungered@gmail.com,1469108510,1469108510,40e394d9c4c813dc26c32a3a2abdeacf77de8be3
+851c9944f79e3ab75001f8a4cb2d3d15b496eb4e,851c9944,"Network API 2.0 is functional, Testing...","Network API 2.0 is functional, Testing...
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468946462,1468946462,cd35b4eb55f2f41c278d8017b2183b838ee28365
+cd35b4eb55f2f41c278d8017b2183b838ee28365,cd35b4eb,"Buttons, Status Activity, Net-Working, more...","Buttons, Status Activity, Net-Working, more...
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468715622,1468715622,ffe7dc19bed80f827200ce43f3bc417f70e61221
+40e394d9c4c813dc26c32a3a2abdeacf77de8be3,40e394d9,"Revert ""Polish and ChangeLog""","Revert ""Polish and ChangeLog""
+
+This reverts commit daa5aec5747a066606f99ceb857a228aaeb32f54.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548483,1468548483,7755fec17d90f1a9b886d944e77a2030e1551341
+7755fec17d90f1a9b886d944e77a2030e1551341,7755fec1,"Revert ""Fix Mistakes""","Revert ""Fix Mistakes""
+
+This reverts commit ea3707ab083c1fac08c1548ce77bf3d86f149929.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548480,1468548480,e85baca959080684c241cb9e9ed367348ab8137a
+e85baca959080684c241cb9e9ed367348ab8137a,e85baca9,"Revert ""TroubleShooting""","Revert ""TroubleShooting""
+
+This reverts commit 72d11a792f761ac6c4df726918f18e3ddf88382a.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548475,1468548475,183453d49281a12aad403cbd58ede869e6691296
+183453d49281a12aad403cbd58ede869e6691296,183453d4,"Revert ""TroubleShooting""","Revert ""TroubleShooting""
+
+This reverts commit e3da0f0853ad41aabfb004b2e7741565fb58a267.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548464,1468548464,62186a55a31ea75b0c9e5523ec9f06339e52a1fe
+62186a55a31ea75b0c9e5523ec9f06339e52a1fe,62186a55,"Revert ""TroubleShooting""","Revert ""TroubleShooting""
+
+This reverts commit ccf77e8eebcbe12b6cc0ed6e31d6711c1068510b.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548456,1468548456,9a7f85e4f0bbaff19f3842d6aa2fd69b8fed4c9b
+9a7f85e4f0bbaff19f3842d6aa2fd69b8fed4c9b,9a7f85e4,"Revert ""Update TroubleShooting.md""","Revert ""Update TroubleShooting.md""
+
+This reverts commit b430680d683bbdce730ce33aaa7f00e4bd9088c7.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468548449,1468548449,df678d28222c4eb6f16abebfc840ffc43f7f8642
+ffe7dc19bed80f827200ce43f3bc417f70e61221,ffe7dc19,"Fixed Menu Bar Status, Networking, Album Error,","Fixed Menu Bar Status, Networking, Album Error,
+
+API 2.0 is incomplete.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468530312,1468530312,19ed5573df9b6b5c60cd7a273c3eaac101396fa0
+19ed5573df9b6b5c60cd7a273c3eaac101396fa0,19ed5573,Notify Icon,"Notify Icon
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468448075,1468448075,123219ed787621e1c6dceb87099669b5e0458fe6
+123219ed787621e1c6dceb87099669b5e0458fe6,123219ed,New Authentication Method ready for testing.,"New Authentication Method ready for testing.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468440630,1468440630,72565a3b7e0263a13d54456767302cf6e90b6c98
+72565a3b7e0263a13d54456767302cf6e90b6c98,72565a3b,"Empty Credentials Check, Better Receiver Handle","Empty Credentials Check, Better Receiver Handle
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468427930,1468427930,41eef88501d3c2ec6910fe55abb01cd81fb81379
+df678d28222c4eb6f16abebfc840ffc43f7f8642,df678d28,"Revert ""test""","Revert ""test""
+
+This reverts commit f52c25050ce4cd5e5d4777a6a39559833110453b.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468255185,1468255185,b430680d683bbdce730ce33aaa7f00e4bd9088c7
+41eef88501d3c2ec6910fe55abb01cd81fb81379,41eef885,Testing API 2.0,"Testing API 2.0
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468252724,1468252724,bbe3f4f79f230a4b214539064fd04a33db04153f
+bbe3f4f79f230a4b214539064fd04a33db04153f,bbe3f4f7,"More Structured Scrobble, Copy, Heart Progress","More Structured Scrobble, Copy, Heart Progress
+
+Still building Heart Service.
+
+API 2.0 not in the works yet.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1468111767,1468111767,9f5f3511d455231339ce60e55615e73c4c720ff1
+b430680d683bbdce730ce33aaa7f00e4bd9088c7,b430680d,Update TroubleShooting.md,Update TroubleShooting.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1467336423,1467336423,ccf77e8eebcbe12b6cc0ed6e31d6711c1068510b
+ccf77e8eebcbe12b6cc0ed6e31d6711c1068510b,ccf77e8e,TroubleShooting,"TroubleShooting
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467336189,1467336189,e3da0f0853ad41aabfb004b2e7741565fb58a267
+e3da0f0853ad41aabfb004b2e7741565fb58a267,e3da0f08,TroubleShooting,"TroubleShooting
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467336134,1467336134,72d11a792f761ac6c4df726918f18e3ddf88382a
+72d11a792f761ac6c4df726918f18e3ddf88382a,72d11a79,TroubleShooting,"TroubleShooting
+
+Help Users See How to Solve Problems Before Creating An Issue.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467336103,1467336103,ea3707ab083c1fac08c1548ce77bf3d86f149929
+9f5f3511d455231339ce60e55615e73c4c720ff1,9f5f3511,BuiltIn Music Player Get Duration and Exceptions,"BuiltIn Music Player Get Duration and Exceptions
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467296944,1467296944,ee3fe5e30d1a22a0e8e5d67e50a7b7e4428c7c65
+ee3fe5e30d1a22a0e8e5d67e50a7b7e4428c7c65,ee3fe5e3,Duration Missing from Android Music Player Receiver,"Duration Missing from Android Music Player Receiver
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467284947,1467284947,d133d71d94c38101e05cb7ea18ffc9200b8c026a
+d133d71d94c38101e05cb7ea18ffc9200b8c026a,d133d71d,Notify Done,"Notify Done
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1467144366,1467144366,2a73bcf6556ce7864ab4a7ac252029767c5dc7b2
+2a73bcf6556ce7864ab4a7ac252029767c5dc7b2,2a73bcf6,Clean Up,"Clean Up
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466900210,1466900210,78bd1c3cf06370391a0b1b55c2d55ed3201ce81e
+78bd1c3cf06370391a0b1b55c2d55ed3201ce81e,78bd1c3c,Preparing For Heart Track Feature,"Preparing For Heart Track Feature
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466899968,1466899968,996f4a6a648e5105328a54afac8ad0b28d6ca9db
+996f4a6a648e5105328a54afac8ad0b28d6ca9db,996f4a6a,Phone Notification Option In Power Settings,"Phone Notification Option In Power Settings
+
+Preparing for a possible heart track feature.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466899943,1466899943,cf34dce5ceb550723c98972c74894979e6214970
+cf34dce5ceb550723c98972c74894979e6214970,cf34dce5,Clean Up,"Clean Up
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466774577,1466774577,80f5bce3fbce24ec7a77fa91768aa796daafcdc8
+80f5bce3fbce24ec7a77fa91768aa796daafcdc8,80f5bce3,Net Working Cleanup,"Net Working Cleanup
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466773976,1466773976,50c98d9b251cfc31fe67880cf3133fe13536352a
+50c98d9b251cfc31fe67880cf3133fe13536352a,50c98d9b,Fix Mistakes,"Fix Mistakes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466773169,1466773169,2e6a296d3ecf082feb24365275d25f90251dd8f3
+ea3707ab083c1fac08c1548ce77bf3d86f149929,ea3707ab,Fix Mistakes,"Fix Mistakes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466773157,1466773157,daa5aec5747a066606f99ceb857a228aaeb32f54
+2e6a296d3ecf082feb24365275d25f90251dd8f3,2e6a296d,New Network Cleanup,"New Network Cleanup
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466720997,1466720997,d5dbb30b5dbfb71def7955a3db6d85190f03fa4a
+d5dbb30b5dbfb71def7955a3db6d85190f03fa4a,d5dbb30b,New Networking,"New Networking
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466720819,1466720819,0a6a5a99bc8b9034572896f2f20907a303d39b4b
+daa5aec5747a066606f99ceb857a228aaeb32f54,daa5aec5,Polish and ChangeLog,"Polish and ChangeLog
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466718642,1466718642,f52c25050ce4cd5e5d4777a6a39559833110453b
+0a6a5a99bc8b9034572896f2f20907a303d39b4b,0a6a5a99,ChangeLog and Polish,"ChangeLog and Polish
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466651418,1466651418,f52c25050ce4cd5e5d4777a6a39559833110453b
+f52c25050ce4cd5e5d4777a6a39559833110453b,f52c2505,test,test,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,GitHub,noreply@github.com,1466185283,1466185283,682e92cff490499311385a0346f062ff3dd09217
+682e92cff490499311385a0346f062ff3dd09217,682e92cf,test,"test
+
+test
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466185222,1466185222,66edb8cdfc65a49409547f1adb2f9eab79d0cd82
+66edb8cdfc65a49409547f1adb2f9eab79d0cd82,66edb8cd,Clean up,"Clean up
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466082068,1466082068,99b20afea702b4930b56b1838acf91d305312ff0
+99b20afea702b4930b56b1838acf91d305312ff0,99b20afe,Another Receiver,"Another Receiver
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1466044047,1466044047,d1a630cc14f6d5598c1d8b22be0fabf7b3e2d4be
+d1a630cc14f6d5598c1d8b22be0fabf7b3e2d4be,d1a630cc,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1463417971,1463417971,dbed9c1d840f06a185575ce7e6f5b9ae4defc7cd
+dbed9c1d840f06a185575ce7e6f5b9ae4defc7cd,dbed9c1d,Merge pull request #262 from inverse/tidy-up,"Merge pull request #262 from inverse/tidy-up
+
+Tidy up",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1463417307,1463417307,"63799b7e7727d5dc28fb43d6c5e11d6e56d1f01e,a575042ac0d59063ea31a9a976b33252f845d1b1"
+a575042ac0d59063ea31a9a976b33252f845d1b1,a575042a,"Tidy up a bit o the Handshaker, scrobbler","Tidy up a bit o the Handshaker, scrobbler
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1463152732,1463152732,493add23fa9431fbf5617e59f66787619e86ee3a
+493add23fa9431fbf5617e59f66787619e86ee3a,493add23,Refactor UserCreds to use settings check for credentials,"Refactor UserCreds to use settings check for credentials
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1463150108,1463150108,e262805c2c54a21a00c5736ca5e08c8dccfb65ad
+e262805c2c54a21a00c5736ca5e08c8dccfb65ad,e262805c,Bump build deps,"Bump build deps
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1463150089,1463150089,63799b7e7727d5dc28fb43d6c5e11d6e56d1f01e
+63799b7e7727d5dc28fb43d6c5e11d6e56d1f01e,63799b7e,Merge pull request #242 from HumbleBeeBumbleBee/master,"Merge pull request #242 from HumbleBeeBumbleBee/master
+
+License and Language",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451772569,1451772569,"d5898b8a31802db8b480ca85d235e0618020f832,172dde96c351bd328bffd3b8a75af1600f580505"
+172dde96c351bd328bffd3b8a75af1600f580505,172dde96,LICENSE.md,"LICENSE.md
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451757661,1451757661,3dcafbbf8fd46745e37b4f79371cf9a03ab653b1
+3dcafbbf8fd46745e37b4f79371cf9a03ab653b1,3dcafbbf,Apache Final Changes,"Apache Final Changes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451690063,1451690063,fa17f8ffe3064a36fa98193d2b35bc1c4b7015b2
+fa17f8ffe3064a36fa98193d2b35bc1c4b7015b2,fa17f8ff,Apache License Turn-Over,"Apache License Turn-Over
+
+Converted all licenses to Apache 2.0
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451684167,1451684167,d5898b8a31802db8b480ca85d235e0618020f832
+d5898b8a31802db8b480ca85d235e0618020f832,d5898b8a,Merge pull request #234 from Alia5/dev,"Merge pull request #234 from Alia5/dev
+
+App-recognition for music players who identify as com.android.music",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451675680,1451675680,"0c37e58c27701f3b0d33ce58025b4eafb27415d8,23685d94ec649de027a742ed9da9fe16f87165a4"
+0c37e58c27701f3b0d33ce58025b4eafb27415d8,0c37e58c,Merge pull request #241 from inverse/patch-1,"Merge pull request #241 from inverse/patch-1
+
+Changed licence to Apache",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451667624,1451667624,"3c9cca4b69f5529f11f753c889ee4141756a0048,8707eda8771be0526f5097801961ec433e551a5e"
+8707eda8771be0526f5097801961ec433e551a5e,8707eda8,Changed readme licence to Apache,Changed readme licence to Apache,,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1451660492,1451660492,3c9cca4b69f5529f11f753c889ee4141756a0048
+3c9cca4b69f5529f11f753c889ee4141756a0048,3c9cca4b,Merge pull request #213 from inverse/change-md5-code,"Merge pull request #213 from inverse/change-md5-code
+
+Changed MD5 code for licencing reasons",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451621747,1451621747,"ac74b22a66549ad42befff9590485a85a9607e52,144bb32bd9eb0f67fffa58c7878b5c814d9291e7"
+ac74b22a66549ad42befff9590485a85a9607e52,ac74b22a,Merge pull request #220 from MendelGusmao/master,"Merge pull request #220 from MendelGusmao/master
+
+Add .tx/config to support translations using Transifex",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451619957,1451619957,"285523c8a8a79190bfc17a49970b0ffb0f029c57,a6e0ffc4604ce0d87cd02767cc29a12ad67ea2db"
+285523c8a8a79190bfc17a49970b0ffb0f029c57,285523c8,Merge pull request #240 from inverse/tidyup,"Merge pull request #240 from inverse/tidyup
+
+Tidy up of some lint warnings",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1451604875,1451604875,"100f24c55db4c3c70c5c364d9084f562ed3e2728,23b6e140b194ce6d4f11f61b8ddca0a8ae0ff411"
+23b6e140b194ce6d4f11f61b8ddca0a8ae0ff411,23b6e140,Tidy up of some lint warnings,"Tidy up of some lint warnings
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1451576274,1451576274,100f24c55db4c3c70c5c364d9084f562ed3e2728
+23685d94ec649de027a742ed9da9fe16f87165a4,23685d94,Add App-recognition support if a MediaPlayer also sends it's packagename in a…,"Add App-recognition support if a MediaPlayer also sends it's packagename in a StringExtra ""scrobbling_source"" along with ""com.android.music.XXX"" intents
+",,,,Peter Repukat,orly.alia5@gmail.com,Peter Repukat,orly.alia5@gmail.com,1448672450,1448672450,100f24c55db4c3c70c5c364d9084f562ed3e2728
+100f24c55db4c3c70c5c364d9084f562ed3e2728,100f24c5,Merge pull request #229 from Dostoi/patch-1,"Merge pull request #229 from Dostoi/patch-1
+
+Update strings.xml",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1447278888,1447278888,"c6c75444f2dfc08c1d6e1daa02ced872ab8edcd9,8a3a61b33854f6dd13b37cffe3f95f5597dd00ce"
+c6c75444f2dfc08c1d6e1daa02ced872ab8edcd9,c6c75444,Merge pull request #231 from inverse/compat,"Merge pull request #231 from inverse/compat
+
+Fix for M",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1447278842,1447278842,"eb33acbbe1000057f57f887ccb6513ea4f4dce54,c2a781c5b4eaa17f44d16b650dc022a085eed4f5"
+c2a781c5b4eaa17f44d16b650dc022a085eed4f5,c2a781c5,Compat,"Compat
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1447192707,1447192707,eb33acbbe1000057f57f887ccb6513ea4f4dce54
+8a3a61b33854f6dd13b37cffe3f95f5597dd00ce,8a3a61b3,Update strings.xml,Update strings.xml,,,,Dostoi,Dostoi@users.noreply.github.com,Dostoi,Dostoi@users.noreply.github.com,1445965100,1445965100,eb33acbbe1000057f57f887ccb6513ea4f4dce54
+eb33acbbe1000057f57f887ccb6513ea4f4dce54,eb33acbb,Fix Spotify,"Fix Spotify
+
+null pointer exception
+Spotify changes ad reporting.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1443451735,1443451735,2f113b78ff2e5ec4890c02c5b4a5862e40303067
+a6e0ffc4604ce0d87cd02767cc29a12ad67ea2db,a6e0ffc4,Add .tx/config to support translations using Transifex,"Add .tx/config to support translations using Transifex
+",,,,MendelGusmao,mendelsongusmao@gmail.com,MendelGusmao,mendelsongusmao@gmail.com,1441062511,1441062511,2f113b78ff2e5ec4890c02c5b4a5862e40303067
+2f113b78ff2e5ec4890c02c5b4a5862e40303067,2f113b78,Merge pull request #215 from inverse/network-debug,"Merge pull request #215 from inverse/network-debug
+
+Added more network debugging",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1441045725,1441045725,"4a421039aeafe29da9efdd0096863f1060df3645,12413af7d69ea46a12df7bf8f10b9ef44a9c8b93"
+4a421039aeafe29da9efdd0096863f1060df3645,4a421039,MarkDown files and Apps string,"MarkDown files and Apps string
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1440170710,1440170710,f7a3eca405220699067ae2c3e8f169152b0951dc
+12413af7d69ea46a12df7bf8f10b9ef44a9c8b93,12413af7,Added more network debugging,"Added more network debugging
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1440007380,1440007380,1033f891f724c3d1f2b8d0ac68f6fe67911dd179
+f7a3eca405220699067ae2c3e8f169152b0951dc,f7a3eca4,Bump version code to 39,"Bump version code to 39
+
+Still v1.4.9.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1439329666,1439329668,3c383db5d0b1df1a65139367329c61c520f3d69b
+3c383db5d0b1df1a65139367329c61c520f3d69b,3c383db5,Fix Spotify Track Duration,"Fix Spotify Track Duration
+
+Spotify scrobbling fully works now thanks to @inverse.
+Changelog and markdown update.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1439238249,1439238249,8b322428622195c7b77be4d2bfb01fd3bfd42b2a
+144bb32bd9eb0f67fffa58c7878b5c814d9291e7,144bb32b,Wrap NoSuchAlgorithmException as RuntimeException just in case the Java version doesn't have MD5.,"Wrap NoSuchAlgorithmException as RuntimeException just in case the Java version doesn't have MD5.
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1439237861,1439237861,62aba1967a3d20fea7fb21b52acbf44d3fe3a9ea
+62aba1967a3d20fea7fb21b52acbf44d3fe3a9ea,62aba196,Changed MD5 code for licencing reasons,"Changed MD5 code for licencing reasons
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1439227355,1439227355,1033f891f724c3d1f2b8d0ac68f6fe67911dd179
+8b322428622195c7b77be4d2bfb01fd3bfd42b2a,8b322428,Bump version code to 38,"Bump version code to 38
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1439154468,1439154468,183523c01c4b867e341e0ed9260d1bebb70572f3
+183523c01c4b867e341e0ed9260d1bebb70572f3,183523c0,Ignore built .apk files,"Ignore built .apk files
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1439154456,1439154456,1033f891f724c3d1f2b8d0ac68f6fe67911dd179
+1033f891f724c3d1f2b8d0ac68f6fe67911dd179,1033f891,version 1.4.9 Ready for Testing,"version 1.4.9 Ready for Testing
+
+Null Pointer Exception crash.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1439149903,1439149903,6464a1d885671e246213a4fd821712b496f44cb2
+6464a1d885671e246213a4fd821712b496f44cb2,6464a1d8,Update SC & MD,"Update SC & MD
+
+Drop SoundCloud support for now
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1437507573,1437507573,74782626e39c9696ca4137ffe991d6a110ee4d3d
+74782626e39c9696ca4137ffe991d6a110ee4d3d,74782626,Merge pull request #206 from inverse/res-tidy,"Merge pull request #206 from inverse/res-tidy
+
+String resource clean up",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1437504272,1437504272,"b244db166c5c5cb09c0083834015958ee5886515,fd036252b0333ffa371bffb3e4c06dc826276ec0"
+fd036252b0333ffa371bffb3e4c06dc826276ec0,fd036252,Reverted char issue,"Reverted char issue
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1436601124,1436601124,0222deefbae436d25a8ccc91d2c5187e4bd419a5
+0222deefbae436d25a8ccc91d2c5187e4bd419a5,0222deef,Merge branch 'master' into res-tidy,"Merge branch 'master' into res-tidy
+
+Conflicts:
+	README.md
+	app/src/main/java/com/adam/aslfms/StatusActivity.java
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1435090885,1435090885,"1d61084e7cd0fc81d392d58971683ca0f09243fd,b244db166c5c5cb09c0083834015958ee5886515"
+b244db166c5c5cb09c0083834015958ee5886515,b244db16,Merge pull request #205 from bryansills/appcompat,"Merge pull request #205 from bryansills/appcompat
+
+Praise be to DuARTe, #MATERIALYOLO",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1434916436,1434916436,"729757eda94d7c9444e7bdf842c19ad47184bfdd,3410fe99a2b03e5a8bb98e3df1e65e36dd973910"
+1d61084e7cd0fc81d392d58971683ca0f09243fd,1d61084e,Merge pull request #2 from HumbleBeeBumbleBee/res-tidy,"Merge pull request #2 from HumbleBeeBumbleBee/res-tidy
+
+Clean up and more",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434559552,1434559552,"fec1d78ca86e78e3620f02d28c1643c5f6629a7c,84cd2cb8610bc20f52c818939281b0e844d072b0"
+84cd2cb8610bc20f52c818939281b0e844d072b0,84cd2cb8,Clean up and more,"Clean up and more
+
+General update of markdown, change-log and strings.
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1434506085,1434506085,fec1d78ca86e78e3620f02d28c1643c5f6629a7c
+fec1d78ca86e78e3620f02d28c1643c5f6629a7c,fec1d78c,Use build in resource for Cancel,"Use build in resource for Cancel
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434390419,1434390419,a296400d3cafb8649a666524fa6ef112d5173606
+a296400d3cafb8649a666524fa6ef112d5173606,a296400d,Use build in resource for OK,"Use build in resource for OK
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434386729,1434386729,e95ef44dcaa2ec484710e383493a2f9e984413c7
+e95ef44dcaa2ec484710e383493a2f9e984413c7,e95ef44d,Removed unnecessary new lines,"Removed unnecessary new lines
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434386445,1434386445,e713dfaba791891942c773800d76ea3980e056cf
+3410fe99a2b03e5a8bb98e3df1e65e36dd973910,3410fe99,Service Intent must be explicit,"Service Intent must be explicit
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1434325735,1434325735,b49bb64e47c6664bc87a19d589dd46cd0d5675a1
+e713dfaba791891942c773800d76ea3980e056cf,e713dfab,"Made indenting consistent, renamed non-translatable strings.","Made indenting consistent, renamed non-translatable strings.
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434295849,1434295849,4a1e722aec78823e3e8c74b4b5a8b08e4b73246c
+4a1e722aec78823e3e8c74b4b5a8b08e4b73246c,4a1e722a,Replaced ... and &#8230; with elipses characters for consistency,"Replaced ... and &#8230; with elipses characters for consistency
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434294629,1434294629,1011c00432bd97c4aad98411713f9d3d7d1d8441
+1011c00432bd97c4aad98411713f9d3d7d1d8441,1011c004,Tidy up of french and spanish strings,"Tidy up of french and spanish strings
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434294393,1434294393,b3f6aacbc6a12cb5a7d6641b16a199ffc3d32729
+b3f6aacbc6a12cb5a7d6641b16a199ffc3d32729,b3f6aacb,Started reworking string resources,"Started reworking string resources
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1434191642,1434191642,729757eda94d7c9444e7bdf842c19ad47184bfdd
+b49bb64e47c6664bc87a19d589dd46cd0d5675a1,b49bb64e,updating who to blame when stuff doesn't work.,"updating who to blame when stuff doesn't work.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1434162529,1434162529,68bcb499969b44b406b92f2f4af6195773206459
+68bcb499969b44b406b92f2f4af6195773206459,68bcb499,renamed activity files.,"renamed activity files.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1434078846,1434078846,4c3973f6772df52160123d736e053aa4d54cb3c2
+4c3973f6772df52160123d736e053aa4d54cb3c2,4c3973f6,back carets work again! yay!,"back carets work again! yay!
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1434078185,1434078185,08d547ed1d440f5b00f717bb380f6cc0abc0769f
+08d547ed1d440f5b00f717bb380f6cc0abc0769f,08d547ed,fixed bug causing crashes on api 7. ughhhhhhhh. why do we support api 7???,"fixed bug causing crashes on api 7. ughhhhhhhh. why do we support api 7???
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1434077329,1434077329,db2a0bd15fd538020eb137c49805483f3c1c2f98
+db2a0bd15fd538020eb137c49805483f3c1c2f98,db2a0bd1,status page now works. lets begin that pull request.,"status page now works. lets begin that pull request.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1433736856,1433736856,c08319a607dc8179c5c7b6ad5ea5706969b80309
+729757eda94d7c9444e7bdf842c19ad47184bfdd,729757ed,Merge pull request #204 from herrherrmann/master,"Merge pull request #204 from herrherrmann/master
+
+Added German translation…",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1433713645,1433713645,"dc953183ee5002323370f4c5eea1718e14c53c7e,c378c83c712d69e2c392584b730367335714e458"
+c08319a607dc8179c5c7b6ad5ea5706969b80309,c08319a6,initial work on status activity.,"initial work on status activity.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1433625889,1433625889,97e1ae50ee7c2bddc2540db5d81c5088537f0388
+c378c83c712d69e2c392584b730367335714e458,c378c83c,"Set some strings to ""untranslatable"" and removed those from current translations…","Set some strings to ""untranslatable"" and removed those from current translations to prevent redundant translations.
+",,,,Sebastian Herrmann,sebastian@herrherrmann.net,Sebastian Herrmann,sebastian@herrherrmann.net,1433591686,1433591686,cdf1cb3ba39ccf35878977f85e29884e14c8fb16
+cdf1cb3ba39ccf35878977f85e29884e14c8fb16,cdf1cb3b,Added German translation.,"Added German translation.
+",,,,Sebastian Herrmann,sebastian@herrherrmann.net,Sebastian Herrmann,sebastian@herrherrmann.net,1433591420,1433591420,dc953183ee5002323370f4c5eea1718e14c53c7e
+97e1ae50ee7c2bddc2540db5d81c5088537f0388,97e1ae50,using support actionbar now. also view scrobble cache works now.,"using support actionbar now. also view scrobble cache works now.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1433567784,1433567784,38a8dc632988353c3f6d1edf5a3f66f2a75fb0af
+38a8dc632988353c3f6d1edf5a3f66f2a75fb0af,38a8dc63,Merge branch 'master' into appcompat,"Merge branch 'master' into appcompat
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1433558811,1433558811,"d7758269b70a756a311d40fd439a23f13545ac08,dc953183ee5002323370f4c5eea1718e14c53c7e"
+dc953183ee5002323370f4c5eea1718e14c53c7e,dc953183,Merge pull request #201 from bryansills/up-navigation,"Merge pull request #201 from bryansills/up-navigation
+
+Added back carets for at least v16 and up",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1433368616,1433368616,"3f3a4cf3db2428f330192caab060c9cb15202205,997da656bfb811f2f9ec05d29af6e0b2e4b601b2"
+3f3a4cf3db2428f330192caab060c9cb15202205,3f3a4cf3,Merge pull request #198 from bryansills/new-icon,"Merge pull request #198 from bryansills/new-icon
+
+New icon",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1433360136,1433360136,"f11c158cfb6760a16943cb0f07623ecca4fa0843,fb84d4edf01330b8d25c7fedbb83b390c31f1c84"
+997da656bfb811f2f9ec05d29af6e0b2e4b601b2,997da656,added back carats for at least v16 and up,"added back carats for at least v16 and up
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1433304594,1433304594,f11c158cfb6760a16943cb0f07623ecca4fa0843
+fb84d4edf01330b8d25c7fedbb83b390c31f1c84,fb84d4ed,a few more references to the old icon.,"a few more references to the old icon.
+",,,,Bryan Sills,bsills@sapient.com,Bryan Sills,bsills@sapient.com,1433174458,1433174458,a389bd0cb4aa4a513261992f511f0b920493a2f1
+d7758269b70a756a311d40fd439a23f13545ac08,d7758269,more easy stuff.,"more easy stuff.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1432257133,1432257133,072b8c14f0cae82d642a61e0e7ffbe3a5b65d23c
+072b8c14f0cae82d642a61e0e7ffbe3a5b65d23c,072b8c14,getting the easy stuff done first.,"getting the easy stuff done first.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1432255572,1432255572,24d9422221603b214da89c2015bc91e2cc74c05f
+24d9422221603b214da89c2015bc91e2cc74c05f,24d94222,got the main page showing up correctly,"got the main page showing up correctly
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1432177420,1432177420,f11c158cfb6760a16943cb0f07623ecca4fa0843
+a389bd0cb4aa4a513261992f511f0b920493a2f1,a389bd0c,forgot one reference to the old icon,"forgot one reference to the old icon
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1432088805,1432088805,99f4fa16fc6e6bf623326df2c75e4a55271fc254
+99f4fa16fc6e6bf623326df2c75e4a55271fc254,99f4fa16,new icon,"new icon
+",,,,Bryan Sills,bsills@sapient.com,Bryan Sills,bsills@sapient.com,1432087290,1432087290,b0378901e2ad2322ce1cfcca13133e7b76d96425
+f11c158cfb6760a16943cb0f07623ecca4fa0843,f11c158c,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431726780,1431726780,b0378901e2ad2322ce1cfcca13133e7b76d96425
+b0378901e2ad2322ce1cfcca13133e7b76d96425,b0378901,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431472595,1431472595,a64e1dd40a7d894689e1dcf504b9d5f966f5c631
+a64e1dd40a7d894689e1dcf504b9d5f966f5c631,a64e1dd4,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431471666,1431471666,358f5a800965f4dc69a90d4657a949b4670f14ab
+358f5a800965f4dc69a90d4657a949b4670f14ab,358f5a80,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431471393,1431471393,6c7298462d15bbdb9c1f20348fe211f822d2e654
+6c7298462d15bbdb9c1f20348fe211f822d2e654,6c729846,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431471351,1431471351,118eb79c879440620c97235fd2462ab042d38767
+118eb79c879440620c97235fd2462ab042d38767,118eb79c,Merge pull request #196 from bryansills/android-studio,"Merge pull request #196 from bryansills/android-studio
+
+Change project hierarchy to support Gradle and Android Studio",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1431471132,1431471132,"a9b37119ca850d2db0b5e296251b757ebd7faab8,0505cf56ac1725427b67b7acd90ccf7171253a14"
+0505cf56ac1725427b67b7acd90ccf7171253a14,0505cf56,project is now set up for android studio.,"project is now set up for android studio.
+",,,,Bryan Sills,bryan.a.sills@gmail.com,Bryan Sills,bryan.a.sills@gmail.com,1431137867,1431137867,a9b37119ca850d2db0b5e296251b757ebd7faab8
+a9b37119ca850d2db0b5e296251b757ebd7faab8,a9b37119,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430949578,1430949578,0c6f53f5ae862506c8f1fe1cdeaa8dc7cf2f2d3d
+0c6f53f5ae862506c8f1fe1cdeaa8dc7cf2f2d3d,0c6f53f5,Update changelog.txt,Update changelog.txt,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430928893,1430928893,1cfb3c5707cf06cc79d08ef98706522b58533d0f
+1cfb3c5707cf06cc79d08ef98706522b58533d0f,1cfb3c57,Revert #110,"Revert #110
+
+8tracks not scrobbling and other users are reporting our changes as
+making things worse.
+https://github.com/tgwizard/sls/issues/80 @arkdae
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430928782,1430928782,97c18487e59553906aa8248a9e25c76e21871f5d
+97c18487e59553906aa8248a9e25c76e21871f5d,97c18487,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430768500,1430768500,d3f1f493d528d863fe12d51de6a5f7e4bda55696
+d3f1f493d528d863fe12d51de6a5f7e4bda55696,d3f1f493,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430768468,1430768468,7384b512c7b548d98312daace735b767c9d3aaa1
+7384b512c7b548d98312daace735b767c9d3aaa1,7384b512,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430767366,1430767366,3e2619c7ff9b24e88366967da09e29e1a3c4c8bc
+3e2619c7ff9b24e88366967da09e29e1a3c4c8bc,3e2619c7,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430766648,1430766648,09a56bd24450e1d0e99f17454f71dcdfd1ca6e66
+09a56bd24450e1d0e99f17454f71dcdfd1ca6e66,09a56bd2,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430764634,1430764634,c95eb22425a3e461e08ca7b21c106257a2deddfe
+c95eb22425a3e461e08ca7b21c106257a2deddfe,c95eb224,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430764380,1430764380,6d9e9abf37f14f6804f0de88c4a598f8fb408539
+6d9e9abf37f14f6804f0de88c4a598f8fb408539,6d9e9abf,Update SoundCloudReceiver.java,Update SoundCloudReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430763666,1430763666,64290d81d14b3593a36700bf4dbc1fd0b45613ab
+64290d81d14b3593a36700bf4dbc1fd0b45613ab,64290d81,Update SpotifyReceiver.java,Update SpotifyReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430763584,1430763584,ce3684bcfbfb9a562f77835e478ba9b114a5e8e8
+ce3684bcfbfb9a562f77835e478ba9b114a5e8e8,ce3684bc,Update changelog.txt,Update changelog.txt,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761415,1430761415,9bc8b083cd4220c8fd46ffd018546e34c0075c55
+9bc8b083cd4220c8fd46ffd018546e34c0075c55,9bc8b083,Update ScrobblingService.java,Update ScrobblingService.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761215,1430761215,1a67e02bdb942fd691167e1f8eb65bd728b25336
+1a67e02bdb942fd691167e1f8eb65bd728b25336,1a67e02b,Update Track.java,Update Track.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761154,1430761154,266dccc1d6770aadc3326cf7875cc145ce5c39ef
+266dccc1d6770aadc3326cf7875cc145ce5c39ef,266dccc1,Update SpotifyReceiver.java,Update SpotifyReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761116,1430761116,bc4912db9781feede6614236d8c57014b4a4a538
+bc4912db9781feede6614236d8c57014b4a4a538,bc4912db,Update SoundCloudReceiver.java,Update SoundCloudReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761094,1430761094,c2e8a5bf8bdb0db68a7763fd33f33d8de507b801
+c2e8a5bf8bdb0db68a7763fd33f33d8de507b801,c2e8a5bf,Update WinampMusicReceiver.java,Update WinampMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761066,1430761066,790f5091d8c137a5fb58e01bb642250bc5d6db0e
+790f5091d8c137a5fb58e01bb642250bc5d6db0e,790f5091,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430761037,1430761037,b305a17083313be2965faa3498f3e8e38ba545ea
+b305a17083313be2965faa3498f3e8e38ba545ea,b305a170,Update SEMCMusicReceiver.java,Update SEMCMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760997,1430760997,565d76272c5747c9bae204c325a4c0e2a08093d2
+565d76272c5747c9bae204c325a4c0e2a08093d2,565d7627,Update PlayerProTrialReceiver.java,Update PlayerProTrialReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760937,1430760937,7408120e2b7d5a0c3522e0135e52f7f055beae3c
+7408120e2b7d5a0c3522e0135e52f7f055beae3c,7408120e,Update PlayerProReceiver.java,Update PlayerProReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760920,1430760920,a36b10b23db52f6f531fb24dba5a0eb0cfd3752a
+a36b10b23db52f6f531fb24dba5a0eb0cfd3752a,a36b10b2,Update MyTouch4GMusicReceiver.java,Update MyTouch4GMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760842,1430760842,bc2f7d747d1232a14b3e3f68dd7db3de8ccac6e4
+bc2f7d747d1232a14b3e3f68dd7db3de8ccac6e4,bc2f7d74,Update MIUIMusicReceiver.java,Update MIUIMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760821,1430760821,ebdca922039ff82013cc1ba20a2c18ffe1472d56
+ebdca922039ff82013cc1ba20a2c18ffe1472d56,ebdca922,Update LgOptimus4xReceiver.java,Update LgOptimus4xReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760799,1430760799,4251f3e499e0adf00bc233da1ce1ed72c0b4f9b0
+4251f3e499e0adf00bc233da1ce1ed72c0b4f9b0,4251f3e4,Update LastFmAPIReceiver.java,Update LastFmAPIReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760736,1430760736,f5fcce0546b616e0d44adcbd7005997a021d570b
+f5fcce0546b616e0d44adcbd7005997a021d570b,f5fcce05,Update HeroMusicReceiver.java,Update HeroMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760701,1430760701,4d21cf2f30c1562d5d8541e0d901e23f1a7af602
+4d21cf2f30c1562d5d8541e0d901e23f1a7af602,4d21cf2f,Update BuiltInMusicAppReceiver.java,Update BuiltInMusicAppReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760660,1430760660,bfbe6cbc8ac88f83aaf15a5d62f401fff4b1e020
+bfbe6cbc8ac88f83aaf15a5d62f401fff4b1e020,bfbe6cbc,Update AndroidMusicReceiver.java,Update AndroidMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760562,1430760562,692f817c25bcb76519d5a1c0271ac33b2465aeec
+692f817c25bcb76519d5a1c0271ac33b2465aeec,692f817c,Update AndroidMusicJRTStudioBuildReceiver.java,Update AndroidMusicJRTStudioBuildReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430760535,1430760535,1f0ec74aed00d8e74f04e040711d3065fba926a1
+1f0ec74aed00d8e74f04e040711d3065fba926a1,1f0ec74a,Create SoundCloudReceiver.java,Create SoundCloudReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430685716,1430685716,8f1490b4f6de1219b13e823b28e2bfcbc13c795f
+8f1490b4f6de1219b13e823b28e2bfcbc13c795f,8f1490b4,Create SpotifyReceiver.java,Create SpotifyReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430685681,1430685681,4007a82a777928bb2f6abbf9b8e0917d66ab9eda
+4007a82a777928bb2f6abbf9b8e0917d66ab9eda,4007a82a,Update AndroidManifest.xml,Update AndroidManifest.xml,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430685406,1430685406,a05c68766b8bd54097603fc7744ae9918575e892
+a05c68766b8bd54097603fc7744ae9918575e892,a05c6876,Merge pull request #191 from tgwizard/testing-149,"Merge pull request #191 from tgwizard/testing-149
+
+@metanota 's #149",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430683582,1430683582,"8f67005a3ac7b963530ea6db57070fac99323454,d94b634933e29ed51557445c80bd9b7e0c6b6590"
+d94b634933e29ed51557445c80bd9b7e0c6b6590,d94b6349,Update NetApp.java,Update NetApp.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430682962,1430682962,f859b5bf495021603f0e41d833bc085ab278b9d8
+8f67005a3ac7b963530ea6db57070fac99323454,8f67005a,Update strings_mapis.xml,Update strings_mapis.xml,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430681634,1430681634,165b559c125364302f98b8770534df890e9f8031
+165b559c125364302f98b8770534df890e9f8031,165b559c,Merge pull request #190 from inverse/android-lint-fix,"Merge pull request #190 from inverse/android-lint-fix
+
+Fix for fatal LINT warnings",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430681549,1430681549,"49b8e3026265f651d39c8a4036994adc0c613e89,6bd315f81cd98eae71a63660c6fa1c6e94b7fffc"
+6bd315f81cd98eae71a63660c6fa1c6e94b7fffc,6bd315f8,Fix for fatal LINT warnings,"Fix for fatal LINT warnings
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1430680437,1430680680,5fdb776f27f2de34c4bc28d3db076b2bdf950a2d
+49b8e3026265f651d39c8a4036994adc0c613e89,49b8e302,Update changelog.txt,Update changelog.txt,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430677671,1430677671,2d5bf21a442a3e701f55ab7555adb83ea44b86e5
+2d5bf21a442a3e701f55ab7555adb83ea44b86e5,2d5bf21a,Update NetApp.java,Update NetApp.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430662518,1430662518,595feb8e4290b8d4f9a6914c74e2baf362b18279
+595feb8e4290b8d4f9a6914c74e2baf362b18279,595feb8e,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430662182,1430662182,2d7350330a657fb7db7576fa3b976ce3c0b82f9b
+2d7350330a657fb7db7576fa3b976ce3c0b82f9b,2d735033,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430662025,1430662025,465bfefb6f9ae7dc21facca0a569ac10d8414089
+465bfefb6f9ae7dc21facca0a569ac10d8414089,465bfefb,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430661557,1430661557,826e4252e6920be14b4252ea1c651300fa3cdbbf
+826e4252e6920be14b4252ea1c651300fa3cdbbf,826e4252,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430659041,1430659041,5fdb776f27f2de34c4bc28d3db076b2bdf950a2d
+5fdb776f27f2de34c4bc28d3db076b2bdf950a2d,5fdb776f,Update README.md,"Update README.md
+
+VLC support!",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430600750,1430600750,21ae4dac0d512b65f14f7342e8d311fbcd199c2d
+21ae4dac0d512b65f14f7342e8d311fbcd199c2d,21ae4dac,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430519030,1430519030,8f035dec84bc94453d654aa46eb9ce8a7c73c802
+8f035dec84bc94453d654aa46eb9ce8a7c73c802,8f035dec,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430518763,1430518763,0272517d1e3b0ee2d8a9a621ea50ba02dcc4374b
+f859b5bf495021603f0e41d833bc085ab278b9d8,f859b5bf,Update Track.java,Update Track.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517485,1430517485,3bb55f5e26f20b221e5ca42d97c0d9b19d0c21d5
+3bb55f5e26f20b221e5ca42d97c0d9b19d0c21d5,3bb55f5e,Update ScrobblingService.java,Update ScrobblingService.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517452,1430517452,cb646c797856ff61b5f67d4b6f7a5b302bbc9f57
+cb646c797856ff61b5f67d4b6f7a5b302bbc9f57,cb646c79,Update WinampMusicReceiver.java,Update WinampMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517419,1430517419,2acaec72445d223c0d2513e9541973ea25c1256b
+2acaec72445d223c0d2513e9541973ea25c1256b,2acaec72,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517372,1430517372,c1125e22623a21feeed511b46951023120a94aa7
+c1125e22623a21feeed511b46951023120a94aa7,c1125e22,Update SEMCMusicReceiver.java,Update SEMCMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517285,1430517285,b70ea65f053ff37ddf05f5d2d8814a0f4a12bc46
+b70ea65f053ff37ddf05f5d2d8814a0f4a12bc46,b70ea65f,Update PlayerProTrialReceiver.java,Update PlayerProTrialReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517202,1430517202,2b368c446f18c5ee1797a2f3189b36433f85a010
+2b368c446f18c5ee1797a2f3189b36433f85a010,2b368c44,Update PlayerProReceiver.java,Update PlayerProReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517165,1430517165,23599949a50d11fafcf2b242f84b16f86ecc2aad
+23599949a50d11fafcf2b242f84b16f86ecc2aad,23599949,Update MyTouch4GMusicReceiver.java,Update MyTouch4GMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517138,1430517138,7a4bc28821f080a3149a53198592ce8392ace557
+7a4bc28821f080a3149a53198592ce8392ace557,7a4bc288,Update MIUIMusicReceiver.java,Update MIUIMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517064,1430517064,fb404cbc16ac476e08fe0c9305d3d6ce4b7d3ead
+fb404cbc16ac476e08fe0c9305d3d6ce4b7d3ead,fb404cbc,Update LgOptimus4xReceiver.java,Update LgOptimus4xReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430517005,1430517005,66ed7d56f024916a87fe1bdb0b3cfc18cbe23639
+66ed7d56f024916a87fe1bdb0b3cfc18cbe23639,66ed7d56,Update LastFmAPIReceiver.java,Update LastFmAPIReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516881,1430516881,d28606b14c60faaeeb45f137210a0f2c4c4690af
+d28606b14c60faaeeb45f137210a0f2c4c4690af,d28606b1,Update HeroMusicReceiver.java,Update HeroMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516798,1430516798,219a2ccea7338ea538e6b35236d8c242cd0ed939
+219a2ccea7338ea538e6b35236d8c242cd0ed939,219a2cce,Update BuiltInMusicAppReceiver.java,Update BuiltInMusicAppReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516767,1430516767,881b7b6f5febeff183e198c5cb368061ef1b58dd
+881b7b6f5febeff183e198c5cb368061ef1b58dd,881b7b6f,Update AndroidMusicReceiver.java,Update AndroidMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516671,1430516671,7604b417a1115c9cf9ba1172fcfea3190c52623d
+7604b417a1115c9cf9ba1172fcfea3190c52623d,7604b417,Update AndroidMusicJRTStudioBuildReceiver.java,Update AndroidMusicJRTStudioBuildReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516638,1430516638,3f4eca081f0e9694cb35d5514ac71f5b0a712673
+3f4eca081f0e9694cb35d5514ac71f5b0a712673,3f4eca08,Update AmazonMP3Receiver.java,Update AmazonMP3Receiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516568,1430516568,0272517d1e3b0ee2d8a9a621ea50ba02dcc4374b
+0272517d1e3b0ee2d8a9a621ea50ba02dcc4374b,0272517d,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430516010,1430516010,32ce07228e49ee04782b97885f8a71de7d6f3b8f
+32ce07228e49ee04782b97885f8a71de7d6f3b8f,32ce0722,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430515920,1430515920,b71dfe1f275f615c76de10d3916cc7a5625cf5f9
+b71dfe1f275f615c76de10d3916cc7a5625cf5f9,b71dfe1f,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430515499,1430515499,7e141a80e8984d23128322fa126fe7cda0cef90c
+7e141a80e8984d23128322fa126fe7cda0cef90c,7e141a80,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430515454,1430515454,7608dca6064d8ae6aa8b475e52daf9e7004901c6
+7608dca6064d8ae6aa8b475e52daf9e7004901c6,7608dca6,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430511056,1430511056,ef14c207a6d269f23a821abbe3753aa1bfdc37a7
+ef14c207a6d269f23a821abbe3753aa1bfdc37a7,ef14c207,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430510978,1430510978,68664bb52bcaadc8485cd851d99665013f69302f
+68664bb52bcaadc8485cd851d99665013f69302f,68664bb5,Merge pull request #110 from inverse/wifi_scrobble,"Merge pull request #110 from inverse/wifi_scrobble
+
+Scrobble on Wifi connected",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430510499,1430510499,"e2c77befd1d0fa665d33db06982ecb5a200a585d,3c81af0a50001efd2cd9e230246fbf1db39683a8"
+e2c77befd1d0fa665d33db06982ecb5a200a585d,e2c77bef,Update README.md,"Update README.md
+
+Supported Samsung Devices",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430506090,1430506090,4aab4f2c0663bacf222058933acb4fd5d8d03786
+4aab4f2c0663bacf222058933acb4fd5d8d03786,4aab4f2c,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430505518,1430505518,22472304859d6ffdb07bd829a5745db89c6483e9
+22472304859d6ffdb07bd829a5745db89c6483e9,22472304,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430505496,1430505496,1ac6b63c2c0ce84228d71abcbf4d9de73b92cd1d
+1ac6b63c2c0ce84228d71abcbf4d9de73b92cd1d,1ac6b63c,Merge pull request #187 from HumbleBeeBumbleBee/IssueSummary,"Merge pull request #187 from HumbleBeeBumbleBee/IssueSummary
+
+Summary of issues and desired application support for programmers and commiters.",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430505300,1430505300,"da6fd5bd6d0e80681dbc07ca292e88da59edbf80,2392aeb2537fd1adf14155d5f634fda7f44d9e49"
+2392aeb2537fd1adf14155d5f634fda7f44d9e49,2392aeb2,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430505109,1430505109,cbe7143efe5d41c57cf878ecef0180b2aeaa3bd4
+cbe7143efe5d41c57cf878ecef0180b2aeaa3bd4,cbe7143e,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430504865,1430504865,636bc26f095c54d729209c7738728157762b1fda
+636bc26f095c54d729209c7738728157762b1fda,636bc26f,Update IssueSummary.md,Update IssueSummary.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430504696,1430504696,da5dab99d022ee2518e8056e8f55f6c19279604e
+da6fd5bd6d0e80681dbc07ca292e88da59edbf80,da6fd5bd,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430504567,1430504567,e27b4c8c452c0b573ad9795d0955fee22d190e5e
+e27b4c8c452c0b573ad9795d0955fee22d190e5e,e27b4c8c,Update README.md,"Update README.md
+
+F-Droid links",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430504539,1430504539,1094fd2b9ac0a37e8bc961fd8391d1ef7b664677
+1094fd2b9ac0a37e8bc961fd8391d1ef7b664677,1094fd2b,Update README.md,"Update README.md
+
+vanilla",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430503951,1430503951,be2e88a078842af404ed1b55f99e8388a52a793d
+be2e88a078842af404ed1b55f99e8388a52a793d,be2e88a0,Update README.md,"Update README.md
+
+vanilla",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430503738,1430503738,78102272fe13fb9cd0b8968878d86dd6ba8bc1b2
+78102272fe13fb9cd0b8968878d86dd6ba8bc1b2,78102272,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430503336,1430503336,a7dd560179cacc9f2d7b03bae3817515045cde27
+a7dd560179cacc9f2d7b03bae3817515045cde27,a7dd5601,Update README.md,"Update README.md
+
+8tracks vanilla",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430502540,1430502540,08f925162c4193b76322a97b1e825750c31489e5
+08f925162c4193b76322a97b1e825750c31489e5,08f92516,Update README.md,"Update README.md
+
+8tracks is supported",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430502105,1430502105,ac63d37db9d0fa94be4c153c30f3546d1c221129
+ac63d37db9d0fa94be4c153c30f3546d1c221129,ac63d37d,Update README.md,Update README.md,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430501761,1430501761,e612774689d044ed9c32ee1389f61c477a2f86f3
+e612774689d044ed9c32ee1389f61c477a2f86f3,e6127746,Update README.md,"Update README.md
+
+Added additional email support.",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430501714,1430501714,3649a78464c6bfc8aa56b5e0e7db074a0a584a75
+3649a78464c6bfc8aa56b5e0e7db074a0a584a75,3649a784,Merge pull request #185 from metanota/fix-176-playepro,"Merge pull request #185 from metanota/fix-176-playepro
+
+Fixed #176. Added Player Pro intents to application's manifest.",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430498634,1430498634,"8001be8a83ba42d46fedc097d1e83c9f32a64ae9,14af8a128ed0f7349acbfd045343c27468fa399d"
+8001be8a83ba42d46fedc097d1e83c9f32a64ae9,8001be8a,Merge pull request #141 from satbadkd/frTranslation,"Merge pull request #141 from satbadkd/frTranslation
+
+Added french translation",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430498444,1430498444,"ed7a47c04c01feb496d8ded0417dc2ed76e27790,556dedacdd628f629439d620afa14a0db2d35dcc"
+ed7a47c04c01feb496d8ded0417dc2ed76e27790,ed7a47c0,Merge pull request #154 from moshpirit/spanish-translations,"Merge pull request #154 from moshpirit/spanish-translations
+
+Added spanish translation",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430495943,1430495943,"11e0fb7f0b6e6a28600f64beff8cfbaa86b5d76a,e4f9838dd3edce347e857baaf943311a5ccf6514"
+11e0fb7f0b6e6a28600f64beff8cfbaa86b5d76a,11e0fb7f,Merge pull request #184 from HumbleBeeBumbleBee/HTTPS-Literals,"Merge pull request #184 from HumbleBeeBumbleBee/HTTPS-Literals
+
+HTTPS-literal",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430495543,1430495543,"5635f15ee138c3ae286e1a3391833c4f185093a5,7c9eb8e7e6f9e04d3a2e9446fcb7ebe4197cafd3"
+5635f15ee138c3ae286e1a3391833c4f185093a5,5635f15e,Merge pull request #166 from yarik2720/patch-123,"Merge pull request #166 from yarik2720/patch-123
+
+added to compatible devices",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430495355,1430495355,"629159b32c9bfc13c2d640a39baca21d0cdd47c3,c30d3ff114370fc798a6040d23fde9cc0928d77d"
+629159b32c9bfc13c2d640a39baca21d0cdd47c3,629159b3,Update README.md,"Update README.md
+
+ Remove wiki, add pages to repository #33",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430494724,1430494724,db7773a381f52e807d0cd5f5c057a3a08bb1fcca
+db7773a381f52e807d0cd5f5c057a3a08bb1fcca,db7773a3,Merge pull request #181 from HumbleBeeBumbleBee/MarkDown-#33,"Merge pull request #181 from HumbleBeeBumbleBee/MarkDown-#33
+
+Wiki MarkDown Copy/Paste #33",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430494448,1430494448,"70d7d990032df0f0cfd3488e40f003063cded7fe,06bb985ebfa4a3f8255b2e79fbab853d47b995d0"
+70d7d990032df0f0cfd3488e40f003063cded7fe,70d7d990,Merge pull request #183 from HumbleBeeBumbleBee/Annoying-Toast-#171,"Merge pull request #183 from HumbleBeeBumbleBee/Annoying-Toast-#171
+
+Annoying make Toast",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430493939,1430493939,"eeb8648911b45bda16b6f321c2efb200885b0999,2a45605f43b4d695527843cd5097302f15f18bac"
+2a45605f43b4d695527843cd5097302f15f18bac,2a45605f,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430493920,1430493920,7e2b34422f998417b65dbc2b89fb8d5e3fefe34b
+7e2b34422f998417b65dbc2b89fb8d5e3fefe34b,7e2b3442,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430493756,1430493756,6ecd5a878e97df5766f473f38a30aea1e1276030
+6ecd5a878e97df5766f473f38a30aea1e1276030,6ecd5a87,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430493688,1430493688,92befc0af72067442d48159d031918827acd8f58
+92befc0af72067442d48159d031918827acd8f58,92befc0a,Update SamsungMusicReceiver.java,Update SamsungMusicReceiver.java,,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430493677,1430493677,d65360faf8144cf0e86d4e32c16a393b251ed7a2
+eeb8648911b45bda16b6f321c2efb200885b0999,eeb86489,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1430484492,1430484492,5bc2d4527a2172882c96e86afb96d2638bd24cee
+da5dab99d022ee2518e8056e8f55f6c19279604e,da5dab99,IssueSummary,"IssueSummary
+
+fixes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430434867,1430434867,8566aabc3a6df5205dac125bf9ce609cdf5d46fa
+7c9eb8e7e6f9e04d3a2e9446fcb7ebe4197cafd3,7c9eb8e7,HTTPS-literal,"HTTPS-literal
+
+Still need to figure out how to enable HTTPS with libre.fm
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430434678,1430434678,5bc2d4527a2172882c96e86afb96d2638bd24cee
+8566aabc3a6df5205dac125bf9ce609cdf5d46fa,8566aabc,IssueSummary,"IssueSummary
+
+All fixes
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430431480,1430431480,5bc2d4527a2172882c96e86afb96d2638bd24cee
+14af8a128ed0f7349acbfd045343c27468fa399d,14af8a12,Fixed #176. Added Player Pro intents to application's manifest.,"Fixed #176. Added Player Pro intents to application's manifest.
+",,,,metanota,metanota@gmail.com,metanota,metanota@gmail.com,1430429763,1430429763,5bc2d4527a2172882c96e86afb96d2638bd24cee
+d65360faf8144cf0e86d4e32c16a393b251ed7a2,d65360fa,Annoying make Toast,"Annoying make Toast
+
+Solution for issue #171
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430362122,1430362122,5bc2d4527a2172882c96e86afb96d2638bd24cee
+06bb985ebfa4a3f8255b2e79fbab853d47b995d0,06bb985e,MarkDown Copy/Paste #33,"MarkDown Copy/Paste #33
+
+Per request #33
+",,,,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,HumbleBeeBumbleBee,HumbleBeeBumbleBeeDebugs@gmail.com,1430340752,1430340752,5bc2d4527a2172882c96e86afb96d2638bd24cee
+c30d3ff114370fc798a6040d23fde9cc0928d77d,c30d3ff1,added to compatible devices,"added to compatible devices
+added compatible application
+",,,,modi,yarik2720@ya.ru,modi,yarik2720@ya.ru,1420736299,1420736299,5bc2d4527a2172882c96e86afb96d2638bd24cee
+5bc2d4527a2172882c96e86afb96d2638bd24cee,5bc2d452,Merge pull request #162 from WyriHaximus/patch-1,"Merge pull request #162 from WyriHaximus/patch-1
+
+Reporting Google Nexus 5 working for last.fm",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1418978592,1418978592,"0fa3ed3bfafc8b161d6c513f82cdfa60ca307fe9,221ca49be3afab48a25093f9bbfed410e2c6d775"
+221ca49be3afab48a25093f9bbfed410e2c6d775,221ca49b,Reporting Google Nexus 5 working for last.fm,Reporting Google Nexus 5 working for last.fm,,,,Cees-Jan Kiewiet,ceesjank@gmail.com,Cees-Jan Kiewiet,ceesjank@gmail.com,1418824291,1418824291,0fa3ed3bfafc8b161d6c513f82cdfa60ca307fe9
+0fa3ed3bfafc8b161d6c513f82cdfa60ca307fe9,0fa3ed3b,Merge pull request #157 from jensz12/master,"Merge pull request #157 from jensz12/master
+
+Update README.md",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1417011798,1417011798,"d3d73f6dc55b8456aa13d71d0cb6a969be21a385,7fbbff3fa1cef5528fd08792597ac0b5969ad36b"
+7fbbff3fa1cef5528fd08792597ac0b5969ad36b,7fbbff3f,Update README.md,Update README.md,,,,Jens Møller,jens@jensz12.com,Jens Møller,jens@jensz12.com,1417011509,1417011509,d3d73f6dc55b8456aa13d71d0cb6a969be21a385
+3c81af0a50001efd2cd9e230246fbf1db39683a8,3c81af0a,Fixed indentation,"Fixed indentation
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1415533725,1415533725,733fb12fdebba9928e5b3b96567116fdde56f332
+733fb12fdebba9928e5b3b96567116fdde56f332,733fb12f,Tidy up of open logic,"Tidy up of open logic
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1415533668,1415533668,b419429ea19f09b7b44281f10637a93fdd67a567
+b419429ea19f09b7b44281f10637a93fdd67a567,b419429e,Merge pull request #1 from luisbandalap/patch-1,"Merge pull request #1 from luisbandalap/patch-1
+
+Fix NPE on wifi connect",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1415533342,1415533342,"d316a6cf5f9b763b7807a21bcce48444b8879784,d2927c443693796462746120274bf1e67cd304a4"
+d2927c443693796462746120274bf1e67cd304a4,d2927c44,Fix NPE on wifi connect,"Fix NPE on wifi connect
+
+For some weird reason database is not opened and when wifi connection is established SLS crashes because mDb is null, adding this little check solves it.",,,,Luis Bandala,luis449bp@gmail.com,Luis Bandala,luis449bp@gmail.com,1415489176,1415489176,d316a6cf5f9b763b7807a21bcce48444b8879784
+e4f9838dd3edce347e857baaf943311a5ccf6514,e4f9838d,Update strings_options.xml,Update strings_options.xml,,,,moshpirit,aru@openmailbox.org,moshpirit,aru@openmailbox.org,1415457981,1415457981,3370fccae54b560bec78044d50f681f39468febb
+3370fccae54b560bec78044d50f681f39468febb,3370fcca,Update strings_status.xml,Update strings_status.xml,,,,moshpirit,aru@openmailbox.org,moshpirit,aru@openmailbox.org,1415457875,1415457875,8433bc703c8badba7ae6a726958efa56c4caaa23
+8433bc703c8badba7ae6a726958efa56c4caaa23,8433bc70,Added spanish translation,"Added spanish translation
+",,,,moshpirit,aru@openmailbox.org,moshpirit,aru@openmailbox.org,1415149585,1415149585,f4b5914ebe10ddc9c921701b39bfce824c78f813
+d3d73f6dc55b8456aa13d71d0cb6a969be21a385,d3d73f6d,Merge pull request #152 from moshpirit/patch-2,"Merge pull request #152 from moshpirit/patch-2
+
+Update README.md",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1415092458,1415092458,"f4b5914ebe10ddc9c921701b39bfce824c78f813,1ca90a6e654d5369e39dda5dc6e18135e03040e0"
+1ca90a6e654d5369e39dda5dc6e18135e03040e0,1ca90a6e,Update README.md,"Update README.md
+
+Added Motorola Defy and Sony Xperia SP",,,,moshpirit,aru@openmailbox.org,moshpirit,aru@openmailbox.org,1415044551,1415044551,f4b5914ebe10ddc9c921701b39bfce824c78f813
+f4b5914ebe10ddc9c921701b39bfce824c78f813,f4b5914e,Bump version to v1.4.8,"Bump version to v1.4.8
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1408200148,1408200148,e303244db3df5a724cfb7d568a3c832c05d83ece
+e303244db3df5a724cfb7d568a3c832c05d83ece,e303244d,Add new high-resolution icon from Tha Phlash,"Add new high-resolution icon from Tha Phlash
+
+Fixes #61.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1408199847,1408199847,4984df2ff38d2e2d7e4937666e66a7b17c64b396
+556dedacdd628f629439d620afa14a0db2d35dcc,556dedac,Improvement of a description,"Improvement of a description
+",,,,pierre,mail@pierre-duchemin.fr,pierre,mail@pierre-duchemin.fr,1408094452,1408094452,6d362d69158248619ef87997fac8773e89d5905a
+6d362d69158248619ef87997fac8773e89d5905a,6d362d69,Fixed little problems with french translation,"Fixed little problems with french translation
+",,,,pierre,mail@pierre-duchemin.fr,pierre,mail@pierre-duchemin.fr,1408055241,1408055241,b03ef7aa83e8debbba82a2c952386b1a41579cd8
+b03ef7aa83e8debbba82a2c952386b1a41579cd8,b03ef7aa,Added french translation,"Added french translation
+",,,,pierre,mail@pierre-duchemin.fr,pierre,mail@pierre-duchemin.fr,1408049243,1408049243,4984df2ff38d2e2d7e4937666e66a7b17c64b396
+4984df2ff38d2e2d7e4937666e66a7b17c64b396,4984df2f,Version 1.4.7 (36),"Version 1.4.7 (36)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406146726,1406146726,9603058e6b0e64544077f63d790f4755d07dbece
+9603058e6b0e64544077f63d790f4755d07dbece,9603058e,Fix linking to issues page,"Fix linking to issues page
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406146707,1406146707,098fd19fcadb08efcdc60f4a6fc70e5de96712aa
+098fd19fcadb08efcdc60f4a6fc70e5de96712aa,098fd19f,Version 1.4.7 (35),"Version 1.4.7 (35)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406145789,1406145789,942758476b4c69280c8a69086bebeed18cf5db51
+942758476b4c69280c8a69086bebeed18cf5db51,94275847,Change email link to link to github issues page,"Change email link to link to github issues page
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406145767,1406145767,fa18e2f8015cf333ebb7d70e3878dd10dc701b8e
+fa18e2f8015cf333ebb7d70e3878dd10dc701b8e,fa18e2f8,List metanota as contributor,"List metanota as contributor
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406145275,1406145275,96e9bf20ccd1ce408c3ad6da83cdaf8d52994112
+96e9bf20ccd1ce408c3ad6da83cdaf8d52994112,96e9bf20,Update PlayerPro listing as supported,"Update PlayerPro listing as supported
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406145105,1406145194,c972ac742b1243e33670fdaaf6c9b56af17c38c6
+c972ac742b1243e33670fdaaf6c9b56af17c38c6,c972ac74,Merge branch 'feature-player-pro-support' of github.com:metanota/sls into…,"Merge branch 'feature-player-pro-support' of github.com:metanota/sls into metanota-feature-player-pro-support
+
+Conflicts:
+	AndroidManifest.xml
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406144429,1406144429,"df6834e1119d1f26af82337abd38cd6a5b3a8a86,4b2d5098cc79af4ca721b6050091e2145205ed40"
+df6834e1119d1f26af82337abd38cd6a5b3a8a86,df6834e1,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406144028,1406144028,269fb179bbfbaf9c8a7c7ba38ce935d622eec938
+269fb179bbfbaf9c8a7c7ba38ce935d622eec938,269fb179,List Amazon Music in README.md,List Amazon Music in README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406143945,1406143945,feec8cfd834243ed49fac81e33d3c180805c801b
+feec8cfd834243ed49fac81e33d3c180805c801b,feec8cfd,Merge pull request #133 from theli-ua/master,"Merge pull request #133 from theli-ua/master
+
+Add support for Amazon Music",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1406143713,1406143713,"d301307e6c410d263304b7f9e10f1fd7957bb648,1b5989e5a72fbcfba03b5b2a4671dc70bee9f160"
+1b5989e5a72fbcfba03b5b2a4671dc70bee9f160,1b5989e5,Add support for Amazon Music,"Add support for Amazon Music
+",,,,Anton Romanov,theli.ua@gmail.com,Anton Romanov,theli.ua@gmail.com,1403844700,1403844947,d301307e6c410d263304b7f9e10f1fd7957bb648
+d301307e6c410d263304b7f9e10f1fd7957bb648,d301307e,List support for SoundSeeder in about strings,List support for SoundSeeder in about strings,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1394652379,1394652379,515476756e27a666e04a114677b9b91b59936dfa
+515476756e27a666e04a114677b9b91b59936dfa,51547675,Update README.md,"Update README.md
+
+List support for SoundSeeder",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1394652296,1394652296,332799186ee7db353ea0bb64c8d495947176a785
+4b2d5098cc79af4ca721b6050091e2145205ed40,4b2d5098,Added javadoc for Player Pro,"Added javadoc for Player Pro
+",,,,metanota,metanota@gmail.com,metanota,metanota@gmail.com,1393872548,1393872548,1b878151687a8083f7efb7a0185a336c3f5d8c57
+1b878151687a8083f7efb7a0185a336c3f5d8c57,1b878151,Added Player Pro support,"Added Player Pro support
+",,,,metanota,metanota@gmail.com,metanota,metanota@gmail.com,1393816745,1393816745,332799186ee7db353ea0bb64c8d495947176a785
+d316a6cf5f9b763b7807a21bcce48444b8879784,d316a6cf,Reverted Util.java to previous state,"Reverted Util.java to previous state
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1392550553,1392550553,3af3478f446c1dcf175f8cc73818454738766842
+332799186ee7db353ea0bb64c8d495947176a785,33279918,Remove unnecessary APK file,"Remove unnecessary APK file
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1392309396,1392309396,5150ebca4cf95c8740dacd7a4b7796f8ceeca6c0
+3af3478f446c1dcf175f8cc73818454738766842,3af3478f,Fixed indentation within ConnectivityChangeReciever,"Fixed indentation within ConnectivityChangeReciever
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1392297861,1392297861,48d2a27a10bd83ffae5e653358f751a5365c044b
+5150ebca4cf95c8740dacd7a4b7796f8ceeca6c0,5150ebca,Merge pull request #111 from jadkik/master,"Merge pull request #111 from jadkik/master
+
+Add support for the newer Sony Xperia/Sony Ericsson Walkman app",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1392229026,1392229026,"bd97b26d76365465bd38bd5355db9ba5d2cc0347,61ccb134afefe673930e2134225f728d37990c6e"
+bd97b26d76365465bd38bd5355db9ba5d2cc0347,bd97b26d,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1392228903,1392228903,d1895c4f351ac304e6f367168c181360304b8a9f
+d1895c4f351ac304e6f367168c181360304b8a9f,d1895c4f,Changelog and version bump for 1.4.6,"Changelog and version bump for 1.4.6
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1392227964,1392227964,45001d021af06f23c52678938a537144fb976cbc
+45001d021af06f23c52678938a537144fb976cbc,45001d02,Update credits in README.md,"Update credits in README.md
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1392227945,1392227945,af4f7867a31d312df0acc275a8b64151113125ec
+af4f7867a31d312df0acc275a8b64151113125ec,af4f7867,Some updates to .classpath that Eclipse seems to want,"Some updates to .classpath that Eclipse seems to want
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1392227916,1392227916,fd7eaa9a32bce604c76298f00d08862e807df16a
+fd7eaa9a32bce604c76298f00d08862e807df16a,fd7eaa9a,Update .gitignore,"Update .gitignore
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1392227892,1392227892,f5725ffaf498b594fcd8632c6de694eab78d8672
+f5725ffaf498b594fcd8632c6de694eab78d8672,f5725ffa,Merge pull request #107 from klusark/patch-1,"Merge pull request #107 from klusark/patch-1
+
+Add android.permission.READ_EXTERNAL_STORAGE",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1390781834,1390781834,"c5df98de121f084d6bbafc055bf0eb79f4440be8,65d674c7e3705b3620ca4e0a4851b7352ee90491"
+61ccb134afefe673930e2134225f728d37990c6e,61ccb134,Add javadocs to the isStopAction methods,Add javadocs to the isStopAction methods,,,,Jad Kik,jadkik94@gmail.com,Jad Kik,jadkik94@gmail.com,1389274227,1389274227,aa44bf7fca4a24e09689ee95a7e02fff4ca1f93e
+c5df98de121f084d6bbafc055bf0eb79f4440be8,c5df98de,Merge pull request #108 from the-lay/patch-1,"Merge pull request #108 from the-lay/patch-1
+
+Update README.md",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1387394748,1387394748,"3d97696f1dd232b97fd907e14305bb7ec5949864,5ade889749dd9acef268782f7eb1dd983fea6da8"
+48d2a27a10bd83ffae5e653358f751a5365c044b,48d2a27a,Modified to scrobble when connected to Wifi only when cache has tracks,"Modified to scrobble when connected to Wifi only when cache has tracks
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1386884384,1386884384,531274a055186ccbddcc427d69ec519350941a27
+aa44bf7fca4a24e09689ee95a7e02fff4ca1f93e,aa44bf7f,Add support for the newer Sony Xperia/Sony Ericsson Walkman app,"Add support for the newer Sony Xperia/Sony Ericsson Walkman app
+",,,,Jad Kik,jkik@jad-desktop.local,Jad Kik,jkik@jad-desktop.local,1386516062,1386516062,3d97696f1dd232b97fd907e14305bb7ec5949864
+531274a055186ccbddcc427d69ec519350941a27,531274a0,Scrobble on Wifi connected,"Scrobble on Wifi connected
+",,,,Malachi Soord,inverse.chi@gmail.com,Malachi Soord,inverse.chi@gmail.com,1386366186,1386366186,3d97696f1dd232b97fd907e14305bb7ec5949864
+5ade889749dd9acef268782f7eb1dd983fea6da8,5ade8897,Update README.md,"Update README.md
+
+Added working report for Google Nexus 4.",,,,Iļja Gubins,ilja.gubin@gmail.com,Iļja Gubins,ilja.gubin@gmail.com,1385972514,1385972514,3d97696f1dd232b97fd907e14305bb7ec5949864
+65d674c7e3705b3620ca4e0a4851b7352ee90491,65d674c7,Add android.permission.READ_EXTERNAL_STORAGE,"Add android.permission.READ_EXTERNAL_STORAGE
+
+On my Nexus 5 running 4.4 the app crashes whenever I change songs. The message says it is missing this permission. It works perfectly after I add it locally.",,,,Joel Teichroeb,joel@teichroeb.net,Joel Teichroeb,joel@teichroeb.net,1385491495,1385491495,3d97696f1dd232b97fd907e14305bb7ec5949864
+3d97696f1dd232b97fd907e14305bb7ec5949864,3d97696f,Update strings_about.xml,"Update strings_about.xml
+
+List support for My Cloud Player.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1370440923,1370440923,9d5a49886b6b3f59698e8c6874e15dbe7d9ec74b
+9d5a49886b6b3f59698e8c6874e15dbe7d9ec74b,9d5a4988,Update README.md,"Update README.md
+
+List support for My Cloud Player.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1370440885,1370440885,ddebf5c0b07270cfda28352c6e24bd1e165d904d
+ddebf5c0b07270cfda28352c6e24bd1e165d904d,ddebf5c0,Update strings_about.xml,"Update strings_about.xml
+
+Listed support for Shuttle Music Player.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1369809402,1369809402,176654b3cd8299c88cd69f27e64e44f740cfcfca
+176654b3cd8299c88cd69f27e64e44f740cfcfca,176654b3,Update README.md,"Update README.md
+
+Listed support for Shuttle Music Player",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1369809370,1369809370,88af38063060b8c52b8705a8126958c7c843cf3b
+88af38063060b8c52b8705a8126958c7c843cf3b,88af3806,Update README.md,"Update README.md
+
+Explaining the status of this project.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1368566319,1368566319,8bb0e27049d7490799d25934cebd929a88e9ef8c
+8bb0e27049d7490799d25934cebd929a88e9ef8c,8bb0e270,Update strings_about.xml,"Update strings_about.xml
+
+Listed support for ""Now Playing"" music app.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1367783309,1367783309,f1c50801e693ecedaefacdf18aa827b0c0a6be61
+f1c50801e693ecedaefacdf18aa827b0c0a6be61,f1c50801,Update README.md,"Update README.md
+
+Listed support for ""Now Playing"" music app.",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1367783279,1367783279,b548188c12e31bf291bd3352380a51213d7861d4
+b548188c12e31bf291bd3352380a51213d7861d4,b548188c,Bump version to 1.4.5,"Bump version to 1.4.5
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1362331582,1362332060,a7aa1014bb3f87549f06591cf6153b285f19861d
+a7aa1014bb3f87549f06591cf6153b285f19861d,a7aa1014,Add Shahar as contributor,"Add Shahar as contributor
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1362331573,1362332060,5e547890a074294b98afceff149e94ad62612992
+5e547890a074294b98afceff149e94ad62612992,5e547890,List LG Music Player as supported,"List LG Music Player as supported
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1362331522,1362332060,0b2e243824da38ba9dae332b5d3a79788702e8c9
+0b2e243824da38ba9dae332b5d3a79788702e8c9,0b2e2438,Minor fixes for LG receiver,"Minor fixes for LG receiver
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1362332027,1362332060,fd3720fc1f87107c4a6508e38c7d4cce6f27be9f
+fd3720fc1f87107c4a6508e38c7d4cce6f27be9f,fd3720fc,Merge pull request #75 from kshahar/master,"Merge pull request #75 from kshahar/master
+
+Support for LG Optimus 4X P880",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1362331102,1362331102,"33dc2a3b0ec6dda55e17d6b8a4190ad7f3d7b11b,090c65fc0103b6d7a0e5066dee37aa757d130d6c"
+090c65fc0103b6d7a0e5066dee37aa757d130d6c,090c65fc,fixed scrobbling issue of new track after pause,"fixed scrobbling issue of new track after pause
+",,,,kshahar,kshahar@gmail.com,kshahar,kshahar@gmail.com,1361818852,1361818852,a1f6ce155cc68c0603c4142ae2835dbd5cb1b01e
+a1f6ce155cc68c0603c4142ae2835dbd5cb1b01e,a1f6ce15,convert spaces -> tabs,"convert spaces -> tabs
+",,,,kshahar,kshahar@gmail.com,kshahar,kshahar@gmail.com,1361738919,1361738919,3be85c80fe8bda859a0e8af86df949e68081995c
+3be85c80fe8bda859a0e8af86df949e68081995c,3be85c80,fix scrobbling issues with last.fm (duration was not set correctly),"fix scrobbling issues with last.fm (duration was not set correctly)
+",,,,kshahar,kshahar@gmail.com,kshahar,kshahar@gmail.com,1361521632,1361521632,940ae9c80cfbdea55231512398425a4088be59bf
+940ae9c80cfbdea55231512398425a4088be59bf,940ae9c8,parse intent even if no bundle was provided,"parse intent even if no bundle was provided
+",,,,kshahar,kshahar@gmail.com,kshahar,kshahar@gmail.com,1361521591,1361521591,3c872ea0208714875d9e7f684096aac705b3e37d
+3c872ea0208714875d9e7f684096aac705b3e37d,3c872ea0,added support for LG Optimus 4X P880,"added support for LG Optimus 4X P880
+",,,,kshahar,kshahar@gmail.com,kshahar,kshahar@gmail.com,1361470824,1361470824,33dc2a3b0ec6dda55e17d6b8a4190ad7f3d7b11b
+33dc2a3b0ec6dda55e17d6b8a4190ad7f3d7b11b,33dc2a3b,Update res/values/strings_about.xml,"Update res/values/strings_about.xml
+
+Listed Apollo as supported",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1353680395,1353680395,b2f25d4cfd2e8eb6272671a429b5d1fc0224dada
+b2f25d4cfd2e8eb6272671a429b5d1fc0224dada,b2f25d4c,Update README.md,"Update README.md
+
+Listed Apollo as supported",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1353680233,1353680233,a99b2e0be81c9eb17fc9019b593de6ad0c76efc3
+a99b2e0be81c9eb17fc9019b593de6ad0c76efc3,a99b2e0b,Update README.md,"Update README.md
+
+Oops, forgot parens",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1351951386,1351951386,8c77e88a94b5bf081cd00d87474aa0c28b63abe5
+8c77e88a94b5bf081cd00d87474aa0c28b63abe5,8c77e88a,Update README.md,"Update README.md
+
+HTC Evo 3D reportedly works",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1351943125,1351943125,dd935f94ab3523619c4d5fb1ae1f060b7bdb4e19
+dd935f94ab3523619c4d5fb1ae1f060b7bdb4e19,dd935f94,Update README.md,"Update README.md
+
+List Music Folder Player as supported",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1351942991,1351942991,a2fe58335409c7c716ba1a3966a35e4546b0425d
+a2fe58335409c7c716ba1a3966a35e4546b0425d,a2fe5833,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1351324577,1351324577,62c6de7c23803ca27c2056a1612c016b7818e72a
+62c6de7c23803ca27c2056a1612c016b7818e72a,62c6de7c,Update README.md,"Update README.md
+
+Notice of test version for v1.4.4",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1350755466,1350755466,6986fa3296559afca4bac60192ef6bc31fc7f0e7
+6986fa3296559afca4bac60192ef6bc31fc7f0e7,6986fa32,"Version bump (1.4.4), and changelog","Version bump (1.4.4), and changelog
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1350754955,1350754955,67df81976dc677c5c9d84251809ebf11f49b6a70
+67df81976dc677c5c9d84251809ebf11f49b6a70,67df8197,Misc. code cleanup. Unused imports and @Override,"Misc. code cleanup. Unused imports and @Override
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1350754911,1350754911,d9813e95038667931612702278c4cf38a67177db
+d9813e95038667931612702278c4cf38a67177db,d9813e95,"Add Joseph Cooper as contributor, and JRTStudio player","Add Joseph Cooper as contributor, and JRTStudio player
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1350754559,1350754559,f1ff3a53e93eadf75822243dccdfc09d0f89453b
+f1ff3a53e93eadf75822243dccdfc09d0f89453b,f1ff3a53,Android target in project.properties -> 12,"Android target in project.properties -> 12
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1350754091,1350754091,07783f814d1f6535b0ea294bf3d38959961c13fe
+07783f814d1f6535b0ea294bf3d38959961c13fe,07783f81,Merge remote-tracking branch 'grodin/master',"Merge remote-tracking branch 'grodin/master'
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1350753878,1350753878,"f7615586556d3beb62f9dfadb96ef3da8dd86f3f,abbbe9a91f7a08bd545b3bf6b04dc752fbd1d86d"
+abbbe9a91f7a08bd545b3bf6b04dc752fbd1d86d,abbbe9a9,"Added receiver for JRT Studio build of Android Music Player, fixing issue #46","Added receiver for JRT Studio build of Android Music Player, fixing issue #46
+",,,,grodinacid,cooper.joseph+github@gmail.com,grodinacid,cooper.joseph+github@gmail.com,1350659907,1350659907,f7615586556d3beb62f9dfadb96ef3da8dd86f3f
+f7615586556d3beb62f9dfadb96ef3da8dd86f3f,f7615586,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1345454937,1345454937,9300d438e81782c66fe74129c30bbe5ec28abc88
+9300d438e81782c66fe74129c30bbe5ec28abc88,9300d438,Listed Music Pump XBMC Remote (Beta) as supported,"Listed Music Pump XBMC Remote (Beta) as supported
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1345105413,1345105413,678f15f8c7a43d02d23cbc37df30b5e1e7bc1a11
+678f15f8c7a43d02d23cbc37df30b5e1e7bc1a11,678f15f8,Bumped version and changelog,"Bumped version and changelog
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1344282956,1344282956,1d424a70e45ba095c53a6846fc61b593fb465934
+1d424a70e45ba095c53a6846fc61b593fb465934,1d424a70,Merge pull request #41 from Argoday/master,"Merge pull request #41 from Argoday/master
+
+Issue #30 | Single sync point",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1344282312,1344282312,"3730f3f3925575f7779171473b4a5bccfb4929c0,5170f9ef4ca2560e8d2ad81564948004731100ad"
+5170f9ef4ca2560e8d2ad81564948004731100ad,5170f9ef,"Revert ""Issue #38 | Remove usage of Local time, use System.currentTimeMillis()""","Revert ""Issue #38 | Remove usage of Local time, use System.currentTimeMillis()""
+
+This reverts commit 29332ae7e3147d3c2fc494bdc24353839c4bdf9b.
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1344240766,1344240766,65eceb248de59defd28c38b650e9bfc4c9c44b36
+65eceb248de59defd28c38b650e9bfc4c9c44b36,65eceb24,Issue #30 | Put connection_count and db under one object so that a lock locks both at the same time,"Issue #30 | Put connection_count and db under one object so that a lock locks both at the same time
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1344240310,1344240310,18fcb36cdf67a34fb81522699ca070597d0fb1a3
+18fcb36cdf67a34fb81522699ca070597d0fb1a3,18fcb36c,Merge branch 'master' of git://github.com/tgwizard/sls,"Merge branch 'master' of git://github.com/tgwizard/sls
+
+Conflicts:
+	src/com/adam/aslfms/receiver/MusicAPI.java
+	src/com/adam/aslfms/util/ScrobblesDatabase.java
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1344238374,1344238374,"125fee1efc12d6da23f2fdf0d937ac370d4db20f,3730f3f3925575f7779171473b4a5bccfb4929c0"
+3730f3f3925575f7779171473b4a5bccfb4929c0,3730f3f3,Bumped version to 1.4.2,"Bumped version to 1.4.2
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1344163217,1344163217,861c8a3cd0b0fa96d1e0af6c8f41caaac73bbd9a
+861c8a3cd0b0fa96d1e0af6c8f41caaac73bbd9a,861c8a3c,	#30 Fixed database race conditions,"	#30 Fixed database race conditions
+
+	Thanks to Argoday for his suggestions.
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1344162985,1344162985,f4b84abeb61b9683352f1af28994b95c615cf7e2
+f4b84abeb61b9683352f1af28994b95c615cf7e2,f4b84abe,Use SystemClock.elapsedRealtime() for playtime,"Use SystemClock.elapsedRealtime() for playtime
+
+For #38
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1344034129,1344034129,4db91dabe634a8f07d93ab5858576de22b5f6d8b
+4db91dabe634a8f07d93ab5858576de22b5f6d8b,4db91dab,"Log negative time increase, don't throw","Log negative time increase, don't throw
+
+Is for #38, and might solve it.
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1344032565,1344032565,1973b719a80f8fb472b8148a98494c010e89a91c
+125fee1efc12d6da23f2fdf0d937ac370d4db20f,125fee1e,Remove optimization that proved to cause a bug in the way the MusicAPI database is accessed.,"Remove optimization that proved to cause a bug in the way the MusicAPI database is accessed.
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1344011201,1344011201,29332ae7e3147d3c2fc494bdc24353839c4bdf9b
+29332ae7e3147d3c2fc494bdc24353839c4bdf9b,29332ae7,"Issue #38 | Remove usage of Local time, use System.currentTimeMillis()","Issue #38 | Remove usage of Local time, use System.currentTimeMillis()
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1344007671,1344007671,52e6c29cccff4528041db9355fdb9b74f42e29ae
+1973b719a80f8fb472b8148a98494c010e89a91c,1973b719,Bumped version to 1.4.1,"Bumped version to 1.4.1
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343990902,1343990902,931fe251a72ac7cc6b1501be0975464e4f2047f9
+931fe251a72ac7cc6b1501be0975464e4f2047f9,931fe251,Merge pull request #37 from Argoday/master,"Merge pull request #37 from Argoday/master
+
+Cleanup Database Connection Usage",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343988784,1343988784,"55c436fffb4db54cc78fbeb81053c92056532663,52e6c29cccff4528041db9355fdb9b74f42e29ae"
+55c436fffb4db54cc78fbeb81053c92056532663,55c436ff,Update res/values/strings_about.xml,"Update res/values/strings_about.xml
+
+Added DeaDBeeF",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343988104,1343988104,d0a22671f5dd7b75df274dbbb71cf879473f4887
+d0a22671f5dd7b75df274dbbb71cf879473f4887,d0a22671,Update README.md,"Update README.md
+
+Added DeaDBeeF player",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343987993,1343987993,9bf1a5c6c72d77f1dd0d08d21f0d72b88a20571b
+52e6c29cccff4528041db9355fdb9b74f42e29ae,52e6c29c,Forgot to update Log message TAGs,"Forgot to update Log message TAGs
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343986811,1343986811,d1e88e9c2c0e53ecf18a22871ee1595628678fbf
+d1e88e9c2c0e53ecf18a22871ee1595628678fbf,d1e88e9c,Address Issue #30 | Move the MusicAPI database under an Application-wide Singleton,"Address Issue #30 | Move the MusicAPI database under an Application-wide Singleton
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343985889,1343985889,0e5a3561f1df71ba78ff06bd75455b13580533ab
+0e5a3561f1df71ba78ff06bd75455b13580533ab,0e5a3561,Address Issue #30 | Move the database under an Application-wide Singleton,"Address Issue #30 | Move the database under an Application-wide Singleton
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343985197,1343985197,9bf1a5c6c72d77f1dd0d08d21f0d72b88a20571b
+9bf1a5c6c72d77f1dd0d08d21f0d72b88a20571b,9bf1a5c6,Update README.md,"Update README.md
+
+More contributors",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343940600,1343940600,c10c4569bf27e1de5b30176c8e3b1ce7638a6693
+c10c4569bf27e1de5b30176c8e3b1ce7638a6693,c10c4569,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343940455,1343940455,f067478fc1d4ec30313e6325f2b7daaa1c83a7be
+f067478fc1d4ec30313e6325f2b7daaa1c83a7be,f067478f,Merge pull request #34 from Argoday/master,"Merge pull request #34 from Argoday/master
+
+Quick updates, null pointers in service start",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343940071,1343940071,"583c09830ea03507c8d434a87e695c4fdabc540f,b1c58be84ceeab1ece4e8bca7b917646030197df"
+b1c58be84ceeab1ece4e8bca7b917646030197df,b1c58be8,Update onStart to onStartCommand,"Update onStart to onStartCommand
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343932015,1343932015,f4f072b3aed0e17d923417e5552ac9210fa96698
+f4f072b3aed0e17d923417e5552ac9210fa96698,f4f072b3,Add check for null intent,"Add check for null intent
+- This occurs when playing via SoundCloud
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343931627,1343931627,583c09830ea03507c8d434a87e695c4fdabc540f
+583c09830ea03507c8d434a87e695c4fdabc540f,583c0983,Added test for SLSAPIReceiver,"Added test for SLSAPIReceiver
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343918510,1343918510,ea87a1ce308d7931facac1f8a0e207d3d0a710f7
+ea87a1ce308d7931facac1f8a0e207d3d0a710f7,ea87a1ce,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343906892,1343906892,1b8610e59eb0f399e5ec0465da8cddeb16bc0eb9
+1b8610e59eb0f399e5ec0465da8cddeb16bc0eb9,1b8610e5,Merge pull request #32 from SeanPONeil/master,"Merge pull request #32 from SeanPONeil/master
+
+Resolved Null Pointer Exception when trying to reset stats",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343850297,1343850297,"b5a9f13c9ea5aed1e3176bdde08b81e227b81ed4,f271ac61b8432ee95b1247c2710902002509ae71"
+f271ac61b8432ee95b1247c2710902002509ae71,f271ac61,Fixed null pointer exception when trying to reset stats,"Fixed null pointer exception when trying to reset stats
+",,,,Sean O'Neil,oneilse14@gmail.com,Sean O'Neil,oneilse14@gmail.com,1343849163,1343849163,b5a9f13c9ea5aed1e3176bdde08b81e227b81ed4
+b5a9f13c9ea5aed1e3176bdde08b81e227b81ed4,b5a9f13c,Bumped version number to 1.4,"Bumped version number to 1.4
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343847712,1343847712,570f21a4fdbbda9f754d22cb35683c3a431b61d5
+570f21a4fdbbda9f754d22cb35683c3a431b61d5,570f21a4,Merge branch 'android-12',"Merge branch 'android-12'
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343847588,1343847588,"66857effa0a48be7a97d77899ca2aac40f6cdc29,8ede2a14386f0ea9f1ef3a12ef7a7d57875941f2"
+66857effa0a48be7a97d77899ca2aac40f6cdc29,66857eff,Merge branch 'android-12',"Merge branch 'android-12'
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343846989,1343846989,"e3a8bf87c3c7be2ba366883d24e39039287eaafe,e31337c9a0bf8985d4761d9c41331c77fedd6236"
+e3a8bf87c3c7be2ba366883d24e39039287eaafe,e3a8bf87,Update README.md,"Update README.md
+
+Added Sean O'Neil as contributor",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343846955,1343846955,cee4d44c1b27fcbff7be42a10041de12f656735e
+8ede2a14386f0ea9f1ef3a12ef7a7d57875941f2,8ede2a14,Merge pull request #31 from SeanPONeil/android-12,"Merge pull request #31 from SeanPONeil/android-12
+
+StatusActivity now inflates the menu for StatusInfoNetApp due to changes...",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343845637,1343845637,"e31337c9a0bf8985d4761d9c41331c77fedd6236,dd49a7a49db4b7502271198e13617ae9f3d33ae2"
+dd49a7a49db4b7502271198e13617ae9f3d33ae2,dd49a7a4,StatusActivity now inflates the menu for StatusInfoNetApp due to changes in how…,"StatusActivity now inflates the menu for StatusInfoNetApp due to changes in how TabActivity works in 3.0 and above.
+",,,,Sean O'Neil,oneilse14@gmail.com,Sean O'Neil,oneilse14@gmail.com,1343844904,1343844904,e31337c9a0bf8985d4761d9c41331c77fedd6236
+cee4d44c1b27fcbff7be42a10041de12f656735e,cee4d44c,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343646558,1343646558,3cbac2ed694cbe02afe4d6ca2cc68af6b76cf81d
+3cbac2ed694cbe02afe4d6ca2cc68af6b76cf81d,3cbac2ed,Updated README.md,"Updated README.md
+
+Proper headlines",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343642045,1343642045,3403445151940455715929a4c2835d449910c5fa
+3403445151940455715929a4c2835d449910c5fa,34034451,Added list of contributors to README.md,Added list of contributors to README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343641863,1343641863,9a1fdb7e229e1ad0aff2cbe790d0ab6c6ea0fc30
+9a1fdb7e229e1ad0aff2cbe790d0ab6c6ea0fc30,9a1fdb7e,Update README.md,Update README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343641398,1343641398,7c52eb19a971d1c643bd13ce7395d34728549afd
+7c52eb19a971d1c643bd13ce7395d34728549afd,7c52eb19,Merge pull request #26 from paskal/patch-1,"Merge pull request #26 from paskal/patch-1
+
+Add tested device",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343637359,1343637359,"760c1bd81a2866c97085c4a72966a7cdae144ba4,1d573f7a5529611bab50f3ea5b46c580eaeeba23"
+1d573f7a5529611bab50f3ea5b46c580eaeeba23,1d573f7a,Add tested device,"Add tested device
+
+Scrobbler working on Xperia Pro (mk16i/mk16a) with built-in player and any other players too. Tested on both 2.3.4 and 4.0.4 stock ROM.",,,,Dmitry Paskal,paskal.07@gmail.com,Dmitry Paskal,paskal.07@gmail.com,1343629277,1343629277,760c1bd81a2866c97085c4a72966a7cdae144ba4
+760c1bd81a2866c97085c4a72966a7cdae144ba4,760c1bd8,README.dm References to android market -> google play,"README.dm References to android market -> google play
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343476769,1343476769,d9615ae12ab0768b0a01d72ed37c11f8deb87143
+d9615ae12ab0768b0a01d72ed37c11f8deb87143,d9615ae1,Added support for rdio. Fixes #13,"Added support for rdio. Fixes #13
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343475992,1343476013,5d657a04318ca8f267dea751da9432db56b17fa3
+5d657a04318ca8f267dea751da9432db56b17fa3,5d657a04,Merge pull request #17 from Argoday/master,"Merge pull request #17 from Argoday/master
+
+Small update, getIntFromBundle",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343472311,1343472311,"559793e3f77181e16a85b433e0b33e5da0bc2f37,5ed7bdea84192d67bf5ee63af05c36c3ab7c5acc"
+5ed7bdea84192d67bf5ee63af05c36c3ab7c5acc,5ed7bdea,Remove unused import,"Remove unused import
+Collapse 'if' clause
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343471486,1343471486,b7acb1265ce5c334c16d9b3db1e64381c4dfb39e
+b7acb1265ce5c334c16d9b3db1e64381c4dfb39e,b7acb126,Update README.md,"Update README.md
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343471449,1343471449,559793e3f77181e16a85b433e0b33e5da0bc2f37
+559793e3f77181e16a85b433e0b33e5da0bc2f37,559793e3,Update README.md,"Update README.md
+
+Added Google Galaxy Nexus as tested by me",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343470098,1343470098,34333e0d0800b84ea1e67673f6711b1d13988375
+34333e0d0800b84ea1e67673f6711b1d13988375,34333e0d,Rewrote getIntFromBundle to look more like other code in codebase,"Rewrote getIntFromBundle to look more like other code in codebase
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343469374,1343469374,afe3340cd43371786f209963f47537e020bfbb4e
+afe3340cd43371786f209963f47537e020bfbb4e,afe3340c,Added Music2Dance2 to the about string,"Added Music2Dance2 to the about string
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1343468761,1343468761,e970771ba9da2963c141db0ff3c78079387fa24b
+e970771ba9da2963c141db0ff3c78079387fa24b,e970771b,Merge pull request #10 from Argoday/master,"Merge pull request #10 from Argoday/master
+
+Adds error handling on ParseIntent",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1343468618,1343468618,"bbebd580dfe605c66c010425c04529ec7b121b71,c2db5683b9f4a186d68d7e38a936389209d9b531"
+c2db5683b9f4a186d68d7e38a936389209d9b531,c2db5683,Update changelog.txt and README.md to include Music2Dance2,"Update changelog.txt and README.md to include Music2Dance2
+Update Manifest to a new version code
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343453737,1343453737,da1be0d2d25fc45005aa202275fdaaf4fc4743f4
+da1be0d2d25fc45005aa202275fdaaf4fc4743f4,da1be0d2,Update fix to consolidate code using a helper function,"Update fix to consolidate code using a helper function
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343453656,1343453656,6897606d5a42110fc4eee5372bb381c4f4b4ddee
+6897606d5a42110fc4eee5372bb381c4f4b4ddee,6897606d,Handle numbers as Longs if that is how they are included in the Intent,"Handle numbers as Longs if that is how they are included in the Intent
+",,,,Argoday,argoday@argoday.com,Argoday,argoday@argoday.com,1343433746,1343433746,bbebd580dfe605c66c010425c04529ec7b121b71
+bbebd580dfe605c66c010425c04529ec7b121b71,bbebd580,"Updated README.md, added phone working note","Updated README.md, added phone working note",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1340561397,1340561397,73dc7221385885c6ba45c3dee1c095e293e2a736
+73dc7221385885c6ba45c3dee1c095e293e2a736,73dc7221,Updated README.md with HTC Desire S,Updated README.md with HTC Desire S,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1337978279,1337978279,6c51dd718da95521e5b46ec5c288a15591384468
+e31337c9a0bf8985d4761d9c41331c77fedd6236,e31337c9,Updated ViewScrobbleInfoDialog to have better contrast on 4.0 phones (but worse on older),"Updated ViewScrobbleInfoDialog to have better contrast on 4.0 phones (but worse on older)
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1335024848,1335024848,a260a0ee1bf5330d700e903b5fc90f44b1068f41
+a260a0ee1bf5330d700e903b5fc90f44b1068f41,a260a0ee,Updated ViewScrobbleCacheActivity to use an xml-based menu,"Updated ViewScrobbleCacheActivity to use an xml-based menu
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1335024801,1335024801,dd7caf448ba2f154b373505dc654bbb2598b3eb1
+dd7caf448ba2f154b373505dc654bbb2598b3eb1,dd7caf44,Some automatic regenreation of test/.classpath,"Some automatic regenreation of test/.classpath
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1335020777,1335020777,384fd0ef09d7ac382b19e06f8cc507c7fc551852
+384fd0ef09d7ac382b19e06f8cc507c7fc551852,384fd0ef,Moved option to display what's-new dialog to settings-activity-menu,"Moved option to display what's-new dialog to settings-activity-menu
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1335020750,1335020750,4eb27abc7085f4bef23af157c892f3e27f4c6e5e
+4eb27abc7085f4bef23af157c892f3e27f4c6e5e,4eb27abc,Renamed some dev_stuff files,"Renamed some dev_stuff files
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334966993,1334966993,634fae9812c2c112936c9ac0fc0794a3642e4de2
+634fae9812c2c112936c9ac0fc0794a3642e4de2,634fae98,'Solved' the issue of images in tab headers by removing them,"'Solved' the issue of images in tab headers by removing them
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334965895,1334965895,0da73e1d04198000cbbebd25951db634fc94de05
+0da73e1d04198000cbbebd25951db634fc94de05,0da73e1d,"Now only supports API-level 7 (Android 2.1) and up, still around 99%","Now only supports API-level 7 (Android 2.1) and up, still around 99%
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334965283,1334965283,c286e472c3c1f1e21935d80412372c09ed17e962
+c286e472c3c1f1e21935d80412372c09ed17e962,c286e472,ViewScrobbleCache now also uses an xml-menu for its main menu,"ViewScrobbleCache now also uses an xml-menu for its main menu
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334964594,1334964613,152066ad3e4fda5f4fc2883c6983e5bbefbf9f44
+152066ad3e4fda5f4fc2883c6983e5bbefbf9f44,152066ad,added releases/ to .gitignore,"added releases/ to .gitignore
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334954496,1334963870,2c9a6c7c6b74b880e1896af3fdb4b05722be316a
+2c9a6c7c6b74b880e1896af3fdb4b05722be316a,2c9a6c7c,Cleaned up in the manifest,"Cleaned up in the manifest
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334963814,1334963814,e33f6c609aa2e665317c9e1cab29ba292ec2fc03
+e33f6c609aa2e665317c9e1cab29ba292ec2fc03,e33f6c60,Made touch-screen no longer required,"Made touch-screen no longer required
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334963603,1334963603,be2200a39ee785bf30921df96f897363e101c35c
+6c51dd718da95521e5b46ec5c288a15591384468,6c51dd71,Removed unused images in dev_stuff/,"Removed unused images in dev_stuff/
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334963004,1334963004,c684ddf5dabcc118706c16c6ce5b66266758b57a
+c684ddf5dabcc118706c16c6ce5b66266758b57a,c684ddf5,Changed to http from https in link to github website,"Changed to http from https in link to github website
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334962975,1334962980,fb098fab3ddbc29d5e46870ce1c0f0dc2a3a0b37
+fb098fab3ddbc29d5e46870ce1c0f0dc2a3a0b37,fb098fab,Added upscaled 512x512 icon,"Added upscaled 512x512 icon
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334962949,1334962949,44796de97c80fc80326272d35728933a2d532a36
+44796de97c80fc80326272d35728933a2d532a36,44796de9,"Oops, forgot to change website-url to github. Won't retag, but will publish with correct link","Oops, forgot to change website-url to github. Won't retag, but will publish with correct link
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334962297,1334962297,a6aa737dfe55084e3cdd61d450a3be8d7ae8bcef
+a6aa737dfe55084e3cdd61d450a3be8d7ae8bcef,a6aa737d,Added link to neutron music player,Added link to neutron music player,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1334961825,1334961825,af8eaba7d8df7ebcabb034069b88931c95718cd0
+af8eaba7d8df7ebcabb034069b88931c95718cd0,af8eaba7,Bumped version to 1.3.6/25,"Bumped version to 1.3.6/25
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334961461,1334961461,dbfdb7509e366555dfe3b6acaeafa77e5a325f54
+dbfdb7509e366555dfe3b6acaeafa77e5a325f54,dbfdb750,Merge branch 'neutron-music-player' into HEAD,"Merge branch 'neutron-music-player' into HEAD
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334961318,1334961318,"50805ff0a7d97d45c8e365dbb72604d28f7335fd,368a48afec5c3c779bb52395c4e5c2d3c3f3295e"
+50805ff0a7d97d45c8e365dbb72604d28f7335fd,50805ff0,Updated wiki links to point to github wiki-pages,Updated wiki links to point to github wiki-pages,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1334960228,1334960228,e29d05108a55a72fc56dde8c6b554e7df94f209e
+e29d05108a55a72fc56dde8c6b554e7df94f209e,e29d0510,fixed some typos in README.md,fixed some typos in README.md,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1334957707,1334957707,6268c21db2ecb0a3daa1c4be17a93b251be6b0a3
+6268c21db2ecb0a3daa1c4be17a93b251be6b0a3,6268c21d,Copied and rewrote the main-page from old site: http://code.google.com/p/a-simple-lastfm-scrobbler/,Copied and rewrote the main-page from old site: http://code.google.com/p/a-simple-lastfm-scrobbler/,,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1334957223,1334957223,fbd9ff557baa5bb9df09807f13404bed21253c0e
+fbd9ff557baa5bb9df09807f13404bed21253c0e,fbd9ff55,Added bogus README.md,"Added bogus README.md
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334955289,1334955289,b13473d13bec844226b655d4fd237c061ba933c2
+b13473d13bec844226b655d4fd237c061ba933c2,b13473d1,added releases/ to .gitignore,"added releases/ to .gitignore
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334954496,1334954798,e64d4212afb92dbc64fe0792e699a00f0e6f5da3
+368a48afec5c3c779bb52395c4e5c2d3c3f3295e,368a48af,Updated changelog.txt and about-string to mention Neutron Music Player,"Updated changelog.txt and about-string to mention Neutron Music Player
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334954534,1334954534,4d39c81c80fd77351aa244970b180b44e3d9b4a9
+4d39c81c80fd77351aa244970b180b44e3d9b4a9,4d39c81c,added releases/ to .gitignore,"added releases/ to .gitignore
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334954496,1334954496,c172176136fd80bf234c8a75685f898fabf1cb57
+c172176136fd80bf234c8a75685f898fabf1cb57,c1721761,"Updated BuiltInMusicAppReceiver to support Neutron Music Player, as suggested by…","Updated BuiltInMusicAppReceiver to support Neutron Music Player, as suggested by Dmitry Kostjuchenko
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334953974,1334953974,c7cb39d7cf9cddf39c844aa97da3728f87ac9334
+c7cb39d7cf9cddf39c844aa97da3728f87ac9334,c7cb39d7,Some kind of automatic update of test/.classpath,"Some kind of automatic update of test/.classpath
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334953511,1334953511,e64d4212afb92dbc64fe0792e699a00f0e6f5da3
+be2200a39ee785bf30921df96f897363e101c35c,be2200a3,SettingsActivity now uses an xml-based menu. Other stuff as well.,"SettingsActivity now uses an xml-based menu. Other stuff as well.
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334176667,1334176706,091b564575468b028a8e219e422cb674d472fdf9
+091b564575468b028a8e219e422cb674d472fdf9,091b5645,Updated manifest to target android-12,"Updated manifest to target android-12
+
+Needed to modify the <support-screens> tag. This hasn't been verified to
+work on older targets.
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334176229,1334176229,e64d4212afb92dbc64fe0792e699a00f0e6f5da3
+e64d4212afb92dbc64fe0792e699a00f0e6f5da3,e64d4212,Ignore lint.xml,"Ignore lint.xml
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334175986,1334175986,698adddb67a5850f5aef4c9c58c1af29767f0f7e
+698adddb67a5850f5aef4c9c58c1af29767f0f7e,698adddb,"Added lint.xml, don't know for what","Added lint.xml, don't know for what
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334165068,1334165068,9ab85ee980a468ef03ff4290f5751ec02e65cf73
+9ab85ee980a468ef03ff4290f5751ec02e65cf73,9ab85ee9,Updated test project to refer to sls properly,"Updated test project to refer to sls properly
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1334165043,1334165043,97695e846ab95c95d5af45c729790e4881adf4f0
+97695e846ab95c95d5af45c729790e4881adf4f0,97695e84,.gitignore for gen/ and bin/,".gitignore for gen/ and bin/
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1328692221,1328692221,8e8f468ff374046628b64548a8c157f847dc183a
+8e8f468ff374046628b64548a8c157f847dc183a,8e8f468f,Updated .classpath to remove build errors,"Updated .classpath to remove build errors
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1328692195,1328692195,cca09dc29a17bcade99fd8d9dac90e9c1359e145
+cca09dc29a17bcade99fd8d9dac90e9c1359e145,cca09dc2,Forgot to move some hidden Eclipse files,"Forgot to move some hidden Eclipse files
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1328603508,1328603508,9a836cfb0e09032c3f2fb2eef3febfb625482bcf
+9a836cfb0e09032c3f2fb2eef3febfb625482bcf,9a836cfb,Removed some left-over files,"Removed some left-over files
+
+I used the files to try to reverse engineer the spotify broadcasts, but
+failed.
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1328562618,1328562618,05f57672f5f6a0a17f9ce0dcb26c7ac5e22d7eaa
+05f57672f5f6a0a17f9ce0dcb26c7ac5e22d7eaa,05f57672,Removed top directory,"Removed top directory
+",,,,adam,tgwizard@gmail.com,adam,tgwizard@gmail.com,1328562509,1328562509,ac20041fc988f8eaec0b3bef1efbe050df45e789
+ac20041fc988f8eaec0b3bef1efbe050df45e789,ac20041f,Forgot to update changelog.txt,"Forgot to update changelog.txt
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1328125576,1328125576,f98ea1ee96136b677a46d243e7dd98583e3b76f0
+f98ea1ee96136b677a46d243e7dd98583e3b76f0,f98ea1ee,"With support for Sony Ericsson/Xperia mobile phones, thanks to Mark Gillespie","With support for Sony Ericsson/Xperia mobile phones, thanks to Mark Gillespie
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1328125463,1328125463,be4f0148fe31ec2ba8780ca71b63d3b4bf03860e
+be4f0148fe31ec2ba8780ca71b63d3b4bf03860e,be4f0148,forgot to add MIUI Music Player to the list of supported apps... won't republish/retag though,"forgot to add MIUI Music Player to the list of supported apps... won't republish/retag though
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1318433413,1318433413,2107a5adb547b3762d3762a137fa6d628412ff17
+2107a5adb547b3762d3762a137fa6d628412ff17,2107a5ad,"* added support for MIU Music Player, thanks to Andrew Thomson","* added support for MIU Music Player, thanks to Andrew Thomson
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1318432571,1318432571,bce6700acf8b43c1fc9125bce601a2434ad12571
+bce6700acf8b43c1fc9125bce601a2434ad12571,bce6700a,* added some apps as supported,"* added some apps as supported
+* will remove leading/trailing whitespace from usernames when logging in
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1318404867,1318404867,3d0c286123326555179f99ff438f3565216ab925
+3d0c286123326555179f99ff438f3565216ab925,3d0c2861,* checks if the new Google Music Player is installed - then we can't use the id…,"* checks if the new Google Music Player is installed - then we can't use the id in the intent to read from the mediastore
+* this will probably be version 1.3.3
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1310585170,1310585170,4950bbae77c01d08d9721e50ac42d4b3ad93654b
+4950bbae77c01d08d9721e50ac42d4b3ad93654b,4950bbae,* Some changes to an Apache License header,"* Some changes to an Apache License header
+* Some refactorings and moving of stuff
+* Some private variables has become package private
+* Some tests. Not enough.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1310583025,1310583025,a571775825892b4ddbcd40d441acdc54268a9575
+a571775825892b4ddbcd40d441acdc54268a9575,a5717758,small cleanup in InternalTrackTransmitterTest,"small cleanup in InternalTrackTransmitterTest
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1308443981,1308443981,8c318205a4c2633d8a0da88aedfa972d485627a0
+8c318205a4c2633d8a0da88aedfa972d485627a0,8c318205,"* deleted AppSettingsEnums, created a package com.adam.asllfms.util.enums where…","* deleted AppSettingsEnums, created a package com.adam.asllfms.util.enums where the enums reside instead.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1308443646,1308443646,ba24be1e5c34ae0fc70885b9d62aabd1a4f575d0
+ba24be1e5c34ae0fc70885b9d62aabd1a4f575d0,ba24be1e,"big logo (long ago, forgot why it's there)","big logo (long ago, forgot why it's there)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1308443076,1308443076,277b0d2a3ea4240de42f33740a27486f47439167
+277b0d2a3ea4240de42f33740a27486f47439167,277b0d2a,* added testing project,"* added testing project
+* wrote tests for Track and InternalTrackTransmitter 
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1308443013,1308443013,6ef715e6c3bc66600b5631d3c1f5bf4d439cf47a
+6ef715e6c3bc66600b5631d3c1f5bf4d439cf47a,6ef715e6,"- forgot, this is v1.3.2","- forgot, this is v1.3.2
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1299463004,1299463004,cf855c5881e77fd471a2fbaead1bd78a0a8f1110
+cf855c5881e77fd471a2fbaead1bd78a0a8f1110,cf855c58,* disabled support for Last.fm Android App API,"* disabled support for Last.fm Android App API
+* Winamp works!
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1299462975,1299462975,71682e41a95ce1a0332184527f58cd544d434669
+71682e41a95ce1a0332184527f58cd544d434669,71682e41,* now supports myTouch 4G and the Last.fm Android App API (both untested),"* now supports myTouch 4G and the Last.fm Android App API (both untested)
+
+* fixed some errors that came up while I have done nothing
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1299461609,1299461609,e5eea10b45d8981e143208edc0cdd78eb4e0ab81
+e5eea10b45d8981e143208edc0cdd78eb4e0ab81,e5eea10b,probably what will become v1.3.1,"probably what will become v1.3.1
+
+* Don't prevent login with usernames containing spaces
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1277919532,1277919532,bf5d271911eb5c8e9458b0a6df5a55c16d29384c
+bf5d271911eb5c8e9458b0a6df5a55c16d29384c,bf5d2719,"final changes for v1.3, fixed some settings-not-correct-after-upgrade issues","final changes for v1.3, fixed some settings-not-correct-after-upgrade issues
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1268068988,1268068988,6781f709290a365ea5a7d99e11e91f7180c101d3
+6781f709290a365ea5a7d99e11e91f7180c101d3,6781f709,reformatted and stuff some layout files,"reformatted and stuff some layout files
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1268067520,1268067520,8a6ac73bd6316f805398497c9ed086a7ac0dddcf
+8a6ac73bd6316f805398497c9ed086a7ac0dddcf,8a6ac73b,+ version++ for 1.3.0,"+ version++ for 1.3.0
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1268062697,1268062697,90d93a9b4a29be504579e564a5dc2967353f65b9
+90d93a9b4a29be504579e564a5dc2967353f65b9,90d93a9b,+ added icons for the options menus items,"+ added icons for the options menus items
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1268012101,1268012101,f771373a4bd2a6d09c0d7730c4ccc064ca883bae
+f771373a4bd2a6d09c0d7730c4ccc064ca883bae,f771373a,(minor) added some fields for the np-notification (track-nr and mbid),"(minor) added some fields for the np-notification (track-nr and mbid)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267932060,1267932060,4d4a2ab74138957425342371c7f22998e0dd8002
+4d4a2ab74138957425342371c7f22998e0dd8002,4d4a2ab7,+ added the ability to change the sort order when viewing the local cache,"+ added the ability to change the sort order when viewing the local cache
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267927160,1267927160,4c3668e269db6473e1fdd4e9ef8e10e83d708abd
+4c3668e269db6473e1fdd4e9ef8e10e83d708abd,4c3668e2,renamed app name in license comment,"renamed app name in license comment
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267910193,1267910193,f87d1bd5eb83bea343f2fb7abd17587e8dbfdf60
+f87d1bd5eb83bea343f2fb7abd17587e8dbfdf60,f87d1bd5,"+ fixed some bugs in the checking-for-a-fit-network code, and added options for…","+ fixed some bugs in the checking-for-a-fit-network code, and added options for when the phone is roaming
+- (the roaming options are untested)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267909859,1267909859,eedd1cd6c4122283d55d2a2c3a639338ec776fa5
+eedd1cd6c4122283d55d2a2c3a639338ec776fa5,eedd1cd6,"+ better handling of networks, and waking up when waiting on them","+ better handling of networks, and waking up when waiting on them
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267887488,1267887488,ff1d5ae91645c124a1d44b21963f14ab2c9b8d1b
+ff1d5ae91645c124a1d44b21963f14ab2c9b8d1b,ff1d5ae9,renamed app name in license comment,"renamed app name in license comment
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267885762,1267885762,6edb6d3b637d478b1c9847ea454e3bf072eb50a2
+6edb6d3b637d478b1c9847ea454e3bf072eb50a2,6edb6d3b,+ strings have been split into separate files,"+ strings have been split into separate files
++ Supported apps -> Enabled apps, with more explanation
++ Reworked how the Options screen works, less code duplication
++ Added options for submission on specific networks
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267834317,1267834317,086e8d245b50a6b020b439855583f9a15c30356e
+086e8d245b50a6b020b439855583f9a15c30356e,086e8d24,"fixed the ClassCastException, some other stuff. ready for 1.2.7","fixed the ClassCastException, some other stuff. ready for 1.2.7
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1267398619,1267398619,e8c06cc48805ca0fa52f7fca60dcc1ba313eb166
+e8c06cc48805ca0fa52f7fca60dcc1ba313eb166,e8c06cc4,* uses audio id from android/hero music apps,"* uses audio id from android/hero music apps
+* won't display ""null"" beneath supported apps with null messages
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264950834,1264950834,d88738685bf25aa70ec2403033b950d0aa6cabf7
+d88738685bf25aa70ec2403033b950d0aa6cabf7,d8873868,forgot to mention Tha PHLASH in the about text,"forgot to mention Tha PHLASH in the about text
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264631976,1264631976,1583c6782743e7b7e563ac55902f44c15d642edc
+1583c6782743e7b7e563ac55902f44c15d642edc,1583c678,"version 1.2.5, with new icon by Tha PHLASH","version 1.2.5, with new icon by Tha PHLASH
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264631621,1264631621,c53c01e43fb5c5cb11c8ecdefbb7b7b4e7575bb8
+c53c01e43fb5c5cb11c8ecdefbb7b7b4e7575bb8,c53c01e4,"some devstuff, including the icon by tha_phlash","some devstuff, including the icon by tha_phlash
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264631075,1264631075,0cf287c0841ef323fe2be65e7d6a35e79c0c9171
+0cf287c0841ef323fe2be65e7d6a35e79c0c9171,0cf287c0,v1.2.4 - fixed a bug where SLS would crash if you hadn't scrobbled all your…,"v1.2.4 - fixed a bug where SLS would crash if you hadn't scrobbled all your cached tracks before upgrading to 1.2.3
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264300690,1264300690,0537ab96cda0c292c0a93dd00aed864a3dcb7ce4
+0537ab96cda0c292c0a93dd00aed864a3dcb7ce4,0537ab96,for release 1.2.3,"for release 1.2.3
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264279130,1264279130,c05d532f2f8624c6ad7ad2824b4f57df027bacbc
+c05d532f2f8624c6ad7ad2824b4f57df027bacbc,c05d532f,comments on how SLS handles passwords,"comments on how SLS handles passwords
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264271905,1264271905,b5de04e8e0d4f0d971ec37401d48224b073d3bee
+b5de04e8e0d4f0d971ec37401d48224b073d3bee,b5de04e8,* lots of documentation,"* lots of documentation
+* added  link to profile page in status activity
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264260250,1264260250,a2dae55d3c1d6d31ef1fdb3c0a628bcd9b10e819
+a2dae55d3c1d6d31ef1fdb3c0a628bcd9b10e819,a2dae55d,Added documentation for the receiver.* classes,"Added documentation for the receiver.* classes
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1264020813,1264020813,9f76c1e593b475f86e0bd19a81159e97d55da9d4
+9f76c1e593b475f86e0bd19a81159e97d55da9d4,9f76c1e5,refactored and changed so as to provide for the new SLS API and automatic…,"refactored and changed so as to provide for the new SLS API and automatic ""supported music apps"" detection.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1263864633,1263864633,9276746ba2c8573f68002b581da684b2a2aee7c9
+9276746ba2c8573f68002b581da684b2a2aee7c9,9276746b,"1.2.1 fixed username length limitation, changed the wording of the scrobble point texts","1.2.1 fixed username length limitation, changed the wording of the scrobble point texts
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1261139571,1261139571,5156aa142360ed5f70a1aa1b04f3a38bea064da8
+5156aa142360ed5f70a1aa1b04f3a38bea064da8,5156aa14,finished v 1.2,"finished v 1.2
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1260058354,1260058354,0741384d6dc33c010ade3d5a2b9a77a186e99ad3
+0741384d6dc33c010ade3d5a2b9a77a186e99ad3,0741384d,"split options into On battery and Plugged in sections. Much refactoring, moving…","split options into On battery and Plugged in sections. Much refactoring, moving code between classes.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1260038683,1260038683,11ea3eac5855f68c630ac374ad7dff9c1039c311
+11ea3eac5855f68c630ac374ad7dff9c1039c311,11ea3eac,"Added support for the Scrobble Droid API, and tested it on Meridian Player and RockOn","Added support for the Scrobble Droid API, and tested it on Meridian Player and RockOn
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1260029031,1260029031,3d17aa5e142fd24a0f420571d6d10eb086a46d77
+3d17aa5e142fd24a0f420571d6d10eb086a46d77,3d17aa5e,"version 1.1.10, fixed crash on sd-card unmount + advanced option to always…","version 1.1.10, fixed crash on sd-card unmount + advanced option to always submit when connected to a power source
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1259111285,1259111285,de0783990da01e9ad3456a426857490d08f3423c
+de0783990da01e9ad3456a426857490d08f3423c,de078399,"version 1.1.9 now done, this commit: small bugfixes after more testing","version 1.1.9 now done, this commit: small bugfixes after more testing
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1254084505,1254084505,756977ea040b5013e28fff7a9a9d767b8c90c857
+756977ea040b5013e28fff7a9a9d767b8c90c857,756977ea,"almost done, can now view scrobble cache for all websites simultaneously ","almost done, can now view scrobble cache for all websites simultaneously 
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1254007282,1254007282,5eda44850b5428d81c9b102d40b696286bbec678
+5eda44850b5428d81c9b102d40b696286bbec678,5eda4485,"and now status_info has a list_view, much simpler","and now status_info has a list_view, much simpler
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253994327,1253994327,20706b3740aaacd6f970258cfbd08a5675444fdc
+20706b3740aaacd6f970258cfbd08a5675444fdc,20706b37,now the layout for scrobble cache view row works!,"now the layout for scrobble cache view row works!
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253986666,1253986666,0e25ac75290f7753b41654dcebd20f04738d3872
+0e25ac75290f7753b41654dcebd20f04738d3872,0e25ac75,yet again just saving,"yet again just saving
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253985686,1253985686,68cf64cf39184a789ee1d7cf269b259884c9d7b2
+68cf64cf39184a789ee1d7cf269b259884c9d7b2,68cf64cf,can now sort scrobbles.,"can now sort scrobbles.
+
+clicking on scrobbles in view cache still doesn't work, just saving work
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253983235,1253983235,f87c681b5b26e2ef1d306408927a0abea7cf7b7a
+f87c681b5b26e2ef1d306408927a0abea7cf7b7a,f87c681b,"view scrobble cache works, but not really. commiting just to save changes","view scrobble cache works, but not really. commiting just to save changes
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253823442,1253823442,b72146ba8602c8b2b760974a8343a3a19a08e2ab
+b72146ba8602c8b2b760974a8343a3a19a08e2ab,b72146ba,not yet flawless ability to view and edit the scrobble cache,"not yet flawless ability to view and edit the scrobble cache
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253752836,1253752836,2367095f078bb608f31969594dc3aefae56357e6
+2367095f078bb608f31969594dc3aefae56357e6,2367095f,removed dot from changelog :D,"removed dot from changelog :D
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253648547,1253648547,feed352be853edb90119dee72d8da6efe2d899c2
+feed352be853edb90119dee72d8da6efe2d899c2,feed352b,version 1.1.7,"version 1.1.7
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253645358,1253645358,1d325b4f3c001e202d92b62b9901110790cfb1ad
+1d325b4f3c001e202d92b62b9901110790cfb1ad,1d325b4f,??,"??
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253641062,1253641062,5f4a220a205d953ec93599deeee3ba6075e00bff
+5f4a220a205d953ec93599deeee3ba6075e00bff,5f4a220a,updated how incompatibilites with scrobble droid is displayed,"updated how incompatibilites with scrobble droid is displayed
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253635426,1253635426,cb037b2b996d8844f9086d63874147525ea3e1dc
+cb037b2b996d8844f9086d63874147525ea3e1dc,cb037b2b,prevent many scrobblers from spawning on network down,"prevent many scrobblers from spawning on network down
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253633735,1253633735,08416235055ee4ddd6648fef7c065733ab625ba5
+08416235055ee4ddd6648fef7c065733ab625ba5,08416235,"warns user before clearing creds, which also clears unsubmitted scrobbles","warns user before clearing creds, which also clears unsubmitted scrobbles
+
+small other stuff
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253633068,1253633068,02534ffcfeba55cbb7da814a6e0f9a2b894be60c
+02534ffcfeba55cbb7da814a6e0f9a2b894be60c,02534ffc,minor refactoring,"minor refactoring
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253631358,1253631358,8782fbc7c6f66e193aa686b35f0c12363628f7c3
+8782fbc7c6f66e193aa686b35f0c12363628f7c3,8782fbc7,"refactored SettingsActivity into smaller classes, much better visibility","refactored SettingsActivity into smaller classes, much better visibility
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253566809,1253566809,c90289874b4e48410c12ede08f3ebbc80b74c7f2
+c90289874b4e48410c12ede08f3ebbc80b74c7f2,c9028987,some refactoring,"some refactoring
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253548417,1253548417,064c5023ce59521ba2b588bdc5952d933e838c07
+064c5023ce59521ba2b588bdc5952d933e838c07,064c5023,"added advanced options. not yet complete, some questions remain","added advanced options. not yet complete, some questions remain
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253481050,1253481050,ce7b756991bab923b231ed6756f5341f78023c61
+ce7b756991bab923b231ed6756f5341f78023c61,ce7b7569,version++ for 1.1.5,"version++ for 1.1.5
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253314464,1253314464,07c7a8808d8f77a5353b00c7ff90bcc89998525b
+07c7a8808d8f77a5353b00c7ff90bcc89998525b,07c7a880,support for multiple websites to scrobble to,"support for multiple websites to scrobble to
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1253313891,1253313891,c7967b80aecf5a685390f1a2a5476137f10d92a7
+c7967b80aecf5a685390f1a2a5476137f10d92a7,c7967b80,version++ for 1.1,"version++ for 1.1
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252943730,1252943730,a6fb1f29abfc18a15dd51793a454a6833f32aa3b
+a6fb1f29abfc18a15dd51793a454a6833f32aa3b,a6fb1f29,fixed network waiter and some overzealous finals,"fixed network waiter and some overzealous finals
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252943022,1252943022,71bdee3c7372128e13b2dac48f0e3a91666c4fab
+71bdee3c7372128e13b2dac48f0e3a91666c4fab,71bdee3c,made some stuff final,"made some stuff final
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252935325,1252935325,e463f3407da6176a76dc2ba4f8903c96d51734bf
+e463f3407da6176a76dc2ba4f8903c96d51734bf,e463f340,"cleaned up scrobbling, and statusinfo now gets updated during sleep","cleaned up scrobbling, and statusinfo now gets updated during sleep
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252933355,1252933355,ad1c23d6d3ef3e903374bb024e536c0285aeffc5
+ad1c23d6d3ef3e903374bb024e536c0285aeffc5,ad1c23d6,mostly added license comments,"mostly added license comments
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252929638,1252929638,9ff53c26f4b4d9a0871a7d1a3b81cb02407164ac
+9ff53c26f4b4d9a0871a7d1a3b81cb02407164ac,9ff53c26,the stuff for v1.1,"the stuff for v1.1
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252893312,1252893312,78dcf0daa9906be8828e748951fa99693bf75d54
+78dcf0daa9906be8828e748951fa99693bf75d54,78dcf0da,versioning for release 1.0.2,"versioning for release 1.0.2
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252714691,1252714691,99db9df15f3702c549efbae7b35591eac6d33e00
+99db9df15f3702c549efbae7b35591eac6d33e00,99db9df1,fixed a bug where sls would crash on sd-card unmount/remount,"fixed a bug where sls would crash on sd-card unmount/remount
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1252713957,1252713957,a459725c6935386dafa071cbb7e0443d9eac2f8a
+a459725c6935386dafa071cbb7e0443d9eac2f8a,a459725c,dd,"dd
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251600455,1251600455,c97530f7d8801669e3f7af87d4f8f618e6a85cd8
+c97530f7d8801669e3f7af87d4f8f618e6a85cd8,c97530f7,version++,"version++
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251376334,1251376334,62249eff33b10df1f886c5afacf061e977f3695b
+62249eff33b10df1f886c5afacf061e977f3695b,62249eff,release 1.0.1,"release 1.0.1
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251368346,1251368346,82e9cc9a48e9aa74ffe377523f0c808de69cfd43
+82e9cc9a48e9aa74ffe377523f0c808de69cfd43,82e9cc9a,release 1.0.1 beta,"release 1.0.1 beta
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251206663,1251206663,08e0455ea182c25e0c9430f6280ed7475be3490a
+08e0455ea182c25e0c9430f6280ed7475be3490a,08e0455e,hero support (untested),"hero support (untested)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251199010,1251199010,9a78f2c623ed3a6160d317dec0ac65ce6136ef14
+9a78f2c623ed3a6160d317dec0ac65ce6136ef14,9a78f2c6,"refactored the way different music players were handled, now it is quite beautiful","refactored the way different music players were handled, now it is quite beautiful
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251162461,1251162461,3c9a909e8c50cfd08bd82cebdca5df2bcc38d535
+3c9a909e8c50cfd08bd82cebdca5df2bcc38d535,3c9a909e,release 1.0,"release 1.0
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251123972,1251123972,6d41e2f176a2d5482a14541afeccaf84726594ae
+6d41e2f176a2d5482a14541afeccaf84726594ae,6d41e2f1,removed untested htc-music compat,"removed untested htc-music compat
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251123149,1251123149,34f090c8b4270b3dff10d278ef8596a7b5cac677
+34f090c8b4270b3dff10d278ef8596a7b5cac677,34f090c8,got id-stuff + fixed not-quite-good-enough icon,"got id-stuff + fixed not-quite-good-enough icon
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251122569,1251122569,61dae1f533deaf624469aa232e48df32d5c3db15
+61dae1f533deaf624469aa232e48df32d5c3db15,61dae1f5,"Changed app_name to ""Simple Last.fm Scrobbler"", for better placement in the app-screen","Changed app_name to ""Simple Last.fm Scrobbler"", for better placement in the app-screen
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251058928,1251058928,43db325d772471fd95781d19e7d44696ae9d6092
+43db325d772471fd95781d19e7d44696ae9d6092,43db325d,removed needless debugging info,"removed needless debugging info
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251046208,1251046208,3400bd6f209f51f244e6888c36d09eb823146602
+3400bd6f209f51f244e6888c36d09eb823146602,3400bd6f,removed test stuff,"removed test stuff
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251045812,1251045812,5d66af19ab4b4c33a0227c00d6f54533ccc50412
+5d66af19ab4b4c33a0227c00d6f54533ccc50412,5d66af19,check for incompatible apps (ScrobbleDroid only for now),"check for incompatible apps (ScrobbleDroid only for now)
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1251045156,1251045156,5a0118b1e9775e1eecd73482b170ef6f6736da2f
+5a0118b1e9775e1eecd73482b170ef6f6736da2f,5a0118b1,...,"...
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250904398,1250904398,282342f94aa389aa30eaa4950116227761fc3c4d
+282342f94aa389aa30eaa4950116227761fc3c4d,282342f9,very many things + status dialog + more checks + some refactoring,"very many things + status dialog + more checks + some refactoring
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250900384,1250900384,6fcd941a9f5e65145c99daa74ba2a432787915c8
+6fcd941a9f5e65145c99daa74ba2a432787915c8,6fcd941a,added documentation,"added documentation
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250863054,1250863054,d439228e21d237f9de83469469fbaae8a92dd0cf
+d439228e21d237f9de83469469fbaae8a92dd0cf,d439228e,some renaming and copying,"some renaming and copying
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250856376,1250856376,72388a503be26918702c4ad474a2d312da2d3a95
+72388a503be26918702c4ad474a2d312da2d3a95,72388a50,...,"...
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250819709,1250819709,de123256ef7f40a872b8b8249456323ac97cc0ac
+de123256ef7f40a872b8b8249456323ac97cc0ac,de123256,renamed AppTransaction -> InternalTrackTransmitter,"renamed AppTransaction -> InternalTrackTransmitter
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250819301,1250819301,3fe8dccf43832ebee98e08d69748dd66cfb02505
+3fe8dccf43832ebee98e08d69748dd66cfb02505,3fe8dccf,"comments, sleeping retry, some unfortunate code bloating","comments, sleeping retry, some unfortunate code bloating
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250815767,1250815767,dacceb3069a06dff2045a1b0a8c58a3207534254
+dacceb3069a06dff2045a1b0a8c58a3207534254,dacceb30,added the ability for other apps to scrobble via aslfms,"added the ability for other apps to scrobble via aslfms
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250788674,1250788674,7c2f70da397a41772a70365aa609252314030727
+7c2f70da397a41772a70365aa609252314030727,7c2f70da,"fixed some todos, won't exceed scrobble limit, tested on actual phone - and made…","fixed some todos, won't exceed scrobble limit, tested on actual phone - and made changes to which broadcasts were received
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250783697,1250783697,164245b16c3e9c4a645334490fb1bedd881c2e7c
+164245b16c3e9c4a645334490fb1bedd881c2e7c,164245b1,Added GPL3 licensing information,"Added GPL3 licensing information
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250736454,1250736454,b8171942a05e1e4bdd34870f750aaf6a19364c22
+b8171942a05e1e4bdd34870f750aaf6a19364c22,b8171942,test,"test
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250731568,1250731568,da93b6114725f6dc4df0c6d0c7e4106d22cb3655
+da93b6114725f6dc4df0c6d0c7e4106d22cb3655,da93b611,move to trunk,"move to trunk
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250730900,1250730900,9b6556402989fa29550033ce89f10e4609dd277a
+9b6556402989fa29550033ce89f10e4609dd277a,9b655640,Initial directory structure.,"Initial directory structure.
+",,,,Adam Renberg,tgwizard@gmail.com,Adam Renberg,tgwizard@gmail.com,1250729202,1250729202,

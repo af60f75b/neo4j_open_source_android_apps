@@ -1,0 +1,807 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+e8c1eed1460000b60649f393bf686a4453c1e3eb,e8c1eed1,"* Did various work toward reducing occurence of ""cannot delete"" errors.","* Did various work toward reducing occurence of ""cannot delete"" errors.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1511295098,1511295098,71a9cd516cf5f3bc24c96796347c85aca0abe74a
+71a9cd516cf5f3bc24c96796347c85aca0abe74a,71a9cd51,"* Updated packages to work with new react/react-native versions. (in some cases,…","* Updated packages to work with new react/react-native versions. (in some cases, I just did quick removals of PropTypes and such to fix modules that didn't have updates provided -- without adding to repo, sorry)
+* Fixed that react-native-chart had error about keys not being unique.
+* Found that, definitely, watchman is cause of can't-delete bugs. (re-enabled watchmanconfig file, but doesn't seem to help)
+* Fixed that scroll-tab-bar had white background.
+* Fixed that first tab (Tools) would not display.
+* Fixed that app was marked as x86 ready, causing error since it only has ARM libs. (now marked as only ARM, so it just uses emulation/translation)
+* MS we use the prebuilt react-native instead of building-from-source.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1511275631,1511275631,2c779ec070b30012387e73e6f0cbde6b53f7e59d
+2c779ec070b30012387e73e6f0cbde6b53f7e59d,2c779ec0,"* Updated to latest react-native. (still getting can't delete bug, however)","* Updated to latest react-native. (still getting can't delete bug, however)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1511261706,1511261706,2eda509c56b9861326e3f3a20692130da6659d8b
+2eda509c56b9861326e3f3a20692130da6659d8b,2eda509c,Oops. Missed most changes for some reason!,"Oops. Missed most changes for some reason!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1511259671,1511259671,7dc67a47b32e21a21e3776b875aea42f7f399258
+7dc67a47b32e21a21e3776b875aea42f7f399258,7dc67a47,"* Removed Muse stuff. (I don't have a Muse anymore, so can't test it)","* Removed Muse stuff. (I don't have a Muse anymore, so can't test it)
+* Added libs to x86 folder as well. (hoping that will let it work on Chromebook -- we'll see)
+* Updated Android Studio. (to try to fix can't-delete error, which didn't help)
+
+Next: Will try upgrading react-native.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1511259626,1511259626,445ab6cc37386b243dbbc40d7d01af790e1d7443
+445ab6cc37386b243dbbc40d7d01af790e1d7443,445ab6cc,* MS escape key can be pressed in place of movement-detection. (for temp-disabling alarm sound),"* MS escape key can be pressed in place of movement-detection. (for temp-disabling alarm sound)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1505659432,1505659432,0445db4d553857d98187a8150c35141758266ae6
+0445db4d553857d98187a8150c35141758266ae6,0445db4d,"* Fixed that the ""ChangeVolume"" action, when trying to set the bluetooth-volume,…","* Fixed that the ""ChangeVolume"" action, when trying to set the bluetooth-volume, would set it to the specified normal-volume instead.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1497573854,1497573854,6e738c057e3412b9d5501028771cc1278b1e120d
+6e738c057e3412b9d5501028771cc1278b1e120d,6e738c05,"* Increased max value for ""sequenceDisabler_minPercentDiff"" to 1000%.","* Increased max value for ""sequenceDisabler_minPercentDiff"" to 1000%.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1497353623,1497353623,9d4cdf285609af8d10a8c5656d146ba1a9592c53
+9d4cdf285609af8d10a8c5656d146ba1a9592c53,9d4cdf28,"* Fixed that error would occur on connecting bluetooth earpiece, if session wasn't started yet.","* Fixed that error would occur on connecting bluetooth earpiece, if session wasn't started yet.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1497192553,1497192553,902cd7ebb1704edf2f192c03bea7eaae59eb96cf
+902cd7ebb1704edf2f192c03bea7eaae59eb96cf,902cd7eb,"* Fixed that ""Stopping session X"" would get logged many times per second, after…","* Fixed that ""Stopping session X"" would get logged many times per second, after rem-sequence had been started once, and movement was then detected.
+* MS logs only contain day-number for date -- full date is known from logged launch-start-date.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1497147470,1497147470,7c491d792cb13d6995a94567bcd718c043f3a167
+7c491d792cb13d6995a94567bcd718c043f3a167,7c491d79,"* Fixed that ""wait x minutes"" only waited x seconds!","* Fixed that ""wait x minutes"" only waited x seconds!
+* MS FBA rem-sequence ""test run"" can be enabled.
+* MS logs show sequence-step's type, when run.
+* Fix that error would occur on sequence completion.
+* MS sequence-steps show step-numbers.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1497094023,1497094023,8f9d8e67121b5197f25ed24cd32171b426dfcc68
+8f9d8e67121b5197f25ed24cd32171b426dfcc68,8f9d8e67,"* Added ""Min interval between speak-text calls"" options for FBA engine. (nice…","* Added ""Min interval between speak-text calls"" options for FBA engine. (nice for knowing if it knows you awoke, without having it get too annoying with frequent messaging!)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496987504,1496987504,ac78c2c15796ed329b52caaf3ff8a5e47970e529
+ac78c2c15796ed329b52caaf3ff8a5e47970e529,ac78c2c1,* Fixed that breathing-depth-last and breathing-depth-prev would not show until 30s in.,"* Fixed that breathing-depth-last and breathing-depth-prev would not show until 30s in.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496839440,1496839440,f7b42e7bc18596ab5e059f75c246168ba123c42a
+f7b42e7bc18596ab5e059f75c246168ba123c42a,f7b42e7b,"* MS project uses a flat structure (ie. without in-git ""Main"" folder).","* MS project uses a flat structure (ie. without in-git ""Main"" folder).
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496837938,1496837938,8af53e6b986d27547901a04fcd58f5a53725b05b
+8af53e6b986d27547901a04fcd58f5a53725b05b,8af53e6b,"* Did some cleanup (eg. added HasteFS fix to git-tracking), for new…","* Did some cleanup (eg. added HasteFS fix to git-tracking), for new watchman-enabled approach. (which was triggered by need to fix packager issue)
+
+Next:
+* Flatten project structure.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496836865,1496836865,894254c5b19faa2c11e0c0197451da239f138b42
+894254c5b19faa2c11e0c0197451da239f138b42,894254c5,"* Finally, finally actually-fixed the packager issue! (I think)","* Finally, finally actually-fixed the packager issue! (I think)
+
+Next:
+* Try to get watchman version working. (might be better than this way -- I at least need to give it one more shot)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496827897,1496827897,8549fbf8de26c1c56870c89529df98d4cf920812
+8549fbf8de26c1c56870c89529df98d4cf920812,8549fbf8,* Fixed that status report would not remove the decimal portions from the…,"* Fixed that status report would not remove the decimal portions from the variables. (making them too long for speech)
+* MS report-interval can be set more precisely. (not just integer increments)
+* MS breathing-depth also shows the change amount.
+* Fixed that command-listener measured breathing-depth change-amount incorrectly.
+* Fixed that command-listener would speak disabler-text, even if sequence was already disabled.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496759726,1496759726,bb0e97cec3f56afb85369aafa831eab66e05d23d
+bb0e97cec3f56afb85369aafa831eab66e05d23d,bb0e97ce,* Finally fixed the build/packager bug fully! (I think) [fixed it by…,"* Finally fixed the build/packager bug fully! (I think) [fixed it by switching-to/globally-installing ""watchman"", then fixing all the issues stemming from that change]
+* Added buffering to bio-data transfer. (haven't tested yet)
+* MS ""Build"" folder contains contents directly, instead of in an inner ""Source"" folder.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496755645,1496755645,1722b012aa1dc27cc87206379cfcd4a85f97f302
+1722b012aa1dc27cc87206379cfcd4a85f97f302,1722b012,"* Found that packager error still shows up sometimes. ; (   [for now, seems to…","* Found that packager error still shows up sometimes. ; (   [for now, seems to work fine if you start packager after run-android build-process]
+
+Next:
+* Fix that streaming of real-time data slows the UI down too much.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496682926,1496682926,596ff0de4884df149569928855c7484039226248
+596ff0de4884df149569928855c7484039226248,596ff0de,"* Add wait, change-volume, and repeat-steps action-types.","* Add wait, change-volume, and repeat-steps action-types.
+* ""Night""/""sleep"" streams now use real-time streams under-the-hood. (for faster data receiving/response)
+* Thus, ""Night"" streams check sleep-stage more often (every 30 seconds instead of every minute).
+* New system is coded enough that it *may* work now. (ie. the first-coding of it is done -- now it's time for testing!)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496681674,1496681741,6fa2b741af681e4014a06d8ab59a16ff4e75ebe0
+6fa2b741af681e4014a06d8ab59a16ff4e75ebe0,6fa2b741,"* Mostly fixed the terrible bug where ""react-native run-android"" would almost…","* Mostly fixed the terrible bug where ""react-native run-android"" would almost always fail without a fresh clean each time! (now, just make sure you close the react-packager before each ""react-native run-android"" run, and it should work)
+* Added new FBA system: rem-start sequence, command listener, status reporter, etc.
+* Speak-text command action can now specify a volume. (it overrides the media volume while the text is playing)
+* First-coding of UI done.
+
+Next:
+* Finish code to actually have system work.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496671515,1496671515,46030583c708c0bc422947baa4f5380d57c852be
+46030583c708c0bc422947baa4f5380d57c852be,46030583,* Most of ui for new FBA system added.,"* Most of ui for new FBA system added.
+
+Next:
+* MS FBA uses realtime s+ data streaming (so it can more quickly react to breathing changes), and it shows in status ui.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1496631604,1496631604,d238cb1c614fa736e83243f635e25e9a9f02720d
+d238cb1c614fa736e83243f635e25e9a9f02720d,d238cb1c,* Fixed npm run script.,"* Fixed npm run script.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1489672038,1489672038,d2c3dc8deaf1c1a2fdd63ba703f00d18c36963d5
+d2c3dc8deaf1c1a2fdd63ba703f00d18c36963d5,d2c3dc8d,* Updated npm-scripts/readme a bit.,"* Updated npm-scripts/readme a bit.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1489671764,1489671764,068f352a4e8e0e83b6f992cdbdeea8a049e21974
+068f352a4e8e0e83b6f992cdbdeea8a049e21974,068f352a,* AudioFile.Play now defaults to having a 1-second warmup period. (just like Speak()),"* AudioFile.Play now defaults to having a 1-second warmup period. (just like Speak())
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488996815,1488996815,2c3967b355f7490a82254c1c89d7a98f44c9d9f5
+2c3967b355f7490a82254c1c89d7a98f44c9d9f5,2c3967b3,* Fixed regression on API23+ permission requesting.,"* Fixed regression on API23+ permission requesting.
+* Fixed some semi-issues. (using First instead of FirstOrX for selected script, etc)
+* Added js.map file to apk. (not sure if its actually used, yet)
+* Removed lots of unnecessary permissions.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488944775,1488944775,66fc04323624f1c4b06cc6483216e61ea60a95c4
+66fc04323624f1c4b06cc6483216e61ea60a95c4,66fc0432,* Finally fixed the instant-run crash issue!,"* Finally fixed the instant-run crash issue!
+* Finally integrated the last of the SP.jar contents -- now no longer needing it as a dependency.
+* Added ""npm run release"" script.
+* Added build folder to "".watchmanconfig"" file. (not sure if it actually helps, though)
+
+Backup just before releasing next version on Play store.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488938078,1488938078,e1124d831151019656191b1d0d63c3ca4a5f65f6
+e1124d831151019656191b1d0d63c3ca4a5f65f6,e1124d83,"Backup before trying to add multidex, in attempt to get firebase to work.","Backup before trying to add multidex, in attempt to get firebase to work.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488926374,1488926374,a1d61fd5fa06ab627449e94dcea8b39c33a0c09a
+a1d61fd5fa06ab627449e94dcea8b39c33a0c09a,a1d61fd5,* Fixed two likely error-causers for FBA system.,"* Fixed two likely error-causers for FBA system.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488702752,1488702752,3481427beae7d537b025a7a719b48bc92c8001d6
+3481427beae7d537b025a7a719b48bc92c8001d6,3481427b,* I think I finally fixed the rogue-fba-prompts issue. (crossing fingers/knocking on wood),"* I think I finally fixed the rogue-fba-prompts issue. (crossing fingers/knocking on wood)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488625488,1488625488,8cda39f249744a1a34263b5d5533e641ffc4cdb0
+8cda39f249744a1a34263b5d5533e641ffc4cdb0,8cda39f2,* Fixed that action props were not being saved.,"* Fixed that action props were not being saved.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488594798,1488594798,ff00412a3ccbd5eff8094bb3692cf04198e889d7
+ff00412a3ccbd5eff8094bb3692cf04198e889d7,ff00412a,"* Fix that actions' uis didn't let you change the values. (or rather, would not…","* Fix that actions' uis didn't let you change the values. (or rather, would not update after the values were changed)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488590891,1488590891,a0eab7ba8faed172b401b1c45752b92bc4aa2199
+a0eab7ba8faed172b401b1c45752b92bc4aa2199,a0eab7ba,"* FBA actions can include playing audio-files (there's now a list of actions,…","* FBA actions can include playing audio-files (there's now a list of actions, rather than an assumed, single speak-text one)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488590422,1488590422,30d54da2c87c4aedf6f4dfa801d2af02caed26d6
+30d54da2c87c4aedf6f4dfa801d2af02caed26d6,30d54da2,* Cleaned up live-code surrounding pre-app-close js-code. (though still have…,"* Cleaned up live-code surrounding pre-app-close js-code. (though still have some non-live-code to clean up)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488582247,1488582247,077013df9d195c945462286cae0df3ffc8627158
+077013df9d195c945462286cae0df3ffc8627158,077013df,* Got the run-js-before-swipe-close-completes system working reliably now!,"* Got the run-js-before-swipe-close-completes system working reliably now!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488580616,1488580616,68fb795f142280e6c9ef8487dfc255aa489b2f39
+68fb795f142280e6c9ef8487dfc255aa489b2f39,68fb795f,Quick backup before going back to last commit. (to see what broke the js-run-before-close feature),"Quick backup before going back to last commit. (to see what broke the js-run-before-close feature)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488576106,1488576106,23f70f1499f6fec9f8fafac5f553f122c53c4216
+23f70f1499f6fec9f8fafac5f553f122c53c4216,23f70f14,"* It's working! JS-side's ""PreAppClose"" event is now called before its…","* It's working! JS-side's ""PreAppClose"" event is now called before its termination (which is initiated by swipe-close).
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488573147,1488573147,3e5122970d35dc23ff1bd1eb82b5e44526e0181f
+3e5122970d35dc23ff1bd1eb82b5e44526e0181f,3e512297,"Quick backup, while in middle of finding way to have JS code run after user swipes app away.","Quick backup, while in middle of finding way to have JS code run after user swipes app away.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488568990,1488568990,78ed626d39878103a60ce67d4bea39edc03991c2
+78ed626d39878103a60ce67d4bea39edc03991c2,78ed626d,"* Added a halfway-fix for odd issue, that enter blurs the input and does not add…","* Added a halfway-fix for odd issue, that enter blurs the input and does not add a line-break. (now it doesn't blur, and adds line-break, but does not always update the selection position correctly afterward)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488288284,1488288284,ee87e8ee656dc8670941a5dfa6603a68a5efd3f4
+ee87e8ee656dc8670941a5dfa6603a68a5efd3f4,ee87e8ee,* Got no-missed-start system from last commit actually working now.,"* Got no-missed-start system from last commit actually working now.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488284390,1488284390,dd09e17663d81957513fb0141d1f31797d5212b1
+dd09e17663d81957513fb0141d1f31797d5212b1,dd09e176,* Added built-in Waterfall audio-file.,"* Added built-in Waterfall audio-file.
+* Speak() can now be called stand-alone, even with bluetooth speakers, without missing first part of text. (the white-noise/waterfall audio-file is now played for a second beforehand, to activate the bluetooth device in case sleeping)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488277225,1488277225,398451ce8efe16c618865547ccd1c774fc71ebac
+398451ce8efe16c618865547ccd1c774fc71ebac,398451ce,* Solved crash issue (I think).,"* Solved crash issue (I think).
+* Fixed odd callback-null issue (I think).
+* Removed unneeded check-heartbeat stuff.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488232358,1488232358,ec757540d82a1afb589fc73e20a56981e1fc1e1c
+ec757540d82a1afb589fc73e20a56981e1fc1e1c,ec757540,* Added Firebase analytics and crash-reporting. (haven't yet confirmed that the…,"* Added Firebase analytics and crash-reporting. (haven't yet confirmed that the data shows online, though, since it has delay; no errors, though, so it's probably working)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488195767,1488195767,92d5353aa4b489c7eceafcce05bc90b14369e561
+92d5353aa4b489c7eceafcce05bc90b14369e561,92d5353a,* Fix logs-ui-not-updating and locked-into-logs-page issues,"* Fix logs-ui-not-updating and locked-into-logs-page issues
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488119330,1488119330,dd2c5f334f8bf7485861acada2b109513d547116
+dd2c5f334f8bf7485861acada2b109513d547116,dd2c5f33,* Fix detection of bluetooth connected/disconnected state.,"* Fix detection of bluetooth connected/disconnected state.
+* Started cleanup of LucidLink<>LucidLinkModule distinguishment.
+* Removed some more unneeded files.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1488115119,1488115119,dd55e42c5fa93b5b8b224fdc32999a7b1d45c7f9
+dd55e42c5fa93b5b8b224fdc32999a7b1d45c7f9,dd55e42c,"* FBA page first-coded, and not errorring on usage-start. (haven't yet tried…","* FBA page first-coded, and not errorring on usage-start. (haven't yet tried with actual sleep, i.e. triggering)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487979578,1487979578,aa8efc2dc34e758da50ba1d9346ce63c63e25720
+aa8efc2dc34e758da50ba1d9346ce63c63e25720,aa8efc2d,* Sleep sessions can now be displayed full-screen. : ),"* Sleep sessions can now be displayed full-screen. : )
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487978715,1487978715,bbe25570c24c687a8c23b9f0de7cf9d3269d0f8b
+bbe25570c24c687a8c23b9f0de7cf9d3269d0f8b,bbe25570,* Got chart and such working/looking fine again.,"* Got chart and such working/looking fine again.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487974962,1487974962,bc0ca4675057e23acce1080e29a262dc668d3504
+bc0ca4675057e23acce1080e29a262dc668d3504,bc0ca467,"* Reverted scrollable-tab-view to old, customized content (from repo directly I…","* Reverted scrollable-tab-view to old, customized content (from repo directly I think), and added to lucid-link repo. (since not reproducible from npm)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487973359,1487973359,bbd8d2416829c297f1057cbcadf1d4eea989555f
+bbd8d2416829c297f1057cbcadf1d4eea989555f,bbd8d241,"* Got app launching again; however, scroll-view background is white, and ui…","* Got app launching again; however, scroll-view background is white, and ui seems a bit slower than before.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487971154,1487971154,9cb25d5734d16d06949b34fcdd8f13c9dc378e8c
+9cb25d5734d16d06949b34fcdd8f13c9dc378e8c,9cb25d57,Quick backup before reinstalling all node-modules.,"Quick backup before reinstalling all node-modules.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487959924,1487959924,d3e1369643e77388346c1916b9289c735f9be913
+d3e1369643e77388346c1916b9289c735f9be913,d3e13696,Quick backup before updating React-Native to version with width/height percentage support.,"Quick backup before updating React-Native to version with width/height percentage support.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487923278,1487923278,45583827b9bff3fed3edea564b20f2e5bd940ec9
+45583827b9bff3fed3edea564b20f2e5bd940ec9,45583827,"* Fixed error during real-time ""sleep"" session.","* Fixed error during real-time ""sleep"" session.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487917068,1487917068,05dbd615ab41d3806f268b0a7454710c8479a339
+05dbd615ab41d3806f268b0a7454710c8479a339,05dbd615,* Real-time streams no longer record session-data.,"* Real-time streams no longer record session-data.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487916662,1487916662,c1c7dc9d6e2ab4b332436f01912bb2f989bb4e9d
+c1c7dc9d6e2ab4b332436f01912bb2f989bb4e9d,c1c7dc9d,Can't seem to get the sleep-results thing to work. (reliably at least) Oh well.…,"Can't seem to get the sleep-results thing to work. (reliably at least) Oh well. I'm just going to ignore that atm, since it's not important for the core function (rem-detection).
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487760619,1487760619,99946ef22259734fb234808e48bed6a85854b1a1
+99946ef22259734fb234808e48bed6a85854b1a1,99946ef2,* Reduced delay between sleep-stage updates to 30-seconds. (from 60 seconds)…,"* Reduced delay between sleep-stage updates to 30-seconds. (from 60 seconds) [this is as fast as the rm20jni lib will update its calculation -- once per 480-sample/30-second epoch]
+* Sleep-summary is now calculated and logged before stopping a session.
+* Added temp button to show sleep-summary without stopping session.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487757443,1487757443,650c7cb337bea6a6aaa91265b4077ccde37092cd
+650c7cb337bea6a6aaa91265b4077ccde37092cd,650c7cb3,"* Added bioBufferSize setting; however, I think I'm going to try using the…","* Added bioBufferSize setting; however, I think I'm going to try using the real-time stream now anyway, instead of the night-stream.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487736654,1487736654,3164da22c97794d3b5633299a84d0390d1fa1004
+3164da22c97794d3b5633299a84d0390d1fa1004,3164da22,"* Finally actually solved the not-stopping-voice-prompts issue, I'm 85% sure.…","* Finally actually solved the not-stopping-voice-prompts issue, I'm 85% sure. (listeners were not being cleared for when-x-minutes-into-sleep-stage-y, before re-applying scripts)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487615974,1487615974,e4cf0ef2868bf6ff6514e691e19b730021b7e488
+e4cf0ef2868bf6ff6514e691e19b730021b7e488,e4cf0ef2,* Container UI for FBA technique set up. Will make it actually functional in a…,"* Container UI for FBA technique set up. Will make it actually functional in a couple days, once I've worked out a good setup. (through script-based tests)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487553523,1487553523,5fc68658c20f3537434afa2a84bf1dff8fa93c19
+5fc68658c20f3537434afa2a84bf1dff8fa93c19,5fc68658,* Cleaned up Sequence construct.,"* Cleaned up Sequence construct.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487552620,1487552620,fe576de70c0ef866e5c65c52d1f59dcdee5bba50
+fe576de70c0ef866e5c65c52d1f59dcdee5bba50,fe576de7,* Add Sequence construct,"* Add Sequence construct
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487550302,1487550302,f4ed3264fbfa79ba1e711968509471da6bf8cbf2
+f4ed3264fbfa79ba1e711968509471da6bf8cbf2,f4ed3264,* Quick fix for bug.,"* Quick fix for bug.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487419149,1487419149,e1e4072984488a32ba18be2f091d5051d36a3bd0
+e1e4072984488a32ba18be2f091d5051d36a3bd0,e1e40729,* Sleep-graphs are now nice and pretty. :),"* Sleep-graphs are now nice and pretty. :)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487412918,1487412918,c76b7b70f176fa36b8b62f4da750f11712ad935a
+c76b7b70f176fa36b8b62f4da750f11712ad935a,c76b7b70,* Added very basic sleep-graph ui.,"* Added very basic sleep-graph ui.
+
+Next:
+* Improve sleep-graph ui.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487410400,1487410400,1bb13bc86a61e150e03b86f357385cb23404ae15
+1bb13bc86a61e150e03b86f357385cb23404ae15,1bb13bc8,"* Added recording of sleep-session data. (haven't tested it yet, though; and no graph for it yet)","* Added recording of sleep-session data. (haven't tested it yet, though; and no graph for it yet)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487402295,1487402295,dd60abb2a50549fb4bb7ead4b2527469852b2a77
+dd60abb2a50549fb4bb7ead4b2527469852b2a77,dd60abb2,"* Connect/disconnect with S+ now works reliably. (well, sometimes doesn't…","* Connect/disconnect with S+ now works reliably. (well, sometimes doesn't connect the first try, but now you can just disconnect and try again) [still may benefit from work on that ""reconnecting"" state doesn't seem to trigger an actual reconnect attempt)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487377337,1487377337,68713bda8d3c193193940376d0e7aa06a0a8ec8d
+68713bda8d3c193193940376d0e7aa06a0a8ec8d,68713bda,"* Added script-globals: WhenChangeSleepStageDo, WhenXMinutesIntoSleepStageYDo","* Added script-globals: WhenChangeSleepStageDo, WhenXMinutesIntoSleepStageYDo
+* Age and gender can now be set on the Settings page. (used to help in sleep-stage calculation)
+* Removed some not-very-useful logs.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487334611,1487334611,1bd66da78d0a01a6789af7613e3d939b563c1532
+1bd66da78d0a01a6789af7613e3d939b563c1532,1bd66da7,* S+ light now reliably changes based on connection state. (green for…,"* S+ light now reliably changes based on connection state. (green for connected/ready, off for stream active)
+* Connection, disconnection, and stream starting/stopping now working reliably. (stream stopping currently just occurs before disconnecting or starting a new stream)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487226757,1487226757,b39bc39670b0959a9af259584427ebb3e8944692
+b39bc39670b0959a9af259584427ebb3e8944692,b39bc396,* Simplified more.,"* Simplified more.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487215876,1487215876,1680bc26cf04c7e2359bdb20d4147be7a1bb7efe
+1680bc26cf04c7e2359bdb20d4147be7a1bb7efe,1680bc26,* BluetoothService simplified to no longer be a service. (just called to directly),"* BluetoothService simplified to no longer be a service. (just called to directly)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487215247,1487215247,dee8d9d0cd6a44744534ad2632e1a8f2b5c97272
+dee8d9d0cd6a44744534ad2632e1a8f2b5c97272,dee8d9d0,"* Backup before making ""bluetooth service"" not a real service. (for…","* Backup before making ""bluetooth service"" not a real service. (for simplicity/easier-communication)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487213073,1487213073,0349df1567d951fdbca96b41f05bdd63058f1927
+0349df1567d951fdbca96b41f05bdd63058f1927,0349df15,* Fixed bug in bio-data processor that caused the sleep-stage calculation to be way off.,"* Fixed bug in bio-data processor that caused the sleep-stage calculation to be way off.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487143319,1487143319,52fa9b9229424ccd27e8ebe6fb25fea27738fa36
+52fa9b9229424ccd27e8ebe6fb25fea27738fa36,52fa9b92,* Functional UI now set up for real-time and sleep-stage data retrieval! : ),"* Functional UI now set up for real-time and sleep-stage data retrieval! : )
+
+However, there's something wrong with the sleep-stage calculation; it often changes to rem-sleep, deep-sleep etc. as each minute passes.
+
+I think I see why in the code, and am about to try fixing.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487142405,1487142405,e9fbd9aa2fb952cb44f10e6d9ec1b3bd103aea0e
+e9fbd9aa2fb952cb44f10e6d9ec1b3bd103aea0e,e9fbd9aa,"* Sleep-stage values are now correctly mapped to their names/enums, and displayed as such in Toast.","* Sleep-stage values are now correctly mapped to their names/enums, and displayed as such in Toast.
+
+Next step: improve ui display of data (including new-there stuff like sleep-stage name and breathing-rate), and start cleaning up the monstrosity I pieced together.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487135231,1487135231,779bfd515165b8b1360c2a57cf240ecadae1565e
+779bfd515165b8b1360c2a57cf240ecadae1565e,779bfd51,* SUCCESS!!! I *finally* got the sleep-stage value to actually get calculated…,"* SUCCESS!!! I *finally* got the sleep-stage value to actually get calculated and displayed in UI/toast! (just start app, press ""Sleep"", wait a minute or so, then press ""Sleep stage"", and it'll display different values depending on as-you-go calculations!)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487133504,1487133504,0051d137c236018e50801ad3fefddc8e9b969f82
+0051d137c236018e50801ad3fefddc8e9b969f82,0051d137,* Fixed serialize-utils crashing.,"* Fixed serialize-utils crashing.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487127852,1487127852,af9e9a74538f2657ce1d762824c0e8429d2bbc23
+af9e9a74538f2657ce1d762824c0e8429d2bbc23,af9e9a74,"* Finally found and added enums in place of annoying numbers, for RefreshBluetoothService switches.","* Finally found and added enums in place of annoying numbers, for RefreshBluetoothService switches.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487126774,1487126774,a0ab35525b542352431b1c64641ac16b80959c54
+a0ab35525b542352431b1c64641ac16b80959c54,a0ab3552,Quick backup before replacing SPlusModule contents with that of SleepTrackFragment (basically).,"Quick backup before replacing SPlusModule contents with that of SleepTrackFragment (basically).
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487123842,1487123842,8da3edb3203ba9aed30c43893d10900f5e91738d
+8da3edb3203ba9aed30c43893d10900f5e91738d,8da3edb3,* Cut down on redundant logs/messages a bit.,"* Cut down on redundant logs/messages a bit.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487066669,1487066669,d8b71bcaf2d31c306593223f0bb709dcd6e3b354
+d8b71bcaf2d31c306593223f0bb709dcd6e3b354,d8b71bca,"* Data from the S+ is now shown in the UI! (the temp, light, and breath…","* Data from the S+ is now shown in the UI! (the temp, light, and breath values... still working on getting real sleep-stage values)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487064629,1487064629,bea976baab552150b7480ea9b3892e31a95bdefe
+bea976baab552150b7480ea9b3892e31a95bdefe,bea976ba,"* Added some buttons to S+ Monitor page. (Get stage, realtime, sleep)","* Added some buttons to S+ Monitor page. (Get stage, realtime, sleep)
+* Finally seems to be streaming actual breathing data from device. However, that breathing data is not currently getting transmitted to the higher-level functions where my code expects it (and in nice, understandable format instead of raw bytes).
+
+Will now do rest test to see if its just ignoring raw data because it doesn't sense body.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487058246,1487058246,40a8796a2c658f3e10ac39a87691969b4cbf3128
+40a8796a2c658f3e10ac39a87691969b4cbf3128,40a8796a,* Used better decompiler (JADX) to decompile the Bluetooth connect/connected…,"* Used better decompiler (JADX) to decompile the Bluetooth connect/connected threads/classes. Will maybe use it for other areas as well.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1487040187,1487040187,bcc7bd41a88dbcb520e590a7e9024b0eb2e7f58a
+bcc7bd41a88dbcb520e590a7e9024b0eb2e7f58a,bcc7bd41,"* Tried the easy things, and nope, they didn't work. Now need to look into the…","* Tried the easy things, and nope, they didn't work. Now need to look into the core of things tomorrow. (goodnight)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486976294,1486976294,3b68da94b7e516bbd3d46856642573167d921adc
+3b68da94b7e516bbd3d46856642573167d921adc,3b68da94,"* Pathway now manages to talk to the device a little -- however, it still…","* Pathway now manages to talk to the device a little -- however, it still doesn't send data. It's stuck in the ""SESSION_OPENING"" state.
+
+I'll have to look around some more; but not tonight. I've been up 24+ hours straight on this thing!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486975632,1486975632,47660e964abf75993d177852d696c8a1fd0ec09a
+47660e964abf75993d177852d696c8a1fd0ec09a,47660e96,* Cleaned things up some more.,"* Cleaned things up some more.
+
+Still has issue if not getting seemingly-real data.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486961623,1486961623,16b9189295872b8f7cd760bcbdc0e0f8efee74ec
+16b9189295872b8f7cd760bcbdc0e0f8efee74ec,16b91892,* Finally got the sleep-stage data coming from the device! At least... I think…,"* Finally got the sleep-stage data coming from the device! At least... I think it is. It hasn't actually changed its values from 3/65535, so it may in fact be waiting for some further setup.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486952797,1486952797,bfcfe246a8592a0c4a923eeae04de0a4bd7d3d40
+bfcfe246a8592a0c4a923eeae04de0a4bd7d3d40,bfcfe246,"* App now connects with the S+ device and makes its light turn green! However, that's all atm.","* App now connects with the S+ device and makes its light turn green! However, that's all atm.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486949728,1486949728,12f85a3c4e8a9544c9e5842e216bec396868e2b1
+12f85a3c4e8a9544c9e5842e216bec396868e2b1,12f85a3c,"* Launches without error, and has some (local) interaction with rm20jni library,…","* Launches without error, and has some (local) interaction with rm20jni library, but not actually connecting to S+ yet.
+* RefreshBluetoothService is launched alongside as well.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486939280,1486939280,9217c795ebed7a52c400caf613fed3add8e407ae
+9217c795ebed7a52c400caf613fed3add8e407ae,9217c795,"* Added S+ jar and so files, and got the pathway working up to the point of…","* Added S+ jar and so files, and got the pathway working up to the point of calling the native ""startupLibrary"" method. (it crashes from some native exception, perhaps because I pass in bad data)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486932827,1486932827,955bc8b4f9d1771f5d2d976363762569e994f7a0
+955bc8b4f9d1771f5d2d976363762569e994f7a0,955bc8b4,* The project compiles and launches again! (though crashes when it tries to connect to S+),"* The project compiles and launches again! (though crashes when it tries to connect to S+)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486931171,1486931171,8baa4c13953b456b0bd3ac3e96fcf4131c52fd89
+8baa4c13953b456b0bd3ac3e96fcf4131c52fd89,8baa4c13,* Removed a ton more files that weren't essential.,"* Removed a ton more files that weren't essential.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486925088,1486925088,6c9b39692c17b7d25a2c3bd6a0b7991f089b2462
+6c9b39692c17b7d25a2c3bd6a0b7991f089b2462,6c9b3969,"* Removed a lot of not-going-to-be-used things. (audio player, ui stuff, advice, server link, etc.)","* Removed a lot of not-going-to-be-used things. (audio player, ui stuff, advice, server link, etc.)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486920995,1486920995,c4ff97fe938507d7590e9b8340dc6f410da5bcfc
+c4ff97fe938507d7590e9b8340dc6f410da5bcfc,c4ff97fe,* Removed DAO stuff.,"* Removed DAO stuff.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486919576,1486919576,64ad68a76ea86df2fd9f3df5b71419128f7e6304
+64ad68a76ea86df2fd9f3df5b71419128f7e6304,64ad68a7,"* For parts removed from resmed source, added back to jar. (maybe bad, at least…","* For parts removed from resmed source, added back to jar. (maybe bad, at least for ui, since we really won't be using it)
+
+Backup before probably removing database stuff from resmed code.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486916374,1486916374,fa6df66fb42e488783570a6cf919c259c438e839
+fa6df66fb42e488783570a6cf919c259c438e839,fa6df66f,* Chugging along.,"* Chugging along.
+
+Backup before trying to remove the resmed folders other than ""refresh"" and ""rm20"".
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486914878,1486914878,2d7e56dd043c380f004d5581f4a6e1525d929274
+2d7e56dd043c380f004d5581f4a6e1525d929274,2d7e56dd,* Chugging along.,"* Chugging along.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486911129,1486911129,1438be6af840cdefb54bf7e2bd802f54026f04ac
+1438be6af840cdefb54bf7e2bd802f54026f04ac,1438be6a,* Starting decompile/integration. (currently only worked on resmed's…,"* Starting decompile/integration. (currently only worked on resmed's SleepSessionManager, RstEdfMetaData, RefreshBluetoothServiceClient, and Connection_State files, I believe)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486909107,1486909107,562c1162f63dacdfdb98b5f00426b4511938a4f8
+562c1162f63dacdfdb98b5f00426b4511938a4f8,562c1162,"Backup before giving up on jar approach, and just decompiling it all.","Backup before giving up on jar approach, and just decompiling it all.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486906541,1486906541,254f4895957150fc2affe18c9d7123436d6acdb1
+254f4895957150fc2affe18c9d7123436d6acdb1,254f4895,* Backup before trying to use javassist.,"* Backup before trying to use javassist.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486904856,1486904856,e1b99b78e49588dc4cae8f4d07339fa367a0770a
+e1b99b78e49588dc4cae8f4d07339fa367a0770a,e1b99b78,"* Seems to finally compile again from AndroidStudio, with S+ jar. We'll see if…","* Seems to finally compile again from AndroidStudio, with S+ jar. We'll see if that keeps up, and if using code works.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486902564,1486902564,8d8adf83cd1bb109df6d83076f27ad49b1eab932
+8d8adf83cd1bb109df6d83076f27ad49b1eab932,8d8adf83,* Minor improvements.,"* Minor improvements.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486716413,1486716413,71b0ec6a0bf56587049f14aa53076e5a48da4ac7
+71b0ec6a0bf56587049f14aa53076e5a48da4ac7,71b0ec6a,"Oops, forgot mod to node-module file.","Oops, forgot mod to node-module file.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486714355,1486714355,32af39dfb3b729110d3585460cd30dc89a417781
+32af39dfb3b729110d3585460cd30dc89a417781,32af39df,"* Added fancy global-draft system, letting you just type during the night, and…","* Added fancy global-draft system, letting you just type during the night, and it records the text without having keyboard focus in any text box. (letting you then save it into an actual dream journal entry in the morning)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486714294,1486714294,05085b4949ebfdbc9d4064adc822359eddb1254e
+05085b4949ebfdbc9d4064adc822359eddb1254e,05085b49,* Updated version.,"* Updated version.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486328276,1486328276,f3e349dd59a73a71f5408e05eb15b33173e862d6
+f3e349dd59a73a71f5408e05eb15b33173e862d6,f3e349dd,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486324305,1486324305,f98a5f651fdc2351d4b5315d9757fbed17b40540
+f98a5f651fdc2351d4b5315d9757fbed17b40540,f98a5f65,* Fixed that app would crash on Android 6+. (write access requires permission granting),"* Fixed that app would crash on Android 6+. (write access requires permission granting)
+* Fixed crash when toggling dream ""lucid"" option.
+* Added link to app Play Store download page.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486324081,1486324081,f51feafc53334b26a29123ed240f0db52e4160a1
+f51feafc53334b26a29123ed240f0db52e4160a1,f51feafc,* First version uploaded to Google Play!,"* First version uploaded to Google Play!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486209374,1486209374,bf54834b8bf6a5fa97ec85198a04f19aa68b7725
+bf54834b8bf6a5fa97ec85198a04f19aa68b7725,bf54834b,* Backup before trying different approach of fixing switch-from-monitor-page-to-tracker crash.,"* Backup before trying different approach of fixing switch-from-monitor-page-to-tracker crash.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486199032,1486199032,cfe37f40f4d5dc983a4195e26363f0d1f844ff33
+cfe37f40f4d5dc983a4195e26363f0d1f844ff33,cfe37f40,* Finally fixed function-names-being-stripped issue. (https://github.com/Venryx/LucidLink/issues/2),"* Finally fixed function-names-being-stripped issue. (https://github.com/Venryx/LucidLink/issues/2)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486188713,1486188713,ee0ac60574d8ff31305d2711bbe7c929da5fb9ce
+ee0ac60574d8ff31305d2711bbe7c929da5fb9ce,ee0ac605,"* Added tiny fix to lodash file, for prod build js error. (possibly caused by…","* Added tiny fix to lodash file, for prod build js error. (possibly caused by function-name stripping, which I'm working on removing now)
+
+[note that actual fix came from applying same change to all the other lodash file matches in the directory tree, but I didn't know which one mattered, so only checked in this root entry]
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486185481,1486185481,5bf0f48640a620e0a5fb7c2426c6e2068e963b6f
+5bf0f48640a620e0a5fb7c2426c6e2068e963b6f,5bf0f486,* App now works from fresh launch. (ie without existing data),"* App now works from fresh launch. (ie without existing data)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486183517,1486183517,f50fa423b5eb4386fdbb66f141ad125afd6d1871
+f50fa423b5eb4386fdbb66f141ad125afd6d1871,f50fa423,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486177647,1486177647,d9cd4beae5da7d70018daeadc32a088293e8ff7a
+d9cd4beae5da7d70018daeadc32a088293e8ff7a,d9cd4bea,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486174978,1486174978,a809dd515b63de56319efb9a6227c0975d314045
+a809dd515b63de56319efb9a6227c0975d314045,a809dd51,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486174936,1486174936,ba621fb077583683d4f52d3fe53e8dcac27e08b9
+ba621fb077583683d4f52d3fe53e8dcac27e08b9,ba621fb0,* RVP Technique UI added!,"* RVP Technique UI added!
+* Cleaned up some ui-components stuff.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486172942,1486172942,903861b7525c4c12351271c098c2ce0b29fa7dd1
+903861b7525c4c12351271c098c2ce0b29fa7dd1,903861b7,* SettingsUI code greatly shortened by making NumberPicker component.,"* SettingsUI code greatly shortened by making NumberPicker component.
+* Made panel for RVP (random voice prompt) tool.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1486162155,1486162155,5143857c382bef10f27071dc4942c0ef49d95558
+5143857c382bef10f27071dc4942c0ef49d95558,5143857c,* VDF library is now imported as its source ts files. : D   (so full…,"* VDF library is now imported as its source ts files. : D   (so full intellisense support, as well as interacting with it almost fully modulized)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483297849,1483297849,6ade35fbfefbe0e6fbbfdd12635820005359ca12
+6ade35fbfefbe0e6fbbfdd12635820005359ca12,6ade35fb,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483243861,1483243861,4c422ee7d3806603ef20f8d87dd639a5bf548dff
+4c422ee7d3806603ef20f8d87dd639a5bf548dff,4c422ee7,* Fixed that creating a new script does not update the script-list right away,"* Fixed that creating a new script does not update the script-list right away
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483120278,1483120278,67e466689850be4142c4e95f6da7bc0cc0ac60a5
+67e466689850be4142c4e95f6da7bc0cc0ac60a5,67e46668,* Small fix to icons.,"* Small fix to icons.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483119302,1483119302,802f0d871928977ee942e760d24ddb2161def0ec
+802f0d871928977ee942e760d24ddb2161def0ec,802f0d87,"* Updated icon to have less padding. (2px less on each side, for mdpi (48x48) one)","* Updated icon to have less padding. (2px less on each side, for mdpi (48x48) one)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483118131,1483118131,3c15855c208d73c19e6c7ee48fdb11b70de9f68f
+3c15855c208d73c19e6c7ee48fdb11b70de9f68f,3c15855c,* Added keep-screen-on setting,"* Added keep-screen-on setting
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483106142,1483106142,e102bee91081b865c3d6a86c5cdf40d141350d87
+e102bee91081b865c3d6a86c5cdf40d141350d87,e102bee9,* Added app icon!,"* Added app icon!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1483104798,1483104798,9454ee5d9300643f8f4e19f6ce91cc3075f0efa9
+9454ee5d9300643f8f4e19f6ce91cc3075f0efa9,9454ee5d,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482938892,1482938892,3512f1788a193d9e56c3e0b15b6292e25b9bd4d8
+3512f1788a193d9e56c3e0b15b6292e25b9bd4d8,3512f178,* Get Tracker>Graph>Refresh button actually working,"* Get Tracker>Graph>Refresh button actually working
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482938592,1482938592,0ff0d3ee12285f07427771ab4c3bf2102908192d
+0ff0d3ee12285f07427771ab4c3bf2102908192d,0ff0d3ee,* Fixed that the graph-overlay would not reliably offset the event-labels to not…,"* Fixed that the graph-overlay would not reliably offset the event-labels to not intersect each other.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482938360,1482938360,ba5a502e0ff11b30956f1277412a56b46e5377f3
+ba5a502e0ff11b30956f1277412a56b46e5377f3,ba5a502e,* Current session is now saved periodically (according to new…,"* Current session is now saved periodically (according to new sessionSaveInterval setting), as well as just before app-leave.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482936577,1482936577,275bbcc0bf67f630722ebdbbae141de0ec31cb80
+275bbcc0bf67f630722ebdbbae141de0ec31cb80,275bbcc0,"* Added ""AddEventRow"" and ""AddEventOverlay"" methods for use in displayer scripts.","* Added ""AddEventRow"" and ""AddEventOverlay"" methods for use in displayer scripts.
+* Basic graph event-rows are now working!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482934789,1482934789,efb78d81467902f24f9b5f3b06cc7c1f276273ce
+efb78d81467902f24f9b5f3b06cc7c1f276273ce,efb78d81,* Cleaned up some ui classes by using mobx instead of callbacks and forceupdate.,"* Cleaned up some ui classes by using mobx instead of callbacks and forceupdate.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482917701,1482917701,a0b0252e3217b976c840d6a0faacdf7cc259bc7d
+a0b0252e3217b976c840d6a0faacdf7cc259bc7d,a0b0252e,"* Added ""Clear empty"" button to Tracker>List panel","* Added ""Clear empty"" button to Tracker>List panel
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482916251,1482916251,5433a7777b06a88ec753c1c61fbbe6b87d968e97
+5433a7777b06a88ec753c1c61fbbe6b87d968e97,5433a777,* Switched to using the react-native-background-timer module for timers. (since…,"* Switched to using the react-native-background-timer module for timers. (since can work in background--seemingly, the built-in react-native setInterval does not, from couple nights of usage and logging)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482912387,1482912387,85b77646e03938b10cf7cccd8fbf5d036867deb2
+85b77646e03938b10cf7cccd8fbf5d036867deb2,85b77646,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482738796,1482738796,2cccaa864bf0660055d470d28330377a37e2a4cb
+2cccaa864bf0660055d470d28330377a37e2a4cb,2cccaa86,* Added reconnectAttemptInterval setting. (which is really helpful for keeping…,"* Added reconnectAttemptInterval setting. (which is really helpful for keeping device connected while asleep or the like)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482738574,1482738574,5cd0fa9be2b30b5233a6bd6d4d8cce4006001e19
+5cd0fa9be2b30b5233a6bd6d4d8cce4006001e19,5cd0fa9b,* Fixed some issues with AudioFile class.,"* Fixed some issues with AudioFile class.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482735622,1482735622,e2f70aaf72a1985dc34a681b5d2a79c61865cddf
+e2f70aaf72a1985dc34a681b5d2a79c61865cddf,e2f70aaf,"* Switched ScriptRunner to use eval to make globals directly accessible, instead…","* Switched ScriptRunner to use eval to make globals directly accessible, instead of ""with"" statement. (done so that code in a ""function something()"" declaration can use the names directly as well)
+* Added CreateTimer function, which creates a timer that will automatically be removed when scripts are re-applied.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482734516,1482734516,b0001ab76eef94234ebf0017df57d742d596afc8
+b0001ab76eef94234ebf0017df57d742d596afc8,b0001ab7,* Fixed that app would sometimes crash if Reload is pressed while still loading.,"* Fixed that app would sometimes crash if Reload is pressed while still loading.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482732813,1482732813,b8b5d9d6ffb3c1c29576b434beb7496832efdc12
+b8b5d9d6ffb3c1c29576b434beb7496832efdc12,b8b5d9d6,* Added WhenChangeMuseConnectStatus script-globals func.,"* Added WhenChangeMuseConnectStatus script-globals func.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482732591,1482732591,fda2906817f82e36cb7a0295953ae8ac8c07f230
+fda2906817f82e36cb7a0295953ae8ac8c07f230,fda29068,* AudioFile Play() returns self now. (for chaining),"* AudioFile Play() returns self now. (for chaining)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482731293,1482731293,20435eefa3ab0aa3c79162ef3746d060d3f5e571
+20435eefa3ab0aa3c79162ef3746d060d3f5e571,20435eef,"* Log-stats-every-x-minutes setting now works. (for now, just logs the memory…","* Log-stats-every-x-minutes setting now works. (for now, just logs the memory usage and total for app)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482730859,1482730859,a0d8c67798a52f165af97325bf6a27f8dc15eade
+a0d8c67798a52f165af97325bf6a27f8dc15eade,a0d8c677,* Package name changed to v.lucidlink.,"* Package name changed to v.lucidlink.
+* SetNumConnectTries is now called (passing 1000), on connection-status change.
+* Added logStatsEveryXMinutes setting. (though not yet used)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482729389,1482729389,b13d5e55c8b9738e664c717c57dc30dcc52ea999
+b13d5e55c8b9738e664c717c57dc30dcc52ea999,b13d5e55,* Added AddVolume function.,"* Added AddVolume function.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482668587,1482668587,7bf36f7038424e999585d3403c4bcdd064c0c1ba
+7bf36f7038424e999585d3403c4bcdd064c0c1ba,7bf36f70,* Disabled back-button,"* Disabled back-button
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482666852,1482666852,03093ac1b820e7d010b80a2053d135478571bb2b
+03093ac1b820e7d010b80a2053d135478571bb2b,03093ac1,* Removed tab-widening system. (doesn't work reliably yet),"* Removed tab-widening system. (doesn't work reliably yet)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482664817,1482664817,01e31ce0b7452b5154b885db51c0841de56642b3
+01e31ce0b7452b5154b885db51c0841de56642b3,01e31ce0,Removed remnants (eg ui) of old pattern system.,"Removed remnants (eg ui) of old pattern system.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482591979,1482591979,67ab845f06f362f5da149462ce47d375fdc10bf0
+67ab845f06f362f5da149462ce47d375fdc10bf0,67ab845f,* Glance and blink detection now work really well!,"* Glance and blink detection now work really well!
+* Script defaults updated to demo code.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482591132,1482591132,da5c5ff630a744adff754eba14da65aeb66b5b72
+da5c5ff630a744adff754eba14da65aeb66b5b72,da5c5ff6,* Left-right eye pattern matching works really well!,"* Left-right eye pattern matching works really well!
+* Improved performance of pattern-matching enough to be usable! Finally ready on my device! (probably not on lower-end tablets (or phones) yet though)
+* Added custom-patterns script.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482583766,1482583766,efedbcc3d2929a997be7805193d631c295327f42
+efedbcc3d2929a997be7805193d631c295327f42,efedbcc3,* MS profiler rows have correct height. (50 pixels),"* MS profiler rows have correct height. (50 pixels)
+* MS profiler ui shows real data again.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482574299,1482574299,4c2dbc0f8d6d02d08c67ae433ea6e54864cd1ea5
+4c2dbc0f8d6d02d08c67ae433ea6e54864cd1ea5,4c2dbc0f,* Profiler ui finally shows actual profiler data. (though currently terribly...…,"* Profiler ui finally shows actual profiler data. (though currently terribly... it squashes them all into the visible screen height)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482502062,1482502062,9caccf5d7a12ec34f7efe9fa39df491f51ba9013
+9caccf5d7a12ec34f7efe9fa39df491f51ba9013,9caccf5d,* Got ridiculously basic profiler-ui working.,"* Got ridiculously basic profiler-ui working.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482501261,1482501261,27c51a0e99d0dd9d6e4dcfc131f144a65ab022f0
+27c51a0e99d0dd9d6e4dcfc131f144a65ab022f0,27c51a0e,"* Make ScriptGlobals not real globals (instead, import from ScriptGlobals file,…","* Make ScriptGlobals not real globals (instead, import from ScriptGlobals file, then each scripts-application: for each prop, add code to the eval string that grabs its value into a local variable).
+* Profiler button can be pushed without errorring, though doesn't actually succeed in showing anything yet.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482490985,1482490985,e8f08f4c45920d745523a34bb6be417150e98997
+e8f08f4c45920d745523a34bb6be417150e98997,e8f08f4c,* Profiler ui first-coded.,"* Profiler ui first-coded.
+* React native components now use BaseComponent<T, T2> base, letting them specify their props and state contents.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482485548,1482485548,299cf3045b8caddd4919558945e9efe308b5dccb
+299cf3045b8caddd4919558945e9efe308b5dccb,299cf304,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482403965,1482403965,0040c584e21e2444c5c8a971492e529efb8b6a77
+0040c584e21e2444c5c8a971492e529efb8b6a77,0040c584,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482403945,1482403945,0cd34c5fdfc5abdb9c639f08694cffc7e0660a07
+0cd34c5fdfc5abdb9c639f08694cffc7e0660a07,0cd34c5f,* Brought type-safety to the LL main-tree. : ),"* Brought type-safety to the LL main-tree. : )
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482403884,1482403884,c73d637b39db43f538cf827b662caaa62f811a7f
+c73d637b39db43f538cf827b662caaa62f811a7f,c73d637b,"* Program all working again, using TypeScript!","* Program all working again, using TypeScript!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482401627,1482401627,8ce19f49ac0b9662493a22f60f7604c41db1d738
+8ce19f49ac0b9662493a22f60f7604c41db1d738,8ce19f49,* Fixed nasty LibMuse NativeModules bug.,"* Fixed nasty LibMuse NativeModules bug.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482400980,1482400980,b19cb9b11c0f787491629bf9cd519447e18b6dc3
+b19cb9b11c0f787491629bf9cd519447e18b6dc3,b19cb9b1,* Got the UI mostly working again.,"* Got the UI mostly working again.
+
+Next:
+* Fix the lib-muse native-module issue!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482399388,1482399388,b1cdea3da57f355cf5529a64945812281c0f1ee3
+b1cdea3da57f355cf5529a64945812281c0f1ee3,b1cdea3d,Backup before trying going all-in to module approach. (rather than having…,"Backup before trying going all-in to module approach. (rather than having globals) [prompted in part by discovery of auto-import extensions]
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482328179,1482328179,93ffbf6240d59888ff1cd3d8da0f03d9536825ad
+93ffbf6240d59888ff1cd3d8da0f03d9536825ad,93ffbf62,Backup before trying the TypeScript auto-imports extensions. (and such),"Backup before trying the TypeScript auto-imports extensions. (and such)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482274287,1482274287,21af8e009e1c36fe5347e815d074180c794e5f1a
+21af8e009e1c36fe5347e815d074180c794e5f1a,21af8e00,"* Tried Flow. Seems nice, but vs-code extensions for it are too slow/buggy...","* Tried Flow. Seems nice, but vs-code extensions for it are too slow/buggy...
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482264679,1482264679,9733201223079c7ea4b511fb836ec55cca73edae
+9733201223079c7ea4b511fb836ec55cca73edae,97332012,* Started evaluation of TypeScript.,"* Started evaluation of TypeScript.
+
+Now going to try Facebook's Flow.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482253596,1482253596,9d82478037198e2d30589028fb5e01c625aa6934
+9d82478037198e2d30589028fb5e01c625aa6934,9d824780,* Backup before trying typescript.,"* Backup before trying typescript.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482240494,1482240494,41d0b749b622d655de1d57b1a3844415918d6a9a
+41d0b749b622d655de1d57b1a3844415918d6a9a,41d0b749,"* Fixed eeg mess-up every x frames, by removing old pattern-matching code.…","* Fixed eeg mess-up every x frames, by removing old pattern-matching code. (should remove the ui for it soon too)
+* Fixed that the chart wouldn't display on startup.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482215058,1482215058,e8508935e0780066c13289a273f7c9cebf442eb0
+e8508935e0780066c13289a273f7c9cebf442eb0,e8508935,* Performance seemingly improved... simply by moving the three funcs into a…,"* Performance seemingly improved... simply by moving the three funcs into a Packet class? Sounds odd, but appears to be the case.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482214715,1482214715,caac76431e8d94f2c8c5da144c5a67a32bafeea0
+caac76431e8d94f2c8c5da144c5a67a32bafeea0,caac7643,"* Framerate with pattern-matching enabled increased to ~30fps, by only…","* Framerate with pattern-matching enabled increased to ~30fps, by only rerendering chart every 50 packets.
+* Fixed that script text-view would not apply tab-fixing to initial text.
+
+Next focus is on JS pattern-matching slowdown. (currently the JS thread is running continuously, probably dropping packets)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482212898,1482212898,eb56b81d2e641ff1d189e96340a22d8aa7fd90fa
+eb56b81d2e641ff1d189e96340a22d8aa7fd90fa,eb56b81d,* Improved performance by having the debug-text ui only update 10 times per second.,"* Improved performance by having the debug-text ui only update 10 times per second.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482205751,1482205751,519960fc97757d20353ac3be38698b223e34ab9e
+519960fc97757d20353ac3be38698b223e34ab9e,519960fc,* Updated doc.,"* Updated doc.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482140626,1482140626,5b4de9cbd3dbfc6e89c3a94eb6e8930d42d9c42f
+5b4de9cbd3dbfc6e89c3a94eb6e8930d42d9c42f,5b4de9cb,* The main pathway for the new match-func pattern-matching system seems to be…,"* The main pathway for the new match-func pattern-matching system seems to be working... though I can't be sure because: the performance is so bad!
+* Baseline data sent to js as well.
+* Pattern onEnd func added.
+
+Next step:
+* Performance probably.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482140163,1482140163,8a3663364c978115080a128e4931132e0c1ac448
+8a3663364c978115080a128e4931132e0c1ac448,8a366336,"* Added Notify function, as an alternative to Toast.","* Added Notify function, as an alternative to Toast.
+* First segment is getting matched... but not those after yet.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482137542,1482137542,e7f9b39e6791b8f8ac9fa68c17a44895edaace41
+e7f9b39e6791b8f8ac9fa68c17a44895edaace41,e7f9b39e,* Added minStartInterval prop.,"* Added minStartInterval prop.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482131040,1482131040,02823d8fd0e863ab735566cadd61daaca79da2fe
+02823d8fd0e863ab735566cadd61daaca79da2fe,02823d8f,* Entering a space at the start of a line in a script text-input now inserts a…,"* Entering a space at the start of a line in a script text-input now inserts a tab instead. (and those tabs are correctly sized)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482128576,1482128576,ed4837dd61173eafa50501c54d6cea00051e2874
+ed4837dd61173eafa50501c54d6cea00051e2874,ed4837dd,* First-coded the match-func pattern system.,"* First-coded the match-func pattern system.
+* Fixed that dream time could not be changed.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482122112,1482122112,30c8c9e2535b1ac5a1c011228337affccfa75cbd
+30c8c9e2535b1ac5a1c011228337affccfa75cbd,30c8c9e2,* Updated some setting defaults.,"* Updated some setting defaults.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482060397,1482060397,8b76138d96e9e5cc03751cab4aa458fa040a8b9d
+8b76138d96e9e5cc03751cab4aa458fa040a8b9d,8b76138d,* Updated match-func doc.,"* Updated match-func doc.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482060301,1482060301,22cd2019a7af892ea6dda549be5373caf573dcb0
+22cd2019a7af892ea6dda549be5373caf573dcb0,22cd2019,* Sensitivity range changed.,"* Sensitivity range changed.
+* Baseline calculation system changed to a compromise between the median and average approaches.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482060132,1482060132,6fa91d76fc40bc9201a98b06c230d221d3050677
+6fa91d76fc40bc9201a98b06c230d221d3050677,6fa91d76,* Added setting: eyeTracker_offScreenGravity,"* Added setting: eyeTracker_offScreenGravity
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482056782,1482056782,77c8c7dc0f0fc431335a2714a324a86af2331175
+77c8c7dc0f0fc431335a2714a324a86af2331175,77c8c7dc,"* Went back to old baseline system that reduces drift. (however, is also a bit…","* Went back to old baseline system that reduces drift. (however, is also a bit less accurate the rest of the time)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482054830,1482054830,bed1dcb192067183b3201e5000c0d18eb360a731
+bed1dcb192067183b3201e5000c0d18eb360a731,bed1dcb1,"* Using big-decimal, which sseems to slow problem but not solve it.","* Using big-decimal, which sseems to slow problem but not solve it.
+
+I think I can solve it by going back to median approach.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482052888,1482052888,60709aafc8ca3928011ad4217f024b698c3e47fc
+60709aafc8ca3928011ad4217f024b698c3e47fc,60709aaf,Quick backup before switching to BigDecimal.,"Quick backup before switching to BigDecimal.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482051167,1482051167,98bb17119cb03b528682d4dd1703840f5d696d30
+98bb17119cb03b528682d4dd1703840f5d696d30,98bb1711,* View direction and distance is now sent to JS.,"* View direction and distance is now sent to JS.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482050126,1482050126,afbc99633c2a515d9048946aa13e5fb7abcd7f0f
+afbc99633c2a515d9048946aa13e5fb7abcd7f0f,afbc9963,* Cleaned up muse-data transfer system.,"* Cleaned up muse-data transfer system.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482044839,1482044839,56cae4c016aa90bb8ba5a36b60ca0c4c80ec21ce
+56cae4c016aa90bb8ba5a36b60ca0c4c80ec21ce,56cae4c0,* Add toggles for which channels to show,"* Add toggles for which channels to show
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1482022964,1482022964,3942ee37729e3881fa0aa29467d7818bb992da0e
+3942ee37729e3881fa0aa29467d7818bb992da0e,3942ee37,* Added basic view-distance bar.,"* Added basic view-distance bar.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481970556,1481970556,5a83e19eb5fca15ce41b37a46b3ec2770d603048
+5a83e19eb5fca15ce41b37a46b3ec2770d603048,5a83e19e,* FINALLY managed to get the mp-android-chart (which isn't react-native) to play…,"* FINALLY managed to get the mp-android-chart (which isn't react-native) to play nice (ie layout properly) within the react-native hierarchy. (this also means the side-panel finally shows over the chart now!)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481965885,1481965885,66994b6237a015c4f63a780e4a79e6d51d6e8d98
+66994b6237a015c4f63a780e4a79e6d51d6e8d98,66994b62,* Baseline estimation seems to have been slightly improved by using simpler averaging approach.,"* Baseline estimation seems to have been slightly improved by using simpler averaging approach.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481866042,1481866042,42d84fc8ff549d4bfe589633f29e14bcbb434e5f
+42d84fc8ff549d4bfe589633f29e14bcbb434e5f,42d84fc8,* Y adjustment back to old way.,"* Y adjustment back to old way.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481864756,1481864756,f71afb22217a9946723364ad1a3c6b4985df03e4
+f71afb22217a9946723364ad1a3c6b4985df03e4,f71afb22,* MS adjuster for x-pos good enough for first version.,"* MS adjuster for x-pos good enough for first version.
+
+Next step:
+* Make adjuster for y-pos.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481863293,1481863293,3520b8671d44cd46abcdd7acf7f4d52d5cadc212
+3520b8671d44cd46abcdd7acf7f4d52d5cadc212,3520b867,Backup before simplifying last-n-segments system to just last-n-positions.,"Backup before simplifying last-n-segments system to just last-n-positions.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481861413,1481861413,b3ff94735bd271f19e6cc1e2f1a677cb9ea0d117
+b3ff94735bd271f19e6cc1e2f1a677cb9ea0d117,b3ff9473,Update README.md,Update README.md,,,,Stephen Wicklund,Venryx@users.noreply.github.com,GitHub,noreply@github.com,1481789152,1481789152,2acdfd468a1437876eccce947b20fd1c0813a781
+2acdfd468a1437876eccce947b20fd1c0813a781,2acdfd46,* Eye-tracking system works pretty well. It's good enough for the initial version.,"* Eye-tracking system works pretty well. It's good enough for the initial version.
+* Designed match-func pattern system in info doc.
+
+Next step:
+* Clean up and package all the new stuff nicely. (separate view-distance ui, recording system, etc.)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481788769,1481788769,a458804f4b9c94bf393e82f06dd744115d865dee
+a458804f4b9c94bf393e82f06dd744115d865dee,a458804f,"* Precise/preserving approach tried, and doesn't seem to work well.","* Precise/preserving approach tried, and doesn't seem to work well.
+
+Now trying simpler approach. (to separate left-right movements from close-far movements)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481784428,1481784428,0ef5ace41a5f7abc89d1f8567f23932a9960edd2
+0ef5ace41a5f7abc89d1f8567f23932a9960edd2,0ef5ace4,I think I know why the eye-tracker y-pos kept getting shifted:,"I think I know why the eye-tracker y-pos kept getting shifted:
+
+moving left/right does not cause one side to mirror the other side, because the negativity of one side is just the ""relaxing"" of the outer muscle--and the relaxation amount is less than the tensing amount of the other side.
+
+So it sees the left/right as having a net positive result, causing my naive code to think the eye was looking up some.
+
+See here for illustration of eye muscles: http://www.innerbody.com/image/nerv08.html
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481703364,1481703364,85e41faa34f791062f8aa071572ba77c146f7089
+85e41faa34f791062f8aa071572ba77c146f7089,85e41faa,* Tried approach-2 again.,"* Tried approach-2 again.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481681203,1481681203,9dca79a9c056a0828a56eb9f1feaaaf6f2bcbee3
+9dca79a9c056a0828a56eb9f1feaaaf6f2bcbee3,9dca79a9,* Tried adding ch1VSch2 compensation system. It might be helping--not sure.,"* Tried adding ch1VSch2 compensation system. It might be helping--not sure.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481680237,1481680237,6f524a727389f726b8c68e94e39425fc073aceae
+6f524a727389f726b8c68e94e39425fc073aceae,6f524a72,"* More organic approach used again, working okay.","* More organic approach used again, working okay.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481673015,1481673015,578d444c1ab79a1e8cb4efde70ad8ff6127eb21a
+578d444c1ab79a1e8cb4efde70ad8ff6127eb21a,578d444c,"* Eye tracking kind of working with extent-only approach. (fixed main issue,…","* Eye tracking kind of working with extent-only approach. (fixed main issue, which was low sample rate)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481667362,1481667362,e0621bb5b49fd44cff6b3d05a8a0c526e60f49f5
+e0621bb5b49fd44cff6b3d05a8a0c526e60f49f5,e0621bb5,* Working on eye-tracking...,"* Working on eye-tracking...
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481510249,1481510249,097b6b3ceee6d804f1ce064ba273b474d2a6f837
+097b6b3ceee6d804f1ce064ba273b474d2a6f837,097b6b3c,* Fixed that monitor chart would not load at launch.,"* Fixed that monitor chart would not load at launch.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481280092,1481280092,fba81466a0c55eae0aca7aa5e8c49aee67e36baf
+fba81466a0c55eae0aca7aa5e8c49aee67e36baf,fba81466,* Fixed that the file-picker for audio files wasn't working.,"* Fixed that the file-picker for audio files wasn't working.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481249078,1481249078,5549d287924c22958636539031292b46e47a5489
+5549d287924c22958636539031292b46e47a5489,5549d287,* MS EEG-data is sent to JS again.,"* MS EEG-data is sent to JS again.
+* Added museEEGPacketBufferSize setting.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481245462,1481245462,7e9195062ae73d099f1c0202d0efbbba180a9c0e
+7e9195062ae73d099f1c0202d0efbbba180a9c0e,7e919506,* Created Tracker>Graph UI! Currently only shows: events. Number of days/rows to…,"* Created Tracker>Graph UI! Currently only shows: events. Number of days/rows to show is customizable.
+* Fixed that the selected script and displayer-script were not persisted between sessions.
+* Fixed that Console panel errors would fail to show. (g.HandleError was not resolving)
+* MS Settings>Patterns graphs have dark background.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481080937,1481080937,11e5365c794ff50fd641706bc70f643006f8ca11
+11e5365c794ff50fd641706bc70f643006f8ca11,11e5365c,* MS events can be added from scripts. (and seen in Tracker>List ui),"* MS events can be added from scripts. (and seen in Tracker>List ui)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481049014,1481049014,4b11ab5ebb3fd05c06a2fe970cf99207d317c100
+4b11ab5ebb3fd05c06a2fe970cf99207d317c100,4b11ab5e,* Tracker>List ui built.,"* Tracker>List ui built.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1481046099,1481046099,f91a3d61457ae6a8c0509368a627cc4d9f4b2f2a
+f91a3d61457ae6a8c0509368a627cc4d9f4b2f2a,f91a3d61,* MobX now used as Change/Observer/Listener system. (equivalent to Node system…,"* MobX now used as Change/Observer/Listener system. (equivalent to Node system in my BD project, although with even less boilerplate)
+* Work on Tracker page started. (DisplayerScripts panel working)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480936394,1480936394,12386e0e79a8a30f1a350b79db0931bbac5d59dc
+12386e0e79a8a30f1a350b79db0931bbac5d59dc,12386e0e,"Backup before trying to add Redux, for the DisplayerScripts portion of the app.","Backup before trying to add Redux, for the DisplayerScripts portion of the app.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480908709,1480908709,242faae9057f8affd9a10eb3df5123f77bde1d15
+242faae9057f8affd9a10eb3df5123f77bde1d15,242faae9,* Added working Dream Journal tab/page/panel/feature!,"* Added working Dream Journal tab/page/panel/feature!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480835204,1480835204,092693bd66596612898c23ed5a1366e396bc701e
+092693bd66596612898c23ed5a1366e396bc701e,092693bd,* Fixed the IsPlaying function.,"* Fixed the IsPlaying function.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480807653,1480807653,515a6382e88308c0ca7b66e533a20714a8b91698
+515a6382e88308c0ca7b66e533a20714a8b91698,515a6382,"* Monitor chart is now twice as sensitive to changes, i.e. it's y-scale is 2x…","* Monitor chart is now twice as sensitive to changes, i.e. it's y-scale is 2x prior. (don't worry, this will be customizable later)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480732524,1480732524,3316b9ff37fe27c9ed5abbd5b5354a66a7945c70
+3316b9ff37fe27c9ed5abbd5b5354a66a7945c70,3316b9ff,"* MS PatternsUI is like ScriptsUI -- with one entry active at a time, and a…","* MS PatternsUI is like ScriptsUI -- with one entry active at a time, and a side-drawer for selecting
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480729783,1480729783,9e350dc876480ae1a076491542e398d998080f3b
+9e350dc876480ae1a076491542e398d998080f3b,9e350dc8,* Fixed issue with pattern matching. (from endsWith func),"* Fixed issue with pattern matching. (from endsWith func)
+* Added IsPlaying and FadeVolume functions to AudioFile class.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480719458,1480719458,67ed7b25fd12f8ac419003f1b2f1028cadfae156
+67ed7b25fd12f8ac419003f1b2f1028cadfae156,67ed7b25,* Fixed small error with AudioFile class.,"* Fixed small error with AudioFile class.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480642256,1480642256,10ccf1327732842faefed8f25d3ea575336f902b
+10ccf1327732842faefed8f25d3ea575336f902b,10ccf132,* Added Clone and Transform commands for patterns. (transform command lets you…,"* Added Clone and Transform commands for patterns. (transform command lets you enter arbitrary transformation code for points)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480613796,1480613796,2c296b26ba849f67eb618d7342c73cabfb4ac4f1
+2c296b26ba849f67eb618d7342c73cabfb4ac4f1,2c296b26,* It now pretty accurately detects eye-movements in all four directions!!!,"* It now pretty accurately detects eye-movements in all four directions!!!
+* Added text-to-speech commands.
+* Merge core-functions and built-in-helpers script
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480606976,1480606976,5ae743984e733026c301fcaefdaf960121879410
+5ae743984e733026c301fcaefdaf960121879410,5ae74398,* Greatly improved performance of pattern-matching.,"* Greatly improved performance of pattern-matching.
+* Added ""sensitivity"" setting to patterns.
+
+First version that actually has practical/usable pattern-matching!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480558248,1480558248,d7db5453b3b48547ee142de0af5d12199daf25dc
+d7db5453b3b48547ee142de0af5d12199daf25dc,d7db5453,Backup before removing experiment with open-cv library.,"Backup before removing experiment with open-cv library.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480551473,1480551473,7bd417a96b57c0d2d2c5e111acff4c1229de7370
+7bd417a96b57c0d2d2c5e111acff4c1229de7370,7bd417a9,* Grabbed-pattern points are now offset using the pattern-min-x and channel-baseline-y.,"* Grabbed-pattern points are now offset using the pattern-min-x and channel-baseline-y.
+
+First-coding of initial functionality-chain is now complete.
+
+Now just need to improve performance and such, to where it's actually useful.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480533863,1480533863,dc075f16eef487e1955a8751649c1d7dec80c1f9
+dc075f16eef487e1955a8751649c1d7dec80c1f9,dc075f16,* Added pattern-grabber ui!,"* Added pattern-grabber ui!
+
+Next step:
+* MS transformers can be used on patterns.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480530460,1480530460,e88b74aad927081d647f81ce3aa6a74d809fbdbe
+e88b74aad927081d647f81ce3aa6a74d809fbdbe,e88b74aa,* Pattern-match probabilities are sent to JS. (subscribe to event using…,"* Pattern-match probabilities are sent to JS. (subscribe to event using AddListener_OnUpdatePatternMatchProbabilities)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480514258,1480514258,960fce7129bde4060d2da4c64adf23d036272018
+960fce7129bde4060d2da4c64adf23d036272018,960fce71,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480465589,1480465589,f069938686b537deaf2e8bae3fa4a80ffbdec7b0
+f069938686b537deaf2e8bae3fa4a80ffbdec7b0,f0699386,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480464984,1480464984,07e1746cebbb5bded9e94a192697275787b7cc49
+07e1746cebbb5bded9e94a192697275787b7cc49,07e1746c,"* Mentioned in readme that Android device can also be used, instead of emulator.","* Mentioned in readme that Android device can also be used, instead of emulator.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480464353,1480464353,e120f1b4503bf397d8c5d76b30bff2959bb224a3
+e120f1b4503bf397d8c5d76b30bff2959bb224a3,e120f1b4,"* Pattern matching system now works on eeg data, efficiently enough! (and…","* Pattern matching system now works on eeg data, efficiently enough! (and displaying on monitor page using red line)
+
+Next step:
+* Add pattern-grabbing ui on monitor page.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480462352,1480462352,d2117db28ecf4b70cc6a44b7371638f603cbe728
+d2117db28ecf4b70cc6a44b7371638f603cbe728,d2117db2,* Pattern matching system moved to Java code. A ton faster now (since no…,"* Pattern matching system moved to Java code. A ton faster now (since no transfer to and from js, for every eeg data-piece)--well assuming it's actually running, since it's not showing the red line like it did the last commit.
+
+Next step:
+* Get red line to show again.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480457784,1480457784,c242bb8abc363a20642b61ad1853cb2a7c559906
+c242bb8abc363a20642b61ad1853cb2a7c559906,c242bb8a,* Red line now shows for probability of pattern match!,"* Red line now shows for probability of pattern match!
+
+Next step:
+* Fix the performance and time-matching problems. (probably by moving all the pattern-matching stuff to the Java side)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480394301,1480394301,aabacaaf26fb5172dc2e20a1726579de4c311513
+aabacaaf26fb5172dc2e20a1726579de4c311513,aabacaaf,"* Chart shows up better now, since it's color's changed to white.","* Chart shows up better now, since it's color's changed to white.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480386390,1480386390,880c38ab24b1832a2068a436922fd8242446ffb8
+880c38ab24b1832a2068a436922fd8242446ffb8,880c38ab,Backup before moving pattern-matching code to the Java side.,"Backup before moving pattern-matching code to the Java side.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480384830,1480384830,09823e6119a141b01c400cf6fbd365d94dad11eb
+09823e6119a141b01c400cf6fbd365d94dad11eb,09823e61,* Got monitor chart working again.,"* Got monitor chart working again.
+* Working on shape-matching system. (faster now, but still needs work)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480382086,1480382086,699ec3af34dbb2f1e990dd6ccd91dc91a9a280e6
+699ec3af34dbb2f1e990dd6ccd91dc91a9a280e6,699ec3af,* The first-coding process is complete! The system is receiving data from the…,"* The first-coding process is complete! The system is receiving data from the headset, comparing it with user-provided patterns, and letting the user perform actions when a pattern-match probability rises above a certain level!
+
+Next:
+* Get the system to work smoothly enough to actually be usable. (main issue at this point is performance; the pattern-matching brings the JS engine to a crawl)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480259786,1480259786,d6d5d4ef954e5e8aed033311172727d9c745ce91
+d6d5d4ef954e5e8aed033311172727d9c745ce91,d6d5d4ef,* First-coded more of the core of the pattern-matching system.,"* First-coded more of the core of the pattern-matching system.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480215517,1480215517,87ad585184fedad09ba9a1b62aa4e11b7c6da5b1
+87ad585184fedad09ba9a1b62aa4e11b7c6da5b1,87ad5851,* First version that could theoretically trigger a sound-file or something from in-dream eeg data!,"* First version that could theoretically trigger a sound-file or something from in-dream eeg data!
+
+Next step:
+* Get system to actually work.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480214425,1480214425,a1fc2f9642c229a6ccb1ab6cd180a7077c5be1a8
+a1fc2f9642c229a6ccb1ab6cd180a7077c5be1a8,a1fc2f96,* Core settings in place.,"* Core settings in place.
+
+Commit just before working on actual shape-matching code.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480212888,1480212888,b6d13e62d7aebc046ccc1240ffaad5e49b918ec2
+b6d13e62d7aebc046ccc1240ffaad5e49b918ec2,b6d13e62,* Fixed that the Audios panel showed up blank.,"* Fixed that the Audios panel showed up blank.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480209581,1480209581,2eaf7bf447bead6f5bf6a7d8e984d4f4dab698b7
+2eaf7bf447bead6f5bf6a7d8e984d4f4dab698b7,2eaf7bf4,* Preview charts working okay now.,"* Preview charts working okay now.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480207729,1480207729,eb1c25c4a814aa064d53dce721cba10cb09e9f3e
+eb1c25c4a814aa064d53dce721cba10cb09e9f3e,eb1c25c4,* Changed app to dark theme.,"* Changed app to dark theme.
+
+Wrestled unsuccessfully with watchman system.
+
+Backup before working on broken chart library.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480183803,1480183803,1bf7652837c9a46e1b67981e002056d9457561a0
+1bf7652837c9a46e1b67981e002056d9457561a0,1bf76528,"* Quick backup before trying ""npm link"" for npm submodules.","* Quick backup before trying ""npm link"" for npm submodules.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480150504,1480150504,d0e25104216ae4e57ce3380e84f007fa58de4a0e
+d0e25104216ae4e57ce3380e84f007fa58de4a0e,d0e25104,* Fixed error on Patterns panel.,"* Fixed error on Patterns panel.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480143750,1480143750,dd8f63973662fe6e0bee71cd70d2b0a8a528b1f1
+dd8f63973662fe6e0bee71cd70d2b0a8a528b1f1,dd8f6397,* Fixed that hot-reloading wasn't working. (remember: DO NOT make the root UI…,"* Fixed that hot-reloading wasn't working. (remember: DO NOT make the root UI component (LucidLinkUI) extend BaseComponent; always have it extend the original React Component)
+* Java logs now show up in More>Logs panel.
+* Fixed that on external muse disconnect, the app would not restart searching/listening for muses.
+
+In middle of work on Patterns system. (ui and core) [current column]
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480143599,1480143599,e259534f7b59e34ee73c6c920ec0ec4ba96dfdeb
+e259534f7b59e34ee73c6c920ec0ec4ba96dfdeb,e259534f,Backup before going back to find what broke live-reloading.,"Backup before going back to find what broke live-reloading.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480135124,1480135124,e62a3f4bc44f8cfeb66c95d22a85f95a9f1a5034
+e62a3f4bc44f8cfeb66c95d22a85f95a9f1a5034,e62a3f4b,* Split settings menu into three tabs.,"* Split settings menu into three tabs.
+* Fixed that reloading react-native would leave a phantom chart.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480134852,1480134852,68781ec60ce9310a191d15d3a46e87259fe1d03c
+68781ec60ce9310a191d15d3a46e87259fe1d03c,68781ec6,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480031282,1480031282,b25c54db010a24b3b3b190cda6125e2697024cf7
+b25c54db010a24b3b3b190cda6125e2697024cf7,b25c54db,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480031251,1480031251,b42d02faecc24fd6870c21a8fa159ee52fece3ab
+b42d02faecc24fd6870c21a8fa159ee52fece3ab,b42d02fa,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480031190,1480031190,371bac7a88f89a70d54ac1e20ac0ea6d62151687
+371bac7a88f89a70d54ac1e20ac0ea6d62151687,371bac7a,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480031143,1480031143,9556145433da5b35ffc28d452c75157d2ec5d0fd
+9556145433da5b35ffc28d452c75157d2ec5d0fd,95561454,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480030991,1480030991,e21d733e9b1f31a5833190f193fc6ab01584978c
+e21d733e9b1f31a5833190f193fc6ab01584978c,e21d733e,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480030864,1480030864,71091d8b3c8102f56441f6f26065e24ada8a402c
+71091d8b3c8102f56441f6f26065e24ada8a402c,71091d8b,* Readme improved a bit.,"* Readme improved a bit.
+
+Note that if you use external folders as mentioned last commit, and you want changes to those external folder's js files to reflect in your app, you have to either copy the contents each time into the node_modules folder, or do a directory-level ""hard-link clone"" from the external folder to that node_modules location. Whenever you add a new JS file that needs tracking, you also need to redo this directory-level ""hard-link clone"". (but at least not after every file change)
+
+For knowing what I mean by that phrase (and for doing the deed itself pretty easily on Windows), see here: http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html#hardlinkclones
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480030802,1480030802,e4ccbe71337bb1c6af86649b4f38fef8de9ba2ae
+e4ccbe71337bb1c6af86649b4f38fef8de9ba2ae,e4ccbe71,"* React-native-lib-muse is now imported directly from it's main repo, rather…","* React-native-lib-muse is now imported directly from it's main repo, rather than having a separate copy in the node_modules folder. (this makes it much easier to make changes, without going out-of-sync with main repo)
+* UserConfig.json file can now be created. You can have it contain these strings, which are self-explanatory: ""reactNativeLibMuse_external: true"", ""mpChartLib_external: true"" (they have it look for a dedicated folder for the project repo, in the grandparent folder of this project's root folder, instead of looking in the node_modules folder and/or the cloud)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480029370,1480029370,d04896db3eccc155148c8be6772233228b6d6144
+d04896db3eccc155148c8be6772233228b6d6144,d04896db,* Finally fixed dev-menu freezing when opening sometimes.,"* Finally fixed dev-menu freezing when opening sometimes.
+* Cleaned up positioning of items in monitor-page header bar.
+* Added time-marker bar.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480027983,1480027983,93ed2f749042564e4d6fd2b670a07f327d80794c
+93ed2f749042564e4d6fd2b670a07f327d80794c,93ed2f74,* Chart hides when not on the Monitor page.,"* Chart hides when not on the Monitor page.
+* Cleaned up chart stuff on Java side. (while avoiding odd freeze issue; at least I narrowed it down to the ""chart.setVisibleXRange(0, maxX);"" call now)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480022381,1480022381,bdbe56bb68c92f8f3faa94860419159c4b02ac32
+bdbe56bb68c92f8f3faa94860419159c4b02ac32,bdbe56bb,* Made modification to react-native code that reduces the communication channel…,"* Made modification to react-native code that reduces the communication channel overhead to ~50% of prior. (it wasn't caching the class-name of the JavaScriptModule class) [I also am sending a pull request so it gets included in main]
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1480007852,1480007852,214faba4b9998794bd7f7ef65c2c0e67f346dd1f
+214faba4b9998794bd7f7ef65c2c0e67f346dd1f,214faba4,* Got real data showing in the app! And well enough that you can see the…,"* Got real data showing in the app! And well enough that you can see the waves--though they are still clumped together.
+
+Next step:
+* Get the 4 channels to show in their own rows. (and perhaps entirely separate charts)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479931183,1479931183,1564bb3053fe283999a206e9cd91603405d3e06b
+1564bb3053fe283999a206e9cd91603405d3e06b,1564bb30,* Graph shows in the right place now. (though doesn't yet update),"* Graph shows in the right place now. (though doesn't yet update)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479914571,1479914571,63d0f3abf534daa329c931112a2bf05e15bfd5ce
+63d0f3abf534daa329c931112a2bf05e15bfd5ce,63d0f3ab,"* Chart is showing! However, very offsetly... (and smally...) [since I'm not…","* Chart is showing! However, very offsetly... (and smally...) [since I'm not adjusting to chart-holder bounds yet]
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479914124,1479914124,82cbd459aecde3f7f2558e04931927eef73e1f5c
+82cbd459aecde3f7f2558e04931927eef73e1f5c,82cbd459,* Finally have the V.FindViewByContentDescription method in-place and working.…,"* Finally have the V.FindViewByContentDescription method in-place and working. Now onto adding the chart!
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479911326,1479911326,606e5fb5461844e151e9c7e5cb065e7668542aeb
+606e5fb5461844e151e9c7e5cb065e7668542aeb,606e5fb5,"* Improved look a bit, but still too slow.","* Improved look a bit, but still too slow.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479905180,1479905180,18bb70ed5e93e0d10f713bf720cc12ab3e735d09
+18bb70ed5e93e0d10f713bf720cc12ab3e735d09,18bb70ed,"* Fake data now shows on the Monitor page! However, performance is really bad.…","* Fake data now shows on the Monitor page! However, performance is really bad. (so I'll probably switch to Java-based)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479904255,1479904255,2d1a9953fa60b54d974ff70253e72d8835738988
+2d1a9953fa60b54d974ff70253e72d8835738988,2d1a9953,Quick backup before switching to channel-points data organization.,"Quick backup before switching to channel-points data organization.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479903053,1479903053,0d804321c3a3bffa0f0955f1e6515a4a5d8be8d6
+0d804321c3a3bffa0f0955f1e6515a4a5d8be8d6,0d804321,* Overall system cleaned up a lot. Ready for more focused work on eeg-data…,"* Overall system cleaned up a lot. Ready for more focused work on eeg-data channel (or code to just render ui from the java side).
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479895853,1479895853,8642d57da1787c13c2dd14e7d32c3cde8e09455a
+8642d57da1787c13c2dd14e7d32c3cde8e09455a,8642d57d,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479883015,1479883015,61841e84b475843a5e814dabc62996984f756569
+61841e84b475843a5e814dabc62996984f756569,61841e84,"* Data is finally, finally getting sent to the JS....","* Data is finally, finally getting sent to the JS....
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479879614,1479879614,a4866f87adc72c7063e9806001bb7c3568f63e5b
+a4866f87adc72c7063e9806001bb7c3568f63e5b,a4866f87,* Working well for the most part. (up to listen stage),"* Working well for the most part. (up to listen stage)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479871654,1479871654,d165c080e05b65d67d393eeaf29c9f71dad2eddf
+d165c080e05b65d67d393eeaf29c9f71dad2eddf,d165c080,Merge branch 'CheckingIfOldVersionStillWorks',"Merge branch 'CheckingIfOldVersionStillWorks'
+
+# Conflicts:
+#	Main/Source/Frame/EEGBridge.js
+#	Main/Source/LucidLink/Monitor.js
+#	Main/android/app/build.gradle
+#	Main/android/app/src/main/java/com/lucidlink/MainApplication.java
+#	Main/android/settings.gradle
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479861144,1479861144,"b1112c6b1f02644eb9453c554f7281fb6f213ba1,be5ecce5a46fdf6f12cea2ed13ece4a144159e9b"
+be5ecce5a46fdf6f12cea2ed13ece4a144159e9b,be5ecce5,* Not getting errors.,"* Not getting errors.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479860881,1479860881,e220aa5d11725dc984c0d963e29e0deda3a2cbf5
+b1112c6b1f02644eb9453c554f7281fb6f213ba1,b1112c6b,* Basic muse link should be working. But am getting error. This is quick backup.,"* Basic muse link should be working. But am getting error. This is quick backup.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479857695,1479857695,e220aa5d11725dc984c0d963e29e0deda3a2cbf5
+e220aa5d11725dc984c0d963e29e0deda3a2cbf5,e220aa5d,* Script-metas are now saved on app leave. (so eg disabling a script persists),"* Script-metas are now saved on app leave. (so eg disabling a script persists)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479742338,1479742338,d4e20b4f0794b55f3d5ec5860821393ef1ab334e
+d4e20b4f0794b55f3d5ec5860821393ef1ab334e,d4e20b4f,* Scripts are no longer auto-saved when leaving app.,"* Scripts are no longer auto-saved when leaving app.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479742001,1479742001,544ebcaff9c6238c749e073653a773882320fbe0
+544ebcaff9c6238c749e073653a773882320fbe0,544ebcaf,* Added really nice script-chooser panel. (with ability to create an arbitrary number of scripts),"* Added really nice script-chooser panel. (with ability to create an arbitrary number of scripts)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479741330,1479741330,c973ca23a89a5ec26a04d70e854bc4cf69599bb8
+c973ca23a89a5ec26a04d70e854bc4cf69599bb8,c973ca23,"* Sidebar showing and closing. (and no errors, afaik)","* Sidebar showing and closing. (and no errors, afaik)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479729760,1479729760,c50223300778dd4a52e4827753bfc29d4722db1f
+c50223300778dd4a52e4827753bfc29d4722db1f,c5022330,* Logs-ui max-log-count option now just changes how many are displayed; not how…,"* Logs-ui max-log-count option now just changes how many are displayed; not how many are kept in-memory/accessible-through-ui.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479722339,1479722339,29f9c2d738ad028ad0640ffdccccce1df8700237
+29f9c2d738ad028ad0640ffdccccce1df8700237,29f9c2d7,* Updated start script texts a bit.,"* Updated start script texts a bit.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479721083,1479721083,b7cff6c7ac5cd32b884583ea7b97258a5cd4f40a
+b7cff6c7ac5cd32b884583ea7b97258a5cd4f40a,b7cff6c7,* Reset-script buttons moved to new More>Others panel.,"* Reset-script buttons moved to new More>Others panel.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479720238,1479720238,3ba82693a42bd3c1cd03b4a29b5919fa53dcd751
+3ba82693a42bd3c1cd03b4a29b5919fa53dcd751,3ba82693,"* Logs are now stored to file, in each session's folder.","* Logs are now stored to file, in each session's folder.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479718408,1479718408,efc350c930978a73001af4d632187e28c86a5f6b
+efc350c930978a73001af4d632187e28c86a5f6b,efc350c9,"* With more-info enabled, fractional seconds are shown.","* With more-info enabled, fractional seconds are shown.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479717033,1479717033,8a216a7288abe5a58efffcb38c05f2d77cb78dab
+8a216a7288abe5a58efffcb38c05f2d77cb78dab,8a216a72,"* Added ""more info"" option to Logs panel. (showing date, and log-entry type)","* Added ""more info"" option to Logs panel. (showing date, and log-entry type)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479716705,1479716705,9b442f5666c82ccccd371915c8e200cfdf262656
+9b442f5666c82ccccd371915c8e200cfdf262656,9b442f56,* Added max-log-entries-count option to More>Logs panel.,"* Added max-log-entries-count option to More>Logs panel.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479713114,1479713114,65b595af744875e91cfd20db370e0217be3a29a6
+65b595af744875e91cfd20db370e0217be3a29a6,65b595af,* I think the resize-from-keyboard system's working better now. (it somewhat…,"* I think the resize-from-keyboard system's working better now. (it somewhat flaky, but it appears to be usable now)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479675966,1479675966,800e19daf4db3f999cbb5c6ae8ea390c7d01b57c
+800e19daf4db3f999cbb5c6ae8ea390c7d01b57c,800e19da,* Spell-check is disabled in script editors.,"* Spell-check is disabled in script editors.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479670559,1479670559,10cd27e2759c5e149609c74aa990f9a61bcce029
+10cd27e2759c5e149609c74aa990f9a61bcce029,10cd27e2,* Audio files can be started and stopped from key-presses.,"* Audio files can be started and stopped from key-presses.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479669402,1479669402,5a541b02da847f5f8732e4253e35679d0a8af8c0
+5a541b02da847f5f8732e4253e35679d0a8af8c0,5a541b02,* Save button added.,"* Save button added.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479659123,1479659123,9c8087216cf30fdb07964617d72942ad0d1e40d0
+9c8087216cf30fdb07964617d72942ad0d1e40d0,9c808721,* Fixed padding issue in Scripts page.,"* Fixed padding issue in Scripts page.
+* Scripts now load from defaults files.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479650545,1479650545,c9ed0863a7cd64ee8b1a1fb8e5266673e57310dd
+c9ed0863a7cd64ee8b1a1fb8e5266673e57310dd,c9ed0863,"* MainData is now saved, even when just pausing/going-to-launcher.","* MainData is now saved, even when just pausing/going-to-launcher.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479648266,1479648266,03ed3aece48172d2bebb0b7cbba776cacd0885c4
+03ed3aece48172d2bebb0b7cbba776cacd0885c4,03ed3aec,* MainData saving and loading now works.,"* MainData saving and loading now works.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479647393,1479647393,4b56586666c33e8fae7d2dea6293934c9383591c
+4b56586666c33e8fae7d2dea6293934c9383591c,4b565866,* Fixed file-chooser crash.,"* Fixed file-chooser crash.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479643937,1479643937,b823c9cd330eba881390623daa53378ffe4591b2
+b823c9cd330eba881390623daa53378ffe4591b2,b823c9cd,"* File chooser added, but currently crashing.","* File chooser added, but currently crashing.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479640890,1479640890,b44a7f026befd2c638f35032559d43cb8555807c
+b44a7f026befd2c638f35032559d43cb8555807c,b44a7f02,* Added basic console ui in About page.,"* Added basic console ui in About page.
+* Got test-data loading from VDF.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479637815,1479637815,19d21e167adb4b3deddc9e1af79e60e3cc3dd3ad
+19d21e167adb4b3deddc9e1af79e60e3cc3dd3ad,19d21e16,* Decorators seem to be working.,"* Decorators seem to be working.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479635881,1479635881,c164ef961ffc7978fe989f80c3f84333929e0805
+c164ef961ffc7978fe989f80c3f84333929e0805,c164ef96,* Scripts-page tabs now adjust in height based on whether we're in landscape or portrait.,"* Scripts-page tabs now adjust in height based on whether we're in landscape or portrait.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479632886,1479632886,b72f47a37a2b5d4139c8b98d2c89a17e166bdc2e
+b72f47a37a2b5d4139c8b98d2c89a17e166bdc2e,b72f47a3,"* Backup before getting ""react-native-orientation"" added.","* Backup before getting ""react-native-orientation"" added.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479631219,1479631219,989debd1a333345709fccedb7d02003247447b2f
+989debd1a333345709fccedb7d02003247447b2f,989debd1,Backup before trying react-native-extended-css library.,"Backup before trying react-native-extended-css library.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479630347,1479630347,e2f78439d553e8011175489a5cb7176ea52017fc
+e2f78439d553e8011175489a5cb7176ea52017fc,e2f78439,Quick backup just after adding new button library.,"Quick backup just after adding new button library.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479629240,1479629240,548a19f057e21e2cc5563b27e0a65708727c37a5
+548a19f057e21e2cc5563b27e0a65708727c37a5,548a19f0,"* Add ""Apply"" button and such to script editor","* Add ""Apply"" button and such to script editor
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479625780,1479625780,f4b8718f3a19cf569c2c962913591814c4d0c50c
+f4b8718f3a19cf569c2c962913591814c4d0c50c,f4b8718f,* Scripts page has saving and loading of the five scripts.,"* Scripts page has saving and loading of the five scripts.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479482031,1479482031,591f4f902394e0898dd8bf77ca4e07f51d59b2b1
+591f4f902394e0898dd8bf77ca4e07f51d59b2b1,591f4f90,* Got tabs and such set up.,"* Got tabs and such set up.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479473215,1479473215,1885707a715c3226b0530683e79db028b1e2005a
+1885707a715c3226b0530683e79db028b1e2005a,1885707a,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479462714,1479462714,80f9682d6016be92536f9a592afe9260662eff84
+80f9682d6016be92536f9a592afe9260662eff84,80f9682d,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479462696,1479462696,265c79e6f4d62fa4c5d89a51231b3ef396785188
+265c79e6f4d62fa4c5d89a51231b3ef396785188,265c79e6,* Added ui overview doc.,"* Added ui overview doc.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479462042,1479462042,27157535c2f852107695244fef53a55141ab6eb6
+27157535c2f852107695244fef53a55141ab6eb6,27157535,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479460553,1479460553,5a50aa1410207ebe85d3c70373c51136ccad79cc
+5a50aa1410207ebe85d3c70373c51136ccad79cc,5a50aa14,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479323224,1479323224,5b832d63f040ae49933190ca7afdda2e86ab2f80
+5b832d63f040ae49933190ca7afdda2e86ab2f80,5b832d63,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479323129,1479323129,1c020938efb9ff6eee1329837d21d8e91457fbd2
+1c020938efb9ff6eee1329837d21d8e91457fbd2,1c020938,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479323101,1479323101,c96c1b5a244f5c0c57fb390e0e315aa8e8747483
+c96c1b5a244f5c0c57fb390e0e315aa8e8747483,c96c1b5a,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479323047,1479323047,7dbfadc54e319c8b27e6f194262f3cf243eb9efa
+7dbfadc54e319c8b27e6f194262f3cf243eb9efa,7dbfadc5,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479322908,1479322908,876f901b67a51dca155462fb2c0dfa151e6fecb1
+876f901b67a51dca155462fb2c0dfa151e6fecb1,876f901b,*,"*
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479322878,1479322878,086e3195bc361dd0c9811a29a1538ffcff87f0cc
+086e3195bc361dd0c9811a29a1538ffcff87f0cc,086e3195,* Added compile and such instructions.,"* Added compile and such instructions.
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479322846,1479322846,c8c81d1e6b5481ff71e0e26cd5b88912661ef550
+c8c81d1e6b5481ff71e0e26cd5b88912661ef550,c8c81d1e,"* Basic ReactJS app, working on the Genymotion emulator--with hot-reloading, and…","* Basic ReactJS app, working on the Genymotion emulator--with hot-reloading, and a linked native java-module. (no actual headset or EEG code yet)
+",,,,Venryx,venryx@gmail.com,Venryx,venryx@gmail.com,1479307693,1479307693,3371da80c86490d7ff567180758c9d393c6e4a49
+3371da80c86490d7ff567180758c9d393c6e4a49,3371da80,Initial commit,Initial commit,,,,Stephen Wicklund,Venryx@users.noreply.github.com,Stephen Wicklund,Venryx@users.noreply.github.com,1479306256,1479306256,

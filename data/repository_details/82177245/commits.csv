@@ -1,0 +1,77 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+07e6fd2ef32a69dc0a9482510288623eb806cf3f,07e6fd2e,feat: change behaviour of includeCompileClasspath to resolve missing annotation at runtime,"feat: change behaviour of includeCompileClasspath to resolve missing annotation at runtime
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1493369813,1493378372,e4a384ff74f88f5862c82997980532b100399e90
+e4a384ff74f88f5862c82997980532b100399e90,e4a384ff,feat: Upgrade to Dagger release candidate for usage of ContributesAndroidInjector,"feat: Upgrade to Dagger release candidate for usage of ContributesAndroidInjector
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1493198299,1493198299,b2ee49cde3da594b4d1ac4e92170aa1e1bea7fc4
+b2ee49cde3da594b4d1ac4e92170aa1e1bea7fc4,b2ee49cd,feat: Update Android gradle tools plugin,"feat: Update Android gradle tools plugin
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1492447727,1492447727,cd3a5c028f3bd83e939e06c9faa64cc3fb198e82
+cd3a5c028f3bd83e939e06c9faa64cc3fb198e82,cd3a5c02,docs: Update documentation,"docs: Update documentation
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1492379009,1492379009,58aad6f844c7d38851fe91b953200ce85246758e
+58aad6f844c7d38851fe91b953200ce85246758e,58aad6f8,fix: Update to latest library version and use transitive dependency,"fix: Update to latest library version and use transitive dependency
+
+RxFirebase 1.3.2 resolves the issue with Firebase query configurations
+being lost when executing the reference, this will correctly introduce
+message ordering by created date.
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1492363751,1492366462,4b0b8e23f3046fb6fb38237eccf8916355586c8c
+4b0b8e23f3046fb6fb38237eccf8916355586c8c,4b0b8e23,feat: Split post and repost methods,"feat: Split post and repost methods
+
+Include further lambda methods with clear separation between posting
+and reposting for single responsibility and no nullability. Includes
+default values for Message builder method.
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1492032827,1492032827,4e92b2b4ac96217723988dd4813f09a66100fb0c
+4e92b2b4ac96217723988dd4813f09a66100fb0c,4e92b2b4,feat: Handle back press on chat activity,"feat: Handle back press on chat activity
+
+When the user presses back, use the same login functionality as when
+the user selects sign out from the overflow menu
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1491926849,1491926849,c83d15f1265e64a904f7fbbff2f47c518820b079
+c83d15f1265e64a904f7fbbff2f47c518820b079,c83d15f1,feat: Anonymous login for debug builds,"feat: Anonymous login for debug builds
+
+To further aid testing efforts anonymous sign is enabled for debug
+builds, in addition to cleaning up some lambda methods and removal
+of unnecessary inner classes.
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1491926702,1491926702,4dc157d644416720137b8ad18c0e7d9f97fbd5c2
+4dc157d644416720137b8ad18c0e7d9f97fbd5c2,4dc157d6,feat: Update language level to Java 8,"feat: Update language level to Java 8
+
+Facilitate the update of language level to Java 8 and inline lambdas
+where possible by using Android gradle 2.4.0-alpha4 which allows
+preliminary usage of Java 8 features.
+
+Some extracted interface implementations can be removed as a result
+of using lambda methods.
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1491473620,1491473620,7e4f3d59efae6489f06e9ef06bc32bf4cc268d58
+7e4f3d59efae6489f06e9ef06bc32bf4cc268d58,7e4f3d59,Introduce Dagger 2.10rc-2 bindings with updated Android processor,"Introduce Dagger 2.10rc-2 bindings with updated Android processor
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488899374,1488899374,4c7298e1107df140cdbf9d2f86f7bedbb8dea23a
+4c7298e1107df140cdbf9d2f86f7bedbb8dea23a,4c7298e1,Update build environment,"Update build environment
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488891017,1488891017,43f79bba5ca698bae0c2bf5346271c99bb2d902a
+43f79bba5ca698bae0c2bf5346271c99bb2d902a,43f79bba,Update message repository loading,"Update message repository loading
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488493691,1488493691,32f09ccf27615ee888d9096c9e7f0ada16ebe90b
+32f09ccf27615ee888d9096c9e7f0ada16ebe90b,32f09ccf,Include jacoco export and gradle utilities,"Include jacoco export and gradle utilities
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488489495,1488489495,4f05682b7aca733c58dcdecba5f6aa944d570885
+4f05682b7aca733c58dcdecba5f6aa944d570885,4f05682b,Bump version number,"Bump version number
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488486920,1488486920,14876a6cf5ac4856926272f73c39f75498b1a96f
+14876a6cf5ac4856926272f73c39f75498b1a96f,14876a6c,Extract reporting from Firebase logging,"Extract reporting from Firebase logging
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488477490,1488486111,55d59095111a695a8130f034ca5dd945b38c6743
+55d59095111a695a8130f034ca5dd945b38c6743,55d59095,Lower minimum sdk version,"Lower minimum sdk version
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488235720,1488295132,75f887b084605bc6843d3e239f480f0d9011d03e
+75f887b084605bc6843d3e239f480f0d9011d03e,75f887b0,Prepare improvements and update for version 1.2.0,"Prepare improvements and update for version 1.2.0
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488234707,1488234707,0b3222a23440978a8c5181604377df24d92ac731
+0b3222a23440978a8c5181604377df24d92ac731,0b3222a2,Include string formatting tests,"Include string formatting tests
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488224259,1488224259,6280e40a2f1170ff9843c13707a425932427fac1
+6280e40a2f1170ff9843c13707a425932427fac1,6280e40a,Bump version number,"Bump version number
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488215330,1488215330,bbb7a332063149858cedd34decbe9efba1bd045d
+bbb7a332063149858cedd34decbe9efba1bd045d,bbb7a332,Application structural changes,"Application structural changes
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488215040,1488215040,c5339c6690ecc2f42a874414a820a73c2be039f2
+c5339c6690ecc2f42a874414a820a73c2be039f2,c5339c66,Include logging,"Include logging
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488147062,1488147062,5193ec31072a4eb2e9e2be62c0f9b4087296bd30
+5193ec31072a4eb2e9e2be62c0f9b4087296bd30,5193ec31,Include application invitations,"Include application invitations
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488143980,1488143980,1890cc460f93de027f28270c1f7183d115f648af
+1890cc460f93de027f28270c1f7183d115f648af,1890cc46,Allow invalidation of remote config via firebase notifications,"Allow invalidation of remote config via firebase notifications
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488142229,1488142229,17149615af8993744c2f5a642bbdc7075ac8fc4d
+17149615af8993744c2f5a642bbdc7075ac8fc4d,17149615,Include application messaging,"Include application messaging
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488139312,1488139312,0a716871cceb9b0c8166c5d4272152fb8b33996d
+0a716871cceb9b0c8166c5d4272152fb8b33996d,0a716871,Include app indexing actions,"Include app indexing actions
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488138254,1488138254,c5a7cbeba916b89e4311265d8eace0e8dbfab3d0
+c5a7cbeba916b89e4311265d8eace0e8dbfab3d0,c5a7cbeb,Add application indexing,"Add application indexing
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1488137359,1488137359,ce0a95a261c0d52e48ea56584834ae63ed7a7ce7
+ce0a95a261c0d52e48ea56584834ae63ed7a7ce7,ce0a95a2,Initial commit,"Initial commit
+",,,,Ash Davies,ash.davies@gmail.com,Ash Davies,ash.davies@gmail.com,1487247432,1488136014,

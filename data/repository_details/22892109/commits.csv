@@ -1,0 +1,621 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+d93d69c085da0605a95731c5ec21d139497cb897,d93d69c0,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1455115205,1455115205,"a896df855a8372932745881dd7d0911301b51688,47555a121839a9f504751c428001c6289d8075f8"
+a896df855a8372932745881dd7d0911301b51688,a896df85,"Server: removed old MessageModel, better responses","Server: removed old MessageModel, better responses
+
+- Removed old MessageModel from the code, and from indexes
+- Responses that are displayed in browser, and not used for REST are now more meaningful for the users
+- clearusers cron job now logs deleted users
+- Switched to new GCM URL used for sending messages
+- Fixed a wrong action attribute, for the form in renameadmin page
+- Mail API sometimes fails to send for no reason, retry 3 times before giving up
+- Notify users of badly formated emails
+- Got weird requests from some kind of search bot on 204.79.180.* subnet, the subnet is now blacklisted in dos.yaml
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1455114667,1455114667,643dc9dab5535cf98a74a264912e068b9558997d
+47555a121839a9f504751c428001c6289d8075f8,47555a12,WinRT: removed unnecessary imports from RenamePage,"WinRT: removed unnecessary imports from RenamePage
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1442502504,1442502504,74b0e8cbef93ef1d873cb7fb66d7a8bf8bafb472
+74b0e8cbef93ef1d873cb7fb66d7a8bf8bafb472,74b0e8cb,WinRT: added support for renaming users,"WinRT: added support for renaming users
+
+- Windows Runtime client now has the option to rename user accounts
+- ConversationListItem now just stores a Message instance, instead of
+  various properties to be displayed
+- moved progress indicators away from title-bars for better visibility
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1442502235,1442502235,643dc9dab5535cf98a74a264912e068b9558997d
+643dc9dab5535cf98a74a264912e068b9558997d,643dc9da,Android: support for user renaming,"Android: support for user renaming
+
+- Added ability to rename users in Android client
+- Improved DataStorage to support deletion of items, mainly to delete old user data when renaming
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1442433687,1442433687,011be661980a74e183594224dc2763ca23b6f0a1
+011be661980a74e183594224dc2763ca23b6f0a1,011be661,Python: added option to rename user,"Python: added option to rename user
+
+- added option to rename the user account in Python client
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1442086395,1442086395,04a7151c37d2fc60b48d4a626bb91af888af752c
+04a7151c37d2fc60b48d4a626bb91af888af752c,04a7151c,server: ability to rename user,"server: ability to rename user
+
+- added ability to rename users on the server, it can be done by an administrator (via web interface), or by the user himself (via HTTP request)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1442085978,1442085978,f672081d95712c739663626b56c2e4583bd565e7
+f672081d95712c739663626b56c2e4583bd565e7,f672081d,Android: added blinking unread indicator,"Android: added blinking unread indicator
+
+- added a new indicator that blinks when there are unread messages in another conversation
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441896817,1441896817,a038b366efd259e41bd8dd1d872b48b64157c9ac
+a038b366efd259e41bd8dd1d872b48b64157c9ac,a038b366,Android: display peer name in action bar,"Android: display peer name in action bar
+
+- peer name on the conversation page is now displayed as action bar title, the peerName TextView is removed
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441837792,1441837792,d0a70f6347d08e0564b29a791e982822c5a3349b
+d0a70f6347d08e0564b29a791e982822c5a3349b,d0a70f63,WinRT: conversation list items more descriptive,"WinRT: conversation list items more descriptive
+
+- items in the list of conversations now display the date of the last
+  message, and a part of its text (just like on old Windows 8 client)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441812151,1441812151,b84e36b3ceca8554031a73be9c463ba1b046f083
+b84e36b3ceca8554031a73be9c463ba1b046f083,b84e36b3,Android: conversation UI redesign,"Android: conversation UI redesign
+
+- ConversationsActivity is now merged into ConversationActivity - added a drawer with a list of conversations using DrawerLayout
+- redesigned ConversationListAdapter and conversation list item to fit the new model
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441796741,1441796741,1745bfd150f9f1bb991b599b8650caf72ea3086f
+1745bfd150f9f1bb991b599b8650caf72ea3086f,1745bfd1,Server: improved message model,"Server: improved message model
+
+- created a new message model class which stores all message data as a single JSON string to reduce the number of datastore operations, JSON is encoded and decoded on the fly
+- messages are no longer guaranteed to be ordered by timestamp, all ordering has to be done by the clients
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441641792,1441641792,d8eae559d7538d05d35c4dbe7c3ab432f8748545
+d8eae559d7538d05d35c4dbe7c3ab432f8748545,d8eae559,Renamed individual client folders,"Renamed individual client folders
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441559704,1441559704,7adb8b9de63f68eeae8693251e690e4e3c213896
+7adb8b9de63f68eeae8693251e690e4e3c213896,7adb8b9d,"WinRT:switched to Windows 10, Windows 8 deprecated","WinRT:switched to Windows 10, Windows 8 deprecated
+
+- created new universal app client for windows 10, windows 8 code deleted
+- redesigned app to fit into windows 10 better
+- unified conversation page, conversation list now displayed on a side pane
+- removed dependency on WinRTXamlToolkit - implemented own InputDialog
+- accent color applied to more UI elements
+- accent color used on desktop client too
+- filepicker code is now the same on both clients, no more need to worry
+  about resuming on Windows Phone
+- better and more secure handling of timeDiff - large timediffs are
+  treated as insecure, non-numeric time strings are rejected
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441538443,1441538443,e27a23ba0d36c4de7d5921594dd699ed78c867b6
+e27a23ba0d36c4de7d5921594dd699ed78c867b6,e27a23ba,"server: added website, reduced datastore writes","server: added website, reduced datastore writes
+
+- removed some properties from MessageModel
+- turned of indexing for some properties in MessageModel and UserKey to reduce the number of datastore writes
+- delete file-messages immediately instead of marking them as unread (this reduces datastore writes), Blobs themselves are deleted by a cron-job
+- added a basic website for the application
+- added ability for the administrator to re-send a recovery email
+- logged errors now include a stack trace
+- names with exotic characters are rejected with a proper error message, insteadof causing an exception
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441459322,1441459322,31feb397d4280b0025a767dfcc84a0db04f74d55
+31feb397d4280b0025a767dfcc84a0db04f74d55,31feb397,Python: better timeDiff handling,"Python: better timeDiff handling
+
+- reject timeDiff strings that are not numbers
+- reject timeDiffs bigger than 3600 secconds
+- better error description strings
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441459107,1441459107,d2d70ff650af5f4a848bfdee431e21a10ca4c147
+d2d70ff650af5f4a848bfdee431e21a10ca4c147,d2d70ff6,Android: better time difference handling,"Android: better time difference handling
+
+- timeDiff responses that are not numbers are rejected elegantly instead of crashing
+- timeDiffs bigger than one hour are rejected - the server could be malicious
+- error messages for unknown errors now give more information
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1441458297,1441458297,2e7b8e5304b4b6d8f05ec6bc2fbb91066b24653d
+2e7b8e5304b4b6d8f05ec6bc2fbb91066b24653d,2e7b8e53,Android: localized help,"Android: localized help
+
+- Documentation HTML files are now separated for different languages
+- Switched to new gradle version
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1439311976,1439311976,56bd8a8c46435c6353860ece0a2c53ed2f8f1662
+56bd8a8c46435c6353860ece0a2c53ed2f8f1662,56bd8a8c,Android: unhide sender ID,"Android: unhide sender ID
+
+- there is no need to keep GCM sender ID hidden in a separate file so it was moved GCMHandling.java
+- minor refactoring of Android code
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1435495097,1435495097,78bd17e14cb3c6ab76acfdbedb83f038e09a618d
+78bd17e14cb3c6ab76acfdbedb83f038e09a618d,78bd17e1,Javascript: display unread count in title,"Javascript: display unread count in title
+
+- display the number of conversations with unread messages in the title text
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1435495018,1435495018,9379bf6eca2c46c48d4b2d6ee8ddd848d2903691
+9379bf6eca2c46c48d4b2d6ee8ddd848d2903691,9379bf6e,Javascript: handle enter presses better,"Javascript: handle enter presses better
+
+- Added send-on-enter behaviour. Shift+Enter adds newline to message
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1435402169,1435402169,7ccc85f24c9db66d9a6695bb229086f8a0fca4cd
+7ccc85f24c9db66d9a6695bb229086f8a0fca4cd,7ccc85f2,Removed jquery.js that came with JQueryUI,"Removed jquery.js that came with JQueryUI
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1435331072,1435331072,1a7fb1c928585c4f8c7d3f65c7702971b18120f7
+1a7fb1c928585c4f8c7d3f65c7702971b18120f7,1a7fb1c9,Added Javascript client,"Added Javascript client
+
+- created a new client application written with javascript/html/css, supports all features found in other clients, uses channel api for instant delivery
+- the javascript client is available on the server, only for admin account (me) currently
+- added channel api support to server code, although it's locked for now, due to low quotas
+- minor refactoring of server code
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1435330514,1435330514,c39f2be6fc37b25c6c4cf8f83af469522bb9d8b6
+c39f2be6fc37b25c6c4cf8f83af469522bb9d8b6,c39f2be6,WinRT: add signature support,"WinRT: add signature support
+
+- Added support for signatures in WinRT client
+- Refactoring: move all dialog window code in a single class
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1433492654,1433492654,591d1ca5251f23b1a1161206a9d5f05a24aa53c1
+591d1ca5251f23b1a1161206a9d5f05a24aa53c1,591d1ca5,Android: added signature support,"Android: added signature support
+
+	- Added option to sign messages to Android client
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1433269073,1433269073,483a221ada20e43795d7c09c217b1daa32876645
+483a221ada20e43795d7c09c217b1daa32876645,483a221a,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432824083,1432824083,"facbb27b033e7ce2f7a485fa437ec26e98fa7ef2,1a1247cb1f5a04b0f9a28840f17df749d8d2b42a"
+facbb27b033e7ce2f7a485fa437ec26e98fa7ef2,facbb27b,Android: move file handling code to separate file,"Android: move file handling code to separate file
+
+- Moved all methods used for file upload and download into FileTransfers.java to declutter ConversationActivity.java
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432824005,1432824005,532ca2575697c3f0b2a82e2bc87cec577d6729fa
+1a1247cb1f5a04b0f9a28840f17df749d8d2b42a,1a1247cb,Remove SenderId comment from GCMHandling.java,Remove SenderId comment from GCMHandling.java,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432764167,1432764167,532ca2575697c3f0b2a82e2bc87cec577d6729fa
+532ca2575697c3f0b2a82e2bc87cec577d6729fa,532ca257,Android: new build tools,"Android: new build tools
+
+- Switched to newer versions of Android SDK, Gradle etc.
+- Minor code reformatting
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432763980,1432763980,a8417fd2aa811b67fffefe21c342f75040d54bd8
+a8417fd2aa811b67fffefe21c342f75040d54bd8,a8417fd2,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432229202,1432229202,"77bfe4139d4d3fa1b34f8e23347c314b1572d931,b26eb1e1d470fcccc23e03fe7e711013a5b0786a"
+77bfe4139d4d3fa1b34f8e23347c314b1572d931,77bfe413,Server: enable resending of verification emails,"Server: enable resending of verification emails
+
+- App engine mail API sometimes fails to send the email, so a a page was added to let the admin send the email again
+
+- Move mail-sending code into methods of UserModel
+
+- Minor refactoring and improvements
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432229045,1432229045,8f1d97fa5044c919d951ceb1646aa29b84d0ba40
+b26eb1e1d470fcccc23e03fe7e711013a5b0786a,b26eb1e1,WinRT: minor improvements and refactoring,"WinRT: minor improvements and refactoring
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1432058418,1432058418,9b1ad0f6b6bdda530ab35b54729672698023c19c
+9b1ad0f6b6bdda530ab35b54729672698023c19c,9b1ad0f6,Fixed a typo,Fixed a typo,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432042431,1432042431,cc9fdc7191a2daf73a5514a9efabfc0da32b6491
+cc9fdc7191a2daf73a5514a9efabfc0da32b6491,cc9fdc71,Add Android info to README.md,Add Android info to README.md,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432042407,1432042407,8f1d97fa5044c919d951ceb1646aa29b84d0ba40
+8f1d97fa5044c919d951ceb1646aa29b84d0ba40,8f1d97fa,Python: signature support,"Python: signature support
+
+- Add support for signatures using Socialist millionaire algorithm
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432041965,1432041965,0f8397a5c1635cfc41a2079b7d3b3babb78d13b8
+0f8397a5c1635cfc41a2079b7d3b3babb78d13b8,0f8397a5,"Server: refactoring, logging","Server: refactoring, logging
+
+- Improved logging for better diagnostics
+- Move getMessages method to MessageModel
+- Add signatures support
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432041894,1432041894,9f06f8c83a8941751fe76d01b266cfb982afe377
+9f06f8c83a8941751fe76d01b266cfb982afe377,9f06f8c8,Android: minor improvements,"Android: minor improvements
+
+- easier navigation, add links to registration, forgot and help activities
+- better ad placement, don't show ads on small screens
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1432015306,1432015306,efc0ab9fde822226fa44b9c39e9d668675286217
+efc0ab9fde822226fa44b9c39e9d668675286217,efc0ab9f,WinRT: improved appearance,"WinRT: improved appearance
+
+- Make the message input box smaller (grow it when necessary)
+- Display messages on the bottom of the list if there is only a few of them
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1431206244,1431206244,4b1c4b519981f3334b33ed4a204cf1e90a7459b9
+4b1c4b519981f3334b33ed4a204cf1e90a7459b9,4b1c4b51,WinRT: improved performance and looks (minor),"WinRT: improved performance and looks (minor)
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1428953887,1428953887,e78b58e769f5a2edb1721c1756acdfed10a82500
+e78b58e769f5a2edb1721c1756acdfed10a82500,e78b58e7,WinRT: use ListView instead of WebView,"WinRT: use ListView instead of WebView
+
+- Replaced WebView with ListView for better looks and performance
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1428866946,1428866946,173bf35b56a7de36676a5eee3cdb5e9f510f5947
+173bf35b56a7de36676a5eee3cdb5e9f510f5947,173bf35b,Android: improved display of messages,"Android: improved display of messages
+
+- Now using ListView to display messages instead of WebView, is looks prettier and improves performance
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1428698166,1428698166,9b5f2cc1e01e8c9fc6e1a6ad73d18d154279beac
+9b5f2cc1e01e8c9fc6e1a6ad73d18d154279beac,9b5f2cc1,WinRT: minor improvements,"WinRT: minor improvements
+
+- Remove verification and recovery pages from the app
+- Add some pages to the phone app
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1428613519,1428613519,1dd397c47ea8e38b8a44029f2a268971b63d38ad
+1dd397c47ea8e38b8a44029f2a268971b63d38ad,1dd397c4,"Python: translations, improvements","Python: translations, improvements
+
+- Client is now translated to Serbian and English, adding new languages is possible
+- Removed recovery and verification UI from the app
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1428611588,1428611588,260f5fc1bbffa59effa30b77f2c6aa7f53892e6a
+260f5fc1bbffa59effa30b77f2c6aa7f53892e6a,260f5fc1,"Server: WNS, GCM, better verification and recovery","Server: WNS, GCM, better verification and recovery
+
+- Added support for WNS and GCM notifications
+- Verification and Recovery are now done via email+browser only
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1428611408,1428611408,9cbe71978191b810eb8d798096df1ae18b475662
+9cbe71978191b810eb8d798096df1ae18b475662,9cbe7197,Android: major additions,"Android: major additions
+
+- Added Google Cloud Messaging support, notifications and messages are delivered instantly
+- Added AdMob ads
+- Added support for sending files
+- Verification Activity removed, all verification is now done via browser
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1428610522,1428610522,c77cf761022fcc638d716d5f1d5c1b9652abfd1b
+c77cf761022fcc638d716d5f1d5c1b9652abfd1b,c77cf761,WinRT: Add WNS notification support,"WinRT: Add WNS notification support
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1421843230,1421843230,a615369db8d3c31738d38703b661d75dfcb1143d
+a615369db8d3c31738d38703b661d75dfcb1143d,a615369d,WinRT: add option to mark conversation as unread,"WinRT: add option to mark conversation as unread
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1420149846,1420149846,0fe2deadd0f738d6eb9ae26afec5c401761e0d48
+0fe2deadd0f738d6eb9ae26afec5c401761e0d48,0fe2dead,WinRT: prevent user from sending to himself,"WinRT: prevent user from sending to himself
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1420113967,1420113967,01891c6eae7a5b3e81668b3209212bdd4ede7bc4
+01891c6eae7a5b3e81668b3209212bdd4ede7bc4,01891c6e,Android: unread indicator,"Android: unread indicator
+
+- Add unread message indicator
+- Add buttons to mark conversation as read
+- Prevent user from  sending messages to himself
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1420024564,1420024564,3bd7b8cbc5ab2cd3f361699cee19be196e59aa56
+3bd7b8cbc5ab2cd3f361699cee19be196e59aa56,3bd7b8cb,Python: UX improvements,"Python: UX improvements
+
+- Keyboard shortcut: send message when enter is pressed
+- Add button to mark all conversations as read
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1420024394,1420024394,11b1667d9fe2b72d1c9341d13cb167b11bf941ca
+11b1667d9fe2b72d1c9341d13cb167b11bf941ca,11b1667d,WinRT: added unread indicator,"WinRT: added unread indicator
+
+- Indicate conversations that have unread messages, and add button to mark them as read
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1419854540,1419854540,bd3e62f0f7458d1f042bceb58655279aecf9677f
+bd3e62f0f7458d1f042bceb58655279aecf9677f,bd3e62f0,Python: add unread message indication,"Python: add unread message indication
+
+- Indicate conversations with unread messages by bolding the text
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419601527,1419601527,db0c28e28799733dbbfc3ed032d0a65dc70d2b76
+db0c28e28799733dbbfc3ed032d0a65dc70d2b76,db0c28e2,Python: handle empty messages properly,"Python: handle empty messages properly
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419511978,1419511978,4039517b1c933502ab451e1d7aca3002e2b942f1
+4039517b1c933502ab451e1d7aca3002e2b942f1,4039517b,WinRT: handle file-messages properly in conversation list,"WinRT: handle file-messages properly in conversation list
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1419511548,1419511548,8619be0bde8275b23a36e898b687ed3bf9e43726
+8619be0bde8275b23a36e898b687ed3bf9e43726,8619be0b,Python: fix display of file-messages in list,"Python: fix display of file-messages in list
+
+- File messages don't have contents field, so the filename is displayed in the conversations list instead
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419510260,1419510260,1ad2b226d177ea33b8b75362b653af209b46d503
+1ad2b226d177ea33b8b75362b653af209b46d503,1ad2b226,WinRT: updated strings,"WinRT: updated strings
+
+- Change name to CryptoChat in desktop app
+- Change ""authorization"" to ""activation""
+- Change some strings to match visual style
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1419434479,1419434479,780a675a5d9016253264ffc27e97366437db28a4
+780a675a5d9016253264ffc27e97366437db28a4,780a675a,Python: set executable name to CryptoChat,"Python: set executable name to CryptoChat
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419277941,1419277941,80c5cd28f7f63af68895930eaca5345d05561f49
+80c5cd28f7f63af68895930eaca5345d05561f49,80c5cd28,"Python: change executrable name, add icon","Python: change executrable name, add icon
+
+- Change the produced executable name in the Cx_Freeze setup script and add an icon (copied from Android app)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419276741,1419276741,8bac15b7d23b77ce7249fbb38bd68548bcac914d
+8bac15b7d23b77ce7249fbb38bd68548bcac914d,8bac15b7,Python: minor improvements,"Python: minor improvements
+
+- Handle logouts gracefully, keep the login window open but hidden, and show it when necessary
+- Minor edits in the help text
+- Code reformatting
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419260202,1419260202,8f7eb42ba3161ed3ff2acac0bd884402b98d7938
+8f7eb42ba3161ed3ff2acac0bd884402b98d7938,8f7eb42b,Android: better text input in conversation,"Android: better text input in conversation
+
+- Autocorect and capitalize message contents
+- Limit peer name to single line
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419253347,1419253347,e4f52a05563b71f9ca45996dc399f5d9201ac4ef
+e4f52a05563b71f9ca45996dc399f5d9201ac4ef,e4f52a05,Python: close child windows when exiting,"Python: close child windows when exiting
+
+- Close all conversation windows when exiting the conversation list window
+- Change word ""unauthorize"" to ""deactivate"" in UI strings
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419197715,1419197715,d3b691a2a574d942c77da89aff4fbcf928d3c19e
+d3b691a2a574d942c77da89aff4fbcf928d3c19e,d3b691a2,Android: add network timeout,"Android: add network timeout
+
+- Set HTTP operations timeout to 60 seconds
+- Change the word ""unauthorize"" to ""deactivate"" in UI strings
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419197655,1419197655,c1283926c9c885c1b22396dcccba46bbcebb6cb5
+c1283926c9c885c1b22396dcccba46bbcebb6cb5,c1283926,Python: update help screenshot,"Python: update help screenshot
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419165212,1419165212,a633025722b779cd4cd7e2913c056659c35e1a69
+a633025722b779cd4cd7e2913c056659c35e1a69,a6330257,Python client: update help,"Python client: update help
+
+- Help files updated to match new application name and new navigation model
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419162199,1419162199,b6468c264056893fda335a8fdcc3d68c4be1cfc0
+b6468c264056893fda335a8fdcc3d68c4be1cfc0,b6468c26,Python: changed name to CryptoChat,"Python: changed name to CryptoChat
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419118590,1419118590,3b00a0279a202f83620483351818d802c4ba0936
+3b00a0279a202f83620483351818d802c4ba0936,3b00a027,"WinRT: increase time treshold, remove unnecessary code","WinRT: increase time treshold, remove unnecessary code
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1419108453,1419108453,cbfc04a4c377d6053ea4a8f67f5a7e98fbdeb4a7
+cbfc04a4c377d6053ea4a8f67f5a7e98fbdeb4a7,cbfc04a4,Python client: removed unnecessary code,"Python client: removed unnecessary code
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419107503,1419107503,2284ec8c6b228af43591053d89b96fc1585c719d
+2284ec8c6b228af43591053d89b96fc1585c719d,2284ec8c,Android and Python: increase timestamp tolerance,"Android and Python: increase timestamp tolerance
+
+- Slow networks sometimes caused rejected messages because of invalid timestamp, so the allowed difference is now higher
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419090833,1419090833,3fed9717069068121cc20f653b79e295c716b299
+3fed9717069068121cc20f653b79e295c716b299,3fed9717,Python client: separate conversations,"Python client: separate conversations
+
+- Separate conversations fully implemented for Python client
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1419090563,1419090563,53b897651be1777912795db633d65ac2ebe22086
+53b897651be1777912795db633d65ac2ebe22086,53b89765,WinRT: added delete conversation option,"WinRT: added delete conversation option
+
+- List items in the conversations page now have context menus which allow the user to delete selected conversation
+- Code for deleting messages simplified, no more manual event passing
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1418916665,1418916665,9843ddb8aec81c1862d717e5401b1705e4f07668
+9843ddb8aec81c1862d717e5401b1705e4f07668,9843ddb8,WinRT: bugfix,"WinRT: bugfix
+
+- Don't set DataStorage.ApplicationRunning to when navigating from conversations list to conversation page, set it only when the user navigates back from conversations list
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1418823366,1418823366,9bc6e3238a1f27be230158ed1a8af0d410006987
+9bc6e3238a1f27be230158ed1a8af0d410006987,9bc6e323,Android: bugfixes,"Android: bugfixes
+
+- Schedule the notifier service to run when the app is started - this way the user doesn't have to restart after instalation to enable notifications
+- Set CommonData.conversationsAdapter to null when starting ConversationsActivity to remove leftovers from previous logins
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418822369,1418822369,8e270dda9210cbcaea957c6a0796c12d302920de
+8e270dda9210cbcaea957c6a0796c12d302920de,8e270dda,WinRT: separate conversations complete for Windows Desktop,"WinRT: separate conversations complete for Windows Desktop
+
+- Separate confersations finished
+- Display date of last message in conversations list
+- Display confirmation dialogs for destructive actions
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1418745842,1418745842,accebc6344abac5e2996f21f832cde92f27fd2b2
+accebc6344abac5e2996f21f832cde92f27fd2b2,accebc63,Server: change displayed name to CryptoChat,"Server: change displayed name to CryptoChat
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418648112,1418648112,33bac24e25741523605913799337f493ef6ce2f4
+33bac24e25741523605913799337f493ef6ce2f4,33bac24e,Windows Phone: separate conversations done,"Windows Phone: separate conversations done
+
+- Separate conversations fully implemented on Windows Phone client (Windows Desktop not done yet)
+- Refactoring: CommonData got too big, separated Html generation and data storage into different classes
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1418587922,1418587922,4840c6911f58f6eaa06bac3951e95717be0e3e51
+4840c6911f58f6eaa06bac3951e95717be0e3e51,4840c691,WinRT: started work on separate convesations,"WinRT: started work on separate convesations
+
+- started adding separate conversations like on Android
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1418494433,1418494433,14665ceace7839dce9bb3c112133c7dd33a96025
+14665ceace7839dce9bb3c112133c7dd33a96025,14665cea,Android: minor code refactoring,"Android: minor code refactoring
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418471708,1418471708,0f9c0dc61c524f44f6caae2c12ae7416a707beda
+0f9c0dc61c524f44f6caae2c12ae7416a707beda,0f9c0dc6,Android: delete conversation from list,"Android: delete conversation from list
+
+- Individual conversations can now be deleted from the conversation list
+- Updated menu captions to match conversation deletion
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418420047,1418420047,a912dc3357b48091f47dc2ad9c77a17e4c8e05c8
+a912dc3357b48091f47dc2ad9c77a17e4c8e05c8,a912dc33,Merge pull request #1 from nidzo732/separateConversations,"Merge pull request #1 from nidzo732/separateConversations
+
+Separate conversations",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418403563,1418403563,"ebc2aeb589252290a79cd4760540721957d6f02f,320da1499542e75bfb85be2587e05f7c28cba991"
+320da1499542e75bfb85be2587e05f7c28cba991,320da149,Android: new model finished,"Android: new model finished
+
+- Separate conversations finished
+- Prettier text on conversation list
+- Removed unnecesary layout elements on conversation page
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418403352,1418403352,44e09f8116b1e49e170b2fa1873dd87bcee72845
+44e09f8116b1e49e170b2fa1873dd87bcee72845,44e09f81,Android: updated sponsor logo,"Android: updated sponsor logo
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418396068,1418396068,45ac5d3744e0dce95e84a8ad5f1c3a3bcd1bfded
+ebc2aeb589252290a79cd4760540721957d6f02f,ebc2aeb5,Python: refresh messages on startup,"Python: refresh messages on startup
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418245045,1418245045,4caba9d80a32e28ba00a9c3d05b89479fe9fa883
+45ac5d3744e0dce95e84a8ad5f1c3a3bcd1bfded,45ac5d37,Android: separate conversations probably finished,"Android: separate conversations probably finished
+
+- Separate conversations fully implemented and working, will be merged after testing
+- Help contents updated to match new model
+- Application name changed to CryptoChat
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418244081,1418244081,e6acfed56c75811b7eb4899c65e28618bd1ee538
+e6acfed56c75811b7eb4899c65e28618bd1ee538,e6acfed5,Android: further work on new model,"Android: further work on new model
+
+- Got the basic things working, all conversations are now separate
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418153149,1418153149,6c7a1e7f2b927115c5a15f8c0362f2ce37689228
+6c7a1e7f2b927115c5a15f8c0362f2ce37689228,6c7a1e7f,Android: redesigned navigation model,"Android: redesigned navigation model
+
+- redesigned layout, different conversations are now separate - like the SMS app
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418148910,1418148910,4caba9d80a32e28ba00a9c3d05b89479fe9fa883
+4caba9d80a32e28ba00a9c3d05b89479fe9fa883,4caba9d8,Android: modified notifier scheduling,"Android: modified notifier scheduling
+
+- Now using ELAPSED_REALTIME instead of RTC when setting notifier alarm
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1418046552,1418046552,886e9a50865eac14adbd6490dd6dc27ab11020c1
+886e9a50865eac14adbd6490dd6dc27ab11020c1,886e9a50,Android: notifier bugfix,"Android: notifier bugfix
+
+- Remove stored notifier passwords properly
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417812106,1417812106,21b1711e9023f11d6b5ce31865d3f84dc7777a32
+21b1711e9023f11d6b5ce31865d3f84dc7777a32,21b1711e,Android: removed unnecesary menus,"Android: removed unnecesary menus
+
+- Removed menu code from activities that don't need menus
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417791376,1417791376,fb18c6a26dc1aba6ba57dfb9420a14f388744df0
+fb18c6a26dc1aba6ba57dfb9420a14f388744df0,fb18c6a2,Android: Gradle updated,"Android: Gradle updated
+
+- Switched to newer version of Gradle, minor changes to build configuration files
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417787918,1417787918,45d8e4dcd3aeddea1e4c838dcf33dc4b9d60307c
+45d8e4dcd3aeddea1e4c838dcf33dc4b9d60307c,45d8e4dc,Android: improved notifier scheduling,"Android: improved notifier scheduling
+
+- Now using AlarmManager.setInexactRepeating to run notifier automatically instead of rescheduling every time with AlarmManager.set
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417725408,1417725408,c57254ff81dc2bb7695fc1e591926637a0bd0ec4
+c57254ff81dc2bb7695fc1e591926637a0bd0ec4,c57254ff,Android: fixes,"Android: fixes
+
+- Older Android versions sometimes loaded HTML improperly if utf-8 was specified in content type so this was removed
+
+- ICS sometimes overscrolled when calling WebView.scrollTo, now using WebView.pageDown(true)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417710071,1417710071,d5b62ef14a1c9e927b81b5dfd3a4f875341da82b
+d5b62ef14a1c9e927b81b5dfd3a4f875341da82b,d5b62ef1,Python: added language notice to help files,"Python: added language notice to help files
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417706509,1417706509,9fa988a5d1c167ead877e931f1bbaaec732caf93
+9fa988a5d1c167ead877e931f1bbaaec732caf93,9fa988a5,Python: translated help file,"Python: translated help file
+
+- Added serbian version of the help file
+- Translate Upload file button
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417706093,1417706093,204c31778522c3fffee42ce23ec72589d3933f10
+204c31778522c3fffee42ce23ec72589d3933f10,204c3177,"Python client: bugfix, translations","Python client: bugfix, translations
+
+- Handle bad tokens properly during login
+- Translated error messages
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417702953,1417702953,02576c9c3d6f3187507ad2bf1ff8a1a248cb4926
+02576c9c3d6f3187507ad2bf1ff8a1a248cb4926,02576c9c,Python client bugfixes,"Python client bugfixes
+
+- Always open string resource files using UTF-8 encoding
+- Modified setup.py to include resources folder in the build
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417639660,1417639660,167c0ffb1aa41d5c70c7d2ecfe7bc5a2445335f0
+167c0ffb1aa41d5c70c7d2ecfe7bc5a2445335f0,167c0ffb,Python client translation,"Python client translation
+
+- Added translation infrastructure and translated most of the UI to serbian
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417638114,1417638114,7d3d6c19ebd819269c7f325797978c4085b81032
+7d3d6c19ebd819269c7f325797978c4085b81032,7d3d6c19,Python client: made some Windows modal,"Python client: made some Windows modal
+
+- Registration, verification and password recovery windows are now modal
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417378409,1417378409,3b1e110c4871b5cd7332b7cceb17b5cce8c9fe80
+3b1e110c4871b5cd7332b7cceb17b5cce8c9fe80,3b1e110c,Android: minor fixes and reformatting,"Android: minor fixes and reformatting
+
+- Don't stop notifier if the check fails for only one account
+- Use loadDataWithBaseURL when displaying help
+- Minor reformatting
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417377867,1417377867,4ad9d1013f6c83e554221a61931f2b9c6a613ed6
+4ad9d1013f6c83e554221a61931f2b9c6a613ed6,4ad9d101,"Python: improved help, Android: new features","Python: improved help, Android: new features
+
+- Improved help text for Python client, fixed a few typos
+- Added password recovery activities to Android client, also improved help text on Android
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417298366,1417298366,23f79ef241257933661c8b01b7394ef8ddbaabc9
+23f79ef241257933661c8b01b7394ef8ddbaabc9,23f79ef2,Python build script add MSVC,"Python build script add MSVC
+
+- Modified setup.py to include MSVCRT libraries when building on Windows
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417211084,1417211084,4733b25dc28f71f17b51206a383cd0371238ee17
+4733b25dc28f71f17b51206a383cd0371238ee17,4733b25d,Python client: help added,"Python client: help added
+
+- Added help document
+- Fixed minor typos in strings
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417204287,1417204287,e96ff730108bb04124cd3a7bd0027185b04786a3
+e96ff730108bb04124cd3a7bd0027185b04786a3,e96ff730,Python client improvements,"Python client improvements
+
+- Added user friendly responses
+- Fixed typos in strings, added better UI captions
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417101272,1417101272,9ef9d03b31c5b2627f106e05897a711cc3ca0a89
+9ef9d03b31c5b2627f106e05897a711cc3ca0a89,9ef9d03b,Python client: message deletion,"Python client: message deletion
+
+- Added options to delete individual messages
+- Added confirmation dialogs to destructive actions
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417017443,1417017443,d411b84ae17caa45c6ac76fda65e365b7037b38f
+d411b84ae17caa45c6ac76fda65e365b7037b38f,d411b84a,Python client improvements,"Python client improvements
+
+- Added asynchrony, long operations are now done on separate thread making UI more responsive
+- Added set password dialog
+- Added links on message display used to select peer (just like WinRT/Android)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1417012391,1417012391,5b83ce1fdee7ba2b37adcbb422f878c65acfcf04
+5b83ce1fdee7ba2b37adcbb422f878c65acfcf04,5b83ce1f,Fixed AndroidStudio quirks,"Fixed AndroidStudio quirks
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416840466,1416840466,66c198270340e93c501a0f051132985489ea5a61
+66c198270340e93c501a0f051132985489ea5a61,66c19827,Android: added sponsor logo,"Android: added sponsor logo
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416839826,1416839826,24cc6adfec395d5e0338d5449857f39d03ec5368
+24cc6adfec395d5e0338d5449857f39d03ec5368,24cc6adf,Removed a leftover apk,"Removed a leftover apk
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416657428,1416657428,54f779e709b5743cf88f9497895b599f3f3c911d
+54f779e709b5743cf88f9497895b599f3f3c911d,54f779e7,"Android, code reformatting","Android, code reformatting
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416656957,1416656957,c2028ea708ab7ca4c42c8a3dde81b2c516450434
+c2028ea708ab7ca4c42c8a3dde81b2c516450434,c2028ea7,Android: message display fix,"Android: message display fix
+
+- Wait 100ms before scrolling the message display to let it load the HTML
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416611634,1416611634,7c42ea8cf2ac921583d95da8b734d143397a06a4
+7c42ea8cf2ac921583d95da8b734d143397a06a4,7c42ea8c,"WinRt: move set password page","WinRt: move set password page
+
+- Just like with android, the set password page was originally accessed from the login page, this enabled the user to go straight to that page without logging in. If the user hasn't logged in before, this would cause the set password page to try to use a nonexistent token. This way, the user is forced to log in first, which eliminates the posibility of a nonexistent token.
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1416601182,1416601182,5c537009571deec41bae7dae8b31282fa151f515
+5c537009571deec41bae7dae8b31282fa151f515,5c537009,Android: UI redesign,"Android: UI redesign
+
+- Move send and refresh buttons to action bar
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416499265,1416499265,e5ee436a6f5692b95bda626fb93b2d08b99906e3
+e5ee436a6f5692b95bda626fb93b2d08b99906e3,e5ee436a,WinRT: added features,"WinRT: added features
+
+- The peer can now be selected by clicking his name in the message display (feature copied from Android client)
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1416495938,1416495938,20c920890d20c632b953f7575c9ba782bbe963f7
+20c920890d20c632b953f7575c9ba782bbe963f7,20c92089,WinRT: prevent notifier from running when app is active,"WinRT: prevent notifier from running when app is active
+
+- WinRT HttpClient uses app-global cookie storage, which caused problems if the Notifier runs when the app is active,
+  this kind of behaviour is now disabled
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1416407807,1416407807,97fbf569af20c8f4410b9711aafd78e0f2527171
+97fbf569af20c8f4410b9711aafd78e0f2527171,97fbf569,Android: bugfix,"Android: bugfix
+
+- On Android Lolipop, WebView sometimes didn't display loaded html when calling loadData, for some reason, it works with loadDataWithBaseURL
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416242295,1416242295,81785fc76e68e0e0d09b2bf292a6c9404200f419
+81785fc76e68e0e0d09b2bf292a6c9404200f419,81785fc7,Android remove MANAGE_ACCOUNTS permission,"Android remove MANAGE_ACCOUNTS permission
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416138014,1416138014,d35feceec03bb54e5e3ce294b1310473c27d2ea9
+d35feceec03bb54e5e3ce294b1310473c27d2ea9,d35fecee,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416088005,1416088005,"f785838f71427919bd46476127983288b084d9bf,7b250b84cd6819b783a9eb122708332fb0b47b32"
+f785838f71427919bd46476127983288b084d9bf,f785838f,"Android, asynchrony, notifications, refactoring","Android, asynchrony, notifications, refactoring
+
+- All tasks involving networking and cryptography are done on a separate thread
+- Added background notification service
+- Rearanged navigation layout, set password activity is now accessed from conversation activity
+- Code refactoring
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1416087802,1416087802,916101584fffa7b1adc3743bed803881cae7bdb0
+7b250b84cd6819b783a9eb122708332fb0b47b32,7b250b84,Removed old leftover code,Removed old leftover code,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415659180,1415659180,ee25347253319dcc7e01a7d5f555fc245de2aa54
+ee25347253319dcc7e01a7d5f555fc245de2aa54,ee253472,Removed old leftover code,Removed old leftover code,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415659071,1415659071,916101584fffa7b1adc3743bed803881cae7bdb0
+916101584fffa7b1adc3743bed803881cae7bdb0,91610158,Android client improvements,"Android client improvements
+
+- Added icon to Android client
+- Added help, and utility activities to Android client
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415658837,1415658837,3b4af20b48320f9aeda867d28f51633464a2de3b
+3b4af20b48320f9aeda867d28f51633464a2de3b,3b4af20b,"Android client, refactoring","Android client, refactoring
+
+- Moved declaration of click listeners to XML
+- Shwitched to android built-in Base64 library
+- Code reformatting
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415621497,1415621497,d16946a7b897b1f573b5612a6d11b92fe58298bf
+d16946a7b897b1f573b5612a6d11b92fe58298bf,d16946a7,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415573982,1415573982,"d024f22704edd59ac7e19f08bcb294c30340da8a,ce1209d6848954223f75d1c5111d76541d0a97f1"
+d024f22704edd59ac7e19f08bcb294c30340da8a,d024f227,Started work on Android client,"Started work on Android client
+
+- Added an Android client with basic messaging support
+- Minor fixes in the server code - prevent login to an unauthorized acount with an empty token
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1415573857,1415573857,27740bcfc49f42c2433b908cf34a863742afda7f
+ce1209d6848954223f75d1c5111d76541d0a97f1,ce1209d6,Updated WinRT client for new protocol,"Updated WinRT client for new protocol
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1414076883,1414076883,27740bcfc49f42c2433b908cf34a863742afda7f
+27740bcfc49f42c2433b908cf34a863742afda7f,27740bcf,Merge branch 'master' of https://github.com/nidzo732/SecureMessaging,"Merge branch 'master' of https://github.com/nidzo732/SecureMessaging
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1414072861,1414072861,"bbeffe846658def1d7b80eb11cf3d390ad9ed922,b359e7d8b79fb9479dee60e007b67c67d3d668a4"
+bbeffe846658def1d7b80eb11cf3d390ad9ed922,bbeffe84,Minor protocol redesign,"Minor protocol redesign
+
+- JSON is no longer overused when it's not needed, raw strings are sent instead
+- No more JSON when sending time, upload address, keys and other simple values
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1414072744,1414072744,d4fbe917457d33bffcd488579e960e2253839357
+b359e7d8b79fb9479dee60e007b67c67d3d668a4,b359e7d8,WinRT: minor refactoring,"WinRT: minor refactoring
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1414009913,1414009913,d4fbe917457d33bffcd488579e960e2253839357
+d4fbe917457d33bffcd488579e960e2253839357,d4fbe917,Minor changes to server,"Minor changes to server
+
+- limit number of received messages to 20
+- limit password, username and email length
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413748618,1413748618,73eaf2858c3f94764c4d9d636785042265d4d312
+73eaf2858c3f94764c4d9d636785042265d4d312,73eaf285,Minor translations for WinRT save dialog,"Minor translations for WinRT save dialog
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413581556,1413581556,d6c3f0ef2b7f0373c7d9899059bf29b0d890feb1
+d6c3f0ef2b7f0373c7d9899059bf29b0d890feb1,d6c3f0ef,Added timeouts to WinRT client,"Added timeouts to WinRT client
+- prevent requests from running forever
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413143111,1413143111,bc66cd985f3f8ce47e59e4ce68dea2836cbc7729
+bc66cd985f3f8ce47e59e4ce68dea2836cbc7729,bc66cd98,Python client: allow bigger difference between timestamps for files,"Python client: allow bigger difference between timestamps for files
+
+- allow files to have bigger difference between timestamps to allow long upload times",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413140634,1413140634,68b5396c0188f4a3e2e4267d2ebc8b6649191456
+68b5396c0188f4a3e2e4267d2ebc8b6649191456,68b5396c,WinRT: allow bigger timestamp difference for files,"WinRT: allow bigger timestamp difference for files
+
+- allow files to have bigger difference between timestamps to allow long upload times",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413140576,1413140576,cb3be69784c6e7f9cc3d656d26998c9e4294b5c2
+cb3be69784c6e7f9cc3d656d26998c9e4294b5c2,cb3be697,Server file upload size increase,"Server file upload size increase
+- Increased size limit for uploaded files to accomodate for keys and base64 encoding
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413139582,1413139582,e273292ad35ca0a046c03e9584d99c35119e458b
+e273292ad35ca0a046c03e9584d99c35119e458b,e273292a,WinRT - moved file decryption to separate async Task,"WinRT - moved file decryption to separate async Task
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413130315,1413130315,c8262b8213f2e85c4cbaef49192821fca3744d46
+c8262b8213f2e85c4cbaef49192821fca3744d46,c8262b82,WinRT small improvements,"WinRT small improvements
+-
+WinRT client sends User agent again
+- Slightly reworked networking, request sender class is no longer static
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413128206,1413128206,0ccd96592b7ac80e0d07286104135cb5572c0e1c
+0ccd96592b7ac80e0d07286104135cb5572c0e1c,0ccd9659,WinRt: translations for file-related errors,"WinRt: translations for file-related errors
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413106175,1413106175,8f7a8f8069b13ac5de6424c9c6fe527fcb2c6201
+8f7a8f8069b13ac5de6424c9c6fe527fcb2c6201,8f7a8f80,Removed leftover file,Removed leftover file,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413060606,1413060606,10ca5b16ffdf1a485aca34379d1a6565738ed523
+10ca5b16ffdf1a485aca34379d1a6565738ed523,10ca5b16,Removed leftover file,Removed leftover file,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1413060570,1413060570,71c8fc42d56b06b4afee084a47067d48efc6234b
+71c8fc42d56b06b4afee084a47067d48efc6234b,71c8fc42,Added timestamp checking for files in WinRT,"Added timestamp checking for files in WinRT
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413059836,1413059836,f81e98ce3dc8743a2cc70750f677aaf3468c71cb
+f81e98ce3dc8743a2cc70750f677aaf3468c71cb,f81e98ce,Added file upload/download support to WinRT client,"Added file upload/download support to WinRT client
+- Window
+s Runtime client can now send and receive files
+- WiRT client switched to Windows.Webb.Http for networking
+- WinRT: removed some duplicate strings from resources # Please enter the commit message for your changes. Lines starting
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1413059686,1413059686,7fec14b990c6dc1fa4ec75bf46fb703ac7532243
+7fec14b990c6dc1fa4ec75bf46fb703ac7532243,7fec14b9,Added support for sending files,"Added support for sending files
+- File upload added (Python client library, Python client, server)
+- Messages are now saved with pickle instead of JSON
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1411248972,1411248972,0e040f1756841f714a8be7dde863ab0821e31e36
+0e040f1756841f714a8be7dde863ab0821e31e36,0e040f17,WinRT: removed some commented-out methods from MessageNotifier,"WinRT: removed some commented-out methods from MessageNotifier
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1409508824,1409508824,92fa0563a5bee55d3f87c632837002cb8cd3f7d3
+92fa0563a5bee55d3f87c632837002cb8cd3f7d3,92fa0563,WinRT: translated notifications,"WinRT: translated notifications
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1409415270,1409415270,24df7ec87c01b895c947d2d461aa909fb66a7942
+24df7ec87c01b895c947d2d461aa909fb66a7942,24df7ec8,WinRT client: removed displayMessages() from ConversationPage.OnNavigatedTo(),"WinRT client: removed displayMessages() from ConversationPage.OnNavigatedTo()
+it's called by refreshMessages()
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1409345613,1409345613,01784ce62e56e132023a6d15800fb18e6b496f4b
+01784ce62e56e132023a6d15800fb18e6b496f4b,01784ce6,"WinRT, Notifier: log out after checking new messages","WinRT, Notifier: log out after checking new messages
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1409080189,1409080189,844895f221956180a63424ed27384fe180c3b9c4
+844895f221956180a63424ed27384fe180c3b9c4,844895f2,Improved notifications for WinRT client,"Improved notifications for WinRT client
+- multiple users can now receieve notifications on a single client computer
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1409054594,1409054594,fa931dd8b4217ef1b73d286409d12752d90a8147
+fa931dd8b4217ef1b73d286409d12752d90a8147,fa931dd8,Added background notifications capability to WinRT client,"Added background notifications capability to WinRT client
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1408993537,1408993537,bc44c041d390d3e879121450a493bb9e6057d826
+bc44c041d390d3e879121450a493bb9e6057d826,bc44c041,Removed a wrongly placed file,Removed a wrongly placed file,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408885784,1408885784,9bb7fbbb420daa7f598fa2e4aad0784a1cde29eb
+9bb7fbbb420daa7f598fa2e4aad0784a1cde29eb,9bb7fbbb,Removed unnecesary cursor POST key from server,Removed unnecesary cursor POST key from server,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408885753,1408885753,e87dfcdf478547e02766497eb80f0657567006d2
+e87dfcdf478547e02766497eb80f0657567006d2,e87dfcdf,Updated c# client,"Updated c# client
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1408885132,1408885132,cee18756996a103bdb24ec5201ab0f025e0a12f6
+cee18756996a103bdb24ec5201ab0f025e0a12f6,cee18756,Forgot to commit the changes to the server code,"Forgot to commit the changes to the server code
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408882347,1408882347,87d0973464b0f4846d1745a17ff36d6c136930e3
+87d0973464b0f4846d1745a17ff36d6c136930e3,87d09734,"Bugfixes, simplification, new capabilities","Bugfixes, simplification, new capabilities
+- fixed the clearusers cron job
+- removed the need for cursors when receiving messages (this breaks C# client for now)
+- added ability to check for new messages without downloading (currently only available in Python client)
+- added ability to log in without updating keys, useful when just checking for new messages (currently only available in Python client)
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408881971,1408881971,33df8c464df892e09ccc7bcec9c6f742d1f8805c
+33df8c464df892e09ccc7bcec9c6f742d1f8805c,33df8c46,Forgot to add a return statement when a non-alphhanumeric username is rejected,"Forgot to add a return statement when a non-alphhanumeric username is rejected
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408567330,1408567330,a09274d9c80ece4c454a52bbd22477cd05c68074
+a09274d9c80ece4c454a52bbd22477cd05c68074,a09274d9,Reject non-alphanumeric usernames during registration,"Reject non-alphanumeric usernames during registration
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408565582,1408565582,2ae7d76c74499f95280a9267324a370c04ac26f1
+2ae7d76c74499f95280a9267324a370c04ac26f1,2ae7d76c,Added description to uigen.sh,Added description to uigen.sh,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408528862,1408528862,55769d7926354ce8f4dc05003ff926a2c21bc0ad
+55769d7926354ce8f4dc05003ff926a2c21bc0ad,55769d79,Python client app now display sender and receiver,"Python client app now display sender and receiver
+- added receiver attribute to secureMessagingClient.message.Message
+- display receiver in the application
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408528695,1408528695,6a19c79534e6fd44e65ac7bd1135c19c53222d6f
+6a19c79534e6fd44e65ac7bd1135c19c53222d6f,6a19c795,Display both sender and receiever in the WinRT client application,"Display both sender and receiever in the WinRT client application
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1408527702,1408527702,3533c9106eb51f07003495e8fa2ac2b9d9edabd8
+3533c9106eb51f07003495e8fa2ac2b9d9edabd8,3533c910,Minor changes,"Minor changes
+- Edited homepage to point to GitHub page
+- Changed the session cookie key
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408204010,1408204010,fb1af74cb87f47c477826a75b3f1bdac7e61c358
+fb1af74cb87f47c477826a75b3f1bdac7e61c358,fb1af74c,More detailed readme,More detailed readme,,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408203711,1408203711,4f1d468ce753332b36120613634d88ad04251791
+4f1d468ce753332b36120613634d88ad04251791,4f1d468c,Restructuiring...,"Restructuiring...
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408201853,1408201853,378ded4c2af51b88d8dbd204614c640ac176baff
+378ded4c2af51b88d8dbd204614c640ac176baff,378ded4c,Improved exception handling in the Python client,"Improved exception handling in the Python client
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1408048717,1408048717,7dbd17083e74b8754f30b7f1faebedbfac7b4183
+7dbd17083e74b8754f30b7f1faebedbfac7b4183,7dbd1708,Added WinRt client,"Added WinRt client
+",,,,nidzo732,nikola825@gmail.com,nidzo732,nikola825@gmail.com,1407962600,1407962600,5a1a0d764bca4656c1239e6e215b7658a5a04907
+5a1a0d764bca4656c1239e6e215b7658a5a04907,5a1a0d76,Ignore files ending with '~' and .idea folders made by PyCharm,"Ignore files ending with '~' and .idea folders made by PyCharm
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1407961522,1407961522,806d2aba5605da2e36b4f4279c19d3a003cc9926
+806d2aba5605da2e36b4f4279c19d3a003cc9926,806d2aba,Cleanup,"Cleanup
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1407878308,1407878308,a616d039956e40d21ebbd4b000bdfcd8971e0d27
+a616d039956e40d21ebbd4b000bdfcd8971e0d27,a616d039,Initial commit,"Initial commit
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1407877126,1407877126,37b99727714a07f5e57ba4367b733c8958279bdd
+37b99727714a07f5e57ba4367b733c8958279bdd,37b99727,Initial commit,"Initial commit
+",,,,Nikola Pavlović,nikola825@gmail.com,Nikola Pavlović,nikola825@gmail.com,1407876726,1407876726,

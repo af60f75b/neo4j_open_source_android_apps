@@ -1,0 +1,318 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c5d1fa69fb061abfd216818ebf6a126406433972,c5d1fa69,version bump to 1.2.6,"version bump to 1.2.6
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1438288297,1438288333,d221efd16d451f1e6df3702f80982fa16a3df2b4
+d221efd16d451f1e6df3702f80982fa16a3df2b4,d221efd1,Merge branch 'moparisthebest-sni',"Merge branch 'moparisthebest-sni'
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1438288059,1438288059,"5f53edb6594050db559b46d599dda88544ba316a,5612b502745265a583d4610d24b716a5c3690199"
+5612b502745265a583d4610d24b716a5c3690199,5612b502,Added GPL license,"Added GPL license
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1438286702,1438286702,a6ad6cd5c75de39a508285999618644bfe09424b
+a6ad6cd5c75de39a508285999618644bfe09424b,a6ad6cd5,AndroidManifest: raise min API level to 9,"AndroidManifest: raise min API level to 9
+
+Only 2.3+ is supported from now on
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1438284492,1438286612,a8aea42d978021b7d8eb5aa06600e90abda6c7d5
+a8aea42d978021b7d8eb5aa06600e90abda6c7d5,a8aea42d,TcpProxy: Implemented support for SNI,"TcpProxy: Implemented support for SNI
+
+Implemented backwards-compatible support for the Server Name
+Indication extension of the SSL/TLS protocol in way that it
+is still compatible with Android 2.3+ devices where the API
+does not support SNI
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1438282914,1438286585,1371240c65125729b860331b7458cb50313a50b2
+1371240c65125729b860331b7458cb50313a50b2,1371240c,AndroidManifest: raise API level to 17,"AndroidManifest: raise API level to 17
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1438282754,1438286585,e553d58eda071fc263bca6fec174b11534fb35ec
+e553d58eda071fc263bca6fec174b11534fb35ec,e553d58e,Move hostname validation into an AsyncTask,"Move hostname validation into an AsyncTask
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1438281126,1438286579,dc5d2d641b0c97b8ef4ea8ab6716544005e024e4
+dc5d2d641b0c97b8ef4ea8ab6716544005e024e4,dc5d2d64,TcpProxy: move listening socket creation off the UI thread,"TcpProxy: move listening socket creation off the UI thread
+
+Needed to avoid a NetworkOnMainThreadException on API level 11+
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1438282029,1438286423,6fa89457b9e3bc04e476606fe47df00936a92175
+6fa89457b9e3bc04e476606fe47df00936a92175,6fa89457,TunnelDetails: make client-side certificate usage optional,"TunnelDetails: make client-side certificate usage optional
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1438281907,1438283272,f78687cd3d2ac180ee95b103462ea42274d7f960
+f78687cd3d2ac180ee95b103462ea42274d7f960,f78687cd,Provisioning: comment out WIP stub,"Provisioning: comment out WIP stub
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1438281696,1438283269,1ac1b4fb17adebbecd69205385136eb6d1c389b5
+1ac1b4fb17adebbecd69205385136eb6d1c389b5,1ac1b4fb,Add gradle build and wrapper,"Add gradle build and wrapper
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,moparisthebest,admin@moparisthebest.com,Balint Kovacs,blint@balabit.hu,1437802627,1438283253,5f53edb6594050db559b46d599dda88544ba316a
+5f53edb6594050db559b46d599dda88544ba316a,5f53edb6,version bump to 1.2.4,"version bump to 1.2.4
+
+Signed-off-by: Balint Kovacs <blint@balabit.hu>",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1418987660,1418987660,dd0e9ac2804abcc526978e85e243fe12c74ec834
+dd0e9ac2804abcc526978e85e243fe12c74ec834,dd0e9ac2,TcpProxyServerThread: add missing check on socket existence,"TcpProxyServerThread: add missing check on socket existence
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1418984125,1418984913,e04d51d891450f7997d3ac79127affdc6458446e
+e04d51d891450f7997d3ac79127affdc6458446e,e04d51d8,classpath: added new path,"classpath: added new path
+",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1418984885,1418984885,60646b523ce3bbc35451464791ae9356ae824496
+60646b523ce3bbc35451464791ae9356ae824496,60646b52,SSLDroidTunnelDetails: remove unnecessary except clause,"SSLDroidTunnelDetails: remove unnecessary except clause
+
+Signed-off-by: Balint Kovacs <blint@balabit.hu>",,,,Balint Kovacs,blint@balabit.hu,Balint Kovacs,blint@balabit.hu,1418984820,1418984820,c97ab2bb80934b2cbad90d0a9e59e007c0175f10
+c97ab2bb80934b2cbad90d0a9e59e007c0175f10,c97ab2bb,Moved Relay class into a separate file,"Moved Relay class into a separate file
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1391850907,1391850907,42c6f7df963d18cf6f9bf92ac67fa00df83aa558
+42c6f7df963d18cf6f9bf92ac67fa00df83aa558,42c6f7df,Fix a race condition in TcpServerThread,"Fix a race condition in TcpServerThread
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>
+",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1391438989,1391438989,a76eff7188cf83bdb5a8c7b51e1a5b197702babf
+a76eff7188cf83bdb5a8c7b51e1a5b197702babf,a76eff71,Version bump to 1.2.2,"Version bump to 1.2.2
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371206193,1371206193,f4641c4498de57cfe0ba640d72dc0c3ddba8a19a
+f4641c4498de57cfe0ba640d72dc0c3ddba8a19a,f4641c44,Added proper permissions for service stop and start,"Added proper permissions for service stop and start
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371203512,1371203512,5c2958ea69936a436275c4847ff13f1d8da902f6
+5c2958ea69936a436275c4847ff13f1d8da902f6,5c2958ea,Version bump,"Version bump
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371201111,1371201111,06bda39d24b14e77b25c0b880f0d7e662bb1edeb
+06bda39d24b14e77b25c0b880f0d7e662bb1edeb,06bda39d,Fixed invalid permissions for SSLDroid service,"Fixed invalid permissions for SSLDroid service
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371201042,1371201042,50f0cb2c954b1180faf0c5fe3cfda0701a9c0db2
+50f0cb2c954b1180faf0c5fe3cfda0701a9c0db2,50f0cb2c,Version bump to 1.2,"Version bump to 1.2
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371104571,1371104571,72f5efd826dc617213802688f73827a6ad073a38
+72f5efd826dc617213802688f73827a6ad073a38,72f5efd8,Added Clone tunnel functionality,"Added Clone tunnel functionality
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371104166,1371104166,27b08ae5282303961a2ebd9dd0df54c7779a01d2
+27b08ae5282303961a2ebd9dd0df54c7779a01d2,27b08ae5,Removed unnecessary import,"Removed unnecessary import
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371102440,1371102440,8ade78aeb706c609815d4bd0c9347079fef5ca9e
+8ade78aeb706c609815d4bd0c9347079fef5ca9e,8ade78ae,Added version info in service startup log message,"Added version info in service startup log message
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371026076,1371026076,3e84ffc9b592564f30dcc9069db753f4dfb17c6c
+3e84ffc9b592564f30dcc9069db753f4dfb17c6c,3e84ffc9,Version bump,"Version bump
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371022176,1371022176,e9dd932d1c5afe9449dc6abca4810fe46dac68bd
+e9dd932d1c5afe9449dc6abca4810fe46dac68bd,e9dd932d,Updated proguard.cfg to update deprecated keywords,"Updated proguard.cfg to update deprecated keywords
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021984,1371021984,12aef62a1d2369d051e68ba74bb7daf9f66247da
+12aef62a1d2369d051e68ba74bb7daf9f66247da,12aef62a,Version bump,"Version bump
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021934,1371021934,1c7977a78d85173db6b6c8637f532a88205f72ba
+1c7977a78d85173db6b6c8637f532a88205f72ba,1c7977a7,Added share logs functionality,"Added share logs functionality
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021572,1371021572,74d7c4c6a492aaee6ec967c8e68a99f0ecd81b4b
+74d7c4c6a492aaee6ec967c8e68a99f0ecd81b4b,74d7c4c6,added suppress to remove warnings for yet unused functionality,"added suppress to remove warnings for yet unused functionality
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021514,1371021514,76677d959a92d4fe2df81e0b0764e491573dbc90
+76677d959a92d4fe2df81e0b0764e491573dbc90,76677d95,cleaned up AndroidManifest to get rid of AndroidLint warnings and,"cleaned up AndroidManifest to get rid of AndroidLint warnings and
+properly define API level, also added security on the Service intent",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021410,1371021410,f269d18052988faa65da8e663feceb6620947fa6
+f269d18052988faa65da8e663feceb6620947fa6,f269d180,removed presumably dead code,removed presumably dead code,,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021308,1371021308,15119d16982ab07100a96deedd13982aa4a7e66a
+15119d16982ab07100a96deedd13982aa4a7e66a,15119d16,removed unnecessary import,"removed unnecessary import
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1371021174,1371021174,77539380ed372fefea5a532fbaef9fe466e9dc32
+77539380ed372fefea5a532fbaef9fe466e9dc32,77539380,README added,"README added
+",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1320163095,1320163095,ecf4cd5557ef0c2a1469e6b9898b2c5a0460014a
+ecf4cd5557ef0c2a1469e6b9898b2c5a0460014a,ecf4cd55,[explicit stop] made option name less ambiguous,[explicit stop] made option name less ambiguous,,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1319017605,1319017605,8e3cd92b69210579c1a88b94d25c5fa193fd547b
+8e3cd92b69210579c1a88b94d25c5fa193fd547b,8e3cd92b,Implemented explicit stop feature - stops the service until it is,"Implemented explicit stop feature - stops the service until it is
+started manually
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1319017483,1319017483,d59aa907a82a36419de0745b325d07b4e871991c
+d59aa907a82a36419de0745b325d07b4e871991c,d59aa907,Additional logging in case of SSL IOExeption,"Additional logging in case of SSL IOExeption
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1315230520,1315230520,99e6e89c138ed0e417858fbd26d4f32a9b64d80b
+99e6e89c138ed0e417858fbd26d4f32a9b64d80b,99e6e89c,"Changed logging, so that it includes the listening socket's IP address","Changed logging, so that it includes the listening socket's IP address
+as well
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1315230487,1315230487,d474bb66828f6495f57e19e296096434f8014f25
+d474bb66828f6495f57e19e296096434f8014f25,d474bb66,Implement check if the client-side certificate is expired,"Implement check if the client-side certificate is expired
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1315230260,1315230260,6010416325e3c429b9e0a826d9681d1f9976b723
+6010416325e3c429b9e0a826d9681d1f9976b723,60104163,Check certificate expiration while saving the tunnel details,"Check certificate expiration while saving the tunnel details
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1311080425,1311080425,26685aa5d7139ec6cd12d9f6e1406ef330ca9a0f
+26685aa5d7139ec6cd12d9f6e1406ef330ca9a0f,26685aa5,[provisioning] XSD for validating the XML config,"[provisioning] XSD for validating the XML config
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1309261537,1309261537,e38b9b81abeaafba84a0716e731b54e4c3162d6f
+e38b9b81abeaafba84a0716e731b54e4c3162d6f,e38b9b81,[provisioning] example XML config,[provisioning] example XML config,,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1309261498,1309261498,99c780aabc8992f451339d51d1be1b27faba3528
+99c780aabc8992f451339d51d1be1b27faba3528,99c780aa,Causes NullPointerException,"Causes NullPointerException
+
+Revert ""Enhanced logging for Network status change, so that we are able to""
+
+This reverts commit c8a4d2a45999d8ce0d339f37b495b21d5d1b9ad8.
+",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1308046556,1308046556,c8a4d2a45999d8ce0d339f37b495b21d5d1b9ad8
+c8a4d2a45999d8ce0d339f37b495b21d5d1b9ad8,c8a4d2a4,"Enhanced logging for Network status change, so that we are able to","Enhanced logging for Network status change, so that we are able to
+filter better on change events in future
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1307690741,1307690741,c3add3dbf80559794505d086f37bffd605b67bb8
+c3add3dbf80559794505d086f37bffd605b67bb8,c3add3db,Fixed too strict unicity check in tunnel details dialog,"Fixed too strict unicity check in tunnel details dialog
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1307690700,1307690700,aad79a8e5a01b04b5e99b509e6800c6a2c0e865f
+aad79a8e5a01b04b5e99b509e6800c6a2c0e865f,aad79a8e,Indentation fixes,"Indentation fixes
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304537486,1304537486,69c521c91e402b36dd07fbc56a7024edf1e21970
+69c521c91e402b36dd07fbc56a7024edf1e21970,69c521c9,"Removed the ticker text on service startup notification, only","Removed the ticker text on service startup notification, only
+displaying the icon now (less disturbing)
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304531870,1304531870,6c07dca8e013b913567b38c29fc1c02f04a4768e
+6c07dca8e013b913567b38c29fc1c02f04a4768e,6c07dca8,Implemented network state change listener that stops the service on,"Implemented network state change listener that stops the service on
+connectivity loss and starts it once connectivity is regained
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304510845,1304510845,5d92ede437facfd7ac6fa41ceae18ce8098db50b
+5d92ede437facfd7ac6fa41ceae18ce8098db50b,5d92ede4,"Externalized string for menu item ""Refresh"" on the logview activity","Externalized string for menu item ""Refresh"" on the logview activity
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304505683,1304505683,497417760343bc0a8be91290968ef3fc3ce4dbdb
+497417760343bc0a8be91290968ef3fc3ce4dbdb,49741776,Added refresh menu option to the logview activity,"Added refresh menu option to the logview activity
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304505154,1304505154,56e94748298af94201c5263a51bed70241d6b7ae
+56e94748298af94201c5263a51bed70241d6b7ae,56e94748,"Removed deprecated ""editable"" attribute","Removed deprecated ""editable"" attribute
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304496419,1304496419,cacac3cc50435cdaeee373fe3733f641fa718b1e
+cacac3cc50435cdaeee373fe3733f641fa718b1e,cacac3cc,"Fixed a copy-paste problem in AndroidManifest.xml, the log read","Fixed a copy-paste problem in AndroidManifest.xml, the log read
+activity always popped up the soft keyboard
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304496150,1304496150,236a6394c7d8993e9a237f45f13ea0e69a2a196c
+236a6394c7d8993e9a237f45f13ea0e69a2a196c,236a6394,Removed log messages used for inital debugging that could disclose,"Removed log messages used for inital debugging that could disclose
+personal information (SD card content)
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304494348,1304494348,64063593f86c6e4eb16c5bb2e9ad5c9f7db40233
+64063593f86c6e4eb16c5bb2e9ad5c9f7db40233,64063593,Added Back button in the file browser and did some additional checks,"Added Back button in the file browser and did some additional checks
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304494106,1304494106,7f5f4f476814741ffe0261f09438e78f80dac995
+7f5f4f476814741ffe0261f09438e78f80dac995,7f5f4f47,Implemented rudimentary file browser capability to dive into,"Implemented rudimentary file browser capability to dive into
+subdirectories
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304450447,1304450447,ef3168131bcde9dc129e4c453afa641d42f8d208
+ef3168131bcde9dc129e4c453afa641d42f8d208,ef316813,Extended file pick dialog to find .p12 and .pfx files on the whole SD,"Extended file pick dialog to find .p12 and .pfx files on the whole SD
+card recursively
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304443737,1304443737,2e55c4e2c30405fd1f67c18779afa690d2797605
+2e55c4e2c30405fd1f67c18779afa690d2797605,2e55c4e2,Polished log view a bit more,"Polished log view a bit more
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304439067,1304439067,3a03aa7eedd1998b9f6748dcff9995ae72bbdac6
+3a03aa7eedd1998b9f6748dcff9995ae72bbdac6,3a03aa7e,Removed unused code hunk,"Removed unused code hunk
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304435540,1304435540,11db518fe9cc6556b056a7b2b859f93f7effcdaa
+11db518fe9cc6556b056a7b2b859f93f7effcdaa,11db518f,Polished log view to a usable stage,"Polished log view to a usable stage
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304435164,1304435164,662d62d7bd7e620681072e82b8e676e4aab50a98
+662d62d7bd7e620681072e82b8e676e4aab50a98,662d62d7,Log view prototype (untested),"Log view prototype (untested)
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1304035284,1304035284,5e276bf69c698f15e9a293518697f3aaf9ecf3e9
+5e276bf69c698f15e9a293518697f3aaf9ecf3e9,5e276bf6,Added a bunch of TODO's to the appropriate files,"Added a bunch of TODO's to the appropriate files
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303998017,1303998017,de7a26429658f901ba7faacba431d8b85d5ee290
+de7a26429658f901ba7faacba431d8b85d5ee290,de7a2642,Added log tags and session ID to the stream related error messages,"Added log tags and session ID to the stream related error messages
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303825331,1303825331,a094fa8be17ac48abc84d3309058183584df6837
+a094fa8be17ac48abc84d3309058183584df6837,a094fa8b,Added local port collision check to the tunnel details input,"Added local port collision check to the tunnel details input
+validation
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303823805,1303823805,8d35c15a0239dfe485adc916a9d11f196b97a8d5
+8d35c15a0239dfe485adc916a9d11f196b97a8d5,8d35c15a,Added a bunch of input validation at the tunnel details screen,"Added a bunch of input validation at the tunnel details screen
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303822190,1303822190,e33cf5dc17f76054c13e5fa4e0fe99358a578134
+e33cf5dc17f76054c13e5fa4e0fe99358a578134,e33cf5dc,Make sure the server socket only listens on localhost,"Make sure the server socket only listens on localhost
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303363595,1303363595,f83d37f2ca3917c7a08d0677b358f632f19b2517
+f83d37f2ca3917c7a08d0677b358f632f19b2517,f83d37f2,Moved saving the TunnelDetails state from the onPause() hook to the,"Moved saving the TunnelDetails state from the onPause() hook to the
+explicit button press event for the Apply button to avoid the changes
+to be saved if the user hits the back button.
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303338019,1303338019,a4489bcd97c07e133194b0c3b825c8ef07aef6ca
+a4489bcd97c07e133194b0c3b825c8ef07aef6ca,a4489bcd,Basically undone these commits:,"Basically undone these commits:
+
+82da2651b2034114fe6305b922471c9993823092
+780d221b2f3a8a112fdcce888d3f7e515b805b56
+
+Instead of wait()-ing which has just made the problem worse, the
+socket used for passing data between the threads needs to be closed.
+
+The second is yet to be solved, onPause() is called even if the
+Activity is being canceled, need to check somehow why this is needed
+for saving the instance state.
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303335275,1303335275,79c357576ca40c30586cf6357a3d9914b205bada
+79c357576ca40c30586cf6357a3d9914b205bada,79c35757,Implemented file chooser for picking the PKCS12 file for the tunnel,"Implemented file chooser for picking the PKCS12 file for the tunnel
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303328756,1303328756,8a28244471760abe4dfb010cc1fb4a3253662c67
+8a28244471760abe4dfb010cc1fb4a3253662c67,8a282444,Another cleanup round,"Another cleanup round
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303324975,1303324975,422d217e3bbc0b13225692f0bdbdacd241f7064b
+422d217e3bbc0b13225692f0bdbdacd241f7064b,422d217e,Some more cleanup,"Some more cleanup
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303319294,1303319294,89d87a89e85629c5f8dfa24d96a6c0c287c4d339
+89d87a89e85629c5f8dfa24d96a6c0c287c4d339,89d87a89,Some more cleanup,"Some more cleanup
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303319146,1303319146,5ef9db389e379308c50b5ff8e23949ea7d6f8ff0
+5ef9db389e379308c50b5ff8e23949ea7d6f8ff0,5ef9db38,Removed some clutter used for initial troubleshooting,"Removed some clutter used for initial troubleshooting
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303319119,1303319119,82da2651b2034114fe6305b922471c9993823092
+82da2651b2034114fe6305b922471c9993823092,82da2651,Try to wait() for the workerthreads to finish when stopping the,"Try to wait() for the workerthreads to finish when stopping the
+service, this probably needs more thought in the future
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303318879,1303318879,780d221b2f3a8a112fdcce888d3f7e515b805b56
+780d221b2f3a8a112fdcce888d3f7e515b805b56,780d221b,Fixed a problem that caused the application to save to tunnel,"Fixed a problem that caused the application to save to tunnel
+preference when pressing the back button and hence has also restarted
+the service
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303318782,1303318782,422b11fdefd5ccd541a0c0a59c6684e5fb1c66eb
+422b11fdefd5ccd541a0c0a59c6684e5fb1c66eb,422b11fd,"Heavy refactoring, implemented proper GUI","Heavy refactoring, implemented proper GUI
+
+Migrated settings to be sqlite-based and the GUI to be based on
+ListActivity
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303315834,1303315834,4d724fb37d7409c7424de83653283585f94a8094
+4d724fb37d7409c7424de83653283585f94a8094,4d724fb3,Implemented basics of multiple tunnel handling,"Implemented basics of multiple tunnel handling
+
+Also implemented accepting all server certs as my subject server had
+an expired certificate.
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303104603,1303104603,9d4495713256820768e2113b63c6fe3db0bf4583
+9d4495713256820768e2113b63c6fe3db0bf4583,9d449571,"Changed ""running"" notification to display the tunnel details.","Changed ""running"" notification to display the tunnel details.
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303066414,1303066414,7cf08aca6ecd8bd264403fcc7cfd6bcd51e29d96
+7cf08aca6ecd8bd264403fcc7cfd6bcd51e29d96,7cf08aca,"Fixed ""running"" notification to be persistent, e.g. not clearable by","Fixed ""running"" notification to be persistent, e.g. not clearable by
+the user.
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1303065844,1303065844,a447f4419f328d0d20ee53a713369a03318f0a9a
+a447f4419f328d0d20ee53a713369a03318f0a9a,a447f441,Support for local settings,"Support for local settings
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1302861000,1302861000,02465d3450670ead33f598f49bcbe6df0c72d574
+02465d3450670ead33f598f49bcbe6df0c72d574,02465d34,Moved notification creation and deletion to separate functions,"Moved notification creation and deletion to separate functions
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1302849793,1302849793,c1a7c94be9ae02675a91cf59f02438f0ed3661fc
+c1a7c94be9ae02675a91cf59f02438f0ed3661fc,c1a7c94b,Fixed shutdown issue and some error handling adjustments,"Fixed shutdown issue and some error handling adjustments
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1302849723,1302849723,2ebebbd89664cf8d7ae87c769d419d0058051682
+2ebebbd89664cf8d7ae87c769d419d0058051682,2ebebbd8,Huge amount of changes:,"Huge amount of changes:
+
+* moved TcpProxy server thread into separate class
+* implemented on boot startup
+* fixed service stop problem
+
+and anything else I forgot about (bad boy, should commit more often)
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1302620760,1302620760,36414ea0b954ee563ac92f38a0a9242bab9cb603
+36414ea0b954ee563ac92f38a0a9242bab9cb603,36414ea0,Initial support for on-boot startup,"Initial support for on-boot startup
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1301049784,1301049784,769f2768dc04a33b81a060cfa7932e380d329289
+769f2768dc04a33b81a060cfa7932e380d329289,769f2768,Added the svg version of the logo the the assets,"Added the svg version of the logo the the assets
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1300996978,1300996978,99fb986ac4c0038498e402780522caa11c6188fc
+99fb986ac4c0038498e402780522caa11c6188fc,99fb986a,New icon and some minor reformattings,"New icon and some minor reformattings
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1300996788,1300996788,484d940be9a1843383a2b6481772395a63146545
+484d940be9a1843383a2b6481772395a63146545,484d940b,Minor logging cleanup and bugfixes,"Minor logging cleanup and bugfixes
+
+Finally a working proof-of-concept
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1300801634,1300801634,4ba06a0131ac15e41ea1b06d8f480a1e911b4bde
+4ba06a0131ac15e41ea1b06d8f480a1e911b4bde,4ba06a01,Initial commit,"Initial commit
+
+So far done:
+- ssl proxying
+- basic android conversion
+
+Signed-off-by: Balint Kovacs <blint@blint.hu>",,,,Balint Kovacs,blint@blint.hu,Balint Kovacs,blint@blint.hu,1300706871,1300706871,

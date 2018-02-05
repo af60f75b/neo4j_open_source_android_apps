@@ -1,0 +1,794 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+42631f4b798902ac7bf2cb27a5e93d1d7ab9333b,42631f4b,update travis settings,"update travis settings
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1511910868,1511910868,16e17c8b90a1c4cc2f99ece7a407637bc0a00bad
+16e17c8b90a1c4cc2f99ece7a407637bc0a00bad,16e17c8b,update gradle wrapper,"update gradle wrapper
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1511909818,1511909818,f1819b8bf9cfaa88a24e923f59da89d1a7d9dbc8
+f1819b8bf9cfaa88a24e923f59da89d1a7d9dbc8,f1819b8b,buildtools & dependencies updated,"buildtools & dependencies updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1511909390,1511909390,638e9c34ed5e005f46b900f53bf6dc96b3e49d5d
+638e9c34ed5e005f46b900f53bf6dc96b3e49d5d,638e9c34,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1511212096,1511212096,7a277f554eeaf87e846f3e3e9e870ad3e584bdd2
+7a277f554eeaf87e846f3e3e9e870ad3e584bdd2,7a277f55,make travis happy?,"make travis happy?
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1504202864,1504202864,4f06d0bcf8166482ae31fae6aa07afccb58f50ea
+4f06d0bcf8166482ae31fae6aa07afccb58f50ea,4f06d0bc,downgrad for travis...,"downgrad for travis...
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1504202445,1504202445,cc68a64ac4182a2e5ecfcc7a400e17c3e801d23e
+cc68a64ac4182a2e5ecfcc7a400e17c3e801d23e,cc68a64a,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1504202039,1504202039,797a3e0deb1bf58c8a156a27b803b4bff271f868
+797a3e0deb1bf58c8a156a27b803b4bff271f868,797a3e0d,fix import counter,"fix import counter
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1504202029,1504202029,67dfd89bbfee82de702bf93e1635bfba850ec5c5
+67dfd89bbfee82de702bf93e1635bfba850ec5c5,67dfd89b,Merge pull request #110 from NewJorg/continual-achievement-fix,"Merge pull request #110 from NewJorg/continual-achievement-fix
+
+Continual achievement fix (https://github.com/j4velin/Pedometer/issues/109)",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1504038520,1504038520,"7dff875a3acf64230f1fdc99a1031decfca6a1a1,a1c01e4259f933c57d54e796708a4c17f22b3e5e"
+a1c01e4259f933c57d54e796708a4c17f22b3e5e,a1c01e42,Introduce getDaysWithoutToday for achievements,"Introduce getDaysWithoutToday for achievements
+
+Create getDaysWithoutToday() to match together with
+getTotalWithoutToday() and use it in the getDays() method.
+getDaysWithoutToday() will return a value >= 0, getDays() will add 1 day
+to it, so it will return a value >= 1.
+Using the getDaysWithoutToday method for the achievement there is
+already a check if days >= 10, so it is safe to divide by this value.
+",,,,Jörg Franke,359489+NewJorg@users.noreply.github.com,Jörg Franke,359489+NewJorg@users.noreply.github.com,1504024640,1504024640,01c04dfebb4e1c0c2a85fbbedd44e123966665fe
+01c04dfebb4e1c0c2a85fbbedd44e123966665fe,01c04dfe,Achieve Continual with average from description,"Achieve Continual with average from description
+
+equal the average should be also okay from the description of the
+achievement.
+",,,,Jörg Franke,359489+NewJorg@users.noreply.github.com,Jörg Franke,359489+NewJorg@users.noreply.github.com,1504022058,1504022058,7dff875a3acf64230f1fdc99a1031decfca6a1a1
+7dff875a3acf64230f1fdc99a1031decfca6a1a1,7dff875a,adding travis badge again,adding travis badge again,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1503516933,1503516933,309453c2e57917fc1201bdfd53f0a7d4181a55ad
+309453c2e57917fc1201bdfd53f0a7d4181a55ad,309453c2,add missing imports,"add missing imports
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1503516669,1503516669,64800866c73d4a5ba738ffd68ad3868025f5750e
+64800866c73d4a5ba738ffd68ad3868025f5750e,64800866,add maven repo for google support libs,"add maven repo for google support libs
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1503516021,1503516021,12b908ff74668edb3f2dfa001fcdecb653135179
+12b908ff74668edb3f2dfa001fcdecb653135179,12b908ff,Merge pull request #108 from alvarogzp/favour-backup-data-over-database,"Merge pull request #108 from alvarogzp/favour-backup-data-over-database
+
+When restoring from backup, overwrite existing days instead of skipping them",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1503515734,1503515734,"8557e29a788382157998ca9491b73073431ffaee,097c26b73443cc4e0844df352e7cb65b55b0f2bd"
+097c26b73443cc4e0844df352e7cb65b55b0f2bd,097c26b7,Update javadoc on Fragment_Settings's importCsv method,"Update javadoc on Fragment_Settings's importCsv method
+",,,,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,1503255502,1503255502,d6c11c9d2a705326e70f068e1ca94c077891f7df
+d6c11c9d2a705326e70f068e1ca94c077891f7df,d6c11c9d,Remove non updated translations for entries_overwritten,"Remove non updated translations for entries_overwritten
+",,,,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,1503237005,1503237005,d332f1e064dd2b5cf0fdf6230ce3f950ad02b491
+d332f1e064dd2b5cf0fdf6230ce3f950ad02b491,d332f1e0,Add translation for entries_overwritten in spanish,"Add translation for entries_overwritten in spanish
+",,,,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,1503181399,1503181399,cc8191a7d29ac92bbecdc756d65fdab28d213bc2
+cc8191a7d29ac92bbecdc756d65fdab28d213bc2,cc8191a7,"When importing data from backup, overwrite existing entries in the database…","When importing data from backup, overwrite existing entries in the database instead of skipping them
+",,,,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,Alvaro Gutierrez Perez,alvarogzp@users.noreply.github.com,1503181286,1503181286,8557e29a788382157998ca9491b73073431ffaee
+8557e29a788382157998ca9491b73073431ffaee,8557e29a,Create NOTICE,Create NOTICE,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1502566110,1502566110,816cf114e59be6e59d935f4bf23120ad008c5064
+816cf114e59be6e59d935f4bf23120ad008c5064,816cf114,Merge pull request #107 from devpilot/master,"Merge pull request #107 from devpilot/master
+
+Add Bengali translation",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1501706529,1501706529,"1fdb9a13ee72933701b43ea503f100381bbf4e34,55ae11863ddbba89b8d5278f0d6bcbae79d687d1"
+55ae11863ddbba89b8d5278f0d6bcbae79d687d1,55ae1186,Add Bengali translation,"Add Bengali translation
+",,,,Aritra,aet419@gmail.com,Aritra,aet419@gmail.com,1501410259,1501413431,1fdb9a13ee72933701b43ea503f100381bbf4e34
+1fdb9a13ee72933701b43ea503f100381bbf4e34,1fdb9a13,Add turkish translation (https://github.com/j4velin/Pedometer/issues/102) thanks…,"Add turkish translation (https://github.com/j4velin/Pedometer/issues/102) thanks to https://github.com/Erdener
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1498683093,1498683093,a4c138c39b7db2001b4dd53b2f712493f052c0e3
+a4c138c39b7db2001b4dd53b2f712493f052c0e3,a4c138c3,ask for storage permission in debug builds,"ask for storage permission in debug builds
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1494361240,1494361240,2f3b46cc9c5df55da3f6ceb61ccaa6ff0e9d6dcf
+2f3b46cc9c5df55da3f6ceb61ccaa6ff0e9d6dcf,2f3b46cc,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1494260137,1494260137,750d50be5e7481682cf8986073f05f6f68634aa6
+750d50be5e7481682cf8986073f05f6f68634aa6,750d50be,...,"...
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1493488160,1493488160,1044b1e6e46153a2d7b62c69294aab0b04eebde0
+1044b1e6e46153a2d7b62c69294aab0b04eebde0,1044b1e6,update every hour even if no steps are taken,"update every hour even if no steps are taken
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1493488132,1493488132,539eec1d4b52a06e4e63fefe11909954a02cd0cc
+539eec1d4b52a06e4e63fefe11909954a02cd0cc,539eec1d,Update README.md,Update README.md,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1492719409,1492719409,aabb34060a8ebefe477c5f887b5141169dfeda6e
+aabb34060a8ebefe477c5f887b5141169dfeda6e,aabb3406,completely disable travis until a usable solution for…,"completely disable travis until a usable solution for https://github.com/travis-ci/travis-ci/issues/7110 is available
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492719314,1492719314,435159b687eb6d160e1b0b9b16b330295f84b53c
+435159b687eb6d160e1b0b9b16b330295f84b53c,435159b6,giving up on getting travis to work... (https://github.com/travis-ci/travis-ci/issues/7110),"giving up on getting travis to work... (https://github.com/travis-ci/travis-ci/issues/7110)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492718762,1492718762,9cee12c958a4c7b4c627f57705fd09c6edf55656
+9cee12c958a4c7b4c627f57705fd09c6edf55656,9cee12c9,another try at getting travis to be happy again...,"another try at getting travis to be happy again...
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492718092,1492718092,885231df4e275ca10f1209282b3c053734ec96fe
+885231df4e275ca10f1209282b3c053734ec96fe,885231df,another try at getting travis to be happy again...,"another try at getting travis to be happy again...
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492717154,1492717154,6e7a06760add26f270802775cfbcd8bf81a1a31f
+6e7a06760add26f270802775cfbcd8bf81a1a31f,6e7a0676,change travis component order (see https://github.com/travis-ci/travis-ci/issues/7110),"change travis component order (see https://github.com/travis-ci/travis-ci/issues/7110)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492716832,1492716832,105747710ef5ea3da7c20331c17a2d4157685a45
+105747710ef5ea3da7c20331c17a2d4157685a45,10574771,gradle update,"gradle update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492715842,1492715842,17d23dc21e89ac4083468fbf0178b1db1739cd38
+17d23dc21e89ac4083468fbf0178b1db1739cd38,17d23dc2,update compilesdk & buildtools,"update compilesdk & buildtools
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492715215,1492715215,e38c2ede2b9b56fba93b7a34557097e5dd869221
+e38c2ede2b9b56fba93b7a34557097e5dd869221,e38c2ede,update widget & notification at least every 500 steps,"update widget & notification at least every 500 steps
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1492714099,1492714099,6a5237c017fb728978d65d9a4cd0add9a1f11cb1
+6a5237c017fb728978d65d9a4cd0add9a1f11cb1,6a5237c0,Merge pull request #98 from avandorp/patch-1,"Merge pull request #98 from avandorp/patch-1
+
+Update strings.xml",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1492437022,1492437022,"f7647ed7571e273640d07b6465cdca40cbf0ab7f,71470914ac3a1109d77e0bf848e065c0fec9795f"
+71470914ac3a1109d77e0bf848e065c0fec9795f,71470914,Update strings.xml,Update strings.xml,,,,avandorp,avandorp@users.noreply.github.com,GitHub,noreply@github.com,1492000509,1492000509,f7647ed7571e273640d07b6465cdca40cbf0ab7f
+f7647ed7571e273640d07b6465cdca40cbf0ab7f,f7647ed7,Merge pull request #94 from dbf256/patch-1,"Merge pull request #94 from dbf256/patch-1
+
+Update russian strings.xml",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1485191914,1485191914,"661cce229e0714417bf67444360d323d9ece70f8,d96e75e1dfe8e9a7826736ad31c05a9cb9d52f61"
+d96e75e1dfe8e9a7826736ad31c05a9cb9d52f61,d96e75e1,Update russian strings.xml,Update russian strings.xml,,,,Alexey,dbf256@gmail.com,GitHub,noreply@github.com,1485118358,1485118358,661cce229e0714417bf67444360d323d9ece70f8
+661cce229e0714417bf67444360d323d9ece70f8,661cce22,Merge pull request #93 from zygimantus/master,"Merge pull request #93 from zygimantus/master
+
+Lithuanian translation added",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1482179512,1482179512,"43d089a7cb2b15494acd985ecfc6fbaab725d87a,54c1c55682217caae7357718b021e1a6fb259071"
+54c1c55682217caae7357718b021e1a6fb259071,54c1c556,Lithuanian translation added,"Lithuanian translation added
+
+",,,,zygimantus,zygimantus@gmail.com,zygimantus,zygimantus@gmail.com,1482135636,1482135636,43d089a7cb2b15494acd985ecfc6fbaab725d87a
+43d089a7cb2b15494acd985ecfc6fbaab725d87a,43d089a7,Merge pull request #92 from naofum/master,"Merge pull request #92 from naofum/master
+
+Updated Japanese translation",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1478715197,1478715197,"9cd749fa964815900ccd7709ea7c59081276af0f,f5238924c07ef88c34bde5ed21019994eac55f2b"
+f5238924c07ef88c34bde5ed21019994eac55f2b,f5238924,Updated Japanese translation,"Updated Japanese translation
+",,,,naofum,naofum@gmail.com,naofum,naofum@gmail.com,1478699616,1478699616,9cd749fa964815900ccd7709ea7c59081276af0f
+9cd749fa964815900ccd7709ea7c59081276af0f,9cd749fa,Update README.md,Update README.md,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474046616,1474046616,a2229d6b1dfde9cb989ac2781284eabde9da29c5
+a2229d6b1dfde9cb989ac2781284eabde9da29c5,a2229d6b,Merge pull request #90 from j4velin/travis,"Merge pull request #90 from j4velin/travis
+
+get travis ci building...",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474046277,1474046277,"c23928d611f0c44b6223376e55470b9c1638ca99,1a093eb194c4b4babd2966934029c708b23c41ae"
+1a093eb194c4b4babd2966934029c708b23c41ae,1a093eb1,use jdk 1.8,"use jdk 1.8
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474045845,1474045845,141f00f999a3e5d8551a92cb5655bc05c41a3340
+141f00f999a3e5d8551a92cb5655bc05c41a3340,141f00f9,23.0.3,"23.0.3
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474045523,1474045523,539e60f83e3a1cbf17494693023765afd58733be
+539e60f83e3a1cbf17494693023765afd58733be,539e60f8,downgrade buildtools version,"downgrade buildtools version
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474045344,1474045344,4a2f9b3622e54bc6e8b78ce141cfdea98c3dc0f5
+4a2f9b3622e54bc6e8b78ce141cfdea98c3dc0f5,4a2f9b36,buildtools update,"buildtools update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474038726,1474038726,a16a28e7b1e242b9ec131e8c77a1f8cffae2a199
+a16a28e7b1e242b9ec131e8c77a1f8cffae2a199,a16a28e7,..,"..
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474038488,1474038488,249652ba83cc4631c18a8e696fa916605af241b6
+249652ba83cc4631c18a8e696fa916605af241b6,249652ba,only build fdroid version on travis,"only build fdroid version on travis
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1474038129,1474038129,6a0526119fa9564ba3df75ad8aa39161ecb3a447
+6a0526119fa9564ba3df75ad8aa39161ecb3a447,6a052611,Delete ids.xml,Delete ids.xml,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474037751,1474037751,c23928d611f0c44b6223376e55470b9c1638ca99
+c23928d611f0c44b6223376e55470b9c1638ca99,c23928d6,Create ids.xml,Create ids.xml,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474037261,1474037261,1fc143bf2bf1297849b819a34d16285042b35b03
+1fc143bf2bf1297849b819a34d16285042b35b03,1fc143bf,add actual sample keystore to use in travis ci,"add actual sample keystore to use in travis ci
+
+Change-Id: I787578ca8dc6547351cb475678d1b6c360c8ac6b
+",,,,Thomas Hoffmann,thomas.hoffmann@esolutions.de,Thomas Hoffmann,thomas.hoffmann@esolutions.de,1474026597,1474026597,8ebd81a001f64822ba80b43704e66890375bf473
+8ebd81a001f64822ba80b43704e66890375bf473,8ebd81a0,switched to buildtool version 23.0.2,"switched to buildtool version 23.0.2
+
+Change-Id: I6245b121bc01dcbb88f0de1e02253d905fc6bf4b
+",,,,Thomas Hoffmann,thomas.hoffmann@esolutions.de,Thomas Hoffmann,thomas.hoffmann@esolutions.de,1474025311,1474025311,6a4d951fe66d9af271c1807319e63d670f6942c7
+6a4d951fe66d9af271c1807319e63d670f6942c7,6a4d951f,Update gradle-wrapper.properties,Update gradle-wrapper.properties,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474024604,1474024604,d37c538297e8eb79926a0921518926c8cd80f3dd
+d37c538297e8eb79926a0921518926c8cd80f3dd,d37c5382,set executable permission for gradlew,"set executable permission for gradlew
+
+Change-Id: If5c11b35df0cef0f5a5be22ba687cd144db7d903
+",,,,Thomas Hoffmann,thomas.hoffmann@esolutions.de,Thomas Hoffmann,thomas.hoffmann@esolutions.de,1474024360,1474024360,b71d304a491cdd2eb454f699f72ad68b0332a8b9
+b71d304a491cdd2eb454f699f72ad68b0332a8b9,b71d304a,Create .travis.yml,Create .travis.yml,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,GitHub,noreply@github.com,1474023985,1474023985,c7e3076628299bfd29daf1c351d4c4183b132f04
+c7e3076628299bfd29daf1c351d4c4183b132f04,c7e30766,Fix: not updating notification state on setting change,"Fix: not updating notification state on setting change
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1471971936,1471971936,d15d04b2e5278af90f033e900536a27ae4485a81
+d15d04b2e5278af90f033e900536a27ae4485a81,d15d04b2,reverted UTC timezone stuff -.-,"reverted UTC timezone stuff -.-
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1471771678,1471771678,f99688b406a65427bdbebfdb572a6a0d863a2ceb
+f99688b406a65427bdbebfdb572a6a0d863a2ceb,f99688b4,only use UTC timestamps (experimental),"only use UTC timestamps (experimental)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1471692567,1471692567,17b395d44ce52611d3e72c8c08ed8b847b01b6cf
+17b395d44ce52611d3e72c8c08ed8b847b01b6cf,17b395d4,"Remove autosignin option when logging out, no matter if connected or not","Remove autosignin option when logging out, no matter if connected or not
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1470589390,1470589390,58ee761a065612b5f5a3f4b5600644fec2e1a3c9
+58ee761a065612b5f5a3f4b5600644fec2e1a3c9,58ee761a,Merge branch 'master' of github.com:j4velin/Pedometer,"Merge branch 'master' of github.com:j4velin/Pedometer
+
+# Conflicts:
+#	build.gradle
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1468875265,1468875265,"d12f0e513fcb78c1864bbfc98d7dace500062cd7,453094c7b3fa79e674f7f3d8beabfe14952b5645"
+d12f0e513fcb78c1864bbfc98d7dace500062cd7,d12f0e51,gradle/buildtools version update,"gradle/buildtools version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1468264845,1468264845,b16e2fe72776fc9dde0f7c2ec6efd3ad89052133
+453094c7b3fa79e674f7f3d8beabfe14952b5645,453094c7,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1467740796,1467740796,83cfaae2faf044c508e3af3cc883b4e3ff04ea2a
+83cfaae2faf044c508e3af3cc883b4e3ff04ea2a,83cfaae2,Merge branch 'master' of github.com:j4velin/Pedometer,"Merge branch 'master' of github.com:j4velin/Pedometer
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1459442924,1459442924,"9216b5fc9b9c9b5171a3b7bdb06cf79ce24b95a8,7d6f2c1a232abc1cee40b6f41af082b56978d0a4"
+9216b5fc9b9c9b5171a3b7bdb06cf79ce24b95a8,9216b5fc,increased default compile sdk version,"increased default compile sdk version
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1459442897,1459442897,311be9084ac02c6729e1d03223be64e12444a6f2
+7d6f2c1a232abc1cee40b6f41af082b56978d0a4,7d6f2c1a,Merge pull request #77 from ogr3/master,"Merge pull request #77 from ogr3/master
+
+Updated Swedish translation",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1459355852,1459355852,"311be9084ac02c6729e1d03223be64e12444a6f2,afe6f9410f5b38aba54d0348291c53858266553e"
+afe6f9410f5b38aba54d0348291c53858266553e,afe6f941,Updated Swedish translation,"Updated Swedish translation
+",,,,oGre,ogre@muppfarmen.se,oGre,ogre@muppfarmen.se,1459355557,1459355557,311be9084ac02c6729e1d03223be64e12444a6f2
+311be9084ac02c6729e1d03223be64e12444a6f2,311be908,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1459353883,1459353883,9735c27b80b9fb7d4cb4bf57de2ca5484aca7398
+9735c27b80b9fb7d4cb4bf57de2ca5484aca7398,9735c27b,experimental fix for daylight saving problem,"experimental fix for daylight saving problem
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1459276914,1459276914,ec5894709bb3cb7002c6c89820b3b038be7727bd
+ec5894709bb3cb7002c6c89820b3b038be7727bd,ec589470,wrong sensor check,"wrong sensor check
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1458599104,1458599104,899140b1df874c23d3e899bdbb1ff71e69036a7b
+899140b1df874c23d3e899bdbb1ff71e69036a7b,899140b1,"refactoring, M permission","refactoring, M permission
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1458598961,1458598961,3e5995b914a6e615e22c2eb0fc6c6cbc60373335
+3e5995b914a6e615e22c2eb0fc6c6cbc60373335,3e5995b9,show error message if no step sensor is present,"show error message if no step sensor is present
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1458596608,1458596608,407a60870a7eaba24a89474df82cf7a36560e391
+407a60870a7eaba24a89474df82cf7a36560e391,407a6087,Changed to ColorPreviewButton view from colorpicker lib,"Changed to ColorPreviewButton view from colorpicker lib
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1458596211,1458596211,b02ed6b95f51a8e77af779e7a884d71373fa1138
+b02ed6b95f51a8e77af779e7a884d71373fa1138,b02ed6b9,French translation fixed,"French translation fixed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1446909239,1446909239,f4d35836e84488e783ee3ed1591e935252505d2c
+f4d35836e84488e783ee3ed1591e935252505d2c,f4d35836,French translation added,"French translation added
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1446154893,1446154893,78740df696eefb6ad236c5b178d1ad1880011628
+78740df696eefb6ad236c5b178d1ad1880011628,78740df6,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1440798572,1440798572,4210a51c61ed168b79512037c1333bdbcb1dedbe
+4210a51c61ed168b79512037c1333bdbcb1dedbe,4210a51c,fixed using old version of colorpicker lib,"fixed using old version of colorpicker lib
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1438005728,1438005728,244b2c850696d3173dbdaa578d59b2f5f59a740f
+244b2c850696d3173dbdaa578d59b2f5f59a740f,244b2c85,buildfile updated to load version number from root file if present,"buildfile updated to load version number from root file if present
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1436692872,1436692872,2b7e7973b80781097d7b976a1b9f79a0c287cb9a
+2b7e7973b80781097d7b976a1b9f79a0c287cb9a,2b7e7973,Merge pull request #74 from SweetLion/patch-1,"Merge pull request #74 from SweetLion/patch-1
+
+Added Google play and F-Droid Badges",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1434299238,1434299238,"26e3d13b3a3ab2b91468a01133be340cec358ca8,2161c0107636e29d7f1d985f01214010b518bb20"
+2161c0107636e29d7f1d985f01214010b518bb20,2161c010,Added Google play and F-Droid Badges,Added Google play and F-Droid Badges,,,,SweetLion,SweetLion@users.noreply.github.com,SweetLion,SweetLion@users.noreply.github.com,1434202732,1434202732,26e3d13b3a3ab2b91468a01133be340cec358ca8
+26e3d13b3a3ab2b91468a01133be340cec358ca8,26e3d13b,selective google play services APIs,"selective google play services APIs
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1433092510,1433092510,5a1a02c6602c8a523aa17bac68dbfd9d1f510d06
+5a1a02c6602c8a523aa17bac68dbfd9d1f510d06,5a1a02c6,korean translation (https://github.com/j4velin/Pedometer/issues/73),"korean translation (https://github.com/j4velin/Pedometer/issues/73)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1431131003,1431131003,b16e2fe72776fc9dde0f7c2ec6efd3ad89052133
+b16e2fe72776fc9dde0f7c2ec6efd3ad89052133,b16e2fe7,merge,"merge
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1430917398,1430917398,"bfb0607b4b391f70135306d51079faf6ee4d5262,3c65680da9898d4c915e7228945e493ccbcc6588"
+bfb0607b4b391f70135306d51079faf6ee4d5262,bfb0607b,buildfile updated,"buildfile updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1430556043,1430556043,82563dcceb898b03d74f504bd62e1ee0267efbb1
+3c65680da9898d4c915e7228945e493ccbcc6588,3c65680d,added jcenter repo to buildfile,"added jcenter repo to buildfile
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429910033,1429910033,e9c498679be874faae0ed1a2bc8df7a110221cc0
+e9c498679be874faae0ed1a2bc8df7a110221cc0,e9c49867,"changed EazeGraph lib from local reference to jCenter version (not yet synced,…","changed EazeGraph lib from local reference to jCenter version (not yet synced, but should be soon...)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429732823,1429732823,e57a77215387a1e15f1fe8a6056e16c6d0cacb49
+e57a77215387a1e15f1fe8a6056e16c6d0cacb49,e57a7721,added play/fdroid productflavors (requires some refactoring in the future...),"added play/fdroid productflavors (requires some refactoring in the future...)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429732706,1429732706,09740f77a751c7e5b20bc4ea93037b2e2d973a7b
+09740f77a751c7e5b20bc4ea93037b2e2d973a7b,09740f77,removed dashclock.jar from buildfile,"removed dashclock.jar from buildfile
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429730377,1429730377,842c928086e4bb9b640777ec16975a2ede787c1f
+842c928086e4bb9b640777ec16975a2ede787c1f,842c9280,fixed timezone change issues?,"fixed timezone change issues?
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429435916,1429435916,efd1069f2c3793b7fd21d2c13715a4d6cab5bd51
+efd1069f2c3793b7fd21d2c13715a4d6cab5bd51,efd1069f,google fit recording api added,"google fit recording api added
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429262187,1429262187,5504c6f636cb214b54e8f932f68edf20ff8fa6a4
+5504c6f636cb214b54e8f932f68edf20ff8fa6a4,5504c6f6,fixes,"fixes
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429261589,1429261589,c88eeef93ea3de29657e5844d71e53993e2842f3
+c88eeef93ea3de29657e5844d71e53993e2842f3,c88eeef9,colorpicker package changed,"colorpicker package changed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429216769,1429216769,bcf43441eb40a5d0f009bb8b9fbd4a9baa1baedd
+bcf43441eb40a5d0f009bb8b9fbd4a9baa1baedd,bcf43441,build.gradle updated,"build.gradle updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1429125652,1429125652,c2feafdf2f2c3319107a9923487eab3d9fa78412
+c2feafdf2f2c3319107a9923487eab3d9fa78412,c2feafdf,Google Fit API,"Google Fit API
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1428913776,1428913776,57522784be4733485952390a3982a23122472dfe
+57522784be4733485952390a3982a23122472dfe,57522784,Update README.md,Update README.md,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1427742578,1427742578,1bf88f91b2436bf76aa9835e309aa5f32952982c
+1bf88f91b2436bf76aa9835e309aa5f32952982c,1bf88f91,buildfiles updated,"buildfiles updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1427379117,1427379117,379606d569ab9a21f6d28385f06f170da99e3f05
+379606d569ab9a21f6d28385f06f170da99e3f05,379606d5,Merge pull request #69 from anthonytex/master,"Merge pull request #69 from anthonytex/master
+
+Translated to italian",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1424163184,1424163184,"b6c52cbbae9f5bd1605f6b1de2a4ac7fc87a41d7,41eb8b4063f0b326c25b1172f1a63ff53f88c56d"
+41eb8b4063f0b326c25b1172f1a63ff53f88c56d,41eb8b40,Add Italian Translation,"Add Italian Translation
+",,,,Anthony,antoniotex90@gmail.com,Anthony,antoniotex90@gmail.com,1424115073,1424162660,b6c52cbbae9f5bd1605f6b1de2a4ac7fc87a41d7
+b6c52cbbae9f5bd1605f6b1de2a4ac7fc87a41d7,b6c52cbb,Merge pull request #68 from dotWee/master,"Merge pull request #68 from dotWee/master
+
+Bump version numbers to fix import into latest Android Studio",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1424102659,1424102659,"5a0b70960f0448e85a3e9212e575f4743fd733ff,a867ed9a32dae90443c4e2f20defdd542428d425"
+a867ed9a32dae90443c4e2f20defdd542428d425,a867ed9a,Bump build-tools and play-services version,"Bump build-tools and play-services version
+
+Also, I couldn't find any dependency on ColorPickerPreference.
+Sure that it is still used in this project?",,,,dotWee,dotWee@users.noreply.github.com,dotWee,dotWee@users.noreply.github.com,1423848543,1423848543,b611b4ef39b951e956d3ab5a35f7377f16ac4b37
+b611b4ef39b951e956d3ab5a35f7377f16ac4b37,b611b4ef,Bump gradle-version,"Bump gradle-version
+
+because projects with gradle version >2.2 causes import-problems on latest Android Studio 1.1",,,,dotWee,dotWee@users.noreply.github.com,dotWee,dotWee@users.noreply.github.com,1423848345,1423848345,5a0b70960f0448e85a3e9212e575f4743fd733ff
+5a0b70960f0448e85a3e9212e575f4743fd733ff,5a0b7096,key.properties.sample added,"key.properties.sample added
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1421865900,1421865900,7120dc949e092893bc40f70ec6a40c1b65ce6804
+7120dc949e092893bc40f70ec6a40c1b65ce6804,7120dc94,Merge pull request #64 from ogr3/master,"Merge pull request #64 from ogr3/master
+
+Updated Swedish translation",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1421607651,1421607651,"82563dcceb898b03d74f504bd62e1ee0267efbb1,9b63946ea55ab75db91f8823ddcd657c4082d54d"
+9b63946ea55ab75db91f8823ddcd657c4082d54d,9b63946e,Updated Swedish translation,"Updated Swedish translation
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1421602675,1421602675,82563dcceb898b03d74f504bd62e1ee0267efbb1
+82563dcceb898b03d74f504bd62e1ee0267efbb1,82563dcc,gradle build files updated,"gradle build files updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1418769092,1418769092,5ab83e98636dd572044fc78804f9bbb72e0ed806
+5ab83e98636dd572044fc78804f9bbb72e0ed806,5ab83e98,removed ids.xml (game ids),"removed ids.xml (game ids)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1417033627,1417033627,f372e5e711c396245b93d05f47f9f83b66fd7bc9
+f372e5e711c396245b93d05f47f9f83b66fd7bc9,f372e5e7,trying sensor batching again,"trying sensor batching again
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1417033326,1417033326,f1f084a879f8c224de1633aecc7c09285a8d55f2
+f1f084a879f8c224de1633aecc7c09285a8d55f2,f1f084a8,disabled shrinkRessources as building seems to fail with it enabled,"disabled shrinkRessources as building seems to fail with it enabled
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416781745,1416781745,f37d670a9f002c7444a0546fbbfcef422c55b170
+f37d670a9f002c7444a0546fbbfcef422c55b170,f37d670a,dont update steps if step value > Integer.MAXINT,"dont update steps if step value > Integer.MAXINT
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416684816,1416684816,6e2eb8897266f68bcf6d78af19038f9717ed667b
+6e2eb8897266f68bcf6d78af19038f9717ed667b,6e2eb889,iml removed,"iml removed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416679090,1416679090,beba9883b0a4ccdabe8beedd15ab6aae85d0b45b
+beba9883b0a4ccdabe8beedd15ab6aae85d0b45b,beba9883,gitignore updated,"gitignore updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416678631,1416678631,d339fe5aa94e09e0226db1262bbce5326982379c
+d339fe5aa94e09e0226db1262bbce5326982379c,d339fe5a,gradle buildfiles,"gradle buildfiles
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416678326,1416678326,2bf4bb5f7053b0384a03feb8b35962f08522e748
+2bf4bb5f7053b0384a03feb8b35962f08522e748,2bf4bb5f,removed replace theme,"removed replace theme
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416434756,1416434756,4744d0e16d07122854914ce94fa89822269e897e
+4744d0e16d07122854914ce94fa89822269e897e,4744d0e1,gradle & target sdk updated,"gradle & target sdk updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1416229615,1416229615,fcd3b3219dc5215c89c3160a7252d28b27937553
+fcd3b3219dc5215c89c3160a7252d28b27937553,fcd3b321,...,"...
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415529838,1415529838,66f7d430eb7fa0b53bfab62f47793ef1e30aa5da
+66f7d430eb7fa0b53bfab62f47793ef1e30aa5da,66f7d430,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415524132,1415524132,6dbfe68d03b53a04d53303b81afec7630329630f
+6dbfe68d03b53a04d53303b81afec7630329630f,6dbfe68d,fixed crash,"fixed crash
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415490339,1415490339,6f64ffaa66faa9021cb19f07fa432b60b0ccd0e8
+6f64ffaa66faa9021cb19f07fa432b60b0ccd0e8,6f64ffaa,different IDs for error and normal notification,"different IDs for error and normal notification
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415438969,1415438969,56e8b46b1214844ab06e044d51ec8bda0137d198
+56e8b46b1214844ab06e044d51ec8bda0137d198,56e8b46b,try to recover some steps after an incorrect shutdown,"try to recover some steps after an incorrect shutdown
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415438835,1415438835,402b5aa1b93cb27d0697889c048f8cc65a2c36d8
+402b5aa1b93cb27d0697889c048f8cc65a2c36d8,402b5aa1,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415391471,1415391471,"8bea74fcc7a02f7883cfd4a2e370baff4bfc5477,a561633057c76ee09903f0a85a59b78fb7862465"
+8bea74fcc7a02f7883cfd4a2e370baff4bfc5477,8bea74fc,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415391429,1415391429,e2f39ca8c7052c6e921d259038ca5362bc5a91e5
+a561633057c76ee09903f0a85a59b78fb7862465,a5616330,removed basegameutils dependancy from readme,removed basegameutils dependancy from readme,,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1415262038,1415262038,e2f39ca8c7052c6e921d259038ca5362bc5a91e5
+e2f39ca8c7052c6e921d259038ca5362bc5a91e5,e2f39ca8,fix: data on shutdown might have been added to the wrong date,"fix: data on shutdown might have been added to the wrong date
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415218589,1415218589,cf97fe4b9b4027aaa292f9fb79f8dc8e539da508
+cf97fe4b9b4027aaa292f9fb79f8dc8e539da508,cf97fe4b,ColorPreview views changed,"ColorPreview views changed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415200936,1415200936,55d4777e60e217a204910270f2a2a76db7ad0915
+55d4777e60e217a204910270f2a2a76db7ad0915,55d4777e,also subscribe to Google Fit recodings API,"also subscribe to Google Fit recodings API
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415200428,1415200428,d6ed344fad76f08d7bf18f7bfcabdb339b28d391
+d6ed344fad76f08d7bf18f7bfcabdb339b28d391,d6ed344f,only export data with date > 0 into csv,"only export data with date > 0 into csv
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1415200384,1415200384,5c026865588615e9068ad02c90cabdf186a8acc3
+5c026865588615e9068ad02c90cabdf186a8acc3,5c026865,Merge pull request #56 from I3ck/master,"Merge pull request #56 from I3ck/master
+
+changed wording in README",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1414739708,1414739708,"8fe6a2d5cb22be4fcdcd52eb9942f18b6c1d2e96,fa8a9da74eea87c9481e3aa5c181d9953311a4a4"
+fa8a9da74eea87c9481e3aa5c181d9953311a4a4,fa8a9da7,changed wording in README,changed wording in README,,,,Martin Buck,buckmartin@buckmartin.de,Martin Buck,buckmartin@buckmartin.de,1414713295,1414713295,8fe6a2d5cb22be4fcdcd52eb9942f18b6c1d2e96
+8fe6a2d5cb22be4fcdcd52eb9942f18b6c1d2e96,8fe6a2d5,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414580678,1414580678,7b13a7b9b7df7d9fca0a633fead574e1ffc62ed1
+7b13a7b9b7df7d9fca0a633fead574e1ffc62ed1,7b13a7b9,sync to Google Fit,"sync to Google Fit
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414580329,1414580329,eb964920884a161722deb186b7f4c0bd887d4950
+eb964920884a161722deb186b7f4c0bd887d4950,eb964920,moved PlayServices to util package,"moved PlayServices to util package
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414577966,1414577966,f33a9ba35c9b3118286c0c5281a89c0e2258d478
+f33a9ba35c9b3118286c0c5281a89c0e2258d478,f33a9ba3,fixed: same RC for play activity & play services error resolving,"fixed: same RC for play activity & play services error resolving
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414577048,1414577048,0acda517d44f01affc262c26d15966ac14406d45
+0acda517d44f01affc262c26d15966ac14406d45,0acda517,removed BaseGameUtils,"removed BaseGameUtils
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414576890,1414576890,2c404631b641ecd69eb6eb018e82284cd396f378
+2c404631b641ecd69eb6eb018e82284cd396f378,2c404631,package refactoring,"package refactoring
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414485574,1414485574,fbb0be6b7cd2987bb0fcc8d4824d405b01fb4725
+fbb0be6b7cd2987bb0fcc8d4824d405b01fb4725,fbb0be6b,error notification icon changed,"error notification icon changed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414055076,1414055076,b1f4ea121eb70016255b826afd304cf8d0acf5c0
+b1f4ea121eb70016255b826afd304cf8d0acf5c0,b1f4ea12,switched to DeviceDefault theme,"switched to DeviceDefault theme
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414055031,1414055031,890c94eb05f032dc44e3448352c5231de26d8939
+890c94eb05f032dc44e3448352c5231de26d8939,890c94eb,fixed crash in emulator without step sensors,"fixed crash in emulator without step sensors
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414054913,1414054913,5b33b6da6987a7cfd70806b933c9b6167398ea10
+5b33b6da6987a7cfd70806b933c9b6167398ea10,5b33b6da,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414054256,1414054256,fd3b9930f97367a2bdf1ff69f0c8f6c2821fbec1
+fd3b9930f97367a2bdf1ff69f0c8f6c2821fbec1,fd3b9930,"added information about ""skipped"" (not ignored) entries when importing a csv file","added information about ""skipped"" (not ignored) entries when importing a csv file
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1414054220,1414054220,8bfbeae71ed93bc6c348f4061249874b537dbc94
+8bfbeae71ed93bc6c348f4061249874b537dbc94,8bfbeae7,ignore step values > Integer.MAX_INT,"ignore step values > Integer.MAX_INT
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413907949,1413907949,f503d383f85d0a74f8a9272587becaea86945352
+f503d383f85d0a74f8a9272587becaea86945352,f503d383,"ignore ""backup column"" (date=-1) when checking for achievements","ignore ""backup column"" (date=-1) when checking for achievements
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413443372,1413443372,c14948dc62b2ec92e0d3d4a66fa148aa59c1d42e
+c14948dc62b2ec92e0d3d4a66fa148aa59c1d42e,c14948dc,icon changed,"icon changed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413183142,1413183142,87fb119b3c51577e5646db0efa70f1e984b145a1
+87fb119b3c51577e5646db0efa70f1e984b145a1,87fb119b,Merge branch 'master' of github.com:j4velin/Pedometer,"Merge branch 'master' of github.com:j4velin/Pedometer
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413183122,1413183122,"60cda638d62312a1453c22c9e48eb54d6acef965,6a9e7d2e459d216922847fd6b04a825556845037"
+60cda638d62312a1453c22c9e48eb54d6acef965,60cda638,icon changes,"icon changes
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413183104,1413183104,9a0328fd5144d374cc6df2ef215abbeb86c12819
+9a0328fd5144d374cc6df2ef215abbeb86c12819,9a0328fd,..,"..
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1413182921,1413182921,792e6442a06ce66d7c47d3db2f8646f7b6eb3963
+6a9e7d2e459d216922847fd6b04a825556845037,6a9e7d2e,Merge pull request #54 from stankochetkov/patch-1,"Merge pull request #54 from stankochetkov/patch-1
+
+Added strings for ""Pause while charging"" option",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1411749214,1411749214,"792e6442a06ce66d7c47d3db2f8646f7b6eb3963,ae5257660a64ae06caeaa38323f3ca4ad2013f8a"
+ae5257660a64ae06caeaa38323f3ca4ad2013f8a,ae525766,"Added strings for ""Pause while charging"" option","Added strings for ""Pause while charging"" option",,,,stankochetkov,stan.kochetkov@gmail.com,stankochetkov,stan.kochetkov@gmail.com,1411741245,1411741245,792e6442a06ce66d7c47d3db2f8646f7b6eb3963
+792e6442a06ce66d7c47d3db2f8646f7b6eb3963,792e6442,Merge pull request #53 from knight00931/patch-5,"Merge pull request #53 from knight00931/patch-5
+
+Update strings.xml",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1411372303,1411372303,"fe517d88b4d4cc22540da7105bf7d153b19f82ec,6b585947edc93c6565d9e891875e221928209865"
+6b585947edc93c6565d9e891875e221928209865,6b585947,Update strings.xml,Update strings.xml,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1411361998,1411361998,fe517d88b4d4cc22540da7105bf7d153b19f82ec
+fe517d88b4d4cc22540da7105bf7d153b19f82ec,fe517d88,fixed (?) issue with PRIMARY KEY constraint still active even though it should…,"fixed (?) issue with PRIMARY KEY constraint still active even though it should have been removed when upgrading the database
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1411155565,1411155565,11029b828d55abf0f7bebb0073c3686c8bd4b2ee
+11029b828d55abf0f7bebb0073c3686c8bd4b2ee,11029b82,"added ""pause while charging"" option","added ""pause while charging"" option
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1411155112,1411155112,c298cf979a425a109c3f3b0d04e020b5a89bf0e1
+c298cf979a425a109c3f3b0d04e020b5a89bf0e1,c298cf97,about link updated,"about link updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1411154269,1411154269,316b9edb46644a99d4c65419af753edec63e3d4e
+316b9edb46644a99d4c65419af753edec63e3d4e,316b9edb,translation updated,"translation updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1411154239,1411154239,fa3489cb57fa9618becf990018330905b7c4c8ac
+fa3489cb57fa9618becf990018330905b7c4c8ac,fa3489cb,use saved step value for notification if current value is not available,"use saved step value for notification if current value is not available
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1411154156,1411154156,fb28022f2945baea6566107eb00ba4fb34f8f15a
+fb28022f2945baea6566107eb00ba4fb34f8f15a,fb28022f,Merge pull request #51 from knight00931/patch-5,"Merge pull request #51 from knight00931/patch-5
+
+Update strings.xml",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1409902013,1409902013,"24ec9bda396c109c2be03fc1f5ae744a2a313400,74b05acb40bc0be947dabc9f3889bc422fafe6dd"
+74b05acb40bc0be947dabc9f3889bc422fafe6dd,74b05acb,Update strings.xml,Update strings.xml,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1409883630,1409883630,24ec9bda396c109c2be03fc1f5ae744a2a313400
+24ec9bda396c109c2be03fc1f5ae744a2a313400,24ec9bda,removed PRIMARY KEY constraint,"removed PRIMARY KEY constraint
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1409093723,1409093723,c21fea12634acf509e580725f2aad99992b6860c
+c21fea12634acf509e580725f2aad99992b6860c,c21fea12,update widget whenever sensorlistener is started (at least once an hour),"update widget whenever sensorlistener is started (at least once an hour)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408977205,1408977205,03ef785d7c1adda6f5fc4b39ab73a88821704371
+03ef785d7c1adda6f5fc4b39ab73a88821704371,03ef785d,updated target sdk (20),"updated target sdk (20)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408976691,1408976691,0009bace28a1ea4f0d9dc2a81da294a20fc1f13e
+0009bace28a1ea4f0d9dc2a81da294a20fc1f13e,0009bace,made classes package local,"made classes package local
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408976626,1408976626,64b422bc0906078dc20f40e7f55701451d116bfa
+64b422bc0906078dc20f40e7f55701451d116bfa,64b422bc,notification icon changed,"notification icon changed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408976317,1408976317,d7120b1c663373a87bc90b5ea51a682aa1c56393
+d7120b1c663373a87bc90b5ea51a682aa1c56393,d7120b1c,disabled background process to see if that fixes the issue with the step counter…,"disabled background process to see if that fixes the issue with the step counter not responding after some days
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408975336,1408975336,73d9e68e363b32ee52f0a355976d21e83381b19a
+73d9e68e363b32ee52f0a355976d21e83381b19a,73d9e68e,Merge branch 'master' of github.com:j4velin/Pedometer,"Merge branch 'master' of github.com:j4velin/Pedometer
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408975197,1408975197,"1109e20f1869eae34d8f7748010027cc22c3e947,cb914a8a1eb9cca32940c8b242356a1619d0be88"
+1109e20f1869eae34d8f7748010027cc22c3e947,1109e20f,added pause/resum button to main UI,"added pause/resum button to main UI
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408975090,1408975090,761360aa0203853ee30b9a1a3b45d747ae7bf5ef
+cb914a8a1eb9cca32940c8b242356a1619d0be88,cb914a8a,use older google services as otherwise we are not allowed to publish to the play store!?!?,"use older google services as otherwise we are not allowed to publish to the play store!?!?
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408544964,1408544964,761360aa0203853ee30b9a1a3b45d747ae7bf5ef
+761360aa0203853ee30b9a1a3b45d747ae7bf5ef,761360aa,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408232485,1408232485,56e114d4b651e400c86321bef2eccf0c794479a1
+56e114d4b651e400c86321bef2eccf0c794479a1,56e114d4,buildscript updated,"buildscript updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408232440,1408232440,c43db9ac30f2a197587782311835d204838faf83
+c43db9ac30f2a197587782311835d204838faf83,c43db9ac,show notification on SensorListener onCreate,"show notification on SensorListener onCreate
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408110543,1408110543,4a35afcaefc8f7959e5aaf264dcc36a665dc1a4f
+4a35afcaefc8f7959e5aaf264dcc36a665dc1a4f,4a35afca,version update,"version update
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408049642,1408049642,c41aa8ed2dd1e415d9aabc6f13670d159534b1d5
+c41aa8ed2dd1e415d9aabc6f13670d159534b1d5,c41aa8ed,iml updated,"iml updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408049298,1408049298,097be6fc5a20d0b8744e7e18655bb08890236f40
+097be6fc5a20d0b8744e7e18655bb08890236f40,097be6fc,show decimals on barchart in distance view,"show decimals on barchart in distance view
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1408049031,1408049031,4102a1d4858b1ecc93de8cbb1114db8cfa88b344
+4102a1d4858b1ecc93de8cbb1114db8cfa88b344,4102a1d4,NullPointerException fixed,"NullPointerException fixed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407872331,1407872331,19cac9ec8790b856d7569d115b807e7a8d8ae2f9
+19cac9ec8790b856d7569d115b807e7a8d8ae2f9,19cac9ec,Merge pull request #50 from knight00931/patch-4,"Merge pull request #50 from knight00931/patch-4
+
+Update strings.xml",,,,Thomas Hoffmann,j4velin@users.noreply.github.com,Thomas Hoffmann,j4velin@users.noreply.github.com,1407833223,1407833223,"81e523be703e490d2874420b68a963e7e396f974,e193d46eb296598989611ee40af9c474cbdecd1c"
+e193d46eb296598989611ee40af9c474cbdecd1c,e193d46e,Update strings.xml,Update strings.xml,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1407832881,1407832881,81e523be703e490d2874420b68a963e7e396f974
+81e523be703e490d2874420b68a963e7e396f974,81e523be,handle timezone changes,"handle timezone changes
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407175638,1407175638,9fc542b7457868361925bc17d90517e89081509e
+9fc542b7457868361925bc17d90517e89081509e,9fc542b7,ongoing notification,"ongoing notification
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407149118,1407149118,1a2e17717edd0f30e98b0ee726e8cdc37f8fb890
+1a2e17717edd0f30e98b0ee726e8cdc37f8fb890,1a2e1771,"added ""pause"" option (experimental)","added ""pause"" option (experimental)
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407142672,1407142672,0f6a86db7facfda16bcae711a045308c9664662f
+0f6a86db7facfda16bcae711a045308c9664662f,0f6a86db,dismiss split counter dialog on start,"dismiss split counter dialog on start
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407091836,1407091836,ac18fb31b6ffe766c6d42200c7b53c8bd6eea188
+ac18fb31b6ffe766c6d42200c7b53c8bd6eea188,ac18fb31,re-register sensorlistener every hours & removed foreground-service workaround…,"re-register sensorlistener every hours & removed foreground-service workaround for the 4.4.2 start-sticky bug
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407054171,1407054171,c063450d66dda2b113114ec21e5bb3c342409264
+c063450d66dda2b113114ec21e5bb3c342409264,c063450d,fixed incorrect widget background color,"fixed incorrect widget background color
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1407054023,1407054023,6ddc018efb061d38b47f42632f4f007859adab69
+6ddc018efb061d38b47f42632f4f007859adab69,6ddc018e,Merge branch 'master' of github.com:j4velin/Pedometer,"Merge branch 'master' of github.com:j4velin/Pedometer
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406932996,1406932996,"51f9048c28a447d595a55c1846a4917b6914dc94,31e169657a5e267016f25c50e926dfb7e77b6259"
+51f9048c28a447d595a55c1846a4917b6914dc94,51f9048c,updated about dialog text,"updated about dialog text
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406932951,1406932951,82ab3fe7a0851a84059817dce2d32715cd36a0af
+31e169657a5e267016f25c50e926dfb7e77b6259,31e16965,Update README.md,Update README.md,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1406844890,1406844890,82ab3fe7a0851a84059817dce2d32715cd36a0af
+82ab3fe7a0851a84059817dce2d32715cd36a0af,82ab3fe7,fix: switching to distance did not change value text in bar chart,"fix: switching to distance did not change value text in bar chart
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406542527,1406542527,150cfaf094d9079c278a601f3cececc7c78d907e
+150cfaf094d9079c278a601f3cececc7c78d907e,150cfaf0,layout changes,"layout changes
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406542355,1406542355,5756d2ff906fd3fae35a9fce7fcfa4be1a29cecc
+5756d2ff906fd3fae35a9fce7fcfa4be1a29cecc,5756d2ff,ladnscape view of statistics dialog added,"ladnscape view of statistics dialog added
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406542021,1406542021,7db209ffa4cdd9af33e362b0b28d72d282f6172a
+7db209ffa4cdd9af33e362b0b28d72d282f6172a,7db209ff,added call to update() on PieGraph,"added call to update() on PieGraph
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406542004,1406542004,3af3c15a6a9cac046d6c27d2cf397e1ab6416f0e
+3af3c15a6a9cac046d6c27d2cf397e1ab6416f0e,3af3c15a,minor code optimizations,"minor code optimizations
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406503403,1406503403,216e96cb16bb0adb8ab0f4218c0f2195b52d1c2d
+216e96cb16bb0adb8ab0f4218c0f2195b52d1c2d,216e96cb,reformat code,"reformat code
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406502887,1406502887,574a93caebe8dc83e3dd7ef2e68f376c628a3067
+574a93caebe8dc83e3dd7ef2e68f376c628a3067,574a93ca,Database is now a singleton,"Database is now a singleton
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406502563,1406502563,96ab2a5ec6b391e9346625e5c5470fd18b00ffe0
+96ab2a5ec6b391e9346625e5c5470fd18b00ffe0,96ab2a5e,switch to another graph library,"switch to another graph library
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406502213,1406502213,d0e0c22df637efa40edf40b02dfa0c9ac0be543b
+d0e0c22df637efa40edf40b02dfa0c9ac0be543b,d0e0c22d,disabled proguard for debug builds,"disabled proguard for debug builds
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406154176,1406154176,7cbdafa7041d9f200486ed572724ef7f07e0c155
+7cbdafa7041d9f200486ed572724ef7f07e0c155,7cbdafa7,fixed crash when accessing cursor,"fixed crash when accessing cursor
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1406154140,1406154140,684b9279ead46165550154b5a4eee257f3b88ca8
+684b9279ead46165550154b5a4eee257f3b88ca8,684b9279,fix daysForStamina limited to max 15,fix daysForStamina limited to max 15,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1406041147,1406041147,7fda44c0101976d63ae2446e6c804f487283921b
+7fda44c0101976d63ae2446e6c804f487283921b,7fda44c0,reverted last commit: AS automatically adds that excludeFolder again :(,"reverted last commit: AS automatically adds that excludeFolder again :(
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1405356945,1405356945,65fdd78d3d5e160c4a514a35bcc162275f339f9e
+65fdd78d3d5e160c4a514a35bcc162275f339f9e,65fdd78d,"removed ""exclude folder: outputs""","removed ""exclude folder: outputs""
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1405322354,1405322354,45717be636e24cdb30f750aff64a97fca4dac3ac
+45717be636e24cdb30f750aff64a97fca4dac3ac,45717be6,commented lines removed,"commented lines removed
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1404911018,1404911018,09ac30cf6cda8b4cae22a576ab4ead7a72a2de5b
+09ac30cf6cda8b4cae22a576ab4ead7a72a2de5b,09ac30cf,play services updated,"play services updated
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1404727911,1404727911,2701219adb92f03142bd7b17005854903e0986bb
+2701219adb92f03142bd7b17005854903e0986bb,2701219a,refactoring,"refactoring
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1404157537,1404157537,0cadcf1bb0b82cd1a4a626f201765e0cc148eff1
+0cadcf1bb0b82cd1a4a626f201765e0cc148eff1,0cadcf1b,reorganzized files for gradle,"reorganzized files for gradle
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1404156673,1404156673,27b2cbe2195b3a81b0520617367ee50e15556487
+27b2cbe2195b3a81b0520617367ee50e15556487,27b2cbe2,changed to Android Studio & gradle,"changed to Android Studio & gradle
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1404124537,1404124537,12a5d2c70a780157d015b3c08246a6b1d2d01f83
+12a5d2c70a780157d015b3c08246a6b1d2d01f83,12a5d2c7,Merge pull request #47 from oXidFoX/patch-1,"Merge pull request #47 from oXidFoX/patch-1
+
+french first try.",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1403998341,1403998341,"a2ed621a43d00ce761896181757e3fc5d74d245c,42acde7a1c9d59297cc3e4deaf235fd77e63616b"
+42acde7a1c9d59297cc3e4deaf235fd77e63616b,42acde7a,french first try.,"french first try.
+
+""split count"" still missing. Currently don't find a nice way to translate it...",,,,oXidFoX,oXidFoX@users.noreply.github.com,oXidFoX,oXidFoX@users.noreply.github.com,1403730588,1403730588,a2ed621a43d00ce761896181757e3fc5d74d245c
+a2ed621a43d00ce761896181757e3fc5d74d245c,a2ed621a,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1402428196,1402428196,12a285e3c2d878d89b11717c89ed7cba6f153f55
+12a285e3c2d878d89b11717c89ed7cba6f153f55,12a285e3,reset db value for current steps on boot,reset db value for current steps on boot,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1402428183,1402428183,bd79ab45013560264ace4f73dacf1a4d8fb6213d
+bd79ab45013560264ace4f73dacf1a4d8fb6213d,bd79ab45,fix: current steps not saved if there was not entry yet,fix: current steps not saved if there was not entry yet,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1402269452,1402269452,5d8af6c751f6313ff849df4674e05f877f22b5d1
+5d8af6c751f6313ff849df4674e05f877f22b5d1,5d8af6c7,Merge pull request #45 from kazuH/master,"Merge pull request #45 from kazuH/master
+
+First translation for Japanese",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1402225895,1402225895,"7e6f4ceb9a0ffee46e97b10d0d13a54c15bc2a4f,e69bcc7473bc7208bb3235a143a6f2a0921a1f4b"
+7e6f4ceb9a0ffee46e97b10d0d13a54c15bc2a4f,7e6f4ceb,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1401806184,1401806184,594c99662c1d02b636d359b092c9653f7e943772
+e69bcc7473bc7208bb3235a143a6f2a0921a1f4b,e69bcc74,First translation for Japanese,First translation for Japanese,,,,kazuH,kz4n66016@gmail.com,kazuH,kz4n66016@gmail.com,1401608855,1401608855,594c99662c1d02b636d359b092c9653f7e943772
+594c99662c1d02b636d359b092c9653f7e943772,594c9966,store current steps in database instead of sharedpreferences,store current steps in database instead of sharedpreferences,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1401570208,1401570208,ddaf38a523ee1f13d4e88bceed2accfcb72bd21b
+ddaf38a523ee1f13d4e88bceed2accfcb72bd21b,ddaf38a5,fix: negative number in notificaiton if goal was reached,fix: negative number in notificaiton if goal was reached,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1401103713,1401103713,5a864732e4752ccf04a0a0039ddcc1363a657353
+5a864732e4752ccf04a0a0039ddcc1363a657353,5a864732,fix: steps not saved on shutdown,fix: steps not saved on shutdown,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1401103543,1401103543,7135702760db4ff0e348cb1855cc4c2ff716af8b
+7135702760db4ff0e348cb1855cc4c2ff716af8b,71357027,fixed not inserting new date if steps == 0,fixed not inserting new date if steps == 0,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400929765,1400929765,87a76400dfc7c19cedf195d0c0cb119e92bfa76b
+87a76400dfc7c19cedf195d0c0cb119e92bfa76b,87a76400,merge conflicts,merge conflicts,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400919923,1400919923,b4ba19ed8bebd2b9b1d229840fd892a5ff60a329
+b4ba19ed8bebd2b9b1d229840fd892a5ff60a329,b4ba19ed,Merge remote-tracking branch 'origin/test',"Merge remote-tracking branch 'origin/test'
+
+Conflicts:
+	AndroidManifest.xml
+	src/de/j4velin/pedometer/background/SensorListener.java
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400919898,1400919898,"701bf200b5702ac128cc493961bc67cb02635099,d917f29acb910f64f957f5163f293db780e766d2"
+d917f29acb910f64f957f5163f293db780e766d2,d917f29a,added some more logging,added some more logging,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400918056,1400918056,db98ff6ab799485be5061e6d4d153b650b5754f4
+db98ff6ab799485be5061e6d4d153b650b5754f4,db98ff6a,re-added notification,re-added notification,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400623130,1400623130,dccca57030ee21734e93ce16fb614ce8e7f85bc2
+dccca57030ee21734e93ce16fb614ce8e7f85bc2,dccca570,never unregister listener,never unregister listener,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400522079,1400522079,e37e52f1185eac3a9dc9ededeebd6a469472815f
+701bf200b5702ac128cc493961bc67cb02635099,701bf200,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400521534,1400521534,16a025fa8307442a56ab5f67d97fa908801bf645
+16a025fa8307442a56ab5f67d97fa908801bf645,16a025fa,more dealing with incorrect sensor values...,more dealing with incorrect sensor values...,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400521499,1400521499,bb3a9bbfe28f0f35e59dd69e102bfe0e7697dec9
+e37e52f1185eac3a9dc9ededeebd6a469472815f,e37e52f1,testing a simpler approach,testing a simpler approach,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1400401140,1400401140,bb3a9bbfe28f0f35e59dd69e102bfe0e7697dec9
+bb3a9bbfe28f0f35e59dd69e102bfe0e7697dec9,bb3a9bbf,experimental auto-reset method when receiving 10 consecutive incorrect,"experimental auto-reset method when receiving 10 consecutive incorrect
+values from the sensor",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1399452691,1399452691,484505868a84d168d04bebb6d73d332445ddae3f
+484505868a84d168d04bebb6d73d332445ddae3f,48450586,Merge pull request #39 from ogr3/master,"Merge pull request #39 from ogr3/master
+
+Swedish translation of new strings",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1399212978,1399212978,"67069908d08b5702889d8222b0a204175af2d38b,19fa10e2b337cb922adfb16bbe84de9f02cd6690"
+19fa10e2b337cb922adfb16bbe84de9f02cd6690,19fa10e2,Swedish translation of new strings,"Swedish translation of new strings
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1399210509,1399210509,67069908d08b5702889d8222b0a204175af2d38b
+67069908d08b5702889d8222b0a204175af2d38b,67069908,possible endless loop fixed,possible endless loop fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398938049,1398938049,d3d187beafd3f109ad34f3679ea8d99b893c6fd0
+d3d187beafd3f109ad34f3679ea8d99b893c6fd0,d3d187be,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398869930,1398869930,f2e067a79d3fe034b6b4c85d2d2a3797d11caaa7
+f2e067a79d3fe034b6b4c85d2d2a3797d11caaa7,f2e067a7,added 'auto-fix-database' feature if sensor value decreases somehow,added 'auto-fix-database' feature if sensor value decreases somehow,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398869879,1398869879,6c42b3237531b47076028bbafbf2d16322dfc70d
+6c42b3237531b47076028bbafbf2d16322dfc70d,6c42b323,new leaderboard added,new leaderboard added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398854701,1398854701,974f24cd451eba2f842ed3bf7f668e07444b3d96
+974f24cd451eba2f842ed3bf7f668e07444b3d96,974f24cd,added new achievements,added new achievements,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398853859,1398853859,de817dbb82db2e60822c52fba3fe1d154ddc9342
+de817dbb82db2e60822c52fba3fe1d154ddc9342,de817dbb,valid entries are not limited to 200.000 steps per day,valid entries are not limited to 200.000 steps per day,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398851951,1398851951,23c7889268334d171256f4ab41314f3ba5b475cd
+23c7889268334d171256f4ab41314f3ba5b475cd,23c78892,start service after removing invalid database entries,start service after removing invalid database entries,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398761836,1398761836,4f17a9cc334f99ef99c159d48afb790914269ea6
+4f17a9cc334f99ef99c159d48afb790914269ea6,4f17a9cc,always remove negative rows on boot,always remove negative rows on boot,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398761774,1398761774,4cc714242d64f0b0b8c2d6cf50c61d976c5f703a
+4cc714242d64f0b0b8c2d6cf50c61d976c5f703a,4cc71424,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398761522,1398761522,"e63ff44063a347a0ae545cc20f03bd7bf0cef327,5de87e67e851369fed0ff8508e3c94a061020f75"
+e63ff44063a347a0ae545cc20f03bd7bf0cef327,e63ff440,"removed overwritten method ""close"" and ""open"" in SQLiteOpenHelper","removed overwritten method ""close"" and ""open"" in SQLiteOpenHelper",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398761512,1398761512,b78a652ffb1bbe1ab448b8c94c5c426ccb116cfb
+5de87e67e851369fed0ff8508e3c94a061020f75,5de87e67,Merge pull request #36 from nikanorov/master,"Merge pull request #36 from nikanorov/master
+
+Russian translation",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1398370533,1398370533,"b78a652ffb1bbe1ab448b8c94c5c426ccb116cfb,4e48dafc3b5faf5d88d50e217c547e6b35aaff51"
+4e48dafc3b5faf5d88d50e217c547e6b35aaff51,4e48dafc,Russian translation,"Russian translation
+",,,,Andrey Nikanorov,nikanorov@gmail.com,Andrey Nikanorov,nikanorov@gmail.com,1398339476,1398339476,b78a652ffb1bbe1ab448b8c94c5c426ccb116cfb
+b78a652ffb1bbe1ab448b8c94c5c426ccb116cfb,b78a652f,removed sensor event batching again,removed sensor event batching again,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1398325375,1398325375,b3aff6826c79deead20585cc4852a5ab009f6dd0
+b3aff6826c79deead20585cc4852a5ab009f6dd0,b3aff682,fixed issue where step value decreased for no logical reason,fixed issue where step value decreased for no logical reason,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1397423376,1397423376,36b64f25ac9a240baac7f975dfead046ec56b8a8
+36b64f25ac9a240baac7f975dfead046ec56b8a8,36b64f25,added settings fragment replacement to backstack,added settings fragment replacement to backstack,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1397423210,1397423210,26f1c7de342d854047a98198dd62846c5c599585
+26f1c7de342d854047a98198dd62846c5c599585,26f1c7de,don't ask for google+ signout by default,don't ask for google+ signout by default,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1397423092,1397423092,da8cbd2f3fa5dba520882d6322b3b6b583993f95
+da8cbd2f3fa5dba520882d6322b3b6b583993f95,da8cbd2f,prevent Play Service from auto-reconnecting if user specifically signed,"prevent Play Service from auto-reconnecting if user specifically signed
+out",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1397422878,1397422878,fe7d64992c4097cb7f4cdd86c150a4a360aed189
+fe7d64992c4097cb7f4cdd86c150a4a360aed189,fe7d6499,activity launch mode changed,activity launch mode changed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1397420144,1397420144,0278386cd238d3436832775547a1203d66b8c70a
+0278386cd238d3436832775547a1203d66b8c70a,0278386c,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1396993665,1396993665,8f47a178454017ff676ed7a8e4ff3460833045b6
+8f47a178454017ff676ed7a8e4ff3460833045b6,8f47a178,changed to batched sensor reporting,changed to batched sensor reporting,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1396990089,1396990089,2f2867457aff36adcff64ad25dbd2d62643974f6
+2f2867457aff36adcff64ad25dbd2d62643974f6,2f286745,screenshots added,screenshots added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1396434571,1396434571,c587e4d9187dbdc802ad9fc93fa4454d520cc38f
+c587e4d9187dbdc802ad9fc93fa4454d520cc38f,c587e4d9,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1396434445,1396434445,"a01daca92a857f1ea7237206d28472d769ed53b8,ed768dfd142762171123691231b5ef532109ad81"
+a01daca92a857f1ea7237206d28472d769ed53b8,a01daca9,try unregistering sensorlistener before registering again,try unregistering sensorlistener before registering again,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1396434417,1396434417,0a9c3fe3133bc2255f272358485410f0ae3abe86
+ed768dfd142762171123691231b5ef532109ad81,ed768dfd,Merge pull request #34 from knight00931/patch-3,"Merge pull request #34 from knight00931/patch-3
+
+update split count strings",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1396024975,1396024975,"0a9c3fe3133bc2255f272358485410f0ae3abe86,fc060749697d06a082aae53ea12ea242d31351ea"
+fc060749697d06a082aae53ea12ea242d31351ea,fc060749,update split count strings,update split count strings,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1396019496,1396019496,0a9c3fe3133bc2255f272358485410f0ae3abe86
+0a9c3fe3133bc2255f272358485410f0ae3abe86,0a9c3fe3,german translation updated,german translation updated,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395910097,1395910097,e9aff3a5772e03fde84403518916abdb33b3fd73
+e9aff3a5772e03fde84403518916abdb33b3fd73,e9aff3a5,Merge pull request #33 from McGiverGim/master,"Merge pull request #33 from McGiverGim/master
+
+Update version. Added split counter translation to spanish.",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1395909613,1395909613,"e867ce452f774db7abfe64d652669939de14e964,42443042f67b9d40c96a75c73a2f8f42459f5875"
+42443042f67b9d40c96a75c73a2f8f42459f5875,42443042,Update strings.xml,"Update strings.xml
+
+Add split counter strings",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1395903739,1395903739,9cc92096a22a6ad47e6fd3222e31af2576e64ce7
+9cc92096a22a6ad47e6fd3222e31af2576e64ce7,9cc92096,Merge pull request #6 from j4velin/master,"Merge pull request #6 from j4velin/master
+
+Update version",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1395903127,1395903127,"3a8e678cfc7b271752b3573325a62bace1e9f4f3,e867ce452f774db7abfe64d652669939de14e964"
+e867ce452f774db7abfe64d652669939de14e964,e867ce45,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395860566,1395860566,2ee3932aa64d3efd0fd6337a1e1b24e4bf0662f3
+2ee3932aa64d3efd0fd6337a1e1b24e4bf0662f3,2ee3932a,copyright text added,copyright text added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395667854,1395667854,d22234c9064b179aa2a65f8348236686852b9856
+d22234c9064b179aa2a65f8348236686852b9856,d22234c9,fix: wrong date in split dialog,fix: wrong date in split dialog,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395667789,1395667789,7e07ed35887b608bc1d5d54d4ceacd004c4edac6
+7e07ed35887b608bc1d5d54d4ceacd004c4edac6,7e07ed35,fixed NullPointerException,fixed NullPointerException,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395602490,1395602490,fd88888938403b351f2d83500dd0d7cb5d8a6f45
+fd88888938403b351f2d83500dd0d7cb5d8a6f45,fd888889,"""about"" moved from settings to overflow menu","""about"" moved from settings to overflow menu",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395397346,1395397346,913d75a5a47b088000456f0d3d9dfdc8afa65a68
+913d75a5a47b088000456f0d3d9dfdc8afa65a68,913d75a5,hide splitcount dialog from settings fragment,hide splitcount dialog from settings fragment,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395397092,1395397092,7f2ec79ad2d9a943939af83c547b42a58cf68db5
+7f2ec79ad2d9a943939af83c547b42a58cf68db5,7f2ec79a,split count added,split count added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395396883,1395396883,5779eff7cf9566b6ebf182d2bdafdcc37a16c355
+5779eff7cf9566b6ebf182d2bdafdcc37a16c355,5779eff7,links in about dialog added,links in about dialog added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395391461,1395391461,46157c70d4b442769b71db14ba6e5dde1ccc5228
+46157c70d4b442769b71db14ba6e5dde1ccc5228,46157c70,refactoring,refactoring,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395391429,1395391429,58be5022a71b68d9cc11cebb8bdb1fa0d3fd9962
+58be5022a71b68d9cc11cebb8bdb1fa0d3fd9962,58be5022,removed unused import,removed unused import,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1395141853,1395141853,a7a388d4338f948749ac51c47552eab62d672c6e
+a7a388d4338f948749ac51c47552eab62d672c6e,a7a388d4,Merge remote-tracking branch 'j4velin/master',"Merge remote-tracking branch 'j4velin/master'
+
+Conflicts:
+	src/de/j4velin/pedometer/SettingsFragment.java
+",,,,Alfonso,roaredalfonso@gmail.com,Alfonso,roaredalfonso@gmail.com,1394974978,1394974978,"41fdd13e7e20eea0ff06964cbeba9f3375ba159c,467f0adf711b7a96412e01a8f7ba4a578559a3bb"
+467f0adf711b7a96412e01a8f7ba4a578559a3bb,467f0adf,git ignore dashclock jar,git ignore dashclock jar,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394899263,1394899263,20209ad3be37171e6044844bd124ba43026e1e10
+20209ad3be37171e6044844bd124ba43026e1e10,20209ad3,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394899126,1394899126,"2594084acb0ffb904b32342f2063cdc0c46d7dd9,c7ed9175610e2ef6ea8050d38d621771fa3c5b34"
+2594084acb0ffb904b32342f2063cdc0c46d7dd9,2594084a,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394899116,1394899116,ddb771916927c24ffc80fec0540f16ef97699607
+ddb771916927c24ffc80fec0540f16ef97699607,ddb77191,typo,typo,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394887402,1394887402,c488a75856e2138376efe2d870bc4667ad1902de
+c488a75856e2138376efe2d870bc4667ad1902de,c488a758,fix: SensorListener now calls NewDayReceiver only when it gets a real,"fix: SensorListener now calls NewDayReceiver only when it gets a real
+sensor value",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394887372,1394887372,35e781b891f9c4d7e5d02f3ce3c39c20742ce9d9
+c7ed9175610e2ef6ea8050d38d621771fa3c5b34,c7ed9175,Merge pull request #30 from knight00931/patch-2,"Merge pull request #30 from knight00931/patch-2
+
+update zh-rTW strings",,,,j4velin,j4velin@users.noreply.github.com,j4velin,j4velin@users.noreply.github.com,1394886350,1394886350,"35e781b891f9c4d7e5d02f3ce3c39c20742ce9d9,ba7ecea485cc321dcfeaf7769e13114d0383089c"
+ba7ecea485cc321dcfeaf7769e13114d0383089c,ba7ecea4,update zh-rTW strings,update zh-rTW strings,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1394885980,1394885980,35e781b891f9c4d7e5d02f3ce3c39c20742ce9d9
+35e781b891f9c4d7e5d02f3ce3c39c20742ce9d9,35e781b8,re-register sensor listener on each start,re-register sensor listener on each start,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394638561,1394638561,45a8cc2ec5d405cec77805956df4b167354c3d38
+45a8cc2ec5d405cec77805956df4b167354c3d38,45a8cc2e,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394638530,1394638530,72d9bb089fde2ba72dbdf42d83bfa54a600a8888
+41fdd13e7e20eea0ff06964cbeba9f3375ba159c,41fdd13e,updated to the new GoogleApiClient,updated to the new GoogleApiClient,,,,Alfonso,roaredalfonso@gmail.com,Alfonso,roaredalfonso@gmail.com,1394583671,1394583671,637542668cd3fcbe2f5b7cabfd280d58bf777e80
+637542668cd3fcbe2f5b7cabfd280d58bf777e80,63754266,updated to the new GoogleApiClient,updated to the new GoogleApiClient,,,,Alfonso,roaredalfonso@gmail.com,Alfonso,roaredalfonso@gmail.com,1394583022,1394583022,146f46348df79142552e9e151befbb167794cbbc
+72d9bb089fde2ba72dbdf42d83bfa54a600a8888,72d9bb08,fix: Overview sometimes used the offset of the previous day,fix: Overview sometimes used the offset of the previous day,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394361630,1394361630,85e4c42127966a047d07d6de24be5538174a6e85
+85e4c42127966a047d07d6de24be5538174a6e85,85e4c421,"last 7 days now means ""today + last 6 days""","last 7 days now means ""today + last 6 days""",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394011615,1394011615,ec2b394db234fe7b5c7686b5ba1a1d11e62be5cd
+ec2b394db234fe7b5c7686b5ba1a1d11e62be5cd,ec2b394d,string extracted,string extracted,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394011090,1394011090,4a1d9bba39791933494ea5ddee8a229f54b53d09
+4a1d9bba39791933494ea5ddee8a229f54b53d09,4a1d9bba,added confirm dialog when exporting data if file already exists,added confirm dialog when exporting data if file already exists,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394010862,1394010862,790f66bf5795bb031ee34cb9cac47ecb2a2ddd4d
+790f66bf5795bb031ee34cb9cac47ecb2a2ddd4d,790f66bf,replaced PreferenceManager.getSharedPreferences with,"replaced PreferenceManager.getSharedPreferences with
+context.getSharedPreferences with MODE_MULTI_PROCESS flag",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394010130,1394010130,03e47d4762f9dc814973e5e48eafafd012f47c43
+03e47d4762f9dc814973e5e48eafafd012f47c43,03e47d47,line width,line width,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1394009986,1394009986,146f46348df79142552e9e151befbb167794cbbc
+146f46348df79142552e9e151befbb167794cbbc,146f4634,Merge pull request #28 from McGiverGim/master,"Merge pull request #28 from McGiverGim/master
+
+Update spanish translation to latest version",,,,j4velin,j4velin@users.noreply.github.com,j4velin,j4velin@users.noreply.github.com,1393232998,1393232998,"db66fe21e6cb322666a408b8b322c517559c37cf,3a8e678cfc7b271752b3573325a62bace1e9f4f3"
+3a8e678cfc7b271752b3573325a62bace1e9f4f3,3a8e678c,Update spanish translations to last version,Update spanish translations to last version,,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1393226775,1393226775,88bf61faa8ce5dc456a75276260993c8a3adbede
+88bf61faa8ce5dc456a75276260993c8a3adbede,88bf61fa,Merge pull request #5 from j4velin/master,"Merge pull request #5 from j4velin/master
+
+Update version",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1393226569,1393226569,"db65848a2aacd6e133d561edbc2d47513ea305e2,db66fe21e6cb322666a408b8b322c517559c37cf"
+db66fe21e6cb322666a408b8b322c517559c37cf,db66fe21,statistics more accurate,statistics more accurate,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392806747,1392806747,fc22436614806fd70b2c0e4c0f0156596761ded9
+fc22436614806fd70b2c0e4c0f0156596761ded9,fc224366,fixed isse: http://j4velin-systems.de/bugtracker/view.php?id=354,fixed isse: http://j4velin-systems.de/bugtracker/view.php?id=354,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392806043,1392806043,ee12029acf5076d9068ac535e85f7b7e7f77ae22
+ee12029acf5076d9068ac535e85f7b7e7f77ae22,ee12029a,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392805921,1392805921,"d6cedb1e27e3a8bf9463ea41965129f7383b6939,0a9a69dd753b0613ba1b1ea79ac0131b68c877e9"
+0a9a69dd753b0613ba1b1ea79ac0131b68c877e9,0a9a69dd,Merge pull request #26 from knight00931/patch-1,"Merge pull request #26 from knight00931/patch-1
+
+Update strings.xml",,,,j4velin,j4velin@users.noreply.github.com,j4velin,j4velin@users.noreply.github.com,1392805904,1392805904,"6ee1a5874798050125e17595c6c9e8eab9ed493a,1f3be330beaa7bc3e2773ef76d670597b9ccb3dc"
+6ee1a5874798050125e17595c6c9e8eab9ed493a,6ee1a587,Merge pull request #27 from ogr3/master,"Merge pull request #27 from ogr3/master
+
+New strings translated to Swedish",,,,j4velin,j4velin@users.noreply.github.com,j4velin,j4velin@users.noreply.github.com,1392805899,1392805899,"fbc1468383d91cf78a4044d9c68a571e35c0b9e0,ea01e31d2d08f1405cc7c689d99493f9e1c442cc"
+d6cedb1e27e3a8bf9463ea41965129f7383b6939,d6cedb1e,fix: last week statistics,fix: last week statistics,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392805538,1392805538,fbc1468383d91cf78a4044d9c68a571e35c0b9e0
+ea01e31d2d08f1405cc7c689d99493f9e1c442cc,ea01e31d,New strings translated to Swedish,"New strings translated to Swedish
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1392444915,1392444915,fbc1468383d91cf78a4044d9c68a571e35c0b9e0
+1f3be330beaa7bc3e2773ef76d670597b9ccb3dc,1f3be330,Update strings.xml,"Update strings.xml
+
+translate new strings",,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1392432954,1392432954,fbc1468383d91cf78a4044d9c68a571e35c0b9e0
+fbc1468383d91cf78a4044d9c68a571e35c0b9e0,fbc14683,added some more statistics,added some more statistics,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392420349,1392420349,fed6e88aede9bcf404cce39f061b8ed7b95d2a0c
+fed6e88aede9bcf404cce39f061b8ed7b95d2a0c,fed6e88a,added some OK buttons on the dialogs,added some OK buttons on the dialogs,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392412992,1392412992,b0b14f1f502377b5dc1aa103487f6e34249c89be
+b0b14f1f502377b5dc1aa103487f6e34249c89be,b0b14f1f,fix: Google+ signOut crash,fix: Google+ signOut crash,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392412638,1392412638,5ea5b48258da48b1dc3cac96f99f91d6891ee0a7
+5ea5b48258da48b1dc3cac96f99f91d6891ee0a7,5ea5b482,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392411734,1392411734,"c57ed2f9c5fe76cbbc5da8f12abd7eaa54f9f685,adf58ea5d1d48a5dab91a359af194ad7b5897f6f"
+c57ed2f9c5fe76cbbc5da8f12abd7eaa54f9f685,c57ed2f9,added periodically backup in case the device crashes,added periodically backup in case the device crashes,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1392411726,1392411726,4278426b0f83444b97781c8967fcdb24371781ec
+adf58ea5d1d48a5dab91a359af194ad7b5897f6f,adf58ea5,Merge pull request #24 from knight00931/patch-1,"Merge pull request #24 from knight00931/patch-1
+
+Update strings.xml",,,,j4velin,j4velin@users.noreply.github.com,j4velin,j4velin@users.noreply.github.com,1392220003,1392220003,"4278426b0f83444b97781c8967fcdb24371781ec,b1b660ef21255080896dd4f7cfa4620e4f277e10"
+b1b660ef21255080896dd4f7cfa4620e4f277e10,b1b660ef,Update strings.xml,Update strings.xml,,,,knight00931,knight00931@gmail.com,knight00931,knight00931@gmail.com,1392215016,1392215016,4278426b0f83444b97781c8967fcdb24371781ec
+4278426b0f83444b97781c8967fcdb24371781ec,4278426b,Merge branch 'patch-1',"Merge branch 'patch-1'
+
+Conflicts:
+	res/values-zh-rCN/strings.xml
+",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391988683,1391988683,"e1c93216de9eee20d8e13607f691160727b4c9c9,95cf2fb23be3f87d9d31cf11c8f159d5e30724d7"
+e1c93216de9eee20d8e13607f691160727b4c9c9,e1c93216,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391986714,1391986714,"c1b89d381c06c874929f85d6c333bdf495bfc631,2ce6c22f68871a2d4f088cefe681d060fba6716b"
+2ce6c22f68871a2d4f088cefe681d060fba6716b,2ce6c22f,Merge pull request #20 from Felix2yu/master,"Merge pull request #20 from Felix2yu/master
+
+Update Chinese",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391986325,1391986325,"bd1f23672456c16ade242bc26f8bef7b6cdce765,26f39a5817083cbf092c8f04321d32b6251ee057"
+bd1f23672456c16ade242bc26f8bef7b6cdce765,bd1f2367,Merge pull request #21 from McGiverGim/master,"Merge pull request #21 from McGiverGim/master
+
+Spanish: Added average translation and some little corrections",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391986314,1391986314,"8854f984316ac78eb70e440fce6b6077d71d9f0b,db65848a2aacd6e133d561edbc2d47513ea305e2"
+95cf2fb23be3f87d9d31cf11c8f159d5e30724d7,95cf2fb2,Update strings.xml,"Update strings.xml
+
+fix translation",,,,zenoven,zenoven@gmail.com,zenoven,zenoven@gmail.com,1391846276,1391846276,8854f984316ac78eb70e440fce6b6077d71d9f0b
+db65848a2aacd6e133d561edbc2d47513ea305e2,db65848a,"Added average string, some little corrections","Added average string, some little corrections",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1391845766,1391845766,be4bd7be7f0ddacd9c0352bfc69b41d42c01f763
+26f39a5817083cbf092c8f04321d32b6251ee057,26f39a58,错别字,"错别字
+",,,,Felix2yu,yufei.im@gmail.com,Felix2yu,yufei.im@gmail.com,1391845506,1391845506,834497de10755662208885f28b62a7470e1c2024
+be4bd7be7f0ddacd9c0352bfc69b41d42c01f763,be4bd7be,Merge pull request #4 from j4velin/master,"Merge pull request #4 from j4velin/master
+
+New update",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1391845486,1391845486,"6e9df0b7708d5c18ee5d4172029f5570c34fe172,8854f984316ac78eb70e440fce6b6077d71d9f0b"
+834497de10755662208885f28b62a7470e1c2024,834497de,Update Chinese,"Update Chinese
+",,,,Felix2yu,yufei.im@gmail.com,Felix2yu,yufei.im@gmail.com,1391831998,1391831998,f5a82033c21da74eaf6131355c315818bbc55138
+f5a82033c21da74eaf6131355c315818bbc55138,f5a82033,Merge pull request #1 from j4velin/master,"Merge pull request #1 from j4velin/master
+
+update",,,,Felix2yu,yufei.im@gmail.com,Felix2yu,yufei.im@gmail.com,1391831236,1391831236,"66b094d7e1ce07a640836e1ed6c500f147e4b3b6,8854f984316ac78eb70e440fce6b6077d71d9f0b"
+c1b89d381c06c874929f85d6c333bdf495bfc631,c1b89d38,fix: progress bar was not updated when goal was reached,fix: progress bar was not updated when goal was reached,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391800436,1391800436,8854f984316ac78eb70e440fce6b6077d71d9f0b
+8854f984316ac78eb70e440fce6b6077d71d9f0b,8854f984,Merge pull request #19 from ogr3/master,"Merge pull request #19 from ogr3/master
+
+translated average to swedish",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391800296,1391800296,"2f6d10f398efbf86b3f0cbb0f316c5eeb2047b4e,b37b944433e82d72afb2c18d77d320fbb0df9949"
+b37b944433e82d72afb2c18d77d320fbb0df9949,b37b9444,translated average to swedish,"translated average to swedish
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1391709098,1391709098,2f6d10f398efbf86b3f0cbb0f316c5eeb2047b4e
+2f6d10f398efbf86b3f0cbb0f316c5eeb2047b4e,2f6d10f3,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391634994,1391634994,"41a2c4f0d4833f63673555320f1995dbe34324b3,180e0c16ede79879db69bb2070ee09a12b8c4e46"
+41a2c4f0d4833f63673555320f1995dbe34324b3,41a2c4f0,localization,localization,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391633787,1391633787,8845fae736d572cba7cb774f5993b1c9498edd86
+8845fae736d572cba7cb774f5993b1c9498edd86,8845fae7,replaced 'yesterday' with 'average' and change all data on the screen,"replaced 'yesterday' with 'average' and change all data on the screen
+when switching from 'steps' to 'distance'",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391633473,1391633473,da9069bd695dc6a3fbd327473502f0400dc6bf1a
+da9069bd695dc6a3fbd327473502f0400dc6bf1a,da9069bd,fixed NumberFormatException when entering empty string,fixed NumberFormatException when entering empty string,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391625138,1391625138,2130988895166611ee099e2e54f481052e245682
+2130988895166611ee099e2e54f481052e245682,21309888,NPE fixed,NPE fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391625033,1391625033,0cd08868ebbc0886f9d6690b92ce25f8b421a4bc
+180e0c16ede79879db69bb2070ee09a12b8c4e46,180e0c16,Merge pull request #18 from Felix2yu/master,"Merge pull request #18 from Felix2yu/master
+
+Chinese translation",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391587155,1391587155,"0cd08868ebbc0886f9d6690b92ce25f8b421a4bc,66b094d7e1ce07a640836e1ed6c500f147e4b3b6"
+66b094d7e1ce07a640836e1ed6c500f147e4b3b6,66b094d7,Chinese translation,"Chinese translation
+",,,,Felix2yu,yufei.im@gmail.com,Felix2yu,yufei.im@gmail.com,1391574759,1391574759,0cd08868ebbc0886f9d6690b92ce25f8b421a4bc
+0cd08868ebbc0886f9d6690b92ce25f8b421a4bc,0cd08868,Merge pull request #17 from McGiverGim/master,"Merge pull request #17 from McGiverGim/master
+
+Updated new strings extracted",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391528932,1391528932,"bdaa3d865a11af46a15236461dac3fc7c30f5da8,6e9df0b7708d5c18ee5d4172029f5570c34fe172"
+bdaa3d865a11af46a15236461dac3fc7c30f5da8,bdaa3d86,Merge pull request #16 from ogr3/master,"Merge pull request #16 from ogr3/master
+
+Swedish translation of newly extracted strings",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391528922,1391528922,"1128135589a7e108f82d6c8544379072de4ad5d7,318c83cc40c5abdb3867e6e3be154a1e9f01e41d"
+6e9df0b7708d5c18ee5d4172029f5570c34fe172,6e9df0b7,Update strings.xml,"Update strings.xml
+
+Updated new strings extracted",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1391497443,1391497443,cf016425845b9c5e7b869e93af48f3747078a563
+cf016425845b9c5e7b869e93af48f3747078a563,cf016425,Merge pull request #3 from j4velin/master,"Merge pull request #3 from j4velin/master
+
+Update version",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1391497074,1391497074,"07e7f58619e4f96fe64f78d62249ee4132203b2f,1128135589a7e108f82d6c8544379072de4ad5d7"
+318c83cc40c5abdb3867e6e3be154a1e9f01e41d,318c83cc,Swedish translation of newly extracted strings,"Swedish translation of newly extracted strings
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1391455815,1391455815,1128135589a7e108f82d6c8544379072de4ad5d7
+1128135589a7e108f82d6c8544379072de4ad5d7,11281355,german translation,german translation,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391453993,1391453993,d2c057175af7418c403919fbd5cdbc439d8371a3
+d2c057175af7418c403919fbd5cdbc439d8371a3,d2c05717,string extracted,string extracted,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391453938,1391453938,a759612770ca095ecf51b5cffc803f438f5646de
+a759612770ca095ecf51b5cffc803f438f5646de,a7596127,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391452911,1391452911,"39657fbf3cc29a25c701b158af019e38cc4702c9,ffbd8da906fe28734f206546b3c58c45ff512ef8"
+39657fbf3cc29a25c701b158af019e38cc4702c9,39657fbf,decrease required widget width,decrease required widget width,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391452898,1391452898,24962be0ca33d9f6de6b61935b10e68db3646d01
+ffbd8da906fe28734f206546b3c58c45ff512ef8,ffbd8da9,Merge pull request #15 from AlonsoLP/patch-1,"Merge pull request #15 from AlonsoLP/patch-1
+
+Update strings.xml",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391096309,1391096309,"72045d25f67b30eede0b1acb4c9e17695f2b98dc,08b1459b04b3bd889f72357e83b97ec380aa3b77"
+08b1459b04b3bd889f72357e83b97ec380aa3b77,08b1459b,Update strings.xml,Update strings.xml,,,,AlonsoLP,alonso.lara.plana@gmail.com,AlonsoLP,alonso.lara.plana@gmail.com,1391078273,1391078273,72045d25f67b30eede0b1acb4c9e17695f2b98dc
+72045d25f67b30eede0b1acb4c9e17695f2b98dc,72045d25,Merge pull request #14 from ogr3/master,"Merge pull request #14 from ogr3/master
+
+Swedish translation added for new strings",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1391027580,1391027580,"24962be0ca33d9f6de6b61935b10e68db3646d01,8de178b7263b83b0f15dec3d69ddc9470264c04e"
+8de178b7263b83b0f15dec3d69ddc9470264c04e,8de178b7,whitespace,"whitespace
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1391026727,1391026727,29292b3a0a627333909a0d4aca36372b3dfc651b
+29292b3a0a627333909a0d4aca36372b3dfc651b,29292b3a,Swedish translation of extracted strings,"Swedish translation of extracted strings
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1391026665,1391026665,24962be0ca33d9f6de6b61935b10e68db3646d01
+24962be0ca33d9f6de6b61935b10e68db3646d01,24962be0,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391026339,1391026339,"fa5f27527684775a09dfec21c027f03fb7a70aaa,e7ccfc6e96218e7d2bb466568bb3f71e259f0297"
+fa5f27527684775a09dfec21c027f03fb7a70aaa,fa5f2752,even more string extracted ^^,even more string extracted ^^,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1391026203,1391026203,2487c8ed6dea6024360dfa6c3c122c9f10c11570
+e7ccfc6e96218e7d2bb466568bb3f71e259f0297,e7ccfc6e,Merge pull request #12 from McGiverGim/master,"Merge pull request #12 from McGiverGim/master
+
+Added new Strings to spanish translation",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390939560,1390939560,"1dc78da7efc31693b039d77367c5bb5bbf21ee1c,07e7f58619e4f96fe64f78d62249ee4132203b2f"
+1dc78da7efc31693b039d77367c5bb5bbf21ee1c,1dc78da7,Merge pull request #13 from ogr3/master,"Merge pull request #13 from ogr3/master
+
+Swedish translation updated",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390939545,1390939545,"2487c8ed6dea6024360dfa6c3c122c9f10c11570,7a794d5d51b7acebf4cecfb57e9edb35c672d031"
+7a794d5d51b7acebf4cecfb57e9edb35c672d031,7a794d5d,Updated Swedish translation,"Updated Swedish translation
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1390938898,1390938898,a2284188368434c73ae0476c22c4309ab2ec098d
+07e7f58619e4f96fe64f78d62249ee4132203b2f,07e7f586,Update strings.xml,"Update strings.xml
+
+Added new strings",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390934362,1390934362,f43fb470e6b70cfd9d07fd03e106da68646a0bcf
+f43fb470e6b70cfd9d07fd03e106da68646a0bcf,f43fb470,Merge pull request #2 from j4velin/master,"Merge pull request #2 from j4velin/master
+
+Update to latest version",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390934184,1390934184,"7b0933bd22802c41827a844cd7d636605ba7d8a8,2487c8ed6dea6024360dfa6c3c122c9f10c11570"
+a2284188368434c73ae0476c22c4309ab2ec098d,a2284188,Merge branch 'master' of https://github.com/j4velin/Pedometer,"Merge branch 'master' of https://github.com/j4velin/Pedometer
+",,,,fredup,fredrik.duprez@tillvaxtverket.se,fredup,fredrik.duprez@tillvaxtverket.se,1390923212,1390923212,"ea9e32bbefb33b7b5006b7429e284b1597b1d905,2487c8ed6dea6024360dfa6c3c122c9f10c11570"
+ea9e32bbefb33b7b5006b7429e284b1597b1d905,ea9e32bb,Minor Swedish translation fixes,"Minor Swedish translation fixes
+",,,,fredup,fredrik.duprez@tillvaxtverket.se,fredup,fredrik.duprez@tillvaxtverket.se,1390923128,1390923128,392a0cf1323136dd53a0f516d9eb08b40acba840
+2487c8ed6dea6024360dfa6c3c122c9f10c11570,2487c8ed,fix: bars not shown if one day had 0 steps,fix: bars not shown if one day had 0 steps,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390903801,1390903801,d4392ddac2818f81a0df9ad44a3448b7d1540e43
+d4392ddac2818f81a0df9ad44a3448b7d1540e43,d4392dda,fix crash on German devices,fix crash on German devices,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390903780,1390903780,9481c2b0ee157ae3acfab741bfd8eea53404ccaf
+9481c2b0ee157ae3acfab741bfd8eea53404ccaf,9481c2b0,Merge pull request #11 from ogr3/master,"Merge pull request #11 from ogr3/master
+
+Swedish translation added for new strings",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390903693,1390903693,"839e1a5895925ffcedf36c92a4b0a938136a064b,392a0cf1323136dd53a0f516d9eb08b40acba840"
+392a0cf1323136dd53a0f516d9eb08b40acba840,392a0cf1,Swedish translation added for new strings,"Swedish translation added for new strings
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1390882138,1390882138,839e1a5895925ffcedf36c92a4b0a938136a064b
+839e1a5895925ffcedf36c92a4b0a938136a064b,839e1a58,more strings extracted,more strings extracted,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390867227,1390867227,e30d5c95539b832d08ca0742f691797557a1ab89
+e30d5c95539b832d08ca0742f691797557a1ab89,e30d5c95,switched from BroadcastReceiver to AppWidgetProvider,switched from BroadcastReceiver to AppWidgetProvider,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390867092,1390867092,cff432d642ee073bd5f69d1d22508132388d7122
+cff432d642ee073bd5f69d1d22508132388d7122,cff432d6,"added IS_RUNNING flag & re-added ""restart every hour"" workaround","added IS_RUNNING flag & re-added ""restart every hour"" workaround",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390867052,1390867052,b753dc545f7284fee3748f386d7ed4f1ba3ff842
+b753dc545f7284fee3748f386d7ed4f1ba3ff842,b753dc54,start SensorListener before reading steps variable,start SensorListener before reading steps variable,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390867018,1390867018,12ea12f3f6006a33b1b67954666b1d5b4def167f
+12ea12f3f6006a33b1b67954666b1d5b4def167f,12ea12f3,NullPointer fixed,NullPointer fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390866934,1390866934,bc67ea7380ddd1b252a208e08d9bb3e4116a8fc0
+bc67ea7380ddd1b252a208e08d9bb3e4116a8fc0,bc67ea73,FAQ link added to menu,FAQ link added to menu,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390866912,1390866912,563e3ce36fcafed9a7030c84109cb243e54352c3
+563e3ce36fcafed9a7030c84109cb243e54352c3,563e3ce3,german translation,german translation,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390866877,1390866877,8eae11d79379380e9c51052c3a05f149188112c5
+8eae11d79379380e9c51052c3a05f149188112c5,8eae11d7,Merge pull request #10 from McGiverGim/master,"Merge pull request #10 from McGiverGim/master
+
+Added new Strings to spanish translation",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390768694,1390768694,"f2183e43d95066f35bba293f274796da11e0c9d9,7b0933bd22802c41827a844cd7d636605ba7d8a8"
+7b0933bd22802c41827a844cd7d636605ba7d8a8,7b0933bd,Update strings.xml,"Update strings.xml
+
+Translated new strings",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390750750,1390750750,2b9bf08b4827bee8b0e4c7743d5c61a6f3bca144
+2b9bf08b4827bee8b0e4c7743d5c61a6f3bca144,2b9bf08b,Merge pull request #1 from j4velin/master,"Merge pull request #1 from j4velin/master
+
+Update Strings",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390750398,1390750398,"a4318b087c6933a57690f46dadbe52cea98e01f9,f2183e43d95066f35bba293f274796da11e0c9d9"
+f2183e43d95066f35bba293f274796da11e0c9d9,f2183e43,Merge pull request #9 from ogr3/master,"Merge pull request #9 from ogr3/master
+
+Swedish translation",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390745482,1390745482,"387a7a61f54653f3a08f8956665d0d7c77925a3e,510b62727ba250e634e60d7a8ad75b30dd92421e"
+510b62727ba250e634e60d7a8ad75b30dd92421e,510b6272,Newline added at end of file,"Newline added at end of file
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1390744995,1390744995,e58e0a191f5761052ddc66885b791137758c87c5
+e58e0a191f5761052ddc66885b791137758c87c5,e58e0a19,Typo,"Typo
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1390744892,1390744892,4edcc68af0ddb5ceaa0da7896ef26856b4fd915e
+4edcc68af0ddb5ceaa0da7896ef26856b4fd915e,4edcc68a,Swedish translation,"Swedish translation
+",,,,oGre,oGre@muppfarmen.se,oGre,oGre@muppfarmen.se,1390744735,1390744735,387a7a61f54653f3a08f8956665d0d7c77925a3e
+387a7a61f54653f3a08f8956665d0d7c77925a3e,387a7a61,added colorpicker to about dialog text,added colorpicker to about dialog text,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390742553,1390742553,af2e2dbb82a76708f1845914c408aadf34966c34
+af2e2dbb82a76708f1845914c408aadf34966c34,af2e2dbb,Update README.md,Update README.md,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390742308,1390742308,72cfa64c9099b2c1917981db542d9988a96348ee
+72cfa64c9099b2c1917981db542d9988a96348ee,72cfa64c,widget fixes,widget fixes,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390741907,1390741907,05009c08ede42ea5653fd927811b4e9e60eb0152
+05009c08ede42ea5653fd927811b4e9e60eb0152,05009c08,moved Util & Logger class to util package,moved Util & Logger class to util package,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390740596,1390740596,7afc978cf5af16432f156fd3c1744c44e1a124ba
+7afc978cf5af16432f156fd3c1744c44e1a124ba,7afc978c,widget added,widget added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390740552,1390740552,7074f8d8e875069a4c58a617fec12114763b5fc4
+7074f8d8e875069a4c58a617fec12114763b5fc4,7074f8d8,more strings extracted,more strings extracted,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390737522,1390737522,9becd363b71202ce298c9a71e7d03d9f39f54cdb
+9becd363b71202ce298c9a71e7d03d9f39f54cdb,9becd363,reduced logging in onReceive & visibility of the sheduleAlarmForNextDay,"reduced logging in onReceive & visibility of the sheduleAlarmForNextDay
+method",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390736771,1390736771,285906f6e7c2c74a001ca6da3f100abb39edd040
+285906f6e7c2c74a001ca6da3f100abb39edd040,285906f6,removed call to sheduleNewDayReceiver as the SensorListener calls it,"removed call to sheduleNewDayReceiver as the SensorListener calls it
+anyways",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390736702,1390736702,966b647c5d42505d0c943796b99609901168cac3
+966b647c5d42505d0c943796b99609901168cac3,966b647c,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390736658,1390736658,"6d45b860be57c42a0b797ff8efbb059a52b6d8e8,e5a736621b46cad95950becd6f9aa373f4ddd059"
+e5a736621b46cad95950becd6f9aa373f4ddd059,e5a73662,Merge pull request #8 from McGiverGim/master,"Merge pull request #8 from McGiverGim/master
+
+Translation into spanish",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1390735604,1390735604,"46a3e88e26a2fd1680d9b52fc81d567616d9253c,a4318b087c6933a57690f46dadbe52cea98e01f9"
+a4318b087c6933a57690f46dadbe52cea98e01f9,a4318b08,Update strings.xml,"Update strings.xml
+
+Traducido nombre de la aplicación",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390734954,1390734954,400f541037f6a456703463abda15a3d4831e83cc
+400f541037f6a456703463abda15a3d4831e83cc,400f5410,Create strings.xml,"Create strings.xml
+
+Translated strings into spanish",,,,McGiverGim,mcgivergim@gmail.com,McGiverGim,mcgivergim@gmail.com,1390734837,1390734837,46a3e88e26a2fd1680d9b52fc81d567616d9253c
+6d45b860be57c42a0b797ff8efbb059a52b6d8e8,6d45b860,final modifier added,final modifier added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390656226,1390656226,fe6d4831b7231c093915cb1169ced3258883b85c
+fe6d4831b7231c093915cb1169ced3258883b85c,fe6d4831,removed 'restart service every hour' workaround,removed 'restart service every hour' workaround,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390656164,1390656164,0974a00d36e1961cf9800b3ebffa3e3d032e589e
+0974a00d36e1961cf9800b3ebffa3e3d032e589e,0974a00d,moved logic to update yesterdays steps on a new day in the new method,"moved logic to update yesterdays steps on a new day in the new method
+Database.insertNewDay",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390656114,1390656114,d38184b35909dcd76d8e842fd598019c13c1b06f
+d38184b35909dcd76d8e842fd598019c13c1b06f,d38184b3,replaced insertDay with insertDayFromBackup,replaced insertDay with insertDayFromBackup,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390656054,1390656054,6e78f3878830cd3d6e605e5dc7990e9c66a96a47
+6e78f3878830cd3d6e605e5dc7990e9c66a96a47,6e78f387,removed insertDay method from overview fragment,removed insertDay method from overview fragment,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390656039,1390656039,46a3e88e26a2fd1680d9b52fc81d567616d9253c
+46a3e88e26a2fd1680d9b52fc81d567616d9253c,46a3e88e,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390231816,1390231816,"4b10377bc798c6399010ab1e94c9afdcc3d95055,0ec901d43fbcd74f0e789a50bfba45b5146757a2"
+4b10377bc798c6399010ab1e94c9afdcc3d95055,4b10377b,new day check moved to onStart,new day check moved to onStart,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390231778,1390231778,b49e459fb62c75231ade9b2a280dcc9ca5fd83f8
+b49e459fb62c75231ade9b2a280dcc9ca5fd83f8,b49e459f,ApplicationContext for broadcast & prevent for inserting,"ApplicationContext for broadcast & prevent for inserting
+-Interger.MIN_VALUE for yesterday",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1390231759,1390231759,b9145ca5d2a42cde206f6a1c5edba65b9655e9e4
+0ec901d43fbcd74f0e789a50bfba45b5146757a2,0ec901d4,added dashclock api to build instructions,added dashclock api to build instructions,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1389835164,1389835164,4071b8fc637d5b384c4894a58c7f740525e6eea3
+4071b8fc637d5b384c4894a58c7f740525e6eea3,4071b8fc,Update LICENSE,Update LICENSE,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1389835014,1389835014,b9145ca5d2a42cde206f6a1c5edba65b9655e9e4
+b9145ca5d2a42cde206f6a1c5edba65b9655e9e4,b9145ca5,added dashclock extension,added dashclock extension,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389832354,1389832354,a5eecbf8593b28c835ce8b33c3081211516b9d2b
+a5eecbf8593b28c835ce8b33c3081211516b9d2b,a5eecbf8,screenshot updated,screenshot updated,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1389797059,1389797059,9ec0a23af8ff05bf4d058cd7bb92d4c64b57aba4
+9ec0a23af8ff05bf4d058cd7bb92d4c64b57aba4,9ec0a23a,check if there is already an entry for the new day,check if there is already an entry for the new day,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389796644,1389796644,dc81507257fa05a708cc1dc9cc5e2be3a2936e12
+dc81507257fa05a708cc1dc9cc5e2be3a2936e12,dc815072,uses applicationcontext for alarm (maybe that will fix the alarm being,"uses applicationcontext for alarm (maybe that will fix the alarm being
+canceled?), calls NewDayReceiver if there is no entry for today yet (in
+case the alarm was somehow canceled)",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389796614,1389796614,a3a2e0470b8eb7f8dc99a2dd790060df2865a914
+a3a2e0470b8eb7f8dc99a2dd790060df2865a914,a3a2e047,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,Merge branch 'master' of git@github.com:j4velin/Pedometer.git,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389704242,1389704242,"52bf14dc79a25d43e4e03ac498d05ae93c27a73b,0fabac7452fcbdb0f3682c87da5ecb636728771b"
+52bf14dc79a25d43e4e03ac498d05ae93c27a73b,52bf14dc,graph alignment,graph alignment,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389704043,1389704043,b06c4904cf58f06c752e4a0c73f303a3258d3633
+b06c4904cf58f06c752e4a0c73f303a3258d3633,b06c4904,added open source notice in about dialog,added open source notice in about dialog,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389703992,1389703992,b627292cf01dcce46a6c45009f739923e79d0e1c
+b627292cf01dcce46a6c45009f739923e79d0e1c,b627292c,javadoc,javadoc,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389703948,1389703948,4ba4f2a8a54ee4d5f74c8bb86ce671132cf518aa
+0fabac7452fcbdb0f3682c87da5ecb636728771b,0fabac74,Merge pull request #3 from yoasif/patch-1,"Merge pull request #3 from yoasif/patch-1
+
+Updated readme to use inline linking",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1389651757,1389651757,"4ba4f2a8a54ee4d5f74c8bb86ce671132cf518aa,67f732a3a5426b1c1ff93d999f5b7c2337de0038"
+67f732a3a5426b1c1ff93d999f5b7c2337de0038,67f732a3,Updated readme to use inline linking,Updated readme to use inline linking,,,,yoasif,yoasif@gmail.com,yoasif,yoasif@gmail.com,1389649478,1389649478,4ba4f2a8a54ee4d5f74c8bb86ce671132cf518aa
+4ba4f2a8a54ee4d5f74c8bb86ce671132cf518aa,4ba4f2a8,changed to setExact for the alarm,changed to setExact for the alarm,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389521891,1389521891,48b26cd21584f8873689bcf9044c901094c75525
+48b26cd21584f8873689bcf9044c901094c75525,48b26cd2,restart workaround moved to onStartCommand method,restart workaround moved to onStartCommand method,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389521838,1389521838,f555f4a924ec647aab00927edcd092cb19752456
+f555f4a924ec647aab00927edcd092cb19752456,f555f4a9,fixed crash on orientation change,fixed crash on orientation change,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389438564,1389438564,933b67703d5440ce46ccd87c306775ca7c8c858f
+933b67703d5440ce46ccd87c306775ca7c8c858f,933b6770,only load last 5 entries on logging,only load last 5 entries on logging,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389438516,1389438516,393378afcf1e3e495024d68b2f636cd86e043ade
+393378afcf1e3e495024d68b2f636cd86e043ade,393378af,avoid fragment replacement on orientation change,avoid fragment replacement on orientation change,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389438488,1389438488,042990148c341fc5c579a2988bfdba2ba61fb5c1
+042990148c341fc5c579a2988bfdba2ba61fb5c1,04299014,onClickListener on Graph instead of text,onClickListener on Graph instead of text,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389438462,1389438462,20693f78183c3519ff24e7418c52ae6c79917e71
+20693f78183c3519ff24e7418c52ae6c79917e71,20693f78,about dialog shows app version name,about dialog shows app version name,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389119145,1389119145,ea271835cc660c2ebf628a49d4003e51fd70a5d5
+ea271835cc660c2ebf628a49d4003e51fd70a5d5,ea271835,typo,typo,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389118927,1389118927,d695e9b77e49cfce6e1217a6f30c2b0f7dfcb021
+d695e9b77e49cfce6e1217a6f30c2b0f7dfcb021,d695e9b7,green bars if goal was reached for that day,green bars if goal was reached for that day,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389118887,1389118887,9194f6e1e15563973466e24249899fb2b357f1f0
+9194f6e1e15563973466e24249899fb2b357f1f0,9194f6e1,newDayAlarm now wakes the device to make sure the broadcast is deliverd,"newDayAlarm now wakes the device to make sure the broadcast is deliverd
+at midnight",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389118837,1389118837,aa70e9ccaed9ffbe9abf6ba91bba88d5d7aae0c0
+aa70e9ccaed9ffbe9abf6ba91bba88d5d7aae0c0,aa70e9cc,loggin typo,loggin typo,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389118800,1389118800,d22c68db044a1d15aa664b678fd68de006d3261f
+d22c68db044a1d15aa664b678fd68de006d3261f,d22c68db,notification changed,notification changed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1389118787,1389118787,53697d150118feab18ccd517ebbf2bee5bc869c6
+53697d150118feab18ccd517ebbf2bee5bc869c6,53697d15,layout changes,layout changes,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388744175,1388744175,b241ae00f22bf85f1fd5cf72d83638bcc8b636ce
+b241ae00f22bf85f1fd5cf72d83638bcc8b636ce,b241ae00,notification update fixed,notification update fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388616958,1388616958,3c6e9082ea09486958f039f514de44a2ad5e4abf
+3c6e9082ea09486958f039f514de44a2ad5e4abf,3c6e9082,landscape layout added,landscape layout added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388616941,1388616941,78bd029f921cbe901e7ce085d5b1605e74502304
+78bd029f921cbe901e7ce085d5b1605e74502304,78bd029f,javadoc added,javadoc added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388485137,1388485137,2abc7608a0132f01cf913860ff8d7dd76e104332
+2abc7608a0132f01cf913860ff8d7dd76e104332,2abc7608,double Log.d call removed,double Log.d call removed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388485126,1388485126,1568ef1fce00567783a214ab43bbf0968384c238
+1568ef1fce00567783a214ab43bbf0968384c238,1568ef1f,notification disable-able,notification disable-able,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388485109,1388485109,6112cdf5b574853189b13de729071b771f1d3887
+6112cdf5b574853189b13de729071b771f1d3887,6112cdf5,import/export option & notification checkbox,import/export option & notification checkbox,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388485089,1388485089,f5572ee9034eadd2b87b818e3065d9355db99e5b
+f5572ee9034eadd2b87b818e3065d9355db99e5b,f5572ee9,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388485054,1388485054,917b7ac8693427c8d838435c6ef217d29dafe312
+917b7ac8693427c8d838435c6ef217d29dafe312,917b7ac8,Update README.md,Update README.md,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1388438657,1388438657,1721b8d767a6ecf3b552d0736dd1e2322c85154f
+1721b8d767a6ecf3b552d0736dd1e2322c85154f,1721b8d7,gitignore,gitignore,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388413762,1388413762,7489755a2054f1b997330d971a797ea82c85f6b7
+7489755a2054f1b997330d971a797ea82c85f6b7,7489755a,update notification on new day,update notification on new day,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388362914,1388362914,c41ab3893e09878c64fa8defa951bb1b4d707f34
+c41ab3893e09878c64fa8defa951bb1b4d707f34,c41ab389,version update,version update,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388362898,1388362898,6060bb5f67eea069b1dab47117ac04b05ad8c704
+6060bb5f67eea069b1dab47117ac04b05ad8c704,6060bb5f,new day starts at 0:00:01,new day starts at 0:00:01,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388362732,1388362732,45680ac3d2568b6d88a8594886ac82f0ac2a7893
+45680ac3d2568b6d88a8594886ac82f0ac2a7893,45680ac3,notification fixed,notification fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388362663,1388362663,4e1c205e30cd55b83782615449d0797d09b4bf2d
+4e1c205e30cd55b83782615449d0797d09b4bf2d,4e1c205e,start sensorlistener as foreground service until the Android,"start sensorlistener as foreground service until the Android
+4.4.2-START_STICKY-bug is fixed",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1388348949,1388348949,a265f4f347e8ab17da7eab3e595a1779e5cfc7e5
+a265f4f347e8ab17da7eab3e595a1779e5cfc7e5,a265f4f3,Update README.md,Update README.md,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1388045728,1388045728,1319c267c95a7239ee3dc622c3536d1fab2ea550
+1319c267c95a7239ee3dc622c3536d1fab2ea550,1319c267,increased default step size,increased default step size,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1387996478,1387996478,9b80490fa3e9bc071ef11507786807590222dfac
+9b80490fa3e9bc071ef11507786807590222dfac,9b80490f,logging disabled,logging disabled,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386889237,1386889237,428c84cccdbc51191c91ec02a42e8834b00d2250
+428c84cccdbc51191c91ec02a42e8834b00d2250,428c84cc,"restart service when task is removed (due to ""swiping away"" the app in","restart service when task is removed (due to ""swiping away"" the app in
+the recent apps list)",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386602842,1386602842,f3226c6d58ffb619db24a483e4087f83afa1d124
+f3226c6d58ffb619db24a483e4087f83afa1d124,f3226c6d,removed some logging,removed some logging,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386516957,1386516957,dbf5671497a6192188e71a31dc1ed06ffbebcd2c
+dbf5671497a6192188e71a31dc1ed06ffbebcd2c,dbf56714,separate process for baackground sensor listener,separate process for baackground sensor listener,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386516742,1386516742,f9df40e8e9c313e09c626526909072c17e05cf05
+f9df40e8e9c313e09c626526909072c17e05cf05,f9df40e8,force show keyboard,force show keyboard,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386420100,1386420100,e225df50e039bc0e7c6a19009a05b83220863e6c
+e225df50e039bc0e7c6a19009a05b83220863e6c,e225df50,remove negative values on boot,remove negative values on boot,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386333874,1386333874,3b83b467037954f00dffd0bb5bfd9899453b40a8
+3b83b467037954f00dffd0bb5bfd9899453b40a8,3b83b467,crash fixed,crash fixed,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386234274,1386234274,dbb2f945694e6c00cb703e9be198d88b03e1d6ad
+dbb2f945694e6c00cb703e9be198d88b03e1d6ad,dbb2f945,added error notification when ACTION_SHUTDOWN was not sent on last,"added error notification when ACTION_SHUTDOWN was not sent on last
+shutdown",,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386182654,1386182654,07bfe52b4c34875e045fac1033e6ed73ce3a86a4
+07bfe52b4c34875e045fac1033e6ed73ce3a86a4,07bfe52b,version increment,version increment,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386181694,1386181694,4bce22000311742d98fc6a55a85038505ddbba57
+4bce22000311742d98fc6a55a85038505ddbba57,4bce2200,new leaderboard added,new leaderboard added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386181246,1386181295,"1ba1f1fbf176f14ee07f53215da2db3cd69878f1,94efb8cba79294475d89e18ceded53a72d89b455"
+1ba1f1fbf176f14ee07f53215da2db3cd69878f1,1ba1f1fb,new leaderboard added,new leaderboard added,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386181233,1386181233,5b3cc45c4a147c6a105ed8886cebd5ec04dc85dd
+94efb8cba79294475d89e18ceded53a72d89b455,94efb8cb,Update README.md,Update README.md,,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1386113754,1386113754,5b3cc45c4a147c6a105ed8886cebd5ec04dc85dd
+5b3cc45c4a147c6a105ed8886cebd5ec04dc85dd,5b3cc45c,initial,initial,,,,j4velin,j4velin@gmail.com,j4velin,j4velin@gmail.com,1386113612,1386113612,fd67ae815c96c0c01ced37a3a99a467816f735bb
+fd67ae815c96c0c01ced37a3a99a467816f735bb,fd67ae81,Initial commit,"Initial commit
+",,,,Thomas,j4velin@users.noreply.github.com,Thomas,j4velin@users.noreply.github.com,1385224642,1385224642,

@@ -1,0 +1,77 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+21496b9b97e1e6fd1e52e3475653a30e117cd4ff,21496b9b,Code used for version 2.0,"Code used for version 2.0
+
+Version 2.0 of the app is based on the code committed, as well as work
+for version 2.1.
+",,,,"Jose Andres ""Shea"" Rosario",jose.shea.rosario@gmail.com,"Jose Andres ""Shea"" Rosario",jose.shea.rosario@gmail.com,1419806791,1419806791,e6276a15a1e8252f4b318a3a65ae4ca849d3deb6
+e6276a15a1e8252f4b318a3a65ae4ca849d3deb6,e6276a15,Temporary Removal of Files,"Temporary Removal of Files
+
+Remove all files from the project
+",,,,"Jose Andres ""Shea"" Rosario",jose.shea.rosario@gmail.com,"Jose Andres ""Shea"" Rosario",jose.shea.rosario@gmail.com,1419805333,1419805333,3236bc3066e46f42f394238c86b04b9a4e704021
+3236bc3066e46f42f394238c86b04b9a4e704021,3236bc30,Near-final version of app,"Near-final version of app
+
+This will serve as my final commit before I release my application to the Google Play Store. A lot code was added/removed/changed between now and the last committ. I'll therefore be brief. The main activity was split into two fragments, one for the closest station search and another for a system map, which includes the weekday and nights/weekend map. The main activity also includes a tab for both fragments, as well as a link to a donate page. Ads have also been placed under the tabs in the action bar, as well as at the end of the page where you select which station you want directions to. All of this also takes into account the closing of the World Trade Center and Exchange Place station on weekends throughout 2014. The tabs will allow for expansion of features for the PATH system, freeing the navigation bar (that I'll add in time) available for selected what transit system you'll like to use.
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1399667295,1399667295,8579ba7ef3f2a2be603e83dc703414ae84ca625a
+8579ba7ef3f2a2be603e83dc703414ae84ca625a,8579ba7e,"Added options, consolidated and removed code, use of OSMDroid and OSMBonus","Added options, consolidated and removed code, use of OSMDroid and OSMBonus
+
+When you select a station, a button is enabled to allow the user to use that as their destination. Also, there is a small map that gives the user can use to barely compare their location and the station highlighted.
+Using OSMDroid bonus, we give you directions to the station and not the entrance in a map format. We have yet to change it to entrances, but will in next commit.
+Eliminate API calls by only selecting stations that are in the same state as the user (if they’re in NY or NJ). This will give us some time to call all the entrances of the three closest stations in order to give the user an accurate measure of distance or duration.
+Distance/Duration from the origin is now judged not by the location of the station, but by the closest entrance of each of the three closest stations
+The possibility now exists that there will be less than three stations appearing in the results. This is expected and is handled.
+Some text corrections
+Removed confirmOptions in ClosestStatiosnActivity. No longer will the options the user selected be displayed.
+Partly removed the need for ObjectSort, especially in ClosestStationsIntent. However it is still needed in ClosestStatoinsActivity
+The closest entrance at each of the three stations is obtainable, but nothing is done with it yet. It is only passed to the second activity.
+Added to README credit to OSMDroid and OSMBonusPack
+Removed “shea” folder from src
+Added the steps needed to convert a manual location to their geo-coordinates, as well as the steps needed to download and parse information to find the three closest stations, onto their own separate threads. This will eliminate the issue of skipping frames between the two first activities.
+An alert is given to the user when they enter a manual location and it cannot be converted to geo-coordinates
+The location of the user is now obtained in the first activity where options are selected. Also, we use the last known location of GPS or Network if it is obtainable. If not, then we enable a GPS and Network listener. They're disabled when they have a location, and again when the first intent is being created. Last known locations are good if they're within 50 meters and were obtained in the last two minutes.
+Added handicap options for stations and entrances. Now if the user selects elevator or escalator, we only search for stations and entrances that are accessible in one of those ways.
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1397242523,1397242523,bdbde525795ef2d4f8e8e7a5100a27498b953bb3
+bdbde525795ef2d4f8e8e7a5100a27498b953bb3,bdbde525,- Created file '.gitignore'.,"- Created file '.gitignore'.
+- Add 'Open_Mapquest_AppKey.json' to .gitignore.
+- Updated README
+- UI that'll ask for the starting location or obtain current location, as well as how you want to get there and whether you care about time or distance.
+- Created 'ClosestStationsActivity.java' to handle the activity of calling all necessary methods to create URLs for each station, call those URLs and download JSON, parse through each to get the measure the user selected to sort, and obtain the three likely stations the user would want to use based on their selected preferences. ClosestStationsActivity starts with a call from 'currentLocation.java' or 'manualLocation.java'
+- Change from Google to Open Mapquest APIs.
+- Changed 'userLocation.java' to 'currentLocation.java'.
+- Added 'manualLocation.java' in order to convert the manual location the user inputted into geo-coordinates.
+- Nothing will occur if the user doesn't choose their two options.
+- Moved 'StationSortObject' class into separate class file: 'StationSort.java'.
+- Now using one method to obtain trip time and distance, as well as one method to obtain either time or distance (based on user preference) from parsing route matrix JSON. Because of this, we now only need one list of StationSort objects instead of two and its contents is based on the user preference.
+- Left ability to display three stations in a 'simple_list_item_2' layout. This could be used instead of the current customized approach.
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1396029073,1396029073,bb62fec18c587a5a5856d3e58fbac6263d17a1f8
+bb62fec18c587a5a5856d3e58fbac6263d17a1f8,bb62fec1,"Added Javadoc comments to code, and added those files to directory.","Added Javadoc comments to code, and added those files to directory.
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1395170399,1395170399,14d2477c4a26f349c8f8c142b80de789fb52af1d
+14d2477c4a26f349c8f8c142b80de789fb52af1d,14d2477c,Merge pull request #1 from kaydell/patch-1,"Merge pull request #1 from kaydell/patch-1
+
+Defined PATH and Linked to Wikipedia Article",,,,"Jose Andres ""Shea"" Rosario",domrpblcj@users.noreply.github.com,"Jose Andres ""Shea"" Rosario",domrpblcj@users.noreply.github.com,1395167064,1395167064,"e679cb313593b4225dd818a8d9ae4b3c4436a0da,0fc00f1672c3584f724451afb0fd7f66601ecf02"
+0fc00f1672c3584f724451afb0fd7f66601ecf02,0fc00f16,Defined PATH and Linked to Wikipedia Article,"Defined PATH and Linked to Wikipedia Article
+
+1. Defined that PATH is an acronym for Port Authority Trans-Hudson
+2. Added a link to the Wikipedia article on PATH
+3. Added a sentence that said that in addition to needing comments, that JavaDoc comments are needed.",,,,Kaydell Leavitt,kaydell@yahoo.com,Kaydell Leavitt,kaydell@yahoo.com,1394935832,1394935832,e679cb313593b4225dd818a8d9ae4b3c4436a0da
+e679cb313593b4225dd818a8d9ae4b3c4436a0da,e679cb31,Merge branch 'master' of https://github.com/domrpblcj/ToThePATHAndBack,"Merge branch 'master' of https://github.com/domrpblcj/ToThePATHAndBack
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1394722111,1394722111,"98e863da1309873cfdde528fdd59c5bd9fd71de2,57d60d71b6521886a053bd665dce0b3e18750c5e"
+98e863da1309873cfdde528fdd59c5bd9fd71de2,98e863da,Added userLocation class with a GPS and Network listener. Updates the current…,"Added userLocation class with a GPS and Network listener. Updates the current location static variable in MainActivity.
+Directions: Removed publication of API key
+Directions: added class that extends AsyncTask which will download all JSON data from String array with request URLs.
+Directions: Added method that passes an array of stations and the current location from MainAcitivity, returns an array of the request URLs
+Directions: Removed getAllJSONdata, replaced with AsyncTask class
+MainActivity: Added static LatLng variable to hold current location obtained from user location class
+MainActivity: removed log entries
+MainActivity: obtains URLs in separate method
+MainActivity: Obtains string array of JSON data using get() from AsyncTask class in DireftionsJSONParse.java
+MainActivity: Add try/catch to code that obtains the distances and durations to each station
+Next commit/update will focus on improving practices on obtaining/updating location. Also there will be a change in how the app will use the Directions API and incorporate more the Maps v2 API. Next update will include something of an appropriate UI. This update will probably be a while from now.
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1394722005,1394722005,f26c6c563f7c6bc6693b1e964391e5e006cea37b
+57d60d71b6521886a053bd665dce0b3e18750c5e,57d60d71,Update LICENSE,"Update LICENSE
+
+Change in license from MIT to GPL v3",,,,Jose Andres Rosario,domrpblcj@users.noreply.github.com,Jose Andres Rosario,domrpblcj@users.noreply.github.com,1394294211,1394294211,f26c6c563f7c6bc6693b1e964391e5e006cea37b
+f26c6c563f7c6bc6693b1e964391e5e006cea37b,f26c6c56,first commit of code,"first commit of code
+",,,,domrpblcj,domrpblcj@users.noreply.github.com,domrpblcj,domrpblcj@users.noreply.github.com,1394293537,1394293537,9d8bf24a9d76202220e182ffdff6ee8794095e60
+9d8bf24a9d76202220e182ffdff6ee8794095e60,9d8bf24a,Update README.md,Update README.md,,,,Jose Andres Rosario,domrpblcj@users.noreply.github.com,Jose Andres Rosario,domrpblcj@users.noreply.github.com,1394293148,1394293148,a595f49b35b795f0b84e9e8df30d950b16b582bd
+a595f49b35b795f0b84e9e8df30d950b16b582bd,a595f49b,Initial commit,"Initial commit
+",,,,Jose Andres Rosario,domrpblcj@users.noreply.github.com,Jose Andres Rosario,domrpblcj@users.noreply.github.com,1394293127,1394293127,

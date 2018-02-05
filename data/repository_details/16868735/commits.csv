@@ -1,0 +1,63 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+bb8d1ebfb7dd9b73ee3fad292b66e1699ec46904,bb8d1ebf,Updated Android build tools to 19.1,"Updated Android build tools to 19.1
+
+* Incremented version code to 5, version name to 1.0.4 (preliminary)
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1400480141,1400480141,ec77b0341c55143d57445e2d24f8d120fd0b71e0
+ec77b0341c55143d57445e2d24f8d120fd0b71e0,ec77b034,Added additional blacklisted ID,"Added additional blacklisted ID
+
+* 14 - Network by PrekeshC
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1399841243,1399841243,04972094704aab72134d66b58d7af1c2c52257d0
+04972094704aab72134d66b58d7af1c2c52257d0,04972094,Forgot to remove blacklist test from onTryUpdate,"Forgot to remove blacklist test from onTryUpdate
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1399841070,1399841070,e42f9ae42d57907e0ca5b48b99fdb55c23040281
+e42f9ae42d57907e0ca5b48b99fdb55c23040281,e42f9ae4,Blacklist hit no longer throws RetryException,"Blacklist hit no longer throws RetryException
+
+Changed implementation to attempt up to 10 iterations of wallpaper
+selection before giving up with a RetryException.
+
+Other:
+* RNG instance is now kept as an instance variable instead of recreating
+on each update.
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1399840881,1399840881,5f004fc232a911b73b7e77589c8ec9eac74129e5
+5f004fc232a911b73b7e77589c8ec9eac74129e5,5f004fc2,Added blacklisting for incompatible wallpapers,"Added blacklisting for incompatible wallpapers
+
+* Added blacklist of wallpaper IDs, with logic in art source to retry if
+a blacklisted wallpaper is selected
+* Incremented version to 1.0.3
+* Updated to Gradle 1.12
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1399839803,1399839803,6ae7d582bafc86dbd9ffb33d6ffd2fa511524828
+6ae7d582bafc86dbd9ffb33d6ffd2fa511524828,6ae7d582,Upgraded to Android Gradle plugin 0.10,"Upgraded to Android Gradle plugin 0.10
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1398955312,1398955312,35a4e3203170e93789755aaeacc346ae29696e00
+35a4e3203170e93789755aaeacc346ae29696e00,35a4e320,Release 1.0.2: CME crash fix,"Release 1.0.2: CME crash fix
+
+* Updated to Gradle 1.11
+* Updated to Android build tools 19.0.3
+* Added local Maven repository to pick up custom Muzei API fork
+* Added build instructions to README.md (closes #7)
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1398716450,1398716450,f3599e4cb95b8a212d5ab2dc0861edb7ff9ee1ac
+f3599e4cb95b8a212d5ab2dc0861edb7ff9ee1ac,f3599e4c,Upgraded to Android Gradle plugin 0.9,"Upgraded to Android Gradle plugin 0.9
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1394298893,1394298893,1c73515a134339f763bee7256c575cd4ca28550b
+1c73515a134339f763bee7256c575cd4ca28550b,1c73515a,Fix handling of unexpected HTML responses.,"Fix handling of unexpected HTML responses.
+
+* Fixes #6 by ensuring the ""wallpaper"" elements selected has a non-zero
+size.
+* Added additional conditionals to ensure correct operation even if
+malformed wallpaper data is processed.
+* The byline will only be set if there is a non-blank ""author"" element
+present.
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1393882632,1393882632,710ce5d2e088ce647b9f90087615830e788e1d3b
+710ce5d2e088ce647b9f90087615830e788e1d3b,710ce5d2,Updating version information for 1.0.1,"Updating version information for 1.0.1
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1392663599,1392663599,a4e9d93b68e4ddfc8760bb1edaaf006499814701
+a4e9d93b68e4ddfc8760bb1edaaf006499814701,a4e9d93b,Fix handling of non-ASCII image URLs,"Fix handling of non-ASCII image URLs
+
+Fixes #2 by ensuring the URL extracted from the <a> tag is properly
+encoded.
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1392662905,1392662905,55a06c839625e94db033b6bd2cb1b60a0769edc2
+55a06c839625e94db033b6bd2cb1b60a0769edc2,55a06c83,Fixed loading of properties in Android Studio,"Fixed loading of properties in Android Studio
+
+Passed a File object via Gradle's file() method instead of the relative
+path.
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1392656677,1392656677,a7b4b8c4d9665dd823fd836a550d1e7e0961a206
+a7b4b8c4d9665dd823fd836a550d1e7e0961a206,a7b4b8c4,"Complete, basic implementation of art source","Complete, basic implementation of art source
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1392505415,1392505415,f42fffcc9a74af594ade4630ca522d3bf058ef4a
+f42fffcc9a74af594ade4630ca522d3bf058ef4a,f42fffcc,Initial commit,"Initial commit
+",,,,Philip Cronje,syke107@gmail.com,Philip Cronje,syke107@gmail.com,1392489552,1392489552,

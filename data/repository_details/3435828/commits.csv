@@ -1,0 +1,34 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b002883bbedcb42c3f7e6566846aea1c1773a6af,b002883b,catch SQLiteException error code 5: database is locked,"catch SQLiteException error code 5: database is locked
+
+In the Market developer console I noticed one exception triggered
+(supposedly causing a force close upon sms reception). So this change
+tries to catch the exception and it retry a few times.
+
+I can't reproduce on the emulator, maybe some 3rd party app keeps the
+db open for too long.
+
+java.lang.RuntimeException: Unable to start receiver com.aa.smsfailfix.SmsReceiver: android.database.sqlite.SQLiteException: error code 5: database is locked
+at android.app.ActivityThread.handleReceiver(ActivityThread.java:2821)
+at android.app.ActivityThread.access$3200(ActivityThread.java:125)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2083)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loop(Looper.java:123)
+at android.app.ActivityThread.main(ActivityThread.java:4627)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:521)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:858)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+at dalvik.system.NativeStart.main(Native Method)
+Caused by: android.database.sqlite.SQLiteException: error code 5: database is locked
+at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:158)
+at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:114)
+at android.content.ContentProviderProxy.update(ContentProviderNative.java:495)
+at android.content.ContentResolver.update(ContentResolver.java:707)
+at com.aa.smsfailfix.SmsFixup.smsFixup(SmsFixup.java:24)
+at com.aa.smsfailfix.SmsReceiver.onReceive(SmsReceiver.java:19)
+at android.app.ActivityThread.handleReceiver(ActivityThread.java:2810)
+... 10 more
+",,,,Andrea Arcangeli,andrea@cpushare.com,Andrea Arcangeli,andrea@cpushare.com,1330373076,1330373610,4be46f08eed5f035d9523328ded73ce031d98e0b
+4be46f08eed5f035d9523328ded73ce031d98e0b,4be46f08,1.0,"1.0
+",,,,Andrea Arcangeli,andrea@cpushare.com,Andrea Arcangeli,andrea@cpushare.com,1329168589,1329168755,

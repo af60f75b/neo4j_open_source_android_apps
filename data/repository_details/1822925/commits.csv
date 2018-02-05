@@ -1,0 +1,488 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f60ab6f779ba06f312b2b1068141364c8db82a9c,f60ab6f7,Use the latest SDK tools on Travis to fix a Lint error,"Use the latest SDK tools on Travis to fix a Lint error
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1490723839,1490729469,3b366fb18e0cd7e066909958f18efe9342f74d06
+3b366fb18e0cd7e066909958f18efe9342f74d06,3b366fb1,"Suppress the ""GoogleAppIndexingWarning"" from Lint","Suppress the ""GoogleAppIndexingWarning"" from Lint
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1490723156,1490723156,6b870652e278d1ff2ccc910b582f3aa6e81846bc
+6b870652e278d1ff2ccc910b582f3aa6e81846bc,6b870652,Move camera related resources to the Camera flavor,"Move camera related resources to the Camera flavor
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1490722681,1490722681,630e844d1785280e9cea5a6b913c654599bb3d0d
+630e844d1785280e9cea5a6b913c654599bb3d0d,630e844d,Disallow backups as the app has no use for it,"Disallow backups as the app has no use for it
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1490722547,1490722547,5b69aa8561c968bf8676b20c21b60d14f02a8a6b
+5b69aa8561c968bf8676b20c21b60d14f02a8a6b,5b69aa85,Make directory names match the flavor case to fix non-Windows builds,"Make directory names match the flavor case to fix non-Windows builds
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1490721176,1490721176,fa2d7516cad38b26fafbdf2517dc1c656b890f17
+fa2d7516cad38b26fafbdf2517dc1c656b890f17,fa2d7516,Make Travis CI accept all Android SDK licenses,"Make Travis CI accept all Android SDK licenses
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489534495,1489954593,47986fc3469854ed2f49170693e24e7568ddebb8
+47986fc3469854ed2f49170693e24e7568ddebb8,47986fc3,Add a basic AppVeyor CI config,"Add a basic AppVeyor CI config
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489930848,1489954593,3931358d554f759fe22769626ca22ef3c927d2ac
+3931358d554f759fe22769626ca22ef3c927d2ac,3931358d,Fix using the correct minSdkVersion 15 for release,"Fix using the correct minSdkVersion 15 for release
+
+For some reason the Google Play Store was showing minSdkVersion 21 also
+for release before.
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489533579,1489533579,f7261135d04f119ae6f5160d56b170ca67d120a1
+f7261135d04f119ae6f5160d56b170ca67d120a1,f7261135,"Move version{Name,Code} to build.gradle and bump them","Move version{Name,Code} to build.gradle and bump them
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489529693,1489532491,fa82715453f8d1b04793e80f7a5db3527fdbbac4
+fa82715453f8d1b04793e80f7a5db3527fdbbac4,fa827154,Remove the WakeLock in favor of keeping only FLAG_KEEP_SCREEN_ON,"Remove the WakeLock in favor of keeping only FLAG_KEEP_SCREEN_ON
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489529073,1489532491,467e03ee64faa45c344d577ca5e1768701452c38
+467e03ee64faa45c344d577ca5e1768701452c38,467e03ee,Increase the maximum heap size for the Gradle daemon,"Increase the maximum heap size for the Gradle daemon
+
+This allows to run dex in-process.
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489527472,1489532491,11366c43ab96cb278d7175c5df8c39d5f8910cf5
+11366c43ab96cb278d7175c5df8c39d5f8910cf5,11366c43,Add a product flavor that does not use the camera,"Add a product flavor that does not use the camera
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489524799,1489532488,79a04ec5a090a6481016452d85c8cddea2d3b94b
+79a04ec5a090a6481016452d85c8cddea2d3b94b,79a04ec5,Enable pre-dexing for debug builds by raising minSdkVersion,"Enable pre-dexing for debug builds by raising minSdkVersion
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489524355,1489525215,d6e1dac7f2f074df7b35fd8311c5705dfcba8e40
+d6e1dac7f2f074df7b35fd8311c5705dfcba8e40,d6e1dac7,Rename the Proguard file as per the new default,"Rename the Proguard file as per the new default
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489524038,1489525215,898cf25b2d7beaefb5b069ebf92de3e999db909c
+898cf25b2d7beaefb5b069ebf92de3e999db909c,898cf25b,"Increase the {compile,min,target}SdkVersion to recommended defaults","Increase the {compile,min,target}SdkVersion to recommended defaults
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489523899,1489525215,5081d186cf2051c5c5cbf2ea9df1056616ce738b
+5081d186cf2051c5c5cbf2ea9df1056616ce738b,5081d186,Do not use the deprecated FloatMath anymore,"Do not use the deprecated FloatMath anymore
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489525173,1489525215,dd26ed7fd76dcff6720cf19b38cad6084fb735b7
+dd26ed7fd76dcff6720cf19b38cad6084fb735b7,dd26ed7f,Resolve dependencies during Gradle's execution time,"Resolve dependencies during Gradle's execution time
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489523438,1489523598,1b446c9e68b96b49091803b00b0cb417046c5bfb
+1b446c9e68b96b49091803b00b0cb417046c5bfb,1b446c9e,Upgrade to Android Gradle plugin 2.3.0,"Upgrade to Android Gradle plugin 2.3.0
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489523383,1489523383,8283bb27acf683b45ddaf0d9a211bc8deb9ce714
+8283bb27acf683b45ddaf0d9a211bc8deb9ce714,8283bb27,Upgrade build tools to 25 as required for Android plugin 2.3.0,"Upgrade build tools to 25 as required for Android plugin 2.3.0
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489523206,1489523360,0660a3b1b5afebbc52f95cc8191ee192033a79ae
+0660a3b1b5afebbc52f95cc8191ee192033a79ae,0660a3b1,Upgrade to Gradle 3.4.1,"Upgrade to Gradle 3.4.1
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1489523332,1489523360,9719f007edbb14325d32c70ce7aad7699071c65f
+9719f007edbb14325d32c70ce7aad7699071c65f,9719f007,Add a minimal Travis CI configuration file,"Add a minimal Travis CI configuration file
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1486455142,1486456169,94a3a4ed69f9f5a61151cfbf7f8a0fa80f3c195d
+94a3a4ed69f9f5a61151cfbf7f8a0fa80f3c195d,94a3a4ed,Upgrade Gradle (via the wrapper) to version 3.3,"Upgrade Gradle (via the wrapper) to version 3.3
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1486454891,1486455369,c8ae4a2eb2ad92a12a0ac699e1901b660013b551
+c8ae4a2eb2ad92a12a0ac699e1901b660013b551,c8ae4a2e,Upgrade the Android Gradle plugin to version 2.2.3,"Upgrade the Android Gradle plugin to version 2.2.3
+",,,,Sebastian Schuberth,sschuberth@gmail.com,Sebastian Schuberth,sschuberth@gmail.com,1486454872,1486454872,fc96df2141ef4871740d1a3b5e933a9b0fb5fcdd
+fc96df2141ef4871740d1a3b5e933a9b0fb5fcdd,fc96df21,Fix a Lint issue about possibly failing casts to GL11,"Fix a Lint issue about possibly failing casts to GL11
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1431454560,1431454560,18011ffb6fa7f200ef7f2a10325bdc32ded53887
+18011ffb6fa7f200ef7f2a10325bdc32ded53887,18011ffb,Update the Android Gradle plugin to version 1.2.3,"Update the Android Gradle plugin to version 1.2.3
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1431454331,1431454367,abdb06b60d0db648ed56019e386565273b87727e
+abdb06b60d0db648ed56019e386565273b87727e,abdb06b6,Upgrade to Gradle 2.4 and Android plugin 1.2.2,"Upgrade to Gradle 2.4 and Android plugin 1.2.2
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1430942074,1430942292,dd5f2eba13d81f3bfaf4f0658d6073390ab7cdbb
+dd5f2eba13d81f3bfaf4f0658d6073390ab7cdbb,dd5f2eba,Credits: Minor simplification of an arithmetic expression,"Credits: Minor simplification of an arithmetic expression
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1430942029,1430942029,1ff199a9a3773916bb71bea3c74d917b080e5ace
+1ff199a9a3773916bb71bea3c74d917b080e5ace,1ff199a9,Add the droidcon 2010 presentation material and 3sat neues video,"Add the droidcon 2010 presentation material and 3sat neues video
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1427143730,1427143780,da9351bcbe1c51a6b83b9bb9c426c6615bcfdf00
+da9351bcbe1c51a6b83b9bb9c426c6615bcfdf00,da9351bc,Add the MP3 sound track to the release directory,"Add the MP3 sound track to the release directory
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1427143464,1427143464,20394ee6de70819a8dd2f735f61087ba3a5afb6c
+20394ee6de70819a8dd2f735f61087ba3a5afb6c,20394ee6,Lint: Fix evaluation of constant expressions,"Lint: Fix evaluation of constant expressions
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422220288,1422220288,b0cafebf54db47560387b84b395ccf6498b8de44
+b0cafebf54db47560387b84b395ccf6498b8de44,b0cafebf,Lint: Do not use the deprecated SCREEN_BRIGHT_WAKE_LOCK,"Lint: Do not use the deprecated SCREEN_BRIGHT_WAKE_LOCK
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422215247,1422215247,bb33c52c255fc2e109ba6379660b8b202c554867
+bb33c52c255fc2e109ba6379660b8b202c554867,bb33c52c,Lint: Remove a pointless arithmetic expression,"Lint: Remove a pointless arithmetic expression
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422215151,1422215151,059347fcd816d72b13d9a8db526d5614fe30a5c1
+059347fcd816d72b13d9a8db526d5614fe30a5c1,059347fc,Lint: Ignore always the same constants being passed to methods,"Lint: Ignore always the same constants being passed to methods
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422214790,1422214790,49e909469811c739e893ec1f1002ec94332d4e2a
+49e909469811c739e893ec1f1002ec94332d4e2a,49e90946,Lint: Turn suitable fields into local variables,"Lint: Turn suitable fields into local variables
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422214633,1422214633,1c8453c72c01e5ee7fe23b4146c5d7385e456334
+1c8453c72c01e5ee7fe23b4146c5d7385e456334,1c8453c7,Lint: Add custom view constructors used by tools,"Lint: Add custom view constructors used by tools
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422214483,1422214483,cebafabb8e9e9b5550bd051d84f519fac2cb8be6
+cebafabb8e9e9b5550bd051d84f519fac2cb8be6,cebafabb,"Lint: Be explicit about the ""allowBackup"" attribute","Lint: Be explicit about the ""allowBackup"" attribute
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422214376,1422214376,122851df0e29ab4139f73f395925f10fbb0105f4
+122851df0e29ab4139f73f395925f10fbb0105f4,122851df,Lint: Ignore density-independent drawables,"Lint: Ignore density-independent drawables
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422214290,1422214290,7d425a270204cd64c5cd8d4e6e183af93e64d2e5
+7d425a270204cd64c5cd8d4e6e183af93e64d2e5,7d425a27,Migrate to Gradle and Android Studio,"Migrate to Gradle and Android Studio
+
+Raise the minSdkVersion to 14 and the targetSdkVersion to 19 in this context.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422134629,1422188535,d8d169213459afcc4ad24578f937f8667224eab8
+d8d169213459afcc4ad24578f937f8667224eab8,d8d16921,Scroller: Convert to UTF-8 encoding,"Scroller: Convert to UTF-8 encoding
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422139345,1422140558,2c708d832358d742b178a02ae3e4b4ed27066e74
+2c708d832358d742b178a02ae3e4b4ed27066e74,2c708d83,Convert DOS to Unix line endings for all text files,"Convert DOS to Unix line endings for all text files
+
+The Git client should be configured to do any conversion on checkout, if
+desired.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422138134,1422140558,34aa7b040a6f2ed6535c95b1c1d04eb5fba9ed75
+34aa7b040a6f2ed6535c95b1c1d04eb5fba9ed75,34aa7b04,Remove outdated docs,"Remove outdated docs
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1422134806,1422140557,8e69b16e03dd33118da463fe4837e43be7732323
+8e69b16e03dd33118da463fe4837e43be7732323,8e69b16e,Ignore a Lint warning about the Launcher icon covering all pixels,"Ignore a Lint warning about the Launcher icon covering all pixels
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373894413,1373894413,54e23848f2d0396e57344add25e6db4697a03a4f
+54e23848f2d0396e57344add25e6db4697a03a4f,54e23848,Scroller: Fix a possible string encoding issue as identified by Lint,"Scroller: Fix a possible string encoding issue as identified by Lint
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373894357,1373894357,d71f719e0eb894482701263634b72b45f08f7eb7
+d71f719e0eb894482701263634b72b45f08f7eb7,d71f719e,Ignore a Lint warning about not using the latest Android target API,"Ignore a Lint warning about not using the latest Android target API
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373893264,1373893264,f3278d22f93882fdf381351746d322b70a1cf5ad
+f3278d22f93882fdf381351746d322b70a1cf5ad,f3278d22,Remove an unused layout,"Remove an unused layout
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373893192,1373893192,5a59c3974ff83ab70c194607a5fac54a45ecb65c
+5a59c3974ff83ab70c194607a5fac54a45ecb65c,5a59c397,Demo: Remove the call to View.isHardwareAccelerated() again,"Demo: Remove the call to View.isHardwareAccelerated() again
+
+This actually requires minSdkVersion (not targetSdkVersion) to be 11.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373893017,1373893017,a58ee59d43579aeb7ca8c1e7805e2034b79ebb29
+a58ee59d43579aeb7ca8c1e7805e2034b79ebb29,a58ee59d,Enable hardware-accelerated OpenGL on Android 3.0 and above,"Enable hardware-accelerated OpenGL on Android 3.0 and above
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373806210,1373806210,f20cc270e7bde04db045294ee6349c037ff8c7cc
+f20cc270e7bde04db045294ee6349c037ff8c7cc,f20cc270,Move the application tag to the end of the manifest to fix a Lint warning,"Move the application tag to the end of the manifest to fix a Lint warning
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373803373,1373803439,ece84ee50008cf899c7ee3ff62278adeed53d3fc
+ece84ee50008cf899c7ee3ff62278adeed53d3fc,ece84ee5,Update to the current Android tools,"Update to the current Android tools
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1373230957,1373230957,fb9e503a5bdfcc5bd663901b2a54532fd308798d
+fb9e503a5bdfcc5bd663901b2a54532fd308798d,fb9e503a,Add a README file (which is a copy of parandroid.nfo) to make GitHub happy,"Add a README file (which is a copy of parandroid.nfo) to make GitHub happy
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1306783731,1306783731,93dc1c7bf102d41dbf44a01995d638ead909e55c
+93dc1c7bf102d41dbf44a01995d638ead909e55c,93dc1c7b,Put Para 'N' droiD unter Apache License 2.0,"Put Para 'N' droiD unter Apache License 2.0
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1306782702,1306782702,96f1c9abaa190681efe1b4d21ba54f773b474fe3
+96f1c9abaa190681efe1b4d21ba54f773b474fe3,96f1c9ab,Bump the version number for release on Android Market,"Bump the version number for release on Android Market
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296479384,1296648761,574e3b4413cc5c7acdd156ccf4f55a88cdac38a5
+574e3b4413cc5c7acdd156ccf4f55a88cdac38a5,574e3b44,Add a work-around for devices where setting the preview size does not work,"Add a work-around for devices where setting the preview size does not work
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296642436,1296648761,ac532fa26e6b2627198845b31be70c58f05f7144
+ac532fa26e6b2627198845b31be70c58f05f7144,ac532fa2,Minor misc. code clean-ups,"Minor misc. code clean-ups
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296642390,1296648760,668dd952b8b647186ec7e9806c27445d7586e71d
+668dd952b8b647186ec7e9806c27445d7586e71d,668dd952,Add some debug code to log the camera preview image format,"Add some debug code to log the camera preview image format
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296635473,1296648760,0848c2bed4f2169d11f1b3a48a2a9b3c4ea77c69
+0848c2bed4f2169d11f1b3a48a2a9b3c4ea77c69,0848c2be,Improve the camera error messages a bit,"Improve the camera error messages a bit
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296633107,1296648760,b2c5cf5980b4d8f4405580ad610406be71b89137
+b2c5cf5980b4d8f4405580ad610406be71b89137,b2c5cf59,"Remove println, if at all use the log instead","Remove println, if at all use the log instead
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296632472,1296648759,542a906c00380d4259bc185bc4479a70448b8f59
+542a906c00380d4259bc185bc4479a70448b8f59,542a906c,Also allow to use the search button for entering the camera cube mode,"Also allow to use the search button for entering the camera cube mode
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296491173,1296648759,b837a4243f44adc30a557ba03d953b8680018ce6
+b837a4243f44adc30a557ba03d953b8680018ce6,b837a424,"Use directly allocated native buffers in all gl-pointer calls, again","Use directly allocated native buffers in all gl-pointer calls, again
+
+This was done by reverting 5789a0b, resolving conflicts and manually
+fixing the camera cube part.
+
+Using direct buffers with native byte ordering became mandatory with
+increasing targetSdkVersion to 4, otherwise we get
+
+java.lang.IllegalArgumentException: Must use a native order direct Buffer
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296477336,1296542862,1473e1cfaf4c8703e41e3bf98ec83ff6c6a5a6d5
+1473e1cfaf4c8703e41e3bf98ec83ff6c6a5a6d5,1473e1cf,Add / improve some DEBUG comments,"Add / improve some DEBUG comments
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1296477507,1296477541,c9775311b4c2695414699a546a4cdf83efb1f994
+c9775311b4c2695414699a546a4cdf83efb1f994,c9775311,Fix running full-screen on the Samsung Galaxy Tab,"Fix running full-screen on the Samsung Galaxy Tab
+
+See http://developer.android.com/guide/practices/screens_support.html
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1290619819,1290632608,53b1554d2010e02ed2dd483c70eef853d60b5cc4
+53b1554d2010e02ed2dd483c70eef853d60b5cc4,53b1554d,"Remove the ""debuggable"" attribute for the final release on Android Market","Remove the ""debuggable"" attribute for the final release on Android Market
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1276847110,1280507364,5941e2dd0aad0724442b422679a6d6041b1355bc
+5941e2dd0aad0724442b422679a6d6041b1355bc,5941e2dd,Add screenshot collages of the final version for Pouet,"Add screenshot collages of the final version for Pouet
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1276629285,1276629285,d510368491946b89f20c2c0e668ef7174447699b
+d510368491946b89f20c2c0e668ef7174447699b,d5103684,Add some null checks to the camera code,"Add some null checks to the camera code
+",,,,bodo,bodo.hinueber@rabenauge.com,eyebex,eyebex@threekings.tk,1276625678,1276625678,8f099909b72c957ac2d329651b80197ce76c940b
+8f099909b72c957ac2d329651b80197ce76c940b,8f099909,"Final version of the NFO as sent by spotter, with minor modifications","Final version of the NFO as sent by spotter, with minor modifications
+
+Trailing spaces were trimmed and our email addresses were added.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1276092076,1276092076,86ee4bfa3efe47217937e1ee362cc2481c28cccc
+86ee4bfa3efe47217937e1ee362cc2481c28cccc,86ee4bfa,Slow down the copper bar hiding / showing for the camera cube,"Slow down the copper bar hiding / showing for the camera cube
+
+And perform some minor refactoring.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274956134,1276088653,13bf4687f6bef25138099dda72e0110ac34ada78
+13bf4687f6bef25138099dda72e0110ac34ada78,13bf4687,Enable the camera preview only when it is needed to avoid juddering,"Enable the camera preview only when it is needed to avoid juddering
+
+This avoids a slowdown of the other effects and allows to trigger the camera
+effects multiple times without any problems.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274954883,1276088653,9baa24eb68f201fb53432ddc7f73547b004f3380
+9baa24eb68f201fb53432ddc7f73547b004f3380,9baa24eb,Show the camera cube when all effects are hidden,"Show the camera cube when all effects are hidden
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274912377,1276088646,8639cf89e9269003dd78169affec95676c43c52b
+8639cf89e9269003dd78169affec95676c43c52b,8639cf89,Take Bobo's camera cube code and clean it up,"Take Bobo's camera cube code and clean it up
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274898753,1274913286,b9baa370f27fc98e97da70d829f2f9f2715a1dd0
+b9baa370f27fc98e97da70d829f2f9f2715a1dd0,b9baa370,"Allow to hide all effects for ""Shoot'em!"" mode by pressing the camera key","Allow to hide all effects for ""Shoot'em!"" mode by pressing the camera key
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274773792,1274912451,02463fb5bb418f2c59e9ce9320d2aa0b068b82c7
+02463fb5bb418f2c59e9ce9320d2aa0b068b82c7,02463fb5,Make the star coordinates shorts so they can be negative (and out of screen),"Make the star coordinates shorts so they can be negative (and out of screen)
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274882042,1274882042,27bdc1f112297f0bf1af9fa04d982774ec4c6d22
+27bdc1f112297f0bf1af9fa04d982774ec4c6d22,27bdc1f1,Simplify listening to touch events,"Simplify listening to touch events
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274878188,1274878532,ca58cc7b95e876413a9b5d8abc38ebe0b212bd54
+ca58cc7b95e876413a9b5d8abc38ebe0b212bd54,ca58cc7b,Rename the time variables,"Rename the time variables
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274813770,1274813770,2167084638fcf3a90186ced06a634dc31b217f2b
+2167084638fcf3a90186ced06a634dc31b217f2b,21670846,Make play() a little bit more generic and add isPlaying(),"Make play() a little bit more generic and add isPlaying()
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274460359,1274773923,405bec0a4b17ef62939ece55a9707b214e2c07bd
+405bec0a4b17ef62939ece55a9707b214e2c07bd,405bec0a,Optimize the joint coordinates once more for the Milestone,"Optimize the joint coordinates once more for the Milestone
+
+Now for the textured point sprites instead for smoothed points.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274298960,1274299128,14c3a02a2072558aff483347d35513dbdb6e0c9d
+14c3a02a2072558aff483347d35513dbdb6e0c9d,14c3a02a,Apply spotter's final scroller text with minor changes,"Apply spotter's final scroller text with minor changes
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274266823,1274266900,4d145b324862b23c205895e785d94d6f8135dd10
+4d145b324862b23c205895e785d94d6f8135dd10,4d145b32,Fade-out the star lines from front to back,"Fade-out the star lines from front to back
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1274211497,1274211497,5789a0b475f4e6a8427f026817f4aef2679bed07
+5789a0b475f4e6a8427f026817f4aef2679bed07,5789a0b4,"Revert ""Use directly allocated native buffers in all gl-pointer calls""","Revert ""Use directly allocated native buffers in all gl-pointer calls""
+
+This reverts commit 1f4150b02bfbd3d33bed9a06f89a38f83dd860b2. The directly
+allocated buffers of native byte order turned out to be actually slower than
+plain arrays, although they need to be converted at each pointer call!
+
+Conflicts:
+
+	TODO.txt
+	src/com/rabenauge/parandroid/Scroller.java
+	src/com/rabenauge/parandroid/StarField.java
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273606724,1273607906,976cc3cead8d705c218297eb30bfca988ab8bc4e
+976cc3cead8d705c218297eb30bfca988ab8bc4e,976cc3ce,Only smooth lines when rendering the star field,"Only smooth lines when rendering the star field
+
+Unfortunately, this does *not* fix the striped-shadow-issue with the scroller,
+giving up on finding the cause for this.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273503284,1273506712,ec224ad1a1f814ba76f4c91ce38e4cc6ba461b2f
+ec224ad1a1f814ba76f4c91ce38e4cc6ba461b2f,ec224ad1,Fix the gap in the shadow at the left screen egde due to the shadow offset,"Fix the gap in the shadow at the left screen egde due to the shadow offset
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273500704,1273506712,a8ddd9662b14d36d404d2301c7757d109a2db278
+a8ddd9662b14d36d404d2301c7757d109a2db278,a8ddd966,Discard the idea of using a global sin/cos table as the gain is unclear,"Discard the idea of using a global sin/cos table as the gain is unclear
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273506698,1273506698,f7df47097b9b5a6b6ad391752f0cca8560f7780f
+f7df47097b9b5a6b6ad391752f0cca8560f7780f,f7df4709,Update the TODO list for the final release,"Update the TODO list for the final release
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273497092,1273497092,61850feec634d84a2d2b106ac545e31c47aed151
+61850feec634d84a2d2b106ac545e31c47aed151,61850fee,"Credits: Buffers in gl-pointer calls, configurable number of cubes, clean-ups","Credits: Buffers in gl-pointer calls, configurable number of cubes, clean-ups
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273432611,1273497023,f909e3b4b7e6bc86a716182ee5d7ea37b56b0865
+f909e3b4b7e6bc86a716182ee5d7ea37b56b0865,f909e3b4,Change the wording of a comment,"Change the wording of a comment
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273452008,1273452008,9203b4fb7472991b698995fabd8496d8f6c2f980
+9203b4fb7472991b698995fabd8496d8f6c2f980,9203b4fb,Add float allocators for completeness,"Add float allocators for completeness
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273451968,1273451968,1f4150b02bfbd3d33bed9a06f89a38f83dd860b2
+1f4150b02bfbd3d33bed9a06f89a38f83dd860b2,1f4150b0,Use directly allocated native buffers in all gl-pointer calls,"Use directly allocated native buffers in all gl-pointer calls
+
+And perform some other minor buffer-related optimizations.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1271694652,1273413502,8287b8cd265230e8d7ad38044d5e6fa5582ae68a
+8287b8cd265230e8d7ad38044d5e6fa5582ae68a,8287b8cd,Clean-up the hack done before the compo to make animation smooth,"Clean-up the hack done before the compo to make animation smooth
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1273407968,1273409401,bcdcc5fe15513141dc82491855a5150a0372ba67
+bcdcc5fe15513141dc82491855a5150a0372ba67,bcdcc5fe,Output some Android device information to the log,"Output some Android device information to the log
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1271690450,1271690450,5414bda6ad425d6ba2339e7faa71df8ab58cb159
+5414bda6ad425d6ba2339e7faa71df8ab58cb159,5414bda6,"And get rid of Texture.enable(), use the static Helper.toggleState() instead","And get rid of Texture.enable(), use the static Helper.toggleState() instead
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270719763,1270719763,ca23cd39156ed46cf1ef7009616f83beaf822f3a
+ca23cd39156ed46cf1ef7009616f83beaf822f3a,ca23cd39,Make point sprites replace texture coordinates by default,"Make point sprites replace texture coordinates by default
+
+And get rid of enable(), use the static Helper.toggleState() instead.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270719402,1270719402,05efbd8ebcd7a854aa14217efc6cd53588807f28
+05efbd8ebcd7a854aa14217efc6cd53588807f28,05efbd8e,Use point sprites instead of smoothed points for the blinking joints,"Use point sprites instead of smoothed points for the blinking joints
+
+This is for greater compatibility. Some devices, like the Motorola Milestone,
+do not support smoothed (anti-aliased) point rendering at all. Other devices,
+like the HTC Hero, claim to support smoothed points of up to 32 pixels in
+diameter but fail to render them properly.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270718011,1270718253,990aaa43ddb55c1e4d8a80aec585566b5c619dfa
+990aaa43ddb55c1e4d8a80aec585566b5c619dfa,990aaa43,Point sprite textures should not repeat by default,"Point sprite textures should not repeat by default
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270665563,1270665563,8a8535632a25ecf440b847595c5e115fc4a01e9e
+8a8535632a25ecf440b847595c5e115fc4a01e9e,8a853563,Add an argument allowing to toggle point sprites and texturing separately,"Add an argument allowing to toggle point sprites and texturing separately
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270665471,1270665471,056e57d798a196a57b3bb6df065409f9f2398aae
+056e57d798a196a57b3bb6df065409f9f2398aae,056e57d7,Add some more ideas for optimizations for the final version,"Add some more ideas for optimizations for the final version
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270658582,1270658582,f6389a14cb951c1bc3b6128d294f5acff6b88b33
+f6389a14cb951c1bc3b6128d294f5acff6b88b33,f6389a14,Properly normalize MotionEvent coordinates,"Properly normalize MotionEvent coordinates
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270656679,1270658291,1cd0095ebdd96c5e03b6e1e9fe34fa5cd0f2a444
+1cd0095ebdd96c5e03b6e1e9fe34fa5cd0f2a444,1cd0095e,"Optimize the joint coordinates again, for the Milestone","Optimize the joint coordinates again, for the Milestone
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270656449,1270656449,9064b5fcefe20913cab018869f3603383d0537af
+9064b5fcefe20913cab018869f3603383d0537af,9064b5fc,Add a comment about choosing depth buffer bits,"Add a comment about choosing depth buffer bits
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270653442,1270653442,129364b1502331b9131359e10dc852968ef091a3
+129364b1502331b9131359e10dc852968ef091a3,129364b1,Also add the Pouet screenshot as a JPG,"Also add the Pouet screenshot as a JPG
+
+Because the PNG exceeds Pouet's size limit of 64 kb.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270579253,1270579253,48c6a14f447da0e17616533a72c4dcd2fb37ece9
+48c6a14f447da0e17616533a72c4dcd2fb37ece9,48c6a14f,Add some tips from Android web sites,"Add some tips from Android web sites
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270573132,1270573132,a4e8c19d779237c2ea52435fed3da81a126aa031
+a4e8c19d779237c2ea52435fed3da81a126aa031,a4e8c19d,Optimize PNG's with PNGOUT / PNG Gauntlet to save space,"Optimize PNG's with PNGOUT / PNG Gauntlet to save space
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270305596,1270305932,a95d4b60cfb894214291a6a072128545d99f7a5d
+a95d4b60cfb894214291a6a072128545d99f7a5d,a95d4b60,Add a note about making sure that MotionEvents will work on non-Milestones,"Add a note about making sure that MotionEvents will work on non-Milestones
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270304381,1270305931,455c01108ede89b2554d97527f692682035e3b44
+455c01108ede89b2554d97527f692682035e3b44,455c0110,HACK: Smoother bobs for the party / video version,"HACK: Smoother bobs for the party / video version
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270240362,1270305916,ee8e04c701a5fa144977c76150698b006a7eb265
+ee8e04c701a5fa144977c76150698b006a7eb265,ee8e04c7,Shorten the static part to 20s to not bore the audience too much ;-),"Shorten the static part to 20s to not bore the audience too much ;-)
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270232571,1270232571,d9ced719d252552ef92834b35116df2e88f651de
+d9ced719d252552ef92834b35116df2e88f651de,d9ced719,Fade out the song if exiting to the credits part,"Fade out the song if exiting to the credits part
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270232422,1270232422,10cdc7ee7a5648c618a19c5325a193715a452af8
+10cdc7ee7a5648c618a19c5325a193715a452af8,10cdc7ee,Add the updated scroller text from spotter,"Add the updated scroller text from spotter
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270229735,1270229735,d7698302be25733543134fe1330b90a1b1b2e09f
+d7698302be25733543134fe1330b90a1b1b2e09f,d7698302,Add the updated .nfo from spotter,"Add the updated .nfo from spotter
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270229549,1270229549,b6f0f8ca4726033cf9ee93a81ea384f1151961e9
+b6f0f8ca4726033cf9ee93a81ea384f1151961e9,b6f0f8ca,Make the credits cubes shake when they crash together,"Make the credits cubes shake when they crash together
+
+In fact, this is only to hide possible misalignments of the cubes ;-)
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270229263,1270229263,d896156263e75748d7571c5a89f6c4dadf1da410
+d896156263e75748d7571c5a89f6c4dadf1da410,d8961562,Revert some debug settings,"Revert some debug settings
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270211887,1270211887,f03c5c62c796b54bd00e96904d2a2e7b8b231fc7
+f03c5c62c796b54bd00e96904d2a2e7b8b231fc7,f03c5c62,Make the bobs change on a touch event,"Make the bobs change on a touch event
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270210475,1270211187,bc44039edee92fce5abaf27d9eb595f70fd0c11f
+bc44039edee92fce5abaf27d9eb595f70fd0c11f,bc44039e,"These bobs will also be used in the interactive part, so remove the ""static""","These bobs will also be used in the interactive part, so remove the ""static""
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270206360,1270206360,949f1800fc4fd2ac60d52b13e82210ffe4f7ea00
+949f1800fc4fd2ac60d52b13e82210ffe4f7ea00,949f1800,Make the logos change immediately on a touch event,"Make the logos change immediately on a touch event
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270205661,1270205661,10ecf2431439dd4c321dbfd61b1ec93252def8d4
+10ecf2431439dd4c321dbfd61b1ec93252def8d4,10ecf243,"Implement the ""exit to credits"" functionality","Implement the ""exit to credits"" functionality
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270204648,1270204648,b249b86e43a8d09d7127c054cb0fd8c9b93579e2
+b249b86e43a8d09d7127c054cb0fd8c9b93579e2,b249b86e,Make the scroller interactive,"Make the scroller interactive
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270202777,1270202851,082bd1b34daa69f8c08cbe9516e9511a890d5c78
+082bd1b34daa69f8c08cbe9516e9511a890d5c78,082bd1b3,Make the star field interactive,"Make the star field interactive
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270141370,1270202850,c5feb3505d685faef26a68806176737de95ba6b6
+c5feb3505d685faef26a68806176737de95ba6b6,c5feb350,DEBUG: Add a simple OnTouchListener,"DEBUG: Add a simple OnTouchListener
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270137704,1270202829,799df50a445271c4b5b78ed8863d7b7df2671871
+799df50a445271c4b5b78ed8863d7b7df2671871,799df50a,Add a preliminary TODO list for the final release,"Add a preliminary TODO list for the final release
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270134511,1270134511,45b3dcf29b9fbb409b4d7f09f8d604953cfbd1ca
+45b3dcf29b9fbb409b4d7f09f8d604953cfbd1ca,45b3dcf2,"Append the credits part to the demo, exit afterwards","Append the credits part to the demo, exit afterwards
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270134172,1270134172,bd5905009f8c302449339517c88b4adb88235a0b
+bd5905009f8c302449339517c88b4adb88235a0b,bd590500,Make the scroll text initially not visible,"Make the scroll text initially not visible
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270134080,1270134080,019adca5ed550bfccc4e7245811592baa3e245d6
+019adca5ed550bfccc4e7245811592baa3e245d6,019adca5,Draw front-facing screen aligned quads,"Draw front-facing screen aligned quads
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270130768,1270130768,053a1a0599723f53dbc0dbefd838270e8525a17c
+053a1a0599723f53dbc0dbefd838270e8525a17c,053a1a05,Separate the Cubes effect states and use the EffectManager timer,"Separate the Cubes effect states and use the EffectManager timer
+
+Also add effects to fade in and out.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270125809,1270130756,e3d0cf763500a47133d886bdf0a1459707440757
+e3d0cf763500a47133d886bdf0a1459707440757,e3d0cf76,"Refactor ColorFade to be part of the EffectManager, too","Refactor ColorFade to be part of the EffectManager, too
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270128511,1270128640,de8ae97df7630d66e9bca2ee2cc94222a666a879
+de8ae97df7630d66e9bca2ee2cc94222a666a879,de8ae97d,"Acquire the wake lock in the Activity, not in the demo","Acquire the wake lock in the Activity, not in the demo
+
+This seems to be more safe / common, see
+http://www.androidsnippets.org/snippets/53/
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270121107,1270125784,6a29a08b2ffe7a3799b1ebd651b889ceb702fcf0
+6a29a08b2ffe7a3799b1ebd651b889ceb702fcf0,6a29a08b,Miscellaneous clean-ups,"Miscellaneous clean-ups
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270118528,1270125784,945333f57300d85a1d3647d3adf30ef0f6fdb329
+945333f57300d85a1d3647d3adf30ef0f6fdb329,945333f5,Load the credits textures in a loop,"Load the credits textures in a loop
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270118105,1270125783,d4fbbc607f896f1bfc944d5a27e48e2fb114c88c
+d4fbbc607f896f1bfc944d5a27e48e2fb114c88c,d4fbbc60,Add an alternate screenshot for Pouet that shows the main effects,"Add an alternate screenshot for Pouet that shows the main effects
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270117254,1270125783,567fc097ae22f8d843374389248fd524a939c565
+567fc097ae22f8d843374389248fd524a939c565,567fc097,Generalize some effects and move them to the EffectManager class,"Generalize some effects and move them to the EffectManager class
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270116686,1270125783,ce8fb5e82ac84ef90bb639c8bbb151478a0f348b
+ce8fb5e82ac84ef90bb639c8bbb151478a0f348b,ce8fb5e8,Add the screenshot for Pouet,"Add the screenshot for Pouet
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270115534,1270115534,135e2d4990350ac6ad1811b390a613335134ef3e
+135e2d4990350ac6ad1811b390a613335134ef3e,135e2d49,Add the icon for PartyMeister,"Add the icon for PartyMeister
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270115385,1270115469,9c2dac21d3ff8be61567758e7ff0fb92b4d81d5f
+9c2dac21d3ff8be61567758e7ff0fb92b4d81d5f,9c2dac21,Add Bobo's greetings to FTC which also are in the scroller,"Add Bobo's greetings to FTC which also are in the scroller
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270114905,1270115254,7fbdb4f1f590032c8b255636f25eec3984823d46
+7fbdb4f1f590032c8b255636f25eec3984823d46,7fbdb4f1,"Merge with the .nfo from the RAB Wiki, trim trailing spaces","Merge with the .nfo from the RAB Wiki, trim trailing spaces
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270114247,1270115249,60ad110448f10e42869085f337d25a16b604ae36
+60ad110448f10e42869085f337d25a16b604ae36,60ad1104,Add the .nfo file from spotter's mail dated Feb 23,"Add the .nfo file from spotter's mail dated Feb 23
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270113405,1270113749,ab338a59054e3a1129d81daa5992ad0eb0673906
+ab338a59054e3a1129d81daa5992ad0eb0673906,ab338a59,Add Bobo's cube credits effect,"Add Bobo's cube credits effect
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270112946,1270112946,32a579b7efcdf41235a2a1c64eb999de2b36977b
+32a579b7efcdf41235a2a1c64eb999de2b36977b,32a579b7,Make the main effects continue after the Rorschach transition,"Make the main effects continue after the Rorschach transition
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270111712,1270111712,912f4a1c3c5e0b58396b54796c0b97ca8850e480
+912f4a1c3c5e0b58396b54796c0b97ca8850e480,912f4a1c,Add the Rorschach transitions between the static and interactive part,"Add the Rorschach transitions between the static and interactive part
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270106710,1270110152,09c7cc63faf465e7ef0a135c1ef124e84fc521fc
+09c7cc63faf465e7ef0a135c1ef124e84fc521fc,09c7cc63,Make the bars longer for the Milestone,"Make the bars longer for the Milestone
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270109164,1270110152,ab854945f3442bf57d62ac68c8970723ee46af44
+ab854945f3442bf57d62ac68c8970723ee46af44,ab854945,Use more generic effect names,"Use more generic effect names
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270107635,1270110152,215c67e42d752b2c471580447e28d88a2689be4e
+215c67e42d752b2c471580447e28d88a2689be4e,215c67e4,Only enable point smoothing if we can draw sizes greater than 1,"Only enable point smoothing if we can draw sizes greater than 1
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270102128,1270110151,4d2949e4265b12dc25b38f136d3f75fffa18986d
+4d2949e4265b12dc25b38f136d3f75fffa18986d,4d2949e4,Query the depth and stencil buffer bits to the log,"Query the depth and stencil buffer bits to the log
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270100776,1270108723,97359b994c54b6fdcdb7c15290f7ec50ed214bb9
+97359b994c54b6fdcdb7c15290f7ec50ed214bb9,97359b99,Fix scrolling for negative speeds and print the required time to the log,"Fix scrolling for negative speeds and print the required time to the log
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270029238,1270108723,1518927ba0b340993f0a6af91e052d0027d352fb
+1518927ba0b340993f0a6af91e052d0027d352fb,1518927b,Declare the application as debugable for the Milestone,"Declare the application as debugable for the Milestone
+
+This gets rid of:
+
+Device '040366021300900D' requires that applications explicitely declare
+themselves as debuggable in their manifest.
+Application 'com.rabenauge.parandroid' does not have the attribute 'debuggable'
+set to TRUE in its manifest and cannot be debugged.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270028916,1270108722,9f7fd1e9107ecd800b53f836b8b837a151deb8c9
+9f7fd1e9107ecd800b53f836b8b837a151deb8c9,9f7fd1e9,Pass the demo instance instead of just the activity to the parts,"Pass the demo instance instead of just the activity to the parts
+
+This is to be able to get more of a demo's variables than just the activity.
+Moreover, query the available sensors to the log.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1270014087,1270108722,57731ae1b935b20db9d5b4f90f52841cf437f819
+57731ae1b935b20db9d5b4f90f52841cf437f819,57731ae1,Add a work-around to get OpenGL hardware acceleration on the Samsung Galaxy,"Add a work-around to get OpenGL hardware acceleration on the Samsung Galaxy
+
+See http://www.anddev.org/viewtopic.php?p=29081#29081
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269985405,1270108722,4d4ea7c56508641bd33c49cc3af476a0d53d6367
+4d4ea7c56508641bd33c49cc3af476a0d53d6367,4d4ea7c5,Fine-tuning of the static effect parameters,"Fine-tuning of the static effect parameters
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269975577,1270108722,09a788e509461000ab61e5fbea4189a4451e072d
+09a788e509461000ab61e5fbea4189a4451e072d,09a788e5,Clean-up the scroller and integrate it into the full demo,"Clean-up the scroller and integrate it into the full demo
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269960726,1270108722,ec70ebfb2175ea7c771d9108c8b12997cbc6ef89
+ec70ebfb2175ea7c771d9108c8b12997cbc6ef89,ec70ebfb,"Again, query more OpenGL limits to the log","Again, query more OpenGL limits to the log
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269959991,1270108721,4423829a3eaa56ae3bf20307cf42c164a56b8a3e
+4423829a3eaa56ae3bf20307cf42c164a56b8a3e,4423829a,Fix the shadow to be not visible between the copper bars,"Fix the shadow to be not visible between the copper bars
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269958857,1270108721,beb4ea86e4f76d47c51a30c4dbfa2f6085dd40f7
+beb4ea86e4f76d47c51a30c4dbfa2f6085dd40f7,beb4ea86,Prefer glTexEnvi() over glTexEnvf(),"Prefer glTexEnvi() over glTexEnvf()
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269958811,1270108721,e932b4ec56130e9ac4cb01d1889e694bc9e92d33
+e932b4ec56130e9ac4cb01d1889e694bc9e92d33,e932b4ec,Add a preliminary sine text scroller with shadow,"Add a preliminary sine text scroller with shadow
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269940111,1270108721,dfe5641dd6761cfcfeaad3e52f3402f0c5e5a6cf
+dfe5641dd6761cfcfeaad3e52f3402f0c5e5a6cf,dfe5641d,Introduce constants for the demo part / effect durations,"Introduce constants for the demo part / effect durations
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269952517,1270108720,ac8479912787cc49291fe032c2ce459f8fea9625
+ac8479912787cc49291fe032c2ce459f8fea9625,ac847991,Add three copper bars to the bottom of the screen,"Add three copper bars to the bottom of the screen
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269849195,1269940184,dfbed4d72a410303864b9ec9403e56eef54128be
+dfbed4d72a410303864b9ec9403e56eef54128be,dfbed4d7,Add the bobs for the static part,"Add the bobs for the static part
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269714897,1269940184,8902aa50924909f2970401cbbf05bb2c8708017b
+8902aa50924909f2970401cbbf05bb2c8708017b,8902aa50,Make static final variables uppercase,"Make static final variables uppercase
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269713059,1269783870,6734ecca9659014ddc13356ea075d91b9de59a3f
+6734ecca9659014ddc13356ea075d91b9de59a3f,6734ecca,Add a comment for consistency,"Add a comment for consistency
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269639060,1269783870,9f028d59227263b854be535c4c407e16b6888e21
+9f028d59227263b854be535c4c407e16b6888e21,9f028d59,"Declare ""bitmap"" separately so the texture loading blocks can be reordered","Declare ""bitmap"" separately so the texture loading blocks can be reordered
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269638859,1269783870,24a88bd88ff137d199f561c29a18b39c4323ff23
+24a88bd88ff137d199f561c29a18b39c4323ff23,24a88bd8,Replace the logos with versions that only have a transparent background,"Replace the logos with versions that only have a transparent background
+
+Previously, due to Gimp's Color to Alpha algorithm, the black portion of
+foreground pixels was also proportionally converted to alpha, which resulted
+in the logos looking to dark when blended in OpenGL.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269783631,1269783870,5844b9b85c5fb5bf34b97fe88c1add714664dc65
+5844b9b85c5fb5bf34b97fe88c1add714664dc65,5844b9b8,Add the water-ripple logo-change effect using multi-texturing,"Add the water-ripple logo-change effect using multi-texturing
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269360945,1269714961,c8662319f99269d83b8c7a29e6be672e96d03112
+c8662319f99269d83b8c7a29e6be672e96d03112,c8662319,"Revert ""PointSprite enable() should not toggle Texture2D enable()""","Revert ""PointSprite enable() should not toggle Texture2D enable()""
+
+This reverts commit bb6ffc98aa0e72ada57d9040ecc4fb2ee4d23fbd as it was a
+source of confusion that just calling enable() would not enable Point Sprites
+if GL_TEXTURE_2D was previously disabled.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269592483,1269592614,c8bd878e3a42ac07a7d44db5cc1596e083e08d23
+c8bd878e3a42ac07a7d44db5cc1596e083e08d23,c8bd878e,Output some more OpenGL limits to the log,"Output some more OpenGL limits to the log
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269438818,1269592391,0cc165db375fe5cb70b6e8261d28148328d89f95
+0cc165db375fe5cb70b6e8261d28148328d89f95,0cc165db,Move special demo math stuff to a separate class,"Move special demo math stuff to a separate class
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269428336,1269439702,f67abb72744ea8f4c05f0d731bede71a425fd724
+f67abb72744ea8f4c05f0d731bede71a425fd724,f67abb72,Make an effect entry a top-level class and also pass the total effect time,"Make an effect entry a top-level class and also pass the total effect time
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269427138,1269427705,6ff037960f3319fd8c0d017434d28eb861b4c189
+6ff037960f3319fd8c0d017434d28eb861b4c189,6ff03796,Do not import GL10 if we have GL11,"Do not import GL10 if we have GL11
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269371860,1269371917,b91e4af69cb0c551f75464157f948b9ea0ab1b48
+b91e4af69cb0c551f75464157f948b9ea0ab1b48,b91e4af6,Prefer arrays over buffers,"Prefer arrays over buffers
+
+So we do not need to care about the buffer position, and hopefully this is
+faster.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269371731,1269371916,945fa8813861eef3e1d7aadbbd493eabba619776
+945fa8813861eef3e1d7aadbbd493eabba619776,945fa881,Testing allocateDirect() for byte buffers,"Testing allocateDirect() for byte buffers
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269368707,1269370508,b5c7a0bd9ff8e192afcb038c56fdfcf34b8ce645
+b5c7a0bd9ff8e192afcb038c56fdfcf34b8ce645,b5c7a0bd,Convert float to fixed point for performance reasons,"Convert float to fixed point for performance reasons
+
+And some related optimizations.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269361390,1269365552,07cf785924cd24981119dbbd3cd96bb8408f2799
+07cf785924cd24981119dbbd3cd96bb8408f2799,07cf7859,Implement the star field incl. fading from the intro part,"Implement the star field incl. fading from the intro part
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1268898422,1269093183,2ab5a73411b8f0e15c2d473933eec0c9c3995aff
+2ab5a73411b8f0e15c2d473933eec0c9c3995aff,2ab5a734,Restore the original clear color when stopping,"Restore the original clear color when stopping
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269092497,1269093172,de288bf5a12508ce2259d86a23f541ed6b9ae422
+de288bf5a12508ce2259d86a23f541ed6b9ae422,de288bf5,Minor code order / comment changes,"Minor code order / comment changes
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269092465,1269093172,0bb6d2a6c0e748aa1107378eb30e69eaadc13405
+0bb6d2a6c0e748aa1107378eb30e69eaadc13405,0bb6d2a6,Add a method to query the part's total duration,"Add a method to query the part's total duration
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269092394,1269093172,a7eedf3ecabbfff0c3068e8b70d15e8c0fba7b84
+a7eedf3ecabbfff0c3068e8b70d15e8c0fba7b84,a7eedf3e,Add a method to draw a screen space aligned (untextured) quad,"Add a method to draw a screen space aligned (untextured) quad
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269092296,1269093171,3f6269bc379cc0fdd1b235e51bdd23d978466d3f
+3f6269bc379cc0fdd1b235e51bdd23d978466d3f,3f6269bc,Reduce the blinking frequency a bit,"Reduce the blinking frequency a bit
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269087727,1269093171,04e3dc1ed613e326571ec750200a90f9eba2005c
+04e3dc1ed613e326571ec750200a90f9eba2005c,04e3dc1e,Generalize the effect classes to be able to reuse them,"Generalize the effect classes to be able to reuse them
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269087695,1269093171,2c065b87b303df0fdb8eb33e64b0749552daaa56
+2c065b87b303df0fdb8eb33e64b0749552daaa56,2c065b87,Fix a bug that caused the joints to look bad in the first second,"Fix a bug that caused the joints to look bad in the first second
+
+This was because the screen was not cleared by IntroFade in the first second.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269086818,1269093171,6b93f09c093ee3af63bd05ec8dcb6bc3bf71868c
+6b93f09c093ee3af63bd05ec8dcb6bc3bf71868c,6b93f09c,Add another argument to onRender() that contains the elapsed time,"Add another argument to onRender() that contains the elapsed time
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269026749,1269027095,8a116d374dd234134375d2b690533416ebef86ce
+8a116d374dd234134375d2b690533416ebef86ce,8a116d37,Make play() return whether an effect was found for the given time,"Make play() return whether an effect was found for the given time
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269019335,1269019335,74d3d26c5bc3dec2d4abb97322814948c2dd11a4
+74d3d26c5bc3dec2d4abb97322814948c2dd11a4,74d3d26c,Make an effect aware of whether it is currently running or not,"Make an effect aware of whether it is currently running or not
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1269018948,1269019104,770985096675ed06c9d8d192b27ba1805d724cf3
+770985096675ed06c9d8d192b27ba1805d724cf3,77098509,Finish the intro part with a third title screen and red blinking dots,"Finish the intro part with a third title screen and red blinking dots
+
+This code is the first to use the new effect manager framework.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1268240151,1269010552,7145d06293edbe6d7b2ddc30d1cdbb0c8acc1181
+7145d06293edbe6d7b2ddc30d1cdbb0c8acc1181,7145d062,Pass an Activity instead of Context to the View to be able to call finish(),"Pass an Activity instead of Context to the View to be able to call finish()
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1268165970,1268505043,57e3fed053bc01ff57277f3b68c56d1c430a851f
+57e3fed053bc01ff57277f3b68c56d1c430a851f,57e3fed0,Add the (preliminary) introduction part incl. title screens and sound track,"Add the (preliminary) introduction part incl. title screens and sound track
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266183730,1268505043,2fe4e2885a3a97fced51cb8babfe4eb05b8aa3a7
+2fe4e2885a3a97fced51cb8babfe4eb05b8aa3a7,2fe4e288,Add the group logos and render the Rabenauge logo fullscreen for testing,"Add the group logos and render the Rabenauge logo fullscreen for testing
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266055323,1268505043,bb6ffc98aa0e72ada57d9040ecc4fb2ee4d23fbd
+bb6ffc98aa0e72ada57d9040ecc4fb2ee4d23fbd,bb6ffc98,PointSprite enable() should not toggle Texture2D enable(),"PointSprite enable() should not toggle Texture2D enable()
+
+This is so we can toggle GL_POINT_SPRITE_OES and GL_TEXTURE_2D independently.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266054763,1268505042,1927fa281fa4b2b73d8203b5d07fed2fff1fbe85
+1927fa281fa4b2b73d8203b5d07fed2fff1fbe85,1927fa28,"Add a helper class, and a method to draw screen space aligned textured quads","Add a helper class, and a method to draw screen space aligned textured quads
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266054540,1268505042,49d5583175bef0190ccfe7aa2ad5873f41d274ff
+49d5583175bef0190ccfe7aa2ad5873f41d274ff,49d55831,Enable filtering when scaling NPOT textures; minor optimizations,"Enable filtering when scaling NPOT textures; minor optimizations
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266052759,1268505042,732387add01ad5801faa20938de56d9a44136a88
+732387add01ad5801faa20938de56d9a44136a88,732387ad,Move all OpenGL helper classes to a separate package,"Move all OpenGL helper classes to a separate package
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266019828,1268505042,d878d6eccf5a8a07ec4ad7ec0bf47776195c551b
+d878d6eccf5a8a07ec4ad7ec0bf47776195c551b,d878d6ec,Ensure the screen is not dimmed when running the demo,"Ensure the screen is not dimmed when running the demo
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266013607,1268505041,2543a9cc19fb064cd19f138c26fc5e8cefc01252
+2543a9cc19fb064cd19f138c26fc5e8cefc01252,2543a9cc,Render four textured point sprites as a test,"Render four textured point sprites as a test
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265981222,1268505041,bcf5470e6417b870982c6e9423f9c3fb25ba5b2e
+bcf5470e6417b870982c6e9423f9c3fb25ba5b2e,bcf5470e,Add a bunch of helper classes for bindable OpenGL objects (textures etc.),"Add a bunch of helper classes for bindable OpenGL objects (textures etc.)
+
+Non-power-of-two (NPOT) textures are scaled up to the next power of two.
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1266011052,1268505029,bc2d3228c613fc8c87589df9bcdc021b0c419d37
+bc2d3228c613fc8c87589df9bcdc021b0c419d37,bc2d3228,"Add spotter's ""drips"" icon and change the name's spelling to our agreement","Add spotter's ""drips"" icon and change the name's spelling to our agreement
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265932058,1265981095,f4aaaa89d2fbc04f1563c61b0abad7b50abc33ad
+f4aaaa89d2fbc04f1563c61b0abad7b50abc33ad,f4aaaa89,Set the screen orientation to landscape,"Set the screen orientation to landscape
+",,,,bodo,bodo.hinueber@rabenauge.com,eyebex,eyebex@threekings.tk,1265801782,1265818272,770228957a17fb1e2a18dafcc03000039c0696bd
+770228957a17fb1e2a18dafcc03000039c0696bd,77022895,Immediately kill the process when the user presses the back button,"Immediately kill the process when the user presses the back button
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265583298,1265585052,2ad27f1acadf4fbba6bdef215518ed068188d220
+2ad27f1acadf4fbba6bdef215518ed068188d220,2ad27f1a,Log some OpenGL info to Eclipse's DDMS perspective,"Log some OpenGL info to Eclipse's DDMS perspective
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265489722,1265585049,5de5919d160f87171a2e927100f42d69fd01c5b7
+5de5919d160f87171a2e927100f42d69fd01c5b7,5de5919d,Make the application run fullscreen,"Make the application run fullscreen
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265480977,1265584993,28655b64331b1d92d8c79c072cbd34abe59447bd
+28655b64331b1d92d8c79c072cbd34abe59447bd,28655b64,Fix the application name by escaping the single quotes,"Fix the application name by escaping the single quotes
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265480533,1265584993,7e8f52ede6768d882df05772fe02b8ef66480ee3
+7e8f52ede6768d882df05772fe02b8ef66480ee3,7e8f52ed,"Get rid of the ""hello"" string resource","Get rid of the ""hello"" string resource
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265480508,1265584993,44e3cede12ec891fe0759be4722d4b87f2840e41
+44e3cede12ec891fe0759be4722d4b87f2840e41,44e3cede,Make Git ignore the bin/ and gen/ directories,"Make Git ignore the bin/ and gen/ directories
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265477958,1265584992,0c937b5225bc52d2219d7d89992f3c9ba50248dd
+0c937b5225bc52d2219d7d89992f3c9ba50248dd,0c937b52,Add a minimal OpenGL ES renderer that just clears the screen to red,"Add a minimal OpenGL ES renderer that just clears the screen to red
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265477871,1265584986,1bb8934d4cc456f4eb0d83a099435409c498a610
+1bb8934d4cc456f4eb0d83a099435409c498a610,1bb8934d,Initial Android Project as created by Eclipse,"Initial Android Project as created by Eclipse
+",,,,eyebex,eyebex@threekings.tk,eyebex,eyebex@threekings.tk,1265405772,1265454138,

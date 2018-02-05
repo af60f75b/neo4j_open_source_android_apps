@@ -1,0 +1,35 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+500c1df29d6973d12a5d2be902336f3ed934a7cf,500c1df2,Remove NonPhoneActivity from activity list.,"Remove NonPhoneActivity from activity list.
+
+It would be better to exclude it via query flags, but I haven't found a flag
+that works to this end.
+
+This resolves the issue where the chooser always displays on newer versions of
+Android.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348868949,1348868949,801f549158aecb7e293463d27ff9c2d9e7e6179e
+801f549158aecb7e293463d27ff9c2d9e7e6179e,801f5491,Fix crash bug on rotate while viewing safe number.,"Fix crash bug on rotate while viewing safe number.
+
+In short, we can't edit the intent we received, because it will be used to
+re-launch on rotate.  If we edit it, the wrong app is launched (and fails).
+
+Also adds a ScrollView around the upper portion so the copy button can be used
+while in landscape mode.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348860855,1348860855,60ff602cc3ba819c5503cd645019e4d93c953f64
+60ff602cc3ba819c5503cd645019e4d93c953f64,60ff602c,Update README with content from market.,"Update README with content from market.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348819531,1348819531,ec0e6350ef54fa6ce5068ee1da096e244090adcf
+ec0e6350ef54fa6ce5068ee1da096e244090adcf,ec0e6350,Improved UI.,"Improved UI.
+
+Added explicit dismiss and copy buttons.  Dismiss and dial buttons resize based
+on safe vs. malicious.  Description above number is much more clear.
+
+Separated all strings into resources.  Translations welcome.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348817700,1348817700,7a10aa256c0058b424f110e69117f194b88a3645
+7a10aa256c0058b424f110e69117f194b88a3645,7a10aa25,Recognize empty telephone numbers as safe.,"Recognize empty telephone numbers as safe.
+
+Also, color the label text to make it more apparent.  These changes are
+available on Google Play as version 2.1.0.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348763821,1348763821,b3100b7a4bd223607b86b2b89ce8cca753ffbe6f
+b3100b7a4bd223607b86b2b89ce8cca753ffbe6f,b3100b7a,Switch to GitHub hosted pages since JSFiddle doesn't run on all phones.,"Switch to GitHub hosted pages since JSFiddle doesn't run on all phones.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348680221,1348680221,919542518ad53602cd29500316a1353763bbac4b
+919542518ad53602cd29500316a1353763bbac4b,91954251,Initial commit.,"Initial commit.
+",,,,Rusty Burchfield,GICodeWarrior@gmail.com,Rusty Burchfield,GICodeWarrior@gmail.com,1348679130,1348679130,

@@ -1,0 +1,66 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0b7b4381f6b21016de4ab15654f242eb4c07722a,0b7b4381,Fix Settings Menu Bugs,"Fix Settings Menu Bugs
+
+- Fixes bugs with settings options
+- Formats MainActivity a bit better and adds some comments in.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1407378548,1407378548,f4c0081cadb62a33ac929fd2cd6d4b12cccef076
+f4c0081cadb62a33ac929fd2cd6d4b12cccef076,f4c0081c,"Add License, Settings","Add License, Settings
+
+Implements the settings menu, moves port selection
+into that menu. Adds licensing headers.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1407338878,1407338878,21f6309e37b6786892978b9c6a3bc2b7019b699b
+21f6309e37b6786892978b9c6a3bc2b7019b699b,21f6309e,"Fix Freeze, Add README & License","Fix Freeze, Add README & License
+
+Fixes a freeze when you press back immediately after
+launching the application.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1407258964,1407258964,92b305b6d6745852fc35dda1ae9f7ccf38c28542
+92b305b6d6745852fc35dda1ae9f7ccf38c28542,92b305b6,Save default server / port away,"Save default server / port away
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1407082717,1407082717,11c34987bb512708bc930f3b05dca75bb83a3239
+11c34987bb512708bc930f3b05dca75bb83a3239,11c34987,Implement full wakelock,"Implement full wakelock
+
+Partial wakelock really wasn't fixing the slowdown
+issue. This patch implements an easily modifiable,
+settable wakelock and sets it to full screen wakelock.
+
+To prevent the downlink from being disabled by a screen
+tap in flight, the app requires a long-press on the stop button
+to enact a stop now.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400963547,1400963547,274c7a6cab130d38e5dc0df109dd095199eb6bbc
+274c7a6cab130d38e5dc0df109dd095199eb6bbc,274c7a6c,Implement partial wakelock,"Implement partial wakelock
+
+Implements partial wakelock which
+reduces the CPU lagdown that is occurring
+when the screen goes off. It is still present though.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400910513,1400910513,a4ccf66acf1565289f3209b097efe6b7b4486889
+a4ccf66acf1565289f3209b097efe6b7b4486889,a4ccf66a,Improves Endpoint Robustness,"Improves Endpoint Robustness
+
+This patch focuses on improving link reliability.
+There should be pretty much no way to lose the
+TCP side of the downlink once activated now. It
+also improves the UI by forcing the user to launch the
+app by plugging in the device, getting rid of the
+annoying security requests by the android
+subsystem.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400893168,1400893168,f4a3d7ec73f301e4360e07e399ebb69f644649e9
+f4a3d7ec73f301e4360e07e399ebb69f644649e9,f4a3d7ec,Bring USB Serial Library into codebase,"Bring USB Serial Library into codebase
+
+Some modifications needed to be made to hoho's
+android usb/serial library since they really dont support
+APM communication very well and spam the living hell
+out of the log. This fixes those problems and brings
+the raw source into the project.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400893090,1400893090,9505329e9ceb4fd8fb041be0b080f2db406c5cc1
+9505329e9ceb4fd8fb041be0b080f2db406c5cc1,9505329e,Adds in UI status indicators,"Adds in UI status indicators
+
+- Adds in msg received, downlink/mav status indicators
+- Adds in reporter functions for the IOEndpoints to talk to the UI
+- Restructures how connections are made
+- Fixes a bug where the device never disconnects from the endpoint server.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400783630,1400783630,06e764d2fdc5de49c51bee5f1996b3c4ea7ca568
+06e764d2fdc5de49c51bee5f1996b3c4ea7ca568,06e764d2,"Change application name to ""MavDownlink""","Change application name to ""MavDownlink""
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400772974,1400772974,a79a663007d3344a9cf9848efedb5aa919c45a05
+a79a663007d3344a9cf9848efedb5aa919c45a05,a79a6630,Initial Commit,"Initial Commit
+
+Working program - no status text and
+does not disconnect properly.
+",,,,James Betker,jbetker@gmail.com,James Betker,jbetker@gmail.com,1400772348,1400772348,

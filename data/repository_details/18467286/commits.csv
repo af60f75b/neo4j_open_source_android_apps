@@ -1,0 +1,85 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+bf0ed9cbd0dca89b9a6bd9b510bea40f1b822555,bf0ed9cb,Refactor pitch class naming.,"Refactor pitch class naming.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1397402361,1397402361,5d12caf5ce6efcd22c36e6bf52f09c934934bc51
+5d12caf5ce6efcd22c36e6bf52f09c934934bc51,5d12caf5,Rename the Eclipse project.,"Rename the Eclipse project.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1397394643,1397394643,0a2a30e4a444822f4e9876f28d95ce78d23406af
+0a2a30e4a444822f4e9876f28d95ce78d23406af,0a2a30e4,Extract the musical logic into a separate common library.,"Extract the musical logic into a separate common library.
+
+Remove the direct dependency on Jackson. Move also the test, to the tests project is deleted.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1397345081,1397345081,51f9ff818f6eae0a72657814d40479a1a3030748
+51f9ff818f6eae0a72657814d40479a1a3030748,51f9ff81,Fix the ProGuard config for Jackson.,"Fix the ProGuard config for Jackson.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396903545,1396903545,6e1b8ac9f64441b9677ee454d89ccfea90e59865
+6e1b8ac9f64441b9677ee454d89ccfea90e59865,6e1b8ac9,Modify the pitch class namer to set the names via constructor and throw a…,"Modify the pitch class namer to set the names via constructor and throw a runtime exception instead of just silently continuing.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396903527,1396903527,9c99d27a233c343c4485e774428b8dcbfb1d8778
+9c99d27a233c343c4485e774428b8dcbfb1d8778,9c99d27a,Create a separate test project.,"Create a separate test project.
+
+In order to prevent the build system to including the test classes and JUnit to the release APK.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396902125,1396902125,4c8525fa7c3d3b1d245f25494b87f319e557d80c
+4c8525fa7c3d3b1d245f25494b87f319e557d80c,4c8525fa,Fix the ProGuard config for Jackson.,"Fix the ProGuard config for Jackson.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396902074,1396902074,e94e8bf2b0d1e77c52f0c464ec28ef3e181b5c20
+e94e8bf2b0d1e77c52f0c464ec28ef3e181b5c20,e94e8bf2,Set default chord as non-empty.,"Set default chord as non-empty.
+
+In order to give the users some hint what to expect from the app.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396902047,1396902047,e89469b033a0d6685748426e47f42629d30bfd57
+e89469b033a0d6685748426e47f42629d30bfd57,e89469b0,Update the chord definition.,"Update the chord definition.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396897059,1396897059,fd96c6469ac14c2f0fbb4ad95bd676ea95baf24e
+fd96c6469ac14c2f0fbb4ad95bd676ea95baf24e,fd96c646,Add the changelog.,"Add the changelog.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396897047,1396897047,a68d3f6003cc20cf8a22f13e03445c791eedef59
+a68d3f6003cc20cf8a22f13e03445c791eedef59,a68d3f60,Rename the license file.,"Rename the license file.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396897034,1396897034,d4131d22ca2b61658652aadf1e40795744d57e98
+d4131d22ca2b61658652aadf1e40795744d57e98,d4131d22,Update the version.,"Update the version.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396895022,1396895022,3a80479795670b4117c8b32202dc1f8ce1a099a7
+3a80479795670b4117c8b32202dc1f8ce1a099a7,3a804797,Resize the chord name text automatically.,"Resize the chord name text automatically.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396895012,1396895012,114b1ff3129f9b13f901c8bed11cd7acf986091e
+114b1ff3129f9b13f901c8bed11cd7acf986091e,114b1ff3,Maintain 1:1 aspect ratio of the tone circle view.,"Maintain 1:1 aspect ratio of the tone circle view.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396894989,1396894989,51568f938807d0fba4e89f597b52680f2def6e4b
+51568f938807d0fba4e89f597b52680f2def6e4b,51568f93,Use the size from onSizeChanged instead of directly from canvas.,"Use the size from onSizeChanged instead of directly from canvas.
+
+In canvas it can be wrong.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396894816,1396894816,972aeb05e5a5aae1b8493d61408955e0dc745f81
+972aeb05e5a5aae1b8493d61408955e0dc745f81,972aeb05,Show the active chord name in a separate text view.,"Show the active chord name in a separate text view.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877967,1396877967,5b65f31fe63dcccb81019b25a51b315a61586156
+5b65f31fe63dcccb81019b25a51b315a61586156,5b65f31f,Allow persisting the active tones to shared preferences.,"Allow persisting the active tones to shared preferences.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877917,1396877917,84fdd680d86a87e19b9b0193bf75d01976a2f213
+84fdd680d86a87e19b9b0193bf75d01976a2f213,84fdd680,Enable ProGuard.,"Enable ProGuard.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877792,1396877792,cc541a1a785e7664cb8feec11aaf99a32b90e5d1
+cc541a1a785e7664cb8feec11aaf99a32b90e5d1,cc541a1a,Implement means for describing the pitch class sets.,"Implement means for describing the pitch class sets.
+
+Add dependency to the Jackson library for JSON configuration.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877775,1396877775,9e6e3fea052c62ecb8a90894c88ab3b515330344
+9e6e3fea052c62ecb8a90894c88ab3b515330344,9e6e3fea,Add an incomplete test for PitchClassSet.,"Add an incomplete test for PitchClassSet.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877676,1396877676,705b7de3473b7e0f470ba16d1aed05be2075cc67
+705b7de3473b7e0f470ba16d1aed05be2075cc67,705b7de3,Add a listener for an event when active tones are changed.,"Add a listener for an event when active tones are changed.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877656,1396877656,1199cd053e789301f61fc5f98cd783df9f5802fa
+1199cd053e789301f61fc5f98cd783df9f5802fa,1199cd05,Enhance the PitchClassSet.,"Enhance the PitchClassSet.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396877594,1396877594,e44c6f268b0df43fa221308b57fc405284da68be
+e44c6f268b0df43fa221308b57fc405284da68be,e44c6f26,Implement a custom pitch class set.,"Implement a custom pitch class set.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396813256,1396813256,2c68edb716812c7e73d68f04c35c698e61b3e46f
+2c68edb716812c7e73d68f04c35c698e61b3e46f,2c68edb7,Set the version.,"Set the version.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396786726,1396786726,9819f25872a90925d06b670d83ab35825df7a2c7
+9819f25872a90925d06b670d83ab35825df7a2c7,9819f258,Remove some unused drawables.,"Remove some unused drawables.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396786717,1396786717,0cc5fa26e7f94778a679b77efdcecf9b208e8e1c
+0cc5fa26e7f94778a679b77efdcecf9b208e8e1c,0cc5fa26,Change the icon.,"Change the icon.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396785838,1396785838,b3cf4c63dca246f03db4e567ede5c10d308134fd
+b3cf4c63dca246f03db4e567ede5c10d308134fd,b3cf4c63,Support padding in the tone circle view.,"Support padding in the tone circle view.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396781600,1396781600,57dfb3025791f0489ff288fef1a1e421559b441e
+57dfb3025791f0489ff288fef1a1e421559b441e,57dfb302,Refactor the code.,"Refactor the code.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396780369,1396780369,d0ee26d9ad7b7fee7adce7956660f41b2c845059
+d0ee26d9ad7b7fee7adce7956660f41b2c845059,d0ee26d9,Handle the screen change itself - prevent losing the data.,"Handle the screen change itself - prevent losing the data.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396776342,1396776342,c86595e23f4815fafdd7ad44a8c646888b256f6e
+c86595e23f4815fafdd7ad44a8c646888b256f6e,c86595e2,"Refactor the drag-n-drop touch detector, add rotation touch detector to allow transposing.","Refactor the drag-n-drop touch detector, add rotation touch detector to allow transposing.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396735200,1396735200,4ebcc68d52d2ff141981d9efb1b2e89a30012589
+4ebcc68d52d2ff141981d9efb1b2e89a30012589,4ebcc68d,Refactor the code a bit.,"Refactor the code a bit.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396729508,1396729508,109b743b8acca5966e539b87338158498935a610
+109b743b8acca5966e539b87338158498935a610,109b743b,Draw the inner chords as a quadratic path (similar to the circos diagram).,"Draw the inner chords as a quadratic path (similar to the circos diagram).
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396717044,1396717044,22f56febac6a12f57a3383e54aca2364ce6fbacb
+22f56febac6a12f57a3383e54aca2364ce6fbacb,22f56feb,Draw a polygon connecting the active tones.,"Draw a polygon connecting the active tones.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396711800,1396711800,eef77fc8c8b9aaebc0ab5c273dd06e0d0d0d8496
+eef77fc8c8b9aaebc0ab5c273dd06e0d0d0d8496,eef77fc8,Use a BitSet. Allow dragging the current tone.,"Use a BitSet. Allow dragging the current tone.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396711778,1396711778,6536723a2cc75f9c79abf8c0e7ba8890fa35b489
+6536723a2cc75f9c79abf8c0e7ba8890fa35b489,6536723a,Change the icon.,"Change the icon.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396711684,1396711684,8527b9d20d0146b0ebb33de80a274f71d9609361
+8527b9d20d0146b0ebb33de80a274f71d9609361,8527b9d2,Implement a simple circular view with multiple toggle buttons representing tones in an octave.,"Implement a simple circular view with multiple toggle buttons representing tones in an octave.
+",,,,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,Bohumir Zamecnik,bohumir.zamecnik@gmail.com,1396705759,1396705759,d089e297cb3081203675d8cfbe0a773408469402
+d089e297cb3081203675d8cfbe0a773408469402,d089e297,Initial commit,"Initial commit
+",,,,Bohumír Zámečník,bohumir.zamecnik@gmail.com,Bohumír Zámečník,bohumir.zamecnik@gmail.com,1396704442,1396704442,

@@ -1,0 +1,64 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+73fdedf104c318b294e250d096053879a7bfbab4,73fdedf1,Reverted previous change of Maps API key to correspond to the one for the correct release keystore,"Reverted previous change of Maps API key to correspond to the one for the correct release keystore
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1349108820,1349108820,f7b2cbd1523f1f6f1a336b3484c6d4af7b125ac5
+f7b2cbd1523f1f6f1a336b3484c6d4af7b125ac5,f7b2cbd1,"Revert ""Updating Maps API key""","Revert ""Updating Maps API key""
+
+This reverts commit 33d24327712739d341bb0f3f7703074ac0ab72e2.
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1349108436,1349108436,33d24327712739d341bb0f3f7703074ac0ab72e2
+33d24327712739d341bb0f3f7703074ac0ab72e2,33d24327,Updating Maps API key,"Updating Maps API key
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348964823,1348964823,63d8fa1912c7574f6d4aee7a8398affb40dc41b5
+63d8fa1912c7574f6d4aee7a8398affb40dc41b5,63d8fa19,Bumped version for 1.1 release,"Bumped version for 1.1 release
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348964477,1348964477,667ab5319eeab50efb96f9b41898024d9684518e
+667ab5319eeab50efb96f9b41898024d9684518e,667ab531,Added gzip support to FroyoHttpClient,"Added gzip support to FroyoHttpClient
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348959209,1348959209,d1e892f7eb4926673f3dbc2f404f01a71b7c2a4a
+d1e892f7eb4926673f3dbc2f404f01a71b7c2a4a,d1e892f7,Fixed a bug where CameraActivity could fill up the message queue with AsyncTask…,"Fixed a bug where CameraActivity could fill up the message queue with AsyncTask instances causing a crash
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348946520,1348946520,516baeb64793720c40c44555d0b6c6bc7810b483
+516baeb64793720c40c44555d0b6c6bc7810b483,516baeb6,Removed swipe navigation from CameraActivity,"Removed swipe navigation from CameraActivity
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348943381,1348943381,0426b8a007276d516e418b4be066539bf7415a6e
+0426b8a007276d516e418b4be066539bf7415a6e,0426b8a0,"Moved HTTP response caching to its own class, refactored data fetchers to use it","Moved HTTP response caching to its own class, refactored data fetchers to use it
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1348939538,1348939538,3952862ca1652a69f722203d04f9eac449aa0d49
+3952862ca1652a69f722203d04f9eac449aa0d49,3952862c,Replaced the static camera list with fetching of camera data from the API,"Replaced the static camera list with fetching of camera data from the API
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1347754865,1347754865,861fc9c12146fdcb6b3f8bb2221654322706aed7
+861fc9c12146fdcb6b3f8bb2221654322706aed7,861fc9c1,Minor cleanup,"Minor cleanup
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1347672644,1347672644,6a9538474cac139d5bbcc37cbd24d54ccb65de5d
+6a9538474cac139d5bbcc37cbd24d54ccb65de5d,6a953847,"Refactored to remove usage of AndroidHttpClient, which appears to cause issues…","Refactored to remove usage of AndroidHttpClient, which appears to cause issues with decoding downloaded image files
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1347672617,1347672617,9f0b0006ca5f7070320b08a47f867d110f900706
+9f0b0006ca5f7070320b08a47f867d110f900706,9f0b0006,Fixed a bug in IncidentFetcher where only the last incident was being returned,"Fixed a bug in IncidentFetcher where only the last incident was being returned
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1347672526,1347672526,f96ec9f6b2bb1acaceabd2ef2a358dea728b7cab
+f96ec9f6b2bb1acaceabd2ef2a358dea728b7cab,f96ec9f6,Updated .gitignore to ignore ant build artifacts,"Updated .gitignore to ignore ant build artifacts
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1346609700,1346609700,53badacdc5a3ab6e55ce3199c332a934c8ed8a0d
+53badacdc5a3ab6e55ce3199c332a934c8ed8a0d,53badacd,"Added version-appropriate HTTP client library usage, updated CameraImageFetcher…","Added version-appropriate HTTP client library usage, updated CameraImageFetcher and IncientFetcher to use it, updated IncidentFetcher to use new API endpoint and handle its JSON format
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1346609694,1346609694,6ce9a1b647f989de4f1d2f884de3e8d2dd2903d2
+6ce9a1b647f989de4f1d2f884de3e8d2dd2903d2,6ce9a1b6,Removed default.properties - appears it's not necessary when building with ant,"Removed default.properties - appears it's not necessary when building with ant
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1346551620,1346551620,1bb967516186b1d3662ef18239b958f0c9c9df5c
+1bb967516186b1d3662ef18239b958f0c9c9df5c,1bb96751,"Bumped version requirement to 2.1 to get around a ""Resources$NotFoundException""…","Bumped version requirement to 2.1 to get around a ""Resources$NotFoundException"" error that appears to be due to deprecation of APIs prior to 2.1 - see https://github.com/cyrilmottier/GreenDroid/issues/23
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1321661284,1321661284,a2a3cf3886f617beb4cb477c58d2bcaf341d5d85
+a2a3cf3886f617beb4cb477c58d2bcaf341d5d85,a2a3cf38,Fixed incident list caching not working,"Fixed incident list caching not working
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1321661201,1321661201,45c6027c2712e37abbc2a2bb4e4dd0459eae5f5e
+45c6027c2712e37abbc2a2bb4e4dd0459eae5f5e,45c6027c,Updated camera image-related code to account for new URL structure,"Updated camera image-related code to account for new URL structure
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1321658375,1321658375,b71735f3e6dca7911269e44219f8616edae01c41
+b71735f3e6dca7911269e44219f8616edae01c41,b71735f3,Added missing string value for the Exit button,"Added missing string value for the Exit button
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1321658229,1321658229,3c82af367001219d756ce64df4a14ba8fe480e80
+3c82af367001219d756ce64df4a14ba8fe480e80,3c82af36,"Revert ""Added missing @Override annotations, added a seek bar to the…","Revert ""Added missing @Override annotations, added a seek bar to the CameraActivity, added an Exit button to the MainActivity, integrated use of Flurry Analytics""
+
+This reverts commit 9708198307accde665ccdcaa47f3cff1b7766f67.
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1321656935,1321656935,9708198307accde665ccdcaa47f3cff1b7766f67
+9708198307accde665ccdcaa47f3cff1b7766f67,97081983,"Added missing @Override annotations, added a seek bar to the CameraActivity,…","Added missing @Override annotations, added a seek bar to the CameraActivity, added an Exit button to the MainActivity, integrated use of Flurry Analytics
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293764695,1293764695,1fc4e651bb1a21323e14768bfd32c54213062670
+1fc4e651bb1a21323e14768bfd32c54213062670,1fc4e651,Added an Exit button to MainActivity,Added an Exit button to MainActivity,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293764299,1293764299,0ab7a7381a520247d8b7f3a47048630556e82d14
+0ab7a7381a520247d8b7f3a47048630556e82d14,0ab7a738,Fixed a potential crash in IncidentFetcher,"Fixed a potential crash in IncidentFetcher
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293586739,1293586739,127f1a14dd201692a96d3a3c462500dd2e2e9802
+127f1a14dd201692a96d3a3c462500dd2e2e9802,127f1a14,"Modified CameraList to make street names more user-friendly, properly…","Modified CameraList to make street names more user-friendly, properly alphabetize them, and correct a street name typo
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293586525,1293586525,b70fb5dcbacb6037b07aa976fa7dc90e408ec08a
+b70fb5dcbacb6037b07aa976fa7dc90e408ec08a,b70fb5dc,Added app screenshots used in the Android Market,"Added app screenshots used in the Android Market
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293586493,1293586493,c5dd6257e470060ad1d478d09b18407f92c57bb6
+c5dd6257e470060ad1d478d09b18407f92c57bb6,c5dd6257,Added generated R.java file,"Added generated R.java file
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293586476,1293586476,3bf8563a52c9c6730b9720fe8c0ac124fe233702
+3bf8563a52c9c6730b9720fe8c0ac124fe233702,3bf8563a,Made assets/sizeimg executable,"Made assets/sizeimg executable
+",,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1293586436,1293586436,ec5a53f0d82c0abaf7d2631da83f59029b98f4a8
+ec5a53f0d82c0abaf7d2631da83f59029b98f4a8,ec5a53f0,Bumped manifest version for 1.0.1 release,Bumped manifest version for 1.0.1 release,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1291427390,1291427390,19949f93b2b6bbfa45491fcda8965689f01ad573
+19949f93b2b6bbfa45491fcda8965689f01ad573,19949f93,Attempt to fix an issue with duplicate incidents sometimes appearing in List View,Attempt to fix an issue with duplicate incidents sometimes appearing in List View,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1290989220,1290989220,4ac2b58889b9a2d2856eddb6a709f4cbbc26511f
+4ac2b58889b9a2d2856eddb6a709f4cbbc26511f,4ac2b588,Removed debuggable attribute from manifest to allow for signed builds,Removed debuggable attribute from manifest to allow for signed builds,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1290988534,1290988534,7d367b2c6a7bf8c851ca2547daa2f91fa70def9c
+7d367b2c6a7bf8c851ca2547daa2f91fa70def9c,7d367b2c,Updated res/layout/traffic_map.xml to use production Maps API key,Updated res/layout/traffic_map.xml to use production Maps API key,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1290988429,1290988429,7c1235f3951e82945a84e46966c29145cd80c723
+7c1235f3951e82945a84e46966c29145cd80c723,7c1235f3,Updated assets/icon.jpg to have dimensions conforming to Android Market requirements,Updated assets/icon.jpg to have dimensions conforming to Android Market requirements,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1290988384,1290988384,e73e93af4df2a9020b113fc74e4c180421d3563a
+e73e93af4df2a9020b113fc74e4c180421d3563a,e73e93af,Initial import into repository,Initial import into repository,,,,elazar,tobias382@gmail.com,elazar,tobias382@gmail.com,1290975986,1290975986,

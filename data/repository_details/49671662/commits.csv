@@ -1,0 +1,232 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+88b32366fb554e5f8bfb13e5d9a7354dd6156c05,88b32366,Bump version,"Bump version
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1456866103,1456866103,fd36dc378f11a1f2f61346cb2fbdf627a05ea875
+fd36dc378f11a1f2f61346cb2fbdf627a05ea875,fd36dc37,Do not show networks with empty SSID,"Do not show networks with empty SSID
+",,,,Bruno PARMENTIER,dev@brunoparmentier.be,Bruno PARMENTIER,dev@brunoparmentier.be,1456785111,1456785111,155a9247ebaece63f68a98bc989c62dc910333bd
+155a9247ebaece63f68a98bc989c62dc910333bd,155a9247,Check that WifiConfiguration.SSID is not null. Fixes #14.,"Check that WifiConfiguration.SSID is not null. Fixes #14.
+
+Return an empty SSID if null.
+",,,,Bruno PARMENTIER,dev@brunoparmentier.be,Bruno PARMENTIER,dev@brunoparmentier.be,1456784944,1456784944,fe6364db3b43d51af9512d34a92429da94c67ef3
+fe6364db3b43d51af9512d34a92429da94c67ef3,fe6364db,Bump version,"Bump version
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455578577,1455578577,bf35bafac089c8ec339680b3c0b696ecb2361e24
+bf35bafac089c8ec339680b3c0b696ecb2361e24,bf35bafa,Set Open authentication type flag to 0x0001 as per the WSC tech spec,"Set Open authentication type flag to 0x0001 as per the WSC tech spec
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455500483,1455500483,7c046a2904d2db4bea9bc2853d4817b43db17623
+7c046a2904d2db4bea9bc2853d4817b43db17623,7c046a29,Set preSharedKey to null for OPEN networks. Fixes #12.,"Set preSharedKey to null for OPEN networks. Fixes #12.
+
+Checks for preSharedKey and SSID nullity were removed as they were
+not really needed (network won't be added by Android if not valid
+anyway).
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455500081,1455500081,c187bc591a7100d1cc048b86358f1fe4684d2ca7
+c187bc591a7100d1cc048b86358f1fe4684d2ca7,c187bc59,Add AAR to NDEF message only if enough space on tag. Fixes #11.,"Add AAR to NDEF message only if enough space on tag. Fixes #11.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455494370,1455494370,050060f54146fdf354178910ab9d14a7fa6063ea
+050060f54146fdf354178910ab9d14a7fa6063ea,050060f5,Remove unused fields from Wi-Fi configuration record,"Remove unused fields from Wi-Fi configuration record
+
+This does not comply with the specs anymore, but allows us to save
+a few bytes on the tag to write even the longest SSID (32 bytes)
+and key (64 bytes) possible (at least on an NTAG203 tag with 144
+bytes user memory).
+
+See #11 for more information.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455476342,1455476342,02031c5f17abc5bb1064b76704a0499a4686a904
+02031c5f17abc5bb1064b76704a0499a4686a904,02031c5f,Sort Wi-Fi networks alphabetically. Fixes #10.,"Sort Wi-Fi networks alphabetically. Fixes #10.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1455471225,1455471225,31ec2dc737245757e1c85313e28a5dc631e76f20
+31ec2dc737245757e1c85313e28a5dc631e76f20,31ec2dc7,Temporarily remove AAR from NDEF message (see #11),"Temporarily remove AAR from NDEF message (see #11)
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454879740,1454879740,4765b1565e978411900acf8220c637276fba4ff6
+4765b1565e978411900acf8220c637276fba4ff6,4765b156,Escape apostrophe in French translation (fix build),"Escape apostrophe in French translation (fix build)
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454687742,1454687742,1047c8e54c4504273ea083d25a4d4887eeb53ac4
+1047c8e54c4504273ea083d25a4d4887eeb53ac4,1047c8e5,Show error toast if tag not written,"Show error toast if tag not written
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454687458,1454687458,71f597d13274f4991e4017b1a7905bb77b606773
+71f597d13274f4991e4017b1a7905bb77b606773,71f597d1,Update NFC status message when fragment is resumed,"Update NFC status message when fragment is resumed
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454686976,1454686976,0e624d26030c9416dc498030977f00acb9521108
+0e624d26030c9416dc498030977f00acb9521108,0e624d26,Use one instance of WifiKeysDataSource through entire application,"Use one instance of WifiKeysDataSource through entire application
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454544671,1454544671,cf7a4b673066d616e10899786924e398753c9e24
+cf7a4b673066d616e10899786924e398753c9e24,cf7a4b67,Always retrieve networks from WifiManager,"Always retrieve networks from WifiManager
+
+wpa_supplicant is only queried to get the passwords.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454516360,1454516360,397b380051354d15b74434d17c386b1ace40038b
+397b380051354d15b74434d17c386b1ace40038b,397b3800,Prevent WpaSupplicantParser from crashing if no ssid. Fixes #7.,"Prevent WpaSupplicantParser from crashing if no ssid. Fixes #7.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454511999,1454511999,428d762d27b428ebab6758a32aff5bd022e09f92
+428d762d27b428ebab6758a32aff5bd022e09f92,428d762d,Update French translation,"Update French translation
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454459842,1454459842,0a54dc79e1b573b1af345117c93cbbf2af293c6b
+0a54dc79e1b573b1af345117c93cbbf2af293c6b,0a54dc79,Show plain-text password in network screen. Fixes #8.,"Show plain-text password in network screen. Fixes #8.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454459829,1454459829,4af95b8b53731860ae09e401d75f327b2045f274
+4af95b8b53731860ae09e401d75f327b2045f274,4af95b8b,Move UI-related classes to ui package,"Move UI-related classes to ui package
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454455809,1454455809,c261b445b91fe95424f1e33d5c4e8a9c6d13f375
+c261b445b91fe95424f1e33d5c4e8a9c6d13f375,c261b445,Move WifiException to model package,"Move WifiException to model package
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454455654,1454455654,4a4affa3739cae22a276e2d8a2f71e44d3b00030
+4a4affa3739cae22a276e2d8a2f71e44d3b00030,4a4affa3,Move activities to ui package,"Move activities to ui package
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454455276,1454455276,7a0dda4aef4673c45544c9a75b5e1575a6fe8e08
+7a0dda4aef4673c45544c9a75b5e1575a6fe8e08,7a0dda4a,Update French translation,"Update French translation
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454454764,1454454764,5463fe7ca47d769b599743e65e8468bd12553dfa
+5463fe7ca47d769b599743e65e8468bd12553dfa,5463fe7c,Add missing <br /> tag in credits list,"Add missing <br /> tag in credits list
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454454563,1454454563,11094adafba99930c68fa9d30c4482a00498c0f0
+11094adafba99930c68fa9d30c4482a00498c0f0,11094ada,Remove unused strings,"Remove unused strings
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454454526,1454454526,b26ab353f8f0d481254c0a50ccfdb8d075cac83d
+b26ab353f8f0d481254c0a50ccfdb8d075cac83d,b26ab353,Add PasscodeLock-Android link in credits,"Add PasscodeLock-Android link in credits
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454453167,1454453167,10e9ce2d5b39c8f7a24545e1075e1d080f956640
+10e9ce2d5b39c8f7a24545e1075e1d080f956640,10e9ce2d,"Override PasscodeLock strings to use ""PIN"" instead of passcode","Override PasscodeLock strings to use ""PIN"" instead of passcode
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454452811,1454452811,7ead2accd9a68fdf320c467d18953d9deb124e42
+7ead2accd9a68fdf320c467d18953d9deb124e42,7ead2acc,Fix PIN lock preference text not updating,"Fix PIN lock preference text not updating
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454451583,1454451583,f9a083571fe02b00cc6335427d947cb8bb26d377
+f9a083571fe02b00cc6335427d947cb8bb26d377,f9a08357,"Close activity on click on ""back arrow"" in toolbar","Close activity on click on ""back arrow"" in toolbar
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454451369,1454451369,9c9ae7e73795d04eb6f68d18d55df0acf4139242
+9c9ae7e73795d04eb6f68d18d55df0acf4139242,9c9ae7e7,Add PIN lock. Fixes #9.,"Add PIN lock. Fixes #9.
+
+A lock-screen can be set from the new Settings screen.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454422229,1454422229,e9c38f41802591b8baffb38b84a96dcffe19ad6b
+e9c38f41802591b8baffb38b84a96dcffe19ad6b,e9c38f41,Fix crash with BroadcastReceiver (un-)registration,"Fix crash with BroadcastReceiver (un-)registration
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454351878,1454351878,0ccceaec68a6e12ce9205e2d282cb58e6bf7ba93
+0ccceaec68a6e12ce9205e2d282cb58e6bf7ba93,0ccceaec,Turn Wi-Fi off if not enabled at startup. Fixes #6.,"Turn Wi-Fi off if not enabled at startup. Fixes #6.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1454108354,1454108354,3591800e1b3bc51e3a99f22d6b412a98385b2317
+3591800e1b3bc51e3a99f22d6b412a98385b2317,3591800e,Add AAR to written NDEF message,"Add AAR to written NDEF message
+
+Android 4.4- users who don't have the app installed will be
+sent to the market when scanning the tag.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453774732,1453774732,fa97f2401e5a212eeca4d97489eae35bcef988d0
+fa97f2401e5a212eeca4d97489eae35bcef988d0,fa97f240,Automatically rename release APK's,"Automatically rename release APK's
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453735386,1453735386,aa2802ec0fce51147c4d185631fbf7d80a5e6a30
+aa2802ec0fce51147c4d185631fbf7d80a5e6a30,aa2802ec,"Center ""write to tag"" image in layout","Center ""write to tag"" image in layout
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453681839,1453681839,edbac1594949eb79398ef306cdd6b147f6bbbe13
+edbac1594949eb79398ef306cdd6b147f6bbbe13,edbac159,Remove EAP networks from Wi-Fi list,"Remove EAP networks from Wi-Fi list
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453679899,1453679899,970b7b356e64baef67f1759e4d5f8489212b6603
+970b7b356e64baef67f1759e4d5f8489212b6603,970b7b35,Add wifikeysha.re URL in About dialog,"Add wifikeysha.re URL in About dialog
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453679581,1453679581,2062dfaeae199d4a9a36f7f36c53b4b3b3c03f03
+2062dfaeae199d4a9a36f7f36c53b4b3b3c03f03,2062dfae,Show button to launch NFC settings if NFC is deactivated,"Show button to launch NFC settings if NFC is deactivated
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453679255,1453679255,4882bd8b04ddfbecdf1d670c1a1edd2f4c231dfb
+4882bd8b04ddfbecdf1d670c1a1edd2f4c231dfb,4882bd8b,Reword no root dialog title,"Reword no root dialog title
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453677714,1453677714,fa7ff43cd7e74036f23b5124e0733a1e829d3244
+fa7ff43cd7e74036f23b5124e0733a1e829d3244,fa7ff43c,Remove useless debug code,"Remove useless debug code
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453668070,1453668070,609caa560b5b64de7b961e1d8aa0ed77bc778d25
+609caa560b5b64de7b961e1d8aa0ed77bc778d25,609caa56,Use custom exception with error code to ease i18n,"Use custom exception with error code to ease i18n
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453645668,1453645668,adba55ddb398d5b953e4c40ce0837be067b07b72
+adba55ddb398d5b953e4c40ce0837be067b07b72,adba55dd,"Disable ""Write to tag"" button for WEP networks","Disable ""Write to tag"" button for WEP networks
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453645031,1453645031,fe3729344ef869b4051630f9dcea8166e372071e
+fe3729344ef869b4051630f9dcea8166e372071e,fe372934,Add French translation,"Add French translation
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453638740,1453638740,d716eda374b2da05b9c86c465152b1157a6ce453
+d716eda374b2da05b9c86c465152b1157a6ce453,d716eda3,"Re-arrange strings (order, naming, etc.)","Re-arrange strings (order, naming, etc.)
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453569724,1453569724,a9323ed96cee39f6f25b0c85942435862f8f46df
+a9323ed96cee39f6f25b0c85942435862f8f46df,a9323ed9,Use enum name() in code and toString() for a more user-friendly name,"Use enum name() in code and toString() for a more user-friendly name
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453478483,1453478483,da0aebe44612350fe5b4820dbed74df909157813
+da0aebe44612350fe5b4820dbed74df909157813,da0aebe4,Fix authentication type field in QR code string,"Fix authentication type field in QR code string
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453477636,1453477636,8caa03f314687418032c459e131350efc8bf2330
+8caa03f314687418032c459e131350efc8bf2330,8caa03f3,Check that the scanned tag is of type application/vnd.wfa.wsc,"Check that the scanned tag is of type application/vnd.wfa.wsc
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453475136,1453475136,70b0d3705066d0f96139038c9492a041d2412b1a
+70b0d3705066d0f96139038c9492a041d2412b1a,70b0d370,Make ConfirmConnectToWifiNetworkActivity dialog fully transparent,"Make ConfirmConnectToWifiNetworkActivity dialog fully transparent
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453460283,1453460283,c15cc5ae8382b5e4d81db8a33c52572b898caced
+c15cc5ae8382b5e4d81db8a33c52572b898caced,c15cc5ae,Prevent BufferUnderflowException in NfcUtils#parse(NdefMessage). Fixes #1.,"Prevent BufferUnderflowException in NfcUtils#parse(NdefMessage). Fixes #1.
+
+The previous code did not take the value of other fields into
+account when looping through the payload.
+This is a bug to report to the AOSP, from which the original code
+comes from.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453447112,1453447112,2d1f7d91960b70261e179df8da427a72533cd839
+2d1f7d91960b70261e179df8da427a72533cd839,2d1f7d91,Try to be more precise when parsing WPA/WPA2 security from WifiConfiguration,"Try to be more precise when parsing WPA/WPA2 security from WifiConfiguration
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453400643,1453400643,f2243115b4c37c3f206f498e19684e2eefcc70da
+f2243115b4c37c3f206f498e19684e2eefcc70da,f2243115,Return WPA2_* by default instead of WPA_*,"Return WPA2_* by default instead of WPA_*
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453400549,1453400549,04daf83bd84c6af2a2d7d4ccc3209d0be9267d56
+04daf83bd84c6af2a2d7d4ccc3209d0be9267d56,04daf83b,Follow Wi-Fi Simple Configuration Technical Specification,"Follow Wi-Fi Simple Configuration Technical Specification
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453399041,1453399041,9e094daa729a426ef76492e44ea9ad79b48fab6f
+9e094daa729a426ef76492e44ea9ad79b48fab6f,9e094daa,Check that parsed WifiConfiguration is not null,"Check that parsed WifiConfiguration is not null
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453397811,1453397811,8675db32ce9c60ae620d0fe947ba104cc86d9ecb
+8675db32ce9c60ae620d0fe947ba104cc86d9ecb,8675db32,"Show a ""Connect to Wi-Fi network?"" dialog when scanning an application/vnd.wfa.wsc tag","Show a ""Connect to Wi-Fi network?"" dialog when scanning an application/vnd.wfa.wsc tag
+
+The dialog is taken from the AOSP source code. For now, the default Android
+confirmation dialog is shown on devices running Android 5.0+ (except when in
+WifiNetworkActivity), and our own dialog is shown on all other devices running
+Android 4.4 and before.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453375932,1453375932,9b72e3649133d4be327d43e2f4e4f84ac618e5a9
+9b72e3649133d4be327d43e2f4e4f84ac618e5a9,9b72e364,Add drawables for other screen densities,"Add drawables for other screen densities
+
+PNG's where optimized with the optipng tool
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453313873,1453313873,6aa756d69331339c610205df99ac56084e38d6fa
+6aa756d69331339c610205df99ac56084e38d6fa,6aa756d6,Use dismiss() instead of hide() on alert dialog to prevent leaked window,"Use dismiss() instead of hide() on alert dialog to prevent leaked window
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453248782,1453248782,6e9de108ddf85de8e8560c5cf67df6d63d1da980
+6e9de108ddf85de8e8560c5cf67df6d63d1da980,6e9de108,Add open and close methods to WifiKeysDataSource and use them in activities,"Add open and close methods to WifiKeysDataSource and use them in activities
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453233452,1453233452,426369a8f547aacf9bd29878053af8c997ba9456
+426369a8f547aacf9bd29878053af8c997ba9456,426369a8,Remove WifiNetwork argument from NfcFragment as it is not used,"Remove WifiNetwork argument from NfcFragment as it is not used
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453219360,1453219360,0a2c3e98f25c70dd9943cb2ac92944bbcaf67dab
+0a2c3e98f25c70dd9943cb2ac92944bbcaf67dab,0a2c3e98,"Show ""Clear saved password"" in context menu dialog only when device is not rooted","Show ""Clear saved password"" in context menu dialog only when device is not rooted
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453215051,1453215051,13fd608886faebbd3201cec415746a8a9f2ca5ae
+13fd608886faebbd3201cec415746a8a9f2ca5ae,13fd6088,Add option to view password after long tap on network,"Add option to view password after long tap on network
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453213215,1453213215,154d84dce457c12a1bc0bb705b7e4c6c0e8b7a0e
+154d84dce457c12a1bc0bb705b7e4c6c0e8b7a0e,154d84dc,Do not show toast when reading a tag,"Do not show toast when reading a tag
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453162339,1453162339,931cd3b8a5638f28497d4e3d18b78dba04e0811a
+931cd3b8a5638f28497d4e3d18b78dba04e0811a,931cd3b8,"Add missing ""Write to tag"" image in resources","Add missing ""Write to tag"" image in resources
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453162158,1453162158,5369a0cfdac51e0c08a3f948d7755b7fcf2cb258
+5369a0cfdac51e0c08a3f948d7755b7fcf2cb258,5369a0cf,"Add ""Write to tag"" image in NfcFragment","Add ""Write to tag"" image in NfcFragment
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453161933,1453161933,ce67d92e754ed37d87a80890189a06543549fd3d
+ce67d92e754ed37d87a80890189a06543549fd3d,ce67d92e,Remove scroll flag from Toolbar,"Remove scroll flag from Toolbar
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453149946,1453149946,6665882866ba5df3347694f7ed63f7408b36ef25
+6665882866ba5df3347694f7ed63f7408b36ef25,66658828,Move hardcoded string to string resources,"Move hardcoded string to string resources
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453149725,1453149725,62e40a8ba904981d774f881795817fd0a790562e
+62e40a8ba904981d774f881795817fd0a790562e,62e40a8b,"Add About dialog box with app description, license and credits","Add About dialog box with app description, license and credits
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453148723,1453148723,d39e83d3ab4e650aaa1d5bcd731559c4bd2e2392
+d39e83d3ab4e650aaa1d5bcd731559c4bd2e2392,d39e83d3,Re-enable NFC foreground dispatch in WifiNetworkActivity as we need it to write tags,"Re-enable NFC foreground dispatch in WifiNetworkActivity as we need it to write tags
+
+Partially revert changes made in commit #1571dd2.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453131602,1453131602,5288e05d6e51d2962fc12c895c0c10b5ff3f57da
+5288e05d6e51d2962fc12c895c0c10b5ff3f57da,5288e05d,Show context menu on long tap on Wi-Fi list item allowing to clear saved password,"Show context menu on long tap on Wi-Fi list item allowing to clear saved password
+
+RecyclerView has been replaced by a custom sub-class of it (ContextMenuRecyclerView)
+that is able to detect which item was clicked.
+
+See http://stackoverflow.com/a/31478593
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453124968,1453124968,344886ddce3f54a72c0356c46524b5450f78e82b
+344886ddce3f54a72c0356c46524b5450f78e82b,344886dd,Add checkbox to show/hide password,"Add checkbox to show/hide password
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453078546,1453078546,ae2c504e98503220303c06e8f50d3d7e56d97d34
+ae2c504e98503220303c06e8f50d3d7e56d97d34,ae2c504e,"Show ""No root"" dialog only on first run","Show ""No root"" dialog only on first run
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453076010,1453076010,010ddf2ff9c5ee1b6a3c6d1909991577448fbc50
+010ddf2ff9c5ee1b6a3c6d1909991577448fbc50,010ddf2f,"Remove unused AddWifiDialog class and all its resources (layout, strings, styles, arrays)","Remove unused AddWifiDialog class and all its resources (layout, strings, styles, arrays)
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453075272,1453075272,cfd1680573f9cd2970892c740877a4a3900e882a
+cfd1680573f9cd2970892c740877a4a3900e882a,cfd16805,Escape apostrophe in strings,"Escape apostrophe in strings
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453074947,1453074947,6a80f7e9aee10a99c4a35964384c939dccb480c9
+6a80f7e9aee10a99c4a35964384c939dccb480c9,6a80f7e9,Extract hardcoded strings to string resources,"Extract hardcoded strings to string resources
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453074796,1453074796,6927318af3b81f0660d2f03bab99c1420bfb3afd
+6927318af3b81f0660d2f03bab99c1420bfb3afd,6927318a,Disable app data backup,"Disable app data backup
+
+Prevent saved Wi-Fi keys to be sent to Google without user knowing it.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453073246,1453073246,5ae3c21f8be43e04240e61af35dfd7530ee636fc
+5ae3c21f8be43e04240e61af35dfd7530ee636fc,5ae3c21f,Ellipsize long SSIDs in list,"Ellipsize long SSIDs in list
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453072235,1453072235,6a77faee15027ab1941c9df0b77b719d11c98b28
+6a77faee15027ab1941c9df0b77b719d11c98b28,6a77faee,Do not set password restrictions in EditText until we know exactly what are the…,"Do not set password restrictions in EditText until we know exactly what are the restrictions for WEP/WPA passwords
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453070860,1453070860,ff6cee5baa63eb33cddb7374b68ad432a37059d9
+ff6cee5baa63eb33cddb7374b68ad432a37059d9,ff6cee5b,Move isValidPasswordLength to static isValidKeyLength method in WifiNetwork class,"Move isValidPasswordLength to static isValidKeyLength method in WifiNetwork class
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453069278,1453069278,1571dd2adae05d4882b8818e59df471c8ca5dbee
+1571dd2adae05d4882b8818e59df471c8ca5dbee,1571dd2a,Remove NFC foreground dispatch and enable Android Beam in Wi-Fi network activity,"Remove NFC foreground dispatch and enable Android Beam in Wi-Fi network activity
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453068066,1453068066,00aa557fe4fed10895dab4ccdd09e86bab35a8a5
+00aa557fe4fed10895dab4ccdd09e86bab35a8a5,00aa557f,Check that NFC is enabled/available before reading/writing tag,"Check that NFC is enabled/available before reading/writing tag
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453064691,1453064691,b48a0a76b8bad3953a47fc91b8aeef5ebb6c9ce0
+b48a0a76b8bad3953a47fc91b8aeef5ebb6c9ce0,b48a0a76,Remove FloatingActionButton in Wi-Fi list activity as we currently don't use it,"Remove FloatingActionButton in Wi-Fi list activity as we currently don't use it
+
+FAB may be re-added in the future if we find it useful (add new network/scan QR code/scan NFC tag/…)
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453034306,1453034306,b5f4fcb7f57a0cc31d31e8e21d53c1cdb41805af
+b5f4fcb7f57a0cc31d31e8e21d53c1cdb41805af,b5f4fcb7,Remove padding in Wi-Fi list content layout,"Remove padding in Wi-Fi list content layout
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453033403,1453033403,cbfc4a37abfc11af84e73c9ba3081dafdc01c4f1
+cbfc4a37abfc11af84e73c9ba3081dafdc01c4f1,cbfc4a37,Add app launcher icon,"Add app launcher icon
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1453032595,1453032595,0dfc76cb0b1565f2ae76ec973d025985565c5d64
+0dfc76cb0b1565f2ae76ec973d025985565c5d64,0dfc76cb,Add Travis CI build status image,"Add Travis CI build status image
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452966144,1452966144,62369914976a4e90cf46bca5a554a0a9464e571d
+62369914976a4e90cf46bca5a554a0a9464e571d,62369914,Add key/missing key icon for each item in the networks list,"Add key/missing key icon for each item in the networks list
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452965674,1452965674,141ec8c1aa4410121bee60afc81a2d3e93f50d68
+141ec8c1aa4410121bee60afc81a2d3e93f50d68,141ec8c1,Save user-entered passwords to database,"Save user-entered passwords to database
+
+When no root access is given, the app asks the user to manually enter the password for protected networks.
+Those passwords are saved to a local database so that he won't have to enter again after app closes.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452946289,1452946289,841cd7ac287d43b07242586ce08678474d80604d
+841cd7ac287d43b07242586ce08678474d80604d,841cd7ac,Prevent crash on startup when Wi-Fi is not yet fully activated,"Prevent crash on startup when Wi-Fi is not yet fully activated
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452863962,1452863962,ce345e0ea4ca53b7a0a3abec2fef63bbc376f55e
+ce345e0ea4ca53b7a0a3abec2fef63bbc376f55e,ce345e0e,Set QR code width to 200 dp,"Set QR code width to 200 dp
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452820063,1452820063,a8755a6e74b3827fc7a5f628a3915db60dbfe9e1
+a8755a6e74b3827fc7a5f628a3915db60dbfe9e1,a8755a6e,Prevent wifiPasswordDialog from reappearing on screen rotation,"Prevent wifiPasswordDialog from reappearing on screen rotation
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452817028,1452817028,59696027f969110f5671295fdbad04422cd83820
+59696027f969110f5671295fdbad04422cd83820,59696027,Set accent color to orange,"Set accent color to orange
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452815224,1452815224,a848fc7a081719722a55760c23dd5d09c7d45a5d
+a848fc7a081719722a55760c23dd5d09c7d45a5d,a848fc7a,Add Travis CI config file,"Add Travis CI config file
+
+build.gradle has also been modified to prevent build to fail when lint
+errors are detected.
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452806239,1452809180,fc9936600ebfd973a87b817acab3efa4a6b6cd03
+fc9936600ebfd973a87b817acab3efa4a6b6cd03,fc993660,Add GPLv3 LICENSE file and notices to the start of each file,"Add GPLv3 LICENSE file and notices to the start of each file
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452805808,1452805808,bf2fbd0e512b8d228fc5000f0645d8aeaa88733e
+bf2fbd0e512b8d228fc5000f0645d8aeaa88733e,bf2fbd0e,Initial commit,"Initial commit
+",,,,Bruno Parmentier,dev@brunoparmentier.be,Bruno Parmentier,dev@brunoparmentier.be,1452801629,1452801629,

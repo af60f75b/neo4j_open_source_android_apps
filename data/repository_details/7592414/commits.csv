@@ -1,0 +1,682 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ffdf8e26dac48d08bf45b8283f38d8ea428df424,ffdf8e26,Support Google TV.,"Support Google TV.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1392959257,1392959257,bec7639472a72e2d743a7f5b553b79555cf491d3
+bec7639472a72e2d743a7f5b553b79555cf491d3,bec76394,v1.2.3,"v1.2.3
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1392955301,1392955301,560d3ad9826ca6fb075a5d32ae67da7d601dddf5
+560d3ad9826ca6fb075a5d32ae67da7d601dddf5,560d3ad9,Don't hide the nav bar pre-KitKat.,"Don't hide the nav bar pre-KitKat.
+
+Doing so puts us into the ""break glass to continue"" mode
+used by video players starting with JELLY_BEAN, which is
+seriously not what we want.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1392954839,1392955215,151ff4a550a4959b0ee404e157a30c25b8eb0e75
+151ff4a550a4959b0ee404e157a30c25b8eb0e75,151ff4a5,Merge branch 'fix-immersive-3',"Merge branch 'fix-immersive-3'
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388638333,1388638333,"10c71fd31853aa7b0f58b7ca975c43c3cbd7766e,9753497b123eec023e2afe8a8dda8c17d5f223f2"
+9753497b123eec023e2afe8a8dda8c17d5f223f2,9753497b,Bump to v1.2.2,"Bump to v1.2.2
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388638265,1388638265,4a3695ba1306792baf22d156b8b76b408f040a07
+4a3695ba1306792baf22d156b8b76b408f040a07,4a3695ba,Don't use the SYSTEM_UI_FLAGs on pre-JB devices.,"Don't use the SYSTEM_UI_FLAGs on pre-JB devices.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388558572,1388558572,4876f92c34123a8d0bbc9aa8915ca69d157a55dc
+4876f92c34123a8d0bbc9aa8915ca69d157a55dc,4876f92c,Explicitly adapt to system decor.,"Explicitly adapt to system decor.
+
+android:fitsSystemWindows is a nice idea, but it totally
+breaks when you have multiple views that each need to adapt
+to the status and navigation bars (since the first View that
+returns true for fitSystemWindows() aborts the traversal).
+
+For many apps this isn't a problem because you can simply
+contain all your views in a single layout that fits the
+system windows, but since Markers has a Slate view that
+extends underneath the decor we need to apply the fitting
+somewhere else. The next logical approach would be to create
+a single large layout to hold all the palettes and other UI,
+but that introduces a lot of unnecessary overdraw.
+
+Here, we nominate a single view (I chose LogoView) to catch
+fitSystemWindows() and apply those insets to many views
+onscreen that might need them. As it happens adding inset
+padding to these views doesn't muck around with the overall
+layout so this works pretty well in practice. (You might see
+a similar technique going on in the AOSP sources for
+Launcher3.)
+
+While this fixes outstanding bugs with older versions of
+Android, I think this technique (entering immersive mode
+only when the palettes are gone) isn't all that useful in
+practice. Rather, I think Markers just needs to run in
+immersive mode all the time, or perhaps with a (gasp)
+setting.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388556499,1388557668,ea7a64a00e437539f8cdf2aed1f94b4b62c9dee7
+ea7a64a00e437539f8cdf2aed1f94b4b62c9dee7,ea7a64a0,Ant target to start the default activity,"Ant target to start the default activity
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388185940,1388185940,9fc45867c293c77511e3d36bf7c383a55d5ff666
+9fc45867c293c77511e3d36bf7c383a55d5ff666,9fc45867,Trivially fix IDE layout rendering,"Trivially fix IDE layout rendering
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1388184520,1388184520,10c71fd31853aa7b0f58b7ca975c43c3cbd7766e
+10c71fd31853aa7b0f58b7ca975c43c3cbd7766e,10c71fd3,Fix use of post-Eclair API on Eclair devices.,"Fix use of post-Eclair API on Eclair devices.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1387863221,1387863240,128aeff1bd7bb8cfeb3e0f88d262f5710808cedd
+128aeff1bd7bb8cfeb3e0f88d262f5710808cedd,128aeff1,Fix use of GB SharedPreferences API on Froyo.,"Fix use of GB SharedPreferences API on Froyo.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385953242,1385953252,f9fa8229403eeb41e537ba3de39ca3942eef8d65
+f9fa8229403eeb41e537ba3de39ca3942eef8d65,f9fa8229,Another pre-HC fix (setSystemUiVisibility calls).,"Another pre-HC fix (setSystemUiVisibility calls).
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385153443,1385153443,8fb636cfa7118d9a7359e02a7421139d1b98384a
+8fb636cfa7118d9a7359e02a7421139d1b98384a,8fb636cf,Bump version to 1.2.1,"Bump version to 1.2.1
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385151497,1385151497,a3e482a3fac6106da9c25a719d6e02e6f7d757a9
+a3e482a3fac6106da9c25a719d6e02e6f7d757a9,a3e482a3,Fix startup crash on pre-Honeycomb devices.,"Fix startup crash on pre-Honeycomb devices.
+
+  java.lang.NoSuchMethodError: com.google.android.apps.markers.ZoomTouchView.setAlpha
+    at com.google.android.apps.markers.MarkersActivity.onCreate(MarkersActivity.java:230)
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385151296,1385151296,20cda81ff1a1487c2763eb18042033cb416795f1
+20cda81ff1a1487c2763eb18042033cb416795f1,20cda81f,Let's just call it 1.2 and be done with it.,"Let's just call it 1.2 and be done with it.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385089526,1385089526,5e1a98e3d2373efc7b03b475722fab08e59bf2da
+5e1a98e3d2373efc7b03b475722fab08e59bf2da,5e1a98e3,Not sure where 1.2 went. I want to go to there.,"Not sure where 1.2 went. I want to go to there.
+",,,,Dan Sandler,dsandler@android.com,Dan Sandler,dsandler@android.com,1385087142,1385087142,509b18bc656ee685103420de7a0fad84ce534f54
+509b18bc656ee685103420de7a0fad84ce534f54,509b18bc,More fitsSystemWindows mischief,"More fitsSystemWindows mischief
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384201776,1384201776,52c9c6364d51a734dac1d75f67c1b0768477c563
+52c9c6364d51a734dac1d75f67c1b0768477c563,52c9c636,bump version,"bump version
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384201146,1384201146,920cada6f0cf917b9ec147fa934faddd13f96521
+920cada6f0cf917b9ec147fa934faddd13f96521,920cada6,Hack and slash: fixing fitSystemWindows on phones,"Hack and slash: fixing fitSystemWindows on phones
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384201110,1384201110,d9ba87c099fc911437ae3dc917f0588564f4869f
+d9ba87c099fc911437ae3dc917f0588564f4869f,d9ba87c0,Dial the density back down for release.,"Dial the density back down for release.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384144408,1384144408,a40adae91c8c188f39a9e996d7139f25b023ac92
+a40adae91c8c188f39a9e996d7139f25b023ac92,a40adae9,"Hideybars (er, IMMERSIVE) support.","Hideybars (er, IMMERSIVE) support.
+
+Requires Android 4.4. Thanks, John!
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1382488519,1384143968,d1f106919c382c139f8ee536111a81593aca6cab
+d1f106919c382c139f8ee536111a81593aca6cab,d1f10691,Update to KK API.,"Update to KK API.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384143518,1384143518,453ce720f7b93cbc4039783d1123598b46bb436a
+453ce720f7b93cbc4039783d1123598b46bb436a,453ce720,Set workspace overlay color to something unique.,"Set workspace overlay color to something unique.
+
+Previously if you had a black canvas it was hard to tell where
+the workspace ended.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384143330,1384143330,51f20fc8d84b0989f5a999268c16671a2828d1a6
+51f20fc8d84b0989f5a999268c16671a2828d1a6,51f20fc8,Confine scale to 0.1x--20x.,"Confine scale to 0.1x--20x.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384143076,1384143076,ce59f219aefa80d1c27d6849c55a55375ba3037f
+ce59f219aefa80d1c27d6849c55a55375ba3037f,ce59f219,Clean up buggy/unnecessary layer management.,"Clean up buggy/unnecessary layer management.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1384141792,1384141792,f35562e90d0a519e31b55e9880b39d7ed12ae241
+f35562e90d0a519e31b55e9880b39d7ed12ae241,f35562e9,"If you pick a color in zoom mode, switch back to the pen.","If you pick a color in zoom mode, switch back to the pen.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375929087,1375929087,aa1398fa2a838a7ba29b085663474b3222bb8de6
+aa1398fa2a838a7ba29b085663474b3222bb8de6,aa1398fa,Double-click fatbits not ready yet.,"Double-click fatbits not ready yet.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375928717,1375928717,58917f5762d20cd0ba2a5c55b052bb4eb84e02e5
+58917f5762d20cd0ba2a5c55b052bb4eb84e02e5,58917f57,Fix top margin of tools on small tablets,"Fix top margin of tools on small tablets
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375927476,1375927476,b5987f34cc2d6826956894643639cdc45442a696
+b5987f34cc2d6826956894643639cdc45442a696,b5987f34,"This is still beta, yo.","This is still beta, yo.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375927182,1375927182,25de5d901ba1f3425a13babd110831f1e8778129
+25de5d901ba1f3425a13babd110831f1e8778129,25de5d90,Fix longpress-to-reset-zoom,"Fix longpress-to-reset-zoom
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375927164,1375927164,056ea4d22aa4098be5fa828d9afc81aaafed9256
+056ea4d22aa4098be5fa828d9afc81aaafed9256,056ea4d2,Merge branch 'scaling',"Merge branch 'scaling'
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1375926660,1375926976,"046293580fc10508f1a31f1232fe88375aa51591,f5c6f1ff55a4599a5ee30b1cb8b807263d4687a0"
+f5c6f1ff55a4599a5ee30b1cb8b807263d4687a0,f5c6f1ff,Fix OOM on large devices by actually checking the memclass.,"Fix OOM on large devices by actually checking the memclass.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1368148086,1368148086,086af81ba7a162188ab4b5758ce767452fdb8b7d
+086af81ba7a162188ab4b5758ce767452fdb8b7d,086af81b,Fix unnecessary bitmap copy introduced by tiles.,"Fix unnecessary bitmap copy introduced by tiles.
+
+Also add tile debug drawing back to the UI.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1365628301,1365628301,b87410acc5b6ebcf75320b27a31301813e922dc5
+b87410acc5b6ebcf75320b27a31301813e922dc5,b87410ac,Save brush widths.,"Save brush widths.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1358132715,1358132715,73adfa933511613cc9979b3cb1b150361544c2d2
+73adfa933511613cc9979b3cb1b150361544c2d2,73adfa93,Add a dialog for editing pen widths.,"Add a dialog for editing pen widths.
+
+Next up: saving between runs.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1358106603,1358131769,dd31cddec5bf9bfb13e4fd715724ad66a036cb26
+dd31cddec5bf9bfb13e4fd715724ad66a036cb26,dd31cdde,Missing copyright header,"Missing copyright header
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1358021421,1358021421,a54246b2bf3a2ced5addd4b5c2c070438a911050
+a54246b2bf3a2ced5addd4b5c2c070438a911050,a54246b2,double-tap with zoom tool now toggles 1x and 4x,"double-tap with zoom tool now toggles 1x and 4x
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1358020758,1358020799,c83f694fd4a0e2f681c60281ef5ae5398f5a1508
+c83f694fd4a0e2f681c60281ef5ae5398f5a1508,c83f694f,Cleaning up obsolete longpress behavior.,"Cleaning up obsolete longpress behavior.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1358018519,1358019875,916570d68b139abbc5023bad9bb2dc7bb49c3c87
+046293580fc10508f1a31f1232fe88375aa51591,04629358,Bugfix: NPE when pausing and there's no bitmap,"Bugfix: NPE when pausing and there's no bitmap
+
+v1.1.2 RC
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357743640,1357743640,7ba9b6a1c5901f1d2beee52f921a38b78278f27d
+916570d68b139abbc5023bad9bb2dc7bb49c3c87,916570d6,Turn off bitmap filtering at large sizes.,"Turn off bitmap filtering at large sizes.
+
+Pre-4.1 this has no effect with HW acceleration, but in 4.1 the
+filtering can be turned off.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357702095,1357702095,ec369957c738bd8293c38acc126cf1abbb042daa
+ec369957c738bd8293c38acc126cf1abbb042daa,ec369957,Double tap to reset zoom,"Double tap to reset zoom
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357676622,1357676622,bcd3cc326e633203c8601289d610d096f35a5001
+bcd3cc326e633203c8601289d610d096f35a5001,bcd3cc32,bump versionCode,"bump versionCode
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357620258,1357620258,276700e50bc73b4079a251cd537697adb8668c37
+276700e50bc73b4079a251cd537697adb8668c37,276700e5,Fix toolbar alignment issue on v16 tablets,"Fix toolbar alignment issue on v16 tablets
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357620245,1357620245,842225dfe0f19e4d015506d673a641dd14d34e73
+842225dfe0f19e4d015506d673a641dd14d34e73,842225df,I seem to have fixed scaling and panning and everything.,"I seem to have fixed scaling and panning and everything.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357620018,1357620018,7d7b58d7e7fbcfa1e928078e62bc91098b13fb95
+7d7b58d7e7fbcfa1e928078e62bc91098b13fb95,7d7b58d7,Zoom attempt using canvas matrix,"Zoom attempt using canvas matrix
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1357609265,1357609265,1a3f6f034d89b3c0dd176105f10ce5305e0dec75
+1a3f6f034d89b3c0dd176105f10ce5305e0dec75,1a3f6f03,Experimental: API 11+ scaling support,"Experimental: API 11+ scaling support
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1356564745,1356564745,f3bbe95fde3919989d5a89732d3f024bc2e4778a
+f3bbe95fde3919989d5a89732d3f024bc2e4778a,f3bbe95f,Experimental: hiding status bar with HUD,"Experimental: hiding status bar with HUD
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1356564718,1356564718,678230bc5aafaeaf7d22e4b1a1452f517a0856c9
+678230bc5aafaeaf7d22e4b1a1452f517a0856c9,678230bc,target api 17 in eclipse,"target api 17 in eclipse
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1356123021,1356123021,7ba9b6a1c5901f1d2beee52f921a38b78278f27d
+7ba9b6a1c5901f1d2beee52f921a38b78278f27d,7ba9b6a1,v1.1.1: Fix crashing bug pre-Honeycomb.,"v1.1.1: Fix crashing bug pre-Honeycomb.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1356122964,1356122964,5bef0eef0b3d368ca7708a32afae9fd407800d2e
+5bef0eef0b3d368ca7708a32afae9fd407800d2e,5bef0eef,1.1 release candidate,"1.1 release candidate
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1352747628,1352747628,158ed70bbe2b894884b32d4e7140c7432ab80ed0
+158ed70bbe2b894884b32d4e7140c7432ab80ed0,158ed70b,Performance: use software layers for HUDs at all times,"Performance: use software layers for HUDs at all times
+
+We were benefiting from this before due to some sloppy coding that
+left the layers on after the first HUD animation.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1352747587,1352747587,707725de4524262755bd7c015d97487f15540d18
+707725de4524262755bd7c015d97487f15540d18,707725de,Long-standing gripe: tools don't retain state if process exits,"Long-standing gripe: tools don't retain state if process exits
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1352746869,1352746869,080153a45a76ab1350bca35f363066bb2829088d
+080153a45a76ab1350bca35f363066bb2829088d,080153a4,Fixing too-many-undo's in tiles.,"Fixing too-many-undo's in tiles.
+
+Here's something astonishing: off-by-one-errors are such a
+common programming error that occasionally you make so many
+of them that they cancel one another out and the behavior is
+essentially correct. Only when you go back to fix or add
+something that depends on the intended behavior do you
+notice the problem, and then it becomes something of a
+pest-control problem to fix all the errors.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1352665426,1352744272,daeccc4ad9aa82109b936844fe24f3d15553ca56
+daeccc4ad9aa82109b936844fe24f3d15553ca56,daeccc4a,v1.1-beta,"v1.1-beta
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1352665418,1352665418,7e6f4401828ed5560bd340849d5d5293f6532fdf
+7e6f4401828ed5560bd340849d5d5293f6532fdf,7e6f4401,Mollify lint tools; pick a better (more stable) overflow menu animation.,"Mollify lint tools; pick a better (more stable) overflow menu animation.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1350277350,1350277350,4aca9a41b38c401761356774cf268a8807d0c546
+4aca9a41b38c401761356774cf268a8807d0c546,4aca9a41,Loading drawings works again.,"Loading drawings works again.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1350276403,1350276403,f77c3f12c5a978e93968bbafcc78379804e89c3e
+f77c3f12c5a978e93968bbafcc78379804e89c3e,f77c3f12,Versions working with multi-undo. (!),"Versions working with multi-undo. (!)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1350092187,1350092210,6ed193ac4fc8d63a9621b41c47734e2b536bc281
+6ed193ac4fc8d63a9621b41c47734e2b536bc281,6ed193ac,Checkpoint: versioned tiles,"Checkpoint: versioned tiles
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1350089057,1350089057,46abc3b1aaf884033abdc35cf80c22be643f0b87
+46abc3b1aaf884033abdc35cf80c22be643f0b87,46abc3b1,Texture support in TiledBitmapCanvas.,"Texture support in TiledBitmapCanvas.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1350086473,1350086473,da885166fe435119b206ccf30779d71e7dde6abe
+da885166fe435119b206ccf30779d71e7dde6abe,da885166,Initial tiling render implementation.,"Initial tiling render implementation.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1347853070,1347853070,1f9e2a42b512e60e13a35b9d33f5759604eafeaa
+1f9e2a42b512e60e13a35b9d33f5759604eafeaa,1f9e2a42,Fix issue #10: DIRECTORY_PICTURES on Eclair,"Fix issue #10: DIRECTORY_PICTURES on Eclair
+
+http://code.google.com/p/markers-for-android/issues/detail?id=10
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1346695268,1346695268,4265407fa0b02b6cfea0318b0943d288c581132a
+4265407fa0b02b6cfea0318b0943d288c581132a,4265407f,Fix issue 7: using future features of LinkedList,"Fix issue 7: using future features of LinkedList
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341773522,1341773873,6ee885f076042b41885f56754e74d99c4b5f83e0
+6ee885f076042b41885f56754e74d99c4b5f83e0,6ee885f0,Working on setting background color.,"Working on setting background color.
+
+Had to clear the rubble of ephemeral tool mode.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341723556,1341723556,d43adac0db1cdfef89afd2fa9e5a26adb30f7046
+d43adac0db1cdfef89afd2fa9e5a26adb30f7046,d43adac0,A little more room for the pen shapes,"A little more room for the pen shapes
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341631020,1341631020,3d5d51b5c62ba1bac1515b537b7f1af30f8c11cd
+3d5d51b5c62ba1bac1515b537b7f1af30f8c11cd,3d5d51b5,Adjust the spacing formula to try to draw fewer circles.,"Adjust the spacing formula to try to draw fewer circles.
+
+This has a nice side effect: The airbrush is kind of usable again.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341630812,1341630812,eeabdbe46603ca264f9adb9ac826f63ac8836e10
+eeabdbe46603ca264f9adb9ac826f63ac8836e10,eeabdbe4,Bump versionCode,"Bump versionCode
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341550938,1341550938,9a750514017a95f5399a2e529ecf3558d04c5bca
+9a750514017a95f5399a2e529ecf3558d04c5bca,9a750514,Rework how we talk to MediaScanner.,"Rework how we talk to MediaScanner.
+
+Side effect: allows us to share a content: URI with
+ACTION_SEND rather than a file: URI, which some apps (I'm
+looking at you, Google+) don't like.
+
+http://code.google.com/p/markers-for-android/issues/detail?id=4
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341550788,1341550788,b80c3d318a8ad52f1f0a5cdbccd47bb57d69d445
+b80c3d318a8ad52f1f0a5cdbccd47bb57d69d445,b80c3d31,New chisel tip pen shape.,"New chisel tip pen shape.
+
+I need to make it easier to add pen shapes; this is nuts.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341546027,1341546027,c90e7e827c1885dfd0f4458b13265abda5f7bb5a
+c90e7e827c1885dfd0f4458b13265abda5f7bb5a,c90e7e82,Repair version 1.0.2 to no longer require faketouch,"Repair version 1.0.2 to no longer require faketouch
+
+...since it appears this prevents it from showing up on some devices:
+
+http://code.google.com/p/android/issues/detail?id=23984
+http://stackoverflow.com/questions/10475954/why-does-the-google-play-store-say-my-android-app-is-incompatible-with-my-own-de
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341343858,1341343858,5b02570690c0c9b90491b4f1c09ae0735c981c5d
+5b02570690c0c9b90491b4f1c09ae0735c981c5d,5b025706,We don't need such a high-quality airbrush anyway.,"We don't need such a high-quality airbrush anyway.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341259954,1341259954,fb539acda18cd3aa3c6cb33a3fe803786935b9d1
+fb539acda18cd3aa3c6cb33a3fe803786935b9d1,fb539acd,Suppress circle bitmap brush for now.,"Suppress circle bitmap brush for now.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341259444,1341259444,89142ee325b536206966b50b6ad7dd45c51c32b4
+89142ee325b536206966b50b6ad7dd45c51c32b4,89142ee3,Now support faketouch devices. Also fix bugs:,"Now support faketouch devices. Also fix bugs:
+
+- Stop allocating two huge bitmaps for each pointer (x10!)
+- Downsample brush bitmaps on lowmem devices
+- Don't use API 11 constructor for AlertDialog.Builder
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341259302,1341259354,0d5b0a96e94f0bca9ac7bbfba2ceac1ef309d0b0
+0d5b0a96e94f0bca9ac7bbfba2ceac1ef309d0b0,0d5b0a96,Fix NPEs drawing bitmaps.,"Fix NPEs drawing bitmaps.
+
+Root cause: specifying a null src rect causes a crash on 3.x and 4.0.x when hw
+acceleration is in use:
+
+    java.lang.NullPointerException
+    	at android.view.GLES20Canvas.drawBitmap(GLES20Canvas.java:611)
+    	at android.view.GLES20RecordingCanvas.drawBitmap(GLES20RecordingCanvas.java:90)
+    	at com.google.android.apps.markers.ToolButton$PenTypeButton.onDraw(ToolButton.java:189)
+    	at android.view.View.draw(View.java:9279)
+    	at android.view.View.getDisplayList(View.java:8742)
+    	at android.view.ViewGroup.drawChild(ViewGroup.java:2554)
+        [...]
+
+Public bug: http://code.google.com/p/android/issues/detail?id=21364
+
+Fixed in JB.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1341163286,1341163286,68ab86f778817609482e6e469181208821b8af9c
+68ab86f778817609482e6e469181208821b8af9c,68ab86f7,Fix resource NPEs on HC devices.,"Fix resource NPEs on HC devices.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340926925,1340926925,13b5057a03bb98dc3353e97b9b97077868e93eb0
+13b5057a03bb98dc3353e97b9b97077868e93eb0,13b5057a,Removed,"Removed
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340926593,1340926593,e616e42c9d255c2e3a11af3b8eb07896f7685196
+e616e42c9d255c2e3a11af3b8eb07896f7685196,e616e42c,Final tweaks for launch,"Final tweaks for launch
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340424973,1340425097,c069d923b2ecb9f5078ba86eb7091fe719a9bb3c
+c069d923b2ecb9f5078ba86eb7091fe719a9bb3c,c069d923,Clean up some junk.,"Clean up some junk.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340421214,1340421214,1066f8e93f2444de9c399e18d3c7b9a6361587d7
+1066f8e93f2444de9c399e18d3c7b9a6361587d7,1066f8e9,Tweak pen widths.,"Tweak pen widths.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340419673,1340419673,cf34a0a0d6d0d88369f4a30d93bbdd50bc6cde2f
+cf34a0a0d6d0d88369f4a30d93bbdd50bc6cde2f,cf34a0a0,ICS target,"ICS target
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340418509,1340418509,e8118916e5a48edc339dbc79ecefca94433b61a2
+e8118916e5a48edc339dbc79ecefca94433b61a2,e8118916,Market description,"Market description
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340396986,1340396986,fef246264e7f70ff1bf38593263ed1216d269f99
+fef246264e7f70ff1bf38593263ed1216d269f99,fef24626,Fix some text size issues,"Fix some text size issues
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340396979,1340396979,23a3dca137f4d6116e4109d2bf7c8b358c1a2af7
+23a3dca137f4d6116e4109d2bf7c8b358c1a2af7,23a3dca1,Finally got it to compile under org.dsandler.,"Finally got it to compile under org.dsandler.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340383024,1340383024,8f05d997b940c8cc81d971cddeaffde41a47c0dc
+8f05d997b940c8cc81d971cddeaffde41a47c0dc,8f05d997,Notes for Play Store,"Notes for Play Store
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340383003,1340383003,9c0f221575bca398775e07f88552619868869752
+9c0f221575bca398775e07f88552619868869752,9c0f2215,Target API 16,"Target API 16
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340303076,1340303076,cd95bceba4390b1cb039488a44fbbe9c58f7319d
+cd95bceba4390b1cb039488a44fbbe9c58f7319d,cd95bceb,Bump version number up (down).,"Bump version number up (down).
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340302134,1340302134,2ad0614f8942272eaae1847627ada8a2c22df8d8
+2ad0614f8942272eaae1847627ada8a2c22df8d8,2ad0614f,Moved to org.dsandler package.,"Moved to org.dsandler package.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340302110,1340302110,fe1d6cf10148326267ad78c8c3cdf10341c20332
+fe1d6cf10148326267ad78c8c3cdf10341c20332,fe1d6cf1,Working on about box etc,"Working on about box etc
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340300439,1340300577,ba1a4387cc3ac410b41f515f46cd754ef2659f1a
+ba1a4387cc3ac410b41f515f46cd754ef2659f1a,ba1a4387,More about box work,"More about box work
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340291557,1340291557,aa30363ba85e53562669ab6736e0d75e269400a5
+aa30363ba85e53562669ab6736e0d75e269400a5,aa30363b,Use Holo/default theme without title bar.,"Use Holo/default theme without title bar.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340288142,1340288142,8c47d6b6e7347b44d847e657bd2459540a723d06
+8c47d6b6e7347b44d847e657bd2459540a723d06,8c47d6b6,"About box, QR code box","About box, QR code box
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340249658,1340249658,f27bef862b9edc39416aacff20c09b2b0e957e52
+f27bef862b9edc39416aacff20c09b2b0e957e52,f27bef86,"Package name refactoring, finished.","Package name refactoring, finished.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340238984,1340238984,0e1457842dcf09eef03a38bb247f11ed18259f31
+0e1457842dcf09eef03a38bb247f11ed18259f31,0e145784,Refactoring part 1,"Refactoring part 1
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340224700,1340224700,e03e071ebf40b8ce2be33d0935c67e1a7e7d6001
+e03e071ebf40b8ce2be33d0935c67e1a7e7d6001,e03e071e,More UI tweakery (fonts),"More UI tweakery (fonts)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340221833,1340221833,ec226c73ba4eee7ba46838a5bb13138febb814ad
+ec226c73ba4eee7ba46838a5bb13138febb814ad,ec226c73,More work in the direction of opening the code:,"More work in the direction of opening the code:
+
+- actionbar overflow menu back to Eclair
+- forgot files from new package names
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340220926,1340220926,897cf0266393bc99baa4432496f62466ba6f04c2
+897cf0266393bc99baa4432496f62466ba6f04c2,897cf026,API guard,"API guard
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340220875,1340220875,f9b5706b26fd8759469a93c096d6f4ac55662e70
+f9b5706b26fd8759469a93c096d6f4ac55662e70,f9b5706b,Tablet fixes,"Tablet fixes
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340138679,1340138679,cc6ed5155b2a89a5b292a71eff8b322b977629a1
+cc6ed5155b2a89a5b292a71eff8b322b977629a1,cc6ed515,new art,"new art
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340137843,1340138292,916adc4e08e3d5f673dd535b0463c32f1b3f40db
+916adc4e08e3d5f673dd535b0463c32f1b3f40db,916adc4e,AOSP licenses,"AOSP licenses
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340134345,1340134345,cfd6cbdb4238a6952cc63f0c55008c62f344d2cf
+cfd6cbdb4238a6952cc63f0c55008c62f344d2cf,cfd6cbdb,Move main app to com.example.markers.,"Move main app to com.example.markers.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340079207,1340079207,82d215ae20553ffd7c42fef3ab6582c6469ed1a2
+82d215ae20553ffd7c42fef3ab6582c6469ed1a2,82d215ae,Remove more unused stuff,"Remove more unused stuff
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340073283,1340073283,b9c31fc430583a38e602dbd94703ea844f4fa39d
+b9c31fc430583a38e602dbd94703ea844f4fa39d,b9c31fc4,Remove more unused stuff,"Remove more unused stuff
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340073197,1340073197,9dd564a81e0dcdc3bed9ab19e9f5935e98d1c991
+9dd564a81e0dcdc3bed9ab19e9f5935e98d1c991,9dd564a8,Remove unused accelerometer code.,"Remove unused accelerometer code.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340072928,1340072962,6273fd60dcc45b3ee4c032e465c7f10e8dd1bac1
+6273fd60dcc45b3ee4c032e465c7f10e8dd1bac1,6273fd60,New launcher icon.,"New launcher icon.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1340043499,1340043499,e9679c669e34bc2624120668a0daba29b5f880db
+e9679c669e34bc2624120668a0daba29b5f880db,e9679c66,Bump to 0.11,"Bump to 0.11
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1336112530,1336112530,fdbf42a2717ac81ee30fe031528180ddc9b76588
+fdbf42a2717ac81ee30fe031528180ddc9b76588,fdbf42a2,Add pen type selector.,"Add pen type selector.
+
+Whiteboard: full opacity.
+Felt tip: partial alpha.
+Airbrush: use airbrush bitmap.
+
+Still some bad artifacts on the airbrush, unfortunately.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1336112140,1336112140,b679b2c87b8ff6d49832103bf738eac4d2ea5a45
+b679b2c87b8ff6d49832103bf738eac4d2ea5a45,b679b2c8,"Tuning animations, making them work on tablets too.","Tuning animations, making them work on tablets too.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1336105815,1336105815,56296b1221f12235fb561f525c3d6b23d03015f9
+56296b1221f12235fb561f525c3d6b23d03015f9,56296b12,Broke up HUD again.,"Broke up HUD again.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335666762,1335666951,9c45966e7c36a46288054c58f1ad6a6f9ee369f0
+9c45966e7c36a46288054c58f1ad6a6f9ee369f0,9c45966e,bump,"bump
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335070285,1335070285,376aba19337c29dbd3f7dffd20864fd5496ddeb3
+376aba19337c29dbd3f7dffd20864fd5496ddeb3,376aba19,Butter up the HUD animation.,"Butter up the HUD animation.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335070169,1335070169,34f019c7042ca49b76c5e7cf473dd61144eced99
+34f019c7042ca49b76c5e7cf473dd61144eced99,34f019c7,Fix bugs / cleanup around image load,"Fix bugs / cleanup around image load
+
+Should fix double-drawing of resumed drawings (making them too dark), edits, etc.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335069375,1335069464,4a49189fdda6d58843df5b136c6a3deb241f495e
+4a49189fdda6d58843df5b136c6a3deb241f495e,4a49189f,Initial move to portrait on smaller screens.,"Initial move to portrait on smaller screens.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335063746,1335063746,8cf411e928ae75e774fc79bf307854f942b76780
+8cf411e928ae75e774fc79bf307854f942b76780,8cf411e9,"Fix drawing save bug, for real.","Fix drawing save bug, for real.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1335061905,1335061905,a4cf45c5d432b195768970a811b46edf1920fb30
+a4cf45c5d432b195768970a811b46edf1920fb30,a4cf45c5,Still playing with brush composition,"Still playing with brush composition
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334635401,1334635401,5c1e4842be2842d4fd0b053092e1c62723cd1fba
+5c1e4842be2842d4fd0b053092e1c62723cd1fba,5c1e4842,Bump version,"Bump version
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334466731,1334466731,f81abca34f5201f160d1933aa314fe2586cef109
+f81abca34f5201f160d1933aa314fe2586cef109,f81abca3,More experiments with new brush types,"More experiments with new brush types
+
+...including figuring out how to use colorfilters to get the
+airbrush to work right (and consequently inventing felt-tip
+markers / chalk).
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334465453,1334465453,042fe23870292d49c47ba89cc6a67aa9fbc00321
+042fe23870292d49c47ba89cc6a67aa9fbc00321,042fe238,Reduce double-drawing at each touch point along the stroke.,"Reduce double-drawing at each touch point along the stroke.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334462237,1334463061,de571976ac883d1af3fa1e33304e90f8cf54adf2
+de571976ac883d1af3fa1e33304e90f8cf54adf2,de571976,Experimenting with other brush shapes.,"Experimenting with other brush shapes.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334430972,1334462235,63cdc33a7aa48bbd2189a4ac254f014bfc0672fc
+63cdc33a7aa48bbd2189a4ac254f014bfc0672fc,63cdc33a,WIP: performance testing,"WIP: performance testing
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334159292,1334159292,b7295e4d68b0de888ec7820bc6cb889e6210486c
+b7295e4d68b0de888ec7820bc6cb889e6210486c,b7295e4d,Performance: stop using PathMeasure to draw strokes,"Performance: stop using PathMeasure to draw strokes
+
+This was only useful when we had Bezier curves, but it's
+much faster to just step along linearly now.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334157948,1334157948,0c9bf47bfe0f704d1d871229ab16282921c4756d
+0c9bf47bfe0f704d1d871229ab16282921c4756d,0c9bf47b,Separate smoothing parameters for position & size/pressure.,"Separate smoothing parameters for position & size/pressure.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334117051,1334117051,5d51d465b270bc22aa268b3e1dfab073362a04da
+5d51d465b270bc22aa268b3e1dfab073362a04da,5d51d465,missing,"missing
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334115673,1334115719,173f88d1f6b2eb14d27d49df2815fbb53106bed3
+173f88d1f6b2eb14d27d49df2815fbb53106bed3,173f88d1,missing,"missing
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1334115657,1334115657,65731569308fc5c97f73d83ab6dde3220af76877
+65731569308fc5c97f73d83ab6dde3220af76877,65731569,WIP: Edit intent support,"WIP: Edit intent support
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1331578530,1331578530,dbb195f067c490a94e912a5c15d8b0f8eb7eeb98
+dbb195f067c490a94e912a5c15d8b0f8eb7eeb98,dbb195f0,Assume stylus is calibrated.,"Assume stylus is calibrated.
+
+This means removing it from the entire pressure calibration
+system, not only not being influenced by current calibration
+settings but not feeding input to the calibration either.
+The PressureCooker is now purely a TOOL_TYPE_FINGER
+calibration system.
+
+Also fixed a bug where the tool type on PressureCooker
+output was not being set correctly.
+
+Thanks to my niece Isabel Makulski for requiring I fix this. :)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1324698173,1324698173,2aee5fc522f39e09bbb2faa11efecee1959a3867
+2aee5fc522f39e09bbb2faa11efecee1959a3867,2aee5fc5,Precise stylus input.,"Precise stylus input.
+
+If a stylus is detected, don't do any smoothing of the input.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1324697089,1324697089,416e8089df84941d0e71b528c104e99daddce09f
+416e8089df84941d0e71b528c104e99daddce09f,416e8089,"Detect styli on ICS, plus a hack for the Flyer.","Detect styli on ICS, plus a hack for the Flyer.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1324416289,1324416289,7c25bb7f81ae94dd0e00ff93b8154d83c9f576ab
+7c25bb7f81ae94dd0e00ff93b8154d83c9f576ab,7c25bb7f,Further improvements to new color palette.,"Further improvements to new color palette.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1324407268,1324407268,2189a498465918da63fefdb5f6adcfdb2375f6f2
+2189a498465918da63fefdb5f6adcfdb2375f6f2,2189a498,New color layout. Untested on phone.,"New color layout. Untested on phone.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1323498638,1323499944,dcc1f7a4eabff50a84e34a16e56e60a67a4b9832
+dcc1f7a4eabff50a84e34a16e56e60a67a4b9832,dcc1f7a4,probably should be in Buganizer but whatever,"probably should be in Buganizer but whatever
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322369894,1322369894,b5d7b016fa32673bf9fdd9f52fd331fd0e8c7f78
+b5d7b016fa32673bf9fdd9f52fd331fd0e8c7f78,b5d7b016,Save temporary in onPause instead of onStop.,"Save temporary in onPause instead of onStop.
+
+Avoids clear-on-load bug on Flyer.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322338703,1322338703,07d3366e2234e6a1a79102862aa3314566c28323
+07d3366e2234e6a1a79102862aa3314566c28323,07d3366e,fix annoying clear-on-share bug,"fix annoying clear-on-share bug
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322338321,1322338321,69526e20bc35cc8f48069c78b74b35c2df81275c
+69526e20bc35cc8f48069c78b74b35c2df81275c,69526e20,only create .nomedia in temp directory,"only create .nomedia in temp directory
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322337526,1322337526,99a94f71f8ff86994f08f807e0889d04eaec2c66
+99a94f71f8ff86994f08f807e0889d04eaec2c66,99a94f71,fix colorlist orientation bug,"fix colorlist orientation bug
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322336477,1322336477,65393a35b3c68e63724d482234756f8de00d81db
+65393a35b3c68e63724d482234756f8de00d81db,65393a35,Work on revised HUD layout.,"Work on revised HUD layout.
+
+Also update to latest dev tools.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1322336280,1322336280,907cf013e2b01c9c0dbf2050e1f19d6bab31911f
+907cf013e2b01c9c0dbf2050e1f19d6bab31911f,907cf013,Bump version to 0.8.,"Bump version to 0.8.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1314056986,1314056986,48cbc263419b4960612bdd9d8225005decd8be5d
+48cbc263419b4960612bdd9d8225005decd8be5d,48cbc263,Adjust UI for tablet.,"Adjust UI for tablet.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1314056970,1314056970,be5fe76e531c03cd9284f1312c88ba017f022e6e
+be5fe76e531c03cd9284f1312c88ba017f022e6e,be5fe76e,Pull over new pressure debug code from partner branch.,"Pull over new pressure debug code from partner branch.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@android.com,1307131814,1314056523,dfa485a17f66bb9a858be6ae8495f0e9e1d5f44a
+dfa485a17f66bb9a858be6ae8495f0e9e1d5f44a,dfa485a1,Tweak highlighting in action bar.,"Tweak highlighting in action bar.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1314055009,1314055009,0a38042f9b4acaf09fb6e9b4f826d488d09f0dc9
+0a38042f9b4acaf09fb6e9b4f826d488d09f0dc9,0a38042f,Revised actionbar icons.,"Revised actionbar icons.
+
+Now offer a ""clear without save"" as well as ""clear with save"" because sometimes you just want to crumple up your drawing and throw it away. (Consequently the icon is an angry scribble.)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1314054629,1314054629,3c871f0f48ca8eba87d5e9504adfa7a28b52522b
+3c871f0f48ca8eba87d5e9504adfa7a28b52522b,3c871f0f,WIP: new UI and quick-save workflow,"WIP: new UI and quick-save workflow
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1310762367,1310764638,a2a5b66a895ed84fe0b829ae43d9c944acf0ee6b
+a2a5b66a895ed84fe0b829ae43d9c944acf0ee6b,a2a5b66a,Bump version to 0.7.3.,"Bump version to 0.7.3.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1310675137,1310675137,749e61d1efb48fec609f1c50f067d91b8f343ddb
+749e61d1efb48fec609f1c50f067d91b8f343ddb,749e61d1,Now use pressure + size.,"Now use pressure + size.
+
+This gives us some stroke variation on devices that report
+only size information (e.g., HTC Flyer). Will make results a
+little strange on devices that report *both*.
+
+Also: move xlarge UI to large (again, for 7"" tablets like
+Flyer).
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1310675105,1310675116,1294f87594ad814a9519cfe77721676499f1136f
+1294f87594ad814a9519cfe77721676499f1136f,1294f875,0.7.2.2: allow clear-all to be undone,"0.7.2.2: allow clear-all to be undone
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1307076727,1307076727,0ac99349c66b68a08edf83a28c454a7cc81bfe65
+0ac99349c66b68a08edf83a28c454a7cc81bfe65,0ac99349,forgot to re-enable the fat marker (v0.7.2.1),"forgot to re-enable the fat marker (v0.7.2.1)
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1307074233,1307074233,cc89a2dcd9ca58789096e03d0f5511d48ccc410a
+cc89a2dcd9ca58789096e03d0f5511d48ccc410a,cc89a2dc,Version bump: 0.7.2,"Version bump: 0.7.2
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1307037227,1307037227,5e76264b6219d2c790bb09803b51a1b48ed79384
+5e76264b6219d2c790bb09803b51a1b48ed79384,5e76264b,Return to a simpler time.,"Return to a simpler time.
+
+All the DrawStream stuff has been factored out to return
+Markers to its raster-based roots. The 'erase' color
+remains, however, and bugs related to resizing the bitmap on
+rotation have been squashed.
+
+Finally, the PressureCooker has been pulled out into its own
+file to facilitate its removal (for sample code).
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1307035277,1307035638,0e5ebc3764587843d054e43ce27edaeddbef6337
+0e5ebc3764587843d054e43ce27edaeddbef6337,0e5ebc37,Some early scaling work.,"Some early scaling work.
+
+Invalidations are getting screwed up, as is rescaling after
+translating. Strokes are not being unscaled appropriately so
+it's tough to do detail work.
+
+But it's a start.
+
+The right solution is to replace all the
+viewportScale/viewportTranslate variables with a prev and
+current matrix. This will help when transforming the spots
+and the invalidations.
+",,,,Daniel Sandler,dsandler@cyclotron.(none),Daniel Sandler,dsandler@cyclotron.(none),1306893557,1306895294,97e3b4141757fe0faf37fc9ddf6612431e1dbdcb
+97e3b4141757fe0faf37fc9ddf6612431e1dbdcb,97e3b414,Fixed loading bitmaps.,"Fixed loading bitmaps.
+
+Also reduced the amount of invalidation required on undo.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1306876256,1306876256,1abd31e789fc75d2b0cc04c92e0d9ab90c0313c1
+1abd31e789fc75d2b0cc04c92e0d9ab90c0313c1,1abd31e7,Major progress toward panning.,"Major progress toward panning.
+
+You can now pan around an infinite canvas and draw where you
+like. When you save, only the current viewport is currently
+captured. Likewise: loading is way broken (the bitmap isn't
+even inserted in the draw stack, let alone load/save DrawOps
+which is what really needs to be done anyway).
+
+But it is a start.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1306437222,1306437222,ada76ebecad69f35336e098f189c2d66787078a9
+ada76ebecad69f35336e098f189c2d66787078a9,ada76ebe,ZOMG multiple undo,"ZOMG multiple undo
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1305938839,1305938839,b97b15a96bd8998e81fff1c781c553e6cdca0cd6
+b97b15a96bd8998e81fff1c781c553e6cdca0cd6,b97b15a9,Merge UI layout changes,"Merge UI layout changes
+",,,,Daniel Sandler,dsandler@dhcp-172-19-26-108.mtv.corp.google.com,Daniel Sandler,dsandler@dhcp-172-19-26-108.mtv.corp.google.com,1305740215,1305740215,"c068cac6d6260098b5ea8a16bd974f67f0fcade9,654a480b939a8f70e94930c85ce952a03c06f0b0"
+c068cac6d6260098b5ea8a16bd974f67f0fcade9,c068cac6,Fix first point of paths.,"Fix first point of paths.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1305732417,1305732417,e475d1d0ac7149a8ed5372465de0c83c79960ae3
+e475d1d0ac7149a8ed5372465de0c83c79960ae3,e475d1d0,Erase support.,"Erase support.
+
+The stroke bitmap is now the 'current' bitmap. The drawing bitmap
+is now the 'previous' (undo) bitmap.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1305730937,1305730937,72147f30465e905295bb1b1b970eadcaf37ef90e
+72147f30465e905295bb1b1b970eadcaf37ef90e,72147f30,OMG progress,"OMG progress
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1305640560,1305640560,984d0afb553edafbc2b631dafd836014159269c7
+654a480b939a8f70e94930c85ce952a03c06f0b0,654a480b,Bump version to 0.7.2 (19),"Bump version to 0.7.2 (19)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1304998136,1304998136,8e9d11736e6b41c5680fde3e5814b6a16458135a
+8e9d11736e6b41c5680fde3e5814b6a16458135a,8e9d1173,Disable tool quasimodes if split touch is not available.,"Disable tool quasimodes if split touch is not available.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1304998118,1304998118,5667be649f684d819c56df7a99d9d0776efe6a13
+5667be649f684d819c56df7a99d9d0776efe6a13,5667be64,New main layout.,"New main layout.
+
+Everything on the left for xlarge; tools at left and colors at bottom for phones.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1304997913,1304997913,984d0afb553edafbc2b631dafd836014159269c7
+984d0afb553edafbc2b631dafd836014159269c7,984d0afb,Fix crash on load.,"Fix crash on load.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1304020818,1304020912,45dd3419c9a22cfa6c9931406c78cff72a0d6786
+45dd3419c9a22cfa6c9931406c78cff72a0d6786,45dd3419,Add 'Share' in the main menu.,"Add 'Share' in the main menu.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1304019572,1304019572,5481bce97c575b2f4f9440e5fe14c0fa9be41ff5
+5481bce97c575b2f4f9440e5fe14c0fa9be41ff5,5481bce9,Bump version to 0.7-beta.,"Bump version to 0.7-beta.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1303746718,1303746718,324e1a24190b9be1b4c493528019565221314ac6
+324e1a24190b9be1b4c493528019565221314ac6,324e1a24,resolved conflict,"resolved conflict
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1303738703,1303738703,"67d5092d8c76cda39c58921f7c98a9fa8cf22bcf,92b2ab0fe066db0e763f558870041e7973f6f67e"
+92b2ab0fe066db0e763f558870041e7973f6f67e,92b2ab0f,Checkpoint ephemeral tool support.,"Checkpoint ephemeral tool support.
+
+(Maybe disable the pressed state pre-Honeycomb?)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1303702425,1303708696,e2fed6da14617332909f0c2f1772d36f923e4fe9
+67d5092d8c76cda39c58921f7c98a9fa8cf22bcf,67d5092d,bump version,"bump version
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302876121,1302876121,0889eda4f1a5bfe4fc7978ee071c119737ceddc1
+0889eda4f1a5bfe4fc7978ee071c119737ceddc1,0889eda4,Misc.,"Misc.
+
+- Fix up debug mode colors.
+- Add new ""quick calibration"" mode for first run.
+- Tune the point filter parameters.
+",,,,Daniel Sandler,dsandler@cyclotron.(none),Daniel Sandler,dsandler@cyclotron.(none),1302869916,1302870196,6e05d58d261f21e8422abfb717d047841d57c30a
+6e05d58d261f21e8422abfb717d047841d57c30a,6e05d58d,Fix BACK button (broken by last commit).,"Fix BACK button (broken by last commit).
+",,,,Daniel Sandler,dsandler@cyclotron.(none),Daniel Sandler,dsandler@cyclotron.(none),1302869901,1302869901,e2fed6da14617332909f0c2f1772d36f923e4fe9
+e2fed6da14617332909f0c2f1772d36f923e4fe9,e2fed6da,MENU key toggles the action bar.,"MENU key toggles the action bar.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302806206,1302806206,b94f3d4623bac418cb1aa795b66f59f12aab2615
+b94f3d4623bac418cb1aa795b66f59f12aab2615,b94f3d46,Bump version number.,"Bump version number.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1302758730,1302758730,cd036105edd2c8d8393e4407fa6ae29db14ae8d0
+cd036105edd2c8d8393e4407fa6ae29db14ae8d0,cd036105,resolve conflicts,"resolve conflicts
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1302757498,1302757498,"7b2fbcc3978c2100771c5a4a7e9d5d3141aa2412,dff8aaa5019e62853a6c2f7d5dce3639da9fce87"
+dff8aaa5019e62853a6c2f7d5dce3639da9fce87,dff8aaa5,New actionbar UI.,"New actionbar UI.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1302755045,1302755455,2bce227493a846361265f1673363cd0ca6f2fb93
+7b2fbcc3978c2100771c5a4a7e9d5d3141aa2412,7b2fbcc3,Final refactoring.,"Final refactoring.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302115458,1302115458,9e222e39e5d8800536dbc58dd584a7a5b9d97e9b
+9e222e39e5d8800536dbc58dd584a7a5b9d97e9b,9e222e39,Packaging for internal beta.,"Packaging for internal beta.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302102026,1302102026,0f2a111dc437a42df331ef244e5dac746ed4b74f
+0f2a111dc437a42df331ef244e5dac746ed4b74f,0f2a111d,Refactoring (2): rewiring the house,"Refactoring (2): rewiring the house
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302101702,1302101702,aef85713748a75d5b3a7d31ba2401ac12acc92bd
+aef85713748a75d5b3a7d31ba2401ac12acc92bd,aef85713,Refactoring (1): Move to com.google.android.markersbeta/.MarkersActivity,"Refactoring (1): Move to com.google.android.markersbeta/.MarkersActivity
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1302101435,1302101598,2bce227493a846361265f1673363cd0ca6f2fb93
+2bce227493a846361265f1673363cd0ca6f2fb93,2bce2274,Attempt to fix startup crash on EVO.,"Attempt to fix startup crash on EVO.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1301883800,1301883800,6e9ae12d385e51621d53339c4d2e4c0b9540fe62
+6e9ae12d385e51621d53339c4d2e4c0b9540fe62,6e9ae12d,Back to API 5.,"Back to API 5.
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1301812466,1301812556,6f1371499ca3e02d14c0f6df3d7a84c84d279692
+6f1371499ca3e02d14c0f6df3d7a84c84d279692,6f137149,Just made this work on Eclair. WHAT JUST HAPPENED,"Just made this work on Eclair. WHAT JUST HAPPENED
+
+(Note: does some nonConfigurationInstance hackery to retain
+the Slate view, avoiding OOM crashes when snapping the
+keyboard open and shut on Droid. Because someone will try.)
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1301811714,1301811777,79604feba5864a8c66078a57ce807b8ca26a6f03
+79604feba5864a8c66078a57ce807b8ca26a6f03,79604feb,More plumbing for Spot,"More plumbing for Spot
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@android.com,1301808065,1301808065,36dedeba48c1576dab39494f4f6dd16198bb533b
+36dedeba48c1576dab39494f4f6dd16198bb533b,36dedeba,Checkpoint: Reduce dependency on PointerCoords with new Spot class,"Checkpoint: Reduce dependency on PointerCoords with new Spot class
+",,,,Daniel Sandler,dsandler@android.com,Daniel Sandler,dsandler@shockwave.(none),1301807813,1301807829,88231759824969526c862cef40af710688ecf31d
+88231759824969526c862cef40af710688ecf31d,88231759,Merge branch 'master' of diesel.i.corp.google.com:gitrepos/Markers,"Merge branch 'master' of diesel.i.corp.google.com:gitrepos/Markers
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1300890362,1300890362,"ba1fd128b25cdc2b7c719db64ef4b7220aefd5e5,f89c1466d36c3e2ffc5426d2e50c97d707f8d324"
+ba1fd128b25cdc2b7c719db64ef4b7220aefd5e5,ba1fd128,Split touch events support.,"Split touch events support.
+
+The target SDK is now Honeycomb, allowing the colors and
+canvas to receive touch events simultaneously.
+
+Reimplemented the color selector so it can be scrubbed (drag
+your finger along, switching colors as it goes). Combine
+this with split touch events to create OMG RAINBOW PONIES.
+
+Version: 0.4
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1300889367,1300890330,a637a97b379adbd2b53a5577d04c2c3328add031
+f89c1466d36c3e2ffc5426d2e50c97d707f8d324,f89c1466,Split touch events support.,"Split touch events support.
+
+The target SDK is now Honeycomb, allowing the colors and
+canvas to receive touch events simultaneously.
+
+Reimplemented the color selector so it can be scrubbed (drag
+your finger along, switching colors as it goes). Combine
+this with split touch events to create OMG RAINBOW PONIES.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1300889367,1300889367,a637a97b379adbd2b53a5577d04c2c3328add031
+a637a97b379adbd2b53a5577d04c2c3328add031,a637a97b,New feature: automatic pressure calibration. Still rough.,"New feature: automatic pressure calibration. Still rough.
+",,,,Daniel Sandler,dsandler@cyclotron.(none),Daniel Sandler,dsandler@cyclotron.(none),1297746934,1297747125,5df48fc9e9b721c2b5dd645a6359e676ac048b44
+5df48fc9e9b721c2b5dd645a6359e676ac048b44,5df48fc9,Version number bump for pressure calibration,"Version number bump for pressure calibration
+",,,,Daniel Sandler,dsandler@cyclotron.(none),Daniel Sandler,dsandler@cyclotron.(none),1297747090,1297747121,3d64756a1011dda13d0a514d1ac029c59e7ce3dd
+3d64756a1011dda13d0a514d1ac029c59e7ce3dd,3d64756a,Version bump (0.3),"Version bump (0.3)
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1297447903,1297447903,61d6d46758de73671511edc572c782be44216860
+61d6d46758de73671511edc572c782be44216860,61d6d467,Undo.,"Undo.
+
+Also: shake to undo.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1297447869,1297447869,e0c0abb3a067f884dd4fef2867a9fb31abd8e199
+e0c0abb3a067f884dd4fef2867a9fb31abd8e199,e0c0abb3,Basic undo support.,"Basic undo support.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1297441801,1297441801,b33aa5e20817cf00f1b5fda39d610d3a5af28448
+b33aa5e20817cf00f1b5fda39d610d3a5af28448,b33aa5e2,Fixes loading images.,"Fixes loading images.
+
+(They were getting clobbered immediately by the contents of
+the .temporary.png file used to save the canvas between
+launches.)
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1297132519,1297132519,0a66290a09b0e03c6589566f5697fb9387fb8532
+0a66290a09b0e03c6589566f5697fb9387fb8532,0a66290a,version number bump (0.2.2),"version number bump (0.2.2)
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296790542,1296790542,fc28b2f3a137d6bd10da92f459c29295a07de907
+fc28b2f3a137d6bd10da92f459c29295a07de907,fc28b2f3,Implemented save/restore on stop.,"Implemented save/restore on stop.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296788960,1296788960,508a875d1ad0613631a7d630a425794188c3a4ce
+508a875d1ad0613631a7d630a425794188c3a4ce,508a875d,Move file IO logic to Activity.,"Move file IO logic to Activity.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296786576,1296786576,ac262e6fd123b88c91b2a542844ce741656b3be5
+ac262e6fd123b88c91b2a542844ce741656b3be5,ac262e6f,tidiness,"tidiness
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296786225,1296786225,ae4c42cf2ef172a1812ca11d99e8f09313d14255
+ae4c42cf2ef172a1812ca11d99e8f09313d14255,ae4c42cf,Save files to 'Drawings' instead of 'Slates'.,"Save files to 'Drawings' instead of 'Slates'.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296622577,1296622577,66bbe0c85037ceb87910062f3ee826b9018e3fe7
+66bbe0c85037ceb87910062f3ee826b9018e3fe7,66bbe0c8,Minor UI overhaul:,"Minor UI overhaul:
+
+  - no more impossible-to-hit color buttons with gutters;
+    now they look like a TV test pattern, or the old
+    many-bricks LEGO logo
+  - everything's larger on xlarge devices
+  - added brown at Erica Baker's request
+  - added more gray levels at my own request
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296621489,1296622289,0cbe727cc512a365fb5df5792fed57bfe856c7f7
+0cbe727cc512a365fb5df5792fed57bfe856c7f7,0cbe727c,sensorLandscape orientation,"sensorLandscape orientation
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296619474,1296619474,0cd1db376c9d05aa2f8e13a9fb5d138f90350d0e
+0cd1db376c9d05aa2f8e13a9fb5d138f90350d0e,0cd1db37,WIP: multitouch,"WIP: multitouch
+
+NB: debugging on every touch event is a sure way to kill
+both your logcat buffer and your performance (traceview says
+BigInteger.<init> consumed 91% of the cycles on a
+five-finger input!)
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296533469,1296533595,065b67e773f5cde5b9d5573ef287db1cc81868d0
+065b67e773f5cde5b9d5573ef287db1cc81868d0,065b67e7,"Density-sensitive pen radius. Also, removed size influence for now.","Density-sensitive pen radius. Also, removed size influence for now.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296530552,1296530552,77c39ea8dab0bc28399e9e5804f7d61f7c045250
+77c39ea8dab0bc28399e9e5804f7d61f7c045250,77c39ea8,Properly target API 9 (for PointerCoords).,"Properly target API 9 (for PointerCoords).
+
+Gingerbread is required for this app.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296529089,1296529089,61fbe8b20f22c9974e9a37e58409efd0dfc61d2b
+61fbe8b20f22c9974e9a37e58409efd0dfc61d2b,61fbe8b2,Cleanups.,"Cleanups.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296529023,1296529023,7df2a1bd816f85b5cb0057183d6f5f2b9bfc664d
+7df2a1bd816f85b5cb0057183d6f5f2b9bfc664d,7df2a1bd,sigh,"sigh
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296528932,1296528932,872ca73c1107b1b1c4d749ee0b37a3454f6305df
+872ca73c1107b1b1c4d749ee0b37a3454f6305df,872ca73c,content-type; version number,"content-type; version number
+",,,,Daniel Sandler,dsandler@menace.cam.corp.google.com,Daniel Sandler,dsandler@menace.cam.corp.google.com,1296528496,1296528511,eea97787028650bd233c846c4f25e3218b9296c1
+eea97787028650bd233c846c4f25e3218b9296c1,eea97787,Merge branch 'master' of diesel.i.corp.google.com:gitrepos/Markers,"Merge branch 'master' of diesel.i.corp.google.com:gitrepos/Markers
+",,,,Daniel Sandler,dsandler@menace.cam.corp.google.com,Daniel Sandler,dsandler@menace.cam.corp.google.com,1296528486,1296528486,"8340784ed2dbd30d3228bb366bdda0668314b99b,f5e316e5fc2b78009cdaf5763d8fe51a16f59615"
+f5e316e5fc2b78009cdaf5763d8fe51a16f59615,f5e316e5,version 0.1,"version 0.1
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296528430,1296528430,155454ded67f3678c7025662ef4c86f4fe773d7e
+155454ded67f3678c7025662ef4c86f4fe773d7e,155454de,trivial website,"trivial website
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296528417,1296528417,4a2def4ff1ea2af73086911642cbe51e940d2a29
+8340784ed2dbd30d3228bb366bdda0668314b99b,8340784e,trivial website,"trivial website
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296528083,1296528083,4a2def4ff1ea2af73086911642cbe51e940d2a29
+4a2def4ff1ea2af73086911642cbe51e940d2a29,4a2def4f,For posterity.,"For posterity.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1296366818,1296366818,7cc6e7717bcd0d996a28531aa74489fc768d86ba
+7cc6e7717bcd0d996a28531aa74489fc768d86ba,7cc6e771,New name and icon.,"New name and icon.
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1296230030,1296230043,f14e5796c909a0a4448b7e265796b1fc8b94b774
+f14e5796c909a0a4448b7e265796b1fc8b94b774,f14e5796,tweaks,"tweaks
+
+- Some indication of current color
+- Fixed color selection (doh)
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1295972157,1295972157,983be19f4d6a3da6b871d52ab56a811f5c60687a
+983be19f4d6a3da6b871d52ab56a811f5c60687a,983be19f,work,"work
+
+- Transparent PNGs generated now
+- White background by default
+- Fixed first dot (you can tap points again)
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1295970041,1295970041,5cffbd52b4c00f22b9aa102699f90d7ff28e8d64
+5cffbd52b4c00f22b9aa102699f90d7ff28e8d64,5cffbd52,Added toasts. Also apply bitmap on top of canvas instead of clearing first.,"Added toasts. Also apply bitmap on top of canvas instead of clearing first.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1295935291,1295935291,3174967171ae0f09da5c9d47931317733eaef63d
+3174967171ae0f09da5c9d47931317733eaef63d,31749671,"Loading images, quick & dirty.","Loading images, quick & dirty.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1295934271,1295934271,5f1e51dd3672e35c3504ccf5734e036ff9cf6d15
+5f1e51dd3672e35c3504ccf5734e036ff9cf6d15,5f1e51dd,Tweaks:,"Tweaks:
+
+- Don't double-draw circles at touch points in WALK_PATHS mode
+- Parameterize the coordbuffer filter stuff for easy tuning
+- paramaterize some of the bezier stuff (but it's pretty
+  broken unless you use a very large filter window)
+",,,,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,Daniel Sandler,dsandler@cyclotron.cam.corp.google.com,1295904113,1295904113,3ea578bcc0cfea26c9b0d50eb7cf5fae3021095f
+3ea578bcc0cfea26c9b0d50eb7cf5fae3021095f,3ea578bc,Exponential decay weighted average.,"Exponential decay weighted average.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1295846392,1295846392,b478097646cda21d4fb99b28bb150f141a767a9e
+b478097646cda21d4fb99b28bb150f141a767a9e,b4780976,New filtering logic. Not bad for a first try.,"New filtering logic. Not bad for a first try.
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1295766232,1295766232,4e8c56279378a1ee4ddc82569b9ca02f702c0932
+4e8c56279378a1ee4ddc82569b9ca02f702c0932,4e8c5627,landscape UI for my son,"landscape UI for my son
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1294118634,1294118634,b0f3d02f3ce75987a0ee7c038d202f27dfb556e1
+b0f3d02f3ce75987a0ee7c038d202f27dfb556e1,b0f3d02f,Tweaks:,"Tweaks:
+
+quick icon
+incorporate both size and pressure
+fix icon name
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1294117145,1294117145,499b3ed11952f1596698203a88e021db7aa884ea
+499b3ed11952f1596698203a88e021db7aa884ea,499b3ed1,"Now plotting circles along the path, lerping weight","Now plotting circles along the path, lerping weight
+
+Disabled béziers for now since they cause oscillations
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1294032482,1294032482,478e2c15881df26c67b6b3fb755258f4ce90bed9
+478e2c15881df26c67b6b3fb755258f4ce90bed9,478e2c15,Colors,"Colors
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1293911125,1293911125,69b07ec0ac8716d96a97be02220995795834b288
+69b07ec0ac8716d96a97be02220995795834b288,69b07ec0,fix clear bug leaving paint in weird state,"fix clear bug leaving paint in weird state
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1293605587,1293605587,8bcfe06eac3b97bc6e78317d8017753e4342df28
+8bcfe06eac3b97bc6e78317d8017753e4342df28,8bcfe06e,"Features: clear, save","Features: clear, save
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1293605166,1293605166,ae594f0b6530c20d8a21de606583498ce8e81e49
+ae594f0b6530c20d8a21de606583498ce8e81e49,ae594f0b,initial version,"initial version
+",,,,Daniel Sandler,dsandler@dsandler-macbookpro.local,Daniel Sandler,dsandler@dsandler-macbookpro.local,1293508661,1293508661,

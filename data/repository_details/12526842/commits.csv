@@ -1,0 +1,71 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+f583186901e96d99bd08105b3050a76561d4e0c9,f5831869,Create privacy policy for linking from Play Store,Create privacy policy for linking from Play Store,,,,Nicholas Parker,nick@nickbp.com,GitHub,noreply@github.com,1486461591,1486461591,b785557e0a6a43b856f3f4c9f6247ce41ca0b200
+b785557e0a6a43b856f3f4c9f6247ce41ca0b200,b785557e,Mark a const as final,"Mark a const as final
+",,,,Nick Parker,nick@nickbp.com,Nick Parker,nick@nickbp.com,1456809502,1456809502,84e0d101b28d881c250cc67ad9b987b1beeaaf10
+84e0d101b28d881c250cc67ad9b987b1beeaaf10,84e0d101,Clean up a bunch of busted indentation and trailing spaces.,"Clean up a bunch of busted indentation and trailing spaces.
+
+May as well go with 4sp instead of the previous tab majority.
+",,,,Nick Parker,nick@nickbp.com,Nick Parker,nick@nickbp.com,1418748918,1418748918,ff08959f66b81b78282d748ee36e7264e8089d86
+ff08959f66b81b78282d748ee36e7264e8089d86,ff08959f,"Implement proper text sizing, and add a delay before turing off mic viz.","Implement proper text sizing, and add a delay before turing off mic viz.
+
+(Resolves the TODOs mentioned in the last commit)
+
+Make it a release.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1380687610,1380687761,a88792bb91769d53bc7c3305b5a1f43d5193a87b
+a88792bb91769d53bc7c3305b5a1f43d5193a87b,a88792bb,Implement visualization of mic input when system audio is blank.,"Implement visualization of mic input when system audio is blank.
+Automatically switches between the two depending on if system audio is present.
+
+Still some TODOs:
+- Mic->Player should probably have a delay to avoid triggering on brief notification sounds and such
+- New text is too wide in portrait mode. Implement some sort of smart sizing (currently just some arb consts)
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1380529005,1380529005,96f60785b3ec32d4321cb46fe1ffedb6787213ce
+96f60785b3ec32d4321cb46fe1ffedb6787213ce,96f60785,Mark a release,"Mark a release
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378869345,1378869354,108767178f7d70326bd1710838ae32661ab93e86
+108767178f7d70326bd1710838ae32661ab93e86,10876717,Fix an NPE in 4.0.x-specific hidey code.,"Fix an NPE in 4.0.x-specific hidey code.
+
+Viz doesn't use Action Bar, so getActionBar() returns null for us!
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378869074,1378869074,adf0dc71d25655d306f3829dd3db4fef4b60757a
+adf0dc71d25655d306f3829dd3db4fef4b60757a,adf0dc71,Call a release.,"Call a release.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378439666,1378439666,b07478bd379acb85f7112830dbfdefd433c6deba
+b07478bd379acb85f7112830dbfdefd433c6deba,b07478bd,Finish up optimization. Now using ~54% of original CPU.,"Finish up optimization. Now using ~54% of original CPU.
+
+Break data scaling out into a separate class.
+Simplify PrecalcColorUtil.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378439576,1378439576,968e0f0cde9960dec6afb322354c47c9d64abb74
+968e0f0cde9960dec6afb322354c47c9d64abb74,968e0f0c,Revert the previous commit's reuse of unsmoothed luminosity.,"Revert the previous commit's reuse of unsmoothed luminosity.
+
+It was making the analyzer appear too jumpy, defeating the purpose of smoothing.
+Call it a version.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378272100,1378272100,4beead913b94447941d0c40879efa5c5adadc4a4
+4beead913b94447941d0c40879efa5c5adadc4a4,4beead91,Profile/optimize: Trim 33% off render time,"Profile/optimize: Trim 33% off render time
+
+The biggest gains are from making more things precalculated.
+Did some shortcuts in the HSL->RGB conversion, but the effect there was small.
+One optimization that may be user-visible is the reuse of unsmoothed luminosity across voiceprint+analyzer.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378270999,1378270999,95ff4634ac2a145c97479142f666afa6270388e4
+95ff4634ac2a145c97479142f666afa6270388e4,95ff4634,Lots of fixes/improvements. Add rotate mode.,"Lots of fixes/improvements. Add rotate mode.
+
+- Refrain from keeping the screen on when there's no music (avoid burn-in when the music stops)
+- Add a rotate mode which replaces the previous mirroring example. Tap to rotate.
+- Reduce jankiness when showing/hiding system ui, especially when user repeatedly opens/closes it.
+- Drop the dc and hz/2 datapoints. DC isn't part of the spectrum and hz/2 isn't worth bothering with.
+- Fix alignment of the horizontal scroller. It was cutting off part of the bottom pixel.
+- Greatly simplify the BitmapScroller(s). Things now render onto a single bitmap. This also
+  fixes an issue where there'd sometimes be a black column in the voiceprint due to bad math.
+- Tweaks to the voiceprint scroll speed (slower), scale factor (wider bass/mids, skinnier treble),
+  and analyzer fall off rate (fall a little slower)
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378157764,1378158857,78886b239527da9799084c5d453b7fc2ea5140b8
+78886b239527da9799084c5d453b7fc2ea5140b8,78886b23,Production version bump for the preceding commit,"Production version bump for the preceding commit
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378095075,1378095075,2dc98ca10163fe8b8823a85b24af967f2bf7171b
+2dc98ca10163fe8b8823a85b24af967f2bf7171b,2dc98ca1,Switch to a somewhat better icon. Add a 'No Audio Detected' notice.,"Switch to a somewhat better icon. Add a 'No Audio Detected' notice.
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378094503,1378094503,d86f61b9030a4042dc4322558fcddde462dc4b39
+d86f61b9030a4042dc4322558fcddde462dc4b39,d86f61b9,Add arbitrary crappy icon,"Add arbitrary crappy icon
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378080778,1378080778,b9715ee2c0a727821769eab026a9d3eb72c44a63
+b9715ee2c0a727821769eab026a9d3eb72c44a63,b9715ee2,Introduce a luminosity curve to make lower values more visible,"Introduce a luminosity curve to make lower values more visible
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378076592,1378076592,9202538a1af7df34d3f868a925f0e6f74a77111b
+9202538a1af7df34d3f868a925f0e6f74a77111b,9202538a,Initial project drop.,"Initial project drop.
+
+Tested on a couple tablets, works fine!
+",,,,Nicholas Parker,nickbp@gmail.com,Nicholas Parker,nickbp@gmail.com,1378071600,1378071600,5876517feee5c63739d7e6959afc08daba0e5299
+5876517feee5c63739d7e6959afc08daba0e5299,5876517f,Initial commit,"Initial commit
+",,,,Nicholas Parker,nick@nickbp.com,Nicholas Parker,nick@nickbp.com,1378069798,1378069798,

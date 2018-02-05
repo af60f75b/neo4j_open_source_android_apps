@@ -1,0 +1,991 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+7eeb87578ff079f35f4b4b751b3f3ec93f3d117b,7eeb8757,Merge pull request #164 from brarcher/pre-v0.16,"Merge pull request #164 from brarcher/pre-v0.16
+
+Update for v0.16",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1512005037,1512005037,"5fba338223076ce4d22b65869bda6bf96eed5407,badba551d0e7e78beb603c8cdc665df35712b392"
+badba551d0e7e78beb603c8cdc665df35712b392,badba551,Update CHANGELOG,Update CHANGELOG,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1512004692,1512004692,49abf8a918f96037945bb34999c18ba5275aaa61
+49abf8a918f96037945bb34999c18ba5275aaa61,49abf8a9,Update for v0.16,Update for v0.16,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1512004510,1512004510,5fba338223076ce4d22b65869bda6bf96eed5407
+5fba338223076ce4d22b65869bda6bf96eed5407,5fba3382,Merge pull request #163 from brarcher/shortcut,"Merge pull request #163 from brarcher/shortcut
+
+Remove support for adding shortcuts from within the app",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1512004345,1512004345,"e14da63d06f7f32f33ea5b26d22417022c3d1a83,388a0723dc4202c21fcb935250d5c0fcb18b4cfe"
+388a0723dc4202c21fcb935250d5c0fcb18b4cfe,388a0723,Remove support for adding shortcuts from within the app,"Remove support for adding shortcuts from within the app
+
+The preferred way to create a shortcut is through the launcher.
+Although it is possible for an app to create shortcuts, there is
+concern that allowing the app to do so may not be desirable
+due to potentials for abuse.
+
+As there is support now for adding shortcuts through the launcher,
+this app do not need to also support creating them itself.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1512000214,1512000214,e14da63d06f7f32f33ea5b26d22417022c3d1a83
+e14da63d06f7f32f33ea5b26d22417022c3d1a83,e14da63d,Merge pull request #161 from brarcher/add-shortcuts-from-launcher,"Merge pull request #161 from brarcher/add-shortcuts-from-launcher
+
+Add shortcuts from launcher",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1511812604,1511812604,"7758c6107946e2a63b7539e29aa45b2d3f997dbb,1673c0229a452ffe65e59d9e3fb8ca4fd59e1062"
+1673c0229a452ffe65e59d9e3fb8ca4fd59e1062,1673c022,Update strings around adding shortcuts,"Update strings around adding shortcuts
+
+Chrome uses the wording ""Add to home screen"" when adding
+a shortcut.
+
+   https://developer.chrome.com/multidevice/android/installtohomescreen
+
+That sounds more direct that this app's wording. Updating to match.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511812218,1511812218,22afeddcbcb93876f65be4a90165b1a18f8b5e2a
+22afeddcbcb93876f65be4a90165b1a18f8b5e2a,22afeddc,Add activity for handling shortcut add requests,"Add activity for handling shortcut add requests
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511735124,1511747415,7758c6107946e2a63b7539e29aa45b2d3f997dbb
+7758c6107946e2a63b7539e29aa45b2d3f997dbb,7758c610,Merge pull request #157 from brarcher/pre-v0.15,"Merge pull request #157 from brarcher/pre-v0.15
+
+Pre v0.15",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1511639307,1511639307,"685ee018c65b4fa8e0029cb24ce7ff64304400e2,47b30ca9fb13df843b5c61ce3bd2a30504525096"
+47b30ca9fb13df843b5c61ce3bd2a30504525096,47b30ca9,Update for v0.15,"Update for v0.15
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511638880,1511638880,7b4d587b13b0760a160774c2b6f495897f2a22e0
+7b4d587b13b0760a160774c2b6f495897f2a22e0,7b4d587b,Update CHANGELOG for v0.15,"Update CHANGELOG for v0.15
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511638833,1511638840,685ee018c65b4fa8e0029cb24ce7ff64304400e2
+685ee018c65b4fa8e0029cb24ce7ff64304400e2,685ee018,Merge pull request #155 from brarcher/shortcuts,"Merge pull request #155 from brarcher/shortcuts
+
+Add support for shortcuts",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1511638807,1511638807,"c760465b3e83da4872abd793ba50b7d59a3fddaa,e0915578ba296d50af8936e284f045f9562ce664"
+e0915578ba296d50af8936e284f045f9562ce664,e0915578,Redraw card info when launched by a shortcut,"Redraw card info when launched by a shortcut
+
+When a shortcut launches the view activity, if the activity
+already exists it will get onNewIntent() called. This needs to
+clear out the view items so the next card will be redrawn.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511637817,1511638439,c733a6c3b9275c29de1660c045cc113d190acded
+c733a6c3b9275c29de1660c045cc113d190acded,c733a6c3,"Start shortcuts with singleTop, but not all launches","Start shortcuts with singleTop, but not all launches
+
+This will prevent shortcuts from creating many views, and causing
+them to leak. However, do not use singleTop for all launches
+of the view activity, else the edit mode cannot be entered.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511637762,1511638439,ec17255a430b36e543bd4845a8868a765993a0f9
+ec17255a430b36e543bd4845a8868a765993a0f9,ec17255a,Remove unneeded local variables,"Remove unneeded local variables
+
+The global variables have the same information; no need to look
+up the information again.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511637689,1511638439,1fc7baa5a0de839a5cb82bb307e665d2de04e992
+1fc7baa5a0de839a5cb82bb307e665d2de04e992,1fc7baa5,Capture view items in onCreate,"Capture view items in onCreate
+
+Some of these will need to be accessed prior to onResume()
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511637641,1511638439,0df411ee963350065402221bbd3b4e535122a405
+0df411ee963350065402221bbd3b4e535122a405,0df411ee,"Revert ""Add widget for directly opening specific card""","Revert ""Add widget for directly opening specific card""
+
+This is largely unneeded, as shortcuts are directly supported
+now, and the widget was a hacky replacement for shortcuts.
+
+This reverts commit ebe6139a64cc54e092165e4c5cb2f712d215c675.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511586835,1511638439,23178d969404c945d12f745e5c236e872f4540aa
+23178d969404c945d12f745e5c236e872f4540aa,23178d96,Optionally add shortcut when creating/editing a card,"Optionally add shortcut when creating/editing a card
+
+When a card is being added or created, a checkbox will now
+be presented asking if a shortcut should be made. If selected,
+when saving a shortcut will be added to the home screen. The
+shortcut will directly launch the given card in view mode.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511586582,1511638439,94accc951d2bbd765cdd478330ce9679d25cfcd1
+94accc951d2bbd765cdd478330ce9679d25cfcd1,94accc95,Let insertLoyaltyCard return the new ID,"Let insertLoyaltyCard return the new ID
+
+Card IDs for new cards will soon need to be known once they
+are created. This change updates this call to return the
+new id.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511577570,1511638439,0207e12aed0aa373a37568bb24ce8603353b29e5
+0207e12aed0aa373a37568bb24ce8603353b29e5,0207e12a,"Revert ""Only let one card viewing activity exist at a time""","Revert ""Only let one card viewing activity exist at a time""
+
+This prevented the editing of cards, as the same activity
+was used for viewing and editing, but the viewing ""instance""
+was calling finish(). It is simpler to remove the singleTop
+option.
+
+This reverts commit 4e02252b75b68e794466b143370b5d3ea10651f2.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511577490,1511638439,c760465b3e83da4872abd793ba50b7d59a3fddaa
+c760465b3e83da4872abd793ba50b7d59a3fddaa,c760465b,Merge pull request #156 from brarcher/mimetype,"Merge pull request #156 from brarcher/mimetype
+
+Report accurate mime type when sending backup data",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1511638424,1511638424,"7b4c119d7d3eccc95dbcb22c3c509353c4914ec6,f480bd0c7e59f707aae9fbcbcad314b42687f822"
+f480bd0c7e59f707aae9fbcbcad314b42687f822,f480bd0c,Report the correct mime type for exported data,"Report the correct mime type for exported data
+
+Technically text/plain is correct-ish, but text/csv is more correct.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511577605,1511637947,559956025829dc16e5228f5b174740324f7f527b
+559956025829dc16e5228f5b174740324f7f527b,55995602,Remove unneeded imports,"Remove unneeded imports
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511317896,1511637947,7b4c119d7d3eccc95dbcb22c3c509353c4914ec6
+7b4c119d7d3eccc95dbcb22c3c509353c4914ec6,7b4c119d,Merge pull request #153 from brarcher/content-imports,"Merge pull request #153 from brarcher/content-imports
+
+Support importing/exporting via content providers",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1511317492,1511317492,"5d122affcebbed3e89fd774515008ff6afd07cea,61443530792029a61ee7bd7d16d57f5bf13af487"
+61443530792029a61ee7bd7d16d57f5bf13af487,61443530,List correct file name on imports,"List correct file name on imports
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511316942,1511316942,03a53349619864d34e319674ece651a1ae9ea16e
+03a53349619864d34e319674ece651a1ae9ea16e,03a53349,Export backups using FileProvider,"Export backups using FileProvider
+
+On Android 7+ providing another activity a file:// Uri is
+discouraged. This changes instead uses a content provider
+backed by a FileProvider to give backup data to other
+activities.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511316887,1511316887,04e0a5716e88798fa215956fce3ee1a277f334da
+04e0a5716e88798fa215956fce3ee1a277f334da,04e0a571,Flatten error handling when importing from an activity,"Flatten error handling when importing from an activity
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511316741,1511316741,91e3f9f78541562169e6ffcfe49d2e84455324a0
+91e3f9f78541562169e6ffcfe49d2e84455324a0,91e3f9f7,Support importing content URIs and file URIs,"Support importing content URIs and file URIs
+
+When importing backed up settings other activities may provide
+data via a content URI. This is especially likely on Android 7+,
+where providing a file URI is flagged as a security issue.
+To support such activities, this commit enables supporting
+content URIs for importing settings.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511306156,1511306156,2ebc862e275fccc9065a88a9a46fae02401c3fc7
+2ebc862e275fccc9065a88a9a46fae02401c3fc7,2ebc862e,Remove file arg from TaskCompleteListener,"Remove file arg from TaskCompleteListener
+
+Soon more than files will be imported, as content URIs will
+also be supported. This then makes the File argument for
+onTaskComplete() not always useful, as there may not
+be a direct file used. To this end, removing the File
+argument as the caller should know what was passed
+to the ImportExport task anyway.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1511300334,1511300485,5d122affcebbed3e89fd774515008ff6afd07cea
+5d122affcebbed3e89fd774515008ff6afd07cea,5d122aff,Merge pull request #150 from brarcher/proguard,"Merge pull request #150 from brarcher/proguard
+
+do not obfuscate using proguard",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506882768,1506882768,"2753b8826fba1122cd43ce3141c734f4c624fa88,9e09b9052a547ebee321c6e2b2867c44f1ad9f2f"
+9e09b9052a547ebee321c6e2b2867c44f1ad9f2f,9e09b905,do not obfuscate using proguard,"do not obfuscate using proguard
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1506880384,1506880391,2753b8826fba1122cd43ce3141c734f4c624fa88
+2753b8826fba1122cd43ce3141c734f4c624fa88,2753b882,Merge pull request #149 from brarcher/singletop,"Merge pull request #149 from brarcher/singletop
+
+Only let one card viewing activity exist at a time",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506617959,1506617959,"647ce00e72e93a46f15604e6793550685c7f81b4,4e02252b75b68e794466b143370b5d3ea10651f2"
+4e02252b75b68e794466b143370b5d3ea10651f2,4e02252b,Only let one card viewing activity exist at a time,"Only let one card viewing activity exist at a time
+
+Now that there are shortcuts which can launch card viewing activities
+directly, if a user does not back out of the activity then there will
+be a pile up of activities over time. To prevent this, only let
+one such view activity exist at a time.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1506612604,1506612660,647ce00e72e93a46f15604e6793550685c7f81b4
+647ce00e72e93a46f15604e6793550685c7f81b4,647ce00e,Merge pull request #148 from brarcher/text,"Merge pull request #148 from brarcher/text
+
+Capitalize first letter in store and note fields",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506607410,1506607410,"dca512903147e3732e32c9f3b3b3ecb609118aee,86a5f2fb501da3680062e4037327cb94c7669c8e"
+86a5f2fb501da3680062e4037327cb94c7669c8e,86a5f2fb,Capitalize first letter in store and note fields,"Capitalize first letter in store and note fields
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1506606363,1506606374,dca512903147e3732e32c9f3b3b3ecb609118aee
+dca512903147e3732e32c9f3b3b3ecb609118aee,dca51290,Merge pull request #147 from brarcher/proguard,"Merge pull request #147 from brarcher/proguard
+
+Do not strip line number info with proguard",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506528888,1506528888,"11e5cb8ec24b826e158c93b251aa66e7aea3f746,e30eb00bf729f7317cfd7b88f11129c2e51f098c"
+e30eb00bf729f7317cfd7b88f11129c2e51f098c,e30eb00b,Do not strip line number info with proguard,"Do not strip line number info with proguard
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1506527191,1506527191,11e5cb8ec24b826e158c93b251aa66e7aea3f746
+11e5cb8ec24b826e158c93b251aa66e7aea3f746,11e5cb8e,Merge pull request #146 from brarcher/pre-v0.14,"Merge pull request #146 from brarcher/pre-v0.14
+
+Update for v0.14",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506482748,1506482748,"d6b47914c8390bf3cfcf78b7eb94031b89dab49b,bdd5c8fbbb880b318bd0e8e6f6db9e3982a862bb"
+bdd5c8fbbb880b318bd0e8e6f6db9e3982a862bb,bdd5c8fb,Update CHANGELOG,Update CHANGELOG,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506482346,1506482346,cd79839748572bf719032e4b615804e304fedcbc
+cd79839748572bf719032e4b615804e304fedcbc,cd798397,Update for v0.14,Update for v0.14,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506482087,1506482087,d6b47914c8390bf3cfcf78b7eb94031b89dab49b
+d6b47914c8390bf3cfcf78b7eb94031b89dab49b,d6b47914,Merge pull request #145 from brarcher/app-shortcuts,"Merge pull request #145 from brarcher/app-shortcuts
+
+Add card shortcuts for most recently used cards",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1506481920,1506481920,"bc360aa06c968f05f0bec4e984ca12cd97cd89f2,ce1acb83f0e107e2f701018519b6c472ab6c1730"
+ce1acb83f0e107e2f701018519b6c472ab6c1730,ce1acb83,Add card shortcuts for most recently used cards,"Add card shortcuts for most recently used cards
+
+This adds app shortcuts for the most recently used cards.
+When a new card is accessed, it is added to the shortcuts list.
+When the list exceeds its maximum size, the least recently
+used shortcut is discarded.
+
+Android limits the maximum number of shortcuts to 5, however
+it recommends in its documentation to limit this to 4. This
+commit limits this to 3, however, as that is aesthetically pleasing.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1506480752,1506480752,bc360aa06c968f05f0bec4e984ca12cd97cd89f2
+bc360aa06c968f05f0bec4e984ca12cd97cd89f2,bc360aa0,Merge pull request #142 from brarcher/widget,"Merge pull request #142 from brarcher/widget
+
+Add widget for directly opening specific card",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1505843387,1505843387,"d354fd187766e18264b4f283b8260d41e7f45b58,ebe6139a64cc54e092165e4c5cb2f712d215c675"
+ebe6139a64cc54e092165e4c5cb2f712d215c675,ebe6139a,Add widget for directly opening specific card,"Add widget for directly opening specific card
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1505840195,1505840328,d354fd187766e18264b4f283b8260d41e7f45b58
+d354fd187766e18264b4f283b8260d41e7f45b58,d354fd18,Merge pull request #138 from brarcher/transifex,"Merge pull request #138 from brarcher/transifex
+
+Remove missing translations stubbed to English",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1502416186,1502416186,"a307511193f3ce35a2bdb369ba0434ebebbbc880,00b612d6c76d62b4b309f8638fd712793ace020a"
+00b612d6c76d62b4b309f8638fd712793ace020a,00b612d6,Remove missing translations stubbed to English,"Remove missing translations stubbed to English
+
+By request, a project on Transifex was created to better
+manage translations. To make things less confusing, instead
+of using the MissingTranslations lint error, and thus needing
+to add stub translations, the progress of translations is now
+handled on Transifex.
+
+transifex.com/na-243/loyalty-card-locker/
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1502414704,1502414713,a307511193f3ce35a2bdb369ba0434ebebbbc880
+a307511193f3ce35a2bdb369ba0434ebebbbc880,a3075111,Merge pull request #137 from brarcher/readme,"Merge pull request #137 from brarcher/readme
+
+README: add translating info",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1502414561,1502414561,"f7b50a72a4c934ef9d5d1fecd90d5349b9020227,f7f358c5c3a77564de4010496ec001cecde17ce9"
+f7f358c5c3a77564de4010496ec001cecde17ce9,f7f358c5,README: add translating info,README: add translating info,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1502414110,1502414110,f7b50a72a4c934ef9d5d1fecd90d5349b9020227
+f7b50a72a4c934ef9d5d1fecd90d5349b9020227,f7b50a72,Merge pull request #135 from brarcher/changelog,"Merge pull request #135 from brarcher/changelog
+
+Update CHANGELOG for v0.11.1, v0.12, v0.13",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1501107516,1501107516,"e822ab0b567919c5aef5f7457a61e42c575ca673,68ce1fe9fd85c5125a5fdb3d5c37f576efd84d1b"
+68ce1fe9fd85c5125a5fdb3d5c37f576efd84d1b,68ce1fe9,"Update CHANGELOG for v0.11.1, v0.12, v0.13","Update CHANGELOG for v0.11.1, v0.12, v0.13",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1501107121,1501107121,e822ab0b567919c5aef5f7457a61e42c575ca673
+e822ab0b567919c5aef5f7457a61e42c575ca673,e822ab0b,Merge pull request #133 from brarcher/pre-v0.13,"Merge pull request #133 from brarcher/pre-v0.13
+
+Update for v0.13",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500991484,1500991484,"0d50ad6d100d666d66e4d295158828d076a4a317,e33ab682a6f1d4044d5afc707b97c20d6aca144b"
+e33ab682a6f1d4044d5afc707b97c20d6aca144b,e33ab682,Update for v0.13,Update for v0.13,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500991099,1500991099,0d50ad6d100d666d66e4d295158828d076a4a317
+0d50ad6d100d666d66e4d295158828d076a4a317,0d50ad6d,Merge pull request #132 from brarcher/check-for-card,"Merge pull request #132 from brarcher/check-for-card
+
+Verify card exists before displaying it",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500820026,1500820026,"3abcb32a75d0beeba9255f76f2aba7a4a2827637,4143e5c28663f312530cdfabac653943a1d65dc1"
+4143e5c28663f312530cdfabac653943a1d65dc1,4143e5c2,Bail if loyalty card could not be found,"Bail if loyalty card could not be found
+
+This case was hit at least once by a user, though the scenario
+is not known. If it is hit, post a message and bail gracefully,
+until the reason can be determined.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500818705,1500818705,15425d51aaadb5dad438983c65f06fc0009100e4
+15425d51aaadb5dad438983c65f06fc0009100e4,15425d51,Add debugging when entering view activity,"Add debugging when entering view activity
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500781390,1500781941,3abcb32a75d0beeba9255f76f2aba7a4a2827637
+3abcb32a75d0beeba9255f76f2aba7a4a2827637,3abcb32a,Merge pull request #130 from brarcher/text-update,"Merge pull request #130 from brarcher/text-update
+
+Change lock/unlock text to say block/unblock",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500431147,1500431147,"29b00e3b5905bdef58ac16d6d588360f848e0772,93124a88a5453a8cf92658dda4dd0f034cc994a3"
+93124a88a5453a8cf92658dda4dd0f034cc994a3,93124a88,Change lock/unlock text to say block/unblock,"Change lock/unlock text to say block/unblock
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500430732,1500430732,29b00e3b5905bdef58ac16d6d588360f848e0772
+29b00e3b5905bdef58ac16d6d588360f848e0772,29b00e3b,Merge pull request #129 from airon90/patch-1,"Merge pull request #129 from airon90/patch-1
+
+Update strings.xml",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500429968,1500429968,"bf60976d10662dc998aeb107b226588e77a7ff13,04174154d6bb47d0405e2d1035157109c5b0c930"
+04174154d6bb47d0405e2d1035157109c5b0c930,04174154,Update strings.xml,"Update strings.xml
+
+Instead of ""Block screen"" I translated ""Block rotation"" because I think it's more intuitive",,,,Michael Moroni,michael.moroni@openmailbox.org,GitHub,noreply@github.com,1500288579,1500288579,bf60976d10662dc998aeb107b226588e77a7ff13
+bf60976d10662dc998aeb107b226588e77a7ff13,bf60976d,Merge pull request #128 from brarcher/lock-orientation,"Merge pull request #128 from brarcher/lock-orientation
+
+Add option to lock screen orientation",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1500255175,1500255175,"ecd2ecd5170cad298a6df7240bc437d9f8bf64a5,fb7e3e12f260cba0831a5d57dc08b4a89a82f75d"
+fb7e3e12f260cba0831a5d57dc08b4a89a82f75d,fb7e3e12,Add menu option to lock screen when viewing card,"Add menu option to lock screen when viewing card
+
+When passing a phone to a clerk to scan the barcode, if the
+phone is rotated and the screen reloads it can be bothersome
+or confusion. To avoid this situation, a new option is
+added to lock the screen.
+
+A menu icon is now added which defaults as unlocked. When
+touched the app sets its orientation to the ""natural"" orientation
+of the device. When touched again the sensor dictates the
+orientation of the device.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500254383,1500254800,641d29a6f883151a4222f47fa4dc85f10cc804b9
+641d29a6f883151a4222f47fa4dc85f10cc804b9,641d29a6,Remove usage of depreated location of ActivityController,"Remove usage of depreated location of ActivityController
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500253576,1500254800,0f2ee296b4e03bf0c6452fe99bb3e4fd90b6bdbf
+0f2ee296b4e03bf0c6452fe99bb3e4fd90b6bdbf,0f2ee296,Remove container class for intro slides,"Remove container class for intro slides
+
+Even with passing a bundle with the layout ID sometimes
+some users will encounter a situation where the _layout
+variable is null. To avoid further issues, creating a
+class for each intro slide, so the layout is encoded
+into the class itself.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1500253558,1500254800,ecd2ecd5170cad298a6df7240bc437d9f8bf64a5
+ecd2ecd5170cad298a6df7240bc437d9f8bf64a5,ecd2ecd5,Merge pull request #127 from brarcher/pre-v0.12,"Merge pull request #127 from brarcher/pre-v0.12
+
+Update for v0.12",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1499914531,1499914531,"f4522fb17d99fadc796cb57613b91f126b0faec4,f3e7d8f5c18a205ba52be925799835dfa2f8b380"
+f3e7d8f5c18a205ba52be925799835dfa2f8b380,f3e7d8f5,Update for v0.12,Update for v0.12,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1499914049,1499914049,f4522fb17d99fadc796cb57613b91f126b0faec4
+f4522fb17d99fadc796cb57613b91f126b0faec4,f4522fb1,Merge pull request #126 from brarcher/scale-barcode,"Merge pull request #126 from brarcher/scale-barcode
+
+Scale barcode height to match reduced width",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1499912043,1499912043,"b6190d32502db2161155a14336474c6a0d629526,824a72b156708973e56fab25bb726fc2e771a1b9"
+824a72b156708973e56fab25bb726fc2e771a1b9,824a72b1,Scale height of barcode to match ratio when reducing width,"Scale height of barcode to match ratio when reducing width
+
+When reducing the pixel size of the width, if the height is not
+scaled to match then 1D barcodes end up being squished and are
+too narrow to scan. To avoid this, scale the height to match.
+Then, when the barcode is loaded into a Bitmap it will scale up
+to the correct size.
+
+It was found that on a Galaxy S4 a barcode width of 400 px started
+to see some blurriness, but 500 px still looked sharp. Reducing
+the maximum width to 500 px.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1499829386,1499829386,116a44fd1c0cf0b7b8f32b6d03832f969f0937c4
+116a44fd1c0cf0b7b8f32b6d03832f969f0937c4,116a44fd,Let BarcodeImageWriterTask's constructor be package private,"Let BarcodeImageWriterTask's constructor be package private
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1499829226,1499829226,b6190d32502db2161155a14336474c6a0d629526
+b6190d32502db2161155a14336474c6a0d629526,b6190d32,Merge pull request #125 from arno-github/patch-3,"Merge pull request #125 from arno-github/patch-3
+
+French update",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1499111748,1499111748,"c6c9fb763ab807aba41b896737523a9f508cef42,82c40408f7bc936dfdc0eb188813d772906d158b"
+82c40408f7bc936dfdc0eb188813d772906d158b,82c40408,French update,French update,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1499109021,1499109021,c6c9fb763ab807aba41b896737523a9f508cef42
+c6c9fb763ab807aba41b896737523a9f508cef42,c6c9fb76,Merge pull request #124 from arno-github/patch-2,"Merge pull request #124 from arno-github/patch-2
+
+Update french translation",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1499049390,1499049390,"d039ad9fa4ea838acf4c7562c6f0aa0f6469a98a,dda5dcc65262bd19b7cdae92263df875e811a6eb"
+dda5dcc65262bd19b7cdae92263df875e811a6eb,dda5dcc6,Update french translation,"Update french translation
+
+Cosmetic changes",,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1499018421,1499018421,d039ad9fa4ea838acf4c7562c6f0aa0f6469a98a
+d039ad9fa4ea838acf4c7562c6f0aa0f6469a98a,d039ad9f,Merge pull request #122 from Entze/master,"Merge pull request #122 from Entze/master
+
+add & refine german translation",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498787042,1498787042,"b38ec7b75310a534ec2a156d251af00e39a4ddce,5c70c98eb998cc4d22f2b95d01224cf2c87b5a5e"
+5c70c98eb998cc4d22f2b95d01224cf2c87b5a5e,5c70c98e,Merge branch 'master' of github.com:brarcher/loyalty-card-locker,"Merge branch 'master' of github.com:brarcher/loyalty-card-locker
+",,,,Lukas Grassauer,entze@grassauer.eu,Lukas Grassauer,entze@grassauer.eu,1498746497,1498746497,"2face21985a804a85f8759012e0e122b339b93fa,b38ec7b75310a534ec2a156d251af00e39a4ddce"
+2face21985a804a85f8759012e0e122b339b93fa,2face219,add missing and revise de translations,"add missing and revise de translations
+",,,,Lukas Grassauer,entze@grassauer.eu,Lukas Grassauer,entze@grassauer.eu,1498746190,1498746190,bdbcaf4b1eb8d68aa12def0c4884f0cc3a204556
+b38ec7b75310a534ec2a156d251af00e39a4ddce,b38ec7b7,Merge pull request #121 from brarcher/pre-v0.11.1,"Merge pull request #121 from brarcher/pre-v0.11.1
+
+Update for v0.11.1",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498745587,1498745587,"bdbcaf4b1eb8d68aa12def0c4884f0cc3a204556,32d5aec76b840c5e5f548de94af672f4fffc1082"
+32d5aec76b840c5e5f548de94af672f4fffc1082,32d5aec7,Update for v0.11.1,Update for v0.11.1,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498704584,1498704584,bdbcaf4b1eb8d68aa12def0c4884f0cc3a204556
+bdbcaf4b1eb8d68aa12def0c4884f0cc3a204556,bdbcaf4b,Merge pull request #120 from brarcher/handleConfigChanges,"Merge pull request #120 from brarcher/handleConfigChanges
+
+handle orientation and resize config change for IntroActivity",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498704530,1498704530,"2d3bd4a375d05c8a66a28a6644f4556f8aaf2af2,f54905f21844e3f6ccaeaa105c19ebee6ed8dd8d"
+f54905f21844e3f6ccaeaa105c19ebee6ed8dd8d,f54905f2,handle orientation and resize config change for IntroActivity,"handle orientation and resize config change for IntroActivity
+
+If orientation and resize are not handled if the screen is
+rotate or resized the IntroSlide fragment loses its layout,
+and when it tries inflates the layout it fails to do so.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1498704093,1498704122,2d3bd4a375d05c8a66a28a6644f4556f8aaf2af2
+2d3bd4a375d05c8a66a28a6644f4556f8aaf2af2,2d3bd4a3,Merge pull request #118 from brarcher/credit,"Merge pull request #118 from brarcher/credit
+
+Add credit for save icon & update copyright string format",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498532196,1498532196,"2b84762b99b567624a100ab41774d0e936e783bb,de4ab954373deb2972c9d908be81a747f6389dcd"
+de4ab954373deb2972c9d908be81a747f6389dcd,de4ab954,Add credit for save icon in about dialog,"Add credit for save icon in about dialog
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1498414537,1498529409,09fba7171077f0d53c5a973b91773c21ec20c7ae
+09fba7171077f0d53c5a973b91773c21ec20c7ae,09fba717,Fix string format for copyright year,"Fix string format for copyright year
+
+The year is an integer, but the format was for a string.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1498414509,1498529409,2b84762b99b567624a100ab41774d0e936e783bb
+2b84762b99b567624a100ab41774d0e936e783bb,2b84762b,Merge pull request #117 from brarcher/changelog,"Merge pull request #117 from brarcher/changelog
+
+Update CHANGELOG for v0.11",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498529258,1498529258,"15cbd5b6413ac0ce967fcd3ac3003efe40211c9c,3a4850d5cf0a4f9eff0d3a106a39a378df24bf74"
+3a4850d5cf0a4f9eff0d3a106a39a378df24bf74,3a4850d5,Merge branch 'master' into changelog,Merge branch 'master' into changelog,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498528786,1498528786,"5bc8a915d64ac5cc37e73030a898b21b8a1c96ae,15cbd5b6413ac0ce967fcd3ac3003efe40211c9c"
+5bc8a915d64ac5cc37e73030a898b21b8a1c96ae,5bc8a915,Update CHANGELOG for v0.11,Update CHANGELOG for v0.11,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498528776,1498528776,e58cbd972e70d294888677e8ede5166b9c9164ea
+15cbd5b6413ac0ce967fcd3ac3003efe40211c9c,15cbd5b6,Merge pull request #116 from brarcher/pre-v0.11,"Merge pull request #116 from brarcher/pre-v0.11
+
+Update for v0.11 release",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498528747,1498528747,"e58cbd972e70d294888677e8ede5166b9c9164ea,d980079d765a4c723f26a8cb92fd13302a13d8df"
+d980079d765a4c723f26a8cb92fd13302a13d8df,d980079d,Update for v0.11 release,Update for v0.11 release,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498527856,1498527856,e58cbd972e70d294888677e8ede5166b9c9164ea
+e58cbd972e70d294888677e8ede5166b9c9164ea,e58cbd97,Merge pull request #112 from brarcher/readme,"Merge pull request #112 from brarcher/readme
+
+Add attribution for save icon in README",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498354695,1498354695,"707306ac8109c183209ea0022e06235776125585,1fbecd439bf9d3256488a1d629451c5b0537e29b"
+1fbecd439bf9d3256488a1d629451c5b0537e29b,1fbecd43,Add attribution for save icon in README,Add attribution for save icon in README,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498184202,1498184202,707306ac8109c183209ea0022e06235776125585
+707306ac8109c183209ea0022e06235776125585,707306ac,Merge pull request #111 from brarcher/readme,"Merge pull request #111 from brarcher/readme
+
+Update README with new screenshots",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498102932,1498102932,"fa33e4873ee733833afd499aa58ed27fef8c7b6f,86152586cd3866e5926f7fc8005f7a3f6ad463bb"
+86152586cd3866e5926f7fc8005f7a3f6ad463bb,86152586,Update README with new screenshots,Update README with new screenshots,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498102329,1498102329,fa33e4873ee733833afd499aa58ed27fef8c7b6f
+fa33e4873ee733833afd499aa58ed27fef8c7b6f,fa33e487,Merge pull request #109 from Airon90/patch-1,"Merge pull request #109 from Airon90/patch-1
+
+Update strings.xml",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498013020,1498013020,"f38a499bd8dcb64b04103a167ddbc39075cf70a8,24e4ef2d9b76af96026989a136497c38904d2355"
+24e4ef2d9b76af96026989a136497c38904d2355,24e4ef2d,Merge branch 'master' into patch-1,Merge branch 'master' into patch-1,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498012504,1498012504,"eac4142392d462088a7d4967c5908d245b1579ba,f38a499bd8dcb64b04103a167ddbc39075cf70a8"
+eac4142392d462088a7d4967c5908d245b1579ba,eac41423,Escape ' in strings.xml,Escape ' in strings.xml,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498011813,1498011813,c8255a26481a3b2c30f645edd55dac6193fa1836
+f38a499bd8dcb64b04103a167ddbc39075cf70a8,f38a499b,Merge pull request #110 from brarcher/french,"Merge pull request #110 from brarcher/french
+
+Update French translations",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1498011705,1498011705,"f28326e36386bb91ea1027732612284efee3d4b7,0b8f52b87ec528f6677741e185346488367e2d4e"
+0b8f52b87ec528f6677741e185346488367e2d4e,0b8f52b8,Update French translations,"Update French translations
+
+Provided by GitHub user arno-github.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1498011267,1498011267,f28326e36386bb91ea1027732612284efee3d4b7
+c8255a26481a3b2c30f645edd55dac6193fa1836,c8255a26,Update strings.xml,"Update strings.xml
+
+Updated Italian (it) translation",,,,Michael Moroni,michael.moroni@openmailbox.org,GitHub,noreply@github.com,1497980473,1497980473,f28326e36386bb91ea1027732612284efee3d4b7
+f28326e36386bb91ea1027732612284efee3d4b7,f28326e3,Merge pull request #108 from brarcher/intro,"Merge pull request #108 from brarcher/intro
+
+First run intro wizard",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497843997,1497843997,"a8eecb8841b1bc78456e400f0bc7396e1bf80f3c,a9952d021b75b68a5567d1b166981fedeb6a2670"
+a9952d021b75b68a5567d1b166981fedeb6a2670,a9952d02,Update to Robolectric 3.3.2,"Update to Robolectric 3.3.2
+
+This is necessary, as Robolectric 3.0 did not work
+with the newer Android SDK. Further, Robolectric 3.3.2
+did not like running tests at SDK 17, so this was
+also bumped.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497843537,1497843542,9274339be8fd42240487c7b528f6273912feb54a
+9274339be8fd42240487c7b528f6273912feb54a,9274339b,Add intro wizard for application,"Add intro wizard for application
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497841307,1497843471,18caa01089ec7821869b07ca1e01dd03da6284ca
+18caa01089ec7821869b07ca1e01dd03da6284ca,18caa010,Move the ic_launcher.xcf file into a separate directory,"Move the ic_launcher.xcf file into a separate directory
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497841226,1497841523,ac495e1bf2cb5a3feeac763321ba9f0d9fef4ac7
+ac495e1bf2cb5a3feeac763321ba9f0d9fef4ac7,ac495e1b,Add missing card add menu,"Add missing card add menu
+
+There was no save button when creating a new card.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497839055,1497841522,a8eecb8841b1bc78456e400f0bc7396e1bf80f3c
+a8eecb8841b1bc78456e400f0bc7396e1bf80f3c,a8eecb88,Merge pull request #107 from brarcher/layout-and-colors,"Merge pull request #107 from brarcher/layout-and-colors
+
+Layout and colors",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497837740,1497837740,"ef33c7a33fb995ccaa74ebe7b89f3e9aec48e974,abdde45669627af54858dfcf9044b31e818c1e2c"
+abdde45669627af54858dfcf9044b31e818c1e2c,abdde456,Update card view layout,"Update card view layout
+
+This layout uses a TableLayout and shows lines dividing the
+different parts of an entry.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497833257,1497833257,13b2faab390e26136ab01b88e0ee0c70bb8a38da
+13b2faab390e26136ab01b88e0ee0c70bb8a38da,13b2faab,Use save button in action bar,"Use save button in action bar
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497808730,1497814660,433d31c30f19e4280e5dfa82b6b357b086749d36
+433d31c30f19e4280e5dfa82b6b357b086749d36,433d31c3,Add super call in onCreateOptionsMenu,"Add super call in onCreateOptionsMenu
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497808699,1497814660,fa7dcd253a7d8d135ba49f9bef7eea7e822fee52
+fa7dcd253a7d8d135ba49f9bef7eea7e822fee52,fa7dcd25,"Change menus names to focus where they are, not what they contain","Change menus names to focus where they are, not what they contain
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497757451,1497814660,ac057f50e2760da2d9f9cd719425bc44295f50cf
+ac057f50e2760da2d9f9cd719425bc44295f50cf,ac057f50,Change color palette to better match icon,"Change color palette to better match icon
+
+The green primary color was a bit of contrast with the icons grey.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497272256,1497814660,ef33c7a33fb995ccaa74ebe7b89f3e9aec48e974
+ef33c7a33fb995ccaa74ebe7b89f3e9aec48e974,ef33c7a3,Merge pull request #106 from brarcher/french-strings,"Merge pull request #106 from brarcher/french-strings
+
+Updated French strings.xml",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497810999,1497810998,"da5f999eed7a07fdfe7d6d41b2e4c6ba67e38f86,6028f7d674b0db6eaa6cfe2576a332e3ab90d311"
+6028f7d674b0db6eaa6cfe2576a332e3ab90d311,6028f7d6,Updated French strings.xml,"Updated French strings.xml
+
+Contributed by arno-github",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497810655,1497810655,da5f999eed7a07fdfe7d6d41b2e4c6ba67e38f86
+da5f999eed7a07fdfe7d6d41b2e4c6ba67e38f86,da5f999e,Merge pull request #104 from brarcher/edit-card,"Merge pull request #104 from brarcher/edit-card
+
+Update ""Enter card"" button if card id exists",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497208418,1497208418,"c173012955331532b043719f28295ac10f268eb6,0a9124c834da6e3191600f0cd8371bf4df96724a"
+0a9124c834da6e3191600f0cd8371bf4df96724a,0a9124c8,"Update ""Enter card"" button if card id exists","Update ""Enter card"" button if card id exists
+
+If someone is editing an existing card, or is adding a card
+and wants to change the value, update the name of the button
+from ""Enter card"" to ""Edit card"", to give the impression that
+a new card id need not by typed from scratch.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497207970,1497207970,c173012955331532b043719f28295ac10f268eb6
+c173012955331532b043719f28295ac10f268eb6,c1730129,Merge pull request #103 from brarcher/limit-width,"Merge pull request #103 from brarcher/limit-width
+
+Limit width of barcodes",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497207927,1497207927,"807ea25ac96c5dd16e85fd2520c72efcbc6210ce,64db9e593d9e4bde7613f5ab18dd59921ce79c34"
+64db9e593d9e4bde7613f5ab18dd59921ce79c34,64db9e59,Limit width of barcodes,"Limit width of barcodes
+
+To reduce the amount of memory used in generating barcodes, limit
+the width of the barcodes to no more than 3x the height.
+This should be plenty sufficient to generate a usable barcode.
+
+On devices with a really long width generating a barcode of 200x2560
+is not useful and can result in an OutOfMemoryError.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497207377,1497207377,acde4ef181cfa281854a28b79951662c20aca756
+acde4ef181cfa281854a28b79951662c20aca756,acde4ef1,Update to zxing 3.3.0 and zxing-android 3.5.0,"Update to zxing 3.3.0 and zxing-android 3.5.0
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1497061914,1497207339,807ea25ac96c5dd16e85fd2520c72efcbc6210ce
+807ea25ac96c5dd16e85fd2520c72efcbc6210ce,807ea25a,Merge pull request #102 from brarcher/privacy-policy,"Merge pull request #102 from brarcher/privacy-policy
+
+Create privacy-policy.md",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497123650,1497123650,"f2c0e3904f4045b577a09e254283ddb6ab76a159,ad4476fead0faa050920ecf1048dde605a4b969f"
+ad4476fead0faa050920ecf1048dde605a4b969f,ad4476fe,Create privacy-policy.md,"Create privacy-policy.md
+
+This is required by Google for apps in the play store
+which use certain permissions, such as the camera.",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1497123205,1497123205,f2c0e3904f4045b577a09e254283ddb6ab76a159
+f2c0e3904f4045b577a09e254283ddb6ab76a159,f2c0e390,Merge pull request #98 from brarcher/travis,"Merge pull request #98 from brarcher/travis
+
+Travis-CI changes",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1495318067,1495318067,"b7e8b8d36eaaec47e90d3931a1ad9a1f33c8ebd4,0eeadbf77f3ab718522a081c62e0f6a79a4a527d"
+0eeadbf77f3ab718522a081c62e0f6a79a4a527d,0eeadbf7,Build only the release variant,"Build only the release variant
+
+Building both debug and release was unnecessary, and only
+increased the time to validate a pull request
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1495301783,1495301783,c0e95bd4dae27d390ae934833b15f533b86b8ab1
+c0e95bd4dae27d390ae934833b15f533b86b8ab1,c0e95bd4,do not emit xml results,"do not emit xml results
+
+gradle will output the failures, so this is unnecessary
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1495301757,1495301757,b7e8b8d36eaaec47e90d3931a1ad9a1f33c8ebd4
+b7e8b8d36eaaec47e90d3931a1ad9a1f33c8ebd4,b7e8b8d3,Merge pull request #96 from brarcher/about,"Merge pull request #96 from brarcher/about
+
+About",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1488854993,1488854993,"29838f4f736e73d02114e7e47698596bfd223af9,2bca8b738afa9cac66e2a63817befebeb7182d6b"
+2bca8b738afa9cac66e2a63817befebeb7182d6b,2bca8b73,Change about dialog info to use map instead of String[][],"Change about dialog info to use map instead of String[][]
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1488742891,1488742939,2b617ceca5c12195cdaaa84df12857ecda9e5dfb
+2b617ceca5c12195cdaaa84df12857ecda9e5dfb,2b617cec,Remove mention of Freepik icons from README,"Remove mention of Freepik icons from README
+
+The main application icon was replaced, and the icon from
+Freepik is no longer used.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1488742830,1488742939,29838f4f736e73d02114e7e47698596bfd223af9
+29838f4f736e73d02114e7e47698596bfd223af9,29838f4f,Merge pull request #95 from brarcher/readme,"Merge pull request #95 from brarcher/readme
+
+Add Google Play badge",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1488604084,1488604084,"c4b860bb3defb12410b97bcda5efde14e82b98ed,1403d4a98e74f5cc48863873540eb0ef5970955c"
+1403d4a98e74f5cc48863873540eb0ef5970955c,1403d4a9,Add Google Play badge,"Add Google Play badge
+
+Adds a Google Play badge and updated the F-Droid badge to match",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1488603403,1488603403,c4b860bb3defb12410b97bcda5efde14e82b98ed
+c4b860bb3defb12410b97bcda5efde14e82b98ed,c4b860bb,Merge pull request #94 from brarcher/pre-populate-enter-card,"Merge pull request #94 from brarcher/pre-populate-enter-card
+
+Pre-populate Barcode Selector",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486957715,1486957715,"596d8994498db931759c2888795dcbec36370388,2768f4c590da5099ac6bb15aec57b4458ae6a63f"
+2768f4c590da5099ac6bb15aec57b4458ae6a63f,2768f4c5,Start with all barcode images visible,"Start with all barcode images visible
+
+If the user enters the barcode selector view with a pre-existing
+id, the barcodes are immediately drawn. However, if the ImageViews
+were invisible their initial size is not known, and as such the
+generated barcode images are fuzzy or not as expected. To avoid this,
+all images are set to be visible. The expectation is that once the
+barcodes are drawn for the first time if they are invalid the images
+will be made invisible anyway.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1486957215,1486957345,8660d4e2186ba1e910e10456cfc6b8b0b91ae919
+8660d4e2186ba1e910e10456cfc6b8b0b91ae919,8660d4e2,Pre-populate card id in Barcode Selector,"Pre-populate card id in Barcode Selector
+
+If a user is attempting to update a card id of an existing card,
+before when the Enter Card button was selected the barcode selector
+view would be empty. To be more useful, the view will now be
+pre-populated with the existing card id.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1486957031,1486957345,596d8994498db931759c2888795dcbec36370388
+596d8994498db931759c2888795dcbec36370388,596d8994,Merge pull request #93 from brarcher/changelog,"Merge pull request #93 from brarcher/changelog
+
+Update changelog for v0.10",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486932805,1486932805,"bbd3782bf203181c1cd7288ba471eef28cc3f7cd,0db5a6f803d92efc4b2d9abfa8b8a23e7dcd01cb"
+0db5a6f803d92efc4b2d9abfa8b8a23e7dcd01cb,0db5a6f8,Update changelog for v0.10,Update changelog for v0.10,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486932020,1486932020,bbd3782bf203181c1cd7288ba471eef28cc3f7cd
+bbd3782bf203181c1cd7288ba471eef28cc3f7cd,bbd3782b,Merge pull request #92 from brarcher/pre-v0.10,"Merge pull request #92 from brarcher/pre-v0.10
+
+Update for v0.10 release",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486931718,1486931718,"ce4dc01c9d15d788811859604ace5677b9f8c0eb,b69f2d470b73131694655af84288a73029fbd591"
+b69f2d470b73131694655af84288a73029fbd591,b69f2d47,Update for v0.10 release,Update for v0.10 release,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486931149,1486931149,ce4dc01c9d15d788811859604ace5677b9f8c0eb
+ce4dc01c9d15d788811859604ace5677b9f8c0eb,ce4dc01c,Merge pull request #91 from brarcher/view-layout,"Merge pull request #91 from brarcher/view-layout
+
+View layout",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1486871038,1486871038,"330b6ecd54102aeaec114525c623457fd6c3c65c,5cea7eba6cd2dc167188a712022e40cf64e7fa30"
+5cea7eba6cd2dc167188a712022e40cf64e7fa30,5cea7eba,Allow text to be selectable in view mode,"Allow text to be selectable in view mode
+
+When text is long clicked it is now selectable, so that one can
+copy it to the clipboard.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1486870365,1486870437,0f7d64bed65d64aa41f735e539ab893688eb1f86
+0f7d64bed65d64aa41f735e539ab893688eb1f86,0f7d64be,Show card data in a TextView when viewing,"Show card data in a TextView when viewing
+
+Earlier when a card was viewed it was shown in an EditView which
+was disabled. This was not optimal, as the resulting text was
+dimmed. To help the text be easier to read, a TextView is now
+used to display the data.
+
+In addition, the layout of the card viewing screen has been adjusted
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1486870046,1486870437,330b6ecd54102aeaec114525c623457fd6c3c65c
+330b6ecd54102aeaec114525c623457fd6c3c65c,330b6ecd,Merge pull request #87 from brarcher/string-correction,"Merge pull request #87 from brarcher/string-correction
+
+String correction",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1485651536,1485651536,"449419b647123fba06bed0ebc1d5c0eb3b5a9b85,3f5bcbb9416aeb4efa37546326fdd2b1eb74e989"
+3f5bcbb9416aeb4efa37546326fdd2b1eb74e989,3f5bcbb9,Add log message when exporting data,"Add log message when exporting data
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1485638361,1485638534,9c74b2a2642828a81dfc3dd6b333b90b32f67d20
+9c74b2a2642828a81dfc3dd6b333b90b32f67d20,9c74b2a2,Correct typo in comment,"Correct typo in comment
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1485638329,1485638534,dfc804fbe5160ad59c8505728731a31f6f26ff5e
+dfc804fbe5160ad59c8505728731a31f6f26ff5e,dfc804fb,"correct ""Use external application"" title","correct ""Use external application"" title
+
+The title mistakenly said filesystem.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1485638305,1485638534,fa73a30bf49239f374c562730a0ffe1104f33016
+fa73a30bf49239f374c562730a0ffe1104f33016,fa73a30b,Use string const for button,"Use string const for button
+
+There is a string for the ""Use external application"" button,
+but it was not used.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484705545,1485638534,449419b647123fba06bed0ebc1d5c0eb3b5a9b85
+449419b647123fba06bed0ebc1d5c0eb3b5a9b85,449419b6,Merge pull request #85 from brarcher/no-download-extras,"Merge pull request #85 from brarcher/no-download-extras
+
+Remove downloading extras during travis build",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484707415,1484707415,"03f97374bd1f37bbc5faa6d55c84602399adeb13,36916b622b5f0932ce27bf66f30a7562ec7207c1"
+36916b622b5f0932ce27bf66f30a7562ec7207c1,36916b62,Remove downloading extras during travis build,"Remove downloading extras during travis build
+
+The application does not use google play and other extra libraries,
+so downloading them during the build should be unnecessary.",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484706350,1484706350,03f97374bd1f37bbc5faa6d55c84602399adeb13
+03f97374bd1f37bbc5faa6d55c84602399adeb13,03f97374,Merge pull request #84 from brarcher/export-filename,"Merge pull request #84 from brarcher/export-filename
+
+Change default import/export file name",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484706275,1484706275,"defb8793f6873071411aefdf8f6d22d70c591ef7,8650878d957639529e6a7107cd275de10c491588"
+8650878d957639529e6a7107cd275de10c491588,8650878d,Change default import/export file name,"Change default import/export file name
+
+The application is now ""Loyalty Card Keychain"", but ""Locker""
+still appears in the application's default import/export
+file. Updating the file to match the new name of the application.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484704550,1484705167,defb8793f6873071411aefdf8f6d22d70c591ef7
+defb8793f6873071411aefdf8f6d22d70c591ef7,defb8793,Merge pull request #83 from brarcher/changelog,"Merge pull request #83 from brarcher/changelog
+
+Update CHANGELOG for v0.9",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484704692,1484704692,"5960f03f9bb8b06ba403b17fc9e59fc603b8f65d,c6b7fd603276547db84d307f80878d3d266591a4"
+c6b7fd603276547db84d307f80878d3d266591a4,c6b7fd60,Update CHANGELOG for v0.9,Update CHANGELOG for v0.9,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484704051,1484704051,5960f03f9bb8b06ba403b17fc9e59fc603b8f65d
+5960f03f9bb8b06ba403b17fc9e59fc603b8f65d,5960f03f,Merge pull request #82 from brarcher/pre-v0.9,"Merge pull request #82 from brarcher/pre-v0.9
+
+Update for release v0.9",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484626057,1484626057,"bfb131c811e35ff7ee20bb517ea63850084aa4b9,b1df0c0baf957098d380a9f6b5c4fbf5d3399f43"
+b1df0c0baf957098d380a9f6b5c4fbf5d3399f43,b1df0c0b,Update for release v0.9,"Update for release v0.9
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484625201,1484625201,4580ee8017303947122f765dacbb3ec8d2becaf5
+bfb131c811e35ff7ee20bb517ea63850084aa4b9,bfb131c8,Merge pull request #81 from brarcher/keychain,"Merge pull request #81 from brarcher/keychain
+
+Update the name ""Locker"" to ""Keychain""",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484625036,1484625036,"d76a6d79d72d763f2852791c14c67e726f89bc4c,4580ee8017303947122f765dacbb3ec8d2becaf5"
+4580ee8017303947122f765dacbb3ec8d2becaf5,4580ee80,"Update the ""Locker"" name to ""Keychain""","Update the ""Locker"" name to ""Keychain""
+
+The icon on the application is no longer a locker, so the
+Locker part of the name no longer makes sense. Changing it
+to Keychain, as it may make more sense.
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484624651,1484624651,d76a6d79d72d763f2852791c14c67e726f89bc4c
+d76a6d79d72d763f2852791c14c67e726f89bc4c,d76a6d79,Merge pull request #76 from brarcher/select-import-file,"Merge pull request #76 from brarcher/select-import-file
+
+Select import file, allow exported file to be sent",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1484623854,1484623854,"87c1bbdbf4dae60b9a0015beab603daaed5a5e12,b38e035fb68da4cd16a09487a45c38f66ca490af"
+b38e035fb68da4cd16a09487a45c38f66ca490af,b38e035f,Allow sending newly exported data,"Allow sending newly exported data
+
+With this change once data is exported it can be sent to
+another application.
+
+Translation contributions:
+Clonewayx: cs
+PanderMusubi: nl
+pbeckmann: de
+Airon90: it
+arno-github : fr
+
+# Conflicts:
+#	app/src/main/res/values-it/strings.xml
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484622373,1484623388,eeb41376c5052993ae38be087586e77966ac9334
+eeb41376c5052993ae38be087586e77966ac9334,eeb41376,Add ability to select file to import,"Add ability to select file to import
+
+To date the only way to import a file is to hope the exported file
+is in the correct location. To remove this requirement, this change
+checks if there are any activities available on the system which
+can look in the file system. If there are, new options for
+importing data will be available.
+
+In addition, the import/export activity's layout was updated,
+adding more explanation.
+
+Translation contributions:
+Clonewayx: cs
+PanderMusubi: nl
+pbeckmann: de
+Airon90: it
+arno-github : fr
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1484622314,1484623388,89f649e5efc2ed8b31fc5671afe8a8830b5a811f
+89f649e5efc2ed8b31fc5671afe8a8830b5a811f,89f649e5,Correct TAG name,"Correct TAG name
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1480995793,1484623388,4bde8f49b155bab2fa14ec2a6e76c63d97578d6f
+4bde8f49b155bab2fa14ec2a6e76c63d97578d6f,4bde8f49,update gradle and android plugin,"update gradle and android plugin
+",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1480882650,1484623388,87c1bbdbf4dae60b9a0015beab603daaed5a5e12
+87c1bbdbf4dae60b9a0015beab603daaed5a5e12,87c1bbdb,Merge pull request #80 from arno-github/arno-github-patch-4,"Merge pull request #80 from arno-github/arno-github-patch-4
+
+New french strings update",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1481386636,1481386636,"8e0a4b978d4376d8cf375c9134b3383a1eff1de5,7029818789015bc7506f1b2f41c32fac7a1851da"
+7029818789015bc7506f1b2f41c32fac7a1851da,70298187,Update strings.xml,Update strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481379041,1481379041,b64c29bf960d7ac0b2a801872be3cea7480c192c
+b64c29bf960d7ac0b2a801872be3cea7480c192c,b64c29bf,Update french strings,Update french strings,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481376613,1481376613,24317f4d99679f748881ea0899da432ad9001cc6
+24317f4d99679f748881ea0899da432ad9001cc6,24317f4d,Update strings.xml,Update strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481376380,1481376380,b9d369903887a5cf89af4d12d16469afb1b7deee
+b9d369903887a5cf89af4d12d16469afb1b7deee,b9d36990,Update strings.xml,Update strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481376079,1481376079,ed3c9ceb50f92835b260f356a9fa8509432996f6
+ed3c9ceb50f92835b260f356a9fa8509432996f6,ed3c9ceb,Update strings.xml,Update strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481375583,1481375583,0a938628cbd93abaa01ac0a14102591fa4feee9c
+0a938628cbd93abaa01ac0a14102591fa4feee9c,0a938628,Update strings.xml,Update strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481367224,1481367224,5720da1581ed9d139a2ff12966e0d925679f1dce
+5720da1581ed9d139a2ff12966e0d925679f1dce,5720da15,Merge pull request #1 from arno-github/arno-github-patch-1,"Merge pull request #1 from arno-github/arno-github-patch-1
+
+Create strings.xml",,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481367123,1481367123,"8e0a4b978d4376d8cf375c9134b3383a1eff1de5,53939038728bf3856b537641cc323c61fc23013f"
+53939038728bf3856b537641cc323c61fc23013f,53939038,Create strings.xml,Create strings.xml,,,,arno-github,arno-github@users.noreply.github.com,GitHub,noreply@github.com,1481367020,1481367020,8e0a4b978d4376d8cf375c9134b3383a1eff1de5
+8e0a4b978d4376d8cf375c9134b3383a1eff1de5,8e0a4b97,Merge pull request #75 from betsythefc/master,"Merge pull request #75 from betsythefc/master
+
+Icon V2",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1481079187,1481079187,"65d0f57358f85aa1b1af9f9a993b53ab6b75d97a,df21c2577df321d521747f523bbbfd80e2ceafe3"
+df21c2577df321d521747f523bbbfd80e2ceafe3,df21c257,Improved icon with keyring hole,"Improved icon with keyring hole
+",,,,betsythefc,bmcnab80+github@gmail.com,betsythefc,bmcnab80+github@gmail.com,1480999672,1480999672,a7d5b6fa0c0c306c9df6093930188a099babc3b8
+a7d5b6fa0c0c306c9df6093930188a099babc3b8,a7d5b6fa,New icon V2,"New icon V2
+",,,,betsythefc,bmcnab80+github@gmail.com,betsythefc,bmcnab80+github@gmail.com,1480966540,1480966540,b49501e66a7aa4e2afde6913c1fa528aa71636de
+b49501e66a7aa4e2afde6913c1fa528aa71636de,b49501e6,Merge remote-tracking branch 'brarcher/master',"Merge remote-tracking branch 'brarcher/master'
+",,,,betsythefc,bmcnab80+github@gmail.com,betsythefc,bmcnab80+github@gmail.com,1480966254,1480966254,"ed4afed5388e788c5fd4eaf90eef7bd3b08bc6e5,65d0f57358f85aa1b1af9f9a993b53ab6b75d97a"
+65d0f57358f85aa1b1af9f9a993b53ab6b75d97a,65d0f573,Merge pull request #62 from techwebpd/patch-1,"Merge pull request #62 from techwebpd/patch-1
+
+Lithuanian strings.xml",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1480782932,1480782932,"007427023b8a655df78ddd1eb551790e917ff054,927ac619123672357ee53a0f40f6ebc389857070"
+927ac619123672357ee53a0f40f6ebc389857070,927ac619,Merge branch 'master' into patch-1,Merge branch 'master' into patch-1,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1480782592,1480782592,"fd2b84f318b32d15b9ebeb382c1d0da2e000f1c4,007427023b8a655df78ddd1eb551790e917ff054"
+fd2b84f318b32d15b9ebeb382c1d0da2e000f1c4,fd2b84f3,Remove string that did not need translating.,Remove string that did not need translating.,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1480782584,1480782584,71777a74fd1c122eb8b0c5d3b08ec6b89f6401ff
+ed4afed5388e788c5fd4eaf90eef7bd3b08bc6e5,ed4afed5,New Icon,"New Icon
+",,,,betsythefc,bmcnab80+github@gmail.com,betsythefc,bmcnab80+github@gmail.com,1480706358,1480706358,007427023b8a655df78ddd1eb551790e917ff054
+007427023b8a655df78ddd1eb551790e917ff054,00742702,Merge pull request #70 from brarcher/changelog,"Merge pull request #70 from brarcher/changelog
+
+Create CHANGELOG.md",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1479872653,1479872653,"151b81daa77bc4e3e3ac8a56123092e7e4cee619,b4ff68eddb10ef768e0b4309d7816569034eba34"
+b4ff68eddb10ef768e0b4309d7816569034eba34,b4ff68ed,Create CHANGELOG.md,"Create CHANGELOG.md
+
+Per-request from:
+https://github.com/brarcher/loyalty-card-locker/issues/48",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1479872149,1479872149,151b81daa77bc4e3e3ac8a56123092e7e4cee619
+151b81daa77bc4e3e3ac8a56123092e7e4cee619,151b81da,Merge pull request #69 from brarcher/pre-v0.8,"Merge pull request #69 from brarcher/pre-v0.8
+
+Update for release v0.8",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1479871295,1479871295,"54a0f89821ef80ed943ed8c878262538341f928d,c090af1c7d4e59a916fad6cdcc51c666f5c9a831"
+c090af1c7d4e59a916fad6cdcc51c666f5c9a831,c090af1c,Update for release v0.8,Update for release v0.8,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1479870809,1479870809,54a0f89821ef80ed943ed8c878262538341f928d
+54a0f89821ef80ed943ed8c878262538341f928d,54a0f898,Merge pull request #66 from lgasp/patch-1,"Merge pull request #66 from lgasp/patch-1
+
+Small update to italian translation ",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1478462878,1478462878,"c49ecdca567956a315eb4a444dad0d6d2936bf2a,f01058d5b8e39907328471e1f211772448877637"
+f01058d5b8e39907328471e1f211772448877637,f01058d5,Update strings.xml,Update strings.xml,,,,lgasp,liviogasp@hotmail.it,GitHub,noreply@github.com,1478341188,1478341188,e01c77681b86d1bdf5eae23201e1cffbe203a3f3
+e01c77681b86d1bdf5eae23201e1cffbe203a3f3,e01c7768,proposing less confusing trnalsation fo r button,"proposing less confusing trnalsation fo r button
+
+""Scan code"" is translated as ""salva tessera"" that corresponds to English ""save card"",  that is similar to the button "" save"" on the same screen.
+""Scansione codice""is a more literal, and hopefully more clear, translational",,,,lgasp,liviogasp@hotmail.it,GitHub,noreply@github.com,1478285334,1478285334,c49ecdca567956a315eb4a444dad0d6d2936bf2a
+c49ecdca567956a315eb4a444dad0d6d2936bf2a,c49ecdca,Merge pull request #57 from pbeckmann/master,"Merge pull request #57 from pbeckmann/master
+
+Add a german translation.",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1478111838,1478111838,"bebab039d71998b14785c36262beb79cb11a2eba,b7672e5247aca8c3d4987d5c692008aa609fb48f"
+b7672e5247aca8c3d4987d5c692008aa609fb48f,b7672e52,Merge branch 'master' into master,Merge branch 'master' into master,,,,Peer Beckmann,pbeckmann@users.noreply.github.com,GitHub,noreply@github.com,1477990218,1477990218,"484f357a8271550243657310a00985a29a23409e,bebab039d71998b14785c36262beb79cb11a2eba"
+71777a74fd1c122eb8b0c5d3b08ec6b89f6401ff,71777a74,Lithuanian strings.xml,"Lithuanian strings.xml
+
+lithuanian translation",,,,techwebpd,techwebpd@riseup.net,GitHub,noreply@github.com,1477661299,1477661299,bebab039d71998b14785c36262beb79cb11a2eba
+bebab039d71998b14785c36262beb79cb11a2eba,bebab039,Merge pull request #60 from brarcher/screenshots,"Merge pull request #60 from brarcher/screenshots
+
+Simplify screenshots in README.md",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1473653406,1473653406,"a9bbf8fb6545014305298bec57a06fbcaaba5e6b,588a573878284a02f19bc37664298de810f297b1"
+588a573878284a02f19bc37664298de810f297b1,588a5738,Simplify screenshots in README.md,Simplify screenshots in README.md,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1473652592,1473652592,a9bbf8fb6545014305298bec57a06fbcaaba5e6b
+a9bbf8fb6545014305298bec57a06fbcaaba5e6b,a9bbf8fb,Merge pull request #59 from brarcher/screenshots,"Merge pull request #59 from brarcher/screenshots
+
+Add screenshots to README.md",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1472413462,1472413462,"9f08d07a6af577af5d445b941177e9e0fd74be67,175135d695e4b61824555150933d42778317c3d7"
+175135d695e4b61824555150933d42778317c3d7,175135d6,Add screenshots to README.md,"Add screenshots to README.md
+
+Requested in:
+https://github.com/brarcher/loyalty-card-locker/issues/56",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1472412623,1472412623,9f08d07a6af577af5d445b941177e9e0fd74be67
+9f08d07a6af577af5d445b941177e9e0fd74be67,9f08d07a,Merge pull request #58 from Clonewayx/patch-1,"Merge pull request #58 from Clonewayx/patch-1
+
+Czech translation",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1472320147,1472320147,"e32b40a0248799c7145fd3fb92d2fbb397f3d147,07f50b15441b5cf2eaebed061942bbf33e276df1"
+07f50b15441b5cf2eaebed061942bbf33e276df1,07f50b15,Update and rename  	strings.xml to strings.xml,"Update and rename  	strings.xml to strings.xml
+
+remove untranslatable line",,,,Clonewayx,Clonewayx@users.noreply.github.com,GitHub,noreply@github.com,1472313840,1472313840,584064a4a28d0d61f8e6f555fe910d7d33904c0b
+584064a4a28d0d61f8e6f555fe910d7d33904c0b,584064a4,Czech translation,Czech translation,,,,Clonewayx,Clonewayx@users.noreply.github.com,GitHub,noreply@github.com,1472273892,1472273892,e32b40a0248799c7145fd3fb92d2fbb397f3d147
+484f357a8271550243657310a00985a29a23409e,484f357a,Add a german translation.,"Add a german translation.
+",,,,Peer Beckmann,peer@pbeckmann.de,Peer Beckmann,peer@pbeckmann.de,1472147512,1472147875,e32b40a0248799c7145fd3fb92d2fbb397f3d147
+e32b40a0248799c7145fd3fb92d2fbb397f3d147,e32b40a0,Merge pull request #55 from brarcher/delete-confirmation,"Merge pull request #55 from brarcher/delete-confirmation
+
+Delete confirmation",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1469189055,1469189055,"925f7805992261bd3a50068505e5b5950b6ddfdf,010b88d477283ac9022eadcd60f77171ed3739ab"
+010b88d477283ac9022eadcd60f77171ed3739ab,010b88d4,Attempt to force travis builds on non-container infrastructure,"Attempt to force travis builds on non-container infrastructure
+
+There is an issue with running the travis builds. The root
+cause is unknown. Attempting to use the non-container
+version of the infrastructure to see if the issue persists.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1469026400,1469188583,fe0bb7b870fa4fdcef807aa04a10ecfc09fa0d9f
+fe0bb7b870fa4fdcef807aa04a10ecfc09fa0d9f,fe0bb7b8,Add a confirmation before deleting card,"Add a confirmation before deleting card
+
+https://github.com/brarcher/loyalty-card-locker/issues/53
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1468986471,1469188582,925f7805992261bd3a50068505e5b5950b6ddfdf
+925f7805992261bd3a50068505e5b5950b6ddfdf,925f7805,Merge pull request #54 from brarcher/screen-brightness,"Merge pull request #54 from brarcher/screen-brightness
+
+Adjust brightness to its maximum when displaying a card",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1468987482,1468987482,"5965b822511a46c4e2158b922b79f93031e98119,9492d206d9a6dddd26438b5a9f730fde533a8b54"
+9492d206d9a6dddd26438b5a9f730fde533a8b54,9492d206,Adjust brightness to its maximum when displaying a card,"Adjust brightness to its maximum when displaying a card
+
+Some users have mentioned that a barcode scanner has the best
+success when the screen is at its brightest. To enable the best
+results, the screen brightness will now be adjusted to its
+maximum when displaying a loyalty card.
+
+https://github.com/brarcher/loyalty-card-locker/issues/21
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1468986156,1468986156,a32415b4d2ffaded6a9f73ec67643363d3e0ad40
+a32415b4d2ffaded6a9f73ec67643363d3e0ad40,a32415b4,Reduce the number of cards tested in import/export tests,"Reduce the number of cards tested in import/export tests
+
+There is no need to have so many cards tested in the test, just
+a few will do to prove the point.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1468619598,1468986091,5965b822511a46c4e2158b922b79f93031e98119
+5965b822511a46c4e2158b922b79f93031e98119,5965b822,Merge pull request #51 from brarcher/pre-v0.7,"Merge pull request #51 from brarcher/pre-v0.7
+
+Update for release v0.7",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1468526410,1468526410,"6befc99ccc2eca789764fbb6730a5451a601689b,a5650e6382215d565c4553ce83e95e7c93fa18bf"
+a5650e6382215d565c4553ce83e95e7c93fa18bf,a5650e63,Update for release v0.7,Update for release v0.7,,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1468525055,1468525055,6befc99ccc2eca789764fbb6730a5451a601689b
+6befc99ccc2eca789764fbb6730a5451a601689b,6befc99c,Merge pull request #50 from brarcher/id-to-clipboard,"Merge pull request #50 from brarcher/id-to-clipboard
+
+Copy card id to clipboard",,,,Branden Archer,b.m.archer4@gmail.com,GitHub,noreply@github.com,1468522580,1468522580,"f2f56b06dd188f0f8412c8d01c1d2966580184da,0e124b2550903543e9156109f79e8749e5b859c7"
+0e124b2550903543e9156109f79e8749e5b859c7,0e124b25,Allow long-click of card to copy id to clipboard,"Allow long-click of card to copy id to clipboard
+
+https://github.com/brarcher/loyalty-card-locker/issues/49
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1466473617,1468517922,06a7db0e6dbc9ebbb7c89ecd2629866455e65a09
+06a7db0e6dbc9ebbb7c89ecd2629866455e65a09,06a7db0e,Update Android gradle plugin to 2.1.2,"Update Android gradle plugin to 2.1.2
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1468502524,1468517922,f2f56b06dd188f0f8412c8d01c1d2966580184da
+f2f56b06dd188f0f8412c8d01c1d2966580184da,f2f56b06,Merge pull request #47 from brarcher/back-button,"Merge pull request #47 from brarcher/back-button
+
+Let pushing back button in menu end import/export activity",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1464318742,1464318742,"bbe6ec37419988d47102c253cfb1aeea3efd636a,518f339c7afa9cd04ebfc9087bfbe6beba0390a4"
+518f339c7afa9cd04ebfc9087bfbe6beba0390a4,518f339c,Let pushing back button in menu end import/export activity,"Let pushing back button in menu end import/export activity
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1464090721,1464090904,bbe6ec37419988d47102c253cfb1aeea3efd636a
+bbe6ec37419988d47102c253cfb1aeea3efd636a,bbe6ec37,Merge pull request #46 from brarcher/pre-v0.6,"Merge pull request #46 from brarcher/pre-v0.6
+
+Update for release v0.6",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1464008886,1464008886,"19bd64c48c0b6fe97fe1c8f1210fecbbc6458049,18310fdd250b1402c6ca636159921b5c9b8fa88d"
+18310fdd250b1402c6ca636159921b5c9b8fa88d,18310fdd,Update for release v0.6,Update for release v0.6,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1464007947,1464007947,19bd64c48c0b6fe97fe1c8f1210fecbbc6458049
+19bd64c48c0b6fe97fe1c8f1210fecbbc6458049,19bd64c4,Merge pull request #44 from brarcher/manual-barcode-entry,"Merge pull request #44 from brarcher/manual-barcode-entry
+
+Allow manual barcode entry",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1464007888,1464007888,"227af54de7634e8fcda10bbeaa912e5f07295472,c86819fc7447f61d582daa20c96fb65d85d0a409"
+c86819fc7447f61d582daa20c96fb65d85d0a409,c86819fc,Allow user to enter a barcode manually,"Allow user to enter a barcode manually
+
+If a user is unable to scan a barcode, this commit allows a
+user to enter is manually.
+
+If the user selects to Enter Card instead of Capture Card,
+the user may enter the card's id. As it may not be known which barcode
+format the user expects, and the user may not know what barcode
+type is what, all barcode types are generated from the user
+input. Those that are valid are displayed to the user. The user
+may then select the barcode image which matches what the user wants.
+
+Italian translations provided by Michael Moroni (Airon90)
+Dutch translations provided by PanderMusubi
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1464007432,1464007432,8edc9ce5fd4c79016ad1196247d7a73a279effc0
+8edc9ce5fd4c79016ad1196247d7a73a279effc0,8edc9ce5,Set barcode image visibility upon completion,"Set barcode image visibility upon completion
+
+If the barcode generation succeeds set it as visible, otherwise
+make it gone.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885577,1463885888,a3a5a3a8dbb0516737e21f5f5d742ab4f5b9c118
+a3a5a3a8dbb0516737e21f5f5d742ab4f5b9c118,a3a5a3a8,Remove GlobalLayoutListener when no longer needed,"Remove GlobalLayoutListener when no longer needed
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885457,1463885888,793247a48c3a15467a4305b2468c34c653388216
+793247a48c3a15467a4305b2468c34c653388216,793247a4,Remove unused context,"Remove unused context
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885421,1463885888,2f86de4c1b4f90e3621e7df0dc67859e05085800
+2f86de4c1b4f90e3621e7df0dc67859e05085800,2f86de4c,Protect against unexpected failures when encoding barcodes,"Protect against unexpected failures when encoding barcodes
+
+It was observed that some barcode encoders will fail if the
+data passed to them is not valid for the format. For example,
+the ITF encoder will throw an ArrayIndexOutOfBoundsException
+on the input ""this is a test"".
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885406,1463885888,0aa18042583b8cb8db52f82a3df2826c72b8e6c2
+0aa18042583b8cb8db52f82a3df2826c72b8e6c2,0aa18042,Allow home button to back out to previous activity,"Allow home button to back out to previous activity
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885080,1463885888,1c8ef34b8a2d5c2c7567aded75ff93597d8795e4
+1c8ef34b8a2d5c2c7567aded75ff93597d8795e4,1c8ef34b,Remove unneeded parentActivtyName attributes,"Remove unneeded parentActivtyName attributes
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463885034,1463885888,3fd45af7d95ccdcfced410f96386f1330b884031
+3fd45af7d95ccdcfced410f96386f1330b884031,3fd45af7,Add dependency on Guava,"Add dependency on Guava
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463884898,1463885888,227af54de7634e8fcda10bbeaa912e5f07295472
+227af54de7634e8fcda10bbeaa912e5f07295472,227af54d,Merge pull request #43 from brarcher/datamatrix-scaling,"Merge pull request #43 from brarcher/datamatrix-scaling
+
+Datamatrix scaling",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1463870817,1463870817,"b8d4eaacad97c1adbffd8534f263b937898d888f,b89c5eb91c259bd7b57a7af60b93c557429c656a"
+b89c5eb91c259bd7b57a7af60b93c557429c656a,b89c5eb9,Change padding of card list on main screen,"Change padding of card list on main screen
+
+The entire space for the ListView was not being used, which
+appeared odd.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463869891,1463869949,cecec15762b4054fc53bf2c69bcafbac2f4ce9b1
+cecec15762b4054fc53bf2c69bcafbac2f4ce9b1,cecec157,Scale barcodes to ImageView's size without filtering,"Scale barcodes to ImageView's size without filtering
+
+It turns out that the library used to create datamatrix barcodes
+returns the smallest image necessary to contain the barcode. That
+is, the size passed into the barcode writer. If the ImageView
+scales the tiny image itself into the full size it will use
+bi-linear filtering, which results in a blurry barcode.
+
+To avoid this, if scaling is needed do so without using filtering.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463869581,1463869949,dc4a41088c01a365ab14d9ed5951f504c0fa3c12
+dc4a41088c01a365ab14d9ed5951f504c0fa3c12,dc4a4108,Generate barcode after ImageView size is known,"Generate barcode after ImageView size is known
+
+The size of the ImageView may not yet be known when the
+barcode generation is needed. If this is the case, wait
+until the final layout is complete then start the
+barcode generation.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463869388,1463869949,b91d4c934a664e06f4b5c41a1b198d56f0c8e1b9
+b91d4c934a664e06f4b5c41a1b198d56f0c8e1b9,b91d4c93,Generate barcode in an AsyncTask,"Generate barcode in an AsyncTask
+
+This change moves the generation of the barcode into its
+own async task. In addition, the size of the ImageView is
+used to determine the barcode size to use.
+
+There will be cases when the size of the ImageView will not
+be known when the barcode generation starts. This will be resolved
+in a future commit.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463869313,1463869949,b8d4eaacad97c1adbffd8534f263b937898d888f
+b8d4eaacad97c1adbffd8534f263b937898d888f,b8d4eaac,Merge pull request #42 from brarcher/min-sdk-11,"Merge pull request #42 from brarcher/min-sdk-11
+
+Reduce min SDK version to 11",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1463523791,1463523791,"14972c9cc964d978916698cf3dad271bbdc9cefe,0a7d5d89cf864a25e81d286bce20d2e8173eef4d"
+0a7d5d89cf864a25e81d286bce20d2e8173eef4d,0a7d5d89,Reduce min SDK version to 11,"Reduce min SDK version to 11
+
+The selection of SDK 17 was arbitrarily based on the version
+available on my device at the time. As no APIs are being used
+at that level, a lower SDK version can be targeted.
+
+According to the current distribution of Android device versions,
+99.9% of devices are at SDK 11+. Changing to this for the min SDK
+for now.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463509840,1463509840,7bbcc52ba6f61c1d259aaac2fb0d89e028fbe4d1
+7bbcc52ba6f61c1d259aaac2fb0d89e028fbe4d1,7bbcc52b,Remove usage of emulator in Travis-CI,"Remove usage of emulator in Travis-CI
+
+The emulator was never used, no reason to download it on every build
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463446537,1463455591,14972c9cc964d978916698cf3dad271bbdc9cefe
+14972c9cc964d978916698cf3dad271bbdc9cefe,14972c9c,Merge pull request #40 from brarcher/pre-v0.5,"Merge pull request #40 from brarcher/pre-v0.5
+
+Update for release v0.5",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1463447718,1463447718,"f4f22055fc0916ae3f875ac95d601397e5448a8e,213d1f64a6f2d4316e40b0c3e205bb307972d498"
+213d1f64a6f2d4316e40b0c3e205bb307972d498,213d1f64,Update for release v0.5,Update for release v0.5,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1463447189,1463447189,f4f22055fc0916ae3f875ac95d601397e5448a8e
+f4f22055fc0916ae3f875ac95d601397e5448a8e,f4f22055,Merge pull request #38 from brarcher/import-export,"Merge pull request #38 from brarcher/import-export
+
+Add support for backing up cards to CSV file on external storage",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1463446838,1463446838,"7b2d022e9203107f003232badbaf47725f17f03f,b99704a3d8a28a091f7feaf5d8b68e54e37ec229"
+b99704a3d8a28a091f7feaf5d8b68e54e37ec229,b99704a3,Add an About page,"Add an About page
+
+This about page layout is borrowed from K-9 Mail:
+https://github.com/k9mail
+
+Italian translations provided by Airon90.
+Dutch translations provided by PanderMusubi.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463439768,1463446319,715d726ea349967d916d2f707cbdd931c80f2d18
+715d726ea349967d916d2f707cbdd931c80f2d18,715d726e,Update Gradle to 2.10,"Update Gradle to 2.10
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463108213,1463446319,8b887a2ee9d0926d30e339ee1d1ecbe5c6dc9c8b
+8b887a2ee9d0926d30e339ee1d1ecbe5c6dc9c8b,8b887a2e,Update Gradle Android plugin to 2.0.0,"Update Gradle Android plugin to 2.0.0
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463108204,1463446319,0248df532a986f5be63af1bcd2327220260e6d20
+0248df532a986f5be63af1bcd2327220260e6d20,0248df53,Use gradle wrapper script on Travis-CI,"Use gradle wrapper script on Travis-CI
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463109422,1463446319,8c83b85cea155a57b56e564c140e91788ca4ddad
+8c83b85cea155a57b56e564c140e91788ca4ddad,8c83b85c,Request external storage permission if necessary,"Request external storage permission if necessary
+
+Starting on Android 6.0 permissions may be requested at
+runtime. To allow import/exporting on 6.0+, request permission
+to external storage.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463109192,1463446319,b8f3d891ea4d5b14e54e5152e313a17d66b2c3a3
+b8f3d891ea4d5b14e54e5152e313a17d66b2c3a3,b8f3d891,Allow user to import/export cards to/from CSV on external storage,"Allow user to import/export cards to/from CSV on external storage
+
+Italian translations provided by Airon90.
+Dutch translations provided by PanderMusubi
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463108175,1463446319,20338eb09bf456abefaceb8c13021afca8c17cc3
+20338eb09bf456abefaceb8c13021afca8c17cc3,20338eb0,Add task for importing/exporting,"Add task for importing/exporting
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463108058,1463446319,ce272fe7f13c998001f30227f6e04c4bba8ad63e
+ce272fe7f13c998001f30227f6e04c4bba8ad63e,ce272fe7,Add ability to import/export cards to/from CSV,"Add ability to import/export cards to/from CSV
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463108032,1463446319,fb34fb7451604bb618bc2070253778c01056233c
+fb34fb7451604bb618bc2070253778c01056233c,fb34fb74,Add call for writing card entry to specific id,"Add call for writing card entry to specific id
+
+This will be necessary when importing card entries later
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1463107911,1463446319,7b2d022e9203107f003232badbaf47725f17f03f
+7b2d022e9203107f003232badbaf47725f17f03f,7b2d022e,Merge pull request #35 from brarcher/gradle-wrappers,"Merge pull request #35 from brarcher/gradle-wrappers
+
+Add wrapper scripts and instructions for building",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1461331669,1461331669,"d46b3c0810d37cee5573b36d8a5cce9497f480ba,283858a6e3d7001b919e0d37b11ddfd82871d076"
+283858a6e3d7001b919e0d37b11ddfd82871d076,283858a6,Add wrapper scripts and instructions for building,"Add wrapper scripts and instructions for building
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1461329891,1461329918,d46b3c0810d37cee5573b36d8a5cce9497f480ba
+d46b3c0810d37cee5573b36d8a5cce9497f480ba,d46b3c08,Merge pull request #31 from brarcher/note-translation,"Merge pull request #31 from brarcher/note-translation
+
+Update Italian translation for note",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1460466294,1460466294,"b2e333c37920c3351633131b5bca997bf9d0928d,a2ff1a9e05c726c39e18cb9eb7e5fbe46183cfac"
+a2ff1a9e05c726c39e18cb9eb7e5fbe46183cfac,a2ff1a9e,Update Italian translation for note,"Update Italian translation for note
+
+Airon90 mentioned that although ""Nota"" is Italian for ""Note"", it would be better to use the plural
+form ""Note"" here.",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1460465885,1460465885,b2e333c37920c3351633131b5bca997bf9d0928d
+b2e333c37920c3351633131b5bca997bf9d0928d,b2e333c3,Merge pull request #30 from brarcher/pre-v0.4,"Merge pull request #30 from brarcher/pre-v0.4
+
+Update for release v0.4",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1460255190,1460255190,"fc3302219ea013dd5ac8c49c679ebd3060ca5b96,2b058ee7660e9294e5eb8ce7b0c36dc789573ad6"
+2b058ee7660e9294e5eb8ce7b0c36dc789573ad6,2b058ee7,Update for release v0.4,Update for release v0.4,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1460254883,1460254883,fc3302219ea013dd5ac8c49c679ebd3060ca5b96
+fc3302219ea013dd5ac8c49c679ebd3060ca5b96,fc330221,Merge pull request #29 from brarcher/note-field,"Merge pull request #29 from brarcher/note-field
+
+Add a note field",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1460254715,1460254715,"d12edd06a4dc006be3d4f63f560f2972637b21c1,e0a77e9628ea8574c96d5a1f330363021d3c012e"
+e0a77e9628ea8574c96d5a1f330363021d3c012e,e0a77e96,display store and note on card summary view,"display store and note on card summary view
+
+Dutch translation provided by PanderMusubi
+
+Related issues:
+https://github.com/brarcher/loyalty-card-locker/issues/23
+https://github.com/brarcher/loyalty-card-locker/issues/24
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1460254280,1460254280,f6f749de1c1e38aa1b17458279212063f6a5f689
+f6f749de1c1e38aa1b17458279212063f6a5f689,f6f749de,Use multi exception catch for idential exceptions,"Use multi exception catch for idential exceptions
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1458511020,1458511551,61dec10e744c7a5fd479509975843bb526a29734
+61dec10e744c7a5fd479509975843bb526a29734,61dec10e,Do not overwrite store field when capturing barcode,"Do not overwrite store field when capturing barcode
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1458510995,1458511551,9306e1a3d948139c7b0eca3d8a5573c954baaabd
+9306e1a3d948139c7b0eca3d8a5573c954baaabd,9306e1a3,Add ability to store a note with loyalty card,"Add ability to store a note with loyalty card
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1458510971,1458511551,62e4fa402ca740c3a5262b79f750e3ce646efb52
+62e4fa402ca740c3a5262b79f750e3ce646efb52,62e4fa40,split parts of test into separate methods,"split parts of test into separate methods
+
+in the future additional tests will be added, and this will
+allow for more reuse
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1458510410,1458511551,d12edd06a4dc006be3d4f63f560f2972637b21c1
+d12edd06a4dc006be3d4f63f560f2972637b21c1,d12edd06,Merge pull request #28 from brarcher/dutch,"Merge pull request #28 from brarcher/dutch
+
+Add Dutch translations",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1458183748,1458183748,"34faf18deb0266d8dffb494af95e4699615d89ae,4a8bc4744dd362566dd2cd35102c5b540b0e7cda"
+4a8bc4744dd362566dd2cd35102c5b540b0e7cda,4a8bc474,Add Dutch translations,"Add Dutch translations
+
+These are provided by PanderMusubi
+
+https://github.com/brarcher/loyalty-card-locker/issues/27
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1458183271,1458183271,8c371751a72f90e86c49a1469efd18b17b00af9a
+34faf18deb0266d8dffb494af95e4699615d89ae,34faf18d,Merge pull request #26 from brarcher/edit-name,"Merge pull request #26 from brarcher/edit-name
+
+Edit name",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1457835978,1457835978,"77afaf1a3d2779b436db3892e45d352872f49194,8c371751a72f90e86c49a1469efd18b17b00af9a"
+8c371751a72f90e86c49a1469efd18b17b00af9a,8c371751,Allow store name to be editable after creation,"Allow store name to be editable after creation
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1457751206,1457751218,c21c81f2c72a9dd3c802cdff9fadd99487c9d8b2
+c21c81f2c72a9dd3c802cdff9fadd99487c9d8b2,c21c81f2,Correct names of unit tests,"Correct names of unit tests
+
+Some of the tests mentioned ""Gift"" cards, but should mention
+""Loyalty"" cards instead. Additionally, made one unit test's
+intention more clear.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1457748982,1457751218,77afaf1a3d2779b436db3892e45d352872f49194
+77afaf1a3d2779b436db3892e45d352872f49194,77afaf1a,Merge pull request #22 from brarcher/findbugs,"Merge pull request #22 from brarcher/findbugs
+
+enable findbugs in travis-ci build",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1456003764,1456003764,"5bc992f7f85d22ec3456ebce36638c60ff451c21,eb61f81b5275255c58b2f8d23d27524d3b2e4162"
+eb61f81b5275255c58b2f8d23d27524d3b2e4162,eb61f81b,cat unit test failure report if failures found,"cat unit test failure report if failures found
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455994050,1455994050,0289720c093c1a0e61b6461971fd5a4189c08544
+0289720c093c1a0e61b6461971fd5a4189c08544,0289720c,enable findbugs during travis-ci build,"enable findbugs during travis-ci build
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455994013,1455994013,5f2e3a5e1d64e4e2c40d8c44a817a05d946f7fa2
+5f2e3a5e1d64e4e2c40d8c44a817a05d946f7fa2,5f2e3a5e,Change inner class to be static,"Change inner class to be static
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455993037,1455993094,5bc992f7f85d22ec3456ebce36638c60ff451c21
+5bc992f7f85d22ec3456ebce36638c60ff451c21,5bc992f7,Merge pull request #15 from brarcher/readme,"Merge pull request #15 from brarcher/readme
+
+mention barcode types in README.md",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455190337,1455190337,"9593b94a2ba59aba988c8776989da4c6d4ef39a1,a2ab434d015162314cee72dc57e34b2f091b43be"
+a2ab434d015162314cee72dc57e34b2f091b43be,a2ab434d,Merge branch 'master' into readme,Merge branch 'master' into readme,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455172563,1455172563,"c6967f6a3f1858d193ec97770ea475eaf1d05dd5,9593b94a2ba59aba988c8776989da4c6d4ef39a1"
+9593b94a2ba59aba988c8776989da4c6d4ef39a1,9593b94a,Merge pull request #16 from brarcher/pre-v0.3,"Merge pull request #16 from brarcher/pre-v0.3
+
+update version for next release",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455172556,1455172556,"a8ca5470c79de805b044f58eed1126ae01a90a70,075a440e4f630a6b0a09c9ccc8626f8241942b9d"
+075a440e4f630a6b0a09c9ccc8626f8241942b9d,075a440e,update version for next release,update version for next release,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455172212,1455172212,a8ca5470c79de805b044f58eed1126ae01a90a70
+c6967f6a3f1858d193ec97770ea475eaf1d05dd5,c6967f6a,mention barcode types in README.md,mention barcode types in README.md,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455172170,1455172170,a8ca5470c79de805b044f58eed1126ae01a90a70
+a8ca5470c79de805b044f58eed1126ae01a90a70,a8ca5470,Merge pull request #14 from brarcher/update-zxing-android-embedded,"Merge pull request #14 from brarcher/update-zxing-android-embedded
+
+update zxing-android-embedded to latest release",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455171761,1455171761,"c51531e367f5ed1956ba07e1d0959e4add845933,4d277eff51285ea91b23b7eaca630a6a170c51eb"
+4d277eff51285ea91b23b7eaca630a6a170c51eb,4d277eff,update zxing-android-embedded to latest release,"update zxing-android-embedded to latest release
+
+there was an issue with requesting camera permission
+for Android 6 which was resolved in release 3.2.0.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455170365,1455170402,c51531e367f5ed1956ba07e1d0959e4add845933
+c51531e367f5ed1956ba07e1d0959e4add845933,c51531e3,Merge pull request #13 from brarcher/all-barcodes,"Merge pull request #13 from brarcher/all-barcodes
+
+All barcodes",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1455158961,1455158961,"dd0bb18234360cde57246e3ffba906a3149b0ba0,5e57d66daa38ef197dba80030aca5586205cf155"
+5e57d66daa38ef197dba80030aca5586205cf155,5e57d66d,Do not bring up keyboard in view activity,"Do not bring up keyboard in view activity
+
+Typically one will open the view activity to bring up a
+barcode, and the keyboard is not expected. Disable the
+keyboard until an editable field is selected.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455158446,1455158577,73aff4aeb83df49eedacb86b2ec36ce469f21963
+73aff4aeb83df49eedacb86b2ec36ce469f21963,73aff4ae,Support all barcodes zxing can generate,"Support all barcodes zxing can generate
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455158252,1455158577,e6241b5a47a4bc3528df9e6df4a15d6dbb7151b7
+e6241b5a47a4bc3528df9e6df4a15d6dbb7151b7,e6241b5a,"Update to using latest zxing library release, 3.2.1","Update to using latest zxing library release, 3.2.1
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1455157755,1455158577,dd0bb18234360cde57246e3ffba906a3149b0ba0
+dd0bb18234360cde57246e3ffba906a3149b0ba0,dd0bb182,Merge pull request #9 from brarcher/pre-v0.2,"Merge pull request #9 from brarcher/pre-v0.2
+
+Update version information for release",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454900449,1454900449,"63e0356ddd1371935bb8a9d44041d47d3a9d1ea8,35c778eadcbe5cc8e17adf50975e91e345bd88a0"
+35c778eadcbe5cc8e17adf50975e91e345bd88a0,35c778ea,Update version information for release,Update version information for release,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454900162,1454900162,63e0356ddd1371935bb8a9d44041d47d3a9d1ea8
+63e0356ddd1371935bb8a9d44041d47d3a9d1ea8,63e0356d,Merge pull request #8 from brarcher/camera-permission,"Merge pull request #8 from brarcher/camera-permission
+
+Camera permission",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454878270,1454878270,"cdbbf9222abf8decd78552404651eab544d0c0df,9820bca3159d1b823c8fd52f8a897be516c7a678"
+9820bca3159d1b823c8fd52f8a897be516c7a678,9820bca3,declare usage of the auto focus feature for the camera,"declare usage of the auto focus feature for the camera
+
+The zxing library will attempt to use auto focus on the camera,
+if available.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454877487,1454877487,2e457dc06eefe07fae19d454092f61bd6d4ba337
+2e457dc06eefe07fae19d454092f61bd6d4ba337,2e457dc0,Add permission for using camera,"Add permission for using camera
+
+The zxing library will need this permission to work
+correctly.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454877460,1454877460,8bfd0f12157b133e4d0536966f47104a5ad43aaa
+8bfd0f12157b133e4d0536966f47104a5ad43aaa,8bfd0f12,Use multiple lines to declare features and permissions,"Use multiple lines to declare features and permissions
+
+This is for readability.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454877435,1454877435,96c665a539b4308b828427f5662a407082a195bd
+cdbbf9222abf8decd78552404651eab544d0c0df,cdbbf922,Merge pull request #7 from brarcher/1d-barcodes,"Merge pull request #7 from brarcher/1d-barcodes
+
+Support scanning all types of 1D barcodes",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454530607,1454530607,"c0e8a33605c02bd3c240cbc0cf9d7e572056d02f,96c665a539b4308b828427f5662a407082a195bd"
+96c665a539b4308b828427f5662a407082a195bd,96c665a5,Support scanning all types of 1D barcodes,"Support scanning all types of 1D barcodes
+
+There are loyalty cards which are not product codes but are 1D
+barcodes. Enabling support for all types of 1D barcodes to
+enable more types of loyalty cards.
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454530162,1454530194,c0e8a33605c02bd3c240cbc0cf9d7e572056d02f
+c0e8a33605c02bd3c240cbc0cf9d7e572056d02f,c0e8a336,Merge pull request #6 from brarcher/readme,"Merge pull request #6 from brarcher/readme
+
+Add F-Droid icon and fix grammer in README.md",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454471508,1454471508,"41590706b51ff9558ca9f56c19c47a8a3b99c3af,fb96dfc8acff87cc2dc4232f8800d50af03c1ad9"
+fb96dfc8acff87cc2dc4232f8800d50af03c1ad9,fb96dfc8,Add F-Droid icon and fix grammer in README.md,Add F-Droid icon and fix grammer in README.md,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454470040,1454470040,41590706b51ff9558ca9f56c19c47a8a3b99c3af
+41590706b51ff9558ca9f56c19c47a8a3b99c3af,41590706,Merge pull request #2 from Airon90/patch-1,"Merge pull request #2 from Airon90/patch-1
+
+Create strings.xml for Italian translation",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454268255,1454268255,"7638b0fff3f3c941162532ac45a5cd93e8ae9b97,59a7976ad5b9bd8492461da9a83be34e51950050"
+59a7976ad5b9bd8492461da9a83be34e51950050,59a7976a,Update strings.xml,"Update strings.xml
+
+fix",,,,Michael Moroni,michael.moroni@openmailbox.org,Michael Moroni,michael.moroni@openmailbox.org,1454247316,1454247316,281fc30418a94dc26c741a22f3a490db9d93f457
+281fc30418a94dc26c741a22f3a490db9d93f457,281fc304,Create strings.xml,"Create strings.xml
+
+Added Italian translation",,,,Michael Moroni,michael.moroni@openmailbox.org,Michael Moroni,michael.moroni@openmailbox.org,1454245777,1454245777,7638b0fff3f3c941162532ac45a5cd93e8ae9b97
+7638b0fff3f3c941162532ac45a5cd93e8ae9b97,7638b0ff,Merge pull request #1 from brarcher/initial,"Merge pull request #1 from brarcher/initial
+
+Initial commit of application",,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1454205789,1454205789,"439e226a8038241b501e20cfffb2797f0ab77705,265d24c95d5f04e949983cab05040fbaf9e2a5d1"
+265d24c95d5f04e949983cab05040fbaf9e2a5d1,265d24c9,Initial commit of application,"Initial commit of application
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454205030,1454205030,439e226a8038241b501e20cfffb2797f0ab77705
+439e226a8038241b501e20cfffb2797f0ab77705,439e226a,Enable building with Travis CI,"Enable building with Travis CI
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454204170,1454204170,08cb6e88bba01a6f1998e26717710bfe06976aa8
+08cb6e88bba01a6f1998e26717710bfe06976aa8,08cb6e88,Add README.md,"Add README.md
+",,,,Branden Archer,Branden Archer b.m.archer4@gmail.com,Branden Archer,Branden Archer b.m.archer4@gmail.com,1454204140,1454204140,91b4d3c3fdd377c12242a31dd2e744a2410f5132
+91b4d3c3fdd377c12242a31dd2e744a2410f5132,91b4d3c3,Initial commit,Initial commit,,,,Branden Archer,b.m.archer4@gmail.com,Branden Archer,b.m.archer4@gmail.com,1453652012,1453652012,

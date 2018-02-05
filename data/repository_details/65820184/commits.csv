@@ -1,0 +1,532 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+a3f4de6d95ab790099f8c11cc5ceccb71d9cb70e,a3f4de6d,Update README.md,Update README.md,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1485297842,1485297842,acbd9e4d92aac2e45eb5d2b1aca7e9133b2908cf
+acbd9e4d92aac2e45eb5d2b1aca7e9133b2908cf,acbd9e4d,Version bump to 0.4,"Version bump to 0.4
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480339291,1480339291,73a2bc240b36630067a1d1da782a984ccbfffa72
+73a2bc240b36630067a1d1da782a984ccbfffa72,73a2bc24,Encode the Google Maps Uri,"Encode the Google Maps Uri
+
+Intent works better when the query is encoded.
+https://developers.google.com/maps/documentation/android-api/intents#uri_encoded_query_strings
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480339191,1480339191,4937b5cf4b8fe44e3305e5a94cfcce65318b58c6
+4937b5cf4b8fe44e3305e5a94cfcce65318b58c6,4937b5cf,"Removed DetailActivity, it is not needed since we open Google Maps straight away","Removed DetailActivity, it is not needed since we open Google Maps straight away
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480338701,1480338747,f966c42e19a28621804d171cc6afbcceb34dc926
+f966c42e19a28621804d171cc6afbcceb34dc926,f966c42e,Skip details page and go straight to Google maps,"Skip details page and go straight to Google maps
+
+The details page would be very similar to Google Maps anyway, no point copying existing functionality.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480338590,1480338648,d36c98d93fd6cb26963a90064012e15b226c69f0
+d36c98d93fd6cb26963a90064012e15b226c69f0,d36c98d9,"Detail fragment will now receive the place, ready to update the UI","Detail fragment will now receive the place, ready to update the UI
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480338466,1480338466,57642b939cccf86bb89ab7cba8dde9de73106de2
+57642b939cccf86bb89ab7cba8dde9de73106de2,57642b93,Refactored Snapshot fragment to GoogleApiClientFragment,"Refactored Snapshot fragment to GoogleApiClientFragment
+
+PlaceFragment uses very similar code, so it makes sense to have a base abstract class.
+Also added some more interfaces for when a place is found.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1480337546,1480337852,8f75ca4637c8cef6b8a5af9f4f9e31fb57d29212
+8f75ca4637c8cef6b8a5af9f4f9e31fb57d29212,8f75ca46,Removed dummy layout from detail fragment,"Removed dummy layout from detail fragment
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1479825867,1479825867,a24aab4cce35d1bc8250f7e7e555f78cf80ab915
+a24aab4cce35d1bc8250f7e7e555f78cf80ab915,a24aab4c,Rank results by distance,"Rank results by distance
+
+Makes the results more intuitive.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1479825665,1479825665,2c627728d7e9b64f550364f53a8d9fc28da7aec2
+2c627728d7e9b64f550364f53a8d9fc28da7aec2,2c627728,Maps button is now clickable,"Maps button is now clickable
+
+Will take you to the place in google maps
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1479825603,1479825603,058a2a2fb8b7f2057f5ed1d0b4625985f5be1258
+058a2a2fb8b7f2057f5ed1d0b4625985f5be1258,058a2a2f,Use Google Places Api to get place details,"Use Google Places Api to get place details
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1479821532,1479821532,99754f25ce33e52ea3b88001955590d8b0d2da0c
+99754f25ce33e52ea3b88001955590d8b0d2da0c,99754f25,Started on detail fragment layout,"Started on detail fragment layout
+
+Using example layout from cheese sample app as dummy content.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1479820035,1479820035,0eecd48e50af2b23a11867ba02504652a3786c13
+0eecd48e50af2b23a11867ba02504652a3786c13,0eecd48e,Finish detail activity on up button press,"Finish detail activity on up button press
+
+This is to go back to the results page instead of loading a fresh results page
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478886541,1478886541,2bc746c922785e9818145a2e45d6733892ed6fdf
+2bc746c922785e9818145a2e45d6733892ed6fdf,2bc746c9,Translucent status bar on lollipop and above,"Translucent status bar on lollipop and above
+
+Refactored Theme for more scalable customisation.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478885028,1478885028,d3751a096dc7c08fa2c79d4e0078152bf0851948
+d3751a096dc7c08fa2c79d4e0078152bf0851948,d3751a09,Changed debug icon to be inverted colours,"Changed debug icon to be inverted colours
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478884381,1478884381,a6263b0ecb5603bd5ef0d5530aca879073b0f671
+a6263b0ecb5603bd5ef0d5530aca879073b0f671,a6263b0e,Colour pallete changes,"Colour pallete changes
+
+Toolbar is now purple instead of off-white.
+Accent colour is now indigo.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478884010,1478884010,07f048e2931310f1525fb35d0a43dae5982a7d55
+07f048e2931310f1525fb35d0a43dae5982a7d55,07f048e2,Started DetailActivity,"Started DetailActivity
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478791184,1478791184,8646ff322ea53d881fbe88c353cb86b7e226cd77
+8646ff322ea53d881fbe88c353cb86b7e226cd77,8646ff32,Bumped version number to 0.3,"Bumped version number to 0.3
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478790310,1478790310,2f7cf13025dfc633ebcaaac581df265e612c037d
+2f7cf13025dfc633ebcaaac581df265e612c037d,2f7cf130,Disable refresh action after initial results load,"Disable refresh action after initial results load
+
+This is so users can't constantly refresh results and waste queries on the same search.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478788345,1478788345,4725742bfc8e89d6338761307797b106d6a6ae18
+4725742bfc8e89d6338761307797b106d6a6ae18,4725742b,Change photo picking algorithm to show more photos,"Change photo picking algorithm to show more photos
+
+A lot of places dont have photos that fit our best photo picker. Will now pick first photo if no photos available
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478611614,1478611637,18b7d4c822bee016837d49d7cec6faef90a523f1
+18b7d4c822bee016837d49d7cec6faef90a523f1,18b7d4c8,Restrict results to those that are open now.,"Restrict results to those that are open now.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478610878,1478610878,c07d33b53a0b10ed43a28b9064ac339025ee7f63
+c07d33b53a0b10ed43a28b9064ac339025ee7f63,c07d33b5,Removed unused class,"Removed unused class
+
+Yearnsnapshot was going to be used as sort of a caching class.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478610842,1478610842,989406b4d7c147a93969f2d317de604e46710beb
+989406b4d7c147a93969f2d317de604e46710beb,989406b4,Exit result callback if unsuccessful,"Exit result callback if unsuccessful
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478609775,1478609775,c3a4f0700fbbfc19edb6384b95d61058ae248fba
+c3a4f0700fbbfc19edb6384b95d61058ae248fba,c3a4f070,Added up arrow in result activity to return to query activity,"Added up arrow in result activity to return to query activity
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478609614,1478609614,e81ece91b411e2a654bdbf01fea8ca39bd6b2de5
+e81ece91b411e2a654bdbf01fea8ca39bd6b2de5,e81ece91,Check if results are null before getting array length,"Check if results are null before getting array length
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478008318,1478008318,c1ab8390933b6871cc776af222ed10e0f04bbdac
+c1ab8390933b6871cc776af222ed10e0f04bbdac,c1ab8390,Bumped version code and name to 0.2,"Bumped version code and name to 0.2
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478006143,1478006143,a732bc2cc025e75294c0778d3727e8eebad5e808
+a732bc2cc025e75294c0778d3727e8eebad5e808,a732bc2c,Improved search request,"Improved search request
+
+Will now combine place type and a keyword if it provides better results.
+
+E.g. combine placetype bar with keyword sports to get sports bars.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478006042,1478006042,cf9868635772e62372bb30b07113c8c929d1c1e2
+cf9868635772e62372bb30b07113c8c929d1c1e2,cf986863,"Revert ""Toolbar is ow handled in BaseActivity""","Revert ""Toolbar is ow handled in BaseActivity""
+
+This reverts commit 88cca0fa8ede1fbef7ed12bd3adad6342add3664.
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478004917,1478004917,88cca0fa8ede1fbef7ed12bd3adad6342add3664
+88cca0fa8ede1fbef7ed12bd3adad6342add3664,88cca0fa,Toolbar is ow handled in BaseActivity,"Toolbar is ow handled in BaseActivity
+
+Reduces same lines of code.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478004868,1478004868,c2f9a2b24dd077c9e66e249ba7f7270f388989f9
+c2f9a2b24dd077c9e66e249ba7f7270f388989f9,c2f9a2b2,Changed title in ResultActivity,"Changed title in ResultActivity
+
+e.g. ""Yearn - Lunch""
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478003786,1478003786,e2d1998a737ecdf9c1a2a109274b7a38f5510f59
+e2d1998a737ecdf9c1a2a109274b7a38f5510f59,e2d1998a,Changed right to end to better support right to left languages,"Changed right to end to better support right to left languages
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478003703,1478003703,5dd8c74d4e9615a1de2f696a96ebeeb0d02e866e
+5dd8c74d4e9615a1de2f696a96ebeeb0d02e866e,5dd8c74d,"Revert ""Refactored common action bar code""","Revert ""Refactored common action bar code""
+
+This reverts commit 92cc6a0d383295a3fbed133a9cbf85edb27b1e45.
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478003455,1478003455,92cc6a0d383295a3fbed133a9cbf85edb27b1e45
+92cc6a0d383295a3fbed133a9cbf85edb27b1e45,92cc6a0d,Refactored common action bar code,"Refactored common action bar code
+
+Both action bars will now say ""powered by Google""
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478001744,1478001744,b9b3f80ef12289ffb2f9fcfef0500035fc046e63
+b9b3f80ef12289ffb2f9fcfef0500035fc046e63,b9b3f80e,Layout changes to contextual cards,"Layout changes to contextual cards
+
+- Made images square
+- Made text always 2 lines to cater for longer yearns
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1478001272,1478001272,b6864a05a35d532ae91162766527d4b3396ff9ef
+b6864a05a35d532ae91162766527d4b3396ff9ef,b6864a05,Added some weather based yearns.,"Added some weather based yearns.
+
+If it is snowing for example, yearn will suggest staying indoors or a park to build a snowman
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477999276,1477999276,24051b4f5c6f69ee206230e75bc8c518e8fad605
+24051b4f5c6f69ee206230e75bc8c518e8fad605,24051b4f,Added 'powered by Google' attribution to the status bar,"Added 'powered by Google' attribution to the status bar
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477997509,1477997509,ed4b14faeaf23445591b7df58dec7741abcb351d
+ed4b14faeaf23445591b7df58dec7741abcb351d,ed4b14fa,Added skeleton code for place picker,"Added skeleton code for place picker
+
+Place picker can now be launched and the result is handled, just nothing in place to launch it yet.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477996501,1477996501,8897f670be182ec8d7b4a2585359228f27d2f155
+8897f670be182ec8d7b4a2585359228f27d2f155,8897f670,Refactored RecyclerViewHeader so that it is no longer necessary,"Refactored RecyclerViewHeader so that it is no longer necessary
+
+Adapter now handles the time and date stuff.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477995194,1477995194,6d909a34aa303dd37b1af11d82c98fff20726e38
+6d909a34aa303dd37b1af11d82c98fff20726e38,6d909a34,Fixed bug with getting time of day.,"Fixed bug with getting time of day.
+
+Inequality error where 0 was unaccounted for.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477962526,1477962526,7431457701976afb2a6034d19cac560268ef3db3
+7431457701976afb2a6034d19cac560268ef3db3,74314577,Organised API keys,"Organised API keys
+
+Api keys are now stored in the secret.properties file.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477962307,1477962486,5c5b914345720e3eb61c04aed72520f83782b18f
+5c5b914345720e3eb61c04aed72520f83782b18f,5c5b9143,Added loading animation,"Added loading animation
+
+Circle refresh animation added with swiperefreshlayout
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477948799,1477948799,ae85eb6607d39c836048c011cdafb6f202958e7c
+ae85eb6607d39c836048c011cdafb6f202958e7c,ae85eb66,Yearn now implements parcelable,"Yearn now implements parcelable
+
+Can now be passed with an intent.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477943964,1477943964,a2de4f5c2e2387766817dff3078e7e188930ff6f
+a2de4f5c2e2387766817dff3078e7e188930ff6f,a2de4f5c,"Added different package name, icon and app name for debug version","Added different package name, icon and app name for debug version
+
+Will now appear as Yearn Debug in the debug version, with and orange icon.
+Package name is com.jamieadkins.yearn.debug
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477941268,1477941268,7655754c60cf9f3ea5317a56fb2d0d03b924833f
+7655754c60cf9f3ea5317a56fb2d0d03b924833f,7655754c,Improved results by using PlaceType,"Improved results by using PlaceType
+
+Yearns now have an associated placetype and this is used instead of a keyword for searches.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477937011,1477937011,2ec8b2b0e32f67be022e6f7988314dd516687877
+2ec8b2b0e32f67be022e6f7988314dd516687877,2ec8b2b0,Changed version name to 0.1.0,"Changed version name to 0.1.0
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477932317,1477932317,9b969bff7e1010309dc57cc05a4f3f5e4a93c3e7
+9b969bff7e1010309dc57cc05a4f3f5e4a93c3e7,9b969bff,Added an explanation dialog for the location permission request.,"Added an explanation dialog for the location permission request.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477931970,1477932278,cdb5826fcb867297ada6b247b35be6e2b78ec1d1
+cdb5826fcb867297ada6b247b35be6e2b78ec1d1,cdb5826f,Added feature graphic for play store listing,"Added feature graphic for play store listing
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477929322,1477929322,5677221d715e669e9c4953b04c14721fa7081a36
+5677221d715e669e9c4953b04c14721fa7081a36,5677221d,Added framework that allows different locations to the one the user is in.,"Added framework that allows different locations to the one the user is in.
+
+If the intent contains a location then a snapshot fragment won't be launched.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477928591,1477928591,b907b3d93529432f109789da37e98f55ac93d864
+b907b3d93529432f109789da37e98f55ac93d864,b907b3d9,Moved Activity classes into new package,"Moved Activity classes into new package
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477921328,1477921328,3c1d95fcc1a9ec23a9bca63838f8aea7f8b2e9f9
+3c1d95fcc1a9ec23a9bca63838f8aea7f8b2e9f9,3c1d95fc,Header text is now updated with weather information,"Header text is now updated with weather information
+
+- Removed BaseRecylcerViewAdapter. No longer needed.
+- Added methods to QueryRecyclerViewAdpater to allow updating of header.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477920544,1477920544,ac447679f50fa367d346b33fef2fac370fc0caca
+ac447679f50fa367d346b33fef2fac370fc0caca,ac447679,Switched to Awareness API.,"Switched to Awareness API.
+
+Removed Location services since that can be handled inside the awareness api.
+Also removed shared preferences cache. The awareness API caches data for us.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477667658,1477667658,f70b0721af0b1ccd8ae86e58775ad78b5ce235ac
+f70b0721af0b1ccd8ae86e58775ad78b5ce235ac,f70b0721,Update to sdk 25,"Update to sdk 25
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477662919,1477662919,48bc73611e97da915b0cf7ce4b0acfdd4447d15d
+48bc73611e97da915b0cf7ce4b0acfdd4447d15d,48bc7361,Refactored location handling,"Refactored location handling
+
+Activities now extend BaseActivity, which inits a location fragment if needed.
+Viewholders now handle the onclick intents, instead of the adapter
+Latest location data is stored in shared preferences.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477662076,1477662076,2fab6d1b6340d1ded722dfc3aee80ecba90791c5
+2fab6d1b6340d1ded722dfc3aee80ecba90791c5,2fab6d1b,Added an icon,"Added an icon
+
+Placeholder icon with a 'Y' icon. Definitely not final
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1477174308,1477174308,cdf77468242bea586059bdb67b2aaf664a3ed5a1
+cdf77468242bea586059bdb67b2aaf664a3ed5a1,cdf77468,Added TODO,"Added TODO
+
+Need to refactor to give the adapter less control.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476973084,1476973084,99a60ab478e38d3df9f4b374e15185770f7ce598
+99a60ab478e38d3df9f4b374e15185770f7ce598,99a60ab4,Formatting changes.,"Formatting changes.
+
+A few comments changed.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476972598,1476972598,ca890844b39d13089baae2f35b4fc56d9135d401
+ca890844b39d13089baae2f35b4fc56d9135d401,ca890844,Removed unecessary comment,"Removed unecessary comment
+
+Comment no longer applied to code.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476971806,1476971806,4d95e2d29134b444224b3d3b4f3c756245ba38a4
+4d95e2d29134b444224b3d3b4f3c756245ba38a4,4d95e2d2,Upgraded gradle version,"Upgraded gradle version
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476966122,1476966122,aae0d16db97fff54caafd4b304ce5a813293ea8d
+aae0d16db97fff54caafd4b304ce5a813293ea8d,aae0d16d,Now uses location and actual search terms again,"Now uses location and actual search terms again
+
+Structure is not fantastic, but is ok for now.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476966074,1476966074,baafc41485cf850ea5f0ecc3cbb08679a275180c
+baafc41485cf850ea5f0ecc3cbb08679a275180c,baafc414,Refactored to create BaseRecyclerViewAdapter,"Refactored to create BaseRecyclerViewAdapter
+
+Currently only contains location information.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476793370,1476793370,66aa03ff728358bc3ef99b9e745f238ee7d9838d
+66aa03ff728358bc3ef99b9e745f238ee7d9838d,66aa03ff,Removed unused recycler view adapter,"Removed unused recycler view adapter
+
+That adapter is now handled in a seperate class
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476791366,1476791366,8525c19b12f9dee9dd5ef9b7e6d1805aac4c22a4
+8525c19b12f9dee9dd5ef9b7e6d1805aac4c22a4,8525c19b,Updated references to screenshots in README,Updated references to screenshots in README,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476789227,1476789227,c468c494019f7d1b4b0f3ba60988a99c2a0fa1ad
+c468c494019f7d1b4b0f3ba60988a99c2a0fa1ad,c468c494,Moved screenshots into marketing folder,"Moved screenshots into marketing folder
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1476789134,1476789134,e8105d9c27079be5d16efba414b3ba00259e26ed
+e8105d9c27079be5d16efba414b3ba00259e26ed,e8105d9c,Added linebreak in README,Added linebreak in README,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476722080,1476722080,a4e2ff6f06cfb26cb5bd86558d8dda5ba2d9da44
+a4e2ff6f06cfb26cb5bd86558d8dda5ba2d9da44,a4e2ff6f,Reduced size of screenshot in README,Reduced size of screenshot in README,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476722053,1476722053,48463ef42e13ef8acd2f6506a24734aad2311c99
+48463ef42e13ef8acd2f6506a24734aad2311c99,48463ef4,Added screenshots to README,Added screenshots to README,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476721122,1476721122,73b35b256944b91fd4ea2b1c3a69c727d389929c
+73b35b256944b91fd4ea2b1c3a69c727d389929c,73b35b25,Added a couple of screenshots for the README,Added a couple of screenshots for the README,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476720921,1476720921,97459ddb94dea38aa4c1b0ed9ccd3956e6b17a78
+97459ddb94dea38aa4c1b0ed9ccd3956e6b17a78,97459ddb,Create README.md,Create README.md,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1476720659,1476720659,cb82d905a9024a0136907e40d6c5fa2cbc83d961
+cb82d905a9024a0136907e40d6c5fa2cbc83d961,cb82d905,Yearn now contains the string resource id of the title instead of the raw string,"Yearn now contains the string resource id of the title instead of the raw string
+
+This allows us to have static Yearns that are not hardcoded and are translatable.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1475088623,1475088623,9576c77313c0e4a11cf871adcc1a2d898884b239
+9576c77313c0e4a11cf871adcc1a2d898884b239,9576c773,Hardcode lunch in shepards bush for demo.,"Hardcode lunch in shepards bush for demo.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474484288,1474484288,0125fcaa430832bef3fb4edf47a4d4e35af849a4
+0125fcaa430832bef3fb4edf47a4d4e35af849a4,0125fcaa,New layout with contextual yearns.,"New layout with contextual yearns.
+
+Yearns are shown for appropriate time of day.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474483777,1474483777,5ef417c8678028dc16e9fd079edb8c6565bcda26
+5ef417c8678028dc16e9fd079edb8c6565bcda26,5ef417c8,Refactored recyclerview out into its own class,"Refactored recyclerview out into its own class
+
+The recycler view was getting complicated so I brought it out into
+its own class. I did the same with the various view holders.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474476208,1474476208,5ab7f9534940e28ddc0345d359cb526f7445ceaa
+5ab7f9534940e28ddc0345d359cb526f7445ceaa,5ab7f953,Added escaping slash to string resource.,"Added escaping slash to string resource.
+
+Needed before the apostrophe.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474464026,1474464026,fdc98cd8e607b594a1ccadc4e3a1ae66302d1e75
+fdc98cd8e607b594a1ccadc4e3a1ae66302d1e75,fdc98cd8,Moved yearn resources to their own resource file.,"Moved yearn resources to their own resource file.
+
+Makes sense to keep them together.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474463983,1474463983,e436e36f21118794d2588e8bd4488b8a8fbc6a87
+e436e36f21118794d2588e8bd4488b8a8fbc6a87,e436e36f,Added string resources for time of day.,"Added string resources for time of day.
+
+Will be used for ""Ir's Monday morning, I'm yearning for... breakfast""
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474463813,1474463813,185425d951e3799209f6730a5467f0a25bae7cc3
+185425d951e3799209f6730a5467f0a25bae7cc3,185425d9,Changed header of query fragment.,"Changed header of query fragment.
+
+In prep for having a context based system like Google play music, I've changed the heading.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474462651,1474462651,47dec0585336a056b45b7ab2225fc7b66b2a0514
+47dec0585336a056b45b7ab2225fc7b66b2a0514,47dec058,Update to gradle 2.2,"Update to gradle 2.2
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474462512,1474462512,829428e356fd59d4c299da291f9cb5d3c8ec78d5
+829428e356fd59d4c299da291f9cb5d3c8ec78d5,829428e3,Make best photo picker more generous,"Make best photo picker more generous
+
+Only requires a greater than 1 aspect ratio
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474245435,1474245435,00e94a95f78a578e7ae9f4b81c982b38ac5e00fb
+00e94a95f78a578e7ae9f4b81c982b38ac5e00fb,00e94a95,"Use yearn instead of ""restaurant""","Use yearn instead of ""restaurant""
+
+Accidentally committed.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474244574,1474244574,6dc7d8851f43a6d53b05d4bb3a4e97116cb33109
+6dc7d8851f43a6d53b05d4bb3a4e97116cb33109,6dc7d885,Use device location instead of hardcoded query.,"Use device location instead of hardcoded query.
+
+Use the devices location to search for places. Search algorithm still needs to be tweaked.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474244333,1474244333,f7213e5f8da30ac86b0280d1c378737bdb2fce03
+f7213e5f8da30ac86b0280d1c378737bdb2fce03,f7213e5f,Added retained fragment that gets the current location,"Added retained fragment that gets the current location
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474227546,1474227546,99c254bca968583fad9e147fd33811cbfc6b6e08
+99c254bca968583fad9e147fd33811cbfc6b6e08,99c254bc,Added javadocs for PhotoUtils,"Added javadocs for PhotoUtils
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474222531,1474222531,fdbc0617178bb7863799fb5050884fedd13efe82
+fdbc0617178bb7863799fb5050884fedd13efe82,fdbc0617,Added photos retrieving!,"Added photos retrieving!
+
+Photos are now retrieved if they have any. Placeholder image is used if there is no image avaliable.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474211657,1474211657,1d5abfa85417b0988881c0b74b1bd26a958333e9
+1d5abfa85417b0988881c0b74b1bd26a958333e9,1d5abfa8,Import formatting,"Import formatting
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474150115,1474150115,89e9fb714fbba5153ece7b0f155ead0feb13416c
+89e9fb714fbba5153ece7b0f155ead0feb13416c,89e9fb71,Switch to use official Google wrapper library,"Switch to use official Google wrapper library
+
+Just switched over, quick commit where everything still works.
+
+Commented out photo code because its wip.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474149972,1474149972,9be2f39d864df0ea3141d72e9b2879edca47fbe7
+9be2f39d864df0ea3141d72e9b2879edca47fbe7,9be2f39d,Gradle update,"Gradle update
+
+Update to 2.1.3
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1474147197,1474147197,0cf8d6e3654d59ed0857b559a5e6c659761bcd27
+0cf8d6e3654d59ed0857b559a5e6c659761bcd27,0cf8d6e3,Added actual searching for yearns,"Added actual searching for yearns
+
+Very primitive and no pictures yet.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471565406,1471565406,9a222a9873b150bc0985c4155ebe03d9972c2ea6
+9a222a9873b150bc0985c4155ebe03d9972c2ea6,9a222a98,Added starting layout for place results.,"Added starting layout for place results.
+
+Full size picture and then the name of the place underneath.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471562227,1471562227,5ae3a71dabe196ba1106c2f41eb4f6a5a147c0b7
+5ae3a71dabe196ba1106c2f41eb4f6a5a147c0b7,5ae3a71d,Started work on results view,"Started work on results view
+
+Started cardview for result
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471547596,1471547596,eb6b1027ef972d211099f6b2665645cdb11a1d37
+eb6b1027ef972d211099f6b2665645cdb11a1d37,eb6b1027,Added new Yearns,"Added new Yearns
+
+Added park, night out, book, movie.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471546244,1471546244,7bba697341b0ff9d91be55fb2df011cbdda3fb2e
+7bba697341b0ff9d91be55fb2df011cbdda3fb2e,7bba6973,Playing with colours.,"Playing with colours.
+
+Now have a light status bar on 23 and above.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471534402,1471534524,8e49a40ad7659c0cb2a206fd7c68f4d5c0215476
+8e49a40ad7659c0cb2a206fd7c68f4d5c0215476,8e49a40a,Added divider for yearn list,"Added divider for yearn list
+
+Added SimpleDivider to Recycler View to divide the yearns up.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471468657,1471468657,4d2e072aa48f0c74cefb7f4c7de5beaefc88530d
+4d2e072aa48f0c74cefb7f4c7de5beaefc88530d,4d2e072a,Added new yearns,"Added new yearns
+
+Also fiddled with the colour scheme.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471467842,1471468267,6479c4176ee3ceb306177ff85050add452b32bdd
+6479c4176ee3ceb306177ff85050add452b32bdd,6479c417,Added recycler view for different yearnings,"Added recycler view for different yearnings
+
+Started work on the layout of the main screen.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471463414,1471463414,8b74e1a45e7fe17a7809918332f6269909694c5d
+8b74e1a45e7fe17a7809918332f6269909694c5d,8b74e1a4,Added Recycler view,"Added Recycler view
+
+Started work on query fragment.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471457461,1471457472,206d2b991a0bc3020bf05d3f1bc1d785709a2498
+206d2b991a0bc3020bf05d3f1bc1d785709a2498,206d2b99,Added example fragment,"Added example fragment
+
+Just setting up some structure.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471456744,1471456884,3427d57bfd2e8a018c14f36f44ba50e5637f71bc
+3427d57bfd2e8a018c14f36f44ba50e5637f71bc,3427d57b,Started adding the different yearns,"Started adding the different yearns
+
+""I'm yearning for ..."" ""a beer"" or ""food""
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471386749,1471386749,e1ec020dbfaf14f1c6d42f1178cf2228511ec519
+e1ec020dbfaf14f1c6d42f1178cf2228511ec519,e1ec020d,Api key constants need to be public.,"Api key constants need to be public.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471386726,1471386726,eacc2199a8bec4e7f7e4876c8f543d20f2fa86d8
+eacc2199a8bec4e7f7e4876c8f543d20f2fa86d8,eacc2199,Test Google Web API wrapper,"Test Google Web API wrapper
+
+Example activity that searches for the empire state building.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471385928,1471385928,6a09baeef8035e146dd7a88001dbf554b5fb3567
+6a09baeef8035e146dd7a88001dbf554b5fb3567,6a09baee,Target Android N,"Target Android N
+
+Updated build.gradle to target sdk 24
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471384742,1471384742,897f42e5340a1022c290cea1aa27b753486b6085
+897f42e5340a1022c290cea1aa27b753486b6085,897f42e5,Added class that holds our secret information.,"Added class that holds our secret information.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471383888,1471383888,cb78a78b96f0c8d791654ed325a004161db30270
+cb78a78b96f0c8d791654ed325a004161db30270,cb78a78b,Create Android project,"Create Android project
+
+Contains no code. Just what Android studio has generated.
+
+Signed-off-by: Jamie Adkins <jamieadkins95@gmail.com>
+",,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471383365,1471383365,1fc9cbfc364562324668a96621c8efd915838051
+1fc9cbfc364562324668a96621c8efd915838051,1fc9cbfc,Ignore everything in .idea/,Ignore everything in .idea/,,,,Jamie Adkins,jamieadkins95@gmail.com,GitHub,noreply@github.com,1471352172,1471352172,11893fc45f3aa9470e9b1757e8bb382a4d86550b
+11893fc45f3aa9470e9b1757e8bb382a4d86550b,11893fc4,Initial commit,Initial commit,,,,Jamie Adkins,jamieadkins95@gmail.com,Jamie Adkins,jamieadkins95@gmail.com,1471352126,1471352126,

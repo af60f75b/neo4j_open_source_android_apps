@@ -1,0 +1,493 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+30a41e4cca600e5a89c84c7d0510bde9f5a030e7,30a41e4c,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457919376,1457919376,06ad7c04afd32a1198385cf6a0dba53d6963e87f
+06ad7c04afd32a1198385cf6a0dba53d6963e87f,06ad7c04,Reverting,"Reverting
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457814868,1457814868,2a701ef3779d224b941b7d844c31abb7fc0595be
+2a701ef3779d224b941b7d844c31abb7fc0595be,2a701ef3,"Testing a failed build, will revert later","Testing a failed build, will revert later
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457813754,1457813754,a2adf20d028c101a6ee4eddcec7d220cf1128449
+a2adf20d028c101a6ee4eddcec7d220cf1128449,a2adf20d,Verison bump,"Verison bump
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457377431,1457377431,9f23be51844ca39db12295e6b0204f15a5f46b56
+9f23be51844ca39db12295e6b0204f15a5f46b56,9f23be51,Merge pull request #9 from jordond/develop,"Merge pull request #9 from jordond/develop
+
+Release 2.0.1",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457377148,1457377148,"31e15488442a42fe2ed6d96749afac546f035cd8,2df572ac10facf59770d38fb41a692cd02baf617"
+31e15488442a42fe2ed6d96749afac546f035cd8,31e15488,Try a new fix,"Try a new fix
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457376688,1457377043,892f623693b1679f95522b744b176be3c043a4c4
+2df572ac10facf59770d38fb41a692cd02baf617,2df572ac,Try a new fix,"Try a new fix
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457376688,1457376688,892f623693b1679f95522b744b176be3c043a4c4
+892f623693b1679f95522b744b176be3c043a4c4,892f6236,Fix for the wear vibration,"Fix for the wear vibration
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457376408,1457376408,e2e95dcc43c95c2d0bf09ff42f918b27100f518c
+e2e95dcc43c95c2d0bf09ff42f918b27100f518c,e2e95dcc,Undo Wear version bump,"Undo Wear version bump
+
+Newer android wear library caused unreliable message handling.
+Change the way the Wear devices handles a finished game
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457375124,1457375124,1273c9e4112afbfc1f3c9bfc75d15a310219cece
+1273c9e4112afbfc1f3c9bfc75d15a310219cece,1273c9e4,Merge pull request #8 from jordond/hotfix,"Merge pull request #8 from jordond/hotfix
+
+A Couple hotfixes for latest release",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457374248,1457374248,"615c0628a398b29e867c9e2dd7994899d4e3aea3,011591e874052ff87fe431c8ed06f53daa6176dc"
+011591e874052ff87fe431c8ed06f53daa6176dc,011591e8,"Bump version, prepare for release","Bump version, prepare for release
+
+Update the README
+Bump the Google Play Services Wear library to latest version
+NOTE Causes the Wear emulator to function strangely
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457373995,1457373995,8464b1426feb13b41db0f674d02e074905df493c
+8464b1426feb13b41db0f674d02e074905df493c,8464b142,Fix finish activity on Wear,"Fix finish activity on Wear
+
+Inproper information was being sent to the finish activity, had to
+reinstate the onDataChange listener.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457373742,1457373742,e1095f066911ac02de9822b65ff5f47b371024e7
+e1095f066911ac02de9822b65ff5f47b371024e7,e1095f06,Remove fake inifinty round limit,"Remove fake inifinty round limit
+
+It was never actually implemented, so it is best to remove it
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457371581,1457371581,d42ec012be4f1b64c34131924e5d4e77903a0d65
+d42ec012be4f1b64c34131924e5d4e77903a0d65,d42ec012,Fix fatal bug when resuming activity,"Fix fatal bug when resuming activity
+
+If a game was started and the user exited the app, then tried to
+return to it, the application would crash.
+
+Solved by instantiating the WearData object before calling the
+BaseActivity#onCreate()
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457371230,1457371230,615c0628a398b29e867c9e2dd7994899d4e3aea3
+615c0628a398b29e867c9e2dd7994899d4e3aea3,615c0628,Merge pull request #7 from jordond/develop,"Merge pull request #7 from jordond/develop
+
+Version 2.0 Release",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457310384,1457310384,"13394cc1ebf6fee8d085d24ae832893035f0e5f8,cc275ea7ab08af3312a952e5465e40ba20d8759d"
+cc275ea7ab08af3312a952e5465e40ba20d8759d,cc275ea7,Merge branch 'develop' of github.com:jordond/powerhour into develop,"Merge branch 'develop' of github.com:jordond/powerhour into develop
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457310355,1457310355,"6bc56f2cca3224fb2fa4a32c67efbc3391a239bf,f3ae299607e629c314abba8a59070cf44f894193"
+6bc56f2cca3224fb2fa4a32c67efbc3391a239bf,6bc56f2c,Add some Fabric Answers,"Add some Fabric Answers
+
+Add some simple metrics so I can better understand what parts
+people are using
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457310318,1457310318,b33ad74d19b5a0dc550d7ba4d60801539c3c350b
+f3ae299607e629c314abba8a59070cf44f894193,f3ae2996,Update README.md,"Update README.md
+
+Fix images",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457306957,1457306957,b33ad74d19b5a0dc550d7ba4d60801539c3c350b
+b33ad74d19b5a0dc550d7ba4d60801539c3c350b,b33ad74d,Update documentation,"Update documentation
+
+Change the about page a bit, add build date
+Update the README with links and goodness
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457305381,1457305430,7fffb7bcc3d5665dd7b600e8e7c112be01a8d309
+7fffb7bcc3d5665dd7b600e8e7c112be01a8d309,7fffb7bc,Prepare for release,"Prepare for release
+
+Add new slide to the help/tour section
+Bump version to new release
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457302624,1457302624,3ac9df2bf1e9ae1e10138b8139a84f033045837b
+3ac9df2bf1e9ae1e10138b8139a84f033045837b,3ac9df2b,Fix bug with incorect remaining minutes,"Fix bug with incorect remaining minutes
+
+The remaining minutes used to be off by several minutes the longer
+the game went on.  I now changed it to display the exact time
+remaining.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457301073,1457301073,926dd6152c1c36642e221088eea6720559c79367
+926dd6152c1c36642e221088eea6720559c79367,926dd615,Add screenshots for new devices,"Add screenshots for new devices
+
+Add tablet and wear screen shots within device frames
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457297154,1457297154,96e97377abf7cf5eea0ed8d4e264a696134d82cc
+96e97377abf7cf5eea0ed8d4e264a696134d82cc,96e97377,Fix layout for round devices,"Fix layout for round devices
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457297148,1457297148,9459051c3295004c08d4d61ed8dc7fc9351f9e66
+9459051c3295004c08d4d61ed8dc7fc9351f9e66,9459051c,Fix tablet centering ui,"Fix tablet centering ui
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457297070,1457297070,b0856e32281cc0b4325a930f38273f27af955196
+b0856e32281cc0b4325a930f38273f27af955196,b0856e32,Fix bug with sending finish activity,"Fix bug with sending finish activity
+
+Moved all the activity launching to the message location, as it
+seems to be more reliable.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457289394,1457289394,2363634be513efe1a4de63039b529e0ca85d1690
+2363634be513efe1a4de63039b529e0ca85d1690,2363634b,Merge pull request #6 from jordond/wear/notification,"Merge pull request #6 from jordond/wear/notification
+
+Notification for Wear device",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457288549,1457288549,"542afd7949fc1b77b1adbdc9e8d357f38c3d59a4,274e57add5e5fe77a35a637a31073dacfcf28d9d"
+274e57add5e5fe77a35a637a31073dacfcf28d9d,274e57ad,Change when to display notification,"Change when to display notification
+
+Notification will only be displayed if the game has started, and
+the GameActivity has been paused.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457288461,1457288461,e154d5b3b3e9c634559f3c520e4d90c24f4cb8e2
+e154d5b3b3e9c634559f3c520e4d90c24f4cb8e2,e154d5b3,Add game notification,"Add game notification
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457287870,1457287870,542afd7949fc1b77b1adbdc9e8d357f38c3d59a4
+542afd7949fc1b77b1adbdc9e8d357f38c3d59a4,542afd79,Add appearance of depth,"Add appearance of depth
+
+Change the progressbackground color to a slightly darker primary,
+giving the illusion of depth.
+
+Move ColorUtil to a shared location
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457222852,1457222852,829929863ebaa6799ff631ba79a1ebc5b391f8f2
+829929863ebaa6799ff631ba79a1ebc5b391f8f2,82992986,Fix view for rectangle wear devices,"Fix view for rectangle wear devices
+
+Add butterknife to finish activity
+fix colors on finish activity
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457222310,1457222310,12a8e025eb36d7a3523a242bebda263cea52720f
+12a8e025eb36d7a3523a242bebda263cea52720f,12a8e025,Move wear packages to new package,"Move wear packages to new package
+
+Having it the same was causing conflicts with the mobile app
+
+Also delete old colors object
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457220191,1457220191,f354552516d1e10f695824d6da12dd6860c2ec98
+f354552516d1e10f695824d6da12dd6860c2ec98,f3545525,Fix bugs associated with new changes,"Fix bugs associated with new changes
+
+Move colors to GameState, to make it more consistent
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457219852,1457219852,94538e3b8bdc3927b49dd8e4a38ba1b6f33db93d
+94538e3b8bdc3927b49dd8e4a38ba1b6f33db93d,94538e3b,Add global game information state,"Add global game information state
+
+If the user closes the watch app, and the minute is up.  The app
+will be relaunched, and shown the shot notification.
+
+The showing of the SHOT notification and animation is not yet working
+but all the information is there.
+
+This will also help with the ongoing Notification I will be adding
+later
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457210687,1457210687,3cb29bcf05bc8b51534f66b61173bc543049b243
+3cb29bcf05bc8b51534f66b61173bc543049b243,3cb29bcf,Restructure the application a little bit,"Restructure the application a little bit
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457205032,1457205032,a4a1c525e8070e12aca2882340e4a9a4fdef4f63
+a4a1c525e8070e12aca2882340e4a9a4fdef4f63,a4a1c525,Remove old fragments and layouts,"Remove old fragments and layouts
+
+Rename package from fragments to views
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457201789,1457201789,6461819af5dc1445890d48d12d5507921b9aa60a
+6461819af5dc1445890d48d12d5507921b9aa60a,6461819a,Fix race condition bug,"Fix race condition bug
+
+Sometimes the device would recieve an update message AFTER a shot
+message was received.  Causing the device to hide the progress
+wheel
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457201742,1457201742,9ad1ea3904f6b5edd9717c4162294682fe5ccd41
+9ad1ea3904f6b5edd9717c4162294682fe5ccd41,9ad1ea39,Move fragment into a custom view instead,"Move fragment into a custom view instead
+
+In preperation of removing the controls fragment, the viewpager is
+no longer needed.  So a custom view will work instead of a fragment
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457200827,1457200827,5a56766259ff2a4cef1e23ba34a44f677533fb97
+5a56766259ff2a4cef1e23ba34a44f677533fb97,5a567662,Ignore produce method,"Ignore produce method
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457142834,1457142834,248d5ccfce97aca036078cbf676ea66190fb79a7
+248d5ccfce97aca036078cbf676ea66190fb79a7,248d5ccf,Add logic for the active-ambient clock,"Add logic for the active-ambient clock
+
+Fix color of progress wheel when the device is in ambient mode
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457142794,1457142794,c40c3ee97ba4eccbce930893acd5bbc7d3f9d870
+c40c3ee97ba4eccbce930893acd5bbc7d3f9d870,c40c3ee9,Add active-ambient clock layout,"Add active-ambient clock layout
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457142751,1457142751,9744ef9578087757c9fd54f4ae8a771e15357c98
+9744ef9578087757c9fd54f4ae8a771e15357c98,9744ef95,Fix constant vibrating bug,"Fix constant vibrating bug
+
+When a game was stopped while the app was vibrating, it would
+cause an endless vibrate
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457142698,1457142698,87a967e9c5115f7e5d7045bb8281fee0f773bfb7
+87a967e9c5115f7e5d7045bb8281fee0f773bfb7,87a967e9,"Update some dependencies, fix misleading remaining time","Update some dependencies, fix misleading remaining time
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1457141279,1457141279,36ad4fa6c29e175c80438a474db33390388bb862
+36ad4fa6c29e175c80438a474db33390388bb862,36ad4fa6,Add some leftover artifacts,"Add some leftover artifacts
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1454981608,1454981608,322136d81780d6ca5336d67f0b39b253e15d65a9
+322136d81780d6ca5336d67f0b39b253e15d65a9,322136d8,"Fix gradle plugin, project should now build properly","Fix gradle plugin, project should now build properly
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1454981532,1454981532,d78024746eac0d6c535f97434eeeceb29d08a691
+d78024746eac0d6c535f97434eeeceb29d08a691,d7802474,Merge branch 'master' into develop,"Merge branch 'master' into develop
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452547689,1452547689,"bc274fb55b8f058f9a3109a7c8723ebb92c5e1b0,13394cc1ebf6fee8d085d24ae832893035f0e5f8"
+13394cc1ebf6fee8d085d24ae832893035f0e5f8,13394cc1,Fix broken dependancy,"Fix broken dependancy
+
+A change happened with nineoldandroids which caused build to fail.
+This fix will update the deps to use the fixed materialdesign library
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452547621,1452547621,fcce55546f285d21e92942310f95027095c84904
+bc274fb55b8f058f9a3109a7c8723ebb92c5e1b0,bc274fb5,Trying to get Jenkins to be able to assemble project,"Trying to get Jenkins to be able to assemble project
+
+Jenkins is using Java8 which doesn't seem to agree with
+my common java library.  So I have switched it to an
+android library in the hopes it will work.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452287732,1452287732,20aa46ae8bead30b386e44ad4fede1df126e7820
+20aa46ae8bead30b386e44ad4fede1df126e7820,20aa46ae,Jenkins still wont build it,"Jenkins still wont build it
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452285486,1452285486,7c7904a8fa3c559a8e42e0283a1d65c2f1899173
+7c7904a8fa3c559a8e42e0283a1d65c2f1899173,7c7904a8,Merge branch 'develop' of github.com:jordond/powerhour into develop,"Merge branch 'develop' of github.com:jordond/powerhour into develop
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452283041,1452283041,"e0df44e9992b76a72fbd7f4cd5df88bf4936c149,6d928d96ae03e02ae0f920925f584b364b66f68b"
+e0df44e9992b76a72fbd7f4cd5df88bf4936c149,e0df44e9,stuff,"stuff
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452283034,1452283034,6ab3edb458a7aa265769506c4699a0220f42dd88
+6d928d96ae03e02ae0f920925f584b364b66f68b,6d928d96,Merge pull request #5 from jordond/master,"Merge pull request #5 from jordond/master
+
+Merge master",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452218711,1452218711,"6ab3edb458a7aa265769506c4699a0220f42dd88,fcce55546f285d21e92942310f95027095c84904"
+6ab3edb458a7aa265769506c4699a0220f42dd88,6ab3edb4,Merge pull request #4 from jordond/wear,"Merge pull request #4 from jordond/wear
+
+Added Android Wear compatibility",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452218493,1452218493,"a75c1ffc2862d27663e2a9885db249a6991a3c15,4bcfe4f5e2690732ef1c186ef7a231a4ffc772f7"
+4bcfe4f5e2690732ef1c186ef7a231a4ffc772f7,4bcfe4f5,Reset the default round length,"Reset the default round length
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1452218387,1452218387,5e0e8af491d488cebe96671fa7a13cc6b68fc7f3
+5e0e8af491d488cebe96671fa7a13cc6b68fc7f3,5e0e8af4,Removed some old TODO's and optimized imports,"Removed some old TODO's and optimized imports
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1451358379,1451358379,b3b209e2e8822acd835378cbaf93884ee153271c
+b3b209e2e8822acd835378cbaf93884ee153271c,b3b209e2,Added the shot message and vibrator features,"Added the shot message and vibrator features
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1451358138,1451358138,290a40a3c08978e86681ac46646d3d0461838498
+290a40a3c08978e86681ac46646d3d0461838498,290a40a3,Fixed the finish screen colors bug,"Fixed the finish screen colors bug
+
+Also on 'okay' press on mobile, wear will return to
+main activity
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1451353741,1451353741,7fa8589697758c150474b055dc7db077930e91c3
+7fa8589697758c150474b055dc7db077930e91c3,7fa85896, A lot of work to the project," A lot of work to the project
+
+Finish activity is now complete, adjusted the mute mode for phone
+Will set it so if the app detects an android wear it will turn on
+wear mode, which will mute the phone, and display a message to the user.
+The user can then disable or keep it.
+Wear mode mutes the phone and disables the always on screen.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1451349247,1451349247,48f3651f4c241b899fc74778a7691961cb122a7d
+48f3651f4c241b899fc74778a7691961cb122a7d,48f3651f,Committing what I have,"Committing what I have
+
+Added a finish activity
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1451004786,1451004786,5be20c6d2239ac24642983b8d45fa702a079cce3
+5be20c6d2239ac24642983b8d45fa702a079cce3,5be20c6d,Tweaked the wear update interval,"Tweaked the wear update interval
+
+It should be easier to change, just edit Cosnts.Game.WEAR_UPDATE...
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450908046,1450908046,45985b903ef6ddbf49b2889f2e85abc4735717fe
+45985b903ef6ddbf49b2889f2e85abc4735717fe,45985b90,Progress now shows on the watch,"Progress now shows on the watch
+
+Need to fix bug when game is stopped or finished, and the watch
+receives an dataitem after finish.
+Watch is currently a second behind, need to investigate
+NEed to implement a round finish, and game finish
+
+Still problems with dataitem listener on startup
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450906750,1450906750,bcda1ac1d14d65d35efb39a0254ac30886a2909c
+bcda1ac1d14d65d35efb39a0254ac30886a2909c,bcda1ac1,Added a singleton for keeping track of the color state,"Added a singleton for keeping track of the color state
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450900466,1450900466,7f7572e5086f494e768abc7cba508f338dd66e49
+7f7572e5086f494e768abc7cba508f338dd66e49,7f7572e5,Finally got data messages to send,"Finally got data messages to send
+
+TODO On finish screen inform wear that the game is over
+Handle the pausing, and playing, and started events
+
+Figure out if I want to have my own timer on the watch or not
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450895502,1450895502,e4dd9bcb629278d66f88d5c8fbdf9b5f30ab166c
+e4dd9bcb629278d66f88d5c8fbdf9b5f30ab166c,e4dd9bcb,Started on data listener,"Started on data listener
+
+Created a common library to share classes between modules
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450813448,1450813448,7cafd03f9b3a26df04180be8d01fb77787c7153c
+7cafd03f9b3a26df04180be8d01fb77787c7153c,7cafd03f,"Renamed app to just powerhour, added into","Renamed app to just powerhour, added into
+
+Added an intro waiting activity, that will start the gamescreen
+when data is retrieved from the mobile device
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450811599,1450811599,8c913bad76e6124acf815ea3cdb5bd5bf448422a
+8c913bad76e6124acf815ea3cdb5bd5bf448422a,8c913bad,"Finished the layout, need to implement it now","Finished the layout, need to implement it now
+
+Pretty much finished all the layout, still havent decided on swiping
+away the app yet, so a ambient clock is still unkown.
+Need to implement the data/message service on wear and mobile
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450658166,1450658166,78d73f800fe12a0f5cca996657ca51ea257c41e7
+78d73f800fe12a0f5cca996657ca51ea257c41e7,78d73f80,Initial work for the game pager,"Initial work for the game pager
+
+Sepearted the parts into fragments
+TODO complete layout for the game controls
+Prevent users from swiping away the app? If that isn't
+done then I will need to implement a feature where the
+phone reopens the app.  Or I can add a simple clock to the
+app, so they always stay in the app
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450650005,1450650005,47181abe5f6542dfd28faff360ddd603a0bc3f9b
+47181abe5f6542dfd28faff360ddd603a0bc3f9b,47181abe,Fleshing out the layout,"Fleshing out the layout
+
+Mainly focusing on the round view at the moment
+Got the placeholder for the progress bar and the other
+text views.
+TODO alternate screen for pause and stop buttons
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450645084,1450645084,4a24f1f75144aea668f56cb302d44db8d5b6c5bc
+4a24f1f75144aea668f56cb302d44db8d5b6c5bc,4a24f1f7,Initial commit for wear module,"Initial commit for wear module
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1450639485,1450639485,a75c1ffc2862d27663e2a9885db249a6991a3c15
+fcce55546f285d21e92942310f95027095c84904,fcce5554,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1449455235,1449455235,7d53d8dbeb275e86214336f538cb141174383ca7
+7d53d8dbeb275e86214336f538cb141174383ca7,7d53d8db,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1449447638,1449447638,d14fcb93c7be974fe3599272582b0348b8292f8e
+d14fcb93c7be974fe3599272582b0348b8292f8e,d14fcb93,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1449447624,1449447624,a75c1ffc2862d27663e2a9885db249a6991a3c15
+a75c1ffc2862d27663e2a9885db249a6991a3c15,a75c1ffc,Update deps,"Update deps
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1449440903,1449440903,9937ba66199a5e7cbc42a57f46a871578546f6ca
+9937ba66199a5e7cbc42a57f46a871578546f6ca,9937ba66,HELLiqlkfnlcllzzdalkladfkkaslafmkhellnlsdsdn,"HELLiqlkfnlcllzzdalkladfkkaslafmkhellnlsdsdn
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438745035,1438745035,ec552b1fdffa1542c032389a9f59cc1ab350d0f6
+ec552b1fdffa1542c032389a9f59cc1ab350d0f6,ec552b1f,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438221491,1438221491,5b167e9d52940cf106a9efccee851491498eb199
+5b167e9d52940cf106a9efccee851491498eb199,5b167e9d,Merge branch 'master' of github.com:jordond/powerhour,"Merge branch 'master' of github.com:jordond/powerhour
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438221247,1438221247,"31464957367a2b55356b089a1c4fa7f8e17c614e,c4a420aa22035df13f5118868ad65991d9e81986"
+31464957367a2b55356b089a1c4fa7f8e17c614e,31464957,sigh,"sigh
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438221242,1438221242,a08e35e4e4262ba5bce312d4a8c5d8df17b6f0e6
+c4a420aa22035df13f5118868ad65991d9e81986,c4a420aa,Update README.md,Update README.md,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438221142,1438221142,a08e35e4e4262ba5bce312d4a8c5d8df17b6f0e6
+a08e35e4e4262ba5bce312d4a8c5d8df17b6f0e6,a08e35e4,More shrinking,"More shrinking
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438221065,1438221065,bd3a36dfa9bac3f12f9de3366a1f276a87a4a43e
+bd3a36dfa9bac3f12f9de3366a1f276a87a4a43e,bd3a36df,Trying even smaller,"Trying even smaller
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438220972,1438220972,4b289c21580011c7bf465ed8689038a28da442a1
+4b289c21580011c7bf465ed8689038a28da442a1,4b289c21,Shrunk photos,"Shrunk photos
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438220711,1438220711,533e279841ea44dcb455948b9fdaf74bb38a4003
+533e279841ea44dcb455948b9fdaf74bb38a4003,533e2798,Added screenshots,"Added screenshots
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438219812,1438219812,e1cb2dfc10bc3159e8ffdc8bf7253cca5d03a24c
+e1cb2dfc10bc3159e8ffdc8bf7253cca5d03a24c,e1cb2dfc,"finished tour activity, and readied app for production","finished tour activity, and readied app for production
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438219598,1438219598,738d10474a86a2014d76547a69cdd28e6f7ad8b0
+738d10474a86a2014d76547a69cdd28e6f7ad8b0,738d1047,Initial attempt at a tourguide activity,"Initial attempt at a tourguide activity
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438214618,1438214618,9e0eb7606bbdffc87f745895b606ce039fd2b93b
+9e0eb7606bbdffc87f745895b606ce039fd2b93b,9e0eb760,"Added landscape mode, fixed beer calc","Added landscape mode, fixed beer calc
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438193862,1438193862,fb790736a45a0ee282c286b116429668b0558b11
+fb790736a45a0ee282c286b116429668b0558b11,fb790736,"Big update, added vibrate, fixed some bugs, and worked on the game over screen","Big update, added vibrate, fixed some bugs, and worked on the game over screen
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438138927,1438138927,7e24667f64a637c5fe4945874205fe72c659fba1
+7e24667f64a637c5fe4945874205fe72c659fba1,7e24667f,Added ina  minutes remaining textview,"Added ina  minutes remaining textview
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438131310,1438131310,31784f4fe77aaf1ef88aeab69a51116944664148
+31784f4fe77aaf1ef88aeab69a51116944664148,31784f4f,clean up unneeded code,"clean up unneeded code
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438129785,1438129785,290eb448351c66e36d6015f9e00c67fe3a598a01
+290eb448351c66e36d6015f9e00c67fe3a598a01,290eb448,Added in animater,"Added in animater
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438113728,1438113728,afdb2a11b9f9e2be6e9b03c43f2ad4b08899bf04
+afdb2a11b9f9e2be6e9b03c43f2ad4b08899bf04,afdb2a11,"Handling the celebrator, music now plays. need to work on the actual things that…","Handling the celebrator, music now plays. need to work on the actual things that happen on game screen
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438111605,1438111605,7da7520b885210080340a9f978c4b3a4062774b3
+7da7520b885210080340a9f978c4b3a4062774b3,7da7520b,"Fixed screen coming on, wakelock","Fixed screen coming on, wakelock
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438040632,1438040632,3898badbaff56eb9c392352ee6e4ed71506cde29
+3898badbaff56eb9c392352ee6e4ed71506cde29,3898badb,"fixed the game screen buttons, added muting","fixed the game screen buttons, added muting
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438036242,1438036242,026e771b5d23098fed2134fcfba8e43234fa1bb0
+026e771b5d23098fed2134fcfba8e43234fa1bb0,026e771b,Added landscape,"Added landscape
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438034442,1438034442,0dd1c853330b87cf58bf2b503a89a5e2b1e89206
+0dd1c853330b87cf58bf2b503a89a5e2b1e89206,0dd1c853,Added options to record or play current sound,"Added options to record or play current sound
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1438033770,1438033770,9d71883499d2983119ca99afd314b5424a8fa0cf
+9d71883499d2983119ca99afd314b5424a8fa0cf,9d718834,Added a sound chooser,"Added a sound chooser
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437944218,1437944218,741fc8e605664b1ec495d736d6c03335abb26aa8
+741fc8e605664b1ec495d736d6c03335abb26aa8,741fc8e6,Added reset button to colors,"Added reset button to colors
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437934915,1437934915,02caca78cd369d0c3926b6bf090c41a9f31b4866
+02caca78cd369d0c3926b6bf090c41a9f31b4866,02caca78,removed unneeded resources and imports,"removed unneeded resources and imports
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437928831,1437928831,ced9f4e8fcb01a87df37f31e5fbbf234e872fda8
+ced9f4e8fcb01a87df37f31e5fbbf234e872fda8,ced9f4e8,Merge pull request #1 from jordond/finishscreen,"Merge pull request #1 from jordond/finishscreen
+
+Lots of Work",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437928157,1437928157,"17a344a6fb781d51679a9583cec61623a0e46738,e86e1d3d8d34ab863cd9cd3559fd035b85da7c41"
+e86e1d3d8d34ab863cd9cd3559fd035b85da7c41,e86e1d3d,"Removed hard deps, replaced with my maven repo","Removed hard deps, replaced with my maven repo
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437927988,1437927988,1e95a44bad11886bdb3f40b794009e17a10a1049
+1e95a44bad11886bdb3f40b794009e17a10a1049,1e95a44b,Changed main to use produce,"Changed main to use produce
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437924335,1437924335,3387cb2f3054c2f163c1febe9a8962d024c8fe2e
+3387cb2f3054c2f163c1febe9a8962d024c8fe2e,3387cb2f,laying the ground work for in-between round celebrating,"laying the ground work for in-between round celebrating
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437696978,1437696978,da00d63edbb51ae731f41ce0b3994bbaa4090c01
+da00d63edbb51ae731f41ce0b3994bbaa4090c01,da00d63e,Wake lock ahoy!,"Wake lock ahoy!
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437677627,1437677627,6b8d589150b59b9b50275ec6c3f41056df63ccd3
+6b8d589150b59b9b50275ec6c3f41056df63ccd3,6b8d5891,"Some housecleaning, moved notifications to own class","Some housecleaning, moved notifications to own class
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437674722,1437674722,f1f954a1fcc57bb9d127eefc85df0c79b2c1b02c
+f1f954a1fcc57bb9d127eefc85df0c79b2c1b02c,f1f954a1,"cancel game if not started, and back button is pressed","cancel game if not started, and back button is pressed
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437672705,1437672705,7f9205dcb1e09be0fc84d4bacb5475cb1dd0b0aa
+7f9205dcb1e09be0fc84d4bacb5475cb1dd0b0aa,7f9205dc,Fixed about back button,"Fixed about back button
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437672016,1437672016,f54a424b82837665402baf1d61e58e3dd7fbd8c0
+f54a424b82837665402baf1d61e58e3dd7fbd8c0,f54a424b,forgot the land layout,"forgot the land layout
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437671424,1437671424,b55fddd051f7aa110e3026005c2b6fc797f919c2
+b55fddd051f7aa110e3026005c2b6fc797f919c2,b55fddd0,Added new icon,"Added new icon
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437671206,1437671206,d1af08c695da4f4a2e0f1221dcba53a6c4fb6469
+d1af08c695da4f4a2e0f1221dcba53a6c4fb6469,d1af08c6,Cleaned up the layouts a bit,"Cleaned up the layouts a bit
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437615728,1437615728,17a344a6fb781d51679a9583cec61623a0e46738
+17a344a6fb781d51679a9583cec61623a0e46738,17a344a6,"Cleaned up a lot of code, and added an about activity","Cleaned up a lot of code, and added an about activity
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437608223,1437608223,d77906aad2a43811a38f9d114ecb680998aa9c2c
+d77906aad2a43811a38f9d114ecb680998aa9c2c,d77906aa,More tweaks,"More tweaks
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437523589,1437523589,002a23744f9eb5149ed085d02cb7e1962c800488
+002a23744f9eb5149ed085d02cb7e1962c800488,002a2374,More work on the view,"More work on the view
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437519741,1437519741,acbabffeb4a17eae2531c705c5eb098c2d34040e
+acbabffeb4a17eae2531c705c5eb098c2d34040e,acbabffe,Fixed landscape mode and added buttons,"Fixed landscape mode and added buttons
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437519630,1437519630,d323de2a3a1a2ce8e84e7bb79b5d2385462775ec
+d323de2a3a1a2ce8e84e7bb79b5d2385462775ec,d323de2a,Moved some logic to a new class,"Moved some logic to a new class
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437511021,1437511021,1cde47c99cfee2a6b2aed7cb41ba8f9fd221edc5
+1cde47c99cfee2a6b2aed7cb41ba8f9fd221edc5,1cde47c9,Added the material design library as amodule to fix a namespace issue,"Added the material design library as amodule to fix a namespace issue
+
+Added the design library as well.  Changed the way the configure screen looks.
+Trying to remove logic from the GameScreen
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437501929,1437501929,74e9b1168782e799a7da727be86b844de8f8b657
+74e9b1168782e799a7da727be86b844de8f8b657,74e9b116,Added a option to keep the scren locked,"Added a option to keep the scren locked
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437440412,1437440412,7de5c893c130ae782bdb0803e8bc0248646328eb
+7de5c893c130ae782bdb0803e8bc0248646328eb,7de5c893,"Made the service start in the forground, next is wakelock","Made the service start in the forground, next is wakelock
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437434662,1437434662,704d7b971fa066491f97fb0edcf129893454a05e
+704d7b971fa066491f97fb0edcf129893454a05e,704d7b97,Instaniate updates in oncreate,"Instaniate updates in oncreate
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437420720,1437420720,05dce13786000d864a1b26c7d16c359065763f01
+05dce13786000d864a1b26c7d16c359065763f01,05dce137,"fixed two crashes, related to no data being passed by @produce","fixed two crashes, related to no data being passed by @produce
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437420500,1437420500,1f5dbcebfcff8dc1a39839d8110a334b268462a5
+1f5dbcebfcff8dc1a39839d8110a334b268462a5,1f5dbceb,some cleanup,"some cleanup
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437360437,1437360437,43c66d397e3e0e1050f60254605ef09de30d267f
+43c66d397e3e0e1050f60254605ef09de30d267f,43c66d39,Optimized imports,"Optimized imports
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437360224,1437360224,637a426db0fffc42e7674196c425aa788fbd78e0
+637a426db0fffc42e7674196c425aa788fbd78e0,637a426d,made a class for updating wheels,"made a class for updating wheels
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437360190,1437360190,aac775364cd9bc57e30b95d20d2dd805db4464d0
+aac775364cd9bc57e30b95d20d2dd805db4464d0,aac77536,"removed parameter from gamescreen, tweaking ui methods","removed parameter from gamescreen, tweaking ui methods
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437358559,1437358559,5669dbdebe97dc8a1b79302f4007707ce88ecff7
+5669dbdebe97dc8a1b79302f4007707ce88ecff7,5669dbde,"Added landscape mode for gamescreen, fixed duplicating oncreateview","Added landscape mode for gamescreen, fixed duplicating oncreateview
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437356610,1437356610,be003aceb9239dcc50181593742f151bd8666b6a
+be003aceb9239dcc50181593742f151bd8666b6a,be003ace,"Service control is all in mainactivity now, removed saving instance state","Service control is all in mainactivity now, removed saving instance state
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437353935,1437353935,edf1ff2073e2ff9e4a9d23a5fa30d0135f8a3773
+edf1ff2073e2ff9e4a9d23a5fa30d0135f8a3773,edf1ff20,"Fixed autostart problem, also update the game progress wheel every tick as well","Fixed autostart problem, also update the game progress wheel every tick as well
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437349397,1437349397,d9e14af879d7d97d3b02ed381be8cbc07ccd081f
+d9e14af879d7d97d3b02ed381be8cbc07ccd081f,d9e14af8,Some cleanup,"Some cleanup
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437343366,1437343366,a19703a9644649b235c485e687a75d7196d991e6
+a19703a9644649b235c485e687a75d7196d991e6,a19703a9,Pause animation when dialog is open,"Pause animation when dialog is open
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437342847,1437342847,a5c3bd519e598d662ae980900d953d565d8537a7
+a5c3bd519e598d662ae980900d953d565d8537a7,a5c3bd51,Big update.  Decoupled the fragment almost completely from the service,"Big update.  Decoupled the fragment almost completely from the service
+
+I plan on using the produce functionality of otto, to get rid of
+restore instance state.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437342186,1437342186,0bd0048a5cdf5aa0609699fcbf1b3fa2cd1bd906
+0bd0048a5cdf5aa0609699fcbf1b3fa2cd1bd906,0bd0048a,"Added fabric to app, for crashlytics","Added fabric to app, for crashlytics
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437342165,1437342165,5bb984c2103c1fa612a5ab935c70ab7eea8f4db1
+5bb984c2103c1fa612a5ab935c70ab7eea8f4db1,5bb984c2,"Even more bugs fixed, done for tonight, need to handle the pause/play button still.","Even more bugs fixed, done for tonight, need to handle the pause/play button still.
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437274463,1437274463,fd57080bfa8f04334e3f79340b48aca345ccfc8f
+fd57080bfa8f04334e3f79340b48aca345ccfc8f,fd57080b,"Alot of things are working now, still need to fix config change","Alot of things are working now, still need to fix config change
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437269516,1437269516,e1df21a12231ffa596f2be94f308d1db68284f04
+e1df21a12231ffa596f2be94f308d1db68284f04,e1df21a1,about to setup the game screen,"about to setup the game screen
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437259264,1437259264,de0f28ddf7947aff9011b7a86cab83b57afbb31a
+de0f28ddf7947aff9011b7a86cab83b57afbb31a,de0f28dd,Changed some stuff back while i figure out,"Changed some stuff back while i figure out
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437256600,1437256600,73333297717da915ca5315d16de08508583b4a13
+73333297717da915ca5315d16de08508583b4a13,73333297,Perliminary work on the service,"Perliminary work on the service
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437255527,1437255527,b0277e6283706fe58d58d9bcc10df24f97970697
+b0277e6283706fe58d58d9bcc10df24f97970697,b0277e62,Did some work on the screen layout and basic hooking intoasd,"Did some work on the screen layout and basic hooking intoasd
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437184924,1437184924,218bd95dd00d100d73d057a5a4c5c574e29ba091
+218bd95dd00d100d73d057a5a4c5c574e29ba091,218bd95d,Fixed crash when config was changed,"Fixed crash when config was changed
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437183198,1437183198,cf53e48cbe5fd5f8091118a6bb455ec89fd93bc9
+cf53e48cbe5fd5f8091118a6bb455ec89fd93bc9,cf53e48c,updated deps,"updated deps
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437183167,1437183167,f9e1dbc4f6f4c3ff1d584698f6a570189e8551ea
+f9e1dbc4f6f4c3ff1d584698f6a570189e8551ea,f9e1dbc4,updated dep,"updated dep
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437179497,1437179497,52234c593a7c31975bb01f3cddfa9e85b261da6a
+52234c593a7c31975bb01f3cddfa9e85b261da6a,52234c59,Updated deps,"Updated deps
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437175722,1437175722,f93f05bf860bbfd2278f11ee90a990f3e20d1a0d
+f93f05bf860bbfd2278f11ee90a990f3e20d1a0d,f93f05bf,updated dep,"updated dep
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437175016,1437175016,f081b935da9cd42f3888ad5a411f9daea0336dcd
+f081b935da9cd42f3888ad5a411f9daea0336dcd,f081b935,Updated dep,"Updated dep
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437172952,1437172952,62f9fa9a9774c6263c27b514d65d1063f5d67395
+62f9fa9a9774c6263c27b514d65d1063f5d67395,62f9fa9a,"Added a second progress for rounds, gotta make her go backwards","Added a second progress for rounds, gotta make her go backwards
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437162213,1437162213,d3b91ddc6526d56c8ea7c22bf02a28c7a6b3071f
+d3b91ddc6526d56c8ea7c22bf02a28c7a6b3071f,d3b91ddc,"Macguyver'd some stuff, really need to implement this service","Macguyver'd some stuff, really need to implement this service
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437095930,1437095930,6d9c1d7b977b88234df9a5e63b2f03b8cc0ba896
+6d9c1d7b977b88234df9a5e63b2f03b8cc0ba896,6d9c1d7b,"Added more to the game screen, made custom view","Added more to the game screen, made custom view
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437087035,1437087035,167e55512c5ae72c7c42334bd922da4f2adb2633
+167e55512c5ae72c7c42334bd922da4f2adb2633,167e5551,"Added in the control buttons, untested, need to implement","Added in the control buttons, untested, need to implement
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437082650,1437082650,d8305f4e12fa9c0ee6d6edddf060388159b2ce52
+d8305f4e12fa9c0ee6d6edddf060388159b2ce52,d8305f4e,Updated submod,"Updated submod
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437074099,1437074099,cb75b4077c3bb52d14d7435adba284da088f18a8
+cb75b4077c3bb52d14d7435adba284da088f18a8,cb75b407,Things,"Things
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437073943,1437073943,2ca49ebb80e8b55a6a2a112fd688903f6adf541a
+2ca49ebb80e8b55a6a2a112fd688903f6adf541a,2ca49ebb,Added circleprogress as a module dep,"Added circleprogress as a module dep
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437073746,1437073746,3c139f8ccb924f7222ae7037a0f379f6da2ca05e
+3c139f8ccb924f7222ae7037a0f379f6da2ca05e,3c139f8c,Added circlularprogress as a submodule,"Added circlularprogress as a submodule
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1437073534,1437073534,abdb05d506000769810ff19448205d693c0ba18d
+abdb05d506000769810ff19448205d693c0ba18d,abdb05d5,"Tweaked the animations for configuring, also fixed the launching of custom mode","Tweaked the animations for configuring, also fixed the launching of custom mode
+
+Added a slide out left animation.  Some basic stuff to the GameScreen.class
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436997195,1436997195,796c8b71d18407451b91a0151ad0ad906e627dcc
+796c8b71d18407451b91a0151ad0ad906e627dcc,796c8b71,Added some placeholder icons,"Added some placeholder icons
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436997158,1436997158,adbe05405cb61fbc853dbf553c8c52a27be1d6ec
+adbe05405cb61fbc853dbf553c8c52a27be1d6ec,adbe0540,some work on the game screen logic,"some work on the game screen logic
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436993901,1436993901,d8de2ce1f0ec7b5d9fefbea71fd3f9586f8abee8
+d8de2ce1f0ec7b5d9fefbea71fd3f9586f8abee8,d8de2ce1,Some refactoring,"Some refactoring
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436991059,1436991059,dbaa940bf9a3e019b5697acba55c11aab61687ea
+dbaa940bf9a3e019b5697acba55c11aab61687ea,dbaa940b,Some AS suggested fixes,"Some AS suggested fixes
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436912221,1436912221,8333123c39aad3b0123f84618d3e50495174d883
+8333123c39aad3b0123f84618d3e50495174d883,8333123c,Organized imports,"Organized imports
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436823533,1436823533,8923f6267244ad0a99c6e3a121a7a09d59a5045e
+8923f6267244ad0a99c6e3a121a7a09d59a5045e,8923f626,"Im tired of the stupid menu acting up, just getting rid of it","Im tired of the stupid menu acting up, just getting rid of it
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436819392,1436819392,8ce09ebf3eb1b7c2cc122c6fe1975d9ed839407e
+8ce09ebf3eb1b7c2cc122c6fe1975d9ed839407e,8ce09ebf,Added a color changer,"Added a color changer
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436815661,1436815661,1a9c42ff05179bc04142a4029827ea3bede8789c
+1a9c42ff05179bc04142a4029827ea3bede8789c,1a9c42ff,"Made changes, to reset settings, and in preparation for color changer","Made changes, to reset settings, and in preparation for color changer
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436583544,1436583544,273ec614ae2cb29e09a0558efcbe0594093fbd68
+273ec614ae2cb29e09a0558efcbe0594093fbd68,273ec614,Added a row of buttons for incrementing rounds,"Added a row of buttons for incrementing rounds
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436582492,1436582492,3080133e2e1b025fc9285a95c0a7ff5889cd6861
+3080133e2e1b025fc9285a95c0a7ff5889cd6861,3080133e,"Worked on the landscape mode, removed unneeded code, fixed back button","Worked on the landscape mode, removed unneeded code, fixed back button
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436577472,1436577472,c69c1f293de4a8f0936d653b90c1ea5204463d10
+c69c1f293de4a8f0936d653b90c1ea5204463d10,c69c1f29,added animations and retaining fragment state,"added animations and retaining fragment state
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436574166,1436574166,33e7dc9364b33624fd04e4015435313c3f2ecd21
+33e7dc9364b33624fd04e4015435313c3f2ecd21,33e7dc93,tweaked colors again,"tweaked colors again
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436557367,1436557367,7122abfa2fd0187ec71e9924e39b72b5f07d0fe2
+7122abfa2fd0187ec71e9924e39b72b5f07d0fe2,7122abfa,"Added a reset button, flushed out layout smore","Added a reset button, flushed out layout smore
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436557144,1436557144,a14a8844949a7bcfe46519a20b472fd45181712f
+a14a8844949a7bcfe46519a20b472fd45181712f,a14a8844,Changed button to different library,"Changed button to different library
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436546616,1436546616,024cb6a7fea75eb34b40d259af4e73be510d3877
+024cb6a7fea75eb34b40d259af4e73be510d3877,024cb6a7,"More work on the configure, added color changer util","More work on the configure, added color changer util
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436488955,1436488955,9df5c00fa56ffe38053dadf2344c4642a02395f5
+9df5c00fa56ffe38053dadf2344c4642a02395f5,9df5c00f,Rough initial pass at configure screen,"Rough initial pass at configure screen
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436485242,1436485242,be95b559e3def0f573da9d48fcb90914f99a2281
+be95b559e3def0f573da9d48fcb90914f99a2281,be95b559,cleanup,"cleanup
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436479453,1436479453,d391973bed52ab764ef608b13887688123ad5513
+d391973bed52ab764ef608b13887688123ad5513,d391973b,Change colors,"Change colors
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436479217,1436479217,026c4d5045f1e771dc18f97f7017340b60aa56a4
+026c4d5045f1e771dc18f97f7017340b60aa56a4,026c4d50,Working on navigation,"Working on navigation
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436475986,1436475986,a2d70ca695ff4157c161d0c06365dd238de29c5c
+a2d70ca695ff4157c161d0c06365dd238de29c5c,a2d70ca6,Changes to the view,"Changes to the view
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436405465,1436405465,24c0823eb7b07c527008924641458e38e75888c9
+24c0823eb7b07c527008924641458e38e75888c9,24c0823e,Added a toolbar to the fragment,"Added a toolbar to the fragment
+
+Also changed the way the rippleview works
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436388028,1436388028,0aee5eaacbaad1d59e83afcb986f69b97d02123e
+0aee5eaacbaad1d59e83afcb986f69b97d02123e,0aee5eaa,More work on the selection,"More work on the selection
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436322478,1436322478,39373c7e76b40e2530a14533c455f25d072e26bd
+39373c7e76b40e2530a14533c455f25d072e26bd,39373c7e,Some more work on the selection fragment,"Some more work on the selection fragment
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436315268,1436315268,ff5437d982906aced762808b7fc6e8bdf09dff73
+ff5437d982906aced762808b7fc6e8bdf09dff73,ff5437d9,Getting sorted out,"Getting sorted out
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436299031,1436299031,7f41c1efe4e6713be8427829c2393b09b6c18c79
+7f41c1efe4e6713be8427829c2393b09b6c18c79,7f41c1ef,Initial commit,"Initial commit
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436220646,1436220646,ecd16062da198ddd709ccf958a889513a55b51b4
+ecd16062da198ddd709ccf958a889513a55b51b4,ecd16062,Update LICENSE,Update LICENSE,,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436215848,1436215848,a57f4f2b3f5070069b14cef37fb9d2a6e80b45af
+a57f4f2b3f5070069b14cef37fb9d2a6e80b45af,a57f4f2b,Initial commit,"Initial commit
+",,,,Jordon de Hoog,jordon.dehoog@gmail.com,Jordon de Hoog,jordon.dehoog@gmail.com,1436215804,1436215804,

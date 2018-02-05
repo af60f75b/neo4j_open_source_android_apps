@@ -1,0 +1,361 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+29fe0041f163695510775facdcc8c48114580def,29fe0041,Prepare 1.3.0 circular release,"Prepare 1.3.0 circular release
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1503846821,1503846821,fd5655c419929155b491d1e92ab4ae3f036cbe15
+fd5655c419929155b491d1e92ab4ae3f036cbe15,fd5655c4,Update android deps and target version to Oreo,"Update android deps and target version to Oreo
+
+Also Fix a String.format lint issue
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1503840230,1503846485,45f550e248e119dcd096d9a2e9c2bf88389e2358
+45f550e248e119dcd096d9a2e9c2bf88389e2358,45f550e2,Add some finals and UiThread annotations,"Add some finals and UiThread annotations
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1498589920,1503846485,5ec672a5c1f520886b7d72f5c47ec41b4a5b202f
+5ec672a5c1f520886b7d72f5c47ec41b4a5b202f,5ec672a5,Fix travis build,"Fix travis build
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1498513173,1503846485,417db0f9cb884a046e79904c9589965d4c57c32a
+417db0f9cb884a046e79904c9589965d4c57c32a,417db0f9,"Code cleaning, modify some public to private/package access","Code cleaning, modify some public to private/package access
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1498504366,1503846485,f490e07d8367c60d260cd14fa8e9fbe56e7fd959
+f490e07d8367c60d260cd14fa8e9fbe56e7fd959,f490e07d,Fix Nougat rotation issue,"Fix Nougat rotation issue
+
+Fixes #91
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1498504305,1503846485,562487a1c0069aa7e729442757880d00fd99eb99
+562487a1c0069aa7e729442757880d00fd99eb99,562487a1,Upgrade dependencies versions,"Upgrade dependencies versions
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1498502175,1503846485,2a97eb9626f935a5c40a794bd3218f44953a4f35
+2a97eb9626f935a5c40a794bd3218f44953a4f35,2a97eb96,Merge pull request #95 from bryant1410/master,"Merge pull request #95 from bryant1410/master
+
+Fix broken headings in Markdown files",,,,Antoine Merle,merle.antoine@gmail.com,GitHub,noreply@github.com,1498514201,1498514201,"53e6e9984a050ea48f4f24fb916c4f687b6931d7,a4c7cdc7ae96434af3c787d72fb08ac52b5d2aba"
+a4c7cdc7ae96434af3c787d72fb08ac52b5d2aba,a4c7cdc7,Fix broken Markdown headings,"Fix broken Markdown headings
+",,,,Santiago Castro,santi.1410@hotmail.com,Santiago Castro,santi.1410@hotmail.com,1492419052,1492419052,53e6e9984a050ea48f4f24fb916c4f687b6931d7
+53e6e9984a050ea48f4f24fb916c4f687b6931d7,53e6e998,Update changelog,"Update changelog
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1445689863,1445689863,064614e2b0dee54502d408155c4267932805ba7c
+064614e2b0dee54502d408155c4267932805ba7c,064614e2,Merge branch 'dev',"Merge branch 'dev'
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1445681086,1445681086,"271855feb43bc0624855b24c774e49500d530446,9d5ac280577c77075f3d2b534d47020d38cf4fd3"
+9d5ac280577c77075f3d2b534d47020d38cf4fd3,9d5ac280,Set Version name to 1.2.0,"Set Version name to 1.2.0
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1445681070,1445681070,ec4d8befd2c3e2b9db5876601d59c29832f6f776
+ec4d8befd2c3e2b9db5876601d59c29832f6f776,ec4d8bef,Added a reference to the powerManager,"Added a reference to the powerManager
+
+The power save mode will be checked every time the drawable starts.
+This fixes the case where the drawable is created once and started later.
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1442140933,1442140933,8234af57495b7fc791350c5805cd8e22e896e2d3
+8234af57495b7fc791350c5805cd8e22e896e2d3,8234af57,Updated travis script,"Updated travis script
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1442070186,1442071763,1c320d7f6c40c50f788296a3e9b6537fe521ca62
+1c320d7f6c40c50f788296a3e9b6537fe521ca62,1c320d7f,Set the default interpolator to FastOutSlowInInterpolator,"Set the default interpolator to FastOutSlowInInterpolator
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1442070139,1442070139,95b3e1fa1f779347b0a2cb4901ead502b24d9a3f
+95b3e1fa1f779347b0a2cb4901ead502b24d9a3f,95b3e1fa,PowerSaveMode handled. Fixes #78,"PowerSaveMode handled. Fixes #78
+
+In power mode, the animation will be very simple, with a refresh rate of 1 sec.
+
+- Refactored the circular drawable to use a delegate (default or powerSaveMode).
+- Fixed a leak: old animators kept running when calling setIndeterminateDrawable
+",,,,Castorflex,merle.antoine@gmail.com,Castorflex,merle.antoine@gmail.com,1440799257,1442069862,2d8d4edeede73560c6d81c3b38841d684fbf31a7
+2d8d4edeede73560c6d81c3b38841d684fbf31a7,2d8d4ede,Bump version,"Bump version
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1426615375,1426615375,6a5dc5b92fbfcdff51829da770d4edbb25cfd2ca
+271855feb43bc0624855b24c774e49500d530446,271855fe,Merge branch 'dev',"Merge branch 'dev'
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1426615088,1426615088,"676f0669473f1eef31b85b8e5e57257f68206ed5,6a5dc5b92fbfcdff51829da770d4edbb25cfd2ca"
+6a5dc5b92fbfcdff51829da770d4edbb25cfd2ca,6a5dc5b9,Prepared release / updated build tools version to 21.1.2,"Prepared release / updated build tools version to 21.1.2
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1426615051,1426615051,63dd4fd3390cfc938b5e8c830e43065cb1b9fc99
+676f0669473f1eef31b85b8e5e57257f68206ed5,676f0669,Merge pull request #72 from Moter8/patch-1,"Merge pull request #72 from Moter8/patch-1
+
+Fix the dependency code blocks' language",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1426234521,1426234521,"9cd32655ff0efef2ac92b9cd071dfeeedccf34e1,0d875a7e62770af97fa3bba11f20028f438df31f"
+0d875a7e62770af97fa3bba11f20028f438df31f,0d875a7e,Changed java code-blocks to groovy.,Changed java code-blocks to groovy.,,,,Carsten H,moter8@gmail.com,Carsten H,moter8@gmail.com,1426191382,1426191382,067e6746839e1951a301179ed5af9f4798fcd909
+067e6746839e1951a301179ed5af9f4798fcd909,067e6746,Fix the dependency code blocks' language,"Fix the dependency code blocks' language
+
+Github only highlights it if it's java :)",,,,Carsten H,moter8@gmail.com,Carsten H,moter8@gmail.com,1425814779,1425814779,9cd32655ff0efef2ac92b9cd071dfeeedccf34e1
+9cd32655ff0efef2ac92b9cd071dfeeedccf34e1,9cd32655,Merge pull request #71 from niedzielski/patch-1,"Merge pull request #71 from niedzielski/patch-1
+
+Specify Float Instead of Double",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1425237802,1425237802,"1c352b3b81038c0b45ac141cbd27020823a2464c,606ca479e2e6df8ec6589bee7fa44969054d5427"
+606ca479e2e6df8ec6589bee7fa44969054d5427,606ca479,Specify Float Instead of Double,Specify Float Instead of Double,,,,Stephen Niedzielski,stephen@niedzielski.com,Stephen Niedzielski,stephen@niedzielski.com,1425234989,1425234989,1c352b3b81038c0b45ac141cbd27020823a2464c
+63dd4fd3390cfc938b5e8c830e43065cb1b9fc99,63dd4fd3,Updated changelog,"Updated changelog
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424715170,1424715170,350bf1ed3f6c7409ff5b48314c164152d1809054
+350bf1ed3f6c7409ff5b48314c164152d1809054,350bf1ed,Updated versions codes / names. Cleaned grade build,"Updated versions codes / names. Cleaned grade build
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424714827,1424714827,b644cd5a4aa9c609a0386a204915a83be9eff835
+b644cd5a4aa9c609a0386a204915a83be9eff835,b644cd5a,Added viewEditMode check in the progressDrawable builder. should fix #41,"Added viewEditMode check in the progressDrawable builder. should fix #41
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424714720,1424714720,688c32284b218fd6b81e7fb2ec14b86aebbac4c5
+688c32284b218fd6b81e7fb2ec14b86aebbac4c5,688c3228,Updated android gradle plugin version,"Updated android gradle plugin version
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424530877,1424530877,7114bf33c1f6739188f07e8509477cdb38c23554
+7114bf33c1f6739188f07e8509477cdb38c23554,7114bf33,Updated sample to lollipop,"Updated sample to lollipop
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424528781,1424528781,c889fc1b7d791dafcc749eb1a47994133bfbc418
+c889fc1b7d791dafcc749eb1a47994133bfbc418,c889fc1b,Added v21 theme (mainly for determinate state),"Added v21 theme (mainly for determinate state)
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424528768,1424528768,0bb155d2df3f55c4c3d1cdb8b1a17bc9d58ccc18
+0bb155d2df3f55c4c3d1cdb8b1a17bc9d58ccc18,0bb155d2,Fixed Themes for people using CircularProgressBar and SmoothProgressBar themes…,"Fixed Themes for people using CircularProgressBar and SmoothProgressBar themes (removed that weird 48dp height).
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1424528582,1424528582,185e9beec9bd83f8214ff479c1189708c6e2b6ca
+185e9beec9bd83f8214ff479c1189708c6e2b6ca,185e9bee,Fixes #67,"Fixes #67
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1422993412,1422993412,284ffedf907fb638cf22adc6d173c9a7cd1e4c0a
+284ffedf907fb638cf22adc6d173c9a7cd1e4c0a,284ffedf,Updated grade plugin / grade version,"Updated grade plugin / grade version
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1422993356,1422993356,1c352b3b81038c0b45ac141cbd27020823a2464c
+1c352b3b81038c0b45ac141cbd27020823a2464c,1c352b3b,Prepared release,"Prepared release
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1417557276,1417557276,84a576cc5bda1c3a348a2d440a7097349dde82c6
+84a576cc5bda1c3a348a2d440a7097349dde82c6,84a576cc,Fixed Lollipop bug with the progress stop.,"Fixed Lollipop bug with the progress stop.
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1417556495,1417556495,14174e794ad74e4832e731b0ca47b9fa70b90d30
+14174e794ad74e4832e731b0ca47b9fa70b90d30,14174e79,Merge branch 'master' of https://github.com/pristineio/SmoothProgressBar into dev,"Merge branch 'master' of https://github.com/pristineio/SmoothProgressBar into dev
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1417554829,1417554829,"9440de3b80a1f431ed34a94b7c1d83a8a048bba3,fd6150ede3216cd74b0b02b0c82ab5d202c6278d"
+fd6150ede3216cd74b0b02b0c82ab5d202c6278d,fd6150ed,for some reason this line fixes android instrumentation tests,"for some reason this line fixes android instrumentation tests
+",,,,Aaron Alaniz,aaron@pristine.io,Aaron Alaniz,aaron@pristine.io,1416348781,1416348781,aeca86b0eb5ecb1e1e360e6a47222bafccb85726
+9440de3b80a1f431ed34a94b7c1d83a8a048bba3,9440de3b,Branch for issue#58,"Branch for issue#58
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1414259253,1414259253,35e00cb44b685af0459d0dea9aac75588bb5577e
+35e00cb44b685af0459d0dea9aac75588bb5577e,35e00cb4,Updated copyright,"Updated copyright
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1413722103,1413722103,"aeca86b0eb5ecb1e1e360e6a47222bafccb85726,13a89b5b95a3a3ba06d0d8980e48b53313ce54e3"
+aeca86b0eb5ecb1e1e360e6a47222bafccb85726,aeca86b0,Incremented version name for library-circular,"Incremented version name for library-circular
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1412876177,1412877100,"0689ec70234cf78ecc13a4a44e1ee43899de776d,dc34ce2a7927d22e93cb6eef7a552d135aef5cc2"
+13a89b5b95a3a3ba06d0d8980e48b53313ce54e3,13a89b5b,Merge branch 'patch-1' of https://github.com/kashban/SmoothProgressBar into dev,"Merge branch 'patch-1' of https://github.com/kashban/SmoothProgressBar into dev
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1412876177,1412876177,"0689ec70234cf78ecc13a4a44e1ee43899de776d,dc34ce2a7927d22e93cb6eef7a552d135aef5cc2"
+0689ec70234cf78ecc13a4a44e1ee43899de776d,0689ec70,Merge branch 'update-gradle' of https://github.com/friederbluemle/SmoothProgressBar into dev,"Merge branch 'update-gradle' of https://github.com/friederbluemle/SmoothProgressBar into dev
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1412876051,1412876051,"2f474fa70f8935cd1d0501dc96c9f93a25c49d9d,96d1957712a18fed019cbeb3257b1a6074bec98a"
+dc34ce2a7927d22e93cb6eef7a552d135aef5cc2,dc34ce2a,Create about_libraries_def.xml,"Create about_libraries_def.xml
+
+Allows AboutLibraries (https://github.com/mikepenz/AboutLibraries) to autodetect the usage of this library and show it on a dialog.",,,,"Jürgen ""Kashban"" Wahlmann",github@kashban.de,"Jürgen ""Kashban"" Wahlmann",github@kashban.de,1412845107,1412845107,528ce023d6bc422326c9b8277cb5c4621d25136f
+96d1957712a18fed019cbeb3257b1a6074bec98a,96d19577,Update Android Gradle plug-in to 0.13.3,"Update Android Gradle plug-in to 0.13.3
+",,,,Frieder Bluemle,frieder.bluemle@gmail.com,Frieder Bluemle,frieder.bluemle@gmail.com,1412840912,1412842440,1745492f3126fc2212cd3bc91fc711aaa4ba2af3
+1745492f3126fc2212cd3bc91fc711aaa4ba2af3,1745492f,Update Gradle wrapper to 2.1,"Update Gradle wrapper to 2.1
+",,,,Frieder Bluemle,frieder.bluemle@gmail.com,Frieder Bluemle,frieder.bluemle@gmail.com,1412837625,1412837625,528ce023d6bc422326c9b8277cb5c4621d25136f
+528ce023d6bc422326c9b8277cb5c4621d25136f,528ce023,Merge pull request #54 from Diolor/master,"Merge pull request #54 from Diolor/master
+
+Fix travis ci",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1412066896,1412066896,"4647a20c42687ec7f70c745b0b57ecea1ea49b08,e77eead833cc14ac0910e806cfbfa2489adade17"
+e77eead833cc14ac0910e806cfbfa2489adade17,e77eead8,fix travis,fix travis,,,,Dionysis Lorentzos,ddl449@gmail.com,Dionysis Lorentzos,ddl449@gmail.com,1412066384,1412066384,4647a20c42687ec7f70c745b0b57ecea1ea49b08
+2f474fa70f8935cd1d0501dc96c9f93a25c49d9d,2f474fa7,Merge branch 'master' into dev,"Merge branch 'master' into dev
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1411120394,1411120394,"05ee125f5b62d622b4f7b12fa76d441cbfaca7ea,4647a20c42687ec7f70c745b0b57ecea1ea49b08"
+05ee125f5b62d622b4f7b12fa76d441cbfaca7ea,05ee125f,Merge pull request #50 from i906/dev,"Merge pull request #50 from i906/dev
+
+Added progressiveStop methods",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1411032980,1411032980,"b8f547bc9e8c20d4f6c31a8cbcadc74d54da0703,e98bee3c1998d94beff7c01066b875fe5fdaf55b"
+e98bee3c1998d94beff7c01066b875fe5fdaf55b,e98bee3c,Added progressiveStop methods,"Added progressiveStop methods
+",,,,Noorzaini Ilhami,ilhami@terato.com,Noorzaini Ilhami,ilhami@terato.com,1411032715,1411032715,b8f547bc9e8c20d4f6c31a8cbcadc74d54da0703
+4647a20c42687ec7f70c745b0b57ecea1ea49b08,4647a20c,Fixed snippets. Closes #47,Fixed snippets. Closes #47,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410854829,1410854829,2c62c5928b309ca96f0fa18baa37f4a463aba323
+2c62c5928b309ca96f0fa18baa37f4a463aba323,2c62c592,Fixed typo. closes #46,Fixed typo. closes #46,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410854401,1410854401,7705b680256c13343305d366819155ed1c87dc6e
+7705b680256c13343305d366819155ed1c87dc6e,7705b680,Merge pull request #45 from i906/patch-1,"Merge pull request #45 from i906/patch-1
+
+Fixed to use correct class name",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410851561,1410851561,"21cf13e26d6f2dc43c9cb8c9861ed9866306ff61,2cd7a6b79cceaf797f22975bbd41e336bb03d716"
+2cd7a6b79cceaf797f22975bbd41e336bb03d716,2cd7a6b7,Fixed to use correct class name,Fixed to use correct class name,,,,i906,i906@users.noreply.github.com,i906,i906@users.noreply.github.com,1410847539,1410847539,21cf13e26d6f2dc43c9cb8c9861ed9866306ff61
+21cf13e26d6f2dc43c9cb8c9861ed9866306ff61,21cf13e2,Updated changelog,"Updated changelog
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410621804,1410621817,5870a1466e745e7a3d5bca43eed5296aa041ece4
+5870a1466e745e7a3d5bca43eed5296aa041ece4,5870a146,Merge branch 'dev',"Merge branch 'dev'
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410621693,1410621693,"aa235e88f5ba9977f43b3bc88722096d96e54725,b8f547bc9e8c20d4f6c31a8cbcadc74d54da0703"
+b8f547bc9e8c20d4f6c31a8cbcadc74d54da0703,b8f547bc,Added a callback for circularProgressDrawable stop animation,"Added a callback for circularProgressDrawable stop animation
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410620509,1410620509,456224f5174f0166d0ac1922a5e368ed8ac94bff
+456224f5174f0166d0ac1922a5e368ed8ac94bff,456224f5,Changed default smoothprogressbar interpolator to accelerate interpolator,"Changed default smoothprogressbar interpolator to accelerate interpolator
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410620317,1410620317,369a45fbe546868cb0c5bd167b0e36ae6f7bc331
+369a45fbe546868cb0c5bd167b0e36ae6f7bc331,369a45fb,Added sweep speed and rotation speed,"Added sweep speed and rotation speed
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410620268,1410620268,ecfcc9561c33c7141c655814a06ec610431a588a
+ecfcc9561c33c7141c655814a06ec610431a588a,ecfcc956,Changed version to 1.0.0.,"Changed version to 1.0.0.
+Moved description in libraries folders
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1410620165,1410620165,74c011c54b6b07c98a5b35325903f293248cfc2d
+74c011c54b6b07c98a5b35325903f293248cfc2d,74c011c5,Fixed Travis,"Fixed Travis
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409488719,1409489973,c6b694292a3396caf55e301ca9ead1f75993745c
+c6b694292a3396caf55e301ca9ead1f75993745c,c6b69429,Updated gif sample in readme,"Updated gif sample in readme
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409488392,1409488392,5d8375b8ab0e1553478228783ebbb0c87e204f90
+5d8375b8ab0e1553478228783ebbb0c87e204f90,5d8375b8,Travis update,"Travis update
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409485758,1409485997,b09dd7e14fccb24dcdcac4842fbdc4f2c8990b21
+b09dd7e14fccb24dcdcac4842fbdc4f2c8990b21,b09dd7e1,Incremented version code for apk sample,"Incremented version code for apk sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409484316,1409484316,daa589d4f9ccf1a215f4e3915a0e0ed865129ab3
+daa589d4f9ccf1a215f4e3915a0e0ed865129ab3,daa589d4,Updated sample to add the progressive stop,"Updated sample to add the progressive stop
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409483371,1409483371,041364416a4b4536a6bab7ff7fbbdec53a980a32
+041364416a4b4536a6bab7ff7fbbdec53a980a32,04136441,Added a smooth progressive start and a progressive stop. the progressive start…,"Added a smooth progressive start and a progressive stop. the progressive start is automatic and the progressive stop requires a call to CircularProgressDrawable#progressiveStop() method
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409483353,1409483353,8ca5d9b88650eeec6378cf9d5bef1696883eeb13
+8ca5d9b88650eeec6378cf9d5bef1696883eeb13,8ca5d9b8,Added appearing animation,"Added appearing animation
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409481653,1409481653,b3e6d70941604e96283289d3b6e38bb1483c0493
+b3e6d70941604e96283289d3b6e38bb1483c0493,b3e6d709,Reorganized library:,"Reorganized library:
+split into 2 libs: library(SmoothProgressBar, minAPI 7) and library-circular(CircularProgressBar, minAPI 14)
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409418376,1409419906,de02076a24b63226bb7f9d4bcefe92d2ee04a3fd
+de02076a24b63226bb7f9d4bcefe92d2ee04a3fd,de02076a,Fixed sample to add CircularProgressBar,"Fixed sample to add CircularProgressBar
+Added a few parameters:
+- sweep interpolator
+- rotation interpolator
+- rotation speed
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409411441,1409411441,b707acbe1c708118a54daf1349f589c765093cfa
+b707acbe1c708118a54daf1349f589c765093cfa,b707acbe,Replaced property animators by value animators to remove useless casts,"Replaced property animators by value animators to remove useless casts
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1409390124,1409390124,12997daf5ab0798884bc0d69acb81fc35c94d30d
+12997daf5ab0798884bc0d69acb81fc35c94d30d,12997daf,Added maven central badge,"Added maven central badge
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1408805234,1408805514,89a24ed7dcb93e5e8c7686a559f9dd62c473c7e2
+89a24ed7dcb93e5e8c7686a559f9dd62c473c7e2,89a24ed7,Snapshot version,"Snapshot version
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1408093109,1408093109,2d911633364f4a0233dd843ab14200a09f7b03fc
+2d911633364f4a0233dd843ab14200a09f7b03fc,2d911633,Disabled lint options for travis,"Disabled lint options for travis
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1408037549,1408037549,29808330e6dd25b4d0cfb5620004dca3f4b280f1
+29808330e6dd25b4d0cfb5620004dca3f4b280f1,29808330,Added CircularProgressBar,"Added CircularProgressBar
+Now API 14+ (using ICS animators)
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1408036174,1408036976,b048c859e6faa1940aa1727ace54ed467a9ea772
+aa235e88f5ba9977f43b3bc88722096d96e54725,aa235e88,Merge pull request #39 from cdeange/patch-1,"Merge pull request #39 from cdeange/patch-1
+
+GradlePlease now links directly to project",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1404804023,1404804023,"b048c859e6faa1940aa1727ace54ed467a9ea772,2cf4fb396bd64003aec331007a35ba60060f19c0"
+2cf4fb396bd64003aec331007a35ba60060f19c0,2cf4fb39,GradlePlease now links directly to project,GradlePlease now links directly to project,,,,Christian De Angelis,christiandeange@gmail.com,Christian De Angelis,christiandeange@gmail.com,1404801142,1404801142,b048c859e6faa1940aa1727ace54ed467a9ea772
+b048c859e6faa1940aa1727ace54ed467a9ea772,b048c859,Added gif in readme,"Added gif in readme
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402597886,1402597886,b212fcb5438c620382e91abd3c3d5ea08909ba44
+b212fcb5438c620382e91abd3c3d5ea08909ba44,b212fcb5,Merge branch 'dev',"Merge branch 'dev'
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402595397,1402595397,"4943c91d709642db0e48102d5ee5771c882edbe5,e4ff905a0716cc3c36c7b0a7c1d503f631ff0161"
+e4ff905a0716cc3c36c7b0a7c1d503f631ff0161,e4ff905a,"Updated plugins, incremented versions code/numbers...","Updated plugins, incremented versions code/numbers...
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402594666,1402594666,27517effac05e411cf03bc75cd1991fbb3e81daf
+27517effac05e411cf03bc75cd1991fbb3e81daf,27517eff,Updated Sample,"Updated Sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402594230,1402594230,8f88728794d129cb6cc2524c147976e369836ae8
+8f88728794d129cb6cc2524c147976e369836ae8,8f887287,Added a test before scheduling the next update. Closes #35,"Added a test before scheduling the next update. Closes #35
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402590178,1402590178,6750aef594677307e48eaf85851ccd24103c593e
+4943c91d709642db0e48102d5ee5771c882edbe5,4943c91d,Merge pull request #37 from somayajisubs/patch-1,"Merge pull request #37 from somayajisubs/patch-1
+
+Added screenshots",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1402382300,1402382300,"6750aef594677307e48eaf85851ccd24103c593e,bbac228d3384dda593c508f946a1d4764b29d64b"
+bbac228d3384dda593c508f946a1d4764b29d64b,bbac228d,Added screenshots,Added screenshots,,,,Subrahmanya Somayaji M,somayajisubs@gmail.com,Subrahmanya Somayaji M,somayajisubs@gmail.com,1402373640,1402373640,6750aef594677307e48eaf85851ccd24103c593e
+6750aef594677307e48eaf85851ccd24103c593e,6750aef5,Added change log 0.5.1,"Added change log 0.5.1
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1399196942,1399196942,f02d68c2f76f5b33a414f1322e33d68b19518792
+f02d68c2f76f5b33a414f1322e33d68b19518792,f02d68c2,Incremented version code / number,"Incremented version code / number
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1399196809,1399196809,d981c435b66c5d651e8bc719137deecf8ea71762
+d981c435b66c5d651e8bc719137deecf8ea71762,d981c435,Fixed bug when gradients used with non-mirror reversed mode,"Fixed bug when gradients used with non-mirror reversed mode
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1399196761,1399196761,97ea329114d267ca2e45db0374132b4e27044fbd
+97ea329114d267ca2e45db0374132b4e27044fbd,97ea3291,Added gradient yolo option,"Added gradient yolo option
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1399152173,1399152173,87e8efebb35c62aafd67bbdda200fb6c6d27ae7f
+87e8efebb35c62aafd67bbdda200fb6c6d27ae7f,87e8efeb,Removed useless bitdeli badge,"Removed useless bitdeli badge
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1398007614,1398007614,b13819ce896638c4f4e7098832ba9972d821c1b2
+b13819ce896638c4f4e7098832ba9972d821c1b2,b13819ce,"By beerware, welcome apache2. No more beers for me :(","By beerware, welcome apache2. No more beers for me :(
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1398006626,1398006626,fb65b549fe7c34d61402d5fe51c93612f094dc1b
+fb65b549fe7c34d61402d5fe51c93612f094dc1b,fb65b549,Fixed progressiveStop: no longer wait the end of the current section,"Fixed progressiveStop: no longer wait the end of the current section
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1398005833,1398005833,6c129760d46704c16e02a4f3902b468502af3809
+6c129760d46704c16e02a4f3902b468502af3809,6c129760,Merge branch 'sdk-manager-plugin' into dev,"Merge branch 'sdk-manager-plugin' into dev
+
+Conflicts:
+	build.gradle
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1398002054,1398002054,"add70205d64c3bd92bdb9fef8e8ffe5dbc2adf74,2fd38baa3e2ca406b85e2bf80f02101143c14494"
+2fd38baa3e2ca406b85e2bf80f02101143c14494,2fd38baa,Added sdk manager plugin.,"Added sdk manager plugin.
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1396706012,1398000036,2d397ff94a72ecfe49600dcfdac2c576a86a4673
+add70205d64c3bd92bdb9fef8e8ffe5dbc2adf74,add70205,Updated gradle and gradle plugin,"Updated gradle and gradle plugin
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1397999228,1397999228,2d397ff94a72ecfe49600dcfdac2c576a86a4673
+2d397ff94a72ecfe49600dcfdac2c576a86a4673,2d397ff9,Added View#isInEditMode. should fix #30,"Added View#isInEditMode. should fix #30
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1396692770,1396692770,958fb0d98f9c874a6cad06e537c33acb1677d260
+958fb0d98f9c874a6cad06e537c33acb1677d260,958fb0d9,Incremented version number for the next iteration,"Incremented version number for the next iteration
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395093005,1395093005,9198cb9201268cec63e69d87cdbfb879a962f827
+9198cb9201268cec63e69d87cdbfb879a962f827,9198cb92,Added empty debug buildType,"Added empty debug buildType
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395092941,1395092941,d6c13f05334741cd8f2fa196cbb1344732918ac9
+d6c13f05334741cd8f2fa196cbb1344732918ac9,d6c13f05,Updated version number/code,"Updated version number/code
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395091739,1395091739,f0a596bc56d871cd457ff331449ac36ab38cbada
+f0a596bc56d871cd457ff331449ac36ab38cbada,f0a596bc,Updated read me,"Updated read me
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395091170,1395091263,f9a132310dc716f54a92f5a388a7f88198c92659
+f9a132310dc716f54a92f5a388a7f88198c92659,f9a13231,Added Eclipse support. Closes #28,"Added Eclipse support. Closes #28
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090817,1395090817,5ea360e6ba54ebc00624c30cd20ca3d1c427e46c
+5ea360e6ba54ebc00624c30cd20ca3d1c427e46c,5ea360e6,Merge branch 'dev' of https://github.com/castorflex/SmoothProgressBar into dev,"Merge branch 'dev' of https://github.com/castorflex/SmoothProgressBar into dev
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090655,1395090655,"46b252db8c6307e24a75c0ed6d15926a2683bf59,437c8b1937bc76dde807a2107b08a9e8fc15e628"
+46b252db8c6307e24a75c0ed6d15926a2683bf59,46b252db,Updated change log,"Updated change log
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090620,1395090620,f68f36b84dba013511a9293c2b7b34c0f9b61910
+f68f36b84dba013511a9293c2b7b34c0f9b61910,f68f36b8,Fixed a title in the demo,"Fixed a title in the demo
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090350,1395090350,6af92498e7e7568efe92179449a85b008440e969
+6af92498e7e7568efe92179449a85b008440e969,6af92498,Renamed Utils to SmoothProgressBarUtils,"Renamed Utils to SmoothProgressBarUtils
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090270,1395090270,c6af1437d2485ff4b72819321aae96c684bab41f
+c6af1437d2485ff4b72819321aae96c684bab41f,c6af1437,Added a pocket style,"Added a pocket style
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1395090202,1395090202,e81062e2cd017fdb1ce1cdb007e878dc41946c57
+437c8b1937bc76dde807a2107b08a9e8fc15e628,437c8b19,Update .travis.yml,Update .travis.yml,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1394096243,1394096243,e81062e2cd017fdb1ce1cdb007e878dc41946c57
+e81062e2cd017fdb1ce1cdb007e878dc41946c57,e81062e2,Added possibility to set a background or a generated background with the setted colors.,"Added possibility to set a background or a generated background with the setted colors.
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1394064508,1394064508,34ad080931d95a107ee1278b59a4d0e79838d72e
+34ad080931d95a107ee1278b59a4d0e79838d72e,34ad0809,Incremented gradle version and gradle plugin version,"Incremented gradle version and gradle plugin version
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1393980806,1393980806,d3294b28fec642b445bcd95a52ed9bd92a127d27
+d3294b28fec642b445bcd95a52ed9bd92a127d27,d3294b28,Update CHANGELOG.md,Update CHANGELOG.md,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392971587,1392971587,39e62f1dba1cb5dffd76c8055d8ae4d1c122b185
+39e62f1dba1cb5dffd76c8055d8ae4d1c122b185,39e62f1d,The progressStart now also reset the current offset,"The progressStart now also reset the current offset
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392936356,1392936356,61a26cd572cc8cf27364c17e34ffb3d9109693be
+61a26cd572cc8cf27364c17e34ffb3d9109693be,61a26cd5,Fixed a bug if `progressiveStop` is called just after `progressiveStart`,"Fixed a bug if `progressiveStop` is called just after `progressiveStart`
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392936063,1392936131,536c42f0dc6762874d882681e75df77b2a3a8a93
+536c42f0dc6762874d882681e75df77b2a3a8a93,536c42f0,Updated readme/changelog,"Updated readme/changelog
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392935229,1392935497,3febaa153be9e8fcaac39c7427f8056500c3b6ae
+3febaa153be9e8fcaac39c7427f8056500c3b6ae,3febaa15,Added possibility to set the progressiveStartSpeed and progressiveStopSpeed,"Added possibility to set the progressiveStartSpeed and progressiveStopSpeed
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392934490,1392934974,af6fb583d164a63c97226b6d4a8567d1bf3dcd08
+af6fb583d164a63c97226b6d4a8567d1bf3dcd08,af6fb583,Now uses the currentInterpolator if no interpolator is setted with `spb_interpolator`,"Now uses the currentInterpolator if no interpolator is setted with `spb_interpolator`
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392931674,1392931674,a2b4d95d00433c9094276f24864d245060938bbb
+a2b4d95d00433c9094276f24864d245060938bbb,a2b4d95d,New property: progressiveStart,"New property: progressiveStart
+Finished to merge googlenow pull request
+Formatted code
+Removed some useless progressbars in the demo
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392927743,1392927743,496e6dd29bc405ec3205a9d5d68d5b1c0be3c7ac
+496e6dd29bc405ec3205a9d5d68d5b1c0be3c7ac,496e6dd2,incremented versioncode/name,"incremented versioncode/name
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1392763382,1392763382,42ae9043161cb126f29bff2c65dddfec96afac5c
+42ae9043161cb126f29bff2c65dddfec96afac5c,42ae9043,Converted indentation to spaces.,"Converted indentation to spaces.
+",,,,Eric Leong,ericleong@tumblr.com,Eric Leong,ericleong@tumblr.com,1392758732,1392758732,fe93e56c7a274a6b9c5dc853633031201ff97cc0
+fe93e56c7a274a6b9c5dc853633031201ff97cc0,fe93e56c,Added begin/finish for progress bar to transition into and out of existence.,"Added begin/finish for progress bar to transition into and out of existence.
+",,,,Eric Leong,ericleong@tumblr.com,Eric Leong,ericleong@tumblr.com,1392758130,1392758130,e6ce517a88a3270d8eb51fd900efcae937d0f5eb
+e6ce517a88a3270d8eb51fd900efcae937d0f5eb,e6ce517a,Added a contentLoadingSmoothProgressBar,"Added a contentLoadingSmoothProgressBar
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1390669979,1390669979,e784e6ee1b34a552f5308e4a961dd3cdac9a3964
+e784e6ee1b34a552f5308e4a961dd3cdac9a3964,e784e6ee,Updated readme. Closes #15,Updated readme. Closes #15,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1390152670,1390152670,d5136141159c3f955666c7bf1fad9e12bd12849f
+d5136141159c3f955666c7bf1fad9e12bd12849f,d5136141,TargetSdkVersion is now 14. Fixes #12,"TargetSdkVersion is now 14. Fixes #12
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389276190,1389276190,bb591d4c53cb78cfd5926ecc247b8eb30c54f288
+bb591d4c53cb78cfd5926ecc247b8eb30c54f288,bb591d4c,Updated read me,"Updated read me
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389226780,1389226780,a4fea9fe723eeea45350f2290ebeb1d60c6b3ddd
+a4fea9fe723eeea45350f2290ebeb1d60c6b3ddd,a4fea9fe,v0.3.1 - added a applyStyle(int styleResId) method,"v0.3.1 - added a applyStyle(int styleResId) method
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389225048,1389225048,3cb33fcbaee1e38a33edf0191eb2e0c64302b5fb
+3cb33fcbaee1e38a33edf0191eb2e0c64302b5fb,3cb33fcb,added changelog and license files,"added changelog and license files
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389217730,1389217730,5e2e4a3bb58024704722f40e373e8c1fbeb906d7
+5e2e4a3bb58024704722f40e373e8c1fbeb906d7,5e2e4a3b,Updated version code/number,"Updated version code/number
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389217052,1389217052,5f5980f1553fb853806e6ed76a1a7c5216d40373
+5f5980f1553fb853806e6ed76a1a7c5216d40373,5f5980f1,Change width to strokeWidth. the strokeWidth is now a float.,"Change width to strokeWidth. the strokeWidth is now a float.
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389214573,1389214573,3a728c61385839d7ada03fb2b35ea4569cb6983d
+3a728c61385839d7ada03fb2b35ea4569cb6983d,3a728c61,Added possibility to modify the progressbar/progressdrawable dynamically,"Added possibility to modify the progressbar/progressdrawable dynamically
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389214076,1389214076,9e379095049ab56e4fa9472f8cb60ebff1706435
+9e379095049ab56e4fa9472f8cb60ebff1706435,9e379095,Merge pull request #13 from intrications/patch-1,"Merge pull request #13 from intrications/patch-1
+
+Add empty <application/> tag ",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1389101682,1389101682,"de16232b1f2f9fb127a81702a355e8a0a52d1a04,0f501bb7645baf37b30fa9d8d31613d88201916d"
+0f501bb7645baf37b30fa9d8d31613d88201916d,0f501bb7,Add empty <application/> tag to fix #12.,Add empty <application/> tag to fix #12.,,,,Michael Basil,michael@intrications.com,Michael Basil,michael@intrications.com,1389089504,1389089504,de16232b1f2f9fb127a81702a355e8a0a52d1a04
+de16232b1f2f9fb127a81702a355e8a0a52d1a04,de16232b,Updated read me,"Updated read me
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388792286,1388792286,d94e2633c25f405ef730115f26a6610f0f13f2d4
+d94e2633c25f405ef730115f26a6610f0f13f2d4,d94e2633,Fixed Travis build,"Fixed Travis build
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388788541,1388788541,3997894e269d52a53436dda5cbc50b263e7df414
+3997894e269d52a53436dda5cbc50b263e7df414,3997894e,Updated maven_push to use Chris Banes’…,"Updated maven_push to use Chris Banes’ https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388776726,1388776726,750b57534428c7ad8b91781596ccdd0f1d1ffdea
+750b57534428c7ad8b91781596ccdd0f1d1ffdea,750b5753,updated signing configs,"updated signing configs
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388776050,1388776050,e92cdcaac89d46673812f5d9f86604eb15c18071
+e92cdcaac89d46673812f5d9f86604eb15c18071,e92cdcaa,Merge branch 'dev' for release 0.2.2,"Merge branch 'dev' for release 0.2.2
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388773740,1388773740,"26189406cf935745ae8ad9e10f855dd8a67d1ea4,0bd44c7386f05d89daf237e12e73fcc5d0fcb82f"
+0bd44c7386f05d89daf237e12e73fcc5d0fcb82f,0bd44c73,Prepared version code/name for release,"Prepared version code/name for release
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388773624,1388773624,5922643cf7c10ac6145bca7062f422f23cdfedb2
+5922643cf7c10ac6145bca7062f422f23cdfedb2,5922643c,Fixed max offset making the bar to flicker a bit.,"Fixed max offset making the bar to flicker a bit.
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388773542,1388773542,12b7ffa55e8eac1d9965f3fc414a33c20394c0a8
+12b7ffa55e8eac1d9965f3fc414a33c20394c0a8,12b7ffa5,Update gradle plugin to 0.7.+ and gradle to 1.9,"Update gradle plugin to 0.7.+ and gradle to 1.9
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388772786,1388772786,9b0c06edb082e0223d45d3b2737df8edf9efb2e0
+26189406cf935745ae8ad9e10f855dd8a67d1ea4,26189406,Added analytics,Added analytics,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388650474,1388650474,30e527c35466ff836940d31408c159285890c032
+9b0c06edb082e0223d45d3b2737df8edf9efb2e0,9b0c06ed,Now using TypedArray#getFloat instead of getString for speed attribute. Should fix #9,"Now using TypedArray#getFloat instead of getString for speed attribute. Should fix #9
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1388337874,1388337874,ed8a13e2ec83bf114a0820e632ec2aefdf0118b2
+30e527c35466ff836940d31408c159285890c032,30e527c3,Commented maven push for travis,Commented maven push for travis,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386671801,1386671801,9669dedcf1a2248ecf17e95d9b7fbd0de6e48a43
+9669dedcf1a2248ecf17e95d9b7fbd0de6e48a43,9669dedc,Added travis badges,Added travis badges,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386671284,1386671284,988af3f6b62c0f6668380d1e4d7cbf7405307092
+988af3f6b62c0f6668380d1e4d7cbf7405307092,988af3f6,Added Bitdeli badge,Added Bitdeli badge,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386671057,1386671057,bc819ba0ca8b822bb9fc134aa6aa8ad4d9e9a4e0
+ed8a13e2ec83bf114a0820e632ec2aefdf0118b2,ed8a13e2,Commented maven push,"Commented maven push
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386182998,1386183126,78b042886330a7e12d53b10b7820e9c60739f1ae
+78b042886330a7e12d53b10b7820e9c60739f1ae,78b04288,updated version name/code,"updated version name/code
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386181485,1386183120,bc819ba0ca8b822bb9fc134aa6aa8ad4d9e9a4e0
+bc819ba0ca8b822bb9fc134aa6aa8ad4d9e9a4e0,bc819ba0,Merge branch 'dev',"Merge branch 'dev'
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386181003,1386181003,"45ac8472a342c69613ba7a0b010e8361f61420ed,66c7f0892c3bf4b4a739f577c15bb693ab0dbe9f"
+66c7f0892c3bf4b4a739f577c15bb693ab0dbe9f,66c7f089,Fixed travis,"Fixed travis
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386171964,1386180623,1fd59bf1ac167e4354239bf182d8b09fe39063b4
+1fd59bf1ac167e4354239bf182d8b09fe39063b4,1fd59bf1,Fixed crash in demo app if sectionsCount == 0,Fixed crash in demo app if sectionsCount == 0,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386171222,1386171222,7d1449c3354ee8f0661b1a60f184e76b44bcecbf
+7d1449c3354ee8f0661b1a60f184e76b44bcecbf,7d1449c3,Create .travis.yml,Create .travis.yml,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386171093,1386171093,e640146285dd2e8165d9230fb0e6639a74f58e6d
+45ac8472a342c69613ba7a0b010e8361f61420ed,45ac8472,Added gnow and gplus styles to the sample,"Added gnow and gplus styles to the sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386105435,1386105435,94ec2af2c07c7a918d667faf88d906ebc091bf50
+94ec2af2c07c7a918d667faf88d906ebc091bf50,94ec2af2,Lib pushed on maven central. Updated readme to add integration part. Closes #2,"Lib pushed on maven central. Updated readme to add integration part. Closes #2
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386055654,1386055654,a66cce5a0df989599bb735a3f17390f3967ee68b
+a66cce5a0df989599bb735a3f17390f3967ee68b,a66cce5a,Added Maven push,"Added Maven push
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1386013226,1386013226,6974926a87b680fc1df93c839b4d3cfa0e5b5621
+6974926a87b680fc1df93c839b4d3cfa0e5b5621,6974926a,Fixed decelerate issue,"Fixed decelerate issue
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385938965,1385938965,3dba2b65568a8a8f4d2e716eb0a674ed8a0842bc
+3dba2b65568a8a8f4d2e716eb0a674ed8a0842bc,3dba2b65,Merge branch 'dev',"Merge branch 'dev'
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385938195,1385938195,"8a81f2c217812bced00baa82d5c3092a41776857,e640146285dd2e8165d9230fb0e6639a74f58e6d"
+e640146285dd2e8165d9230fb0e6639a74f58e6d,e6401462,Modified the draw to fix some cases,"Modified the draw to fix some cases
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385938154,1385938154,46d9cb85598843afa83714a23eed2623b051fcf1
+46d9cb85598843afa83714a23eed2623b051fcf1,46d9cb85,Added sample colors in the MakeCustom Sample,"Added sample colors in the MakeCustom Sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385937987,1385937987,358b14d3c8ccc6f87a2df3b2ce39c8126429f1fc
+358b14d3c8ccc6f87a2df3b2ce39c8126429f1fc,358b14d3,Added a make your own sample,"Added a make your own sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385928939,1385928939,050f0abc1ed16f1259697a5270be53a25120e469
+050f0abc1ed16f1259697a5270be53a25120e469,050f0abc,Added mirror mode (and mirror + reversed),"Added mirror mode (and mirror + reversed)
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385922650,1385924172,a0b2db97950284b5b12cad3b295c43b9f1c969a1
+a0b2db97950284b5b12cad3b295c43b9f1c969a1,a0b2db97,Fix 'app:spb_color=#fff' color setting with SmoothProgressBar,"Fix 'app:spb_color=#fff' color setting with SmoothProgressBar
+
+Signed-off-by: Lucio Maciel <luciofm@gmail.com>
+",,,,Lucio Maciel,luciofm@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385870495,1385923861,c17c1c22467a9066a0dafbd9160a029082899606
+8a81f2c217812bced00baa82d5c3092a41776857,8a81f2c2,Merge pull request #4 from luciofm/master,"Merge pull request #4 from luciofm/master
+
+Fix 'app:spb_color=#fff' color setting with SmoothProgressBar",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385889924,1385889924,"c17c1c22467a9066a0dafbd9160a029082899606,fcccf626fb55733232429edf6e1270d922b14d22"
+fcccf626fb55733232429edf6e1270d922b14d22,fcccf626,Fix 'app:spb_color=#fff' color setting with SmoothProgressBar,"Fix 'app:spb_color=#fff' color setting with SmoothProgressBar
+
+Signed-off-by: Lucio Maciel <luciofm@gmail.com>
+",,,,Lucio Maciel,luciofm@gmail.com,Lucio Maciel,luciofm@gmail.com,1385870495,1385870495,c17c1c22467a9066a0dafbd9160a029082899606
+c17c1c22467a9066a0dafbd9160a029082899606,c17c1c22,Updated README to add reversed and colors properties,"Updated README to add reversed and colors properties
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385771603,1385771603,eb5b1a43ed52a1bc038456c42b0700178a09b51f
+eb5b1a43ed52a1bc038456c42b0700178a09b51f,eb5b1a43,Added possibility to set many colors for one progressDrawable,"Added possibility to set many colors for one progressDrawable
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385771159,1385771159,fa9ac48d3fcd18db2e97293b5fe045aacfc2c9e3
+fa9ac48d3fcd18db2e97293b5fe045aacfc2c9e3,fa9ac48d,"Fixed versionName to 0.1.0, Added gradle.properties","Fixed versionName to 0.1.0, Added gradle.properties
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385767744,1385767744,2b74d71b5d728bd6bee71c49ea7bdc4ee6c2235d
+2b74d71b5d728bd6bee71c49ea7bdc4ee6c2235d,2b74d71b,Added reversed property,"Added reversed property
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385767004,1385767004,9bcb9ce5b8312fb42e91da8e3a64f0f5a1e6caae
+9bcb9ce5b8312fb42e91da8e3a64f0f5a1e6caae,9bcb9ce5,Fixed some naming conventions,"Fixed some naming conventions
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385766595,1385766595,2ff58a89bc48726753a3d35d3b0b3d31e49c05e2
+2ff58a89bc48726753a3d35d3b0b3d31e49c05e2,2ff58a89,Fixes #3,"Fixes #3
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385764370,1385764370,1adfeb64b0bced4f9012c4bb458eaf473254f24d
+1adfeb64b0bced4f9012c4bb458eaf473254f24d,1adfeb64,Update README.md,Update README.md,,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385632151,1385632151,c7532601b0028754862e168357a8bd0850335e8d
+c7532601b0028754862e168357a8bd0850335e8d,c7532601,Added README,"Added README
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385584409,1385584409,4cb385d6b0833b3c97675a50c65439c6bd449864
+4cb385d6b0833b3c97675a50c65439c6bd449864,4cb385d6,Added style in sample,"Added style in sample
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385580305,1385580305,ef5d9056927c531a6954acf96cfa4e411fc5b06e
+ef5d9056927c531a6954acf96cfa4e411fc5b06e,ef5d9056,initial import,"initial import
+",,,,Antoine Merle,merle.antoine@gmail.com,Antoine Merle,merle.antoine@gmail.com,1385579596,1385579596,

@@ -1,0 +1,951 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+ed4b90e9cbc31aa859042f3ec366a585caec2f9e,ed4b90e9,V14,"V14
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1501690985,1501690985,c5e5ef1b1cfdf421e27cbe07f878a2ee8be6d506
+c5e5ef1b1cfdf421e27cbe07f878a2ee8be6d506,c5e5ef1b,V14 (#58),"V14 (#58)
+
+* Added checkboxes for Vitamin B12 and Vitamin D.
+
+* Vitamins are not counted in the daily total servings.
+
+* Refactored the usage of some hardcoded values
+
+* Removed an unused method
+
+* Updated version to 14
+
+* Added translations for Vitamin B12 and Vitamin D. Removed unnecessary copies of the food_quantities integer-array from the translation files.
+
+* Moved the call to dismiss the notification from MainActivity's onCreate to onResume. In onCreate, the notification was not being dismissed if the app was running in the background.
+
+* greek translation fixes (#57)
+
+* greek translation fixes
+
+* Update strings.xml
+
+* Added icons for Vitamin B12 and Vitamin D
+
+* Replaced TODO with comment
+
+* Replaced the Vitamin D icon with a filled in sun
+
+* Added a divider to inform users that checking vitamins does not update the daily servings count
+
+* Added translations for vitamins dialog text.
+
+* Added a null check for the result of getFoodByName when restoring from backup files
+
+* Updated the Spanish translation
+
+* Increase versionCode
+",,,,John Slavick,slavick@users.noreply.github.com,GitHub,noreply@github.com,1501690551,1501690551,f112d1c7eced9bf9f956c820f97b12e62a9ff80a
+f112d1c7eced9bf9f956c820f97b12e62a9ff80a,f112d1c7,Updated pull_database.sh to work without requiring root access. The script only…,"Updated pull_database.sh to work without requiring root access. The script only works with debug builds of the app.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1501088631,1501088631,ba2daedf0000e3a62189880fc7c8c765dccb68ac
+ba2daedf0000e3a62189880fc7c8c765dccb68ac,ba2daedf,V13.1 (#56),"V13.1 (#56)
+
+* German: Translate ""tablespoon"" with ""Esslöffel""
+
+See: https://dict.leo.org/englisch-deutsch/tablespoon
+
+* Improve German translation
+
+- Fixes typos.
+- Fixes misleading/wrong translations.
+- Improves punctuation.
+- Improves understandability.
+- Harmonizes form of address (""du"" instead of ""Sie"").
+
+* Fixed minor bug where notification is not dismissed unless you open the app by tapping the notification.
+
+* Updated version to 13.1
+
+* Updated README.md
+",,,,John Slavick,slavick@users.noreply.github.com,GitHub,noreply@github.com,1500375026,1500375026,ac5a3013daac6392ef6cbee8b8aac5b7d4ecae50
+ac5a3013daac6392ef6cbee8b8aac5b7d4ecae50,ac5a3013,V13 (#53),"V13 (#53)
+
+* Updated the app version to v13.
+
+* Tapping on a date in the FoodHistoryActivity now takes the user to that date.
+
+* Added button to FoodInfoActivity that allows the user to change between Imperial and Metric units. This implementation does not work with translations, so it will need to be refactored.
+
+* Split the serving size strings into an unformatted string-array and two string-arrays for Imperial and Metric units.
+
+* Refactored to support Spanish translation. Updating the rest of the translations should be fairly straightforward.
+
+* Updated the Bulgarian translation
+
+* Updated the German translation
+
+* Updated the Greek translation
+
+* Updated the French translation
+
+* Small changes to English strings
+
+* Startup performance improvement. No longer loading and caching all FoodInfo on startup. Only food icons are loaded initially since they are used on the first screen the user sees. If the user taps into FoodInfoActivity, then the rest of the data is loaded and cached.
+
+* Added a comment to initServingSizesForFood
+
+* Moved the change units button underneath the ""Serving Sizes"" label. This prevents the label and button from being hidden with long translations.
+
+* Don't show the change units button when displaying info for exercise
+
+* Added missing translations that were preventing the apk from being built
+
+* Replaced all German metric volume units with metric weight units from the book
+
+* Reverted MPAndroidChart to 2.1.6. Updating to 2.2.5 has made MPAndroidChart the main source of crashes in the app.
+
+* The user can now jump to a date from the ServingsHistoryActivity
+
+* Added Greek and Bulgarian translations for grams. Removed some trailing commas in the strings files.
+
+* Fixed display bug where the tops of the chart labels were being cut off.
+
+* User can now only jump to a specific date if they are viewing the daily servings history. LoadServingsHistoryTask now returns a LoadServingsHistoryCompleteEvent so extra data can be passed with the complete event.
+
+* Updated README.md
+",,,,John Slavick,slavick@users.noreply.github.com,GitHub,noreply@github.com,1499364527,1499364527,f8570ca9c7540b55ed5caeb750a8ab83c481c362
+f8570ca9c7540b55ed5caeb750a8ab83c481c362,f8570ca9,Updated README.md,"Updated README.md
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1496957284,1496957284,799f40cc17babe39c5ced29e59ab01f82c3194b6
+799f40cc17babe39c5ced29e59ab01f82c3194b6,799f40cc,Updated version to 12.2,"Updated version to 12.2
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1496956625,1496956625,9fe0a47ab4ad79c7ea65e95c13c46e6a9a423452
+9fe0a47ab4ad79c7ea65e95c13c46e6a9a423452,9fe0a47a,"Added android:installLocation=""auto"" to AndroidManifest.xml. This allows the…","Added android:installLocation=""auto"" to AndroidManifest.xml. This allows the user to move the app to the SD card.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1496956614,1496956614,ed6a87166bbb47d2a1a791427e2ced535a80db6a
+ed6a87166bbb47d2a1a791427e2ced535a80db6a,ed6a8716,Fixed bug where views on Samsung devices were painted black.,"Fixed bug where views on Samsung devices were painted black.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1496829166,1496829166,c922e9b10980cdcbc1ad9e6ad0c1c92064d5142e
+c922e9b10980cdcbc1ad9e6ad0c1c92064d5142e,c922e9b1,Adding AA_MODELS so the tables wont be said to be missing when using Instant Run (#49),"Adding AA_MODELS so the tables wont be said to be missing when using Instant Run (#49)
+
+",,,,notmypassword,notmypassword@users.noreply.github.com,John Slavick,slavick@users.noreply.github.com,1496757034,1496757034,defd6c37c9fc51cd5ff950d262f0d1524ae60fe0
+defd6c37c9fc51cd5ff950d262f0d1524ae60fe0,defd6c37,V12.1 (#48),"V12.1 (#48)
+
+* Removed Dutch translation
+
+* Extracted the ""%d out of %d"" string and added translations for it.
+
+* Fixed bug where days without servings were not included in the trend calculation. Now, those missing days are counted as 0 servings. This provides a more accurate trend for users who are more sporadic in their use of the app.
+
+* Updated Butterknife to 8.6.0
+
+* Updated version to v12.1
+
+* Added *.apk to .gitignore
+
+* Fixed minor bug where views were not properly aligned
+",,,,John Slavick,slavick@users.noreply.github.com,GitHub,noreply@github.com,1495385378,1495385378,83ed8582ecaf7ec9f2c1a01e0a08ae34a33398ab
+83ed8582ecaf7ec9f2c1a01e0a08ae34a33398ab,83ed8582,V12 (#47),"V12 (#47)
+
+- Improved performance and functionality of the Daily Servings History graph
+- Redesigned checkbox layout to improve support for translations and small screens
+- Added Spanish translation - thanks to contributor Monica Suarez
+- Added French translation - thanks to contributor [vgstef](https://github.com/vgstef)
+- Added Dutch translation - thanks to contributor [gfvpelt](https://github.com/gfvpelt)
+- Added Bulgarian translation - thanks to contributor [haripetrov](https://github.com/haripetrov)
+- Added Greek translation - thanks to contributor [kapcom01](https://github.com/kapcom01)",,,,John Slavick,slavick@users.noreply.github.com,GitHub,noreply@github.com,1494776925,1494776925,a6720d4fb2045b6addd490510a9888e570a4e3bb
+a6720d4fb2045b6addd490510a9888e570a4e3bb,a6720d4f,The food id names are now used when creating the backup csv file,"The food id names are now used when creating the backup csv file
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1479236277,1479236277,6d8003b539c043b6dbfce2867b9a8664ead6e85e
+6d8003b539c043b6dbfce2867b9a8664ead6e85e,6d8003b5,Refactored Servings.getTotalServingsOnDate to do a SELECT SUM() query instead of…,"Refactored Servings.getTotalServingsOnDate to do a SELECT SUM() query instead of iterating over the results and calculating the sum manually.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1479056270,1479056270,ef7273329f96ed606a84a3dc6cc3d29012bc007f
+ef7273329f96ed606a84a3dc6cc3d29012bc007f,ef727332,Updated serving sizes to use fraction characters,"Updated serving sizes to use fraction characters
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1478884850,1478884850,d6a524efa26689dcf94638d9c33bcd8734b3028f
+d6a524efa26689dcf94638d9c33bcd8734b3028f,d6a524ef,Fixed bug where the overall food videos link was creating the url using the translated food name.,"Fixed bug where the overall food videos link was creating the url using the translated food name.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1478884618,1478884618,29430ae686861dd61cddbdfc007e8bfcb6c0bf35
+29430ae686861dd61cddbdfc007e8bfcb6c0bf35,29430ae6,Updated README for v11; fixed links to contributors' pages,"Updated README for v11; fixed links to contributors' pages
+",,,,John Slavick,slavick@users.noreply.github.com,John Slavick,slavick@users.noreply.github.com,1478818640,1478818640,ced0d48d3c7e58f30dc52b6dc66689c340b105d0
+ced0d48d3c7e58f30dc52b6dc66689c340b105d0,ced0d48d,Updated README for v11,"Updated README for v11
+",,,,John Slavick,slavick@users.noreply.github.com,John Slavick,slavick@users.noreply.github.com,1478818497,1478818497,c971a2b2399b749884a86cd4a89c82ad84bc88e7
+c971a2b2399b749884a86cd4a89c82ad84bc88e7,c971a2b2,Merge pull request #34 from nutritionfactsorg/v11,"Merge pull request #34 from nutritionfactsorg/v11
+
+V11",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1478817545,1478817545,"9e6aa7af227f4a08fd7008258b54f22a26527352,d9e63bdf28436c88894b0f286a29becf79467c3c"
+d9e63bdf28436c88894b0f286a29becf79467c3c,d9e63bdf,Updated to latest gradle version,"Updated to latest gradle version
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478816269,1478816269,c818225911b147d8a4c9a5f1f789659c0e2545f0
+c818225911b147d8a4c9a5f1f789659c0e2545f0,c8182259,Updated to latest Crashlytics version,"Updated to latest Crashlytics version
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478814322,1478814322,ee8e79ac4ea3a398ea0b79a40f53adb22173e400
+ee8e79ac4ea3a398ea0b79a40f53adb22173e400,ee8e79ac,Fixed issues preventing the apk release build process,"Fixed issues preventing the apk release build process
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478814304,1478814304,b051d1e1c86aaacbdf02e960dd9b7caacb1febea
+b051d1e1c86aaacbdf02e960dd9b7caacb1febea,b051d1e1,Updated version to 11,"Updated version to 11
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478812959,1478812959,f8c038a2cd46a4156496fa79261c77a740f564a2
+f8c038a2cd46a4156496fa79261c77a740f564a2,f8c038a2,Made some elements smaller in order to fit all of the Beverages checkboxes on small screens.,"Made some elements smaller in order to fit all of the Beverages checkboxes on small screens.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478812660,1478812660,92251e37cc4836832372a3641a687427aec737be
+92251e37cc4836832372a3641a687427aec737be,92251e37,Tapping on the food icon now opens the food information.,"Tapping on the food icon now opens the food information.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478812616,1478812616,4f02ad289f68bf22f548e7623bd52e2381f69ebd
+4f02ad289f68bf22f548e7623bd52e2381f69ebd,4f02ad28,Fixed crash where backup files created with the previous version of the app…,"Fixed crash where backup files created with the previous version of the app crashed on restore in the new version of the app.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478796114,1478796114,a14e27f80fe89b3790213edc26063f73072df391
+a14e27f80fe89b3790213edc26063f73072df391,a14e27f8,Refactored Food.createFoodIfDoesNotExist to handle changing languages on the…,"Refactored Food.createFoodIfDoesNotExist to handle changing languages on the device. The id_name column in the foods table is being used as a canonical id for the foods. The data in this column should never change as it is used for allowing the app to know what the food is no matter the language settings on the device.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478795046,1478795046,38f0cfdfc980c5a14f184eecceb98c155de02743
+38f0cfdfc980c5a14f184eecceb98c155de02743,38f0cfdf,Undoing the change where I added DatabaseUtil as I ended up not needing to add…,"Undoing the change where I added DatabaseUtil as I ended up not needing to add another database upgrade task.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478725922,1478725922,f63a644b402b1a6f39b8de171b0f6c651755b15a
+f63a644b402b1a6f39b8de171b0f6c651755b15a,f63a644b,Added the id_name column to Food. Updated the migration file to create an index…,"Added the id_name column to Food. Updated the migration file to create an index for id_name as the ActiveAndroid schema upgrade process doesn't seem to take into account the ""index = true"".
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478638314,1478638884,75c59eed3e9e17deb29e3b37ae627d7da57b4a3d
+75c59eed3e9e17deb29e3b37ae627d7da57b4a3d,75c59eed,Added a helpful script that makes it very easy to pull and open a SQLite…,"Added a helpful script that makes it very easy to pull and open a SQLite database file on rooted devices
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478637449,1478637449,e00baffffa0ccdb72ae34013116913b828adae69
+e00baffffa0ccdb72ae34013116913b828adae69,e00bafff,Added DatabaseUtil to encapsulate database migrations so MainActivity doesn't become polluted,"Added DatabaseUtil to encapsulate database migrations so MainActivity doesn't become polluted
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478621477,1478621477,4c15e92dda7999b5c53233a29bdbce74db045d8a
+4c15e92dda7999b5c53233a29bdbce74db045d8a,4c15e92d,Refactored CalculateStreaksTask and LoadServingsHistoryTask to use the EventBus…,"Refactored CalculateStreaksTask and LoadServingsHistoryTask to use the EventBus in onPostExecute instead of the listener interface
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478621077,1478621077,50bb916e816b3f33ef22b693f84a1a06bf5dc6c2
+50bb916e816b3f33ef22b693f84a1a06bf5dc6c2,50bb916e,Refactored BackupTask to use the EventBus in onPostExecute instead of the listener interface,"Refactored BackupTask to use the EventBus in onPostExecute instead of the listener interface
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478619668,1478619668,1d8d5ee3471d70602abb663b92be81bab2eec17a
+1d8d5ee3471d70602abb663b92be81bab2eec17a,1d8d5ee3,Refactored RestoreTask to use the EventBus in onPostExecute instead of the listener interface,"Refactored RestoreTask to use the EventBus in onPostExecute instead of the listener interface
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478619413,1478619413,3a292b073f1569a8f2ceedb1b2ad1aca8f000ad3
+3a292b073f1569a8f2ceedb1b2ad1aca8f000ad3,3a292b07,Refactored CalculateStreakTask to use the EventBus in onPostExecute instead of…,"Refactored CalculateStreakTask to use the EventBus in onPostExecute instead of the listener interface
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478618797,1478618797,d53331c6e8bf6c59f5d40a6e2ba58fdaa79a78b4
+d53331c6e8bf6c59f5d40a6e2ba58fdaa79a78b4,d53331c6,Added migration for adding the id_name column to the foods table. This column…,"Added migration for adding the id_name column to the foods table. This column name will hold the English name of the food so that the name field can change with the language.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1478617847,1478617847,b18d9115ef3a70061a0f7dcdaa5f8891c6a14af1
+b18d9115ef3a70061a0f7dcdaa5f8891c6a14af1,b18d9115,Fixing crashes on start when phone set to German language. The issue has to do…,"Fixing crashes on start when phone set to German language. The issue has to do with the wrong translation being used to look up the food icon and then throwing a NullPointerException.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1477425990,1477425990,3f3fb81036d668ba53bf5c6e67f012d4399d26e8
+3f3fb81036d668ba53bf5c6e67f012d4399d26e8,3f3fb810,Moved the servings CheckBox logic into FoodCheckBoxes,"Moved the servings CheckBox logic into FoodCheckBoxes
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1476813118,1476813118,635f1ac20f3521622f221037155e683a52040f3d
+635f1ac20f3521622f221037155e683a52040f3d,635f1ac2,Servings are now checked in groups. This means we call setServings instead of…,"Servings are now checked in groups. This means we call setServings instead of increaseServings/decreaseServings.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1476811318,1476811318,af289114444e31ecb8f51c86439b7563d5c45584
+af289114444e31ecb8f51c86439b7563d5c45584,af289114,Update ServingCheckBox to match code style,"Update ServingCheckBox to match code style
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1476810513,1476810804,927686d0fa55d40f340e0f2d1a02d356e06db795
+927686d0fa55d40f340e0f2d1a02d356e06db795,927686d0,Gradle v2.2.0,"Gradle v2.2.0
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1476809509,1476809509,5c69deb11ac00457c3b073e5c8addfef77ddcb68
+5c69deb11ac00457c3b073e5c8addfef77ddcb68,5c69deb1,Merge pull request #32 from notmypassword/v11,"Merge pull request #32 from notmypassword/v11
+
+Check Box Proposal: Checking boxes to the right of a checked box.",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1474246414,1474246414,"7512918e0a7d63982b6201c37d4122727068ef9f,6f7f140ef9a183937f133abff1c4e87bbec048d3"
+6f7f140ef9a183937f133abff1c4e87bbec048d3,6f7f140e,Removing unused methods,"Removing unused methods
+",,,,Ben Butler,softaware2@use.startmail.com,Ben Butler,softaware2@use.startmail.com,1473928093,1473928093,8be5c69559915481be5478db397e944c4ff84eb8
+8be5c69559915481be5478db397e944c4ff84eb8,8be5c695,Check Box Proposal: Checking boxes to the right of a checked box. Unchecking…,"Check Box Proposal: Checking boxes to the right of a checked box. Unchecking boxes to the left of an unchecked box.
+",,,,Ben Butler,softaware2@use.startmail.com,Ben Butler,softaware2@use.startmail.com,1473921304,1473921304,7512918e0a7d63982b6201c37d4122727068ef9f
+7512918e0a7d63982b6201c37d4122727068ef9f,7512918e,Merge pull request #31 from myang310/master,"Merge pull request #31 from myang310/master
+
+Swapped images of cruciferous_vegetables.png and greens.png",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1473374977,1473374977,"6546a25e5731f6c9e4f01dce9edde88cdd05a23f,59a6a76b061ca2f8cfa70ecb8389f0284d67f382"
+6546a25e5731f6c9e4f01dce9edde88cdd05a23f,6546a25e,Removed some unused methods,"Removed some unused methods
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1473293738,1473293738,497bde29a5bf146f778cab9de7ff5ac436d6aa07
+497bde29a5bf146f778cab9de7ff5ac436d6aa07,497bde29,Fixed crash due to ActivityNotFoundException.,"Fixed crash due to ActivityNotFoundException.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1473293689,1473293689,7b137b8bc14648a7df84a1688aafdfb509a752ac
+59a6a76b061ca2f8cfa70ecb8389f0284d67f382,59a6a76b,Swapped images of cruciferous_vegetables.png and greens.png,"Swapped images of cruciferous_vegetables.png and greens.png
+",,,,Ming Yang,mgy209@nyu.edu,Ming Yang,mgy209@nyu.edu,1472974746,1472974746,9e6aa7af227f4a08fd7008258b54f22a26527352
+7b137b8bc14648a7df84a1688aafdfb509a752ac,7b137b8b,Added a null check when restoring from backup.,"Added a null check when restoring from backup.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1472305312,1472305312,49a32672205784e05b9fd2046553dd8781b5eabe
+49a32672205784e05b9fd2046553dd8781b5eabe,49a32672,Merge pull request #29 from MovGP0/feature/26-provide-a-german-translation,"Merge pull request #29 from MovGP0/feature/26-provide-a-german-translation
+
+Feature/26 provide a german translation",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1472031818,1472031818,"69f8cf2bd6e87516bee1f29752b5aa40b3afca00,7d6d0418d11a50074cbccbace4bd8d3ba4799bca"
+7d6d0418d11a50074cbccbace4bd8d3ba4799bca,7d6d0418, #26 using vulgar fractions," #26 using vulgar fractions
+",,,,Johann Dirry,movgp0@gmail.com,Johann Dirry,movgp0@gmail.com,1471292721,1471862431,2d4f903a9776203dccb66ff11d68ef4dd15e9909
+2d4f903a9776203dccb66ff11d68ef4dd15e9909,2d4f903a,Eigenreview and fixing translations,"Eigenreview and fixing translations
+",,,,Johann Dirry,movgp0@gmail.com,Johann Dirry,movgp0@gmail.com,1471453878,1471862426,d82ad0e1726e6a850a1ed2869a0efaccfd60f92a
+d82ad0e1726e6a850a1ed2869a0efaccfd60f92a,d82ad0e1, #26 adding string-array translations (video links still missing)," #26 adding string-array translations (video links still missing)
+",,,,Johann Dirry,movgp0@gmail.com,Johann Dirry,movgp0@gmail.com,1471291977,1471862413,707b0bb213de5c38c953afee8403057f5869bc9e
+707b0bb213de5c38c953afee8403057f5869bc9e,707b0bb2, #26 translating string resources to german," #26 translating string resources to german
+",,,,Johann Dirry,movgp0@gmail.com,Johann Dirry,movgp0@gmail.com,1471286004,1471862384,69f8cf2bd6e87516bee1f29752b5aa40b3afca00
+69f8cf2bd6e87516bee1f29752b5aa40b3afca00,69f8cf2b,Added length check to prevent ArrayIndexOutOfBoundsException when restoring backup,"Added length check to prevent ArrayIndexOutOfBoundsException when restoring backup
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1470494595,1470495240,805b933bffa0739d893c6cd8758a269224390fc6
+805b933bffa0739d893c6cd8758a269224390fc6,805b933b,Added null check to fix crash due to vgExplodingStar being null.,"Added null check to fix crash due to vgExplodingStar being null.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1470494018,1470494018,9e6aa7af227f4a08fd7008258b54f22a26527352
+9e6aa7af227f4a08fd7008258b54f22a26527352,9e6aa7af,Merge pull request #24 from nutritionfactsorg/v10.3,"Merge pull request #24 from nutritionfactsorg/v10.3
+
+v10.3",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467567089,1467567089,"24d0a70b09a0e365888018e83e74f202a9eea283,5f7b6f4515de7b12535123b163c07b5ad48cdd81"
+5f7b6f4515de7b12535123b163c07b5ad48cdd81,5f7b6f45,version 10.3,"version 10.3
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1467549731,1467549731,a9715c127c6d952f6f55e82de9e191c14c6cc3dc
+a9715c127c6d952f6f55e82de9e191c14c6cc3dc,a9715c12,Added a try/catch for RuntimeExceptions when trying to show the update reminder notification.,"Added a try/catch for RuntimeExceptions when trying to show the update reminder notification.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1467549714,1467549714,24d0a70b09a0e365888018e83e74f202a9eea283
+24d0a70b09a0e365888018e83e74f202a9eea283,24d0a70b,Merge pull request #23 from nutritionfactsorg/v10.2,"Merge pull request #23 from nutritionfactsorg/v10.2
+
+v10.2",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467461360,1467461360,"7255e823a2e6da9d43b7056d462d0b468c2febba,e81a47f127bcb50c9dfc31ad1810c37246de3240"
+e81a47f127bcb50c9dfc31ad1810c37246de3240,e81a47f1,UpdateReminderPref is no longer Serializable. This was causing a crash between…,"UpdateReminderPref is no longer Serializable. This was causing a crash between app updates. Instead of serializing the UpdateReminderPref object and passing that to the alarm service, I am converting it to a JSON string.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467460910,1467460910,f8bf0d38bb126adbc55e15228196203bdea0f536
+f8bf0d38bb126adbc55e15228196203bdea0f536,f8bf0d38,Enabled ProGuard and added more rules. Updated versions.,"Enabled ProGuard and added more rules. Updated versions.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467454108,1467454177,bc6a8fdb7fcf52a74ef0c0f48150f152d3da6f4c
+bc6a8fdb7fcf52a74ef0c0f48150f152d3da6f4c,bc6a8fdb,Added the auto generated serialVersionUID generated by Android Studio.,"Added the auto generated serialVersionUID generated by Android Studio.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467453313,1467453313,eeb3f98873d14b47c440cee0d009071f72e0ebf8
+7255e823a2e6da9d43b7056d462d0b468c2febba,7255e823,Merge pull request #22 from nutritionfactsorg/develop,"Merge pull request #22 from nutritionfactsorg/develop
+
+Merging v10.1 changes into master ",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467422772,1467422772,"c0a3ae0c74aa3ec0afbfee29099c6ffb5bb696b4,eeb3f98873d14b47c440cee0d009071f72e0ebf8"
+eeb3f98873d14b47c440cee0d009071f72e0ebf8,eeb3f988,Merge pull request #21 from nutritionfactsorg/v10.1,"Merge pull request #21 from nutritionfactsorg/v10.1
+
+v10.1",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467422713,1467422713,"572a8aa77de6905ca620a8df706d317281c56211,e5060c3f7cab2a354578391d1b8971439f104227"
+e5060c3f7cab2a354578391d1b8971439f104227,e5060c3f,Disabled proguard and increased version,"Disabled proguard and increased version
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467422397,1467422397,6bfb9479b34dfd1919fd07a0f85b617c77b62aa8
+6bfb9479b34dfd1919fd07a0f85b617c77b62aa8,6bfb9479,"Fix for crash caused by using ""?android:attr/listPreferredItemPaddingStart"" and…","Fix for crash caused by using ""?android:attr/listPreferredItemPaddingStart"" and ""?android:attr/listPreferredItemPaddingEnd"" which are not supported below SDK 17.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467421403,1467421403,572a8aa77de6905ca620a8df706d317281c56211
+c0a3ae0c74aa3ec0afbfee29099c6ffb5bb696b4,c0a3ae0c,Merge pull request #20 from nutritionfactsorg/develop,"Merge pull request #20 from nutritionfactsorg/develop
+
+Merging v10 changes into master ",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467413103,1467413103,"6cc1473de40bbd2b12069421a421e1adcea0cbbf,572a8aa77de6905ca620a8df706d317281c56211"
+572a8aa77de6905ca620a8df706d317281c56211,572a8aa7,Merge pull request #19 from nutritionfactsorg/v10,"Merge pull request #19 from nutritionfactsorg/v10
+
+v10",,,,John Slavick,john.slavick@gmail.com,GitHub,noreply@github.com,1467413043,1467413043,"a16f2bfd89e9b9bed26292a1e4565eaf2afe2417,c1c3ed3bff6549d25b569f381cb07fd8f746e909"
+c1c3ed3bff6549d25b569f381cb07fd8f746e909,c1c3ed3b,Updated README and build.gradle for v10,"Updated README and build.gradle for v10
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467411711,1467412446,161980adbb1e6a94cf91e15699cabc58a896403c
+161980adbb1e6a94cf91e15699cabc58a896403c,161980ad,Changed centerInside to fitCenter to fix the food images not stretching to the…,"Changed centerInside to fitCenter to fix the food images not stretching to the screen edges on very high resolution phones.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467410298,1467410298,8a068a776f424e3b9beb74f62697cb5850be8d83
+8a068a776f424e3b9beb74f62697cb5850be8d83,8a068a77,Added links to videos,"Added links to videos
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467161582,1467216442,3217f248b41f9ae0f9777804baf244cf6b5ee947
+3217f248b41f9ae0f9777804baf244cf6b5ee947,3217f248,Added version of openUrlInExternalBrowser that takes Strings directly.,"Added version of openUrlInExternalBrowser that takes Strings directly.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1467110956,1467110956,7ffa5755f830d3036449445879de495ed936efb7
+7ffa5755f830d3036449445879de495ed936efb7,7ffa5755,Fixed some UI issues for hdpi phones,"Fixed some UI issues for hdpi phones
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1466734409,1466735365,4aa6cc00a050683f2235ca3054c339dddc87c156
+4aa6cc00a050683f2235ca3054c339dddc87c156,4aa6cc00,Added the loadImage method to Common. This method wraps…,"Added the loadImage method to Common. This method wraps ContextCompat.getDrawable calls in a try/catch that handles OutOfMemoryErrors.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465811515,1465811515,962993173ac810134415820f8a244318c9c02f77
+962993173ac810134415820f8a244318c9c02f77,96299317,Added DeviceBootReceiver. The purpose of this BroadcastReceiver class is to set…,"Added DeviceBootReceiver. The purpose of this BroadcastReceiver class is to set the update reminder after the device boots up.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465783651,1465783651,cde853335413b48b0e709cc0587ef2b339fec1ba
+cde853335413b48b0e709cc0587ef2b339fec1ba,cde85333,Wrapped the loading of the food image in a try/catch to catch any OutOfMemoryErrors.,"Wrapped the loading of the food image in a try/catch to catch any OutOfMemoryErrors.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465342126,1465342126,481f3c59b0040be72d62c7f2824a458848d1b30d
+481f3c59b0040be72d62c7f2824a458848d1b30d,481f3c59,Updated gradle build tools version,"Updated gradle build tools version
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465340639,1465340639,a16f2bfd89e9b9bed26292a1e4565eaf2afe2417
+6cc1473de40bbd2b12069421a421e1adcea0cbbf,6cc1473d,Merge pull request #15 from nutritionfactsorg/develop,"Merge pull request #15 from nutritionfactsorg/develop
+
+Merging v9 changes into master",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465295368,1465295368,"2322ecd8b2a747fc1b2477677e400564e1f037b4,a16f2bfd89e9b9bed26292a1e4565eaf2afe2417"
+a16f2bfd89e9b9bed26292a1e4565eaf2afe2417,a16f2bfd,Updated README.md for version 9,"Updated README.md for version 9
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465295043,1465295043,7874f30eb25e3a5d14516dff5574069cbf86aaec
+7874f30eb25e3a5d14516dff5574069cbf86aaec,7874f30e,Now using AlarmManager.setExact for setting alarms on devices running KitKat or…,"Now using AlarmManager.setExact for setting alarms on devices running KitKat or later. The rationale can be read about here: https://developer.android.com/reference/android/app/AlarmManager.html#set%28int,%20long,%20android.app.PendingIntent%29
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465264683,1465264683,e7986adce3f8b2278cfd32f1b004a6cb9faa107b
+e7986adce3f8b2278cfd32f1b004a6cb9faa107b,e7986adc,versionCode 25,"versionCode 25
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465150460,1465150460,8fbe94aa45ca3c2a5216db474936abfac6cee893
+8fbe94aa45ca3c2a5216db474936abfac6cee893,8fbe94aa,"Removed allowBackup=""false"" to allow M devices to have their app data backed up…","Removed allowBackup=""false"" to allow M devices to have their app data backed up to their Google Account.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465150451,1465150451,8049188c1fb7d7d7d78dfc893eb5df85c9303edf
+8049188c1fb7d7d7d78dfc893eb5df85c9303edf,8049188c,The default update reminder notification now vibrates the phone and plays a sound,"The default update reminder notification now vibrates the phone and plays a sound
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465149835,1465149835,63764447c4e27abea551a1680d13372042cca6f0
+63764447c4e27abea551a1680d13372042cca6f0,63764447,Merge pull request #14 from nutritionfactsorg/v9,"Merge pull request #14 from nutritionfactsorg/v9
+
+V9",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465059398,1465059398,"2322ecd8b2a747fc1b2477677e400564e1f037b4,cc241136fbe1fcbc4bf549f696b9f4313b504be4"
+cc241136fbe1fcbc4bf549f696b9f4313b504be4,cc241136,Merge pull request #13 from nutritionfactsorg/feature/v9_notification,"Merge pull request #13 from nutritionfactsorg/feature/v9_notification
+
+Feature/v9 notification",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465058623,1465058623,"927be5ecc6d7aa481adaff737f3e8ee6f5da3029,8e66e25ed10ba821ff9faa38f4bff2c562959ce9"
+8e66e25ed10ba821ff9faa38f4bff2c562959ce9,8e66e25e,Increased versionCode,"Increased versionCode
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465058265,1465058265,0d13bfee78c343a75d5de6e9a807fb858c1f6043
+0d13bfee78c343a75d5de6e9a807fb858c1f6043,0d13bfee,Renamed from Notfication to Daily Reminder. Removed the Rate in Play Store menu…,"Renamed from Notfication to Daily Reminder. Removed the Rate in Play Store menu option since the menu is getting too long.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465057545,1465057545,d52f1cc2fe97edbdcf0921dc46a39e8c286bef9f
+d52f1cc2fe97edbdcf0921dc46a39e8c286bef9f,d52f1cc2,The update reminder notification now gets created by default on the first run of…,"The update reminder notification now gets created by default on the first run of the app (or next run if the app was updated)
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465056098,1465056098,dea2e4975b15969ed2a4f894d3d2bcc95e2f2ee6
+dea2e4975b15969ed2a4f894d3d2bcc95e2f2ee6,dea2e497,Replaced use of left margin with left padding to keep view the same size but…,"Replaced use of left margin with left padding to keep view the same size but increase the touchable area.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1465043235,1465043235,87c247c55091ff7597c57c591c3a5ef7a4b4f081
+87c247c55091ff7597c57c591c3a5ef7a4b4f081,87c247c5,Refactor to pass the entire UpdateReminderPref object to the update reminder…,"Refactor to pass the entire UpdateReminderPref object to the update reminder notification and not just individual settings. UpdateReminderPref now implements Serializable.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464990572,1465001029,1400ad40a0470065c12c69a68b22be34d337958a
+1400ad40a0470065c12c69a68b22be34d337958a,1400ad40,Added the getAlarmManager method,"Added the getAlarmManager method
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464989411,1464989411,8949511208a7451d027551b44a76c4b2ba3f3b7f
+8949511208a7451d027551b44a76c4b2ba3f3b7f,89495112,Wrapped the update reminder config in a CardView,"Wrapped the update reminder config in a CardView
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464989345,1464989345,fe7629a4829fdff5ae0d441125145dc3fd0d9f4a
+fe7629a4829fdff5ae0d441125145dc3fd0d9f4a,fe7629a4,Changed vertical list of notification settings to horizontal,"Changed vertical list of notification settings to horizontal
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464988304,1464988304,11acd2ce9ccdcc604a8f8abec403d594a66056eb
+11acd2ce9ccdcc604a8f8abec403d594a66056eb,11acd2ce,"Changed ""Show reminder at"" to ""Remind me at""","Changed ""Show reminder at"" to ""Remind me at""
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464988188,1464988188,aeac40dbc9a80cc65c72737affa83d7761c0b3b5
+aeac40dbc9a80cc65c72737affa83d7761c0b3b5,aeac40db,Upgraded crashlytics,"Upgraded crashlytics
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464988037,1464988037,ddf884d2b8ecb65395ad5200c74ad0d70b46727d
+ddf884d2b8ecb65395ad5200c74ad0d70b46727d,ddf884d2,Changed app bar layout to have a height of wrap_content instead of a hardcoded value,"Changed app bar layout to have a height of wrap_content instead of a hardcoded value
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464947168,1464947168,989de50498d2e567357b3269eee3fdfc77782907
+989de50498d2e567357b3269eee3fdfc77782907,989de504,I have no idea how this happened,"I have no idea how this happened
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464920675,1464920675,76187400de77994a7fcc0744d5292cfe90e24207
+76187400de77994a7fcc0744d5292cfe90e24207,76187400,The vibrate setting is now hidden for devices that lack a vibrator,"The vibrate setting is now hidden for devices that lack a vibrator
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464920420,1464920420,6dd45b3425bbb3a7c5f4c6f03108a01d4cc983a9
+6dd45b3425bbb3a7c5f4c6f03108a01d4cc983a9,6dd45b34,Added the ability for the user to have the notification vibrate or play the…,"Added the ability for the user to have the notification vibrate or play the default notification sound
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464918636,1464919775,e808e2c15e897946cd5f1f55306137bbea6b6134
+e808e2c15e897946cd5f1f55306137bbea6b6134,e808e2c1,The notification alarm is set for tomorrow if the alarm time has already passed for today.,"The notification alarm is set for tomorrow if the alarm time has already passed for today.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464916962,1464916962,9955941d6987428b0820e5412367f37e6d13fa93
+9955941d6987428b0820e5412367f37e6d13fa93,9955941d,"By default, the update reminder notification is set for 8pm. Added the…","By default, the update reminder notification is set for 8pm. Added the getAlarmTimeInMillis to encapsulate the use of Calendar.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464915087,1464915087,bd9f969b37bf6868abf55ed5035df120ad7b1d50
+bd9f969b37bf6868abf55ed5035df120ad7b1d50,bd9f969b,Merge branch 'v9' of https://github.com/nutritionfactsorg/daily-dozen-android…,"Merge branch 'v9' of https://github.com/nutritionfactsorg/daily-dozen-android into feature/v9_notification
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464914189,1464914189,"070e66568f418d71dde37c2b33fb38f3f15305df,927be5ecc6d7aa481adaff737f3e8ee6f5da3029"
+927be5ecc6d7aa481adaff737f3e8ee6f5da3029,927be5ec,Prevent crashing if loading of food image fails for some reason.,"Prevent crashing if loading of food image fails for some reason.
+",,,,John Slavick,jslavick@Johns-MacBook-Pro.local,John Slavick,jslavick@Johns-MacBook-Pro.local,1464914160,1464914160,ac4ce1eeecaf2e65f42935cebc2ffca4212eca09
+070e66568f418d71dde37c2b33fb38f3f15305df,070e6656,App can now set an alarm and show the update reminder notification to the user.,"App can now set an alarm and show the update reminder notification to the user.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464183894,1464183894,e6ed760962c4dd0da0f9729e236fb557c7efaeb1
+e6ed760962c4dd0da0f9729e236fb557c7efaeb1,e6ed7609,Added NotificationSettingsActivity,"Added NotificationSettingsActivity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464095721,1464120960,5f221353d53be52134b6f3c404bb690de3942f78
+5f221353d53be52134b6f3c404bb690de3942f78,5f221353,Added NotificationUtil.,"Added NotificationUtil.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1464020709,1464021010,ac4ce1eeecaf2e65f42935cebc2ffca4212eca09
+ac4ce1eeecaf2e65f42935cebc2ffca4212eca09,ac4ce1ee,Added null checks when using the food variable in FoodLoadingActivity.,"Added null checks when using the food variable in FoodLoadingActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463588092,1463588092,105daa383cde1c0a62e52492f5d581dcfc7966bb
+105daa383cde1c0a62e52492f5d581dcfc7966bb,105daa38,Extracted strings to facilitate translations,"Extracted strings to facilitate translations
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463450699,1463450699,e7577d2331f4bb3e2356515f667b0c047954905f
+e7577d2331f4bb3e2356515f667b0c047954905f,e7577d23,Extracted strings from FoodInfo and into strings.xml to facilitate translations,"Extracted strings from FoodInfo and into strings.xml to facilitate translations
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463445773,1463449244,2181d066a934b3101f22618a4bfbe13e5a39c520
+2181d066a934b3101f22618a4bfbe13e5a39c520,2181d066,Upgraded ButterKnife to 8.0.1,"Upgraded ButterKnife to 8.0.1
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463442250,1463442250,ae89b26eedd7c7c51df75bfdc20649e2c0ea6184
+ae89b26eedd7c7c51df75bfdc20649e2c0ea6184,ae89b26e,Updated the support libraries to 23.4.0,"Updated the support libraries to 23.4.0
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463316835,1463316835,8e02d04ef6e101f54848c421e7f82aeb4df015ce
+8e02d04ef6e101f54848c421e7f82aeb4df015ce,8e02d04e,Fixed bug that was causing every other day to be skipped when viewing,"Fixed bug that was causing every other day to be skipped when viewing
+daily servings history.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463276361,1463276361,2322ecd8b2a747fc1b2477677e400564e1f037b4
+2322ecd8b2a747fc1b2477677e400564e1f037b4,2322ecd8,versionCode 22,"versionCode 22
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463021625,1463021625,9636c7280f89afd4d2e01eab33d93c9c378304d2
+9636c7280f89afd4d2e01eab33d93c9c378304d2,9636c728,Updated README.md,"Updated README.md
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463020890,1463020890,656fa84295c853d1963cd5b22bdfb3e1d9cd8c90
+656fa84295c853d1963cd5b22bdfb3e1d9cd8c90,656fa842,Added a Rate Us in the Play Store message to be displayed the first time the…,"Added a Rate Us in the Play Store message to be displayed the first time the user sees the exploding star animation
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463020585,1463020585,3835b1161b03e2d64fa89da940743080d319a795
+3835b1161b03e2d64fa89da940743080d319a795,3835b116,Centered the text in the first box of the About Activity,"Centered the text in the first box of the About Activity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463010027,1463010027,98ecd4b73ce559b7159a43c47ddd182c6c162935
+98ecd4b73ce559b7159a43c47ddd182c6c162935,98ecd4b7,"Added links to the book, donate, subscribe, and open source web pages in the menu","Added links to the book, donate, subscribe, and open source web pages in the menu
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1463009807,1463009807,2f14571a6519d535e05588130a1cad499344031a
+2f14571a6519d535e05588130a1cad499344031a,2f14571a,Merge branch 'master' into newapp,"Merge branch 'master' into newapp
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462639167,1462639167,"ac936572165ec9344ed49dee2ffbe7cdba2e0c71,564ed4f1f2e5561b0df8df912e49b76806438313"
+ac936572165ec9344ed49dee2ffbe7cdba2e0c71,ac936572,Added zip of Original App's repository and added administrative files,"Added zip of Original App's repository and added administrative files
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462638428,1462638428,abe21c2c7e9169f7fd68013de053283375e11d69
+564ed4f1f2e5561b0df8df912e49b76806438313,564ed4f1,Removed screenshots.zip,"Removed screenshots.zip
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462637132,1462637132,0458580f3a4e9a21b9c417b3226ff70d23301fde
+abe21c2c7e9169f7fd68013de053283375e11d69,abe21c2c,Fixed minor bug where the food image was not as wide as the screen,"Fixed minor bug where the food image was not as wide as the screen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462632157,1462632157,7bc4271725eebc9c146e2967076b66b510f87622
+7bc4271725eebc9c146e2967076b66b510f87622,7bc42717,Updated AboutActivity.,"Updated AboutActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462631156,1462631352,15a6c0906f222496e24b5f399871af346b9df063
+15a6c0906f222496e24b5f399871af346b9df063,15a6c090,Reduced some code duplication,"Reduced some code duplication
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462627162,1462627399,a1fb420fea48dd6e36e2b53568169f2dcec021a5
+a1fb420fea48dd6e36e2b53568169f2dcec021a5,a1fb420f,Extracted the Calendar logic from LoadServingsHistoryTask into DateUtil.,"Extracted the Calendar logic from LoadServingsHistoryTask into DateUtil.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462625325,1462626241,21edb00329d89150705b4e08fa5c1b4a3e7b2d7c
+21edb00329d89150705b4e08fa5c1b4a3e7b2d7c,21edb003,Updated libraries and gradle plugin,"Updated libraries and gradle plugin
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462532389,1462532389,e8a8873d47930aea04109f562c5fb7fc2bfb8ddc
+e8a8873d47930aea04109f562c5fb7fc2bfb8ddc,e8a8873d,Changed the fabric api key to use the nutritionfacts.org group,"Changed the fabric api key to use the nutritionfacts.org group
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462529690,1462529690,33d42da8b30d757e5eba1a7f47d5e7d73dead4f1
+33d42da8b30d757e5eba1a7f47d5e7d73dead4f1,33d42da8,Merge branch 'master' of https://bitbucket.org/slavick/dailydozen,"Merge branch 'master' of https://bitbucket.org/slavick/dailydozen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462443853,1462443853,"fa21fd13adec23c835ab8e2f5cb109c68d6cb385,baa474bf1d4f2a897d266f48681136f821b6ee70"
+baa474bf1d4f2a897d266f48681136f821b6ee70,baa474bf,Merge branch 'master' of https://bitbucket.org/slavick/dailydozen,"Merge branch 'master' of https://bitbucket.org/slavick/dailydozen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462408635,1462408635,"1ae5ca105db9ba282acd0e55c0598157b7c47c56,c5d15df75f30d4f3beae845844238f15fc5843fd"
+1ae5ca105db9ba282acd0e55c0598157b7c47c56,1ae5ca10,Refactoring to remove an argument that can be implied,"Refactoring to remove an argument that can be implied
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462408225,1462408225,8b0d3a33e536a8e1ea4d56cbf73fa09b44f409af
+8b0d3a33e536a8e1ea4d56cbf73fa09b44f409af,8b0d3a33,Refactored the creating of the CombinedData objects for MPAndroidChart to reduce code duplication.,"Refactored the creating of the CombinedData objects for MPAndroidChart to reduce code duplication.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462406797,1462406797,838404c5a262c97d8769cd619e3b1cf1d9ac40f7
+838404c5a262c97d8769cd619e3b1cf1d9ac40f7,838404c5,Refactored the Day and Servings models to not use java.util.Calendar,"Refactored the Day and Servings models to not use java.util.Calendar
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462405188,1462405188,6ff6e56c8af0e9c7e5ffc9edd153218057e7b60a
+6ff6e56c8af0e9c7e5ffc9edd153218057e7b60a,6ff6e56c,Refactored to reduce code duplication and specify which base is being used for month integers,"Refactored to reduce code duplication and specify which base is being used for month integers
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462403411,1462403684,dde2847f3d28580cc21826ec938352d77ba31c40
+fa21fd13adec23c835ab8e2f5cb109c68d6cb385,fa21fd13,Added butterknife rules to proguard,"Added butterknife rules to proguard
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1462064535,1462064535,c5d15df75f30d4f3beae845844238f15fc5843fd
+0458580f3a4e9a21b9c417b3226ff70d23301fde,0458580f,Merge pull request #10 from essce/iss1spices,"Merge pull request #10 from essce/iss1spices
+
+Changed spice serving count from null to 1.0",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459814696,1459814696,"5168c40c8f426762d7bb1ff8d5b489de139ce073,e34b9e818700092ef539edd8adf140e68d7ece20"
+c5d15df75f30d4f3beae845844238f15fc5843fd,c5d15df7,Added large images,"Added large images
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459717133,1459717133,34a0e292e654e53dbafd636bbc89a24398fbc860
+e34b9e818700092ef539edd8adf140e68d7ece20,e34b9e81,Changed spice serving count from null to 1.0,"Changed spice serving count from null to 1.0
+",,,,stanchin,ess.chin@gmail.com,stanchin,ess.chin@gmail.com,1459637217,1459637217,5168c40c8f426762d7bb1ff8d5b489de139ce073
+34a0e292e654e53dbafd636bbc89a24398fbc860,34a0e292,Removed fabric.properties,"Removed fabric.properties
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459637204,1459637204,f78ee84dabfa7f8b1a0fcaed828a79d15ddfc47d
+f78ee84dabfa7f8b1a0fcaed828a79d15ddfc47d,f78ee84d,Renamed package from org.slavick to org.nutritionfacts,"Renamed package from org.slavick to org.nutritionfacts
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459636786,1459636786,dde2847f3d28580cc21826ec938352d77ba31c40
+dde2847f3d28580cc21826ec938352d77ba31c40,dde2847f,Added the Common.getLineSeparator method,"Added the Common.getLineSeparator method
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459569679,1459569679,52c323f2ed327949ba1e4facad064b306bf26b85
+52c323f2ed327949ba1e4facad064b306bf26b85,52c323f2,Removed an unused method,"Removed an unused method
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459569620,1459569620,6a5c0f1029ea857f5ccf09b93e82249e7f893860
+6a5c0f1029ea857f5ccf09b93e82249e7f893860,6a5c0f10,Added ButterKnife to list of libraries used,"Added ButterKnife to list of libraries used
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459568209,1459568209,bc7a8b19fa398ffaacc79a954265546bb45af7c7
+bc7a8b19fa398ffaacc79a954265546bb45af7c7,bc7a8b19,Replaced setOnClickListener calls with ButterKnife's @OnClick,"Replaced setOnClickListener calls with ButterKnife's @OnClick
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459568075,1459568075,4b7628f3d7d7091c07a3998b0f39befcac6e1a2a
+4b7628f3d7d7091c07a3998b0f39befcac6e1a2a,4b7628f3,Removed some unnecessary calls to getString,"Removed some unnecessary calls to getString
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459567591,1459567591,c74d3db05b76127cbdaa33acfe87e128f77f435c
+c74d3db05b76127cbdaa33acfe87e128f77f435c,c74d3db0,Added the ButterKnife library,"Added the ButterKnife library
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459566309,1459566309,6f3c3c46052d4654b0506a12498bcad9bbd9159e
+6f3c3c46052d4654b0506a12498bcad9bbd9159e,6f3c3c46,Moved initializing of views out of onCreateView and into onViewCreated,"Moved initializing of views out of onCreateView and into onViewCreated
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459564810,1459564810,c854dadb763bf5a1d600c5e8f0a13a3dbff89f43
+c854dadb763bf5a1d600c5e8f0a13a3dbff89f43,c854dadb,Version 8 build 21,"Version 8 build 21
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459215854,1459215854,60062f001a896796d30b2e76c9028fce6e0c6bb3
+60062f001a896796d30b2e76c9028fce6e0c6bb3,60062f00,Loading data for months and years now shows increasing progress in the progress dialog,"Loading data for months and years now shows increasing progress in the progress dialog
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459214964,1459214964,ea3c8b145f45071e5a8cf295d4ad81057945c64f
+ea3c8b145f45071e5a8cf295d4ad81057945c64f,ea3c8b14,Fixed bug where data was being loaded from the database twice when…,"Fixed bug where data was being loaded from the database twice when ServingsHistoryActivity was opened.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459214916,1459214916,9b1d651dd71c60ff40c46ae53d967d6e35f9b6c1
+9b1d651dd71c60ff40c46ae53d967d6e35f9b6c1,9b1d651d,Refactored getAverageTotalServingsInYear and getAverageTotalServingsInMonth to…,"Refactored getAverageTotalServingsInYear and getAverageTotalServingsInMonth to eliminate code duplication.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459159412,1459159412,f89ee6a5bf0ea522ec6594ba5325758c8028d653
+f89ee6a5bf0ea522ec6594ba5325758c8028d653,f89ee6a5,Changing the ServingsHistoryActivity to allow the user to change the time scale…,"Changing the ServingsHistoryActivity to allow the user to change the time scale between days, months, and years. The code is very rough at this point.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459157542,1459157542,65c1e70ce109d8bd3add18df0844bb7302184c12
+65c1e70ce109d8bd3add18df0844bb7302184c12,65c1e70c,Changed the colors theme from blue to green,"Changed the colors theme from blue to green
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459027049,1459027049,e8a76e32803e21c193d83b84c45d60626fe0b010
+e8a76e32803e21c193d83b84c45d60626fe0b010,e8a76e32,Upgraded some 3rd party libraries,"Upgraded some 3rd party libraries
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459019206,1459019206,3baec6ea0d0f1ae03db08cc4975e40ead951077f
+3baec6ea0d0f1ae03db08cc4975e40ead951077f,3baec6ea,Added food icons,"Added food icons
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459017993,1459017993,42f413eaae5cf911a5a201159795be3c7bea00f6
+42f413eaae5cf911a5a201159795be3c7bea00f6,42f413ea,Changed app icon,"Changed app icon
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1459011777,1459011777,b42e7bc820a6c64ff46401c6dc97411ff8e03baa
+5168c40c8f426762d7bb1ff8d5b489de139ce073,5168c40c,Update Contribution Guidelines and README,"Update Contribution Guidelines and README
+",,,,Christi Richards,christi.richards@gmail.com,Christi Richards,christi.richards@gmail.com,1458627195,1458791603,fef35f21d9806def10c2bb5646a3c73b71e81a1a
+fef35f21d9806def10c2bb5646a3c73b71e81a1a,fef35f21,"Add in Contribution Guidelines, license, Conduct, and README","Add in Contribution Guidelines, license, Conduct, and README
+",,,,Christi Richards,christi.richards@gmail.com,Christi Richards,christi.richards@gmail.com,1456800954,1458791603,8d1128c53bd9cb116f57f1c1b71925a8cf302928
+8d1128c53bd9cb116f57f1c1b71925a8cf302928,8d1128c5,"Changed ""Gregor to Greger"".","Changed ""Gregor to Greger"".",,,,Lauren Hacker,lauren@nutritionfacts.org,Christi Richards,christi.richards@gmail.com,1451529928,1458791603,88456048402d2091c4cd31776f00150cf19af965
+b42e7bc820a6c64ff46401c6dc97411ff8e03baa,b42e7bc8,version 7 build 20,"version 7 build 20
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457840108,1457840108,b11eb289d4a4c59a40ede9f92200cc5a8c5c7540
+b11eb289d4a4c59a40ede9f92200cc5a8c5c7540,b11eb289,Can now cancel GenerateDataTask,"Can now cancel GenerateDataTask
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457837759,1457837759,a312fbea9c1db8459d268fb710b7eae3c4d56a08
+a312fbea9c1db8459d268fb710b7eae3c4d56a08,a312fbea,Added the ability to configure how much history to generate in the debug settings,"Added the ability to configure how much history to generate in the debug settings
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457837499,1457837499,c1e369d018d8972cc88f7ed5c4a78868d0551643
+c1e369d018d8972cc88f7ed5c4a78868d0551643,c1e369d0,Long pressing the star icon in the servings header will show the animation again,"Long pressing the star icon in the servings header will show the animation again
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457835746,1457835746,40cd7c33f13ca24cdc42704d192e0a4e8b1474b7
+40cd7c33f13ca24cdc42704d192e0a4e8b1474b7,40cd7c33,Increased the size of the star in the explosion,"Increased the size of the star in the explosion
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457835214,1457835214,b0c9a34e97e6fb30312a0f5cb89972b926c13720
+b0c9a34e97e6fb30312a0f5cb89972b926c13720,b0c9a34e,Fixed logic for not loading months that have already been loaded.,"Fixed logic for not loading months that have already been loaded.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457707310,1457707310,6f373663065bb466d1c4a448b2d6f5283275f2d8
+6f373663065bb466d1c4a448b2d6f5283275f2d8,6f373663,Renamed a variable,"Renamed a variable
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457621240,1457621240,e87484263bba07189076e2a498c9bbd7f7c16d41
+e87484263bba07189076e2a498c9bbd7f7c16d41,e8748426,Minor refactoring to replace instances of date with day,"Minor refactoring to replace instances of date with day
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457620839,1457620839,c67867370cd39a46456c69ed53948765635bc4fd
+c67867370cd39a46456c69ed53948765635bc4fd,c6786737,FoodHistoryActivity should not load months that were previously loaded.,"FoodHistoryActivity should not load months that were previously loaded.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457620455,1457620455,ca164aef9d9aa0565223d7c2ce8b30e036fda608
+ca164aef9d9aa0565223d7c2ce8b30e036fda608,ca164aef,Updated version,"Updated version
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457619810,1457619810,c290cc27cb3fc9bb5ebe5d2bd7f5ff00562241d0
+c290cc27cb3fc9bb5ebe5d2bd7f5ff00562241d0,c290cc27,Added LikeAnimation library to the AboutActivity,"Added LikeAnimation library to the AboutActivity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457305321,1457305321,7cd09a485a749c22a271bff5caf49a91625d5f67
+7cd09a485a749c22a271bff5caf49a91625d5f67,7cd09a48,The exploding star is now working properly,"The exploding star is now working properly
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457304912,1457304912,21e035b7ac9439a81aa29a0c5dc7d0a8ef03908d
+21e035b7ac9439a81aa29a0c5dc7d0a8ef03908d,21e035b7,Incorporated an exploding star animation for 24 days,"Incorporated an exploding star animation for 24 days
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457275002,1457275002,d9645900a057bdc8477b600673cb0aadbda087f3
+d9645900a057bdc8477b600673cb0aadbda087f3,d9645900,Combined the CardViewHeader class with DateServings. I added a star to the…,"Combined the CardViewHeader class with DateServings. I added a star to the center of DateServings for when the user has a 24 day.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457274021,1457274021,7a12704d67770e8dd49d74ddcdb700b7af6e2e67
+7a12704d67770e8dd49d74ddcdb700b7af6e2e67,7a12704d,Refactored to remove the use of CardViewHeader in the AboutActivity.,"Refactored to remove the use of CardViewHeader in the AboutActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457222732,1457222732,debb9fc26a57704ec45060da72cdc1d49bc80f96
+debb9fc26a57704ec45060da72cdc1d49bc80f96,debb9fc2,ServingsHistoryActivity dropdown improvements,"ServingsHistoryActivity dropdown improvements
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457222071,1457222406,95bbdcb0c25a70ed71d647241ac2c3802e271f97
+95bbdcb0c25a70ed71d647241ac2c3802e271f97,95bbdcb0,First pass at allowing user to change amount of history shown in ServingsHistoryActivity.,"First pass at allowing user to change amount of history shown in ServingsHistoryActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457219669,1457219669,26408df5862bd2e214317d5028cf555427ad5943
+26408df5862bd2e214317d5028cf555427ad5943,26408df5,Updated some libraries,"Updated some libraries
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457216889,1457216889,104bb3af618f4eef86deb763b832be965bec5572
+104bb3af618f4eef86deb763b832be965bec5572,104bb3af,Updated version,"Updated version
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1457216577,1457216577,85b1facf1ecb7f46f84c19ad4a30b80b4aaf844d
+85b1facf1ecb7f46f84c19ad4a30b80b4aaf844d,85b1facf,Merge branch 'master' of https://bitbucket.org/slavick/dailydozen,"Merge branch 'master' of https://bitbucket.org/slavick/dailydozen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456950275,1456950275,"3f4a63be49425f96a8c473ac8b22f6a518bf3728,22137bdd9a9f26a1a7de16d9e5b4eb086fc07107"
+22137bdd9a9f26a1a7de16d9e5b4eb086fc07107,22137bdd,Added the Generate Full Data button that will generate a year's worth of completed food servings,"Added the Generate Full Data button that will generate a year's worth of completed food servings
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456830590,1456830590,de53baf822a9400117eb7fc6fd353151835420b8
+3f4a63be49425f96a8c473ac8b22f6a518bf3728,3f4a63be,Added InvalidDateException to prevent crashes where the date string that is…,"Added InvalidDateException to prevent crashes where the date string that is meant to be parsed into a Day object is not actually a date.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456685065,1456685065,dfe047679cfb49af65c41fe29b9eec750505585f
+dfe047679cfb49af65c41fe29b9eec750505585f,dfe04767,Performance improvement. Replaced the date string in DateFragment with a Day…,"Performance improvement. Replaced the date string in DateFragment with a Day object. The date string was being converted to a Day object dozens of times and now it is converted just once. I also removed some unused methods in the Day model class.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456684278,1456684278,de53baf822a9400117eb7fc6fd353151835420b8
+de53baf822a9400117eb7fc6fd353151835420b8,de53baf8,build 15,"build 15
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456628983,1456628983,de8dfe81383b2e75e4769d514c56a3d31dc08b13
+de8dfe81383b2e75e4769d514c56a3d31dc08b13,de8dfe81,Updated ProGuard for latest EventBus,"Updated ProGuard for latest EventBus
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456627346,1456627346,416cd0df51d0364c814a2a46eda10f84f7d91b65
+416cd0df51d0364c814a2a46eda10f84f7d91b65,416cd0df,Merge branch 'master' of https://bitbucket.org/slavick/dailydozen,"Merge branch 'master' of https://bitbucket.org/slavick/dailydozen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456626946,1456626946,"2116c5d70fe23fc8e45c95e023298fb0d3d6616a,9799c77ed7e511c173f490cd09305e48120e595a"
+9799c77ed7e511c173f490cd09305e48120e595a,9799c77e,Upgraded EventBus from 2.4.1 to 3.0.0,"Upgraded EventBus from 2.4.1 to 3.0.0
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456626559,1456626559,67b50907808009a1282cc5a3581c6e58842203b9
+67b50907808009a1282cc5a3581c6e58842203b9,67b50907,"Setting the chart to gone by default eliminated the quick flash of ""No chart…","Setting the chart to gone by default eliminated the quick flash of ""No chart data available."" as well as the need for the notifyDataSetChanged and invalidate calls
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456604355,1456604355,ccf2941d34270e659dbbd5e1b1857d44987c35a3
+ccf2941d34270e659dbbd5e1b1857d44987c35a3,ccf2941d,LoadServingsHistoryTask now constrains results to the value passed into it.,"LoadServingsHistoryTask now constrains results to the value passed into it.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456604062,1456604062,66fa82f1356b3222fcbdbf563930b534a3bc5272
+66fa82f1356b3222fcbdbf563930b534a3bc5272,66fa82f1,Added the LoadServingsHistoryTask which uses a background thread to load the…,"Added the LoadServingsHistoryTask which uses a background thread to load the data for ServingsHistoryActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456603276,1456603276,262eeaa26d45d4afc8c6300754dd1a2820afbd85
+262eeaa26d45d4afc8c6300754dd1a2820afbd85,262eeaa2,Reverted the display of the servings history chart,"Reverted the display of the servings history chart
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456581986,1456581986,d7279dec0a06249d3d513d67e5491ff9a9cc5091
+d7279dec0a06249d3d513d67e5491ff9a9cc5091,d7279dec,Added some extra room around the servings at the top as well as the individual…,"Added some extra room around the servings at the top as well as the individual food history buttons to make the tapable area larger for the user.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456580985,1456580985,9f86adb87aac0687f259be4e37dc2c6c6a8e93b3
+2116c5d70fe23fc8e45c95e023298fb0d3d6616a,2116c5d7,Version 6 build 14,"Version 6 build 14
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456104080,1456104080,5609575c0200f29b196c430d61ea6e98013f0c3b
+5609575c0200f29b196c430d61ea6e98013f0c3b,5609575c,Refactored BackupTask to build backup files using StringBuilder instead of Lists…,"Refactored BackupTask to build backup files using StringBuilder instead of Lists and then joining the contents.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456102481,1456102621,9f86adb87aac0687f259be4e37dc2c6c6a8e93b3
+9f86adb87aac0687f259be4e37dc2c6c6a8e93b3,9f86adb8,Removed the unused isEmpty and getCount methods from Day and Food.,"Removed the unused isEmpty and getCount methods from Day and Food.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456100721,1456100721,0d2833bceb0ba5b5b4a0d7476933737ab57b825a
+0d2833bceb0ba5b5b4a0d7476933737ab57b825a,0d2833bc,Increased speed of GenerateRandomDataTask by wrapping db code in a transaction,"Increased speed of GenerateRandomDataTask by wrapping db code in a transaction
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456100357,1456100357,2ac4482b8c30427c65af85972ca956508a409a29
+2ac4482b8c30427c65af85972ca956508a409a29,2ac4482b,Added the GenerateRandomDataTask which creates data for one year in the past,"Added the GenerateRandomDataTask which creates data for one year in the past
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456070490,1456070490,87e3a22f626b259fff3bf5ee164ee0c3bf3e2ebb
+87e3a22f626b259fff3bf5ee164ee0c3bf3e2ebb,87e3a22f,Added the DebugActivity and refactored existing AlertDialogs.,"Added the DebugActivity and refactored existing AlertDialogs.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1456063972,1456063972,0eff6a16cad19104319167fec8115e34242c6598
+0eff6a16cad19104319167fec8115e34242c6598,0eff6a16,RestoreTask no longer loads all of the backup file lines into memory.,"RestoreTask no longer loads all of the backup file lines into memory.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455997474,1455997474,b5e9c6ece323f6b97253a211294ef7090c11f6a6
+b5e9c6ece323f6b97253a211294ef7090c11f6a6,b5e9c6ec,The backup and restore tasks are now correctly cancelled if the user presses the…,"The backup and restore tasks are now correctly cancelled if the user presses the back button while they are running
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455992732,1455992732,b7764245658b3902229adf0c8eb3d59c4cd418c8
+b7764245658b3902229adf0c8eb3d59c4cd418c8,b7764245,Minor BackupTask change,"Minor BackupTask change
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455992266,1455992266,5a175786724c110c86d5ed002591f4e13dbe63ab
+5a175786724c110c86d5ed002591f4e13dbe63ab,5a175786,"Greatly increased the speed of backup. Before, each line in the csv backup file…","Greatly increased the speed of backup. Before, each line in the csv backup file required 12 queries (one for each food). Now, a single query is made to get all of the results in a list which is then converted into a map.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455984536,1455984536,00c1d5d15cf80321ef1a4ef1625b119e28c5ac26
+00c1d5d15cf80321ef1a4ef1625b119e28c5ac26,00c1d5d1,"Before backing up, the app checks if there are any servings in the database. If…","Before backing up, the app checks if there are any servings in the database. If there are not, it does not ask user for permission to write to storage.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455981339,1455981339,996d79e671acfab2f3be6600fc0bdcc16f19f8fc
+996d79e671acfab2f3be6600fc0bdcc16f19f8fc,996d79e6,Changed labels on servings history chart. Increased size of calendar and bar chart icons a bit.,"Changed labels on servings history chart. Increased size of calendar and bar chart icons a bit.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455980650,1455981017,1514014e6b132d42bc8886de38e9d8499cacaa9d
+1514014e6b132d42bc8886de38e9d8499cacaa9d,1514014e,Version 6 Build 13,"Version 6 Build 13
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455879671,1455879671,8f16f40370a4ec879e311659ff637ff93ebcb875
+8f16f40370a4ec879e311659ff637ff93ebcb875,8f16f403,Added the Rate in Play Store menu item,"Added the Rate in Play Store menu item
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455839266,1455839266,f30ca5d9cae83ebdb21cc3884af25158d62f0c2a
+f30ca5d9cae83ebdb21cc3884af25158d62f0c2a,f30ca5d9,Added comment so I understand why I start 2 months in the past,"Added comment so I understand why I start 2 months in the past
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455839235,1455839235,f4d89597c487de8c9d78f813abfee4203d7c43e5
+f4d89597c487de8c9d78f813abfee4203d7c43e5,f4d89597,Upgraded Caldroid to version 3.0.0. This version includes the changes I made to…,"Upgraded Caldroid to version 3.0.0. This version includes the changes I made to Caldroid to support alternative Map implementations. I refactored the code to build the map of dates using an ArrayMap. Also used their method that accepts DateTime objects instead of Date objects.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455837993,1455837993,d52a49e8a80ba783406c15412253af7875ca59db
+d52a49e8a80ba783406c15412253af7875ca59db,d52a49e8,versionCode 12,"versionCode 12
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455472712,1455472712,1dbdb9a16711815d6d9cfd7d18c465dc7dfd3ffa
+1dbdb9a16711815d6d9cfd7d18c465dc7dfd3ffa,1dbdb9a1,Moved the Back to Today button out of its LinearLayout,"Moved the Back to Today button out of its LinearLayout
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455467382,1455467382,d28f613b592b4c2b57aa3dea9503a6c11bd17d55
+d28f613b592b4c2b57aa3dea9503a6c11bd17d55,d28f613b,Added the Back to Today button back again,"Added the Back to Today button back again
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455467230,1455467230,006c910234ffc389337047eaa7aaad4fcba0eb78
+006c910234ffc389337047eaa7aaad4fcba0eb78,006c9102,Version 5,"Version 5
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455463822,1455463822,5d3e8802baf335fc1859acd4be28dc51489bc06c
+5d3e8802baf335fc1859acd4be28dc51489bc06c,5d3e8802,Now display an alert dialog to the user if they do not have an email app…,"Now display an alert dialog to the user if they do not have an email app installed. This prevents a crash.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455386988,1455386988,fe4347bbb08fd10d4481a0936497c72717adb6fd
+fe4347bbb08fd10d4481a0936497c72717adb6fd,fe4347bb,Merge branch 'master' of https://bitbucket.org/slavick/dailydozen,"Merge branch 'master' of https://bitbucket.org/slavick/dailydozen
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455386464,1455386464,"36576a5aaa51b49db6b9d65eec21dec405479bae,ef8d5384146ff5aa1f7093e84b6e874c1708d2ab"
+36576a5aaa51b49db6b9d65eec21dec405479bae,36576a5a,Fixed the bug where the app would crash because the DatePagerAdapter.getCount…,"Fixed the bug where the app would crash because the DatePagerAdapter.getCount method would return a larger value after the day had changed.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455386285,1455386285,b08db9f3c61f98b25abce99797e6ed1dbcc564d2
+ef8d5384146ff5aa1f7093e84b6e874c1708d2ab,ef8d5384,Removed the Back to Today button,"Removed the Back to Today button
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455153342,1455153342,0e37ed5b7e98982b7bf19c122f4c1df8fd0b28b5
+0e37ed5b7e98982b7bf19c122f4c1df8fd0b28b5,0e37ed5b,Added the Back to today button for all date fragments that are not today,"Added the Back to today button for all date fragments that are not today
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455070332,1455070332,528e07669695376d9deeeefd40cd89288744c932
+528e07669695376d9deeeefd40cd89288744c932,528e0766,"Another attempt at fixing the ""The application's PagerAdapter changed the…","Another attempt at fixing the ""The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged!"" crash
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1455069010,1455069010,b08db9f3c61f98b25abce99797e6ed1dbcc564d2
+b08db9f3c61f98b25abce99797e6ed1dbcc564d2,b08db9f3,Improved CalculateStreaksTask progress,"Improved CalculateStreaksTask progress
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454274806,1454274806,352da3fca51728835696ee90990ede4b1e4576bb
+352da3fca51728835696ee90990ede4b1e4576bb,352da3fc,Removed outdated TODO,"Removed outdated TODO
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454273753,1454273753,42e59bb0be088c2da1c55ab43f8d24ae2b0e7c3c
+42e59bb0be088c2da1c55ab43f8d24ae2b0e7c3c,42e59bb0,Added the CalculateStreaksTask back again. Even though backing up and restoring…,"Added the CalculateStreaksTask back again. Even though backing up and restoring will calculate the streaks, it would require me adding logic around it that would be confusing in the future. Added a dialog box telling the user their database will be upgraded.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454273680,1454273680,b06a5e0cf5117e0db6f75406165d5dee96a2cda2
+b06a5e0cf5117e0db6f75406165d5dee96a2cda2,b06a5e0c,Refactored getByDate to return a Day object with the results of the parsed date…,"Refactored getByDate to return a Day object with the results of the parsed date string. This object will have a null id if it doesn't exist in the database.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454254562,1454254562,bf243fd8024dfbc224394a9962c9dee7f2a0120a
+bf243fd8024dfbc224394a9962c9dee7f2a0120a,bf243fd8,Refactored FoodServingsChangedEvent to take a date string and a food name string…,"Refactored FoodServingsChangedEvent to take a date string and a food name string instead of the model objects
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454248877,1454248877,c07a20739e1d1426c9bd8cdb1ca5b228c0ac2546
+c07a20739e1d1426c9bd8cdb1ca5b228c0ac2546,c07a2073,DateFragment now holds a date string instead of a Day object. This is because…,"DateFragment now holds a date string instead of a Day object. This is because the Day object could be null (if no servings exist on that Day) and not provide any clue for which date it represented. A date string could be converted into a Day object.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454248501,1454248501,b3618ad7061e4f339fcc4c00954406f07b73a7ab
+b3618ad7061e4f339fcc4c00954406f07b73a7ab,b3618ad7,date4j is now only used inside the Day class. Now to fix all the bugs!,"date4j is now only used inside the Day class. Now to fix all the bugs!
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454173510,1454173510,46fcb42a5815f3c2fc14e79697cf09327be995da
+46fcb42a5815f3c2fc14e79697cf09327be995da,46fcb42a,Refactored some uses of DateTime to Day,"Refactored some uses of DateTime to Day
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454172358,1454172358,b4e1e3b0e197e6180ba3962e68567103bbc90013
+b4e1e3b0e197e6180ba3962e68567103bbc90013,b4e1e3b0,Moved DateTime methods out of Common and into Day,"Moved DateTime methods out of Common and into Day
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454171709,1454171709,a4099507a4b1e7c52db735cdce367fc7322ae231
+a4099507a4b1e7c52db735cdce367fc7322ae231,a4099507,Refactoring to use Day objects instead of DateTime as that exposes my implementation of Day,"Refactoring to use Day objects instead of DateTime as that exposes my implementation of Day
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454171526,1454171526,7d9b38dc9f99eae4ee41ccb20bd517559dd6bb09
+7d9b38dc9f99eae4ee41ccb20bd517559dd6bb09,7d9b38dc,FoodServings.onServingsChanged no longer checks if the date is today before calculating the streak,"FoodServings.onServingsChanged no longer checks if the date is today before calculating the streak
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454169221,1454169221,e285222ad081b8e2aeefde7ebae676f12c311e98
+e285222ad081b8e2aeefde7ebae676f12c311e98,e285222a,Changing usages of java.util.Date to date4j,"Changing usages of java.util.Date to date4j
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454168277,1454168277,8387462fc730b3e75511261b3cd6966966a373d6
+8387462fc730b3e75511261b3cd6966966a373d6,8387462f,Removed java.util.Date from Common.,"Removed java.util.Date from Common.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454164500,1454164500,92c075a1e9abf82e43ada63f59a16b1b77854a21
+92c075a1e9abf82e43ada63f59a16b1b77854a21,92c075a1,Added the getEarliestDay method,"Added the getEarliestDay method
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454123281,1454123281,4baf13db28e962bef10e6f12a6617de096ef3dc2
+4baf13db28e962bef10e6f12a6617de096ef3dc2,4baf13db,More changes on the path to getting streaks working,"More changes on the path to getting streaks working
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454113637,1454113637,b7abf9bf559cc9194cd4a4f43990a85e4d080d8c
+b7abf9bf559cc9194cd4a4f43990a85e4d080d8c,b7abf9bf,Some improvements to CalculateStreaksTask.,"Some improvements to CalculateStreaksTask.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1454029298,1454029298,c14f6db709eb3b88862f47d93311154b64eb4a46
+c14f6db709eb3b88862f47d93311154b64eb4a46,c14f6db7,Streaks are now calculated in MainActivity.,"Streaks are now calculated in MainActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453948968,1453948968,1ec2e13a73a09756469b2c0fe310cd0daebcd475
+1ec2e13a73a09756469b2c0fe310cd0daebcd475,1ec2e13a,Added a one time task for calculating streaks after the database upgrade to version 2,"Added a one time task for calculating streaks after the database upgrade to version 2
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453946807,1453946807,41aca09ff5498fe076464d121386587b182cbca4
+41aca09ff5498fe076464d121386587b182cbca4,41aca09f,Added the CalculateStreaksTask back,"Added the CalculateStreaksTask back
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453945307,1453945307,54b3d66be05bbd2ba20a94869f9dbd8e9cf00d25
+54b3d66be05bbd2ba20a94869f9dbd8e9cf00d25,54b3d66b,Added EventBus to the list of libraries,"Added EventBus to the list of libraries
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453942740,1453942740,7373685a447cda8ffdb9b14d8883129bc8228feb
+7373685a447cda8ffdb9b14d8883129bc8228feb,7373685a,version 4 and proguard updates for EventBus,"version 4 and proguard updates for EventBus
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453863500,1453863500,e68db9ef87975a73b9e08176fcb41daa32e01682
+e68db9ef87975a73b9e08176fcb41daa32e01682,e68db9ef,StreakWidget look changes,"StreakWidget look changes
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453863305,1453863305,3e12bb6c8de66956ccbc583ac59a9f50e76097ec
+3e12bb6c8de66956ccbc583ac59a9f50e76097ec,3e12bb6c,Added date to FoodServingsChangedEvent so only the DateFragment which matches…,"Added date to FoodServingsChangedEvent so only the DateFragment which matches the date will update itself.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453856924,1453856924,948a2df0e8e7b1a5646742f780f755afa8857ee4
+948a2df0e8e7b1a5646742f780f755afa8857ee4,948a2df0,Streaks are now calculated quickly and correctly because of the event bus,"Streaks are now calculated quickly and correctly because of the event bus
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453856549,1453856549,d0c83604f687ef0f3cf67ef699078fb0226d32db
+d0c83604f687ef0f3cf67ef699078fb0226d32db,d0c83604,Removed RecyclerView. FoodServings now listen for bus events in order to update their streak.,"Removed RecyclerView. FoodServings now listen for bus events in order to update their streak.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453855897,1453855897,c1f529b83cc00f505a771c14fe09a00c12d8aca4
+c1f529b83cc00f505a771c14fe09a00c12d8aca4,c1f529b8,StreakWidget no longer performs its own database query,"StreakWidget no longer performs its own database query
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453853301,1453853301,ddfbc4ffdd5f5fdfae1853a3729a648e5b23b64a
+ddfbc4ffdd5f5fdfae1853a3729a648e5b23b64a,ddfbc4ff,Moved the streaks column into the Servings table. Deleted ServingsStreak and CalculateStreaksTask.,"Moved the streaks column into the Servings table. Deleted ServingsStreak and CalculateStreaksTask.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453807295,1453807313,62eeeaead736815d4793ac9b92aea490067b87a3
+62eeeaead736815d4793ac9b92aea490067b87a3,62eeeaea,Minor streaks task changes,"Minor streaks task changes
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453805562,1453805562,1026077c02856e4ad6999ab29611719356c7a8bb
+1026077c02856e4ad6999ab29611719356c7a8bb,1026077c,Added the CalculateStreakTask,"Added the CalculateStreakTask
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453775663,1453775663,9938c210f767dffdf8111855e679c306041af07f
+9938c210f767dffdf8111855e679c306041af07f,9938c210,Added the StreakWidget,"Added the StreakWidget
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453769862,1453769862,c0b6b1834c3785315ffd8cb792cf72f67c066e21
+c0b6b1834c3785315ffd8cb792cf72f67c066e21,c0b6b183,CalculateStreaksTask now functions correctly,"CalculateStreaksTask now functions correctly
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453763214,1453763214,67b3b083032ae4da2acec6f3fb1e51d5934ec22c
+67b3b083032ae4da2acec6f3fb1e51d5934ec22c,67b3b083,Added some background selecting logic,"Added some background selecting logic
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453721395,1453721395,f81b5c95d395d6853cfb71d7ae853122656f696c
+f81b5c95d395d6853cfb71d7ae853122656f696c,f81b5c95,Merge branch 'streaks' of https://bitbucket.org/slavick/dailydozen into v4,"Merge branch 'streaks' of https://bitbucket.org/slavick/dailydozen into v4
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453720982,1453720982,"40c49db07439cb38247265cfbea53d70ad0af3a3,72d8d14850ec8adce109204cf80ef07cd5e23392"
+40c49db07439cb38247265cfbea53d70ad0af3a3,40c49db0,Added the ServingsStreak model class and CalculateStreaksTask,"Added the ServingsStreak model class and CalculateStreaksTask
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453720528,1453720528,4540626e2be26a5cc50e24d0c526fa6b63c8050f
+72d8d14850ec8adce109204cf80ef07cd5e23392,72d8d148,Saving work in progress,"Saving work in progress
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453720448,1453720448,4540626e2be26a5cc50e24d0c526fa6b63c8050f
+4540626e2be26a5cc50e24d0c526fa6b63c8050f,4540626e,Downgraded MPAndroidChart because there were issues with proguard,"Downgraded MPAndroidChart because there were issues with proguard
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453429556,1453429556,d303bdb5f4e6ec862588c4a226c930ce666c84bf
+d303bdb5f4e6ec862588c4a226c930ce666c84bf,d303bdb5,Fixed crash where ServingsHistoryActivity would crash when there were no servings in the database.,"Fixed crash where ServingsHistoryActivity would crash when there were no servings in the database.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453425993,1453425993,7a8c2b0948a8be0a6bfcb0561e1125a18ac89e53
+7a8c2b0948a8be0a6bfcb0561e1125a18ac89e53,7a8c2b09,versionCode 9,"versionCode 9
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453425108,1453425108,369525de91d4adfde8630728d64acf14070162ef
+369525de91d4adfde8630728d64acf14070162ef,369525de,Moving average line chart is reenabled,"Moving average line chart is reenabled
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453375857,1453375857,55045bed6050c28f8bbae16347f2fb14f8c93c6c
+55045bed6050c28f8bbae16347f2fb14f8c93c6c,55045bed,Disabled the moving average line chart until I can check the results.,"Disabled the moving average line chart until I can check the results.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453343535,1453343535,6ccaee5c795ed5704a8aebb288bcd25b9059d60f
+6ccaee5c795ed5704a8aebb288bcd25b9059d60f,6ccaee5c,Replaced MovingAverage with trend calculation logic from freeweightlog (The Hacker's Diet),"Replaced MovingAverage with trend calculation logic from freeweightlog (The Hacker's Diet)
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453342612,1453342612,d3ac8a43921fc4b5aa2a161836abcc5c934d5878
+d3ac8a43921fc4b5aa2a161836abcc5c934d5878,d3ac8a43,Have a simple moving average calculation for the line chart,"Have a simple moving average calculation for the line chart
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453341691,1453341691,50275e131eeee999bc19c2362560b37a5bee3dc0
+50275e131eeee999bc19c2362560b37a5bee3dc0,50275e13,Combined food info icon with food name,"Combined food info icon with food name
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453300514,1453300514,b58e7adec45eb373250dd47b68788561d661cdc6
+b58e7adec45eb373250dd47b68788561d661cdc6,b58e7ade,Changed some styles based on materialpalette.com,"Changed some styles based on materialpalette.com
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453293065,1453293065,7ed6aae21e1764c7e1bfad20f18f070630c1802e
+7ed6aae21e1764c7e1bfad20f18f070630c1802e,7ed6aae2,Styled the PagerTabStrip,"Styled the PagerTabStrip
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453291691,1453291691,5ae651feace2f3575aa085f7c55e2b96e5028c2e
+5ae651feace2f3575aa085f7c55e2b96e5028c2e,5ae651fe,Added MPAndroidChart to the about text,"Added MPAndroidChart to the about text
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453250580,1453250580,8a0ed0624fa40a5e99eb307e70bf01d6647fcd93
+8a0ed0624fa40a5e99eb307e70bf01d6647fcd93,8a0ed062,Added a horizontal divider between the Servings header and the form,"Added a horizontal divider between the Servings header and the form
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453250232,1453250232,0b6943ecfb12248025cbf394681592f632a5dd49
+0b6943ecfb12248025cbf394681592f632a5dd49,0b6943ec,Completed the first version of the daily servings chart,"Completed the first version of the daily servings chart
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453249408,1453249408,56fbbeec3b075d4eb47309d7558ad18020c53d53
+56fbbeec3b075d4eb47309d7558ad18020c53d53,56fbbeec,Daily Servings chart visual improvements,"Daily Servings chart visual improvements
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453203212,1453203212,3f63f320a4adc6cf8bd17826be2e7727828860f7
+3f63f320a4adc6cf8bd17826be2e7727828860f7,3f63f320,Integrating the MPAndroidChart library for charting daily servings counts,"Integrating the MPAndroidChart library for charting daily servings counts
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453116570,1453116570,dcf21d9c3661492c4a9a6f167c2c8c49510a9c23
+dcf21d9c3661492c4a9a6f167c2c8c49510a9c23,dcf21d9c,Removed my attempt at making a bar chart. I am going to try an android library…,"Removed my attempt at making a bar chart. I am going to try an android library that will provide more functionality and be easier to integrate.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453114670,1453114670,f011e950fcec6d0617e88a7e6b9c751d7fba0d03
+f011e950fcec6d0617e88a7e6b9c751d7fba0d03,f011e950,Working towards getting the bar chart working,"Working towards getting the bar chart working
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453087134,1453087134,12575a87d3be5934dd2c2ccb877cd2e520419d2a
+12575a87d3be5934dd2c2ccb877cd2e520419d2a,12575a87,Added the ServingsHistoryActivity which will show the user a horizontal bar…,"Added the ServingsHistoryActivity which will show the user a horizontal bar chart of their daily servings
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453070375,1453070375,e35ed7ced2d40eace78a89a2299129753db18a2c
+e35ed7ced2d40eace78a89a2299129753db18a2c,e35ed7ce,Updated about text with android-iconify library,"Updated about text with android-iconify library
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453066663,1453066663,0f939ce43f23b225a5d8cdebdb083c3940af92b6
+0f939ce43f23b225a5d8cdebdb083c3940af92b6,0f939ce4,Added the android-iconify library to replace the info and calendar icons I was…,"Added the android-iconify library to replace the info and calendar icons I was using with font icons that can be scaled and colored
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1453066471,1453066471,f4e28bc9f9a8dbbd17dbd9409ef98aced36b8c4d
+f4e28bc9f9a8dbbd17dbd9409ef98aced36b8c4d,f4e28bc9,Fixed some layouts,"Fixed some layouts
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452981440,1452981440,dc99451df9ad2b58ad3426731d3714b553700512
+dc99451df9ad2b58ad3426731d3714b553700512,dc99451d,Added the DateServings widget which encapsulates the minimal logic in displaying…,"Added the DateServings widget which encapsulates the minimal logic in displaying the days total servings count.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452979924,1452980016,edaae6ba2d7fbc1224b342069d70686f9e21d0a1
+edaae6ba2d7fbc1224b342069d70686f9e21d0a1,edaae6ba,Updated version,"Updated version
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452979195,1452979195,cf32b92861ce89005f60c1da43c329c314551817
+cf32b92861ce89005f60c1da43c329c314551817,cf32b928,Moved common code from the food activities into the new FoodLoadingActivity.,"Moved common code from the food activities into the new FoodLoadingActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452978798,1452978798,2b3a1487154767983708fe6597380121a7cdb141
+2b3a1487154767983708fe6597380121a7cdb141,2b3a1487,Food History and Info has been split into two separate Activities,"Food History and Info has been split into two separate Activities
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452978119,1452978119,f905886893032ebc6ec908725962e344c690364a
+f905886893032ebc6ec908725962e344c690364a,f9058868,Changed gray to be a bit darker and simplified rounded_rectangle.xml,"Changed gray to be a bit darker and simplified rounded_rectangle.xml
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452977762,1452977762,9285c2cab187fa39a9c08105efde46ed21f3ecf6
+9285c2cab187fa39a9c08105efde46ed21f3ecf6,9285c2ca,Merge remote-tracking branch 'origin/v2',"Merge remote-tracking branch 'origin/v2'
+
+# Conflicts:
+#	app/src/main/java/org/slavick/dailydozen/Common.java
+#	app/src/main/java/org/slavick/dailydozen/activity/MainActivity.java
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452975635,1452975635,"8192aa7c3b284504f21029e412e4985aca8a7bfd,80a610b20e5c4809910889840824e7b9cfd3810e"
+8192aa7c3b284504f21029e412e4985aca8a7bfd,8192aa7c,Fixed issue where Daily Dozen would not register for Inbox attachments.,"Fixed issue where Daily Dozen would not register for Inbox attachments.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452953487,1452953487,1d8c81e811ff747c1f77e85b77d543d33d1a1378
+1d8c81e811ff747c1f77e85b77d543d33d1a1378,1d8c81e8,version 2,"version 2
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452951495,1452951495,d77497ffe53ccbc065a456a8a3b2c9462a2083d8
+d77497ffe53ccbc065a456a8a3b2c9462a2083d8,d77497ff,Put a space between the words Daily Dozen in the backup email instructions,"Put a space between the words Daily Dozen in the backup email instructions
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452951484,1452951484,4da71189adf797c20b1823e67824588a7903fdcf
+4da71189adf797c20b1823e67824588a7903fdcf,4da71189,Added the TruncatableModel class which I got from…,"Added the TruncatableModel class which I got from https://github.com/pardom/ActiveAndroid/pull/221#issuecomment-170113145. This simplifies and speeds up the process of deleting all Servings and Days from the database.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452901730,1452901730,a6e0e80794436ad410afab8e72aec513f9151031
+a6e0e80794436ad410afab8e72aec513f9151031,a6e0e807,Fixed bug where rotating screen after restoring data would prompt the user to restore again,"Fixed bug where rotating screen after restoring data would prompt the user to restore again
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452901671,1452901671,77c6a5096dbbe7d0489535f56c41f60e38fb4801
+77c6a5096dbbe7d0489535f56c41f60e38fb4801,77c6a509,"Changed mimetype of intent-filter from ""*/*"" to ""text/csv"" as I noticed it was…","Changed mimetype of intent-filter from ""*/*"" to ""text/csv"" as I noticed it was matching incorrect things
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452900336,1452900336,d911c309507e6b6277597f0d08ea0bd683d89a22
+d911c309507e6b6277597f0d08ea0bd683d89a22,d911c309,ensureAllFoodsExistInDatabase is now wrapped in a transaction,"ensureAllFoodsExistInDatabase is now wrapped in a transaction
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452899893,1452899893,2665e0bc567b56dce5e6585c2d84daceda0121aa
+2665e0bc567b56dce5e6585c2d84daceda0121aa,2665e0bc,Greatly improved the speed of the RestoreTask. This was accomplished by using…,"Greatly improved the speed of the RestoreTask. This was accomplished by using transactions. Added the Hugo plugin to automatically give me timings of function calls.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452857448,1452857448,c950218f8fc008091782c9f4eb419bb7bf139147
+c950218f8fc008091782c9f4eb419bb7bf139147,c950218f,Renamed DailyFoodsApplication to DailyDozenApplication,"Renamed DailyFoodsApplication to DailyDozenApplication
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452856222,1452856222,0e0218a2d3a00e34251d5b77513be20a9845b674
+0e0218a2d3a00e34251d5b77513be20a9845b674,0e0218a2,The About text and Backup instructions text are now stored as string-arrays instead of strings.,"The About text and Backup instructions text are now stored as string-arrays instead of strings.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452770919,1452770919,d29ad601f260827fafd63a4df0e6a24bb7fe10df
+d29ad601f260827fafd63a4df0e6a24bb7fe10df,d29ad601,Build 6,"Build 6
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452741732,1452741732,15b2092d4c615f3fd55e244b1a51fcbe604e066e
+15b2092d4c615f3fd55e244b1a51fcbe604e066e,15b2092d,Fixed issue where restore was not refreshing the currently displayed fragment,"Fixed issue where restore was not refreshing the currently displayed fragment
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452741022,1452741022,60d64245ba88f91816ff66ae2d6cba0aa21cef2f
+60d64245ba88f91816ff66ae2d6cba0aa21cef2f,60d64245,More refactorings to BackupTask and RestoreTask,"More refactorings to BackupTask and RestoreTask
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452740199,1452740199,18ece31198205c15b780c6193a56b35e54f0aa1a
+18ece31198205c15b780c6193a56b35e54f0aa1a,18ece311,Cleaned up BackupTask,"Cleaned up BackupTask
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452738473,1452738473,094db268058f62470e1235ea7423a32b365a15b8
+094db268058f62470e1235ea7423a32b365a15b8,094db268,Removed pull_database.sh,"Removed pull_database.sh
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452737163,1452737163,03636cc31d961e57178d49b9cecba895048e2e4c
+03636cc31d961e57178d49b9cecba895048e2e4c,03636cc3,Removed BackupRestoreActivity. Restoring is now done in MainActivity. Also…,"Removed BackupRestoreActivity. Restoring is now done in MainActivity. Also solved the bug where multiple instances of the app were running after a restore.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452686729,1452686729,a60ad7f85ead6edfa9ac2c7af3e35ab8d52e9aad
+a60ad7f85ead6edfa9ac2c7af3e35ab8d52e9aad,a60ad7f8,Restore confirmation dialog is not shown if there is no data in the database,"Restore confirmation dialog is not shown if there is no data in the database
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452685008,1452685008,9067b75b02423cadcc588d54071349b7de393d64
+9067b75b02423cadcc588d54071349b7de393d64,9067b75b,Data is now backed up without having to go to BackupRestoreActivity,"Data is now backed up without having to go to BackupRestoreActivity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452684577,1452684577,a17853b1be170ad29c669188a1223c146ed3716f
+a17853b1be170ad29c669188a1223c146ed3716f,a17853b1,Added a ProgressBar to TaskWithContext. Both BackupTask and RestoreTask now show…,"Added a ProgressBar to TaskWithContext. Both BackupTask and RestoreTask now show their progress while running.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452655976,1452656006,5f7b62701f65999f1076c1fba28b4bf4f8ec0822
+5f7b62701f65999f1076c1fba28b4bf4f8ec0822,5f7b6270,Refactored BackupController into the separate BackupTask and RestoreTask AsyncTask classes.,"Refactored BackupController into the separate BackupTask and RestoreTask AsyncTask classes.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452654026,1452654026,83d098d3bfdd6498811b29435ce088bb604236b6
+83d098d3bfdd6498811b29435ce088bb604236b6,83d098d3,Moved strings to strings.xml,"Moved strings to strings.xml
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452597696,1452597696,afa77b90aa445334662a294566215d125655a299
+afa77b90aa445334662a294566215d125655a299,afa77b90,Added confirmation dialog before restoring,"Added confirmation dialog before restoring
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452597345,1452597345,dab84d49eee91d6168377b5a42b342161119a9b0
+dab84d49eee91d6168377b5a42b342161119a9b0,dab84d49,Fixed bug where servings were being restored when they had 0 servings,"Fixed bug where servings were being restored when they had 0 servings
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452568261,1452568261,aa938b4c4d0b98eadad029127a7a491d5cc0337b
+aa938b4c4d0b98eadad029127a7a491d5cc0337b,aa938b4c,First version that successfully restores from csv,"First version that successfully restores from csv
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452568095,1452568095,8815a33cad351018a5071bc23e35ad4c1839a43a
+8815a33cad351018a5071bc23e35ad4c1839a43a,8815a33c,First version where dailydozen_backup.csv files can be opened in the app,"First version where dailydozen_backup.csv files can be opened in the app
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452565424,1452565424,dbd6a136b08a81702ac250fd21f138dae0dd6be5
+dbd6a136b08a81702ac250fd21f138dae0dd6be5,dbd6a136,Removed some unnecessary code and added a timestamp to the subject of the backup email,"Removed some unnecessary code and added a timestamp to the subject of the backup email
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452467432,1452467432,16309d5d7fe43124a3f8f88a76d4c5ffcf929eb0
+16309d5d7fe43124a3f8f88a76d4c5ffcf929eb0,16309d5d,First version where the backup file is successfully attached to an email,"First version where the backup file is successfully attached to an email
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452466573,1452466573,2a049210dd2a6e751b23cc53eba81f92634b6825
+2a049210dd2a6e751b23cc53eba81f92634b6825,2a049210,backupToCsv now returns a boolean so the app knows if the backup was successful,"backupToCsv now returns a boolean so the app knows if the backup was successful
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452133706,1452133706,a6847717d35a6f0bf995bce971df76e428da366c
+a6847717d35a6f0bf995bce971df76e428da366c,a6847717,Added the Restore button and tested that the backup file can be read,"Added the Restore button and tested that the backup file can be read
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452083197,1452083197,dccdc68ee105b4f28006fa655a7d3eee7e0a9de2
+dccdc68ee105b4f28006fa655a7d3eee7e0a9de2,dccdc68e,Encapsulated joining of lists,"Encapsulated joining of lists
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452079432,1452079432,0052a5765c033d18a21c4ad7e76dcd7b6777046d
+0052a5765c033d18a21c4ad7e76dcd7b6777046d,0052a576,The app now asks for the WRITE_EXTERNAL_STORAGE permission before attempting to backup,"The app now asks for the WRITE_EXTERNAL_STORAGE permission before attempting to backup
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452079231,1452079249,d6d39c0e83aa9526750e94c2e44158fa6485bdc9
+d6d39c0e83aa9526750e94c2e44158fa6485bdc9,d6d39c0e,Added the BackupRestoreActivity and some basic backup functionality,"Added the BackupRestoreActivity and some basic backup functionality
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452053725,1452053725,f874ac5b56523c8b3f533a6542e943e2e04a7280
+f874ac5b56523c8b3f533a6542e943e2e04a7280,f874ac5b,Added a link to nutritionfacts.org in About,"Added a link to nutritionfacts.org in About
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452041560,1452041560,3a1af898aa426521ef778b40a8ea17c89ebfbffe
+3a1af898aa426521ef778b40a8ea17c89ebfbffe,3a1af898,Setting the calendar's year and month is now more explicit. Suppressed unchecked cast warning.,"Setting the calendar's year and month is now more explicit. Suppressed unchecked cast warning.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1452041395,1452041395,25421736b256a9e9153444b2f95996ba5ee97493
+80a610b20e5c4809910889840824e7b9cfd3810e,80a610b2,Another attempt at fixing the bug where DatePagerAdapter.getCount returns a…,"Another attempt at fixing the bug where DatePagerAdapter.getCount returns a different value. Now I am keeping track of the getCount value when the adapter is created and checking in onResume if it has changed. If so, I recreate the adapter. I tested this manually by changing the value while stepping through in the debugger.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451836989,1451836989,25421736b256a9e9153444b2f95996ba5ee97493
+25421736b256a9e9153444b2f95996ba5ee97493,25421736,Updated app icon,"Updated app icon
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451677409,1451677409,e054d6c04ba05f435dd7e1baee84803bb0275116
+e054d6c04ba05f435dd7e1baee84803bb0275116,e054d6c0,The version displayed in the about activity is now read from BuildConfig.VERSION_NAME,"The version displayed in the about activity is now read from BuildConfig.VERSION_NAME
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451672391,1451672391,72cf5af1b6e6977b05ed821bb7f879d10b92171c
+72cf5af1b6e6977b05ed821bb7f879d10b92171c,72cf5af1,Removed butterknife and increased build to 5,"Removed butterknife and increased build to 5
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451596064,1451596064,4c3f66251e42520da18880f36c8fa7834a7f5f35
+4c3f66251e42520da18880f36c8fa7834a7f5f35,4c3f6625,Fixed bug in getServingsOfFoodInMonth. Very rare bug that I would have only…,"Fixed bug in getServingsOfFoodInMonth. Very rare bug that I would have only found today, December 31st. The problem was that adding 1 month to Oct 31 changed the date to Nov 30, but adding 1 month to Nov 30 changed the date to Dec 30 and not Dec 31 like I was expecting it to. I fixed the bug by only looking at the year and month properties of the calendar as that is all I was interested in anyways.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451595260,1451595260,db78df6ef068a59f1d5e04d63942908451fdf3d0
+db78df6ef068a59f1d5e04d63942908451fdf3d0,db78df6e,Added proguard,"Added proguard
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451594335,1451594335,895e373e17cf70f0335c842c51ddfbd95e19e4c1
+895e373e17cf70f0335c842c51ddfbd95e19e4c1,895e373e,Added links in the about page,"Added links in the about page
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451585149,1451585149,97555b30e4ddff8660fb1340f3374e00f7122e82
+97555b30e4ddff8660fb1340f3374e00f7122e82,97555b30,Added the CardViewHeader widget to encapsulate xml layout duplication. Added…,"Added the CardViewHeader widget to encapsulate xml layout duplication. Added some more text to AboutActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451518112,1451518112,fb7d319637c9ebeaa22d9c907318d605e5160820
+fb7d319637c9ebeaa22d9c907318d605e5160820,fb7d3196,Added the empty AboutActivity,"Added the empty AboutActivity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451515410,1451515410,477ed27176303e1ca10a2a461960ffe56a6b7b6a
+477ed27176303e1ca10a2a461960ffe56a6b7b6a,477ed271,The scrollbar no longer overlaps the calendar icon,"The scrollbar no longer overlaps the calendar icon
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451514653,1451514653,3edb52d1942fd6a4737992ece9d71e259175b573
+3edb52d1942fd6a4737992ece9d71e259175b573,3edb52d1,build 4,"build 4
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451512825,1451512825,fd366381c94988ae53e99cf4d287bed2ee37573a
+fd366381c94988ae53e99cf4d287bed2ee37573a,fd366381,Added the date icon to the end of the food item,"Added the date icon to the end of the food item
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451509412,1451509412,df583d2d72b74d04ff1b3172c39ff749e9fb7fb0
+df583d2d72b74d04ff1b3172c39ff749e9fb7fb0,df583d2d,Added padding between card titles and card content,"Added padding between card titles and card content
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451506301,1451506301,b5d7fbd99092c7864eaf1de04fb0257bfdb83618
+b5d7fbd99092c7864eaf1de04fb0257bfdb83618,b5d7fbd9,Added the back arrow to the toolbar in FoodInfoActivity. I had to override…,"Added the back arrow to the toolbar in FoodInfoActivity. I had to override onOptionsItemSelected to handle the click directly because the normal operation always brought the user back to today's date when they might have been on a different date.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451505967,1451505967,3c1b2e78d82a7eb0962bf8f00801fb29b749acae
+3c1b2e78d82a7eb0962bf8f00801fb29b749acae,3c1b2e78,Removed the date range icon,"Removed the date range icon
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451505016,1451505016,3fe7eef41ec90b71df80db9b73e1bddbfad1aff4
+3fe7eef41ec90b71df80db9b73e1bddbfad1aff4,3fe7eef4,Redesigned the food item to have an info icon and a calendar icon.,"Redesigned the food item to have an info icon and a calendar icon.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451503762,1451503762,b72efebbe6a0b0577946ca7e82dbf310f4335e84
+b72efebbe6a0b0577946ca7e82dbf310f4335e84,b72efebb,Removed drawable from food_item.xml,"Removed drawable from food_item.xml
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451490052,1451490052,e66bab9f0e640ee32a7331319353179985c94d11
+e66bab9f0e640ee32a7331319353179985c94d11,e66bab9f,Changed score display. Removed item from style,"Changed score display. Removed item from style
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451490018,1451490018,5ff75661e254936bfe8ee034066293f958bb8b9d
+5ff75661e254936bfe8ee034066293f958bb8b9d,5ff75661,Added an info icon to the right of each food item,"Added an info icon to the right of each food item
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451485239,1451485239,4686b13ef8c69a51935358eaeb3e90bd9246f377
+4686b13ef8c69a51935358eaeb3e90bd9246f377,4686b13e,build 3,"build 3
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451444054,1451444054,2f085d802092b35076de93d12f88af158ae465e3
+2f085d802092b35076de93d12f88af158ae465e3,2f085d80,Day does not need to be serializable,"Day does not need to be serializable
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451443471,1451443471,8feefbcedf32f410324cd44bf786375b3467d3b4
+8feefbcedf32f410324cd44bf786375b3467d3b4,8feefbce,Reverted the code that attempted to serialize Food objects,"Reverted the code that attempted to serialize Food objects
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451443313,1451443313,675ee57abaf2fa23fac674d791bca367fa6c490b
+675ee57abaf2fa23fac674d791bca367fa6c490b,675ee57a,The Score is now displayed at the top of the servings form,"The Score is now displayed at the top of the servings form
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451435240,1451435240,e76386f7041d6fb367730f0db6e918585859c753
+e76386f7041d6fb367730f0db6e918585859c753,e76386f7,Score is now displayed and updated when servings change,"Score is now displayed and updated when servings change
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451434985,1451434985,74b054cf3ec4481b1e9bf9b379adb8dcf10e87f5
+74b054cf3ec4481b1e9bf9b379adb8dcf10e87f5,74b054cf,The DateFragment now listens for food servings being checked and unchecked.,"The DateFragment now listens for food servings being checked and unchecked.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451433937,1451433937,b2d04526f131df47cba09fb99c2de1faad2153d4
+b2d04526f131df47cba09fb99c2de1faad2153d4,b2d04526,Food Servings are now in a RecyclerView instead of a ListView,"Food Servings are now in a RecyclerView instead of a ListView
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451433219,1451433219,d1a7a75b606240cb71867935711904ac36f7ca02
+d1a7a75b606240cb71867935711904ac36f7ca02,d1a7a75b,Added header,"Added header
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451431507,1451431507,a54f844ba44c1f65d7c9723edc76493b3cc09bcd
+a54f844ba44c1f65d7c9723edc76493b3cc09bcd,a54f844b,Removed padding,"Removed padding
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451429008,1451429008,444f3fc5c942343f3bdfcec50aa865db9febaed3
+444f3fc5c942343f3bdfcec50aa865db9febaed3,444f3fc5,The date form is now in a CardView,"The date form is now in a CardView
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451413590,1451413590,d32395a441da9dc3e0a2b14901659e600099fbae
+d32395a441da9dc3e0a2b14901659e600099fbae,d32395a4,Removed menu and go to today button,"Removed menu and go to today button
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451412434,1451412434,83a7455c5a8358b2948c462dba387b937082a7b9
+83a7455c5a8358b2948c462dba387b937082a7b9,83a7455c,Legend is now hidden for foods with a single recommended serving,"Legend is now hidden for foods with a single recommended serving
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451412059,1451412059,0cd3ad8a2f188e5e48b34ac797772ac804bc7637
+0cd3ad8a2f188e5e48b34ac797772ac804bc7637,0cd3ad8a,Added an id column into Food to allow the class to be serialized and contain its id,"Added an id column into Food to allow the class to be serialized and contain its id
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451411906,1451411906,60461b7e830eb024044019761c8efc74c86ac95d
+60461b7e830eb024044019761c8efc74c86ac95d,60461b7e,Added the legend underneath the calendar,"Added the legend underneath the calendar
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451408114,1451408114,dc33aba495aa082489dc4ec37e31fff13892de05
+dc33aba495aa082489dc4ec37e31fff13892de05,dc33aba4,The food name now takes up its entire area. This makes tapping on it much easier.,"The food name now takes up its entire area. This makes tapping on it much easier.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451344538,1451344538,4eb947eba2597dd7bc1f20c5be6493ccf3331df1
+4eb947eba2597dd7bc1f20c5be6493ccf3331df1,4eb947eb,build 2,"build 2
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451334811,1451334811,76095c54c95d7890d67b1f961447ca398ee15d4c
+76095c54c95d7890d67b1f961447ca398ee15d4c,76095c54,The calendar now shows different colors for when the user does not reach the recommended servings,"The calendar now shows different colors for when the user does not reach the recommended servings
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451323615,1451323615,ac2409969ac5fcebe8190cb60f71eba526742642
+ac2409969ac5fcebe8190cb60f71eba526742642,ac240996,Removed list divider and made the food names blue.,"Removed list divider and made the food names blue.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451314694,1451314694,da603038579bf3b2276c7632dbae97e4ee9061dc
+da603038579bf3b2276c7632dbae97e4ee9061dc,da603038,Added the calendar into FoodInfoActivity. Removed CalendarActivity.,"Added the calendar into FoodInfoActivity. Removed CalendarActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451314241,1451314241,7824017b4e5deeb2b55a79a7dbf4f5af93275e69
+7824017b4e5deeb2b55a79a7dbf4f5af93275e69,7824017b,Styled the food list item in the same way as android.R.layout.simple_list_item_1,"Styled the food list item in the same way as android.R.layout.simple_list_item_1
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451312328,1451312328,cf90afb0849f978bb8a32fe67d7c64bee62f9c87
+cf90afb0849f978bb8a32fe67d7c64bee62f9c87,cf90afb0,Replaced the ViewGroup in DateFragment with a ListView.,"Replaced the ViewGroup in DateFragment with a ListView.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451274252,1451274252,e1632cee18735dd46fbc7d79a8ab130e791c26a1
+e1632cee18735dd46fbc7d79a8ab130e791c26a1,e1632cee,The Food Types and Serving Sizes lists are now fully expanded.,"The Food Types and Serving Sizes lists are now fully expanded.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451270590,1451270590,d268ff6808030666f2e435467090ace7a976db7d
+d268ff6808030666f2e435467090ace7a976db7d,d268ff68,Copied the CardView styles used in the cheesesquare project for use in FoodInfoActivity,"Copied the CardView styles used in the cheesesquare project for use in FoodInfoActivity
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451250876,1451250876,469d2b09bc9b19d9ed49785e4a77a3748f21f61a
+469d2b09bc9b19d9ed49785e4a77a3748f21f61a,469d2b09,Added the FoodInfoActivity which will give the user info on what types of foods…,"Added the FoodInfoActivity which will give the user info on what types of foods and in which quantities they should be consumed. Added the FoodInfo class to encapsulate those recommendations.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451249824,1451249824,be0d061f6f7a65cbcdf1c275f5d6bf32ca2f1076
+be0d061f6f7a65cbcdf1c275f5d6bf32ca2f1076,be0d061f,Attempt to fix the crash when the app is sent to the background and then to…,"Attempt to fix the crash when the app is sent to the background and then to foreground the next day.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451168201,1451168201,6379a3f91b661aa2926ca2e836d27480ba2b41dc
+6379a3f91b661aa2926ca2e836d27480ba2b41dc,6379a3f9,Removed an unnecessary log message from CalendarActivity and added some space around food items,"Removed an unnecessary log message from CalendarActivity and added some space around food items
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451163705,1451163705,c1b141dd781db2db8c2402d10bca66d20d283ccf
+c1b141dd781db2db8c2402d10bca66d20d283ccf,c1b141dd,Removed CardView from form,"Removed CardView from form
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451163477,1451163477,208176dbf123731a0821d778c8aa9385ef263014
+208176dbf123731a0821d778c8aa9385ef263014,208176db,Moved the code to ensure all the foods are in the database into DailyFoodsApplication.,"Moved the code to ensure all the foods are in the database into DailyFoodsApplication.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451163006,1451163006,34c86d99db62394c33ea8b5c82a1418b05bea8a2
+34c86d99db62394c33ea8b5c82a1418b05bea8a2,34c86d99,Removed the outer LinearLayout from MainActivity's layout,"Removed the outer LinearLayout from MainActivity's layout
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1451162977,1451162977,2e16e1b7e3ec0dfcbde6fb20c48ee45d4df8d0b6
+2e16e1b7e3ec0dfcbde6fb20c48ee45d4df8d0b6,2e16e1b7,Days are only highlighted on the calendar when you have eaten the recommended servings of the food.,"Days are only highlighted on the calendar when you have eaten the recommended servings of the food.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450977667,1450977667,6ed0fca10aa1d881f96f140098b1dc376e6b5317
+6ed0fca10aa1d881f96f140098b1dc376e6b5317,6ed0fca1,Added a launcher icon,"Added a launcher icon
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450721568,1450722002,51400ae2d4e74cca4b204a20655725ee7248b833
+51400ae2d4e74cca4b204a20655725ee7248b833,51400ae2,No longer are Day objects required for tabs for those dates to be shown. The app…,"No longer are Day objects required for tabs for those dates to be shown. The app now supports all days back until Jan 1, 1970.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450720344,1450720344,2547d2258da547172d3661aa17d3f110ddd684f0
+2547d2258da547172d3661aa17d3f110ddd684f0,2547d225,Work in progress. Replaced viewpagerindicator with PagerTabStrip.  This does not…,"Work in progress. Replaced viewpagerindicator with PagerTabStrip.  This does not suffer from the performance issues that TitlePageIndicator does. Also working on replacing the tabs from representing Day objects in the database with dates in general.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450714818,1450714818,9d2361616189d330e3fb3adb048308543ae69276
+9d2361616189d330e3fb3adb048308543ae69276,9d236161,Added null checks to getByDateAndFood,"Added null checks to getByDateAndFood
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450643722,1450643722,4829dfcac3080bad4fabe36af3119231cea6e462
+4829dfcac3080bad4fabe36af3119231cea6e462,4829dfca,CalendarActivity now shows days food has been eaten.,"CalendarActivity now shows days food has been eaten.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450536282,1450536282,7e79ea5f9863aba75a1dac380bbd04a12e281905
+7e79ea5f9863aba75a1dac380bbd04a12e281905,7e79ea5f,Minor code refactoring in CalendarActivity.,"Minor code refactoring in CalendarActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450529987,1450529987,00f17a687d3368f475deb7cb910e7677767c9df6
+00f17a687d3368f475deb7cb910e7677767c9df6,00f17a68,Refactored the Date model class into the Day model class. The major difference…,"Refactored the Date model class into the Day model class. The major difference is that Day uses java Date objects instead of Strings. It also provides a table with more granular querying abilities. I named it Day to avoid having to use the explicit java.util.Date all over the place.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450407152,1450407152,fb1a6ec77f3560ef5cede0b2a02e64926183d2f3
+fb1a6ec77f3560ef5cede0b2a02e64926183d2f3,fb1a6ec7,Added CalendarActivity.,"Added CalendarActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450403549,1450403549,dde761414c39457c3cbb318a41fa99543d38b41d
+dde761414c39457c3cbb318a41fa99543d38b41d,dde76141,Added the pull_database.sh script,"Added the pull_database.sh script
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450402434,1450402434,cd5a1d618b893a14a6f56cee7b2f5d7bdeb47e1a
+cd5a1d618b893a14a6f56cee7b2f5d7bdeb47e1a,cd5a1d61,Added the go to today menu button,"Added the go to today menu button
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450394926,1450394926,5bb082901bee3c1e6357a5759cdb42e4b447bf54
+5bb082901bee3c1e6357a5759cdb42e4b447bf54,5bb08290,Form can now scroll in landscape mode,"Form can now scroll in landscape mode
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450392124,1450392124,543fca80198ed919727a9a49101e57ee0f47f7fb
+543fca80198ed919727a9a49101e57ee0f47f7fb,543fca80,"Added Crashlytics. Changed name to just ""Daily Dozen""","Added Crashlytics. Changed name to just ""Daily Dozen""
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450389803,1450391590,fd1f45c62f9592a39b62c67914fa5bb3bbe65633
+fd1f45c62f9592a39b62c67914fa5bb3bbe65633,fd1f45c6,Added CardView to try to make the app look a bit better. Still a work in progress.,"Added CardView to try to make the app look a bit better. Still a work in progress.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450360314,1450360314,75da7a388d1b1520f739073a93bb81a9d5a00bdd
+75da7a388d1b1520f739073a93bb81a9d5a00bdd,75da7a38,Replaced the TextView for displaying the date with the TitlePageIndicator class…,"Replaced the TextView for displaying the date with the TitlePageIndicator class from the viewpagerindicator library.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450358103,1450358103,41dfe26fef35e8233cb3980e349646ef5faa9786
+41dfe26fef35e8233cb3980e349646ef5faa9786,41dfe26f,The DatePagerAdapter now swipes in the correct direction.,"The DatePagerAdapter now swipes in the correct direction.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450357371,1450357371,018b3b0c2ecc6b2675120f059f5ed0739ea8825a
+018b3b0c2ecc6b2675120f059f5ed0739ea8825a,018b3b0c,MainActivity now ensures that today's date exists in database.,"MainActivity now ensures that today's date exists in database.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450147552,1450147552,819641f502c1bd048048e877e96b957f28659aec
+819641f502c1bd048048e877e96b957f28659aec,819641f5,Moved code that ensure Foods existed in database out of DateFragment and into MainActivity.,"Moved code that ensure Foods existed in database out of DateFragment and into MainActivity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450147311,1450147311,8aa4b458a41d6ea13864b721abf3941b2e2c163d
+8aa4b458a41d6ea13864b721abf3941b2e2c163d,8aa4b458,"You can now swipe between days. However, the swipe direction is not correct.","You can now swipe between days. However, the swipe direction is not correct.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450146345,1450146345,d2a7ba385d0780388793072545549b120752db73
+d2a7ba385d0780388793072545549b120752db73,d2a7ba38,Renamed some packages to be singular,"Renamed some packages to be singular
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450092197,1450092197,e23328f240be29286f91b5018a01fab7c80b291d
+e23328f240be29286f91b5018a01fab7c80b291d,e23328f2,Removed TODO comments,"Removed TODO comments
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450039127,1450039127,58f9c690302c6f3010a567e4aa668e98c6faeb23
+58f9c690302c6f3010a567e4aa668e98c6faeb23,58f9c690,Existing servings are now loaded,"Existing servings are now loaded
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450038618,1450038618,2a87346686a2dcc3f96dd073875dc15de8eca1fc
+2a87346686a2dcc3f96dd073875dc15de8eca1fc,2a873466,Fixed create*IfNotExists methods. First version where servings are saved to the database.,"Fixed create*IfNotExists methods. First version where servings are saved to the database.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450035596,1450035596,3b49fae20cfb37a211c59f2be5b14ee1b8a4908e
+3b49fae20cfb37a211c59f2be5b14ee1b8a4908e,3b49fae2,Moved the methods from the helper classes into the model classes.,"Moved the methods from the helper classes into the model classes.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450034661,1450034661,d3b67bb54c22bb5d87439839e763103b62077951
+d3b67bb54c22bb5d87439839e763103b62077951,d3b67bb5,"Added the ActiveAndroid library to handle database entries. Added Date, Food,…","Added the ActiveAndroid library to handle database entries. Added Date, Food, and Servings model classes.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450034002,1450034002,cd98ddef3c3cea03ecc7e8fc7c1322bd009adfb1
+cd98ddef3c3cea03ecc7e8fc7c1322bd009adfb1,cd98ddef,Fixed package name,"Fixed package name
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1450017497,1450017497,2928790cfc413189d994b0eb037d1443117ff797
+2928790cfc413189d994b0eb037d1443117ff797,2928790c,Renamed base package from com.johnslavick to org.slavick,"Renamed base package from com.johnslavick to org.slavick
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449969817,1449969817,1c21765a9822409132f91c3f9baa3bac792591e8
+1c21765a9822409132f91c3f9baa3bac792591e8,1c21765a,Checking a checkbox now calculates the number of servings you have eaten.,"Checking a checkbox now calculates the number of servings you have eaten.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449966984,1449966984,dfe24fc543192deaf0a40b1eb3c3968504eb62ba
+dfe24fc543192deaf0a40b1eb3c3968504eb62ba,dfe24fc5,The checkboxes are now right aligned and have the same width regardless of quantity.,"The checkboxes are now right aligned and have the same width regardless of quantity.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449942365,1449942365,8f4c7909a6224a28298ad72e9f09a0d9d434fea9
+8f4c7909a6224a28298ad72e9f09a0d9d434fea9,8f4c7909,Refactored having to specify all food items in the activity_main.xml layout.…,"Refactored having to specify all food items in the activity_main.xml layout. They are now created on the fly in MainActivity.onCreate
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449940518,1449940518,478c34daada9746654fb8a249f54a78ce3dbeec0
+478c34daada9746654fb8a249f54a78ce3dbeec0,478c34da,Created the FoodItem widget. Implemented a non-functional first pass at the main food entry form.,"Created the FoodItem widget. Implemented a non-functional first pass at the main food entry form.
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449939473,1449939473,f9b9b381336cfd7ff974866485020d11811808a1
+f9b9b381336cfd7ff974866485020d11811808a1,f9b9b381,Brand new project,"Brand new project
+",,,,John Slavick,john.slavick@gmail.com,John Slavick,john.slavick@gmail.com,1449937498,1449937498,
+88456048402d2091c4cd31776f00150cf19af965,88456048,- updating gradle files,"- updating gradle files
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1447186682,1447186682,53fb21a9ed6bfe38d46e2fd85a59d7fcaf810627
+53fb21a9ed6bfe38d46e2fd85a59d7fcaf810627,53fb21a9,- adding custom images,"- adding custom images
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1447181544,1447181544,43000fa6e0fd0589b76102ea05547b512abc6a93
+43000fa6e0fd0589b76102ea05547b512abc6a93,43000fa6,- updating nav drawer icons,"- updating nav drawer icons
+- updating to ensure app resets on new day
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1444154585,1444154585,35dcf93c34b13721be303265258c1d7d48c9ef23
+35dcf93c34b13721be303265258c1d7d48c9ef23,35dcf93c,- adding screenshots,"- adding screenshots
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441392607,1441392607,602e240c36929d4526ae4d432b7b012beae2081c
+602e240c36929d4526ae4d432b7b012beae2081c,602e240c,- adding acknowledgements screen,"- adding acknowledgements screen
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441391600,1441391600,4e02dba84be07fcd1760dc4bcd6e9ed00f576392
+4e02dba84be07fcd1760dc4bcd6e9ed00f576392,4e02dba8,- added welcome screen,"- added welcome screen
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441389780,1441389780,b676a2a61edf70a82e6cd1e2b35b8f4098f03cae
+b676a2a61edf70a82e6cd1e2b35b8f4098f03cae,b676a2a6,- bug fixes,"- bug fixes
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441327124,1441327124,96cfe20f874d068da33b293de4f385dd15aca20f
+96cfe20f874d068da33b293de4f385dd15aca20f,96cfe20f,- adding icons,"- adding icons
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441326285,1441326285,a0b04bbffc8e000a3b5eeaf84b92af114f84145c
+a0b04bbffc8e000a3b5eeaf84b92af114f84145c,a0b04bbf,- work on dialog fragment,"- work on dialog fragment
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441318675,1441318675,c86f18bb10d5c6e5096f2110d1d3f54299ba394f
+c86f18bb10d5c6e5096f2110d1d3f54299ba394f,c86f18bb,- implementing data source,"- implementing data source
+- implementing rough draft home screen
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1441302490,1441302490,5f25fadf6d56215052e1076ebf632e94622653ed
+5f25fadf6d56215052e1076ebf632e94622653ed,5f25fadf,- adding template navigation drawer layout for home screen,"- adding template navigation drawer layout for home screen
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1438135189,1438135189,1afd037820b43f6cb7558d0467d91f1dbae3c57f
+1afd037820b43f6cb7558d0467d91f1dbae3c57f,1afd0378,- adding new project stub,"- adding new project stub
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1438132674,1438132674,b72db1e810ed770c82765942c714942d6a850a74
+b72db1e810ed770c82765942c714942d6a850a74,b72db1e8,- adding gitignore,"- adding gitignore
+",,,,Chan Kruse,chan.kruse@qxmd.com,Chan Kruse,chan.kruse@qxmd.com,1438132565,1438132565,

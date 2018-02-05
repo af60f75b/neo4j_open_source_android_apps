@@ -1,0 +1,69 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+74d238be5b0da77febf428781bb32b72f110bd58,74d238be,tweak docs to reflect additional parameter for recipient,"tweak docs to reflect additional parameter for recipient
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1486464383,1486464383,71a6e6742d4e43436d9f7de1c781b71bbc5ccc6b
+71a6e6742d4e43436d9f7de1c781b71bbc5ccc6b,71a6e674,bump version code for next release,"bump version code for next release
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1485776285,1485776285,abfa4b38934581d8098715c6f9010dcb0b6e3405
+abfa4b38934581d8098715c6f9010dcb0b6e3405,abfa4b38,fix Android 6 breakage by requesting permissions at runtime,"fix Android 6 breakage by requesting permissions at runtime
+
+Apparently, Google Play doesn't allow you to downgrade target SDK
+versions (attempted in 0d245ebee3c9bf324dccbea5d99e18b3f6de9ba1)
+and refuses to upload the APK. So implement it and bump target SDK
+to 25 again.
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1485774832,1485774929,c6cf15a0b71c6a90366fdc802e464a4791af5bae
+c6cf15a0b71c6a90366fdc802e464a4791af5bae,c6cf15a0,add privacy section,"add privacy section
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1485771773,1485771773,1ac28b18a2a8e8971d1672d47655ef0fdaa5e38d
+1ac28b18a2a8e8971d1672d47655ef0fdaa5e38d,1ac28b18,include the recipient when relaying the SMS to server,"include the recipient when relaying the SMS to server
+
+This is possible only in Android 5.1 and above, which
+introduces the relevant APIs. In case the phone number
+is not available, then the display name is used instead.
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1485762586,1485770901,0d245ebee3c9bf324dccbea5d99e18b3f6de9ba1
+0d245ebee3c9bf324dccbea5d99e18b3f6de9ba1,0d245ebe,fix Android 6 breakage by downgrading targetSdkVersion to 22,"fix Android 6 breakage by downgrading targetSdkVersion to 22
+
+From Android 6 (API 23) permissions are checked at runtime, not
+at install time. This would require using the Support Library or
+APIs introduced in level 23, so just downgrade targetSdkVersion
+to bring back the old behavior.
+
+https://developer.android.com/training/permissions/requesting.html
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1485766838,1485767396,c7be5db0e0102133342d89cfc5b5999489508eac
+c7be5db0e0102133342d89cfc5b5999489508eac,c7be5db0,bump version code for next release,"bump version code for next release
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484752266,1484752266,5a13c54c24934bb8eb3518be16fd8c264dbd3410
+5a13c54c24934bb8eb3518be16fd8c264dbd3410,5a13c54c,tweak message in case of invalid credentials + fix documentation,"tweak message in case of invalid credentials + fix documentation
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484751699,1484751802,3a4a16351237c2cf1ddb09afda7695fe270f2ead
+3a4a16351237c2cf1ddb09afda7695fe270f2ead,3a4a1635,create website with basic documentation,"create website with basic documentation
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484750889,1484751266,13aff7afa21f103c7c42315a9f0392de7c0586c4
+13aff7afa21f103c7c42315a9f0392de7c0586c4,13aff7af,"move ""HTTP Basic Authentication"" settings to be after ""HTTP Relay""","move ""HTTP Basic Authentication"" settings to be after ""HTTP Relay""
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484750539,1484750673,5023ad009bcfd64f1d90100aacdfe83b5fc7aa6c
+5023ad009bcfd64f1d90100aacdfe83b5fc7aa6c,5023ad00,allow customizing the HTTP Method,"allow customizing the HTTP Method
+
+Instead of always defaulting to PUT, allow using POST as well.
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484745463,1484746036,69b6977d228ed828734e15b2484e7ea1c4d68451
+69b6977d228ed828734e15b2484e7ea1c4d68451,69b6977d,allow filtering by multiple senders and message content,"allow filtering by multiple senders and message content
+
+Each message is evaluated against the sender and content filter.
+Within each category, any text which gets matched results in the
+filter being considered successful.
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484744227,1484744481,e83680ef7b0fe8d22a2e5fccbd4716a9f3461d49
+e83680ef7b0fe8d22a2e5fccbd4716a9f3461d49,e83680ef,simplify the setup to make it easier to understand,"simplify the setup to make it easier to understand
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484742586,1484742691,cc98f5f14d0b95104316df039ded37b063cf9376
+cc98f5f14d0b95104316df039ded37b063cf9376,cc98f5f1,add configuration for Travis CI,"add configuration for Travis CI
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484720240,1484722645,1f7d60683cdd5cab0e15f33307f7017c47adca5a
+1f7d60683cdd5cab0e15f33307f7017c47adca5a,1f7d6068,bump version code for next release,"bump version code for next release
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1484719798,1484719798,b41fd2457bb2ea36b4b997fd853a66de0e5cc263
+b41fd2457bb2ea36b4b997fd853a66de0e5cc263,b41fd245,change message to be more in line with app name,"change message to be more in line with app name
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483365362,1483365362,3e04c1144a96db0ee45b898db7080db2bf8b1bbd
+3e04c1144a96db0ee45b898db7080db2bf8b1bbd,3e04c114,"fix ""App is not installed"" message due to overly eager lint fixing","fix ""App is not installed"" message due to overly eager lint fixing
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483103611,1483103626,b58f1df21dea5ee60821bb3b96c4867fca960787
+b58f1df21dea5ee60821bb3b96c4867fca960787,b58f1df2,add configuration for building signed release APK,"add configuration for building signed release APK
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483083339,1483083339,46eeefc1c2352e47281adeda7b896bd3ae738b76
+46eeefc1c2352e47281adeda7b896bd3ae738b76,46eeefc1,"add ""About"" option to display app details","add ""About"" option to display app details
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483080466,1483080494,bd52eca065bec23153f6be145455b336e5738086
+bd52eca065bec23153f6be145455b336e5738086,bd52eca0,add LICENSE and rename to SMS Relay,"add LICENSE and rename to SMS Relay
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483078339,1483078339,64471bf6210db15103950aa4daf56f77e7de69ec
+64471bf6210db15103950aa4daf56f77e7de69ec,64471bf6,fix lint warnings with gradle,"fix lint warnings with gradle
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483076630,1483076630,a37c5da7dcad103ca25240bf1e8d34731e1fac61
+a37c5da7dcad103ca25240bf1e8d34731e1fac61,a37c5da7,implement SMS receiver with forwarding to configured URL,"implement SMS receiver with forwarding to configured URL
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483013639,1483022628,8add6e39709cc4c778b1127e221ebe675d2bb02b
+8add6e39709cc4c778b1127e221ebe675d2bb02b,8add6e39,import project with settings activity,"import project with settings activity
+",,,,Ashish Kulkarni,ashish@advarisk.com,Ashish Kulkarni,ashish@advarisk.com,1483013107,1483022628,

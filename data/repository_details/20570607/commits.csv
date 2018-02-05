@@ -1,0 +1,380 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+124bad7608622703d0b840ad474f9d00c63b0fb2,124bad76,Release 1.3 to maven central with fixes for new build tools,"Release 1.3 to maven central with fixes for new build tools
+",,,,Patrick Mertens,patrick.mertens@rwth-aachen.de,Patrick Mertens,patrick.mertens@rwth-aachen.de,1510070824,1510070824,2920825afd55a323c7c7b431c3c99fb1a0617a9a
+2920825afd55a323c7c7b431c3c99fb1a0617a9a,2920825a,"Tons of fixes for the activity lifecycle, fixes #37","Tons of fixes for the activity lifecycle, fixes #37
+
+Also migrate to the appcompat spinner.
+",,,,Patrick Mertens,patrick.mertens@rwth-aachen.de,Patrick Mertens,patrick.mertens@rwth-aachen.de,1509993078,1509993078,978ace7539c61535563b3b7c4b61082eebae0d6d
+978ace7539c61535563b3b7c4b61082eebae0d6d,978ace75,"Update to Android Studio & Gradle 3, Oreo (API 26) & increase minSDK to 14","Update to Android Studio & Gradle 3, Oreo (API 26) & increase minSDK to 14
+
+Newest appcompat support library requires minSDK 14...
+This also changes file permissions for some reason.
+",,,,Patrick Mertens,patrick.mertens@rwth-aachen.de,Patrick Mertens,patrick.mertens@rwth-aachen.de,1509568538,1509568618,0774a4d3c54ef204dae32202ee53028cefd385de
+0774a4d3c54ef204dae32202ee53028cefd385de,0774a4d3,Fix string resource detection in xml parsing (#36),"Fix string resource detection in xml parsing (#36)
+",,,,Patrick Mertens,patrick.mertens@rwth-aachen.de,Patrick Mertens,patrick.mertens@rwth-aachen.de,1509567777,1509567777,0731a895308cff15f9f80d47a3ef209b3deb827a
+0731a895308cff15f9f80d47a3ef209b3deb827a,0731a895,"Release 1.3 to maven central, including customizable spinner items","Release 1.3 to maven central, including customizable spinner items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1447705948,1447705948,a52b837cc9bfce4a0712ff26adf3b265678f4512
+a52b837cc9bfce4a0712ff26adf3b265678f4512,a52b837c,Use correct light text on dark theme in Honeycomb through KitKat.,"Use correct light text on dark theme in Honeycomb through KitKat.
+
+As the support lib now finally has a dark spinner background in those APIs the workaround is no longer needed.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1445248041,1445248041,298c8be0f57373900a7275e55ecdc5f9167a640d
+298c8be0f57373900a7275e55ecdc5f9167a640d,298c8be0,"Add Turkish translation, thanks Cüneyt Ayyıldız!","Add Turkish translation, thanks Cüneyt Ayyıldız!
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1443521088,1443521088,23f3715e3bae8b45c04865e22fbf5cdfcea6a1c9
+23f3715e3bae8b45c04865e22fbf5cdfcea6a1c9,23f3715e,Document customizing the spinner items (#29) in the README,"Document customizing the spinner items (#29) in the README
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1441830032,1441830032,5ea93d7a9a3e1a9f4ac50a25607f6e1adf70f1f5
+5ea93d7a9a3e1a9f4ac50a25607f6e1adf70f1f5,5ea93d7a,Merge branch 'feature-itemIDs',"Merge branch 'feature-itemIDs'
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1441792255,1441792255,"d4164e26cff4750d3f3f39c35b129ffc6278f95f,f50abd97bc95cbf65b4bf0a10247c463cccafbf7"
+d4164e26cff4750d3f3f39c35b129ffc6278f95f,d4164e26,Release 1.2.1 to maven and update gradle,"Release 1.2.1 to maven and update gradle
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1441710242,1441710242,a5a4866448e6c0028a4d66719386d37dd2132894
+f50abd97bc95cbf65b4bf0a10247c463cccafbf7,f50abd97,Switch to xml based spinner items to support easy overriding,"Switch to xml based spinner items to support easy overriding
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1441709964,1441709964,d25e88ff9f5107d4e009f3e1f9ba3e631e4c6651
+d25e88ff9f5107d4e009f3e1f9ba3e631e4c6651,d25e88ff,Rewrite selectDefaultDate() to support modified date and time items,"Rewrite selectDefaultDate() to support modified date and time items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440849366,1440849366,130e8d2beda39cea8c65442fcc530537e523cafb
+130e8d2beda39cea8c65442fcc530537e523cafb,130e8d2b,Merge branch 'master' into feature-itemIDs,"Merge branch 'master' into feature-itemIDs
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440604016,1440604016,"b3cffdb731c805456bed7ff8b19ebb13c9fc2637,a5a4866448e6c0028a4d66719386d37dd2132894"
+a5a4866448e6c0028a4d66719386d37dd2132894,a5a48664,Fix selection changes when toggling flags or modifying the spinner items.,"Fix selection changes when toggling flags or modifying the spinner items.
+
+Note that the removeAdapterItemAt() method is still a bit buggy when removing the selected item, as the onItemSelected callback will not always get called correctly in that case.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440603886,1440603886,ed633a4bf7ddb101b5eb47bf7c5f9b2d92e75133
+b3cffdb731c805456bed7ff8b19ebb13c9fc2637,b3cffdb7,Add IDs to the spinner items and use those for the flags as discussed in #29,"Add IDs to the spinner items and use those for the flags as discussed in #29
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440531721,1440531721,ed633a4bf7ddb101b5eb47bf7c5f9b2d92e75133
+ed633a4bf7ddb101b5eb47bf7c5f9b2d92e75133,ed633a4b,Fix #31: the selected item in the picker now matches the spinner selection,"Fix #31: the selected item in the picker now matches the spinner selection
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440336693,1440336693,e5dd17984e073bab0776e8e4127fb96c848f418f
+e5dd17984e073bab0776e8e4127fb96c848f418f,e5dd1798,Add getters for the picker dialogs (#27) and Nullable clarifications,"Add getters for the picker dialogs (#27) and Nullable clarifications
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440272450,1440272450,6c5c4bd4bd72f4a592eaf0fdf22cd9bd58014d23
+6c5c4bd4bd72f4a592eaf0fdf22cd9bd58014d23,6c5c4bd4,Update to Marshmallow (API 23) and the sample to v1.2 in Google Play,"Update to Marshmallow (API 23) and the sample to v1.2 in Google Play
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1440007156,1440007156,f7e93b3921ac903d43d002c9ba464cdeb1d9cda8
+f7e93b3921ac903d43d002c9ba464cdeb1d9cda8,f7e93b39,"Release 1.2 to maven, including support for min/max date and overridable styles.","Release 1.2 to maven, including support for min/max date and overridable styles.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1439148789,1439150479,cbaa35ac4d1dd3174c9d06ac696fe08d91d29fd7
+cbaa35ac4d1dd3174c9d06ac696fe08d91d29fd7,cbaa35ac,Workaround for setVisibility temporary selection bug.,"Workaround for setVisibility temporary selection bug.
+
+When rotating the device with FLAG_HIDE_TIME set and a temporary item selected, the footer would be selected after clicking on the time button. It turns out the system somehow manages to get rid of the temporary selection after the Spinner is made visible.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1439148247,1439148247,f3a50cb64838af9f40847a5f06afbe00335f2456
+f3a50cb64838af9f40847a5f06afbe00335f2456,f3a50cb6,Dependency updates and README simplification,"Dependency updates and README simplification
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1439143346,1439143346,808ac9f93bfdc2eda4384fc7f5b5b21251201a2f
+808ac9f93bfdc2eda4384fc7f5b5b21251201a2f,808ac9f9,"Set minimum spinner height to 48dp, fixing #25.","Set minimum spinner height to 48dp, fixing #25.
+
+This guarantees that the spinners always have the minimum touch target size of 48 dips.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1438601770,1438601770,e824e3271337a56343fe7e6ef08f521d8f70f416
+e824e3271337a56343fe7e6ef08f521d8f70f416,e824e327,Add min/max date calls to ReminderDatePicker and documentation updates,"Add min/max date calls to ReminderDatePicker and documentation updates
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1437917896,1437918155,68b9d7a6ea4c6f4f8b7400e1f3beee75142356c4
+68b9d7a6ea4c6f4f8b7400e1f3beee75142356c4,68b9d7a6,Add disabled spinner items and support for min/max date.,"Add disabled spinner items and support for min/max date.
+
+If FLAG_PAST is not set, the minimum date is now set to today per default. Also includes a couple of small fixes and annotations.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1437822564,1437822564,5d2aab655c4a4592557432f044f654dfb8ba0ba8
+5d2aab655c4a4592557432f044f654dfb8ba0ba8,5d2aab65,"Switch to jaydeep17's DateTimePicker, updates and fixes.","Switch to jaydeep17's DateTimePicker, updates and fixes.
+
+As flavienlaurent's repo is currently inactive we'll use the forked picker instead as that adds some important color and layout changes. The setNotifyOnChanged(false) in PickerSpinner was something I experimented with and then forgot to remove. It stopped the spinner selected spinner item from updating when changing flags.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1436470938,1436470938,2638745d91c197b41e28eed33426499172f3b681
+2638745d91c197b41e28eed33426499172f3b681,2638745d,Clarify sample styles and additional getCount amend,"Clarify sample styles and additional getCount amend
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1434755294,1434755294,8d47c4f2d9f06f19ae656f10bbc7fac7e358f643
+8d47c4f2d9f06f19ae656f10bbc7fac7e358f643,8d47c4f2,Fix #24 using the adapter's getCount() method everywhere,"Fix #24 using the adapter's getCount() method everywhere
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1434750659,1434750754,d14d6f40f0824049ae121bc47a8de946d9e02235
+d14d6f40f0824049ae121bc47a8de946d9e02235,d14d6f40,Merge pull request #23 from adrianpop1990/master,"Merge pull request #23 from adrianpop1990/master
+
+Issue #22 fix, thanks!",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1434009056,1434009056,"c893b7f9f252a5bff601dae6c5e1cf4cf151bd35,2fe96bbb6f33d573a826ae2a04bb6cf81f813438"
+2fe96bbb6f33d573a826ae2a04bb6cf81f813438,2fe96bbb,Style Demo (PickerSpinner.spinnerMode = dialog),"Style Demo (PickerSpinner.spinnerMode = dialog)
+(Issue #22 fix)
+",,,,adrianpop1990,adrianpop1990@gmail.com,adrianpop1990,adrianpop1990@gmail.com,1433625673,1433625673,7061088db6c030d0a10644ad02766eb8d68d8199
+7061088db6c030d0a10644ad02766eb8d68d8199,7061088d,outsource styles,"outsource styles
+",,,,adrianpop1990,adrianpop1990@gmail.com,adrianpop1990,adrianpop1990@gmail.com,1433624897,1433624897,c893b7f9f252a5bff601dae6c5e1cf4cf151bd35
+c893b7f9f252a5bff601dae6c5e1cf4cf151bd35,c893b7f9,Fix ClassCastException in getSelectedDate (#19).,"Fix ClassCastException in getSelectedDate (#19).
+
+This is more like a workaround so the onItemSelected callback will now be ignored when the footer is selected.
+I also moved the last selected date checks into the date and time spinners, so that redundant onItemSelected calls are ignored when one of the spinners is used without the full ReminderDatePicker.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1428744858,1428744858,c68a08ac62e31d7c0cf1bfe3ee38156053469242
+c68a08ac62e31d7c0cf1bfe3ee38156053469242,c68a08ac,Fix onDateSelected not fired in Android 5.1 (#20).,"Fix onDateSelected not fired in Android 5.1 (#20).
+
+It's nicer like this anyway, as it doesn't rely on the platform calling onItemSelected in the right order.
+Also cleaned up a bit (recycling those TypedArrays... )
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1428679895,1428680677,7f7064c0762348b1ba92937a15bd4e29ddd85174
+7f7064c0762348b1ba92937a15bd4e29ddd85174,7f7064c0,Update target SDK and build tools to Android 5.1 (API 22),"Update target SDK and build tools to Android 5.1 (API 22)
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1426437355,1426437355,23da06cbb822cfca47befba68c0d57b4fe65aef4
+23da06cbb822cfca47befba68c0d57b4fe65aef4,23da06cb,"Merge branch 'master', forgot to pull.","Merge branch 'master', forgot to pull.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1425743768,1425743768,"7f4787ba78b0a907e9ff0487cea9547fd6fd8d35,c1cb9ff73f348e44daeb0d337bca6f53d9be257d"
+7f4787ba78b0a907e9ff0487cea9547fd6fd8d35,7f4787ba,"Release 1.1.4 to maven, containing FLAG_WEEKDAY_NAMES and bugfixes","Release 1.1.4 to maven, containing FLAG_WEEKDAY_NAMES and bugfixes
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1425738165,1425738165,99a92740d4b7ca6713fa9232b381a7fabe320444
+c1cb9ff73f348e44daeb0d337bca6f53d9be257d,c1cb9ff7,Merge pull request #17 from jjobes/master,"Merge pull request #17 from jjobes/master
+
+Updated README - fixed image sizes and spelling. Thanks! ",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1424452519,1424452519,"99a92740d4b7ca6713fa9232b381a7fabe320444,0e2e48f671116cd0e80416b17fdae59de4845659"
+0e2e48f671116cd0e80416b17fdae59de4845659,0e2e48f6,Updated README - fixed image sizes and spelling.,"Updated README - fixed image sizes and spelling.
+",,,,jjobes,jjobes@gmail.com,jjobes,jjobes@gmail.com,1424416189,1424416189,99a92740d4b7ca6713fa9232b381a7fabe320444
+99a92740d4b7ca6713fa9232b381a7fabe320444,99a92740,Enable FLAG_NUMBERS for the DateSpinner's weekdays.,"Enable FLAG_NUMBERS for the DateSpinner's weekdays.
+
+When FLAG_NUMBERS and FLAG_WEEKDAY_NAMES are used together, the spinner now shows the date as secondary text next to the weekday name.
+Note that in rare occasions the secondary date will be cut off under the spinner arrow as the spinner is not wide enough.
+This happens because the PickerSpinnerAdapter cannot measure temporary items when the spinner size is evaluated.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1424038086,1424038086,1c18c8c44f18488cd7b2dd8a9719fc34548e1ac5
+1c18c8c44f18488cd7b2dd8a9719fc34548e1ac5,1c18c8c4,Fix bug #16: Time items are restored correctly now.,"Fix bug #16: Time items are restored correctly now.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1424035595,1424035595,0c3f76f76df8c1dbeff7e4daffbfac117bfe1d27
+0c3f76f76df8c1dbeff7e4daffbfac117bfe1d27,0c3f76f7,Add methods to control date format as discussed in #15.,"Add methods to control date format as discussed in #15.
+
+The setDateFormat and getCustomDateFormat methods are similar to their time counterparts, except that getCustomDateFormat will return null when no custom format has been set before.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1423860516,1423860516,95b25abf512e06e86bcfdadf109e606c9d77015f
+95b25abf512e06e86bcfdadf109e606c9d77015f,95b25abf,Fix issue #15 with new FLAG_WEEKDAY_NAMES.,"Fix issue #15 with new FLAG_WEEKDAY_NAMES.
+
+When a date within the next week is selected, the weekday name will now be shown when the new flag is set. Otherwise, it will be displayed using the default date format as the spinner in Google Keep does.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1423773155,1423773155,3e73e247a49c3adbb69e6c518820dff898f5c976
+3e73e247a49c3adbb69e6c518820dff898f5c976,3e73e247,"Release 1.1.3 to maven central, containing bugfixes","Release 1.1.3 to maven central, containing bugfixes
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1421783793,1421783793,5a60b6ccd7517af81b60489438a91da9dc3a0ae3
+5a60b6ccd7517af81b60489438a91da9dc3a0ae3,5a60b6cc,Fix bug #13 and correct setTimeFormat method.,"Fix bug #13 and correct setTimeFormat method.
+
+The selected time would just get overriden by the default date in onAttachToWindow().
+The setTimeFormat() works now as expected, it would occasionally crash when a temporary item was selected.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1420991478,1420991478,e054966d534da64bf026c9d6976a99777940a537
+e054966d534da64bf026c9d6976a99777940a537,e054966d,Fix bug #11 and update ABC to version 21.0.3,"Fix bug #11 and update ABC to version 21.0.3
+
+The flags in the TimeSpinner are now correctly restored when calling setTimeFormat().
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1420911714,1420912715,bb2a0927e0623d4dc00db6a5ddcd25a5ed4b40e1
+bb2a0927e0623d4dc00db6a5ddcd25a5ed4b40e1,bb2a0927,Release 1.1.2 to maven fixing 12/24 hours format and built with gradle 1.0,"Release 1.1.2 to maven fixing 12/24 hours format and built with gradle 1.0
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1418383550,1418383550,dd5d96997be27e6cd90495cae885f58f3d7c37c5
+dd5d96997be27e6cd90495cae885f58f3d7c37c5,dd5d9699,Fix issue #9 and simplify time strings.,"Fix issue #9 and simplify time strings.
+
+The TimeSpinner now correctly uses the 12-hour format if set by the system. Declaring the time format (hh:mm) in the time strings was a bad idea to begin with, so that has been moved into the code.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1418382867,1418382867,42e973c70965962632c026aff2f86c74304d1010
+42e973c70965962632c026aff2f86c74304d1010,42e973c7,Update to Android Studio (and gradle) 1.0,"Update to Android Studio (and gradle) 1.0
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1418073875,1418073875,c839396330982bb76cdf6ae1efdc3e9d5f48c457
+c839396330982bb76cdf6ae1efdc3e9d5f48c457,c8393963,Release Sample v1.1.1 to PlayStore,"Release Sample v1.1.1 to PlayStore
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1417266035,1417266035,0122a639fa06c6ded5af58c56b7459720e6074bb
+0122a639fa06c6ded5af58c56b7459720e6074bb,0122a639,Use exact version numbers for dependencies,"Use exact version numbers for dependencies
+
+Mavens POM check gave me some errors when using '.+' declarations in gradle version numbers, it is probably safer like this anyway.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1417088663,1417088663,b66ac519ac800ed79389123d3e9df1d2d039cd90
+b66ac519ac800ed79389123d3e9df1d2d039cd90,b66ac519,"Release 1.1.1 to maven central, allows controlling time format","Release 1.1.1 to maven central, allows controlling time format
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1417084934,1417084934,f92f72076a8c98248a7e63608cef5e09a959714c
+f92f72076a8c98248a7e63608cef5e09a959714c,f92f7207,Add methods to control time format as requested in #9,"Add methods to control time format as requested in #9
+
+Allows setting the time format used in the TimeSpinner so you can use a format specific to your app passing a java.text.SimpleDateFormat to setTimeFormat().
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1417083640,1417083640,8940d2d6171f27aa45fa49bd837ed9ebdba0bad8
+8940d2d6171f27aa45fa49bd837ed9ebdba0bad8,8940d2d6,"Release 1.1.0 to maven, targeting Android Lollipop.","Release 1.1.0 to maven, targeting Android Lollipop.
+
+You can stick to version 1.0.+ if you're not developing for Lollipop yet.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1416763457,1416763457,9bb90831a5a1a6f8650f396b4da37afd55271d9b
+9bb90831a5a1a6f8650f396b4da37afd55271d9b,9bb90831,Update target SDK and AppCompat to Android Lollipop.,"Update target SDK and AppCompat to Android Lollipop.
+
+Had a huge issue with AppCompat 21 on KitKat using the dark theme, because the spinner dropdown menu background is white and not black as it is on Lollipop.
+I worked around this by inversing the text color in dark themes.
+Note that the spinner background arrow drawable is white on pre-Lollipop (even in lite theme) and looks kind of ugly, but I don't see any way around that as it is an issue in AppCompat.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1416762309,1416762309,c38c028e87fccd634366b51590749f0531aeffae
+c38c028e87fccd634366b51590749f0531aeffae,c38c028e,Add project.properties and update README with better Eclipse support.,"Add project.properties and update README with better Eclipse support.
+
+This fixes issue #8, even though importing it into Eclipse is still a mess because of the 2 needed additional libraries.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1415557749,1415557749,54fe51ee3bcc15807d33400a3d13c9a8c38e10f7
+54fe51ee3bcc15807d33400a3d13c9a8c38e10f7,54fe51ee,Release 1.0.4 with Portuguese translation and gradle 0.13,"Release 1.0.4 with Portuguese translation and gradle 0.13
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1411225025,1411225025,99767a21988f7d131d919480d8ad1a07b10091e8
+99767a21988f7d131d919480d8ad1a07b10091e8,99767a21,Merge branch 'erickpires-master' with the Brazilian Portuguese translation,"Merge branch 'erickpires-master' with the Brazilian Portuguese translation
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1411223818,1411223818,"a3c341fc03c81c6e51a6ee617b27e2e5356071ba,3bb5f5805ff7e44f3b69d20d02b67bfd06f0dcc7"
+3bb5f5805ff7e44f3b69d20d02b67bfd06f0dcc7,3bb5f580,Use separate string for last/next weekend days to allow gender variation.,"Use separate string for last/next weekend days to allow gender variation.
+
+At some point we might have to rewrite the lext and last day code to use arrays instead when there is a language with more complex variations.
+For now, this is the lazy and faster way.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1411223594,1411223594,67e068450ad083734b5aa352b1dc217991e3271e
+67e068450ad083734b5aa352b1dc217991e3271e,67e06845,pt-BR translation,"pt-BR translation
+",,,,erickpires,rckkas@gmail.com,erickpires,rckkas@gmail.com,1409966664,1409966664,a3c341fc03c81c6e51a6ee617b27e2e5356071ba
+a3c341fc03c81c6e51a6ee617b27e2e5356071ba,a3c341fc,Release 1.0.3 to maven central including Italian translation,"Release 1.0.3 to maven central including Italian translation
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1409774384,1409774384,1fa4acfa6e8ec77fed9840b729a59d45c6056d61
+1fa4acfa6e8ec77fed9840b729a59d45c6056d61,1fa4acfa,Merge pull request #6 from chrisonline/patch-1,"Merge pull request #6 from chrisonline/patch-1
+
+Removed cast to int for getTimeInMillis().",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1409317141,1409317141,"a49af6a2f5c3a57d3117747dd17c9fa091590aac,5629591a407e39a6eef3922a2696e59a5c706a29"
+5629591a407e39a6eef3922a2696e59a5c706a29,5629591a,Update DateSpinner.java,"Update DateSpinner.java
+
+Removed cast to int for getTimeInMillis. Have to be a long value otherwise you get on higher dates problems !",,,,chrisonline,info@chrisonline.at,chrisonline,info@chrisonline.at,1409142625,1409142625,a49af6a2f5c3a57d3117747dd17c9fa091590aac
+a49af6a2f5c3a57d3117747dd17c9fa091590aac,a49af6a2,Merge pull request #5 from rampo/master,"Merge pull request #5 from rampo/master
+
+Fixed misspelling in Italian translation",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1408744516,1408744516,"b9b9ff12704d53b595c8a8d225186fa325a107e7,bbe128ed3765d3f0922d1552c5194bcd1c7c1fe8"
+bbe128ed3765d3f0922d1552c5194bcd1c7c1fe8,bbe128ed,Fixed misspelling,"Fixed misspelling
+",,,,Rampo,rampini.pietro@gmail.com,Rampo,rampini.pietro@gmail.com,1408731163,1408731163,408e899ce3a3d31fde82191d388882b474a728dd
+b9b9ff12704d53b595c8a8d225186fa325a107e7,b9b9ff12,Merge pull request #4 from rampo/master,"Merge pull request #4 from rampo/master
+
+Add Italian translation, thanks rampo!",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1408726280,1408726280,"4cb5b0618de4f49aafdb3cf31a04b1aaf01e9aff,408e899ce3a3d31fde82191d388882b474a728dd"
+408e899ce3a3d31fde82191d388882b474a728dd,408e899c,Italian translation,"Italian translation
+",,,,Rampo,rampini.pietro@gmail.com,Rampo,rampini.pietro@gmail.com,1408544942,1408544942,4cb5b0618de4f49aafdb3cf31a04b1aaf01e9aff
+4cb5b0618de4f49aafdb3cf31a04b1aaf01e9aff,4cb5b061,Release 1.0.2 containing Greek and Spanish translation,"Release 1.0.2 containing Greek and Spanish translation
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1408186135,1408186135,f0c899f6c4a4e08f34c3ad87d3747fda028fd56a
+f0c899f6c4a4e08f34c3ad87d3747fda028fd56a,f0c899f6,Merge pull request #3 from dahool/master,"Merge pull request #3 from dahool/master
+
+Add spanish translation, thanks dahool!",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407603389,1407603389,"77189b3199b1a1497775d55011edc569ac68d51c,61af98cb6dc615a5fee85f27d4aa4b3c87322cd4"
+61af98cb6dc615a5fee85f27d4aa4b3c87322cd4,61af98cb,add spanish translation,"add spanish translation
+",,,,Gabriel,gabriel.sgt@gmail.com,Gabriel,gabriel.sgt@gmail.com,1407595116,1407595116,77189b3199b1a1497775d55011edc569ac68d51c
+77189b3199b1a1497775d55011edc569ac68d51c,77189b31,"Add Greek translation, thanks dancer_69","Add Greek translation, thanks dancer_69
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407493300,1407493512,d4946e241594796b8b0279f3816e914ad57de7e8
+d4946e241594796b8b0279f3816e914ad57de7e8,d4946e24,Sample app released to the Google Play Store.,"Sample app released to the Google Play Store.
+
+Also added thanks to Oxygen Team for the sample icon.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407355530,1407355530,d7fcdfd26994601a581aefb73a2523d3e091efa7
+d7fcdfd26994601a581aefb73a2523d3e091efa7,d7fcdfd2,"Stupid bugfix, new sample icon and release 1.0.1","Stupid bugfix, new sample icon and release 1.0.1
+
+Forgot to remove the app_name string from the lib which overrides every app_name string when you include the library -.-
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407340197,1407341070,efd809f0a6cb10a282da1a0042b0150b621928ec
+efd809f0a6cb10a282da1a0042b0150b621928ec,efd809f0,Release 1.0.0 and Maven scripts,"Release 1.0.0 and Maven scripts
+
+ReminderDatePicker is now ready to use and uploaded to maven central.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407236492,1407317109,cd85ce1de641ae273bae2da17c87851c2b0e3a26
+cd85ce1de641ae273bae2da17c87851c2b0e3a26,cd85ce1d,Add French translation,"Add French translation
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407224063,1407224063,d52719cfcb86b2a1c7e40a8d1a2ffb879aad9731
+d52719cfcb86b2a1c7e40a8d1a2ffb879aad9731,d52719cf,Update README with full description,"Update README with full description
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407222735,1407222735,87ad26fd66b2fa977ae7700092457b9d09faba98
+87ad26fd66b2fa977ae7700092457b9d09faba98,87ad26fd,Add Javadoc in various places and cleanup imports,"Add Javadoc in various places and cleanup imports
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407173486,1407173486,09e9ce62cb00ebe470361dbd9c94bedb9f685379
+09e9ce62cb00ebe470361dbd9c94bedb9f685379,09e9ce62,DateSpinner and TimeSpinner listen for xml flags if being used separately,"DateSpinner and TimeSpinner listen for xml flags if being used separately
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407061164,1407061164,42d891724682cdbe9008aaf46fcf82d763eccde1
+42d891724682cdbe9008aaf46fcf82d763eccde1,42d89172,Default date depends on FLAG_HIDE_TIME + isTimeHidden() method,"Default date depends on FLAG_HIDE_TIME + isTimeHidden() method
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1407058708,1407058708,6c5f189f9c6ae0502e8257cb98543cdb42d8ab04
+6c5f189f9c6ae0502e8257cb98543cdb42d8ab04,6c5f189f,Add German translation,"Add German translation
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406976795,1406976795,0e238b5b9c107a04e2487d7a361d595bfb1b9d52
+0e238b5b9c107a04e2487d7a361d595bfb1b9d52,0e238b5b,Make time button borderless and align center.,"Make time button borderless and align center.
+
+Also tested on Froyo, works just fine (though it obviously falls back to dialog popup in lack of dropdown).
+The size of the time button (FLAG_HIDE_TIME) varies quite a lot between different versions of Android, but it shouldn't be too much of a problem.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406931640,1406931640,4fb21c84381dc37cf3397fae327f253867d04af6
+4fb21c84381dc37cf3397fae327f253867d04af6,4fb21c84,Enable setting flags and modes in xml layouts,"Enable setting flags and modes in xml layouts
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406817175,1406817175,6838ced9ca3788f9499d315ceca63dca8614794e
+6838ced9ca3788f9499d315ceca63dca8614794e,6838ced9,Fix rotation resetting selection,"Fix rotation resetting selection
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406815932,1406815932,5ac53223541fb171fb57843bd40a0b33629ba6bf
+5ac53223541fb171fb57843bd40a0b33629ba6bf,5ac53223,Catch selecting same date twice in parent view.,"Catch selecting same date twice in parent view.
+
+Anybody who wants to use the DateSpinner or TimeSpinner without the ReminderDatePicker parent will have to apply this patch to the activity (or to their own Spinner).
+This is not implemented everywhere for performance reasons (getSelectedDate isn't the fastest method in the world).
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406739193,1406739193,9b53d94071fa1f0a537d11dee9d22417c3a5fb42
+9b53d94071fa1f0a537d11dee9d22417c3a5fb42,9b53d940,"Fix bug #1, still sometimes onDateSelected is called twice.","Fix bug #1, still sometimes onDateSelected is called twice.
+
+Removed all workarounds except for the one in setShowNumbersInView.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406738367,1406738367,32c822cc6051b5db71c8e30cbf4073b4de375b82
+32c822cc6051b5db71c8e30cbf4073b4de375b82,32c822cc,Additional workarounds for deselecting flags with temporary items,"Additional workarounds for deselecting flags with temporary items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406626756,1406626756,72972e2984bb2fdf26b6ef478b7047e8bf237336
+72972e2984bb2fdf26b6ef478b7047e8bf237336,72972e29,Correctly format time in temporary items,"Correctly format time in temporary items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406587463,1406587463,499af14a3bc72791ef22de52d5a71a6d0f06a389
+499af14a3bc72791ef22de52d5a71a6d0f06a389,499af14a,Update selectDefaultDate with the more time items,"Update selectDefaultDate with the more time items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406566387,1406566387,83c71b6ad49bec146eda865db3c4cf97ab39230e
+83c71b6ad49bec146eda865db3c4cf97ab39230e,83c71b6a,Add FLAG_MORE_TIME including noon and late night item + update sample.,"Add FLAG_MORE_TIME including noon and late night item + update sample.
+
+Still setSelectionQuietly does not work correctly, listener is still called when calling it twice in a row I think.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406565901,1406565901,d0f8a520f26b58cb3e51c07609127bd5461178ca
+d0f8a520f26b58cb3e51c07609127bd5461178ca,d0f8a520,"Workaround for FLAG_PAST bug, removeAdapterItemAt should not be called twice","Workaround for FLAG_PAST bug, removeAdapterItemAt should not be called twice
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406559899,1406559899,8bc3f4bcda0fba61028f4950f7f27a753c4e4529
+8bc3f4bcda0fba61028f4950f7f27a753c4e4529,8bc3f4bc,Partially fix bugs and new dynamic add and remove methods.,"Partially fix bugs and new dynamic add and remove methods.
+
+Stupid bug on deselecting FLAG_PAST when temporary item is selected is still present, will select the footer instead of the temporary item again. No idea why the spinner reselects the footer item but ignoring for now.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406551247,1406551247,5e7401c35b6d9df462bc594bfe0892eada4e720c
+5e7401c35b6d9df462bc594bfe0892eada4e720c,5e7401c3,"Simplify getting weekday names, less work translating","Simplify getting weekday names, less work translating
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406316393,1406316393,6c77945eb60045936cf38f5ebf7afc428f2ae39d
+6c77945eb60045936cf38f5ebf7afc428f2ae39d,6c77945e,Use long month names and correct formatting with DateUtils,"Use long month names and correct formatting with DateUtils
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1406072889,1406072889,1481e19e5c41265448b37cb573da6bdd4aa7c7d9
+1481e19e5c41265448b37cb573da6bdd4aa7c7d9,1481e19e,Use primary text color for main view,"Use primary text color for main view
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405936266,1405936266,7fed7026e43e099bd96af1b86a89397fa8c4cd6f
+7fed7026e43e099bd96af1b86a89397fa8c4cd6f,7fed7026,Use secondary text color everywhere,"Use secondary text color everywhere
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405936184,1405936184,04eb331dac7b02a4fd6a7dba3bc3f19c647bf3a8
+04eb331dac7b02a4fd6a7dba3bc3f19c647bf3a8,04eb331d,Different footer background similar to the Google Keep,"Different footer background similar to the Google Keep
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405899795,1405899795,069447589b9a736d263d708709174f36762eaeae
+069447589b9a736d263d708709174f36762eaeae,06944758,Update build tools and support lib to v20,"Update build tools and support lib to v20
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405867666,1405867666,9efc3cc42cc85410357531aecb011f58f4489373
+9efc3cc42cc85410357531aecb011f58f4489373,9efc3cc4,Add view source code action in overflow menu,"Add view source code action in overflow menu
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405727527,1405727527,4767f622b4409481fa20306df53d2046c62762d3
+4767f622b4409481fa20306df53d2046c62762d3,4767f622,"Add switch theme to sample, hide time icon depends on activity theme","Add switch theme to sample, hide time icon depends on activity theme
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405709638,1405709748,e5060dbdf0d4c733474eaca6e81fe4122efc9562
+e5060dbdf0d4c733474eaca6e81fe4122efc9562,e5060dbd,Add intelligent default selection,"Add intelligent default selection
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405703739,1405703739,faa62233e0e5435dc35b7665f4c9a49ccfe8364d
+faa62233e0e5435dc35b7665f4c9a49ccfe8364d,faa62233,Update sample with flags and various fixes.,"Update sample with flags and various fixes.
+
+Still needs some work layout-wise, but closer to stable now ;).
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405604067,1405604067,6f652ea28de4b9490bb02684ae69cda4823541ff
+6f652ea28de4b9490bb02684ae69cda4823541ff,6f652ea2,Add hide time mode,"Add hide time mode
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405503573,1405503573,c171b5825635c1616bbc339c7dfa02cc76f92afb
+c171b5825635c1616bbc339c7dfa02cc76f92afb,c171b582,"Add numeric time mode + flag, simplify setFlags in DateSpinner","Add numeric time mode + flag, simplify setFlags in DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405438699,1405438894,c57108d893eac9477554fd9d056e351969095cc6
+c57108d893eac9477554fd9d056e351969095cc6,c57108d8,Add month mode to DateSpinner + flag,"Add month mode to DateSpinner + flag
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405420788,1405420861,e2f80e804c448b93ad5c7bb16826baea8849c7e6
+e2f80e804c448b93ad5c7bb16826baea8849c7e6,e2f80e80,Add past mode in DateSpinner + flag,"Add past mode in DateSpinner + flag
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405258145,1405263716,be44bd7ca49aa4e8ecb0500f89febbc3d1c651c9
+be44bd7ca49aa4e8ecb0500f89febbc3d1c651c9,be44bd7c,Add base support for flags in code & xml,"Add base support for flags in code & xml
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405251934,1405251934,77a987d291e10b132db465f582d6081fc12d79b2
+77a987d291e10b132db465f582d6081fc12d79b2,77a987d2,Only show secondary text in dropdown view,"Only show secondary text in dropdown view
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1405012063,1405012063,ec02d43caa8e0a1ce36e2dd66adb6976e56277d4
+ec02d43caa8e0a1ce36e2dd66adb6976e56277d4,ec02d43c,Add flavienlaurent's TimePickerDialog as default picker,"Add flavienlaurent's TimePickerDialog as default picker
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404931229,1404931229,50c5e3014db6babadc918a1b0a044f7ab8fe68c7
+50c5e3014db6babadc918a1b0a044f7ab8fe68c7,50c5e301,Fix selecting two different temporary items,"Fix selecting two different temporary items
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404919843,1404919843,84b5df27d0e749ee79faed7885046075ea48cc4a
+84b5df27d0e749ee79faed7885046075ea48cc4a,84b5df27,"Fixes to the temporary selection, needs some work when having same position","Fixes to the temporary selection, needs some work when having same position
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404844489,1404844489,412d4cffb8bc20928263fdcb8d630fe5a3f05578
+412d4cffb8bc20928263fdcb8d630fe5a3f05578,412d4cff,Switch DateItem parameters to match GregorianCalender,"Switch DateItem parameters to match GregorianCalender
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404827583,1404842930,091c3363d3740501e83a7ca23674ee5eb1fbac86
+091c3363d3740501e83a7ca23674ee5eb1fbac86,091c3363,Add flavienlaurent's DateTimePicker as default date picker,"Add flavienlaurent's DateTimePicker as default date picker
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404826695,1404826695,09ccb9a36279d52702b20f43bbc7578a0ae4303f
+09ccb9a36279d52702b20f43bbc7578a0ae4303f,09ccb9a3,Add customizable date and time picker via OnClickListener,"Add customizable date and time picker via OnClickListener
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404763375,1404763375,bc9f5131fb15f83cbec8a0b0f960261f831bcb4d
+bc9f5131fb15f83cbec8a0b0f960261f831bcb4d,bc9f5131,Very stupid fixes to DateSpinner,"Very stupid fixes to DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404727560,1404727560,5139a353d315839402fec865d74062aa91efc977
+5139a353d315839402fec865d74062aa91efc977,5139a353,Update sample with listener+Toast,"Update sample with listener+Toast
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404477454,1404477454,2dc3f280fc00bf230fcbaadab9b1d00a2a703fd5
+2dc3f280fc00bf230fcbaadab9b1d00a2a703fd5,2dc3f280,Layout adjustment in dropDown Menu,"Layout adjustment in dropDown Menu
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404476822,1404476822,2d57ea61c3b0d7f34c4753cc9c09ecd5da32a73b
+2d57ea61c3b0d7f34c4753cc9c09ecd5da32a73b,2d57ea61,Simplify PickerSpinnerAdapter and use right dropDownResource,"Simplify PickerSpinnerAdapter and use right dropDownResource
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404381680,1404381680,efd36f0f93ff2d1966236d4755fd7c9f8859d46f
+efd36f0f93ff2d1966236d4755fd7c9f8859d46f,efd36f0f,Add @LayoutRes annotation in various places,"Add @LayoutRes annotation in various places
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404379743,1404379743,d8c4099b600531994b1866b42c682c06e659044d
+d8c4099b600531994b1866b42c682c06e659044d,d8c4099b,Rewrite Adapter and Android Studio updates,"Rewrite Adapter and Android Studio updates
+
+PickerSpinnerAdapter doesn't make use of the super.getView and getDropdownView any more. Works perfectly now, only need to finalize the twin_text_item and twin_text_dropdown_item with the correct layout and text markups.
+Updated Android Studio to 0.8.1 beta, but still running on old SDK and build tools (v19) until they are stable.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1404224267,1404224267,3b1fa65d20ee10c3992decd323a503f3afc2e16c
+3b1fa65d20ee10c3992decd323a503f3afc2e16c,3b1fa65d,Text markup in TimeSpinner and cleanups,"Text markup in TimeSpinner and cleanups
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403690163,1403690163,37dbc6cf0be9bb51776e7330318516a53fc66f60
+37dbc6cf0be9bb51776e7330318516a53fc66f60,37dbc6cf,Use 2 TextViews as Spinner item,"Use 2 TextViews as Spinner item
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403657217,1403657217,d62d6b0d306ddd8b652d0ca2dd6c4a2183a76702
+d62d6b0d306ddd8b652d0ca2dd6c4a2183a76702,d62d6b0d,"Revert ""Try markup in TimeItem with Spans""","Revert ""Try markup in TimeItem with Spans""
+
+Since we can do color highlighting (and alignment) in both TextViews.
+This reverts commit 27aa7a43cff3fb3f604bc197a0994025c4bbcc73.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403649069,1403649069,27aa7a43cff3fb3f604bc197a0994025c4bbcc73
+27aa7a43cff3fb3f604bc197a0994025c4bbcc73,27aa7a43,Try markup in TimeItem with Spans,"Try markup in TimeItem with Spans
+
+As using alignment spans does not work for a part of a line in a TextView, this will probably be reverted and replaced with a solution with multiple TextViews.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403605019,1403605019,d0ee8bc06506a96f1839fee451a8699d21fba26d
+d0ee8bc06506a96f1839fee451a8699d21fba26d,d0ee8bc0,Add digital time to time_strings,"Add digital time to time_strings
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403604772,1403604993,9b327ee55a48752f75054aba26d66b6804e888fb
+9b327ee55a48752f75054aba26d66b6804e888fb,9b327ee5,"Revert ""Make both DateItem and TimeItem implement CharSequence""","Revert ""Make both DateItem and TimeItem implement CharSequence""
+
+This reverts commit 262efe93984015ac3f039f30a81e30e32f4adb99 as it is better to extend SpannableString instead ;). Dumb idea anyway...
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403468782,1403468782,262efe93984015ac3f039f30a81e30e32f4adb99
+262efe93984015ac3f039f30a81e30e32f4adb99,262efe93,Make both DateItem and TimeItem implement CharSequence,"Make both DateItem and TimeItem implement CharSequence
+
+This will probably make it easier for the TimeSpinner to show the time in different algin and color as the text.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403444034,1403444034,7d65820685947a922f7a26b3ec44dc4c5c850215
+7d65820685947a922f7a26b3ec44dc4c5c850215,7d658206,Correctly display footer in getDropDownView,"Correctly display footer in getDropDownView
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403253673,1403253673,9ee59358b8e90dc20ccb6a573a04ce74e733ce32
+9ee59358b8e90dc20ccb6a573a04ce74e733ce32,9ee59358,Fix layout and simplify PickerSpinnerAdapter,"Fix layout and simplify PickerSpinnerAdapter
+
+In the end it passing 0 as defStyle to the constructor in PickerSpinner caused the whole layout to crash ;). Also, having a PickerSpinnerAdapter extends ArrayAdapter<Object> is more convenient than PickerSpinnerAdapter<T>.
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1403193798,1403194086,65fd0878c5a1df0845aeba976516664f9176e261
+65fd0878c5a1df0845aeba976516664f9176e261,65fd0878,Add sample and resource fixes,"Add sample and resource fixes
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402948967,1402948967,fe2a5816029bbf2d4c5a7afaac1b6e2ea40b5b7e
+fe2a5816029bbf2d4c5a7afaac1b6e2ea40b5b7e,fe2a5816,"More getters and setter for ReminderDatePicker, probably ready for testing","More getters and setter for ReminderDatePicker, probably ready for testing
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402774905,1402774905,03853b3a570d059dfc89629743035c046812950f
+03853b3a570d059dfc89629743035c046812950f,03853b3a,Export OnDateSelectedListener to separate file to be used in Picker,"Export OnDateSelectedListener to separate file to be used in Picker
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402773463,1402773463,6455ac180d719d9e5199dca93b8d9e966f0a8d9e
+6455ac180d719d9e5199dca93b8d9e966f0a8d9e,6455ac18,"Work on TimeSpinner, now similar to DateSpinner","Work on TimeSpinner, now similar to DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402694452,1402694452,16080376df0fd96fc477decb65b79fe06b18335a
+16080376df0fd96fc477decb65b79fe06b18335a,16080376,Fix setSelectedDate and methods for DateItem,"Fix setSelectedDate and methods for DateItem
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402692543,1402692543,851c98454ec74614c39434e3eeedbad919c89ae9
+851c98454ec74614c39434e3eeedbad919c89ae9,851c9845,Basic TimeSpinner (+TimeItem) and fixes,"Basic TimeSpinner (+TimeItem) and fixes
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402678319,1402678319,592367b269b64b2e74ff079a13d7fb81387cad05
+592367b269b64b2e74ff079a13d7fb81387cad05,592367b2,Add OnDateSelectedListener to DateSpinner,"Add OnDateSelectedListener to DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402676100,1402676100,07d5788eff270830fc73c77a96210760423e7e07
+07d5788eff270830fc73c77a96210760423e7e07,07d5788e,Work on setSelectedDate enabling temporary dates,"Work on setSelectedDate enabling temporary dates
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402602639,1402602639,085ab1b3f51c8107c4a3be6dabc0e381618cd10e
+085ab1b3f51c8107c4a3be6dabc0e381618cd10e,085ab1b3,"Add temporary selection in the PickerSpinner, enables selecting Objects which…","Add temporary selection in the PickerSpinner, enables selecting Objects which don't appear in the Adapter and DropDown menu
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402502701,1402502701,81973a147be53aab573dfa4703fd91c96d78719d
+81973a147be53aab573dfa4703fd91c96d78719d,81973a14,Some work on DateSpinner,"Some work on DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402417865,1402417865,311cc05f67ebc90b71911000424f85031c6dfd04
+311cc05f67ebc90b71911000424f85031c6dfd04,311cc05f,Spinner items for the DateSpinner,"Spinner items for the DateSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402328356,1402328356,49bfc7395703f7d1c3b3358a44ac8efc6fcf29fa
+49bfc7395703f7d1c3b3358a44ac8efc6fcf29fa,49bfc739,Cosmetics and first strings,"Cosmetics and first strings
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402263356,1402263356,8c14cb2636126dfad18bbaf631dfe79d7676a2cf
+8c14cb2636126dfad18bbaf631dfe79d7676a2cf,8c14cb26,Enable footer integration in PickerSpinner,"Enable footer integration in PickerSpinner
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402256372,1402256372,34a432d749a1d881409aac68d180258d02efef2b
+34a432d749a1d881409aac68d180258d02efef2b,34a432d7,Rename lastItem to footer,"Rename lastItem to footer
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402095910,1402095910,11c9a58f06a19b2fe702bfc079bce0b19695c6f7
+11c9a58f06a19b2fe702bfc079bce0b19695c6f7,11c9a58f,Use Spinner instead of Buttons and create custom Adapter,"Use Spinner instead of Buttons and create custom Adapter
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402094491,1402094491,93f3ec30a7defc7bcbb22da56b6a2e18d0483a28
+93f3ec30a7defc7bcbb22da56b6a2e18d0483a28,93f3ec30,"Initial setup, first View and layout files","Initial setup, first View and layout files
+",,,,SimplicityApks,simplicityapks@gmail.com,SimplicityApks,simplicityapks@gmail.com,1402072740,1402072740,

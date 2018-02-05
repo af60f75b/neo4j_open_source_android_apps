@@ -1,0 +1,76 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+6a5d59a2d952d67b1aa91fd6df927276d9df182d,6a5d59a2,Merge pull request #1 from ideco/master,"Merge pull request #1 from ideco/master
+
+Fixed performance bug and re-factored FullDijkstra",,,,David Hasenfratz,david.hasenfratz@gmail.com,David Hasenfratz,david.hasenfratz@gmail.com,1422620081,1422620081,"cf8cc71a7fefa031b6a6ac09765cf560275ae6f2,148d870832e04f3474c5446e94b989b0ceee688b"
+148d870832e04f3474c5446e94b989b0ceee688b,148d8708,Refactored FullDijkstra and introduced UnreachableNodeProvider,"Refactored FullDijkstra and introduced UnreachableNodeProvider
+
+Up to now, FullDijkstra was a standalone implementation of Dijkstra's algorithm which had nothing in common with the other implementations in this project, which all inherit from AbstractDijkstra.
+
+Since this class was only used to compute the unreachable nodes in the graph, it was removed and replaced by UnreachableNodeProvider, which contains a nested implementation of Dijkstra's algorithm, which inherits from PriorityDijkstra.
+",,,,ivo,deconcini@gmail.com,ivo,deconcini@gmail.com,1422020752,1422020752,f10776dd4b742cb31129e7a44a673f6d4a9ca68f
+f10776dd4b742cb31129e7a44a673f6d4a9ca68f,f10776dd,Fixed bug that reduced routing performance,"Fixed bug that reduced routing performance
+
+When scanning new arcs in Dijkstra's algorithm, it makes sense to check whether the target of the new ark has already been visited and to not scan such arks again.
+Up to now however, we always checked if the target of the whole route has already been visited, which hardly makes any sense at all.
+Although this typo did not have any impact on the behaviour of the algorithm (the computed routes were still correct) it did have impact on the performance. It was now fixed, and as a consequence the routing algorithms should run faster.
+",,,,ivo,deconcini@gmail.com,ivo,deconcini@gmail.com,1422020218,1422020218,cf8cc71a7fefa031b6a6ac09765cf560275ae6f2
+cf8cc71a7fefa031b6a6ac09765cf560275ae6f2,cf8cc71a,readme update,"readme update
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1421921523,1421921523,6ad726c5eb541c044540286e8fcfbf3515b38c83
+6ad726c5eb541c044540286e8fcfbf3515b38c83,6ad726c5,show splash screen before loading main activity,"show splash screen before loading main activity
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420800191,1420800191,69293edd0dd9726f1830d0fec3725a9abe48c315
+69293edd0dd9726f1830d0fec3725a9abe48c315,69293edd,chech for null in onPause and onDestroy,"chech for null in onPause and onDestroy
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420797060,1420797060,fdfc9e4a6d793538222efc6b2180f701571ba715
+fdfc9e4a6d793538222efc6b2180f701571ba715,fdfc9e4a,correct app name in the home screen,"correct app name in the home screen
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420794579,1420794579,b26efc6c49ab148e2eb421c72cc1ac22bac09c7c
+b26efc6c49ab148e2eb421c72cc1ac22bac09c7c,b26efc6c,corrected license text,"corrected license text
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420792675,1420792675,71e96372ae05a8fb5ca0922f5c1a4d062985b4f7
+71e96372ae05a8fb5ca0922f5c1a4d062985b4f7,71e96372,added license text,"added license text
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420754726,1420754726,6bbad4a16411ea33d35b29deb82b01f16c171403
+6bbad4a16411ea33d35b29deb82b01f16c171403,6bbad4a1,added license text,"added license text
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420739528,1420739528,cbbcd3016fea88fdd07fd3958572c436591c247a
+cbbcd3016fea88fdd07fd3958572c436591c247a,cbbcd301,GNU license,"GNU license
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420737311,1420737311,ad4519e546854c6134e927c1581160838bf928c7
+ad4519e546854c6134e927c1581160838bf928c7,ad4519e5,play store pics,"play store pics
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420731990,1420731990,8c6da5ebb87a0574f1e74cd648fd5de79cf7d827
+8c6da5ebb87a0574f1e74cd648fd5de79cf7d827,8c6da5eb,correct handling if there is internet connection but google places api cannot be reached,"correct handling if there is internet connection but google places api cannot be reached
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420727173,1420727173,4ed6f6e35c4fa20ac312fba3c31b3638cea76c49
+4ed6f6e35c4fa20ac312fba3c31b3638cea76c49,4ed6f6e3,drawables for small devices,"drawables for small devices
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420727077,1420727077,1ff1e20f102d3b2d12cca6c0e177cc5f802e2eb1
+1ff1e20f102d3b2d12cca6c0e177cc5f802e2eb1,1ff1e20f,apk update,"apk update
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420718297,1420718297,880a32e9ece9dbf8be78b3884a4b30d4adf7c2c8
+880a32e9ece9dbf8be78b3884a4b30d4adf7c2c8,880a32e9,activity lifecycle problems fixed,"activity lifecycle problems fixed
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420718234,1420718234,280968b5ec91b0425af3d8520e86af4f46ae5d34
+280968b5ec91b0425af3d8520e86af4f46ae5d34,280968b5,minor fixes,"minor fixes
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420711806,1420711806,1732a75ec5bb4124f9c72b5c27744ea22865294a
+1732a75ec5bb4124f9c72b5c27744ea22865294a,1732a75e,settings screenshot,"settings screenshot
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420647414,1420647414,be674ff0b1f0e24c912ccce22fe5e40d0eec3020
+be674ff0b1f0e24c912ccce22fe5e40d0eec3020,be674ff0,fixed app prefernces,"fixed app prefernces
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420647037,1420647037,0d64f3715c9c931d37d6f1e484249e5d8d6e4f90
+0d64f3715c9c931d37d6f1e484249e5d8d6e4f90,0d64f371,apk file,"apk file
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420474976,1420474976,d9e1aa18d1bfbf7e3193f9593953e40d12fd5eee
+d9e1aa18d1bfbf7e3193f9593953e40d12fd5eee,d9e1aa18,readme,"readme
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420329093,1420329093,fd0bf96bac02fc6a83372e408f9728531999f6f1
+fd0bf96bac02fc6a83372e408f9728531999f6f1,fd0bf96b,update pic,"update pic
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420305252,1420305252,60193cd3fa5ec0e886e1ae9ae7860084744737de
+60193cd3fa5ec0e886e1ae9ae7860084744737de,60193cd3,settings bg image,"settings bg image
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420304746,1420304746,7d5faf1933b854b7d6e8d7e9a4ba51a9de6445b0
+7d5faf1933b854b7d6e8d7e9a4ba51a9de6445b0,7d5faf19,readme,"readme
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420299698,1420299698,fa159d2d4e7ede1de6c925095b9f87243a50f18b
+fa159d2d4e7ede1de6c925095b9f87243a50f18b,fa159d2d,screenshots,"screenshots
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420299337,1420299337,59459fda8a3474cea729c39b910d2980a72aa76f
+59459fda8a3474cea729c39b910d2980a72aa76f,59459fda,minor fixes and history entry is done in a background thread to get a smoother…,"minor fixes and history entry is done in a background thread to get a smoother experience for the user
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1420297111,1420297111,3a14c0c8010127b65dacd1c5308606e0ba8d72c3
+3a14c0c8010127b65dacd1c5308606e0ba8d72c3,3a14c0c8,background image,"background image
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419809868,1419809868,1827f9fb8d98427fc9f6c518339789ceda81eec4
+1827f9fb8d98427fc9f6c518339789ceda81eec4,1827f9fb,about activity,"about activity
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419803011,1419803011,73e762eb2a0a9913bc228456394cf795a5180c77
+73e762eb2a0a9913bc228456394cf795a5180c77,73e762eb,about activity,"about activity
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419802943,1419802943,40d2234bfac0b4e9acd3a67525ae34873b002b1e
+40d2234bfac0b4e9acd3a67525ae34873b002b1e,40d2234b,settings finished,"settings finished
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419773706,1419773706,fe1e2fb5828b2f1c603fb509ef403547e85cb9b0
+fe1e2fb5828b2f1c603fb509ef403547e85cb9b0,fe1e2fb5,remove obsolete gitignore file,"remove obsolete gitignore file
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419765260,1419765260,1175c6f6f9e0df63fd66e1b78b3474500e448734
+1175c6f6f9e0df63fd66e1b78b3474500e448734,1175c6f6,initial commit,"initial commit
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419765055,1419765055,8aa14416a9f59e14f191dc6eb830410bcbd99e50
+8aa14416a9f59e14f191dc6eb830410bcbd99e50,8aa14416,empty readme,"empty readme
+",,,,dhasenfratz,david.hasenfratz@gmail.com,dhasenfratz,david.hasenfratz@gmail.com,1419764226,1419764226,

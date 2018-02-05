@@ -1,0 +1,310 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+fcf888c4dba662dc23d7cc3a26265a1049486143,fcf888c4,[Fix]: Applied important fix for softkeyboard visiblity (Issue #5),"[Fix]: Applied important fix for softkeyboard visiblity (Issue #5)
+
+The softkeyboard would not always show on some devices on returning from
+activity. Fixes #5.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1408843740,1408844830,c999f49bc2392d0f4bf20ad31cca1131508ebf7a
+c999f49bc2392d0f4bf20ad31cca1131508ebf7a,c999f49b,[Doc]: Updated the README to include app link & added alt text,[Doc]: Updated the README to include app link & added alt text,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1408843417,1408844802,6b2b7aa0f201f13934f55645f20d92dc0b769ff1
+6b2b7aa0f201f13934f55645f20d92dc0b769ff1,6b2b7aa0,"[Doc][Rea]: Updated README, corrected spelling, & added screenshots","[Doc][Rea]: Updated README, corrected spelling, & added screenshots",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1408298521,1408299108,81ff0371a8922c49e1d7877f754e1f147a606910
+81ff0371a8922c49e1d7877f754e1f147a606910,81ff0371,[Ref]: Moved PreferenceUtils from ui.prefs to prefs,"[Ref]: Moved PreferenceUtils from ui.prefs to prefs
+
+Updated references",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1408298493,1408298493,fbb263f04efd621c8ebb5d48ba021f9343bdc570
+fbb263f04efd621c8ebb5d48ba021f9343bdc570,fbb263f0,Add bool track if sending & set flash to transmit through rotation,"Add bool track if sending & set flash to transmit through rotation
+
+[Mod]: MainActivity:
+-Added bool to  to know when currently sending a message or not.
+Including bundling handling.
+-Ensured transcriber safety by cancelling before sending.
+[Mod]: MainFragment:
+-Set to maintain sending state between pauses (i.e. boolean, button,
+text disabled, checkboxes disabled)
+-Set to re-send upon fragment reload if currently sending. Thus allowing
+for messages to keep flashing between 
+
+[Mod]: Updated manifest version number to 0.1.3 for alpha testing.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405820664,1405820664,1e68e861634ddada0d0182ffab0dc3e45842bcab
+1e68e861634ddada0d0182ffab0dc3e45842bcab,1e68e861,Fixed isRunning() method & fixed close() null pointer exception,"Fixed isRunning() method & fixed close() null pointer exception
+
+[Fix]: MorseTranscriber- isRunning() would only return true when sending
+but not transcribing. Now returns true for both.
+[Fix]: CameraFlashUtil - Added null check before synchronizing on
+camera.
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405820117,1405820117,1d78a7ff08cfc7ec2c3aa7a710cd9e601fd9d48b
+1d78a7ff08cfc7ec2c3aa7a710cd9e601fd9d48b,1d78a7ff,[Mod]: Incremented version number (0.1.2) for alpha testing,"[Mod]: Incremented version number (0.1.2) for alpha testing
+
+Note that camera-flash will not work on rotation",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405293696,1405293696,790da3768b58a857e98d781a08b6f0f74c30fa7c
+790da3768b58a857e98d781a08b6f0f74c30fa7c,790da376,"Fixed flash delay, refactored some functionality & added checks","Fixed flash delay, refactored some functionality & added checks
+
+[Fix]: There was a flash delay meaning that took over 200ms to reset.
+This was caused by the camera being released and reinitalized, an
+uncessary step that was removed.
+[Mod]: Other changes to CameraFlashUtil:
+-Added checks to to check if the camera has been closed (not null
+but closed).
+-Added checks for the visibility of surface view and set it to toggle
+visible before setting
+[Mod]: mainfragment.xml : Set the surgace view to in invisible.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405108670,1405108786,379e57879178026f31c3ad74ac951560a5aae30c
+379e57879178026f31c3ad74ac951560a5aae30c,379e5787,Fixed the camera flash & reordered message ending,"Fixed the camera flash & reordered message ending
+
+[Fix]: MainActivity:
+-Camera flash was set always to be false, fixed this to be set to the
+appropriate state.
+-Camera flash is set to false after the message is complete. This
+prevents double falses.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405105192,1405105192,862a43f9ce4fb45dcee9c58ba7b57b0fc471120a
+862a43f9ce4fb45dcee9c58ba7b57b0fc471120a,862a43f9,Set checkbox to be disabled during cam flash & set keyboard to hide,"Set checkbox to be disabled during cam flash & set keyboard to hide
+
+[Mod][Fix]: MainFragment:
+-Set checkboxes to be disabled when sending a message
+-Set the virtual keyboard to be hidden when the message is sent (and by
+extension, hiding it when when the flashing fragment appears)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1405104872,1405104872,e224522293c0fecdb745bc36d1938ad179d60959
+e224522293c0fecdb745bc36d1938ad179d60959,e2245222,[Fix]: Keyboard sometimes would not show up onFocus after resume,"[Fix]: Keyboard sometimes would not show up onFocus after resume
+
+Fixed this behaviour by removing focus on resume.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1404760172,1404760172,9d37d6184b3b9a70819d9e214f800b177f2fa1ad
+9d37d6184b3b9a70819d9e214f800b177f2fa1ad,9d37d618,[Doc]: Updated doc. to be clearer for ScreenFlashFragment,[Doc]: Updated doc. to be clearer for ScreenFlashFragment,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1404758457,1404758457,3eb22bedeffcc02bff3b9298718ecd5d49325a9a
+3eb22bedeffcc02bff3b9298718ecd5d49325a9a,3eb22bed,[Mod]: Updated README to provide more information about the app,"[Mod]: Updated README to provide more information about the app
+
+Details include:
+-Project requirements
+-Limitations
+-Some mention of future plans ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403731301,1403733224,b9ae85cbc617e495f78fd222e929397f22c2b344
+b9ae85cbc617e495f78fd222e929397f22c2b344,b9ae85cb,[Fix]: Better fix for main to prevent background signals,"[Fix]: Better fix for main to prevent background signals
+
+If the activity is not visible AND there have been multiple unseen
+signals, then the fragment cancels the transcription, and hides the
+fragment on resume. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403655183,1403655183,1c20874c4be1a331d715933c55cbba6df730bb13
+1c20874c4be1a331d715933c55cbba6df730bb13,1c20874c,[Mod]: Updated gitignore to ignore proguard files,[Mod]: Updated gitignore to ignore proguard files,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403651886,1403651886,fbd158280aeadff2136cf097f1bebfa65bd6a5ae
+fbd158280aeadff2136cf097f1bebfa65bd6a5ae,fbd15828,[Mod]: Updated version code/number for next alpha release,[Mod]: Updated version code/number for next alpha release,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403650552,1403650552,4ac5871398758b1e9ff3d040fa71459a849a121d
+4ac5871398758b1e9ff3d040fa71459a849a121d,4ac58713,"Main: Fixed null errors, double starting & background running","Main: Fixed null errors, double starting & background running
+
+[Fix]: In MainActivity:
+-MorseTranscriber was sometimes returning null from a headless fragment.
+Reinit. in those cases
+-Message would continue to send even if we returned to homescreen.
+Transcriber is now cancelled in onDestroy()/onPause()
+-Message would sometimes restart when the flash fragment was reloaded.
+Fixed to only restart if the transcriber is not already running",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403650223,1403650223,bfa754b959a526ff96c65c7105f93b1791e3cbbb
+bfa754b959a526ff96c65c7105f93b1791e3cbbb,bfa754b9,[Fix]: Ensured the camera is closed on resume before reopening,"[Fix]: Ensured the camera is closed on resume before reopening
+
+Camera was not always closed before asked for reopening in (as onPause
+is not always called before resume). ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403649108,1403649108,ad6bc7cfeb38880c6c32751f6b10a0540dc452b3
+ad6bc7cfeb38880c6c32751f6b10a0540dc452b3,ad6bc7cf,[Mod]: Added padding to checkboxes to make them more clickable,[Mod]: Added padding to checkboxes to make them more clickable,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403648517,1403648517,523a793d41cc341a204b0b18bfe3a3700d97f8b5
+523a793d41cc341a204b0b18bfe3a3700d97f8b5,523a793d,[Mod]: Added function to determine if the transcriber is running,"[Mod]: Added function to determine if the transcriber is running
+
+Returns true if the message is sending.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403648423,1403648423,17c0c0f756091065a4d70d6f62042c1ce6b2194e
+17c0c0f756091065a4d70d6f62042c1ce6b2194e,17c0c0f7,Added hardware feature for autofocus & specified rear cam,"Added hardware feature for autofocus & specified rear cam
+
+[Mod]: In CameraFlashUtil:
+-Specified the rear camera when opening (some devices may protest
+otherwise)
+-Added setPreviewCallback(null) for closing the camera 
+[Mod]: Added hardware feature ""autofocus"" to the manifest",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403648336,1403648336,59f021bc0826cac86d3fc828fc9fd68c9de87b1d
+59f021bc0826cac86d3fc828fc9fd68c9de87b1d,59f021bc,[Rem]: Removed settings menu from Main,[Rem]: Removed settings menu from Main,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403568543,1403568543,d7876422ce2769267459eb2e0be477aa6e325532
+d7876422ce2769267459eb2e0be477aa6e325532,d7876422,[Add][Mod]: Compressed & added holo-drawable resources,[Add][Mod]: Compressed & added holo-drawable resources,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403567080,1403567080,0bcbd92cc7ac3d851e10a4a0f249d195947b41fd
+0bcbd92cc7ac3d851e10a4a0f249d195947b41fd,0bcbd92c,[Mod]: Made input one line & set SurfaceView as unfocusable,[Mod]: Made input one line & set SurfaceView as unfocusable,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403562615,1403562615,b2fff3dce6ebcb12f283da2aabdca6543664bd78
+b2fff3dce6ebcb12f283da2aabdca6543664bd78,b2fff3dc,[Mod]: Made Camera + Flash requirements optional,[Mod]: Made Camera + Flash requirements optional,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403561782,1403561782,688f96fc801c71d85a10a1e6d4f4f24c39aaa807
+688f96fc801c71d85a10a1e6d4f4f24c39aaa807,688f96fc,[Mod]: Added delay for before + after sending message,"[Mod]: Added delay for before + after sending message
+
+Default value is 500ms.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403561723,1403561723,f745de6676e8c28793c037d59d937b76156aa018
+f745de6676e8c28793c037d59d937b76156aa018,f745de66,[Mod]: Added null check for Cam Flash util in MainFragment,[Mod]: Added null check for Cam Flash util in MainFragment,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403561371,1403561371,01dbe4f52b7754a5b079ec4b03ae4841e009de9a
+01dbe4f52b7754a5b079ec4b03ae4841e009de9a,01dbe4f5,[Mod]: Enhanced the CameraFlashUtil to be better ready for work,[Mod]: Enhanced the CameraFlashUtil to be better ready for work,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403214758,1403214758,605411856afb13996b2f679e8794bc5a613580a2
+605411856afb13996b2f679e8794bc5a613580a2,60541185,[Mod][Add]: Updated the application icon(s),"[Mod][Add]: Updated the application icon(s)
+
+Simple icon thrown together in inkscape. A better one will come later.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1403044520,1403044520,1aff3c7615dd4de01beb02a0140a3f56ae4c1e2e
+1aff3c7615dd4de01beb02a0140a3f56ae4c1e2e,1aff3c76,"Defined invalid unitTimes, applied some transcriber fixes","Defined invalid unitTimes, applied some transcriber fixes
+
+[Mod]: IMorseTranscriber: setUnitTime(int) now throws an exception if
+the unitTime is <= 0
+[Mod]: MorseTranscriber:
+-Throws exception for unitTime <= 0
+-Does not allow blank messages to be sent
+[Fix]: MorseTranscriber would have extra-intervals on the end such that:
+.=.=.+===.=.=.+++
+Where = is the required interval time and + is an extra one appended.
+Removed the extra: intra-character ticks, character intervals, and word
+intervals from message.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402612423,1402612423,fd2830ec4c76c7e5a27bdc7499ad76f18017f2cf
+fd2830ec4c76c7e5a27bdc7499ad76f18017f2cf,fd2830ec,[Fix]: Made mainfragment incapable of sending blank messages,[Fix]: Made mainfragment incapable of sending blank messages,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402612041,1402612041,75faaa88b2d43660c0db84735a0f37266c934552
+75faaa88b2d43660c0db84735a0f37266c934552,75faaa88,Fixed decode & corrected k. Added toString & string->morse function,"Fixed decode & corrected k. Added toString & string->morse function
+
+[Fix]: InternationalMorseCode:
+-Fixed the decode function (was using == by mistaken)
+-Fixed k; it was the wrong sequence ('r').
+[Mod]: MorseDictionary.MorseCharacter:
+-Added function to Builder to create MorseCharacters using strings of
+dashes and dots (e.g. ""-.-.-"", ""_ . _ _"").
+-override toString() function to supply more useful information in the
+form of string based morse (e.g. a would read ('.-') )",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402439203,1402439203,12f2c1e6a839fa7af381809760fbc613f9e2b9a9
+12f2c1e6a839fa7af381809760fbc613f9e2b9a9,12f2c1e6,"Added readme, license and included license in source files","Added readme, license and included license in source files
+
+[Add]: Added README describing the project
+[Add]: Added Full apache2 license.
+[Mod]: Added apache2 license to source
+[Rem]: Removed proguard files from git",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402339991,1402339991,fafbbbafdb8cf5a05d1dd715b9eb74179d9ce0b1
+fafbbbafdb8cf5a05d1dd715b9eb74179d9ce0b1,fafbbbaf,"Updated main frag's CamFlash use,tidied code & updated activity methods ","Updated main frag's CamFlash use,tidied code & updated activity methods 
+
+[Mod]: MainFragment was updated to:
+-Better handle the closing & opening of CameraFlashUtil (in onPause,
+etc)
+-Use preferences for camera flash use.
+-Introduced simpler function for sending messages
+[Dep]: Deprecated the older onSendButton(String,bool,bool) function as
+it could be done by refering to preferences.
+[Ref]: MainFragment: Reorganised code into functions to reduce
+repeatition 
+
+[Mod]: MainActivity:
+-Updated to use the new interface function, and reworked them to use
+preferences
+-Introduced function to increase screen brightness, has issues.
+[Fix]: MainActivity: Added thread safety when performing actions on
+fragments.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402265799,1403732653,479d68d4c9f36150b78a7a5fe53e4243eef53399
+479d68d4c9f36150b78a7a5fe53e4243eef53399,479d68d4,"[Mod]: Added the ""Use camera flash"" to the default preference","[Mod]: Added the ""Use camera flash"" to the default preference
+
+Currently set default value to ""false"", as it is still experimental.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402264187,1402264187,f502d4db8c1ef50755cb4941b752b7c79cffba88
+f502d4db8c1ef50755cb4941b752b7c79cffba88,f502d4db,Changed install loc to be auto & made flash frag keep screen on,"Changed install loc to be auto & made flash frag keep screen on
+
+[Mod]: Mainfest file now specifies installLocation to be ""auto""
+[Mod]: Gave screen_flash fragment views the property of
+keepScreenOn=""true"", to keep the frag visible when in use.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402263975,1402264097,3ef822089ee9eaa605a23ca30730ef66afa0b9e1
+3ef822089ee9eaa605a23ca30730ef66afa0b9e1,3ef82208,Moved MainFragment from MainActivity into its own class,"Moved MainFragment from MainActivity into its own class
+
+[Ref]: Moved MainFragment into MainActivity. As such callbacks were
+implemented to maintain interaction between activity and fragment.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402007805,1402007805,a63c93904293b62e2f80f0ea9ea62de76e0355d8
+a63c93904293b62e2f80f0ea9ea62de76e0355d8,a63c9390,[Fix]: The transcriber now cancels correctly,"[Fix]: The transcriber now cancels correctly
+
+It was only partially cancelling before. Now it fully cancels.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402007688,1402007790,ba69d6c52d2c9b4c44b3663a53c62ecdf654d438
+ba69d6c52d2c9b4c44b3663a53c62ecdf654d438,ba69d6c5,[Fix]: Flash Util close was incomplete and not fully releasing cam.,"[Fix]: Flash Util close was incomplete and not fully releasing cam.
+
+Made the close function unset the surfaceview callback to correct
+""method called after release()"" exception ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402007609,1402007609,6f9f956509ef5833df6699c56de61bcb6c44ff87
+6f9f956509ef5833df6699c56de61bcb6c44ff87,6f9f9565,Added untested functionality for flashlight functionality to main,"Added untested functionality for flashlight functionality to main
+
+[Mod]: Added Camera and FlashLight permisions to AndroidManifest.
+[Mod]: MainActivity + MainFragment:
+-Added functionality for the flash checkbox, enabling/disabling based
+upon the flash light accessibility.
+-Added functionality to main to produce flashlight output which is in
+theory, stable. It is currently completely untested. 
+-Changed functionality of the send button in mainfragment to become a
+cancel button + disable the input when in ""flash"" mode.
+[Ref]: Reorganised the createView function of MainFragment to be more
+readable. ",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402004904,1402004904,730e333d5189e28f848159d019916c912e9f39e0
+730e333d5189e28f848159d019916c912e9f39e0,730e333d,"Updated strings for flash checkbox & added a ""hidden"" SurfaceView","Updated strings for flash checkbox & added a ""hidden"" SurfaceView
+
+[Mod]: Changed the strings for flash checkbox to read: 
+-""Use Camera Flash (Experimental)""
+-""Use Camera Flash (Not Found)""
+[Mod]: Added surface view for use with camera. Currently hidden behind
+""send"" button (but attributes are and must remain visible).",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402004686,1402004686,a7457b0eaaf8bf25936c4e4348f668ed8fd63e4c
+a7457b0eaaf8bf25936c4e4348f668ed8fd63e4c,a7457b0e,"Added method to safely clean up the Flash util, updated doc, etc","Added method to safely clean up the Flash util, updated doc, etc
+
+[Mod][Doc]: Added method close() to clean up free the camera service by
+releasing it. Updated documentation to explain the requirements.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1402004540,1402004540,0ba1c00dda02c9e0309b86c889d180409526f6e6
+0ba1c00dda02c9e0309b86c889d180409526f6e6,0ba1c00d,[Fix]: Caught exceptions for outlier cases of no camera service,"[Fix]: Caught exceptions for outlier cases of no camera service
+
+If there is no camera (such as emulator) there may be runtime error.
+Fixed it to catch and return false instead of failing out. Additionally,
+added a null check for the camera in case there is no camera (or the
+above case)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401922745,1401922745,0e21ac5c6985641e68e4714426d1918852513e47
+0e21ac5c6985641e68e4714426d1918852513e47,0e21ac5c,Fixed check pressed state & switched direction of arrows,"Fixed check pressed state & switched direction of arrows
+
+[Mod]: Toggle button arrow now points up for checked, down for
+unchecked.
+[Fix]: Pressed checked state is now fixed (did not show arrow).",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401922615,1401922615,eba1a29976ce441a55a1cfc18dfbadfae1d15945
+eba1a29976ce441a55a1cfc18dfbadfae1d15945,eba1a299,Created custom toggle button for Advanced button/checbox,"Created custom toggle button for Advanced button/checbox
+
+[Add]: To create the button, added:
+-up and down arrows (png)
+-drawables (up + down)
+-statelist for checkbox
+[Mod]: Main - Applied button drawable to checkbox.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401844464,1401844464,79ba416e9320c4f62ac9d1658e57e2febce4ad0f
+79ba416e9320c4f62ac9d1658e57e2febce4ad0f,79ba416e,Changed styling to be more like holo dark,"Changed styling to be more like holo dark
+
+[Add]: Added a bunch of resources from: 
+http://android-holo-colors.com/ to mimick the holo look on API <11.
+
+Resources include:
+-pngs for buttons + checkboxes
+-statelists for said buttons
+-style overrides to update buttons + checkboxes seemlessly",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401842902,1401842902,c74bc3dc8a751b584130684f7fb698e8725ba06a
+c74bc3dc8a751b584130684f7fb698e8725ba06a,c74bc3dc,"Added Advanced checkbox/button, flash checkbox, updated docs","Added Advanced checkbox/button, flash checkbox, updated docs
+
+[Mod]: Added string for Advanced buttton. Changed loop message string.
+[Mod]: To main fragment layout:
+-Added checkbox for advanced button & container for advanced settings. 
+-Moved loop message to advanced settings
+-Made camera flash checkbox visible (disabled still)
+[Mod]: Added ability to toggle the advanced settings visible and
+invisible to main.
+[Doc]: Updated documentation for CameraFlashUtil
+
+
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401842591,1401842591,e74f6ac62f364265c48a075c58454755b560978f
+e74f6ac62f364265c48a075c58454755b560978f,e74f6ac6,[Add]: Created basic CameraFlashUtil for handling flashing LED,"[Add]: Created basic CameraFlashUtil for handling flashing LED
+
+Currently untested. Basic start.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401745064,1401745064,571c22ff38191da1523ce033b7f6f4106ef3d28d
+571c22ff38191da1523ce033b7f6f4106ef3d28d,571c22ff,[Doc]: Added PreferenceUtils documentation/comments,[Doc]: Added PreferenceUtils documentation/comments,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401745022,1401745022,c7c55db9bb1557bddb4c1afdbe09e030744966b9
+c7c55db9bb1557bddb4c1afdbe09e030744966b9,c7c55db9,[Mod]: Added preference for the loop message checkbox,[Mod]: Added preference for the loop message checkbox,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401663882,1401663882,fd26d30b0a6ed3d6b76c87d08fe7c52d14fb1982
+fd26d30b0a6ed3d6b76c87d08fe7c52d14fb1982,fd26d30b,[Add]: Added basic preference functionality,[Add]: Added basic preference functionality,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401663858,1401663858,978451d668e4e4cf38747e79334a34a5a5afa9dc
+978451d668e4e4cf38747e79334a34a5a5afa9dc,978451d6,"Added loop checkbox + message looping, fixed the input retention","Added loop checkbox + message looping, fixed the input retention
+
+[Fix]: Upon launching fragment and returning, message was blank. Fixed
+so it is retained when returning.
+[Mod]: Added looping string for checkbox.
+[Mod]: Added basic looping for messages.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401400589,1401400589,7e22708cb2bcb5ecb751f165ee7b5b5dee92832f
+7e22708cb2bcb5ecb751f165ee7b5b5dee92832f,7e22708c,Enhanced var name readablity & set message interval to be shorter,"Enhanced var name readablity & set message interval to be shorter
+
+[Rea][Mod]: 
+-Changed variable names to be more readable
+-Changed the message loop delay time from 20 to 15 (double word time)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401407316,1401407316,70177ea9b721af78f01bbc1f2d1b70978458b1bd
+70177ea9b721af78f01bbc1f2d1b70978458b1bd,70177ea9,Updated intial draft of MainActivity,"Updated intial draft of MainActivity
+
+[Mod]: Updated fragment layout and changed fragment name to match.
+[Mod]: Activity now has the basic functionality to:
+-Take in string and display morse code
+-Shift activity to fullscreen and back when needed
+-Switch fragments when needed
+-Make use of the headless fragment
+-Retain state of relevant fields (tag names, input)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401234362,1401234362,2b74c79b84ae880209daa06d527eb19c7294d2dc
+2b74c79b84ae880209daa06d527eb19c7294d2dc,2b74c79b,"Added some basic colours, changed action bar style, added strings","Added some basic colours, changed action bar style, added strings
+
+[Add]: Added strings for send button, future checkboxes, etc.
+[Add]: Added colours for the basis of white and black for use within the
+app.
+[Add]: Changed style from holo light to (dark) holo.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401233853,1401233853,9d5188e2d2c0a280d823b251cfb0e89fe029d911
+9d5188e2d2c0a280d823b251cfb0e89fe029d911,9d5188e2,[Fix]: Fixed the cancel() & setUnitTime() functionalities,"[Fix]: Fixed the cancel() & setUnitTime() functionalities
+
+-Unit time was neglecting the dot and symbol intervals
+-cancel was only cancelling processing not sending",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401231619,1401231619,3dcec9c9c5b4d82b17a151c86138d5fe5672ec13
+3dcec9c9c5b4d82b17a151c86138d5fe5672ec13,3dcec9c9,[Add]: Created headless fragment for the transcriber,"[Add]: Created headless fragment for the transcriber
+
+Headless fragment eases the use with activities as it retains the 
+instance and keeps the same Transcriber around (important if we need to
+cancel)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401228676,1401228676,e707435a2fc3ac504127d08f3a4c5d571c84d585
+e707435a2fc3ac504127d08f3a4c5d571c84d585,e707435a,Created MorseTranscriber for transcribing strings to morse,"Created MorseTranscriber for transcribing strings to morse
+
+[Add]: IMorseTranscriber is the interface defining the interactions
+for the transcriber.
+[Add]: Created the MorseTranscriber which:
+-trims + explodes the string
+-parses the the string into morse characters (in a thread)
+-sets the timers for the the morse to be transmitted
+-includes interface to attach actions to
+",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401228546,1401228546,2a4f2057d786cdb825c490651f5224912ad7185b
+2a4f2057d786cdb825c490651f5224912ad7185b,2a4f2057,[Mod]: Updated flash fragment to notify when loaded,"[Mod]: Updated flash fragment to notify when loaded
+
+-Added function to interface for when fragment view loads
+-setRetainInstance(true)",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1401228417,1401228417,febe1ff32fc8fa41b69185a6ec0dbea277e76c45
+febe1ff32fc8fa41b69185a6ec0dbea277e76c45,febe1ff3,[Add]: Created ScreenFlashFragment to alternate between 000 and fff,"[Add]: Created ScreenFlashFragment to alternate between 000 and fff
+
+Allows caller to turn background on and off as well as define cancel
+behaviour.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1400799822,1400799822,833f380dcfbde5bd39105f10021724e3659983dc
+833f380dcfbde5bd39105f10021724e3659983dc,833f380d,[Mod]: Changed the type patterns are stored as  ,[Mod]: Changed the type patterns are stored as  ,,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1400019704,1400019704,fc16250a2e7087627c89389716c0dabe92bf4bec
+fc16250a2e7087627c89389716c0dabe92bf4bec,fc16250a,[Add]: Created International Morse dictionary,"[Add]: Created International Morse dictionary
+
+Partially adheres to the internation Morse code standard. Still requires
+some more characters.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1400015936,1400015936,85c5fa9ed817e8560d701ab1b00f28aacb7d494f
+85c5fa9ed817e8560d701ab1b00f28aacb7d494f,85c5fa9e,[Add]: Added MorseDictionary to define dictionary attributes,"[Add]: Added MorseDictionary to define dictionary attributes
+
+MorseDictionary also contains the internal class MorseCharacter used to
+define patterns for letters.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1400015861,1400015861,e5bcd54dddcf1c8c8034f2ff8564ba175bdae9a8
+e5bcd54dddcf1c8c8034f2ff8564ba175bdae9a8,e5bcd54d,Initial commit,"Initial commit
+
+[Add]: Added the starting point of the project.",,,,Jason J,iam@ovrhere.com,Jason J,iam@ovrhere.com,1400015769,1400015769,

@@ -1,0 +1,326 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+7a07975d010feadf9a6231898dfd6009454e4039,7a07975d,"Added Search Icon, stub for search","Added Search Icon, stub for search
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401305019,1401305019,7b7ba4cb870f910741695ef8ed53669f4a59d7fb
+7b7ba4cb870f910741695ef8ed53669f4a59d7fb,7b7ba4cb,added progress dialog on locate,"added progress dialog on locate
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401228911,1401228911,25ffbaac9ddb2c553aade01cf130ebe2a3140939
+25ffbaac9ddb2c553aade01cf130ebe2a3140939,25ffbaac,Show edit if logged in user,"Show edit if logged in user
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401228891,1401228891,df08388afc6cdab2599f01640aab215568d010e3
+df08388afc6cdab2599f01640aab215568d010e3,df08388a,"Removed name required, added progress dialog","Removed name required, added progress dialog
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401228872,1401228872,e218917efb233a9b223dca6759fd492841ff57c0
+e218917efb233a9b223dca6759fd492841ff57c0,e218917e,added edit menu option for redditor,"added edit menu option for redditor
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401228841,1401228841,3deeec29cac26c4b861ea225d6be5410cba543b8
+3deeec29cac26c4b861ea225d6be5410cba543b8,3deeec29,updated label text,"updated label text
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401228820,1401228820,cffff25c0200003675ad72ad9b198c5c4aaea7fa
+cffff25c0200003675ad72ad9b198c5c4aaea7fa,cffff25c,"New Geocoder, Added Edit Profile","New Geocoder, Added Edit Profile
+
+New Geocoder based on the Google Maps reverse geocoding service. Created
+new Activity for editing user profiles, complete with ""first time""
+functionality similar to the website.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401112339,1401112339,c64b3ea2aa8a7cd459d8db757c00a7d93db6cd90
+c64b3ea2aa8a7cd459d8db757c00a7d93db6cd90,c64b3ea2,Provider sequence issue,"Provider sequence issue
+
+when more than one provider returns a result, it attempts to finalize
+without checking if finalized.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1401112260,1401112260,a3cfda7b3b99445e65bf53ab186af472c1a2ae61
+a3cfda7b3b99445e65bf53ab186af472c1a2ae61,a3cfda7b,Changes to update redditor marker postion,"Changes to update redditor marker postion
+
+Now the authenticated user is able to move their marker on the map and
+it will save automatically. Created new layouts and activity for editing
+profile information (not linked)
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1400818719,1400818719,9978a20652d8493fc9aadcc837ca239efc56c06e
+9978a20652d8493fc9aadcc837ca239efc56c06e,9978a206,Added new Save Redditor function,"Added new Save Redditor function
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1400818626,1400818626,e8457834bd0056bd750c5c890aeb18b8582bae45
+e8457834bd0056bd750c5c890aeb18b8582bae45,e8457834,Added copy for unresponsive gps.,"Added copy for unresponsive gps.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399728030,1399728030,62d957ca78725d22192e00ffc6bae4689a49c64f
+62d957ca78725d22192e00ffc6bae4689a49c64f,62d957ca,"Updated Version, Decremented minSdkVersion","Updated Version, Decremented minSdkVersion
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399666272,1399666272,faa1c8f4ba6f457b4678c0279ae15777522a74cf
+faa1c8f4ba6f457b4678c0279ae15777522a74cf,faa1c8f4,"Fixed draggable icons, removed old code","Fixed draggable icons, removed old code
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399663253,1399663253,48b96a11d9129730ad33cbf1faedd30a4f311a3d
+48b96a11d9129730ad33cbf1faedd30a4f311a3d,48b96a11,Cookie is now explicitly set in the cookie store.,"Cookie is now explicitly set in the cookie store.
+
+Resolves an issue where first time users authenticate and are unable to
+access authenticated portions of the application.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399658628,1399658628,250faa4def3f64a6996cf03d429651c4c850293c
+250faa4def3f64a6996cf03d429651c4c850293c,250faa4d,"New LocationListener, MapActivity now ActionBar","New LocationListener, MapActivity now ActionBar
+
+Created new LocationListener framework. Migrated the MapActivity to an
+ActionBarActivity, which is a FragmentActivity. Added new Menu option
+for updated the location from the new LocationListener.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399656093,1399656093,23d5a357ece18c99534e1d64f72db1dc5b23e744
+23d5a357ece18c99534e1d64f72db1dc5b23e744,23d5a357,Daisy Chained Initial Get Spots Task,"Daisy Chained Initial Get Spots Task
+
+GetSpotsTask now executes if the GetRedditorsTask completes
+successfully.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399638376,1399638376,70a30a96b5ce98e9beef6d90de18fe9ba23769b3
+70a30a96b5ce98e9beef6d90de18fe9ba23769b3,70a30a96,Up Navigation for New Spots is MapActivity,"Up Navigation for New Spots is MapActivity
+
+On new spot creation, if the user clicks the up navigation, it needs to
+redirect to the MapActivity.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399638145,1399638145,b711c91b815be3d71454e2fbcab973f2ad0efa01
+b711c91b815be3d71454e2fbcab973f2ad0efa01,b711c91b,Javadoc for Redditor,"Javadoc for Redditor
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399598834,1399598834,e5958ab771ae106a17c65bd328fc5ca41956eded
+e5958ab771ae106a17c65bd328fc5ca41956eded,e5958ab7,Javadoc for the GetRedditorResponse,"Javadoc for the GetRedditorResponse
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399588954,1399588954,39a2a1b726558e4cb7e4b0859126454cba523996
+39a2a1b726558e4cb7e4b0859126454cba523996,39a2a1b7,Javadoc for the RedditorLocationResponse,"Javadoc for the RedditorLocationResponse
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399588640,1399588640,8dff1a94f87f802a4ecc6d05cdd0fb8a5c7dac65
+8dff1a94f87f802a4ecc6d05cdd0fb8a5c7dac65,8dff1a94,Javadoc for GetMySpotLocationResponse,"Javadoc for GetMySpotLocationResponse
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399587627,1399587627,9ea8bb22d6a3d4e7542fd402599c3ef22a2ca7fc
+9ea8bb22d6a3d4e7542fd402599c3ef22a2ca7fc,9ea8bb22,Javadoc for the DumpsterMapService,"Javadoc for the DumpsterMapService
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399587493,1399587493,d35421011648e08cf1b2fadf0da27db2e45f1be1
+d35421011648e08cf1b2fadf0da27db2e45f1be1,d3542101,Javadoc for AuthenticationResponse,"Javadoc for AuthenticationResponse
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399586534,1399586534,83a9da976eb54dab89d7ca14b4765315ace3b5ed
+83a9da976eb54dab89d7ca14b4765315ace3b5ed,83a9da97,"actionbar icons pre 11, fixed looping issues.","actionbar icons pre 11, fixed looping issues.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399586327,1399586327,bde11b89d9681d996106b78d7024b602e4568d22
+bde11b89d9681d996106b78d7024b602e4568d22,bde11b89,"Removed old handler, added short circuits.","Removed old handler, added short circuits.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399581606,1399581606,2dca2c7edeb299a8985c388e52a5a3b509c85cd3
+2dca2c7edeb299a8985c388e52a5a3b509c85cd3,2dca2c7e,Updated Update Spot Location to Listener,"Updated Update Spot Location to Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399572395,1399572395,c53ec0e4da27148799f6b60fd751f7a777cc16bc
+c53ec0e4da27148799f6b60fd751f7a777cc16bc,c53ec0e4,Added Constructor that copies values,"Added Constructor that copies values
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399572378,1399572378,acb150a9b50f75d6ee26249273b750511deb8c3a
+acb150a9b50f75d6ee26249273b750511deb8c3a,acb150a9,Updated SaveSpotTask to the Listener,"Updated SaveSpotTask to the Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399571889,1399571889,f1b32731c2b2ec3a9bb771ddf53539161294d41b
+f1b32731c2b2ec3a9bb771ddf53539161294d41b,f1b32731,Updated Save Spot to Listener,"Updated Save Spot to Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399571480,1399571480,d86b47b04466073938685fd553c0b2d6e171c8fd
+d86b47b04466073938685fd553c0b2d6e171c8fd,d86b47b0,Updated Save Spot comment to to Listener,"Updated Save Spot comment to to Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399567708,1399567708,b76dd80f59545af889754676b33c1542027ea604
+b76dd80f59545af889754676b33c1542027ea604,b76dd80f,Updated Get Spot Visits to Listener,"Updated Get Spot Visits to Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399550879,1399550879,18ad3afcc13b2f6dfc2591265821ad948fa6f51f
+18ad3afcc13b2f6dfc2591265821ad948fa6f51f,18ad3afc,Wrapped Get Spot Visits in Response,"Wrapped Get Spot Visits in Response
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399550867,1399550867,4f6c8d3e628b230d7ec07379f0c186cab128df82
+4f6c8d3e628b230d7ec07379f0c186cab128df82,4f6c8d3e,"Updated to Listener, Removed GetSpotListener","Updated to Listener, Removed GetSpotListener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399549660,1399549660,17fdc46a6e1ba93cb83cb55274dd103822ca0f20
+17fdc46a6e1ba93cb83cb55274dd103822ca0f20,17fdc46a,Updated Get Redditor to listener model,"Updated Get Redditor to listener model
+
+Also, GetRedditorTask has been set to short circuit the error popup. on
+startup both spots an redditors are loaded and would both display
+popups.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399549232,1399549232,e50bf8665fabed08f4c2f67ee901fc66a2eece79
+e50bf8665fabed08f4c2f67ee901fc66a2eece79,e50bf866,Updated Get Spot Comments to Listener,"Updated Get Spot Comments to Listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399548729,1399548729,93700bdc367479a0243920dfe702cbd82e6b970a
+93700bdc367479a0243920dfe702cbd82e6b970a,93700bdc,Wrapped Get Spot Comments in Response,"Wrapped Get Spot Comments in Response
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399548679,1399548679,e0cf1d6ea2760b1051d74c6e68c368a243a4679d
+e0cf1d6ea2760b1051d74c6e68c368a243a4679d,e0cf1d6e,Updated GetRedditor to listener model,"Updated GetRedditor to listener model
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399546396,1399546396,044c47ca93bc9de686d1986fc87a495f473c3357
+044c47ca93bc9de686d1986fc87a495f473c3357,044c47ca,Wrapped the redditor in a response object,"Wrapped the redditor in a response object
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399546369,1399546369,b202b58c3251d938f9e8da58af77707b2da4e554
+b202b58c3251d938f9e8da58af77707b2da4e554,b202b58c,Removed unused import,"Removed unused import
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399546333,1399546333,96f530c020001bb327cff8c0721da563b7dc1d57
+96f530c020001bb327cff8c0721da563b7dc1d57,96f530c0,Removed unused import,"Removed unused import
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399546311,1399546311,62d86b9574ab53fc37737e68e66892a25eb33004
+62d86b9574ab53fc37737e68e66892a25eb33004,62d86b95,Migrated RedditorLocation task to new listener,"Migrated RedditorLocation task to new listener
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399503440,1399503440,978d0361ef78665d8e0a98e12e82f38d25323ce5
+978d0361ef78665d8e0a98e12e82f38d25323ce5,978d0361,Wrapped RedditorLocation response.,"Wrapped RedditorLocation response.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399503418,1399503418,a800d03a30c4274bf40efa4b4498a38171427244
+a800d03a30c4274bf40efa4b4498a38171427244,a800d03a,Updated GetMySpotLocation to new listener.,"Updated GetMySpotLocation to new listener.
+
+Created new class for the get my spot location server response and
+service now returns that object as a result. Updated task to fit into
+the new listener model and updated the MapActivity to implement the
+response handler.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399502630,1399502630,bdcf8a61b7df3a3580d27d6c07d6a932133c9ceb
+bdcf8a61b7df3a3580d27d6c07d6a932133c9ceb,bdcf8a61,Corrected time to be in millis,"Corrected time to be in millis
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399502504,1399502504,015c528fe944bffbf8aa55af06ced6ea1c1e7e3a
+015c528fe944bffbf8aa55af06ced6ea1c1e7e3a,015c528f,"Added UnknownHostException, corrected message","Added UnknownHostException, corrected message
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399502477,1399502477,7c065aeaab2512312101eb86d1d40bf1fd05f0e9
+7c065aeaab2512312101eb86d1d40bf1fd05f0e9,7c065aea,"Added UnknownHostException, corrected message","Added UnknownHostException, corrected message
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399502461,1399502461,2c899061c04141ef3246bdb27299f73d2bad880f
+2c899061c04141ef3246bdb27299f73d2bad880f,2c899061,Added UnknownHostException,"Added UnknownHostException
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399502418,1399502418,37b197de3c08e4a346a101f43002a71bf58c93e9
+37b197de3c08e4a346a101f43002a71bf58c93e9,37b197de,Began Migration to Response Listener,"Began Migration to Response Listener
+
+Began work refactoring server responses to utilize new Listener
+Interface. BaseActivity handles error and Session Timeout responses.
+Individual Tasks are still responsible for sending what error occurred
+to the response handler.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399469489,1399469489,289793f4a049b33041760cc268c45b186d7d7c77
+289793f4a049b33041760cc268c45b186d7d7c77,289793f4,New interface for handling service responses,"New interface for handling service responses
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399469366,1399469366,71b2eceeacf67f2f6d9dad64d3ba531b19ff8560
+71b2eceeacf67f2f6d9dad64d3ba531b19ff8560,71b2ecee,Added Connection Timeout,"Added Connection Timeout
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399469332,1399469332,ca4c19a1c5eeb275043cb7dee67581662141769d
+ca4c19a1c5eeb275043cb7dee67581662141769d,ca4c19a1,New Strings for Connection Issues,"New Strings for Connection Issues
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399469296,1399469296,c37c751a828d7883c29c9f6a981ffa7a5964292a
+c37c751a828d7883c29c9f6a981ffa7a5964292a,c37c751a,New Error Messages for Connection Issues,"New Error Messages for Connection Issues
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399469257,1399469257,f9713fea902b40a2fb290382427866611be8d93a
+f9713fea902b40a2fb290382427866611be8d93a,f9713fea,"AppCompat theme, doesn't crash.","AppCompat theme, doesn't crash.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399462847,1399462847,762659d0ac3495e8e43dca0f024059b60d867fa6
+762659d0ac3495e8e43dca0f024059b60d867fa6,762659d0,Attempts to utilize action bar.,"Attempts to utilize action bar.
+
+Encountering an exception, theme is not working.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399431225,1399431225,81174f8581794c072157abd909dbd9a244c2d54e
+81174f8581794c072157abd909dbd9a244c2d54e,81174f85,Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid,"Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid
+
+Conflicts:
+	DumpsterMap/AndroidManifest.xml
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399408949,1399408949,"8bf266608aa3aeee389dbbfced63638b202c1f55,d0b93cbc19e6b24a238a00128652615c3a9271e9"
+8bf266608aa3aeee389dbbfced63638b202c1f55,8bf26660,"Is now an ActionBarActivity, parent is up nav.","Is now an ActionBarActivity, parent is up nav.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399378283,1399378283,da009a3bd69afe22f9ae93b281f7f603abfb21dc
+da009a3bd69afe22f9ae93b281f7f603abfb21dc,da009a3b,Set Parental Hierarchy,"Set Parental Hierarchy
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399378069,1399378069,8bc6677197c54c95c1f23d1ff5ee56921527bc72
+8bc6677197c54c95c1f23d1ff5ee56921527bc72,8bc66771,Auto-formatting tabs,"Auto-formatting tabs
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399378003,1399378003,37d58b5a9b42ab8966f9612c86e7c2550a3a6625
+37d58b5a9b42ab8966f9612c86e7c2550a3a6625,37d58b5a,updated ignore,"updated ignore
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399377964,1399377964,4d56250a52537455bf39a21da9ab17a6b83780de
+4d56250a52537455bf39a21da9ab17a6b83780de,4d56250a,Added back in support library,"Added back in support library
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399377940,1399377940,eb789c1f45f531c40135ab96fb770de3a91b7bc0
+d0b93cbc19e6b24a238a00128652615c3a9271e9,d0b93cbc,Updated Version for Play Store,"Updated Version for Play Store
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399175521,1399175521,eb789c1f45f531c40135ab96fb770de3a91b7bc0
+eb789c1f45f531c40135ab96fb770de3a91b7bc0,eb789c1f,"Updates for owned spots to be draggable, autosave","Updates for owned spots to be draggable, autosave
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399077790,1399077790,6e7fddcb1c17e1205cf30bc8f7e2b6a5dfc00348
+6e7fddcb1c17e1205cf30bc8f7e2b6a5dfc00348,6e7fddcb,More Backend for Magic LatLng Updates.,"More Backend for Magic LatLng Updates.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1399060606,1399060606,84e3bfe3e411774201bfd21a513c5f7c4a6ab003
+84e3bfe3e411774201bfd21a513c5f7c4a6ab003,84e3bfe3,Resolved Issue: added super parse.,"Resolved Issue: added super parse.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398988509,1398988509,f0f6dd264140ac9f2f4c741e7b3706f4d8f7a327
+f0f6dd264140ac9f2f4c741e7b3706f4d8f7a327,f0f6dd26,"More Service Wraps, Update For First Time Login","More Service Wraps, Update For First Time Login
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398976834,1398976834,2f15625b08b27b26ece62c06cddb418473ec4bce
+2f15625b08b27b26ece62c06cddb418473ec4bce,2f15625b,Removed old Menus. Https.,"Removed old Menus. Https.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398833359,1398833359,58789e32bff5e2dd2e071bff38fc7024b02adac0
+58789e32bff5e2dd2e071bff38fc7024b02adac0,58789e32,Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid,"Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398828625,1398828625,"f32987b32c707b7a39afdbd8121fe7f7cb40a5b7,209fad29b36544e959cad9adedbd4e01014a4dbb"
+f32987b32c707b7a39afdbd8121fe7f7cb40a5b7,f32987b3,Wrapped in runOnUIThread,"Wrapped in runOnUIThread
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398828618,1398828618,9ad9aaa1bb5c0ec95e1c859a2c4d924a44c65df6
+209fad29b36544e959cad9adedbd4e01014a4dbb,209fad29,New flows for views. Added checks OnResume.,"New flows for views. Added checks OnResume.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398823338,1398823338,9ad9aaa1bb5c0ec95e1c859a2c4d924a44c65df6
+9ad9aaa1bb5c0ec95e1c859a2c4d924a44c65df6,9ad9aaa1,"Edit/Create Spot Complete, Added Delete Spot","Edit/Create Spot Complete, Added Delete Spot
+
+Refactored GetSpotTask to accept a GetSpotListener. This will be used
+when the updated spot information needs to be reloaded and adds
+reusability to the task.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398776739,1398776739,a8206d52507af506c9e084cd248fe37df6d9c0d0
+a8206d52507af506c9e084cd248fe37df6d9c0d0,a8206d52,Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid,"Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398738548,1398738548,"421b4c589a1f9e60b5316d72dc0c7d38266867e8,47baa216e5ccc26cdcf2c04b3b19e2190963cfff"
+421b4c589a1f9e60b5316d72dc0c7d38266867e8,421b4c58,gen changes,"gen changes
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398738537,1398738537,9693b4bc6bd08320a26201cef18d56989c423135
+47baa216e5ccc26cdcf2c04b3b19e2190963cfff,47baa216,Working on Spot Save,"Working on Spot Save
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398738460,1398738460,9693b4bc6bd08320a26201cef18d56989c423135
+9693b4bc6bd08320a26201cef18d56989c423135,9693b4bc,additional updates for edit spot activity,"additional updates for edit spot activity
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398735945,1398735945,acad0dfe8c68c6e76cde6947459d0774723de92f
+acad0dfe8c68c6e76cde6947459d0774723de92f,acad0dfe,Completed Spot Visits. Adding Create/Edit Spot,"Completed Spot Visits. Adding Create/Edit Spot
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398691213,1398691213,a43d250e03cb22e6c72d08e3a89a45cf0af3b7fc
+a43d250e03cb22e6c72d08e3a89a45cf0af3b7fc,a43d250e,Full comment functionality.,"Full comment functionality.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398654041,1398654041,a7a7ad20f96483a51bc6728ffb5d536d9223e380
+a7a7ad20f96483a51bc6728ffb5d536d9223e380,a7a7ad20,Beginning Updates for Saving comments.,"Beginning Updates for Saving comments.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398610189,1398610189,5a96fd6242e4656a6ebe4d20535174b3f6f3316a
+5a96fd6242e4656a6ebe4d20535174b3f6f3316a,5a96fd62,Migrated to BaseActivity,"Migrated to BaseActivity
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398610128,1398610128,7390eeb0de1c69e52692683d20d4b9c5f399e114
+7390eeb0de1c69e52692683d20d4b9c5f399e114,7390eeb0,New Base Activity,"New Base Activity
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398610083,1398610083,cc0953f79cb5a69099485493ef90747bede3f76b
+cc0953f79cb5a69099485493ef90747bede3f76b,cc0953f7,Added API Service Calls for Comments and Visits,"Added API Service Calls for Comments and Visits
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398601750,1398601750,1c38ac271cb02ad92af9b80245fb746e02388a68
+1c38ac271cb02ad92af9b80245fb746e02388a68,1c38ac27,updated icons. beautified layouts.,"updated icons. beautified layouts.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398522186,1398522186,7fe77ea73dd16372329dc7d1ddb1b5f42f430aa3
+7fe77ea73dd16372329dc7d1ddb1b5f42f430aa3,7fe77ea7,Reload cookies if detected change in session.,"Reload cookies if detected change in session.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398520502,1398520502,cfad266f83f0564efe5ddbc0569d1ff713b28b98
+cfad266f83f0564efe5ddbc0569d1ff713b28b98,cfad266f,Manual setting of session cookie for each request,"Manual setting of session cookie for each request
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398520376,1398520376,3255dcc33dcdd4f246aadb32f3c7363a7e0efd39
+3255dcc33dcdd4f246aadb32f3c7363a7e0efd39,3255dcc3,Moved async tasks to last operation.,"Moved async tasks to last operation.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398520346,1398520346,37b630e81c4df5844b36b64e7466e6f0b8acb4f8
+37b630e81c4df5844b36b64e7466e6f0b8acb4f8,37b630e8,Removed Broadcast. Login Now Works.,"Removed Broadcast. Login Now Works.
+
+Added additional debugging on the authentication.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398516670,1398516670,7953aa51a6e17af5a1ddcdf25ab49df5f3503610
+7953aa51a6e17af5a1ddcdf25ab49df5f3503610,7953aa51,Refactored Responses. New Save Spot call.,"Refactored Responses. New Save Spot call.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398467171,1398467171,f4b3bc73cd10e7da4332b9ed3ec7f0767787eb65
+f4b3bc73cd10e7da4332b9ed3ec7f0767787eb65,f4b3bc73,Add Server Response Base Class,"Add Server Response Base Class
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398467148,1398467148,046db85b9d57a59a691b1be87986a0e75e57c4a4
+046db85b9d57a59a691b1be87986a0e75e57c4a4,046db85b,Login Exceptions now display,"Login Exceptions now display
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398467117,1398467117,42632d79cf4c3f5646d387f3980a2f06f8986a8b
+42632d79cf4c3f5646d387f3980a2f06f8986a8b,42632d79,Login Features,"Login Features
+
+Added code for communicating with DumpsterMap.com to login to the
+server, remember the session cookie and store it in the
+SharedPreferences. Updated the DumpsterMapService instance to be a
+singleton to maintain the session cookie. Added BroadcastReceiver on Map
+Activity to allow it to be notified when a login occurs.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398459431,1398459431,373a2620339162e03005ae8dbf79d510e8f60ca8
+373a2620339162e03005ae8dbf79d510e8f60ca8,373a2620,Login activity and Authentication Service,"Login activity and Authentication Service
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398307588,1398307588,d214763f8711dab696328287095454dacd9c40e9
+d214763f8711dab696328287095454dacd9c40e9,d214763f,Updated to Visit Add Icon to Action Bar,"Updated to Visit Add Icon to Action Bar
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398224085,1398224085,c240581a12c5dd02be45b5f336cabe089216539c
+c240581a12c5dd02be45b5f336cabe089216539c,c240581a,Fixed Comments Activity. ic_add is now Action Bar.,"Fixed Comments Activity. ic_add is now Action Bar.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398223687,1398223687,8224a54a1b2f7fa951eb6b693ba8704cb609865f
+8224a54a1b2f7fa951eb6b693ba8704cb609865f,8224a54a,"SpotComment, Corrected Visit List, Updated Titles","SpotComment, Corrected Visit List, Updated Titles
+
+Created new Spot Comment Activity for future add/edits of comments.
+Updated Activity titles to contain Location or Redditor name. Added
+clipart add button. Added button to spot visits and comments.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398209078,1398209078,346ea793e0c29c4436974d8f7ffd5abfa87adedf
+346ea793e0c29c4436974d8f7ffd5abfa87adedf,346ea793,added ignores,"added ignores
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179843,1398179843,fa94f8a97950f44a7a27073ef12abb1f8bcddb59
+fa94f8a97950f44a7a27073ef12abb1f8bcddb59,fa94f8a9,Map activity now responds to orientation change.,"Map activity now responds to orientation change.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179817,1398179817,d5f876bff93c7dc0f01b2ac85ec5edc84f9d1fd1
+d5f876bff93c7dc0f01b2ac85ec5edc84f9d1fd1,d5f876bf,R Udpates,"R Udpates
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179794,1398179794,734de23caa009f822c01b2d2af6beccb82c85494
+734de23caa009f822c01b2d2af6beccb82c85494,734de23c,"Corrected Layout Issues, Fixed Note/Join Label.","Corrected Layout Issues, Fixed Note/Join Label.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179778,1398179778,ab44712359fca44bb64d365bc4e5a36904db1fcf
+ab44712359fca44bb64d365bc4e5a36904db1fcf,ab447123,"Corrected Layout Issues, Fixed Note.","Corrected Layout Issues, Fixed Note.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179741,1398179741,2197c2a174bfe05c4d279d35311bdea6202bf8cf
+2197c2a174bfe05c4d279d35311bdea6202bf8cf,2197c2a1,Corrected relative time difference.,"Corrected relative time difference.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398179697,1398179697,9cae266b7ddabd9eeba8427e43740fa6171952c2
+9cae266b7ddabd9eeba8427e43740fa6171952c2,9cae266b,added ignores for these files.,"added ignores for these files.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398178050,1398178050,72cf9e98d444d375b7b2a28a29b92309dfd612a5
+72cf9e98d444d375b7b2a28a29b92309dfd612a5,72cf9e98,Additional Corrections from Conflicts,"Additional Corrections from Conflicts
+
+updated label names and orderings from activities. Corrected Date Parse
+Format from StringUtil.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398177996,1398177996,c99f636d9e675dd79b386181eee35077f6656c64
+c99f636d9e675dd79b386181eee35077f6656c64,c99f636d,empty diff,"empty diff
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398177315,1398177315,48bdcfcfeadf4ee4c596ead8b45084d32b847dd4
+48bdcfcfeadf4ee4c596ead8b45084d32b847dd4,48bdcfcf,Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid,"Merge branch 'master' of https://github.com/ShadowedMists/DumpsterMapAndroid
+
+Conflicts:
+	DumpsterMap/gen/com/dumpstermap/R.java
+	DumpsterMap/res/layout/activity_spot.xml
+	DumpsterMap/res/layout/activity_spot_comments.xml
+	DumpsterMap/src/com/dumpstermap/SpotActivity.java
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398177295,1398177295,"5b35561533902d78ae7b2f5bf1d2b46a8302176c,b3908ee8df8ac4675501f6ab05a68a81b0341820"
+5b35561533902d78ae7b2f5bf1d2b46a8302176c,5b355615,New Visits Activity. Layout Additions.,"New Visits Activity. Layout Additions.
+
+Created new String Utility class for formatting dates and text. Created
+new Activity for Spot Visits. added dates on redditor and spot
+activities.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398173965,1398173965,9e4af4c98f59fad775ca17b4e9439a204a0b4b2e
+b3908ee8df8ac4675501f6ab05a68a81b0341820,b3908ee8,Resolved R Issue.,"Resolved R Issue.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398167323,1398167323,9e4af4c98f59fad775ca17b4e9439a204a0b4b2e
+9e4af4c98f59fad775ca17b4e9439a204a0b4b2e,9e4af4c9,Adding Spot Comments.,"Adding Spot Comments.
+
+Updates for tasks to return true if successful. Added new Activity for
+future display of comments.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398130740,1398130740,c117d376ef22f0b6a854f232bd22a7272d5fac16
+c117d376ef22f0b6a854f232bd22a7272d5fac16,c117d376,update layout,"update layout
+
+added placeholders for notes and the future buttons for pulling comments
+and visits.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398089719,1398089719,9fb1e99c26f26a4ffa212fa9eec1e00a9b575b48
+9fb1e99c26f26a4ffa212fa9eec1e00a9b575b48,9fb1e99c,Added Comments and Visits for Service,"Added Comments and Visits for Service
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1398089668,1398089668,d738c82ab3157bc05b1c7f2539f1819aacf5bfe8
+d738c82ab3157bc05b1c7f2539f1819aacf5bfe8,d738c82a,Added comments for IJSONSerializable,"Added comments for IJSONSerializable
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397999176,1397999176,fc02374d1de22260d385be3d7d1c6c5026c67b9f
+fc02374d1de22260d385be3d7d1c6c5026c67b9f,fc02374d,Added comments for DumpsterMapService,"Added comments for DumpsterMapService
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397999162,1397999162,7c5a26359a726f80385949699e5c913f65c4f6fc
+7c5a26359a726f80385949699e5c913f65c4f6fc,7c5a2635,Stubbed SpotActivity. Additional cleanup.,"Stubbed SpotActivity. Additional cleanup.
+
+Removed fragments from login activity.  Updated Spot activity to display
+new fields on the screen for testing.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397997935,1397997935,08fd0993edebc7d2ca0ef22a6b7a6444240e7df8
+08fd0993edebc7d2ca0ef22a6b7a6444240e7df8,08fd0993,resolved issues with redditor activity.,"resolved issues with redditor activity.
+
+service lib had incorrect getters and setters from copy paste. also
+updated service object to correctly use the new IJSONSerializable
+interface for parsing objects. removed example code from service from
+other project.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397996281,1397996281,62d1143d5a53aaa654a72614822fba3a51150abd
+62d1143d5a53aaa654a72614822fba3a51150abd,62d1143d,updated references from renaming,"updated references from renaming
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397995488,1397995488,adb731ef7f812219b3f1d257432a44a809f8e812
+adb731ef7f812219b3f1d257432a44a809f8e812,adb731ef,"Renamed Project folder (sp), updated gitignore","Renamed Project folder (sp), updated gitignore
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397995411,1397995411,7d906dfa0f873b076bc86dcd18e95f29fb0e45a1
+7d906dfa0f873b076bc86dcd18e95f29fb0e45a1,7d906dfa,removed old files,"removed old files
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397966757,1397966757,a3f8909a8728eb861010791c00e1339954a4bb34
+a3f8909a8728eb861010791c00e1339954a4bb34,a3f8909a,Create LICENSE.md,Create LICENSE.md,,,,ShadowedMists,ifendres@gmail.com,ShadowedMists,ifendres@gmail.com,1397966563,1397966563,2da89e2e4f617dc0519c777f293dc0909246a5c4
+2da89e2e4f617dc0519c777f293dc0909246a5c4,2da89e2e,Create README.md,Create README.md,,,,ShadowedMists,ifendres@gmail.com,ShadowedMists,ifendres@gmail.com,1397966444,1397966444,402f4fc58acbe6ec63cae66951e07daf878ed0c0
+402f4fc58acbe6ec63cae66951e07daf878ed0c0,402f4fc5,Added DumpsterMapAndroid Codebase,"Added DumpsterMapAndroid Codebase
+
+Initial Commit of Android working copy. Additional libraries for plays
+services and appcompact.
+",,,,Shadowed Mists,ifendres@gmail.com,Shadowed Mists,ifendres@gmail.com,1397966354,1397966354,751330e11c734cefec4a80ffea1480b21d66ab7c
+751330e11c734cefec4a80ffea1480b21d66ab7c,751330e1,Initial commit,"Initial commit
+",,,,ShadowedMists,ifendres@gmail.com,ShadowedMists,ifendres@gmail.com,1397965181,1397965181,

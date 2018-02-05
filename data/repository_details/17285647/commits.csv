@@ -1,0 +1,641 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0426b369fb255c85508378ca2e8afc81b04b3419,0426b369,Closes #69: Re-enable Crazyradio fw-accelerated scan,"Closes #69: Re-enable Crazyradio fw-accelerated scan
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1501166095,1501166095,2eb2859a10d5ffb532e8e143f51df304e86d2a44
+2eb2859a10d5ffb532e8e143f51df304e86d2a44,2eb2859a,Closes #68: Mask hexadecimal version to correct error with dev cradio,"Closes #68: Mask hexadecimal version to correct error with dev cradio
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1501165887,1501165887,fb4e55852757b1fa9c33c79e05fa3f8bbbf22b55
+fb4e55852757b1fa9c33c79e05fa3f8bbbf22b55,fb4e5585,Remove *.iml files,Remove *.iml files,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1498526496,1498526705,eac6befc9c45cf53b1c1ab10cd0c02a8ca99f5d8
+eac6befc9c45cf53b1c1ab10cd0c02a8ca99f5d8,eac6befc,Update com.android.tools.build:gradle,Update com.android.tools.build:gradle,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1498525006,1498525006,7ce7263f936442248d31f5f6f8f22974c9659871
+7ce7263f936442248d31f5f6f8f22974c9659871,7ce7263f,"Update Gradle and buildToolsVersion, fix repositories","Update Gradle and buildToolsVersion, fix repositories",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1492041907,1492041907,0c37f5f72a7acf8b712d99c155384abf3a005157
+0c37f5f72a7acf8b712d99c155384abf3a005157,0c37f5f7,Fix problem with TOC containing more than 128 entries in log message,Fix problem with TOC containing more than 128 entries in log message,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1485300335,1485901168,83362c21ff8dcb95c6a6c9c66f6ff8e63748b57b
+83362c21ff8dcb95c6a6c9c66f6ff8e63748b57b,83362c21,Update version for upload to Google Play,"Update version for upload to Google Play
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1485333588,1485333588,799dcef83d4455c68ad39615bf51c80c9e13f7bf
+799dcef83d4455c68ad39615bf51c80c9e13f7bf,799dcef8,#63: Fix layout bug when Yaw is under -99,"#63: Fix layout bug when Yaw is under -99
+
+The bug comes from the YAW text wrapping when the number is
+longer than 3 characters (-100). Fixed by increasing the
+space allocated for the yaw display. Closes #63.
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1485250263,1485250263,80dd0d8ff0220dc573d0472cae78858ce699da2a
+80dd0d8ff0220dc573d0472cae78858ce699da2a,80dd0d8f,Sync-up with Java Crazyflie lib,Sync-up with Java Crazyflie lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1483024101,1483024101,c88ee26d3df01530f8d30f98c251fad444e85aeb
+c88ee26d3df01530f8d30f98c251fad444e85aeb,c88ee26d,Fix unsigned byte decoding in TOC fetch,"Fix unsigned byte decoding in TOC fetch
+
+Caused but when fetching a TOC with more than 128 elements.
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1482950577,1482950577,30fc9a89982b4954cbee9b83c0baa1067e342ed4
+30fc9a89982b4954cbee9b83c0baa1067e342ed4,30fc9a89,Fix potential issues with empty TOCs,Fix potential issues with empty TOCs,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482938872,1482938872,7e83ae394dae518a0b4f0c9ac9171cb4af7f13f4
+7e83ae394dae518a0b4f0c9ac9171cb4af7f13f4,7e83ae39,Fix NPE and mini clean-up,Fix NPE and mini clean-up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482932585,1482932585,f0adb7150fab37603a051564382c2278937dd221
+f0adb7150fab37603a051564382c2278937dd221,f0adb715,Clean up,Clean up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482773836,1482798191,0ff428e818d761875a7974d88bdfb615c044f57f
+0ff428e818d761875a7974d88bdfb615c044f57f,0ff428e8,Hover mode and BLE disconnect fix,"Hover mode and BLE disconnect fix
+
+Hover mode should only work with CrazyRadio, disconnect on copter side
+is now handled properly ",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482798160,1482798160,fe74d49870ef9ad843c8c28de37b7e8bd06c5118
+fe74d49870ef9ad843c8c28de37b7e8bd06c5118,fe74d498,Fix BLE,"Fix BLE
+
+BLE connection did not work, because IncomingPacketHandler loop was
+interrupted before connection was established. Also, since BLE does not
+support Param and Logg subsystems, ""Connected"" is the final state, not
+""Setup Finished"".",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482770276,1482770276,2af3e20406094a9bc4b0b88d4cbae739d584648a
+2af3e20406094a9bc4b0b88d4cbae739d584648a,2af3e204,Update IML file,Update IML file,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482457538,1482457538,39219b2bbeb8528492635912fc16a4316ead0a65
+39219b2bbeb8528492635912fc16a4316ead0a65,39219b2b,"Remove ParameterPacket and ""hacky mode"" after testing.","Remove ParameterPacket and ""hacky mode"" after testing.
+
+Altitude hold is now enabled through the param framework instead of
+using a special ParameterPacket.",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482457488,1482457488,70fde7099dd063a64bda623c170ee7df266978d2
+70fde7099dd063a64bda623c170ee7df266978d2,70fde709,Use parameter packet,Use parameter packet,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466464432,1482284052,5914e2302c43df08b71f585d06cda6eb9b79f03d
+5914e2302c43df08b71f585d06cda6eb9b79f03d,5914e230,Add hover mode (not fully tested yet),Add hover mode (not fully tested yet),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458776376,1482283334,736d35200cda9042616fa352dfd275111766c14b
+736d35200cda9042616fa352dfd275111766c14b,736d3520,Gradle update,Gradle update,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482282700,1482282700,cf5e06f36fdcd038138ba2b7d7acf468c85b7a91
+cf5e06f36fdcd038138ba2b7d7acf468c85b7a91,cf5e06f3,Sync-up with Java Crazyflie lib,Sync-up with Java Crazyflie lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1482282679,1482282679,9bee813cd5e3c3d4700ba92f4c0a8ebd9b940f8a
+9bee813cd5e3c3d4700ba92f4c0a8ebd9b940f8a,9bee813c,New version for release,New version for release,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1475248468,1482281225,9abb11a97b89e4d19bd6eb248c803cfde73b89c4
+9abb11a97b89e4d19bd6eb248c803cfde73b89c4,9abb11a9,"Fix text alignment issues for battery level, link quality and flightdata","Fix text alignment issues for battery level, link quality and flightdata
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1467074429,1482280141,f3314d7ab613678c45e6d324bf73f69a6c6a88ad
+f3314d7ab613678c45e6d324bf73f69a6c6a88ad,f3314d7a,Use int instead of String for battery level,"Use int instead of String for battery level
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1467074338,1482280141,f9a937db1da14a2fb15530f058b48bb81edc9c1f
+f9a937db1da14a2fb15530f058b48bb81edc9c1f,f9a937db,Update IML file,"Update IML file
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466987311,1482280141,75bf86033759281e32559d13a431d0c9bf46e8dd
+75bf86033759281e32559d13a431d0c9bf46e8dd,75bf8603,Workaround for missing indent of SliderPreferences on Nexus 9,"Workaround for missing indent of SliderPreferences on Nexus 9
+
+Not sure if this solves the issue for other devices too.
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466987159,1482280140,2680cf3013d6d7f5ac458f39903acaba02564503
+2680cf3013d6d7f5ac458f39903acaba02564503,2680cf30,Add content descriptions for icons,"Add content descriptions for icons
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466981824,1466987624,e44aa909f5a65c7021f66add3f0e31f2bf0dcb28
+e44aa909f5a65c7021f66add3f0e31f2bf0dcb28,e44aa909,Add workaround for log configs not being found after reconnect,"Add workaround for log configs not being found after reconnect
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466789921,1466987444,a78b4601eefe54a3af109cc17b69fd8a21eae1c0
+a78b4601eefe54a3af109cc17b69fd8a21eae1c0,a78b4601,Show error message instead of error code for log configs,"Show error message instead of error code for log configs
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466780358,1466987444,bb387aca35343af437d4b275859ee2e446a2a990
+bb387aca35343af437d4b275859ee2e446a2a990,bb387aca,Add battery logging WIP,"Add battery logging WIP
+
+Simplified layout, separated battery level and link quality from flight
+data. Added icons for battery level and link quality. Added rudimentary
+conversion from battery voltage to percentage.
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466769176,1466987444,c7db13e5e091d7060b03bf7961860d28d7d092df
+c7db13e5e091d7060b03bf7961860d28d7d092df,c7db13e5,Add battery logging WIP,"Add battery logging WIP
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466555492,1466987444,92608ed889f27d0ebc7d844c381a61e8c8a92763
+92608ed889f27d0ebc7d844c381a61e8c8a92763,92608ed8,Update IML file 2,"Update IML file 2
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466555392,1466987444,91ab4a0c4b6266a96939934ad7b7148a05cc17d5
+91ab4a0c4b6266a96939934ad7b7148a05cc17d5,91ab4a0c,Renamed package se.bitcraze.crazyflielib to se.bitcraze.crazyflie.lib,"Renamed package se.bitcraze.crazyflielib to se.bitcraze.crazyflie.lib
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466467023,1466987444,7c478ec61a4d43dc951c7a3835955a402c8c5796
+7c478ec61a4d43dc951c7a3835955a402c8c5796,7c478ec6,Update IML file,"Update IML file
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466466314,1466987429,587f5db454269d6fa5b37f302bd22141d6ac22e9
+587f5db454269d6fa5b37f302bd22141d6ac22e9,587f5db4,Sync-up with Java Crazyflie lib,Sync-up with Java Crazyflie lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466466302,1466466302,0f2ad02383e3a7fd10155e8a2b03074fe5d5712e
+0f2ad02383e3a7fd10155e8a2b03074fe5d5712e,0f2ad023,Code clean up,Code clean up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1461886838,1466464618,b8681629f20b1928cf1fc09c7884971d1f16189e
+b8681629f20b1928cf1fc09c7884971d1f16189e,b8681629,"Add logging classes, move TocFetchFinishedListener to separate class","Add logging classes, move TocFetchFinishedListener to separate class",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1459042083,1466464618,ce37fe83e936b4933a8af613a54c5200d8ffb63a
+ce37fe83e936b4933a8af613a54c5200d8ffb63a,ce37fe83,Update build.gradle and iml file,Update build.gradle and iml file,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1466464577,1466464577,d385e45ba9759eb3e92452ef05c339e4a63d9308
+d385e45ba9759eb3e92452ef05c339e4a63d9308,d385e45b,New version for release,New version for release,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1461113314,1461113314,5f6feb8b857e77a01dba79e95fdd16f04533619f
+5f6feb8b857e77a01dba79e95fdd16f04533619f,5f6feb8b,"Measure time to fetch TOC, fix misc stuff","Measure time to fetch TOC, fix misc stuff
+
+Refactor MainActivity, fix logging messages, fix bug that showed ""Link:
+100%"" after disconnect, fix calling startConnectionSetup() twice",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1461112054,1461112932,982835a620653d199c5238cc0a1b7dcaecf31a3a
+982835a620653d199c5238cc0a1b7dcaecf31a3a,982835a6,Save bootloader temp files to app's data dir,Save bootloader temp files to app's data dir,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460943076,1460943076,22535942012b855f82a81c0aed36b23bf8ecbfea
+22535942012b855f82a81c0aed36b23bf8ecbfea,22535942,Fix TocCache dirs,Fix TocCache dirs,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460943044,1460943044,2e90746f6f7c1d81607a8ecb53b3cc13e76cfba9
+2e90746f6f7c1d81607a8ecb53b3cc13e76cfba9,2e90746f,Improve disconnect with BleLink + small code changes,Improve disconnect with BleLink + small code changes,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460916145,1460916145,300fc5d111aad7d7541d6835a8eff8dfc01e2b81
+300fc5d111aad7d7541d6835a8eff8dfc01e2b81,300fc5d1,Add support to save TOC cache in Android file system,Add support to save TOC cache in Android file system,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460915758,1460915758,b9f8ca26064cd927bfd9b3cc8b8d150b3980645f
+b9f8ca26064cd927bfd9b3cc8b8d150b3980645f,b9f8ca26,Small code improvements,Small code improvements,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460596740,1460596740,930439e41854ac29750d9acbb8fcf4d53b46ba90
+930439e41854ac29750d9acbb8fcf4d53b46ba90,930439e4,Fix problems with BLE,Fix problems with BLE,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460595912,1460595912,58df8bb981f9b2c2c075a3329d7207a3a0abbeb6
+58df8bb981f9b2c2c075a3329d7207a3a0abbeb6,58df8bb9,Move Alt1 and Alt2 action config back to Gamepad mapping screen,Move Alt1 and Alt2 action config back to Gamepad mapping screen,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460507402,1460507402,23ed4e90de0d274cc3e2f334989c52d26d61b1c0
+23ed4e90de0d274cc3e2f334989c52d26d61b1c0,23ed4e90,Instead of abstract buttons use dedicated buttons,Instead of abstract buttons use dedicated buttons,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460081278,1460081278,6d994acd99d6135b05ee892aec8bd6bc44eaf6aa
+6d994acd99d6135b05ee892aec8bd6bc44eaf6aa,6d994acd,Add delay to BLE close command to fix potential NPE,Add delay to BLE close command to fix potential NPE,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1460072722,1460072722,41b2f6053bebc84446dd8f07c0f1c5f3cb171bd6
+41b2f6053bebc84446dd8f07c0f1c5f3cb171bd6,41b2f605,Get number of LED ring effects dynamically,Get number of LED ring effects dynamically,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1459045110,1459045110,f394204ba896b77eabf0032b629f85a32d4047b9
+f394204ba896b77eabf0032b629f85a32d4047b9,f394204b,"Add action for buzzer, move action config to it's own category","Add action for buzzer, move action config to it's own category",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458522212,1458769342,54ec7a4ab51166f498d82aeb15045beed9a28792
+54ec7a4ab51166f498d82aeb15045beed9a28792,54ec7a4a,Fix possible NPE when using BLE,Fix possible NPE when using BLE,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458519972,1458519972,88533168fde28333368cef51d4b3fe1bf08f243f
+88533168fde28333368cef51d4b3fe1bf08f243f,88533168,Sync-up with Java Crazyflie lib,Sync-up with Java Crazyflie lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458518870,1458518958,a794c2b25065ffd7c6b7eec79896e5e69402d1d5
+a794c2b25065ffd7c6b7eec79896e5e69402d1d5,a794c2b2,Add alt1 and alt2 button configuration - WIP2,Add alt1 and alt2 button configuration - WIP2,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458516803,1458516803,277ec99c972e425d93cb94775e06d89147d43d12
+277ec99c972e425d93cb94775e06d89147d43d12,277ec99c,Add alt1 and alt2 button configuration - WIP,"Add alt1 and alt2 button configuration - WIP
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458405623,1458405686,522a4d6706ecb434a7c6bca238fdda3371216c13
+522a4d6706ecb434a7c6bca238fdda3371216c13,522a4d67,Added IML file,"Added IML file
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458405508,1458405686,83b8f8ccace670e26913824b3ad15f5589a54264
+83b8f8ccace670e26913824b3ad15f5589a54264,83b8f8cc,Improve ParamUpdaterThread,"Improve ParamUpdaterThread
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1451579718,1458405686,7b8332093f29830a44cdcc2d535933b97ee08b1f
+7b8332093f29830a44cdcc2d535933b97ee08b1f,7b833209,Added Toc and Param classes,"Added Toc and Param classes
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450571407,1458405686,762f73976714337bfac208b0328e0b2265fe4fec
+762f73976714337bfac208b0328e0b2265fe4fec,762f7397,Fix problem with Zip files that contain firmwares for CF1 & CF2,"Fix problem with Zip files that contain firmwares for CF1 & CF2
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458331589,1458405686,5c443258983cd2f15ccd959c53118e2e1b111072
+5c443258983cd2f15ccd959c53118e2e1b111072,5c443258,New version for release,New version for release,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1458086597,1458086597,40a3dac2c8d2e6b493658eeb4b0c4636f93400a3
+40a3dac2c8d2e6b493658eeb4b0c4636f93400a3,40a3dac2,Disable Crazyradio settings when dongle is not attached,Disable Crazyradio settings when dongle is not attached,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1457055480,1458086283,adf9f9c11a2ad21feba0fefedac54a68ad32fbd7
+adf9f9c11a2ad21feba0fefedac54a68ad32fbd7,adf9f9c1,Improved control with gyro sensors,"Improved control with gyro sensors
+
+Use different gyro readout method, map yaw to other touch control, add
+gyro amplification setting
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1456278908,1458086283,2be2b4f04e39ed47310b4f70c4f9db84d583b9f6
+2be2b4f04e39ed47310b4f70c4f9db84d583b9f6,2be2b4f0,Fix bitcraze/crazyflie-android-client#56 - NPE in FirmwareDownloader,"Fix bitcraze/crazyflie-android-client#56 - NPE in FirmwareDownloader
+
+Fix NPE and return an error message if the download fails",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1457048488,1457838471,ac433d0d53f4a8a6860363a8d1773f461b5b6ead
+ac433d0d53f4a8a6860363a8d1773f461b5b6ead,ac433d0d,Fix bitcraze/crazyflie-android-client#57 - NPE in IncomingPacketHandler,"Fix bitcraze/crazyflie-android-client#57 - NPE in IncomingPacketHandler
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1456878081,1457838470,97244ca5054401404ebf07efb8dfa14bcdc460cc
+97244ca5054401404ebf07efb8dfa14bcdc460cc,97244ca5,Fixup after PR merge,"Fixup after PR merge
+
+Adjust slider steps for trim settings, workaround for DPad buttons",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1457838150,1457838150,c1e4c3a3226772664770383cf419f849bb7701d6
+c1e4c3a3226772664770383cf419f849bb7701d6,c1e4c3a3,Merge pull request #58 from arnekaiser/master,"Merge pull request #58 from arnekaiser/master
+
+Libraries updated + some minor fixes
+
+Minor modifications during merge to remove unnecessary code changes
+(imports).",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1457837575,1457837575,"49bd97cc4c054275038088e89e304249452d529a,e4b37c1765462cba5b2b35953f711c0295a67026"
+49bd97cc4c054275038088e89e304249452d529a,49bd97cc,Update release checklist,Update release checklist,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1451173783,1457833309,f027763055528cca2485a4e5ee343b5605e599ce
+e4b37c1765462cba5b2b35953f711c0295a67026,e4b37c17,Libraries updated + finer trimming + some minor fixes,"Libraries updated + finer trimming + some minor fixes
+",,,,akaiser,onkelarne@googlemail.com,akaiser,onkelarne@googlemail.com,1457730023,1457730023,f027763055528cca2485a4e5ee343b5605e599ce
+f027763055528cca2485a4e5ee343b5605e599ce,f0277630,Added license file,"Added license file
+",,,,Kristoffer Richardsson,kristoffer@bitcraze.io,Kristoffer Richardsson,kristoffer@bitcraze.io,1454340646,1454340646,c725f0cb73ed4578f47956a4228079cf3c423021
+c725f0cb73ed4578f47956a4228079cf3c423021,c725f0cb,New version for release,New version for release,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1451068609,1451068609,1daf32d93d8fae9bb40c3958a7407e5ec4b460c1
+1daf32d93d8fae9bb40c3958a7407e5ec4b460c1,1daf32d9,Fix potential errors,Fix potential errors,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1451068498,1451068498,abe3e564172679d149108e5f9bb158de33b37da8
+abe3e564172679d149108e5f9bb158de33b37da8,abe3e564,Use slf4j logger,Use slf4j logger,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450566713,1450566713,3fa1fc1b684ed00449b78baa07a3bf8babd63cc8
+3fa1fc1b684ed00449b78baa07a3bf8babd63cc8,3fa1fc1b,Add missing startConnectionSetup() call,Add missing startConnectionSetup() call,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450228805,1450228805,fd495d15f982e7f15f88f2073e3c2ef87aca5832
+fd495d15f982e7f15f88f2073e3c2ef87aca5832,fd495d15,Initial commit of release checklist,Initial commit of release checklist,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450048590,1450141033,e182daee0d2cc493fe85ceb905345f494235e11e
+e182daee0d2cc493fe85ceb905345f494235e11e,e182daee,Lower BLE connection timeout to 5 secons,Lower BLE connection timeout to 5 secons,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450048386,1450141033,44babb3a6d191b865806dad792cd8fdc1b88aca9
+44babb3a6d191b865806dad792cd8fdc1b88aca9,44babb3a,Make IncomingPacketHandler more robust,Make IncomingPacketHandler more robust,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450048361,1450141033,08eae2e9e217d62164d51956c5d83a41daec8cbc
+08eae2e9e217d62164d51956c5d83a41daec8cbc,08eae2e9,Deal with missing network connection when downloading firmware,Deal with missing network connection when downloading firmware,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450048306,1450141033,6790b38cd7dd8ed48edc17a8246024f942d6fed7
+6790b38cd7dd8ed48edc17a8246024f942d6fed7,6790b38c,Set manifest version to 0.6.0 for release,"Set manifest version to 0.6.0 for release
+
+Also removed Graddle build settings, the android manifest should contain
+them.
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1450115554,1450115554,57f9c08a52b0516020fa9a8c784669afefdb46e6
+57f9c08a52b0516020fa9a8c784669afefdb46e6,57f9c08a,Fix order of firmwares in drop down list,Fix order of firmwares in drop down list,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450009093,1450009093,ed22ac3665209da73b9e143574e42c8ce8d39e38
+ed22ac3665209da73b9e143574e42c8ce8d39e38,ed22ac36,Do not fail if new properties are added to manifest.json,Do not fail if new properties are added to manifest.json,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1450009071,1450009071,0ff1b566ecccb3ecfe9ed0b343eaf3b98a8b229e
+0ff1b566ecccb3ecfe9ed0b343eaf3b98a8b229e,0ff1b566,Switch firmware release repo,"Switch firmware release repo
+
+Adapt FirmwareDetails and Manifest to fix JSON parsing errors",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449888113,1449888113,bc7d704c4a183e99e3e4fedc545914eddf3ea142
+bc7d704c4a183e99e3e4fedc545914eddf3ea142,bc7d704c,"Fix enablement of ReleaseNotes button, fix color for error messages like","Fix enablement of ReleaseNotes button, fix color for error messages like
+""Flashing not successfu"".",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449887748,1449887748,1ac5c29d70742fd359c7afd1b1543d1fce53f5e4
+1ac5c29d70742fd359c7afd1b1543d1fce53f5e4,1ac5c29d,Small refactoring in BleLink class,Small refactoring in BleLink class,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449626434,1449626434,6e7981eb0e5fea53e882a9002709f9537e8abd87
+6e7981eb0e5fea53e882a9002709f9537e8abd87,6e7981eb,Replace e.printStackTrace() with logger.error(e.getMessage()),Replace e.printStackTrace() with logger.error(e.getMessage()),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449625915,1449625915,276f606a7753842468c116fb7cf0b35d6907b4a3
+276f606a7753842468c116fb7cf0b35d6907b4a3,276f606a,Fix bug with bluetooth connection,"Fix bug with bluetooth connection
+
+Move connectionListener methods from Crazyflie to CrtpDriver class,
+remove LinkListener, use some hacks to get everything working (should be
+fixed later)",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449625164,1449625164,aa3ae6300f5e37d52ab617765217a0cfeebc0bc3
+aa3ae6300f5e37d52ab617765217a0cfeebc0bc3,aa3ae630,Fix crash when Bluetooth is turned off,Fix crash when Bluetooth is turned off,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449497050,1449497050,4a8e4d9ca6cf07f0d75b595fbeec4bd63b5a9a6e
+4a8e4d9ca6cf07f0d75b595fbeec4bd63b5a9a6e,4a8e4d9c,Fail quickly if Crazyradio is not connected - part 2,Fail quickly if Crazyradio is not connected - part 2,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449453108,1449453108,46b0fc22c9901310ceb5f208273c050dc801ea20
+46b0fc22c9901310ceb5f208273c050dc801ea20,46b0fc22,Clean up,Clean up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449449568,1449449568,4d20ed9a5fa067cc36df98b710ee59bd2ec3f319
+4d20ed9a5fa067cc36df98b710ee59bd2ec3f319,4d20ed9a,Throw readFiles's IOException further up,Throw readFiles's IOException further up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449399320,1449399457,01f4bf4c25d5ef7cf318d20366d09c66e63c27db
+01f4bf4c25d5ef7cf318d20366d09c66e63c27db,01f4bf4c,Add button for showing release notes of a firmware,Add button for showing release notes of a firmware,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449398219,1449398219,43d85861e87efed86995d158301b008ee6c7756b
+43d85861e87efed86995d158301b008ee6c7756b,43d85861,Fix JSON loading,Fix JSON loading,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449396372,1449396372,e56ecc1485ce5f3df82e715e4e7bc13eb859852f
+e56ecc1485ce5f3df82e715e4e7bc13eb859852f,e56ecc14,Tiny refactorings,Tiny refactorings,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449364247,1449364247,cb75a6bb345c642b57f41cab00aa5c329367c0bf
+cb75a6bb345c642b57f41cab00aa5c329367c0bf,cb75a6bb,Add license headers,Add license headers,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449364017,1449364017,93ae13faee93b8a23b6692ce539f69ae5e60a129
+93ae13faee93b8a23b6692ce539f69ae5e60a129,93ae13fa,Fail quickly if Crazyradio is not connected,Fail quickly if Crazyradio is not connected,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449363695,1449363695,94c144245770d141093baf1ee4474f4cf86bd9ac
+94c144245770d141093baf1ee4474f4cf86bd9ac,94c14424,Fix scrolling,Fix scrolling,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449195682,1449195682,f5ed11dc43a5ab5ff52e22b3b597e80472807ff5
+f5ed11dc43a5ab5ff52e22b3b597e80472807ff5,f5ed11dc,"Get rid of ""Check for update"" button, use text instead of image for","Get rid of ""Check for update"" button, use text instead of image for
+""Flash firmware"" button",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449195201,1449195201,2bc2dc016cef65f3547c49a983ece8e7fb5091d4
+2bc2dc016cef65f3547c49a983ece8e7fb5091d4,2bc2dc01,"Cancel flashing when back button is pressed twice, improve popup message","Cancel flashing when back button is pressed twice, improve popup message
+when searching for CF in bootloader mode",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449194156,1449194156,e7fe2b14d5765fa332c9449cd407f88ca7b271c3
+e7fe2b14d5765fa332c9449cd407f88ca7b271c3,e7fe2b14,Increase sleep to make resetToFirmware more robust!?,Increase sleep to make resetToFirmware more robust!?,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449193732,1449193732,cef2c940d97807235b5f63229082a6de9e211082
+cef2c940d97807235b5f63229082a6de9e211082,cef2c940,Disable sleep in RadioDriverThread,Disable sleep in RadioDriverThread,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449193609,1449193609,1f8a759844e71338283a9ffc90ae4bec0039e828
+1f8a759844e71338283a9ffc90ae4bec0039e828,1f8a7598,Clean up and refactoring,Clean up and refactoring,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1449108645,1449108645,4dae72849253504c8c2022d47b1e00224e09eea8
+4dae72849253504c8c2022d47b1e00224e09eea8,4dae7284,Bugfixes,Bugfixes,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448329216,1448329216,caab81f1230cbd7f09e1ea944e9f49de38735a83
+caab81f1230cbd7f09e1ea944e9f49de38735a83,caab81f1,"Get rid of AbstractLink class, WIP (contains bugs)","Get rid of AbstractLink class, WIP (contains bugs)",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448326388,1448327220,79d65ed7528ba153b8ecd7d023ba33451879f2c9
+79d65ed7528ba153b8ecd7d023ba33451879f2c9,79d65ed7,Move CrazyUsbInterface to package 'usb',Move CrazyUsbInterface to package 'usb',,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448221040,1448221040,d02444a93ac822f6f4ce7b2fc2648ff090aaa173
+d02444a93ac822f6f4ce7b2fc2648ff090aaa173,d02444a9,Add Crazyflie and PacketListener classes but do not use them yet,Add Crazyflie and PacketListener classes but do not use them yet,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448220910,1448220910,fc2f8183c75e543adf2ef44c35eba370532b7cf1
+fc2f8183c75e543adf2ef44c35eba370532b7cf1,fc2f8183,Rename mLink to mDriver,Rename mLink to mDriver,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448220851,1448220851,b5df77f7e7fcd42c16e0834a8354b33f422f077c
+b5df77f7e7fcd42c16e0834a8354b33f422f077c,b5df77f7,"Fix imports, refactoring","Fix imports, refactoring",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448220753,1448220753,0db2b12c3db744e851852a05ee305fc4bdafb43c
+0db2b12c3db744e851852a05ee305fc4bdafb43c,0db2b12c,Crazyradio API sync Part4,Crazyradio API sync Part4,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448211092,1448211092,ef8bfd20eefb1d23d29fc29d2ad859f1c1ca1679
+ef8bfd20eefb1d23d29fc29d2ad859f1c1ca1679,ef8bfd20,Crazyradio API sync Part3,Crazyradio API sync Part3,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448044571,1448045026,709c7f858b94c4dd0ae51202d8ec0fbfe1b195f4
+709c7f858b94c4dd0ae51202d8ec0fbfe1b195f4,709c7f85,Crazyradio API sync Part2,Crazyradio API sync Part2,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448041920,1448041920,fa824077f6c05b1ec5c7d62885a9f06d3c6c6bfe
+fa824077f6c05b1ec5c7d62885a9f06d3c6c6bfe,fa824077,Crazyradio API sync Part1,Crazyradio API sync Part1,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448040717,1448040717,23c551fbfa4c776449a3827abb1841f59751713c
+23c551fbfa4c776449a3827abb1841f59751713c,23c551fb,API Sync with CF lib,API Sync with CF lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1448039035,1448039035,dea536bd9031a19e86bcddc07737b515f97b558b
+dea536bd9031a19e86bcddc07737b515f97b558b,dea536bd,Use red font for error messages,Use red font for error messages,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447988926,1447988926,f5167d158854fd9aaa5d45d61c77b10ea8a6beb4
+f5167d158854fd9aaa5d45d61c77b10ea8a6beb4,f5167d15,Fix issues with onBackPressed(),Fix issues with onBackPressed(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447899102,1447899102,8bc246c5ea1a355b4efe29162916d28f0bcc62ee
+8bc246c5ea1a355b4efe29162916d28f0bcc62ee,8bc246c5,Use ScrollView to have a scrolling console instead of a single status,"Use ScrollView to have a scrolling console instead of a single status
+line",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447898525,1447898525,92d2ce0f4635d384f169f4ca7d8d93ef071e3f91
+92d2ce0f4635d384f169f4ca7d8d93ef071e3f91,92d2ce0f,Catch IllegalArgumentException,Catch IllegalArgumentException,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447898291,1447898291,01c79140c7e9439de54130b70ce4da077e2d752a
+01c79140c7e9439de54130b70ce4da077e2d752a,01c79140,Stop bootloader when back button is pressed two times in a row (WIP),Stop bootloader when back button is pressed two times in a row (WIP),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447810355,1447810355,2486cbf6170ce580c1a59238fe9ccf17c7463320
+2486cbf6170ce580c1a59238fe9ccf17c7463320,2486cbf6,Move listener to crazyflie package,Move listener to crazyflie package,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447719994,1447719994,5d29fe9cd4768b37a0d72e6fd35fda26edcca6e6
+5d29fe9cd4768b37a0d72e6fd35fda26edcca6e6,5d29fe9c,Rename and move CrazyradioLink to Crazyradio,Rename and move CrazyradioLink to Crazyradio,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447718854,1447718925,ff2dfe9a08720400591742c90f4f5f8a7f6a8dbe
+ff2dfe9a08720400591742c90f4f5f8a7f6a8dbe,ff2dfe9a,Revert FirmwareDetails refactoring,"Revert FirmwareDetails refactoring
+
+Refactoring caused problems during JSON serialization, also improved
+error handling",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447718756,1447718756,a6de1928f535a0084512761b48eba40c8feb0cfa
+a6de1928f535a0084512761b48eba40c8feb0cfa,a6de1928,Fix bug during the creation of the JSON file containing the release info,Fix bug during the creation of the JSON file containing the release info,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447716537,1447716537,6ae1867afe5d0b8842397d9d3e9ece668b67213f
+6ae1867afe5d0b8842397d9d3e9ece668b67213f,6ae1867a,"Avoid NPE when disconnecting, because packets are still sent","Avoid NPE when disconnecting, because packets are still sent",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447716441,1447716441,13cf0168f1ad8308f463312419204849aad103bd
+13cf0168f1ad8308f463312419204849aad103bd,13cf0168,Add Bootloader dependencies to Graddle,"Add Bootloader dependencies to Graddle
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1447697232,1447697232,9af281398b343124ad1f018de2b5942f41cadb4d
+9af281398b343124ad1f018de2b5942f41cadb4d,9af28139,Move FirmwareDetails class into Manifest class,Move FirmwareDetails class into Manifest class,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447638495,1447638495,82e2cdbf862a0cca78d1730e20af13335709fd0b
+82e2cdbf862a0cca78d1730e20af13335709fd0b,82e2cdbf,Improvements and refactorings,"Improvements and refactorings
+
+Assume STM32 for bin files, create stopFlashProcess() method, fix issue
+with listeners",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447638290,1447638290,cb9f9d775db39953553fc17e835f3861ca101f42
+cb9f9d775db39953553fc17e835f3861ca101f42,cb9f9d77,Increase Thread.sleep after resetToFirmware(),Increase Thread.sleep after resetToFirmware(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447638120,1447638120,04d277f0d151553acbef6cca3dbbd6aea756d612
+04d277f0d151553acbef6cca3dbbd6aea756d612,04d277f0,Clean up,Clean up,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447376922,1447376938,92f55d72b21217e96d1e68896f5950202c9a6811
+92f55d72b21217e96d1e68896f5950202c9a6811,92f55d72,Keep the screen on during flashing,Keep the screen on during flashing,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447297092,1447297092,18b61c11b2155aec1f75c670f3d73db3e7b5f112
+18b61c11b2155aec1f75c670f3d73db3e7b5f112,18b61c11,"Rename DownloadListener to FirmwareDownloadListener, use separate","Rename DownloadListener to FirmwareDownloadListener, use separate
+AsyncTask during search for Crazyflie in bootloader mode, fix setMax",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447296198,1447296198,89653cc7ff12c15a5a0678c4b50108f9313600a2
+89653cc7ff12c15a5a0678c4b50108f9313600a2,89653cc7,Close USB after setRadioStats() and radioScan(),Close USB after setRadioStats() and radioScan(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447296048,1447296048,ff8ffdf92a59b2d0d0c308e03eb7349ff6f17326
+ff8ffdf92a59b2d0d0c308e03eb7349ff6f17326,ff8ffdf9,Remove redundant call to UsbLinkAndroid.releaseInterface(),Remove redundant call to UsbLinkAndroid.releaseInterface(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447295873,1447295873,a41b15d7e801179f109d5d327f9358290e6b9335
+a41b15d7e801179f109d5d327f9358290e6b9335,a41b15d7,"Report # of pages during notifyUpdateProgress(), increase Thread.sleep","Report # of pages during notifyUpdateProgress(), increase Thread.sleep
+to 500 in resetToFirmware()",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447295808,1447295808,b776b999c1040c4257b5cca459aa14b7cde465a6
+b776b999c1040c4257b5cca459aa14b7cde465a6,b776b999,Split up FlashFirmwareTask,Split up FlashFirmwareTask,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447207006,1447207006,d6395bcb3f257f2f82e11249b2e2b1be6436bca5
+d6395bcb3f257f2f82e11249b2e2b1be6436bca5,d6395bcb,Multiple fixes,"Multiple fixes
+
+Treat every release asset as a Firmware object, get rid of Asset class,
+add Download listener, changed RadioDriver Thread.sleep to 10ms, check
+if firmware is compatible with Crazyflie.",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447200298,1447200298,6f2e87984f5fc4ebe0874079746bf5b24adde7cf
+6f2e87984f5fc4ebe0874079746bf5b24adde7cf,6f2e8798,Save JSON file after first download,Save JSON file after first download,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447117601,1447117601,460c4ae59c78ffb134555d285c893e84fe929c96
+460c4ae59c78ffb134555d285c893e84fe929c96,460c4ae5,Separate init and update of spinner,Separate init and update of spinner,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447117388,1447117388,3124049feab2c59ac10a82e8ec4437f2a2dc6d43
+3124049feab2c59ac10a82e8ec4437f2a2dc6d43,3124049f,Add CustomSpinnerAdapter,Add CustomSpinnerAdapter,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447116965,1447117197,4b641b0b4c93ba47366c4b2a29e5d3c909afa142
+4b641b0b4c93ba47366c4b2a29e5d3c909afa142,4b641b0b,Make readFile static,Make readFile static,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447116483,1447116483,d085fc032bb80fe21a778c861727dfac4f569fb0
+d085fc032bb80fe21a778c861727dfac4f569fb0,d085fc03,Cleanup,Cleanup,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1447026395,1447026395,d6549d7d9e2d662ae73a8b9bed60c9aeb41f58b2
+d6549d7d9e2d662ae73a8b9bed60c9aeb41f58b2,d6549d7d,Update bootloader classes and related components from Java CF lib,Update bootloader classes and related components from Java CF lib,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1446721576,1446721576,25cece4b7c01be2ed98af5f3a46be4382fce1597
+25cece4b7c01be2ed98af5f3a46be4382fce1597,25cece4b,Set protocol version in Cloader only when Target is STM32,Set protocol version in Cloader only when Target is STM32,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1445476432,1445476432,8355052b2c5ee2bd804b7ad256a9bbcccd7e1e59
+8355052b2c5ee2bd804b7ad256a9bbcccd7e1e59,8355052b,Fix call to bootloader.flash(),Fix call to bootloader.flash(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1445468052,1445468052,16c2e615bae8b47f53f33f573706721e2a10dce2
+16c2e615bae8b47f53f33f573706721e2a10dce2,16c2e615,Fix NPE during Bootloader.resetToFirmware(),Fix NPE during Bootloader.resetToFirmware(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1445467973,1445467973,cc8d2b402503b853317107fbf27fd030f7a1b3db
+cc8d2b402503b853317107fbf27fd030f7a1b3db,cc8d2b40,Add asset type to Firmware.toString()  ,Add asset type to Firmware.toString()  ,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1445467759,1445467759,eb2e5bcda3ebbc1d45b1b6e24a882330c5219694
+eb2e5bcda3ebbc1d45b1b6e24a882330c5219694,eb2e5bcd,Various changes,"Various changes
+
+Download without notification, use image buttons instead of text
+buttons, use BroadcastReceiver to check when file has been downloaded,
+when it has been downloaded and it's a Zip file then unzip content into
+a separate folder, move Bootloader menu entry to top settings menu",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1445382584,1445382584,7137bb4a30e449d105dff7c5626bcfeba48e9865
+7137bb4a30e449d105dff7c5626bcfeba48e9865,7137bb4a,Small fixes,"Small fixes
+
+Always show firmware spinner, convert date of firmware, filter out
+firmwares without assets",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444956287,1444956287,821ec0c641c0039ab4478105a01d6fecd40ae1b8
+821ec0c641c0039ab4478105a01d6fecd40ae1b8,821ec0c6,Extract FirmwareDownloader,"Extract FirmwareDownloader
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444868058,1444955925,cc19f5b6ce4229e19040f5dd66fce4773b587837
+cc19f5b6ce4229e19040f5dd66fce4773b587837,cc19f5b6,Extract Firmware class,"Extract Firmware class
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444865171,1444955925,1bf2bdc0ce99b4c84f6aa1e16fa09ff6bd3e01ed
+1bf2bdc0ce99b4c84f6aa1e16fa09ff6bd3e01ed,1bf2bdc0,Move BootloaderActivity to separate package,"Move BootloaderActivity to separate package
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444864987,1444955925,23b7197ffc17e9b3bcb38fc673c9c54f9a1c3a4f
+23b7197ffc17e9b3bcb38fc673c9c54f9a1c3a4f,23b7197f,Bootloader UI WIP,Bootloader UI WIP,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444864858,1444864858,6addd5eb430ce4ed5c3981fe25e4e5adb2153591
+6addd5eb430ce4ed5c3981fe25e4e5adb2153591,6addd5eb,Add initDevice() to IUsbLink interface,Add initDevice() to IUsbLink interface,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444864714,1444864738,1c1fae58ae0123b4425acaa8fe556d3364ca6f26
+1c1fae58ae0123b4425acaa8fe556d3364ca6f26,1c1fae58,Add BootloaderListener,"Add BootloaderListener
+
+Get rid of System.outs",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444857697,1444857697,df544d7394e36614cedd5a06a4ba5900bb213781
+df544d7394e36614cedd5a06a4ba5900bb213781,df544d73,First steps of creating an UI,"First steps of creating an UI
+
+Lock bootloader activiy to sensor landscreen mode, remove action menu",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1444606533,1444606533,fec53278e18935f02d22c7b386817c6392b9b40b
+fec53278e18935f02d22c7b386817c6392b9b40b,fec53278,Add RadioDriver class,Add RadioDriver class,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443670049,1443670049,dc192f5e67c444af641234b70ae6a82fe01250d6
+dc192f5e67c444af641234b70ae6a82fe01250d6,dc192f5e,"Add bootloader classes, add RadioAck class","Add bootloader classes, add RadioAck class",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443669390,1443669390,5b1d93baf94608e48282afbe3265edf812fee993
+5b1d93baf94608e48282afbe3265edf812fee993,5b1d93ba,"Replace Link with CrtpDriver, add LinkListener","Replace Link with CrtpDriver, add LinkListener",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443668455,1443668455,2b60de16afa0ba09a14e8e2dac5f3fab3efdeddc
+2b60de16afa0ba09a14e8e2dac5f3fab3efdeddc,2b60de16,Align ConnectionListener and ConnectionAdapter to Crazyflie lib,"Align ConnectionListener and ConnectionAdapter to Crazyflie lib
+implementation",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443667998,1443667998,cca7a5544ef0e31467ff9d3ae168d4adecf478ee
+cca7a5544ef0e31467ff9d3ae168d4adecf478ee,cca7a554,Use ConnectionData as parameter in connect method,Use ConnectionData as parameter in connect method,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443667229,1443667229,ef8fec35bbf7a3c005735e57ba7a9b7eb551d1cf
+ef8fec35bbf7a3c005735e57ba7a9b7eb551d1cf,ef8fec35,Rename Link.send() method to Link.sendPacket(),Rename Link.send() method to Link.sendPacket(),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443666813,1443666813,185866860cfba1ff45b88219c87d47dc1949e044
+185866860cfba1ff45b88219c87d47dc1949e044,18586686,Add connected callback,"Add connected callback
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429836603,1443666333,d53f090714c29107026a6b5107929cbb813fb7dc
+d53f090714c29107026a6b5107929cbb813fb7dc,d53f0907,Move ConnectionData to separate class,Move ConnectionData to separate class,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1443575567,1443575567,dc1228e75b4e94ef995286a392ee7f3aa512ad52
+dc1228e75b4e94ef995286a392ee7f3aa512ad52,dc1228e7,Improved DataListener,Improved DataListener,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429826434,1433376808,dc9f92edee98bd2aa715c499054c8bd0b3fe04dd
+dc9f92edee98bd2aa715c499054c8bd0b3fe04dd,dc9f92ed,Set reasonable default values for joystick widget according to screen,"Set reasonable default values for joystick widget according to screen
+size",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1433376712,1433376712,0aac0b9c66e0278d634e8651e3e9485d1e06d66e
+0aac0b9c66e0278d634e8651e3e9485d1e06d66e,0aac0b9c,Increase version,"Increase version
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429743963,1429746366,844e36203d5cc645d8c45b5542e65df63985b81d
+844e36203d5cc645d8c45b5542e65df63985b81d,844e3620,Fixes #54 - Trim cancelled by deadzone,"Fixes #54 - Trim cancelled by deadzone
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429739769,1429746366,0f0d9f40ce9fcbb5725b37943184869daa29bbac
+0f0d9f40ce9fcbb5725b37943184869daa29bbac,0f0d9f40,Add CrtpPort class,"Add CrtpPort class
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1428776413,1429746366,1f6f6a6e6b2dfa3ab9bd35578554fbd5f33ac14c
+1f6f6a6e6b2dfa3ab9bd35578554fbd5f33ac14c,1f6f6a6e,Set upperLimit for maxRollPitchAngle to 80 and upperLimit of maxYawAngle,"Set upperLimit for maxRollPitchAngle to 80 and upperLimit of maxYawAngle
+to 300 (to avoid ""spinning out of control"" bug in crazyflie firmware)
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429746214,1429746366,383b0fd8d90af0ecbe49516dc76866477329c211
+383b0fd8d90af0ecbe49516dc76866477329c211,383b0fd8,Merge pull request #53 from ottodog/SliderPreferences,"Merge pull request #53 from ottodog/SliderPreferences
+
+Slider preferences
+
+Minor modifications during merge to remove unnecessary code changes
+(imports).",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1429743550,1429743550,"2fd75d5a1451a228c94fc83367f83bd39c7ac1f3,b9ac20e3c3858803fe703d8f8ee2d197aa35887f"
+b9ac20e3c3858803fe703d8f8ee2d197aa35887f,b9ac20e3,"Fixed issue where SliderPreference's summary reverted to ""summary""","Fixed issue where SliderPreference's summary reverted to ""summary""
+Happens if bar set to minimum AND the value had to change during that gesture
+",,,,Da-Jin Chu,dajinchu@gmail.com,Da-Jin Chu,dajinchu@gmail.com,1429576772,1429576772,a5f787f808cb7b534639ae9a2b8c9959815057a0
+a5f787f808cb7b534639ae9a2b8c9959815057a0,a5f787f8,Removed unnecessary constants and logs,"Removed unnecessary constants and logs
+",,,,Da-Jin Chu,dajinchu@gmail.com,Da-Jin Chu,dajinchu@gmail.com,1429570176,1429570176,7fa43f896031dc8007c41fc421d392a5c8fd93c5
+7fa43f896031dc8007c41fc421d392a5c8fd93c5,7fa43f89,SliderPreference now used in Preferences instead of EditTextPreference.,"SliderPreference now used in Preferences instead of EditTextPreference.
+Radio channel excluded because it requires more precision.
+",,,,Da-Jin Chu,dajinchu@gmail.com,Da-Jin Chu,dajinchu@gmail.com,1429568626,1429568626,95f04f924ceca4bedd0ce3d20bf6e58834aab8e1
+95f04f924ceca4bedd0ce3d20bf6e58834aab8e1,95f04f92,Created SliderPreference for general use. No longer in dialog box,"Created SliderPreference for general use. No longer in dialog box
+",,,,Da-Jin Chu,dajinchu@gmail.com,Da-Jin Chu,dajinchu@gmail.com,1429499220,1429499220,92609b7be6a657895d1e84118d9ce9b9071b9789
+92609b7be6a657895d1e84118d9ce9b9071b9789,92609b7b,Made virtual joystick size adjustable through preferences,"Made virtual joystick size adjustable through preferences
+In the process created slider preference class(JoystickSizeSliderPreference)
+Will refine and reuse for flight control settings.
+",,,,Da-Jin Chu,dajinchu@gmail.com,Da-Jin Chu,dajinchu@gmail.com,1429409722,1429409722,2fd75d5a1451a228c94fc83367f83bd39c7ac1f3
+2fd75d5a1451a228c94fc83367f83bd39c7ac1f3,2fd75d5a,Deal with missing gyro or accelerometer sensors more gracefully,Deal with missing gyro or accelerometer sensors more gracefully,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1428455012,1428455012,380230e3284eb20d722001addf9bdd278b2a1c26
+380230e3284eb20d722001addf9bdd278b2a1c26,380230e3,Change wording of touch thrust full travel preference,Change wording of touch thrust full travel preference,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1428454810,1428454810,34c3a7c9ca3dad0dfba0c89b1a7d7b18b3145267
+34c3a7c9ca3dad0dfba0c89b1a7d7b18b3145267,34c3a7c9,Increase version,Increase version,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1427850079,1427850079,4259bbe0a5d5879beaa6c768a0b1068c9358bf2d
+4259bbe0a5d5879beaa6c768a0b1068c9358bf2d,4259bbe0,Fix bracketing,Fix bracketing,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1427846495,1427846495,3f80bb516fe3ae6b3d5ee4a8b251fca63d4ed6c3
+3f80bb516fe3ae6b3d5ee4a8b251fca63d4ed6c3,3f80bb51,Change JoystickMovedListener.OnMoved() to use floats instead of ints,Change JoystickMovedListener.OnMoved() to use floats instead of ints,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1427845072,1427845072,66adf749499651bb6e486662f5267cd3ba289902
+66adf749499651bb6e486662f5267cd3ba289902,66adf749,"Limit MAX_THRUST to 65000, fix typos, clean up","Limit MAX_THRUST to 65000, fix typos, clean up",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1427844981,1427844981,30520b5c68ccdb4fa820463e1665e40cf4dcb29d
+30520b5c68ccdb4fa820463e1665e40cf4dcb29d,30520b5c,Small clean-ups,Small clean-ups,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1427844216,1427844216,da31b61879ef9cd2515e48069080a684b4b5091c
+da31b61879ef9cd2515e48069080a684b4b5091c,da31b618,Merge pull request #52 from tomfelker/master,"Merge pull request #52 from tomfelker/master
+
+Option to have the onscreen throttle stick spring all the way down.",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1427363420,1427363420,"99e849cb56e4acdbb90910555373ac4583eda94b,6fd8d299b1b593956d06c4b1ca1c0de1455dd940"
+6fd8d299b1b593956d06c4b1ca1c0de1455dd940,6fd8d299,"Make ""Touchscreen thrust full travel"" mode on by default.","Make ""Touchscreen thrust full travel"" mode on by default.",,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1427358287,1427358287,d0dbdf3cdda35919f5c9204a12de6d43c2ad2a47
+d0dbdf3cdda35919f5c9204a12de6d43c2ad2a47,d0dbdf3c,Fix joystick not returning to bottom when coming back from phone being off.,"Fix joystick not returning to bottom when coming back from phone being off.
+
+The code was calling autoReturn() before the view had been laid out, so movementRadius was zero, and the bottom was the center.  I'm now triggering another autoReturn in onLayout() if the movementRadius changes.",,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1427357869,1427357869,f8375a63278fd6c2ea038e90a7c9ddcfef13e785
+f8375a63278fd6c2ea038e90a7c9ddcfef13e785,f8375a63,Some iml file change that Android Studio did...,Some iml file change that Android Studio did...,,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1426837627,1426837627,43c7b34344c9b1dcabdaf62c012b74fe47481d77
+43c7b34344c9b1dcabdaf62c012b74fe47481d77,43c7b343,"Better implementation of ""Touch control full travel"", where, only for the…","Better implementation of ""Touch control full travel"", where, only for the onscreen touch controller, the joystick used for thrust goes all the way to the bottom.
+
+This simply remaps the range reported to the Controls class from (-1 to 1) to (0 to 1). This is mostly to avoid complexifying many other cases that assume that resetting both analog sticks to 0 is the correct action.  Unfortunately it means other types of controllers would need to implement this themselves, if they wanted to.",,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1426837448,1426837448,44d5927a322c37cf3f546d8d56d8f109d7fac793
+44d5927a322c37cf3f546d8d56d8f109d7fac793,44d5927a,add slf4j jar to Android Studio stuff,add slf4j jar to Android Studio stuff,,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1426750085,1426750085,11375a80498ba2dfd9d8a6b6c6575aeba0fd39ad
+11375a80498ba2dfd9d8a6b6c6575aeba0fd39ad,11375a80,Project file for Android Studio (which seems to be replacing Eclipse as their IDE of choice).,Project file for Android Studio (which seems to be replacing Eclipse as their IDE of choice).,,,,Tom Felker,tomfelker@gmail.com,Tom Felker,tomfelker@gmail.com,1426745855,1426745855,99e849cb56e4acdbb90910555373ac4583eda94b
+99e849cb56e4acdbb90910555373ac4583eda94b,99e849cb,Fix link in README.md,Fix link in README.md,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1425252232,1425252232,864df418d78d80bee9fefc2d85a9efbadb3f3365
+864df418d78d80bee9fefc2d85a9efbadb3f3365,864df418,"Update README.md, add CONTRIBUTING.md","Update README.md, add CONTRIBUTING.md",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1425252107,1425252107,dedcf7cb0c49f939ef188217c39f1f3a3d6a05fb
+dedcf7cb0c49f939ef188217c39f1f3a3d6a05fb,dedcf7cb,Increased version,Increased version,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1423443330,1423443330,bbc40154ca65971eb94ba654c5e0e685916c8453
+bbc40154ca65971eb94ba654c5e0e685916c8453,bbc40154,Skip firmware scan when Crazyradio firmware is v0.53,Skip firmware scan when Crazyradio firmware is v0.53,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1423443098,1423443098,1d5958375ed11fd41718b154849d844a7f66d3fd
+1d5958375ed11fd41718b154849d844a7f66d3fd,1d595837,Implemented PreferenceFragment to avoid deprecation warnings,Implemented PreferenceFragment to avoid deprecation warnings,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1423443003,1423443003,779e282cd407c30b3aa4a1670b96d725faf608eb
+779e282cd407c30b3aa4a1670b96d725faf608eb,779e282c,Fixed layout gravity problem when switching to fullscreen mode,Fixed layout gravity problem when switching to fullscreen mode,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1423442086,1423442086,a612324bd7ff6b5fa97983c96bdbbcd6b077c60e
+a612324bd7ff6b5fa97983c96bdbbcd6b077c60e,a612324b,"Fixed issue #48, use onSizeChanged instead of onMeasure","Fixed issue #48, use onSizeChanged instead of onMeasure",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1422979650,1422979650,3a3cbaff1b76c54f10aac96843cb30a28bb27fb9
+3a3cbaff1b76c54f10aac96843cb30a28bb27fb9,3a3cbaff,"Fixed #46, app now gracefully handles radio scan when Crazyradio is not","Fixed #46, app now gracefully handles radio scan when Crazyradio is not
+attached",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1422146155,1422146155,d07fb848423ea8c60356cb0344f0404be4e1a5fc
+d07fb848423ea8c60356cb0344f0404be4e1a5fc,d07fb848,Increased version number,Increased version number,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1422145939,1422145939,44c1aa75ce51cb95b713a29c6726161cdfb41e86
+44c1aa75ce51cb95b713a29c6726161cdfb41e86,44c1aa75,Added BLE latency workaround as a preference,"Added BLE latency workaround as a preference
+
+On some devices there is seconds of latency. Added preference to enable
+the workaround.
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1421854551,1421854551,c48a32fba20a8f2fc39f3cbf5cfa6a0165bdfd3f
+c48a32fba20a8f2fc39f3cbf5cfa6a0165bdfd3f,c48a32fb,Increased version,Increased version,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1419285228,1419285228,420036ec681cba81b62adb73433f091585af5c12
+420036ec681cba81b62adb73433f091585af5c12,420036ec,Fixed typos,Fixed typos,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1419124648,1419124648,2c5d612338a0318e2cfe6e6dc96d22e9edcf245c
+2c5d612338a0318e2cfe6e6dc96d22e9edcf245c,2c5d6123,Fixed bug with multitouch (more than two fingers),Fixed bug with multitouch (more than two fingers),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1419124519,1419124519,356670658cd907436707eebbb60dfd0d272ebca4
+356670658cd907436707eebbb60dfd0d272ebca4,35667065,Automatically activate screen rotation lock in preferences when,"Automatically activate screen rotation lock in preferences when
+gyroscope sensors are used",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418596780,1418688626,13412840db66c7f2cca83cc28c367a7875b2b0e3
+13412840db66c7f2cca83cc28c367a7875b2b0e3,13412840,"Small refactoring, fixed member variable naming","Small refactoring, fixed member variable naming",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418439473,1418688626,24520d3f58624d696570af355b455ddbf948a2f1
+24520d3f58624d696570af355b455ddbf948a2f1,24520d3f,"Do not detect type of controller automatically any more, instead make it","Do not detect type of controller automatically any more, instead make it
+configurable in the preferences",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418438676,1418688626,c71d5ee0fc0f3f84d87864a31183bf7dc3a3d81a
+c71d5ee0fc0f3f84d87864a31183bf7dc3a3d81a,c71d5ee0,Added radio stats entry to preferences menu that shows the firmware,"Added radio stats entry to preferences menu that shows the firmware
+version and serial number, added getSerialNumber() to IUsbLink, switched
+minSdkVersion to 13 (support for UsbDeviceConnection.getDescriptors())",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418437234,1418688626,fc6fc0f9fb5e4307aa1ee97d871e1f52d9e6e01c
+fc6fc0f9fb5e4307aa1ee97d871e1f52d9e6e01c,fc6fc0f9,Fixed possible NPE,Fixed possible NPE,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418436506,1418688297,f36753f7dcdef78af0ff34894bc9e65f17aec3dd
+f36753f7dcdef78af0ff34894bc9e65f17aec3dd,f36753f7,Re-added slow manual scan as a workaround for a problem with Nexus 5 and,"Re-added slow manual scan as a workaround for a problem with Nexus 5 and
+Crazyradio, added method to check Crazyradio firmware version, changed
+scan methods to not be static anymore, let client decide whether slow
+scan should be used",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418435697,1418688297,f4a1d8817796bf3c7c4a762429bb95c0dd97d379
+f4a1d8817796bf3c7c4a762429bb95c0dd97d379,f4a1d881,"Extracted USB implementation into separate class, added IUsbLink","Extracted USB implementation into separate class, added IUsbLink
+interface, added slf4j logging library",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418434106,1418688297,c12b1cc165aba44fbe6621c720bcc5a639723431
+c12b1cc165aba44fbe6621c720bcc5a639723431,c12b1cc1,Changed versionName to 0.2,Changed versionName to 0.2,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418663764,1418663764,cf6de0af1f7fbe27b9b1594381790022e2c3f5ee
+cf6de0af1f7fbe27b9b1594381790022e2c3f5ee,cf6de0af,"Re-added action bar in preferences menu, added preference category for","Re-added action bar in preferences menu, added preference category for
+Crazyradio settings",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418655494,1418655494,21da951609f60c6169caa672dd95a082018b0833
+21da951609f60c6169caa672dd95a082018b0833,21da9516,Merge branch 'dev_layout',"Merge branch 'dev_layout'
+
+Conflicts:
+	AndroidManifest.xml
+	res/values/strings.xml
+	res/xml/preferences.xml
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418607646,1418607646,"175c77eb637c6428cd1589a12d6d42068e5bb921,2aebd2f32f2ff0dd38458146ced757ddce44cbff"
+2aebd2f32f2ff0dd38458146ced757ddce44cbff,2aebd2f3,Added fullscreen mode,Added fullscreen mode,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418598507,1418598507,8bd179d0828050074bf9dd31670fff6855e5b8a6
+8bd179d0828050074bf9dd31670fff6855e5b8a6,8bd179d0,Removed obsolete res/menu,Removed obsolete res/menu,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418426851,1418426851,f8e124b71dfc2416c642aa2e5d44a2852397dcbf
+175c77eb637c6428cd1589a12d6d42068e5bb921,175c77eb,Split up preferences in separate preference screens,Split up preferences in separate preference screens,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1408440054,1418426703,00d397595e5f899f69eac860985e53c02af85931
+00d397595e5f899f69eac860985e53c02af85931,00d39759,Merge pull request #41 from glock45/dev-navi-crash-fix,"Merge pull request #41 from glock45/dev-navi-crash-fix
+
+Fixed crash happening after package name was changed to "".crazyfliecontrol2"".",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418425928,1418425928,"9f8f7023dfcc20497814b1c4ca71032713b50db9,9a0eae64bac154f4e151b5c7054b56531b7439c4"
+9f8f7023dfcc20497814b1c4ca71032713b50db9,9f8f7023,Merge pull request #40 from glock45/dev-studio-support,"Merge pull request #40 from glock45/dev-studio-support
+
+Android Studio 1.0 Integration",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418425772,1418425772,"4c5798bbcf6848a81e1c021d1a0517fe8fb641be,f9dcc540ec9cda085a7a260c5a944c977662f20c"
+f9dcc540ec9cda085a7a260c5a944c977662f20c,f9dcc540,Added program to .gitignore.,"Added program to .gitignore.
+",,,,Damian Kołakowski,damian.kolakowski@up-next.com,Damian Kołakowski,damian.kolakowski@up-next.com,1418425167,1418425167,7874549a9c5add71266224f67bb4bc05ad63bccd
+7874549a9c5add71266224f67bb4bc05ad63bccd,7874549a,"Eclipse files ( .classpath, .project ) removed from .gitignore","Eclipse files ( .classpath, .project ) removed from .gitignore
+",,,,Damian Kołakowski,damian.kolakowski@up-next.com,Damian Kołakowski,damian.kolakowski@up-next.com,1418424998,1418424998,ebd87cae76cf69e879e208a3e5f52518725c8503
+9a0eae64bac154f4e151b5c7054b56531b7439c4,9a0eae64,"Fixed crash happening after package name change to "".crazyfliecontrol2"".","Fixed crash happening after package name change to "".crazyfliecontrol2"".
+",,,,Damian Kołakowski,damian.kolakowski@up-next.com,Damian Kołakowski,damian.kolakowski@up-next.com,1418414286,1418414286,4c5798bbcf6848a81e1c021d1a0517fe8fb641be
+ebd87cae76cf69e879e208a3e5f52518725c8503,ebd87cae,Added Android Studio 1.0 / Gradle 1.0.0 build files ( without touching current source tree ).,"Added Android Studio 1.0 / Gradle 1.0.0 build files ( without touching current source tree ).
+",,,,Damian Kołakowski,damian.kolakowski@up-next.com,Damian Kołakowski,damian.kolakowski@up-next.com,1418387684,1418387684,4c5798bbcf6848a81e1c021d1a0517fe8fb641be
+4c5798bbcf6848a81e1c021d1a0517fe8fb641be,4c5798bb,"Changed app name to ""Crazyflie Client""","Changed app name to ""Crazyflie Client""",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418176766,1418176766,4a1bb00d3ae9a321e4a450c030ea3be30304d13b
+f8e124b71dfc2416c642aa2e5d44a2852397dcbf,f8e124b7,"Use custom button backgrounds (circles), show connected state with","Use custom button backgrounds (circles), show connected state with
+different colors for Crazyradio (green) and BLE (blue)",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418176314,1418176314,8319f193943d7e3cddb6d050d2c6d2ccbf962c67
+8319f193943d7e3cddb6d050d2c6d2ccbf962c67,8319f193,"Removed action bar, added new icon for connect/disconnect, changed","Removed action bar, added new icon for connect/disconnect, changed
+formatting of pitch/roll/thrust/yaw to only show integers and added
+percent sign to thrust value",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1418092341,1418092341,1585779cb2c649f8d09796e4ebe38524e138ec04
+4a1bb00d3ae9a321e4a450c030ea3be30304d13b,4a1bb00d,Make USB host feature optional,"Make USB host feature optional
+
+This allow to support device that have BLE but no OTG
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1418060558,1418060558,1585779cb2c649f8d09796e4ebe38524e138ec04
+1585779cb2c649f8d09796e4ebe38524e138ec04,1585779c,Added check for BLE avaliability,"Added check for BLE avaliability
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1418031584,1418031584,1fcbda08b6cbbf5a440f36447040a7e8ccdb2b8e
+1fcbda08b6cbbf5a440f36447040a7e8ccdb2b8e,1fcbda08,Renamed main application package for upload to play store,"Renamed main application package for upload to play store
+
+Renamed main package from CrazyflieControl to CrazyflieControl2
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1418031162,1418031344,8898ecd58bfb64c80b200a2fd3823b506b52387d
+8898ecd58bfb64c80b200a2fd3823b506b52387d,8898ecd5,Fixed BLE connection sequence,"Fixed BLE connection sequence
+
+Fixed sequence hangs when connect was pushed twice fast
+Fixed sequence hangs when Bluetooth was not started",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1418019993,1418019993,7a797b1e973d1b329f2e9ad5595136737412d3e9
+7a797b1e973d1b329f2e9ad5595136737412d3e9,7a797b1e,Updated app icon,"Updated app icon
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1417886283,1417886283,aacf4120d69cbf31dbca78fec87104914385184c
+aacf4120d69cbf31dbca78fec87104914385184c,aacf4120,Fixed compatibility with Android 12+,"Fixed compatibility with Android 12+
+
+BLE is only tested from Kitkat (19+)
+",,,,Arnaud Taffanel,arnaud@bitcraze.se,Arnaud Taffanel,arnaud@bitcraze.se,1417867004,1417867004,f9184a762e69118741f96b87b0c7904e02cc1b9f
+f9184a762e69118741f96b87b0c7904e02cc1b9f,f9184a76,BLE: Send commander packet every 40ms to fix latency on slow ble devices,"BLE: Send commander packet every 40ms to fix latency on slow ble devices
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1417793016,1417793016,e0ce1a24a31b289c2b360b3c328ec56b7a57f979
+e0ce1a24a31b289c2b360b3c328ec56b7a57f979,e0ce1a24,Implemented BLE link to communicates with Crazyflie 2.0,"Implemented BLE link to communicates with Crazyflie 2.0
+
+Includes a trick to fix a bug with the Nexus 4.
+",,,,Arnaud Taffanel,arnaud@taffanel.org,Arnaud Taffanel,arnaud@taffanel.org,1417759592,1417764758,048c69397eff558d2ff932fc06a14b22575b84ad
+048c69397eff558d2ff932fc06a14b22575b84ad,048c6939,Merge pull request #39 from pappz/fix_division_by_zero,"Merge pull request #39 from pappz/fix_division_by_zero
+
+Fix the division by zero problem",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1417741364,1417741364,"21e6aa147794b0b035109b53e45c03483e8a7782,22b3126a44363c7e8be54acc03c6d3712d509ac0"
+21e6aa147794b0b035109b53e45c03483e8a7782,21e6aa14,"Enabled proguard, fixed lint warning","Enabled proguard, fixed lint warning",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1417740849,1417740849,13119f8383febbdeed5fe18d2e48457990b37ce5
+13119f8383febbdeed5fe18d2e48457990b37ce5,13119f83,"Added copyrights to all files, changed version name to ""0.1"", fixed typo","Added copyrights to all files, changed version name to ""0.1"", fixed typo
+in readme.md",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1417647149,1417647149,3e9276441c15305e323e0e59b576e6e32a3b8a3d
+3e9276441c15305e323e0e59b576e6e32a3b8a3d,3e927644,"Fixed issue with thrust value, show thrust value in percent again","Fixed issue with thrust value, show thrust value in percent again
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1417572781,1417574325,bdcc0744a1afee986b02061818e8101e112222b6
+22b3126a44363c7e8be54acc03c6d3712d509ac0,22b3126a,Fix the division by zero problem,"Fix the division by zero problem
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1416789209,1416789209,bdcc0744a1afee986b02061818e8101e112222b6
+bdcc0744a1afee986b02061818e8101e112222b6,bdcc0744,Merge branch 'pappz-pull_accelerometer_clean' into bitcraze_master,"Merge branch 'pappz-pull_accelerometer_clean' into bitcraze_master
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1415236447,1415236447,"c8f4db04742b6af942220ea5b5537c89aeea7312,f88dc5a1f71db92c48b45417c89093d3d5421c5e"
+f88dc5a1f71db92c48b45417c89093d3d5421c5e,f88dc5a1,Merge branch 'pull_accelerometer_clean' of,"Merge branch 'pull_accelerometer_clean' of
+https://github.com/pappz/crazyflie-android-client into
+pappz-pull_accelerometer_clean
+
+Conflicts:
+	src/se/bitcraze/crazyfliecontrol/controller/GyroscopeController.java
+
+Fixed copy and paste error in TouchController, reset gyro preference if
+no sensors are found",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1415236370,1415236370,"c8f4db04742b6af942220ea5b5537c89aeea7312,360fbd1486161fa349e0d82287a194208cbcda53"
+360fbd1486161fa349e0d82287a194208cbcda53,360fbd14,Fix the stucked flightdata on UI after disable,"Fix the stucked flightdata on UI after disable
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414034521,1414034521,b2c591c5102de4f8b73392ace32f5dbf528a2642
+b2c591c5102de4f8b73392ace32f5dbf528a2642,b2c591c5,Add normalization to the accelerometer,"Add normalization to the accelerometer
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414034116,1414034116,8549dcd2ad6b85362894642e4af3b5fd835d4daf
+8549dcd2ad6b85362894642e4af3b5fd835d4daf,8549dcd2,Add overshoot filter and rewrite sensor calculation,"Add overshoot filter and rewrite sensor calculation
+
+- In getRoll and getPitch in GyroscopeController add an overshoot
+calculation. It split the overshooted sensor values.
+
+- Rewrite the ratio of the accelerometer sensor's value
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414033807,1414033807,6f47763d34378bce92f3c5cbf02a1150aefd473d
+6f47763d34378bce92f3c5cbf02a1150aefd473d,6f47763d,Add accelerometer sensor,"Add accelerometer sensor
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414033550,1414033550,82884e562886007d05275bedb69d6e12f01a8017
+82884e562886007d05275bedb69d6e12f01a8017,82884e56,Inline implementation of the SensorEventListener,"Inline implementation of the SensorEventListener
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414033370,1414033370,d23d1186ccb800104f27c672bd76ab8de6ac7779
+d23d1186ccb800104f27c672bd76ab8de6ac7779,d23d1186,Test the available sensors in the preferences,"Test the available sensors in the preferences
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414033118,1414033118,b39d5c33540116d76365cfae4fa535c7258918f1
+b39d5c33540116d76365cfae4fa535c7258918f1,b39d5c33,Add disable function to IController,"Add disable function to IController
+
+It is important for the gyro controllers because without this
+patch always running the measuring in the background.
+",,,,Zoltan Papp,zoltan.pmail@gmail.com,Zoltan Papp,zoltan.pmail@gmail.com,1414032919,1414032919,d415ee26a52b02ad3380c8bee9fce846455dd964
+c8f4db04742b6af942220ea5b5537c89aeea7312,c8f4db04,Moved preferences to separate package,Moved preferences to separate package,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1407281843,1407284757,c64f63aa2c583ed6953944b0cfba97831c6893e9
+c64f63aa2c583ed6953944b0cfba97831c6893e9,c64f63aa,Small refactorings (similar to pappz' implementation),Small refactorings (similar to pappz' implementation),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1407281433,1407281433,d415ee26a52b02ad3380c8bee9fce846455dd964
+d415ee26a52b02ad3380c8bee9fce846455dd964,d415ee26,"Added icon for preferences menu entry, showAsAction=""ifRoom""","Added icon for preferences menu entry, showAsAction=""ifRoom""",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1403482266,1403482266,ffdc745fb44b8ad7b30e447f4f1b71597e358e00
+ffdc745fb44b8ad7b30e447f4f1b71597e358e00,ffdc745f,Single menu entry for connect/disconnect,Single menu entry for connect/disconnect,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1403482150,1403482150,95153bbbde8d68a5a7df71337a0fd01ecb5c944c
+95153bbbde8d68a5a7df71337a0fd01ecb5c944c,95153bbb,Moved radio scan from menu to preferences,Moved radio scan from menu to preferences,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1403476654,1403476654,002154662ca538c4d3c94fd4725c8972fde2b770
+002154662ca538c4d3c94fd4725c8972fde2b770,00215466,Fixed layout of onscreen controls for tablets,Fixed layout of onscreen controls for tablets,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1403459363,1403459363,1816a7c31a609df694144e5c7535bf273a9200b0
+1816a7c31a609df694144e5c7535bf273a9200b0,1816a7c3,"Layout update for onscreen controls, fixed touch offset for left","Layout update for onscreen controls, fixed touch offset for left
+controller",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1403353785,1403353785,6c1da2d619a36f031ff4b030c0aaf195517b7cea
+6c1da2d619a36f031ff4b030c0aaf195517b7cea,6c1da2d6,Small refactoring,Small refactoring,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1398641669,1403187523,4eb5c1bdc14d4797c60b52dde41c4f7444e6fbd5
+4eb5c1bdc14d4797c60b52dde41c4f7444e6fbd5,4eb5c1bd,Added GyroscopeController class (very similar to pzoli's,"Added GyroscopeController class (very similar to pzoli's
+implementation), added Gyroscope preferences, added some JavaDoc
+
+Conflicts:
+	src/se/bitcraze/crazyfliecontrol/PreferencesActivity.java
+",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1398641281,1403187502,c103905fe2d10c7e926ba27cf613527de4b09c8f
+c103905fe2d10c7e926ba27cf613527de4b09c8f,c103905f,"Added GamepadController class, moved SplitYawAxis config to","Added GamepadController class, moved SplitYawAxis config to
+GamepadController class",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1398422757,1403187279,9016e009bfcd96afd87cf2473900b564dafacd31
+9016e009bfcd96afd87cf2473900b564dafacd31,9016e009,Moved controls class to controller package,Moved controls class to controller package,,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1398417764,1403187268,b3568ecdae9a9d365de335185ef463679decdb3f
+b3568ecdae9a9d365de335185ef463679decdb3f,b3568ecd,Refactored controller classes (similiar to pzoli's implementation),Refactored controller classes (similiar to pzoli's implementation),,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1398417597,1403187257,991915d67231c49d5c48f2a8527d6773ca6a8e4f
+991915d67231c49d5c48f2a8527d6773ca6a8e4f,991915d6,"Created IController interface, extracted TouchController","Created IController interface, extracted TouchController",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1396631571,1403187175,a1d27213100cc72ac9835acf377664b6c2b97e3c
+a1d27213100cc72ac9835acf377664b6c2b97e3c,a1d27213,"Added descriptive summaries for mode preference, added setSummaryArray","Added descriptive summaries for mode preference, added setSummaryArray
+util method",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1400025219,1400025219,32bbe2919719f7d68c66492926678769acb6727b
+32bbe2919719f7d68c66492926678769acb6727b,32bbe291,"Trying to fix issue #35, added .gitignore","Trying to fix issue #35, added .gitignore",,,,Fred G,fredg02@hotmail.com,Fred G,fredg02@hotmail.com,1395968234,1395968234,3680564c52d294c419718127937239a779287c17
+3680564c52d294c419718127937239a779287c17,3680564c,Fixed Issue #34 - Y-axes will not be inverted if they are mapped to AXIS_BRAKE…,"Fixed Issue #34 - Y-axes will not be inverted if they are mapped to AXIS_BRAKE or AXIS_GAS, added reset message
+",,,,fredg02,unknown,fredg02,unknown,1390957053,1390957053,a19e4f8b9e8b73cace0c5f6b1f77855de64f0824
+a19e4f8b9e8b73cace0c5f6b1f77855de64f0824,a19e4f8b,Fixed Issue #6 - Inversion of pitch axis is now done directly on the controls.…,"Fixed Issue #6 - Inversion of pitch axis is now done directly on the controls. Then the x-mode also has the correct angle (blue LED on the rear).
+",,,,fredg02,unknown,fredg02,unknown,1389573261,1389573261,e049c895bc99abd85d0c685a977e54cf3ca2ba45
+e049c895bc99abd85d0c685a977e54cf3ca2ba45,e049c895,"Fixed Issue #32 - Plinky plonk USB connect sound, using two built-in notifications sounds for now","Fixed Issue #32 - Plinky plonk USB connect sound, using two built-in notifications sounds for now
+",,,,fredg02,unknown,fredg02,unknown,1388797622,1388797622,c4629a4be032d557c5a98cb854eb2af0b779c98a
+c4629a4be032d557c5a98cb854eb2af0b779c98a,c4629a4b,"Issue #32 - Use notification sound, small clean up","Issue #32 - Use notification sound, small clean up
+",,,,fredg02,unknown,fredg02,unknown,1388790912,1388790912,9d8e42153d1a20f3bf9343ea35ca0e10aed1533d
+9d8e42153d1a20f3bf9343ea35ca0e10aed1533d,9d8e4215,"Moved searchForCrazyRadio() to CrazyradioLink, replaced mPermissionAsked with…","Moved searchForCrazyRadio() to CrazyradioLink, replaced mPermissionAsked with usbManager.hasPermission(device)
+",,,,fredg02,unknown,fredg02,unknown,1388781227,1388781227,885d785af7d980d785beda4a548a94c6543769d4
+885d785af7d980d785beda4a548a94c6543769d4,885d785a,"Clean up: Use ""datarate"" instead of ""bandwidth"" everywhere, fixed line wrapping,…","Clean up: Use ""datarate"" instead of ""bandwidth"" everywhere, fixed line wrapping, replaced tabs with spaces, unified member variable naming, fixed NPE in axis and button mapping dialogs
+",,,,fredg02,unknown,fredg02,unknown,1388772923,1388772923,74f4ea058943be922461465263c5b0cfd59a22bf
+74f4ea058943be922461465263c5b0cfd59a22bf,74f4ea05,"Extracted control settings into separate class, cleaned up FlightDataView","Extracted control settings into separate class, cleaned up FlightDataView
+",,,,fredg02,unknown,fredg02,unknown,1384995157,1384995157,f4d79b4132a268f3c4bbfcbcde6cfa27081e7bbd
+f4d79b4132a268f3c4bbfcbcde6cfa27081e7bbd,f4d79b41,Fixed Issue #31 - Screen rotate lock not working on Nexus 7,"Fixed Issue #31 - Screen rotate lock not working on Nexus 7
+",,,,fredg02,unknown,fredg02,unknown,1378160690,1378160690,97f38de3430a94dbd7f30924435f3ad17e2d775f
+97f38de3430a94dbd7f30924435f3ad17e2d775f,97f38de3,Refactored transfer methods,"Refactored transfer methods
+",,,,fredg02,unknown,fredg02,unknown,1376354851,1376354851,632e224c2742fa42f0230f0922823626384b140b
+632e224c2742fa42f0230f0922823626384b140b,632e224c,"refs #29 - radio scan is executed on a background thread, doesn't block UI…","refs #29 - radio scan is executed on a background thread, doesn't block UI thread anymore. Still loosing USB connection after several consecutive scans.
+",,,,Sebastian Sams,unknown,Sebastian Sams,unknown,1376313702,1376313702,e1b2141891ede5d92010fe0a212cff5aee662425
+e1b2141891ede5d92010fe0a212cff5aee662425,e1b21418,Fixed Issue #28 - added check if device exists,"Fixed Issue #28 - added check if device exists
+",,,,Sebastian Sams,unknown,Sebastian Sams,unknown,1376312416,1376312416,f76864d3bf43b745457611d1ff7a6f604091ab0f
+f76864d3bf43b745457611d1ff7a6f604091ab0f,f76864d3,bugfix: use equals for string comparison,"bugfix: use equals for string comparison
+",,,,Sebastian Sams,unknown,Sebastian Sams,unknown,1376311895,1376311895,5bdd2dcf5612ea331e24489e794a5c5c6d54a730
+5bdd2dcf5612ea331e24489e794a5c5c6d54a730,5bdd2dcf,Added splitaxis support for yaw axis,"Added splitaxis support for yaw axis
+",,,,fredg02,unknown,fredg02,unknown,1375918239,1375918239,2b670e3157a7e247a7b844164e6e4eba6d9111b1
+2b670e3157a7e247a7b844164e6e4eba6d9111b1,2b670e31,Fixed Issue #27 - Added axis configuration,"Fixed Issue #27 - Added axis configuration
+",,,,fredg02,unknown,fredg02,unknown,1375739174,1375739174,9c3a186e767752af32fa32f03f26127a21207c6e
+9c3a186e767752af32fa32f03f26127a21207c6e,9c3a186e,"Only react on USB disconnect if the device is the Crazyradio, small formatting changes","Only react on USB disconnect if the device is the Crazyradio, small formatting changes
+",,,,fredg02,unknown,fredg02,unknown,1375059364,1375059364,36562882a9dcffd25f4cb4c160007fc2bac9f745
+36562882a9dcffd25f4cb4c160007fc2bac9f745,36562882,Fixed issue #13 - added dialog where the user can select a connection when more…,"Fixed issue #13 - added dialog where the user can select a connection when more than one Crazyflie was found
+",,,,fredg02,unknown,fredg02,unknown,1375053856,1375053856,85123abb1e94ae053cb457e2104605261cd8d25d
+85123abb1e94ae053cb457e2104605261cd8d25d,85123abb,"Fixed issue #26 - Added ""gen"" dir to .hgignore, ""hg forget"" BuildConfig.java and R.java","Fixed issue #26 - Added ""gen"" dir to .hgignore, ""hg forget"" BuildConfig.java and R.java
+",,,,fredg02,unknown,fredg02,unknown,1375027587,1375027587,c92091cb2842baa2d01cf2979f396938321f42b2
+c92091cb2842baa2d01cf2979f396938321f42b2,c92091cb,"Added Roll/Pitch trim and emergency stop functionality, added preferences to…","Added Roll/Pitch trim and emergency stop functionality, added preferences to allow gamepad button mapping for those functionalities
+",,,,fredg02,unknown,fredg02,unknown,1374538178,1374538178,c526419d310258a43fd446f27c3824e07ff30bb0
+c526419d310258a43fd446f27c3824e07ff30bb0,c526419d,Use string formatting,"Use string formatting
+",,,,fredg02,unknown,fredg02,unknown,1374335528,1374335528,4165ac4448d8ca98f8e47b9cef5886e6172f1926
+4165ac4448d8ca98f8e47b9cef5886e6172f1926,4165ac44,Extract flight data UI controls from MainActivity into FlightDataView (compound component),"Extract flight data UI controls from MainActivity into FlightDataView (compound component)
+",,,,fredg02,unknown,fredg02,unknown,1374333745,1374333745,bd63c76222877d929d75d1867c4317ec08dd9f61
+bd63c76222877d929d75d1867c4317ec08dd9f61,bd63c762,Small refactoring and line formatting,"Small refactoring and line formatting
+",,,,fredg02,unknown,fredg02,unknown,1374329433,1374329433,ca285147014e06640124240d311293d1c69fdee4
+ca285147014e06640124240d311293d1c69fdee4,ca285147,Fixed Issue #25 - Adjusted default values for min and max thrust,"Fixed Issue #25 - Adjusted default values for min and max thrust
+",,,,fredg02,unknown,fredg02,unknown,1374188120,1374188120,72499988b0d00aff911b54c85f1a79443cb3d2e2
+72499988b0d00aff911b54c85f1a79443cb3d2e2,72499988,Fixes thrust value generation. Fixes bug #23.,"Fixes thrust value generation. Fixes bug #23.
+
+Set thrust between 0 (0%) and 65535 (100%)
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1374170187,1374170187,f148bd22963b849351b4215675cd011c4f95f803
+f148bd22963b849351b4215675cd011c4f95f803,f148bd22,style changes - missed a file,"style changes - missed a file
+",,,,ssams,unknown,ssams,unknown,1374082003,1374082003,1d81002ab6e3e690f9c33cc2fffb5ea36a89dffc
+1d81002ab6e3e690f9c33cc2fffb5ea36a89dffc,1d81002a,style changes for better compliance with Android code style guidelines,"style changes for better compliance with Android code style guidelines
+fixed link indicator to show special value on disconnect
+",,,,ssams,unknown,ssams,unknown,1374080649,1374080649,9e89885fb5353c3859ed9bfd744dff478082f7e1
+9e89885fb5353c3859ed9bfd744dff478082f7e1,9e89885f,added methods for controlling parameters of CrazyRadio,"added methods for controlling parameters of CrazyRadio
+",,,,ssams,unknown,ssams,unknown,1373622911,1373622911,ddbdcc42daae392c12e2d8d3507a1517d872fc24
+ddbdcc42daae392c12e2d8d3507a1517d872fc24,ddbdcc42,added some missing documentation,"added some missing documentation
+",,,,Sebastian Sams,unknown,Sebastian Sams,unknown,1373618545,1373618545,d3f0d94d0619640a632eec31b1ee91e4631c22b0
+d3f0d94d0619640a632eec31b1ee91e4631c22b0,d3f0d94d,added link quality information,"added link quality information
+count packets without ack to detect broken crazyradio link
+started implementation of parsing of reply packets
+",,,,ssams,unknown,ssams,unknown,1373612118,1373612118,8b485ca9bdbdcf195e7c2ff34ec74f9422035931
+8b485ca9bdbdcf195e7c2ff34ec74f9422035931,8b485ca9,"removed ""javastruct"" dependency","removed ""javastruct"" dependency
+more abstract implementation of crpt packets
+",,,,ssams,unknown,ssams,unknown,1373576354,1373576354,5c6847ecd8fc542e5c1dd1b028e9cf3438ea0c61
+5c6847ecd8fc542e5c1dd1b028e9cf3438ea0c61,5c6847ec,moved USB device IDs of crazyradio to link implementation,"moved USB device IDs of crazyradio to link implementation
+",,,,ssams,unknown,ssams,unknown,1373566505,1373566505,7a0b0d47bec1713ab0bf9707547eccc4dd2c18ce
+7a0b0d47bec1713ab0bf9707547eccc4dd2c18ce,7a0b0d47,cleanup and further decoupling of API and activity,"cleanup and further decoupling of API and activity
+",,,,ssams,unknown,ssams,unknown,1373566189,1373566189,0c1ac0c2e4f3d98c4af5686da5d5ad1b64a68c5f
+0c1ac0c2e4f3d98c4af5686da5d5ad1b64a68c5f,0c1ac0c2,"started rewrite for reusable API, separated crazyradio interface from android activities","started rewrite for reusable API, separated crazyradio interface from android activities
+",,,,Sebastian Sams,unknown,Sebastian Sams,unknown,1373554414,1373554414,e1a1f3e7ca21c435aed1627b87d42a661cd24179
+e1a1f3e7ca21c435aed1627b87d42a661cd24179,e1a1f3e7,Using firmware-accelerated radio scann. Closes #3,"Using firmware-accelerated radio scann. Closes #3
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1373460450,1373460450,2cfd9a79c1a12b945ee28154a4f248a21e7d2e1a
+2cfd9a79c1a12b945ee28154a4f248a21e7d2e1a,2cfd9a79,Fixed issue #15 - Do not automatically connect to the Crazyradio when it's…,"Fixed issue #15 - Do not automatically connect to the Crazyradio when it's attached, instead  only when ""Connect"" or ""Radio scan"" is clicked.
+",,,,fredg02,unknown,fredg02,unknown,1373323285,1373323285,5b6c86272204654a304aff0473f6b5395dd48dfe
+5b6c86272204654a304aff0473f6b5395dd48dfe,5b6c8627,Added missing import,"Added missing import
+",,,,fredg02,unknown,fredg02,unknown,1373321553,1373321553,9090527dac9cc961089a1774a262e4c22af36b01
+9090527dac9cc961089a1774a262e4c22af36b01,9090527d,Ouya support: enable menu-key from gamepad for ouya,"Ouya support: enable menu-key from gamepad for ouya
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1373262890,1373262890,d45a3cd2719ffeaf5db9f41b7e8e42bee11f5931
+d45a3cd2719ffeaf5db9f41b7e8e42bee11f5931,d45a3cd2,Merged changes from dev branch,"Merged changes from dev branch
+",,,,fredg02,unknown,fredg02,unknown,1372985556,1372985556,"ff457f2e61cc8829e789b50f0dafe715231d9981,1721c0b8b08e8d35a1a86684b5f9dcd9519ce29b"
+1721c0b8b08e8d35a1a86684b5f9dcd9519ce29b,1721c0b8,"Fixed Issue #17 - Press back button twice to ""exit"" app","Fixed Issue #17 - Press back button twice to ""exit"" app
+",,,,fredg02,unknown,fredg02,unknown,1372975007,1372975007,09493a321ec00f1c7652eee3a07074e896647491
+09493a321ec00f1c7652eee3a07074e896647491,09493a32,Fixed Issue #16 - Stop radio link when app is paused,"Fixed Issue #16 - Stop radio link when app is paused
+",,,,fredg02,unknown,fredg02,unknown,1372974139,1372974139,cc121e981e4ef2cbd54a270b7829fc2784f1b69c
+cc121e981e4ef2cbd54a270b7829fc2784f1b69c,cc121e98,Code clean up,"Code clean up
+",,,,fredg02,unknown,fredg02,unknown,1372804112,1372804112,cf0992ec6580e4b2715a2f63d28f1f9a2fe81243
+cf0992ec6580e4b2715a2f63d28f1f9a2fe81243,cf0992ec,"Issue #13 - Implemented ""slow"" client radio scan that stops after the first…","Issue #13 - Implemented ""slow"" client radio scan that stops after the first available CrazyFlie is found
+",,,,fredg02,unknown,fredg02,unknown,1372803947,1372803947,71e15df7acac855fdeb6c7d3f0b85fb5bd8c3e21
+71e15df7acac855fdeb6c7d3f0b85fb5bd8c3e21,71e15df7,Prevent IntentReceiver leakage,"Prevent IntentReceiver leakage
+",,,,fredg02,unknown,fredg02,unknown,1372637882,1372637882,e6e6081c5515edd7dceca33dec660f077b0449a3
+e6e6081c5515edd7dceca33dec660f077b0449a3,e6e6081c,No code changes. Just code formatting. Set tab size to 4 spaces.,"No code changes. Just code formatting. Set tab size to 4 spaces.
+",,,,fredg02,unknown,fredg02,unknown,1372632784,1372632784,b0246f17b497bb24b1e9cad4b9ea6be5ba25a170
+b0246f17b497bb24b1e9cad4b9ea6be5ba25a170,b0246f17,Made connecting/disconnecting the CrazyRadio more reliable.,"Made connecting/disconnecting the CrazyRadio more reliable.
+",,,,fredg02,unknown,fredg02,unknown,1372629860,1372629860,7af5dbd859558c3249b9a2324942ef505bfe0f69
+7af5dbd859558c3249b9a2324942ef505bfe0f69,7af5dbd8,Added layout fix for HP Touchpad,"Added layout fix for HP Touchpad
+",,,,fredg02,unknown,fredg02,unknown,1372259728,1372259728,543a0c4072edd42b46eefd502163ae35bbcfe162
+543a0c4072edd42b46eefd502163ae35bbcfe162,543a0c40,"Fixed problems with on-screen controls for some phones (eg. Samsung S2, etc.) by…","Fixed problems with on-screen controls for some phones (eg. Samsung S2, etc.) by cleaning up the layout, round axis values to two decimal places, fixed padding between on-screen joysticks
+",,,,fredg02,unknown,fredg02,unknown,1372181825,1372181825,09236b2b0089bf5f5d4e7b64cc8690134ebd6824
+09236b2b0089bf5f5d4e7b64cc8690134ebd6824,09236b2b,Fixed Lint warnings,"Fixed Lint warnings
+",,,,fredg02,unknown,fredg02,unknown,1372005968,1372005968,22f96f6da707e7e90ac5cb85d280e76ed496b1dc
+22f96f6da707e7e90ac5cb85d280e76ed496b1dc,22f96f6d,Fixed issue #14 - Added workaround,"Fixed issue #14 - Added workaround
+",,,,fredg02,unknown,fredg02,unknown,1371952273,1371952273,1e5dd183f15cf8552a7c325e92ab9ada7548ca49
+1e5dd183f15cf8552a7c325e92ab9ada7548ca49,1e5dd183,"Fixed Issue #12 - If key event comes from a gamepad, don't call super method","Fixed Issue #12 - If key event comes from a gamepad, don't call super method
+",,,,fredg02,unknown,fredg02,unknown,1371945514,1371945514,94466895ad77dcfc932f683286156eb68e87d248
+94466895ad77dcfc932f683286156eb68e87d248,94466895,Fixed copy-paste error in DualJoystickView,"Fixed copy-paste error in DualJoystickView
+",,,,fredg02,unknown,fredg02,unknown,1371937735,1371937735,b389a08f88cb3323612004302bc7c02df22a928f
+b389a08f88cb3323612004302bc7c02df22a928f,b389a08f,Fixed Issue #6 - Added x-mode,"Fixed Issue #6 - Added x-mode
+",,,,fredg02,unknown,fredg02,unknown,1371937687,1371937687,c68f3de58f178e2acbb003168e9f30ec071ee44c
+c68f3de58f178e2acbb003168e9f30ec071ee44c,c68f3de5,Added CommanderPacket constructor,"Added CommanderPacket constructor
+",,,,fredg02,unknown,fredg02,unknown,1371922671,1371922671,a93083d310a8b4388a61041a3bcf9aebeeb1f52c
+a93083d310a8b4388a61041a3bcf9aebeeb1f52c,a93083d3,"Issue #6 - Added ""advanced flight control"" preferences for max roll/pitch angle,…","Issue #6 - Added ""advanced flight control"" preferences for max roll/pitch angle, max yaw angle, max thrust, min thrust
+",,,,fredg02,unknown,fredg02,unknown,1371921121,1371921121,0dacb15cda2f07a6fb94187334cd553796647eb2
+0dacb15cda2f07a6fb94187334cd553796647eb2,0dacb15c,"Fixed Issue #3 - Use android:launchMode=""singleTop""","Fixed Issue #3 - Use android:launchMode=""singleTop""
+",,,,fredg02,unknown,fredg02,unknown,1371897588,1371897588,225b880e77aeb447f6810504b68d62cab14b9295
+225b880e77aeb447f6810504b68d62cab14b9295,225b880e,New approach to disable on-screen controls when external controller is used: Any…,"New approach to disable on-screen controls when external controller is used: Any joystick movement disables on-screen controls until onResume() is called again. Still not perfect...
+",,,,fredg02,unknown,fredg02,unknown,1371776734,1371776734,80cf7717f80f7ca6f482f765e2fc218b0dc7f04c
+80cf7717f80f7ca6f482f765e2fc218b0dc7f04c,80cf7717,Issue #1 - Reset axis values when onPause() is called,"Issue #1 - Reset axis values when onPause() is called
+",,,,fredg02,unknown,fredg02,unknown,1371776401,1371776401,aa76fa35f48d045079834321dab8b5e093ab7918
+aa76fa35f48d045079834321dab8b5e093ab7918,aa76fa35,Added simple debug mode,"Added simple debug mode
+",,,,fredg02,unknown,fredg02,unknown,1371775740,1371775740,ee766976a14349719e6385600e09cec845a1bbfc
+ee766976a14349719e6385600e09cec845a1bbfc,ee766976,Removed explicit check for PS3 controller,"Removed explicit check for PS3 controller
+",,,,fredg02,unknown,fredg02,unknown,1371689816,1371689816,48c2e9b6235314b13fee725f745fc0c88a82a487
+48c2e9b6235314b13fee725f745fc0c88a82a487,48c2e9b6,Added rudimentary support for using a PS3 controller as input device,"Added rudimentary support for using a PS3 controller as input device
+",,,,fredg02,unknown,fredg02,unknown,1371421176,1371421176,be28c892905707438b3ec72e16de9731c437336c
+be28c892905707438b3ec72e16de9731c437336c,be28c892,Added input validation for radioChannel and deadzone preferences,"Added input validation for radioChannel and deadzone preferences
+",,,,fredg02,unknown,fredg02,unknown,1371419676,1371419676,4222c6942325cd09b5842fd0a94d184a779d4fb2
+4222c6942325cd09b5842fd0a94d184a779d4fb2,4222c694,"Added deadzone preference, added inputType for channel and deadzone preference","Added deadzone preference, added inputType for channel and deadzone preference
+",,,,fredg02,unknown,fredg02,unknown,1371416694,1371416694,84de2c9f272235fd06a61c3c56d30b596cf81b7c
+84de2c9f272235fd06a61c3c56d30b596cf81b7c,84de2c9f,Fixed Issue #2…,"Fixed Issue #2 (https://bitbucket.org/bitcraze/crazyflie-android-client/issue/2/options-for-controller-mode), added preference for mode, added layer between joystick axes and pitch, roll, thrust, yaw values, added deadzone
+",,,,fredg02,unknown,fredg02,unknown,1371394577,1371394577,438f476430f7ac7185c426af9e42627198900358
+438f476430f7ac7185c426af9e42627198900358,438f4764,Allow both landscape modes (use sensor),"Allow both landscape modes (use sensor)
+",,,,fredg02,unknown,fredg02,unknown,1371391989,1371391989,fd2003c37dc32abaa91a080a982edc14256f5f27
+fd2003c37dc32abaa91a080a982edc14256f5f27,fd2003c3,"Show pitch, roll, thrust and yaw values on screen","Show pitch, roll, thrust and yaw values on screen
+",,,,fredg02,unknown,fredg02,unknown,1371391838,1371391838,6b0efaf7b6962732163e37ad1282facbdbff14cf
+6b0efaf7b6962732163e37ad1282facbdbff14cf,6b0efaf7,"Refactored radio link code from MainActivity into RadioLink, fixed connect/disconnect buttons","Refactored radio link code from MainActivity into RadioLink, fixed connect/disconnect buttons
+",,,,fredg02,unknown,fredg02,unknown,1371389619,1371389619,be7e2fc6cd07d37c9f44114996fabd99ac70500b
+be7e2fc6cd07d37c9f44114996fabd99ac70500b,be7e2fc6,Set radioChannel and radioBandwidth in onResume() method,"Set radioChannel and radioBandwidth in onResume() method
+",,,,fredg02,unknown,fredg02,unknown,1371387913,1371387913,d4a42cf0d349ae632237e0156e4691eb2d2b3cd1
+d4a42cf0d349ae632237e0156e4691eb2d2b3cd1,d4a42cf0,"Added preferences page for setting radio channel and radio bandwidth, cleaned up code.","Added preferences page for setting radio channel and radio bandwidth, cleaned up code.
+",,,,fredg02,unknown,fredg02,unknown,1370221602,1370221602,4959731c091477447650f3bb2835b879a4a9ed66
+4959731c091477447650f3bb2835b879a4a9ed66,4959731c,Fixed Issue #1…,"Fixed Issue #1 (https://bitbucket.org/bitcraze/crazyflie-android-client/issue/1/debugging-using-eclipse)
+",,,,fredg02,unknown,fredg02,unknown,1370211584,1370211584,50fe4ce017582ca33b734fe843d258ceec1d3c47
+50fe4ce017582ca33b734fe843d258ceec1d3c47,50fe4ce0,Fixed force close on start by updating .classpath,"Fixed force close on start by updating .classpath
+",,,,fredg02,unknown,fredg02,unknown,1370211440,1370211440,b38de8ac4e35c1343b9444a1e092b234aed41da3
+b38de8ac4e35c1343b9444a1e092b234aed41da3,b38de8ac,Starting 'dev' branch,"Starting 'dev' branch
+",,,,fredg02,unknown,fredg02,unknown,1370211094,1370211094,ff457f2e61cc8829e789b50f0dafe715231d9981
+ff457f2e61cc8829e789b50f0dafe715231d9981,ff457f2e,Corrected RPY order in commander packet and disabled most debug printout,"Corrected RPY order in commander packet and disabled most debug printout
+
+Debug printouts where slowing down the control
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1366012132,1366012132,cd64628814aeaf69551c72483a7e1a1af3d68c75
+cd64628814aeaf69551c72483a7e1a1af3d68c75,cd646288,Fixed compilation issues and set API level to 14 (Android 4.0),"Fixed compilation issues and set API level to 14 (Android 4.0)
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1360590119,1360590119,a9ecfee5b4ad8d0aff25593fcd2c45593fae61b6
+a9ecfee5b4ad8d0aff25593fcd2c45593fae61b6,a9ecfee5,Working for controlling Crazyflie,"Working for controlling Crazyflie
+",,,,Marcus Eliasson,marcus@bitcraze.se,Marcus Eliasson,marcus@bitcraze.se,1359664340,1359664340,3b79d81bd1004ba529ea4351317e5702d9ba6966
+3b79d81bd1004ba529ea4351317e5702d9ba6966,3b79d81b,Added readme,"Added readme
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1357902669,1357902669,a826b1cd6f12849ca9747ad9c52b01ab680321ad
+a826b1cd6f12849ca9747ad9c52b01ab680321ad,a826b1cd,Send commander command to start the motors and added some project files,"Send commander command to start the motors and added some project files
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1357902069,1357902069,4fbb0dd016090ed306d6bff4e0a09d7159a3f159
+4fbb0dd016090ed306d6bff4e0a09d7159a3f159,4fbb0dd0,Connect to the radio and sends a NULL parcket cyclically.,"Connect to the radio and sends a NULL parcket cyclically.
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1352649430,1352649430,648f0fc614c50bbc8006a98cce069fe422028952
+648f0fc614c50bbc8006a98cce069fe422028952,648f0fc6,"Initial commit, only joysticks and icon","Initial commit, only joysticks and icon
+",,,,Arnaud Taffanel,unknown,Arnaud Taffanel,unknown,1352044501,1352044501,

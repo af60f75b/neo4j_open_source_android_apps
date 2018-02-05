@@ -1,0 +1,137 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0ca305acb933b43a092ed97b4a0e06c5ecb2a50f,0ca305ac,version 1.8.2: better support for Android TV,"version 1.8.2: better support for Android TV
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1510070109,1510088556,ff08a83c67b27b7b6cca99b0c6f2088e30cc7e6e
+ff08a83c67b27b7b6cca99b0c6f2088e30cc7e6e,ff08a83c,added watchdog service,"added watchdog service
+
+* added CheckRestartSerivice that checks the Bizplay server for the need
+to reboot
+
+* since a reboot cannot be performed by 'normal' apps on a non rooted
+device the app itself is restarted
+
+* added colaboration between the MainActivity and CheckRestartService on
+the base of a binding of the new IserviceCallBacks Interface that is
+implemented by the MainActivity. The MainActivity starts the service so
+it runs in the same thread and the inter thread communicaton that is
+adviced for loosly coupled services is not needed.
+
+* the new service is added to AndroidManifest, an unused service has
+been removed from it.
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1508413735,1508413735,2c93abf368300be91f44890b5d4d2602dec293a2
+2c93abf368300be91f44890b5d4d2602dec293a2,2c93abf3,fix intent and improved exception handling,"fix intent and improved exception handling
+
+* better logging of the exception that occurred
+
+* hand exception to 'real' defailt exception handler
+
+* fixed PendingIntent flag
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1508413595,1508413595,750c455828d113948f8f1ef683ba6c4ecdaad501
+750c455828d113948f8f1ef683ba6c4ecdaad501,750c4558,shortened Log tag to fit 23 characters,"shortened Log tag to fit 23 characters
+
+made shure the classname variable did not contain a string longer than
+23 characters
+
+added two extra logging statements
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1508412772,1508412772,3a173138cb0def8a3b3deaf129a54b04d427d0f2
+3a173138cb0def8a3b3deaf129a54b04d427d0f2,3a173138,start v1.8.0; activated CheckRestart and deactivated Playr service,"start v1.8.0; activated CheckRestart and deactivated Playr service
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1508399291,1508399291,c85b1da286e82394ffaf487c5ba68eccd18aeb09
+c85b1da286e82394ffaf487c5ba68eccd18aeb09,c85b1da2,first commit v1.7.2; added intent to ensure better startup behaviour,"first commit v1.7.2; added intent to ensure better startup behaviour
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1507144857,1507144857,94a442fb29f73b4fe53aff72c1c98d7902548073
+94a442fb29f73b4fe53aff72c1c98d7902548073,94a442fb,extended readme and fixed typos,"extended readme and fixed typos
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1496044497,1496045053,440662853048f14250b1057bd9addcf3615c8f4b
+440662853048f14250b1057bd9addcf3615c8f4b,44066285,set project.properties target to same value as Manifest,"set project.properties target to same value as Manifest
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1495200141,1495200141,71fdea10a2013c5c500d7cee7422640d17e19c4c
+71fdea10a2013c5c500d7cee7422640d17e19c4c,71fdea10,added comment,"added comment
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1491503951,1491503951,86aa1c739143f4610cbf0ced7f9227b089638863
+86aa1c739143f4610cbf0ced7f9227b089638863,86aa1c73,added singleInstance launch mode to prevent multiple instamces of the main activity,"added singleInstance launch mode to prevent multiple instamces of the main activity
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1491501456,1491501456,05ea8f60f636345f5b5df08fdc7bba62dd505f87
+05ea8f60f636345f5b5df08fdc7bba62dd505f87,05ea8f60,"WIP in version 1.7, added alternative for getting mwake","WIP in version 1.7, added alternative for getting mwake
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1491501313,1491501313,efc9f2a614da51b3eefe8693a6145b370107ca0e
+efc9f2a614da51b3eefe8693a6145b370107ca0e,efc9f2a6,"reintroduced WakeLock and removed unused references to PowerManager, version 1.6.8","reintroduced WakeLock and removed unused references to PowerManager, version 1.6.8
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487248614,1487248614,d79e4b35012c6d2f986b34234f039b8c76424976
+d79e4b35012c6d2f986b34234f039b8c76424976,d79e4b35,version 1.6.6,"version 1.6.6
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487201445,1487201445,0645ccea7ae0718f393a697c8abe3aa1e1a0e1e2
+0645ccea7ae0718f393a697c8abe3aa1e1a0e1e2,0645ccea,removed uncompilable code,"removed uncompilable code
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487111684,1487111684,2ee99bc7d6aa17f5ecdca2c82c183a3e461b83f7
+2ee99bc7d6aa17f5ecdca2c82c183a3e461b83f7,2ee99bc7,changed keep alive strategy,"changed keep alive strategy
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487111088,1487111088,4766da476b20a766d212a85ad90f9d8c9607db4c
+4766da476b20a766d212a85ad90f9d8c9607db4c,4766da47,"added app version number, prepared restart of MainActivity","added app version number, prepared restart of MainActivity
+
+changed method of keeping MainActivity alive
+removed spaces
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487110362,1487110797,c44a472bb828ad9070c3f0b99de3b7320026065a
+c44a472bb828ad9070c3f0b99de3b7320026065a,c44a472b,extended CheckRestartService that checks server if the MainActivity should be…,"extended CheckRestartService that checks server if the MainActivity should be restarted, TODO set up communication to MainActivity and use this service
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487108506,1487108506,bb83a9b2c76b31fe01f7cbe3a776732bbead7546
+bb83a9b2c76b31fe01f7cbe3a776732bbead7546,bb83a9b2,"added app_version, to bring Android app in sync with Chrome app","added app_version, to bring Android app in sync with Chrome app
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1487108048,1487108048,e019708ed4d3bc3abbe72afe4378d8fa9b1eec00
+e019708ed4d3bc3abbe72afe4378d8fa9b1eec00,e019708e,WIP,"WIP
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1479411236,1479411236,95278e4532e7cc4a33199ec8fa60ed3ad6592fce
+95278e4532e7cc4a33199ec8fa60ed3ad6592fce,95278e45,WIP,"WIP
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1479402311,1479402311,336cc31281660633d6276441da359608cbb74c52
+336cc31281660633d6276441da359608cbb74c52,336cc312,removed trailing spaces,"removed trailing spaces
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1479376439,1479376439,7aafec524430c33801f02561a0d5fafdda5b4edd
+7aafec524430c33801f02561a0d5fafdda5b4edd,7aafec52,fixed readme,"fixed readme
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1478001938,1478001938,cf7468b3792df4a382f8a67e92768686ad74b0d4
+cf7468b3792df4a382f8a67e92768686ad74b0d4,cf7468b3,removed unused alternative implementations,"removed unused alternative implementations
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477995752,1477995752,f3591d19921343fd9d4039bf8858531070c3c531
+f3591d19921343fd9d4039bf8858531070c3c531,f3591d19,url decode done properly,"url decode done properly
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477995713,1477995713,45d343f33b871e853e345c57fff53df3e67dc266
+45d343f33b871e853e345c57fff53df3e67dc266,45d343f3,raised min target version to 19 to make sure Chrome Webview is used,"raised min target version to 19 to make sure Chrome Webview is used
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477945672,1477945672,a62cf620b1b35c9b1823b633963247fe718aca80
+a62cf620b1b35c9b1823b633963247fe718aca80,a62cf620,"New status parameters, error handling of webview","New status parameters, error handling of webview
+
+Removed unused includes
+
+Added new parameters to the playr_loader html to show the status of the
+webview
+
+Added logic to handle errors in the webview by reloading the webview.
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477945429,1477945429,36e2c927c8c9a2ae4ca0d97502b561d4422c8ed7
+36e2c927c8c9a2ae4ca0d97502b561d4422c8ed7,36e2c927,added two new parameters to show during initial loading,"added two new parameters to show during initial loading
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477943863,1477943863,a193846a4ab01efd90494674f4cfc6d7a8e37de5
+a193846a4ab01efd90494674f4cfc6d7a8e37de5,a193846a,removed unused include,"removed unused include
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477943821,1477943821,dc86ab380c11569474eb7c4b13cb566fafa2ad5a
+dc86ab380c11569474eb7c4b13cb566fafa2ad5a,dc86ab38,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477322372,1477322372,"4f3581ab99aef254fd1b4cbe06fa66a0c4567f31,d7355abfac1e9d74d2312a4a5e185fa838b8793c"
+4f3581ab99aef254fd1b4cbe06fa66a0c4567f31,4f3581ab,added Android version number list reference,"added Android version number list reference
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1477322344,1477322344,e54c0ad8030575efd910c6abb0f757f407746c74
+d7355abfac1e9d74d2312a4a5e185fa838b8793c,d7355abf,Got rid of border around the Ajax loader and the pixel in the middle.,"Got rid of border around the Ajax loader and the pixel in the middle.
+",,,,Pascal Lindelauf,pascal@lindelauf.com,Pascal Lindelauf,pascal@lindelauf.com,1477322161,1477322161,fb96463eeafc7fba41cb8e0bbeeb40c2eb8950be
+fb96463eeafc7fba41cb8e0bbeeb40c2eb8950be,fb96463e,excluded IntelliJ meta data from git,"excluded IntelliJ meta data from git
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1467928584,1467928584,e54c0ad8030575efd910c6abb0f757f407746c74
+e54c0ad8030575efd910c6abb0f757f407746c74,e54c0ad8,WIP; todo remove commented out code,"WIP; todo remove commented out code
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1467897241,1467897241,5bf0f55cf8f470d69d5b9c2c9d2b8520944ea837
+5bf0f55cf8f470d69d5b9c2c9d2b8520944ea837,5bf0f55c,changed logging to use className variable to make porting codebase to the…,"changed logging to use className variable to make porting codebase to the different branded apps easier
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1467193261,1467193261,6c76ad86830dc7f2ff93b3e73068c49867d09830
+6c76ad86830dc7f2ff93b3e73068c49867d09830,6c76ad86,increased version number and deleted unused file,"increased version number and deleted unused file
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464088001,1464088001,1183267cf8cd8cc264d176d179bdd70acfd2975a
+1183267cf8cd8cc264d176d179bdd70acfd2975a,1183267c,"added exception recovery fucntionality, straightened out spaces and tabs,…","added exception recovery fucntionality, straightened out spaces and tabs, corrected logging statements
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464087972,1464087972,f268674d8bedd77a699d28fc784af0b19771aabf
+f268674d8bedd77a699d28fc784af0b19771aabf,f268674d,WIP,"WIP
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464087544,1464087544,8748b3d9dcccb9f0ae2f8e582c03e0f6ef510e3b
+8748b3d9dcccb9f0ae2f8e582c03e0f6ef510e3b,8748b3d9,added logging,"added logging
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464086122,1464086122,750e8ce3c62788467fc91b2c7e1c7cde78c6550b
+750e8ce3c62788467fc91b2c7e1c7cde78c6550b,750e8ce3,"added logging, TODO start main activity, although that seems unecessary at the…","added logging, TODO start main activity, although that seems unecessary at the moment becuase of the intent that is used for the main activity (launcher)
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464085404,1464085404,1d6090d0ecb7e92a65fa0e89774f07afdcc3692c
+1d6090d0ecb7e92a65fa0e89774f07afdcc3692c,1d6090d0,"added logging, changed alarm type to also wakeup device","added logging, changed alarm type to also wakeup device
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464085219,1464085219,da65bb688e7be9e0e459ef5a713b193ec8e4287e
+da65bb688e7be9e0e459ef5a713b193ec8e4287e,da65bb68,make fucntionality in synch with the Manifest and DefaultExceptionhandler,"make fucntionality in synch with the Manifest and DefaultExceptionhandler
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464084855,1464084855,312b1ffacf2cbe336ed867df21a43db02f6ef56a
+312b1ffacf2cbe336ed867df21a43db02f6ef56a,312b1ffa,added logging,"added logging
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1464084780,1464084780,2e1710a34688cd17bea048fc2d72a340d6361859
+2e1710a34688cd17bea048fc2d72a340d6361859,2e1710a3,"deleted unused file, fixed spacing","deleted unused file, fixed spacing
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1463524592,1463524592,f5bf64f10ddebef7bd715632b1ef2e4ef4729608
+f5bf64f10ddebef7bd715632b1ef2e4ef4729608,f5bf64f1,Added logic to restart app after exception/crash/killing of app,"Added logic to restart app after exception/crash/killing of app
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1463171772,1463171772,ee8179a9693b57043778de1d0d38cd170e60d393
+ee8179a9693b57043778de1d0d38cd170e60d393,ee8179a9,increased version number,"increased version number
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1459283950,1459283950,885c2d97f2979c0b6283ac2ff9d749e4858925d0
+885c2d97f2979c0b6283ac2ff9d749e4858925d0,885c2d97,removed spacde,"removed spacde
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1459283884,1459283884,ef050e7dc3320f550d06da54396e44b27eee2687
+ef050e7dc3320f550d06da54396e44b27eee2687,ef050e7d,made comment equal to other android app repos,"made comment equal to other android app repos
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1459283831,1459283831,466cfb78f6209daf49c460d66f8f295508f2e3f3
+466cfb78f6209daf49c460d66f8f295508f2e3f3,466cfb78,fixed missing ;,"fixed missing ;
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1459283680,1459283680,bf384393b6b0d1651a2fb214e7c5cac1d8f7361b
+bf384393b6b0d1651a2fb214e7c5cac1d8f7361b,bf384393,added MIT license,"added MIT license
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1447453118,1447453118,ea3ff5c859bbbb41a2b827e9521f15ab0261b7e8
+ea3ff5c859bbbb41a2b827e9521f15ab0261b7e8,ea3ff5c8,"Initial commit. Version code 9, version name 1.5.4 (to comply with existing…","Initial commit. Version code 9, version name 1.5.4 (to comply with existing versions of the Playr Android app)
+",,,,Bob Groeneveld,bob.groeneveld@gmail.com,Bob Groeneveld,bob.groeneveld@gmail.com,1447452497,1447452497,

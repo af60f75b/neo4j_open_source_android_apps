@@ -1,0 +1,352 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+269ebff4d33c3d41c8d4522888ee15919cffba3e,269ebff4,Readme for main gihub page.,"Readme for main gihub page.
+",,,,Igor Hjelmstrom Vinhas Ribeiro,igorhvr@iasylum.net,Igor Hjelmstrom Vinhas Ribeiro,igorhvr@iasylum.net,1318204927,1318204927,0b8e1c057dbd66763c7244d01a6ed53bfd99534e
+0b8e1c057dbd66763c7244d01a6ed53bfd99534e,0b8e1c05,Implement 'scroll to answer' (suggested by Jan Egil Hagen),"Implement 'scroll to answer' (suggested by Jan Egil Hagen)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1307563623,1307563623,e32fb9d62796d9f738b4dce1998a26b2fcf184e8
+e32fb9d62796d9f738b4dce1998a26b2fcf184e8,e32fb9d6,Tidy up line breaks for easy copy and paste.,"Tidy up line breaks for easy copy and paste.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1307563397,1307563397,faff6ce36ba64a770f1d8579e33fcc13048353df
+faff6ce36ba64a770f1d8579e33fcc13048353df,faff6ce3,Added tag mnemododo-1.3.0 for changeset 62e01db27eaf,"Added tag mnemododo-1.3.0 for changeset 62e01db27eaf
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1304856321,1304856321,e9eebe1ef3bcc43b0c2adaff98277198875aaa78
+e9eebe1ef3bcc43b0c2adaff98277198875aaa78,e9eebe1e,Add the changes for version 1.2.0 (better late than never).,"Add the changes for version 1.2.0 (better late than never).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1304856295,1304856295,104c9199a470cef9d907d2a1e8f052b4996e38d9
+104c9199a470cef9d907d2a1e8f052b4996e38d9,104c9199,Spanish translation is not ready in time for 1.3.0 release.,"Spanish translation is not ready in time for 1.3.0 release.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1304837170,1304837170,374f078a592c2c4190e38155bf2eb4f91a4b1215
+374f078a592c2c4190e38155bf2eb4f91a4b1215,374f078a,Bump version code for release.,"Bump version code for release.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1304836977,1304836977,a42445d01052ff90abab97ee24b6286e5b1fcbcd
+a42445d01052ff90abab97ee24b6286e5b1fcbcd,a42445d0,Add rotation in key config fix to CHANGES.,"Add rotation in key config fix to CHANGES.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303673059,1303673059,0276984a2ecebb56a08974c3e106e772f4cce1bb
+0276984a2ecebb56a08974c3e106e772f4cce1bb,0276984a,Properly handle rotation when setting keys.,"Properly handle rotation when setting keys.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303672998,1303672998,e2f3833373306ee8061c73ad33a9bef1fc79953e
+e2f3833373306ee8061c73ad33a9bef1fc79953e,e2f38333,Attempt to fix intermittent problems playing sounds.,"Attempt to fix intermittent problems playing sounds.
+
+Sounds usually work, but then sometimes, for reasons that have
+not been ascertained, they stop with an IOException. This
+problem occurs quite regularly on a real handset, but has never
+occurred in the emulator.
+
+The phone log (obtained over USB with ddms) contains the entries:
+  WARN/PlayerDriver(16515): PVMFInfoErrorHandlingComplete
+  WARN/MediaPlayer(16634): info/warning (1, 26)
+  ERROR/PlayerDriver(16515): Command PLAYER_SET_DATA_SOURCE
+	    completed with an error or info PVMFErrNotSupported
+  ERROR/MediaPlayer(16634): error (1, -4)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303482965,1303482965,268300c11e9c93a80e0a809ded2a459628e91dc5
+268300c11e9c93a80e0a809ded2a459628e91dc5,268300c1,Eliminate another race condition.,"Eliminate another race condition.
+
+This one can be triggered by launching Mnemododo, and then, very
+quickly, pressing the Home button while the ""loading statistics""
+dialog is displayed. Mnemododo will then crash on restart (even
+in the emulator).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303482822,1303482822,9c0fa9fe8165b520e2c760493a083db3bff09cd8
+9c0fa9fe8165b520e2c760493a083db3bff09cd8,9c0fa9fe,Work around a race condition on resume.,"Work around a race condition on resume.
+
+This code worked on the assumption that the application object
+would be resumed before any of the child threads, thus allowing
+it to call updateCallback() before onPostExecute(). This always
+seemed to work on the emulator, but the phone crashed sometimes.
+Using usb debugging I traced the error to a null pointer (on
+callback) in onPostExecute(). This patch works around the
+problem by caching the result if it is retrieved before a
+callback object is specified.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303243843,1303243843,503f6fc545181cc948bdf24591012abd5e0b9427
+503f6fc545181cc948bdf24591012abd5e0b9427,503f6fc5,Shuffle options around.,"Shuffle options around.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1303243611,1303243611,f32f80c0956b54e36e3a8253d4e7c17c498d0eab
+f32f80c0956b54e36e3a8253d4e7c17c498d0eab,f32f80c0,Update for ADT 8.,"Update for ADT 8.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1300773848,1300773848,b922d7be5c5674e68b3b8bb787e6e40b88879bed
+b922d7be5c5674e68b3b8bb787e6e40b88879bed,b922d7be,Fix the recording of thinking times (only affected dev versions).,"Fix the recording of thinking times (only affected dev versions).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1297143237,1297143237,4f6c27ba0c0c5661f3dac708dddfd58968aec6ac
+4f6c27ba0c0c5661f3dac708dddfd58968aec6ac,4f6c27ba,Add Spanish translation.,"Add Spanish translation.
+
+(Thanks to Paco Cubí.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1296424892,1296424892,e11211d493a071d2f00eaed240969f4457f96f94
+e11211d493a071d2f00eaed240969f4457f96f94,e11211d4,Default to the light style.,"Default to the light style.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1296412550,1296412550,82b5e0f9b7857a8704112d1fde1ce414a2f717a9
+82b5e0f9b7857a8704112d1fde1ce414a2f717a9,82b5e0f9,Fix screen rotation bugs in Settings dialog.,"Fix screen rotation bugs in Settings dialog.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1296406145,1296406145,cfdfaf5822fa16a7c3c9046cbd14893c37baa18a
+cfdfaf5822fa16a7c3c9046cbd14893c37baa18a,cfdfaf58,Tidy up callbacks from ProgressTasks.,"Tidy up callbacks from ProgressTasks.
+
+Shift more of the logic for handling pausing and resuming of
+asynchronous tasks into the ProgressTask class, and update the
+subclasses appropriately. The implementation is still ugly, but
+it seems a bit better than before.
+
+The problem is that we need to work with the latest copy of an
+Application or Settings class in the code that is executed when
+a ProgressTask completes. And these classes may have been
+destroyed and recreated in the meantime (due to pause and
+resume).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1296396967,1296396967,91302f053e8c68b096c532e93600c9511ae325e6
+91302f053e8c68b096c532e93600c9511ae325e6,91302f05,Flip the dark icon horizontally.,"Flip the dark icon horizontally.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1294170063,1294170063,cb01577995264a5b3a10ea6d719ee41c2373845b
+cb01577995264a5b3a10ea6d719ee41c2373845b,cb015779,The card loading task should not be cancelled.,"The card loading task should not be cancelled.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293946607,1293946607,50a4ffbdd62cf309008c4363c551e3e3881de223
+50a4ffbdd62cf309008c4363c551e3e3881de223,50a4ffbd,Add a promo graphic.,"Add a promo graphic.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293801217,1293801217,a0a0b5b72733e5a2d17eaee86821dc60be3578c8
+a0a0b5b72733e5a2d17eaee86821dc60be3578c8,a0a0b5b7,Add (commented-out) tag for touchscreen requirement.,"Add (commented-out) tag for touchscreen requirement.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293801209,1293801209,30e744429810662d6240795dddd58ba3bd7379c9
+30e744429810662d6240795dddd58ba3bd7379c9,30e74442,Reduce the contrast of text in the dark mode.,"Reduce the contrast of text in the dark mode.
+
+(Thanks to Mateusz Krzyzosiak for the suggestion.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293713686,1293713686,2c3c7fecb1568ddc06208a3cf0b12b49fa31e55d
+2c3c7fecb1568ddc06208a3cf0b12b49fa31e55d,2c3c7fec,Bump version number to 1.3.0.,"Bump version number to 1.3.0.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293632724,1293632724,14d1d20b3b843d252c3570bd31c8e5cbf29ae909
+14d1d20b3b843d252c3570bd31c8e5cbf29ae909,14d1d20b,Fix crashes on screen orientation change in Settings.,"Fix crashes on screen orientation change in Settings.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293632607,1293632607,635d6a13295fd740b3a89359c8918d1fdc27e00b
+635d6a13295fd740b3a89359c8918d1fdc27e00b,635d6a13,Cancel the asynchronous card loading task on pause.,"Cancel the asynchronous card loading task on pause.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293628298,1293628298,874ea9f8609d1cf48711ac7a99a0543f0998be77
+874ea9f8609d1cf48711ac7a99a0543f0998be77,874ea9f8,Fix crash when screen rotated during statistics load.,"Fix crash when screen rotated during statistics load.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293627571,1293627571,5f905d23f895b25e6c66b92797594cbc65d678c1
+5f905d23f895b25e6c66b92797594cbc65d678c1,5f905d23,Don't show emulator skin.,"Don't show emulator skin.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293516404,1293516404,ad174397b8f7f9fcc022af62a5447ab84f5ec272
+ad174397b8f7f9fcc022af62a5447ab84f5ec272,ad174397,Use android.os.AsyncTask rather than copied source code.,"Use android.os.AsyncTask rather than copied source code.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293515981,1293515981,2a1a161343b3746cffa5b3338bcae7ac7384dc5e
+2a1a161343b3746cffa5b3338bcae7ac7384dc5e,2a1a1613,Fix a minor flaw in the dark mode.,"Fix a minor flaw in the dark mode.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293482076,1293482076,ecfd4235c7df9eba69a637316656ee187b4bc09b
+ecfd4235c7df9eba69a637316656ee187b4bc09b,ecfd4235,Danish translation (thanks to Henrik Skov Midtiby),"Danish translation (thanks to Henrik Skov Midtiby)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293465722,1293465722,af1debe2054d673dc212a860c2b94ce242f881e9
+af1debe2054d673dc212a860c2b94ce242f881e9,af1debe2,Polish translation (thanks to Mateusz Krzyzosiak),"Polish translation (thanks to Mateusz Krzyzosiak)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293461788,1293461788,0557c6daffb099f2417fee99386bcac8c04f9068
+0557c6daffb099f2417fee99386bcac8c04f9068,0557c6da,Detect date changes on resume and reload cards if needed.,"Detect date changes on resume and reload cards if needed.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293460993,1293460993,836c8ec4a1a6137492a9d062592f1eeea1df5265
+836c8ec4a1a6137492a9d062592f1eeea1df5265,836c8ec4,Volume buttons control media volume.,"Volume buttons control media volume.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293456876,1293456876,409ed8c85a700666dc3fb200c2fda719605a7c92
+409ed8c85a700666dc3fb200c2fda719605a7c92,409ed8c8,Add dark and dimmed display modes.,"Add dark and dimmed display modes.
+
+(Long press on the number of cards remaining.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293450584,1293450584,f88b78f8f6db09e7e32d29dbb32d2a3937f9e1fc
+f88b78f8f6db09e7e32d29dbb32d2a3937f9e1fc,f88b78f8,Setup the infrastructure for changing styles.,"Setup the infrastructure for changing styles.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293376104,1293376104,04e86b968852817eb35257ce5140e2ee7b153a6b
+04e86b968852817eb35257ce5140e2ee7b153a6b,04e86b96,Tidy up layouts and styles.,"Tidy up layouts and styles.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293366826,1293366826,ac6789e95117aeac15602d2f49e12f9f59ab9d3c
+ac6789e95117aeac15602d2f49e12f9f59ab9d3c,ac6789e9,Add some notes about emulator keys,"Add some notes about emulator keys
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293350071,1293350071,978816ea53830160e64a0f92144cdfe69092d87d
+978816ea53830160e64a0f92144cdfe69092d87d,978816ea,Support for bigger and higher-density screens.,"Support for bigger and higher-density screens.
+
+--HG--
+rename : res/drawable/icon128.png => imgsrc/icon128.png
+rename : res/drawable/icon128.png => res/drawable-mdpi/about.png
+rename : res/drawable/icon.png => res/drawable-mdpi/icon.png
+rename : res/drawable/icon_categories.png => res/drawable-mdpi/icon_categories.png
+rename : res/drawable/icon_schedule.png => res/drawable-mdpi/icon_schedule.png
+rename : res/drawable/icon_skip.png => res/drawable-mdpi/icon_skip.png
+rename : res/drawable/icon_stats.png => res/drawable-mdpi/icon_stats.png
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293346759,1293346759,362042736e022479eded08927748771137227b91
+362042736e022479eded08927748771137227b91,36204273,Add debugger target,"Add debugger target
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293219426,1293219426,4e458202c7891e3ba969b4354347691355d9b93b
+4e458202c7891e3ba969b4354347691355d9b93b,4e458202,Add more targets for diagnostic tools,"Add more targets for diagnostic tools
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1293049564,1293049564,224b32e83343de380c11101329bb9041406ea4ae
+224b32e83343de380c11101329bb9041406ea4ae,224b32e8,Add some more options for the emulator target.,"Add some more options for the emulator target.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1290936486,1290936486,c4d832b270d70abe42cbc42644a9d2435910480a
+c4d832b270d70abe42cbc42644a9d2435910480a,c4d832b2,Adjust tabbing.,"Adjust tabbing.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1290768521,1290768521,febd937fb9358ce23fe5b24b9e3f81f1e6d3a7d9
+febd937fb9358ce23fe5b24b9e3f81f1e6d3a7d9,febd937f,Targets to mount/umount the sdcard image,"Targets to mount/umount the sdcard image
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1290768142,1290768142,d7f6f87352520372392d620664875fb61ded7f44
+d7f6f87352520372392d620664875fb61ded7f44,d7f6f873,Build a tags file.,"Build a tags file.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1290670767,1290670767,d4ccac7e2fe1efe3c24165b5b7c3f0bbbbce7d13
+d4ccac7e2fe1efe3c24165b5b7c3f0bbbbce7d13,d4ccac7e,Add other translations to Makefile.,"Add other translations to Makefile.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1289412439,1289412439,81566183b95cd3fbb9503974fb63c1b40704c9e4
+81566183b95cd3fbb9503974fb63c1b40704c9e4,81566183,Add commands to change language.,"Add commands to change language.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1289356743,1289356743,3013523e75367cf2b698f2ea74111e87cfe56b7f
+3013523e75367cf2b698f2ea74111e87cfe56b7f,3013523e,Add support for command-line development,"Add support for command-line development
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1289356135,1289356135,a7e571a02a3ca07aab94cfa52dcc3ae7d67b03a6
+a7e571a02a3ca07aab94cfa52dcc3ae7d67b03a6,a7e571a0,Incorporate translation to German by Karsten Breitig.,"Incorporate translation to German by Karsten Breitig.
+
+Also add EULAs for other translations.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1289251161,1289251161,ef454e983336f5fda335dbf8207ce0e33e8ce368
+ef454e983336f5fda335dbf8207ce0e33e8ce368,ef454e98,Recompile with 2.2 SDK.,"Recompile with 2.2 SDK.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1279810287,1279810287,5301426a34ee9892409eb81876c8afaa6202def3
+5301426a34ee9892409eb81876c8afaa6202def3,5301426a,Added tag mnemododo-1.2.0 for changeset ee75860f4947,"Added tag mnemododo-1.2.0 for changeset ee75860f4947
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1278158758,1278158758,5494b58fd5a44139fc472f942fd62e7cef129fe9
+5494b58fd5a44139fc472f942fd62e7cef129fe9,5494b58f,Add icon for disable categories feature.,"Add icon for disable categories feature.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1278158484,1278158484,2997c2ebac4543d18922363dd61b3d9dbaaa097f
+2997c2ebac4543d18922363dd61b3d9dbaaa097f,2997c2eb,Add Croation translation for activate categories feature.,"Add Croation translation for activate categories feature.
+(Thanks to Jovica Popovic)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275902344,1275902344,4b36fe74243f6998d23aa923bc99a69d120856c6
+4b36fe74243f6998d23aa923bc99a69d120856c6,4b36fe74,Add icon and translations for Category activation.,"Add icon and translations for Category activation.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275731483,1275731483,857cd00c75385c1d8a997cd2140170bdc077787f
+857cd00c75385c1d8a997cd2140170bdc077787f,857cd00c,Bump version number.,"Bump version number.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275455699,1275455699,2ea1601eb1d531d430bd62c9942696d858f16ea6
+2ea1601eb1d531d430bd62c9942696d858f16ea6,2ea1601e,Fix some warnings.,"Fix some warnings.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275413494,1275413494,04fe9885b776d641e0e452e3854f3326c5f76380
+04fe9885b776d641e0e452e3854f3326c5f76380,04fe9885,Working activate categories feature.,"Working activate categories feature.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275413484,1275413484,b3f9ee68e21543bd8e089242ff91c867a1a1e0ca
+b3f9ee68e21543bd8e089242ff91c867a1a1e0ca,b3f9ee68,Fix Chinese translations (sound is supported).,"Fix Chinese translations (sound is supported).
+(Thanks to Chenyi Zhang)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275373768,1275373768,08e77768830e38cbc8ef44675c93bd99592dd17e
+08e77768830e38cbc8ef44675c93bd99592dd17e,08e77768,First draft of support for category deactivation.,"First draft of support for category deactivation.
+(Not working properly yet.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275373324,1275373324,54308e5967472dd33836d09ea74d4356d70b0a05
+54308e5967472dd33836d09ea74d4356d70b0a05,54308e59,Make the package_name adjustable (for demo clients),"Make the package_name adjustable (for demo clients)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275308815,1275308815,d70ce9ba57773debbc1e4606af732cd056215056
+d70ce9ba57773debbc1e4606af732cd056215056,d70ce9ba,Added tag mnemododo-1.1.2 for changeset e5625fbd0038,"Added tag mnemododo-1.1.2 for changeset e5625fbd0038
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275286994,1275286994,52f2246cb33aa02d08395d9420a577d46cf4dbf3
+52f2246cb33aa02d08395d9420a577d46cf4dbf3,52f2246c,Allow multiple demodecks to share the same images and sounds.,"Allow multiple demodecks to share the same images and sounds.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275286976,1275286976,731836e281d2b2edcb8583977d628fd329e655a6
+731836e281d2b2edcb8583977d628fd329e655a6,731836e2,Fix French translation.,"Fix French translation.
+(thanks to Jean-Baptiste Rouquier)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275285977,1275285977,1948b96a15cfa5efa9ae3b92f97e26f91c2947e3
+1948b96a15cfa5efa9ae3b92f97e26f91c2947e3,1948b96a,Added tag mnemododo-1.1.2 for changeset 724d23c42389,"Added tag mnemododo-1.1.2 for changeset 724d23c42389
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275242179,1275242179,18a09f8ad8e69024e993cd444962b6d647c0056a
+18a09f8ad8e69024e993cd444962b6d647c0056a,18a09f8a,Add use-permissions for the SDCARD.,"Add use-permissions for the SDCARD.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275242166,1275242166,33f7b917c8583aa8e6ac644f4b6ac32bd973195c
+33f7b917c8583aa8e6ac644f4b6ac32bd973195c,33f7b917,Minor adjustments to translation files.,"Minor adjustments to translation files.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275238360,1275238360,128d8acc619d246bbeaaf0d79eb8a0b092f8697e
+128d8acc619d246bbeaaf0d79eb8a0b092f8697e,128d8acc,Reorganise classes to make demos easier to maintain.,"Reorganise classes to make demos easier to maintain.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275233841,1275233841,fdc441bf0914c506a3f0c011bf1bad54f829b7ed
+fdc441bf0914c506a3f0c011bf1bad54f829b7ed,fdc441bf,Added tag mnemododo-1.1.2 for changeset b30c11837051,"Added tag mnemododo-1.1.2 for changeset b30c11837051
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275223741,1275223741,0b93cb655f176cd0ddea5617fc59c74c0c6cfad8
+0b93cb655f176cd0ddea5617fc59c74c0c6cfad8,0b93cb65,Update CHANGES file.,"Update CHANGES file.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275223728,1275223728,7ca045b998ff1df28af823a8c7a7588ed629174d
+7ca045b998ff1df28af823a8c7a7588ed629174d,7ca045b9,Bump version number.,"Bump version number.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275223409,1275223409,b7ad16145c1705e27e8117a38482998fd2f86f69
+b7ad16145c1705e27e8117a38482998fd2f86f69,b7ad1614,Fix centering and font sizes in tables,"Fix centering and font sizes in tables
+(thanks to Matt Kimsal for the report)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275209959,1275209959,97543ab8a8205b4db102e9d5641d72f91b4f4d6f
+97543ab8a8205b4db102e9d5641d72f91b4f4d6f,97543ab8,Add translation credits to the about box.,"Add translation credits to the about box.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275155663,1275155663,ec0cc393b53ba4cefd832d4fe5b367276377d220
+ec0cc393b53ba4cefd832d4fe5b367276377d220,ec0cc393,Adjust button display timings,"Adjust button display timings
+(thanks to feedback from Jean-Baptiste Rouquier)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275143832,1275143832,92b4731a2fae677bdfbaf5c0fdefa75b40608c46
+92b4731a2fae677bdfbaf5c0fdefa75b40608c46,92b4731a,Chinese (Simplified & Traditional) translations (http://goapk.com),"Chinese (Simplified & Traditional) translations (http://goapk.com)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275127134,1275127134,0b58089fa09e182b369c4e1ce1f7c6246f107f3c
+0b58089fa09e182b369c4e1ce1f7c6246f107f3c,0b58089f,Croation translation (Jovica Popovic),"Croation translation (Jovica Popovic)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275127055,1275127055,bfab99ca1f99d837c0458711f81627356534386b
+bfab99ca1f99d837c0458711f81627356534386b,bfab99ca,"Fix market and promo text strings (newlines, sound details).","Fix market and promo text strings (newlines, sound details).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275127020,1275127020,dc3d046539d213acdbc7df30ff9b65a100480794
+dc3d046539d213acdbc7df30ff9b65a100480794,dc3d0465,Backslash-escape apostrophes.,"Backslash-escape apostrophes.
+(thanks to Jean-Baptiste Rouquier for noting this.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1275126915,1275126915,db41a5cf8d48bd9667f48966e749c6d30afc5e9a
+db41a5cf8d48bd9667f48966e749c6d30afc5e9a,db41a5cf,Allow automatic sound playing to be disabled.,"Allow automatic sound playing to be disabled.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1272479005,1272479005,60637d444b39b047a45a5a9b93f575d61d5e78f6
+60637d444b39b047a45a5a9b93f575d61d5e78f6,60637d44,Added tag mnemododo-1.1.1 for changeset 5e6c625b02e5,"Added tag mnemododo-1.1.1 for changeset 5e6c625b02e5
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1271082477,1271082477,1f1c99578a389f2e6f78017d74b6b6fa2ae4e2b0
+1f1c99578a389f2e6f78017d74b6b6fa2ae4e2b0,1f1c9957,Update CHANGES.,"Update CHANGES.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1271082472,1271082472,f97697c66e7dc6076b6e43207c6c08ec14297725
+f97697c66e7dc6076b6e43207c6c08ec14297725,f97697c6,Catch exceptions in the FindCardDir process.,"Catch exceptions in the FindCardDir process.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1271082402,1271082402,702bcf7adc06900392227b072e3cc5e27ffc80c4
+702bcf7adc06900392227b072e3cc5e27ffc80c4,702bcf7a,Added tag mnemododo-1.1.0 for changeset d9c3a01b57bf,"Added tag mnemododo-1.1.0 for changeset d9c3a01b57bf
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270918549,1270918549,6d8bec09ac6dc8a94b67afd96f6d5aefe74205b0
+6d8bec09ac6dc8a94b67afd96f6d5aefe74205b0,6d8bec09,Refine the insertion of silent gaps.,"Refine the insertion of silent gaps.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270918460,1270918460,43cecc6e94daa383b9cd96de73bb3ab259ebe12c
+43cecc6e94daa383b9cd96de73bb3ab259ebe12c,43cecc6e,Shorten text to meet Android Market limits.,"Shorten text to meet Android Market limits.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270918440,1270918440,bf759a920b6d9b74a92a55c5dc7836355e9d1cd1
+bf759a920b6d9b74a92a55c5dc7836355e9d1cd1,bf759a92,Bump version number.,"Bump version number.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270912621,1270912621,4c89eb38bc8e25895b938c3d858bfe80964c46ee
+4c89eb38bc8e25895b938c3d858bfe80964c46ee,4c89eb38,Tidy up the translations.,"Tidy up the translations.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270912241,1270912241,cf80c7f8c042785218b476b2f043c221663816d1
+cf80c7f8c042785218b476b2f043c221663816d1,cf80c7f8,Allow the schedule shortcut when there are no new cards.,"Allow the schedule shortcut when there are no new cards.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270900843,1270900843,01825b5af5976bd141fa09ba4444fcee341d2f85
+01825b5af5976bd141fa09ba4444fcee341d2f85,01825b5a,Minor improvements to sound feature.,"Minor improvements to sound feature.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270899096,1270899096,5633b5e827d4839463912f1f3dfa91f99a64ca94
+5633b5e827d4839463912f1f3dfa91f99a64ca94,5633b5e8,Finish the translation to Dutch.,"Finish the translation to Dutch.
+(Thanks to Mirjam Bourke.)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270899063,1270899063,d5260c851c88b8d1c30ba41f87e6a7fc727b77fc
+d5260c851c88b8d1c30ba41f87e6a7fc727b77fc,d5260c85,Add and update the market and promo texts.,"Add and update the market and promo texts.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270872651,1270872651,91f30c2e36230848ee44e753f13e149dab70d4cd
+91f30c2e36230848ee44e753f13e149dab70d4cd,91f30c2e,Sound working.,"Sound working.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270797294,1270797294,081bb339b8c8bd36638df54e471c4c9e9a9eff9b
+081bb339b8c8bd36638df54e471c4c9e9a9eff9b,081bb339,Preliminary support for sound (not yet debugged).,"Preliminary support for sound (not yet debugged).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270753980,1270753980,521d5eca994e1f979a10cff8901532c2ab67c000
+521d5eca994e1f979a10cff8901532c2ab67c000,521d5eca,Add entry for restrict search.,"Add entry for restrict search.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270723565,1270723565,8d095c894600f1d39c39f2d98345a8bfa9ee0332
+8d095c894600f1d39c39f2d98345a8bfa9ee0332,8d095c89,Add learn ahead feature to change list.,"Add learn ahead feature to change list.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270626557,1270626557,039473be5e0bd6e361202f9950fef922304987c4
+039473be5e0bd6e361202f9950fef922304987c4,039473be,Add 'learn ahead' feature. Still needs testing.,"Add 'learn ahead' feature. Still needs testing.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270626319,1270626319,cf325bc44886e3562ccdaa74eaa22e67508a62e0
+cf325bc44886e3562ccdaa74eaa22e67508a62e0,cf325bc4,Add URLs to README credits.,"Add URLs to README credits.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270615357,1270615357,88c18a21b3c30068c099b5c9864e4d512ef5abf7
+88c18a21b3c30068c099b5c9864e4d512ef5abf7,88c18a21,French translation.,"French translation.
+(thanks to Patrick Jayet and Jean-Baptiste Rouquier)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270615161,1270615161,18f644fec906b0009b0d81e5b2a5c805609663f5
+18f644fec906b0009b0d81e5b2a5c805609663f5,18f644fe,Streamline the restrict search feature.,"Streamline the restrict search feature.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270611059,1270611059,5c12bf46d5a3146912ea84fa65fb81a71f366c6f
+5c12bf46d5a3146912ea84fa65fb81a71f366c6f,5c12bf46,Add an option to restrict searches for card directories.,"Add an option to restrict searches for card directories.
+(Suggested by Jean-Baptiste Rouquier)
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1270544325,1270544325,c194d6fa85e77f95a83e74833c58dd038fef29bb
+c194d6fa85e77f95a83e74833c58dd038fef29bb,c194d6fa,Add UTF-8 meta tag to card html.,"Add UTF-8 meta tag to card html.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1268582462,1268582462,200d5ff09a76c9fc309f05e33acdf5b315e1d254
+200d5ff09a76c9fc309f05e33acdf5b315e1d254,200d5ff0,Added tag mnemododo-1.0.2 for changeset 012472c4998b,"Added tag mnemododo-1.0.2 for changeset 012472c4998b
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1267009017,1267009017,4ffce174075d89e1a70fb00a458b36bd361b43eb
+4ffce174075d89e1a70fb00a458b36bd361b43eb,4ffce174,Add the fullscreen and titlebar preferences.,"Add the fullscreen and titlebar preferences.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1267009009,1267009009,cb96e924b396304784650acec2205da4bbbcd946
+cb96e924b396304784650acec2205da4bbbcd946,cb96e924,Add support for demonstration decks in assets.,"Add support for demonstration decks in assets.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266759471,1266759471,28e900f2a4d31ff0b7165a7a457da8f19f4ff9cc
+28e900f2a4d31ff0b7165a7a457da8f19f4ff9cc,28e900f2,Added tag mnemododo-1.0.1 for changeset 5f293ed65a98,"Added tag mnemododo-1.0.1 for changeset 5f293ed65a98
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266643689,1266643689,b2ff8444be732bf723f425401d55cfc66456075f
+b2ff8444be732bf723f425401d55cfc66456075f,b2ff8444,Removed tag mnemogogo-1.1.0,"Removed tag mnemogogo-1.1.0
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266643677,1266643677,ca5d600ba0286db53d0de730509529a9cc6a32b1
+ca5d600ba0286db53d0de730509529a9cc6a32b1,ca5d600b,Retrieve the version number from the manifest file.,"Retrieve the version number from the manifest file.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266643640,1266643640,c6fac93e0e6fbad1f9407991d616f16bcc13f1fe
+c6fac93e0e6fbad1f9407991d616f16bcc13f1fe,c6fac93e,Exclude invalid characters from css class names.,"Exclude invalid characters from css class names.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266642785,1266642785,400e8803d40febe334e7128f71d512a739b937f2
+400e8803d40febe334e7128f71d512a739b937f2,400e8803,Added tag mnemogogo-1.1.0 for changeset 1850d76805b1,"Added tag mnemogogo-1.1.0 for changeset 1850d76805b1
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266612012,1266612012,a24954724f4c066e6580d685c0701cfc4e9f9579
+a24954724f4c066e6580d685c0701cfc4e9f9579,a2495472,Fix a bug in the version number.,"Fix a bug in the version number.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266612005,1266612005,0104514d8230453946948f49de1e87e7bb6d3039
+0104514d8230453946948f49de1e87e7bb6d3039,0104514d,Added tag mnemododo-1.0.0 for changeset 3d061be98b99,"Added tag mnemododo-1.0.0 for changeset 3d061be98b99
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266610431,1266610431,fd49e613cdeb189a54a2b570e27111f6fa1477b3
+fd49e613cdeb189a54a2b570e27111f6fa1477b3,fd49e613,Disable French and German translations.,"Disable French and German translations.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266610427,1266610427,e1151442e6b019d27f7f356c9ef4118ed8fe86b3
+e1151442e6b019d27f7f356c9ef4118ed8fe86b3,e1151442,Add a file to track bugs and ideas.,"Add a file to track bugs and ideas.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266609493,1266609493,a01b1d91975904a3074025a7cfa46fd14b7db240
+a01b1d91975904a3074025a7cfa46fd14b7db240,a01b1d91,Added tag mnemododo-1.0.0 for changeset 981ef56d8eb1,"Added tag mnemododo-1.0.0 for changeset 981ef56d8eb1
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266609366,1266609366,8177f3c506f2bf0d3928b8cf1cc3e2cadae9b61e
+8177f3c506f2bf0d3928b8cf1cc3e2cadae9b61e,8177f3c5,Adjust the about box for landscape mode.,"Adjust the about box for landscape mode.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266609358,1266609358,84600c3ac022bd4c9b36de7b30b197ca624d6ca7
+84600c3ac022bd4c9b36de7b30b197ca624d6ca7,84600c3a,Added tag mnemododo-1.0.0 for changeset 7bd8379dee40,"Added tag mnemododo-1.0.0 for changeset 7bd8379dee40
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266608522,1266608522,9b1e98c6fc269955464391186817baa0ae61e874
+9b1e98c6fc269955464391186817baa0ae61e874,9b1e98c6,Update the Dutch translation (thanks to Mirjam).,"Update the Dutch translation (thanks to Mirjam).
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266606042,1266606042,4dd24e951972bd44ee9566f183777aee58fbaab6
+4dd24e951972bd44ee9566f183777aee58fbaab6,4dd24e95,Remove an unnecessary string.,"Remove an unnecessary string.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266606027,1266606027,446c42f063fd93b8956c37ff943e5b768d318c58
+446c42f063fd93b8956c37ff943e5b768d318c58,446c42f0,Use capital letters for STYLE.CSS,"Use capital letters for STYLE.CSS
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266586872,1266586872,6fd9073ec1331a069e6815fd59f80e0083e6f4e5
+6fd9073ec1331a069e6815fd59f80e0083e6f4e5,6fd9073e,Remove non-essentials from the translations.,"Remove non-essentials from the translations.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266569309,1266569309,88e078b9d3f3230410d510abb69c81effdefef35
+88e078b9d3f3230410d510abb69c81effdefef35,88e078b9,Bump the version number to 1.0.0.,"Bump the version number to 1.0.0.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266569296,1266569296,e2d131e87e4f27edb4618c624799141fcb99c590
+e2d131e87e4f27edb4618c624799141fcb99c590,e2d131e8,Rearrange the order of the settings.,"Rearrange the order of the settings.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266567269,1266567269,1ff0555c5581088e37db6a3280923f2ed6618012
+1ff0555c5581088e37db6a3280923f2ed6618012,1ff0555c,Implement custom key mappings.,"Implement custom key mappings.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266566560,1266566560,cef90596135a2565f37e611fcf6830ad9dd0e2a8
+cef90596135a2565f37e611fcf6830ad9dd0e2a8,cef90596,Add copyright notice.,"Add copyright notice.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266484492,1266484492,f0f106a583143101ead5aedc4977545aa695039e
+f0f106a583143101ead5aedc4977545aa695039e,f0f106a5,Option for buttons on the left and right of landscape screens.,"Option for buttons on the left and right of landscape screens.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266483501,1266483501,22a2c02189d5a1c373335fd6c8c2295ae5460908
+22a2c02189d5a1c373335fd6c8c2295ae5460908,22a2c021,Category-specific classes in the card html.,"Category-specific classes in the card html.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266463324,1266463324,e5df61bcc19bb59d160ad4e986259e7bf084dca7
+e5df61bcc19bb59d160ad4e986259e7bf084dca7,e5df61bc,Remove unnecessary progress bar panel.,"Remove unnecessary progress bar panel.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266429687,1266429687,dee5c9cf27c3577cf4b2ebb1aa247f453b9be7cf
+dee5c9cf27c3577cf4b2ebb1aa247f453b9be7cf,dee5c9cf,Better handling of screen orientation changes.,"Better handling of screen orientation changes.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266415563,1266415563,1dedf3feb59884d2363331e99a781d55671cfa80
+1dedf3feb59884d2363331e99a781d55671cfa80,1dedf3fe,Add an xsl stylesheet for strings.xml files.,"Add an xsl stylesheet for strings.xml files.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266224545,1266224545,02838b99d3b8059abdc170188eda65f86ef9d8cd
+02838b99d3b8059abdc170188eda65f86ef9d8cd,02838b99,Retab.,"Retab.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266220803,1266220803,2396bddd555f9b134e518a7c6ec4bc887d29e0b1
+2396bddd555f9b134e518a7c6ec4bc887d29e0b1,2396bddd,Only reset the background color when necessary.,"Only reset the background color when necessary.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266155560,1266155560,0ba2a9d2df80b62c6ef00017ca39308457edd0d0
+0ba2a9d2df80b62c6ef00017ca39308457edd0d0,0ba2a9d2,Add option to put grading buttons over two rows.,"Add option to put grading buttons over two rows.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266152351,1266152351,c053f36c9687342f10bb98b29c1fa7b13dc04142
+c053f36c9687342f10bb98b29c1fa7b13dc04142,c053f36c,Improvements to Dutch translation.,"Improvements to Dutch translation.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266086964,1266086964,6cc5db2d7befdc441ce4e587933e1d1b479a76dc
+6cc5db2d7befdc441ce4e587933e1d1b479a76dc,6cc5db2d,Finish first draft of the Dutch translation.,"Finish first draft of the Dutch translation.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1266003531,1266003531,2ff08e16c89b4173f04b90e720a6621aac59d253
+2ff08e16c89b4173f04b90e720a6621aac59d253,2ff08e16,Added tag mnemododo-0.9.0 for changeset 41a372a418b8,"Added tag mnemododo-0.9.0 for changeset 41a372a418b8
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265965179,1265965179,f2731e6ad9c6444b702b70ee9bd0c60836819fbf
+f2731e6ad9c6444b702b70ee9bd0c60836819fbf,f2731e6a,Add EULA.,"Add EULA.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265964759,1265964759,87b33b91df303908966176686274c733f5e02641
+87b33b91df303908966176686274c733f5e02641,87b33b91,Add skeleton files for changes and general information.,"Add skeleton files for changes and general information.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265963484,1265963484,3d2049f465711a80546e602c78b647bdefbcef17
+3d2049f465711a80546e602c78b647bdefbcef17,3d2049f4,Adapt translations from Mnemosyne.,"Adapt translations from Mnemosyne.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265963461,1265963461,2796579795380bba6917eef67c4c63f0ae19fc8b
+2796579795380bba6917eef67c4c63f0ae19fc8b,27965797,Fix some bugs in the handling of thinking_time.,"Fix some bugs in the handling of thinking_time.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265953487,1265953487,d24317d8f33beed5c4e92a459f06a3144a579a78
+d24317d8f33beed5c4e92a459f06a3144a579a78,d24317d8,Change show answer key. Backup stats on good load.,"Change show answer key. Backup stats on good load.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265951619,1265951619,2cbf93147bcb096b06598b0ac144d2b34465be23
+2cbf93147bcb096b06598b0ac144d2b34465be23,2cbf9314,Minor bugfixes and refinements during first real test.,"Minor bugfixes and refinements during first real test.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265914575,1265914575,ceff6c7729f098d95740c963d12d2e3bf8b552db
+ceff6c7729f098d95740c963d12d2e3bf8b552db,ceff6c77,Initial import.,"Initial import.
+* Working prototype.
+* Not yet extensively tested.
+* Translations not started.
+",,,,Timothy Bourke,tim@tbrk.org,Timothy Bourke,tim@tbrk.org,1265870987,1265870987,

@@ -1,0 +1,163 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b98ad285046c084b3605b96548071193da668cd0,b98ad285,Merge pull request #12 from xyzz/ios-fixes,"Merge pull request #12 from xyzz/ios-fixes
+
+Fix iOS keyboard behavior.",,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,GitHub,noreply@github.com,1476343755,1476343755,"92830e8cf634dde9c823a9cbdf1a474619f9ddfc,ecc9dd30f9d643ba8ba9928ae06ca0f5526233bc"
+ecc9dd30f9d643ba8ba9928ae06ca0f5526233bc,ecc9dd30,Fix iOS keyboard behavior.,"Fix iOS keyboard behavior.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1476022307,1476022307,92830e8cf634dde9c823a9cbdf1a474619f9ddfc
+92830e8cf634dde9c823a9cbdf1a474619f9ddfc,92830e8c,Fix platforms.json,"Fix platforms.json
+",,,,Lorenz Hübschle-Schneider,huebschle@kit.edu,Lorenz Hübschle-Schneider,huebschle@kit.edu,1470058456,1470058456,ea43eeffbb4c8b02b09c6cd5814221883562a234
+ea43eeffbb4c8b02b09c6cd5814221883562a234,ea43eeff,Merge pull request #9 from rscullin/ios-fixes,"Merge pull request #9 from rscullin/ios-fixes
+
+Add iOS Build Directions + iOS Fixes",,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,GitHub,noreply@github.com,1470058422,1470058422,"6ea71c5f5a657ad54dd50660b668f1ff2898a0f3,0a43f58b59257cab06c22bfdc7f50e0f5fdc4d8f"
+0a43f58b59257cab06c22bfdc7f50e0f5fdc4d8f,0a43f58b,Upstream merge?,"Upstream merge?
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1458618543,1458618543,"ac9c01448953fad6cfc4b7fd0569b1bcfc6f5fee,6ea71c5f5a657ad54dd50660b668f1ff2898a0f3"
+6ea71c5f5a657ad54dd50660b668f1ff2898a0f3,6ea71c5f,Remove cruft from Android manifest,"Remove cruft from Android manifest
+
+This should fix a crash that might have affected some users",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1456584836,1456584836,961aad416fefa388f6c5ab7ea7523101a3c4b8ae
+961aad416fefa388f6c5ab7ea7523101a3c4b8ae,961aad41,Cordova Android platform update,Cordova Android platform update,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1456583943,1456583943,1085e5c1798ee8c8a400f1c351e1c159dafc8e00
+1085e5c1798ee8c8a400f1c351e1c159dafc8e00,1085e5c1,Release version 0.6.0,"Release version 0.6.0
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1456582666,1456582666,73f7776f28be95146d58d88e551b0e30bbd74837
+73f7776f28be95146d58d88e551b0e30bbd74837,73f7776f,Version 0.5.3-beta3,Version 0.5.3-beta3,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1454442430,1454442430,c1039fed9727cd54b1d729e8d9998c9d922e5d48
+c1039fed9727cd54b1d729e8d9998c9d922e5d48,c1039fed,Android: Force-remove WRITE_EXTERNAL_STORAGE permission,"Android: Force-remove WRITE_EXTERNAL_STORAGE permission
+
+the local notification plugin requires that for version of Android that we
+don't support, so we don't need that. Forcibly remove it. This requires
+removing it from the plugin's manifest in
+plugins/de.appplant.cordova.plugin.local-notification/plugin.xml
+
+See https://github.com/katzer/cordova-plugin-local-notifications/commit/901a844e37016a6f202ab7b8b840c6979c29cf6d",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1454441370,1454441370,ae102caef928107675cb2c7a500ba78973f123da
+ae102caef928107675cb2c7a500ba78973f123da,ae102cae,"Rebuild manifest things, update plugins","Rebuild manifest things, update plugins
+
+This removes the android.permission.GET_TASKS permission which
+seems to be no longer required
+
+Splash screen now fades, but the default of 3s is so long that it
+looks really ugly with autoconnect, so reduce duration to .5s
+which looks quite nice imho
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1454440400,1454440674,007469745f4755bc9920f16099cd125ddcbd5388
+ac9c01448953fad6cfc4b7fd0569b1bcfc6f5fee,ac9c0144,Clarifying iOS build directions + need to manually update.,"Clarifying iOS build directions + need to manually update.
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1454034181,1454034181,9a55d891a30e74ebeebd8976dded56ed49bcf1e9
+9a55d891a30e74ebeebd8976dded56ed49bcf1e9,9a55d891,Build instructions for iOS,"Build instructions for iOS
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1453394644,1453394644,89ebc09ea930b4848aa3f4eb3ac88bb25e73ebf6
+89ebc09ea930b4848aa3f4eb3ac88bb25e73ebf6,89ebc09e,Base icon/splash that all the auto-gen'd images are based on,"Base icon/splash that all the auto-gen'd images are based on
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1453349968,1453349968,f810331c2f20fdcb97894befc837386bd567f630
+f810331c2f20fdcb97894befc837386bd567f630,f810331c,Adding iOS splash screens/icons,"Adding iOS splash screens/icons
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1453349621,1453349621,4c218a8829ad19f93afeab2f74f37ef7521344af
+4c218a8829ad19f93afeab2f74f37ef7521344af,4c218a88,Initial iOS support,"Initial iOS support
+",,,,Robert Scullin,robert@robert.scullin.name,Robert Scullin,robert@robert.scullin.name,1453349589,1453349589,db7c9d3302182561f0ece8e39483c2ba9d4aa10d
+007469745f4755bc9920f16099cd125ddcbd5388,00746974,Plugins: No need to manualyl install cordova-plugin-device,"Plugins: No need to manualyl install cordova-plugin-device
+
+It's pulled in by local-notification",,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1453151426,1453151426,db7c9d3302182561f0ece8e39483c2ba9d4aa10d
+db7c9d3302182561f0ece8e39483c2ba9d4aa10d,db7c9d33,README: Fix build instructions,README: Fix build instructions,,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1453151187,1453151187,c3cb32c700e14d5529cbf060b35f5a5eb4f5a8ab
+c3cb32c700e14d5529cbf060b35f5a5eb4f5a8ab,c3cb32c7,"Cordova update, 0.5.3 beta release 2","Cordova update, 0.5.3 beta release 2",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1450797891,1450797891,4ae4000436938e55713d6dc139d58c64f7ce994f
+4ae4000436938e55713d6dc139d58c64f7ce994f,4ae40004,Release 0.5.1,Release 0.5.1,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1445024328,1445024328,06919bb76dd5b427a8ae4bfb31706ce8304f4ffe
+06919bb76dd5b427a8ae4bfb31706ce8304f4ffe,06919bb7,Release version 0.5.0,"Release version 0.5.0
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1442945497,1442945497,08ef7beee2f5c077c6aa8888ab69df7687dcaa33
+08ef7beee2f5c077c6aa8888ab69df7687dcaa33,08ef7bee,quick correction,"quick correction
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1433802778,1433802778,a77418eabf3ddbb99f62abadacdeb5cb85bdefd4
+a77418eabf3ddbb99f62abadacdeb5cb85bdefd4,a77418ea,security update: 0.4.9,security update: 0.4.9,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1433802629,1433802629,3e75ff802a72cdf18d2da1504e09dd29bd14dfeb
+3e75ff802a72cdf18d2da1504e09dd29bd14dfeb,3e75ff80,Release version 0.4.8,Release version 0.4.8,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1425334190,1425334190,a9af0e669a8226ce618a65223d5b5a5212f5b1f7
+a9af0e669a8226ce618a65223d5b5a5212f5b1f7,a9af0e66,Bump target android version to 5.0.1 (SDK version 21),Bump target android version to 5.0.1 (SDK version 21),,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1425155743,1425155743,ef2f58ee54445cd4289211161d8bf2c29e2c2e50
+ef2f58ee54445cd4289211161d8bf2c29e2c2e50,ef2f58ee,Release version 0.4.7,Release version 0.4.7,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1425063367,1425063367,cdb69778e3cbc37187c610942247862cbffac210
+cdb69778e3cbc37187c610942247862cbffac210,cdb69778,Release version 0.4.6 (bugfix release),"Release version 0.4.6 (bugfix release)
+
+I actually forgot to commit 0.4.5 here, it was a bugfix release as well",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1416930879,1416930879,750cc6479f5919226cf16ebe04c3dd7415c7eea9
+750cc6479f5919226cf16ebe04c3dd7415c7eea9,750cc647,Bump version to 0.4.4,Bump version to 0.4.4,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1416488831,1416488831,85edb3f60f61aaa4431b59dc92436d73350bb258
+85edb3f60f61aaa4431b59dc92436d73350bb258,85edb3f6,Release version 0.4.3 -- small title link bugfix,"Release version 0.4.3 -- small title link bugfix
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413647516,1413647516,92b7dc9824b3a895ec431625e3066f5ae45c8a85
+92b7dc9824b3a895ec431625e3066f5ae45c8a85,92b7dc98,Fix embeds by whitelisting * and using the inappbrowser plugin,Fix embeds by whitelisting * and using the inappbrowser plugin,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413479348,1413479348,2f913728a909fd21faa90f71264e3ed31729728a
+2f913728a909fd21faa90f71264e3ed31729728a,2f913728,Clean up config.xml,"Clean up config.xml
+
+access origin doesn't seem work anyway",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413478394,1413478394,d7458282e97425e266c56bdaefcc88822e6e7e98
+d7458282e97425e266c56bdaefcc88822e6e7e98,d7458282,Fix typo in config.xml and remove icons from platform folder,Fix typo in config.xml and remove icons from platform folder,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413478290,1413478290,53589fb57aa463c3c3fc8f06bf9c221056417944
+53589fb57aa463c3c3fc8f06bf9c221056417944,53589fb5,Fix icon specifications,"Fix icon specifications
+
+also decreases app size",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413477982,1413477982,dee4a948659928421de5b09c53a121c2d9ee3721
+dee4a948659928421de5b09c53a121c2d9ee3721,dee4a948,Update android project for new cordova,"Update android project for new cordova
+
+- icon specifications
+- ignore list",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1413474488,1413474488,aaa5390f16a2bba2bb07c783ea1263aad1cdc854
+aaa5390f16a2bba2bb07c783ea1263aad1cdc854,aaa5390f,Release v0.4.1,Release v0.4.1,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1409580965,1409580965,a040b4fff95fc56ebc2ebe4ccf351c4162c73ed6
+a040b4fff95fc56ebc2ebe4ccf351c4162c73ed6,a040b4ff,Bump version to 0.4.0,Bump version to 0.4.0,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1407011917,1407011917,a588ff308cf06085fb0cf824b5da2fcdda4b90cd
+a588ff308cf06085fb0cf824b5da2fcdda4b90cd,a588ff30,crush pngs further with zopfli,"crush pngs further with zopfli
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1405870007,1405870007,0d85744e776af5704b430ccb97617e74a402f072
+0d85744e776af5704b430ccb97617e74a402f072,0d85744e,Release v0.1.1,Release v0.1.1,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1403438784,1403438784,ac757ce7a04d74093929b55562df923f6f8a4537
+ac757ce7a04d74093929b55562df923f6f8a4537,ac757ce7,Release v0.1.0,Release v0.1.0,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1402668478,1402668478,51e1a8bc407c2effe8de95162a990d986adb1417
+51e1a8bc407c2effe8de95162a990d986adb1417,51e1a8bc,android: better splash screen handling,"android: better splash screen handling
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1402325404,1402412591,d07078243119eec2c460ab2b0dca0e9b355235a6
+d07078243119eec2c460ab2b0dca0e9b355235a6,d0707824,Add FirefoxOS platform,Add FirefoxOS platform,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1402412588,1402412588,a5b8c196c024db3cca07a195a1c94a33dedb3774
+a5b8c196c024db3cca07a195a1c94a33dedb3774,a5b8c196,Strip some more useless files from the android build,Strip some more useless files from the android build,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1400928218,1400928218,58ec738e97aeccf92b7d2c4ecc743fde86221ad8
+58ec738e97aeccf92b7d2c4ecc743fde86221ad8,58ec738e,Shrink splash screen png,Shrink splash screen png,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1400927231,1400927231,b278b15929654bdf995647a3927e9f9645303777
+b278b15929654bdf995647a3927e9f9645303777,b278b159,Release version 0.0.8,"Release version 0.0.8
+
+skipped 0.0.7 as cordova seems to generate android version numbers on its
+own now and we've already had 7 so now we need 8",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1400854546,1400854546,634f0ebc58e264b0a7bf1a47a03bfc65852b5fb2
+634f0ebc58e264b0a7bf1a47a03bfc65852b5fb2,634f0ebc,Add play store link to README,Add play store link to README,,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1400687547,1400687547,271c102ac9f43145307a1ecf5215dc8466de533c
+271c102ac9f43145307a1ecf5215dc8466de533c,271c102a,Regenerate android icons from png,Regenerate android icons from png,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1400191328,1400191328,0061fcb93998cf26f9f4678ae894ff61f59e6c14
+0061fcb93998cf26f9f4678ae894ff61f59e6c14,0061fcb9,Release version 0.0.6,"Release version 0.0.6
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1399900309,1399900309,f58682beaeeb5d08f1625ab0b3f788bd1f46b1e1
+f58682beaeeb5d08f1625ab0b3f788bd1f46b1e1,f58682be,delete useless file,"delete useless file
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1399567039,1399567039,25aa2f206b14f6546de963a034fac7754e53f633
+25aa2f206b14f6546de963a034fac7754e53f633,25aa2f20,Update to version v0.0.5,Update to version v0.0.5,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1399561973,1399561973,be0b14ece07ac7dbb9e84f54ecf7a6d7922726ef
+be0b14ece07ac7dbb9e84f54ecf7a6d7922726ef,be0b14ec,Release v0.0.4,Release v0.0.4,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1399221538,1399221538,3d2ec5861cc53f5cc10dd1df4c80744b0987ea72
+3d2ec5861cc53f5cc10dd1df4c80744b0987ea72,3d2ec586,Update email address.,"Update email address.
+
+Should we set the author to ""Glowing Bear team"" or something?",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1399221517,1399221517,498cd806b998b8ac21f13c0697ce9339d18bffd5
+498cd806b998b8ac21f13c0697ce9339d18bffd5,498cd806,"Update g-b, bump version","Update g-b, bump version
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1398524862,1398532705,534eaba1ba5a8c62af7aa6d119acc7ae7313d7c5
+534eaba1ba5a8c62af7aa6d119acc7ae7313d7c5,534eaba1,Submodule: use organisation repo,"Submodule: use organisation repo
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1398524967,1398524980,2319057ccf83e5a31d21f7e87de0131cbe8404b8
+2319057ccf83e5a31d21f7e87de0131cbe8404b8,2319057c,Update and release,Update and release,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397917086,1397917086,76ac9b01484e3e8442b7706c468305a3bffd0663
+76ac9b01484e3e8442b7706c468305a3bffd0663,76ac9b01,Fix name in config,Fix name in config,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397917058,1397917058,80f1fab1cb4992fe46218aea86958afe8da13dc2
+80f1fab1cb4992fe46218aea86958afe8da13dc2,80f1fab1,bump version for release,"bump version for release
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397069702,1397069702,9ac049b4eb6a7dabfe2ec83cd8f128607c13250a
+9ac049b4eb6a7dabfe2ec83cd8f128607c13250a,9ac049b4,remove manual notification sounds,"remove manual notification sounds
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397069460,1397069460,7ae8874e20425df1c2fb367ecd0a049f151cb53b
+7ae8874e20425df1c2fb367ecd0a049f151cb53b,7ae8874e,Fix required android version,"Fix required android version
+
+We can lower this back to 14 (4.0) once it works there. For now, 19 (4.4) only
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397068878,1397068878,13ea406b833fbf78d2f9c131ec7e6ab27a8d0f4b
+13ea406b833fbf78d2f9c131ec7e6ab27a8d0f4b,13ea406b,"Drop favico, update texts","Drop favico, update texts
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397068106,1397068106,9985c1a5766cb3ebb13e7c3607a9b4ce7703593d
+9985c1a5766cb3ebb13e7c3607a9b4ce7703593d,9985c1a5,Set minimum android version to 14 (4.0),"Set minimum android version to 14 (4.0)
+
+We still require 4.4 at the moment - I'm working on it",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1397058136,1397058145,99c3419d594e18eebf64fba28c7ebce684b0e120
+99c3419d594e18eebf64fba28c7ebce684b0e120,99c3419d,Update README.md,Update README.md,,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1397055313,1397055313,c0de00e098189fe05483904f23c7bca5df15a266
+c0de00e098189fe05483904f23c7bca5df15a266,c0de00e0,rebase g-b branch onto upstream master,"rebase g-b branch onto upstream master
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1396984499,1396982979,19d4b89d06487b3e4829790e402c3dac0d0eb40f
+19d4b89d06487b3e4829790e402c3dac0d0eb40f,19d4b89d,Dark splash screen,"Dark splash screen
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1396879670,1396879670,f8e83d0fd1ae600e12facda32620f425fa16b4b5
+f8e83d0fd1ae600e12facda32620f425fa16b4b5,f8e83d0f,Update glowing bear,"Update glowing bear
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1396876714,1396876835,aee4cc873a51916ac573d3b5cef86e4d2fda7800
+aee4cc873a51916ac573d3b5cef86e4d2fda7800,aee4cc87,Update texts to suit app instead of webpage,"Update texts to suit app instead of webpage
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1395346992,1395346992,e3807cc95731864aff857f2a00f7ebe5a6b39e83
+e3807cc95731864aff857f2a00f7ebe5a6b39e83,e3807cc9,rebase onto master,"rebase onto master
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1395262966,1395262966,fbeebeb098b0ced4dd965ff9a8a27107ad98a444
+fbeebeb098b0ced4dd965ff9a8a27107ad98a444,fbeebeb0,Update URLs in external browser,"Update URLs in external browser
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1395180369,1395180369,9dd017d0aefad6212a44bc4a5500f9ed8b3de2db
+9dd017d0aefad6212a44bc4a5500f9ed8b3de2db,9dd017d0,rebase onto master,"rebase onto master
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1395091740,1395091740,9da96ac8b54b4ae7fba9e260a32daca664b198cd
+9da96ac8b54b4ae7fba9e260a32daca664b198cd,9da96ac8,Autocancel notifications,"Autocancel notifications
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1395010765,1395010765,852dfd943b9bcdd36471aabab80d5b1abbb957bd
+852dfd943b9bcdd36471aabab80d5b1abbb957bd,852dfd94,Show local notifications instead of vibrating,Show local notifications instead of vibrating,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394742926,1394742926,49d1b65bd1712e12a423f7c83ef95ed31c141320
+49d1b65bd1712e12a423f7c83ef95ed31c141320,49d1b65b,Add vibrations to notification,"Add vibrations to notification
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394651844,1394651844,fc32cdd1e4018c67c0afc6150848a3b7798a4815
+fc32cdd1e4018c67c0afc6150848a3b7798a4815,fc32cdd1,Add a dummy splash screen,"Add a dummy splash screen
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394578446,1394578446,b4e96997d7a1a46acd35991d7b09a281fc69ee05
+b4e96997d7a1a46acd35991d7b09a281fc69ee05,b4e96997,Switch to dummy package com.glowing_bear,"Switch to dummy package com.glowing_bear
+
+Sadly, de._4z2.glowingbear is invalid",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394481587,1394481587,8c8980d95430be5bbf5e9278e900fbc8f710f1e9
+8c8980d95430be5bbf5e9278e900fbc8f710f1e9,8c8980d9,Add setup instructions to readme,Add setup instructions to readme,,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1394480894,1394480894,1ab3195826bf445d8ffca73b326ac287d932ae5e
+1ab3195826bf445d8ffca73b326ac287d932ae5e,1ab31958,need assets directory,"need assets directory
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394480331,1394480331,8d8b0c1b21e0f5d91a620e073056b65c4ac43f91
+8d8b0c1b21e0f5d91a620e073056b65c4ac43f91,8d8b0c1b,ignore sublime text project files,"ignore sublime text project files
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394480056,1394480056,0c47066adc7b681b912e4af5ca498422ebd51834
+0c47066adc7b681b912e4af5ca498422ebd51834,0c47066a,don't include bower_components in apk,"don't include bower_components in apk
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394479900,1394479900,6a1542cbb77b71c69593a5bb00602e6f0dfa500e
+6a1542cbb77b71c69593a5bb00602e6f0dfa500e,6a1542cb,add logo,"add logo
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394479878,1394479878,8899b6efc38b32cea697f811bdfbb9b9a8d0276c
+8899b6efc38b32cea697f811bdfbb9b9a8d0276c,8899b6ef,Import cordova generated files,Import cordova generated files,,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394479871,1394479871,45117ffcdfccf19466fffd891744a37da9304155
+45117ffcdfccf19466fffd891744a37da9304155,45117ffc,add glowing-bear submodule,"add glowing-bear submodule
+",,,,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,Lorenz Hübschle-Schneider,lorenz-dev@lgh-alumni.de,1394478371,1394478371,f0f89cc3d87d75d675f20155583518bbd7085aae
+f0f89cc3d87d75d675f20155583518bbd7085aae,f0f89cc3,Initial commit,"Initial commit
+",,,,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,Lorenz Hübschle-Schneider,lorenzhs@users.noreply.github.com,1394478180,1394478180,

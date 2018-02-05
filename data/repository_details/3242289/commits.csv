@@ -1,0 +1,1477 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+5c9ce2997e88677775e913896e36510f08f8fa2d,5c9ce299,Eventually close the host search progress dialog (#251),"Eventually close the host search progress dialog (#251)
+
+Changing the orientation of the device while a host search was running
+resulted in a progress dialog that was never closed. The app needed to
+be killed.
+
+This is fixed by switching to a DialogFragment for the progress dialog
+as well as saving the dialog state prior to the orientation change and
+restoring from it after.
+
+Currently, only ListSearchTabActivity has been moved to using that
+DialogFragment. All other activities that might show a progress dialog
+still use the old DialogHandler version.
+
+The HostListAdapter now also has a resetDataset method which accepts a
+new list, clears the old dataset, sets the specified list as the new
+one, and notifies itself of the change in order to update the UI.
+
+Also, the string ""search_results"" that spanned 2 activities is now
+defined in a constant.
+
+Fixes:  #243
+Closes: #251
+",,,,Patrick Geselbracht,code@patrick-geselbracht.eu,Sämy Zehnder,saemy.zehnder@gorrion.ch,1461368860,1512054176,f3abac6e8df9ce588d48fe1d49af82d52dfd7ff3
+f3abac6e8df9ce588d48fe1d49af82d52dfd7ff3,f3abac6e,Move hidden send button in HostContactActivity (#250),"Move hidden send button in HostContactActivity (#250)
+
+The send button was hidden by the software keyboard. With adjustResize,
+the activity's layout gets resized automatically once the keyboard is
+being shown. By doing this, the send button is being pushed upwards.
+
+With a 5"" smartphone this works quite well as there is still enough
+space for six lines of message text. However, on smaller devices this
+might lead to undesirable behaviour.
+
+Fixes:  #244
+Closes: #250
+",,,,Patrick Geselbracht,code@patrick-geselbracht.eu,Sämy Zehnder,saemy.zehnder@gorrion.ch,1461365497,1512044490,8491abc8a04693ae86719f54e064fb9a54b3132b
+8491abc8a04693ae86719f54e064fb9a54b3132b,8491abc8,Enable Travis CI to auto-deploy APKs,"Enable Travis CI to auto-deploy APKs
+
+The resulting APK of a CI build is now automatically uploaded to GitHub
+for tagged revisions. They are signed with the same key that is used in
+the Google Play Store. All secrets are encrypted and only visible to
+Travis CI.
+",,,,Sämy Zehnder,saemy.zehnder@gorrion.ch,Sämy Zehnder,saemy.zehnder@gorrion.ch,1510151369,1510157372,6ab98060868b465ad6d3ec261b94796c2833b3a0
+6ab98060868b465ad6d3ec261b94796c2833b3a0,6ab98060,Adapt feedback API changes (#261),"Adapt feedback API changes (#261)
+
+The server changed its API in /user/{userId}/json_recommendations.
+Namely, it removed ""_value"" from some fields. Also, the hostingDate is
+no longer a number but a formatted string.
+",,,,LaurentSouchet,laurent.souchet@orange.com,Sämy,saemy@users.noreply.github.com,1508847542,1508847542,19d1bda03a8ab2963d9aa46c2475215ceeee2dec
+19d1bda03a8ab2963d9aa46c2475215ceeee2dec,19d1bda0,Improve performance (#260),"Improve performance (#260)
+
+Improve performance slightly by avoiding unnecessary unboxing/boxing and
+storing states as local variable whenever possible.",,,,Siavash,siavash.sedghi@gmail.com,Sämy,saemy@users.noreply.github.com,1506626683,1506626683,8bc55d62ca748d126303f517d15efb587b2a326d
+8bc55d62ca748d126303f517d15efb587b2a326d,8bc55d62,Drop targetSdkVersion to 22.,"Drop targetSdkVersion to 22.
+
+Beginning in Android 6.0 (API level 23), users grant permissions to
+apps while the app is running, not when they install the app. We are
+not ready for this, yet. Having a targetSdkVersion lower than 23 allows
+to use permissions the old way. This fixes crashes on devices running on
+Android 6.0+.
+",,,,Sämy Zehnder,saemy.zehnder@gorrion.ch,Sämy Zehnder,saemy.zehnder@gorrion.ch,1506623169,1506623517,5226e32f9c115b0cd78cf10290d9cdce0b581dad
+5226e32f9c115b0cd78cf10290d9cdce0b581dad,5226e32f,Fix performance penalty in String processing (#259),"Fix performance penalty in String processing (#259)
+
+The method defines a String object and loops through the hosts to add
+their info to the String, under the hood the String is converted to a
+StringBuffer/StringBuilder, appended to, and converted back to a String.
+This can lead to a cost quadratic in the number of iterations, as the
+growing string is recopied in each iteration. This commit replaces
+String with StringBuilder and convert it back to the String object when
+the string process is over.",,,,Siavash,siavash.sedghi@gmail.com,Sämy,saemy@users.noreply.github.com,1506623042,1506623042,c20b57730a68d8e48098a6a96bc60d76c4a803f3
+c20b57730a68d8e48098a6a96bc60d76c4a803f3,c20b5773,Make TLS SNI work (#256),"Make TLS SNI work (#256)
+
+warmshowers.org switched to a hoster which uses SNI. On Android < 6.0
+the Apache HTTPClient does not support this out of the box. Therefore,
+the app is no longer able to verify connections with the server and
+thus fails to operate. However, a fix on devices running Android 4.2+
+is possible by using the native hostname verifier. For Android 4.1 and
+earlier it is possibly supported through reflexion on the same methods.",,,,Sämy,saemy@users.noreply.github.com,GitHub,noreply@github.com,1506605019,1506605019,2b4c9074b5e909082ea05fd2e011a383ef83dfb7
+2b4c9074b5e909082ea05fd2e011a383ef83dfb7,2b4c9074,Make the project building and green again (#255),"Make the project building and green again (#255)
+
+* Use legacy http library
+
+The org.apache.http library has been deprecated. It is now available as
+org.apache.http.legacy.
+
+* Switch to newer library versions
+
+Gradle, the build tools, SDK and many libraries are brought to newer
+versions (as far as compatible).
+
+* Fix all the lint errors and some of the warnings
+
+* Make the tests compile again
+
+Adds jUnit as a testCompile dependency (thank you @PattaFeuFeu) and
+fixes outdated calls to the MapSearchJsonParser constructor.
+
+* Make the tests green again
+
+All the tests failed. The test resources directory was wrong (or
+outdated) and needed to be moved from src/test/res/ to
+src/test/resources/. The mock server replies were not reflecting real
+ones and missed some properties. And a few test cases were not updated
+when code was changed in the past.
+
+* Set a default debug keystore
+
+Adds a keystore for signing debug apk files. This allows installation
+of arbitrary debug versions without the hassle of dealing with
+different signing keys. The release keystore settings have to be set in
+local.properties.
+",,,,Sämy,saemy@users.noreply.github.com,GitHub,noreply@github.com,1506604017,1506604017,e5248a3a4b476be6ce3f011c4bcc6a981a13870e
+e5248a3a4b476be6ce3f011c4bcc6a981a13870e,e5248a3a,Add integration for Travis CI (#254),"Add integration for Travis CI (#254)
+
+Travis CI (https://travis-ci.org) does continuous integration testing
+on every commit and pull request. master is currently neither building
+nor are the tests green. This would allow to discover situations like
+this at PR time.",,,,Sämy,saemy@users.noreply.github.com,GitHub,noreply@github.com,1506530021,1506530021,788283cfcc241e0eb95abe233feb9b570140df57
+788283cfcc241e0eb95abe233feb9b570140df57,788283cf,Followup to #239 - fix problem of rotation during download of info,"Followup to #239 - fix problem of rotation during download of info
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1445985531,1445985603,19a213bcd12b1979fb069533af421ab485c10a6c
+19a213bcd12b1979fb069533af421ab485c10a6c,19a213bc,Fixes #239 by fixing logic for recreating HostInformationActivity,"Fixes #239 by fixing logic for recreating HostInformationActivity
+
+Resolves issue #239
+
+Includes some refactoring and other clean up.
+
+Adjusted the logic in onCreate to the right thing
+when recreating the activity e.g. screen orientation
+change.
+",,,,Kirby Cool,kirbydcool@gmail.com,Randy Fay,randy@randyfay.com,1444431578,1445985568,95a6d27cad21b55b62d7f73afd1fb7682ac4ace1
+95a6d27cad21b55b62d7f73afd1fb7682ac4ace1,95a6d27c,Merge pull request #247 from kirbydcool/kc_changeProjectStructure,"Merge pull request #247 from kirbydcool/kc_changeProjectStructure
+
+Port to modern gradle project structure",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1445293824,1445293824,"99c307057d005dae5f26a64f1339b55f4e5eba7d,098e3c190d359120cf654cbfb27e4f5fb65edd76"
+098e3c190d359120cf654cbfb27e4f5fb65edd76,098e3c19,Port to modern gradle project structure,"Port to modern gradle project structure
+",,,,Kirby Cool,kirbydcool@gmail.com,Kirby Cool,kirbydcool@gmail.com,1444782489,1445037569,99c307057d005dae5f26a64f1339b55f4e5eba7d
+99c307057d005dae5f26a64f1339b55f4e5eba7d,99c30705,Merge pull request #248 from kirbydcool/kc_addSentFromAndroid_#238,"Merge pull request #248 from kirbydcool/kc_addSentFromAndroid_#238
+
+Add ""sent by android app"" to message",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1444950597,1444950597,"b8fd54e8f2bd3df7e0b937f98c7f15eab537254a,66a0d50257ebb142225acb3718ad13bd3b377172"
+66a0d50257ebb142225acb3718ad13bd3b377172,66a0d502,"Add ""sent by android app"" to message","Add ""sent by android app"" to message
+
+Issue #238
+",,,,Kirby Cool,kirbydcool@gmail.com,Kirby Cool,kirbydcool@gmail.com,1444949378,1444949843,bc2826cf90950ab02842bc52707a9f98efe01c2f
+b8fd54e8f2bd3df7e0b937f98c7f15eab537254a,b8fd54e8,Merge pull request #245 from kirbydcool/kc_addJitpackMavenDependency,"Merge pull request #245 from kirbydcool/kc_addJitpackMavenDependency
+
+Add jitpack.io maven dep for material-dialogs",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1444189037,1444189037,"bc2826cf90950ab02842bc52707a9f98efe01c2f,ae62788374190ccdd6b4db66eb3ef42ed951c165"
+ae62788374190ccdd6b4db66eb3ef42ed951c165,ae627883,Add jitpack.io maven dep for material-dialogs,"Add jitpack.io maven dep for material-dialogs
+
+Added the maven dependency for material-dialogs
+to gradle as outlined on the github README.
+https://github.com/afollestad/material-dialogs#gradle-dependency
+",,,,Kirby Cool,kirbydcool@gmail.com,Kirby Cool,kirbydcool@gmail.com,1444168624,1444168624,bc2826cf90950ab02842bc52707a9f98efe01c2f
+bc2826cf90950ab02842bc52707a9f98efe01c2f,bc2826cf,Merge pull request #237 from CyrilWendl/patch-4,"Merge pull request #237 from CyrilWendl/patch-4
+
+Update strings.xml",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1434200759,1434200759,"787a1092e213fc06d197fee0fe3f795b0f12696a,85ab372a7da7272b79d48b3b6878606445623365"
+85ab372a7da7272b79d48b3b6878606445623365,85ab372a,Update strings.xml,"Update strings.xml
+
+I updated some odd translations and added one missing (view_licences).
+Please note: I think the English version as well as all translations of ""about_2"" contain a minor flaw: there is no means of sending feedback through the app, one needs to use the website. Consider adapting this.",,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1434190371,1434190371,787a1092e213fc06d197fee0fe3f795b0f12696a
+787a1092e213fc06d197fee0fe3f795b0f12696a,787a1092,Bump version to 1.5.1beta1,"Bump version to 1.5.1beta1
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1434041620,1434041620,d926404e261ebb82bfe58de7119c7ad91aa93922
+d926404e261ebb82bfe58de7119c7ad91aa93922,d926404e,Fix about_1 with 'traductora' in spanish,"Fix about_1 with 'traductora' in spanish
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433871465,1433871465,99b99a7c225ed97e2a6e34bdddff62ff3c599d7d
+99b99a7c225ed97e2a6e34bdddff62ff3c599d7d,99b99a7c,"Bump release tag and number for final, hopefully","Bump release tag and number for final, hopefully
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433780915,1433780915,4eacd3d5e7c986ced3f382f0a20cff1d7dc1f41e
+4eacd3d5e7c986ced3f382f0a20cff1d7dc1f41e,4eacd3d5,Fix logged-in user on clean start says 'not logged in' on the nav drawer,"Fix logged-in user on clean start says 'not logged in' on the nav drawer
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433780184,1433780184,9b193abcecf6184023c660a65cfa997614aa2f0c
+9b193abcecf6184023c660a65cfa997614aa2f0c,9b193abc,Merge pull request #233 from jeanfrancoisbeaulieu/20150603_LayoutAdjust,"Merge pull request #233 from jeanfrancoisbeaulieu/20150603_LayoutAdjust
+
+Quick Style and image adjust ",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433548885,1433548885,"62062fa17554073086f6d659e077ba64b8bc6e19,fc7f2c6f5d3990c0bd37ca9fdaf91321fb3f34c7"
+fc7f2c6f5d3990c0bd37ca9fdaf91321fb3f34c7,fc7f2c6f,- Quick style of the Option Menu Panel,"- Quick style of the Option Menu Panel
+- Slightly taller navDrawer profile picture
+- Style.xml cleanup
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1433548064,1433548160,62062fa17554073086f6d659e077ba64b8bc6e19
+62062fa17554073086f6d659e077ba64b8bc6e19,62062fa1,"Fix problem where token was being requested every time, fixes #232","Fix problem where token was being requested every time, fixes #232
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433544989,1433544989,abf0491b60aee234e95590a2a6bbafeac4a4c8cc
+abf0491b60aee234e95590a2a6bbafeac4a4c8cc,abf0491b,"Get rid of toasts on first login, go to map after authentication, for #231","Get rid of toasts on first login, go to map after authentication, for #231
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433544324,1433544324,d3e1357f5f00d4b84e0bbd12a91fe7154d8fd037
+d3e1357f5f00d4b84e0bbd12a91fe7154d8fd037,d3e1357f,"Use larger profile picture for nav drawer, for #231","Use larger profile picture for nav drawer, for #231
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433541630,1433541630,49238d94f27c1c115721dd9bbe6488ae9149a755
+49238d94f27c1c115721dd9bbe6488ae9149a755,49238d94,Back to D6 semantics for the feedback creation.,"Back to D6 semantics for the feedback creation.
+
+Ended up wrapping this and solving it on the server side
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433537450,1433537450,777dd2350e4fcfdce7ba60edae47f299356c48d6
+777dd2350e4fcfdce7ba60edae47f299356c48d6,777dd235,Remove specific menu location after authentication failure,"Remove specific menu location after authentication failure
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433530799,1433530799,a06e8f06f441d42c20d097674792f89834aa2cd5
+a06e8f06f441d42c20d097674792f89834aa2cd5,a06e8f06,"Revert ""Add developer preference to change server""","Revert ""Add developer preference to change server""
+
+This didn't work at all, and to actually work GlobalInfo needs to
+be reworked as a singleton. That seems a little disruptive right now.
+
+This reverts commit 891ecef182ac38708a419ba2ef0da1651e54f40a.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433525523,1433525523,1b820d6c0fdad01a348aaa4b942ccf286b00461a
+1b820d6c0fdad01a348aaa4b942ccf286b00461a,1b820d6c,Add both D7 and D6 semantics for feedback node creation,"Add both D7 and D6 semantics for feedback node creation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433525504,1433525504,26c8df94fd368c4b3479111f3ff2d560997318ae
+26c8df94fd368c4b3479111f3ff2d560997318ae,26c8df94,Bump version numbers to 1.5.0beta6,"Bump version numbers to 1.5.0beta6
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433342555,1433342555,d014a1d64aee6c73b0a181134d0127740adc4cf0
+d014a1d64aee6c73b0a181134d0127740adc4cf0,d014a1d6,Merge pull request #229 from jeanfrancoisbeaulieu/20150603_Login,"Merge pull request #229 from jeanfrancoisbeaulieu/20150603_Login
+
+Disable navigation and 'back' button when logged out. fixes #228",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433340867,1433340867,"494244cd4a726924d71cd9bb7aebe147a6c98a8f,6b71cb8056b36610fee2dd4ceef167c23747e719"
+6b71cb8056b36610fee2dd4ceef167c23747e719,6b71cb80,Disable navigation and 'back' button when logged out.,"Disable navigation and 'back' button when logged out.
+Disable physical 'back' button too, maybe a little hacky.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1433339448,1433339448,494244cd4a726924d71cd9bb7aebe147a6c98a8f
+494244cd4a726924d71cd9bb7aebe147a6c98a8f,494244cd,Fix bug with being able to navigate even though not logged in,"Fix bug with being able to navigate even though not logged in
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433287994,1433288082,891ecef182ac38708a419ba2ef0da1651e54f40a
+891ecef182ac38708a419ba2ef0da1651e54f40a,891ecef1,Add developer preference to change server,"Add developer preference to change server
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433286331,1433288004,69ac6afa5d913823a768342052a9e799be2d880b
+69ac6afa5d913823a768342052a9e799be2d880b,69ac6afa,Add commented-out details on staging site,"Add commented-out details on staging site
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433284018,1433288004,3379ace823a1ef30be42afd79bafdbb093631b52
+3379ace823a1ef30be42afd79bafdbb093631b52,3379ace8,Merge pull request #227 from jeanfrancoisbeaulieu/20150601_MaterialButtons,"Merge pull request #227 from jeanfrancoisbeaulieu/20150601_MaterialButtons
+
+Make all buttons use App.Compat instead of CardView hack. ",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433266603,1433266603,"d9cf8e1b5224f3cf2cf603d94091b1b8b84c115a,11dce882f50f0fc1e6219949fc3a6be0c28ad658"
+11dce882f50f0fc1e6219949fc3a6be0c28ad658,11dce882,"Make all buttons use App.Compat instead of CardView hack. Loses shadow, but now…","Make all buttons use App.Compat instead of CardView hack. Loses shadow, but now had 'disable' state that displays properly.
+Button text is now bold, like the Preference dialogs.
+Also, slight layout/styling changes for the authentication screen.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1433227818,1433227818,d9cf8e1b5224f3cf2cf603d94091b1b8b84c115a
+d9cf8e1b5224f3cf2cf603d94091b1b8b84c115a,d9cf8e1b,Fix bug submitting feedback when the date dialog had not been opened,"Fix bug submitting feedback when the date dialog had not been opened
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433193912,1433193912,6dc5be128bd312ef0cc32caff76fcd6e232c571e
+6dc5be128bd312ef0cc32caff76fcd6e232c571e,6dc5be12,Fixes #218 by making member photo download with authentication,"Fixes #218 by making member photo download with authentication
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433188681,1433188681,c84816cef8790ce718fc527fb291bfb699a0993e
+c84816cef8790ce718fc527fb291bfb699a0993e,c84816ce,Fixes #215 by adding the licenses in menu,"Fixes #215 by adding the licenses in menu
+
+Removes 'Help and Feedback' menu, which several people thought was not useful.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433184215,1433184215,282cc2997855632e983bdbe72a36eaab6ac34958
+282cc2997855632e983bdbe72a36eaab6ac34958,282cc299,Merge pull request #224 from jeanfrancoisbeaulieu/20150531_popupDialogs,"Merge pull request #224 from jeanfrancoisbeaulieu/20150531_popupDialogs
+
+Styling for Dialog Alerts and Host popups on map",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433176653,1433176653,"63c6732de6c8dcf970e512f938afa6e108441f51,201c4e55520e21b51466bd34a29022b25c0dbc30"
+63c6732de6c8dcf970e512f938afa6e108441f51,63c6732d,Fixes #225 by using fullname instead of name in the maps activity,"Fixes #225 by using fullname instead of name in the maps activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433175897,1433175897,fc9b47541ece7151023f7d68dca5829240dfb089
+fc9b47541ece7151023f7d68dca5829240dfb089,fc9b4754,"Followup to a45b8b4 - it removed the initDrawer in onResume, so drawer info…","Followup to a45b8b4 - it removed the initDrawer in onResume, so drawer info wasn't right on login/logout
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433141448,1433141448,a45b8b4d5f0cb64c6cb9e10c0aed03e6992ecf72
+201c4e55520e21b51466bd34a29022b25c0dbc30,201c4e55,Styling  for Dialog Alerts and Host popups on Map,"Styling  for Dialog Alerts and Host popups on Map
+- Styled alort dialogs to appcompat v7 in HostContact and Feedback
+- Styled host popups on map for pins, and multi-host popup.
+- Added some text styles
+- Repositionned some buttons.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1433138854,1433138854,a45b8b4d5f0cb64c6cb9e10c0aed03e6992ecf72
+a45b8b4d5f0cb64c6cb9e10c0aed03e6992ecf72,a45b8b4d,Fix bug where the mDrawerToggle got overwritten,"Fix bug where the mDrawerToggle got overwritten
+
+This resulted in the up arrow not showing correctly.
+Moved mDrawerToggle.syncState() back into onPostCreate().
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433136327,1433136327,279b94b55a8e8f8721af580fd8b20d397a72998b
+279b94b55a8e8f8721af580fd8b20d397a72998b,279b94b5,"Fixes #197 by adding the Spanish strings in, which should be all for this release","Fixes #197 by adding the Spanish strings in, which should be all for this release
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433135249,1433135249,45ad686766d7d202f6b42d07655c406ad83d2103
+45ad686766d7d202f6b42d07655c406ad83d2103,45ad6867,Remove app_name as title of HostInformationActivity. It is filled in by code,"Remove app_name as title of HostInformationActivity. It is filled in by code
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433134972,1433135002,9b76e03d1be3c20715dedf1a97d8e5ba27645d0d
+9b76e03d1be3c20715dedf1a97d8e5ba27645d0d,9b76e03d,Merge pull request #223 from CyrilWendl/patch-3,"Merge pull request #223 from CyrilWendl/patch-3
+
+Update strings.xml",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1433026309,1433026309,"2937f2b989695c2ed7ce64ca34ee6e36261b0390,3fdc6acb45e5204ed99bcff2aad8d574fc8afd3d"
+3fdc6acb45e5204ed99bcff2aad8d574fc8afd3d,3fdc6acb,Update strings.xml,Update strings.xml,,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1432987820,1432987820,2937f2b989695c2ed7ce64ca34ee6e36261b0390
+2937f2b989695c2ed7ce64ca34ee6e36261b0390,2937f2b9,Fixes #219 - Offline hosts profile display wasn't working,"Fixes #219 - Offline hosts profile display wasn't working
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432952740,1432952740,eb5b19b74b0a68f97077300415fceb01be572adb
+eb5b19b74b0a68f97077300415fceb01be572adb,eb5b19b7,Remove personal dummy text,"Remove personal dummy text
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432950296,1432950296,d8f4686c27152a1ec94a0c6102f6b374959134a4
+d8f4686c27152a1ec94a0c6102f6b374959134a4,d8f4686c,Add debug-only preference to simulate no network,"Add debug-only preference to simulate no network
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432950210,1432950210,81f758f8982d15a43e447e03f384ebe427e6828e
+81f758f8982d15a43e447e03f384ebe427e6828e,81f758f8,Fix crash with syncState() on api19,"Fix crash with syncState() on api19
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432938078,1432938109,99846b1006b66729dbc34d14aa2ef0edbcaac0ad
+99846b1006b66729dbc34d14aa2ef0edbcaac0ad,99846b10,Merge pull request #221 from jeanfrancoisbeaulieu/20150529_networkInMsgTab_display_bug,"Merge pull request #221 from jeanfrancoisbeaulieu/20150529_networkInMsgTab_display_bug
+
+Display network warning in message tab",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432937059,1432937059,"e44e487f16f7be3c86976dfae4fe3a83e4a95728,f89bf9b959458324e770276b09b95e869b4ee26f"
+f89bf9b959458324e770276b09b95e869b4ee26f,f89bf9b9,Display network warning in message tab,"Display network warning in message tab
+- correct visibility and style
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432936561,1432936561,e44e487f16f7be3c86976dfae4fe3a83e4a95728
+e44e487f16f7be3c86976dfae4fe3a83e4a95728,e44e487f,Merge pull request #220 from jeanfrancoisbeaulieu/20150528_MaterialDesign_Layout_3,"Merge pull request #220 from jeanfrancoisbeaulieu/20150528_MaterialDesign_Layout_3
+
+Themed the Host Contact and Feedback activities",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432936459,1432936459,"ab54204ee87525399b26852ed295d2838f87da83,8cd6991a4bb9883030df0591ef2bb6f05a707b76"
+ab54204ee87525399b26852ed295d2838f87da83,ab54204e,"Fix up new strings required for beta5, for #197","Fix up new strings required for beta5, for #197
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432936404,1432936404,8ae84f973eaf844fa21686b2205ec7218bf8635e
+8ae84f973eaf844fa21686b2205ec7218bf8635e,8ae84f97,Fixes #216 by moving selection logic into the adapter,"Fixes #216 by moving selection logic into the adapter
+
+We had a bunch of problems with trying to use getChildAt()
+which only works for *visible* ListView items, so is
+a very complicated place to do it. This is much simpler.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432935391,1432935396,d9aec76ba0f7d9301e73eca24e2f674e068ab45b
+8cd6991a4bb9883030df0591ef2bb6f05a707b76,8cd6991a,Themed the Host Contact and Feedback activities,"Themed the Host Contact and Feedback activities
+Added proper theming to standard buttons (beta)
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432935385,1432935385,ca176f6d1a947926db47afc15dab2d60be5ba101
+d9aec76ba0f7d9301e73eca24e2f674e068ab45b,d9aec76b,Fixes #205 by adding user information and picture,"Fixes #205 by adding user information and picture
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432866879,1432874476,ca176f6d1a947926db47afc15dab2d60be5ba101
+ca176f6d1a947926db47afc15dab2d60be5ba101,ca176f6d,Merge pull request #217 from jeanfrancoisbeaulieu/20150527_MaterialDesign_Layout_2,"Merge pull request #217 from jeanfrancoisbeaulieu/20150527_MaterialDesign_Layout_2
+
+20150527 material design layout 2",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432835264,1432835264,"1ba6da38998f7d8021e1c7560b5cd7611ee1042e,6c0c757fb79337e8673d366b62bb227d1f880fd6"
+6c0c757fb79337e8673d366b62bb227d1f880fd6,6c0c757f,Change version of appcompat to 7.22.1.1 so material-dialogs would compile,"Change version of appcompat to 7.22.1.1 so material-dialogs would compile
+
+Minor cleanup removing some orphaned commented-out lines, etc.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432835124,1432835124,f0c72643341f984305e1f09c418a16ebac9e81da
+f0c72643341f984305e1f09c418a16ebac9e81da,f0c72643,Update Dialogs to the material design style using an external library…,"Update Dialogs to the material design style using an external library (https://github.com/afollestad/material-dialogs)
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432828429,1432828429,93986800136c27d9ca5871a72861f35dee93eaba
+93986800136c27d9ca5871a72861f35dee93eaba,93986800,Use proper string for Settings Activity ActionBar title,"Use proper string for Settings Activity ActionBar title
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432828170,1432828170,ea24fdc8415813f4f77be9fc7698cd4ecb34661b
+ea24fdc8415813f4f77be9fc7698cd4ecb34661b,ea24fdc8,Skinned the webViewActivity to grey to inform the user it's 'outside' the app,"Skinned the webViewActivity to grey to inform the user it's 'outside' the app
+Removed useless option menu
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432828085,1432828085,e57913ec4e0033709338b4afc4f8f52391d0fce5
+e57913ec4e0033709338b4afc4f8f52391d0fce5,e57913ec,Change accent color to blue for now.,"Change accent color to blue for now.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432827833,1432827833,92ce5f080c35ee5a1d982cfb1ae9171de9b23d3b
+92ce5f080c35ee5a1d982cfb1ae9171de9b23d3b,92ce5f08,Change navDrawer selection design,"Change navDrawer selection design
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432827801,1432827801,767c8a79a7b258b380e243af708268b5d31a70fc
+1ba6da38998f7d8021e1c7560b5cd7611ee1042e,1ba6da38,Fixes #208 by removing use of webview for messages and 'view on site',"Fixes #208 by removing use of webview for messages and 'view on site'
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432825940,1432825940,522a930f1ac7120db54f54245d704ca28d8cdf72
+522a930f1ac7120db54f54245d704ca28d8cdf72,522a930f,Followup to #214 - remove search menu item from nav drawer,"Followup to #214 - remove search menu item from nav drawer
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432821522,1432821522,767c8a79a7b258b380e243af708268b5d31a70fc
+767c8a79a7b258b380e243af708268b5d31a70fc,767c8a79,Merge pull request #214 from jeanfrancoisbeaulieu/20150527_frenchstrings_beta3,"Merge pull request #214 from jeanfrancoisbeaulieu/20150527_frenchstrings_beta3
+
+New localised string and 1.5.0beta3 French strings
+
+Thanks so much! I guess we'll send out to the translators one more time for the ""Log out"". didn't know that had not been i18n",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432753673,1432753673,"386db9d7b7772e88f63d8cc7bc01735347cbeb9d,3e42475bdce047670e9dbc650772967e2dba3c83"
+3e42475bdce047670e9dbc650772967e2dba3c83,3e42475b,- Added localized strings in host_information and authentification,"- Added localized strings in host_information and authentification
+- Translated French string for 1.5.0beta3 and more
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432749222,1432749222,5e913a1e8f1b44eb96894d13d27dc89def55c18d
+386db9d7b7772e88f63d8cc7bc01735347cbeb9d,386db9d7,Implement handling for X-CSRF-Token,"Implement handling for X-CSRF-Token
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432698014,1432698014,9b6c1e9d581096b5f1bde12c8a8d9bf389957617
+9b6c1e9d581096b5f1bde12c8a8d9bf389957617,9b6c1e9d,Use full url for provided picture,"Use full url for provided picture
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432697954,1432697954,9a2cb739cc5705234173613fe2916c96257d85d9
+9a2cb739cc5705234173613fe2916c96257d85d9,9a2cb739,Use server-provided image location,"Use server-provided image location
+Fixes #211
+Also fixes #212, since the picture isn't in user/%/json
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432685297,1432685297,21c47c0d00249530836b60ec194344f0f072efe5
+21c47c0d00249530836b60ec194344f0f072efe5,21c47c0d,Merge pull request #213 from jeanfrancoisbeaulieu/20150428_Material_Design_Layout,"Merge pull request #213 from jeanfrancoisbeaulieu/20150428_Material_Design_Layout
+
+It all looks good to me. I made a couple of simple changes, mostly simplifying the color-highlighting in https://github.com/jeanfrancoisbeaulieu/wsandroid/commit/409b04e64141a8dd12a619d8a1480779b70ac2a7",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432682978,1432682978,"65275283684d16e057ebe72b3dadcd050a6640d2,409b04e64141a8dd12a619d8a1480779b70ac2a7"
+409b04e64141a8dd12a619d8a1480779b70ac2a7,409b04e6,Simplify the selection of current menu/drawer item,"Simplify the selection of current menu/drawer item
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432681188,1432681188,744482dad885c90e5ce6cd50838e203ea722dda7
+744482dad885c90e5ce6cd50838e203ea722dda7,744482da,"Minor cleanup, rename hasBackIntent","Minor cleanup, rename hasBackIntent
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1432678476,1432678621,5e913a1e8f1b44eb96894d13d27dc89def55c18d
+5e913a1e8f1b44eb96894d13d27dc89def55c18d,5e913a1e,Material Dialogs - using support.v7.app.AlertDialog - Theming not done,"Material Dialogs - using support.v7.app.AlertDialog - Theming not done
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432615466,1432615466,"e7196fbdc7721a4d47697c4a880a70426593700d,32f40f0c5148083d2b1588716a3c4fbddc175801"
+e7196fbdc7721a4d47697c4a880a70426593700d,e7196fbd,Back arrow : create new 'intent' for activities to display 'back arrow' instead…,"Back arrow : create new 'intent' for activities to display 'back arrow' instead of the 'hamburger' icon. Created new variable. Code is rough.
+NavDrawer selection : display current activity in the navdrawer, if possible. Also check against current so activities aren't unnecessarily reloaded *Code is experimental, possibly buggy.*
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432614887,1432614887,d5968a55c70646aa49a96c513ff87fbce6cfac89
+d5968a55c70646aa49a96c513ff87fbce6cfac89,d5968a55,Remove open source licenses menu options from the Map Activity,"Remove open source licenses menu options from the Map Activity
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432614565,1432614565,64f05de0837ea221dbe2aaf6d8f042dfd30a1bf0
+64f05de0837ea221dbe2aaf6d8f042dfd30a1bf0,64f05de0,Display NavDrawer over the Toolbar : refactored most XMLs to allow this.,"Display NavDrawer over the Toolbar : refactored most XMLs to allow this.
+Make whole NavDrawer clickable, so you can't hit content under it by mistake
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432614520,1432614520,9f2465402e29da92aaae60b1a3e533982d88aeac
+9f2465402e29da92aaae60b1a3e533982d88aeac,9f246540,"Refactored Buttons using support.v7.widget.CardView, emulating Material design…","Refactored Buttons using support.v7.widget.CardView, emulating Material design elevated buttons. Works 'ok'. Not very 'light'.
+Also, re-layout of Account/Login and Messages with proper text styles.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432614301,1432614301,31b0c4d0ed2708fb2f9b0ae87510e54a50171097
+31b0c4d0ed2708fb2f9b0ae87510e54a50171097,31b0c4d0,Refactored Search:,"Refactored Search:
+- Use support.v7.widget.searchView
+- Fixed color in toolbar
+- Removed entry from Sidebar
+- Added translatable string for activity title
+- highlighting in search: , using regex matcher and pattern, with spannable.
+- removed search from all activities by default
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432613949,1432613949,4a9f5ff76647a2e46f23d11021daf409eb018ad5
+4a9f5ff76647a2e46f23d11021daf409eb018ad5,4a9f5ff7,Re-layout the host lists: - New divider (to refactor) - Text Styles - Temporary circle icon,"Re-layout the host lists: - New divider (to refactor) - Text Styles - Temporary circle icon
+Added new colours to styles.xml
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1432612921,1432612921,3285edb7ed1d98d670990b551c828633ca522618
+65275283684d16e057ebe72b3dadcd050a6640d2,65275283,Add arrays to Spanish strings - I had missed them,"Add arrays to Spanish strings - I had missed them
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1431543020,1431543020,44bfafdfb3999f601191ce097c708b15cd7ba1c3
+3285edb7ed1d98d670990b551c828633ca522618,3285edb7,Host info - added padding,"Host info - added padding
+
+- also a git hub push test
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1430199494,1431234158,157876a6533835c0f37135673235988ccda7f40e
+157876a6533835c0f37135673235988ccda7f40e,157876a6,Visual styling process / style refactoring,"Visual styling process / style refactoring
+
+Re-styled Navigation Drawer
+Re-styled Host Information Window
+-
+Added default member profile image (hardcoded)
+-
+Refactoring / extracting Views’ style to styles.xml
+Created new color and styles
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1430198323,1431234158,44bfafdfb3999f601191ce097c708b15cd7ba1c3
+44bfafdfb3999f601191ce097c708b15cd7ba1c3,44bfafdf,Bump version to beta5,"Bump version to beta5
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430954499,1430954499,59246cdb0ea4532b987cd87520d9585a288d64ac
+59246cdb0ea4532b987cd87520d9585a288d64ac,59246cdb,Fixes #207 by using the right field for the message body,"Fixes #207 by using the right field for the message body
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430954037,1430954037,a68b75a5fa5c1ae58e2525f18fcefb989c65c080
+a68b75a5fa5c1ae58e2525f18fcefb989c65c080,a68b75a5,Repair broken Spanish strings I messed up,"Repair broken Spanish strings I messed up
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430609168,1430609168,7298f26bf9b5e085540d556c6a773df03f2721a5
+7298f26bf9b5e085540d556c6a773df03f2721a5,7298f26b,"Add Spanish strings, thanks Laura","Add Spanish strings, thanks Laura
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430310644,1430310658,cc1b5fc4093add20ad81314d5afb6e64241fbadc
+32f40f0c5148083d2b1588716a3c4fbddc175801,32f40f0c,Host info - added padding,"Host info - added padding
+
+- also a git hub push test
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1430199494,1430199494,4685a0cedc512c8935b9bad8b8e5fb9a36c3617e
+4685a0cedc512c8935b9bad8b8e5fb9a36c3617e,4685a0ce,Visual styling process / style refactoring,"Visual styling process / style refactoring
+
+Re-styled Navigation Drawer
+Re-styled Host Information Window
+-
+Added default member profile image (hardcoded)
+-
+Refactoring / extracting Views’ style to styles.xml
+Created new color and styles
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1430198323,1430198323,e7818bfb0d173ea5b4c2a05fe8c80c744d197866
+cc1b5fc4093add20ad81314d5afb6e64241fbadc,cc1b5fc4,Merge pull request #203 from CyrilWendl/patch-2,"Merge pull request #203 from CyrilWendl/patch-2
+
+Update strings.xml",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430167955,1430167955,"66fabbe2a21336fddd31318f0c54460e5de7c34b,10ec11136121d557b96ec21f0d6f87722cc338ee"
+10ec11136121d557b96ec21f0d6f87722cc338ee,10ec1113,Update strings.xml,Update strings.xml,,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1430167850,1430167850,66fabbe2a21336fddd31318f0c54460e5de7c34b
+66fabbe2a21336fddd31318f0c54460e5de7c34b,66fabbe2,Improves #183: Adding info on how to allow devs to use maps api key,"Improves #183: Adding info on how to allow devs to use maps api key
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430073913,1430073978,c3b2a1a2fe9e4f9c000784555a2b94afa48bba0e
+c3b2a1a2fe9e4f9c000784555a2b94afa48bba0e,c3b2a1a2,Bump version to 1.5.0beta4,"Bump version to 1.5.0beta4
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430071491,1430071491,e7818bfb0d173ea5b4c2a05fe8c80c744d197866
+e7818bfb0d173ea5b4c2a05fe8c80c744d197866,e7818bfb,Fix bug where last login shown incorrectly,"Fix bug where last login shown incorrectly
+
+Also makes starred hosts get updated when you visit them and have network connectivity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430070777,1430070777,3f57f3947f92821c1d30f40282344c7a3b7324ef
+3f57f3947f92821c1d30f40282344c7a3b7324ef,3f57f394,Move back down to play services 6.5,"Move back down to play services 6.5
+
+Makes API22 emulator work, and everything else should work too.
+See http://stackoverflow.com/a/29425161/215713
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430064256,1430064256,b266d60010b408300b987d28e8aee3ce5dd9c1cf
+b266d60010b408300b987d28e8aee3ce5dd9c1cf,b266d600,Fix up FeedbackActivity with a DatePickerDialog,"Fix up FeedbackActivity with a DatePickerDialog
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430062695,1430063091,288039ad56e64dcdf0b338052deb6422782cc96c
+288039ad56e64dcdf0b338052deb6422782cc96c,288039ad,Merge pull request #202 from CyrilWendl/patch-1,"Merge pull request #202 from CyrilWendl/patch-1
+
+Update arrays.xml with German translation. Thanks!",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430052212,1430052212,"8ab7087e194edc0b43273d40090350760dc9176c,22fa05f562a01cf03bcc9f5f3c9b1ea9c4135806"
+22fa05f562a01cf03bcc9f5f3c9b1ea9c4135806,22fa05f5,Update arrays.xml,Update arrays.xml,,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1430030078,1430030078,8ab7087e194edc0b43273d40090350760dc9176c
+8ab7087e194edc0b43273d40090350760dc9176c,8ab7087e,Fix problem with search menu on hostinformation activity,"Fix problem with search menu on hostinformation activity
+
+It didn't used to fire.
+Also adds a bit of right margin to host info activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430021394,1430021394,b9fde31d79aa48b0eab41367218377183368f185
+b9fde31d79aa48b0eab41367218377183368f185,b9fde31d,"Improve host information, not showing until loaded","Improve host information, not showing until loaded
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430003960,1430003960,45e6f08c410dc036e77daf11f3196b5d111fb49a
+45e6f08c410dc036e77daf11f3196b5d111fb49a,45e6f08c,Bump to 1.5.0beta3,"Bump to 1.5.0beta3
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430002564,1430002564,bf84eed982cdbf87bef3e1fc62c920c610d8f97b
+bf84eed982cdbf87bef3e1fc62c920c610d8f97b,bf84eed9,Bump to 1.5.0beta2,"Bump to 1.5.0beta2
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430002312,1430002312,2aa05c54644900cc982e35666820584dba7d19ae
+2aa05c54644900cc982e35666820584dba7d19ae,2aa05c54,Add margins to messages and starred hosts activities,"Add margins to messages and starred hosts activities
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1430001010,1430001010,9884fde4bd9dde54ad7b2d240318f56eae20aefb
+9884fde4bd9dde54ad7b2d240318f56eae20aefb,9884fde4,Fix de/es bad format in feedback string that caused crash on visiting profile page,"Fix de/es bad format in feedback string that caused crash on visiting profile page
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429994396,1429995499,5a32cca1697ac08b490e46e005b826fbb6a96012
+5a32cca1697ac08b490e46e005b826fbb6a96012,5a32cca1,Merge pull request #201 from CyrilWendl/patch-2,"Merge pull request #201 from CyrilWendl/patch-2
+
+Updated strings for app version 1.5.0+
+
+THANKS!",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429995466,1429995466,"e526ba4d4377481be1303f1b575b45bcf1a84d60,776ddd59270191dd6ef35808f78c6043647d2f48"
+776ddd59270191dd6ef35808f78c6043647d2f48,776ddd59,Updated strings for app version 1.5.0+,"Updated strings for app version 1.5.0+
+
+Including updates of older strings",,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1429995356,1429995356,e526ba4d4377481be1303f1b575b45bcf1a84d60
+e526ba4d4377481be1303f1b575b45bcf1a84d60,e526ba4d,Merge pull request #200 from rfay/20150416_material_design,"Merge pull request #200 from rfay/20150416_material_design
+
+Material design UI redesign
+
+fixes #81 (Material design mockups thanks to @jeanfrancoisbeaulieu !!!!), although a number of new features like search suggestions had to be spun off.
+
+Moves min api to 11 to fix #196 
+Removes Roboguice to fix #191 
+Action Bar (now toolbar) and Navigation Drawer to fix #149 
+Menu redesign to fix #74",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429964130,1429964130,"c27cbb8fbec82000384701e5dfaf18c3d0eb2e06,2cad62a1ae9625a9671162447052eb0c0a577644"
+2cad62a1ae9625a9671162447052eb0c0a577644,2cad62a1,Minor change to password prompt,"Minor change to password prompt
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429931583,1429931583,da49625841d62376f01857fa2585cb5b966974f2
+da49625841d62376f01857fa2585cb5b966974f2,da496258,Move need-to-translate strings into de/es/fr directories,"Move need-to-translate strings into de/es/fr directories
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429931351,1429931351,6f8015b40777e1694b5be2a775f6c25d091af46e
+6f8015b40777e1694b5be2a775f6c25d091af46e,6f8015b4,Improve #190 by moving from static libraries,"Improve #190 by moving from static libraries
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429930818,1429930818,86dfd8ee974d717112e30a4ab98a77222b26a54d
+86dfd8ee974d717112e30a4ab98a77222b26a54d,86dfd8ee,Fix last active date in both listview and hostinfo,"Fix last active date in both listview and hostinfo
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429907834,1429907834,2013d0cb8a4d884d96ea1cf01efb4f61f123c7a7
+2013d0cb8a4d884d96ea1cf01efb4f61f123c7a7,2013d0cb,Make settingsactivity look right and display summary,"Make settingsactivity look right and display summary
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429905347,1429905347,81e951a9554721469f786fd7983559b2c9b9eb7d
+81e951a9554721469f786fd7983559b2c9b9eb7d,81e951a9,Add legal/open source notices back in,"Add legal/open source notices back in
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429885758,1429886503,2c3ab93d499aeb19781c77854f06800ed20a6aaf
+2c3ab93d499aeb19781c77854f06800ed20a6aaf,2c3ab93d,Change the About into an activity,"Change the About into an activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429855389,1429855389,54decd9f338f54b5210349d26ed5d95de9c2b250
+54decd9f338f54b5210349d26ed5d95de9c2b250,54decd9f,Fix up AuthenticationActivity,"Fix up AuthenticationActivity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429851294,1429851911,1d0ec422561aed11830e2645954ed8823fa58ec8
+1d0ec422561aed11830e2645954ed8823fa58ec8,1d0ec422,Rework of authentication activity to allow logout,"Rework of authentication activity to allow logout
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429847436,1429847436,b3279cce7fa2d266533b3ec36f93e1fdacc32947
+b3279cce7fa2d266533b3ec36f93e1fdacc32947,b3279cce,Make ListTabSearch and StarredHost lists sort reasonably,"Make ListTabSearch and StarredHost lists sort reasonably
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429826524,1429826524,8e89aca362d3ca42d9881bbd3f535ed72fefca44
+8e89aca362d3ca42d9881bbd3f535ed72fefca44,8e89aca3,Activate the checkbox for saving hosts,"Activate the checkbox for saving hosts
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429824559,1429824559,4f952db2c1aca2278b5d2092841cbf4e30064e7c
+4f952db2c1aca2278b5d2092841cbf4e30064e7c,4f952db2,Fix style/theme problems introduced in support v22.1,"Fix style/theme problems introduced in support v22.1
+
+Also fixes minor fixups to hostavailability
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429817735,1429817735,e614cdb5ea6ef191673c0200968f0b59c887191a
+e614cdb5ea6ef191673c0200968f0b59c887191a,e614cdb5,Remove MainActivity,"Remove MainActivity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429815346,1429815346,bf1a0d41ea40f66a2bbb56342e9e8880c6c36248
+bf1a0d41ea40f66a2bbb56342e9e8880c6c36248,bf1a0d41,Fix datepicker crash in api21+,"Fix datepicker crash in api21+
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429815188,1429815188,99156b0427f17a65aa56069ca1b7f00995c67aed
+99156b0427f17a65aa56069ca1b7f00995c67aed,99156b04,Update support library version,"Update support library version
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429815167,1429815167,62b6f2ad30a2b49c7e6b6dea063bbfe1b9e23480
+62b6f2ad30a2b49c7e6b6dea063bbfe1b9e23480,62b6f2ad,Minor cleanup of hostactivity xml,"Minor cleanup of hostactivity xml
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429746046,1429746046,bad6939bc779bbb457457e4cb98416b1eb2831ca
+bad6939bc779bbb457457e4cb98416b1eb2831ca,bad6939b,Remove elipsis on end of member date,"Remove elipsis on end of member date
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429745512,1429745512,b1fc609b9984f2eac1b356336bfaf679af0d81d4
+b1fc609b9984f2eac1b356336bfaf679af0d81d4,b1fc609b,Feedback working again as FeedbackTable,"Feedback working again as FeedbackTable
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429744942,1429744942,3d50e4abca33a754498ce86edb10426d20ae090d
+3d50e4abca33a754498ce86edb10426d20ae090d,3d50e4ab,Change date formatting for feedback,"Change date formatting for feedback
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429744258,1429744258,3deccd0e598a7d4812d8fecd4d2973378c165ea5
+3deccd0e598a7d4812d8fecd4d2973378c165ea5,3deccd0e,Add spaces between phone numbers,"Add spaces between phone numbers
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429743733,1429743733,9ebba736cb4ba9052fbf1e1239f6681864a91ebf
+9ebba736cb4ba9052fbf1e1239f6681864a91ebf,9ebba736,Change Host to use return a real Date,"Change Host to use return a real Date
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429743478,1429743478,732b20291a45d3001327880af1dc7bd29af1b8bd
+732b20291a45d3001327880af1dc7bd29af1b8bd,732b2029,HostInformation starting to work,"HostInformation starting to work
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429736874,1429736874,06b3cf69c5e335293a053283ad8fec78a714bfe5
+06b3cf69c5e335293a053283ad8fec78a714bfe5,06b3cf69,Added feedback section,"Added feedback section
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429717536,1429717536,3449fed7d6b44b6ae2b328fcde90143a5b6d1190
+3449fed7d6b44b6ae2b328fcde90143a5b6d1190,3449fed7,First round on host information activity,"First round on host information activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429717225,1429717225,959703c02550b60ca6e36ca9c877131e3913b594
+959703c02550b60ca6e36ca9c877131e3913b594,959703c0,"Remove notavailable warning, allow for no query","Remove notavailable warning, allow for no query
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429678538,1429678538,0b1cdaff240392f6785e6878f63f36ef80164571
+0b1cdaff240392f6785e6878f63f36ef80164571,0b1cdaff,Make member photo full width,"Make member photo full width
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429676224,1429676483,02801272e4977c4e7d03a25dc95e4b1de30a64f6
+02801272e4977c4e7d03a25dc95e4b1de30a64f6,02801272,Emphasize location if it's a match,"Emphasize location if it's a match
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429673065,1429673065,d0af50c6a848cc31306d39c7c5c8fbcd5b9b9aef
+d0af50c6a848cc31306d39c7c5c8fbcd5b9b9aef,d0af50c6,Force icon opacity and icon,"Force icon opacity and icon
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429671273,1429671273,83ee1ebd25af8f16a1f1418d05c53b4cb17e8b63
+83ee1ebd25af8f16a1f1418d05c53b4cb17e8b63,83ee1ebd,Search rows now looking good with icon,"Search rows now looking good with icon
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429653930,1429653930,0a802f0ee0f8c38c8798b66de09fcb659b1f122a
+0a802f0ee0f8c38c8798b66de09fcb659b1f122a,0a802f0e,Improvements to host search results,"Improvements to host search results
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429643616,1429643616,91471216b29932ca7f33a2eebc77f8e76fe899c3
+91471216b29932ca7f33a2eebc77f8e76fe899c3,91471216,Improve host contact screen,"Improve host contact screen
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429636680,1429636946,2209fd5144427bbc1b221ced8abf8a9d5473e6fd
+2209fd5144427bbc1b221ced8abf8a9d5473e6fd,2209fd51,Actionbar search working fine,"Actionbar search working fine
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429634994,1429634994,72a18b202b837cdb84c63a1498fe71d3a42fc2ca
+72a18b202b837cdb84c63a1498fe71d3a42fc2ca,72a18b20,Remove old icons,"Remove old icons
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429620140,1429620829,1e5a9bda0c702c46b501d36024b0a837b8d88c7a
+1e5a9bda0c702c46b501d36024b0a837b8d88c7a,1e5a9bda,Add comment about deprecation,"Add comment about deprecation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429591103,1429591103,51e69b90dc0c24db8b5a050ab6b6a4369da20749
+51e69b90dc0c24db8b5a050ab6b6a4369da20749,51e69b90,Map searchview now appears,"Map searchview now appears
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429589861,1429589861,cc2da417b3f668de3ef7fcb2de7c5affbf63fb0d
+cc2da417b3f668de3ef7fcb2de7c5affbf63fb0d,cc2da417,Remove standard actionbar menu from base activity,"Remove standard actionbar menu from base activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429588315,1429588315,72add10cc8acf4e5476840fb4027af3c8afe8ed3
+72add10cc8acf4e5476840fb4027af3c8afe8ed3,72add10c,Tweaks to nav list,"Tweaks to nav list
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429587798,1429587798,791eba03344a530667c8a54970b0cf67d1d45a53
+791eba03344a530667c8a54970b0cf67d1d45a53,791eba03,Add auth info to nav drawer,"Add auth info to nav drawer
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429563304,1429563304,3d98e6706e4e1614e40903cf8f708a4dd158e6d7
+3d98e6706e4e1614e40903cf8f708a4dd158e6d7,3d98e670,Remove animation,"Remove animation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429559197,1429559197,15f06a3fd149697f3efdf8a84ca064d5c302aad8
+15f06a3fd149697f3efdf8a84ca064d5c302aad8,15f06a3f,Adding icons and layout for navigation drawer,"Adding icons and layout for navigation drawer
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429558629,1429558629,6519700dd50f00c5b98b92a7c9e7c72f70c1956e
+6519700dd50f00c5b98b92a7c9e7c72f70c1956e,6519700d,Improve nav drawer row with icon,"Improve nav drawer row with icon
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429552343,1429554497,f3e83c5d249abbbbec658ec0b0d81b3b4b679ebc
+f3e83c5d249abbbbec658ec0b0d81b3b4b679ebc,f3e83c5d,Fix layouts that were overlaying each other,"Fix layouts that were overlaying each other
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429549092,1429549092,f539c0a4f60cfa40df32c44e46cc773dc9e0fd66
+f539c0a4f60cfa40df32c44e46cc773dc9e0fd66,f539c0a4,Massive changes to everything. All activities working mostly,"Massive changes to everything. All activities working mostly
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429548582,1429548582,4cdab23284c1f9ef5f256db34a1636391ab24b0b
+4cdab23284c1f9ef5f256db34a1636391ab24b0b,4cdab232,Start using favorites instead of starred hosts,"Start using favorites instead of starred hosts
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429390016,1429390016,15ae923f638cf95a24c879d8f2222f6dc42e946c
+15ae923f638cf95a24c879d8f2222f6dc42e946c,15ae923f,Title bar text is finally white,"Title bar text is finally white
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429388831,1429388831,c3e0a0b8663541fda76ab2647106f61efc5f6899
+c3e0a0b8663541fda76ab2647106f61efc5f6899,c3e0a0b8,Fix contact activity,"Fix contact activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429382652,1429382652,2243a1724a710f3c82e25f1224bc0fd4bc5a73ee
+2243a1724a710f3c82e25f1224bc0fd4bc5a73ee,2243a172,Change theme name to wsAppTheme,"Change theme name to wsAppTheme
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429374970,1429376748,9b02d812cc64456fda2ac9ed4a896ecf1b3bee0b
+9b02d812cc64456fda2ac9ed4a896ecf1b3bee0b,9b02d812,"Most activities working, removed RoboGuice","Most activities working, removed RoboGuice
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429374735,1429374735,54e366c33d8b90f65b6af8f9ae53dfec201ffdaf
+54e366c33d8b90f65b6af8f9ae53dfec201ffdaf,54e366c3,Starred hosts working,"Starred hosts working
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429332362,1429332362,95596bf224a784dd624e1d12bb3d6bf3d028f725
+95596bf224a784dd624e1d12bb3d6bf3d028f725,95596bf2,HostInformationActivity live,"HostInformationActivity live
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429328433,1429328433,712e355d270ce114593088394f5d05cab16d5258
+712e355d270ce114593088394f5d05cab16d5258,712e355d,Messages tab now working almost,"Messages tab now working almost
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429325046,1429325046,e451eb573a09a4cd6a196f0ddf652d3ca676e2cb
+e451eb573a09a4cd6a196f0ddf652d3ca676e2cb,e451eb57,Nav now working mostly,"Nav now working mostly
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429311369,1429311369,383853c75f34d368a1a9a554769cb74d61487a91
+383853c75f34d368a1a9a554769cb74d61487a91,383853c7,onMenu now starting to work,"onMenu now starting to work
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429226421,1429226421,05e97e9b529bcb6b0c56a5d7a51dd02f35557aaa
+05e97e9b529bcb6b0c56a5d7a51dd02f35557aaa,05e97e9b,Initial working version of navigation drawer - text search only,"Initial working version of navigation drawer - text search only
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429220369,1429220369,c27cbb8fbec82000384701e5dfaf18c3d0eb2e06
+c27cbb8fbec82000384701e5dfaf18c3d0eb2e06,c27cbb8f,"Update to use gradle wrapper for more predictable builds, for #183","Update to use gradle wrapper for more predictable builds, for #183
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429211030,1429211030,d6b75277f9665c0d96e6ceea096e253cae89d484
+d6b75277f9665c0d96e6ceea096e253cae89d484,d6b75277,Fix additional Spanish strings,"Fix additional Spanish strings
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429022977,1429022977,0ca7f5921f0ed86350180c186f4b2880bad5b6a4
+0ca7f5921f0ed86350180c186f4b2880bad5b6a4,0ca7f592,Update build.gradle for 1.4.2 release,"Update build.gradle for 1.4.2 release
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429022763,1429022763,00bb1db3e110074dabe65bf65623aa2f2a21f710
+00bb1db3e110074dabe65bf65623aa2f2a21f710,00bb1db3,Update Spanish translations from Laura,"Update Spanish translations from Laura
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1429022651,1429022651,15acbedeacd84f30064c6db879f99d043ef4980a
+15acbedeacd84f30064c6db879f99d043ef4980a,15acbede,Update version to 1.4.2beta5,"Update version to 1.4.2beta5
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428960071,1428960071,71b176e24a96d62423cc20f231918badac5fae6a
+71b176e24a96d62423cc20f231918badac5fae6a,71b176e2,fixes #192 by providing English versions for post to feedback creation,"fixes #192 by providing English versions for post to feedback creation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428959682,1428959682,a200817244eac0493bae4c3d1a4a1b8298637e41
+a200817244eac0493bae4c3d1a4a1b8298637e41,a2008172,"Update widget sizes on feedback page, fixes #193","Update widget sizes on feedback page, fixes #193
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428958446,1428958610,a9202be1b10e714490d5aab999d54271d9fb750c
+a9202be1b10e714490d5aab999d54271d9fb750c,a9202be1,Merge pull request #195 from CyrilWendl/patch-1,"Merge pull request #195 from CyrilWendl/patch-1
+
+Update strings.xml",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428957469,1428957469,"881b1fa06b28b753e792c836e70c750c6c48c26e,6f5d12e7fd232c9ccbdce257d0bd756bc03102a5"
+6f5d12e7fd232c9ccbdce257d0bd756bc03102a5,6f5d12e7,Update strings.xml,"Update strings.xml
+
+Translated one string, corrected spelling mistake",,,,Cyril Wendl,cyrilwendl@hotmail.com,Cyril Wendl,cyrilwendl@hotmail.com,1428956671,1428956671,881b1fa06b28b753e792c836e70c750c6c48c26e
+881b1fa06b28b753e792c836e70c750c6c48c26e,881b1fa0,Add string 'Your feedback for this member',"Add string 'Your feedback for this member'
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428956267,1428956267,b12a55604165d9383257614f6c266fb49b5c6ace
+b12a55604165d9383257614f6c266fb49b5c6ace,b12a5560,"Revert ""Downgrade play services to 6.5 - only way I can run on api 22""","Revert ""Downgrade play services to 6.5 - only way I can run on api 22""
+
+This seems to have been where I stopped being able to do 2.3.5 install
+Determined by git bisect.
+
+Fixes #189
+
+This reverts commit ace2f3b0d01809e2e02192f984245191ac8ad55b.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428940096,1428940234,983763c40cbd89055be1e8335cf0587c23d8bd17
+983763c40cbd89055be1e8335cf0587c23d8bd17,983763c4,Add stanza to build.gradle for higher lint levels,"Add stanza to build.gradle for higher lint levels
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428938195,1428938195,18295f73b4841915c86530656db125cd5f390602
+18295f73b4841915c86530656db125cd5f390602,18295f73,Fix unchecked conversion in shouldRenderAsCluster(),"Fix unchecked conversion in shouldRenderAsCluster()
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428880993,1428880993,ed547f508a553ec404eb0e8a10cce471cd9be132
+ed547f508a553ec404eb0e8a10cce471cd9be132,ed547f50,Bump version number for 1.4.2beta4,"Bump version number for 1.4.2beta4
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428880225,1428880225,fc7a433a915acf3c7c2cbe61d144ce49cf68f62e
+fc7a433a915acf3c7c2cbe61d144ce49cf68f62e,fc7a433a,"If bitmap download fails, don't display the bitmap","If bitmap download fails, don't display the bitmap
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428871894,1428871894,61d6965b78e046ec64dba5a27ac136b5fe41e277
+61d6965b78e046ec64dba5a27ac136b5fe41e277,61d6965b,"Make string array translation dependent on English array, fixes #186","Make string array translation dependent on English array, fixes #186
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428871866,1428871866,1c92b88508b29f02be101b8b5412e6fdd692a66c
+1c92b88508b29f02be101b8b5412e6fdd692a66c,1c92b885,Fixes #188 by preventing feedback send if no network,"Fixes #188 by preventing feedback send if no network
+
+Also addressed the 'Send message' page, and fiddled with the other implementations.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428770699,1428770699,9bae9e100ff611380fb7ff851172e86f90dad9e7
+9bae9e100ff611380fb7ff851172e86f90dad9e7,9bae9e10,Credit for translators,"Credit for translators
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428763997,1428763997,0893686f5dca44ff0d9853d7e6439829f18fdb00
+0893686f5dca44ff0d9853d7e6439829f18fdb00,0893686f,Clean up language strings for 1.4.2beta3,"Clean up language strings for 1.4.2beta3
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428594985,1428594985,58f5568bfd9b581bb9897993e19d0817d814cf85
+58f5568bfd9b581bb9897993e19d0817d814cf85,58f5568b,Update to 1.4.2beta3,"Update to 1.4.2beta3
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428593974,1428593974,632e669cfd0d69717e6e7215105ca685da088853
+632e669cfd0d69717e6e7215105ca685da088853,632e669c,Add Spanish translations from Laura,"Add Spanish translations from Laura
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428593954,1428593954,9860fccb3d0b9acf1d9b633d26dd2a9aa4f1e19d
+9860fccb3d0b9acf1d9b633d26dd2a9aa4f1e19d,9860fccb,Merge branch 'jeanfrancoisbeaulieu-20150406_frenchstrings',"Merge branch 'jeanfrancoisbeaulieu-20150406_frenchstrings'
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428591335,1428591335,"95e83738d7c563abc2fbee8d1a311f26c7d72fcf,556aa49d32098afbd9c58c0d4759b0dfd41450b9"
+556aa49d32098afbd9c58c0d4759b0dfd41450b9,556aa49d,Merge branch '20150406_frenchstrings' of…,"Merge branch '20150406_frenchstrings' of https://github.com/jeanfrancoisbeaulieu/wsandroid into jeanfrancoisbeaulieu-20150406_frenchstrings
+
+Conflicts:
+	res/values-fr/strings.xml
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428591304,1428591304,"95e83738d7c563abc2fbee8d1a311f26c7d72fcf,0e3ab6a5c7f0d5bd840cd082c362783b6c5c42a3"
+95e83738d7c563abc2fbee8d1a311f26c7d72fcf,95e83738,Merge pull request #185 from CyrilWendl/master,"Merge pull request #185 from CyrilWendl/master
+
+Added: updated German translations - Congrats on first PR @CyrilWendl !",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428590956,1428590956,"6ff85e9d0ef966be2b524d847cb97abe69990dd9,94e16e5c3247e237d4652b56c02d03f7a43a9d0e"
+94e16e5c3247e237d4652b56c02d03f7a43a9d0e,94e16e5c,Added: updated German translations,"Added: updated German translations
+",,,,Cyril Wendl,cyrilwendl@gmail.com,Cyril Wendl,cyrilwendl@gmail.com,1428500147,1428500147,6ff85e9d0ef966be2b524d847cb97abe69990dd9
+0e3ab6a5c7f0d5bd840cd082c362783b6c5c42a3,0e3ab6a5,"Translate new strings to french again, untranslatable","Translate new strings to french again, untranslatable
+
+- translated a bunch of strings relative to feedback
+- modified 2 more strings to untranslatable.
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1428456075,1428456075,84ffa6fde70e35cb03cd28a14d25391d3726fb70
+6ff85e9d0ef966be2b524d847cb97abe69990dd9,6ff85e9d,Updates to strings to make signed apk work,"Updates to strings to make signed apk work
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428440339,1428440339,f52bc84dbc1cb0c5735a278c5d5d0223d897e51f
+f52bc84dbc1cb0c5735a278c5d5d0223d897e51f,f52bc84d,move to beta2 to distinguish from development,"move to beta2 to distinguish from development
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428439638,1428439638,ace2f3b0d01809e2e02192f984245191ac8ad55b
+ace2f3b0d01809e2e02192f984245191ac8ad55b,ace2f3b0,Downgrade play services to 6.5 - only way I can run on api 22,"Downgrade play services to 6.5 - only way I can run on api 22
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428439555,1428439555,9d1c0c7e00232fc3a657ed1008f13b0cb8b15114
+9d1c0c7e00232fc3a657ed1008f13b0cb8b15114,9d1c0c7e,update BuildToolsVersion to 22.0.1,"update BuildToolsVersion to 22.0.1
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428436439,1428436439,d648074f9cf3d47e824bf738668cbc3b55c669e3
+d648074f9cf3d47e824bf738668cbc3b55c669e3,d648074f,Scale profile picture to 70% of enclosing layout,"Scale profile picture to 70% of enclosing layout
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428436420,1428436420,78a4b086a2960ba47baf369ed3762b9e216f94b9
+78a4b086a2960ba47baf369ed3762b9e216f94b9,78a4b086,Change feedback spinners to dropdown mode,"Change feedback spinners to dropdown mode
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428431835,1428431835,f5968c9db266e305cb077efc6eb6afdf7132f99d
+f5968c9db266e305cb077efc6eb6afdf7132f99d,f5968c9d,Make add-feedback screen scroll properly,"Make add-feedback screen scroll properly
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428430470,1428430470,0909c10eef6e8a0dedb8c38aa3eb10571d31b2d8
+0909c10eef6e8a0dedb8c38aa3eb10571d31b2d8,0909c10e,"Fix minSdkVersion, which accidentally got set to 11 instead of 10 (2.3.3)","Fix minSdkVersion, which accidentally got set to 11 instead of 10 (2.3.3)
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428426119,1428426119,756ccb29b3e15c82a7d7abac5d7172ff731aabd9
+84ffa6fde70e35cb03cd28a14d25391d3726fb70,84ffa6fd,"Translate new strings to french, add untranslatable","Translate new strings to french, add untranslatable
+
+- Translated feedback arrays to French
+- Translated error string
+- Made one string untranslatable (used by Google Analytics)
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1428376751,1428376751,756ccb29b3e15c82a7d7abac5d7172ff731aabd9
+756ccb29b3e15c82a7d7abac5d7172ff731aabd9,756ccb29,Spanish strings filled in,"Spanish strings filled in
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428359280,1428359280,5c9883af871f34f71d2828bf957106365e25636f
+5c9883af871f34f71d2828bf957106365e25636f,5c9883af,Add Spanish strings,"Add Spanish strings
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428359183,1428359183,34204db1707a914e675219289735eb7e140120d5
+34204db1707a914e675219289735eb7e140120d5,34204db1,Make host services translatable for #169,"Make host services translatable for #169
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428357329,1428357329,a3a1751ef32fe3acee7e50e5cce97dd294e043b6
+a3a1751ef32fe3acee7e50e5cce97dd294e043b6,a3a1751e,Merge pull request #179 from rfay/20150320_member_photo,"Merge pull request #179 from rfay/20150320_member_photo
+
+Add profile picture to host information for #42",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428341705,1428341705,"c33c8790fa1cdd7b5dd7f73e70fc1d3f4931f8fc,da004c8eb4e99cc7b2076cd9f452e5131ea14af3"
+da004c8eb4e99cc7b2076cd9f452e5131ea14af3,da004c8e,Add padding per Jeff's comments,"Add padding per Jeff's comments
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428341645,1428341645,41334226504553f1541b35001528ea24a8cde8f1
+41334226504553f1541b35001528ea24a8cde8f1,41334226,"Make member photo bigger, move name below it","Make member photo bigger, move name below it
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427575874,1428340464,662bc72b4bf1a09c8402b74e7bc8ed24821b9540
+662bc72b4bf1a09c8402b74e7bc8ed24821b9540,662bc72b,First attempt at member photo for #42,"First attempt at member photo for #42
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427237200,1428340372,c33c8790fa1cdd7b5dd7f73e70fc1d3f4931f8fc
+c33c8790fa1cdd7b5dd7f73e70fc1d3f4931f8fc,c33c8790,Fix up broken strings resources from merge,"Fix up broken strings resources from merge
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428339951,1428339951,4e8d3328e7be3e241c9ad05c099774cb6408de3f
+4e8d3328e7be3e241c9ad05c099774cb6408de3f,4e8d3328,Merge pull request #181 from rfay/20150324_no_network_no_try,"Merge pull request #181 from rfay/20150324_no_network_no_try
+
+Fixes #127 by limiting behaviors when not connected to the network",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428338912,1428338912,"72beac3f7694d029ee182d72ae18ff148c05e6c7,60a68e568e83772845bc712e6d8ebd4bc82b7cc6"
+60a68e568e83772845bc712e6d8ebd4bc82b7cc6,60a68e56,Fixes #127 by limiting behaviors when not connected to the network,"Fixes #127 by limiting behaviors when not connected to the network
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427246649,1428338888,72beac3f7694d029ee182d72ae18ff148c05e6c7
+72beac3f7694d029ee182d72ae18ff148c05e6c7,72beac3f,Merge pull request #180 from rfay/20150324_javascript_in_webview,"Merge pull request #180 from rfay/20150324_javascript_in_webview
+
+Fixes #166 by adding dialog when leaving the app using webview",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428338735,1428338735,"06876dae55d47d58941b6d66670e5a5022bb3993,4ef8d114e05958abff723bb1f326bf9bd9c1b794"
+4ef8d114e05958abff723bb1f326bf9bd9c1b794,4ef8d114,Fixes #166 by adding dialog when leaving the app,"Fixes #166 by adding dialog when leaving the app
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427242240,1428338684,06876dae55d47d58941b6d66670e5a5022bb3993
+06876dae55d47d58941b6d66670e5a5022bb3993,06876dae,Merge pull request #182 from rfay/20150325_create_feedback,"Merge pull request #182 from rfay/20150325_create_feedback
+
+Real Feedback submission form - fixes #40",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1428338210,1428338210,"8be21f8eff32c2520b021975fb1517fa78c3a2b8,7e21cdb7525a7106f8dac727dc0dd30c5a930371"
+7e21cdb7525a7106f8dac727dc0dd30c5a930371,7e21cdb7,Real Feedback submission form - fixes #40,"Real Feedback submission form - fixes #40
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427404304,1427574178,8be21f8eff32c2520b021975fb1517fa78c3a2b8
+8be21f8eff32c2520b021975fb1517fa78c3a2b8,8be21f8e,Followup to #141 to handle the case where a 401 error is NOT for the unauthenticated user,"Followup to #141 to handle the case where a 401 error is NOT for the unauthenticated user
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427404427,1427404427,861b279a084494e6fa3e36825f3a1445601f1de0
+861b279a084494e6fa3e36825f3a1445601f1de0,861b279a,Followup to #147 to improve login behavior - ignore 406 on login,"Followup to #147 to improve login behavior - ignore 406 on login
+
+406 on login seems to mean we're already logged in.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1427237434,1427237434,fa9a998c43d1f8383254b020de425a7d16824734
+fa9a998c43d1f8383254b020de425a7d16824734,fa9a998c,Merge pull request #171 from rfay/20150120_refactor_get_json,"Merge pull request #171 from rfay/20150120_refactor_get_json
+
+Refactor RestClient and related to use JSON, solve various problems",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1426861618,1426861618,"3f460a676f482ea4fef74a84b46098ac98590798,628cc0fc415c6f9cc0da669a38015206fd40dd83"
+628cc0fc415c6f9cc0da669a38015206fd40dd83,628cc0fc,Remove post() recursion and replace it with duplicated code for authentication,"Remove post() recursion and replace it with duplicated code for authentication
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1426544656,1426544656,cd9029dcd40fa5e9186c56ccb9ee2a9c3b342947
+3f460a676f482ea4fef74a84b46098ac98590798,3f460a67,Add kilometers/miles into German translation,"Add kilometers/miles into German translation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421971301,1421971301,a2a0b0d7ef049c8ce78fbe182c109a9f62025c4e
+a2a0b0d7ef049c8ce78fbe182c109a9f62025c4e,a2a0b0d7,Merge pull request #170 from jeanfrancoisbeaulieu/20150122_NewItems_French_Translation,"Merge pull request #170 from jeanfrancoisbeaulieu/20150122_NewItems_French_Translation
+
+Add French translation for distance units",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421971077,1421971077,"d4d68805635d8984f466cda93ab80234d52103ca,3ae70230c61de185bd83554be0dbf305cbe79b5a"
+cd9029dcd40fa5e9186c56ccb9ee2a9c3b342947,cd9029dc,Clean up authenticate() and limit potential for recursion on post(),"Clean up authenticate() and limit potential for recursion on post()
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421967813,1421970798,ce81d90ea8ce596ea0184fdb4ced6f7ff462a8e3
+ce81d90ea8ce596ea0184fdb4ced6f7ff462a8e3,ce81d90e,Make authenticate() use RestClient.post(),"Make authenticate() use RestClient.post()
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421964595,1421964812,859142b9c7db28cc557e7081dac2de7bc89de73c
+859142b9c7db28cc557e7081dac2de7bc89de73c,859142b9,Change AuthenticationThread into AsyncTask,"Change AuthenticationThread into AsyncTask
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421960951,1421960951,f9ebcb2e6a62b6a9b4a558beb5d7f7dd6b508752
+3ae70230c61de185bd83554be0dbf305cbe79b5a,3ae70230,Add French translation for distance units,"Add French translation for distance units
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1421946488,1421946488,d4d68805635d8984f466cda93ab80234d52103ca
+d4d68805635d8984f466cda93ab80234d52103ca,d4d68805,Merge pull request #168 from jeanfrancoisbeaulieu/french_trans,"Merge pull request #168 from jeanfrancoisbeaulieu/french_trans
+
+French translation first round. Thanks @jeanfrancoisbeaulieu .",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421857329,1421857329,"748d5b59e31510339ebeb8d8d83d2cc0374d3db4,6cce5279962d8a20ae745e07595e58c6f436badb"
+6cce5279962d8a20ae745e07595e58c6f436badb,6cce5279,"Corrections on french translation, add untranslatables","Corrections on french translation, add untranslatables
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1421855035,1421855035,5866aab33b0d5287505ab2a78f0d4eca5518ba85
+f9ebcb2e6a62b6a9b4a558beb5d7f7dd6b508752,f9ebcb2e,Remove isAuthenticated() attempt to hit a webpage,"Remove isAuthenticated() attempt to hit a webpage
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421803355,1421803355,51f217d370cdda4240ee542e582335707651a809
+51f217d370cdda4240ee542e582335707651a809,51f217d3,Refactor RestClient methods to return JSONObject,"Refactor RestClient methods to return JSONObject
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421797100,1421800696,5cd9829548d9ecbec7b810c3a31343d5b6e5dab1
+5cd9829548d9ecbec7b810c3a31343d5b6e5dab1,5cd98295,Refactor getJson() and getPage to post() and get(),"Refactor getJson() and getPage to post() and get()
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421789528,1421797106,f7cf6e1fb546fdb214eedf802b68adff5edf2a1c
+f7cf6e1fb546fdb214eedf802b68adff5edf2a1c,f7cf6e1f,"Remove SearchFactory, Refactor HttpTextSearch to RestTextSearch","Remove SearchFactory, Refactor HttpTextSearch to RestTextSearch
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421787095,1421797106,748d5b59e31510339ebeb8d8d83d2cc0374d3db4
+748d5b59e31510339ebeb8d8d83d2cc0374d3db4,748d5b59,Merge pull request #167 from rfay/20150120_fix_maps_crash_on_connect,"Merge pull request #167 from rfay/20150120_fix_maps_crash_on_connect
+
+Followup to #165 on switching to FusedAPI - fix crash
+
+Had to bring this in early because I'm hitting it in debugging other problems.",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421796881,1421796881,"8ee240ba69bf5a89bee0630969cdad605d2656b4,b1ee47eb1ba9eb78fa301d1981a85f5ef30f561c"
+b1ee47eb1ba9eb78fa301d1981a85f5ef30f561c,b1ee47eb,Followup to #165 on switching to FusedAPI - fix crash,"Followup to #165 on switching to FusedAPI - fix crash
+
+Turned out that because both the maps setup and the play services connect are now
+asynchronous that the onConnect() could fire before we had a map to act on.
+Changed the mGoogleApiClient.connect() to be after the map has been set up.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1421789732,1421789732,8ee240ba69bf5a89bee0630969cdad605d2656b4
+8ee240ba69bf5a89bee0630969cdad605d2656b4,8ee240ba,Merge pull request #165 from rfay/20150107_fused_location,"Merge pull request #165 from rfay/20150107_fused_location
+
+Implement fusedApi technique for location to fix #155",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1421008523,1421008523,"83d09fbf52e4b9dd07d36784d6460a22a3e25020,3d1e4b175d01d45319259d48553fe3a8826320ff"
+5866aab33b0d5287505ab2a78f0d4eca5518ba85,5866aab3,completed french translation,"completed french translation
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1420690971,1420691581,83d09fbf52e4b9dd07d36784d6460a22a3e25020
+3d1e4b175d01d45319259d48553fe3a8826320ff,3d1e4b17,Implement fusedApi technique for location to fix #155,"Implement fusedApi technique for location to fix #155
+
+- Updates to Play Services 6.5
+- Adds new toolbar on map (freeby) with navigation and map links
+- Changes min api to 11 - we already were using apis that required 11
+- Re-fixes the problem in #157 now that we have higher play services
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1420655271,1420655271,83d09fbf52e4b9dd07d36784d6460a22a3e25020
+83d09fbf52e4b9dd07d36784d6460a22a3e25020,83d09fbf,Merge pull request #159 from rfay/20141231_french_german_translations,"Merge pull request #159 from rfay/20141231_french_german_translations
+
+Add german translation for #90",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1420530287,1420530287,"ea1fff4d685eb70a5dc1a4f0ce7f417ca6da442e,55529c3ffcc496ac114c15984d8e79c578cfdf75"
+ea1fff4d685eb70a5dc1a4f0ce7f417ca6da442e,ea1fff4d,Merge pull request #163 from rfay/20150103_fix_null_pointers,"Merge pull request #163 from rfay/20150103_fix_null_pointers
+
+Fix null pointer and number format crashes in 1.4.1",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1420530185,1420530185,"53d96ff748a0415d09a86d24ff070b6896393821,3f8a3643d5d394aac6bdfd15c48916906a832ed4"
+3f8a3643d5d394aac6bdfd15c48916906a832ed4,3f8a3643,Fixes #161 by not assuming numeric UID when it might not exist,"Fixes #161 by not assuming numeric UID when it might not exist
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1420503748,1420503748,9fac68fb44d7c11b0bcb272a6dd41035751128cb
+9fac68fb44d7c11b0bcb272a6dd41035751128cb,9fac68fb,Fixes #160 to make sure we have intent and correct requestCode,"Fixes #160 to make sure we have intent and correct requestCode
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1420502844,1420502844,da5d846ad5e1ece3fc1225b8254cbf71da88d9d9
+da5d846ad5e1ece3fc1225b8254cbf71da88d9d9,da5d846a,Fix instance save crash to fix #162,"Fix instance save crash to fix #162
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1420500950,1420500950,53d96ff748a0415d09a86d24ff070b6896393821
+55529c3ffcc496ac114c15984d8e79c578cfdf75,55529c3f,Add german translation for #90,"Add german translation for #90
+
+Did a couple of minor additional things:
+- Added translators to about page
+- The 'Basic info' string on the host info page was not properly resource-ized
+- Created the (untranslated) French version
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1420044521,1420044607,53d96ff748a0415d09a86d24ff070b6896393821
+53d96ff748a0415d09a86d24ff070b6896393821,53d96ff7,Update strings to 1.4.2 beta 1 for next round,"Update strings to 1.4.2 beta 1 for next round
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419963749,1419963749,941de1f5202026e86458935dac768114384d844b
+941de1f5202026e86458935dac768114384d844b,941de1f5,Update to 1.4.1 for push to play store,"Update to 1.4.1 for push to play store
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419963575,1419963575,0424ccb341f1832cff0878f0c3ee0378bf471024
+0424ccb341f1832cff0878f0c3ee0378bf471024,0424ccb3,Update strings to 1.4.1beta2,"Update strings to 1.4.1beta2
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419726042,1419726042,ebdcaffaa175ec2a64530d73d137435a55c6477f
+ebdcaffaa175ec2a64530d73d137435a55c6477f,ebdcaffa,"URLEncoding has to be done with utf-8 specified, or ...","URLEncoding has to be done with utf-8 specified, or ...
+
+Fixes #158
+
+ISO-8859-1 gets used instead, which will really damage utf-8 strings.
+http://stackoverflow.com/questions/10942205/creating-a-urlencodedformentity-from-a-list-of-namevaluepairs-throws-a-nullpoint
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419725595,1419725924,56ab2f4ee31a0c57ec38f9358c43725b0576126b
+56ab2f4ee31a0c57ec38f9358c43725b0576126b,56ab2f4e,Prepare for 1.4.1 beta 1 by changing build,"Prepare for 1.4.1 beta 1 by changing build
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419371391,1419371391,dbae87c1f8da752b0659e77c63d70486ba494878
+dbae87c1f8da752b0659e77c63d70486ba494878,dbae87c1,Fixes #45 by changing app name to Warm Showers (with space),"Fixes #45 by changing app name to Warm Showers (with space)
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419371367,1419371367,811cf3c130e445b896a7d3b11b1f317ea033ff1e
+811cf3c130e445b896a7d3b11b1f317ea033ff1e,811cf3c1,Merge pull request #157 from rfay/20141222_fix_maps_null_pointer,"Merge pull request #157 from rfay/20141222_fix_maps_null_pointer
+
+Prevent case where maps setup returns null - make sure we have google play services
+Pulling this to prepare for a release.",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419370683,1419370683,"4240834a8846ab373d9736d31f331f5d4afb91e8,105776d0bdb201ad94f0d81ad05f7823732b148e"
+105776d0bdb201ad94f0d81ad05f7823732b148e,105776d0,Make sure members of _Host are initialized,"Make sure members of _Host are initialized
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419367663,1419367691,68a376490c745c6f7390891c12c7c0366aa25bd6
+68a376490c745c6f7390891c12c7c0366aa25bd6,68a37649,Verify that google play service is available to prevent null pointer,"Verify that google play service is available to prevent null pointer
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419356852,1419367691,4240834a8846ab373d9736d31f331f5d4afb91e8
+4240834a8846ab373d9736d31f331f5d4afb91e8,4240834a,Fix exception reporting - possible null pointers there,"Fix exception reporting - possible null pointers there
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419129139,1419129139,a8b3a7c3669a0c85a62568fd34f74fc3f0569cb9
+a8b3a7c3669a0c85a62568fd34f74fc3f0569cb9,a8b3a7c3,Merge pull request #153 from rfay/20141214_rework_authentication,"Merge pull request #153 from rfay/20141214_rework_authentication
+
+Refactor AuthenticationHelper and use Account for storing cookie info",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1419118651,1419118651,"46f7f6a5beb9b6e88a15532c1868d676b9d19073,0b3c79ee3a2a022c67bf026a6f72713107488c79"
+0b3c79ee3a2a022c67bf026a6f72713107488c79,0b3c79ee,Refactor AuthenticationHelper and use Account for storing cookie info,"Refactor AuthenticationHelper and use Account for storing cookie info
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1418656867,1418669037,46f7f6a5beb9b6e88a15532c1868d676b9d19073
+46f7f6a5beb9b6e88a15532c1868d676b9d19073,46f7f6a5,Exit app if no internet connection during authentication. Better than a blank screen.,"Exit app if no internet connection during authentication. Better than a blank screen.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1418329111,1418329111,9c9fc61182dabd02713ff96918f01270efa75dd1
+9c9fc61182dabd02713ff96918f01270efa75dd1,9c9fc611,Ignore classes directory,"Ignore classes directory
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1418328701,1418328701,1cf69486bb0f5a52a7964a7e04f31b0da426c9e4
+1cf69486bb0f5a52a7964a7e04f31b0da426c9e4,1cf69486,"Stop catching all the exceptions early, so they can be reported properly later","Stop catching all the exceptions early, so they can be reported properly later
+",,,,Randy Fay,randy@randyfay.com,jstaffans,johannes.staffans@gmail.com,1418315021,1418328629,3612db1d69e05bedea845562af6855301c8b659f
+3612db1d69e05bedea845562af6855301c8b659f,3612db1d,Add google analytics reporting for unusual exception,"Add google analytics reporting for unusual exception
+",,,,Randy Fay,randy@randyfay.com,jstaffans,johannes.staffans@gmail.com,1418149775,1418328629,9e4989b3822408d69bfdbe59104c0a64e51a0726
+9e4989b3822408d69bfdbe59104c0a64e51a0726,9e4989b3,Improve handling of HTTP failures and authentication failures,"Improve handling of HTTP failures and authentication failures
+",,,,Randy Fay,randy@randyfay.com,jstaffans,johannes.staffans@gmail.com,1418147970,1418328628,821466cac8d127c61ad542e12271b86a7028d1e2
+821466cac8d127c61ad542e12271b86a7028d1e2,821466ca,Consolidate HTTP error reporting to user and provide more info,"Consolidate HTTP error reporting to user and provide more info
+",,,,Randy Fay,randy@randyfay.com,jstaffans,johannes.staffans@gmail.com,1418099871,1418328558,0a26961e316d12f7c8d260c46968b6647a85aaa7
+0a26961e316d12f7c8d260c46968b6647a85aaa7,0a26961e,Don't show icons in the overflow menu.,"Don't show icons in the overflow menu.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1418327655,1418328010,90a8a35ba71a772763e3c5afae955915bacf01a3
+90a8a35ba71a772763e3c5afae955915bacf01a3,90a8a35b,reformatted dependency,"reformatted dependency
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1418327632,1418328009,2bae30adebf6b375e50cb0f42f07f56c2f572f67
+2bae30adebf6b375e50cb0f42f07f56c2f572f67,2bae30ad,Merge pull request #146 from rfay/20141127_fix_auth_backspace_error,"Merge pull request #146 from rfay/20141127_fix_auth_backspace_error
+
+Fix backspace-on-auth problem by creating tabs later, fixes #128",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1418327953,1418327953,"5406003129f35f009deb67022258f719550069d8,7502bafc408322822b49acbcc6a7d808fd15ebdf"
+7502bafc408322822b49acbcc6a7d808fd15ebdf,7502bafc,"Fix backspace-on-auth problem by creating tabs later, fixes #128","Fix backspace-on-auth problem by creating tabs later, fixes #128
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417323899,1418075870,5406003129f35f009deb67022258f719550069d8
+5406003129f35f009deb67022258f719550069d8,54060031,Fix some missing includes from reformatting,"Fix some missing includes from reformatting
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1418068452,1418068452,228531b0cfed738f40d8739cd10e4f6bf1a46048
+228531b0cfed738f40d8739cd10e4f6bf1a46048,228531b0,Re-format code. #141,"Re-format code. #141
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1418027331,1418027331,2dfc9c6c915bb705a55ae36a08f33cc64601005d
+2dfc9c6c915bb705a55ae36a08f33cc64601005d,2dfc9c6c,Merge pull request #144 from rfay/20141204_new_gradle,"Merge pull request #144 from rfay/20141204_new_gradle
+
+Fix up build.gradle dependencies for newer Android Studio
+
+Pulling this myself since I don't think it has any impact and probably doesn't need review. My apologies in advance if I was wrong!",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417996769,1417996769,"b146a77785042b8d38d869f9b0e3fc286e2438cb,8ecf76a16fee0a06074e188df8638843976d916b"
+b146a77785042b8d38d869f9b0e3fc286e2438cb,b146a777,Merge pull request #143 from jstaffans/gh-142-action-bar,"Merge pull request #143 from jstaffans/gh-142-action-bar
+
+Thanks! Great stuff.",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417996712,1417996712,"ddcd897fb0139dcf4a7e944eae11d051c5d15cd7,5064cfa779ee06d3603852455bba6007daa34ec0"
+8ecf76a16fee0a06074e188df8638843976d916b,8ecf76a1,Update gradle plugin version,"Update gradle plugin version
+
+This went crazy with 1.x upgrade to Android Studio, apparently
+for no reason. I don't know why we should specify it more
+carefully than this.
+
+The actual error was
+The project is using an unsupported version of the Android Gradle plug-in
+which is really hard to track down to just a classpath in the
+build.gradle!
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417992950,1417993610,ddcd897fb0139dcf4a7e944eae11d051c5d15cd7
+5064cfa779ee06d3603852455bba6007daa34ec0,5064cfa7,Make sure the menu is created before trying to update it.,"Make sure the menu is created before trying to update it.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417981792,1417981792,3d71da5a0e10b50231e478dbbd21597e781905a6
+3d71da5a0e10b50231e478dbbd21597e781905a6,3d71da5a,Add star icon to action bar as well.,"Add star icon to action bar as well.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417980187,1417980187,f3cba69c811d5af913bb652ed8554bf093d9d825
+f3cba69c811d5af913bb652ed8554bf093d9d825,f3cba69c,New action bar email icon.,"New action bar email icon.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417971822,1417971822,98b5b324b0cbc12b5d709750065d40635b5f02e9
+98b5b324b0cbc12b5d709750065d40635b5f02e9,98b5b324,"Remove update action, don't think anyone uses that..","Remove update action, don't think anyone uses that..
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417386564,1417386564,76fcbca76116c1c82801a13040bc343ed0a96bea
+76fcbca76116c1c82801a13040bc343ed0a96bea,76fcbca7,Remove redundant linear layout.,"Remove redundant linear layout.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417386125,1417386125,82f18a07284c04416faa27d1a9ce76d279ffff85
+82f18a07284c04416faa27d1a9ce76d279ffff85,82f18a07,Move host name and all actions to action bar.,"Move host name and all actions to action bar.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417385856,1417385856,34f644818c13e9a67d3faa7cc46cd4c3085e50b6
+34f644818c13e9a67d3faa7cc46cd4c3085e50b6,34f64481,Action bar activity.,"Action bar activity.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417382379,1417382379,c428b4420bd7e3214124a469e1bdafb95ede7c97
+c428b4420bd7e3214124a469e1bdafb95ede7c97,c428b442,"More consistent Host Information activity, RoboGuice updates","More consistent Host Information activity, RoboGuice updates
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417367653,1417367653,8001ddf61a5101adacfb7682a37c88f6de57b49f
+8001ddf61a5101adacfb7682a37c88f6de57b49f,8001ddf6,Add map nav link to menu as well,"Add map nav link to menu as well
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417367634,1417367634,97f3dbe890064743ddb24e8f89e275c4ebb43506
+97f3dbe890064743ddb24e8f89e275c4ebb43506,97f3dbe8,Prepare for ActionBar,"Prepare for ActionBar
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417367612,1417367612,4baa09fbe5b98e0e2036987ff1e64286c8937cff
+4baa09fbe5b98e0e2036987ff1e64286c8937cff,4baa09fb,Update RoboGuice version,"Update RoboGuice version
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417367601,1417367601,ddcd897fb0139dcf4a7e944eae11d051c5d15cd7
+ddcd897fb0139dcf4a7e944eae11d051c5d15cd7,ddcd897f,More specific error message.,"More specific error message.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417352374,1417352374,9e53a1f417343b0e0ecb04506eef9504ab97cb44
+9e53a1f417343b0e0ecb04506eef9504ab97cb44,9e53a1f4,Fix merge mistake,"Fix merge mistake
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417352187,1417352187,97e2dd44667feb35b4d5f461bc08ebe7c5b0573d
+97e2dd44667feb35b4d5f461bc08ebe7c5b0573d,97e2dd44,Add missing view,"Add missing view
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351714,1417351714,8c1fd7836bda1bd9a3a7533ba522e05926f444f7
+8c1fd7836bda1bd9a3a7533ba522e05926f444f7,8c1fd783,Merge branch 'rfay-20141127_fix_test_user_search',"Merge branch 'rfay-20141127_fix_test_user_search'
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351368,1417351368,"64f4fe8335544998cd62d4fb49a5dfe9f022926f,e0e0cd3011f6689d1df1788a14618653d44d7de3"
+e0e0cd3011f6689d1df1788a14618653d44d7de3,e0e0cd30,Merge branch '20141127_fix_test_user_search' of github.com:rfay/wsandroid into…,"Merge branch '20141127_fix_test_user_search' of github.com:rfay/wsandroid into rfay-20141127_fix_test_user_search
+
+Conflicts:
+	res/values/strings.xml
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351357,1417351357,"64f4fe8335544998cd62d4fb49a5dfe9f022926f,b9c9b1d597ee72ae875064768609e3893d25b162"
+64f4fe8335544998cd62d4fb49a5dfe9f022926f,64f4fe83,Merge branch 'rfay-20141127_offline_hosts_on_map',"Merge branch 'rfay-20141127_offline_hosts_on_map'
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351288,1417351288,"a3219bfb67248dc66999ea9aef896b7e34dc0ddb,7499b6f263e9a4b6ff35e91673c99e6844fdba66"
+7499b6f263e9a4b6ff35e91673c99e6844fdba66,7499b6f2,Merge branch '20141127_offline_hosts_on_map' of github.com:rfay/wsandroid into…,"Merge branch '20141127_offline_hosts_on_map' of github.com:rfay/wsandroid into rfay-20141127_offline_hosts_on_map
+
+Conflicts:
+	res/values/strings.xml
+	src/fi/bitrite/android/ws/activity/Maps2Activity.java
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351273,1417351273,"a3219bfb67248dc66999ea9aef896b7e34dc0ddb,632b55c98288ade538a81d84b02b440d818de5fb"
+a3219bfb67248dc66999ea9aef896b7e34dc0ddb,a3219bfb,Merge branch 'rfay-20141126_add_languages_spoken',"Merge branch 'rfay-20141126_add_languages_spoken'
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351100,1417351100,"602fc03272601c6506ded9bfb03ce81fafb8a217,0f522f024dbb9762ab9e8d2e55122743610c24b2"
+0f522f024dbb9762ab9e8d2e55122743610c24b2,0f522f02,Merge branch '20141126_add_languages_spoken' of github.com:rfay/wsandroid into…,"Merge branch '20141126_add_languages_spoken' of github.com:rfay/wsandroid into rfay-20141126_add_languages_spoken
+
+Conflicts:
+	res/layout/host_information.xml
+	res/values/strings.xml
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417351087,1417351087,"602fc03272601c6506ded9bfb03ce81fafb8a217,32c4a2b795b297e0aa785aeebeffedcce7cd9222"
+602fc03272601c6506ded9bfb03ce81fafb8a217,602fc032,Merge branch 'rfay-20141126_add_open_in_maps_option',"Merge branch 'rfay-20141126_add_open_in_maps_option'
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417350959,1417350959,"88c18ebc4baa32e03f8511cc4e6c7e34cb649650,b66a6392a291cabeea27ebeb119f04871c82ff67"
+b66a6392a291cabeea27ebeb119f04871c82ff67,b66a6392,Merge branch '20141126_add_open_in_maps_option' of github.com:rfay/wsandroid…,"Merge branch '20141126_add_open_in_maps_option' of github.com:rfay/wsandroid into rfay-20141126_add_open_in_maps_option
+
+Conflicts:
+	res/values/strings.xml
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417350913,1417350913,"88c18ebc4baa32e03f8511cc4e6c7e34cb649650,a7d5a3ec07faf782651e18e8ab0ba8a27305518c"
+88c18ebc4baa32e03f8511cc4e6c7e34cb649650,88c18ebc,Merge branch 'rfay-20141124_add_google_analytics',"Merge branch 'rfay-20141124_add_google_analytics'
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417350794,1417350794,"4964f42b842953c9ec2d77deba2665444781860d,802f11f181b652fd65d6b3cd5c08a4952e16a357"
+802f11f181b652fd65d6b3cd5c08a4952e16a357,802f11f1,Merge branch '20141124_add_google_analytics' of github.com:rfay/wsandroid into…,"Merge branch '20141124_add_google_analytics' of github.com:rfay/wsandroid into rfay-20141124_add_google_analytics
+
+Conflicts:
+	AndroidManifest.xml
+	res/values/strings.xml
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1417350777,1417350777,"4964f42b842953c9ec2d77deba2665444781860d,4b75bee1b0d020aedae346556d456bfd762e20c8"
+4964f42b842953c9ec2d77deba2665444781860d,4964f42b,Merge pull request #133 from rfay/20141125_webview,"Merge pull request #133 from rfay/20141125_webview
+
+Fixes #110 by using a webview for 'view on site'",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1417350444,1417350444,"fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6,d01e1b371b1450c19f451fdd5ee16b286fa72a31"
+b9c9b1d597ee72ae875064768609e3893d25b162,b9c9b1d5,Fix JSONException case in doSearch() - fixes #139,"Fix JSONException case in doSearch() - fixes #139
+
+This actually was pretty bad - it was failing with 'no internet connection' when
+there were no hosts, because it was always assuming that there was an
+accounts object, and when there were no hits, it wasn't there.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417150304,1417150304,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+4b75bee1b0d020aedae346556d456bfd762e20c8,4b75bee1,Seems that the 'auto' activity tracking isn't quite there,"Seems that the 'auto' activity tracking isn't quite there
+
+This adds the start/stop that are required on pre-api14
+And also programmatically sets 'auto'
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417144715,1417144715,af983cb72d2146f1b7864e1b429029e56471d9cf
+632b55c98288ade538a81d84b02b440d818de5fb,632b55c9,Add support for starred hosts on map,"Add support for starred hosts on map
+
+This fixes #102 - now all starred hosts are shown on map
+even when no network connection.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417106267,1417140434,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+32c4a2b795b297e0aa785aeebeffedcce7cd9222,32c4a2b7,"Add languages spoken to host info, fixes #41","Add languages spoken to host info, fixes #41
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417068048,1417068048,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+d01e1b371b1450c19f451fdd5ee16b286fa72a31,d01e1b37,"Webview provided for view on site, why not messages too?","Webview provided for view on site, why not messages too?
+
+This doesn't solve #46, but is a useful short-term hack-around.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417063637,1417063637,87ea7b3bedca00af202fffd0dd04b521b24fb09c
+a7d5a3ec07faf782651e18e8ab0ba8a27305518c,a7d5a3ec,Add label and geo URI to send to maps app,"Add label and geo URI to send to maps app
+
+Fixes #130 for now; we can do it again when Google's nav icon comes out.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417048536,1417048539,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+af983cb72d2146f1b7864e1b429029e56471d9cf,af983cb7,Fix up preferences handling so the screen shows current setting in summary,"Fix up preferences handling so the screen shows current setting in summary
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1417044612,1417044612,9c0a65cec23f0bd148b9fd19d90102dd76c964ed
+9c0a65cec23f0bd148b9fd19d90102dd76c964ed,9c0a65ce,Implements a basic usage of Google Analytics,"Implements a basic usage of Google Analytics
+
+This fixes #82, but is just the first step
+It took a couple of days for GA to start reporting, so
+I'm not completely confident that we're getting enough info
+yet, and there may have to be more app tracking added.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1416859645,1417043696,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+87ea7b3bedca00af202fffd0dd04b521b24fb09c,87ea7b3b,Fixes #110 by using a webview for 'view on site',"Fixes #110 by using a webview for 'view on site'
+
+This incidentally adds the ability to leave feedback using the site form.
+It doesn't replace doing this 'right' per #40, but it's an interesting
+experiment. I'm certainly willing to pull it out.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1416930978,1416932424,fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6
+fce0a98c6f6f46ba8832b1abdb10ee76a3e32ea6,fce0a98c,Merge pull request #129 from rfay/20141118_update_version,"Merge pull request #129 from rfay/20141118_update_version
+
+Bump version name and code for next rev",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1416397109,1416397109,"6a7ed2fbfe7fa9c5262247bd88bb5bd90cd7f521,39b4e88fef8055b43c14b86219b3d393194b3ba5"
+39b4e88fef8055b43c14b86219b3d393194b3ba5,39b4e88f,Bump version name and code for next rev,"Bump version name and code for next rev
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1416330293,1416330293,6a7ed2fbfe7fa9c5262247bd88bb5bd90cd7f521
+6a7ed2fbfe7fa9c5262247bd88bb5bd90cd7f521,6a7ed2fb,Swapped list search and star tab positions,"Swapped list search and star tab positions
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1416257404,1416257404,c8263e94a1a7a940a77421b40a2bb6b898a065b8
+c8263e94a1a7a940a77421b40a2bb6b898a065b8,c8263e94,More consistent offline error handling. #127,"More consistent offline error handling. #127
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1416256502,1416256502,d84abd1eaceecb2bc5fc46a3d0889c43c3936343
+d84abd1eaceecb2bc5fc46a3d0889c43c3936343,d84abd1e,Clean up strings.,"Clean up strings.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1416256326,1416256326,59ba335397f093edc6a6bbee62a0dca76a43f019
+59ba335397f093edc6a6bbee62a0dca76a43f019,59ba3353,Merge pull request #126 from jeanfrancoisbeaulieu/20141110_multihostpin_correctalign,"Merge pull request #126 from jeanfrancoisbeaulieu/20141110_multihostpin_correctalign
+
+Correct Align for multi host pin and create new layout",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1416158079,1416158079,"0dcc77a3151c9b43b5128f3f7d1b56585cddb26c,968885eee1adc4507bc5b400a7a210f28fd7a411"
+0dcc77a3151c9b43b5128f3f7d1b56585cddb26c,0dcc77a3,Merge pull request #125 from rfay/20141110_fix_multiple_at_same_location,"Merge pull request #125 from rfay/20141110_fix_multiple_at_same_location
+
+Fix zoom-in on multiple at same location, fixes #115",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1416157983,1416157983,"d4e45bc6fe6e66b194bf90cc49fe7a6bc31d985a,bf37909071b4f82378f14a6068cee843e0dec02a"
+d4e45bc6fe6e66b194bf90cc49fe7a6bc31d985a,d4e45bc6,Merge pull request #124 from rfay/20141109_make_show_location_of_user_work_again,"Merge pull request #124 from rfay/20141109_make_show_location_of_user_work_again
+
+Make show location of member work again",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1416157899,1416157899,"4f3ae6f714e43aa7acdee6d7b19465480c9f7207,aea7257a6a01e3277f1a14c285be8db641b4948f"
+4f3ae6f714e43aa7acdee6d7b19465480c9f7207,4f3ae6f7,Merge pull request #121 from rfay/20141109_add_available_not_available,"Merge pull request #121 from rfay/20141109_add_available_not_available
+
+Add availability status on both search list and on the host information page",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1416157786,1416157786,"f9758a955f521c79b1c0832f0a5c80a8b5b814fb,36cfe33a25011d703bcdabbef3281c7761f7871f"
+968885eee1adc4507bc5b400a7a210f28fd7a411,968885ee,Make the single-host pin a layout,"Make the single-host pin a layout
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415654503,1415654503,55b32b89afa91533e3e8c1ab9a33420e5b007917
+55b32b89afa91533e3e8c1ab9a33420e5b007917,55b32b89,Correct Align for multi host pin and create new layout,"Correct Align for multi host pin and create new layout
+",,,,Jean-François Beaulieu,westjef@gmail.com,Jean-François Beaulieu,westjef@gmail.com,1415650970,1415650970,f9758a955f521c79b1c0832f0a5c80a8b5b814fb
+bf37909071b4f82378f14a6068cee843e0dec02a,bf379090,"Fix zoom-in on multiple at same location, fixes #115","Fix zoom-in on multiple at same location, fixes #115
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415644833,1415644833,f9758a955f521c79b1c0832f0a5c80a8b5b814fb
+aea7257a6a01e3277f1a14c285be8db641b4948f,aea7257a,Remove useless onSave and onRestore overrides,"Remove useless onSave and onRestore overrides
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415639780,1415639780,3ba0a5a52749daad6159ea58447c0182318f3468
+3ba0a5a52749daad6159ea58447c0182318f3468,3ba0a5a5,Implement receiving of target location intent on maps2activity,"Implement receiving of target location intent on maps2activity
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415637990,1415637990,ba5ff473e1c3c32e2977637c665646c8a824c53a
+ba5ff473e1c3c32e2977637c665646c8a824c53a,ba5ff473,"Revert ""Comment out Show on Map menu item since not implemented per #116""","Revert ""Comment out Show on Map menu item since not implemented per #116""
+
+I'm implementing this after all.
+
+This reverts commit 8b981cd230ce438680dd7de883ebe9800dba48ab.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415631515,1415631515,e023df28e0b52253572049fb5958abc63fa0236a
+e023df28e0b52253572049fb5958abc63fa0236a,e023df28,Add intent to move map to a target location,"Add intent to move map to a target location
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415631299,1415631299,f9758a955f521c79b1c0832f0a5c80a8b5b814fb
+36cfe33a25011d703bcdabbef3281c7761f7871f,36cfe33a,Make the notavailable-dont-contact message show on every visit to info,"Make the notavailable-dont-contact message show on every visit to info
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415579499,1415579499,0bfdf8e86fe83fd441e3da614b70f02659d52727
+0bfdf8e86fe83fd441e3da614b70f02659d52727,0bfdf8e8,Add notcurrentlyavailable marker on host list and host display - fixes #119,"Add notcurrentlyavailable marker on host list and host display - fixes #119
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415578563,1415578563,f9758a955f521c79b1c0832f0a5c80a8b5b814fb
+f9758a955f521c79b1c0832f0a5c80a8b5b814fb,f9758a95,Merge pull request #117 from rfay/20141108_fix_getid_problem,"Merge pull request #117 from rfay/20141108_fix_getid_problem
+
+Get user uid key from a reliable location",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1415556374,1415556374,"6b2beab9fd6879a3ee66c7c5f79b16edf6818107,66f593686ce45614e397f7cfc71a24f9f57eedb0"
+6b2beab9fd6879a3ee66c7c5f79b16edf6818107,6b2beab9,Merge pull request #114 from rfay/20141108_get_algo_config_from_resource,"Merge pull request #114 from rfay/20141108_get_algo_config_from_resource
+
+Get max_distance_at_zoom from integer resource",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1415556327,1415556327,"3a0de7d545d0014c0b7620aead1eee95482184de,ad768fa6c22bbc1c56bb959665e2d0e2f8d01e58"
+3a0de7d545d0014c0b7620aead1eee95482184de,3a0de7d5,Merge pull request #118 from rfay/20141108_comment_out_show_on_map,"Merge pull request #118 from rfay/20141108_comment_out_show_on_map
+
+Comment out Show on Map menu item since not implemented per #116",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1415556315,1415556315,"3b8b4b35545b039ce70bae7fee5f587d65e0301a,8b981cd230ce438680dd7de883ebe9800dba48ab"
+8b981cd230ce438680dd7de883ebe9800dba48ab,8b981cd2,Comment out Show on Map menu item since not implemented per #116,"Comment out Show on Map menu item since not implemented per #116
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415512321,1415512321,3b8b4b35545b039ce70bae7fee5f587d65e0301a
+66f593686ce45614e397f7cfc71a24f9f57eedb0,66f59368,Fixes #113 by getting the user uid from a working location,"Fixes #113 by getting the user uid from a working location
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415510241,1415510241,3b8b4b35545b039ce70bae7fee5f587d65e0301a
+ad768fa6c22bbc1c56bb959665e2d0e2f8d01e58,ad768fa6,Get max_distance_at_zoom from integer resource,"Get max_distance_at_zoom from integer resource
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415491537,1415491733,3b8b4b35545b039ce70bae7fee5f587d65e0301a
+3b8b4b35545b039ce70bae7fee5f587d65e0301a,3b8b4b35,Use string resource.,"Use string resource.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1415482671,1415482671,a4941b59b035e5d28ee2aabd9ac40985b6346162
+a4941b59b035e5d28ee2aabd9ac40985b6346162,a4941b59,Fix merge mess,"Fix merge mess
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1415482417,1415482417,682324eaabbe5b0854762e76ccb0cd71ae4b27cc
+682324eaabbe5b0854762e76ccb0cd71ae4b27cc,682324ea,Merge branch '20141104_dialog_for_multi_host' of git://github.com/rfay/wsandroid…,"Merge branch '20141104_dialog_for_multi_host' of git://github.com/rfay/wsandroid into rfay-20141104_dialog_for_multi_host
+
+Conflicts:
+	res/values/integers.xml
+	res/values/strings.xml
+	src/fi/bitrite/android/ws/activity/Maps2Activity.java
+	src/fi/bitrite/android/ws/util/Tools.java
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1415481991,1415481991,"d4f024beaecfc94ec553a2540873836fe75662e2,ee78054eb2b86966f64b6a0aed7e5f06d62c01a9"
+d4f024beaecfc94ec553a2540873836fe75662e2,d4f024be,Limit requests to server.,"Limit requests to server.
+
+Squashed commit of the following:
+
+commit 5c37e236337ac156aee07f4de5b1bb710f84234e
+Merge: 47cfb63 0add8f0
+Author: jstaffans <johannes.staffans@gmail.com>
+Date:   Sat Nov 8 22:08:02 2014 +0100
+
+    Merge branch '20141105_limit_requests_to_server' of git://github.com/rfay/wsandroid into rfay-20141105_limit_requests_to_server
+
+    Conflicts:
+    	res/values/strings.xml
+    	src/fi/bitrite/android/ws/activity/Maps2Activity.java
+
+commit 0add8f05468f1057f28e96265d8ab5d3a6ecc2af
+Author: Randy Fay <randy@randyfay.com>
+Date:   Wed Nov 5 12:25:00 2014 -0700
+
+    Limit requsts to server when zoomed out too far
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1415481283,1415481283,47cfb637a9a086370b6f2d466fc796ebf3c14607
+47cfb637a9a086370b6f2d466fc796ebf3c14607,47cfb637,Merge pull request #109 from rfay/20141102_consolidate_strings,"Merge pull request #109 from rfay/20141102_consolidate_strings
+
+Consolidate strings and resources where possible",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1415479820,1415479820,"16197e33ae23d24446db72fbfdf934db4f8970f6,dee330a98af875d660d87320c8b9cb9e8cc658aa"
+ee78054eb2b86966f64b6a0aed7e5f06d62c01a9,ee78054e,Try for 80 as best MAX_DISTANCE_AT_ZOOM,"Try for 80 as best MAX_DISTANCE_AT_ZOOM
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415461690,1415461705,fd32533cbc47decd0d7951d6c0edcfd0fc7d5221
+fd32533cbc47decd0d7951d6c0edcfd0fc7d5221,fd32533c,"Allow a minimum cluster size, set initially to 10","Allow a minimum cluster size, set initially to 10
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415319440,1415319440,50b3d0593be98bbb2fb9e8d06a755ef8776ab0f2
+50b3d0593be98bbb2fb9e8d06a755ef8776ab0f2,50b3d059,Working placement of single location cluster image,"Working placement of single location cluster image
+
+Includes caching of existing bitmaps
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415300434,1415301899,9896013489cc5a1e2633a75d7a9fda045c234415
+9896013489cc5a1e2633a75d7a9fda045c234415,98960134,Incorporate correct sized pointer icons from jeff,"Incorporate correct sized pointer icons from jeff
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415249132,1415249132,dbe6e59a91a532931fca23b8d197f9d00df706ad
+dbe6e59a91a532931fca23b8d197f9d00df706ad,dbe6e59a,Resize down map markers,"Resize down map markers
+
+Markers were created twice too big
+",,,,Jean-François Beaulieu,westjef@gmail.com,Randy Fay,randy@randyfay.com,1415244137,1415248174,0e15c90a723c34a0a058c82c7317a10869bc6b16
+0e15c90a723c34a0a058c82c7317a10869bc6b16,0e15c90a,"Incorporate new icons, first round","Incorporate new icons, first round
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415225523,1415225523,a80b24279cc93c6855977507fd3bd8741c44c921
+a80b24279cc93c6855977507fd3bd8741c44c921,a80b2427,Add new map markers for Single and MultiHost locations,"Add new map markers for Single and MultiHost locations
+",,,,Jean-François Beaulieu,westjef@gmail.com,Randy Fay,randy@randyfay.com,1415220055,1415225296,8b529d870918f468ce144464c98b6619a93f093c
+8b529d870918f468ce144464c98b6619a93f093c,8b529d87,Remove accidentally added launcher icon,"Remove accidentally added launcher icon
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415216102,1415216968,378c02a772afc43e0d600c49fb8fea91e8644460
+378c02a772afc43e0d600c49fb8fea91e8644460,378c02a7,"Change marker icons for single-location markers, with count","Change marker icons for single-location markers, with count
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415210728,1415210728,c30a2ed47ab5babe4dee04a6e777402f5dcc6343
+c30a2ed47ab5babe4dee04a6e777402f5dcc6343,c30a2ed4,Add a dialog instead of infoWindow for multihost cluster,"Add a dialog instead of infoWindow for multihost cluster
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1415135908,1415135908,6f76b46f302cbc1739d6d099e141ff472877d679
+dee330a98af875d660d87320c8b9cb9e8cc658aa,dee330a9,Refactor literal uses of URL into one place,"Refactor literal uses of URL into one place
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414996291,1414996291,78d39a5da940899e059f00539aa25b341d20edc6
+78d39a5da940899e059f00539aa25b341d20edc6,78d39a5d,"Moved a number of strings to resources, fixing #93","Moved a number of strings to resources, fixing #93
+
+I may have missed one or two, but we will find them when
+doing a translation.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414993681,1414993681,e07a84a0e202634fb33a16918276e70b34ac5df8
+e07a84a0e202634fb33a16918276e70b34ac5df8,e07a84a0,"Consolidate version string into build.gradle, fixes #86","Consolidate version string into build.gradle, fixes #86
+
+Versioning is now completely controlled in build.gradle
+BuildConfig.VersionName and BuildConfig.VersionCode
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414992811,1414992895,16197e33ae23d24446db72fbfdf934db4f8970f6
+6f76b46f302cbc1739d6d099e141ff472877d679,6f76b46f,Show distance in both infoWindows on click,"Show distance in both infoWindows on click
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414974601,1414974601,16197e33ae23d24446db72fbfdf934db4f8970f6
+16197e33ae23d24446db72fbfdf934db4f8970f6,16197e33,Merge pull request #104 from rfay/20141027_map_open_correct_location,"Merge pull request #104 from rfay/20141027_map_open_correct_location
+
+Open map at user's location or last saved or default",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414966452,1414966452,"90fed043840c264e3bcfaf6876ff3ebdb229fb97,5b9baf503a8084edf79225a5854314e1b4e7bb1b"
+5b9baf503a8084edf79225a5854314e1b4e7bb1b,5b9baf50,Minor cleanup after rebase,"Minor cleanup after rebase
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414966399,1414966399,424da62b6df052530c910301d2395813f84f21e1
+424da62b6df052530c910301d2395813f84f21e1,424da62b,Fix padding on cluster explode,"Fix padding on cluster explode
+
+Before this it crashed on smaller devices with
+java.lang.IllegalStateException: View size is too small after padding
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414610614,1414966170,598c8154406f261288255b10b1532af7cff1e20c
+598c8154406f261288255b10b1532af7cff1e20c,598c8154,Saving current location and zoom works,"Saving current location and zoom works
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414513103,1414966149,669516f7fa404d835723db0f3fa921146f5b9503
+669516f7fa404d835723db0f3fa921146f5b9503,669516f7,"Attempting to make it save and restore state, but failed","Attempting to make it save and restore state, but failed
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414471603,1414965948,a69d8d926d9d029a1f8513b6c1afbc7106b680a9
+a69d8d926d9d029a1f8513b6c1afbc7106b680a9,a69d8d92,Major work to connect to Google Play Services,"Major work to connect to Google Play Services
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414450195,1414965948,204993359c6bdd054e611e1f05351f79de4b38c1
+204993359c6bdd054e611e1f05351f79de4b38c1,20499335,Simply add todo,"Simply add todo
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414361179,1414965948,90fed043840c264e3bcfaf6876ff3ebdb229fb97
+90fed043840c264e3bcfaf6876ff3ebdb229fb97,90fed043,"Revert ""Map should open at user's location, work-in-progress #97""","Revert ""Map should open at user's location, work-in-progress #97""
+
+Manual merge didn't quite work out, so reverting in favor of
+rebasing the original PR
+
+This reverts commit 0b84c06934c2e025edce832fbdf4527f183ac9fb.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414965469,1414965469,0b84c06934c2e025edce832fbdf4527f183ac9fb
+0b84c06934c2e025edce832fbdf4527f183ac9fb,0b84c069,"Map should open at user's location, work-in-progress #97","Map should open at user's location, work-in-progress #97
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1414959127,1414959127,1cb042e67dc42d2a34a3dd18374aedc8d6d6f62b
+1cb042e67dc42d2a34a3dd18374aedc8d6d6f62b,1cb042e6,Merge pull request #106 from rfay/20141030_improve_splashscreen,"Merge pull request #106 from rfay/20141030_improve_splashscreen
+
+Improve splashscreen to fix #99",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1414957484,1414957484,"9f48a76b03eddd37406c1495e1456180637d6d0a,addd62f5d0ee2a0edbb555fbdada47b85f7bd009"
+9f48a76b03eddd37406c1495e1456180637d6d0a,9f48a76b,Merge pull request #105 from rfay/20141028_single_host_infowindow,"Merge pull request #105 from rfay/20141028_single_host_infowindow
+
+Improve the single-host infowindow",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1414957297,1414957297,"8848f4e95620b2e28d9723588171c3cd3465d244,06d8f50c20c1003089d1aef786501e63763271b0"
+addd62f5d0ee2a0edbb555fbdada47b85f7bd009,addd62f5,Improve splashscreen to fix #99,"Improve splashscreen to fix #99
+
+Adds more info about developers, improves google's license text
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414701077,1414701077,8848f4e95620b2e28d9723588171c3cd3465d244
+06d8f50c20c1003089d1aef786501e63763271b0,06d8f50c,Make single host infowindow work with html,"Make single host infowindow work with html
+This required adding more detailed info to the
+HostBriefInfo
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414537841,1414537841,e5d3c672ecd2364e0ae81acf6245f35469b5068a
+e5d3c672ecd2364e0ae81acf6245f35469b5068a,e5d3c672,New infoWindowAdapter for single host working,"New infoWindowAdapter for single host working
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414532219,1414532219,8848f4e95620b2e28d9723588171c3cd3465d244
+8848f4e95620b2e28d9723588171c3cd3465d244,8848f4e9,Merge pull request #91 from rfay/20141022_html_in_profile,"Merge pull request #91 from rfay/20141022_html_in_profile
+
+Allow some HTML in profile",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1414403464,1414403464,"61a0e7653b2c496dd941936f0cbc67ba02c7695c,00d60bdb8fb72bee79c3ab7448b40ac45e1094e5"
+61a0e7653b2c496dd941936f0cbc67ba02c7695c,61a0e765,Merge pull request #89 from rfay/20141021_google_maps_v2_single_commit,"Merge pull request #89 from rfay/20141021_google_maps_v2_single_commit
+
+Google Maps API v2 Upgrade",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1414403298,1414403298,"f772b1b5b110d7a2c86a916ff59dffc50784e0ac,06efee9cabcd620f829260a38a1f91cc0cf1fa1a"
+00d60bdb8fb72bee79c3ab7448b40ac45e1094e5,00d60bdb,Allow some HTML in profile - fixes #53,"Allow some HTML in profile - fixes #53
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414037839,1414120101,f772b1b5b110d7a2c86a916ff59dffc50784e0ac
+06efee9cabcd620f829260a38a1f91cc0cf1fa1a,06efee9c,Recommended uses-feature for google maps in AndroidManifest,"Recommended uses-feature for google maps in AndroidManifest
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414036071,1414036071,ef346f5c50e3d779176f88c0d099af13de96f20f
+ef346f5c50e3d779176f88c0d099af13de96f20f,ef346f5c,Add google open source licenses to about dialog,"Add google open source licenses to about dialog
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414013781,1414013781,a4a678eb1aa393695d8978110d3e10f021c8fb64
+a4a678eb1aa393695d8978110d3e10f021c8fb64,a4a678eb,Fix visibility of search results header,"Fix visibility of search results header
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414009113,1414009113,2784257d45d21ff6fafbc73669d66496eee2bd34
+2784257d45d21ff6fafbc73669d66496eee2bd34,2784257d,"Put play services level back down, seems to fix","Put play services level back down, seems to fix
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414008103,1414008103,4bf3fec8c7a7cf9fe24f9a8ff45a0a58c7504a28
+4bf3fec8c7a7cf9fe24f9a8ff45a0a58c7504a28,4bf3fec8,Feeble attempts to fix problems with,"Feeble attempts to fix problems with
+
+10-22 13:39:16.540  15374-15531/fi.bitrite.android.ws E/dalvikvm﹕ Could not find class 'com.google.maps.android.clustering.view.DefaultClusterRenderer', referenced from method com.google.maps.android.clustering.view.DefaultClusterRenderer.animateThenRemove
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1414006936,1414006936,e4134e36ba410629bbb99fc478ec0c35d8d50360
+e4134e36ba410629bbb99fc478ec0c35d8d50360,e4134e36,Remove obsolete code,"Remove obsolete code
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1413948606,1413948606,a46f8b2001e3ef25ef9edb01a4baa8f58b8472e1
+a46f8b2001e3ef25ef9edb01a4baa8f58b8472e1,a46f8b20,Google Maps API v2 Implementation,"Google Maps API v2 Implementation
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1413948329,1413948329,f772b1b5b110d7a2c86a916ff59dffc50784e0ac
+f772b1b5b110d7a2c86a916ff59dffc50784e0ac,f772b1b5,Remove dead link,Remove dead link,,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1413912335,1413912335,8aa90d94ab0d8a67c0deef5a49e7e2d7908262a4
+8aa90d94ab0d8a67c0deef5a49e7e2d7908262a4,8aa90d94,Merge pull request #84 from rfay/20141007_add_gradle_build,"Merge pull request #84 from rfay/20141007_add_gradle_build
+
+Fix #83 (building with gradle) by adding build.gradle for gradle/Android Studio builds",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1413911344,1413911344,"ec048bae6b86978d938e32eaa532841b4f93e066,129bd7711163f06f05b503d441f2eef9af0a01c0"
+ec048bae6b86978d938e32eaa532841b4f93e066,ec048bae,Merge pull request #80 from rfay/20141001.2_fix_broken_host_loading,"Merge pull request #80 from rfay/20141001.2_fix_broken_host_loading
+
+Fixes #73 loading user by username via json service",,,,Johannes Staffans,johannes.staffans@gmail.com,Johannes Staffans,johannes.staffans@gmail.com,1413911331,1413911331,"f49490827558fcca1ab6e37ead77d8b1f224db22,bb9f4581f46beaa50995897237f6c8cd8c65c99b"
+129bd7711163f06f05b503d441f2eef9af0a01c0,129bd771,Fixes #83 by adding build.gradle for gradle/Android Studio builds,"Fixes #83 by adding build.gradle for gradle/Android Studio builds
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1412700192,1412700192,f49490827558fcca1ab6e37ead77d8b1f224db22
+bb9f4581f46beaa50995897237f6c8cd8c65c99b,bb9f4581,Reworked to use new hosts/by_location service,"Reworked to use new hosts/by_location service
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1412375398,1412375398,d327dc05502380055eaab3bf40c83e17c529a5ed
+d327dc05502380055eaab3bf40c83e17c529a5ed,d327dc05,Fixes #73 loading user by username via json service,"Fixes #73 loading user by username via json service
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1412209384,1412209384,f49490827558fcca1ab6e37ead77d8b1f224db22
+f49490827558fcca1ab6e37ead77d8b1f224db22,f4949082,"Fix text search, add ""view on site"" link. #78, #77","Fix text search, add ""view on site"" link. #78, #77
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1402865438,1402865438,cb2d19c780542416ffb20f5eff8525608056dfc1
+cb2d19c780542416ffb20f5eff8525608056dfc1,cb2d19c7,Remove debug logging,"Remove debug logging
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1374670336,1374670336,7a647e2070399a9feb1a7d80c3fba02df06534f6
+7a647e2070399a9feb1a7d80c3fba02df06534f6,7a647e20,"Authentication bugfix (closes #71), bumped version numbers","Authentication bugfix (closes #71), bumped version numbers
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1374668664,1374668664,4aa6ecf5ec95630ffc17150100dc7b913c98c6d5
+4aa6ecf5ec95630ffc17150100dc7b913c98c6d5,4aa6ecf5,Properly encode message form. Closes #68.,"Properly encode message form. Closes #68.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1369322582,1369322582,e0c1098e0b9072fb42698cac6a2590e0e8a284c9
+e0c1098e0b9072fb42698cac6a2590e0e8a284c9,e0c1098e,Refs #67: use https,"Refs #67: use https
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1369320004,1369320004,5dcb2f97055e9d99da3057d2d8cddde0b3a774db
+5dcb2f97055e9d99da3057d2d8cddde0b3a774db,5dcb2f97,Fixed typo - closes #66,"Fixed typo - closes #66
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1364316978,1364316978,82ba2a64712f5d69506df3b5bce607c5c8bd6f81
+82ba2a64712f5d69506df3b5bce607c5c8bd6f81,82ba2a64,Refactoring,"Refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1364316845,1364316845,fd429b3edffb2269aa95c324796a71ac86b0760e
+fd429b3edffb2269aa95c324796a71ac86b0760e,fd429b3e,"Class comment, use proper tag for logging","Class comment, use proper tag for logging
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1364314207,1364314207,13eb68ad98c822aeb5e2297c503af1ae6375a08d
+13eb68ad98c822aeb5e2297c503af1ae6375a08d,13eb68ad,Refactoring (session container in a new singleton),"Refactoring (session container in a new singleton)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1364314111,1364314111,0994d045146a0353e10ad4dd5987c19a207ae8cf
+0994d045146a0353e10ad4dd5987c19a207ae8cf,0994d045,Refactoring,"Refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1364201344,1364201344,9755c1e03fa9f598dc092003815cd200a1284bd0
+9755c1e03fa9f598dc092003815cd200a1284bd0,9755c1e0,Code cleanup,"Code cleanup
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1363002628,1363002628,4d6bc696bc47305691659e7a394361fce1982b28
+4d6bc696bc47305691659e7a394361fce1982b28,4d6bc696,Formatting,"Formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1363001215,1363001243,07ab31675a95da7dfa55c7fbcad2d57e1d337ba4
+07ab31675a95da7dfa55c7fbcad2d57e1d337ba4,07ab3167,Update README,Update README,,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362989579,1362989579,55e549890a1d857c1014cb4bceaf27a27bdc0e40
+55e549890a1d857c1014cb4bceaf27a27bdc0e40,55e54989,Bumped version number,"Bumped version number
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362932365,1362932365,02584d250ed210c9af69ae9b1ca44d9bb9aaf8b1
+02584d250ed210c9af69ae9b1ca44d9bb9aaf8b1,02584d25,Version number bumped,"Version number bumped
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362932003,1362932003,5618dfe597b891314abdec1a42bfe622ef952405
+5618dfe597b891314abdec1a42bfe622ef952405,5618dfe5,Workaround for buggy Canvas implementations,"Workaround for buggy Canvas implementations
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362931438,1362931438,044572a415d3857a0969b8415c359a43a640fb91
+044572a415d3857a0969b8415c359a43a640fb91,044572a4,Refs #65: fix Android 2.2.3 issue,"Refs #65: fix Android 2.2.3 issue
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362861357,1362861357,37a41b86f35609a8443ffa12c82ec1f8b0fa2106
+37a41b86f35609a8443ffa12c82ec1f8b0fa2106,37a41b86,Somewhat nicer host feedback table layout,"Somewhat nicer host feedback table layout
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362851018,1362851018,855ce699baba3a40fa325bf9e1a424d7aecf21d2
+855ce699baba3a40fa325bf9e1a424d7aecf21d2,855ce699,takes a special case into consideration - authenticating after already being logged in,"takes a special case into consideration - authenticating after already being logged in
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834352,1362834352,9854e47c73f2a0b0d197d2a9c02663b0e37d7010
+9854e47c73f2a0b0d197d2a9c02663b0e37d7010,9854e47c,screen rotation and on/off issues,"screen rotation and on/off issues
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834333,1362834333,e55eb49ef1eb71db4509db8c2b8330a980d75f2b
+e55eb49ef1eb71db4509db8c2b8330a980d75f2b,e55eb49e,"removed ability to contact host directly from map, since map search results do…","removed ability to contact host directly from map, since map search results do not provide enough information
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834312,1362834312,cf5d3ca5612e5451a378a1e455c0bcc1451dee80
+cf5d3ca5612e5451a378a1e455c0bcc1451dee80,cf5d3ca5,updated version number,"updated version number
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834283,1362834283,6134a2a93dfd9102a6b4d01f2c1aa6a4c301e5fe
+6134a2a93dfd9102a6b4d01f2c1aa6a4c301e5fe,6134a2a9,updated version number,"updated version number
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834241,1362834241,76d999c56b051654553023f5416b31183becd513
+76d999c56b051654553023f5416b31183becd513,76d999c5,"updated version number, removed unused string","updated version number, removed unused string
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362834226,1362834226,d27bbc4e73304a11facbf8e7bc3bba096d1e6f00
+d27bbc4e73304a11facbf8e7bc3bba096d1e6f00,d27bbc4e,Refs #61: see number of unread messages on messaging tab. Also updated version numbers.,"Refs #61: see number of unread messages on messaging tab. Also updated version numbers.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362771490,1362771490,d106c09283e4f628f55608d09ccdbe2579755641
+d106c09283e4f628f55608d09ccdbe2579755641,d106c092,better variable naming,"better variable naming
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362771436,1362771436,233ff199bad9fa445ff997f9c073270394925acd
+233ff199bad9fa445ff997f9c073270394925acd,233ff199,Shorter timeout because the REST API works better than HTML scraping,"Shorter timeout because the REST API works better than HTML scraping
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362771410,1362771410,a93e7cbb2730b4b83e9e4d041fe2420c82d2fa05
+a93e7cbb2730b4b83e9e4d041fe2420c82d2fa05,a93e7cbb,Refactoring - created a new api package,"Refactoring - created a new api package
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362764045,1362764045,8be9d3464291ca02b82d5e53c4c2df48e4b38fa6
+8be9d3464291ca02b82d5e53c4c2df48e4b38fa6,8be9d346,Refs #60 - rating field added to feedback,"Refs #60 - rating field added to feedback
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362749242,1362749242,8b829cb1e5e54ecbe28611abe4596e0bf636fc6b
+8b829cb1e5e54ecbe28611abe4596e0bf636fc6b,8b829cb1,Refs #39 - persist feedback,"Refs #39 - persist feedback
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362748091,1362748091,33f21faec51d0c65bc1fa5fbaabfdf1536e20f30
+33f21faec51d0c65bc1fa5fbaabfdf1536e20f30,33f21fae,Refactoring,"Refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362745063,1362745063,286b6eae9b1857b187e763bf85e4365efe753d2b
+286b6eae9b1857b187e763bf85e4365efe753d2b,286b6eae,i18n,"i18n
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362745026,1362745026,dfdd8ad044a29c9b9d22a361ec83883935924683
+dfdd8ad044a29c9b9d22a361ec83883935924683,dfdd8ad0,Fixed some bugs in the host information activity,"Fixed some bugs in the host information activity
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362734235,1362734235,cc81d0520baf49d3399611e957e1638740f8f2e3
+cc81d0520baf49d3399611e957e1638740f8f2e3,cc81d052,Merge pull request #58 from rfay/master,"Merge pull request #58 from rfay/master
+
+Improve handling of contact request failures by checking http response",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362733468,1362733468,"469de17cd96149aca3f39f5f414691adf6419938,8b5a868b7537e12ada8a4c1cc3af548e7470e241"
+469de17cd96149aca3f39f5f414691adf6419938,469de17c,Refactoring: moved host information into a view model for the host information activity,"Refactoring: moved host information into a view model for the host information activity
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362733052,1362733052,fc84feac751d5eda616660d2c63dfab03cdd3f31
+fc84feac751d5eda616660d2c63dfab03cdd3f31,fc84feac,Removed unused import,"Removed unused import
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362732945,1362732945,4448c3a3b032eb8a3a6902eb4c7832c111023103
+4448c3a3b032eb8a3a6902eb4c7832c111023103,4448c3a3,Merge pull request #59 from rfay/feedback_exception,"Merge pull request #59 from rfay/feedback_exception
+
+Do not allow sending contact if subject and message not completed",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362596310,1362596310,"7341a686c9d497040bd4bdc9f13fd0a8de872d28,cfb3151e86d8c076a2df316a8aac3e03e0a904b2"
+cfb3151e86d8c076a2df316a8aac3e03e0a904b2,cfb3151e,Do not allow sending contact if subject and message not completed,"Do not allow sending contact if subject and message not completed
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1362521138,1362521138,37351c7d5364008ab7a6ba9f36150804ce07a789
+8b5a868b7537e12ada8a4c1cc3af548e7470e241,8b5a868b,Fixes #54 by handling non-200 post responses,"Fixes #54 by handling non-200 post responses
+
+I think there are other places to look at, but here's a start for your review.
+",,,,Randy Fay,randy@randyfay.com,Randy Fay,randy@randyfay.com,1362518682,1362518682,37351c7d5364008ab7a6ba9f36150804ce07a789
+7341a686c9d497040bd4bdc9f13fd0a8de872d28,7341a686,Refs #33: working scale bar,"Refs #33: working scale bar
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362037934,1362037934,287b673a054367dd6129064eca4dba49c8783915
+287b673a054367dd6129064eca4dba49c8783915,287b673a,"Refs #39: bugfixes, save feedback in intent when switching between activities","Refs #39: bugfixes, save feedback in intent when switching between activities
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1362037818,1362037818,37351c7d5364008ab7a6ba9f36150804ce07a789
+37351c7d5364008ab7a6ba9f36150804ce07a789,37351c7d,Refs #33: scale bar on map. still only partly working,"Refs #33: scale bar on map. still only partly working
+(the scale lags one zoom level behind)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361897095,1361897095,e769c07a3dc3a316d6bb036b76e6f403c63a88d2
+e769c07a3dc3a316d6bb036b76e6f403c63a88d2,e769c07a,Refs #39: Download feedback in HostInformationActivity (still have to store it offline),"Refs #39: Download feedback in HostInformationActivity (still have to store it offline)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361893096,1361893096,0a127d35f2c369efc0b6d34f997ba678911ad2c7
+0a127d35f2c369efc0b6d34f997ba678911ad2c7,0a127d35,"Refs #39: feedback parser (wip), refactoring","Refs #39: feedback parser (wip), refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361838409,1361838409,96c8f30fe8db5e3348ed2de85449bf886cfa0619
+96c8f30fe8db5e3348ed2de85449bf886cfa0619,96c8f30f,Formatting,"Formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361834560,1361834560,389c8df96923f6fd51101f27056a909e9540f853
+389c8df96923f6fd51101f27056a909e9540f853,389c8df9,Refs #39: preparations for host feedback on host information page,"Refs #39: preparations for host feedback on host information page
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361834331,1361834331,29843e51fc206660a7406a3c86f42f1b34239055
+29843e51fc206660a7406a3c86f42f1b34239055,29843e51,Formatting,"Formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361833793,1361833793,339073d48c703e673b8feb5cc4e77590fa2a74f7
+339073d48c703e673b8feb5cc4e77590fa2a74f7,339073d4,Bugfix: posts were not working,"Bugfix: posts were not working
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361833715,1361833715,19cc45f28ce7022b8977fa5b40a2a46b0ef32863
+19cc45f28ce7022b8977fa5b40a2a46b0ef32863,19cc45f2,Refs #46: add messages tab in main activity,"Refs #46: add messages tab in main activity
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361833688,1361833688,050d4fe5e4b040ae38017abf368dcff82f8a9fe0
+050d4fe5e4b040ae38017abf368dcff82f8a9fe0,050d4fe5,Small text update,"Small text update
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361833665,1361833665,e97e1e21768dd4366b42b544b2b74f2234bd48a7
+e97e1e21768dd4366b42b544b2b74f2234bd48a7,e97e1e21,Refs #46: messages tab. Empty so far.,"Refs #46: messages tab. Empty so far.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361833607,1361833607,cd15996bc7191290ed37efe110bced61f40dca26
+cd15996bc7191290ed37efe110bced61f40dca26,cd15996b,Refs #51: send messages over REST API,"Refs #51: send messages over REST API
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361761963,1361761963,524a5ac30985a033c94790eaeed8949833b1b32f
+524a5ac30985a033c94790eaeed8949833b1b32f,524a5ac3,Refs #51: refactoring,"Refs #51: refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361753979,1361753979,d9a7ae953bedd84ca5195bbf8ae754dd172a36e9
+d9a7ae953bedd84ca5195bbf8ae754dd172a36e9,d9a7ae95,Fixed host information labels,"Fixed host information labels
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1361753961,1361753961,cd5ab258e1fd284568c06df0e03da91a4e47e036
+cd5ab258e1fd284568c06df0e03da91a4e47e036,cd5ab258,"New icon art, deleted some unused resources. Closes #47","New icon art, deleted some unused resources. Closes #47
+",,,,Johannes Staffans,johannes@Mint-T410.(none),Johannes Staffans,johannes@Mint-T410.(none),1357677456,1357677456,2faf1ce08d32e1ac0a2a28e0114f31bfc64555b4
+2faf1ce08d32e1ac0a2a28e0114f31bfc64555b4,2faf1ce0,Updated to use REST API (work in progress),"Updated to use REST API (work in progress)
+",,,,Johannes Staffans,johannes@Mint-T410.(none),Johannes Staffans,johannes@Mint-T410.(none),1357673659,1357673659,23769bacf4bd21c13cc5fc2a1625501f17961bbd
+23769bacf4bd21c13cc5fc2a1625501f17961bbd,23769bac,Modified messaging to handle new WS private messaging scheme. User-Agent added to HTTP headers.,"Modified messaging to handle new WS private messaging scheme. User-Agent added to HTTP headers.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1349729583,1349729583,e7f4b11b4672ea8cd043c7c22c074404ce13359f
+e7f4b11b4672ea8cd043c7c22c074404ce13359f,e7f4b11b,simplified messaging (always use uid),"simplified messaging (always use uid)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346312812,1346312812,1f824ebc5244c9be6603c004124c90a1f913e27e
+1f824ebc5244c9be6603c004124c90a1f913e27e,1f824ebc,longer timeout,"longer timeout
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346312804,1346312804,c493f114d91715ad8f1dee781e23652262254401
+c493f114d91715ad8f1dee781e23652262254401,c493f114,new version,"new version
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346312791,1346312791,cb8d30e8646c98d10704c1851744db0765641437
+cb8d30e8646c98d10704c1851744db0765641437,cb8d30e8,removed debug logging,"removed debug logging
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227834,1346227834,2ca4722ac86c7be1ab70ef9c465701af33f8c38b
+2ca4722ac86c7be1ab70ef9c465701af33f8c38b,2ca4722a,''created'' and ''login'' host details added to model.,"''created'' and ''login'' host details added to model.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227637,1346227637,9706026f986323a52c91c3d753f59b92a5d29a7c
+9706026f986323a52c91c3d753f59b92a5d29a7c,9706026f,"Tweaked messaging (redundant authentication, user name cleaning). Hopefully…","Tweaked messaging (redundant authentication, user name cleaning). Hopefully makes messaging more stable.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227606,1346227606,2c04d83c7de0ff3da19585cb035c75fba5ba6e86
+2c04d83c7de0ff3da19585cb035c75fba5ba6e86,2c04d83c,Cap sentences in message text fields.,"Cap sentences in message text fields.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227538,1346227538,7acd9ed262b2e9a0e8c33789027d85ec146eb72e
+7acd9ed262b2e9a0e8c33789027d85ec146eb72e,7acd9ed2,new version,"new version
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227525,1346227525,94c37ba9b5d74feee25d418dd7562f6749ade8b3
+94c37ba9b5d74feee25d418dd7562f6749ade8b3,94c37ba9,''member since'' and ''last login'' information added to host info page.,"''member since'' and ''last login'' information added to host info page.
+Closes #37.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1346227415,1346227415,067050f1bc4c367b62926ec9af035aa8bc46c1ad
+067050f1bc4c367b62926ec9af035aa8bc46c1ad,067050f1,Fixed problems caused by WarmShowers.org site redesign,"Fixed problems caused by WarmShowers.org site redesign
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1343766461,1343766461,e03e8f7bfe711c7da3e1b65e3453384426ba18ca
+e03e8f7bfe711c7da3e1b65e3453384426ba18ca,e03e8f7b,new version,"new version
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1340646619,1340646619,88ed3da4588175602e206e8cbf664c0b14df4a11
+88ed3da4588175602e206e8cbf664c0b14df4a11,88ed3da4,Bugfix (app crashed if host information was missing country information),"Bugfix (app crashed if host information was missing country information)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1340646581,1340646581,9282d0603cd3b6e15b1a3dd4211e84b23a795108
+9282d0603cd3b6e15b1a3dd4211e84b23a795108,9282d060,Nicer icons,"Nicer icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1340646565,1340646565,74ccc8aee16d2f9a85603ea128c9168abf3605dc
+74ccc8aee16d2f9a85603ea128c9168abf3605dc,74ccc8ae,Support for back key pointing to host info page (#31).,"Support for back key pointing to host info page (#31).
+Switch off GPS when pausing activity. Closes #32.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1333656612,1333656671,e15d214b8fab011937a0a467487575cb77da2cde
+e15d214b8fab011937a0a467487575cb77da2cde,e15d214b,''Back'' should point back to host info page after going from,"''Back'' should point back to host info page after going from
+there to map location. Closes #31.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1333656574,1333656671,def214bb2dd299a63f701ae8fb61df4d0f9a6e46
+def214bb2dd299a63f701ae8fb61df4d0f9a6e46,def214bb,Dialogs not cancelable anymore. Closes #30.,"Dialogs not cancelable anymore. Closes #30.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1333656529,1333656671,51fbe2fd27bfc7614ad0e0c5953e366b6c3652b7
+51fbe2fd27bfc7614ad0e0c5953e366b6c3652b7,51fbe2fd,Release 1.0.3,"Release 1.0.3
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1333656506,1333656671,b7c796120aa5ad37ad1dd216be7b1de96e3688f4
+b7c796120aa5ad37ad1dd216be7b1de96e3688f4,b7c79612,Update README,Update README,,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332238413,1332238413,b7576b5b6b4fdc367c98d99739a6b39560d31e8d
+b7576b5b6b4fdc367c98d99739a6b39560d31e8d,b7576b5b,"new strings, bumped version number","new strings, bumped version number
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332216653,1332216653,e13c53d0c96ea4071e77d979b9e2cf1c4997b8b9
+e13c53d0c96ea4071e77d979b9e2cf1c4997b8b9,e13c53d0,small bugfix,"small bugfix
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332216631,1332216631,382415423df1a49cb35a0772aad363d73a62eeb5
+382415423df1a49cb35a0772aad363d73a62eeb5,38241542,"fixed map key, android version 2.2+ now supported","fixed map key, android version 2.2+ now supported
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332216612,1332216612,128cf6a7fb831bd6d34bfe3e8376dd422bb24b39
+128cf6a7fb831bd6d34bfe3e8376dd422bb24b39,128cf6a7,Require a minimal zoom level to avoid bombing warmshowers.org server,"Require a minimal zoom level to avoid bombing warmshowers.org server
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332212806,1332212806,58458f07d95e8cae6c724e830ccd3a1edf41c761
+58458f07d95e8cae6c724e830ccd3a1edf41c761,58458f07,Replaced starring confirmation dialog with toast,"Replaced starring confirmation dialog with toast
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332212782,1332212782,887cc7e6ab6bbf3ae676a3474f43c80608d4eba7
+887cc7e6ab6bbf3ae676a3474f43c80608d4eba7,887cc7e6,Changes for API level 8,"Changes for API level 8
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332212761,1332212761,53fd86e7b3e70a34a5f992ce8a52fa22d3f7b9ca
+53fd86e7b3e70a34a5f992ce8a52fa22d3f7b9ca,53fd86e7,close cursor properly,"close cursor properly
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332212363,1332212363,5e8c7fe8de94bc74261365c3b447291e55bf1c1e
+5e8c7fe8de94bc74261365c3b447291e55bf1c1e,5e8c7fe8,fixed map key,"fixed map key
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332210246,1332210246,204f7e2810cd67e6436ffb4cae390b6560694725
+204f7e2810cd67e6436ffb4cae390b6560694725,204f7e28,Icons.,"Icons.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332183780,1332183780,ce3e27e43c71d15f8f2d595ef24c2555abc1c2c8
+ce3e27e43c71d15f8f2d595ef24c2555abc1c2c8,ce3e27e4,''show on map'' in host info menu. Closes #25.,"''show on map'' in host info menu. Closes #25.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332183702,1332183702,863a9df75923b92caf7f910cfcf9c237d3658cd7
+863a9df75923b92caf7f910cfcf9c237d3658cd7,863a9df7,externalized strings. Closes #17.,"externalized strings. Closes #17.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332110161,1332110161,24a3e00ed34fce5362fce7b6182475f3c878fe5f
+24a3e00ed34fce5362fce7b6182475f3c878fe5f,24a3e00e,Closes #23. Closes #24.,"Closes #23. Closes #24.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332109057,1332109057,a7b577021ae98cb5f11e77d572ae5f5cde689219
+a7b577021ae98cb5f11e77d572ae5f5cde689219,a7b57702,Clear search results when result set is empty. Closes #22.,"Clear search results when result set is empty. Closes #22.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332108156,1332108156,81b79151cd667dc0f21de246a20e0fed6b916303
+81b79151cd667dc0f21de246a20e0fed6b916303,81b79151,new menu icons,"new menu icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332107728,1332107728,0fb803b6bed04016a5643ab9445b7ee67b60a328
+0fb803b6bed04016a5643ab9445b7ee67b60a328,0fb803b6,fix text search IME action,"fix text search IME action
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332107715,1332107715,d1d5768d99427a38506ed71fff4ce2450d144cea
+d1d5768d99427a38506ed71fff4ce2450d144cea,d1d5768d,"Cleaned up code, more informative credentials screen","Cleaned up code, more informative credentials screen
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332086104,1332086104,0622f490753575e32a5bf019315bb0e692ddc4b7
+0622f490753575e32a5bf019315bb0e692ddc4b7,0622f490,User definable unit of distance for map. Closes #12.,"User definable unit of distance for map. Closes #12.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332085459,1332085459,2bd6e343076f5681cfb2c0c827b1e37f9a468217
+2bd6e343076f5681cfb2c0c827b1e37f9a468217,2bd6e343,cleaned up code,"cleaned up code
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332082821,1332082821,907fbaabd6a1fb0737496e9cd159730640ea3475
+907fbaabd6a1fb0737496e9cd159730640ea3475,907fbaab,"Screen orientation fixes, cleaned up code. Closes #8.","Screen orientation fixes, cleaned up code. Closes #8.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332082772,1332082772,ff2d27c2e9c3b036f421f711b0517c1cb3b117b3
+ff2d27c2e9c3b036f421f711b0517c1cb3b117b3,ff2d27c2,"simplified code, permission requirement for authentication sevice","simplified code, permission requirement for authentication sevice
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332055227,1332055227,5c8ef3702fb39a27836c0e5ef45bf4cec030d935
+5c8ef3702fb39a27836c0e5ef45bf4cec030d935,5c8ef370,added licensing information,"added licensing information
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332024870,1332024886,50c2abb69989455e0424ffdd27f4c04658178e88
+50c2abb69989455e0424ffdd27f4c04658178e88,50c2abb6,added about screen. Closes #18.,"added about screen. Closes #18.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1332023567,1332023567,5b1f4b9b4154b902431950490a204af0e8abcbcf
+5b1f4b9b4154b902431950490a204af0e8abcbcf,5b1f4b9b,Updating of host information (both starred and normal). Closes #6.,"Updating of host information (both starred and normal). Closes #6.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331999151,1331999151,fdaa0b1b71c960000f53694e826400293cf06105
+fdaa0b1b71c960000f53694e826400293cf06105,fdaa0b1b,"""last updated"" on starred host page","""last updated"" on starred host page
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331996176,1331996176,efc0cbda63c8c2be070a87eb9e391d072c8a3850
+efc0cbda63c8c2be070a87eb9e391d072c8a3850,efc0cbda,"Map animation refactoring, editable user account. Closes #5.","Map animation refactoring, editable user account. Closes #5.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331993549,1331993549,c8a2c0354aa98177f6e8284327adf7ddc57bccea
+c8a2c0354aa98177f6e8284327adf7ddc57bccea,c8a2c035,menu and menu icons,"menu and menu icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331970240,1331970240,372556181185579074d3ed69b54862630db82072
+372556181185579074d3ed69b54862630db82072,37255618,formatting,"formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331936049,1331936049,f96be7558d03411b88f65f94db0df2f97af8e193
+f96be7558d03411b88f65f94db0df2f97af8e193,f96be755,Distance as the crow files on map. Closes #4.,"Distance as the crow files on map. Closes #4.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331935653,1331935653,3af66c7eface959dd10147a26792ea2ca905d18c
+3af66c7eface959dd10147a26792ea2ca905d18c,3af66c7e,Implemented zooming to current location. Closes #3.,"Implemented zooming to current location. Closes #3.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331933977,1331933977,d9cfa9601d697c39eb5b58ed31d870611c3e7745
+d9cfa9601d697c39eb5b58ed31d870611c3e7745,d9cfa960,fixed a list search bug related to #1,"fixed a list search bug related to #1
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331931474,1331931474,747cf4bea78635ee1dc70af4715f437ad4ea1c83
+747cf4bea78635ee1dc70af4715f437ad4ea1c83,747cf4be,Zoom to host location on map. Closes #2.,"Zoom to host location on map. Closes #2.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331930113,1331930113,df1ad60e89aa9fa4a6b878de90a8de3eec8a4431
+df1ad60e89aa9fa4a6b878de90a8de3eec8a4431,df1ad60e,Starring of hosts. Closes #1.,"Starring of hosts. Closes #1.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331923591,1331923591,36f182e54deda97b74184da06a6219273fb3778e
+36f182e54deda97b74184da06a6219273fb3778e,36f182e5,new ''send message'' icons,"new ''send message'' icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331913037,1331913037,d87a36ff2af49da16b122ea6122942280b710b65
+d87a36ff2af49da16b122ea6122942280b710b65,d87a36ff,initial persistence layer,"initial persistence layer
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331846753,1331846753,a4e7c99fdfc0a37c0ac50d9f1291e659bf2a86f2
+a4e7c99fdfc0a37c0ac50d9f1291e659bf2a86f2,a4e7c99f,fixed host messaging,"fixed host messaging
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331844127,1331844127,7dfa33bd0f04fb3aebd5ccbe4ccc457e8d75974a
+7dfa33bd0f04fb3aebd5ccbe4ccc457e8d75974a,7dfa33bd,Initial support for contacting a host,"Initial support for contacting a host
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331756965,1331756965,ee31817b9fb71874470aa3f792cf2c9b83b0f98e
+ee31817b9fb71874470aa3f792cf2c9b83b0f98e,ee31817b,fixes for screen orientation change (work in progress),"fixes for screen orientation change (work in progress)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331139511,1331139511,6d0276914f356c5edb44089e3226649138190949
+6d0276914f356c5edb44089e3226649138190949,6d027691,new icons,"new icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1331139211,1331139211,d958f525b10b3284337a9baf494ed00a100678a4
+d958f525b10b3284337a9baf494ed00a100678a4,d958f525,"improved host information dialog, host id scraping","improved host information dialog, host id scraping
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330984975,1330984975,eba4cff22b20f972e2bb410c8bf53febfad4b700
+eba4cff22b20f972e2bb410c8bf53febfad4b700,eba4cff2,"map search, host information page, icons","map search, host information page, icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330900588,1330900588,b38bd74677a7534ef651a952dfe72db234936d66
+b38bd74677a7534ef651a952dfe72db234936d66,b38bd746,"map search, host information page, icons","map search, host information page, icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330900448,1330900448,c0d1ac15efaffad0b580f3c2d97cf37e59c5a511
+c0d1ac15efaffad0b580f3c2d97cf37e59c5a511,c0d1ac15,"map search, host information page, icons","map search, host information page, icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330900350,1330900350,e3edf90f8439c8acfac6568acc5c0bfd6bd6cdea
+e3edf90f8439c8acfac6568acc5c0bfd6bd6cdea,e3edf90f,"host search on map, new icons","host search on map, new icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330820951,1330820951,051f326264e1ec6f7a7960cccec762b05ed48ec3
+051f326264e1ec6f7a7960cccec762b05ed48ec3,051f3262,"host search on map, new icons","host search on map, new icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330820919,1330820919,bc12d0a6a5316a720e75ccc6656e0d5407546312
+bc12d0a6a5316a720e75ccc6656e0d5407546312,bc12d0a6,"host search on map, new icons","host search on map, new icons
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330820895,1330820895,ccc6af76ada1675e3883f9cd4e5c80cadc2d369d
+ccc6af76ada1675e3883f9cd4e5c80cadc2d369d,ccc6af76,simple map overlay,"simple map overlay
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330775865,1330775865,43900a5a320947382adba4b5d3a2e608b9ce5029
+43900a5a320947382adba4b5d3a2e608b9ce5029,43900a5a,"cleaned up code, authentication activity-based","cleaned up code, authentication activity-based
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330728507,1330728507,926510302c3e442621ec9e722e76e4f6327d88a5
+926510302c3e442621ec9e722e76e4f6327d88a5,92651030,"cleaned up code, made authentication activity- and not dialog-based","cleaned up code, made authentication activity- and not dialog-based
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330728450,1330728450,88ce26bef83ef4b9298635581163b9078d79c36a
+88ce26bef83ef4b9298635581163b9078d79c36a,88ce26be,made authentication a bit smoother,"made authentication a bit smoother
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330722174,1330722174,a57289bf9b84f3913cfaedbd7c666b195c59a863
+a57289bf9b84f3913cfaedbd7c666b195c59a863,a57289bf,cleaned up code,"cleaned up code
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330701863,1330701863,4b459192289d6147a50c1546a0ff5a1712ae7fe4
+4b459192289d6147a50c1546a0ff5a1712ae7fe4,4b459192,cleaned up code,"cleaned up code
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330701813,1330701813,62c54afd3853a69ec2d079a548c1ed0440d872ad
+62c54afd3853a69ec2d079a548c1ed0440d872ad,62c54afd,Modified authentication procedure to use Android's account facilites (remembers account on device),"Modified authentication procedure to use Android's account facilites (remembers account on device)
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330701614,1330701645,50637570f2c2fa29f94720da366ac191ebfff988
+50637570f2c2fa29f94720da366ac191ebfff988,50637570,updated host information page,"updated host information page
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1330022385,1330022385,0f25aa70e461a94f4edb73f6fcb591749dd49b82
+0f25aa70e461a94f4edb73f6fcb591749dd49b82,0f25aa70,updated host information dialog,"updated host information dialog
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329659826,1329659826,5d46b4e1496f1df86490d4c9c03ea673f86669ce
+5d46b4e1496f1df86490d4c9c03ea673f86669ce,5d46b4e1,removed test sleep,"removed test sleep
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329642757,1329642757,96cf02e4e6662d50defda8da4a03eb07c84a23b9
+96cf02e4e6662d50defda8da4a03eb07c84a23b9,96cf02e4,Formatting,"Formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329642564,1329642564,479c41b76b0ffeabe8fb38b462d9b6144d37a7fd
+479c41b76b0ffeabe8fb38b462d9b6144d37a7fd,479c41b7,Added a Google Map to the map tab.,"Added a Google Map to the map tab.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329642487,1329642487,9b800ea7c4fa5190dba6eab48f2b142f5657e9df
+9b800ea7c4fa5190dba6eab48f2b142f5657e9df,9b800ea7,List search implemented.,"List search implemented.
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329639468,1329639468,1b1e34c8577f2e54889e6f60c70fb22d2fd03022
+1b1e34c8577f2e54889e6f60c70fb22d2fd03022,1b1e34c8,new brief host info class for use in host lists; html scraping for list search,"new brief host info class for use in host lists; html scraping for list search
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329572964,1329572964,de9f4453a7d9a758c02902ec28d6379d5aadb771
+de9f4453a7d9a758c02902ec28d6379d5aadb771,de9f4453,cleanup,"cleanup
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250807,1329250807,79c81f4486f409cf220f3d5e970360ec110064e7
+79c81f4486f409cf220f3d5e970360ec110064e7,79c81f44,cleanup,"cleanup
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250689,1329250689,0b0bfd6ff2fbc529d8829c46bfa079668e4cd453
+0b0bfd6ff2fbc529d8829c46bfa079668e4cd453,0b0bfd6f,corrected comment,"corrected comment
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250547,1329250547,2ca4d552bb86d8a8a756348edd99db47b69652d5
+2ca4d552bb86d8a8a756348edd99db47b69652d5,2ca4d552,added client shutdown,"added client shutdown
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250371,1329250371,a043b311d4c922bb96046e81ecec559c610948bf
+a043b311d4c922bb96046e81ecec559c610948bf,a043b311,formatting,"formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250299,1329250299,74fe948ffef3cb06b915236a678b1bfa34787db4
+74fe948ffef3cb06b915236a678b1bfa34787db4,74fe948f,"refactored search dialog handling a bit, http session handling","refactored search dialog handling a bit, http session handling
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329250198,1329250198,6304be956ae73256fa13dd42b604f87fdfc14bd8
+6304be956ae73256fa13dd42b604f87fdfc14bd8,6304be95,Refactoring,"Refactoring
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329242955,1329242955,2070cdddd94617423e1769e9885cbc46fd032fc5
+2070cdddd94617423e1769e9885cbc46fd032fc5,2070cddd,simplified search dialog,"simplified search dialog
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329081653,1329081653,23b854ad9c7977ca20519eb2d7c4602b2373e361
+23b854ad9c7977ca20519eb2d7c4602b2373e361,23b854ad,cleaned up some DI confusion,"cleaned up some DI confusion
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329081250,1329081250,89d20fdb67375f203dc28debff89f3cf3bc18a2a
+89d20fdb67375f203dc28debff89f3cf3bc18a2a,89d20fdb,Http authentication,"Http authentication
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329081051,1329081051,02a99ac145f3c578ee233779cb004365021cf9a2
+02a99ac145f3c578ee233779cb004365021cf9a2,02a99ac1,"implemented a credentials dialog, refactored dialog handling","implemented a credentials dialog, refactored dialog handling
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329058008,1329058008,a93c8aafe31dc881501141eaa2459118c1a21179
+a93c8aafe31dc881501141eaa2459118c1a21179,a93c8aaf,formatting,"formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329044211,1329044211,c00cf6650e131b586e7ec424a84d9e5b6f0cb3de
+c00cf6650e131b586e7ec424a84d9e5b6f0cb3de,c00cf665,formatting,"formatting
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329044132,1329044132,d654c00f3e53d7a7316a26b3283342daffe5858b
+d654c00f3e53d7a7316a26b3283342daffe5858b,d654c00f,Refactored host lists,"Refactored host lists
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1329043950,1329043950,512068b86300c242e20c7dabddbb1fc65e3b1380
+512068b86300c242e20c7dabddbb1fc65e3b1380,512068b8,factory pattern for creating different searches,"factory pattern for creating different searches
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328884944,1328884944,7fb0dade3241f3290400678f61d4902b3cda7aef
+7fb0dade3241f3290400678f61d4902b3cda7aef,7fb0dade,support for search progress dialog,"support for search progress dialog
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328883367,1328883367,54d9af0fc9f518bd9f0fbb24cad1b36f882b9bdd
+54d9af0fc9f518bd9f0fbb24cad1b36f882b9bdd,54d9af0f,updated search icon,"updated search icon
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328883344,1328883344,50d82e4d52ed72d7c2ba325fe8b3ee24f225531f
+50d82e4d52ed72d7c2ba325fe8b3ee24f225531f,50d82e4d,added a search icon to list search tab,"added a search icon to list search tab
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328716061,1328716061,c71c65b101a0c32033dc925f9933eefc43055a7d
+c71c65b101a0c32033dc925f9933eefc43055a7d,c71c65b1,refactored tab layout,"refactored tab layout
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328714412,1328714412,e849ca3b63f2b64780eb0d3cde365a8c4e843f3a
+e849ca3b63f2b64780eb0d3cde365a8c4e843f3a,e849ca3b,introduced ''parcelgen''-generated model,"introduced ''parcelgen''-generated model
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1328037632,1328037727,6a00a5e0d9e1051ed004999e809b1ed3405f9f75
+6a00a5e0d9e1051ed004999e809b1ed3405f9f75,6a00a5e0,added eclipse files too,"added eclipse files too
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1327609906,1327609906,ab6f96d4d1219ab6845f3c567958a445163e3121
+ab6f96d4d1219ab6845f3c567958a445163e3121,ab6f96d4,"Tab layout, simple persistence layer","Tab layout, simple persistence layer
+",,,,jstaffans,johannes.staffans@gmail.com,jstaffans,johannes.staffans@gmail.com,1327609644,1327609644,aa59f3613d95e61455be8565c37b7f9204f9eef2
+aa59f3613d95e61455be8565c37b7f9204f9eef2,aa59f361,initial commit,"initial commit
+",,,,Johannes Staffans,johannes.staffans@uoma.fi,Johannes Staffans,johannes.staffans@uoma.fi,1327267389,1327267389,

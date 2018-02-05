@@ -1,0 +1,700 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+c860872c3e31c155fec7735a6845e86c039e3fdf,c860872c,Merge pull request #77 from andrew-shulgin/tap-to-hide-seekbar,"Merge pull request #77 from andrew-shulgin/tap-to-hide-seekbar
+
+Toggle seek bar visibility on tap and INFO button press",,,,xyzz,1065521+xyzz@users.noreply.github.com,GitHub,noreply@github.com,1512172784,1512172784,"9eb36c00f478ed259fb41783c53af586c44a0030,df42db1d3bba2e64fd07ca227f7e4680e96c963c"
+df42db1d3bba2e64fd07ca227f7e4680e96c963c,df42db1d,fixed gesture handling,"fixed gesture handling
+",,,,Andrew Shulgin,andrewshulginua@gmail.com,Andrew Shulgin,andrewshulginua@gmail.com,1511445433,1511445433,c5af009c433708de7725411f2e0e797606014132
+9eb36c00f478ed259fb41783c53af586c44a0030,9eb36c00,fixed link color from purple to white,"fixed link color from purple to white
+",,,,Andrew Shulgin,andrewshulginua@gmail.com,sfan5,sfan5@live.de,1511424970,1511434407,c03f5ad3291065279ca6bccedabe5d9389892f17
+c5af009c433708de7725411f2e0e797606014132,c5af009c,renamed mightWantToShowControls mightWantToToggleControls,"renamed mightWantToShowControls mightWantToToggleControls
+",,,,Andrew Shulgin,andrewshulginua@gmail.com,Andrew Shulgin,andrewshulginua@gmail.com,1511432377,1511432377,5e1a2f02c80b1247e7d6a15f618e3c81a7d67820
+5e1a2f02c80b1247e7d6a15f618e3c81a7d67820,5e1a2f02,video tap and INFO key toggles the seek bar;,"video tap and INFO key toggles the seek bar;
+resetting seek bar hide timeout on seek bar button tap;
+fixed TouchGestures.onTouchEvent to return false when no gesture handled
+",,,,Andrew Shulgin,andrewshulginua@gmail.com,Andrew Shulgin,andrewshulginua@gmail.com,1511431469,1511431469,c03f5ad3291065279ca6bccedabe5d9389892f17
+c03f5ad3291065279ca6bccedabe5d9389892f17,c03f5ad3,MPVActivity: Make livestream seek prevention work again,"MPVActivity: Make livestream seek prevention work again
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1511026153,1511026153,c1280255581e7b7a118cd8c5e97e3684366353f1
+c1280255581e7b7a118cd8c5e97e3684366353f1,c1280255,MPVView: Fix segfault when Activity is destroyed,"MPVView: Fix segfault when Activity is destroyed
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1510758752,1510758752,124aea11ca769af637eaa1144d7f02bb059a9769
+124aea11ca769af637eaa1144d7f02bb059a9769,124aea11,build: update gradle and google libraries,"build: update gradle and google libraries
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1510615345,1510685683,41c026a297ad92104d5d00d808f5e5e39a8408ef
+41c026a297ad92104d5d00d808f5e5e39a8408ef,41c026a2,build: update kotlin to 1.1.60 (6.0),"build: update kotlin to 1.1.60 (6.0)
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1510615314,1510685683,30bcf133c9bee47383b196cf71b2e91aba034874
+30bcf133c9bee47383b196cf71b2e91aba034874,30bcf133,build: add google's maven repository,"build: add google's maven repository
+
+Required for newer dependency libraries.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1510615261,1510685683,7e7e14a301c725a7d0e5895b8a6a1b60ce171491
+7e7e14a301c725a7d0e5895b8a6a1b60ce171491,7e7e14a3,Merge pull request #53 from mpv-android/sfan5/vo_android2,"Merge pull request #53 from mpv-android/sfan5/vo_android2
+
+Direct surface rendering (--gpu-context=android)",,,,Jan Ekström,jeebjp@gmail.com,GitHub,noreply@github.com,1510685455,1510685455,"485eecfc536c1faac56da40a6c9cfb7bd7d89ead,28b94255d1d335699bb592e5aca7d0a2b0104a4a"
+28b94255d1d335699bb592e5aca7d0a2b0104a4a,28b94255,MPVView: only utilize old surface if non-null and valid,"MPVView: only utilize old surface if non-null and valid
+
+Fixes a crash on return from other applications when the surface
+is no longer valid.
+",,,,Jan Ekström,jeebjp@gmail.com,sfan5,sfan5@live.de,1510620289,1510659903,7df2dcb06111d3bd302483eb7986f21934530599
+7df2dcb06111d3bd302483eb7986f21934530599,7df2dcb0,Replace opengl-cb with vo_gpu + android context,"Replace opengl-cb with vo_gpu + android context
+
+Simplifies the native code considerably and avoid having
+to call draw() through Java, which should increase performance.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1500587392,1510659903,ba4a22ad34fb99329a00642e04a5b751368403e1
+485eecfc536c1faac56da40a6c9cfb7bd7d89ead,485eecfc,x86_64 support,"x86_64 support
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1488878080,1507628688,a229d1406c9fbd6fdd72630c2acf4b16fca94230
+a229d1406c9fbd6fdd72630c2acf4b16fca94230,a229d140,build: Make multiarch optional,"build: Make multiarch optional
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1507628597,1507628597,ba4a22ad34fb99329a00642e04a5b751368403e1
+ba4a22ad34fb99329a00642e04a5b751368403e1,ba4a22ad,"Switch hwdec to ""mediacodec-copy"" (interface change)","Switch hwdec to ""mediacodec-copy"" (interface change)
+
+see mpv-player/mpv@d08e407c9eb9b3fb020efa8f1516a68497389416
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1507579023,1507579023,c099e69ab41542a7089ea069df9531754bcec345
+c099e69ab41542a7089ea069df9531754bcec345,c099e69a,Merge pull request #72 from mpv-android/sfan5/some_bullshit,"Merge pull request #72 from mpv-android/sfan5/some_bullshit
+
+Improve preferences",,,,xyzz,1065521+xyzz@users.noreply.github.com,GitHub,noreply@github.com,1507576687,1507576687,"e86e1917aafe9289f991193d64f1f6a0309d7a45,0cb4232af32316d42680df012dde018138a914d9"
+0cb4232af32316d42680df012dde018138a914d9,0cb4232a,prefs: Support for interpolation and tscale filters,"prefs: Support for interpolation and tscale filters
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1507033156,1507576565,4bf9bde380baaed054824d15b21eb9aae254b336
+4bf9bde380baaed054824d15b21eb9aae254b336,4bf9bde3,prefs: Add preference for selecting video-sync,"prefs: Add preference for selecting video-sync
+
+This also removes the checkbox for disabling display-fps
+detection as there is no good reason to disable it.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1507030735,1507576565,111b29419efa98cd7fe177e509d61219bdf7475c
+111b29419efa98cd7fe177e509d61219bdf7475c,111b2941,prefs: Allow selecting between CPU/GPU debanding,"prefs: Allow selecting between CPU/GPU debanding
+
+I have yet to find a device that supports this, but maybe it's useful
+for more powerful devices (e.g. NVIDIA Shield).
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1506948361,1507576565,bb86389044f6d33900f50fc1c7e9296ad6bf92b7
+bb86389044f6d33900f50fc1c7e9296ad6bf92b7,bb863890,prefs: Custom DialogPreference for selecting scaler & its params,"prefs: Custom DialogPreference for selecting scaler & its params
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1506900511,1507576565,e86e1917aafe9289f991193d64f1f6a0309d7a45
+e86e1917aafe9289f991193d64f1f6a0309d7a45,e86e1917,MPVActivity: Set initial brightness for touch gestures correctly,"MPVActivity: Set initial brightness for touch gestures correctly
+
+This makes brightness adjustment consistent with seeking/volume,
+that is adjustments are made relative to the current value.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1506691682,1506691682,d3c6e52c1a1b81c47229ff197fe78e47ca51f443
+d3c6e52c1a1b81c47229ff197fe78e47ca51f443,d3c6e52c,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505860485,1505860485,89737678938a20548bb9eb7fb3d4e62a4f2e40e4
+89737678938a20548bb9eb7fb3d4e62a4f2e40e4,89737678,app/build: bump build tools to 26.0.1,"app/build: bump build tools to 26.0.1
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505860421,1505860421,7bd7451d6a3fbf6c1128e6a423561659eb9dab06
+7bd7451d6a3fbf6c1128e6a423561659eb9dab06,7bd7451d,Merge pull request #68 from mpv-android/sfan5/various,"Merge pull request #68 from mpv-android/sfan5/various
+
+Various things",,,,Jan Ekström,jeebjp@gmail.com,GitHub,noreply@github.com,1505753093,1505753093,"6c981b06abc98dbbd9dd73ab78ac54e84ff54fe5,672a1f1c5b6defef5077a23db3d2e21904c659c2"
+672a1f1c5b6defef5077a23db3d2e21904c659c2,672a1f1c,MPVActivity: Fix invisible pause button for audio files,"MPVActivity: Fix invisible pause button for audio files
+
+The `pause` event observer does not seem to get invoked
+if only a cover or no video is present.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1505738696,1505738696,95cd3d42cc74bd450ebc7cac857543b19ba255f2
+95cd3d42cc74bd450ebc7cac857543b19ba255f2,95cd3d42,MPVActivity: Remove additional debug code,"MPVActivity: Remove additional debug code
+
+The Intent extra API has been confirmed to work now,
+so this is no longer needed.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1505737447,1505737447,33e43dd3d102702fc3f1316acb8346aac6ffa22f
+33e43dd3d102702fc3f1316acb8346aac6ffa22f,33e43dd3,assets: Update CA bundle,"assets: Update CA bundle
+
+cacert.pem ver: 2017-06-07
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1505736971,1505736971,6c981b06abc98dbbd9dd73ab78ac54e84ff54fe5
+6c981b06abc98dbbd9dd73ab78ac54e84ff54fe5,6c981b06,MPVActivity: properly handle conversions to Uris from Parcelables,"MPVActivity: properly handle conversions to Uris from Parcelables
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505664561,1505664561,4eb641a7515ef58af3b64156f8a65ff78fabdaa2
+4eb641a7515ef58af3b64156f8a65ff78fabdaa2,4eb641a7,MPVActivity: use exceptions in cast() to enable logging,"MPVActivity: use exceptions in cast() to enable logging
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505664333,1505664333,017f6486e72b70b5a4b33067f43bbfd89d79e3b8
+017f6486e72b70b5a4b33067f43bbfd89d79e3b8,017f6486,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505645074,1505645074,656a924cc3cfefdeecccac62c70ad5c9209ed4e1
+656a924cc3cfefdeecccac62c70ad5c9209ed4e1,656a924c,gradle-wrapper: update gradle from 3.3 to 4.1,"gradle-wrapper: update gradle from 3.3 to 4.1
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505644395,1505644415,176ea9d2bf1a698491744a1e4531e689f5d9a691
+176ea9d2bf1a698491744a1e4531e689f5d9a691,176ea9d2,build: update kotlin 1.1.3 to 1.1.4-3,"build: update kotlin 1.1.3 to 1.1.4-3
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505642776,1505642776,6babc52f55e9c7f342b43f0e1d5151178c78dd68
+6babc52f55e9c7f342b43f0e1d5151178c78dd68,6babc52f,Merge pull request #65 from mpv-android/sfan5/subapi,"Merge pull request #65 from mpv-android/sfan5/subapi
+
+MPVActivity: Partially implement MXPlayer intent API",,,,Jan Ekström,jeebjp@gmail.com,GitHub,noreply@github.com,1505639916,1505639916,"588155c1b65a642d691a118c49d81eedeab8ee28,a7d095aa55cea6ea0e774a282c730e2f9e85cb5a"
+a7d095aa55cea6ea0e774a282c730e2f9e85cb5a,a7d095aa,MPVActivity: utilize elvis when resolving the Uri,"MPVActivity: utilize elvis when resolving the Uri
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505608615,1505609361,dfea454f3529ff6f03e79648acd4364d76b68097
+dfea454f3529ff6f03e79648acd4364d76b68097,dfea454f,MPVActivity: check Array<Uri> casts and use emptyArray fallback,"MPVActivity: check Array<Uri> casts and use emptyArray fallback
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505608506,1505609361,7ca75e3d90dddb87f6d58782fde31a7dea415bfb
+7ca75e3d90dddb87f6d58782fde31a7dea415bfb,7ca75e3d,MPVActivity: add a helper function to handle possibly null casts,"MPVActivity: add a helper function to handle possibly null casts
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1505608472,1505609361,72b86396f6861c2c11793c92a850384019bb5ffc
+72b86396f6861c2c11793c92a850384019bb5ffc,72b86396,MPVActivity: Partially implement MXPlayer intent API,"MPVActivity: Partially implement MXPlayer intent API
+
+This allows calling applications to e.g. pass sub streams.
+Documentation can be found here: http://mx.j2inter.com/api
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1504111651,1504125548,588155c1b65a642d691a118c49d81eedeab8ee28
+588155c1b65a642d691a118c49d81eedeab8ee28,588155c1,Merge pull request #56 from mpv-android/sfan5/subfont,"Merge pull request #56 from mpv-android/sfan5/subfont
+
+Fix missing glyphs in subfont",,,,Jan Ekström,jeebjp@gmail.com,GitHub,noreply@github.com,1501620226,1501620226,"e7f0a0d9a1172ab7712cd48e02750c002ea77f84,770f4a9125cebfb05bebfd79c9bccf4164452af9"
+770f4a9125cebfb05bebfd79c9bccf4164452af9,770f4a91,"Update subfont to contain glyphs from ""Droid Sans Regular"" too","Update subfont to contain glyphs from ""Droid Sans Regular"" too
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1501409419,1501409419,e7f0a0d9a1172ab7712cd48e02750c002ea77f84
+e7f0a0d9a1172ab7712cd48e02750c002ea77f84,e7f0a0d9,MPVView: workaround NumberFormatException in TrackDelegate,"MPVView: workaround NumberFormatException in TrackDelegate
+
+Not sure what causes it, but this should solve the issue.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1498599762,1498599762,036d55395ba6fd390113b925c30ff5d28eadd577
+036d55395ba6fd390113b925c30ff5d28eadd577,036d5539,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1498423368,1498423368,67cc958ed7cd3a7181946a3a775efe8f3b18a1b3
+67cc958ed7cd3a7181946a3a775efe8f3b18a1b3,67cc958e,MPVActivity: Wrap opening of content file descriptors in a try-catch,"MPVActivity: Wrap opening of content file descriptors in a try-catch
+
+This prevents possible Security- or NullPointerExceptions from crashing the whole app.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1498410972,1498410972,a107eff0f66e10d75d2ab5a4744bc740a308ea50
+a107eff0f66e10d75d2ab5a4744bc740a308ea50,a107eff0,TouchGestures: add top/bottom deadzone,"TouchGestures: add top/bottom deadzone
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1498392644,1498392644,0419f8b5aeaaa8b5eba9828d9deff98ea2bf5fd6
+0419f8b5aeaaa8b5eba9828d9deff98ea2bf5fd6,0419f8b5,MPVActivity: fix crash when using gestures and time-pos is not available,"MPVActivity: fix crash when using gestures and time-pos is not available
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1498391914,1498391914,53fee919bd036e7bbe923d8ff9aa2b19ad4947c4
+53fee919bd036e7bbe923d8ff9aa2b19ad4947c4,53fee919,jni/event: free property/value strings in sendPropertyUpdateToJava,"jni/event: free property/value strings in sendPropertyUpdateToJava
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1498340930,1498340930,fe41c89f8b7400b4ce14bfb59158d801e7217fd0
+fe41c89f8b7400b4ce14bfb59158d801e7217fd0,fe41c89f,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1498338280,1498338280,823e4411ed2b253a05b307b0e30a6ec1a05234bf
+823e4411ed2b253a05b307b0e30a6ec1a05234bf,823e4411,build: update Kotlin to 1.1.3,"build: update Kotlin to 1.1.3
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1498336718,1498336718,9840f1d70e39a8ec6bd3ebf4c886ff1a596b0b40
+9840f1d70e39a8ec6bd3ebf4c886ff1a596b0b40,9840f1d7,Merge pull request #51 from tmm1/gles2,"Merge pull request #51 from tmm1/gles2
+
+Expand compatibility to include GLES 2.0 devices",,,,xyzz,whatever@xyz.is,GitHub,noreply@github.com,1498312857,1498312857,"abb054eb2a2e568ea772a4c1e0e028b377fae9a5,e8d5e0a59b28ce97d3534edb34c06af70dd9b583"
+e8d5e0a59b28ce97d3534edb34c06af70dd9b583,e8d5e0a5,set EGL context to version 2.0 before initializing,"set EGL context to version 2.0 before initializing
+
+this fixes an EGL_BAD_CONFIG error on certain devices
+
+see https://stackoverflow.com/a/26522689/332798 for more details
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1498243677,1498243677,e9915341bfe028ec33618a34b86fcb7f35fddc87
+e9915341bfe028ec33618a34b86fcb7f35fddc87,e9915341,allow app to be installed on GLES 2.0 devices,"allow app to be installed on GLES 2.0 devices
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1498243659,1498243659,abb054eb2a2e568ea772a4c1e0e028b377fae9a5
+abb054eb2a2e568ea772a4c1e0e028b377fae9a5,abb054eb,Merge pull request #50 from mpv-android/sfan5/gesture_disable,"Merge pull request #50 from mpv-android/sfan5/gesture_disable
+
+Option to disable touch gestures",,,,xyzz,whatever@xyz.is,GitHub,noreply@github.com,1497881589,1497881589,"9c6b340e4fb99ea92ae0f63e28527f029ed05715,7c6fb95c6d19f4fde477f1a505370d282dbc8ff7"
+7c6fb95c6d19f4fde477f1a505370d282dbc8ff7,7c6fb95c,prefs: Add option to disable touch gestures,"prefs: Add option to disable touch gestures
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1497705894,1497791094,9c6b340e4fb99ea92ae0f63e28527f029ed05715
+9c6b340e4fb99ea92ae0f63e28527f029ed05715,9c6b340e,MPVActivity: Disable seek gesture on livestreams,"MPVActivity: Disable seek gesture on livestreams
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1497790637,1497791047,a18bd5d6e036daf2d0d8012fc9dfa69638aaaa67
+a18bd5d6e036daf2d0d8012fc9dfa69638aaaa67,a18bd5d6,MPVActivity: close fd returned by ContentResolver,"MPVActivity: close fd returned by ContentResolver
+
+This requires mpv-player/mpv@2a0028aa130a542f10a2f88bd12025b6c240da27 to work.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1497646247,1497646247,a626b6d70e5ed4e2fc4ed99abe710278bf070d0b
+a626b6d70e5ed4e2fc4ed99abe710278bf070d0b,a626b6d7,AndroidManifest: Reallow opening from file manager or Google Drive,"AndroidManifest: Reallow opening from file manager or Google Drive
+
+This was accidentally broken by 7657ed56733ed06176730f84987980ba8cd5d09c.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1497621220,1497621399,6edb0a3c8e479c6b2d0f1ce3b6856f17982a3997
+6edb0a3c8e479c6b2d0f1ce3b6856f17982a3997,6edb0a3c,jni/java: Move content URI handling to Java side,"jni/java: Move content URI handling to Java side
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1497618850,1497621399,e9d2adc8260a02d7aca3763f87b829e464b77308
+e9d2adc8260a02d7aca3763f87b829e464b77308,e9d2adc8,Add README.,"Add README.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497618116,1497618116,38f8120d6912872f63acc388c6b1b288fd1cea7f
+38f8120d6912872f63acc388c6b1b288fd1cea7f,38f8120d,all: process events from mpv in a separate thread,"all: process events from mpv in a separate thread
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497616565,1497616565,7b2fee95f357d8d4a0f36905848237befea0c648
+7b2fee95f357d8d4a0f36905848237befea0c648,7b2fee95,main: move property-related stuff to property.cpp,"main: move property-related stuff to property.cpp
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497613349,1497613349,42966653fe85778a076a9cd9b078e28369222ff8
+42966653fe85778a076a9cd9b078e28369222ff8,42966653,Merge pull request #47 from mpv-android/touch-gestures,"Merge pull request #47 from mpv-android/touch-gestures
+
+Implement touch gestures",,,,xyzz,whatever@xyz.is,GitHub,noreply@github.com,1497612868,1497612868,"fcefb0429db8249f5589700ae190b9b15def41e8,a19bd0dfcf581115282919cded4ab5aaeac0792f"
+fcefb0429db8249f5589700ae190b9b15def41e8,fcefb042,Merge branch 'render-callback',"Merge branch 'render-callback'
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497612835,1497612835,"05adf09498486089960e02884f5bf8399b47afef,a5c45b03b2b54e02f0e55d50b7c84c0b6209e12f"
+a5c45b03b2b54e02f0e55d50b7c84c0b6209e12f,a5c45b03,all: refactor render_cb&co into a separate file,"all: refactor render_cb&co into a separate file
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497612809,1497612809,4d7259272cfdddadbad92e34b1499f0b6b265371
+4d7259272cfdddadbad92e34b1499f0b6b265371,4d725927,render: add proper DetachEnv,"render: add proper DetachEnv
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497611283,1497611283,83470ef8d2f9d7ab255ac2392f432e175c54c083
+83470ef8d2f9d7ab255ac2392f432e175c54c083,83470ef8,guard glView with a mutex,"guard glView with a mutex
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497608146,1497608146,3d74d83d5998ad7c459aca18d698067826ad31ed
+3d74d83d5998ad7c459aca18d698067826ad31ed,3d74d83d,fix compile error,"fix compile error
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497573524,1497573524,1f2fb43279cf615115ecef3346320a72f2bfb719
+05adf09498486089960e02884f5bf8399b47afef,05adf094,MPVView: disable video output before destroying GL,"MPVView: disable video output before destroying GL
+
+Otherwise mpv fails to output video, sends EOF and we get back to the file picker.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497545847,1497545847,0aba8c3e1aa61212337ad6afc88b4ce99ca3b93e
+a19bd0dfcf581115282919cded4ab5aaeac0792f,a19bd0df,MPVActivity: touch event-related cosmetics,"MPVActivity: touch event-related cosmetics
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497538040,1497538040,5b35940922856c5e64d1bc58fcae235d420a16c1
+5b35940922856c5e64d1bc58fcae235d420a16c1,5b359409,TouchGestures: implement throttling for touch events,"TouchGestures: implement throttling for touch events
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497538023,1497538023,8fc883388ea01ada54c4f23f82895cba553adc0b
+8fc883388ea01ada54c4f23f82895cba553adc0b,8fc88338,MPVActivity/TouchGestures: Add volume control,"MPVActivity/TouchGestures: Add volume control
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497537013,1497537013,7b8004aa8340699b356c0f07b0f40ccaa5762a17
+7b8004aa8340699b356c0f07b0f40ccaa5762a17,7b8004aa,MPVActivity/TouchGestures: Add brightness touch gesture,"MPVActivity/TouchGestures: Add brightness touch gesture
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497536081,1497536121,f6eb3e7eff19fec234a1523b3b12d12097923398
+f6eb3e7eff19fec234a1523b3b12d12097923398,f6eb3e7e,MPVActivity/TouchGestures: Initial support for gesture based seeking,"MPVActivity/TouchGestures: Initial support for gesture based seeking
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1497535333,1497536110,0aba8c3e1aa61212337ad6afc88b4ce99ca3b93e
+1f2fb43279cf615115ecef3346320a72f2bfb719,1f2fb432,guard render_cb when glView is gone,"guard render_cb when glView is gone
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497469221,1497469221,442e76957779fbc1d0102c8bc6ff4832b876e9b5
+442e76957779fbc1d0102c8bc6ff4832b876e9b5,442e7695,keep a global reference to the glView,"keep a global reference to the glView
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497468346,1497468346,4cfab251fb073d87a7a8cf67a0d4dbddb952f4b7
+4cfab251fb073d87a7a8cf67a0d4dbddb952f4b7,4cfab251,fix compile errors,"fix compile errors
+",,,,xyzz,whatever@xyz.is,Aman Gupta,aman@tmm1.net,1497468119,1497468119,81acd2023a790835f0daeb6895fa92508988e655
+81acd2023a790835f0daeb6895fa92508988e655,81acd202,make sure to call DetachCurrentThread,"make sure to call DetachCurrentThread
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497461075,1497461075,9d6e2ab1058f7fb486620149aded87d5f3129a64
+9d6e2ab1058f7fb486620149aded87d5f3129a64,9d6e2ab1,acquire JNIEnv for render_cb,"acquire JNIEnv for render_cb
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497456029,1497456029,08a941e37052393f26f1c7ac013608441b663ec4
+08a941e37052393f26f1c7ac013608441b663ec4,08a941e3,fix casts,"fix casts
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497455909,1497455909,accbb1cc7129cbd41594d2745ab9c36577ed071e
+0aba8c3e1aa61212337ad6afc88b4ce99ca3b93e,0aba8c3e,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1497393021,1497393021,244b50aca129d5bf5bbb2f2487014b75562da06d
+244b50aca129d5bf5bbb2f2487014b75562da06d,244b50ac,MPVView: put refresh rate related things under API level 23 checks,"MPVView: put refresh rate related things under API level 23 checks
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1497384894,1497384894,eb850f075ba308b01e079fc1f6340ce92a8bcb05
+eb850f075ba308b01e079fc1f6340ce92a8bcb05,eb850f07,app/build: update appcompat-v7 library,"app/build: update appcompat-v7 library
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1497383895,1497383895,d77a03920bf60040c726f6fbbd7426a69bd7688d
+d77a03920bf60040c726f6fbbd7426a69bd7688d,d77a0392,build: update gradle plugin,"build: update gradle plugin
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1497383879,1497383879,c05a657b526986729b79df8d2e8fec5551bac844
+c05a657b526986729b79df8d2e8fec5551bac844,c05a657b,build: update kotlin to 1.1.2,"build: update kotlin to 1.1.2
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1497383847,1497383847,944809425d3a6205013e3ae719bb85e9228146a8
+accbb1cc7129cbd41594d2745ab9c36577ed071e,accbb1cc,use a simple FindClass,"use a simple FindClass
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497377450,1497377450,4edf37a7ef1ef20de5158e1a8651ec9c0d358d11
+4edf37a7ef1ef20de5158e1a8651ec9c0d358d11,4edf37a7,use mpv_opengl_cb_set_update_callback() to render only when necessary,"use mpv_opengl_cb_set_update_callback() to render only when necessary
+",,,,Aman Gupta,aman@tmm1.net,Aman Gupta,aman@tmm1.net,1497375050,1497375050,944809425d3a6205013e3ae719bb85e9228146a8
+944809425d3a6205013e3ae719bb85e9228146a8,94480942,Merge pull request #45 from mpv-android/sfan5/enter_url,"Merge pull request #45 from mpv-android/sfan5/enter_url
+
+Add button to open URLs",,,,Jan Ekström,jeebjp@gmail.com,GitHub,noreply@github.com,1497039980,1497039980,"56158233e1a42fde06e00a3e3e74160e410f9aa9,e056f0159235e84a8940839d2393a7fbcdd52412"
+e056f0159235e84a8940839d2393a7fbcdd52412,e056f015,working strings,"working strings
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1495809113,1496958574,56e90916a4371402dab52140afb7807d3a3bef6e
+56e90916a4371402dab52140afb7807d3a3bef6e,56e90916,it kinda works,"it kinda works
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1495808578,1496958574,56158233e1a42fde06e00a3e3e74160e410f9aa9
+56158233e1a42fde06e00a3e3e74160e410f9aa9,56158233,MPVView: Enable MPEG-2 video hwdec,"MPVView: Enable MPEG-2 video hwdec
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1496958549,1496958549,7657ed56733ed06176730f84987980ba8cd5d09c
+7657ed56733ed06176730f84987980ba8cd5d09c,7657ed56,"Add http(s) to mimetype intent filter, fixes #43","Add http(s) to mimetype intent filter, fixes #43
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1495300166,1495300166,c84a0f07ee322cdaee65f385e34a43a21848f668
+c84a0f07ee322cdaee65f385e34a43a21848f668,c84a0f07,Include Mozilla CA bundle to verify TLS certs,"Include Mozilla CA bundle to verify TLS certs
+
+cacert.pem ver: 2017-01-18
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1493390082,1493392514,49c5c796d4205b5e4f9ab082aa7ae1a3184fb800
+49c5c796d4205b5e4f9ab082aa7ae1a3184fb800,49c5c796,Support HTTPS streaming (addresses #36),"Support HTTPS streaming (addresses #36)
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1487775616,1492873248,63260af4dc2f440011a467b17fa7f4f072f9c273
+63260af4dc2f440011a467b17fa7f4f072f9c273,63260af4,MPVActivity: Implement show_fps setting,"MPVActivity: Implement show_fps setting
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1492872936,1492872967,0537d4336f550c775ab36a670da25e97fcc0cc5f
+0537d4336f550c775ab36a670da25e97fcc0cc5f,0537d433,MPVView: Implement debanding (closes #42),"MPVView: Implement debanding (closes #42)
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1492871934,1492871934,23b16fc8e59349a116333603681aae2bb7cf095e
+23b16fc8e59349a116333603681aae2bb7cf095e,23b16fc8,MPVView: Allow disabling automatic refresh rate detect via setting,"MPVView: Allow disabling automatic refresh rate detect via setting
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1492866378,1492866378,cbcc3822b2b59f85e1f7fbd0c8f1a5af6bd55287
+cbcc3822b2b59f85e1f7fbd0c8f1a5af6bd55287,cbcc3822,MPVView: Pass current display refresh rate to vo (closes #13),"MPVView: Pass current display refresh rate to vo (closes #13)
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1492865409,1492865409,3f24393f4a4646d147c3515d88a0f8b16ced744d
+3f24393f4a4646d147c3515d88a0f8b16ced744d,3f24393f,MPVActivity: Use mpv's seek command instead of custom solution,"MPVActivity: Use mpv's seek command instead of custom solution
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1492864303,1492864442,47714de5313cf7c10c9f611bd945f3c9b09acd37
+47714de5313cf7c10c9f611bd945f3c9b09acd37,47714de5,app: AndroidManifest: Allow streaming of .webm URLs,"app: AndroidManifest: Allow streaming of .webm URLs
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1487762342,1487762342,7fef41ba3aa3a68e1ecacb6dc469727d36fcfc8b
+7fef41ba3aa3a68e1ecacb6dc469727d36fcfc8b,7fef41ba,app/jni: Clean up unused JNI global refs,"app/jni: Clean up unused JNI global refs
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1487762072,1487762072,17e20d3397388d0ab0b16b41d2dd74bbd4472341
+17e20d3397388d0ab0b16b41d2dd74bbd4472341,17e20d33,app/build: bump version,"app/build: bump version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1487628032,1487628032,dd3b9b34ca2c6639771991eb029752b60074ded5
+dd3b9b34ca2c6639771991eb029752b60074ded5,dd3b9b34,app/build: bump up compatibility libraries' versions,"app/build: bump up compatibility libraries' versions
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1487622987,1487622987,cf24f042dff764330d821f7e8c105857347daf8a
+cf24f042dff764330d821f7e8c105857347daf8a,cf24f042,Implement native reading support for Android content://,"Implement native reading support for Android content://
+",,,,sfan5,sfan5@live.de,Jan Ekström,jeebjp@gmail.com,1487604528,1487622364,c589474ea285f1e57a7b958a1e15d6a0d508af06
+c589474ea285f1e57a7b958a1e15d6a0d508af06,c589474e,Enable HTTP streaming of common audio formats,"Enable HTTP streaming of common audio formats
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1485524874,1485524874,3b41a6027d801e22dc9b92ee0f09c6e093b16d06
+3b41a6027d801e22dc9b92ee0f09c6e093b16d06,3b41a602,"Revert ""app/build: enable debugging in release builds""","Revert ""app/build: enable debugging in release builds""
+
+fffffffuuu, el GOOG said no to a release binary with this
+flag enabled. Should have listened to @xyzz.
+
+This reverts commit 4dd8f80d8fb961002e3e27b75c1bbaaa348cc461.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484094549,1484094598,c4472a4574957966b21aedbf467825dbcd552323
+c4472a4574957966b21aedbf467825dbcd552323,c4472a45,app/build: bump version identifiers,"app/build: bump version identifiers
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484091432,1484092844,580d63c067e5e005df2e220caff1f07457fd337c
+580d63c067e5e005df2e220caff1f07457fd337c,580d63c0,update gradle,"update gradle
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484092748,1484092844,ab76dfab0e31e155472487316e35e6a59ba57564
+ab76dfab0e31e155472487316e35e6a59ba57564,ab76dfab,app/build: bump build tools version,"app/build: bump build tools version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484092216,1484092250,4dd8f80d8fb961002e3e27b75c1bbaaa348cc461
+4dd8f80d8fb961002e3e27b75c1bbaaa348cc461,4dd8f80d,app/build: enable debugging in release builds,"app/build: enable debugging in release builds
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484090577,1484090577,7fd247ed972ac2ee84daa538afdb873f24a087e0
+7fd247ed972ac2ee84daa538afdb873f24a087e0,7fd247ed,build scripts: move kotlin version and gradle plugin to root,"build scripts: move kotlin version and gradle plugin to root
+
+Additional remove some random dependency repo definitions that
+don't seem to be required?
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484090055,1484090136,f94566159235ed25d8f06f072343221744e243e0
+f94566159235ed25d8f06f072343221744e243e0,f9456615,app/build: update dependencies,"app/build: update dependencies
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1484089966,1484089966,c7d59bde8514debbe01066f69dc0e0b71e32de90
+c7d59bde8514debbe01066f69dc0e0b71e32de90,c7d59bde,change,"change
+",,,,sfan5,sfan5@live.de,xyzz,whatever@xyz.is,1481741229,1481814026,f4a171dd9319a79eb46b1829a67a75dabf01e608
+f4a171dd9319a79eb46b1829a67a75dabf01e608,f4a171dd,settings: Remove custom vo/ao preferences,"settings: Remove custom vo/ao preferences
+
+Due to recent mpv changes the possibility of passing suboptions
+via these vanished.
+",,,,sfan5,sfan5@live.de,xyzz,whatever@xyz.is,1481385265,1481814026,cafad11bf3b48ecb9d2a927f2d84389922aacfd5
+cafad11bf3b48ecb9d2a927f2d84389922aacfd5,cafad11b,app/build: bump internal version number,"app/build: bump internal version number
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1481146262,1481146262,33ab846b9971da6f5a96362102c5f3e014403eda
+33ab846b9971da6f5a96362102c5f3e014403eda,33ab846b,app: AndroidManifest: remove seemingly unneeded permission,"app: AndroidManifest: remove seemingly unneeded permission
+
+Even the person who added it doesn't remember why he added it,
+thus ""off it goes"".
+
+Basic playback was tested.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1481145662,1481145662,cbeedf3955c7ae6f312a4b8fe57467b9c17717a6
+cbeedf3955c7ae6f312a4b8fe57467b9c17717a6,cbeedf39,app/build: add version entries,"app/build: add version entries
+
+One is internal, another is human-readable.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1481141491,1481141491,49d1422decf0842b1e4d0c3f42ca38d0a7778985
+49d1422decf0842b1e4d0c3f42ca38d0a7778985,49d1422d,build: upgrade gradle version,"build: upgrade gradle version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1481138207,1481139676,feddea432ed5d915013a0c901626a7bb93272bd2
+feddea432ed5d915013a0c901626a7bb93272bd2,feddea43,Use options instead of sub-options for vo & ao (support newer mpv),"Use options instead of sub-options for vo & ao (support newer mpv)
+
+see mpv-player/mpv@1a2319f3e4cc42c680e2fd3ba30022c7a9adf3fe
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1480866171,1480866171,657f78cfe7d998df6c12c84a105aaf8932ed274e
+657f78cfe7d998df6c12c84a105aaf8932ed274e,657f78cf,build files: update various utilized libraries and bump compileSdk,"build files: update various utilized libraries and bump compileSdk
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1478721811,1480013796,8ddff3926d853457b0e553fba1ae2d21ae9b34ad
+8ddff3926d853457b0e553fba1ae2d21ae9b34ad,8ddff392,app/build: update kotlin to 1.0.5-2,"app/build: update kotlin to 1.0.5-2
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1478721773,1480013789,7ffc871930dfe687a39f9e34b769eadb757f96e7
+7ffc871930dfe687a39f9e34b769eadb757f96e7,7ffc8719,Handle Android media keys,"Handle Android media keys
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1479935517,1479935517,432cca7c89e97313b2d3c43bf8f6c80ae7ce312c
+432cca7c89e97313b2d3c43bf8f6c80ae7ce312c,432cca7c,Activate all possible mediacodec hw-decoders,"Activate all possible mediacodec hw-decoders
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1476898954,1476899011,12a78bd65d92ddff8c80ab3aeafeb5ce4a9662e1
+12a78bd65d92ddff8c80ab3aeafeb5ce4a9662e1,12a78bd6,build: bump gradle to 2.2.0,"build: bump gradle to 2.2.0
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1474577323,1474577323,28ce75b0e73ac03e69aa6f97854ebc0a57524295
+28ce75b0e73ac03e69aa6f97854ebc0a57524295,28ce75b0,app/build: bump kotlin up to 1.0.4,"app/build: bump kotlin up to 1.0.4
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1474577295,1474577295,f5eabc576cca68030fe6ecab5ab74391363731ff
+f5eabc576cca68030fe6ecab5ab74391363731ff,f5eabc57,Merge pull request #28 from mpv-android/jeeb/fixup_clang,"Merge pull request #28 from mpv-android/jeeb/fixup_clang
+
+Update dependency libraries and make main.cpp build with clang",,,,Josh de Kock,josh@itanimul.li,GitHub,noreply@github.com,1474236869,1474236869,"ddd3f7282976c754eb6f813506d69b49cb7696d5,f8b86ba46d1f6ad2c4ece69b5e59338ddca47eca"
+f8b86ba46d1f6ad2c4ece69b5e59338ddca47eca,f8b86ba4,app/build: pump minSdkVersion to 21,"app/build: pump minSdkVersion to 21
+
+We already pumped up the default with the NDK compilation, so might
+as well pump it here as well.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1474236381,1474236381,656387453915cf2dc3bf1a288f174230027fc4d4
+656387453915cf2dc3bf1a288f174230027fc4d4,65638745,app/main: add a default case in property updates callback,"app/main: add a default case in property updates callback
+
+Not handling all values is an error in clang, GCC seems to be more
+lenient with these things.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1474218727,1474236253,6183adf5ac565b42ea1ffe6dd5184a13bf4d45ec
+6183adf5ac565b42ea1ffe6dd5184a13bf4d45ec,6183adf5,build: update various libraries and gradle,"build: update various libraries and gradle
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1472076757,1474235005,ddd3f7282976c754eb6f813506d69b49cb7696d5
+ddd3f7282976c754eb6f813506d69b49cb7696d5,ddd3f728,Multi arch support,"Multi arch support
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1473600956,1473606279,631d56b1eb25aa18ed1a88db1cc8f2d927daf1a6
+631d56b1eb25aa18ed1a88db1cc8f2d927daf1a6,631d56b1,MPVView: mpv 0.21.0 support (removal of 'hwdec-active' property),"MPVView: mpv 0.21.0 support (removal of 'hwdec-active' property)
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1473606059,1473606172,6ba2a1392753921193b2ff4f200a7e58b3184e5e
+6ba2a1392753921193b2ff4f200a7e58b3184e5e,6ba2a139,MPVActivity: map stats to be under the stats configuration entry,"MPVActivity: map stats to be under the stats configuration entry
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469998481,1469999352,05d2966ad09a8eb4b57450dd58f5dc721ed0b6c1
+05d2966ad09a8eb4b57450dd58f5dc721ed0b6c1,05d2966a,Initial version of playback statistics overlay,"Initial version of playback statistics overlay
+",,,,Ilya Zhuravlev,whatever@xyz.is,Jan Ekström,jeebjp@gmail.com,1461789371,1469999321,30dc6de65827b9d9fcfd349ea5aff9fcd1b01133
+30dc6de65827b9d9fcfd349ea5aff9fcd1b01133,30dc6de6,MainActivity: programmatically set the default storage dir,"MainActivity: programmatically set the default storage dir
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469824381,1469824752,c0bbf1a15c57326687a01cef5ffe6eb7d233e995
+c0bbf1a15c57326687a01cef5ffe6eb7d233e995,c0bbf1a1,MPVView: remove an unneeded variable,"MPVView: remove an unneeded variable
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469824340,1469824340,ff76f651de9a65252e592d07a5c9e70cab040f5e
+ff76f651de9a65252e592d07a5c9e70cab040f5e,ff76f651,MPVLib: final'ize a variable,"MPVLib: final'ize a variable
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469824315,1469824315,6e755beeb029a9d7e7d59ec8c005cd2a2de047ad
+6e755beeb029a9d7e7d59ec8c005cd2a2de047ad,6e755bee,"MPV{Activity,View}: more var=>val","MPV{Activity,View}: more var=>val
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469824257,1469824257,af98356ba661ea357c0a54ee29dcedbb43223939
+af98356ba661ea357c0a54ee29dcedbb43223939,af98356b,Clean up unused imports,"Clean up unused imports
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469824022,1469824022,ff73580b74e29681fb2f6c2b576ff0790e1678c8
+ff73580b74e29681fb2f6c2b576ff0790e1678c8,ff73580b,MPVView: make an unmodified variable a val,"MPVView: make an unmodified variable a val
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469822239,1469822239,d26a62708d7d00abf068be3d230d97998ccb82b0
+d26a62708d7d00abf068be3d230d97998ccb82b0,d26a6270,"MPVView: fixup HWDec default to ""true""","MPVView: fixup HWDec default to ""true""
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469822210,1469822210,1afec4697278b2c685b1e1dda5f5ae547cbdf695
+1afec4697278b2c685b1e1dda5f5ae547cbdf695,1afec469,app/build: update Kotlin to 1.0.3,"app/build: update Kotlin to 1.0.3
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469821804,1469821804,5fadfd9f3d33ba8b572cc98e49ebab1689b9e2d5
+5fadfd9f3d33ba8b572cc98e49ebab1689b9e2d5,5fadfd9f,app/build: upgrade compatibility library,"app/build: upgrade compatibility library
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1469821767,1469821767,f0ea5a5cda9868343ba570577f2081fa9fe42479
+f0ea5a5cda9868343ba570577f2081fa9fe42479,f0ea5a5c,app/mpv: Convert EventObserver to Kotlin,"app/mpv: Convert EventObserver to Kotlin
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1466613489,1469360631,fd9a7aca332c62f76f44126f838f58c5007adb48
+fd9a7aca332c62f76f44126f838f58c5007adb48,fd9a7aca,app/build: bump build SDK and support libs to v24,"app/build: bump build SDK and support libs to v24
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1466613280,1469360631,49197b9090590127baab0b3dc4e08b386dfb8a8e
+49197b9090590127baab0b3dc4e08b386dfb8a8e,49197b90,build: upgrade le gradle,"build: upgrade le gradle
+
+I did this because GOOG told me to do so ┐(´д｀)┌
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1466612772,1469360630,87eca477db4bea8625193817ceb8aa03dfc612c6
+87eca477db4bea8625193817ceb8aa03dfc612c6,87eca477,settings: add file picker starting directory setting,"settings: add file picker starting directory setting
+
+Fixes #10
+",,,,Josh de Kock,josh@itanimul.li,Josh de Kock,josh@itanimul.li,1466460863,1467666012,4dca91f41767d3c0f9c0f6e65b8b84983b751b58
+4dca91f41767d3c0f9c0f6e65b8b84983b751b58,4dca91f4,styles.xml: make text always be white in the file picker,"styles.xml: make text always be white in the file picker
+
+The default theme goes dark when pressed, while we override the
+background color to not change. This leads to the text becoming
+black-on-black when a thing is pressed in the file picker.
+",,,,Jan Ekström,jeebjp@gmail.com,Josh de Kock,josh@itanimul.li,1463947893,1467666012,646efda7573d4db4b0990400585da82f756044f0
+646efda7573d4db4b0990400585da82f756044f0,646efda7,theme: fix colors and remove hack from MainActivity.kt,"theme: fix colors and remove hack from MainActivity.kt
+",,,,Josh de Kock,josh@itanimul.li,Josh de Kock,josh@itanimul.li,1463943974,1467666012,84b94e57998507c05d47740440b0bf9a10f83653
+84b94e57998507c05d47740440b0bf9a10f83653,84b94e57,add a settings panel,"add a settings panel
+",,,,Josh de Kock,josh@itanimul.li,Josh de Kock,josh@itanimul.li,1463700048,1467666002,e0e01ed2db57ac878510ecb7b274fec8b0e48667
+e0e01ed2db57ac878510ecb7b274fec8b0e48667,e0e01ed2,build.gradle: remove unused/unnecessary definitions,"build.gradle: remove unused/unnecessary definitions
+
+* Removes commentede out line regarding native libraries.
+* We're not a super secret proprietary project, so proguard is not
+  required.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1463950551,1463951659,25122538163209f219fe0f7748b71cb45910748f
+25122538163209f219fe0f7748b71cb45910748f,25122538,build.gradle: update android support libraries,"build.gradle: update android support libraries
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1463948264,1463951659,ddb7a48602ac01e4aa1908e4de4c31d21570c7cc
+ddb7a48602ac01e4aa1908e4de4c31d21570c7cc,ddb7a486,build.gradle: update file picker dep to 2.5.2,"build.gradle: update file picker dep to 2.5.2
+
+This enables usage of the library under MPL 2.0 instead of LGPLv3.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1463948152,1463951659,d912ab1f852be7abdc664a49bf66b81ec0e38056
+d912ab1f852be7abdc664a49bf66b81ec0e38056,d912ab1f,"{build.gradle,AndroidManifest.xml}: cosmetics","{build.gradle,AndroidManifest.xml}: cosmetics
+",,,,Josh de Kock,josh@itanimul.li,Jan Ekström,jeebjp@gmail.com,1463951437,1463951568,5c060c32ce6c32f50f68a20d5a1eade6f0d03a28
+5c060c32ce6c32f50f68a20d5a1eade6f0d03a28,5c060c32,main: move mpv logging enabler to mpv context creation,"main: move mpv logging enabler to mpv context creation
+
+This enables the log entries that happen during libmpv context
+initialization, such as the version information.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1463090058,1463090191,cff78577875eeae156cd50a70bad40133aba26c7
+cff78577875eeae156cd50a70bad40133aba26c7,cff78577,Merge pull request #18 from mpv-android/jeeb/general_pokes,"Merge pull request #18 from mpv-android/jeeb/general_pokes
+
+General pokes",,,,xyzz,whatever@xyz.is,xyzz,whatever@xyz.is,1461877981,1461877981,"6100d19b254486f2b07e5dfa46bac9db53083399,946245928f9f5bf8ebec5cc368a57e755802dd70"
+946245928f9f5bf8ebec5cc368a57e755802dd70,94624592,MPVActivity: be consistent with toasts on track switches,"MPVActivity: be consistent with toasts on track switches
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461784827,1461876569,b4b15349ba78b2c755a5530805cde0bf70368aac
+b4b15349ba78b2c755a5530805cde0bf70368aac,b4b15349,MPVActivity: only unpause after track selection if we were playing,"MPVActivity: only unpause after track selection if we were playing
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461784458,1461876569,6100d19b254486f2b07e5dfa46bac9db53083399
+6100d19b254486f2b07e5dfa46bac9db53083399,6100d19b,MPVActivity: show controls when a button on a remote is pressed (android tv),"MPVActivity: show controls when a button on a remote is pressed (android tv)
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461768423,1461768423,ca9144b210e9bf636a4140a557f0572780fbd28b
+ca9144b210e9bf636a4140a557f0572780fbd28b,ca9144b2,MPVActivity: move toasts to the top,"MPVActivity: move toasts to the top
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461713076,1461713076,a655b3aa69886202bd011627df600a30618c298a
+a655b3aa69886202bd011627df600a30618c298a,a655b3aa,MPVActivity: simplify trackSwitchNotification,"MPVActivity: simplify trackSwitchNotification
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461712772,1461712814,bff30ffea74c2ee06f84a7bf3c2414b2121aa456
+bff30ffea74c2ee06f84a7bf3c2414b2121aa456,bff30ffe,build.gradle: upgrade gradle to 2.1,"build.gradle: upgrade gradle to 2.1
+",,,,Jan Ekström,jeebjp@gmail.com,Ilya Zhuravlev,whatever@xyz.is,1461710872,1461712814,e81995f1391a676807dd95dca90c94852078bb55
+e81995f1391a676807dd95dca90c94852078bb55,e81995f1,MPVActivity: re-haul and fix the toast stuff,"MPVActivity: re-haul and fix the toast stuff
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461710743,1461710743,5d0bd54b2f72f97458c18fb2a28a00970f164aea
+5d0bd54b2f72f97458c18fb2a28a00970f164aea,5d0bd54b,MPVActivity: add Toasts to notify of track changes,"MPVActivity: add Toasts to notify of track changes
+
+Otherwise the user has no idea of what is going on.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461621989,1461622193,1037d7fa205d1c93fc06da4aedffc615fdf4643f
+1037d7fa205d1c93fc06da4aedffc615fdf4643f,1037d7fa,"{MPVActivity,player.xml}: move full track menu to long click","{MPVActivity,player.xml}: move full track menu to long click
+
+Re-add track hopping to normal tapping.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461621815,1461622193,2725a69285303fad4285ddfa8d161f2cd86e4764
+2725a69285303fad4285ddfa8d161f2cd86e4764,2725a692,"Remove isPropertyAvailable, it was a huge mistake.","Remove isPropertyAvailable, it was a huge mistake.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461613878,1461613878,fd83df559ebf115c8418b696e0582861ec43d413
+fd83df559ebf115c8418b696e0582861ec43d413,fd83df55,MPVView: proper names for track selection,"MPVView: proper names for track selection
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461612379,1461613714,46438a3637d05995fca9598289146985feac10af
+46438a3637d05995fca9598289146985feac10af,46438a36,"MPVActivity/MPVView: proper support for ""None"" sub/audio track","MPVActivity/MPVView: proper support for ""None"" sub/audio track
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461611033,1461612518,c4eaba02ed0b97dd75f2ab96385bbff207e0f857
+c4eaba02ed0b97dd75f2ab96385bbff207e0f857,c4eaba02,MPVActivity: unpause player when track selection canceled,"MPVActivity: unpause player when track selection canceled
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461527084,1461612518,ec851a8343c464b2e01b6bf2d9835d69fc752d7d
+ec851a8343c464b2e01b6bf2d9835d69fc752d7d,ec851a83,WIP: proper audio/subs track selector,"WIP: proper audio/subs track selector
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461510302,1461612518,dc07e2ab993a72782e3d2180e195d3cda242aba9
+dc07e2ab993a72782e3d2180e195d3cda242aba9,dc07e2ab,main.cpp: Fix getPropertyInt/Boolean returning pointers instead of values.,"main.cpp: Fix getPropertyInt/Boolean returning pointers instead of values.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461612486,1461612486,7c405f2e6cd6ec95f09d4e59cad39cc526b7a4f1
+7c405f2e6cd6ec95f09d4e59cad39cc526b7a4f1,7c405f2e,Merge pull request #15 from mpv-android/property-null,"Merge pull request #15 from mpv-android/property-null
+
+lgtm",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461610837,1461610837,"5be76cc8ae8b79f51aa1b40af4ae902c908f6545,37a7edcc2b664ed58dc820da2367a0c09b2a7984"
+37a7edcc2b664ed58dc820da2367a0c09b2a7984,37a7edcc,General refactoring: property getters can now return Null.,"General refactoring: property getters can now return Null.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461562116,1461562116,5be76cc8ae8b79f51aa1b40af4ae902c908f6545
+5be76cc8ae8b79f51aa1b40af4ae902c908f6545,5be76cc8,MPVActivity: more minor cleanups,"MPVActivity: more minor cleanups
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461427538,1461427538,8f0803eb6ee941ca5bf1c9f4d7f99ab365a631d3
+8f0803eb6ee941ca5bf1c9f4d7f99ab365a631d3,8f0803eb,MPVView: minor cleanups,"MPVView: minor cleanups
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461426996,1461426996,37a68d6b4291b1208715b1260ed28e9fcb775bbe
+37a68d6b4291b1208715b1260ed28e9fcb775bbe,37a68d6b,MPVActivity: clean up copyAssets,"MPVActivity: clean up copyAssets
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461426637,1461426637,dc537cb6b3ea416609647cb9c4de91b527c9948c
+dc537cb6b3ea416609647cb9c4de91b527c9948c,dc537cb6,MPVActivity: small fade handlers refactor,"MPVActivity: small fade handlers refactor
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461425958,1461425958,1ef490169b5b6781cdca55d11aab68ee4e62f327
+1ef490169b5b6781cdca55d11aab68ee4e62f327,1ef49016,MPVActivity: mpv_view => player (again),"MPVActivity: mpv_view => player (again)
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461425407,1461425407,28ac61a1430a9fea8605518533c1e7f09dafa694
+28ac61a1430a9fea8605518533c1e7f09dafa694,28ac61a1,"MPVActivity: refactor playback controls, remove findViewById","MPVActivity: refactor playback controls, remove findViewById
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461424948,1461424948,0a0212beebfef5f0ec12ce4be5078ad195445a6b
+0a0212beebfef5f0ec12ce4be5078ad195445a6b,0a0212be,MPVActivity: refactor prettyTime,"MPVActivity: refactor prettyTime
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461424633,1461424633,9da68801431b077692e5246150d8162ff5c1e70f
+9da68801431b077692e5246150d8162ff5c1e70f,9da68801,MPVActivity: refactor file path retrieval,"MPVActivity: refactor file path retrieval
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461424453,1461424453,9a3faf69b55f69b35b8746975ebc88dbf05a9454
+9a3faf69b55f69b35b8746975ebc88dbf05a9454,9a3faf69,MPVView/MPVLib/MPVActivity: general clean ups for property get/set,"MPVView/MPVLib/MPVActivity: general clean ups for property get/set
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461423444,1461423444,6851acc18c6e89d8dc98c8282c0ececf5ff3ba77
+6851acc18c6e89d8dc98c8282c0ececf5ff3ba77,6851acc1,MainActivity: convert to kotlin,"MainActivity: convert to kotlin
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461421461,1461421461,bb7ff13ffe2ac08c28e07c8989cce4be3baaddd8
+bb7ff13ffe2ac08c28e07c8989cce4be3baaddd8,bb7ff13f,Convert half of the project to kotlin,"Convert half of the project to kotlin
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461421274,1461421274,aa6b238cfb926fa7741420649ff7617e04c59966
+aa6b238cfb926fa7741420649ff7617e04c59966,aa6b238c,"Exit when file is over, fixes #4","Exit when file is over, fixes #4
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461326982,1461326982,c8be548483a22e4a0e7bb5ce446881fe0627ebd0
+c8be548483a22e4a0e7bb5ce446881fe0627ebd0,c8be5484,MPVActivity: refactor eventProperty callbacks,"MPVActivity: refactor eventProperty callbacks
+
+eventPropertyUi(..) will be executed on the UI thread so there's no need
+now to put runOnUiThread everywhere
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461325656,1461325656,20780c00f885aabe8652a84241ff7c2f48f39109
+20780c00f885aabe8652a84241ff7c2f48f39109,20780c00,MPVActivity: deduplicate control hiding code,"MPVActivity: deduplicate control hiding code
+
+Bad JEEB, bad for not doing this right away!
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461272819,1461272819,f2ca9c9ca9938102a333d4d0dc34a6e7d7838ce6
+f2ca9c9ca9938102a333d4d0dc34a6e7d7838ce6,f2ca9c9c,"MPVActivity: rework initializing, showing and hiding the controls","MPVActivity: rework initializing, showing and hiding the controls
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461270029,1461271589,993c702692ba9363d7811c138dad90bedca234f3
+993c702692ba9363d7811c138dad90bedca234f3,993c7026,MPVActivity: change the Android UI hiding time to 2 seconds,"MPVActivity: change the Android UI hiding time to 2 seconds
+
+Is not too long, but still longer than the 1 second used before.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461269698,1461270084,83eb023e74461e08d36dc0d581b2b329e51471ce
+83eb023e74461e08d36dc0d581b2b329e51471ce,83eb023e,player.xml: name layout groups,"player.xml: name layout groups
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461269647,1461270084,f07e06e752f2230d8347823bd1c7b856adf4c06f
+f07e06e752f2230d8347823bd1c7b856adf4c06f,f07e06e7,player.xml: make controls' background alpha .75,"player.xml: make controls' background alpha .75
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461269616,1461270084,43ed6434fe5948120a154f5577072418a336f7e5
+43ed6434fe5948120a154f5577072418a336f7e5,43ed6434,"Set optimal buffer size/sample rate for opensles, fixes #1","Set optimal buffer size/sample rate for opensles, fixes #1
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461268489,1461268489,cd1fb2e6e99121323bd5abe4925609535f4c22af
+cd1fb2e6e99121323bd5abe4925609535f4c22af,cd1fb2e6,Move option setup to java.,"Move option setup to java.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461267895,1461267895,b2d580754dc9a10bd435c589a019b4189d605a60
+b2d580754dc9a10bd435c589a019b4189d605a60,b2d58075,Fix build failing because of bad text,"Fix build failing because of bad text
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461267760,1461267760,c10ae980870346b09e686f41e14638b829c5dd99
+c10ae980870346b09e686f41e14638b829c5dd99,c10ae980,Add a button to switch hw decoder on/off,"Add a button to switch hw decoder on/off
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461266964,1461266989,7f593fe80562ce5003190e5d025d9e595e578d84
+7f593fe80562ce5003190e5d025d9e595e578d84,7f593fe8,Remove old unused global vars.,"Remove old unused global vars.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461250237,1461250237,7ac96321002fc324bc4dec9c70a853b7513998f7
+7ac96321002fc324bc4dec9c70a853b7513998f7,7ac96321,Reduce amount of copypasta in property set/get,"Reduce amount of copypasta in property set/get
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461250146,1461250146,f2f2069d5b1576509914142154f69228d1ad4f3e
+f2f2069d5b1576509914142154f69228d1ad4f3e,f2f2069d,Remove unused setconfigdir,"Remove unused setconfigdir
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461249669,1461249669,c63ebeaa3bd061514075a4226165d10ed59c7b3c
+c63ebeaa3bd061514075a4226165d10ed59c7b3c,c63ebeaa,"Pause video when sent to background. When coming back, restore video output.","Pause video when sent to background. When coming back, restore video output.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461249598,1461249598,079fc2aafd210a50187c0d4228ab1b035b23ce8a
+079fc2aafd210a50187c0d4228ab1b035b23ce8a,079fc2aa,Some function renames around the code,"Some function renames around the code
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461249189,1461249189,c6d4eb3f460d7d329eeabb6c731d08a2722654eb
+c6d4eb3f460d7d329eeabb6c731d08a2722654eb,c6d4eb3f,"Simplify mpv initialization, remove unused touch funcs.","Simplify mpv initialization, remove unused touch funcs.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461248952,1461248952,2a4e71af7e79e03a5c0b93f4a97629e96544cfa9
+2a4e71af7e79e03a5c0b93f4a97629e96544cfa9,2a4e71af,Refactor jvoidfunc/jfunc defines and remove some outdated functions.,"Refactor jvoidfunc/jfunc defines and remove some outdated functions.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461247800,1461247800,fffba78847e434b2164559731dfe40d305467b94
+fffba78847e434b2164559731dfe40d305467b94,fffba788,jni/main: disable OSC (for now),"jni/main: disable OSC (for now)
+
+The Android-specific UI finally does things thanks to xyzz!
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461181742,1461187551,2848aae91e14c168714fc15708f432c8b33953da
+2848aae91e14c168714fc15708f432c8b33953da,2848aae9,AndroidManifest: reformat,"AndroidManifest: reformat
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461181196,1461187551,8d927fdda62d49387aa9527d8b1913413502f295
+8d927fdda62d49387aa9527d8b1913413502f295,8d927fdd,AndroidManifest: inform the system that we might use leanback,"AndroidManifest: inform the system that we might use leanback
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461180959,1461187551,cd97913366126ea14a96c92034b35c2275f7349d
+cd97913366126ea14a96c92034b35c2275f7349d,cd979133,AndroidManifest: remove unnecessary XML namespace usage,"AndroidManifest: remove unnecessary XML namespace usage
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461180899,1461187551,fddeac33de6f876a806a0f2b7c94bd83344f265d
+fddeac33de6f876a806a0f2b7c94bd83344f265d,fddeac33,app: update Android support/compatibility library versions,"app: update Android support/compatibility library versions
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1461180737,1461187551,e9fa6c12ab6aee9e00af2171b187b7623bda3fae
+e9fa6c12ab6aee9e00af2171b187b7623bda3fae,e9fa6c12,"Add cycle aid/sid buttons, they are kinda meh but work.","Add cycle aid/sid buttons, they are kinda meh but work.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461179632,1461179632,01c6f858680ed4bdc408a6f24ee3a3df22ade267
+01c6f858680ed4bdc408a6f24ee3a3df22ade267,01c6f858,Convert updatePlaybackStatus to proper event usage.,"Convert updatePlaybackStatus to proper event usage.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461176173,1461176173,6394b67e704e2f71ad69c67ddc64e2c34da092ab
+6394b67e704e2f71ad69c67ddc64e2c34da092ab,6394b67e,controls: change play/pause depending on playback status,"controls: change play/pause depending on playback status
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461175585,1461175585,73493cae828eaa9c037bdbd120ff410329bdbe52
+73493cae828eaa9c037bdbd120ff410329bdbe52,73493cae,"Pass events from mpv to java, switch playback status updater from polling to event.","Pass events from mpv to java, switch playback status updater from polling to event.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461173875,1461173875,a51885de8a16769407073b965b0f9d062185ab0e
+a51885de8a16769407073b965b0f9d062185ab0e,a51885de,controls: make play/pause button work,"controls: make play/pause button work
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461167339,1461167339,4a371255a7fcb91a29f0c05d1d65827d3242b861
+4a371255a7fcb91a29f0c05d1d65827d3242b861,4a371255,mView => player,"mView => player
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461166970,1461166970,409ed9aad4680c241cb30fc69f066322d02a0227
+409ed9aad4680c241cb30fc69f066322d02a0227,409ed9aa,Move rest of MPVLib stuff to MPVView.,"Move rest of MPVLib stuff to MPVView.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461166878,1461166878,02744aefbc58f24c06651ffe3fcb0f14830306db
+02744aefbc58f24c06651ffe3fcb0f14830306db,02744aef,Move more MPVLib stuff to MPVView,"Move more MPVLib stuff to MPVView
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461166465,1461166465,24a16fa939cdc8b72539b05e2951c0e9d4372a11
+24a16fa939cdc8b72539b05e2951c0e9d4372a11,24a16fa9,"refactor initgl a bit, die on error","refactor initgl a bit, die on error
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461166087,1461166114,6e9a59e46ea28479eab279fa5f9ab28ced131970
+6e9a59e46ea28479eab279fa5f9ab28ced131970,6e9a59e4,"Move onDestroy implementation to MPVView, and don't fail silently.","Move onDestroy implementation to MPVView, and don't fail silently.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461165738,1461165738,2a5bb9dfa87015f1cfa22a399badc4cf29c28889
+2a5bb9dfa87015f1cfa22a399badc4cf29c28889,2a5bb9df,"Update libs location, remove gradle controlled ndk build","Update libs location, remove gradle controlled ndk build
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461152479,1461152479,8e76f84d5b58be0d6e5e65c148a7c1beb00d3007
+8e76f84d5b58be0d6e5e65c148a7c1beb00d3007,8e76f84d,MPVView: pass file path to renderer between it's constructed and setRenderer is called,"MPVView: pass file path to renderer between it's constructed and setRenderer is called
+
+This should help avoid a potential(?) race condition
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461111795,1461111795,c13a698a6d21c32c755ac6dc8f26d755f2edd594
+c13a698a6d21c32c755ac6dc8f26d755f2edd594,c13a698a,Remove command queue as it's not used anymore.,"Remove command queue as it's not used anymore.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1461110344,1461110344,a93da4a7aa153a99603ffe9a9a29506235f1e3af
+a93da4a7aa153a99603ffe9a9a29506235f1e3af,a93da4a7,MPVView: try requesting only OpenGL ES 2 context,"MPVView: try requesting only OpenGL ES 2 context
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460579524,1460579524,1c99feedce52b661388a4628aea7006bd73a5c4c
+1c99feedce52b661388a4628aea7006bd73a5c4c,1c99feed,AndroidManifest: actually use the created icon(s),"AndroidManifest: actually use the created icon(s)
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460578429,1460578429,b809840a0316c6cf0f2d3bf2ce952fa311370d9c
+b809840a0316c6cf0f2d3bf2ce952fa311370d9c,b809840a,app: add icons created from mpv/etc/mpv-gradient.svg,"app: add icons created from mpv/etc/mpv-gradient.svg
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460578011,1460578011,cda332708bc4c5e88c63889885c889236d67cd86
+cda332708bc4c5e88c63889885c889236d67cd86,cda33270,AndroidManifest: enable both landscape modes,"AndroidManifest: enable both landscape modes
+
+""Oh my gawd this actually works out of the box""
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460576373,1460576373,00ceee1a82738ddebf8344eeda8255235b9dbab5
+00ceee1a82738ddebf8344eeda8255235b9dbab5,00ceee1a,MPVActivity/main: fixup OSC,"MPVActivity/main: fixup OSC
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460305526,1460305526,0087355e7826fedba4334e6e96a898bb8d9c3ce5
+0087355e7826fedba4334e6e96a898bb8d9c3ce5,0087355e,jni/main: move osc related params to before init,"jni/main: move osc related params to before init
+
+< wm4> JEEB: yes the osc must be set before for stupid reasons
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460292892,1460292892,8e084b6764ae4441f158ab3feaac4811a2b5f8c3
+8e084b6764ae4441f158ab3feaac4811a2b5f8c3,8e084b67,java stuff: a lot of changes making things work better with contexts,"java stuff: a lot of changes making things work better with contexts
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460291228,1460291228,50a1df35ab73a043e72bbcc14c0206977b50918f
+50a1df35ab73a043e72bbcc14c0206977b50918f,50a1df35,jni/main: add getting the current context,"jni/main: add getting the current context
+
+You have no idea but it seems like this is the thing which fucked
+init in a lot of ways.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460291152,1460291152,fdc0a1eac60e7f2b0f0f8b07f3438fd5494359aa
+fdc0a1eac60e7f2b0f0f8b07f3438fd5494359aa,fdc0a1ea,app/build.gradle: update NDK stuff for gradle,"app/build.gradle: update NDK stuff for gradle
+
+This enables stuff to work with Android Studio 2.x it seems,
+although my laptop works fine without these things :P
+
+Requires overriding dependencies_prefix
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460286464,1460286464,3310678eaf7372170870a130a50fec2f05335d13
+3310678eaf7372170870a130a50fec2f05335d13,3310678e,app/build.gradle: update build tools version,"app/build.gradle: update build tools version
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460286232,1460286232,58e1a52758c2c06c8d9afd10c667accbe04f9038
+58e1a52758c2c06c8d9afd10c667accbe04f9038,58e1a527,update gradle and google android deps,"update gradle and google android deps
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460283197,1460283197,f2d8741e3def304368ff6dbf727d292c6129058a
+f2d8741e3def304368ff6dbf727d292c6129058a,f2d8741e,jni/Android.mk: forgot to remove libavresample,"jni/Android.mk: forgot to remove libavresample
+
+It used to be used by mpv, but currently it would default to
+libswresample anyways... so removan.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460281744,1460281744,1828de595e2a4a84b122f48b77218eafee8df08d
+1828de595e2a4a84b122f48b77218eafee8df08d,1828de59,more garbage day changes,"more garbage day changes
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1460245089,1460245405,4375f6efb6282e2cd64a83e73cae68b4e89643f0
+4375f6efb6282e2cd64a83e73cae68b4e89643f0,4375f6ef,MPVView: clean-up,"MPVView: clean-up
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459009473,1459009557,2c8db970f252aecb2d1b7c23b62d6cc66b2f147a
+2c8db970f252aecb2d1b7c23b62d6cc66b2f147a,2c8db970,MPVView: add debug for GL context creation/removal,"MPVView: add debug for GL context creation/removal
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459009239,1459009239,42e76c5fc808c5fad75bf86476100edffdd7e360
+42e76c5fc808c5fad75bf86476100edffdd7e360,42e76c5f,MPVActivity: Don't touch the GL stuff from outside the GL thread,"MPVActivity: Don't touch the GL stuff from outside the GL thread
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459009192,1459009192,da22f35c93514cae366049d33a1c2b0549878b75
+da22f35c93514cae366049d33a1c2b0549878b75,da22f35c,Initial work to compartmentize things,"Initial work to compartmentize things
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459006672,1459006672,c5dc7fceda2a08415210c2f3fa11b291b185375b
+c5dc7fceda2a08415210c2f3fa11b291b185375b,c5dc7fce,MPVActivity: remove unneeded MPVLib thing,"MPVActivity: remove unneeded MPVLib thing
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459005168,1459005168,7adb11dcf8fb8a457ba01322676e188e0bc4f606
+7adb11dcf8fb8a457ba01322676e188e0bc4f606,7adb11dc,MPVView: move GL initialization to before libmpv init,"MPVView: move GL initialization to before libmpv init
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459004326,1459004326,fe84f423591344c5833315db5e87e2a113930efc
+fe84f423591344c5833315db5e87e2a113930efc,fe84f423,MPVView: Remove unused things,"MPVView: Remove unused things
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459004086,1459004086,7e26e61562a85c6a05b9db810b865092f1a40c04
+7e26e61562a85c6a05b9db810b865092f1a40c04,7e26e615,HACK MPVActivity; disable the constant barrage of events for hidden thing,"HACK MPVActivity; disable the constant barrage of events for hidden thing
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459003889,1459003889,11e06116ab8fa7ba8df77db5b5aca46cbe4c36a8
+11e06116ab8fa7ba8df77db5b5aca46cbe4c36a8,11e06116,"Revert ""MORE WIP STUFF""","Revert ""MORE WIP STUFF""
+
+This reverts commit 840fddb935aa0da6362560df7966dff79be14fa5.
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459003636,1459003636,840fddb935aa0da6362560df7966dff79be14fa5
+840fddb935aa0da6362560df7966dff79be14fa5,840fddb9,MORE WIP STUFF,"MORE WIP STUFF
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1459003629,1459003629,e88eea55e8b419d246a599fa56de59651f1aa8a4
+e88eea55e8b419d246a599fa56de59651f1aa8a4,e88eea55,WIP COMMIT FOR GARBAGE DAY,"WIP COMMIT FOR GARBAGE DAY
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1458996230,1458996327,48416cf49f8960e9c2b98c8e31086165971473d2
+48416cf49f8960e9c2b98c8e31086165971473d2,48416cf4,main/MPVLib: add function to destroy the libmpv context,"main/MPVLib: add function to destroy the libmpv context
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1458952208,1458952208,5b39fc5ca27d92f5bc9d632770581bc10150a277
+5b39fc5ca27d92f5bc9d632770581bc10150a277,5b39fc5c,main: re-add JVM getting. upstreamed lavc MediaCodec requires it,"main: re-add JVM getting. upstreamed lavc MediaCodec requires it
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1458949895,1458949895,1fbc2575fff1950c7d81c3b4c52f254087c03442
+1fbc2575fff1950c7d81c3b4c52f254087c03442,1fbc2575,random changes used for the 2016-02-28 build,"random changes used for the 2016-02-28 build
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1456790248,1456790248,c2f5934fb135045b7b4b44b5597254de6cb119f2
+c2f5934fb135045b7b4b44b5597254de6cb119f2,c2f5934f,main: remove leftovers of old lavc JNI stuff,"main: remove leftovers of old lavc JNI stuff
+",,,,Jan Ekström,jeebjp@gmail.com,Jan Ekström,jeebjp@gmail.com,1456353431,1456353431,37a783582ccffeedd7d217eca12534d06cf48697
+37a783582ccffeedd7d217eca12534d06cf48697,37a78358,Switch to using shared FFmpeg libraries.,"Switch to using shared FFmpeg libraries.
+
+In future this will help us with av_jni_register_java_vm.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455402543,1455402543,fe5d1902817afaf1b14a59ebdbf811c08b88f091
+fe5d1902817afaf1b14a59ebdbf811c08b88f091,fe5d1902,Make the seekbar more responsive while it's being used.,"Make the seekbar more responsive while it's being used.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455375567,1455375567,0207f5119ec8b8008424968590a5f9ae9d0f14e4
+0207f5119ec8b8008424968590a5f9ae9d0f14e4,0207f511,Don't require two taps to show the controls once navigation bar was hidden.,"Don't require two taps to show the controls once navigation bar was hidden.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455375238,1455375238,51f0279eec77b34d01bf4346039cd24cd0172b77
+51f0279eec77b34d01bf4346039cd24cd0172b77,51f0279e,"Add MainActivity which is basically a ""proper"" file picker.","Add MainActivity which is basically a ""proper"" file picker.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455374924,1455374924,5264551b3eb4ceb44e04a3b86dd2a943191efe22
+5264551b3eb4ceb44e04a3b86dd2a943191efe22,5264551b,Properly check for error return from mpv_*_property (attempt 2).,"Properly check for error return from mpv_*_property (attempt 2).
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455312798,1455312798,a825fe96eae07615b6ac8d669727a2748f09f205
+a825fe96eae07615b6ac8d669727a2748f09f205,a825fe96,Fix mpv_*_property return value check.,"Fix mpv_*_property return value check.
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455309222,1455309222,ff5aaad48730afb6fcdfd9f5a6eb4fabed81ec1b
+ff5aaad48730afb6fcdfd9f5a6eb4fabed81ec1b,ff5aaad4,Add LICENSE,"Add LICENSE
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455305412,1455305412,faaff3bd474979f1fa9d27990724a59c5bdfe07e
+faaff3bd474979f1fa9d27990724a59c5bdfe07e,faaff3bd,working seek bar,"working seek bar
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455304256,1455304256,99d348e2c0ca9729c776c7417aa4735d57eb49c8
+99d348e2c0ca9729c776c7417aa4735d57eb49c8,99d348e2,Allow Java code to run any mpv command,"Allow Java code to run any mpv command
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455289777,1455290192,f4d3d9967ac9b4656f9dc06866a4bf05f823a9ff
+f4d3d9967ac9b4656f9dc06866a4bf05f823a9ff,f4d3d996,started working on native playback ui,"started working on native playback ui
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455282421,1455282421,63cddf9708f04903a63490407efa0d873ff6f8a1
+63cddf9708f04903a63490407efa0d873ff6f8a1,63cddf97,properly process log messages,"properly process log messages
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455104845,1455104872,70a8782db2513ee10edfecfd3d69a8a09cfc0b35
+70a8782db2513ee10edfecfd3d69a8a09cfc0b35,70a8782d,Update .gitignore,"Update .gitignore
+
+  local.properties is not required to build stuff which is why I removed it.
+  Android Studio generates it nonetheless
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455099363,1455099363,5516f75ea3b5a468c6c53ecc09130b20701fbcee
+5516f75ea3b5a468c6c53ecc09130b20701fbcee,5516f75e,Open .avi files too,"Open .avi files too
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455060909,1455060909,c89a70750e8dccd208e23e0b4bd3c76831b1cd42
+c89a70750e8dccd208e23e0b4bd3c76831b1cd42,c89a7075,"Exit app if ""Cancel"" is pressed in file picker","Exit app if ""Cancel"" is pressed in file picker
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455050680,1455050824,4b22e604f25dbaa6d992ed89dd35880297f9ad90
+4b22e604f25dbaa6d992ed89dd35880297f9ad90,4b22e604,Fix previous commit,"Fix previous commit
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455050060,1455050060,c288bf5ab01d3e36b6176370baacbf9ac1c0d077
+c288bf5ab01d3e36b6176370baacbf9ac1c0d077,c288bf5a,Allow opening http:// links,"Allow opening http:// links
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455049971,1455049971,d5d6fdefcdac80c07af5a5accd904e1f26a94e45
+d5d6fdefcdac80c07af5a5accd904e1f26a94e45,d5d6fdef,make app icon appear in android tv launcher,"make app icon appear in android tv launcher
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455048674,1455048674,15a136af6cfa932adc595e668fac7464b057b6c1
+15a136af6cfa932adc595e668fac7464b057b6c1,15a136af,ensure screen stays on while MPVActivity is active,"ensure screen stays on while MPVActivity is active
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455045920,1455045920,34474794ae6d41206d77a1e8240bd4928f89ab7a
+34474794ae6d41206d77a1e8240bd4928f89ab7a,34474794,Set config dir to load subfont.ttf,"Set config dir to load subfont.ttf
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455045455,1455045455,9935bd8f8dc7a56628d9e37cd114d1743443f55f
+9935bd8f8dc7a56628d9e37cd114d1743443f55f,9935bd8f,Remove misleading comment,"Remove misleading comment
+
+    Android development is hard.
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455040748,1455040748,d5a824df5e9501372d497172026d870912c87648
+d5a824df5e9501372d497172026d870912c87648,d5a824df,Fix assets missing from .apk,"Fix assets missing from .apk
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455039210,1455039210,46d84f218b2a2c903d5aa2c8d8e409daa2b916e2
+46d84f218b2a2c903d5aa2c8d8e409daa2b916e2,46d84f21,merge file picker support,"merge file picker support
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455039074,1455039074,96a98d50e149f761159353f9f26616931fbf0433
+96a98d50e149f761159353f9f26616931fbf0433,96a98d50,switch to gradle,"switch to gradle
+",,,,Ilya Zhuravlev,whatever@xyz.is,sfan5,sfan5@live.de,1455030289,1455036803,dacd8b51d3f7fa49ec52fa782a31ea1740305a86
+dacd8b51d3f7fa49ec52fa782a31ea1740305a86,dacd8b51,Allow opening files with video/* mime type,"Allow opening files with video/* mime type
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455031567,1455031599,b04ae4b00661030372ad567d525e64f50027d599
+b04ae4b00661030372ad567d525e64f50027d599,b04ae4b0,Automatic copying of font files,"Automatic copying of font files
+",,,,sfan5,sfan5@live.de,sfan5,sfan5@live.de,1455026047,1455026155,23311fcc26ec6e077a347b763c12e493bcc4c1fd
+23311fcc26ec6e077a347b763c12e493bcc4c1fd,23311fcc,"merge touch/mouse support, display the OSC","merge touch/mouse support, display the OSC
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455020920,1455020920,a97794e29faaf8b5e47ef273c5c4534b2819b334
+a97794e29faaf8b5e47ef273c5c4534b2819b334,a97794e2,"pause playback when losing focus, preserve the opengl context (with setPreserveEGLContextOnPause)","pause playback when losing focus, preserve the opengl context (with setPreserveEGLContextOnPause)
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1455019036,1455019036,e7a2de891fa7727610c1dd5955b33c20c8afa636
+e7a2de891fa7727610c1dd5955b33c20c8afa636,e7a2de89,enable subtitles back,"enable subtitles back
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454964267,1454964267,dec81abf08337afda1daf71f86afda5a3f9b59bf
+dec81abf08337afda1daf71f86afda5a3f9b59bf,dec81abf,"disable subtitles for now, otherwise video with forced subs won't play at all","disable subtitles for now, otherwise video with forced subs won't play at all
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454955115,1454955115,f3fee8fcda700ad7a03ddd1de0cdfd2291a31040
+f3fee8fcda700ad7a03ddd1de0cdfd2291a31040,f3fee8fc,landscape fullscreen,"landscape fullscreen
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454949199,1454949199,ab8c0652eab07efe5272ad4dbb7a90010afd7f99
+ab8c0652eab07efe5272ad4dbb7a90010afd7f99,ab8c0652,ao=openal,"ao=openal
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454947830,1454947830,4109d0722320c8de231b071b39ad69f28b03be7a
+4109d0722320c8de231b071b39ad69f28b03be7a,4109d072,set target=android-19,"set target=android-19
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454947818,1454947818,b00eb5ef928b460038826c0e34957b73aa3c6cc7
+b00eb5ef928b460038826c0e34957b73aa3c6cc7,b00eb5ef,initial,"initial
+",,,,Ilya Zhuravlev,whatever@xyz.is,Ilya Zhuravlev,whatever@xyz.is,1454927708,1454927708,

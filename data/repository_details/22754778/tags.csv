@@ -1,0 +1,42 @@
+commit_hash,tag_name,tag_message
+9d6b4a40815e172063e17f331e496e2338b821ba,v1.0.3,"Version 1.0.3
+
+* use default HostnameVerifier to handle alternative subject names correctly"
+dea523f96c04b76bdbd1ac31588bcc353944710f,v1.0.2,"Version 1.0.2
+
+* allow TLSv1, TLSv1.1, TLSv1.2 and disable SSLv3 for Android <5.0 (fixes #14)
+* use ""CAdroid/version"" for HTTP User-Agent"
+60209489cd3a23396a559cec6f7e3190252184c0,v1.0.1,"Version 1.0.1
+
+* fix list view bug for Android <4.4
+* don't crash when no certificates are available
+* don't reuse HTTP connections to avoid Android bugs"
+ce79c3bdf4861b2bc5b53785194c62f72011bc93,v1.0,"Version 1.0
+
+* doesn't crash anymore when you click on the header above the certificate list"
+84cecaf2691dffe6eb1f5c300d9fe52b21d7b536,v0.9.9,"Version 0.9.9
+
+* switch to gradle/Android Studio build system
+* allow selecting the certificate to import from the certificate chain
+* don't distinguish between CA and self-signed certificates anymore
+* error messages for invalid host name and already trusted chain moved to certificate selection
+* don't follow redirects
+* display fingerprints correctly
+* added ProGuard file
+* minor improvements"
+0c5fd6f32eb4468da375b9a09a4661211c4bf323,v0.9.1,"Version 0.9.1
+
+Allow scrolling in ""Import certs"" fragment (shows live status whether the cert has been installed already)"
+1f2cb962d93b1b9c8f5dc2c87347cc9e474c16b4,v0.9,"Version 0.9
+
+  * rewritten core
+  * support stand-alone (chain length: 1) or own CA (chain length > 1) certificates
+  * use Lombok
+  * decode Basic Constraints correctly with own ASN.1/DER decoder
+  * detect whether certificates are already trusted locally
+  * ignore HTTP errors when fetching the certificate
+  * try to give more useful information in error messages
+  * better GUI/core separation
+  * German translation
+  * tests"
+3205ce6b0d3de5b7b7d2e05736fa703d8e73de6e,v0.1,Initial version

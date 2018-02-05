@@ -1,0 +1,153 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+07be0e128f2b02683a0678e8df02f8be65d955a1,07be0e12,Updated build name to 1.0.3 release version,"Updated build name to 1.0.3 release version
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1399004938,1399004938,78a047a928f9bf3409784b61564f66350d93c213
+78a047a928f9bf3409784b61564f66350d93c213,78a047a9,Removed unused application UI stuff.,Removed unused application UI stuff.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398805710,1398805710,50f0ef170b00ced896f968e04f070b0ffb4911f9
+50f0ef170b00ced896f968e04f070b0ffb4911f9,50f0ef17,Lint tool cleanup - nothing significant,Lint tool cleanup - nothing significant,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398803625,1398803625,a6c930ffc6c5025c282ae6309c2a5e08d1d3b703
+a6c930ffc6c5025c282ae6309c2a5e08d1d3b703,a6c930ff,Updated version code.,Updated version code.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398716250,1398716250,4eb733357000da1934d12d213648f33e523b32c6
+4eb733357000da1934d12d213648f33e523b32c6,4eb73335,Corrected expiry time.,Corrected expiry time.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398711526,1398711526,14a49804300061c3157687e797bd2a0471a064c7
+14a49804300061c3157687e797bd2a0471a064c7,14a49804,Export WidgetService and restore custom intent strings.,"Export WidgetService and restore custom intent strings.
+
+Fixed some logging lines.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398710883,1398710883,034693df4b3c54e44a93256fe027aa9e99137825
+034693df4b3c54e44a93256fe027aa9e99137825,034693df,corrected log line.,corrected log line.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398665249,1398665249,b568450323099c4d599f1ee096914cc94d65c99e
+b568450323099c4d599f1ee096914cc94d65c99e,b5684503,Minor changes,"Minor changes
+ * changed handleCommands to handleActions
+ * changed version from 1.0b to 1.0.1b
+ * added log line to show when RingerModeListener.onChange ends.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398664830,1398664830,945e88a5ac923eba7fecbb0cfefdfa156f27917c
+945e88a5ac923eba7fecbb0cfefdfa156f27917c,945e88a5,Removed wft logging from debugging notification cancel issue.,Removed wft logging from debugging notification cancel issue.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398619589,1398619589,c1f87512329a797d3180fbb2156f563426e6bd96
+c1f87512329a797d3180fbb2156f563426e6bd96,c1f87512,Started using intents with Android action strings to avoid potential,"Started using intents with Android action strings to avoid potential
+defect in KitKat.
+
+Intent could not be sent from notifications. I also change notification
+from AlarmManager timer just in case.
+
+04-26 16:00:19.442: W/BroadcastQueue(598): Permission Denial:
+broadcasting Intent {
+act=ca.nmsasaki.android.mute30.ACTION_NOTIFICATION_CANCEL_CLICK
+flg=0x10000010 cmp=ca.nmsasaki.android.mute30/.ShortcutReceiver
+bnds=[128,231][768,327] } from ca.nmsasaki.android.mute30 (pid=-1,
+uid=10216) is not exported from uid 10220 due to receiver
+ca.nmsasaki.android.mute30/.ShortcutReceiver
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398619312,1398619312,44f6557cdc176549940dc1b9ae7a74f61cfdb277
+44f6557cdc176549940dc1b9ae7a74f61cfdb277,44f6557c,"Added ""."" to properly qualify names of intent actions.","Added ""."" to properly qualify names of intent actions.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398530489,1398530489,e6afe9218e8ca81d4e98e971a8eebcbe71429ea6
+e6afe9218e8ca81d4e98e971a8eebcbe71429ea6,e6afe921,Updated matrix removing unnecessary attributes.,Updated matrix removing unnecessary attributes.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398530405,1398530405,ce652c9121a936c574c3c64b8647f5c78269813d
+ce652c9121a936c574c3c64b8647f5c78269813d,ce652c91,Enabled Proguard,"Enabled Proguard
+
+Added removal of logging",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398493982,1398493982,3691807a558b01cd9284634ae29ff96a28c7616c
+3691807a558b01cd9284634ae29ff96a28c7616c,3691807a,Removed unnecessary usage of Application context,"Removed unnecessary usage of Application context
+
+Fixed project settings to stop running app immediately
+
+Simplified receive declaration in manifest.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398486335,1398486335,dd401011cfc7d08f732d4a4e4e296ed3918621a9
+dd401011cfc7d08f732d4a4e4e296ed3918621a9,dd401011,Renamed app again...,Renamed app again...,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398483624,1398483624,eed653eb82b5c1e760655fa0877dc86601d4c552
+eed653eb82b5c1e760655fa0877dc86601d4c552,eed653eb,Added fully qualified intent names back to fix bug.,Added fully qualified intent names back to fix bug.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398470786,1398470786,d57ea11cb2e83c3301a7ff48b3b9462e0b6b51aa
+d57ea11cb2e83c3301a7ff48b3b9462e0b6b51aa,d57ea11c,Some formatting changes and fixed manifest specification for broadcast,"Some formatting changes and fixed manifest specification for broadcast
+receiver. 
+
+Noticed defect - cannot cancel from notifications",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398468129,1398468149,045e4bb0d7148c4354ea0bdc0f96bc3c38e0f2d2
+045e4bb0d7148c4354ea0bdc0f96bc3c38e0f2d2,045e4bb0,Some code cleanup and added license statements,Some code cleanup and added license statements,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398465574,1398465574,7f9cecc0e147fe08051fb929420d3a353b021960
+7f9cecc0e147fe08051fb929420d3a353b021960,7f9cecc0,On User change ringer mode manually:,"On User change ringer mode manually:
+
+Show Toast rather than Notification",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398454864,1398454864,7a60056125741f8ac313a5be4c5614e53b6796b5
+7a60056125741f8ac313a5be4c5614e53b6796b5,7a600561,Had to fix more naming things.,Had to fix more naming things.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398451066,1398451066,830156afcbd7109cc5e89822fbbf6a74ea91d165
+830156afcbd7109cc5e89822fbbf6a74ea91d165,830156af,Renamed Project,Renamed Project,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398449527,1398449527,c34ea2d35ccf753dc3d9a069e16519fa1c7ea951
+c34ea2d35ccf753dc3d9a069e16519fa1c7ea951,c34ea2d3,Added Listener for Manual changes to Ringer Mode,Added Listener for Manual changes to Ringer Mode,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398368177,1398368177,86e37e45d6cffb15d3c61fa46443ed363be9a965
+86e37e45d6cffb15d3c61fa46443ed363be9a965,86e37e45,Register and unregister ringermode listener,"Register and unregister ringermode listener
+ * need to add code in handler to trigger service",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398292652,1398292652,4718a83f804e0c785923ebbc8d91d91e6dc11bce
+4718a83f804e0c785923ebbc8d91d91e6dc11bce,4718a83f,Removed more widgetProvider stuff.,"Removed more widgetProvider stuff.
+
+WidgetService is left as a legacy name",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398214339,1398214339,646af8d42aec62b227302959b2b61650797a31b8
+646af8d42aec62b227302959b2b61650797a31b8,646af8d4,App shortcut instead of widget working.,App shortcut instead of widget working.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398214079,1398214079,5b1bf84b01a847e9ca4d3b1ba67cc688f5afcef2
+5b1bf84b01a847e9ca4d3b1ba67cc688f5afcef2,5b1bf84b,Moved static variables into SharedPreferences,"Moved static variables into SharedPreferences
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398206477,1398206477,cb7e82465d9c87d50761140abe66a5e52068fe50
+cb7e82465d9c87d50761140abe66a5e52068fe50,cb7e8246,Get rid of static alarm PendingIntent,"Get rid of static alarm PendingIntent
+
+Use long alarm expiry time",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398199655,1398199655,a9c32382722819784cd244bf6da363f2b0e9f5a1
+a9c32382722819784cd244bf6da363f2b0e9f5a1,a9c32382,Removed Dead code.,"Removed Dead code.
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398197133,1398197133,0d40f332c46b55552bcac88234ebbc8242af731f
+0d40f332c46b55552bcac88234ebbc8242af731f,0d40f332,Changed WidgetProvider to use Service,Changed WidgetProvider to use Service,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398196942,1398196942,94605072913b63c1bcdfda6b93edb81c811dacba
+94605072913b63c1bcdfda6b93edb81c811dacba,94605072,Cleaned-up code,"Cleaned-up code
+
+extracted some functions.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398189786,1398189786,bb6f800ba777470c637357ea54c9f2132aae0b30
+bb6f800ba777470c637357ea54c9f2132aae0b30,bb6f800b,Removing unused Notification files.,Removing unused Notification files.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398177403,1398177403,da1c10eece92354cb1b78a6bc5e75904b8fc00b7
+da1c10eece92354cb1b78a6bc5e75904b8fc00b7,da1c10ee,Cleaning up code,"Cleaning up code
+- removed util package
+- kept on full screen activity and button for testing",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1398177133,1398177133,5366e51546fbb9a5c016d8e8b07c28e49145e9b5
+5366e51546fbb9a5c016d8e8b07c28e49145e9b5,5366e515,Changed timer to 30 minutes,"Changed timer to 30 minutes
+Corrected displayname label and updated it for widget",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397877513,1397877513,79b62a2d7fbfd5877bc209588a774934098891fd
+79b62a2d7fbfd5877bc209588a774934098891fd,79b62a2d,Add capability to restore back to vibrate mode.,Add capability to restore back to vibrate mode.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397876946,1397876946,7c6ca2fba394e58cc74cfde2e42cf667c06e1376
+7c6ca2fba394e58cc74cfde2e42cf667c06e1376,7c6ca2fb,removed warning,removed warning,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397864604,1397864604,fd41d5275cc8909ad2d21214789c14ce89da255c
+fd41d5275cc8909ad2d21214789c14ce89da255c,fd41d527,Added TODO items for handling timer state properly.,"Added TODO items for handling timer state properly.
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397864541,1397864541,0d4ede63ae5df3a62000028eca42588d2be54820
+0d4ede63ae5df3a62000028eca42588d2be54820,0d4ede63,Proposed some TODO's for repeated code.,Proposed some TODO's for repeated code.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397864056,1397864056,6e4dd30cb141d6cca03dde751e310312e0e9d3cd
+6e4dd30cb141d6cca03dde751e310312e0e9d3cd,6e4dd30c,Truncated seconds from timer so timer always expires on the minute.,Truncated seconds from timer so timer always expires on the minute.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397863610,1397863610,50eeda73b734d69fe3b8f71347a44c7e6fa265ee
+50eeda73b734d69fe3b8f71347a44c7e6fa265ee,50eeda73,Added custom intents to handle events properly.,"Added custom intents to handle events properly.
+
+Cleaned-up logging also",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397862119,1397862119,4416fdc01e09f8b057b31bd92075483332771165
+4416fdc01e09f8b057b31bd92075483332771165,4416fdc0,Updated package name to silentTouch also.,Updated package name to silentTouch also.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397856850,1397856850,85e31659d41597434ce4f63cd5653e0b27626a18
+85e31659d41597434ce4f63cd5653e0b27626a18,85e31659,changed file names to match project,"changed file names to match project
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397238527,1397238527,db2c0e0701305d6c16ca9bfcb10130896be8ee09
+db2c0e0701305d6c16ca9bfcb10130896be8ee09,db2c0e07,Added final icons,"Added final icons
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397235507,1397235507,3975d3f4289a1252ebabc9e0069f7b860078f8b5
+3975d3f4289a1252ebabc9e0069f7b860078f8b5,3975d3f4,added updated notification icons,"added updated notification icons
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397163006,1397163006,97a1c4f3341e0968e1f9bd4d4776da1865f5b3b6
+97a1c4f3341e0968e1f9bd4d4776da1865f5b3b6,97a1c4f3,Added slient capability.,"Added slient capability.
+
+Needs more testing.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1397011721,1397011721,8c3250d4ed94451219aef0a4bcb98e07e32708b4
+8c3250d4ed94451219aef0a4bcb98e07e32708b4,8c3250d4,made toast more responsive,made toast more responsive,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396963888,1396963888,d0198b432d8ef5c0aa6247e1f4e4f0dcb532d90b
+d0198b432d8ef5c0aa6247e1f4e4f0dcb532d90b,d0198b43,Modified Logging to reduce info logs.,Modified Logging to reduce info logs.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396963487,1396963487,57c15167e88d27b5b2679f41b19f8de4879b1e39
+57c15167e88d27b5b2679f41b19f8de4879b1e39,57c15167,Added handling for adding time to existing timer,Added handling for adding time to existing timer,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396962101,1396962101,e46e5a334df2a92eca753cc9719b13f492f2e703
+e46e5a334df2a92eca753cc9719b13f492f2e703,e46e5a33,Fixed problem with manual cancel,Fixed problem with manual cancel,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396948270,1396948270,044ab7862d7c9765ebc7dab841843fe1090a2717
+044ab7862d7c9765ebc7dab841843fe1090a2717,044ab786,Removed some code and tested:,"Removed some code and tested:
+
+1. Click and wait for cancel timer works
+2. Click and manually cancel wills timer correctly
+(Same bug where it registers as if timer expires rather than user).",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396947472,1396947472,a126a3b813cb124a176fc1a5eb485ee181167de5
+a126a3b813cb124a176fc1a5eb485ee181167de5,a126a3b8,"Cancel from notification works, but registers as if the timer expired","Cancel from notification works, but registers as if the timer expired
+every time.
+
+Also tried and failed using RequestCode and Flags on pending Intent
+Also tried and failed setting boolean extras",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396946595,1396946595,db0589989dff5e5032dd5c637622f9b064e0d4a7
+db0589989dff5e5032dd5c637622f9b064e0d4a7,db058998,Added Time stamps to messages so user knows when timer will expire.,"Added Time stamps to messages so user knows when timer will expire.
+
+Tested that it works while phone is locked.
+
+Removed toast from expiry.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396937550,1396937550,689b23558ef9a49bccfade2d7eac89b9d1faee83
+689b23558ef9a49bccfade2d7eac89b9d1faee83,689b2355,Moved code to onReceive,"Moved code to onReceive
+
+Fixed bug with onLaunch activating silence too early
+
+Touch Widget 1st time
+* show toast with better strings
+* show notification with better strings
+* start timer
+
+On Timer Expire from 1st touch
+* show toast (allegedly)
+* show updated notifiction
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396923324,1396923324,4e70853760fe66ec5225e6f492f687493304ab2d
+4e70853760fe66ec5225e6f492f687493304ab2d,4e708537,Added notification on widget touch,Added notification on widget touch,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396916587,1396916587,5e27520c996d41a998c843c73dfc82f1cf0f6fb6
+5e27520c996d41a998c843c73dfc82f1cf0f6fb6,5e27520c,added cancel section to notification bar,"added cancel section to notification bar
+* cancel section will disappear when a subsequent notification with
+cancel appears.
+
+* I need to add a custom view for the notification I think",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396704616,1396704616,81a200e603b96fcb5f1604436af66976ddcc1705
+81a200e603b96fcb5f1604436af66976ddcc1705,81a200e6,Added notification item for dummy button click,Added notification item for dummy button click,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396675265,1396675265,2fc90d1dffefe0b2430c60f25e57d92593ae3751
+2fc90d1dffefe0b2430c60f25e57d92593ae3751,2fc90d1d,Changed widget to image instead of text view,Changed widget to image instead of text view,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396672645,1396672645,073622320e470ead8a1a3ed1c290c593ed876c96
+073622320e470ead8a1a3ed1c290c593ed876c96,07362232,toast appearing on widget touch,toast appearing on widget touch,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396662330,1396662330,ccf4e068e3a2775ce7b41e998d81a9bdee6a83a6
+ccf4e068e3a2775ce7b41e998d81a9bdee6a83a6,ccf4e068,Removed loop since there is only one widget element to handle.,Removed loop since there is only one widget element to handle.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396660453,1396660453,38307b13070d9bb33d406ae51e185d5f6cbc6a40
+38307b13070d9bb33d406ae51e185d5f6cbc6a40,38307b13,Widget is a textview that shows a random number.,"Widget is a textview that shows a random number.
+On clicking the widget, the random number changes.
+
+Code is NOT using Service
+Also added code for adding a shortcut - not sure I will use.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396660263,1396660263,486e46e0a2dea9589df6b24542fd57cdc187fd4b
+486e46e0a2dea9589df6b24542fd57cdc187fd4b,486e46e0,Added more files to get full screen activity and widget.,"Added more files to get full screen activity and widget.
+
+Widget appears in widget list
+I can add it to home screen
+
+Widget does nothing and shows ""problem"" text.",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396578200,1396578200,56183a3efc62176e3d17732922a0791b77c844c4
+56183a3efc62176e3d17732922a0791b77c844c4,56183a3e,Updated to show full screen app and show toast on button click.,Updated to show full screen app and show toast on button click.,,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396378582,1396378582,61dc475ff2191481beb05bfbf44e7bd5e22b4f9a
+61dc475ff2191481beb05bfbf44e7bd5e22b4f9a,61dc475f,added base android files,"added base android files
+",,,,Neil Sasaki,nmsasaki@hotmail.com,Neil Sasaki,nmsasaki@hotmail.com,1396121843,1396121843,c3fa2c2edb00c5c350196ba7b78f0693fdb8abd9
+c3fa2c2edb00c5c350196ba7b78f0693fdb8abd9,c3fa2c2e,Initial commit,"Initial commit
+",,,,nmsasaki,nmsasaki@hotmail.com,nmsasaki,nmsasaki@hotmail.com,1395440281,1395440281,

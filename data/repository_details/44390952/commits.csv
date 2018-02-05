@@ -1,0 +1,61 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+06503153c4985ddc8fe579768899c2d975d5078b,06503153,refactor: Refactor ArticleDetailFragment to Material Design.,"refactor: Refactor ArticleDetailFragment to Material Design.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455418736,1455462142,e8b7dbd69e6953a5f8eba0f731c76b465b888bd9
+e8b7dbd69e6953a5f8eba0f731c76b465b888bd9,e8b7dbd6,refactor: Refactor ArticleListActivity to Material Design,"refactor: Refactor ArticleListActivity to Material Design
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455418744,1455462140,0be7db95de78804a479a92bef1f286983cd2eca5
+0be7db95de78804a479a92bef1f286983cd2eca5,0be7db95,feat: Create Material Design style.,"feat: Create Material Design style.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455418681,1455462037,02990de4232ce0595cab5130d78c4ea4db010812
+02990de4232ce0595cab5130d78c4ea4db010812,02990de4,refactor: Replace Volley by Picaso.,"refactor: Replace Volley by Picaso.
+
+Square Picaso provides a transparent way of dealing with image caching,
+eliminating the cumbersome LRU implementation and providing a more
+readable code.
+
+The material design color palette can be adjusted to the background
+image, considering the its dominant, contrasting, and complementary
+colors.
+
+As soon as the image is downloaded by Picaso, those colors are
+calculated by the command and new primary and accent colors are
+generated. These are more harmonic with the background image.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455412434,1455458794,164f88c49b58c2ba5468909c9a12aaf7edeebce8
+164f88c49b58c2ba5468909c9a12aaf7edeebce8,164f88c4,refactor: Replace OkHttp by Retrofit in date and remote modules,"refactor: Replace OkHttp by Retrofit in date and remote modules
+
+Current OkHttp version conflicts with latest one used by Picaso, so
+the best approach is removing it completly in favor of Retrofit.
+
+Instead of processe date attributes as strings, a better approach is
+create a custom Gson (de)serializer (see http://goo.gl/DY4pH6).
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445180282,1455458512,bc70e7966796b99322104172b4692080c7a7de2a
+bc70e7966796b99322104172b4692080c7a7de2a,bc70e796,feat: Create CursorRecyclerAdapter,"feat: Create CursorRecyclerAdapter
+
+The framework does not provide a CursorAdapter for RecyclerView, so the
+solution is create one inheriting from RecyclerView.Adapter and copy
+all required methods from the original CursorAdapter.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445184185,1455458497,c06a6eb55af579f9066933323b4dbad0e66af84f
+c06a6eb55af579f9066933323b4dbad0e66af84f,c06a6eb5,style: Move Adapter to its own class.,"style: Move Adapter to its own class.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455456482,1455458471,6e90ef904630e78650e16acacb3b3e6f81e9161f
+6e90ef904630e78650e16acacb3b3e6f81e9161f,6e90ef90,feat: Create OnItemSelectedListener.,"feat: Create OnItemSelectedListener.
+
+The RecyclerView does not have an setOnItemSelectedListener, so we need
+to provide a OnItemSelectedListener to emulate the card selection.
+
+The ArticleAdapter will implement the OnClickListener and associated
+with the ViewHolder. When a card is clicked, it internally invokes the
+OnItemSelectedListener interface method, that is implemented by the
+ArticleListActivity and linked through a setter.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1455456112,1455458432,7c706b6189d39bf1a32be7f8b1988ff36f1ce614
+7c706b6189d39bf1a32be7f8b1988ff36f1ce614,7c706b61,feat: Change launcher icon.,"feat: Change launcher icon.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445010331,1455419375,fb80790a020541bcf29d1d19812c41f927405408
+fb80790a020541bcf29d1d19812c41f927405408,fb80790a,chore: Update build environment,"chore: Update build environment
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445010146,1455419372,7448bb12058863154468f67ef98989c7e70ba4c6
+7448bb12058863154468f67ef98989c7e70ba4c6,7448bb12,docs: Add Apache 2.0 License.,"docs: Add Apache 2.0 License.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445010548,1455419372,4191944468b3e197a077107038d71102c161385b
+4191944468b3e197a077107038d71102c161385b,41919444,style: Rename package to my domain.,"style: Rename package to my domain.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445009888,1455419346,f4c64e63211b601d9ebae65bf607d8d056cdcbb6
+f4c64e63211b601d9ebae65bf607d8d056cdcbb6,f4c64e63,Import XYZReader project.,"Import XYZReader project.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445007380,1445007380,857793e25babb70206bd03c791b656bbea3352d4
+857793e25babb70206bd03c791b656bbea3352d4,857793e2,Ignore automatic files.,"Ignore automatic files.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445006546,1445007315,0bfaa660c235cc089105fc765e5954bda35f0a13
+0bfaa660c235cc089105fc765e5954bda35f0a13,0bfaa660,Initial commit.,"Initial commit.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1445006343,1445006343,

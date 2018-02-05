@@ -1,0 +1,274 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+903347bf0d433ebacc86d50c4cd0c00ace5ba507,903347bf,Fixed #5,"Fixed #5
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1459003144,1459003144,94321cc8027758d346974959eabac21b67927698
+94321cc8027758d346974959eabac21b67927698,94321cc8,Temporary fix for permanently deleting notes,"Temporary fix for permanently deleting notes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1459002816,1459002816,854a75dd1ee832153f52edc1f6273916e67bc422
+854a75dd1ee832153f52edc1f6273916e67bc422,854a75dd,Pass NoteItem's by id instead of Serializable (mainly to workaround stupid…,"Pass NoteItem's by id instead of Serializable (mainly to workaround stupid id-is-not-serializable SugarORM bug, but also gain some performance improvement as NoteItem.forId() method is cached.)
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458356733,1458356733,f1534cecffc87ffd64b8671bb783ac56fa9c9f40
+f1534cecffc87ffd64b8671bb783ac56fa9c9f40,f1534cec,"Modify all adapters, fragments, and activities to use new format","Modify all adapters, fragments, and activities to use new format
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458356159,1458356159,9a016f097e057b3b32385365f0cd8b887c9dc4a6
+9a016f097e057b3b32385365f0cd8b887c9dc4a6,9a016f09,Small additions to the model classes with some utility methods and getters,"Small additions to the model classes with some utility methods and getters
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458356128,1458356128,e9c880736e5bf3253da3cd218a6d6ab70a9d2b78
+e9c880736e5bf3253da3cd218a6d6ab70a9d2b78,e9c88073,Implement Note fragments more generally to be flexible based on type,"Implement Note fragments more generally to be flexible based on type
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458356081,1458356081,0ed7d32c0bacfdba75ed27467ade00c0245e52a8
+0ed7d32c0bacfdba75ed27467ade00c0245e52a8,0ed7d32c,Changes to NoteItem and NoteContentItem to reflect new type field. Also 'cancel'…,"Changes to NoteItem and NoteContentItem to reflect new type field. Also 'cancel' the crazy Properties propogation. We need MVP, will need expansion when implementing encryption and such.
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458350751,1458350778,ee9086157cd498eaf68ccc1439fc6bc107ca5bcd
+ee9086157cd498eaf68ccc1439fc6bc107ca5bcd,ee908615,New NoteItem and NoteContentItem model classes to reflect Format changes,"New NoteItem and NoteContentItem model classes to reflect Format changes
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458347568,1458347568,3405d0601a7e3a5d02b7fb4d5969c575c346c9d1
+3405d0601a7e3a5d02b7fb4d5969c575c346c9d1,3405d060,Enum class to house different packaging methods for Notes,"Enum class to house different packaging methods for Notes
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458347528,1458347528,2bd79d0f1971902e25a7b06624bcbe4b16ad4933
+2bd79d0f1971902e25a7b06624bcbe4b16ad4933,2bd79d0f,Merge pull request #7 from icasdri/buildchanges,"Merge pull request #7 from icasdri/buildchanges
+
+Changes to the build",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458006537,1458006537,"9edad1cc33a896c2fdc13fe70c9d27599520cec4,e6f8fc86a141d402c4a408a99b54f1e6669bc685"
+e6f8fc86a141d402c4a408a99b54f1e6669bc685,e6f8fc86,Bring build up to speed with newer gradle and SDK 23,"Bring build up to speed with newer gradle and SDK 23
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458006024,1458006024,58180a02dde76c6a919aea98f73b1b806702d39f
+58180a02dde76c6a919aea98f73b1b806702d39f,58180a02,Remove gradle wrapper,"Remove gradle wrapper
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458006002,1458006002,9edad1cc33a896c2fdc13fe70c9d27599520cec4
+9edad1cc33a896c2fdc13fe70c9d27599520cec4,9edad1cc,Ignore even more IDE files and adjust app/.gitignore to reflect (swap files as well),"Ignore even more IDE files and adjust app/.gitignore to reflect (swap files as well)
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458001108,1458001108,3be6f4cb7799aefe7c73e0ad3a2d909e6968887c
+3be6f4cb7799aefe7c73e0ad3a2d909e6968887c,3be6f4cb,Exclude IDE-specific files from git,"Exclude IDE-specific files from git
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1458000176,1458000176,58734b8151dbe37141c6470fc36709d777d478b7
+58734b8151dbe37141c6470fc36709d777d478b7,58734b81,Remove stray swap file. And exclude them all from git,"Remove stray swap file. And exclude them all from git
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1457999883,1457999883,7d63bbe4089d060bf3d75e863a48b82723c4b346
+7d63bbe4089d060bf3d75e863a48b82723c4b346,7d63bbe4,Merge branch 'master' of https://github.com/icasdri/tuhi-android,"Merge branch 'master' of https://github.com/icasdri/tuhi-android
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457795236,1457795236,"c2fa407839299d7b876467161bbd0df45676d781,7c8e3b60c2b75c1acf8dc71806c4007feee3444b"
+c2fa407839299d7b876467161bbd0df45676d781,c2fa4078,Build stuff...,"Build stuff...
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457795234,1457795234,85c025dc35a507717f4fc3e7fc7f5eee4b6ce5ae
+7c8e3b60c2b75c1acf8dc71806c4007feee3444b,7c8e3b60,Added popup dialog on Note delete to confirm deletion,"Added popup dialog on Note delete to confirm deletion
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1457616333,1457616333,85c025dc35a507717f4fc3e7fc7f5eee4b6ce5ae
+85c025dc35a507717f4fc3e7fc7f5eee4b6ce5ae,85c025dc,Added dialog on hitting of back button in NoteActivity when changes are made…,"Added dialog on hitting of back button in NoteActivity when changes are made asking to discard the changes or cancel
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457566530,1457566530,3b2b360b3f33785e6d7c6f7a17b506dc71dbad0a
+3b2b360b3f33785e6d7c6f7a17b506dc71dbad0a,3b2b360b,Fixed #4,"Fixed #4
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457565484,1457565484,4e5b06fdc5c914b84867539a36a80842b22589f3
+4e5b06fdc5c914b84867539a36a80842b22589f3,4e5b06fd,Forgot Toast D:,"Forgot Toast D:
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457482663,1457482663,55fdd2b2f3d90a5b6eab5001810cace7a8808585
+55fdd2b2f3d90a5b6eab5001810cace7a8808585,55fdd2b2,DeletedFragment working 100%!,"DeletedFragment working 100%!
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457482611,1457482611,d79dbc7dc91a1633bec1c52c70e79e6ceb58cfb8
+d79dbc7dc91a1633bec1c52c70e79e6ceb58cfb8,d79dbc7d,Fixed singleLine code for HistoryItem and DeletedItem,"Fixed singleLine code for HistoryItem and DeletedItem
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457480908,1457480908,a2c4cb6702afa61bf58f3ecd98ec1b6cdf44a315
+a2c4cb6702afa61bf58f3ecd98ec1b6cdf44a315,a2c4cb67,"Fixed hitting back button when viewing DeltedNote to go to DeltedFragment again,…","Fixed hitting back button when viewing DeltedNote to go to DeltedFragment again, also fixed hitting back on HistoryActivity
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457480769,1457480769,e8aa39504d8ec61649a0c078fdfcc1ca4f4d5464
+e8aa39504d8ec61649a0c078fdfcc1ca4f4d5464,e8aa3950,Fixed overly large titles of notes to overlap and become semi-invisible,"Fixed overly large titles of notes to overlap and become semi-invisible
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457477710,1457477710,df1a0aa871e828f26a7f32579640775bd6af4e82
+df1a0aa871e828f26a7f32579640775bd6af4e82,df1a0aa8,Added 'Save' toast for when a note is changed,"Added 'Save' toast for when a note is changed
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457477469,1457477469,6ec7052e092f36787e198b6f9ab7411dc73628b7
+6ec7052e092f36787e198b6f9ab7411dc73628b7,6ec7052e,Added save changes button to NoteActivity,"Added save changes button to NoteActivity
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1457477409,1457477409,ba6153f9372d04f1719ef226b27aaf875afa2941
+ba6153f9372d04f1719ef226b27aaf875afa2941,ba6153f9,In NoteActivity hitting the navigation bar back button saves note,"In NoteActivity hitting the navigation bar back button saves note
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1456862646,1456862646,0bb7ee0d7d3e37a62d7624daedfc7428ae3257e1
+0bb7ee0d7d3e37a62d7624daedfc7428ae3257e1,0bb7ee0d,Fixed toolbar on settings menu,"Fixed toolbar on settings menu
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1456862396,1456862396,59862a86e89a0342826a4b19f36405a684577788
+59862a86e89a0342826a4b19f36405a684577788,59862a86,History and Deleted Adapter Tweaks.,"History and Deleted Adapter Tweaks.
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1456861027,1456861027,fcf6bbd536980c5c34b85f818e8cbd7c70c1c8f8
+fcf6bbd536980c5c34b85f818e8cbd7c70c1c8f8,fcf6bbd5,History and Deleted Adapter Tweaks,"History and Deleted Adapter Tweaks
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1456860954,1456860954,d45849a24d2ef4457fab88bd48394447ea8ddefb
+d45849a24d2ef4457fab88bd48394447ea8ddefb,d45849a2,Added EmptyView to DeleteFragment for when there are no deleted notes,"Added EmptyView to DeleteFragment for when there are no deleted notes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446830580,1446830580,6baa6381f01a26698c67be3ec73e5da8fff45b60
+6baa6381f01a26698c67be3ec73e5da8fff45b60,6baa6381,Added EmtpyView to HomeFragment for when there are no notes,"Added EmtpyView to HomeFragment for when there are no notes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446819874,1446819874,a38796ae413ab711247bbbf92f8ef6719db41bc0
+a38796ae413ab711247bbbf92f8ef6719db41bc0,a38796ae,Finished Delete logic,"Finished Delete logic
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446819060,1446819060,6dda96f2d2411e04bcbdbc5b209dc8cc8d5a6647
+6dda96f2d2411e04bcbdbc5b209dc8cc8d5a6647,6dda96f2,Fixed ordering on DeleteFragment,"Fixed ordering on DeleteFragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446818287,1446818287,2c14ee6ae401be4123b09d0c7169e18313cff631
+2c14ee6ae401be4123b09d0c7169e18313cff631,2c14ee6a,Created Implicit Edit Mode functionality suggested in #3. Finished #3.,"Created Implicit Edit Mode functionality suggested in #3. Finished #3.
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446782176,1446782176,b8ed7b23f9defb037b85719e54f32f6f8c9c5b8b
+b8ed7b23f9defb037b85719e54f32f6f8c9c5b8b,b8ed7b23,DeletedFragment now uses updated Date format,"DeletedFragment now uses updated Date format
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446781436,1446781436,4d8c3e74e3b073762c907130b97fc952e3d6a6ec
+4d8c3e74e3b073762c907130b97fc952e3d6a6ec,4d8c3e74,Notes now sort from newest to oldest,"Notes now sort from newest to oldest
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446781323,1446781323,f7a3a7357d4849e0ad5fe44ea3aeb1565e0902a4
+f7a3a7357d4849e0ad5fe44ea3aeb1565e0902a4,f7a3a735,HistoryFragment now orders from newest to oldest,"HistoryFragment now orders from newest to oldest
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446781034,1446781034,a6ec7a406d674b4dce78d20822e16677d9d3a6df
+a6ec7a406d674b4dce78d20822e16677d9d3a6df,a6ec7a40,Working history functionality! Restoring working.,"Working history functionality! Restoring working.
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446780578,1446780578,810e8324406548fed578f734582c6dc51cfba4d7
+810e8324406548fed578f734582c6dc51cfba4d7,810e8324,Added formatting of date in HistoryFragment,"Added formatting of date in HistoryFragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446778270,1446778270,f24cb8b421d080a1367197c76cf933aef149c9b4
+f24cb8b421d080a1367197c76cf933aef149c9b4,f24cb8b4,Redid history and restore icons in NoteFragment and HistoryViewfragment,"Redid history and restore icons in NoteFragment and HistoryViewfragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446777239,1446777239,d2c0a2405a14e3d04c7e302ff660ff2e5b9e82b1
+d2c0a2405a14e3d04c7e302ff660ff2e5b9e82b1,d2c0a240,Now able to back out of viewing the history of a note,"Now able to back out of viewing the history of a note
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446688140,1446688140,895d83c8d58be6fba990d7f6bbe64eadf5e00e44
+895d83c8d58be6fba990d7f6bbe64eadf5e00e44,895d83c8,Fixed #1,"Fixed #1
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1446673026,1446673026,f05d6999589903e8c6b96ab1bc80fa6d5e946530
+f05d6999589903e8c6b96ab1bc80fa6d5e946530,f05d6999,Added restore icon (HistoryViewActivity),"Added restore icon (HistoryViewActivity)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1443101188,1443101188,338d3b6fa4862dfe22569b682ba262b535ebe829
+338d3b6fa4862dfe22569b682ba262b535ebe829,338d3b6f,Fixed EditText to be below historyview_toolbar (HistoryViewActivity),"Fixed EditText to be below historyview_toolbar (HistoryViewActivity)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1443100812,1443100812,03d87d622c7350be090cad0105f2f578becd642c
+03d87d622c7350be090cad0105f2f578becd642c,03d87d62,Fixed toolbar on HistoryViewActivity,"Fixed toolbar on HistoryViewActivity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1443100670,1443100670,a6411627f89e8fbe18f380323f37cb3e0c47c390
+a6411627f89e8fbe18f380323f37cb3e0c47c390,a6411627,Converting fragment,"Converting fragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440379775,1440379775,3469f6de1a163280a6932e27882af37b0ebfc5cd
+3469f6de1a163280a6932e27882af37b0ebfc5cd,3469f6de,Added HistoryViewActivity to AndroidManifest,"Added HistoryViewActivity to AndroidManifest
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440379306,1440379306,6c3431c5e15dce1fe49d44821666086b83ee9e70
+6c3431c5e15dce1fe49d44821666086b83ee9e70,6c3431c5,Added functionality for viewing the NoteContent in HistoryViewActivity,"Added functionality for viewing the NoteContent in HistoryViewActivity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440379137,1440379137,c07f8291894542bfda8a858f4d8a3921c4e21274
+c07f8291894542bfda8a858f4d8a3921c4e21274,c07f8291,Added functionality for casting NoteContent to HistoryViewActivity,"Added functionality for casting NoteContent to HistoryViewActivity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440378870,1440378870,e543dbe09f44214ce3009e7885f071ba561bbad4
+e543dbe09f44214ce3009e7885f071ba561bbad4,e543dbe0,Added files for new view HistoryViewActivity,"Added files for new view HistoryViewActivity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440378320,1440378320,74d163277d9d6655a211230a17e2bc01b25f50c5
+74d163277d9d6655a211230a17e2bc01b25f50c5,74d16327,Fixed back button on NoteActivity after coming from HistoryActivity,"Fixed back button on NoteActivity after coming from HistoryActivity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1440376810,1440376810,cd44d9c108cc2048bedf12e0a21a98720f3dc007
+cd44d9c108cc2048bedf12e0a21a98720f3dc007,cd44d9c1,Fixed back button on history view,"Fixed back button on history view
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1439714641,1439714641,fc1b6b64761dd0f45408ff32a2cfb4dce1217f88
+fc1b6b64761dd0f45408ff32a2cfb4dce1217f88,fc1b6b64,GUI Updates/Click Listener,"GUI Updates/Click Listener
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1439154783,1439154783,df75ae5f4b0a5871f5426eb516188b6c9101736a
+df75ae5f4b0a5871f5426eb516188b6c9101736a,df75ae5f,Swipe to delete graphically working,"Swipe to delete graphically working
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439147497,1439147497,1e2c4f12d159a22d297bd3937e3328dd8af0894f
+1e2c4f12d159a22d297bd3937e3328dd8af0894f,1e2c4f12,Added DeletedFragment and implementation,"Added DeletedFragment and implementation
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439144769,1439144769,8d5ca7d39a39a6772b848738b1b59e4068a40dbc
+8d5ca7d39a39a6772b848738b1b59e4068a40dbc,8d5ca7d3,Added animation to navigation drawer buttons,"Added animation to navigation drawer buttons
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439139555,1439139555,dc959a90f5e59e6a4e76d4a31f4ad93b78c44be2
+dc959a90f5e59e6a4e76d4a31f4ad93b78c44be2,dc959a90,New deleted logic working,"New deleted logic working
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439139237,1439139237,1abc2d6d8a2000c4f4172bc46fe9b0a1aaf3ad40
+1abc2d6d8a2000c4f4172bc46fe9b0a1aaf3ad40,1abc2d6d,Changed orm queries,"Changed orm queries
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1439009209,1439009209,385de733caa23984d1facd5f37cea778103b9913
+385de733caa23984d1facd5f37cea778103b9913,385de733,Switching to type instead of deleted,"Switching to type instead of deleted
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439001892,1439001892,6351eb4d0e40b256b27fcca5559496700af6f7eb
+6351eb4d0e40b256b27fcca5559496700af6f7eb,6351eb4d,Created NoteEnum,"Created NoteEnum
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439000347,1439000347,3ee4f518fda57a142a9f5436305f79da114ed976
+3ee4f518fda57a142a9f5436305f79da114ed976,3ee4f518,Created NoteEnum,"Created NoteEnum
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1439000332,1439000332,37ebfb6c33e07de1ce6fdac630d8daa5508e1662
+37ebfb6c33e07de1ce6fdac630d8daa5508e1662,37ebfb6c,Moved activities to their own package,"Moved activities to their own package
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438996365,1438996365,0d64858d58e122603ca76eedaf2824e96c6b6e76
+0d64858d58e122603ca76eedaf2824e96c6b6e76,0d64858d,EditText UI Changes,"EditText UI Changes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438996124,1438996124,87ed24dcee206022bf9f23d8a67d090e7cc688fd
+87ed24dcee206022bf9f23d8a67d090e7cc688fd,87ed24dc,Enabled scrollbars on EditText fields across the app,"Enabled scrollbars on EditText fields across the app
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438995498,1438995498,e6817464215d9dae8d33642c81e31dbe63d94922
+e6817464215d9dae8d33642c81e31dbe63d94922,e6817464,Fixed FAB add icon sizing,"Fixed FAB add icon sizing
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438975039,1438975039,640470c0fe6a86c59d4908660d03aec9110022c7
+640470c0fe6a86c59d4908660d03aec9110022c7,640470c0,Search XMLs created. Will implement later. Updated icon,"Search XMLs created. Will implement later. Updated icon
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438974447,1438974447,71531aa39d2adf6d62ca541ea04084d86f173d4a
+71531aa39d2adf6d62ca541ea04084d86f173d4a,71531aa3,Redid open note system,"Redid open note system
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438973125,1438973125,4244250f0123aafcca4b94b283150019e2c46fe9
+4244250f0123aafcca4b94b283150019e2c46fe9,4244250f,Fixed onClick listener,"Fixed onClick listener
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438972577,1438972577,a33be2506196059eca860a23a593fcc2ba4fc29a
+a33be2506196059eca860a23a593fcc2ba4fc29a,a33be250,Edited preferences,"Edited preferences
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438971255,1438971255,0d234e8c416ee770bcacc99bb9352fb6e4241f6d
+0d234e8c416ee770bcacc99bb9352fb6e4241f6d,0d234e8c,Working onClick listener,"Working onClick listener
+",,,,nosduco,nosduco@gmail.com,nosduco,nosduco@gmail.com,1438961946,1438961946,edf4a98774a7b8544da5ee4dcd5f43b068250ce9
+edf4a98774a7b8544da5ee4dcd5f43b068250ce9,edf4a987,Shows Date instead of epoch time,"Shows Date instead of epoch time
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438915802,1438915802,68322b1b1e3e7b642c1d35ac88c20fe5bf619ab7
+68322b1b1e3e7b642c1d35ac88c20fe5bf619ab7,68322b1b,Working history activity!,"Working history activity!
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438915498,1438915498,ec438729671f0e3855b34050df4bd29bf9fb5f57
+ec438729671f0e3855b34050df4bd29bf9fb5f57,ec438729,Progressing,"Progressing
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438912001,1438912001,69d48d1de105cbe0b904128663b28f5a9f9396ae
+69d48d1de105cbe0b904128663b28f5a9f9396ae,69d48d1d,Progress towards history functionality,"Progress towards history functionality
+",,,,Tony Duco,anthony.duco@cardinalhealth.com,Tony Duco,anthony.duco@cardinalhealth.com,1438894584,1438894584,a46e400f27dbe1d9e465cd4b1dea2d2bc6aec4a0
+a46e400f27dbe1d9e465cd4b1dea2d2bc6aec4a0,a46e400f,History REDO half-implemented,"History REDO half-implemented
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438824844,1438824844,e8382d215ddae34abe9b4778824dda0cc81f730d
+e8382d215ddae34abe9b4778824dda0cc81f730d,e8382d21,List refreshes onResume from other activities,"List refreshes onResume from other activities
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1438737595,1438737595,405c014748b633a6bc90cf1c83fc3c5c32379e4b
+405c014748b633a6bc90cf1c83fc3c5c32379e4b,405c0147,Introducing trash fragment,"Introducing trash fragment
+",,,,unknown,nosduco@gmail.com,unknown,nosduco@gmail.com,1438210330,1438210330,6f32bb051f856769a9112acf137b94a57379d114
+6f32bb051f856769a9112acf137b94a57379d114,6f32bb05,Delete logic now works,"Delete logic now works
+",,,,unknown,nosduco@gmail.com,unknown,nosduco@gmail.com,1438209470,1438209470,4afaca552c2369076b6a8b3857e5ef28575d2e0b
+4afaca552c2369076b6a8b3857e5ef28575d2e0b,4afaca55,Minor,"Minor
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437933686,1437933686,d3c5608cc679bafa8e83b997307162f3e89219eb
+d3c5608cc679bafa8e83b997307162f3e89219eb,d3c5608c,Little changes,"Little changes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437784948,1437784948,eb3df8550a20a898a9eb1f005918dbcb6aeaec58
+eb3df8550a20a898a9eb1f005918dbcb6aeaec58,eb3df855,Pull down to refresh working,"Pull down to refresh working
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437769731,1437769731,06039de476023f2733c7bb4f171ab85e2bab60c9
+06039de476023f2733c7bb4f171ab85e2bab60c9,06039de4,Added delete button to note edit screen,"Added delete button to note edit screen
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437766528,1437766528,be3e88b4e30e0b9941d44a3aaac720cf71a7f2cc
+be3e88b4e30e0b9941d44a3aaac720cf71a7f2cc,be3e88b4,Fixed keyboard return button on NewNote screen,"Fixed keyboard return button on NewNote screen
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437765563,1437765563,20494ddd7b8f563dca846005a29bbabc22ab679a
+20494ddd7b8f563dca846005a29bbabc22ab679a,20494ddd,Removed title on NewNote screen,"Removed title on NewNote screen
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437765524,1437765524,1e11b533b7fef5c0f7fd72c127a7bd5976038540
+1e11b533b7fef5c0f7fd72c127a7bd5976038540,1e11b533,Working new FAB,"Working new FAB
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437765104,1437765104,493f7962de53824d0ffe4a0849ae2271bfbb7220
+493f7962de53824d0ffe4a0849ae2271bfbb7220,493f7962,Added resource files,"Added resource files
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437764766,1437764766,720274c88bf29f9d1c7e112e8a0330dc620a921c
+720274c88bf29f9d1c7e112e8a0330dc620a921c,720274c8,Edited layout xml,"Edited layout xml
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437764466,1437764466,f12617f50d45f9fcdd9d75e4c043cd3c5f63fbcf
+f12617f50d45f9fcdd9d75e4c043cd3c5f63fbcf,f12617f5,Configred FAB,"Configred FAB
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437763418,1437763418,d7f120a1588d7a494cf6887ab1c8d25feca8fc74
+d7f120a1588d7a494cf6887ab1c8d25feca8fc74,d7f120a1,Added new FAB library and implemented in view,"Added new FAB library and implemented in view
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437763229,1437763229,9ad62d892280ec0a22b7aaafe83f1bf201b3d460
+9ad62d892280ec0a22b7aaafe83f1bf201b3d460,9ad62d89,Working SuperRecyclerView,"Working SuperRecyclerView
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437762747,1437762747,4ec213444cd2fb5e91acf830fe2b66081e6e76b0
+4ec213444cd2fb5e91acf830fe2b66081e6e76b0,4ec21344,Description shows secondline+ if firstline is not only line,"Description shows secondline+ if firstline is not only line
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437449762,1437449762,5c19d24e31e1bc5cf5597f5941bf1d31e7af6ddf
+5c19d24e31e1bc5cf5597f5941bf1d31e7af6ddf,5c19d24e,Added multiline to note editing,"Added multiline to note editing
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437449231,1437449231,dd720128fc8df7baa012b7a94d556db27db9ecf8
+dd720128fc8df7baa012b7a94d556db27db9ecf8,dd720128,Merge branch 'master' of https://github.com/icasdri/tuhi-android,"Merge branch 'master' of https://github.com/icasdri/tuhi-android
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437444660,1437444660,"f8212d77670b52bb2e1c2aea1dbf8b1752217c21,20195481709c06f1af97f7fe821cc99743cdb480"
+f8212d77670b52bb2e1c2aea1dbf8b1752217c21,f8212d77,Editing note menu added (non-functional),"Editing note menu added (non-functional)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437444658,1437444658,d362caeb1d25bf87c2cb510a1d96e83a0f967ebf
+20195481709c06f1af97f7fe821cc99743cdb480,20195481,Made title logic,"Made title logic
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437422139,1437422139,d362caeb1d25bf87c2cb510a1d96e83a0f967ebf
+d362caeb1d25bf87c2cb510a1d96e83a0f967ebf,d362caeb,Added delete logic,"Added delete logic
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437188559,1437188559,f385b5ab2c57f6c36c5c35bb2915c49b96901453
+f385b5ab2c57f6c36c5c35bb2915c49b96901453,f385b5ab,Working note adding and editing (creates notecontetitems),"Working note adding and editing (creates notecontetitems)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437187764,1437187764,0c9cd72287dd2e6db61927181f722b9c79c6c125
+0c9cd72287dd2e6db61927181f722b9c79c6c125,0c9cd722,Switching to laptop,"Switching to laptop
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437184991,1437184991,0b02b6492f5314a394a98d74151911ff2b8d0897
+0b02b6492f5314a394a98d74151911ff2b8d0897,0b02b649,Added functionality to add new NoteItem and new NoteContentItem on the new note activity,"Added functionality to add new NoteItem and new NoteContentItem on the new note activity
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437159469,1437159469,fd9a88a7931ba68e8f9e27401bb6d4afb318dbd9
+fd9a88a7931ba68e8f9e27401bb6d4afb318dbd9,fd9a88a7,Fixed clicking of note and newnote fragment,"Fixed clicking of note and newnote fragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437145185,1437145185,88435d214ccd16b8f604d1308dfd3804aa3ad377
+88435d214ccd16b8f604d1308dfd3804aa3ad377,88435d21,Added NewNoteActivity and Fragment,"Added NewNoteActivity and Fragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437106904,1437106904,c08d1343fbf4a54b760dfdb23fb20b95df9be373
+c08d1343fbf4a54b760dfdb23fb20b95df9be373,c08d1343,FINALLY FIXED SUGARORM,"FINALLY FIXED SUGARORM
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437104006,1437104006,19aa4e591a2a67ec2c288871dda21223c7b4bd27
+19aa4e591a2a67ec2c288871dda21223c7b4bd27,19aa4e59,Added search button to add temp note,"Added search button to add temp note
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437103538,1437103538,d82d101eac4dc0f387f2811a129a5b8f724be8ce
+d82d101eac4dc0f387f2811a129a5b8f724be8ce,d82d101e,Copied over file. Changes?,"Copied over file. Changes?
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1437015527,1437015527,a11183032af6528039f6e3dbf48ffa530cdc1f76
+a11183032af6528039f6e3dbf48ffa530cdc1f76,a1118303,Little push before switching to desktop,"Little push before switching to desktop
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436926763,1436926763,c735dcf79a13aedbfafaf5258ea35bbdadc56e4b
+c735dcf79a13aedbfafaf5258ea35bbdadc56e4b,c735dcf7,Minor minor minor clean up,"Minor minor minor clean up
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436844225,1436844225,b7a9edca48d5d6cc8cf9107b8e2a13b8e9b53c77
+b7a9edca48d5d6cc8cf9107b8e2a13b8e9b53c77,b7a9edca,NoteItem now saves and loads (currently crashes if none),"NoteItem now saves and loads (currently crashes if none)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436763647,1436763647,6446e9026d82d3b48d469cf8969423d34c39a719
+6446e9026d82d3b48d469cf8969423d34c39a719,6446e902,Fixed ic_launcher manifest bug,"Fixed ic_launcher manifest bug
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436762603,1436762603,6322e62f1a3970b2a1d702cdf60bb6a2da13363c
+6322e62f1a3970b2a1d702cdf60bb6a2da13363c,6322e62f,Using SugarORM for database storing,"Using SugarORM for database storing
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436734727,1436734727,097f4f372487b2fd68c0d2a174a8f949e1d508cf
+097f4f372487b2fd68c0d2a174a8f949e1d508cf,097f4f37,Added TuhiSQLiteHelper (non-functional),"Added TuhiSQLiteHelper (non-functional)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436680843,1436680843,c42b6d00869bef4f1ce16863fbfe92c35986bb57
+c42b6d00869bef4f1ce16863fbfe92c35986bb57,c42b6d00,Changed EditText field to start in top-left,"Changed EditText field to start in top-left
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436680519,1436680519,efa5564c701ff05056b320ce7ed7820adea647ec
+efa5564c701ff05056b320ce7ed7820adea647ec,efa5564c,Added NoteActivity and NoteFragment for displaying Notes,"Added NoteActivity and NoteFragment for displaying Notes
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436680244,1436680244,757fc51025d9b210f94be694531e5ea034fbae83
+757fc51025d9b210f94be694531e5ea034fbae83,757fc510,Added Google official DividerItemDecoration to view,"Added Google official DividerItemDecoration to view
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436633279,1436633279,7f8a508c968cd5ea2eea921316a1fb932533051a
+7f8a508c968cd5ea2eea921316a1fb932533051a,7f8a508c,Fixed findViewById bug,"Fixed findViewById bug
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436632947,1436632947,0c758ce9803ac0f33199d99363dbcf5958d7b816
+0c758ce9803ac0f33199d99363dbcf5958d7b816,0c758ce9,Added recycleview to note page fragment,"Added recycleview to note page fragment
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436632323,1436632323,96967d92c53647986945d0d9d9709834863b9697
+96967d92c53647986945d0d9d9709834863b9697,96967d92,Added recyclerview and adapter (currently crashes),"Added recyclerview and adapter (currently crashes)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436587972,1436587972,0bda2bed0f21de66f1375e480abe3c6db4927c93
+0bda2bed0f21de66f1375e480abe3c6db4927c93,0bda2bed,Removed user from NoteItem. Fixed constructors,"Removed user from NoteItem. Fixed constructors
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436576582,1436576582,25f764feb1b6408e0f5cf0d4d4179c9f5ca9ee21
+25f764feb1b6408e0f5cf0d4d4179c9f5ca9ee21,25f764fe,Created Note and NoteContent objects,"Created Note and NoteContent objects
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436574736,1436574736,4b9bd01aec003a30a866e9c6dbb9329d1b227eac
+4b9bd01aec003a30a866e9c6dbb9329d1b227eac,4b9bd01a,Made settings toolbar text white,"Made settings toolbar text white
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436572347,1436572347,a3b773c060987b774e7b8ec338ebc74caf0bea4b
+a3b773c060987b774e7b8ec338ebc74caf0bea4b,a3b773c0,Added functional settings toolbar,"Added functional settings toolbar
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436571690,1436571690,c6486fa9b5a1847a682a542f17370b27366dac10
+c6486fa9b5a1847a682a542f17370b27366dac10,c6486fa9,Minor bug fix,"Minor bug fix
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436564248,1436564248,7ef2c49ed412a93f50b5befd037c3fb4a2c26e17
+7ef2c49ed412a93f50b5befd037c3fb4a2c26e17,7ef2c49e,Fixed prefences key bug. Introduced activity runtime exception,"Fixed prefences key bug. Introduced activity runtime exception
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436564091,1436564091,c6338b8adba903116afc48b8af41d035bdbd125d
+c6338b8adba903116afc48b8af41d035bdbd125d,c6338b8a,Fixed crash on settings back actionbar menu,"Fixed crash on settings back actionbar menu
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436563213,1436563213,47900c46de2c870563b23f4d1a7e32b7ef6d4ec3
+47900c46de2c870563b23f4d1a7e32b7ef6d4ec3,47900c46,Added actiontoolbar to settings page,"Added actiontoolbar to settings page
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436562772,1436562772,e0a31fdfc8a8b2eb14abde0c08a02a6b10c6ad75
+e0a31fdfc8a8b2eb14abde0c08a02a6b10c6ad75,e0a31fdf,Removed trash files,"Removed trash files
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436557308,1436557308,da32a2bcef104d9a32f1cae27d5d347be9ed08e5
+da32a2bcef104d9a32f1cae27d5d347be9ed08e5,da32a2bc,Added setting activity (non-functional),"Added setting activity (non-functional)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436557219,1436557219,7a00cfe0841c070819d2bf8cf268e1c6a9fbc6ff
+7a00cfe0841c070819d2bf8cf268e1c6a9fbc6ff,7a00cfe0,Fixed notificationfragment bug,"Fixed notificationfragment bug
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436550957,1436550957,6ec23b29fa82a99fe8ce3c493e6624aa63153ac9
+6ec23b29fa82a99fe8ce3c493e6624aa63153ac9,6ec23b29,Added floating action button (no function),"Added floating action button (no function)
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436499016,1436499016,1ba6e0f9fc7744cfa16103bd74a39e3495e6253f
+1ba6e0f9fc7744cfa16103bd74a39e3495e6253f,1ba6e0f9,Blank readme upload,"Blank readme upload
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436493843,1436493843,eb975f5201752bed58b61a44b0de247b249e1fa0
+eb975f5201752bed58b61a44b0de247b249e1fa0,eb975f52,Initial upload of tuhi-android,"Initial upload of tuhi-android
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436493360,1436493360,e9b4aa2532202c5fc4693557767140cceb8aa910
+e9b4aa2532202c5fc4693557767140cceb8aa910,e9b4aa25,Removal of old Tuhi,"Removal of old Tuhi
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1436493261,1436493261,802a4945609d3047f1ccf47a6c248e379bd9e59e
+802a4945609d3047f1ccf47a6c248e379bd9e59e,802a4945,Merge branch 'master' of https://github.com/icasdri/tuhi-android,"Merge branch 'master' of https://github.com/icasdri/tuhi-android
+",,,,NOSDuco,nosduco@gmail.com,NOSDuco,nosduco@gmail.com,1433210659,1433210659,"f068fb110fd69a787c78b694d2a02e2b137e8a87,e94f8ffce3f851f15334cc4eb5af439a3e556991"
+f068fb110fd69a787c78b694d2a02e2b137e8a87,f068fb11,tuhi-android initial upload,"tuhi-android initial upload
+",,,,Tony Duco,nosduco@gmail.com,Tony Duco,nosduco@gmail.com,1433210033,1433210033,
+e94f8ffce3f851f15334cc4eb5af439a3e556991,e94f8ffc,Initial commit,"Initial commit
+",,,,icasdri,icasdri@gmail.com,icasdri,icasdri@gmail.com,1432858628,1432858628,

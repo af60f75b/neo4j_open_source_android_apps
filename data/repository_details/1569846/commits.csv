@@ -1,0 +1,172 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b9a7e28770f9c422ae548d91ff1a018d4a4393b0,b9a7e287,Pushed new version,"Pushed new version
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398912957,1398912957,d13afd9c1248adab0d54b8d57d1e702c73b26cda
+d13afd9c1248adab0d54b8d57d1e702c73b26cda,d13afd9c,Add Edit>Toggle All action bar item,"Add Edit>Toggle All action bar item
+
+Useful for the bigger packs.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398912077,1398912077,29b1f6484ceab8fdac7d99011e8ec7670226d919
+29b1f6484ceab8fdac7d99011e8ec7670226d919,29b1f648,Avoid uncommon crash,"Avoid uncommon crash
+
+On the LG Optimus L9, somehow there was a valid ringtone URI, but it
+wasn't in the MediaStore.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398910125,1398910125,d89d362d654eb725014e09ce5b64c388cfdfa9f9
+d89d362d654eb725014e09ce5b64c388cfdfa9f9,d89d362d,Fix crash if last tone in pack was disabled,"Fix crash if last tone in pack was disabled
+
+Looks like a wrote a bad while loop in RingPackVm's
+findNextEnabledTone(). Forgot to reset the search to the start of the
+pack if we're at the end. Also avoids an infinite loop by returning
+null.
+
+The infinite loop case is if the user has NO tones enabled in a pack. We
+won't let them set it in that case. NOTE: they could go back later and
+disable all of them, which will crash us. I'm betting that won't happen.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398908382,1398908382,e7a3ca493f69f5f206fb70e695e48fa7642c9aa3
+e7a3ca493f69f5f206fb70e695e48fa7642c9aa3,e7a3ca49,New version push,"New version push
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398111285,1398111285,442e9a96f1c4c27930cf69c0f4addb1b65235f46
+442e9a96f1c4c27930cf69c0f4addb1b65235f46,442e9a96,Fix for Samsung users,"Fix for Samsung users
+
+Samsung devices don't allow setting the ringtone to a file that's not in
+the Audio.Media table.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398100287,1398100287,278cd9f7a53fc9b31fb81d756587ed5201276067
+278cd9f7a53fc9b31fb81d756587ed5201276067,278cd9f7,Allow tablet users with no SMS ability to install,"Allow tablet users with no SMS ability to install
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1398061033,1398061033,2f71cb237567e95ddc9eae2802a818a164939221
+2f71cb237567e95ddc9eae2802a818a164939221,2f71cb23,Had the wrong GA ID,"Had the wrong GA ID
+
+So THAT'S why no logs were getting uploaded :(
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397975318,1397975318,9c9c01df14dbc8f0ec05174b332e994ce66d32d0
+9c9c01df14dbc8f0ec05174b332e994ce66d32d0,9c9c01df,New version push,"New version push
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397950455,1397950455,a82107fd57cf6dc2acd7f3621b285eb5c494e481
+a82107fd57cf6dc2acd7f3621b285eb5c494e481,a82107fd,MediaStore ORM and crash fix,"MediaStore ORM and crash fix
+
+If the current Ringtone was a URI that had no MediaStore entry, we'd
+crash. Don't let that happen.
+
+Also introduces MUCH more stable logic for dealing with dirty states.
+RingPack now cleans up after itself, deleting any MediaStore entry with
+our package name in the DATA field.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397950209,1397950209,ba5a1132af2408a59cfca2c1aa9d5191312b878f
+ba5a1132af2408a59cfca2c1aa9d5191312b878f,ba5a1132,Add menu option for switching to next tone,"Add menu option for switching to next tone
+
+Makes debugging easier
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397950027,1397950027,04f764b6133e2837d3b49862eecef5a93342014b
+04f764b6133e2837d3b49862eecef5a93342014b,04f764b6,Fix for enabling/disabling tones going crazy,"Fix for enabling/disabling tones going crazy
+
+Nasty bug where users would attempt to disable a single tone, (which
+would not actually disable), instead other random tones would disable.
+
+Caused by calling enabledCheckBox.setChecked() with a OnCheckChanged
+listener still attached. Fix is to set it to null before
+programmatically setting.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397938513,1397938513,2566f5744d57860788f92f25636145888466af83
+2566f5744d57860788f92f25636145888466af83,2566f574,Add featured screenshots,"Add featured screenshots
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397868453,1397868453,156bda5b7f4f3f9c2fdcfb9693342280a6b815c8
+156bda5b7f4f3f9c2fdcfb9693342280a6b815c8,156bda5b,Add release instructions,"Add release instructions
+
+Gradle knows how to build a signed APK now.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397866220,1397866220,14de237bdea5ebb4a0e7ee9f9fc4f56ea4658100
+14de237bdea5ebb4a0e7ee9f9fc4f56ea4658100,14de237b,Safer RingPack parsing,"Safer RingPack parsing
+
+We should never crash now, simply fail to add it and either alert the
+user or log it.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397864386,1397864386,e2e8e680a461e6e10c571477de5af1c879c7165f
+e2e8e680a461e6e10c571477de5af1c879c7165f,e2e8e680,Fixes for signed build,"Fixes for signed build
+
+Fragments can only have a default constructor, switch to newInstance
+paradigm.
+
+It's possible that the current tone is a RingPack tone not in our list
+of Packs, so avoid NullPointerException if that's the case.
+
+When disabling, why not delete all instances of ourselves in the
+MediaStore that we can find?
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397857329,1397857329,9a55e11bc2b42344f55d2b167c791116e25a95f9
+9a55e11bc2b42344f55d2b167c791116e25a95f9,9a55e11b,Logging to answer hypothesis,"Logging to answer hypothesis
+
+Do users expect to be able to tap a selected pack again to disable it?
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397845391,1397845391,a5e41ce9e9fc3b37872a3591034b66ecfed70c89
+a5e41ce9e9fc3b37872a3591034b66ecfed70c89,a5e41ce9,Pack-specific graphics,"Pack-specific graphics
+
+If we know what pack image to use for a pack, use it.
+
+Also introduces the ART directory for keeping track of design assets.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397843786,1397843786,faf8d3afa49b992e5d972d35c1a1dd96ee53c105
+faf8d3afa49b992e5d972d35c1a1dd96ee53c105,faf8d3af,Add Google Analytics v3,"Add Google Analytics v3
+
+v3 for backwards compat. We should be logging out exceptions (both
+caught and uncaught), screen views, and some key usage metrics.
+
+The dispatch interval is left at the default (30 minutes). I'm not
+exactly sure how that works if the app isn't in the foreground. I think
+it will go. I guess we'll wait and see.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397836395,1397836395,370d1161eee4236d58c936a37b2deb54dd51d73d
+370d1161eee4236d58c936a37b2deb54dd51d73d,370d1161,Add image to ReadMe,"Add image to ReadMe
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397489831,1397489831,0ad298886160d90f47949b72db0ffebf466437a3
+0ad298886160d90f47949b72db0ffebf466437a3,0ad29888,RingActivity.onActivityResult() not called,"RingActivity.onActivityResult() not called
+
+After UP navigation from EditActivity, no result was passed because I
+forgot to override onOptionsItemSelected.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397456464,1397456464,88bea394f38ebe2f515095f98cd0b4a52a9ad679
+88bea394f38ebe2f515095f98cd0b4a52a9ad679,88bea394,EditActivity had gray background,"EditActivity had gray background
+
+On older devices, if the list of tones was short, the rest of the screen
+was gray, not brown. Change the ListView to only take up the room it
+needs to fix this.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397456417,1397456417,ae1f89d8cdfefd9c31aae024d4b234c3f4a334fa
+ae1f89d8cdfefd9c31aae024d4b234c3f4a334fa,ae1f89d8,Remove annoying warning dialog,"Remove annoying warning dialog
+
+User doesn't really care if some of their tone names don't show.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397455525,1397455525,ccb581b5c01370987a6b8ca167f6c61f7afa004c
+ccb581b5c01370987a6b8ca167f6c61f7afa004c,ccb581b5,Crash fix,"Crash fix
+
+If currentRingtone != null && !currentRingtone.isRingPackTone(), then we
+had a null pointer exception.
+
+Check to see if the path of the file contains our package name.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397455254,1397455254,21efce6f4a9ece7079afd08fa6b6423ddcd9e426
+21efce6f4a9ece7079afd08fa6b6423ddcd9e426,21efce6f,Ringtone doesn't play after switching packs,"Ringtone doesn't play after switching packs
+
+Move the play-after-set logic to a more obvious place.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397454403,1397454403,d54da5317a7df20e6e2343f9aacdf2d238ce9560
+d54da5317a7df20e6e2343f9aacdf2d238ce9560,d54da531,Crash on ConcurrentModificationException (sometimes),"Crash on ConcurrentModificationException (sometimes)
+
+Attempting to remove an event listener as the even is fired is a bad
+idea. Instead, we'll pre-define our event handlers in one place.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397454032,1397454032,c0fcde5aeafbceee95a33cccab1a9a0888cd47d0
+c0fcde5aeafbceee95a33cccab1a9a0888cd47d0,c0fcde5a,Crashes when installing a new pack,"Crashes when installing a new pack
+
+onStart() and onStop() were the wrong calls to register/deregister our
+services. onPause() and onResume() are correct.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397453177,1397453177,7a67681119fb1dd1492aac30d71e1d0063273532
+7a67681119fb1dd1492aac30d71e1d0063273532,7a676811,EditActivity was playing the wrong tone sometimes,"EditActivity was playing the wrong tone sometimes
+
+Logic was causing click handlers to get out of sync with view/model
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397453068,1397453068,de7e8e599b733b20f11c1bdfa783c7ac570bcfda
+de7e8e599b733b20f11c1bdfa783c7ac570bcfda,de7e8e59,Layout fixes,"Layout fixes
+
+CacheColorHint needs to be set to brown to avoid a white overlay over
+the Editing ListView. Slightly smaller icons to fit on Droid2 display.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397453037,1397453037,b5f9bd28416f47fe55f2407d596e48738b3e2043
+b5f9bd28416f47fe55f2407d596e48738b3e2043,b5f9bd28,Android Studio quirks,"Android Studio quirks
+
+Moved project location
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397452946,1397452946,4b14d19006c90bc135aeeb49749511db5b3efd9e
+4b14d19006c90bc135aeeb49749511db5b3efd9e,4b14d190,Updates to Readme,"Updates to Readme
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397420000,1397420000,d7b73b8a76f7355b6c304474747b18806757b08c
+d7b73b8a76f7355b6c304474747b18806757b08c,d7b73b8a,RingPack is no longer beta,"RingPack is no longer beta
+
+The project has been migrated from Eclipse to Android Studio. There are
+also major architectural changes.
+
+The background Service has been eliminated.
+",,,,westont,weston.thayer@outlook.com,westont,weston.thayer@outlook.com,1397419367,1397419367,4d2bf00df57d909f555755decf3966a368e207a8
+4d2bf00df57d909f555755decf3966a368e207a8,4d2bf00d,Added the proguard mappings.txt necessary for V 2.1.1,"Added the proguard mappings.txt necessary for V 2.1.1
+
+Signed-off-by: Weston Thayer <weston@cryclops.com>",,,,Weston Thayer,weston@cryclops.com,Weston Thayer,weston@cryclops.com,1301964925,1301964925,9871c3242b6a278d2dd077fac2795199bf85e113
+9871c3242b6a278d2dd077fac2795199bf85e113,9871c324,quick change,quick change,,,,Weston Thayer,weston@cryclops.com,Weston Thayer,weston@cryclops.com,1301962628,1301962628,6fd27aed0d2572e59cf8e516cbeed133c2f391cb
+6fd27aed0d2572e59cf8e516cbeed133c2f391cb,6fd27aed,"Added GPL documentation, cited proper sources, fixed error when","Added GPL documentation, cited proper sources, fixed error when
+info.txt is malformed. Initial Release.
+
+Signed-off-by: Weston Thayer <weston@cryclops.com>",,,,Weston Thayer,weston@cryclops.com,Weston Thayer,weston@cryclops.com,1301962510,1301962510,5574b3edb96756c1e91af5e8c78695528c4d3a0e
+5574b3edb96756c1e91af5e8c78695528c4d3a0e,5574b3ed,First commit of RingPack V 2.1.0,"First commit of RingPack V 2.1.0
+
+Signed-off-by: Weston Thayer <weston@cryclops.com>",,,,Weston Thayer,weston@cryclops.com,Weston Thayer,weston@cryclops.com,1301955774,1301955774,

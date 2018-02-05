@@ -1,0 +1,53 @@
+commit_hash,tag_name,tag_message
+49e0eaa31f98f321ab7cf067e07243a9a12d05b4,version-0.0.9,"Permissions handling and more user control
+
+This release adds:
+* dynamic permissions handling for Android Marshmallow
+* settings for enabling / disabling individual classes of announcements"
+a38db914612241cb372aeac0eeed429627cfaa03,version-0.0.8,"Add menu item for contacting developer
+
+It's at the top right of the Settings activity.
+
+Using that you can send an e-mail with relevant logs when the app misbehaves,
+and there's a fair chance that your problem can actually be fixed.
+
+Also, trim bundle name from Google Inbox e-mail notifications."
+c5702d99b581ff5684b2d68e7d035fcd7ef882d1,version-0.0.7,Announce calendar events
+f1e33f99326c01013ade15cd612f0c53451a11cc,version-0.0.6,"Request audio focus before speaking
+
+This means for example that music will be silenced a bit during our
+announcements."
+514aca42622f1e255a2c8274baea91c214b1a0c5,version-0.0.5,"Announce incoming e-mail
+
+Google Inbox only for now."
+ddb8b86ccbcedcf73fa6ea2f19f597c0e4c74217,version-0.0.4,Filter duplicate Wifi announcements
+c14381bde0443a180dd214f185b134a55af70696,version-0.0.3,"Support announcing in languages we have no translations for
+
+If an SMS (for example) comes in in a language we have no translations for, we
+can now read the announcement in one language and the actual SMS in another:
+""
+[English] SMS from Johan: [Swedish] Jag gillar att kramas
+""
+
+TTS support is still needed for all involved languages though."
+90b8215a6c8eebf1c1894366b702c633f79a9ed5,version-0.0.2,Try less specific locales if we can't find the voice for one
+65321bc23bd595512dc3c1142d3ef3c3bb794993,version-0.0.14,Prevent duplicate announcements
+f7f5ab96b6a0c38a2d0692d62bc2324ef3226beb,version-0.0.13,"Add a Privacy Policy
+
+Also, with this change in place we no longer send any application logs to
+Crashlytics.
+
+We most likely don't need it, and I felt it was hard to explain in the Privacy
+Policy, so I changed it."
+55e2d6742647b007d69b2059d8e3d5adc3fc7ffd,version-0.0.12,"Fix a crash
+
+Before this releast, when some presenter had no preference we crashed.
+
+Now we default to false and log to Crashlytics instead."
+a6ed497722a2980cbd342832546ef0004f7b9211,version-0.0.11,Avoid duplicate calendar announcements
+86faa13d00004f51f76894c540de296926373392,version-0.0.10,Internal improvements only
+863681a6e3f0e13a0ae4c946a91b7625bb23eff6,version-0.0.1,"Improve Wifi notifications
+
+This release should provide fewer duplicates and more correct announcements."
+1b9eeb8b70c5fa668437f2c2f97c39a9e1dc9954,version-0.0.0,Initial beta release
+c83abde4da855b241ff6b536d84374697337ed51,johans_phone,

@@ -1,0 +1,385 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8826c8b5909d4ba4243f6c40f4816e48c7312bb5,8826c8b5,Had to update the gradle build tool,"Had to update the gradle build tool
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1420929999,1420929999,3dda415d126641959a20ab563f0213e020933422
+3dda415d126641959a20ab563f0213e020933422,3dda415d,Merge pull request #37 from specialforest/master,"Merge pull request #37 from specialforest/master
+
+Use an empty string instead of account's name for ""Use Text"" option for ...",,,,James stapleton,github@tasermonkeys.com,James stapleton,github@tasermonkeys.com,1420472367,1420472367,"0f57ccc35dea25842b4e0bbccf3f7ec181b56497,55641fe2c3075bb5868a38d0da8082fe7e619f39"
+55641fe2c3075bb5868a38d0da8082fe7e619f39,55641fe2,"Use an empty string instead of account's name for ""Use Text"" option for new","Use an empty string instead of account's name for ""Use Text"" option for new
+accounts. Make ""Domain"" URL Part selected by default for new accounts.
+",,,,specialforest,specialforest@users.noreply.github.com,specialforest,specialforest@users.noreply.github.com,1420433159,1420433159,dbb49f95616439418f88fdbcc60f463d69606e64
+0f57ccc35dea25842b4e0bbccf3f7ec181b56497,0f57ccc3,Reverting back to 0.9.9 since I don't know what 0.9.10 is.,"Reverting back to 0.9.9 since I don't know what 0.9.10 is.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1420353881,1420353881,dbb49f95616439418f88fdbcc60f463d69606e64
+dbb49f95616439418f88fdbcc60f463d69606e64,dbb49f95,Merge branch 'release/2.0.8',"Merge branch 'release/2.0.8'
+Fixed bug for some devices where 'afterTextChange' will be called, while already processing the event 'afterTextChange' which causes a stack overflow.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411385956,1411385956,"aba9bba3c49dbe95ad1522a7f4f0f11e027615af,10a42e459a44c368dd14cc12f762e570d8e4b930"
+10a42e459a44c368dd14cc12f762e570d8e4b930,10a42e45,Issue #https://github.com/passwordmaker/android-passwordmaker/issues/34 - stack…,"Issue #https://github.com/passwordmaker/android-passwordmaker/issues/34 - stack overflow on update, cause on this one device calling setText makes the android system to notify the applicaiton the text change, which thing causes it to recalculate.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411385316,1411385834,f1771fe4a6d462523879b3bf9aec8630215af3e4
+f1771fe4a6d462523879b3bf9aec8630215af3e4,f1771fe4,Bumping version of library to 0.9.10,"Bumping version of library to 0.9.10
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411309430,1411309430,39890daffa4cb785bfbc9d13c07fe85803c24a1a
+aba9bba3c49dbe95ad1522a7f4f0f11e027615af,aba9bba3,Merge branch 'release/2.0.7',"Merge branch 'release/2.0.7'
+
+- Fixed issue with buggy md5v0.6 algo (it allowed using character set other than hex)
+- Fixed Unicode encoding issues, now it will properly generate passwords with masterpassword having non-ascii characters in it.
+- Allowed the username to be adjustable without modifying the profile, from the main screen
+- Fixed issue where Account's pattern names are blank coming in from the chrome plugin
+- Fixed issue where Chrome's plugin export used the string 'null' for leet level.
+- Added so that when a user copy's a password it will add the used url to the favorites list so that it can be easily reused on the next time
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411306400,1411306400,"212cc8c9a989e983c826d97f279f91cb41025102,39890daffa4cb785bfbc9d13c07fe85803c24a1a"
+39890daffa4cb785bfbc9d13c07fe85803c24a1a,39890daf,Updating the code to match version 0.9.9 of the library.,"Updating the code to match version 0.9.9 of the library.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411306290,1411306290,1fb050a8fdd9a651f66286cda6c3c737e787fe01
+1fb050a8fdd9a651f66286cda6c3c737e787fe01,1fb050a8,Adding auto addition of input text to to favorites. Allowing the user to disable…,"Adding auto addition of input text to to favorites. Allowing the user to disable tis in the settings.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411095711,1411095711,f333a8f08f6e747c0ab38e5074f8149c773e85cc
+f333a8f08f6e747c0ab38e5074f8149c773e85cc,f333a8f0,Adding store listing,"Adding store listing
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411050946,1411050946,160d5689296c4c9ef96c90d47930302da72f6aec
+160d5689296c4c9ef96c90d47930302da72f6aec,160d5689,Adding a Logtags enum so that I have a central source of tags I can look up so…,"Adding a Logtags enum so that I have a central source of tags I can look up so when I want to filter on something.  Also this allows me to prepend a prefix to get the entire app easily.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411047428,1411047471,04274fa774b304ebfc9544d3f3ac7e47cca1a1ac
+04274fa774b304ebfc9544d3f3ac7e47cca1a1ac,04274fa7,Adding the ability to change the username manually after a profile has been selected.,"Adding the ability to change the username manually after a profile has been selected.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1411047458,1411047471,39c39939498c96336a028887066e51365d83c982
+39c39939498c96336a028887066e51365d83c982,39c39939,Updating to newest lib version.,"Updating to newest lib version.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1410955715,1411007649,212cc8c9a989e983c826d97f279f91cb41025102
+212cc8c9a989e983c826d97f279f91cb41025102,212cc8c9,Merge branch 'release/2.0.6',"Merge branch 'release/2.0.6'
+Fixed problem with importing rdfs that don't have a default profile, and profiles that weren't visible to the user was used.
+Changed how the UI worked a tad to hopefully help out on usage
+",,,,James,github@tasermonkeys.com,James,github@tasermonkeys.com,1410921182,1410921182,"efd0723ebe8ad9bafcd980d2b3d91b385cb4ed02,b6dd2f52e0c8f89bb5fbfada0bf2926373fc806c"
+b6dd2f52e0c8f89bb5fbfada0bf2926373fc806c,b6dd2f52,Merge branch 'master' into develop,"Merge branch 'master' into develop
+",,,,James,github@tasermonkeys.com,James,github@tasermonkeys.com,1410920897,1410920897,"f37154a91d3351466835862e53c11a690104f55c,efd0723ebe8ad9bafcd980d2b3d91b385cb4ed02"
+f37154a91d3351466835862e53c11a690104f55c,f37154a9,Updating to the next release version of pwm-lib (should be same code as…,"Updating to the next release version of pwm-lib (should be same code as previous, but this one is in the maven central)
+",,,,James,github@tasermonkeys.com,James,github@tasermonkeys.com,1410920636,1410920636,1626ea0f4bfe78cf631ec807c9a076e5421fa996
+1626ea0f4bfe78cf631ec807c9a076e5421fa996,1626ea0f,Updated passwordmaker-je-lib to fix a number of issues.  Also re-arrange a bit…,"Updated passwordmaker-je-lib to fix a number of issues.  Also re-arrange a bit of the UI to hopefully improve it until another change to it will work
+",,,,James,github@tasermonkeys.com,James,github@tasermonkeys.com,1410316629,1410316629,a24a4d373e9740c5b27742cff98072cf16c758e6
+efd0723ebe8ad9bafcd980d2b3d91b385cb4ed02,efd0723e,Merge branch 'release/2.0.5',"Merge branch 'release/2.0.5'
+
+Some phones won't update the profile name when you manually select a profile, until they type something.  This fixes that.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1407014969,1407014969,"85aa810f4792dc0cbeb6ce90ebeff5f0706341b2,a24a4d373e9740c5b27742cff98072cf16c758e6"
+a24a4d373e9740c5b27742cff98072cf16c758e6,a24a4d37,Adding a call to update the profile name on the resume so that for some phones it will be updated,"Adding a call to update the profile name on the resume so that for some phones it will be updated
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1407005146,1407005495,1fa8efeb8c3fac292b5b9845c1ab0e02fabb0e8d
+85aa810f4792dc0cbeb6ce90ebeff5f0706341b2,85aa810f,Merge branch 'release/2.0.4',"Merge branch 'release/2.0.4'
+
+Fixed bug where you can't ""share"" url with passwordmaker
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406323660,1406323660,"6926b78db0061478cc18e7d26f96d365fe889da3,1fa8efeb8c3fac292b5b9845c1ab0e02fabb0e8d"
+1fa8efeb8c3fac292b5b9845c1ab0e02fabb0e8d,1fa8efeb,Merge branch 'maks-fix-manifest-for-url-shares' into develop,"Merge branch 'maks-fix-manifest-for-url-shares' into develop
+
+This is for pull request https://github.com/passwordmaker/android-passwordmaker/pull/25
+
+Readds the ability to have opens with to open with the application.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406119122,1406119122,"d6d655cad1718ed944b6e154e66d304e556108bc,5ff38f4ca5db24cf89803b314b6a48d285cfa3e8"
+5ff38f4ca5db24cf89803b314b6a48d285cfa3e8,5ff38f4c,add back intent filter to recieve urls via 'share',"add back intent filter to recieve urls via 'share'
+",,,,Maksim Lin,maks@manichord.com,James Stapleton,github@tasermonkeys.com,1406116646,1406119079,d6d655cad1718ed944b6e154e66d304e556108bc
+d6d655cad1718ed944b6e154e66d304e556108bc,d6d655ca,Fixed versionCodes for when versionName contains a classification like 'alpha' or 'beta',"Fixed versionCodes for when versionName contains a classification like 'alpha' or 'beta'
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406066052,1406066506,c879b69461d3bc1d921199021522b1c9760860d9
+c879b69461d3bc1d921199021522b1c9760860d9,c879b694,Merge branch 'release/2.0.3' into develop,"Merge branch 'release/2.0.3' into develop
+
+     - Adding settings window
+     - Adding ability to show username associated with account
+     - Adding ability to display password strength.  This works the same as the chrome version
+     - Move setting of master password hash to the settings window
+     - Removed export of master password hash
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406065369,1406065369,"4a9456d58f311cff072affac81bbb4da287034b4,e7b2f3f3b188f81648c3c541b10ab8e39c26b9c8"
+6926b78db0061478cc18e7d26f96d365fe889da3,6926b78d,Merge branch 'release/2.0.3',"Merge branch 'release/2.0.3'
+ - Adding settings window
+ - Adding ability to show username associated with account
+ - Adding ability to display password strength.  This works the same as the chrome version
+ - Move setting of master password hash to the settings window
+ - Removed export of master password hash
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406065253,1406065253,"b202f8af97d0b6d582816fba9e3ba1c66aea7940,e7b2f3f3b188f81648c3c541b10ab8e39c26b9c8"
+e7b2f3f3b188f81648c3c541b10ab8e39c26b9c8,e7b2f3f3,Fix up naming scheme,"Fix up naming scheme
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406065246,1406065246,4a9456d58f311cff072affac81bbb4da287034b4
+4a9456d58f311cff072affac81bbb4da287034b4,4a9456d5,Making release filename include the version string,"Making release filename include the version string
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406064735,1406064735,ad385ca7cce23cfdc39511c14a3e483ff0360e61
+ad385ca7cce23cfdc39511c14a3e483ff0360e61,ad385ca7,Generating the version code automatically,"Generating the version code automatically
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406064359,1406064359,ddd61d2914b5d7045158d853b28eaf63ee49f019
+ddd61d2914b5d7045158d853b28eaf63ee49f019,ddd61d29,Making the script easier to use by providing defaults if they were already set. …,"Making the script easier to use by providing defaults if they were already set.  This way we can add them to the shell's startup scripts
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1406063025,1406063025,65e4750932853fa63768b94673017f8dffb55940
+65e4750932853fa63768b94673017f8dffb55940,65e47509,Clean up a bunch of warnings,"Clean up a bunch of warnings
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405915550,1405915550,eaf8cdb0d97154827334282baa73fbd2e14c1a58
+eaf8cdb0d97154827334282baa73fbd2e14c1a58,eaf8cdb0,Fixed bug if master password hash isn't used.,"Fixed bug if master password hash isn't used.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405915417,1405915417,00e2f75da0e8a173342229b38bb6666ca24f4cb2
+00e2f75da0e8a173342229b38bb6666ca24f4cb2,00e2f75d,Implement Issue #21 - Password strength meter,"Implement Issue #21 - Password strength meter
+
+Now it can display a progressbar and value for the strength.  It seems to match perfectly with the chrome plugin, which claims to match the firefox plugin.  So it should be good to go.
+
+Updated version of the pwm library to be able to use the calc strength
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405912285,1405912285,d82b707d173a8b989d9c8e4ad187917e775aeb60
+d82b707d173a8b989d9c8e4ad187917e775aeb60,d82b707d,I don't think the password hash should be exported.  Even though it should be…,"I don't think the password hash should be exported.  Even though it should be safe, but its better to keep it closer to the heart.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405908027,1405908027,0dfa5d5f7583efba4b53da1a47291a4f2b95ab40
+0dfa5d5f7583efba4b53da1a47291a4f2b95ab40,0dfa5d5f,Fixes issue #20 - Add the notes field to the account details view,"Fixes issue #20 - Add the notes field to the account details view
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405907929,1405907929,341ab6d82371d16be39f396e3a79b6675a3084d4
+341ab6d82371d16be39f396e3a79b6675a3084d4,341ab6d8,Added a settings dialog to store the settings that won't be changed often for each user.,"Added a settings dialog to store the settings that won't be changed often for each user.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405902974,1405902974,2365893887168d4a6c1da1b9f30636dc178cd24e
+2365893887168d4a6c1da1b9f30636dc178cd24e,23658938,"Adding a username to the account block, then making it only update when the password would update.","Adding a username to the account block, then making it only update when the password would update.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405781714,1405781714,4f192ebebdca5bf7d61c09c06b243d561d2f840e
+4f192ebebdca5bf7d61c09c06b243d561d2f840e,4f192ebe,"Renaming the Use Url to be Use Text, this way we match more of what chrome and firefox has","Renaming the Use Url to be Use Text, this way we match more of what chrome and firefox has
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405734236,1405734236,0a026376bb269599ca6e2f34decf6f364a526fba
+0a026376bb269599ca6e2f34decf6f364a526fba,0a026376,Merge branch 'hotfix/v2.0.2' into develop,"Merge branch 'hotfix/v2.0.2' into develop
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405683761,1405683761,"870db614a5fc5fcdef14c4ecbddb9258e85894d0,ae982e9a1a4b96df2671ff1344802d0c62a58084"
+b202f8af97d0b6d582816fba9e3ba1c66aea7940,b202f8af,Merge branch 'hotfix/v2.0.2',"Merge branch 'hotfix/v2.0.2'
+
+Fixes importing from chrome when you don't use leet.  This is done via the java library fix
+https://github.com/passwordmaker/java-passwordmaker-lib/issues/1
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405683659,1405683659,"b2fad429bcec631a652110ff96a2f9bc7f18e61c,ae982e9a1a4b96df2671ff1344802d0c62a58084"
+ae982e9a1a4b96df2671ff1344802d0c62a58084,ae982e9a,Issue #22 - Updating library version to get the fix for the 0 level,"Issue #22 - Updating library version to get the fix for the 0 level
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405683492,1405683506,07280b4e3ed840068c9f5da05f60cd7f2fccc23d
+07280b4e3ed840068c9f5da05f60cd7f2fccc23d,07280b4e,Bumping version,"Bumping version
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405682737,1405682737,b2fad429bcec631a652110ff96a2f9bc7f18e61c
+870db614a5fc5fcdef14c4ecbddb9258e85894d0,870db614,Filling in some missing information into the readme file,"Filling in some missing information into the readme file
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405655339,1405655548,f23b4fe9083b27c9fa409c72d2edc1cfa2161d6a
+f23b4fe9083b27c9fa409c72d2edc1cfa2161d6a,f23b4fe9,Fixing up some little things about the readme,"Fixing up some little things about the readme
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405654686,1405655548,99941c0958afaf6cd66a2afb055d22b914905474
+b2fad429bcec631a652110ff96a2f9bc7f18e61c,b2fad429,Filling in some missing information into the readme file,"Filling in some missing information into the readme file
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405655339,1405655499,dc3dacebe8055798187d7fb16a4db9280c08afa5
+dc3dacebe8055798187d7fb16a4db9280c08afa5,dc3daceb,Fixing up some little things about the readme,"Fixing up some little things about the readme
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405654686,1405654686,b2a348d069c2f313d84420d7df658ef28aeba0e0
+b2a348d069c2f313d84420d7df658ef28aeba0e0,b2a348d0,Merge branch 'release/v2.0.0',"Merge branch 'release/v2.0.0'
+
+ - generated password now updates on changes for softkeyboards on real devices
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405262790,1405262790,"119a98f3d98ef84fc9e34e0799254d8e4547bcd3,86741a983c36d26cfb897d86e45f4b382e20db2b"
+99941c0958afaf6cd66a2afb055d22b914905474,99941c09,Merge branch 'release/v2.0.0' into develop,"Merge branch 'release/v2.0.0' into develop
+  - generated password now updates on changes for softkeyboards on real devices
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405262714,1405262762,"6b04a17a169997a4e63cb3fc424a3a023c169eae,86741a983c36d26cfb897d86e45f4b382e20db2b"
+86741a983c36d26cfb897d86e45f4b382e20db2b,86741a98,Bumping release version,"Bumping release version
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405262692,1405262692,e575f73310b3f81217800ec067ea3c1cc2ee074f
+e575f73310b3f81217800ec067ea3c1cc2ee074f,e575f733,Of course a difference between emulator and device is key events.  Since I used…,"Of course a difference between emulator and device is key events.  Since I used a 'hardware' keyboard when using the emulator.  This change here allows me to actually detect key events for softkeyboards.  Made the Adapter, cause I think its dumb to have to override every method when I only care about the one.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405262213,1405262213,ed2c3c22131a1ffc28d04040aef47615b679535d
+119a98f3d98ef84fc9e34e0799254d8e4547bcd3,119a98f3,Merge branch 'release/v2.0.0',"Merge branch 'release/v2.0.0'
+  - Bump version number see previous commit for release notes
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405216174,1405216174,"1b68a73f49fc97d930110626ebf6bc7544bac260,ed2c3c22131a1ffc28d04040aef47615b679535d"
+6b04a17a169997a4e63cb3fc424a3a023c169eae,6b04a17a,Merge branch 'release/v2.0.0' into develop,"Merge branch 'release/v2.0.0' into develop
+  - Bump version number
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405216137,1405216137,"971e4bfdaf23a5b8c8fab58753ba96fb01798333,ed2c3c22131a1ffc28d04040aef47615b679535d"
+ed2c3c22131a1ffc28d04040aef47615b679535d,ed2c3c22,Bumping version number,"Bumping version number
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405216114,1405216114,617484e814f02f24fa1fd14ce2ebda4bd8ceba8b
+1b68a73f49fc97d930110626ebf6bc7544bac260,1b68a73f,Merge branch 'release/v2.0.0',"Merge branch 'release/v2.0.0'
+
+  - Use new common backend library `passwordmaker-je` to be able to easily support rdf import/export
+  - New revamped UI
+  - Autoselecting of accounts based on account patterns, and used urls
+  - only the default account now support automatically getting the input text from the input url like the firefox version
+  - Use of actionbar
+  - Utilizing common crypto implementation from spongycastle instead of my own implementation
+  - grails build system
+  - configurable way of signing release artifact
+  - importing of classic android profiles (requires the gson for this)
+    - each favorites for each profile is added both as a favorite and as a pattern
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405215771,1405215829,"537e49aef535df4bb380984a474409143b8ec65c,617484e814f02f24fa1fd14ce2ebda4bd8ceba8b"
+971e4bfdaf23a5b8c8fab58753ba96fb01798333,971e4bfd,Merge branch 'release/v2.0.0' into develop,"Merge branch 'release/v2.0.0' into develop
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405215619,1405215708,"bd97fc19f513aca963214cfb1d3534ecb8d8a173,617484e814f02f24fa1fd14ce2ebda4bd8ceba8b"
+617484e814f02f24fa1fd14ce2ebda4bd8ceba8b,617484e8,Prevent the deletion of the default account.,"Prevent the deletion of the default account.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405215529,1405215529,838b8b4975a7ef84175a651ac02d9304260dcea4
+838b8b4975a7ef84175a651ac02d9304260dcea4,838b8b49,the classic settings importer + delay in password generation/verification code,"the classic settings importer + delay in password generation/verification code
+
+- Now can import from older version
+- Each favorite tied to the classic profile becomes a pattern
+- Allow a profile to specify the url parts, and leave the url blank.
+- Added 600ms delay in password generation and verification code to slow down over the shoulder attacks
+- Had to update the passwordmaker-je-lib for new required features
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404429346,1405214735,a3aa9da8750bbaa3085ff69f0460f85aa44c8c59
+a3aa9da8750bbaa3085ff69f0460f85aa44c8c59,a3aa9da8,"adding ability to delete profiles, by first long clicking then selecting the…","adding ability to delete profiles, by first long clicking then selecting the delete action from the CAB
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1405133538,1405133538,7b2c5fd5744d32d6d2e270c1530b992c918b4fb5
+537e49aef535df4bb380984a474409143b8ec65c,537e49ae,Merge branch 'develop',"Merge branch 'develop'
+
+  - Use new common backend library `passwordmaker-je` to be able to easily support rdf import/export
+  - New revamped UI
+  - Autoselecting of accounts based on account patterns, and used urls
+  - only the default account now support automatically getting the input text from the input url like the firefox version
+  - Use of actionbar
+  - Utilizing common crypto implementation from spongycastle instead of my own implementation
+  - grails build system
+  - configurable way of signing release artifact
+  - no longer requires gson
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404958304,1404958304,"a92181c7feb7d491b63d0ff95b7dd01966458c0f,bd97fc19f513aca963214cfb1d3534ecb8d8a173"
+bd97fc19f513aca963214cfb1d3534ecb8d8a173,bd97fc19,Merge branch 'release/v2.0.0' into develop,"Merge branch 'release/v2.0.0' into develop
+
+  - Use new common backend library `passwordmaker-je` to be able to easily support rdf import/export
+  - New revamped UI
+  - Autoselecting of accounts based on account patterns, and used urls
+  - only the default account now support automatically getting the input text from the input url like the firefox version
+  - Use of actionbar
+  - Utilizing common crypto implementation from spongycastle instead of my own implementation
+  - grails build system
+  - configurable way of signing release artifact
+  - no longer requires gson
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404957833,1404958158,"a92181c7feb7d491b63d0ff95b7dd01966458c0f,7b2c5fd5744d32d6d2e270c1530b992c918b4fb5"
+7b2c5fd5744d32d6d2e270c1530b992c918b4fb5,7b2c5fd5,Merge branch 'develop' into release/v2.0.0,"Merge branch 'develop' into release/v2.0.0
+
+Conflicts:
+	PasswordMakerProForAndroid/AndroidManifest.xml
+	PasswordMakerProForAndroid/src/org/passwordmaker/android/PasswordMakerProForAndroidActivity.java
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404957576,1404957576,"b856aef3d72711cbe3eff911396ed915d01759e7,a92181c7feb7d491b63d0ff95b7dd01966458c0f"
+b856aef3d72711cbe3eff911396ed915d01759e7,b856aef3,Proguard was playing with me by taking away spongycastle,"Proguard was playing with me by taking away spongycastle
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404574307,1404574307,fae927c3223df47ffa636b98a301c77698fcbec9
+fae927c3223df47ffa636b98a301c77698fcbec9,fae927c3,"Bump the version up, to release the fix to have spongycastle actually be used to…","Bump the version up, to release the fix to have spongycastle actually be used to get some of the other hash algos
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404572682,1404572682,598c815d096bc2f8adae067f969380a2c9430a6a
+598c815d096bc2f8adae067f969380a2c9430a6a,598c815d,Forces the default crypto provider to be that of SpongyCastle,"Forces the default crypto provider to be that of SpongyCastle
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404572614,1404572614,78fe41ccaf9e81cee2cb513e23188516824a98cf
+78fe41ccaf9e81cee2cb513e23188516824a98cf,78fe41cc,Bumping version to next version,"Bumping version to next version
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404441815,1404441815,fc0d3978ceb2a2b988db0a27095544b35bb6850c
+fc0d3978ceb2a2b988db0a27095544b35bb6850c,fc0d3978,One day I will remember which one needs () and which needs [],"One day I will remember which one needs () and which needs []
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404441674,1404441674,d617d01933f8c5980ffcd893bf353ac89741f107
+d617d01933f8c5980ffcd893bf353ac89741f107,d617d019,adding general user section,"adding general user section
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404441537,1404441537,f92a0d3899bba47b941bf47d0029f7bf2c19a7dc
+f92a0d3899bba47b941bf47d0029f7bf2c19a7dc,f92a0d38,Fixed headers,"Fixed headers
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404440992,1404440992,84ac5afeeb0b25bd9ac322f5c4cab0485e4c871e
+84ac5afeeb0b25bd9ac322f5c4cab0485e4c871e,84ac5afe,"Filled in some more of the README.md file on how to build, package, and use. …","Filled in some more of the README.md file on how to build, package, and use.  Still assume some android experience.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404440927,1404440927,05a298038aff04b21f08675b9277ebd6bef360e1
+05a298038aff04b21f08675b9277ebd6bef360e1,05a29803,Allow release signing/packaging to work in gradle,"Allow release signing/packaging to work in gradle
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404439886,1404439886,284d74cdc5577a6a0e494047fade85b3c05ac629
+284d74cdc5577a6a0e494047fade85b3c05ac629,284d74cd,Fixing lint warnings,"Fixing lint warnings
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404437890,1404437890,157ad1b08c21c1db3b9039e321c208caccce30b5
+157ad1b08c21c1db3b9039e321c208caccce30b5,157ad1b0,Allow ability to manually select an account by long clicking on an account.,"Allow ability to manually select an account by long clicking on an account.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404434719,1404434719,b5b4e0e75648986627db29b4dba663bece6d42cf
+b5b4e0e75648986627db29b4dba663bece6d42cf,b5b4e0e7,"Because this doesn't make sense, lets just delete the code.  I committed this so…","Because this doesn't make sense, lets just delete the code.  I committed this so that it will be in git.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404429392,1404429392,9bcce906ef2208e73a53235454862b2c19e9afa8
+9bcce906ef2208e73a53235454862b2c19e9afa8,9bcce906,the classic settings importer.  Though really the profiles doesn't make sense in…,"the classic settings importer.  Though really the profiles doesn't make sense in the account layout, as profiles never had a set url, and only 1 profile can have a url parts and match on them.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404429346,1404429346,a85e96588dc8b35d8eb3215969299cfe65f4aa7b
+a85e96588dc8b35d8eb3215969299cfe65f4aa7b,a85e9658,Adding this as a resource string.,"Adding this as a resource string.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404423949,1404423949,3996a9caa1915cbce508586725f96240f46ba06b
+3996a9caa1915cbce508586725f96240f46ba06b,3996a9ca,Added a button to generate a regex template to help with pattern creation.,"Added a button to generate a regex template to help with pattern creation.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404273033,1404273033,c60cda2eefcda6adcd09422c176798dd8ca873d8
+c60cda2eefcda6adcd09422c176798dd8ca873d8,c60cda2e,Adding the ability to store the master password hash.,"Adding the ability to store the master password hash.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404269331,1404269331,82287bf218650e53b1e77f295eaedc5c5e6de5ec
+82287bf218650e53b1e77f295eaedc5c5e6de5ec,82287bf2,Update the message for the conversion warning in the import feature.,"Update the message for the conversion warning in the import feature.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404262541,1404262541,15a35665c6343fd674c0bba4c5bf0e079f4adffb
+15a35665c6343fd674c0bba4c5bf0e079f4adffb,15a35665,Making the default values for a new account be that of the default account.  Seems reasonable.,"Making the default values for a new account be that of the default account.  Seems reasonable.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404262442,1404262442,886f7cd5322ca1ab2d6a9ef7bfb931158ef68754
+886f7cd5322ca1ab2d6a9ef7bfb931158ef68754,886f7cd5,Issue #5 - Fixed the way we do the Algo selection so that I can support the…,"Issue #5 - Fixed the way we do the Algo selection so that I can support the older MD5 version where it didn't trim the leading characters.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404261442,1404261442,e0f4212cc97089ff829286028183708f306cd934
+e0f4212cc97089ff829286028183708f306cd934,e0f4212c,Adding a real app icon,"Adding a real app icon
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404098561,1404098561,b439496cdb0dad98bf1a5d61a023e99f36863449
+b439496cdb0dad98bf1a5d61a023e99f36863449,b439496c,Slightly better actionbar icons.,"Slightly better actionbar icons.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404098026,1404098026,195bf13780c1346a0bf79fc6ecb1227225be06b4
+195bf13780c1346a0bf79fc6ecb1227225be06b4,195bf137,Allow creation of new folders for the account tree.  Also updated the…,"Allow creation of new folders for the account tree.  Also updated the import/export icon to something thats closer to the correct symbol.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404097130,1404097130,04e5d2586752164dce26a367a5d370717a1b3900
+04e5d2586752164dce26a367a5d370717a1b3900,04e5d258,"Save inputs for some length of time, after user requested to save the inputs. …","Save inputs for some length of time, after user requested to save the inputs.  This though stores the user password in plain text, but nothing really that I can do about it, unless android gave me some shared secret that I could use at runtime, otherwise I would either have to hardcode the key used to encrypt, or write a key to disk, which if the user can get the encrypted password on disk, they can get the key on disk too.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404094789,1404095181,534905f3b989d88ec08bd12483634c9654ddd480
+534905f3b989d88ec08bd12483634c9654ddd480,534905f3,Add toast to declared that the password is copied to the clipboard.,"Add toast to declared that the password is copied to the clipboard.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404093621,1404095181,af94dca1927c057e41be44856cee8d4d9f7d86ff
+af94dca1927c057e41be44856cee8d4d9f7d86ff,af94dca1,Only show verification code if number of characters is greater than 8.  This is…,"Only show verification code if number of characters is greater than 8.  This is an intermediate fix until I figure out how to do a timer correctly.  I like the idea that the chrome version does a 600 MS delay as well.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404092405,1404095181,88102fcdc3742df7589ac0fc6b203df82fc060aa
+88102fcdc3742df7589ac0fc6b203df82fc060aa,88102fcd,Allow using custom character sets.,"Allow using custom character sets.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404092092,1404095181,b674d0239664d0fd38ea3a5f473528744e11574e
+b674d0239664d0fd38ea3a5f473528744e11574e,b674d023,"Allow the user to just convert the incompatible algos to the closest match, with…","Allow the user to just convert the incompatible algos to the closest match, with a warning that states this may produce different results.  Also now list the algos that were ignored, if the checkbox was not checked.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404081536,1404081536,24fa0ab24a4d4adee3b9a1dc5540089878f30463
+a92181c7feb7d491b63d0ff95b7dd01966458c0f,a92181c7,Bumping version to next release.,"Bumping version to next release.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404051322,1404051322,f7982b76eced08d09117371b80218041c523e4d4
+f7982b76eced08d09117371b80218041c523e4d4,f7982b76,Issue #13 - Found another bug on the use of the key press listener.,"Issue #13 - Found another bug on the use of the key press listener.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404051298,1404051298,dc94b2ffe59f1672070519e72937b039d4a83b6d
+dc94b2ffe59f1672070519e72937b039d4a83b6d,dc94b2ff,"Issue #13 - A good point is made that with enough attempts, if an attacker would…","Issue #13 - A good point is made that with enough attempts, if an attacker would to have seen the 3 digit code, for each character added, it will be a bit easier to figure out the password.  This fix will make it so that it will only show it after 8 characters.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1404049858,1404049858,5167f9e189e1b3b0baef52e82f57cf62d986832f
+24fa0ab24a4d4adee3b9a1dc5540089878f30463,24fa0ab2,"Adding the ability to add patterns, autocomplete urls from accounts, modify the account url field.","Adding the ability to add patterns, autocomplete urls from accounts, modify the account url field.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403752020,1403752020,aaf64dac4826c0d8f6724fa82e0e331f918909b5
+aaf64dac4826c0d8f6724fa82e0e331f918909b5,aaf64dac,"Got part of the import/export feature ready.  However, it seems to be failing to…","Got part of the import/export feature ready.  However, it seems to be failing to load it all.  Maybe I should use the resulting XML as a unit test for the pwm library.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403484422,1403484422,831d6ef7b350c2fae60d3523bb4b006dfe23d54b
+831d6ef7b350c2fae60d3523bb4b006dfe23d54b,831d6ef7,Adding ability to modify patterns for profiles.,"Adding ability to modify patterns for profiles.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403449796,1403449796,1790d70f2d6a3bbed97805efa955923cd04549dd
+1790d70f2d6a3bbed97805efa955923cd04549dd,1790d70f,Reorganized the filling of the fields .,"Reorganized the filling of the fields .
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403408650,1403408650,a02e0877ad849ec3a60caf9c5d7494d33172f19d
+a02e0877ad849ec3a60caf9c5d7494d33172f19d,a02e0877,Adding favorites into the mix,"Adding favorites into the mix
+- Also improved the ActivityBar so that it doesn't need a menu for phones around the size of a nexus 4 and larger.  Probably smaller too, but if it overflow it should create a menu for the actions.
+- Added some sample favorites for development is easy
+- Made favorites use this autocomplete thing, that does a 'matching substring' filter
+- Favorites are now swipe to delete.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403062302,1403062302,728cd660b1c2ab46dd73f844723e193f1970e15f
+728cd660b1c2ab46dd73f844723e193f1970e15f,728cd660,Intellij keeps modifying my build file behind my back.  Adding back in the mavenLocal() directive.,"Intellij keeps modifying my build file behind my back.  Adding back in the mavenLocal() directive.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403054062,1403054062,54aaa1af90625157c722b44a649d2ec3ff5d678e
+54aaa1af90625157c722b44a649d2ec3ff5d678e,54aaa1af,Modified the proguard rules so that it doesn't obfuscate,"Modified the proguard rules so that it doesn't obfuscate
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403052906,1403052906,a3faffd3b35834de34fbc1826650c64e8a85f698
+a3faffd3b35834de34fbc1826650c64e8a85f698,a3faffd3,Added the ability to show the database of profiles,"Added the ability to show the database of profiles
+- Also moved AccountManager into passwordmaker-je-lib as I think it would be useful in other places, and its faster to unit test there
+- Made build system do an auto versioning for the android display version.  Based on the git tags.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1403052888,1403052888,3adcbdaaffcfcdf8fa3f92cb20bdc21cea000890
+3adcbdaaffcfcdf8fa3f92cb20bdc21cea000890,3adcbdaa,Adding more hooks up to the password maker library,"Adding more hooks up to the password maker library
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402865866,1402865866,adb4dcdc04402817dcada6d42f29804e1e9ea276
+adb4dcdc04402817dcada6d42f29804e1e9ea276,adb4dcdc,Adding the execute bit on this so that a user can just execute this script after cloning it,"Adding the execute bit on this so that a user can just execute this script after cloning it
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402799692,1402799692,c39a6bb3b207aee0ffc6422ae3c19556079a28a4
+c39a6bb3b207aee0ffc6422ae3c19556079a28a4,c39a6bb3,"Adding an actual README.  Still a bit of work to do on it, but it will work for now","Adding an actual README.  Still a bit of work to do on it, but it will work for now
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402799656,1402799656,89c78c94ff9d8dcc81b5870a46354349a792a389
+89c78c94ff9d8dcc81b5870a46354349a792a389,89c78c94,Making this the markdown flavor for github,"Making this the markdown flavor for github
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402797893,1402797893,018cab749b8dce71dbd65c4442c64370da001c19
+018cab749b8dce71dbd65c4442c64370da001c19,018cab74,Renaming the package from my test package while I was developing.,"Renaming the package from my test package while I was developing.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402797859,1402797859,120713fdeeccca5b49d7e7dbb35ad226cb2fe33c
+120713fdeeccca5b49d7e7dbb35ad226cb2fe33c,120713fd,"Initial testing commit for v2.0.0.  This version just verifies that I can hash,…","Initial testing commit for v2.0.0.  This version just verifies that I can hash, read/write the rdf xml files and use a gradle build
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402782809,1402783247,e85780de372c10b07dc05e845df90135d58a6c9a
+e85780de372c10b07dc05e845df90135d58a6c9a,e85780de,Preparing for v2.0.0 using the passwordmaker-je-lib,"Preparing for v2.0.0 using the passwordmaker-je-lib
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402782640,1402782640,5167f9e189e1b3b0baef52e82f57cf62d986832f
+5167f9e189e1b3b0baef52e82f57cf62d986832f,5167f9e1,"Modifying the way the field for hashAlgo works, since now the serializer runs after it gets updated","Modifying the way the field for hashAlgo works, since now the serializer runs after it gets updated
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402671209,1402671286,ca39f757ecd5c762b21cd1e93ff8a4a170fdd9c8
+ca39f757ecd5c762b21cd1e93ff8a4a170fdd9c8,ca39f757,Merge pull request #11 from tasermonkey/develop,"Merge pull request #11 from tasermonkey/develop
+
+Releasing 1.1.9",,,,James stapleton,github@tasermonkeys.com,James stapleton,github@tasermonkeys.com,1402622430,1402622430,"bd6ae095f2a08c96a75742e2d0b44c22c8af32a7,18a244c3e5a91e88f494ae921a4c23434079ce4e"
+18a244c3e5a91e88f494ae921a4c23434079ce4e,18a244c3,Updating version to 1.1.9.  Also had to bump the android sdk version to 9 (The…,"Updating version to 1.1.9.  Also had to bump the android sdk version to 9 (The two versions 9 are coincidental)
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402622399,1402622399,641bd8397b97b0b081c862eafc6136d01f710a61
+641bd8397b97b0b081c862eafc6136d01f710a61,641bd839,Fixes issue #10 - Improperly parsing out domains that contains TLDs that has…,"Fixes issue #10 - Improperly parsing out domains that contains TLDs that has multiple dots in them.  This solves this by using a preexisting list of TLDs to compare against.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402618692,1402618692,6715f36eb713c39e796c068da4baaf2d0c3a120c
+6715f36eb713c39e796c068da4baaf2d0c3a120c,6715f36e,Adding unit tests for multi-dot TLDs,"Adding unit tests for multi-dot TLDs
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402591080,1402591080,bd6ae095f2a08c96a75742e2d0b44c22c8af32a7
+bd6ae095f2a08c96a75742e2d0b44c22c8af32a7,bd6ae095,"Moving the test case into the test project.  Then since I now use IntelliJ,…","Moving the test case into the test project.  Then since I now use IntelliJ, ignore the IntelliJ settings generated by IntelliJ.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1402523439,1402523439,25927d9b7ec84206f10f434d025ca6c529547a51
+25927d9b7ec84206f10f434d025ca6c529547a51,25927d9b,Lets throw the exception so that I can debug it later when it happens again. …,"Lets throw the exception so that I can debug it later when it happens again.  Also this should be a md4hashalgo.
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1342744536,1342744536,590e8cf18ec156f28a7c75debf9c76b61b0a77f9
+590e8cf18ec156f28a7c75debf9c76b61b0a77f9,590e8cf1,"Patch related to: displaying current password, autoselect single fav,…","Patch related to: displaying current password, autoselect single fav, calculating 3-char master pass hash
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1342743937,1342743937,c5679d6a06d0d3d623225b3009c457d78b15e4a6
+c5679d6a06d0d3d623225b3009c457d78b15e4a6,c5679d6a,Fixes Issue #4.  Now all of the Leet levels may be used.  Also fixed a bug where…,"Fixes Issue #4.  Now all of the Leet levels may be used.  Also fixed a bug where it would crash if you left the password length an empty string.
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1324132590,1324132590,efc2eec5dc61ad86cd9ff41a8c1f8587cc712552
+efc2eec5dc61ad86cd9ff41a8c1f8587cc712552,efc2eec5,Bump up the version,"Bump up the version
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1323478569,1323478569,42ca3d7a3f22384f6b33eb329b8d7a1702f8b345
+42ca3d7a3f22384f6b33eb329b8d7a1702f8b345,42ca3d7a,Resolves Issue #2,"Resolves Issue #2
+
+Add ability to grab url from the browser
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1323396476,1323396476,1dda1a2ea9c14955782aeffd3de9214b5a0f336a
+1dda1a2ea9c14955782aeffd3de9214b5a0f336a,1dda1a2e,New version number to release to the wild,"New version number to release to the wild
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1314414824,1314414824,425c656a53130979429245b3891eb82bcddcaa5d
+425c656a53130979429245b3891eb82bcddcaa5d,425c656a,Fixes gh-1,"Fixes gh-1
+
+See the issue gh-1 for more information. The problem was that I didn't
+apply the getModifiedInputText function within the generate password.  I
+do however unit test getModifiedInputText and it does matches password
+maker version on the website.
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1314414696,1314414696,d974cad2fd9104d279d4d03b5705d4c2f6f5cf24
+d974cad2fd9104d279d4d03b5705d4c2f6f5cf24,d974cad2,"Cover a null corner case, though not sure of the underlining reason why its null.","Cover a null corner case, though not sure of the underlining reason why its null.
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1314069845,1314069845,9fa42e8aa1e080c31efd357c5e6c26e115cfac3c
+9fa42e8aa1e080c31efd357c5e6c26e115cfac3c,9fa42e8a,Bug fix: HMAC again!  This time fixed HMACs reporting the digest length incorrectly!,"Bug fix: HMAC again!  This time fixed HMACs reporting the digest length incorrectly!
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313985231,1313985231,44b68ee5407c5084c3b86781972afc161f7db57b
+44b68ee5407c5084c3b86781972afc161f7db57b,44b68ee5,Upaded version code,"Upaded version code
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313971339,1313971339,223314d15470b745ea4cd3da5ce7b5edab4e0b3e
+223314d15470b745ea4cd3da5ce7b5edab4e0b3e,223314d1,Remove warnings in code,"Remove warnings in code
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313933480,1313933480,3049c0d1a7ea356f62e73de5412b8cacc7b93056
+3049c0d1a7ea356f62e73de5412b8cacc7b93056,3049c0d1,Ignore .DS_Store,"Ignore .DS_Store
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313933426,1313933426,1a225b0ce23d25cf1a06cf919c9cba9e21129a1b
+1a225b0ce23d25cf1a06cf919c9cba9e21129a1b,1a225b0c,Part of the previous change(Added ability to edit favorites),"Part of the previous change(Added ability to edit favorites)
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313933368,1313933368,2eeb163a1d04c7d62c93e7221b69bedbbfa7002a
+2eeb163a1d04c7d62c93e7221b69bedbbfa7002a,2eeb163a,Added the ability to edit the favorites,"Added the ability to edit the favorites
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313933349,1313933349,f845627f8f91fb45902605f37a64aeab39ece9a2
+f845627f8f91fb45902605f37a64aeab39ece9a2,f845627f,Fixed HMAC bug,"Fixed HMAC bug
+",,,,tasermonkey,github@tasermonkeys.com,tasermonkey,github@tasermonkeys.com,1313718479,1313718479,8bb8b06e4c123054bf5feb2f75fbc7999cbaa10b
+8bb8b06e4c123054bf5feb2f75fbc7999cbaa10b,8bb8b06e,Added license information to the PasswordMakerTests project and the license text…,"Added license information to the PasswordMakerTests project and the license text to the root directory
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312762035,1312762035,3d39c7c5d69cc6673dff7c2c814a69349b06f57b
+3d39c7c5d69cc6673dff7c2c814a69349b06f57b,3d39c7c5,Save / restore the inputs to the main screen between launches if the uses wants to.,"Save / restore the inputs to the main screen between launches if the uses wants to.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312761311,1312761311,79bac3788a4ba5d29edbb3aae8f2542effa71228
+79bac3788a4ba5d29edbb3aae8f2542effa71228,79bac378,Added Input parsing for Domain/Subdomain/protocol/url,"Added Input parsing for Domain/Subdomain/protocol/url
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312738661,1312738661,aa8c7aec0d7c4861e0c4cb4477b87b71be0c09c5
+aa8c7aec0d7c4861e0c4cb4477b87b71be0c09c5,aa8c7aec,Added license to source files,"Added license to source files
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312605727,1312605727,8b450751880a133e02fd3cd50eed69fcf4ae9252
+8b450751880a133e02fd3cd50eed69fcf4ae9252,8b450751,Removed unused file,"Removed unused file
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312605708,1312605708,2d628c043ecfceb05bcf34245de47ba408acf363
+2d628c043ecfceb05bcf34245de47ba408acf363,2d628c04,Removed my apache IO dependency so that I have more freedom to choose my license agreement,"Removed my apache IO dependency so that I have more freedom to choose my license agreement
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312604327,1312604327,5b836fb5ab96467c965a506b170bd3ca4aca0fa3
+5b836fb5ab96467c965a506b170bd3ca4aca0fa3,5b836fb5,Change the icons for the app to match that of the password maker standard icons,"Change the icons for the app to match that of the password maker standard icons
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312601870,1312601870,c9b61606076b00032a1a077a9a0395a7b082b568
+c9b61606076b00032a1a077a9a0395a7b082b568,c9b61606,Added Storing of the password hash for verifying the user typed it in correctly.,"Added Storing of the password hash for verifying the user typed it in correctly.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312598317,1312598317,688f6b91b2bd7e25ceda19670da6f4ca2a7c9c0b
+688f6b91b2bd7e25ceda19670da6f4ca2a7c9c0b,688f6b91,Added Serialization of profiles for persisting across program launching,"Added Serialization of profiles for persisting across program launching
+
+Added PrivateSettingsStorage to manage the serialization of the objects
+
+added son as the serialization library (converted to my own namespace to
+ ensure that it doesn't collide with other android libraries, off of the
+ suggestion of the gson site)
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1312510833,1312510833,1389044284a055ff9aa7d1d036aae4dcb5d80e7e
+1389044284a055ff9aa7d1d036aae4dcb5d80e7e,13890442,"Start of the UI development for the PWM app. Can change profiles, and add new…","Start of the UI development for the PWM app. Can change profiles, and add new profiles, and edit existing profiles.  Fixed a bug in the serialization of the hash algos as well.
+",,,,James Stapleton,github@tasermonkeys.com,James Stapleton,github@tasermonkeys.com,1310962116,1310962116,186aa12a02f3c4ea496c76987578199684291184
+186aa12a02f3c4ea496c76987578199684291184,186aa12a,Initial Source commit,"Initial Source commit
+",,,,James Stapleton,jstapleton@bericotechnologies.com,James Stapleton,jstapleton@bericotechnologies.com,1309806941,1309806941,4c95efa68777db2f868fceacd61ad2e14fe593f4
+4c95efa68777db2f868fceacd61ad2e14fe593f4,4c95efa6,Updated Ignore file,"Updated Ignore file
+",,,,James Stapleton,jstapleton@bericotechnologies.com,James Stapleton,jstapleton@bericotechnologies.com,1309806922,1309806922,5dd5bd417e51c04f02c724a577eba6db7d4fb91b
+5dd5bd417e51c04f02c724a577eba6db7d4fb91b,5dd5bd41,Initial Commit,"Initial Commit
+",,,,James Stapleton,jstapleton@bericotechnologies.com,James Stapleton,jstapleton@bericotechnologies.com,1309806773,1309806773,

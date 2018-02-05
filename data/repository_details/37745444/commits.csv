@@ -1,0 +1,674 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+e6c5a9e6c4dca5c9e9076f06da006fc9923fc1b2,e6c5a9e6,Merge pull request #24 from whereat/update-apk-version-to-1.4,"Merge pull request #24 from whereat/update-apk-version-to-1.4
+
+AG | Update APK version number for Play Store",,,,Austin Guest,aguestuser@users.noreply.github.com,Austin Guest,aguestuser@users.noreply.github.com,1455492607,1455492607,"532874b6508d149abd41a56abe5c1ce8facd21a8,af551ff71762112866f996239515271be5ce8c8a"
+af551ff71762112866f996239515271be5ce8c8a,af551ff7,AG | Update APK version number for Play Store,"AG | Update APK version number for Play Store
+
+Motivation:
+
+* while we build the React Native version of this app,
+  we want contributors and users to be able to access
+  the most recent version of the vestigal app
+* the version at master/HEAD has several new changes, including:
+  * app starts on load on the map page with location sharing on
+  * preserves polling state correctly
+* BUT: the version on the Play Store lacks these changes
+* AND: to publish a new APK, we need to bump the version number
+
+Actions:
+
+* package and sign a new APK with most recent changes
+* give a new version number to the APK
+* publish to the Play Store
+
+TO-DO:
+
+* document the process of signing and publishing an APK
+* figure out a strategy for sharing (or not sharing) signing credentials
+",,,,aguestuser,guest.austin@gmail.com,aguestuser,guest.austin@gmail.com,1455492434,1455492434,532874b6508d149abd41a56abe5c1ce8facd21a8
+532874b6508d149abd41a56abe5c1ce8facd21a8,532874b6,Merge pull request #22 from whereat/fix-xml-gpl-notice,"Merge pull request #22 from whereat/fix-xml-gpl-notice
+
+Fix xml gpl notice",,,,Austin Guest,aguestuser@users.noreply.github.com,Austin Guest,aguestuser@users.noreply.github.com,1453691828,1453691828,"2aa8d5d296506ecd119f201a51802afb8b7d8598,91702daaf845fb372e5a895e2c913fd368b77af1"
+91702daaf845fb372e5a895e2c913fd368b77af1,91702daa,Re-add GPL boilerplate (with correct xml syntax),"Re-add GPL boilerplate (with correct xml syntax)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453691546,1453691546,376c2e62a67a2b13cf16e0f4170e532378e4e3bb
+376c2e62a67a2b13cf16e0f4170e532378e4e3bb,376c2e62,Strip old GPL boilerplate,"Strip old GPL boilerplate
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453690747,1453690747,2aa8d5d296506ecd119f201a51802afb8b7d8598
+2aa8d5d296506ecd119f201a51802afb8b7d8598,2aa8d5d2,Merge pull request #21 from whereat/add-gpl-boilerplate,"Merge pull request #21 from whereat/add-gpl-boilerplate
+
+Add gpl boilerplate to all files",,,,Austin Guest,aguestuser@users.noreply.github.com,Austin Guest,aguestuser@users.noreply.github.com,1453682675,1453682675,"59a686d33d1037c3b7b0c93a938d57198632af8e,8e2cc87d757c1d31893309b81aad312d91feb05d"
+8e2cc87d757c1d31893309b81aad312d91feb05d,8e2cc87d,Tweak language in license,"Tweak language in license
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453674397,1453674397,d85f83c543ed9e1ecfe43cc07338e4cc1924e1a8
+59a686d33d1037c3b7b0c93a938d57198632af8e,59a686d3,Use correct name for Contributor Agreement,"Use correct name for Contributor Agreement
+
+(Legal technical minutae are FUN!!!)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453590372,1453671262,4e9a27cd9835c5d1d23900056bc9c013fa03dee1
+d85f83c543ed9e1ecfe43cc07338e4cc1924e1a8,d85f83c5,Add GPL boilerplate to all files,"Add GPL boilerplate to all files
+
+Side effects:
+* add copyright notice to LICENSE.md
+* make code of conduct wrapper slightly less alienating
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453670433,1453670433,8135bbd99b6fd2fbdfa676677f80a0c3fe989584
+8135bbd99b6fd2fbdfa676677f80a0c3fe989584,8135bbd9,Merge pull request #20 from whereat/revise-contrib-guide,"Merge pull request #20 from whereat/revise-contrib-guide
+
+Use correct name for Contributor Agreement",,,,Austin Guest,aguestuser@users.noreply.github.com,Austin Guest,aguestuser@users.noreply.github.com,1453590459,1453590459,"4e9a27cd9835c5d1d23900056bc9c013fa03dee1,9b7fb0840ff304e045c223e0ad0a393744bbe169"
+9b7fb0840ff304e045c223e0ad0a393744bbe169,9b7fb084,Use correct name for Contributor Agreement,"Use correct name for Contributor Agreement
+
+(Legal technical minutae are FUN!!!)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453590372,1453590372,4e9a27cd9835c5d1d23900056bc9c013fa03dee1
+4e9a27cd9835c5d1d23900056bc9c013fa03dee1,4e9a27cd,Merge branch 'add-contrib-guide',"Merge branch 'add-contrib-guide'
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453586923,1453586923,"5e40491a1537f6af2424b23645bf4a36dbf6e23c,935df4ce9406657ac9f915d09fca06aad05a9bf7"
+935df4ce9406657ac9f915d09fca06aad05a9bf7,935df4ce,Revise contributor guidelines,"Revise contributor guidelines
+
+* Add links to GF code of conduct & RC social rules
+* Add placeholder for tooling guide
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453585735,1453585735,53a5e68377215eeb4e6e43c6f9f8b40e544a8db0
+5e40491a1537f6af2424b23645bf4a36dbf6e23c,5e40491a,Merge pull request #18 from whereat/contrib-guidelines,"Merge pull request #18 from whereat/contrib-guidelines
+
+Add contributor guidelines",,,,Austin Guest,aguestuser@users.noreply.github.com,Austin Guest,aguestuser@users.noreply.github.com,1453424692,1453424692,"53a5e68377215eeb4e6e43c6f9f8b40e544a8db0,d920cb36847f790a9a339434bfb9b48fea0300dd"
+d920cb36847f790a9a339434bfb9b48fea0300dd,d920cb36,Add contributor guidelines,"Add contributor guidelines
+
+* Includes link to [CLA](https://lists.riseup.net/www/info/whereat-contrib)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1453424389,1453424389,53a5e68377215eeb4e6e43c6f9f8b40e544a8db0
+53a5e68377215eeb4e6e43c6f9f8b40e544a8db0,53a5e683,Merge pull request #17 from whereat/preserve-polling-state,"Merge pull request #17 from whereat/preserve-polling-state
+
+Preserve polling state in OnOffActivity",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1452983687,1452983687,"eb19b2d1a760ca4882dca2144835ded09f3131cf,2f79b94dbfdc0cc75c06d6c59a8e100d4cdf3ea2"
+2f79b94dbfdc0cc75c06d6c59a8e100d4cdf3ea2,2f79b94d,Remove extraneous TODO,"Remove extraneous TODO
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1452983564,1452983564,8de016e7c99e5a388452bdda9526a92f6d13ceac
+8de016e7c99e5a388452bdda9526a92f6d13ceac,8de016e7,Preserve state across instances of OnOffActivity,"Preserve state across instances of OnOffActivity
+
+* BUG:
+  * when switching away from OnOffActivity and back,
+    changes to polling state are lost
+  * as a result, button starts with wrong color, pressing it yields
+    incorrect effects on location polling
+* FIX:
+  * save polling state to Bundle in `onSavedInstanceState`
+    (will be incorporated to subsequent calls to `onCreate`
+    if activity is stopped or destroyed)
+  * make OnOffActivity a ""singleInstance"" activity in
+    AndroidManifest
+  * NOTE: the latter fix has been visually verified but resists testing
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1452983183,1452983183,0e4c56be29a18f03cd57afb997d1636ac2350a84
+eb19b2d1a760ca4882dca2144835ded09f3131cf,eb19b2d1,Merge pull request #16 from whereat/abstract-maps,"Merge pull request #16 from whereat/abstract-maps
+
+Encapsulate all Google Map functionality within Adapter classes",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1451942223,1451942223,"aff547682c41875d20afb3e0bccf2a30657e31d7,0e4c56be29a18f03cd57afb997d1636ac2350a84"
+0e4c56be29a18f03cd57afb997d1636ac2350a84,0e4c56be,"Class, variable renaming","Class, variable renaming
+
+* To more clearly signal design pattern being used,
+  replace all instances of `Map/MarkerContainer` with `Map/MarkerAdapter`
+* To more clearly signal use of Abstract Factory pattern,
+  replace `MapAdapterFactory#getInstance` with `MapAdapterFactory#createMapAdapter`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1451941893,1451941893,9272c124d23431013300b2ba57e924fc86eed9cc
+9272c124d23431013300b2ba57e924fc86eed9cc,9272c124,Encapsulate all Google Map functionality,"Encapsulate all Google Map functionality
+
+In order to facilitate swapping out Google Maps for OSM:
+
+* Create `MapContainer` and `MarkerContainer` interfaces
+* Create `GoogleMapContainer` and `GoogleMarkerContainer` subclasses
+  that:
+    * implement the `MapContainer` and `MarkerContainer` interfaces
+    * encapsulate underlying `GoogleMap` and (Google) `Marker` classes
+      as protected fields
+    * delegate interface-specified method calls to corresponding
+      Google-specific implementations in encapsulated child classes
+* Use concrete subclasses of abstract `MapContainerFactory`
+  to instantiate appropriate subclasses of `MapContainer`
+* __Payoff:__ to introduce OpenStreetMaps implementation, merely
+  create `OSMMapContainer` and `OSMMarkerContainer` classes that
+  implement `MapContainer` and `MarkerContainer` interfaces and delegate
+  to corresponding OSM-specific methods
+
+Side-effects:
+
+* move 50% of code from `Mapper` into `MapContainer` subclasses, producing:
+  * greater separation of concerns between `Mapper` and
+    `MapContainer` (the former manages changes, the latter produces them)
+  * vastly increased testability of `Mapper` class (due to encapsulation
+    of untestable Google code within `MapContainer`)
+* New hand-rolled `LatLon` class to abstract over varying implementations
+  of LatLng (along with room to convert between different representations)
+* various tightening-up refactors and renamings
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1451433755,1451433755,aff547682c41875d20afb3e0bccf2a30657e31d7
+aff547682c41875d20afb3e0bccf2a30657e31d7,aff54768,Merge pull request #15 from whereat/fix-readme,"Merge pull request #15 from whereat/fix-readme
+
+Add boilerplate README",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1450835311,1450835311,"fa3e139beff5e77314abec5494df5b10153dfc86,036ac7472d472c980cfd7080a1dce0a4fc833657"
+036ac7472d472c980cfd7080a1dce0a4fc833657,036ac747,Add boilerplate README,"Add boilerplate README
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1450835252,1450835252,fa3e139beff5e77314abec5494df5b10153dfc86
+fa3e139beff5e77314abec5494df5b10153dfc86,fa3e139b,Merge pull request #14 from whereat/start-on-map,"Merge pull request #14 from whereat/start-on-map
+
+App starts on map
+",,,,madelyn.freed,madelyn.freed@gmail.com,madelyn.freed,madelyn.freed@gmail.com,1449875481,1449875481,"457190d4d1bb0c8dc24f6c475cde0cf0340e0d9b,09e2669ecf73890beaa5815cdc6d04bd2650a043"
+09e2669ecf73890beaa5815cdc6d04bd2650a043,09e2669e,Bug fix: write incoming locs to DB when map not showing,"Bug fix: write incoming locs to DB when map not showing
+
+* BUG: when switching from `MapActivity` to `OnOffActivity` and back,
+  location updates received while viewing `OnOffActivity` aren't reflected on map
+* CAUSE: locations returned from `WhereatApiClient`
+  weren't being written to DB by `LocationPublisher`
+* FIX: subscribe `LocationPublisher.mWhereatClient#remove` to `#record` method
+      * `#record` broadcasts location and saves it to DB
+      * now, when `MapActivity#refresh` called, it picks up locs added to DB while viewing other activities
+
+* side-effects:
+  * remove ""single-instance"" attribute from `MapActivity` in `AndroidManifest` (unnecessary)
+  * remove `OnOffActivity#onDestory` (its function is obsolete since it `OnOffActivity` doesn't control`LocPubManager` anymore)
+  * fill in missing tests for `LocationPublisher`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449735481,1449735481,586b052ade460dac36dd52323d49c75227bf1d3f
+586b052ade460dac36dd52323d49c75227bf1d3f,586b052a,Rename MainActivity to OnOffActivity,"Rename MainActivity to OnOffActivity
+
+* modify activity name to accurately reflect purpose
+* side effects:
+  * MapActivity doesn't restart on screen rotation
+  * MapActivity set to stay on top of call stack (""single-instance"")
+  * weird flags removed from menu
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449727769,1449727769,f04cf9b18dd2a29929632cd0e2ee844ca77f9cba
+f04cf9b18dd2a29929632cd0e2ee844ca77f9cba,f04cf9b1,equally spurious change,"equally spurious change
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449724269,1449724269,8cdd60e692d961800e34c6001219d7b8178857ad
+8cdd60e692d961800e34c6001219d7b8178857ad,8cdd60e6,spurious change,"spurious change
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449724011,1449724011,099ffeeb0081d0083ee0fd9d97690e120f8eea3a
+099ffeeb0081d0083ee0fd9d97690e120f8eea3a,099ffeeb,Change default sharing interval to 5s,"Change default sharing interval to 5s
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449723196,1449723196,4962919d5074b9b13eb005ddf87609edc21f8f08
+4962919d5074b9b13eb005ddf87609edc21f8f08,4962919d,Remove security alert,"Remove security alert
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449722593,1449722593,112f5442c5132ec29851ce860a4cf624ca0b2eff
+112f5442c5132ec29851ce860a4cf624ca0b2eff,112f5442,Location sharing activated on app load,"Location sharing activated on app load
+
+* initialize `MapActivity.mPolling` flag to `true`
+* initialize `go_button` background color to green
+* add `MapActivity#run` (called once and only once)
+  * starts LocationPublisher, connects to LocationDao, initializes Mapper
+  * sets `mRunning` flag to true
+*  `LocationPublisher` calls `#poll` in `#onConnected` callback
+* side effect: tests all location service callbacks on `LocationPublisher`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449720744,1449720744,126b76aa16cd818208478a614d6e6f15d1429502
+126b76aa16cd818208478a614d6e6f15d1429502,126b76aa,Merge branch 'fix-enable-play-services-bug' into start-on-map,"Merge branch 'fix-enable-play-services-bug' into start-on-map
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449269836,1449269836,"634c47a894f221ca1db642b9b32d47c1d8312458,48ba615fae7dc8ca70691bb4442e1e8b165334bc"
+457190d4d1bb0c8dc24f6c475cde0cf0340e0d9b,457190d4,Merge pull request #12 from whereat/fix-enable-play-services-bug,"Merge pull request #12 from whereat/fix-enable-play-services-bug
+
+DEBUG: Fix sequence for enabling Play Services
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449268692,1449268692,"7a1a93873b52ad77ea1288ebdd5f0d17658357d6,48ba615fae7dc8ca70691bb4442e1e8b165334bc"
+634c47a894f221ca1db642b9b32d47c1d8312458,634c47a8,Merge branch 'master' of https://github.com/madelynfreed/whereat-android into madelynfreed-master,"Merge branch 'master' of https://github.com/madelynfreed/whereat-android into madelynfreed-master
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1449264483,1449264483,"7a1a93873b52ad77ea1288ebdd5f0d17658357d6,6007c2213881f259c2c9703ad04d169dea875b57"
+48ba615fae7dc8ca70691bb4442e1e8b165334bc,48ba615f,DEBUG: Fix sequence for enabling Play Services,"DEBUG: Fix sequence for enabling Play Services
+
+__Effect on user:__
+
+* when user first loads app and doesn't know about Play Services, app
+  should guide them to set it up instead of crashing mysteriously
+
+__Bug Fix__
+
+* BUG: if play services disabled, app crashes with NPE
+* CAUSE: `LocationPublisher` is trying to use uninitialized `mBroadcast`
+  field to broadcast problem to rest of app
+* FIX:
+  * initialize `mBroadcast` earlier in lifecycle (in `#onCreate` instead
+    of `#initialize`) so that its defined in scope of `#onStartCommand` call
+  * byproduct: add tests for `#onCreate` and `#onStartCommand` methods
+    of `LocationPublisher` class
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1448657949,1448657949,7a1a93873b52ad77ea1288ebdd5f0d17658357d6
+7a1a93873b52ad77ea1288ebdd5f0d17658357d6,7a1a9387,Merge pull request #9 from whereat/refresh-button,"Merge pull request #9 from whereat/refresh-button
+
+Replace clear button with refresh button
+",,,,madelyn.freed,madelyn.freed@gmail.com,madelyn.freed,madelyn.freed@gmail.com,1448477427,1448477427,"76e54cbbcfac6426201432b378bf07cb02a8ee65,4cdc401771d3a4c586a53a5c0adeef0278ff76b7"
+6007c2213881f259c2c9703ad04d169dea875b57,6007c221,Reorder Map to be landing activity,"Reorder Map to be landing activity
+
+* Moved launcer intent filter to Map Activity
+* Map starts LocPubManager service
+* LocPubManager service start is idempotent
+* Reordered Hamburger menu to have Map first
+* renamed ""Main"" to ""Location On/Off""
+",,,,madelyn.freed,madelyn.freed@gmail.com,madelyn.freed,madelyn.freed@gmail.com,1448152892,1448154064,76e54cbbcfac6426201432b378bf07cb02a8ee65
+76e54cbbcfac6426201432b378bf07cb02a8ee65,76e54cbb,Merge pull request #8 from whereat/version-bump-1-0-2,"Merge pull request #8 from whereat/version-bump-1-0-2
+
+VERSION BUMP
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1447462598,1447462598,"f7bfbc215ba802dc3d5cfb338f85bea0cf25e6c1,aec271ac41859fdf0b4fd16842a31f961f8a1445"
+4cdc401771d3a4c586a53a5c0adeef0278ff76b7,4cdc4017,Replace clear btn assets with refresh btn assets,"Replace clear btn assets with refresh btn assets
+
+* add new svg (for API >= 21) & png (for API < 21)
+* rename clear_button assets and generalize glyphicon asset names
+* remove 40px glyphicon assets
+* keep x button for now...
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1447461953,1447461953,2312dfb93c88e1e41d9048a2c8652afa9bcd7012
+2312dfb93c88e1e41d9048a2c8652afa9bcd7012,2312dfb9,Replace `MapActivity#clear` with `#refresh`,"Replace `MapActivity#clear` with `#refresh`
+
+* Refresh clears Mapper and Dao and pings Location publish manager
+* Consolidated tests for button click behavior
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1447444670,1447444670,aec271ac41859fdf0b4fd16842a31f961f8a1445
+aec271ac41859fdf0b4fd16842a31f961f8a1445,aec271ac,VERSION BUMP,"VERSION BUMP
+
+1.0.1 -> 1.0.2
+
+Changes:
+
+* Delete locally stored locations every minute
+* User may change location sharing intervals
+* User may change local data time-to-live
+* Eliminate long-pressing power button
+* Clicking power button toggles background location sharing
+* Link to security best practices page on load
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1447275366,1447275366,f7bfbc215ba802dc3d5cfb338f85bea0cf25e6c1
+f7bfbc215ba802dc3d5cfb338f85bea0cf25e6c1,f7bfbc21,Merge pull request #7 from whereat/api-server-change,"Merge pull request #7 from whereat/api-server-change
+
+updates api server location
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1445983320,1445983320,"53f99d7c7ecfcc11553085f0fafba80ccea212a0,ba5cdf250149782aefedbadf6e666cd9b5974eed"
+ba5cdf250149782aefedbadf6e666cd9b5974eed,ba5cdf25,updates api server location,"updates api server location
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1445982262,1445982686,53f99d7c7ecfcc11553085f0fafba80ccea212a0
+53f99d7c7ecfcc11553085f0fafba80ccea212a0,53f99d7c,Merge pull request #5 from whereat/intervals-as-setting,"Merge pull request #5 from whereat/intervals-as-setting
+
+Add settings for location update intervals
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1445036457,1445036457,"2ff0df5901c10a3e54dfc661d68b6e3c89aafbcf,e14d874705bc0bf6b5b71d497f2be721724b63f6"
+e14d874705bc0bf6b5b71d497f2be721724b63f6,e14d8747,Cleanup: avoid garbage collection on pref listener,"Cleanup: avoid garbage collection on pref listener
+
+* as per [this guide](http://developer.android.com/guide/topics/ui/settings.html#Listening)
+  best practice is to store a strong reference to
+  instances of `OnSharedPreferenceChangeListener` to avoid listeners
+  being swept up by garbage collection (since system stores a weak
+  reference by default)
+* implementation:
+  * add `LocationPublisher#mPrefListener` field, use lambda instead of
+  * anonymouse class
+* side effects:
+  * remove extraneous code during hunt for other anonymous classes to replace
+  * clean up tests (removing mocks on classes that are now lambdas)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444887545,1444887545,ad547a6e93c127ed125146c23c582106d5d0965e
+ad547a6e93c127ed125146c23c582106d5d0965e,ad547a6e,Bug fix: forget canceling fubar,"Bug fix: forget canceling fubar
+
+* bug 1: `Scheduler#broadcastForget` initially broadcasts `expiration` time of 0L
+  * cause: `LocationPublisher.mTtl` not initialized on first call to `#forget`
+  * fix: add call to `LocationPublisher#getTtlPref` in `#initialize`
+* bug 2: when second forget scheduled, first one not cancelled
+  * cause: `Scheduler#forget` storing runnable as local var instead of field
+  * fix: store as field, pass field to `#cancelForget`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444884949,1444884949,65b46aeff8443f90b1110fd0fcd1dc213d744366
+65b46aeff8443f90b1110fd0fcd1dc213d744366,65b46aef,Bug fix: register receivers in `SetingsActivity`,"Bug fix: register receivers in `SetingsActivity`
+
+* bug: notifications not showing up in `SettingsActivity`
+* cause: broadcast receivers not registered
+* fix:
+  * add `onResume` callback that registers receivers
+  * add `onPause` callback that unregisters receivers
+* side effects:
+  * clean up tests for `MainActivity` life cycle methods
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444882446,1444882446,8847122a9b529fa28a5f1164efaeb8ad260d391c
+8847122a9b529fa28a5f1164efaeb8ad260d391c,8847122a,Remove long-pressing go button,"Remove long-pressing go button
+
+* clicking go button toggles polling
+* long-press does nothing
+* use lambda in `onClickListener`
+* keep `poll` logic in place `LocationPublisher` heirarchy for use in
+  subsequent features
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444880536,1444880536,f36f6baba6f21bfccc521a29cd025b7b7e444ce0
+f36f6baba6f21bfccc521a29cd025b7b7e444ce0,f36f6bab,Add location notifications to `SettingsActivity`,"Add location notifications to `SettingsActivity`
+
+Add receivers
+* create `SettingsActivityReceivers`
+* straightforward, but yielded some related cleanup
+
+Related cleanup
+
+* rename `Receiver` to `Receivers`
+* extract constructors and `#register`, `#unregister` methods into abstract `Receivers` class to create code reuse in concrete subclasses
+* use more succinct matchers in all `Receivers` tests
+* rename `PopToast#briefly` to `#shortToast` and use static imports
+* use lambdas for click listeners in `MainActivity`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444876962,1444876962,fa2a368589913f1252e8af29c8953edc45c6ed36
+fa2a368589913f1252e8af29c8953edc45c6ed36,fa2a3685,`LocationPublisher` updates `mTtl` on pref changes,"`LocationPublisher` updates `mTtl` on pref changes
+
+* extract common `mPrefs` field for use by all `LocationPublisher`
+  methods handlings prefs, initialize it during `#initialize`
+* reset `mTtl` and reschedule `mScheduler#forget` whenever ttl pref
+  changes
+* update tests for `LocationPublisher#initialize` and
+  `#resetPollInterval()` to reflect new structure
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444860884,1444860884,e942e533a68f5ec86df98376f0651e30eab95f91
+e942e533a68f5ec86df98376f0651e30eab95f91,e942e533,Add preference list for location ttl,"Add preference list for location ttl
+
+* Options: (30 min, 1 hr, 2 hr)
+* Pref summary updates when pref changes
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444856160,1444856160,beb9a458686e03ad3d482e7f9a96c15552598a3f
+beb9a458686e03ad3d482e7f9a96c15552598a3f,beb9a458,Tweak options for loc share interval pref,"Tweak options for loc share interval pref
+
+* Trim list from 6 to 5 elements
+* Change range from 10 sec -> 10 min to 5 sec -> 5 min
+* Update tests accordingly
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444855049,1444855049,89161ecb5db66dc1377c8812b5676e6cd835b097
+89161ecb5db66dc1377c8812b5676e6cd835b097,89161ecb,Auto-update summary of loc sharing interval pref,"Auto-update summary of loc sharing interval pref
+
+* When location sharing interval preference changes, so does `summary`
+  field of location sharing interval preference
+* KEY INSIGHT: use `""%s""` in `summary` field of `preferences.xml` rather
+  than convoluted implementation of `onSharedPreferenceChanged` callback!!!
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444852978,1444852978,05be462ad17bba026d5f331871313b3d156f1f3b
+05be462ad17bba026d5f331871313b3d156f1f3b,05be462a,Update location polling interval from prefs,"Update location polling interval from prefs
+
+* Paramaterize polling interval
+  * Change `LocationPublisher.POLLIING_INTERVAL` from constant to mutable
+  field `mPollInterval`
+  * Initialize `mPollInterval` from prefs
+  * Extract building of `mLocReq` into reusable method
+
+* Whenever polling interval preference changes:
+  * trigger callback to...
+  * update `mPollInterval`
+  * rebuild `mLocReq` with new polling interval
+  * restart location polling (if polling currently turned on)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444841758,1444841758,3c68baad1e42597598cdba44b5b608e2f0d8fa8b
+3c68baad1e42597598cdba44b5b608e2f0d8fa8b,3c68baad,"Extract MenuHelper module, refactor file structure","Extract MenuHelper module, refactor file structure
+
+MenuHelper extraction:
+
+* extract menu logic to a `MenuHelper` class
+* add `mMenu` field to all Activities with menus
+* delegate `SomeActivity#onCreateOptionsMenu` to `mMenu#create`
+* delegate `SomeActivity#onMenuOptionsSelected` to `mMenu#select`
+* use lambdas for callbacks, huzzah!
+* move all tests for result of menu events to `MenuHelperTests` (avoids
+  testing same logic N times -- where N is number of activities)
+* in activities, test only that delegation to `mMenu` took place
+
+File Structure changes:
+
+* move `api`, `pubsub`, and `db` packages to `modules` package
+* create `modules.ui` package, put `MenuHelper` class in it, move
+  `PopToast` class to it as `Toaster`
+* create `modules.schedule` package, put `Scheduler` class in it
+* create `modules.map` package, put `Mapper` class in it
+* create `services` package, put `LocPubManager` and `LocationPublisher`
+  classes in it
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444776538,1444776538,79258353facaef7d7deece22f43bf0e5f459bacf
+79258353facaef7d7deece22f43bf0e5f459bacf,79258353,Fix bug with `PreferenceFragment` sketch,"Fix bug with `PreferenceFragment` sketch
+
+* bug cause: Ints are not a valid type for `ListPreference` elements
+  * must use strings and cast to Int or Long
+  * replaced `pref_loc_share_interval_ints` with array of strings
+  * renamed ...`interval_ints` to `interval_values`,
+  * ...`interval_strings` to `interval_labels`
+* previously failing tests now pass
+* added summary and tests for full contents
+* set default values for all preferences from
+  `MainActivity#onCreate` (first possible execution point in app)
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444441773,1444441773,3a7f685fbcf39613e4262a086ab4d4c9adae31b6
+3a7f685fbcf39613e4262a086ab4d4c9adae31b6,3a7f685f,Sketch `PreferenceFragment`,"Sketch `PreferenceFragment`
+
+* Add xml schema for all preferences in `xml/preferences.xml`
+* Add values for `pref_loc_share_interval` settings list
+* Add `SettingsFragment` class
+* Run into intractable issues trying to test `SettingsFragment`
+* Trace to [this issue withrobolectric](https://github.com/robolectric/robolectric/issues/992)
+* Seek resolution on issue thread, suspend testing efforts pending result of thread interaction
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444434937,1444434937,2ff0df5901c10a3e54dfc661d68b6e3c89aafbcf
+2ff0df5901c10a3e54dfc661d68b6e3c89aafbcf,2ff0df59,Merge pull request #4 from whereat/forget-every-minute,"Merge pull request #4 from whereat/forget-every-minute
+
+App now forgets all location records older than 1 hour.
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1444339348,1444339348,"d7a9e30f3082f454b33ede1f7aac3b5c3dd07c49,dcc00b27497be1fd3273734375e1a6410be04278"
+dcc00b27497be1fd3273734375e1a6410be04278,dcc00b27,"Fix loc subscribe bug, refactor `LocationPublisher`","Fix loc subscribe bug, refactor `LocationPublisher`
+
+BUG FIX
+
+* cause: `LocationPublisher#mLocSub` was only being called once
+* fix: make `mLocSub` an `Action1<UserLocation>` (lambda) instead of `Subscription<UserLocation>`
+* revise test for `LocationPublisher#update` to substitute `TestSubscriber<>::onNext` for `mLocSub`, run tests on `TestSubscriber` instance
+
+REFACTOR
+
+* goal: increase readability/maintainability of `LocationPublisher` class
+* extract broadcasters from `LocationPublisher` into separate `LocPubBroadcasters` class
+* shorten method names
+* remove unnecessary helper functions
+* create testing seam with `mLocProvider` field, (set to `FusedApiLocationProvider` in prod)
+* add tests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444336725,1444336725,546fb37918af94e008d80d8bbf55ea51d4294104
+d7a9e30f3082f454b33ede1f7aac3b5c3dd07c49,d7a9e30f,Merge pull request #3 from whereat/assertj-upgrade,"Merge pull request #3 from whereat/assertj-upgrade
+
+Up version of assertj
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1444327718,1444327718,"8f796b6888fd9649c2ecb0cc21e18a258c5a0017,d4eb1e25dd472a8667b0ef438ba87fc9a575b0ed"
+d4eb1e25dd472a8667b0ef438ba87fc9a575b0ed,d4eb1e25,upgrade version of assertj to 3.2.0,"upgrade version of assertj to 3.2.0
+
+The rationale behind using an older version of assertj was unclear, so
+it was upgraded from 1.7.0 . :cool:
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1444327227,1444327227,8f796b6888fd9649c2ecb0cc21e18a258c5a0017
+546fb37918af94e008d80d8bbf55ea51d4294104,546fb379,Refactor `MapActivity`,"Refactor `MapActivity`
+
+* extract all functionality pertaining to google map and hash map of
+  markers into new `Mapper` class, child of `MapActivity`
+* create gnarly testing seams for `Mapper` to get around closed status
+  of `GoogleMap` classes
+* add tests for MapActivity
+
+NEW BUG:
+* map no longer displays markers from other users
+* to be fixed in next commit
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444260154,1444260154,9a8429e478753c38a4aba21373e9034dd97830fb
+9a8429e478753c38a4aba21373e9034dd97830fb,9a8429e4,Squash extra notification bug,"Squash extra notification bug
+
+* Bug: `MainActivity` and `MapActivity` showing spurious empty notification on calls to `forget`
+* Cause: Failure to remove `SchedulerReceivers` class as child of `MainActivityReceivers` and `MapActivityReceivers`
+
+Side effects of bug-squashing:
+
+* remove `dao` as parameter to `Scheduler#forget` (no longer needed)
+* use Factory for instantiating `Scheduler` (makes for easier testing seam)
+* clean up typing (long for string) in tests of `LocationNotificationReceivers`
+* revise tests for `Scheduler` for increased brevity and to replace references to `dao`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444162055,1444162055,8dc3672819de0359ab6d525410458f1454024f90
+8dc3672819de0359ab6d525410458f1454024f90,8dc36728,"Implement forgetting on `MapActivity`, clean up","Implement forgetting on `MapActivity`, clean up
+
+* move `SchedulerReceivers#forgetReceiver` to `LocationNotificationReceivers`
+* add `#forgetReceiver` to `LocationMappingReceivers`
+* add logic to `MapActivity` for performing forget on `GoogleMap` object
+* wrap GoogleMap markers in Pair<Long,Markers> so as to lookup, delete by time
+* remove `SchedulerReceivers` and references in `MainActivitReceivers` and `MapActivityReceivers`
+* add shorter intervals for testing `forget` functionality
+* NOTE: contains bug in which `broadcastForget` is being called twice -- don't know why!
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1444153547,1444153547,e7e14529831b00618a8f4bc1de88616dc6759fad
+e7e14529831b00618a8f4bc1de88616dc6759fad,e7e14529,Add & refactor broadcast receivers,"Add & refactor broadcast receivers
+
+* Add broadcast receivers for `Scheduler`
+* Refactor Broadcast Receiver architecture
+  * Achieve separation of concerns & code-sharing w/ 4 classes that implement `Receiver`:
+    * `LocationNotificationReceivers`
+    * `LocationMappingReceivers`
+    * `GoogleApiReceivers`
+    * `ScheduleReceivers`
+  * `MainReceivers` and `MapReceivers` compose these classes, mixing in ones they need, sharing others
+  * Refactor all alerts triggered by receivers to use fragments
+  * replace all strings with references to xml resources
+  * add tests for all receivers and alert fragments
+* Refactor tests for `LocationPublisher`
+  * eliminate reflection by using protected fields and methods in same package as class under test
+  * create testing seam for `LocationPublisher#update`:
+    * add `locSub` field to `LocationPublisherManager`
+    * when not under test, delegate to `#broadcastLocationReceived`
+    * when under test, delegate to `TestSubscriber<UserLocation>`
+* Add vestigal support for more advanced rxJava tests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443946137,1443946137,ad64c933e817783ecafbcdaa231761a4da5affce
+ad64c933e817783ecafbcdaa231761a4da5affce,ad64c933,Add `forget` broadcast receivers to `LocSubMain`,"Add `forget` broadcast receivers to `LocSubMain`
+
+* Allows `MainActivity` to display toast notifying user of forget action
+* Figured out some testing stuff for `BroadcastReceivers`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443906002,1443906002,7f8d899472071c0bf5b6b2d3b02ab938faa9bec6
+7f8d899472071c0bf5b6b2d3b02ab938faa9bec6,7f8d8994,Forget all locations older than 1 hr every minute,"Forget all locations older than 1 hr every minute
+
+* Add `Scheduler` class with `#forget` and `#cancelForget` methods
+* use `Handler` interface to schedule `Runnables` on `MainLooper`
+* Call `Scheduler#forget()` from `LocationPublisher#run()`
+* figure out testing delayed tasks in Robolectric
+* augment tests for `LocationPublisher`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443846444,1443846444,8f796b6888fd9649c2ecb0cc21e18a258c5a0017
+8f796b6888fd9649c2ecb0cc21e18a258c5a0017,8f796b68,Merge pull request #2 from whereat/security-alert,"Merge pull request #2 from whereat/security-alert
+
+Security alert
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1443730178,1443730178,"dbcc6809b079081578484bd525893e703359727c,20ed961f943251367a241b1a5de3f2701d34f84a"
+20ed961f943251367a241b1a5de3f2701d34f84a,20ed961f,Remove vestigal `Text#linkify` utility,"Remove vestigal `Text#linkify` utility
+
+* move to [this gist](https://gist.github.com/aguestuser/50c8401b3440f793bf60) for future reference
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443727581,1443727581,31b084e0a2f32b55e42fcf03b46825c27280f3f1
+31b084e0a2f32b55e42fcf03b46825c27280f3f1,31b084e0,Cleanup tests for PR,"Cleanup tests for PR
+
+* fix sdk/robolectric versioning conflicts btw/ sdk causing previous
+  tests to fail
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443726969,1443726969,6a496d09aa9f131e6fe22e18ae8c27468aea95b4
+6a496d09aa9f131e6fe22e18ae8c27468aea95b4,6a496d09,Add web link to security alert dialog,"Add web link to security alert dialog
+
+* Add positive/negative buttons to `SecurityAlertFragment`
+* Use positive button to launch activity with web URL as data
+* Create but ditch `Text.linkify` helper method for providing link
+   * cool because: wraps arbitrary substring of arbitrary string with
+   * arbitrary link
+   * but: too unwieldy to make TextView clickable; forcing either/or
+   * choice w/ Pos/Neg buttons is better UX
+   * keep around for future use (and instructive tests)
+* Refactor some string resource names
+* Delete unneeded security alert fragment layout
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443661817,1443661817,a6eb41cd3d668fad2fa0e06170e1fa7726255775
+a6eb41cd3d668fad2fa0e06170e1fa7726255775,a6eb41cd,Add Security Alert (no link),"Add Security Alert (no link)
+
+* add `SecurityAlertFragment`
+* show alert once & once only from `MainActivity`
+* refactor `ActivityHelper` to help with tests
+* random cleanup of tests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1443637583,1443637583,dbcc6809b079081578484bd525893e703359727c
+dbcc6809b079081578484bd525893e703359727c,dbcc6809,Merge pull request #1 from whereat/curve-25519-java,"Merge pull request #1 from whereat/curve-25519-java
+
+use the JCESecureRandomProvider to generate random IDs
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1442856069,1442856069,"8b0a314c00fe7188e714b787c3eee72e231b902f,e5f4cb7c061bf9bb2f4ec6b405b09275bac1747c"
+e5f4cb7c061bf9bb2f4ec6b405b09275bac1747c,e5f4cb7c,use the JCESecureRandomProvider to generate random IDs,"use the JCESecureRandomProvider to generate random IDs
+
+Instead of using randomUUID, we use the interface to JCESecureRandomProvider
+provided by curve25519-java to generate random numbers to turn into IDs
+",,,,The Fisher King,pellam@riseup.net,The Fisher King,pellam@riseup.net,1442615780,1442615780,8b0a314c00fe7188e714b787c3eee72e231b902f
+8b0a314c00fe7188e714b787c3eee72e231b902f,8b0a314c,Tweak release config,"Tweak release config
+* modify version number
+* add package name
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1441911310,1441911310,e2d528bf3a523cd55a836ff2bce9df45b9d68479
+e2d528bf3a523cd55a836ff2bce9df45b9d68479,e2d528bf,Prepare for release,"Prepare for release
+* Add icons
+* Add release Google Maps API Key
+* Increment version number
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1441597337,1441597337,a32c82a48631d9e9697108ba3f4eda52c356e6cc
+a32c82a48631d9e9697108ba3f4eda52c356e6cc,a32c82a4,Refactor LocationPublisherTests,"Refactor LocationPublisherTests
+* Add ReflectionHelper class
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440794729,1440794729,38226de48446f784904842dd34cce616bc497095
+38226de48446f784904842dd34cce616bc497095,38226de4,Add tests for LocationPublisher#ping,"Add tests for LocationPublisher#ping
+* include `ping` and most of helpers
+* eg: `relay`, `update`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440734381,1440734381,6adb3f9cfa7079b2d2c829a51d08f5da8e097b3d
+6adb3f9cfa7079b2d2c829a51d08f5da8e097b3d,6adb3f9c,Sketch LocationPublisherTests,"Sketch LocationPublisherTests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440712269,1440712269,a2492eccdb1e6feffa7e5e0985c00cafe81515cc
+a2492eccdb1e6feffa7e5e0985c00cafe81515cc,a2492ecc,Debug MapActivity#clear(),"Debug MapActivity#clear()
+* move call to LocationDao#clear() to LocationPublisher
+* refactor LocPubManager constructor to allow multiple instances
+* add tests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440711072,1440711072,3950475f6b7e1863edd4ab47782f009186719daf
+3950475f6b7e1863edd4ab47782f009186719daf,3950475f,Sketch MapActivity.clear(),"Sketch MapActivity.clear()
+* add binding to LocationPublisherManager (works?)
+* call `mLocPub.clear()`
+* calls WhereatApiClient.remove(mUserLoc)`
+* broadcasts to MainActivity when doen
+* Q: can you bind two activities to same service?
+* Q: how to test services in Robolectric?
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440640778,1440640778,cffc0d2b190e9946d030a4ee09fb6b0416fdc195
+cffc0d2b190e9946d030a4ee09fb6b0416fdc195,cffc0d2b,Refactor API,"Refactor API
+* replace `init`/`refresh` endpoints with `update`
+* add `remove` endpoint
+* add ApiMessage class to handle responses from `remove`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440637234,1440637234,1f963be0b50a67c7b92702de43fd2eba839a3e92
+1f963be0b50a67c7b92702de43fd2eba839a3e92,1f963be0,Optimize clear button for different android versions,"Optimize clear button for different android versions
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440615296,1440615296,f8f53f2910e28c81a69a852b15c7c569913e29f3
+f8f53f2910e28c81a69a852b15c7c569913e29f3,f8f53f29,Refactor clear map button,"Refactor clear map button
+* make transluscent square
+* match google map control buttons
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1440563486,1440563486,f93de2ef49ba4860078738ec8b738b0c8533bb9d
+f93de2ef49ba4860078738ec8b738b0c8533bb9d,f93de2ef,Update readme,"Update readme
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437859587,1437859587,3adda14d5ad482a28107e279fe86005c570c757e
+3adda14d5ad482a28107e279fe86005c570c757e,3adda14d,Tweak MainActivity toasts,"Tweak MainActivity toasts
+* Only toast when user has published location
+* Don't toast locations coming in from wire
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437853062,1437853062,bb21a63c2b8425edec95a1da6c06fde0766a5e52
+bb21a63c2b8425edec95a1da6c06fde0766a5e52,bb21a63c,Add tests for clearing map,"Add tests for clearing map
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437681625,1437681625,cc9b4d417313fdd23dd8ebbcca9de3059d966cfe
+cc9b4d417313fdd23dd8ebbcca9de3059d966cfe,cc9b4d41,Add design elements for clearing map,"Add design elements for clearing map
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437679316,1437679316,56189a9f03314d58a414f73aca5c1ad41f163f86
+56189a9f03314d58a414f73aca5c1ad41f163f86,56189a9f,Add LocationDao#delete,"Add LocationDao#delete
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437677035,1437677035,be9037a92f44e1e776ff5c54611f0e69ed8757f5
+be9037a92f44e1e776ff5c54611f0e69ed8757f5,be9037a9,Don't center when ading new locations to map,"Don't center when ading new locations to map
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437611762,1437611762,69a2da7fbce9180e6b28f5a61661feb2b2219fce
+69a2da7fbce9180e6b28f5a61661feb2b2219fce,69a2da7f,Implement and test API client and integration with LocationSubscribers,"Implement and test API client and integration with LocationSubscribers
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437356622,1437356622,c197055c7287f831bedd9e5b47750bd130b534db
+c197055c7287f831bedd9e5b47750bd130b534db,c197055c,Sketch implementation of api client,"Sketch implementation of api client
+* Add retrolambda & JDK8
+* Add WhereatApi Client
+* Connect api responses to broadcast dispatch via observable stream
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437118349,1437118349,d643d0373601889527e006d3bbec607df5e7485f
+d643d0373601889527e006d3bbec607df5e7485f,d643d037,Add JSON deserialization methods to Location classes,"Add JSON deserialization methods to Location classes
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437110586,1437110586,d3769ccedf6131503f2912d16935c100a0fcd1f1
+d3769ccedf6131503f2912d16935c100a0fcd1f1,d3769cce,Add JSON serialization methods to Location classes,"Add JSON serialization methods to Location classes
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437100529,1437100529,eb1a9bf5728f24b35866f948de8d910b7a1eb287
+eb1a9bf5728f24b35866f948de8d910b7a1eb287,eb1a9bf5,Add retrofit dependencies to build,"Add retrofit dependencies to build
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1437096115,1437096115,1fca3960a8dd923110cd412da03d54b281d19dab
+1fca3960a8dd923110cd412da03d54b281d19dab,1fca3960,Update readme,"Update readme
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436636664,1436636664,8941167325e2e8fe1ba1da65d7091f246a752a51
+8941167325e2e8fe1ba1da65d7091f246a752a51,89411673,Debug UserLocation refactor,"Debug UserLocation refactor
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436458105,1436458105,6b51a39763c848be7331510c223f0f1677e8fbb3
+6b51a39763c848be7331510c223f0f1677e8fbb3,6b51a397,Refactor LocationDao to:,"Refactor LocationDao to:
+* use UserLocation instead of Location
+* overwrite records on calls to `save`
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436409131,1436409131,84f44956638ee514d6fa0f184ecd122bd619c10d
+84f44956638ee514d6fa0f184ecd122bd619c10d,84f44956,Add tests for UserLocation constructors,"Add tests for UserLocation constructors
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436402098,1436402098,7713c3456ed97808e359c7cc28cb7bce999b14c0
+7713c3456ed97808e359c7cc28cb7bce999b14c0,7713c345,Add migrations to Dao,"Add migrations to Dao
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436398939,1436398939,7c57d26d15b33cc6a12e5a9ea1f0fcd621f26180
+7c57d26d15b33cc6a12e5a9ea1f0fcd621f26180,7c57d26d,Add tests for LocationDao,"Add tests for LocationDao
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436393654,1436393654,96aff5156295cec495eae14858736678e230db78
+96aff5156295cec495eae14858736678e230db78,96aff515,Add tests for MainActivity,"Add tests for MainActivity
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436337036,1436337036,635b0709e6dd5f0886a7dde742cd0799a8e3240f
+635b0709e6dd5f0886a7dde742cd0799a8e3240f,635b0709,Take a stab at Robolectric tests,"Take a stab at Robolectric tests
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436320908,1436320908,59afe29ca1eda664aae7730c3cefdf8b9bf1ef8b
+59afe29ca1eda664aae7730c3cefdf8b9bf1ef8b,59afe29c,Refactor for clearer naming,"Refactor for clearer naming
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436079522,1436079522,b8eec27f33394c534477744745e5b95c9cde36b0
+b8eec27f33394c534477744745e5b95c9cde36b0,b8eec27f,Clear map and db on app close,"Clear map and db on app close
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436059265,1436059265,d99a285f27d531379dd9aa9192d85cbb39aa69e7
+d99a285f27d531379dd9aa9192d85cbb39aa69e7,d99a285f,Fix state-related bugs caused by switching between views:,"Fix state-related bugs caused by switching between views:
+* Go button state restores to correct state after user visits map view and returns;
+* Map refreshes with new markers when user looks at map, returns to home, returns to map
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1436051612,1436051612,e02251a47211eefe84a181a7141cd9236926133a
+e02251a47211eefe84a181a7141cd9236926133a,e02251a4,Create background LocationService,"Create background LocationService
+* add LocationServiceManager binding to MainActivity
+* add LocationSubscriber registrations to MainActivity, MapActivity
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435994660,1435994660,c46f1a3640f4a903e8ac8c1b23d986f3d2b38d53
+c46f1a3640f4a903e8ac8c1b23d986f3d2b38d53,c46f1a36,Fix empty map exception state,"Fix empty map exception state
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435792843,1435792843,210201779a870a4fcf36a18480f0a9e001c9d740
+210201779a870a4fcf36a18480f0a9e001c9d740,21020177,Add location db reads to MapsActivity,"Add location db reads to MapsActivity
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435791573,1435791573,1e6c06ba6c09ceb0a0f6f2178742cb346e5437df
+1e6c06ba6c09ceb0a0f6f2178742cb346e5437df,1e6c06ba,Fix location db writes from MainActivity,"Fix location db writes from MainActivity
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435786641,1435786641,43be16daeb2e2d10ec2869b766874062678aa445
+43be16daeb2e2d10ec2869b766874062678aa445,43be16da,Add LocationDao,"Add LocationDao
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435782539,1435782539,ecbc03625fad90f66f12596cadd948a5b91e6e0a
+ecbc03625fad90f66f12596cadd948a5b91e6e0a,ecbc0362,Add Dao class,"Add Dao class
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435780430,1435780430,754d4b350f8adedb775bb4a7dec6a2a6c1075dd3
+754d4b350f8adedb775bb4a7dec6a2a6c1075dd3,754d4b35,Disable location updates when not polling,"Disable location updates when not polling
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435723564,1435723564,b8cc3f350589a959e151ca136702996f96337d8d
+b8cc3f350589a959e151ca136702996f96337d8d,b8cc3f35,Clean up location polling sad path,"Clean up location polling sad path
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435715758,1435715758,d48ba66e4693e704dfa6b051b0d0a11c8b9e5cb9
+d48ba66e4693e704dfa6b051b0d0a11c8b9e5cb9,d48ba66e,"Restore location polling, make method names terser","Restore location polling, make method names terser
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435707891,1435707891,0c9a22ec546ab18d66def168a95461ee69dd2cac
+0c9a22ec546ab18d66def168a95461ee69dd2cac,0c9a22ec,"Add error handling for (1) no google play services, (2) location services off","Add error handling for (1) no google play services, (2) location services off
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435701687,1435701687,d7ba62f78189da8966e8d4f1c65a1bc1c2bba1bc
+d7ba62f78189da8966e8d4f1c65a1bc1c2bba1bc,d7ba62f7,Disable main activity restart on screen rotate,"Disable main activity restart on screen rotate
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435686722,1435686722,141a321204a5f994bf1aba774db7a30b0e45ed1e
+141a321204a5f994bf1aba774db7a30b0e45ed1e,141a3212,Add license & readme,"Add license & readme
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435633685,1435633685,e6e359f48d8030390da219087bf0e2523908df75
+e6e359f48d8030390da219087bf0e2523908df75,e6e359f4,Go button retrieves location,"Go button retrieves location
+* Clicking go button toasts location
+* Long-clicking go button toasts location every 15 sec
+* Long-clicking go button again turns off location polling
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435628040,1435628040,39c463e05db11f471754cb764b6ac4f3af3de756
+39c463e05db11f471754cb764b6ac4f3af3de756,39c463e0,Switch between map and home activity via menu bar,"Switch between map and home activity via menu bar
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435452704,1435452704,11640536facb60c576d3319308f4a5c8245f41e5
+11640536facb60c576d3319308f4a5c8245f41e5,11640536,Replace stock support map with custom map centered on zucotti,"Replace stock support map with custom map centered on zucotti
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435449967,1435449967,47028a214c90761bda86e363a9717c80c98574e7
+47028a214c90761bda86e363a9717c80c98574e7,47028a21,Embed map fragment in map activity,"Embed map fragment in map activity
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1435448068,1435448068,7d16855e942155150b1fc17dc502e43216fd92e5
+7d16855e942155150b1fc17dc502e43216fd92e5,7d16855e,Add blank map activy,"Add blank map activy
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1434753547,1434753547,96dabeb1cebf2fd88257993a1b2461e7c0f8b8a5
+96dabeb1cebf2fd88257993a1b2461e7c0f8b8a5,96dabeb1,Init commit,"Init commit
+",,,,aguestuser,aguestuser@riseup.net,aguestuser,aguestuser@riseup.net,1434747196,1434747196,

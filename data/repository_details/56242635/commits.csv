@@ -1,0 +1,712 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+65321bc23bd595512dc3c1142d3ef3c3bb794993,65321bc2,Don't say the same thing twice within 30s,"Don't say the same thing twice within 30s
+
+On some devices we're getting duplicate notifications from the system.
+
+With this change in place that shouldn't lead to us saying the same
+thing twice any more.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1484890897,1484890897,f7f5ab96b6a0c38a2d0692d62bc2324ef3226beb
+f7f5ab96b6a0c38a2d0692d62bc2324ef3226beb,f7f5ab96,Update build environment,"Update build environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483473300,1483473300,701aa19d00ded63912dd8d1b2ec86b44e0a7d56f
+701aa19d00ded63912dd8d1b2ec86b44e0a7d56f,701aa19d,Merge branch 'privacy-policy',"Merge branch 'privacy-policy'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483473229,1483473229,"baf17806fe7febed21bc28fe342e4aef8f7cfcf3,c1d65b06ae9135e7f5e01c6e7cdeb783a8c92b39"
+c1d65b06ae9135e7f5e01c6e7cdeb783a8c92b39,c1d65b06,Be less specific about statistics collection,"Be less specific about statistics collection
+
+This gives us more freedom to collect more / less / other statistics in
+the future. And since this data is anonymous anyway, it shouldn't affect
+anybody's privacy, and being more vague should be fine.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483473101,1483473101,0e9fd54aa1069cfca898cf40c7a5ef8038e346f6
+0e9fd54aa1069cfca898cf40c7a5ef8038e346f6,0e9fd54a,Add a Privacy Policy as required by Google,"Add a Privacy Policy as required by Google
+
+As a side effect of adding this policy, stop sending app logs to
+Crashlytics. Those logs are potentially sensitive, and retaining them
+would make the privacy policy much more complex.
+
+If people want to report when the app ""feels"" bad, they can do so using
+the contact-the-developer functionality built into the app.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1483301185,1483301185,baf17806fe7febed21bc28fe342e4aef8f7cfcf3
+baf17806fe7febed21bc28fe342e4aef8f7cfcf3,baf17806,Merge pull request #13 from walles/fix-build,"Merge pull request #13 from walles/fix-build
+
+Use a Java 8 JVM on Travis
+
+This makes the build errors go away:
+http://stackoverflow.com/a/40208648/473672",,,,Johan Walles,johan.walles@gmail.com,GitHub,noreply@github.com,1481145262,1481145262,"4c0c4c5bab261e19cce3e596c6847d2b21c82287,8acd15095e7fdc77f6557169f511f8bee865dfae"
+8acd15095e7fdc77f6557169f511f8bee865dfae,8acd1509,Use a Java 8 JVM on Travis,"Use a Java 8 JVM on Travis
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1481144753,1481144753,4c0c4c5bab261e19cce3e596c6847d2b21c82287
+4c0c4c5bab261e19cce3e596c6847d2b21c82287,4c0c4c5b,Upgrade the development environment,"Upgrade the development environment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1481141774,1481141774,be915537ddbef02f986c619d4303a3a485a762f7
+be915537ddbef02f986c619d4303a3a485a762f7,be915537,README: Link to Google Play for install,"README: Link to Google Play for install
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1465754296,1465754296,55e2d6742647b007d69b2059d8e3d5adc3fc7ffd
+55e2d6742647b007d69b2059d8e3d5adc3fc7ffd,55e2d674,Turn fatal exception non-fatal,"Turn fatal exception non-fatal
+
+If a preference doesn't exist, warn about that to Crashlytics and default to
+false rather than crashing.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464765162,1464765162,a6ed497722a2980cbd342832546ef0004f7b9211
+a6ed497722a2980cbd342832546ef0004f7b9211,a6ed4977,TODO: Help users configure more languages,"TODO: Help users configure more languages
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464715873,1464715873,0395e6c96e981c56a6b0da16b76a58622b91efad
+0395e6c96e981c56a6b0da16b76a58622b91efad,0395e6c9,Merge branch 'dedup-calendar-announcements',"Merge branch 'dedup-calendar-announcements'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464637626,1464637626,"416d74e07aa7be59e0c5d40b70c8fb61fba01aa5,779af8e9caae3f1d636792730412f0c45bebaf0f"
+779af8e9caae3f1d636792730412f0c45bebaf0f,779af8e9,Handle PMD warning,"Handle PMD warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464637145,1464637145,35accf47558078b9fa980e917ae45126492f2d24
+35accf47558078b9fa980e917ae45126492f2d24,35accf47,Trim old entries from calendar announcements cache,"Trim old entries from calendar announcements cache
+
+Trim them after two minutes. That's enough retention, because we don't care
+about messages older than 45s anyway.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464636807,1464636807,e954259252cc940d5dd1d810b8e2c722fb671fe3
+e954259252cc940d5dd1d810b8e2c722fb671fe3,e9542592,Add calendar announcement dups detection,"Add calendar announcement dups detection
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464636476,1464636476,b1398361723ce9781fa79b047e72bca3cef334a3
+b1398361723ce9781fa79b047e72bca3cef334a3,b1398361,Make presenters persistent in SpeakerService,"Make presenters persistent in SpeakerService
+
+This way they can keep track of state if they want to. This is in preparation
+for making the CalendarPresenter not repeat itself when it gets duplicate
+announcements from the OS.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464337679,1464337764,416d74e07aa7be59e0c5d40b70c8fb61fba01aa5
+416d74e07aa7be59e0c5d40b70c8fb61fba01aa5,416d74e0,Be somewhat more defensive about announcing calendar events,"Be somewhat more defensive about announcing calendar events
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464285148,1464285148,4a052af3cf8eabe824a0147e6b02f8bf3141b112
+4a052af3cf8eabe824a0147e6b02f8bf3141b112,4a052af3,Bump support and appcompat versions,"Bump support and appcompat versions
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464285111,1464285111,24cdb82f84909dc6adc41fa3bf6c5411ffbd9fad
+24cdb82f84909dc6adc41fa3bf6c5411ffbd9fad,24cdb82f,Warn about long speech queues,"Warn about long speech queues
+
+Not about any speech queues
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1464285018,1464285018,86faa13d00004f51f76894c540de296926373392
+86faa13d00004f51f76894c540de296926373392,86faa13d,Include app version in all Crashlytics stats,"Include app version in all Crashlytics stats
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463943560,1463943560,3ac317d51e9830606fabc842d292010b10fd73a5
+3ac317d51e9830606fabc842d292010b10fd73a5,3ac317d5,Report spoken-announcements counts to Crashlytics,"Report spoken-announcements counts to Crashlytics
+
+For each announcement we log which presenter it comes from and the app version.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463928991,1463928991,c107424af4887425471e3095db1ff0c6208acfe5
+c107424af4887425471e3095db1ff0c6208acfe5,c107424a,Merge branch 'wifibackoff',"Merge branch 'wifibackoff'
+
+This change is just a refactoring moving WifiPresenter related logic from
+SpeakerService into WifiPresenter.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463860565,1463860565,"a10bd825ce59a4079a9f5013a6a87e5713c75ae5,dbe44b28cc548aef9a885174806b387eb119b9eb"
+dbe44b28cc548aef9a885174806b387eb119b9eb,dbe44b28,Simplify WifiPresenter,"Simplify WifiPresenter
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463860436,1463860436,bd397e603282bfb78758447077205cdabc012995
+bd397e603282bfb78758447077205cdabc012995,bd397e60,Move more Wifi presenter logic into WifiPresenter,"Move more Wifi presenter logic into WifiPresenter
+
+It now keeps track itself on which messages are dups, and doesn't present those.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463685301,1463685301,a10bd825ce59a4079a9f5013a6a87e5713c75ae5
+a10bd825ce59a4079a9f5013a6a87e5713c75ae5,a10bd825,Do Wifi announcements in the correct locale,"Do Wifi announcements in the correct locale
+
+Before this change the announcement phrase was always in the system locale.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463678049,1463678049,336d3a05c98497b32b84775f21ff46c1541f7368
+336d3a05c98497b32b84775f21ff46c1541f7368,336d3a05,Update screenshot with additional settings,"Update screenshot with additional settings
+
+The new Settings screenshot shows the new checkboxes for all announcement types.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463592335,1463592335,6cbc099b0364458f0e2a2d03192fa0f4500fb1a1
+6cbc099b0364458f0e2a2d03192fa0f4500fb1a1,6cbc099b,Simplify WifiPresenter,"Simplify WifiPresenter
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463581323,1463581323,736b7fb25055c7017f9ef38b8dd92e2fe85788a1
+736b7fb25055c7017f9ef38b8dd92e2fe85788a1,736b7fb2,Adhere to the Google Icon Style Guide,"Adhere to the Google Icon Style Guide
+
+Here it is: https://www.google.com/design/spec/style/icons.html
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463580305,1463580305,d78829a873a1500ff948c3f395be452af6edd40e
+d78829a873a1500ff948c3f395be452af6edd40e,d78829a8,Call Crashlytics only if it's enabled,"Call Crashlytics only if it's enabled
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463489730,1463489730,221744263305fbe6949cec98a11443066db3395c
+221744263305fbe6949cec98a11443066db3395c,22174426,Icon: Smooth outline,"Icon: Smooth outline
+
+It used to be jagged and look weird against a white background.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463488590,1463488590,102aedc096fa00f769d86e16a1943d56b49935e3
+102aedc096fa00f769d86e16a1943d56b49935e3,102aedc0,Icon: Use black outline rather than white,"Icon: Use black outline rather than white
+
+The intention is to make the icon look better on a black background.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463487803,1463487904,49e0eaa31f98f321ab7cf067e07243a9a12d05b4
+49e0eaa31f98f321ab7cf067e07243a9a12d05b4,49e0eaa3,Merge branch 'permissions',"Merge branch 'permissions'
+
+This branch adds dynamic permissions handling for Android Marshmallow and
+options for enabling / disabling individual classes of announcements.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463407183,1463407183,"a38db914612241cb372aeac0eeed429627cfaa03,1a5947ae488cee5e4dc5cf81f205b3162ec9fdba"
+1a5947ae488cee5e4dc5cf81f205b3162ec9fdba,1a5947ae,Re-enable Wifi announcements,"Re-enable Wifi announcements
+
+It was unconditionally disabled.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463406954,1463406954,9659db4a4f348ce1e29c8c25dda83d74a0b9b256
+9659db4a4f348ce1e29c8c25dda83d74a0b9b256,9659db4a,README: DONE: Marshmallow permissions handling,"README: DONE: Marshmallow permissions handling
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463361422,1463361422,77c07c9d60f78614bce077038ab5d7c32bad25b7
+77c07c9d60f78614bce077038ab5d7c32bad25b7,77c07c9d,Fix PMD warnings,"Fix PMD warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463360561,1463360561,8574bf79dc3897fdbc2ba0ee5d91a8f3d5418b65
+8574bf79dc3897fdbc2ba0ee5d91a8f3d5418b65,8574bf79,Disable calendar announcements if we lose READ_CALENDAR,"Disable calendar announcements if we lose READ_CALENDAR
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463360183,1463360183,90d243ef77bbed1ed7a03a2606201ee037203f84
+90d243ef77bbed1ed7a03a2606201ee037203f84,90d243ef,"Enable all announcements by default, barring lacking permissions","Enable all announcements by default, barring lacking permissions
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463359018,1463359018,8a9ee033c2e385254a17e9edfd971d7f5c5087a1
+8a9ee033c2e385254a17e9edfd971d7f5c5087a1,8a9ee033,Only do enabled announcements,"Only do enabled announcements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463340722,1463340722,e2d19950f40f88be20f7b0c5eaf29676a7422854
+e2d19950f40f88be20f7b0c5eaf29676a7422854,e2d19950,Check box if permission(s) granted,"Check box if permission(s) granted
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463170328,1463170328,bb58a9740c3ae97df2a2ec41fec94c367b4087ff
+bb58a9740c3ae97df2a2ec41fec94c367b4087ff,bb58a974,Add checkboxes for all types of announcements,"Add checkboxes for all types of announcements
+
+Those that need permissions do ask for it properly, but if they get it the box
+should be checked as well and that doesn't happen.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463146290,1463146290,a38db914612241cb372aeac0eeed429627cfaa03
+a38db914612241cb372aeac0eeed429627cfaa03,a38db914,Remove bundle name from Google Inbox sender,"Remove bundle name from Google Inbox sender
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463073205,1463073205,67eb89c7035945dca3f365f627978fbd2a6a73ec
+67eb89c7035945dca3f365f627978fbd2a6a73ec,67eb89c7,Merge branch 'userfeedback',"Merge branch 'userfeedback'
+
+Have a look at the top right menu in the Settings activity.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463063107,1463063107,"a75a038170e729e3614efed63014701953ccf2cd,ca1b8d23c9c82adb0b69df0897bfafa1a0b24501"
+ca1b8d23c9c82adb0b69df0897bfafa1a0b24501,ca1b8d23,Remedy PMD warning,"Remedy PMD warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463063084,1463063084,626dbcb981923ad53b3b961b76ab61ea7ad88685
+626dbcb981923ad53b3b961b76ab61ea7ad88685,626dbcb9,Silence Findbugs default-encoding warnings,"Silence Findbugs default-encoding warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463063034,1463063034,84a2f20de254918bccfc4059ea589d9d9cc1273d
+84a2f20de254918bccfc4059ea589d9d9cc1273d,84a2f20d,Remedy a set of FindBugs nullness warnings,"Remedy a set of FindBugs nullness warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463062636,1463062636,0cee548ae62334795177986f9aae1cfa9db1a73c
+0cee548ae62334795177986f9aae1cfa9db1a73c,0cee548a,Fix Android Lint warnings,"Fix Android Lint warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463061654,1463061654,81f38f3333e07be1413f1e310678c160ffe617e7
+81f38f3333e07be1413f1e310678c160ffe617e7,81f38f33,README: User feedback option done,"README: User feedback option done
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463061100,1463061100,957ca5ac7bec8e1df1dbf9c13865fbe79f272c9c
+957ca5ac7bec8e1df1dbf9c13865fbe79f272c9c,957ca5ac,Merge branch 'master' into userfeedback,"Merge branch 'master' into userfeedback
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463060849,1463060849,"10fa2374fee5eb65074f5b76cce1d5b98a3d22d9,a75a038170e729e3614efed63014701953ccf2cd"
+a75a038170e729e3614efed63014701953ccf2cd,a75a0381,Plug a TTS engine resource leak,"Plug a TTS engine resource leak
+
+Until proven otherwise I'll just pretend this was the cause for the sporadically
+missing UtteranceProgressListener callbacks.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463060590,1463060590,c72998aae3ea3f45f0c52fb62d94ced6b2c9a915
+10fa2374fee5eb65074f5b76cce1d5b98a3d22d9,10fa2374,Copy log-collection-and-mailing code from BatteryLogger,"Copy log-collection-and-mailing code from BatteryLogger
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463060411,1463060411,c72998aae3ea3f45f0c52fb62d94ced6b2c9a915
+c72998aae3ea3f45f0c52fb62d94ced6b2c9a915,c72998aa,"Never say two ""wifi disconnected"" messages after each other","Never say two ""wifi disconnected"" messages after each other
+
+Closes #9
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1463055728,1463055728,778d389051714c847bf37813215baff691aa2b81
+778d389051714c847bf37813215baff691aa2b81,778d3890,SpeakerService: Log onTrimMemory() calls,"SpeakerService: Log onTrimMemory() calls
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462976811,1462976811,59604a41f629d979a0824ebb45d2478edba122a0
+59604a41f629d979a0824ebb45d2478edba122a0,59604a41,Use same icon in the app as on Android Market,"Use same icon in the app as on Android Market
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462969074,1462969074,79ad316c14e5d400a70eede761f4b1c25f714002
+79ad316c14e5d400a70eede761f4b1c25f714002,79ad316c,Increase duplicate-wifi-announcement timeout,"Increase duplicate-wifi-announcement timeout
+
+It used to be 10s, but I've gotten too many announcements with that setting. Up
+it to 60s.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462965904,1462965904,789ca315174a35b238afbe16ed89caa2e9f2fb74
+789ca315174a35b238afbe16ed89caa2e9f2fb74,789ca315,Log when the SpeakerService starts and stops,"Log when the SpeakerService starts and stops
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462965568,1462965568,c5702d99b581ff5684b2d68e7d035fcd7ef882d1
+c5702d99b581ff5684b2d68e7d035fcd7ef882d1,c5702d99,Merge branch 'calendar',"Merge branch 'calendar'
+
+""Calendar event: ...""
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462901133,1462901133,"34238d712fed0e12abb6590ff97f2180b28afb7c,3b7d381c791a037e77c8797ee4233cc894178cf8"
+3b7d381c791a037e77c8797ee4233cc894178cf8,3b7d381c,"DONE: ""Calendar event: ...""","DONE: ""Calendar event: ...""
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462901078,1462901078,0c3ca540ad72e6f8c0f1ca16b6154dbb9d4e9ba9
+0c3ca540ad72e6f8c0f1ca16b6154dbb9d4e9ba9,0c3ca540,Merge branch 'master' into calendar,"Merge branch 'master' into calendar
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462900683,1462900683,"456ba5bb0f9f6c97dc2d4f0fd1180b99edaff441,34238d712fed0e12abb6590ff97f2180b28afb7c"
+34238d712fed0e12abb6590ff97f2180b28afb7c,34238d71,"Wifi: Treat null SSID as ""disconnected""","Wifi: Treat null SSID as ""disconnected""
+
+This is undocumented but is apparently how it used to work:
+https://code.google.com/p/android/issues/detail?id=43336
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462900486,1462900486,ca18510e6b68ec9ecac9f8a3447b71aa90d9c97a
+456ba5bb0f9f6c97dc2d4f0fd1180b99edaff441,456ba5bb,Ignore spurious calendar reminder broadcasts,"Ignore spurious calendar reminder broadcasts
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462886804,1462886804,b14dcf679b4cfb264dd7b54ce51e903e5868df6f
+b14dcf679b4cfb264dd7b54ce51e903e5868df6f,b14dcf67,Merge branch 'master' into calendar,"Merge branch 'master' into calendar
+
+This merge improves speech-interrupted handling.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462886135,1462886135,"e4b77ccf963a9d7366b618580a40fb20bf828814,ca18510e6b68ec9ecac9f8a3447b71aa90d9c97a"
+ca18510e6b68ec9ecac9f8a3447b71aa90d9c97a,ca18510e,Handle speech getting interrupted,"Handle speech getting interrupted
+
+Plus general speech failure logging robustness.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462885941,1462885941,716deaf1784b54417aa96caff38dfcf2566c34fe
+716deaf1784b54417aa96caff38dfcf2566c34fe,716deaf1,Don't log error for not finding requested locale,"Don't log error for not finding requested locale
+
+Instead we track this using Crashlytics answers.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462883063,1462883063,0575dfd5440b16d25e989712c14f170356fb795d
+e4b77ccf963a9d7366b618580a40fb20bf828814,e4b77ccf,Not finding a calendar reminder event is OK,"Not finding a calendar reminder event is OK
+
+We used to log this as an error but it's usually not, so don't.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462831023,1462831023,dc450c28e7b8f2230fd9fdb8a491677258dd7a53
+dc450c28e7b8f2230fd9fdb8a491677258dd7a53,dc450c28,Don't log exceptions twice to LogCat,"Don't log exceptions twice to LogCat
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462830802,1462830802,73fad0ec2696e374dedde63bb416fdc5103b106c
+73fad0ec2696e374dedde63bb416fdc5103b106c,73fad0ec,Merge branch 'master' into calendar,"Merge branch 'master' into calendar
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462818330,1462818330,"0ab5bdcd5c679a70066207edf9c338cc2eadbbc5,0575dfd5440b16d25e989712c14f170356fb795d"
+0575dfd5440b16d25e989712c14f170356fb795d,0575dfd5,Remove useless Wifi logic,"Remove useless Wifi logic
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462818207,1462818207,7a51cf1b9b2f4a2075fdddbc5927164c76f4b8a8
+0ab5bdcd5c679a70066207edf9c338cc2eadbbc5,0ab5bdcd,Only announce non-declined events,"Only announce non-declined events
+
+A non-user-visible issue is still that we're getting false alarms when an event
+is edited on the device.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462803184,1462803184,357362b98f522f6ae392d335312b004757deca5d
+357362b98f522f6ae392d335312b004757deca5d,357362b9,Announce calendar events,"Announce calendar events
+
+A known issue is that we're getting false alarms when an event is edited on the
+device.
+
+They are however timestamped with the time of the change, not the time of any
+alarms, so what happens is that we don't find any matching events when looking
+for them, and we don't say anything. We should treat this in a good way; logging
+exceptions every time it happens saying that no events were found might not be
+it.
+
+Another known issue is that we announce declined events. We shouldn't do that.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462802048,1462802048,7a51cf1b9b2f4a2075fdddbc5927164c76f4b8a8
+7a51cf1b9b2f4a2075fdddbc5927164c76f4b8a8,7a51cf1b,Simplify WifiReceiver,"Simplify WifiReceiver
+
+Before this change it was more complex and didn't announce Wifi disconnects
+properly.
+
+With this change, it does produce duplicate announcements, but they are filtered
+by the SpeakerService anyway so that shouldn't matter.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462641005,1462641005,f1e33f99326c01013ade15cd612f0c53451a11cc
+f1e33f99326c01013ade15cd612f0c53451a11cc,f1e33f99,Request audio focus before speaking,"Request audio focus before speaking
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462639651,1462639651,b2def28948e42b98782670ba01b566fa9ffb461b
+b2def28948e42b98782670ba01b566fa9ffb461b,b2def289,Remove unnecessary internal class,"Remove unnecessary internal class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462638726,1462638726,c2d2c204a8c74cf966c14b67dcf4f5fd9cee0a59
+c2d2c204a8c74cf966c14b67dcf4f5fd9cee0a59,c2d2c204,Track missing localizations using Crashlytics,"Track missing localizations using Crashlytics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462637972,1462637972,74aa4a9cc44f700282107f77ae55279cdcfd7b57
+74aa4a9cc44f700282107f77ae55279cdcfd7b57,74aa4a9c,Report notification apps to Crashlytics,"Report notification apps to Crashlytics
+
+Now we'll known which ones are most popular, good for making decisions about
+future development.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462617237,1462617237,087f54c9bda7211ec379bc96a1fe43464ce9cc14
+087f54c9bda7211ec379bc96a1fe43464ce9cc14,087f54c9,Merge branch 'announcement-queue',"Merge branch 'announcement-queue'
+
+We now speak one announcement at a time rather than just messing up if we get
+multiple announcements at once.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462616049,1462616049,"514aca42622f1e255a2c8274baea91c214b1a0c5,a7f6c14df84097d3386b617a8ff3a28e235c6210"
+a7f6c14df84097d3386b617a8ff3a28e235c6210,a7f6c14d,TODO: Announcement queue done,"TODO: Announcement queue done
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462615979,1462615979,47a868a6591d43e0323d23181dfc8e221e62561a
+47a868a6591d43e0323d23181dfc8e221e62561a,47a868a6,Speak announcements one at a time,"Speak announcements one at a time
+
+This is relevant if / when we get multiple events at once.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462615885,1462615885,be46e1bf86d3499945e1d0cfc1a667d413a990e5
+be46e1bf86d3499945e1d0cfc1a667d413a990e5,be46e1bf,Move audio logic into AudioUtils,"Move audio logic into AudioUtils
+
+From SpeakerService.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462614900,1462614900,847e489313a6a88f5b222e926f7534f8a19aab97
+847e489313a6a88f5b222e926f7534f8a19aab97,847e4893,Make a method for intent-to-announcement conversion,"Make a method for intent-to-announcement conversion
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462611229,1462611229,514aca42622f1e255a2c8274baea91c214b1a0c5
+514aca42622f1e255a2c8274baea91c214b1a0c5,514aca42,Explain why we need to read notifications,"Explain why we need to read notifications
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462534608,1462534608,6230ffcbc4b8a864dfd9a784e0f856148593cade
+6230ffcbc4b8a864dfd9a784e0f856148593cade,6230ffcb,Merge branch 'notifications',"Merge branch 'notifications'
+
+With this change we can now do new e-mail announcements based on parsing Google
+Inbox system notifications.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462530036,1462530036,"ddb8b86ccbcedcf73fa6ea2f19f597c0e4c74217,7e7ace8c5725363ace2f2b4d4dcf42818ed80590"
+7e7ace8c5725363ace2f2b4d4dcf42818ed80590,7e7ace8c,Remedy a PMD complaint,"Remedy a PMD complaint
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462530003,1462530003,0d5cba17e086a47ae6d4de90a8d5d6995b03e69c
+0d5cba17e086a47ae6d4de90a8d5d6995b03e69c,0d5cba17,Add preferences checkbox for enabling e-mail announcements,"Add preferences checkbox for enabling e-mail announcements
+
+The checkbox really tunnels people to the system setting for allowing us to read
+notifications.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462529334,1462529334,e50c03d301a5a622906baaa957ef1051d8f6a461
+e50c03d301a5a622906baaa957ef1051d8f6a461,e50c03d3,Remove fabric.properties symlink,"Remove fabric.properties symlink
+
+It was a red herring.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462528744,1462528744,458fe247a2d0fa1948d1146e297e43ab732f994e
+458fe247a2d0fa1948d1146e297e43ab732f994e,458fe247,Handle Google Inbox by-group notification,"Handle Google Inbox by-group notification
+
+These contain only the name of a group and a sender.
+
+Or in other words, neither subject nor body.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462525110,1462526423,c9472b4c0ff3e2549f7871a0498b6f7f903cbf2b
+c9472b4c0ff3e2549f7871a0498b6f7f903cbf2b,c9472b4c,Prevent a crash,"Prevent a crash
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462524220,1462524220,5fbf97c2a91b95de51d4b5305a8e2d7a5a342839
+5fbf97c2a91b95de51d4b5305a8e2d7a5a342839,5fbf97c2,Remove unused string resources,"Remove unused string resources
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462524178,1462524178,803ffda8604ae3d3c39310d647937f1c5e96a282
+803ffda8604ae3d3c39310d647937f1c5e96a282,803ffda8,Log span text styles for incoming notifications,"Log span text styles for incoming notifications
+
+This is an attempt to determine how we can identify Google Inbox reporting
+a new (otherwise unspecified) mail in some folder.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462523380,1462523380,0b5d9a796ac80bfdf65d63d4825bd41b487b4461
+0b5d9a796ac80bfdf65d63d4825bd41b487b4461,0b5d9a79,Announce incoming e-mail,"Announce incoming e-mail
+
+Google Inbox only for now.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462522520,1462522520,b8d68a4cf1f51e5ba1a703fae7dae2856bdc1e78
+b8d68a4cf1f51e5ba1a703fae7dae2856bdc1e78,b8d68a4c,Make debug builds log properly to Crashlytics,"Make debug builds log properly to Crashlytics
+
+Seems like the Android Studio build expectes fabric.properties to be in the top
+dir, and the command line build wants it in app/.
+
+This change just adds a symlink to keep it in two places...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462522097,1462522097,5c2ee33d17a2f2239b71d95ce8a6a569b7ae9598
+5c2ee33d17a2f2239b71d95ce8a6a569b7ae9598,5c2ee33d,Solidify Crashlytics setup,"Solidify Crashlytics setup
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462521912,1462521912,3520b157eb0572d715389658bc122d19a43c74b4
+3520b157eb0572d715389658bc122d19a43c74b4,3520b157,Ignore on-going notifications,"Ignore on-going notifications
+
+Just read transient ones.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462372300,1462372300,90a51fb1830d0a62b76ec562490b57bc99691beb
+90a51fb1830d0a62b76ec562490b57bc99691beb,90a51fb1,Read announcements,"Read announcements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462371484,1462371484,ddb8b86ccbcedcf73fa6ea2f19f597c0e4c74217
+ddb8b86ccbcedcf73fa6ea2f19f597c0e4c74217,ddb8b86c,Enable JUnit inspections,"Enable JUnit inspections
+
+And remedy some issues.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462365052,1462365052,30db050517f8d25c2cd676c5e0c2edb3a80e764f
+30db050517f8d25c2cd676c5e0c2edb3a80e764f,30db0505,Filter duplicate Wifi announcements,"Filter duplicate Wifi announcements
+
+Duplicates expire after 10s. Let's increase that number if it isn't enough.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462364858,1462365012,800cd13c9fd64c55410f46062b101e56f6faff9c
+800cd13c9fd64c55410f46062b101e56f6faff9c,800cd13c,Merge branch 'request-a2dp',"Merge branch 'request-a2dp'
+
+Move audio logic from TtsUtils into SpeakerService and the newly added
+AudioUtils class.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462358889,1462358889,"77ee6ea6a3d7dadb67dc4aba4bf34b1d35a8ad8a,df73ab86cb09fcbc4df61c306100076cdc663bbb"
+df73ab86cb09fcbc4df61c306100076cdc663bbb,df73ab86,"A2DP can't be requested, never mind","A2DP can't be requested, never mind
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462358767,1462358767,2ecf102e558098651ef443c13c754fd39b722afd
+2ecf102e558098651ef443c13c754fd39b722afd,2ecf102e,Send most speech to STREAM_MUSIC,"Send most speech to STREAM_MUSIC
+
+STREAM_NOTIFICATION goes to the headset *and* to the speakers, and we explicitly
+don't want to use any speakers.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462358643,1462358643,d790f2588dda168c6629d3e082aacf4c61d1d290
+d790f2588dda168c6629d3e082aacf4c61d1d290,d790f258,Move Bluetooth SCO enablement into its own class,"Move Bluetooth SCO enablement into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462357705,1462357705,39e92c24e0d81a998c30b41ee237a8cd88795f35
+39e92c24e0d81a998c30b41ee237a8cd88795f35,39e92c24,Remove Bluetooth SCO knowledge from TtsUtil.java,"Remove Bluetooth SCO knowledge from TtsUtil.java
+
+All SCO related logic is now in SpeakerService.java.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462356799,1462356799,77ee6ea6a3d7dadb67dc4aba4bf34b1d35a8ad8a
+77ee6ea6a3d7dadb67dc4aba4bf34b1d35a8ad8a,77ee6ea6,Let the Translations class do string formatting,"Let the Translations class do string formatting
+
+This way we ensure that the result gets the correct locale.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462275046,1462275046,c14381bde0443a180dd214f185b134a55af70696
+c14381bde0443a180dd214f185b134a55af70696,c14381bd,README: Add Travis build status graphics,README: Add Travis build status graphics,,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462194180,1462194180,2f244e7f99894917d84f2e7d00015933141ff73b
+2f244e7f99894917d84f2e7d00015933141ff73b,2f244e7f,Merge branch 'untranslated',"Merge branch 'untranslated'
+
+We can now announce incoming messages in languages we have no translations for.
+We still need TTS support though, but that's much more readily available.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462191232,1462191232,"4a2f3a4a587448f96d9e5e1585139253d3a921b4,8fdc8ea0555ccefd9592a7fb40e983b7278c0215"
+8fdc8ea0555ccefd9592a7fb40e983b7278c0215,8fdc8ea0,Improve translations-finding path,"Improve translations-finding path
+
+Now we try:
+1. Requested locale
+2. System locale
+3. Fallback locale (English)
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462190865,1462190865,2f6664598189d669b1fdf9d3af795e6655c3682b
+2f6664598189d669b1fdf9d3af795e6655c3682b,2f666459,Implement multi-lingual SMS and Wifi announcements,"Implement multi-lingual SMS and Wifi announcements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462189604,1462189604,8942dd0f593e80974143c34a3b948f138bdfacc8
+8942dd0f593e80974143c34a3b948f138bdfacc8,8942dd0f,Add support for multi-lingual announcements,"Add support for multi-lingual announcements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462189145,1462189145,4f3a2e73f91d56e768a413fa74d5b4114b0194a9
+4f3a2e73f91d56e768a413fa74d5b4114b0194a9,4f3a2e73,Let the presenters return lists of TextWithLocale,"Let the presenters return lists of TextWithLocale
+
+This enables those who want to come with multi lingual results.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462134740,1462134740,bf773a5608d749dfa7825b5f06aee8e389d5275b
+bf773a5608d749dfa7825b5f06aee8e389d5275b,bf773a56,Make TextWithLocale a class of its own,"Make TextWithLocale a class of its own
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462132670,1462132670,b60ea1f249799b76431d2e01df3a141ae50a3edf
+b60ea1f249799b76431d2e01df3a141ae50a3edf,b60ea1f2,Move string resource fetching into its own class,"Move string resource fetching into its own class
+
+It's called ""Translations"".
+
+Except for getting the strings, it can also say which locale it got the strings
+from. This may or may not be the locale that was requested.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462129778,1462129778,ffab9f766726936f06ca3af84a12f43a1bd8eb96
+4a2f3a4a587448f96d9e5e1585139253d3a921b4,4a2f3a4a,Refactor TtsUtil,"Refactor TtsUtil
+
+The point is to be able to send it a number of phrases in some language and have
+it speak them all.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462009675,1462009675,"90b8215a6c8eebf1c1894366b702c633f79a9ed5,ffab9f766726936f06ca3af84a12f43a1bd8eb96"
+ffab9f766726936f06ca3af84a12f43a1bd8eb96,ffab9f76,Review fixes before merging back to master,"Review fixes before merging back to master
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462009151,1462009151,100afb7d8eed991c25c5e6b2249a7cd1c155531f
+100afb7d8eed991c25c5e6b2249a7cd1c155531f,100afb7d,TtsUtil: Remove testSpeakLocales(),"TtsUtil: Remove testSpeakLocales()
+
+The ordinary speak() method now supports speaking in multiple languages after
+each other, as well as reporting if it went badly.
+
+And since that was all testSpeakLocales() did, calls to it can now be replaced
+with calls to speak().
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462008274,1462008274,3eb23475439d60f0604479037db11068d702653b
+3eb23475439d60f0604479037db11068d702653b,3eb23475,TtsUtil: Clean up some interfaces,"TtsUtil: Clean up some interfaces
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1462006866,1462006866,51d1e9854d272d846855b7024d41f7e1cc7d940b
+51d1e9854d272d846855b7024d41f7e1cc7d940b,51d1e985,Enable TtsUtil.speak() to speak more than one phrase,"Enable TtsUtil.speak() to speak more than one phrase
+
+In different languages nontheless!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461951690,1461951690,5efaa0e9b6603ac5d8659d88c036974682fe46af
+5efaa0e9b6603ac5d8659d88c036974682fe46af,5efaa0e9,Up IntelliJ warning levels a bit,"Up IntelliJ warning levels a bit
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461938103,1461938103,3118b897de8f63c00e773e26c666e18ceaf3b3ea
+3118b897de8f63c00e773e26c666e18ceaf3b3ea,3118b897,Make TtsUtil work on Strings with well defined Locale,"Make TtsUtil work on Strings with well defined Locale
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461937420,1461937420,90b8215a6c8eebf1c1894366b702c633f79a9ed5
+90b8215a6c8eebf1c1894366b702c633f79a9ed5,90b8215a,"No voice for ""sv_SE"" => Try again with just ""sv""","No voice for ""sv_SE"" => Try again with just ""sv""
+
+This resolves a problem with Google's TTS supporting ""sv"" but not ""sv_SE"".
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461934816,1461934816,863681a6e3f0e13a0ae4c946a91b7625bb23eff6
+863681a6e3f0e13a0ae4c946a91b7625bb23eff6,863681a6,Merge pull request #4 from walles/issue-1,"Merge pull request #4 from walles/issue-1
+
+Rework some Wifi notification things",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461864787,1461864787,"73a2df68055cd633d28d46f94ad6f338c941e0c1,20f67ba8102fc404a3ec78a5b47c659af9d8be33"
+20f67ba8102fc404a3ec78a5b47c659af9d8be33,20f67ba8,WifiReceiver: Tell WifiPresenter whether or not we're connected,"WifiReceiver: Tell WifiPresenter whether or not we're connected
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461864360,1461864360,664a0985a31ea6d6de30e81796a3b6c38c9d9653
+664a0985a31ea6d6de30e81796a3b6c38c9d9653,664a0985,"Attempt to remedy duplicate ""connected"" announcements","Attempt to remedy duplicate ""connected"" announcements
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461850846,1461850846,8078878b8608a33a19c8491e745b31f101e29afe
+8078878b8608a33a19c8491e745b31f101e29afe,8078878b,Upgrade to Android Studio 2.1,"Upgrade to Android Studio 2.1
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461850786,1461850786,5d5ce6c1f2768ef427dff03ab005b28d72be3bca
+5d5ce6c1f2768ef427dff03ab005b28d72be3bca,5d5ce6c1,README: Re-plan pre-market plan,"README: Re-plan pre-market plan
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461849500,1461849602,73a2df68055cd633d28d46f94ad6f338c941e0c1
+73a2df68055cd633d28d46f94ad6f338c941e0c1,73a2df68,Fix copyright headers in all files,"Fix copyright headers in all files
+
+Before this change they contained ""Foobar"" rather than ""Headset Harry"" in one
+place.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461824179,1461824179,67c63c506ea7b53e57e36155f2389dace1da25ba
+67c63c506ea7b53e57e36155f2389dace1da25ba,67c63c50,Fix string resource formatting,"Fix string resource formatting
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461824053,1461824053,2865919a586d5378ec99c8f5a6ed0088b87b3506
+2865919a586d5378ec99c8f5a6ed0088b87b3506,2865919a,"Play Store: Fix ""Functional"" graphics to say the right thing","Play Store: Fix ""Functional"" graphics to say the right thing
+
+Before this change it said ""Headphones Harry""...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461777715,1461777715,83edeb5c7770567d474209c63469ff4846f1d86c
+83edeb5c7770567d474209c63469ff4846f1d86c,83edeb5c,Claim networks are unnamed only if they have empty names,"Claim networks are unnamed only if they have empty names
+
+Previously we said ""unnamed"" for network names not surrounded by double quotes.
+
+However, every time I exit our front door I get that message, and I have no idea
+what network it is referring to. So I'll try this instead and see if it makes me
+any more informed.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461760693,1461760693,9e177fe566cd1cf5363c674bfdb7d9986bfc4e87
+9e177fe566cd1cf5363c674bfdb7d9986bfc4e87,9e177fe5,Add copyright + licensing information,"Add copyright + licensing information
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461759952,1461759952,2b6ea00f903b9290b86a886bfc464ccfb0af0745
+2b6ea00f903b9290b86a886bfc464ccfb0af0745,2b6ea00f,README: Note som out-of-source-tree changes,"README: Note som out-of-source-tree changes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461758893,1461758893,dfd2516c253254636d7263786e56ed0528cc0fbc
+dfd2516c253254636d7263786e56ed0528cc0fbc,dfd2516c,No idea what changed here,"No idea what changed here
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461758693,1461758693,de29fdb47bd4905ce7fe1f80a2648e9405cef106
+de29fdb47bd4905ce7fe1f80a2648e9405cef106,de29fdb4,Add Google Play Store resources,"Add Google Play Store resources
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461757671,1461757671,1b9eeb8b70c5fa668437f2c2f97c39a9e1dc9954
+1b9eeb8b70c5fa668437f2c2f97c39a9e1dc9954,1b9eeb8b,Require release tags to start with 'version-',"Require release tags to start with 'version-'
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461755028,1461755028,aa98ae136c77ff8c01a392b0ec727e86652e5f79
+aa98ae136c77ff8c01a392b0ec727e86652e5f79,aa98ae13,README.md: Add a release process,"README.md: Add a release process
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461738856,1461738856,4ecf41edd6953ae8eb3e73223aeb7725730055e0
+4ecf41edd6953ae8eb3e73223aeb7725730055e0,4ecf41ed,Add PMD to the code checks,"Add PMD to the code checks
+
+And fix some issues.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461738662,1461738662,fff6454489c5c4ba359501c0822f02e8e251d23a
+fff6454489c5c4ba359501c0822f02e8e251d23a,fff64544,Ask for signing credentials in release builds,"Ask for signing credentials in release builds
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461700547,1461700547,7893ebfcdca90561cd0480c4311c58581dac1c9f
+7893ebfcdca90561cd0480c4311c58581dac1c9f,7893ebfc,Set app version code from git,"Set app version code from git
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461700469,1461700469,6b3be2e88adcf46786776144d566a806f3d77470
+6b3be2e88adcf46786776144d566a806f3d77470,6b3be2e8,Only log to Crashlytics from real devices,"Only log to Crashlytics from real devices
+
+And not from emulators.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461700298,1461700298,9a4b6b5bf2cf05d0e408b684d50fb662e94d35af
+9a4b6b5bf2cf05d0e408b684d50fb662e94d35af,9a4b6b5b,Add Findbugs to the Travis build,"Add Findbugs to the Travis build
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461699572,1461699572,a5d449f95b2b3a5b5dd21843f3b513795c55a07a
+a5d449f95b2b3a5b5dd21843f3b513795c55a07a,a5d449f9,Merge pull request #1 from walles/travis,"Merge pull request #1 from walles/travis
+
+Add Travis CI integration",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461678072,1461678072,"ac534abddcd6e67524c769c9638b70b1b9435d60,f91d97e414cca8b32d21f878a170fa509a1a5cfc"
+f91d97e414cca8b32d21f878a170fa509a1a5cfc,f91d97e4,README: Travis configured,"README: Travis configured
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461677983,1461677983,6b5cecceb3f4204deaf5386a4209f8345f245335
+6b5cecceb3f4204deaf5386a4209f8345f245335,6b5cecce,Android Lint: Disable code-calls-non-Android-APIs warning,"Android Lint: Disable code-calls-non-Android-APIs warning
+
+It's language-detector that calls:
+/Users/johan/.gradle/caches/modules-2/files-2.1/net.arnx/jsonic/1.2.11/d85dcd1c5469673b58ec78ceae8a675e2c730c66/jsonic-1.2.11.jar: Error: Invalid package reference in library; not included in Android: javax.servlet.http. Referenced from net.arnx.jsonic.web.Container. [InvalidPackage]
+/Users/johan/.gradle/caches/modules-2/files-2.1/net.arnx/jsonic/1.2.11/d85dcd1c5469673b58ec78ceae8a675e2c730c66/jsonic-1.2.11.jar: Error: Invalid package reference in library; not included in Android: javax.servlet. Referenced from net.arnx.jsonic.web.Container. [InvalidPackage]
+/Users/johan/.gradle/caches/modules-2/files-2.1/com.optimaize.languagedetector/language-detector/0.5/90a8d2bb986bdbcb3df66be13a963906dfd0cb49/language-detector-0.5.jar: Error: Invalid package reference in library; not included in Android: javax.xml.stream. Referenced from com.cybozu.labs.langdetect.GenProfile. [InvalidPackage]
+
+None of those seem to affect us though, so we'll just disable the warning for
+now. Fixing language-detector to not use those as all should be simple as well;
+the Jsonic stuff isn't even used AFAICT and XML can probably be parsed some
+other way.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461677485,1461677485,e4b539cdc5b6c8ac6ba8189a0862645f26982815
+e4b539cdc5b6c8ac6ba8189a0862645f26982815,e4b539cd,Android Lint: Protect our SMS receiver,"Android Lint: Protect our SMS receiver
+
+It now requires the intent sender to have the BROADCAST_SMS permission.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461676357,1461676357,f3aa3e82f89124b9b1c75f494339fb37acdc5206
+f3aa3e82f89124b9b1c75f494339fb37acdc5206,f3aa3e82,Android Lint: Never mind Google App Indexing,"Android Lint: Never mind Google App Indexing
+
+AFAIU, for this to work we'd need a web page providing the same service as the
+app, and that doesn't make any sense for this app.
+
+Disable the warning.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461675997,1461675997,f8a9e001b03b8a49e664c9a8e6185da326e2bd28
+f8a9e001b03b8a49e664c9a8e6185da326e2bd28,f8a9e001,Android Lint: We don't care about data backups,"Android Lint: We don't care about data backups
+
+The users' check boxes will be backed up anyway, and that's all state this app
+has.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461675835,1461675835,9f4b587a49ff01bee542a10eb4f05e734f4c2fe1
+9f4b587a49ff01bee542a10eb4f05e734f4c2fe1,9f4b587a,Android Lint: Disable Crashlytics warning,"Android Lint: Disable Crashlytics warning
+
+Android Lint says that Crashlytics shouldn't be versioned with a '+', but the
+Crashlytics docs say they should.
+
+I've arbitrarily decided to take the Crashlytics route here.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461675621,1461675621,4b9eb9535f91b17761f1b47654b9c8411dbf0c29
+4b9eb9535f91b17761f1b47654b9c8411dbf0c29,4b9eb953,Android Lint: Fix implicit use of default locale,"Android Lint: Fix implicit use of default locale
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461675402,1461675402,2dd2b05500afc547ab06421ea4dc5d8986f3445c
+2dd2b05500afc547ab06421ea4dc5d8986f3445c,2dd2b055,Tell Android Lint to print to stdout,"Tell Android Lint to print to stdout
+
+This makes Travis output much more useful.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461675026,1461675263,7eba616e03aad1b3063b47aa2a5d394c05dd2df2
+7eba616e03aad1b3063b47aa2a5d394c05dd2df2,7eba616e,Give Crashlytics a dummy key,"Give Crashlytics a dummy key
+
+This is needed for the build do pass.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461674383,1461674383,5f030b2880ebb4f422da40adc0b84f9c337efa80
+5f030b2880ebb4f422da40adc0b84f9c337efa80,5f030b28,Another attempt at getting build-tools-23,"Another attempt at getting build-tools-23
+
+From here: https://github.com/travis-ci/travis-ci/issues/5648
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461650518,1461650518,8433b193aeea7fd56e5ace6462ea051e8e877c0c
+8433b193aeea7fd56e5ace6462ea051e8e877c0c,8433b193,"Travis: First Android, then Buildtools","Travis: First Android, then Buildtools
+
+This is an attempt to get Travis to actually be able to install the buildtools.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461650104,1461650104,529184b37ad991acab90b658e5fe5d420589074e
+529184b37ad991acab90b658e5fe5d420589074e,529184b3,Tell Travis we don't need sudo,"Tell Travis we don't need sudo
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461649780,1461649780,60194177179143e14b850e6f39814f08912366db
+60194177179143e14b850e6f39814f08912366db,60194177,Add Travis CI integration,"Add Travis CI integration
+
+Note that we fail a number of linter checks, that will have to be remedied
+before merging this branch.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461649515,1461649515,ac534abddcd6e67524c769c9638b70b1b9435d60
+ac534abddcd6e67524c769c9638b70b1b9435d60,ac534abd,Don't look up phone numbers containing letters,"Don't look up phone numbers containing letters
+
+Incoming SMSes sometimes have the sender name encoded in the phone number. If
+that's the case, we should just read the sender name.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461588284,1461588284,748208eb4c7d9d9e5f716cf53b7cd73322a939fe
+748208eb4c7d9d9e5f716cf53b7cd73322a939fe,748208eb,Notify users about selected languages with no installed TTS,"Notify users about selected languages with no installed TTS
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461587887,1461587887,0efb0d620e9c2bd3f2314b237ce855dbe4704518
+0efb0d620e9c2bd3f2314b237ce855dbe4704518,0efb0d62,Add support for announcements over wired headsets,"Add support for announcements over wired headsets
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461580858,1461580858,db3cf8959626c4eedab3d14414e60c62e6297645
+db3cf8959626c4eedab3d14414e60c62e6297645,db3cf895,Merge branch 'wifi',"Merge branch 'wifi'
+
+We now announce Wifi events (connect and disconnect).
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461579340,1461579340,"161a10622cb42fc0aabab79fef00c8ec4039713d,4fc57a6ee389329e1f4b38b9a99d4d8062ebb470"
+4fc57a6ee389329e1f4b38b9a99d4d8062ebb470,4fc57a6e,Remedy some warnings,"Remedy some warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461579307,1461579307,70a16abcf023ea72c04a107f8d83c1bd29557e07
+70a16abcf023ea72c04a107f8d83c1bd29557e07,70a16abc,Announce WiFi events only once,"Announce WiFi events only once
+
+Got some code from StackOverflow, where else:
+http://stackoverflow.com/a/5890104/473672
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461578852,1461578852,30f186f82885643581d95c362e4b92e5579c455e
+30f186f82885643581d95c362e4b92e5579c455e,30f186f8,Filter out some unwanted messages,"Filter out some unwanted messages
+
+We now get only one message at connection time.
+
+Still two for disconnections though, keep filtering...
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461523728,1461523728,2ea2ed8619dc4a19562520cf2eae6358d6f7cdbf
+2ea2ed8619dc4a19562520cf2eae6358d6f7cdbf,2ea2ed86,Wifi announcements,"Wifi announcements
+
+This code kind of works, but I get multiple messages for both connections and
+disconnections.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461523283,1461523283,161a10622cb42fc0aabab79fef00c8ec4039713d
+161a10622cb42fc0aabab79fef00c8ec4039713d,161a1062,Move language detection code into Presenter base class,"Move language detection code into Presenter base class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461492980,1461492980,80ac7a60c2287fcd80b704315b73d9a4f4d76ce3
+80ac7a60c2287fcd80b704315b73d9a4f4d76ce3,80ac7a60,Announce incoming MMS messages,"Announce incoming MMS messages
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461412592,1461412592,ec1be9254d1f3a3c1fc7e02ae2bf6cd9370b375f
+ec1be9254d1f3a3c1fc7e02ae2bf6cd9370b375f,ec1be925,Move SMS presentation into its own class,"Move SMS presentation into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461408482,1461408482,ddff47607310fefef0aef043d189c7c12d6388af
+ddff47607310fefef0aef043d189c7c12d6388af,ddff4760,SettingsActivity: Don't forget to init logging,"SettingsActivity: Don't forget to init logging
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461399641,1461399641,75e148b7877910adbae9e98891978e6e3c3086e8
+75e148b7877910adbae9e98891978e6e3c3086e8,75e148b7,Move some TTS methods into TtsUtil,"Move some TTS methods into TtsUtil
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461332354,1461332354,26135574b124aea5d77bf173dd2a4c07eab49d62
+26135574b124aea5d77bf173dd2a4c07eab49d62,26135574,"In the prefs, capitalize first letter of first language","In the prefs, capitalize first letter of first language
+
+Just because it looks nice and was easy to do.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461331724,1461331724,d95a5829ff8f9b4a7ddf6bb7209a25446d8ecaa8
+d95a5829ff8f9b4a7ddf6bb7209a25446d8ecaa8,d95a5829,Support speaking over Bluetooth SCO,"Support speaking over Bluetooth SCO
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461331485,1461331485,c4953ccb71b6caf64317c46420d6350ab0d9c585
+c4953ccb71b6caf64317c46420d6350ab0d9c585,c4953ccb,Default the configured-languages list to the system language,"Default the configured-languages list to the system language
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461240404,1461240404,3a74b25aa213b137d49da1283bd4a0e6caa7f5d2
+3a74b25aa213b137d49da1283bd4a0e6caa7f5d2,3a74b25a,Merge branch 'settings',"Merge branch 'settings'
+
+Adds a preference for setting what languages to detect and speak for.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461162413,1461162413,"802f4c0f5afe1b5fc3767573db7edc77aeb3e4be,cae84a57f6aee7d34c32c2b7da931fa6ba789b0f"
+cae84a57f6aee7d34c32c2b7da931fa6ba789b0f,cae84a57,Finalize the Settings branch,"Finalize the Settings branch
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461162368,1461162368,738783c9388d23ab44cf47bbcde802c90e504fcc
+738783c9388d23ab44cf47bbcde802c90e504fcc,738783c9,Listen for configured languages,"Listen for configured languages
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461162250,1461162250,76e6a204f206fc64654f7f9eb83a81cb77c33bfe
+76e6a204f206fc64654f7f9eb83a81cb77c33bfe,76e6a204,Keep language preference summary up to date,"Keep language preference summary up to date
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461161084,1461161084,1bfadb6ece5311aa42bb36661d7b62e2c7ec5385
+1bfadb6ece5311aa42bb36661d7b62e2c7ec5385,1bfadb6e,Use MultiSelectListPreference,"Use MultiSelectListPreference
+
+It was there, no need to re-implement it.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461152688,1461152688,ba5f24d79ffb43ffa9506ee21e34dede97348a38
+ba5f24d79ffb43ffa9506ee21e34dede97348a38,ba5f24d7,"Improve type safety, fix a generics warning","Improve type safety, fix a generics warning
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461094103,1461094103,dead1c398df0ba48035f80dc15d42101577dd891
+dead1c398df0ba48035f80dc15d42101577dd891,dead1c39,List only languages supported by our language detector,"List only languages supported by our language detector
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461093731,1461093731,1489d7b4207571c9dda935b8571d6b1d40924a0a
+1489d7b4207571c9dda935b8571d6b1d40924a0a,1489d7b4,Add some languages to the language picker list,"Add some languages to the language picker list
+
+Not that these are the languages you're looking for, but they are a start.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461092828,1461092828,30d920fe69dec97b6a4647994029342e3237a583
+30d920fe69dec97b6a4647994029342e3237a583,30d920fe,Add a language picker activity,"Add a language picker activity
+
+It's empty, needs content.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461089808,1461089808,89db91793f64ce2b8958ad88713450121f8ada03
+89db91793f64ce2b8958ad88713450121f8ada03,89db9179,Move click handling where it should be,"Move click handling where it should be
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461072169,1461072479,a80deee1c30bcb3cd85c32352b14654bbbf98810
+a80deee1c30bcb3cd85c32352b14654bbbf98810,a80deee1,Move language picker preference into its own class,"Move language picker preference into its own class
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461071817,1461071817,9ad7e76cb25930769e10f28638afb8c3cf4b9de9
+9ad7e76cb25930769e10f28638afb8c3cf4b9de9,9ad7e76c,Show a summary of selected languages,"Show a summary of selected languages
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461071133,1461071133,2cb147a43d500b23ab1f8c75110e514976950953
+2cb147a43d500b23ab1f8c75110e514976950953,2cb147a4,Show a custom preference that is clickable,"Show a custom preference that is clickable
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461070799,1461070799,0a8b87715f0671f21cbdd70000cb11924b69e8c0
+0a8b87715f0671f21cbdd70000cb11924b69e8c0,0a8b8771,Move the settings into their own package,"Move the settings into their own package
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461068407,1461068407,fd57749d1b439e51baac4f4836a83b7f7f3f20aa
+fd57749d1b439e51baac4f4836a83b7f7f3f20aa,fd57749d,Add app name to Settings activity,"Add app name to Settings activity
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461004245,1461004245,531671b03e29f69e97608a6d9a77f07a24c5a027
+531671b03e29f69e97608a6d9a77f07a24c5a027,531671b0,We now have an empty Settings activity containing a Fragment,"We now have an empty Settings activity containing a Fragment
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1461004053,1461004053,802f4c0f5afe1b5fc3767573db7edc77aeb3e4be
+802f4c0f5afe1b5fc3767573db7edc77aeb3e4be,802f4c0f,Upgrade to Android Studio 2.0,"Upgrade to Android Studio 2.0
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460986525,1460986525,9e34150fa8d5a951932aed7cbc7b11ebd330b95d
+9e34150fa8d5a951932aed7cbc7b11ebd330b95d,9e34150f,TODO: Language settings before beta users,"TODO: Language settings before beta users
+
+Since the whole Android TTS API is awful, we can't query anything at all.
+
+So the only thing we can do is really ask the user what they want and hope for
+the best.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460981193,1460981193,337df349d7d19fc67be0c38f5545faae5dcca819
+337df349d7d19fc67be0c38f5545faae5dcca819,337df349,Cosmetics,"Cosmetics
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460920073,1460920073,ddb9a17e7a01094fc6957937c552a9a86a677969
+ddb9a17e7a01094fc6957937c552a9a86a677969,ddb9a17e,Prefer the system default TTS engine,"Prefer the system default TTS engine
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460903149,1460903149,e07897dfd3b4924e30367096586087f3980a34bc
+e07897dfd3b4924e30367096586087f3980a34bc,e07897df,Present unrecognized phone numbers as unknown,"Present unrecognized phone numbers as unknown
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460901286,1460901286,e8a604e9ce1cf22477da1bf51c3c0236c1d43fa4
+e8a604e9ce1cf22477da1bf51c3c0236c1d43fa4,e8a604e9,Read contact names for incoming SMS senders,"Read contact names for incoming SMS senders
+
+Before this change we read their phone numbers. Not as useful.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460901022,1460901022,080050b8797c53a7e660748d30982b610d23352a
+080050b8797c53a7e660748d30982b610d23352a,080050b8,Adapt speech template to language of incoming message,"Adapt speech template to language of incoming message
+
+So an SMS in Swedish will be read as ""SMS från NN: Text"", while an SMS in
+English will be read as ""SMS from NN: Text"".
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460897785,1460897785,dbfad167959dcd3a52400d96097aa3376f92ec4d
+dbfad167959dcd3a52400d96097aa3376f92ec4d,dbfad167,Enable i18n/l10n warnings,"Enable i18n/l10n warnings
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460895529,1460895529,03ea617b27b1782e910e77de4bb5ba2ee451cdd4
+03ea617b27b1782e910e77de4bb5ba2ee451cdd4,03ea617b,Move logic from SmsReceiver into SpeakerService,"Move logic from SmsReceiver into SpeakerService
+
+This is a requirement for being able to ask the system for available TTS voices
+before language detecting a message.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460894837,1460894837,3d797056a84bae36950b51b5ebbac4adcd722b80
+3d797056a84bae36950b51b5ebbac4adcd722b80,3d797056,Set app version name from `git describe`,"Set app version name from `git describe`
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460887001,1460887001,c83abde4da855b241ff6b536d84374697337ed51
+c83abde4da855b241ff6b536d84374697337ed51,c83abde4,Only speak when headset connected,"Only speak when headset connected
+
+Tried with A2DP Bluetooth only, support for wired headsets is on the list.
+
+Also consider Bluetooth SCO support, but we'll do that on demand if so.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460886585,1460886585,14450cbfb2663174c9df81bb3d332f7781b5c228
+14450cbfb2663174c9df81bb3d332f7781b5c228,14450cbf,Don't speak during phonecalls,"Don't speak during phonecalls
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460823992,1460823992,7882793e7c2f05a90564e789a57ed97a9f3f400a
+7882793e7c2f05a90564e789a57ed97a9f3f400a,7882793e,Use appropriate TTS engine / voice for reading text,"Use appropriate TTS engine / voice for reading text
+
+We can now speak a text with a suitable voice given its locale.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460752147,1460752147,fef15aa611fc05694795a476ea22ab60b636263b
+fef15aa611fc05694795a476ea22ab60b636263b,fef15aa6,Fix voice selection code,"Fix voice selection code
+
+TTS seems rather broken in SDK 21...
+https://code.google.com/p/android/issues/detail?id=80696
+
+... so we fall back to SDK 20 and do our best.
+
+One noticable difference is that things actually seem to work now.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460728158,1460728158,a3b8cd3ee9437dfc12b7e67056e5e040a52e0483
+a3b8cd3ee9437dfc12b7e67056e5e040a52e0483,a3b8cd3e,"Don't warn about ""unnecessary"" return statements","Don't warn about ""unnecessary"" return statements
+
+I think they help readability in some contexts.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460728053,1460728053,d860bb247620347e1bfdd3df7282fec7d7c19fc2
+d860bb247620347e1bfdd3df7282fec7d7c19fc2,d860bb24,Pick a voice supporting the requested locale,"Pick a voice supporting the requested locale
+
+Note that the emulator's TTS won't list any voices, matching or otherwise.
+
+Note also that we only query one TTS.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460664990,1460664990,d9d660cfc748aa2db57a309ab79e15b9bd654786
+d9d660cfc748aa2db57a309ab79e15b9bd654786,d9d660cf,Do language detection,"Do language detection
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460644895,1460644895,53406f21253dc438f915295fe627b358f9e603d4
+53406f21253dc438f915295fe627b358f9e603d4,53406f21,Initial shot at language detection,"Initial shot at language detection
+
+There are FIXMEs, but this code works in at least some cases.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460642747,1460642747,2341d851685e729f8588f00973569360f297b1b9
+2341d851685e729f8588f00973569360f297b1b9,2341d851,Actually speak incoming SMSes,"Actually speak incoming SMSes
+
+In a random locale, but still!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460639957,1460639957,96c6d9d387412fbd482899ac8c424e8a2076d962
+96c6d9d387412fbd482899ac8c424e8a2076d962,96c6d9d3,Make a speaker service,"Make a speaker service
+
+Initializing TextToSpeech from a BroadcastReceiver didn't work out, so we move
+the speaking to a service instead.
+
+This service still needs to actually speak, it gets the right data but doesn't
+say anything.
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460638906,1460638906,c9acd33da6e5d87dae1b4f7a621068f73fc95490
+c9acd33da6e5d87dae1b4f7a621068f73fc95490,c9acd33d,Listen to incoming SMSes,"Listen to incoming SMSes
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460620014,1460620014,dbf69395dad6e99ed884a51946e7644f7530c6e5
+dbf69395dad6e99ed884a51946e7644f7530c6e5,dbf69395,Tell Android Studio we're using Git,"Tell Android Studio we're using Git
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460617241,1460617241,be4bb968bd179e5008477e83e27eae9226c48022
+be4bb968bd179e5008477e83e27eae9226c48022,be4bb968,Add Crashlytics and Timber support,"Add Crashlytics and Timber support
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460614030,1460614100,800ab83b2776ee5ba6c2301754161ce418f720d2
+800ab83b2776ee5ba6c2301754161ce418f720d2,800ab83b,Initial commit,"Initial commit
+
+Plan is in README.md, go for it!
+",,,,Johan Walles,johan.walles@gmail.com,Johan Walles,johan.walles@gmail.com,1460572045,1460572045,

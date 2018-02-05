@@ -1,0 +1,324 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b3a0478e666e82c672cfa3ee5e79cc1c9f36e628,b3a0478e,Checking for existing Looper on the thread before calling prepare.,"Checking for existing Looper on the thread before calling prepare.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504634490,1504634490,5621f33a889fdfe1ba0d0319e9a01342df34054a
+5621f33a889fdfe1ba0d0319e9a01342df34054a,5621f33a,Setting no audio,"Setting no audio
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504560559,1504560559,28f0f479e257a65fba6b1c3730f2aaa9133c3ef0
+28f0f479e257a65fba6b1c3730f2aaa9133c3ef0,28f0f479,Setting no audio,"Setting no audio
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504559848,1504559848,0af41c2ab886be6c49f760ef067176d667c7a876
+0af41c2ab886be6c49f760ef067176d667c7a876,0af41c2a,Whatever,"Whatever
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504559467,1504559467,af81ca8074e4a707d305279d69b1fd221cf3f1cb
+af81ca8074e4a707d305279d69b1fd221cf3f1cb,af81ca80,Updating ABI to Android 24 to fix Travis,"Updating ABI to Android 24 to fix Travis
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504559003,1504559003,37b412ca94bb3723dd45cffcb18e1bcea5524635
+37b412ca94bb3723dd45cffcb18e1bcea5524635,37b412ca,Updating the downloaders bit so you don't get re-challenged for the NYT every…,"Updating the downloaders bit so you don't get re-challenged for the NYT every time you change dates.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504556964,1504556964,d325a2084c5888cd951c2b7a1b9f1577a94bd10b
+d325a2084c5888cd951c2b7a1b9f1577a94bd10b,d325a208,Just moving packages around.,"Just moving packages around.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504555133,1504555133,a67fc644325890fd4ebea3dfb7ec0edddda9bd34
+a67fc644325890fd4ebea3dfb7ec0edddda9bd34,a67fc644,Merge branch 'master' of https://github.com/kebernet/shortyz,"Merge branch 'master' of https://github.com/kebernet/shortyz
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504555058,1504555058,"534184e69aa32cb46f12799fed33f091d7255472,c1ae575576f46a9eee23c388667115959b8d2ac2"
+534184e69aa32cb46f12799fed33f091d7255472,534184e6,4.4.0,"4.4.0
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1504555003,1504555003,5d45d70d448db643c9b485b67547022fe29f9585
+c1ae575576f46a9eee23c388667115959b8d2ac2,c1ae5755,Merge pull request #111 from jonzolla/background_download,"Merge pull request #111 from jonzolla/background_download
+
+Add support for periodically downloading puzzles in the background.",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1504554932,1504554932,"5d45d70d448db643c9b485b67547022fe29f9585,a418b0a0ea0ed3c8186e5328a45eea2b402e1635"
+a418b0a0ea0ed3c8186e5328a45eea2b402e1635,a418b0a0,Add support for periodically downloading puzzles in the background.,"Add support for periodically downloading puzzles in the background.
+
+This is implemented by using JobScheduler to periodically download
+puzzles that the user has selected. JobScheduler is only available
+on API version >=21, so  this functionality is disabled for lower
+API versions.
+
+Using the JobScheduler API allows us to easily
+provide options for downloading on wifi only, when charging, etc.
+
+Currently just attempt to download every hour. There are more
+intelligent things we can do here, but this has been working well
+on my device.
+
+The updated NYT authentication mechanism is supported by posting a
+notification requesting login when a background download fails
+instead of immediately launching the login activity.
+
+A slight refactor of Downloaders was required to allow for
+downloading the most recent the most recent puzzle for each source
+instead of just the puzzle for the current (or specified) date.
+",,,,Jon Zolla,jon@jonzolla.com,Jon Zolla,jon@jonzolla.com,1491182526,1500863163,5d45d70d448db643c9b485b67547022fe29f9585
+5d45d70d448db643c9b485b67547022fe29f9585,5d45d70d,4.3.10 Adding max expire time.,"4.3.10 Adding max expire time.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1496430824,1496430824,42d93f9c9e825635ca0818e2c7ac7cfd3e08d05f
+42d93f9c9e825635ca0818e2c7ac7cfd3e08d05f,42d93f9c,4.3.9 Updated NYT Auth Code,"4.3.9 Updated NYT Auth Code
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1496427117,1496427117,49f532d17669fb5a4dda290086da59a101b524fc
+49f532d17669fb5a4dda290086da59a101b524fc,49f532d1,Merge branch 'master' of https://github.com/kebernet/shortyz,"Merge branch 'master' of https://github.com/kebernet/shortyz
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1484867373,1484867373,"7ba68e6a7efd35e73fbd9546abd91c590fb92919,ea777c961c13467b0eb8330cfb79472998d2764e"
+7ba68e6a7efd35e73fbd9546abd91c590fb92919,7ba68e6a,4.3.8,"4.3.8
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1484867288,1484867288,e710455ba3716bea068ae34e9696c6975634e004
+ea777c961c13467b0eb8330cfb79472998d2764e,ea777c96,Merge pull request #81 from ebardsley/reveal-errors,"Merge pull request #81 from ebardsley/reveal-errors
+
+Add a ""Reveal"" mode for ""Errors"".",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1484865113,1484865113,"1d2db4015dc8be834fe715a1cb31eb4fcd993d33,05a464b22cf9d0f16cb2f4995c16a34a3af61ee3"
+1d2db4015dc8be834fe715a1cb31eb4fcd993d33,1d2db401,Merge pull request #80 from andrewgaul/spelling,"Merge pull request #80 from andrewgaul/spelling
+
+Correct spelling errors",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1484865074,1484865074,"e9e6dfe5ecf965ec7c467d34f6a921360fb860d8,aeb5c6c1cf80136e7eff23ef986135915311c95b"
+e9e6dfe5ecf965ec7c467d34f6a921360fb860d8,e9e6dfe5,Merge pull request #82 from ebardsley/master,"Merge pull request #82 from ebardsley/master
+
+Performance fix: only walk the archive directory if archive cleanup i…",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1484865063,1484865063,"df4504aa7f1e65a1331138e2c54a7220fb79d9d4,613d813222b9815e0ab4cae407e716a396a23fd2"
+613d813222b9815e0ab4cae407e716a396a23fd2,613d8132,Performance fix: only walk the archive directory if archive cleanup is enabled.,"Performance fix: only walk the archive directory if archive cleanup is enabled.
+",,,,Ed Bardsley,ebardsley@gmail.com,Ed Bardsley,ebardsley@gmail.com,1484035127,1484035127,df4504aa7f1e65a1331138e2c54a7220fb79d9d4
+05a464b22cf9d0f16cb2f4995c16a34a3af61ee3,05a464b2,"Add a ""Reveal"" mode for ""Errors"".","Add a ""Reveal"" mode for ""Errors"".
+
+If ""Show Errors"" is enabled, this fills in the correct anwswer in all ""red"" boxes.
+
+If ""Show Errors"" is disabled, this fills in the correct answer in any currently incorrect boxes, and marks those boxes ""red"".
+
+This also refactors checking for ""blank"" squares into a helper method.
+",,,,Ed Bardsley,ebardsley@gmail.com,Ed Bardsley,ebardsley@gmail.com,1484034207,1484034736,df4504aa7f1e65a1331138e2c54a7220fb79d9d4
+aeb5c6c1cf80136e7eff23ef986135915311c95b,aeb5c6c1,Correct spelling errors,"Correct spelling errors
+
+Fixes #79.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1484030584,1484031589,df4504aa7f1e65a1331138e2c54a7220fb79d9d4
+df4504aa7f1e65a1331138e2c54a7220fb79d9d4,df4504aa,Update README.md,Update README.md,,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1483932003,1483932003,e710455ba3716bea068ae34e9696c6975634e004
+e710455ba3716bea068ae34e9696c6975634e004,e710455b,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483930932,1483930932,b53bc32ea5d42428f598b22d646a8336c6a8668a
+b53bc32ea5d42428f598b22d646a8336c6a8668a,b53bc32e,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483930916,1483930916,addcd3e8de7208e5c7a4a54eb5ef3da144dbcfb9
+addcd3e8de7208e5c7a4a54eb5ef3da144dbcfb9,addcd3e8,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483930375,1483930375,e748a55d33c53dfa285babc6de5ea66f3777463c
+e748a55d33c53dfa285babc6de5ea66f3777463c,e748a55d,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483930198,1483930198,58d8796da0f42e0ed6e3c3b93269bf84acfd4a84
+58d8796da0f42e0ed6e3c3b93269bf84acfd4a84,58d8796d,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483929989,1483929989,2e81b8511669cab96f2a2c79dea99b061c078fea
+2e81b8511669cab96f2a2c79dea99b061c078fea,2e81b851,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483929828,1483929828,ff2007b2f5030341976116faa2d2faf8cf01e297
+ff2007b2f5030341976116faa2d2faf8cf01e297,ff2007b2,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483929650,1483929650,892d690301db894adb5a8ad7bf7580415a07f407
+892d690301db894adb5a8ad7bf7580415a07f407,892d6903,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483929270,1483929270,7038e9d4bf8967d5d584055a000d6917d373ed5c
+7038e9d4bf8967d5d584055a000d6917d373ed5c,7038e9d4,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483929090,1483929090,6e3066b157024e3bdfa4eaa00392058a3f2a8bc1
+6e3066b157024e3bdfa4eaa00392058a3f2a8bc1,6e3066b1,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483928147,1483928147,beefac1ea3d72582ac35ef4a3c6bfb696a6d3625
+beefac1ea3d72582ac35ef4a3c6bfb696a6d3625,beefac1e,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483927867,1483927867,cc8a5f1044b143cc699b8c13de9512e14dc966e7
+cc8a5f1044b143cc699b8c13de9512e14dc966e7,cc8a5f10,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483927653,1483927653,6f805a9b5603b8894ef26466730b10e350ba2943
+6f805a9b5603b8894ef26466730b10e350ba2943,6f805a9b,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483927417,1483927417,3042a4e6706bf4f86d80460ab4f8160de363fe18
+3042a4e6706bf4f86d80460ab4f8160de363fe18,3042a4e6,triggering build,"triggering build
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483927195,1483927195,224362c74db7d7ddf10ea372cd056dc76b537812
+224362c74db7d7ddf10ea372cd056dc76b537812,224362c7,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483927012,1483927012,9b5734af83ce4e075c958d2e39cdfd462641f6c4
+9b5734af83ce4e075c958d2e39cdfd462641f6c4,9b5734af,triggering build,"triggering build
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483926608,1483926608,b20b1601cca172b1e816d9946819b5e6d34fb028
+b20b1601cca172b1e816d9946819b5e6d34fb028,b20b1601,Fixing build.,"Fixing build.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483926560,1483926560,94794a98f3da1b11e529916d6561ea44f508e077
+94794a98f3da1b11e529916d6561ea44f508e077,94794a98,triggering build,"triggering build
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483926433,1483926433,a06e46ef9510bee2b4f43db9e5c946a72674f9f0
+a06e46ef9510bee2b4f43db9e5c946a72674f9f0,a06e46ef,Fixing the stupid colors again.,"Fixing the stupid colors again.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483926258,1483926258,7f8a2a08df725ac244c0ddb71433e98b41141e8f
+7f8a2a08df725ac244c0ddb71433e98b41141e8f,7f8a2a08,Resolving zoom issues. Again. I don't know how this constantly gets screwed up.,"Resolving zoom issues. Again. I don't know how this constantly gets screwed up.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483742251,1483742251,e53067d99a9533dab32a4d53d0c03306a4bd7752
+e53067d99a9533dab32a4d53d0c03306a4bd7752,e53067d9,Adding night-mode specific art. Looks like the build tools can't properly…,"Adding night-mode specific art. Looks like the build tools can't properly interpret colors from values-night when they render the pngs for old Androids.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483728953,1483728953,08654fe563dc801c6c176c2b179c31ca4b376e0a
+08654fe563dc801c6c176c2b179c31ca4b376e0a,08654fe5,Changing the preserve boxes in show errors to a pref. Fixing a few crash issues.,"Changing the preserve boxes in show errors to a pref. Fixing a few crash issues.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483716876,1483716876,609a2b69a42b8b10bce063037f72b33b58e4b262
+609a2b69a42b8b10bce063037f72b33b58e4b262,609a2b69,4.3.0 release prep,"4.3.0 release prep
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483668296,1483668296,078fe199246ed529a342660edf456c59e1f080b1
+078fe199246ed529a342660edf456c59e1f080b1,078fe199,4.3.0 release prep,"4.3.0 release prep
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483668168,1483668168,0155c9c6a191a5ecbfdbdb6609894963b0f7fcd6
+0155c9c6a191a5ecbfdbdb6609894963b0f7fcd6,0155c9c6,M O O N. That spells commit.,"M O O N. That spells commit.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483628451,1483628451,85e306b35601da9ff292a1916f19bfdb8c47b1fe
+85e306b35601da9ff292a1916f19bfdb8c47b1fe,85e306b3,First pass at night mode.,"First pass at night mode.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483332211,1483332211,76463a07d335307307fd77118ca63537d9fdb8f3
+76463a07d335307307fd77118ca63537d9fdb8f3,76463a07,First pass at night mode.,"First pass at night mode.
+",,,,kebernet,rcooper@thoughtworks.com,kebernet,rcooper@thoughtworks.com,1483332200,1483332200,4bacb0ee51701d31ce806073fb304c1671a9c380
+4bacb0ee51701d31ce806073fb304c1671a9c380,4bacb0ee,Merge pull request #73 from paulirwin/feature/android-nougat,"Merge pull request #73 from paulirwin/feature/android-nougat
+
+Target API 25, fix issue #46, use OkHttp for all http calls",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1483133703,1483133703,"965490f384173349b27f675e5225fde96557689b,9013a11a11219fcd6bf7d87eac8349e916c5f9b0"
+9013a11a11219fcd6bf7d87eac8349e916c5f9b0,9013a11a,Assign fluent call result for request headers in DefaultUtil,"Assign fluent call result for request headers in DefaultUtil
+",,,,Paul Irwin,paulirwin@gmail.com,Paul Irwin,paulirwin@gmail.com,1480449883,1480449883,4c174f1ae7099bffe0732390c3f6ed0b554ec4ee
+4c174f1ae7099bffe0732390c3f6ed0b554ec4ee,4c174f1a,"Target API 25, fix issue #46, use OkHttp for all http calls","Target API 25, fix issue #46, use OkHttp for all http calls
+",,,,Paul Irwin,paulirwin@gmail.com,Paul Irwin,paulirwin@gmail.com,1480369726,1480369726,965490f384173349b27f675e5225fde96557689b
+965490f384173349b27f675e5225fde96557689b,965490f3,Merge pull request #56 from ftoresan/fix/last-word,"Merge pull request #56 from ftoresan/fix/last-word
+
+Fix in last word detection",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1473899148,1473899148,"0727e9674c8a93e33339ed5e49b06f060c20ea14,356d204d8cad5280ea044c0dd5c877aed1d2d7ce"
+0727e9674c8a93e33339ed5e49b06f060c20ea14,0727e967,Merge pull request #60 from andrewgaul/modify-correct-letters,"Merge pull request #60 from andrewgaul/modify-correct-letters
+
+Prohibit replacement of correct letters when ""Show Errors"" set",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1473899073,1473899073,"ba3179fe139790a3e947b5bb27631c019fdf2a93,5b43554e723e0bc716d994b48b954914b275ebed"
+ba3179fe139790a3e947b5bb27631c019fdf2a93,ba3179fe,Merge pull request #62 from andrewgaul/boxing,"Merge pull request #62 from andrewgaul/boxing
+
+Avoid boxing during integer comparison",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1473898701,1473898701,"c689b7be72e1d605f1b7a6fb6628c7bab32c62df,336fe44667f9bc8fdb6beb37dbb0c7f35350eb8b"
+c689b7be72e1d605f1b7a6fb6628c7bab32c62df,c689b7be,Merge pull request #66 from ebardsley/purge,"Merge pull request #66 from ebardsley/purge
+
+Add an option to cleanup puzzle archives.",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1473898691,1473898691,"ac90bcb48ed83d22e78612cd710a8c04e08da2f5,4c732058ec743ed4f93683038ff00101d09e344f"
+4c732058ec743ed4f93683038ff00101d09e344f,4c732058,Add an option to cleanup puzzle archives.,"Add an option to cleanup puzzle archives.
+
+This adds another option to delete crosswords from the archives
+during ""Cleanup"" after a certain time. The default behavior is
+unchanged.
+",,,,Ed Bardsley,ebardsley@gmail.com,Ed Bardsley,ebardsley@gmail.com,1473142359,1473809104,ac90bcb48ed83d22e78612cd710a8c04e08da2f5
+ac90bcb48ed83d22e78612cd710a8c04e08da2f5,ac90bcb4,Merge pull request #65 from ebardsley/newsday-crash,"Merge pull request #65 from ebardsley/newsday-crash
+
+Fix a crash when attempting to open old Newsday puzzles.",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,GitHub,noreply@github.com,1473279895,1473279895,"3803ba277a719a14a2258e8ae48f6cfd772579ae,364e6c0cc8af234a89cb273be796e7821196d3b2"
+364e6c0cc8af234a89cb273be796e7821196d3b2,364e6c0c,Fix a crash when attempting to open old Newsday puzzles.,"Fix a crash when attempting to open old Newsday puzzles.
+
+BrainsOnly is returning valid but empty crossword files, which
+eventually causes an ArrayIndexOutOfBoundsException when dealing
+with zero-element grids. Reject these at parse time and add a test.
+",,,,Ed Bardsley,ebardsley@gmail.com,Ed Bardsley,ebardsley@gmail.com,1473141184,1473141909,3803ba277a719a14a2258e8ae48f6cfd772579ae
+336fe44667f9bc8fdb6beb37dbb0c7f35350eb8b,336fe446,Avoid boxing during integer comparison,"Avoid boxing during integer comparison
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1462157363,1468303587,3803ba277a719a14a2258e8ae48f6cfd772579ae
+5b43554e723e0bc716d994b48b954914b275ebed,5b43554e,"Prohibit replacement of correct letters when ""Show Errors"" set","Prohibit replacement of correct letters when ""Show Errors"" set
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1468285606,1468288387,3803ba277a719a14a2258e8ae48f6cfd772579ae
+3803ba277a719a14a2258e8ae48f6cfd772579ae,3803ba27,Moving proguard around,"Moving proguard around
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1461438791,1465122341,9ef3b4db671525d2ccc4e75962df837ce16989e0
+356d204d8cad5280ea044c0dd5c877aed1d2d7ce,356d204d,Fixing a  problem with function to detect if the word is the last in its direction,"Fixing a  problem with function to detect if the word is the last in its direction
+",,,,Fabricio Toresan,fabricio.toresan@gmail.com,Fabricio Toresan,fabricio.toresan@gmail.com,1464280359,1464280359,9ef3b4db671525d2ccc4e75962df837ce16989e0
+9ef3b4db671525d2ccc4e75962df837ce16989e0,9ef3b4db,Merge pull request #54 from andrewgaul/errors,"Merge pull request #54 from andrewgaul/errors
+
+Check errors before cheats",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1459786234,1459786234,"f5b4c11ab15e13cac8a3d35a8e6aad6422da5458,b00bb6b603c7b831a4deac40b6d07252ab2a6366"
+b00bb6b603c7b831a4deac40b6d07252ab2a6366,b00bb6b6,Check errors before cheats,"Check errors before cheats
+
+This ensures that incorrect letters display black text on red
+background.  Also revert f8d543e740b7819e6842be044786f66d7ab2574f
+which could incorrectly display red text on red background.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1459574226,1459617216,f5b4c11ab15e13cac8a3d35a8e6aad6422da5458
+f5b4c11ab15e13cac8a3d35a8e6aad6422da5458,f5b4c11a,Merge branch 'master' of https://github.com/kebernet/shortyz,"Merge branch 'master' of https://github.com/kebernet/shortyz
+
+Conflicts:
+	README.md
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1458073864,1458073864,"ebb9ff8434aea5a21cb913a211920b4d4726ad86,3fdec7565770076e9cca6d7b1d43013abfe33eb2"
+ebb9ff8434aea5a21cb913a211920b4d4726ad86,ebb9ff84,Updated for 4.2.0,"Updated for 4.2.0
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1458073791,1458073791,9b5d02e0cd5e8484033f7fed2898aaf4faa221f7
+9b5d02e0cd5e8484033f7fed2898aaf4faa221f7,9b5d02e0,Reworked the NYT downloader to use OkHttp3. Cleaned up the UI on the downloaded window.,"Reworked the NYT downloader to use OkHttp3. Cleaned up the UI on the downloaded window.
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1458073749,1458073749,58906484f29d4dd697f0cbcd3a66a5357810270d
+3fdec7565770076e9cca6d7b1d43013abfe33eb2,3fdec756,Merge pull request #47 from andrewgaul/readme,"Merge pull request #47 from andrewgaul/readme
+
+Expand README",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1458069939,1458069939,"2b6c13b11e91dbf11507d8b494eb9e3e680828c7,37e451ee1b4e87eed35b3658e0768c67859c7697"
+2b6c13b11e91dbf11507d8b494eb9e3e680828c7,2b6c13b1,Merge pull request #48 from andrewgaul/fallthrough,"Merge pull request #48 from andrewgaul/fallthrough
+
+Do not fallthrough KEYCODE_ENTER",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1458069905,1458069905,"7b4198e009ccbaf8aeff5dabe6651361f155cc65,db32fb3a09710142c7c1d2182ad35947f4f3d3b3"
+7b4198e009ccbaf8aeff5dabe6651361f155cc65,7b4198e0,Merge pull request #50 from andrewgaul/zoom-fit-to-screen,"Merge pull request #50 from andrewgaul/zoom-fit-to-screen
+
+Correct fit to screen with rectangular puzzles",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1458069872,1458069872,"58906484f29d4dd697f0cbcd3a66a5357810270d,40c85688348ec4cc6eabaa450f317fda7d963352"
+40c85688348ec4cc6eabaa450f317fda7d963352,40c85688,Correct fit to screen with rectangular puzzles,"Correct fit to screen with rectangular puzzles
+
+Previously Shortyz zoomed too much and required scrolling.  Fixes #49.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1458008704,1458009004,58906484f29d4dd697f0cbcd3a66a5357810270d
+db32fb3a09710142c7c1d2182ad35947f4f3d3b3,db32fb3a,Do not fallthrough KEYCODE_ENTER,"Do not fallthrough KEYCODE_ENTER
+
+Also enable Xlint:fallthrough to warn about this situation.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457713090,1457713172,58906484f29d4dd697f0cbcd3a66a5357810270d
+37e451ee1b4e87eed35b3658e0768c67859c7697,37e451ee,Expand README,"Expand README
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457553083,1457567402,58906484f29d4dd697f0cbcd3a66a5357810270d
+58906484f29d4dd697f0cbcd3a66a5357810270d,58906484,Merge pull request #37 from gtkirk/master,"Merge pull request #37 from gtkirk/master
+
+Set background and text colors for large landscape layout.",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547257,1457547257,"ed3816077955c3f03dcaf597dd192110b2ae428f,3dd684bc6cd305c1d0d2623642232337f8b26ed4"
+ed3816077955c3f03dcaf597dd192110b2ae428f,ed381607,Merge pull request #42 from andrewgaul/show-errors-unselected,"Merge pull request #42 from andrewgaul/show-errors-unselected
+
+Show errors when word not selected",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547239,1457547239,"d99719d4c3ba14d18199d7debecd5a2231d01699,f8d543e740b7819e6842be044786f66d7ab2574f"
+d99719d4c3ba14d18199d7debecd5a2231d01699,d99719d4,Merge pull request #38 from estmatic/master,"Merge pull request #38 from estmatic/master
+
+Two bug fixes and a title update when viewing the Archive",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547189,1457547189,"a6cc8ed5c890bcbfe750ab26889d0314bdcbf096,88254e3b57c2df36aa0a4b28a8d2c578985d630b"
+a6cc8ed5c890bcbfe750ab26889d0314bdcbf096,a6cc8ed5,Merge pull request #43 from andrewgaul/remove-local-properties,"Merge pull request #43 from andrewgaul/remove-local-properties
+
+Remove local.properties",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547167,1457547167,"433bfa424257ce4eb5ddbf0111a395bbc6fa0bf3,c39f3ed348ec9f1e8045fc0110524bd3ced9f7db"
+433bfa424257ce4eb5ddbf0111a395bbc6fa0bf3,433bfa42,Merge pull request #45 from andrewgaul/float-nan,"Merge pull request #45 from andrewgaul/float-nan
+
+Compare Float.NaN correctly",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547128,1457547128,"0742203b91d6b33adfca4ee7c83abdad1c66783a,378742b46b986c21af04b522ee9d9a373335c054"
+0742203b91d6b33adfca4ee7c83abdad1c66783a,0742203b,Merge pull request #44 from andrewgaul/cheat-level-percentage,"Merge pull request #44 from andrewgaul/cheat-level-percentage
+
+Omit leading zero when formating cheat percentages",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1457547114,1457547114,"a60abd7993d58fa466fe51c64742737575b7b34e,7f62e96a407390548ec8f6e9826761a9b4e9fa1a"
+378742b46b986c21af04b522ee9d9a373335c054,378742b4,Compare Float.NaN correctly,"Compare Float.NaN correctly
+
+Equality testing will always be false.  Found via error-prone.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457400881,1457400881,a60abd7993d58fa466fe51c64742737575b7b34e
+7f62e96a407390548ec8f6e9826761a9b4e9fa1a,7f62e96a,Omit leading zero when formating cheat percentages,"Omit leading zero when formating cheat percentages
+
+This prevents unsightly ""00%"" and ""01%"".
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457342250,1457375985,a60abd7993d58fa466fe51c64742737575b7b34e
+c39f3ed348ec9f1e8045fc0110524bd3ced9f7db,c39f3ed3,Remove local.properties,"Remove local.properties
+
+This contains local configuration such as paths and source control
+should not contain them.  Its presence yields confusing errors.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457338226,1457338242,a60abd7993d58fa466fe51c64742737575b7b34e
+f8d543e740b7819e6842be044786f66d7ab2574f,f8d543e7,Show errors when word not selected,"Show errors when word not selected
+
+Previously Shortyz showed errors when a word was selected but not when
+unselected.
+",,,,Andrew Gaul,andrew@gaul.org,Andrew Gaul,andrew@gaul.org,1457338048,1457338048,a60abd7993d58fa466fe51c64742737575b7b34e
+88254e3b57c2df36aa0a4b28a8d2c578985d630b,88254e3b,Update activity title when viewing archive,"Update activity title when viewing archive
+",,,,Esteban,Esteban@EstebanMBP.local,Esteban,Esteban@EstebanMBP.local,1455510284,1455510284,cd5695a3d53d234c362ae20588524e17d9db5063
+cd5695a3d53d234c362ae20588524e17d9db5063,cd5695a3,Fix: Manually deleting a puzzle does not delete .shortyz meta file,"Fix: Manually deleting a puzzle does not delete .shortyz meta file
+",,,,Esteban,Esteban@EstebanMBP.local,Esteban,Esteban@EstebanMBP.local,1455510220,1455510220,976b9fe18b8e2519c32bb2855f67e3758c1eb60a
+976b9fe18b8e2519c32bb2855f67e3758c1eb60a,976b9fe1,"Fix ""navigate up"" action when on ClueListActivity","Fix ""navigate up"" action when on ClueListActivity
+",,,,Esteban,Esteban@EstebanMBP.local,Esteban,Esteban@EstebanMBP.local,1455509686,1455509686,a60abd7993d58fa466fe51c64742737575b7b34e
+3dd684bc6cd305c1d0d2623642232337f8b26ed4,3dd684bc,Set background and text colors for large landscape layout.,"Set background and text colors for large landscape layout.
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1454791313,1454791313,a60abd7993d58fa466fe51c64742737575b7b34e
+a60abd7993d58fa466fe51c64742737575b7b34e,a60abd79,Merge pull request #19 from vin/master,"Merge pull request #19 from vin/master
+
+Some minor cleanups",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1454777121,1454777121,"acbda9b26a7e5c802e333c6eeee9b5338c98c3b7,63d3364021f2a21fc65008a1b94f3f30d1f6e802"
+acbda9b26a7e5c802e333c6eeee9b5338c98c3b7,acbda9b2,Merge pull request #32 from gtkirk/master,"Merge pull request #32 from gtkirk/master
+
+Fixes for various issues",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1454776859,1454776859,"e38bd63a8c116ed66b3bacfe4ef1984d11e5a204,6827b35815af62203694059ccbc7f400a9d2563e"
+e38bd63a8c116ed66b3bacfe4ef1984d11e5a204,e38bd63a,Merge pull request #17 from rappazzo/movement/fix-parallel-edge-case,"Merge pull request #17 from rappazzo/movement/fix-parallel-edge-case
+
+MovementStrategy: Adjust for some edge cases with the next-parallel strategy",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1454776827,1454776827,"024d010ba082f1181fae7bfcdc045de4b3c8c333,1f8c40cf6c533f8f23ec1bfe3423ec9ca9228c76"
+6827b35815af62203694059ccbc7f400a9d2563e,6827b358,Refactored click handling:,"Refactored click handling:
+- Don't attempt to start actionMode if it is already active
+- Check if view has a FileHandle before adding to selection
+- Finish actionMode if selection is cleared by a a long click
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1453574428,1453574428,5426a99a2d46323021ec0a9d03b83cf488cfba50
+5426a99a2d46323021ec0a9d03b83cf488cfba50,5426a99a,dayOfWeek does not appear on Tablet DownloadPickerDialog so check for null,"dayOfWeek does not appear on Tablet DownloadPickerDialog so check for null
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1453565219,1453565219,2b76deee9900e0171c8c6ae7fd35ceb81b2ee6e4
+2b76deee9900e0171c8c6ae7fd35ceb81b2ee6e4,2b76deee,"Fix Un-archive menu item, also allow swipe to un-archive.","Fix Un-archive menu item, also allow swipe to un-archive.
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1453533021,1453533021,0019ecf9b37ade9a90d2b9efcbcc640a7a623dd5
+0019ecf9b37ade9a90d2b9efcbcc640a7a623dd5,0019ecf9,Display correct day of week,"Display correct day of week
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1453530910,1453530910,ab500976857a6f15c8373901b6ca94db2c6361ed
+ab500976857a6f15c8373901b6ca94db2c6361ed,ab500976,Check disableSwipe setting,"Check disableSwipe setting
+",,,,gtkirk,gtkirk@gmail.com,gtkirk,gtkirk@gmail.com,1453529289,1453529289,024d010ba082f1181fae7bfcdc045de4b3c8c333
+63d3364021f2a21fc65008a1b94f3f30d1f6e802,63d33640,Use boolean || instead of bitwise |,"Use boolean || instead of bitwise |
+",,,,Vineet Kumar,vineet@doorstop.net,Vineet Kumar,vineet@doorstop.net,1445412322,1445412322,6d74189db7f179ce88d19099dd490b3ed1bc7ef0
+6d74189db7f179ce88d19099dd490b3ed1bc7ef0,6d74189d,Simplify and improve Playboard hashCode computation,"Simplify and improve Playboard hashCode computation
+",,,,Vineet Kumar,vineet@doorstop.net,Vineet Kumar,vineet@doorstop.net,1445411468,1445411468,4c2e5a7b422b62550e14626b0c66ae3c5983a1ad
+4c2e5a7b422b62550e14626b0c66ae3c5983a1ad,4c2e5a7b,"Fix typos, add @Override annotations","Fix typos, add @Override annotations
+",,,,Vineet Kumar,vineet@doorstop.net,Vineet Kumar,vineet@doorstop.net,1445411430,1445411430,1e5327ce12a7ea66a94a42de5e9a46b98f2707e9
+1e5327ce12a7ea66a94a42de5e9a46b98f2707e9,1e5327ce,Clarify setBoxes implementation,"Clarify setBoxes implementation
+",,,,Vineet Kumar,vineet@doorstop.net,Vineet Kumar,vineet@doorstop.net,1445411392,1445411392,024d010ba082f1181fae7bfcdc045de4b3c8c333
+1f8c40cf6c533f8f23ec1bfe3423ec9ca9228c76,1f8c40cf,MovementStrategy: Adjust for some edge cases with the next-parallel strategy,"MovementStrategy: Adjust for some edge cases with the next-parallel strategy
+",,,,Michael Rappazzo,michael.rappazzo@gtnexus.com,Michael Rappazzo,michael.rappazzo@gtnexus.com,1444663998,1444664010,024d010ba082f1181fae7bfcdc045de4b3c8c333
+024d010ba082f1181fae7bfcdc045de4b3c8c333,024d010b,4.1.1 final.,"4.1.1 final.
+",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,Robert Cooper,rcooper@gaggle.net,1443486304,1443486304,8e23ef2926be14030a22743da7e71bc3722a7953
+8e23ef2926be14030a22743da7e71bc3722a7953,8e23ef29,Merge pull request #7 from rappazzo/issues/4-stop-on-end-and-skip-filled,"Merge pull request #7 from rappazzo/issues/4-stop-on-end-and-skip-filled
+
+Fix: Issue #4 stop on end with skip filled boxes",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1443484589,1443484589,"9c9df97e4b67da6f76de67a5f0a3418456fc461e,75ae5277683c61bff6807949d9cc971fcb6794af"
+75ae5277683c61bff6807949d9cc971fcb6794af,75ae5277,"Movement Strategy: Fix Issue #4: ""stop at end"" with ""skip filled boxes""","Movement Strategy: Fix Issue #4: ""stop at end"" with ""skip filled boxes""
+
+Issue #4[1] - ""stop at end"" with ""skip filled boxes"" acts incorrectly for
+words that end at the edge of the puzzle.
+
+[1]: https://github.com/kebernet/shortyz/issues/4
+",,,,Michael Rappazzo,michael.rappazzo@gtnexus.com,Michael Rappazzo,michael.rappazzo@gtnexus.com,1442682284,1442682322,76915ec5469b306927a0d5515b691cb7ecb8d920
+76915ec5469b306927a0d5515b691cb7ecb8d920,76915ec5,MovementStrategy: create common utility class,"MovementStrategy: create common utility class
+
+A few of the operations in the movement strategy reused some of the same
+checks.  This change moves those to methods an gives them a clean,
+readable name.
+",,,,Michael Rappazzo,michael.rappazzo@gtnexus.com,Michael Rappazzo,michael.rappazzo@gtnexus.com,1442681939,1442682322,9c9df97e4b67da6f76de67a5f0a3418456fc461e
+9c9df97e4b67da6f76de67a5f0a3418456fc461e,9c9df97e,Merge pull request #3 from rappazzo/next-parallel-movement-strategy,"Merge pull request #3 from rappazzo/next-parallel-movement-strategy
+
+movement-strategy: alter the 'next parallel clue' algorithm",,,,"Robert ""kebernet"" Cooper",kebernet@gmail.com,"Robert ""kebernet"" Cooper",kebernet@gmail.com,1442119101,1442119101,"d5a277628fb8ef69993f0eb140505d32b578142b,7da864c2931eb82ce62a27733c20f3ebcc5434de"
+7da864c2931eb82ce62a27733c20f3ebcc5434de,7da864c2,movement-strategy: alter the 'next parallel clue' algorithm,"movement-strategy: alter the 'next parallel clue' algorithm
+
+This new algorithm determines which next parallel word shares the most
+adjacent fillable boxes with the current word, and uses that word.  In
+the case where multiple parallel words share the same amount of adjacent
+boxes, then the word closest to the start of the current word will be
+used.
+",,,,Michael Rappazzo,michael.rappazzo@gtnexus.com,Michael Rappazzo,michael.rappazzo@gtnexus.com,1441501762,1441503051,d5a277628fb8ef69993f0eb140505d32b578142b
+d5a277628fb8ef69993f0eb140505d32b578142b,d5a27762,4.1 final.,"4.1 final.
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1441056180,1441056180,455c6aeff76c1a9fde5b1d076da9e3f1757d1a7a
+455c6aeff76c1a9fde5b1d076da9e3f1757d1a7a,455c6aef,Looking like this is gonna be the 4.1 release.,"Looking like this is gonna be the 4.1 release.
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1440801679,1440801679,44d85c26569ce9bd025ac11c3011a5e909445db3
+44d85c26569ce9bd025ac11c3011a5e909445db3,44d85c26,Add license,"Add license
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1428457956,1428457956,7f6655fc9a7505d02958cbe4ae4f09828efaabd9
+7f6655fc9a7505d02958cbe4ae4f09828efaabd9,7f6655fc,Add license,"Add license
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1428457944,1428457944,eb4c4b38135ac4ec638aa361af1d9361c827773a
+eb4c4b38135ac4ec638aa361af1d9361c827773a,eb4c4b38,Initial git commit.,"Initial git commit.
+",,,,Robert Cooper,rcooper@gaggle.net,Robert Cooper,rcooper@gaggle.net,1428457690,1428457690,

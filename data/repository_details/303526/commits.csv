@@ -1,0 +1,526 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b73a0d9e8391da6db79654b42a8fb78cdc41bbf2,b73a0d9e,Bump version number.,"Bump version number.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480858024,1480859292,46ba4fde43e087d0fe3de4e6431f406a2e75af69
+46ba4fde43e087d0fe3de4e6431f406a2e75af69,46ba4fde,Minor code cleanup.,"Minor code cleanup.
+
+public is redundant in interfaces.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480857881,1480859292,71b21fc16a28ccbaae051d705e958ae971663689
+71b21fc16a28ccbaae051d705e958ae971663689,71b21fc1,Minor change of notification behaviour.,"Minor change of notification behaviour.
+
+Style is now always set to BigTextStyle, so that single new events can
+be read in their entirety.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480857778,1480859292,7569316c1ca105da33c629615b03596b29063ab0
+7569316c1ca105da33c629615b03596b29063ab0,7569316c,Change behaviour when no data connection is available.,"Change behaviour when no data connection is available.
+
+Instead of waiting for data connection to return, which has a tendency
+to fail on Android 7.0, we now just bail out instead, showing an error
+if the update was initiated from the GUI.
+
+Solves #15
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480857192,1480859292,d0c1f252d0461cfde903b774df31f809cbeb7096
+d0c1f252d0461cfde903b774df31f809cbeb7096,d0c1f252,Allow Multi-window without warning.,"Allow Multi-window without warning.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480851922,1480859292,90cdb9e1ded88960125f2899bc63f38dd689582c
+90cdb9e1ded88960125f2899bc63f38dd689582c,90cdb9e1,Update project files. Target api 24 (Nougat).,"Update project files. Target api 24 (Nougat).
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480849241,1480859285,352abc1b4f0ae0cb413744cbcc1a9515440063e9
+352abc1b4f0ae0cb413744cbcc1a9515440063e9,352abc1b,Remove unused argument.,"Remove unused argument.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480849224,1480849224,e4c39d8233bdd120e05d07dde075d97094834894
+e4c39d8233bdd120e05d07dde075d97094834894,e4c39d82,"Fix a deprecation warning. minApi is 14, we don't need to support < 5...","Fix a deprecation warning. minApi is 14, we don't need to support < 5...
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480849164,1480849164,92dfbd5f0645c33893da9a6f911bc2432271fe65
+92dfbd5f0645c33893da9a6f911bc2432271fe65,92dfbd5f,Fix logging tags to be < 23 characters.,"Fix logging tags to be < 23 characters.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1480849081,1480849081,3a02f66fe5fe28f098efc44bb9b9673391189a92
+3a02f66fe5fe28f098efc44bb9b9673391189a92,3a02f66f,Bump version number.,"Bump version number.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461792391,1461792391,138a7f6b0b518b43d5cadb8eb0ec149a707fc7d9
+138a7f6b0b518b43d5cadb8eb0ec149a707fc7d9,138a7f6b,Update Android Wear notification background.,"Update Android Wear notification background.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461792373,1461792373,0ba7187a5a411f1a02e99ed7b417e1e6c3bd20eb
+0ba7187a5a411f1a02e99ed7b417e1e6c3bd20eb,0ba7187a,Update res-src folder.,"Update res-src folder.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461792348,1461792348,e31ab89c6658cad76459af93407eaa92f4fdf5ef
+e31ab89c6658cad76459af93407eaa92f4fdf5ef,e31ab89c,Even more project files updates.,"Even more project files updates.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461789786,1461789786,830b8124d370370d2444f267825fbab3d819dc79
+830b8124d370370d2444f267825fbab3d819dc79,830b8124,Add some checks in JSON parser.,"Add some checks in JSON parser.
+
+Should fix #13
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461789742,1461789742,ce96735b54673131d072b4e2624aba44c204dd81
+ce96735b54673131d072b4e2624aba44c204dd81,ce96735b,Update project files,"Update project files
+
+(Upgraded Android Studio...)
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461788876,1461788876,400048433d6a30681cfb347276fa30bde6e14e09
+400048433d6a30681cfb347276fa30bde6e14e09,40004843,Remove useless getBackgroundDataSetting call.,"Remove useless getBackgroundDataSetting call.
+
+Solves #12
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1461788800,1461788800,1090758e6d337c2246a63f0555467e3e52dd8e34
+1090758e6d337c2246a63f0555467e3e52dd8e34,1090758e,Fix outdated info in README.,"Fix outdated info in README.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457144277,1457144277,69a2ff15f3ab7f64ff5b86ed4bb8b2822c8f9282
+69a2ff15f3ab7f64ff5b86ed4bb8b2822c8f9282,69a2ff15,Minor improvements to private API key dialog.,"Minor improvements to private API key dialog.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457136031,1457136031,610885621073129517b3610b48a6fefe697a0ed2
+610885621073129517b3610b48a6fefe697a0ed2,61088562,Fix some more warnings.,"Fix some more warnings.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457136020,1457136020,d88a2d2a0dc3c6b2fce8444c4070753d259d6739
+d88a2d2a0dc3c6b2fce8444c4070753d259d6739,d88a2d2a,Bump version to 2.5.,"Bump version to 2.5.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457134914,1457135084,94422ae1245b6dd4eacb68e947af51b317808b5e
+94422ae1245b6dd4eacb68e947af51b317808b5e,94422ae1,Minor fixes.,"Minor fixes.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457134904,1457135084,57edc4b3450afb4b4fb63b32b3b1b5d59ed5f9ae
+57edc4b3450afb4b4fb63b32b3b1b5d59ed5f9ae,57edc4b3,Betterhighlight for selected parcel (tablet mode).,"Betterhighlight for selected parcel (tablet mode).
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457134365,1457135084,f47c6f5e04f20977837270c7fbeb8e8a7341559c
+f47c6f5e04f20977837270c7fbeb8e8a7341559c,f47c6f5e,Fix some more warnings.,"Fix some more warnings.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457132718,1457135084,584277f622c2750ec6099145bb6bac5f9959505e
+584277f622c2750ec6099145bb6bac5f9959505e,584277f6,Fix some sync issues in tablet mode.,"Fix some sync issues in tablet mode.
+
+* Status icon in list would not be updated properly after single refresh.
+* When switching parcel, error would not be shown properly if previous parcel had the same error.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457132079,1457135084,dbd6631ce99e38e94c55a0d2d9955379497c7ae0
+dbd6631ce99e38e94c55a0d2d9955379497c7ae0,dbd6631c,Fix some warnings.,"Fix some warnings.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457129130,1457135084,fccbaa6a0fd9807ce4afa9a84bbd6f851ff50f75
+fccbaa6a0fd9807ce4afa9a84bbd6f851ff50f75,fccbaa6a,Check Response code from API server.,"Check Response code from API server.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457129106,1457135084,7b7d39d23b789c5824273eb415b81f4b572030ba
+7b7d39d23b789c5824273eb415b81f4b572030ba,7b7d39d2,"Restructure settings, add possibility to set a private API key, limit update…","Restructure settings, add possibility to set a private API key, limit update interval to >=1 hour when not using private API key.
+
+As a bonus, this fixes #4 :)
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457129002,1457135063,72f86259a4407af35559eae4914ca135c32ea570
+72f86259a4407af35559eae4914ca135c32ea570,72f86259,*oops* :P,"*oops* :P
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457126713,1457126713,203e0893bdd1578a01d86cf59977cee06b68ece9
+203e0893bdd1578a01d86cf59977cee06b68ece9,203e0893,Now with 100% more Marshmallow.,"Now with 100% more Marshmallow.
+
+Switch targetAPI to 23.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457115784,1457115784,b29375b12ff307e77b6dfa0554bc21206d761467
+b29375b12ff307e77b6dfa0554bc21206d761467,b29375b1,"Switch to PostNords new API (with identical output, but rate limits).","Switch to PostNords new API (with identical output, but rate limits).
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457109298,1457113514,ea2c471324dda51914dc45cdc4241276dd25806e
+ea2c471324dda51914dc45cdc4241276dd25806e,ea2c4713,Android Studio wanted to change this file...,"Android Studio wanted to change this file...
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457109216,1457109216,e9bbc2679cbd0a6cf6d084372eaf8ea8de869b0c
+e9bbc2679cbd0a6cf6d084372eaf8ea8de869b0c,e9bbc267,Bump copyright.,"Bump copyright.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457108287,1457108287,b38a1744433e260ea69974da97f4ea1c74e48c9f
+b38a1744433e260ea69974da97f4ea1c74e48c9f,b38a1744,"New landscape layout for Parcel View, utilizing the horizontal space better.","New landscape layout for Parcel View, utilizing the horizontal space better.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457107960,1457107960,9b8164308364b8c162c971a867d6e73386c9b6f7
+9b8164308364b8c162c971a867d6e73386c9b6f7,9b816430,Fix text colors in parcel view.,"Fix text colors in parcel view.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457105654,1457105654,2e755a23f505f1195267bc254901716cd303e640
+2e755a23f505f1195267bc254901716cd303e640,2e755a23,Improve item/parcel ID matching criteria.,"Improve item/parcel ID matching criteria.
+
+* Attempt matching numerically instead if ending of ID is the same but length differs (handles missing leading zeroes). Closes #10
+* If given a ""shipment ID"" with only one parcel in it, handle that parcel. Closes #11
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457102367,1457102791,1dad8e32093fcc1cdae87a7d735448b77bdcbcbd
+1dad8e32093fcc1cdae87a7d735448b77bdcbcbd,1dad8e32,Avoid crash in ParcelDetailsFragment.,"Avoid crash in ParcelDetailsFragment.
+
+Closes #7
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457099375,1457099375,c1b0a80da0c33b139ef77aacae19a297e8a4146d
+c1b0a80da0c33b139ef77aacae19a297e8a4146d,c1b0a80d,Avoid NPE:s due to ParcelDetailsFragment.mRowId being null.,"Avoid NPE:s due to ParcelDetailsFragment.mRowId being null.
+
+Should fix #8
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457099184,1457099184,01e5cb5c914ffbd9ce87891e497688d6784c0311
+01e5cb5c914ffbd9ce87891e497688d6784c0311,01e5cb5c,Handle cases when RefreshDialog is recreated by the system.,"Handle cases when RefreshDialog is recreated by the system.
+
+We can't do mush else than hide in that case, but now we don't crash :)
+
+Closes #9
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1457098054,1457098054,d66d9386002d85cdd5329ffb2ab531a2a1781a5b
+d66d9386002d85cdd5329ffb2ab531a2a1781a5b,d66d9386,Kill the profiles_settings.xml file with fire,"Kill the profiles_settings.xml file with fire
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1456089735,1456089735,ae5e0c37694d1e67f25a9117099d8afb4f933768
+ae5e0c37694d1e67f25a9117099d8afb4f933768,ae5e0c37,Use a separate drawable when updating just one parcel,"Use a separate drawable when updating just one parcel
+
+Makes it less confusing on tablets.
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1456089624,1456089624,982130487ba4f761f4d189342d07695d95a3056d
+982130487ba4f761f4d189342d07695d95a3056d,98213048,More cleanup,"More cleanup
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1456089034,1456089431,ff445e8ab1432f965f47b7cf3dccb8466ccb912e
+ff445e8ab1432f965f47b7cf3dccb8466ccb912e,ff445e8a,Update the Android gradle plugin for better VectorDrawable tool support,"Update the Android gradle plugin for better VectorDrawable tool support
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1456088242,1456088242,af86823109835151da80b7a5b62a74f5b8939208
+af86823109835151da80b7a5b62a74f5b8939208,af868231,Clean up the git tree,"Clean up the git tree
+
+The old .gitignore file added to much IDE-specific stuff while missing some important files.
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1456081329,1456081585,f2aa73cfda0744cdd5706485a276c88f91691ed0
+f2aa73cfda0744cdd5706485a276c88f91691ed0,f2aa73cf,Fix the padding at the end of the parcel list a bit nicer.,"Fix the padding at the end of the parcel list a bit nicer.
+
+This solution is a bit more complex, but makes the ""scrollbar"" work correctly.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1438765440,1438765440,8d723ec2fdc43a80a1a99c742d51877637297170
+8d723ec2fdc43a80a1a99c742d51877637297170,8d723ec2,Add space for the FAB at the bottom of the list.,"Add space for the FAB at the bottom of the list.
+
+This matches the behaviour of atleast the Gmail app.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1438762047,1438762047,78841d0e4fab1d01d25c7d21b2cf93b383546714
+78841d0e4fab1d01d25c7d21b2cf93b383546714,78841d0e,"Bump version number, update my last name.","Bump version number, update my last name.
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1438761366,1438761366,8788445b117d3fd04b1bdd8f4b07192f18bf64e5
+8788445b117d3fd04b1bdd8f4b07192f18bf64e5,8788445b,Merge branch 'pre_material_release' into HEAD,"Merge branch 'pre_material_release' into HEAD
+
+Conflicts:
+	app/src/main/AndroidManifest.xml
+",,,,Joakim Tufvegren,jocke@barbanet.com,Joakim Tufvegren,jocke@barbanet.com,1438761348,1438761348,"8a9044e46376b0efaed9c3a29cb0ae852d0e3ef6,1ef98fbb14ef9143deab36cd8537bf6ecd6c9a26"
+8a9044e46376b0efaed9c3a29cb0ae852d0e3ef6,8a9044e4,Fix the FAB layout issue,"Fix the FAB layout issue
+
+Fixes issue #5.
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436810004,1436810004,5fb759b9d43a5099eab5ba04a339528bcf740838
+5fb759b9d43a5099eab5ba04a339528bcf740838,5fb759b9,Adjust layout padding,"Adjust layout padding
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436742472,1436742472,195f386a970ae3e9d486993e2d47fb87fddcb0de
+195f386a970ae3e9d486993e2d47fb87fddcb0de,195f386a,Fix FAB padding on pre-Lollipop versions,"Fix FAB padding on pre-Lollipop versions
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436731590,1436731590,bf53e792cd31bc0c20e6855329d44057371cc44a
+bf53e792cd31bc0c20e6855329d44057371cc44a,bf53e792,Update the launcher icon,"Update the launcher icon
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436728488,1436728488,c241de3081e92a1b4da463f2cbacfad1d46d8dfa
+c241de3081e92a1b4da463f2cbacfad1d46d8dfa,c241de30,Update actionbar drawables to Material Design,"Update actionbar drawables to Material Design
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436726780,1436726780,35ef16f35a52c34cf1ca12d057dc6f8a86dc8a61
+35ef16f35a52c34cf1ca12d057dc6f8a86dc8a61,35ef16f3,Don't show Settings in the actionbar,"Don't show Settings in the actionbar
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436724449,1436724449,2a98e33d8d5ae163e4389d49c75f849a0e505dba
+2a98e33d8d5ae163e4389d49c75f849a0e505dba,2a98e33d,Switch to using a FAB for adding new parcels,"Switch to using a FAB for adding new parcels
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436723536,1436724284,f69ad4fbdb9d420513f9842c509d0ea70453cba7
+f69ad4fbdb9d420513f9842c509d0ea70453cba7,f69ad4fb,Fix identation in parcel_list layout,"Fix identation in parcel_list layout
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436720587,1436720587,20a97b5c38151f415ff61117454817213c098ba2
+20a97b5c38151f415ff61117454817213c098ba2,20a97b5c,Update build and gradle config,"Update build and gradle config
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436712025,1436712025,a119eb5977dab1b6f2c34b4a78f9b64882c571b1
+a119eb5977dab1b6f2c34b4a78f9b64882c571b1,a119eb59,Update gitignore,"Update gitignore
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436224204,1436224204,de1189dcc2f362fda3d1e7e4fb03b137fb758fc0
+de1189dcc2f362fda3d1e7e4fb03b137fb758fc0,de1189dc,Adjust some additional properties and project settings,"Adjust some additional properties and project settings
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436223762,1436223762,4fd52f913a7f0c48729359f72a6ceb7391d69da2
+4fd52f913a7f0c48729359f72a6ceb7391d69da2,4fd52f91,Convert the project to Android Studio,"Convert the project to Android Studio
+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1436223262,1436223262,683d7cd17e477950707f1e305c86239402ece996
+1ef98fbb14ef9143deab36cd8537bf6ecd6c9a26,1ef98fbb,Bump version to 2.0.2.,"Bump version to 2.0.2.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1427223535,1427223535,1b518736ecf6ad3442cbc7cad5302aa05acc9af3
+1b518736ecf6ad3442cbc7cad5302aa05acc9af3,1b518736,Handle descriptionless events.,"Handle descriptionless events.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1427223475,1427223475,e3b25ef7da7425e4dfedb7c71a3c16a9cc259c33
+683d7cd17e477950707f1e305c86239402ece996,683d7cd1,Merge branch 'pre_material_release',"Merge branch 'pre_material_release'
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1420214823,1420214823,"77df34b589490bd2f3ad0f3320f12bb6d3964b7b,e3b25ef7da7425e4dfedb7c71a3c16a9cc259c33"
+e3b25ef7da7425e4dfedb7c71a3c16a9cc259c33,e3b25ef7,Bump version to 2.0.1.,"Bump version to 2.0.1.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1420213600,1420213600,2cb82b725255d813c2054679d42f12bcb4f62adb
+2cb82b725255d813c2054679d42f12bcb4f62adb,2cb82b72,Add (limited) support for shipments that are split into multiple parcels.,"Add (limited) support for shipments that are split into multiple parcels.
+
+The ID of an individual parcel must be the ID entered into the app, and the app
+will then track that parcel. The data received from the API contains info about
+all the items, which made the app confused before.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1420213181,1420213181,5148c8eef73b3c8fc43151bec138e38f6639dba2
+5148c8eef73b3c8fc43151bec138e38f6639dba2,5148c8ee,Remove unnecessary dependency.,"Remove unnecessary dependency.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1420211439,1420213046,a8142400c7e1f3fb33f3983fa1e23284eed63215
+77df34b589490bd2f3ad0f3320f12bb6d3964b7b,77df34b5,Ignore fatal missing translations error caused by support library,Ignore fatal missing translations error caused by support library,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1417394862,1417394862,a8b4447ac69aebd9284fe421c54e40e17875ac9b
+a8b4447ac69aebd9284fe421c54e40e17875ac9b,a8b4447a,Remove old styled holo theme assets,Remove old styled holo theme assets,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1417394363,1417394363,e439568d3b23efedbc9520ebbbda68b46a846104
+e439568d3b23efedbc9520ebbbda68b46a846104,e439568d,Cleanup and adjust margins/padding for the parcel id dialog,"Cleanup and adjust margins/padding for the parcel id dialog
+
+Only applies to API level 21 since older levels don't use material
+dialogs yet. The buttons still need adjustments but this is fine for
+now.",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1417393331,1417393331,7b9c2bd642d2d595ce50d937296b9b4a0daa669e
+7b9c2bd642d2d595ce50d937296b9b4a0daa669e,7b9c2bd6,Make the actionbar buttons work,Make the actionbar buttons work,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1417389488,1417389612,1deeca1f33edf3a3c74ad7404b7e8297236a7619
+1deeca1f33edf3a3c74ad7404b7e8297236a7619,1deeca1f,Initial change to Material Design,"Initial change to Material Design
+
+- Update theme attributes
+- Rework settings
+- Various changes needed for the usage of appcompat-v7",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1417389254,1417389612,566cb6102df87c2d87ab715de2fe78a15c53b2ae
+566cb6102df87c2d87ab715de2fe78a15c53b2ae,566cb610,Use the android-support-v4.jar provided by android-support-v7-appcompat,Use the android-support-v4.jar provided by android-support-v7-appcompat,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1416596941,1417389612,a8142400c7e1f3fb33f3983fa1e23284eed63215
+a8142400c7e1f3fb33f3983fa1e23284eed63215,a8142400,Give blunden more deserved credits in the README. :),"Give blunden more deserved credits in the README. :)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1417360003,1417360003,dc6b496d2dbd7bd8148b178ee40a17f7092033a9
+dc6b496d2dbd7bd8148b178ee40a17f7092033a9,dc6b496d,Move consumer ID from an asset file to an XML resource file.,"Move consumer ID from an asset file to an XML resource file.
+
+Material Design seems to conflict with the assets directory.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1417358843,1417358843,875db57e2a2a35c0b2532db710a8444563731f34
+875db57e2a2a35c0b2532db710a8444563731f34,875db57e,"Add note about consumer ID to README.md, and make sure the assets directory exists.","Add note about consumer ID to README.md, and make sure the assets directory exists.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416443348,1416443348,191941d168815fc016aaf9f1832dc840300dd77c
+191941d168815fc016aaf9f1832dc840300dd77c,191941d1,"Fix some more possibly missing data. This fixes at least one ""varubrev"".","Fix some more possibly missing data. This fixes at least one ""varubrev"".
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416442180,1416442180,161e5227adaf1cd05768cd030cccf4bedea1ec3d
+161e5227adaf1cd05768cd030cccf4bedea1ec3d,161e5227,Bump blunden's copyright. He did work this year as well.,"Bump blunden's copyright. He did work this year as well.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416440391,1416440391,56b1be73e875e3c2f0b0d0fc4e10a75b4e7867d4
+56b1be73e875e3c2f0b0d0fc4e10a75b4e7867d4,56b1be73,Add some error handling for json data that I _guess_ might be missing in some cases.,"Add some error handling for json data that I _guess_ might be missing in some cases.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416439696,1416439696,c5683d29328da7ab9c2e988aac44d0148c669425
+c5683d29328da7ab9c2e988aac44d0148c669425,c5683d29,Bump version number and targetSDK.,"Bump version number and targetSDK.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416439242,1416439310,870ff86aef4ebd8de53ea804c63e5ba1a0705e34
+870ff86aef4ebd8de53ea804c63e5ba1a0705e34,870ff86a,Fix for duplicated parcels in back stack.,"Fix for duplicated parcels in back stack.
+
+Editing the viewed parcel (in single pane/phone view) would add the parcel above itself on the back stack.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416438944,1416438944,3e91c16cedfc6ef57eff976f4b5975c7826e361f
+3e91c16cedfc6ef57eff976f4b5975c7826e361f,3e91c16c,Switch to a better API from PostNord.,"Switch to a better API from PostNord.
+
+This API is more officially supported, and can find parcels the old one couldn't.
+It requires a ""consumer ID"", which due to their rules must be kept secret, so it's not included in the open source code. Requesting a consumer ID for a fork is, however, very simple (there's a link in ParcelJsonParser.java).
+
+The new API has so far not been tested thoroughly, but the current code works without issues for my saved collection of mixed parcel ID:s. Of course, most of those parces have already been delivered...
+
+This update will wipe the events table in the database, since the two API:s differ a lot in representation there (would result i duplicate events otherwise).
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416437939,1416437939,6c240ba40e408b8ad0c3df7dd313a8612886692f
+6c240ba40e408b8ad0c3df7dd313a8612886692f,6c240ba4,Show the name of the parcel being refreshed.,"Show the name of the parcel being refreshed.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416436281,1416436594,0d819d720e5a18cc798da713a97bacc21eee582f
+0d819d720e5a18cc798da713a97bacc21eee582f,0d819d72,Fix status icon not updating auto status (opacity) properly in single pane layout.,"Fix status icon not updating auto status (opacity) properly in single pane layout.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416422501,1416422501,87206bcf3673de8afca3fb500bc2e380fd6554f0
+87206bcf3673de8afca3fb500bc2e380fd6554f0,87206bcf,Reset parcel error status on update.,"Reset parcel error status on update.
+
+Fixes #3.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416420851,1416420851,306243ca0a2a902c7919e3da43a79116b18e39d0
+306243ca0a2a902c7919e3da43a79116b18e39d0,306243ca,Add Android Wear notification background.,"Add Android Wear notification background.
+
+Just a large, non-transparent, version of the icon for now.
+Also updates android-support-v4.jar to get support for this.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416419563,1416420184,4fbf6e3e4584d4ceab8225309e160ab497f88d5e
+4fbf6e3e4584d4ceab8225309e160ab497f88d5e,4fbf6e3e,Remove special handling of error events.,"Remove special handling of error events.
+
+The soon-to-be-used new API does not differentiate between events and errorevents.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1416419392,1416420170,ca72784ef035b77036a92f4df8e5d026e5eb8fa8
+ca72784ef035b77036a92f4df8e5d026e5eb8fa8,ca72784e,Holo Light is not available on anything below API level 16,"Holo Light is not available on anything below API level 16
+
+- It was mistakenly used on API level 14 here",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1399193422,1399193422,5450d59b4ee5a7dc8d939f514095d90c5cfbe47a
+5450d59b4ee5a7dc8d939f514095d90c5cfbe47a,5450d59b,"Add the forgotten xhdpi, hdpi and mdpi launcher icons","Add the forgotten xhdpi, hdpi and mdpi launcher icons",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1399157954,1399157954,732de42f553113bab7bb197ee8b0b2a141b52f7e
+732de42f553113bab7bb197ee8b0b2a141b52f7e,732de42f,Google-inspired visual update,"Google-inspired visual update
+
+- Action bar branded with PostNord brand accent color
+- White action bar app icon similar to recent Google apps
+- New Project Moonshine-inspired launcher icon
+- Bumped required API level to 14 (look into using Support Library)",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1399155830,1399155830,d50a5c0d5e823704acc5c403e8446e2b0383ec02
+d50a5c0d5e823704acc5c403e8446e2b0383ec02,d50a5c0d,Update copyright.,"Update copyright.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1398031776,1398031776,abd16a3ab19a80af337fb15c4471e8c22d4c40b8
+abd16a3ab19a80af337fb15c4471e8c22d4c40b8,abd16a3a,Major UI revamp. Now Fragment based with Tablet support.,"Major UI revamp. Now Fragment based with Tablet support.
+
+Most of the UI code is now simpler with less weird pointers floating around. :)
+This should work fully, but may contain bugs or minor weirdness.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1398031228,1398031228,e46fe1857beb23bf12015ea5ea523edf731d9da9
+e46fe1857beb23bf12015ea5ea523edf731d9da9,e46fe185,Fix initial value of progress dialog after rotating screen.,"Fix initial value of progress dialog after rotating screen.
+
+Also fix some comments.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388570889,1388570889,fffb086eecb3984b9b2f2bf362647f04be89db80
+fffb086eecb3984b9b2f2bf362647f04be89db80,fffb086e,Modernize the RefreshDialog code as well.,"Modernize the RefreshDialog code as well.
+
+This also removes the (very non-Android-ish) DialogAwareListActivity, and uses
+Android's built in support for similar handling (in DialogFragment).
+
+However, to simplify some stuff, it's (temporarily, I hope) replaced with a
+RefreshContextListActivity (only to deduplicate some bits of code, that should
+be possible to handle in other ways after a Fragment transition of the UI.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388525777,1388527285,198cca8bad76ddc3df7bc2f21ced8f6db0c02af6
+198cca8bad76ddc3df7bc2f21ced8f6db0c02af6,198cca8b,Fix refresh of individual parcels.,"Fix refresh of individual parcels.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388525389,1388525389,ea1663a696c7e39258b0cefa540eb1ceedfbb0f2
+ea1663a696c7e39258b0cefa540eb1ceedfbb0f2,ea1663a6,Major modernization of ParcelIdDialog.,"Major modernization of ParcelIdDialog.
+
+Now based on DialogFragment instead, removing the need for
+BarcodeListeningListActivity and, partly, DialogAwareListActivity (RefreshDialog
+still uses it, but not for long).
+
+For the user, there is no noticeable change, but removal of
+DialogAwareListActivity is somwehat needed for a Fragment based tablet UI.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388505357,1388506873,7eaf74ec2119a2dc7a316cc84b9e18f7c76c88d7
+7eaf74ec2119a2dc7a316cc84b9e18f7c76c88d7,7eaf74ec,Nicer isValidFragment() implementation.,"Nicer isValidFragment() implementation.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388497352,1388497352,f0d942ce623a6203ecc0abb81ac31add0dbe883f
+f0d942ce623a6203ecc0abb81ac31add0dbe883f,f0d942ce,Preferences overhaul.,"Preferences overhaul.
+
+* Better use of fragments, dividing the preferences into two separate fragments.
+* New method for disabling automatic updates (compatible with the old method).
+* Collect the default values for all preferences in one place (constants.xml).
+* Some minor enhancements to preference strings.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388491742,1388496910,68334953f93c1b03f1efd86b5ac8c12b590f66e5
+68334953f93c1b03f1efd86b5ac8c12b590f66e5,68334953,Remove unnecessary style definition.,"Remove unnecessary style definition.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388490540,1388490540,cddc991da70dd800e07a97fc87a18a713d3269b2
+cddc991da70dd800e07a97fc87a18a713d3269b2,cddc991d,Fetch version name from manifest instead of duplicating it as R.string.version_name.,"Fetch version name from manifest instead of duplicating it as R.string.version_name.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388481505,1388481505,11bc9814e0fcca9d237e16ac9de6aab733dd2845
+11bc9814e0fcca9d237e16ac9de6aab733dd2845,11bc9814,Give status icons full opacity when automatic updates are globally disabled.,"Give status icons full opacity when automatic updates are globally disabled.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388349766,1388349766,070d11a95bf040b4741badc3df3615d397d35d18
+070d11a95bf040b4741badc3df3615d397d35d18,070d11a9,Slight redesign. Use Holo.Light instead of Holo.Light.DarkActionBar.,"Slight redesign. Use Holo.Light instead of Holo.Light.DarkActionBar.
+
+Includes a new custom icon for the add parcel action.
+Also switches to use local icons instead of android.R.drawables.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388347846,1388347846,2d28fb65324e82710b381884c15cebf949605ad9
+2d28fb65324e82710b381884c15cebf949605ad9,2d28fb65,Some minor work on the action bar.,"Some minor work on the action bar.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388341284,1388341284,fc705a8128f962381d9bcb01790d1f59c9e7f3de
+fc705a8128f962381d9bcb01790d1f59c9e7f3de,fc705a81,Fix data loading when rotating the screen.,"Fix data loading when rotating the screen.
+
+See http://stackoverflow.com/questions/12507617/android-loader-not-triggering-callbacks-on-screen-rotate#comment16867142_12507617
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388341001,1388341001,e449faf8d9ec29340a92ea7807b2dd8546e822b2
+e449faf8d9ec29340a92ea7807b2dd8546e822b2,e449faf8,Bump version number.,"Bump version number.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388263330,1388263380,a79119affedc1f0ebac71641f460909e7b309a5d
+a79119affedc1f0ebac71641f460909e7b309a5d,a79119af,Change ParcelIdDialog title when editing a parcel.,"Change ParcelIdDialog title when editing a parcel.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388263261,1388263261,83f332c12e26aaaed3039295012757e7a54360f8
+83f332c12e26aaaed3039295012757e7a54360f8,83f332c1,"Remove add button in MainWindow, replace with action on action bar.","Remove add button in MainWindow, replace with action on action bar.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388263211,1388263211,8387a219703d73d8db24cbc9776a796433cc7841
+8387a219703d73d8db24cbc9776a796433cc7841,8387a219,Use LoaderManager for all database reading in frontend.,"Use LoaderManager for all database reading in frontend.
+
+This removes all deprecation warnings and (somewhat) prepares the code for a fragment based UI.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1388262363,1388262363,46eb6b5cae4b8fd2cc60ce0681c2c5ddea13d26b
+46eb6b5cae4b8fd2cc60ce0681c2c5ddea13d26b,46eb6b5c,"Minor optimization in MainWindow, fix some deprecation warnings.","Minor optimization in MainWindow, fix some deprecation warnings.
+
+Reuse the SimpleCursorAdapter in MainWindow instead of recreating it on refresh.
+Also fixes an issue where parcels deleted from ParcelView wouldn't be removed from the list immediately.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387381476,1387381914,5bb97f3d157f01c6dae276f67777c3f4da9e0ef5
+5bb97f3d157f01c6dae276f67777c3f4da9e0ef5,5bb97f3d,Convert ConfigView to use PreferenceFragment.,"Convert ConfigView to use PreferenceFragment.
+
+Quite useless for a small app like this, but avoids the deprecation notices and I wanted to learn a bit about fragments. ;)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387376960,1387378112,ff93aa889cde4a863bae1ac32a61bc048201612d
+ff93aa889cde4a863bae1ac32a61bc048201612d,ff93aa88,Update the notification code.,"Update the notification code.
+
+Now notifications are expandable with all new events, if supported.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387372557,1387372557,e3c4a2a6a1f8b01e71f12cb78973b9b62dbfd068
+e3c4a2a6a1f8b01e71f12cb78973b9b62dbfd068,e3c4a2a6,"Show ""Update all"" in the action bar of the main activity.","Show ""Update all"" in the action bar of the main activity.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387372540,1387372540,f8e77c371683d57ceb2736a121d938448c5b45a5
+f8e77c371683d57ceb2736a121d938448c5b45a5,f8e77c37,Change default value of automatic update interval from off to 1 hour.,"Change default value of automatic update interval from off to 1 hour.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387369412,1387369412,149f5909cba68cf0714bfb81fb816c40ed9c1e8f
+149f5909cba68cf0714bfb81fb816c40ed9c1e8f,149f5909,Add note about why a parcel may not be found.,"Add note about why a parcel may not be found.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387367745,1387367745,52560bcb2f897e540800ac75c2cf09a13dc25e1d
+52560bcb2f897e540800ac75c2cf09a13dc25e1d,52560bcb,"Order parcels by what's displayed, not the parcel ID.","Order parcels by what's displayed, not the parcel ID.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387359987,1387359987,351d76cb7a822b4b806517d5d51d8d489f7eb15d
+351d76cb7a822b4b806517d5d51d8d489f7eb15d,351d76cb,"Since we're targeting newer Androids only, don't suppress deprecation warnings.","Since we're targeting newer Androids only, don't suppress deprecation warnings.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387357525,1387358983,239118a005fb519b6c60a1f911fe596b330ee105
+239118a005fb519b6c60a1f911fe596b330ee105,239118a0,Update Android Support Library v4.,"Update Android Support Library v4.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387356921,1387358983,ed247e16197e0b9ebda138017e30e34f35ec63f2
+ed247e16197e0b9ebda138017e30e34f35ec63f2,ed247e16,Update menus.,"Update menus.
+
+* Rename the edit action, since it edits more than the ID now.
+* Remove unnecessary parcel view submenu for automatic updates.
+* Only enable the automatic updates (per parcel) item if the automatic updates are enabled.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387355437,1387358983,72486948b1916bf8d875657022b5cc92a442a200
+72486948b1916bf8d875657022b5cc92a442a200,72486948,Update README.,"Update README.
+
+Remove Installation and Requirements, the app will get back on Play Store.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387354685,1387358983,0d0a9713531e44395d1de4e084f4d48de05af257
+0d0a9713531e44395d1de4e084f4d48de05af257,0d0a9713,Add a FIXME to ParcelXMLParser.,"Add a FIXME to ParcelXMLParser.
+
+The XML API we use seems to only manage MyPack(?). Some parcels can be tracked on www.posten.se but not through the XML API, even though the data that we do get through the XML API is identical to the data on www.posten.se...
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387353941,1387358983,92ae3c8aba7f3bf266312bc8cc138378b07b3351
+92ae3c8aba7f3bf266312bc8cc138378b07b3351,92ae3c8a,Add support for setting a custom name/description on parcels.,"Add support for setting a custom name/description on parcels.
+
+This name replaces the parcel id in lists, titles and notifications, making it easier to track multiple shipments.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387325214,1387358983,1d15562c8d8a628651859f82eeee9b4201f3ff56
+1d15562c8d8a628651859f82eeee9b4201f3ff56,1d15562c,Bump version to 1.5,"Bump version to 1.5
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387325196,1387358983,ec6110055e3b6e19ecfd1ce06c349c5cf98998de
+ec6110055e3b6e19ecfd1ce06c349c5cf98998de,ec611005,"Update Copyrights, give blunden credit EVERYWHERE. :)","Update Copyrights, give blunden credit EVERYWHERE. :)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387319493,1387358983,748a432f30220e1b147bfbb04a03ad4315796486
+748a432f30220e1b147bfbb04a03ad4315796486,748a432f,New notification icon more closely matching the Android 3.0+ style.,"New notification icon more closely matching the Android 3.0+ style.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387318967,1387358969,3c5c6eac2e051db4dd5e9884350643cc5d39fb7e
+3c5c6eac2e051db4dd5e9884350643cc5d39fb7e,3c5c6eac,"Fix warnings, target Android 4.4.","Fix warnings, target Android 4.4.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387314915,1387353693,2db958351a4d6f453645a82b579f62daa064c28d
+2db958351a4d6f453645a82b579f62daa064c28d,2db95835,Update .gitingore,"Update .gitingore
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387313931,1387353693,540cf3ad2ca05626c6cf5f83a2cbb267591b37fb
+540cf3ad2ca05626c6cf5f83a2cbb267591b37fb,540cf3ad,"New icon, based on a vectorization of the previous one.","New icon, based on a vectorization of the previous one.
+
+Adds xhdpi and xxhdpi icons.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387313870,1387353693,5b3edd1f082f62dbba387c0dd8a59f25465b4632
+5b3edd1f082f62dbba387c0dd8a59f25465b4632,5b3edd1f,Remove LiveView support.,"Remove LiveView support.
+
+I have a feeling it isn't of much use...
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387311314,1387353657,9cd27441ea8da20d0192b9bdc694bd80e9b2281c
+9cd27441ea8da20d0192b9bdc694bd80e9b2281c,9cd27441,Merge remote-tracking branch 'blunden/master',"Merge remote-tracking branch 'blunden/master'
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1387309610,1387309610,"a2722a4062afbef38ec91e9af41908c9548d7a76,27e5186740f08cba7a3c3098f9958c90d3c21cf0"
+27e5186740f08cba7a3c3098f9958c90d3c21cf0,27e51867,Fix event view padding and use Holo Light for API level 14 and later,Fix event view padding and use Holo Light for API level 14 and later,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380756809,1380756809,e7063480b4fdb207f6bd4869d500d1b795b7cc25
+e7063480b4fdb207f6bd4869d500d1b795b7cc25,e7063480,Small change that supposedly improves layout performance slightly,Small change that supposedly improves layout performance slightly,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380750009,1380750009,8219c586d665a6a26d2033395e9421b27e7a5017
+8219c586d665a6a26d2033395e9421b27e7a5017,8219c586,Modernize Add Parcel dialog and reduce clutter,"Modernize Add Parcel dialog and reduce clutter
+- Use holo dialog buttons
+- Make ""Scan Barcode"" an ImageButton and add a custom drawable",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380749787,1380749787,3470c5994b21948f4dcbb34f6bbde36b21c0abe3
+3470c5994b21948f4dcbb34f6bbde36b21c0abe3,3470c599,Fix language referring to Barcode Scanner and fix warnings,Fix language referring to Barcode Scanner and fix warnings,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380748999,1380748999,b458b0f251d466d1c00662550a1baaba5761c3d9
+b458b0f251d466d1c00662550a1baaba5761c3d9,b458b0f2,Make dialog buttons look holo-like,Make dialog buttons look holo-like,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380740737,1380740737,facaf0d9cab74ef072457c4014a7c197a40d1e3a
+facaf0d9cab74ef072457c4014a7c197a40d1e3a,facaf0d9,Make button layout xml more readable,Make button layout xml more readable,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1380618050,1380618050,5e978679f176ed9619e47a63990bd1240d3f4fcf
+5e978679f176ed9619e47a63990bd1240d3f4fcf,5e978679,Update almost all drawables and add xxhdpi assets,Update almost all drawables and add xxhdpi assets,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1378151514,1378151514,81c16bb49149867d620ca5eaffd26b96ce3ddbb1
+81c16bb49149867d620ca5eaffd26b96ce3ddbb1,81c16bb4,Update target to API level 18 (Android 4.3),Update target to API level 18 (Android 4.3),,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1377428457,1377428457,6a5d24f4ecc0632ac814ede7a405511ffa709f8d
+6a5d24f4ecc0632ac814ede7a405511ffa709f8d,6a5d24f4,Add back carot to ConfigView,Add back carot to ConfigView,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1377426541,1377426541,71998c6167a99a8f5fd294775ba4d00fee30d57e
+71998c6167a99a8f5fd294775ba4d00fee30d57e,71998c61,Add whitespace to About message,Add whitespace to About message,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1377425003,1377425003,c5b859d712586979ab7e70c16b90f6e46d4ce2aa
+c5b859d712586979ab7e70c16b90f6e46d4ce2aa,c5b859d7,Add actionbar back arrow to ParcelView,Add actionbar back arrow to ParcelView,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1377424730,1377424730,08cc85fdb0ee7999a07680267691d08fea00ba53
+08cc85fdb0ee7999a07680267691d08fea00ba53,08cc85fd,Add Android Support Library v4,Add Android Support Library v4,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1377423588,1377423588,1fc5b26670d276d7450cdb3e1765c91d20791e14
+1fc5b26670d276d7450cdb3e1765c91d20791e14,1fc5b266,Should now gracefully downgrade to HoloLight on API level < 14,"Should now gracefully downgrade to HoloLight on API level < 14
+
+The Holo Light with Dark Actionbar theme requires API level 14+",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363347601,1363347601,22cc97885477f1ff6602db9ea7afbedaaf2a14f1
+22cc97885477f1ff6602db9ea7afbedaaf2a14f1,22cc9788,Update About message,Update About message,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363347089,1363347089,c93d2c5b4b7439616f89b6eb58c54153d4dd6182
+c93d2c5b4b7439616f89b6eb58c54153d4dd6182,c93d2c5b,Update version and copyright,"Update version and copyright
+
+Also add missing drawable",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363287136,1363287136,122c0c24ab870cfc7511c2b31536695411b4b1a0
+122c0c24ab870cfc7511c2b31536695411b4b1a0,122c0c24,"Remove dialog drawable, set correct theme for Settings and add readme","Remove dialog drawable, set correct theme for Settings and add readme
+
+The generic dialogs no longer have icons in 3.x.",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363286957,1363286957,dfd25beb36c6651d06d17b33dcaf470fa08bc272
+dfd25beb36c6651d06d17b33dcaf470fa08bc272,dfd25beb,Update version and fix drawable mistake,Update version and fix drawable mistake,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363280611,1363280611,04a800b29d88540f65dc2c4e2a2fa08bef09665a
+04a800b29d88540f65dc2c4e2a2fa08bef09665a,04a800b2,More Fixes,"More Fixes
+
+- Update refresh drawable for actionbar
+- Add Refresh to actionbar
+- Set correct theme for ParcelView activity",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363262675,1363262675,969aa242f658c4201935235220dd7b34db909c87
+969aa242f658c4201935235220dd7b34db909c87,969aa242,Fix some more Alert dialog drawable code to match Holo,Fix some more Alert dialog drawable code to match Holo,,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363260446,1363260446,8fcf11c3b8edaaeadcaae7a11178ce20456a77d5
+8fcf11c3b8edaaeadcaae7a11178ce20456a77d5,8fcf11c3,Do an initial modernizing,"Do an initial modernizing
+
+- Remove usage of outdated drawables
+- Set the theme as Holo
+- Update manifest
+- Swap button order",,,,blunden,blunden2@gmail.com,blunden,blunden2@gmail.com,1363259606,1363259606,a2722a4062afbef38ec91e9af41908c9548d7a76
+a2722a4062afbef38ec91e9af41908c9548d7a76,a2722a40,Add LiveView permission to manifest.,"Add LiveView permission to manifest.
+
+This is optional, but tells the user that the LiveView is accessed.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1295266920,1295266920,94adf9b330ef694e97b03420280e49431ec58f27
+94adf9b330ef694e97b03420280e49431ec58f27,94adf9b3,Add HDPI version of refresh icon.,"Add HDPI version of refresh icon.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294941257,1294941257,b19e83290658a095b20d0e748c6eae94c83dcf20
+b19e83290658a095b20d0e748c6eae94c83dcf20,b19e8329,Some fixes for parcel updates.,"Some fixes for parcel updates.
+
+* Set full Parcel ID when known, to avoid multiple hits in updates (and prepare
+  for possibly handling multiple parcel hits in the future).
+* When there is only one new event, show the event in the notification, instead
+  of just ""1 new event"".
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294737474,1294737474,a24dd315d8e18cc5822c8c45a647c228bc442a37
+a24dd315d8e18cc5822c8c45a647c228bc442a37,a24dd315,Bump version number.,"Bump version number.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294737455,1294737455,be5ca62d04d00c61865df0c942d39f27dc54b8f1
+be5ca62d04d00c61865df0c942d39f27dc54b8f1,be5ca62d,Some LiveView fixes.,"Some LiveView fixes.
+
+Remove special LiveView icon and fix some strings.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294735344,1294735344,997f3f209a491aa65aa6da869ffc6603a051b717
+997f3f209a491aa65aa6da869ffc6603a051b717,997f3f20,Forgot to update the version number here...,"Forgot to update the version number here...
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294685044,1294685044,2bce26f2567e66bd54a503a80447938581af162c
+2bce26f2567e66bd54a503a80447938581af162c,2bce26f2,Rename main window class from PactrackDroid to MainWindow.,"Rename main window class from PactrackDroid to MainWindow.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294684805,1294684805,aa9c5877f427b57669376f7c30e3c23e8ab3c972
+aa9c5877f427b57669376f7c30e3c23e8ab3c972,aa9c5877,Add Sony Ericsson LiveView™ support.,"Add Sony Ericsson LiveView™ support.
+
+Not extensively tested for long-term behaviour, but seems to work well in short-term.
+Also included are some minor refactorings.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294684464,1294684464,752e42f2945f8e7adf037bbe0fe89b83f6debc1b
+752e42f2945f8e7adf037bbe0fe89b83f6debc1b,752e42f2,Fix bug which caused read server data would be truncated.,"Fix bug which caused read server data would be truncated.
+
+Server data would sometimes be truncated due to ParcelXMLParcer.characters()
+being called multiple times with only parts of the data. This was mistakenly
+thought to be server errors (sorry!).
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294678279,1294678570,b3e156501bb3805c9de074a78ac2ab54442f0bdd
+b3e156501bb3805c9de074a78ac2ab54442f0bdd,b3e15650,Update ParcelService to use Android 2.0+ API better.,"Update ParcelService to use Android 2.0+ API better.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294674295,1294674295,2e551e06b20f82314b61aab001e4a70d720ccdb6
+2e551e06b20f82314b61aab001e4a70d720ccdb6,2e551e06,Whitespace fix.,"Whitespace fix.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294670796,1294670796,0e9c35a68c6f6009621871493a66e4e65b0c0ff7
+0e9c35a68c6f6009621871493a66e4e65b0c0ff7,0e9c35a6,Update copyright year (2009 -> 2011).,"Update copyright year (2009 -> 2011).
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294670624,1294670624,ad645500b73a13a6d3fd44d90439ace4713485a5
+ad645500b73a13a6d3fd44d90439ace4713485a5,ad645500,Bump version number and disable SD card installation.,"Bump version number and disable SD card installation.
+
+SD card installation was disabled due to the app's miniscule size and because it
+has a background service, which isn't behaving correctly when installed on SD.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294664625,1294664625,ca3a061c52d37079c84091dd25f3a4ce108410a2
+ca3a061c52d37079c84091dd25f3a4ce108410a2,ca3a061c,"New launcher icons for Android 2.0+, created by coolof on Swedroid forums.","New launcher icons for Android 2.0+, created by coolof on Swedroid forums.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1294664136,1294664136,0a11955743c7769accddc7d47c51558435719520
+0a11955743c7769accddc7d47c51558435719520,0a119557,"Minor Manifest fixes, to be released quite soon:","Minor Manifest fixes, to be released quite soon:
+* Support all available screen sizes (app seems to run fine in QVGA on the emulator, at least)
+* Allow installation on SD card (android 2.2 feature)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1274736962,1274736962,e4c9046f01f3f1e43b119047c7ad3bc722f61285
+e4c9046f01f3f1e43b119047c7ad3bc722f61285,e4c9046f,Add support for error events.,"Add support for error events.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1262781574,1262781574,2934691958a79fd12cf6525f8a1b4b96b772be57
+2934691958a79fd12cf6525f8a1b4b96b772be57,29346919,Bump version to 1.2.,"Bump version to 1.2.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1262781545,1262781545,1593c524cf7d0a0241fa16cc70d67d6096b96b44
+1593c524cf7d0a0241fa16cc70d67d6096b96b44,1593c524,"Use another Exception for NOT_FOUND errors, since IndexOutOfBounds can be thrown…","Use another Exception for NOT_FOUND errors, since IndexOutOfBounds can be thrown during ""normal"" behavior.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1259146695,1259146695,d6e8e2217644cdee120f435b7fae2b6a03dc2c5a
+d6e8e2217644cdee120f435b7fae2b6a03dc2c5a,d6e8e221,Release time for 1.1 :),"Release time for 1.1 :)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1258120913,1258120913,b424faa5fff7d03361d34ae20f1cf5b0910ff795
+b424faa5fff7d03361d34ae20f1cf5b0910ff795,b424faa5,Add support for scanning barcodes (using Barcode Scanner) for entering parcel IDs.,"Add support for scanning barcodes (using Barcode Scanner) for entering parcel IDs.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1258040724,1258040724,c07f9f3cf67279e5ef95052f2dfed004bf68173f
+c07f9f3cf67279e5ef95052f2dfed004bf68173f,c07f9f3c,Add missing GPL comments to some files.,"Add missing GPL comments to some files.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1258033949,1258033949,0ec21f5a905a058cba7c015ed883e6b61322fefb
+0ec21f5a905a058cba7c015ed883e6b61322fefb,0ec21f5a,Add possibility to deactivate background update for individual parcels. If no…,"Add possibility to deactivate background update for individual parcels. If no parcels have background updates activated, the service will not be running.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1257088992,1257089173,20c887a10239efe7b3a9522bdaa9e47886d790b9
+20c887a10239efe7b3a9522bdaa9e47886d790b9,20c887a1,Merge branch 'master' of git@github.com:firetech/PactrackDroid,"Merge branch 'master' of git@github.com:firetech/PactrackDroid
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1257077826,1257077826,"4fb843edfbacfb311cf0c45f1b57591c36359171,1a7b8b7ab36ccf5235c5bc7a263e8c27835a2161"
+4fb843edfbacfb311cf0c45f1b57591c36359171,4fb843ed,Remember cursor position in ParcelIdDialog.,"Remember cursor position in ParcelIdDialog.
+Also remove an obsolete file forgotten in the last commit.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1257077551,1257077650,7fbc0a77c5623b67d85c30d24febc2e0a773fb1a
+1a7b8b7ab36ccf5235c5bc7a263e8c27835a2161,1a7b8b7a,Also remember cursor position in ParcelIdDialog.,"Also remember cursor position in ParcelIdDialog.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1257077551,1257077551,7fbc0a77c5623b67d85c30d24febc2e0a773fb1a
+7fbc0a77c5623b67d85c30d24febc2e0a773fb1a,7fbc0a77,Major refactor of the way the refresh dialog works. Now also applies to ParcelIdDialog.,"Major refactor of the way the refresh dialog works. Now also applies to ParcelIdDialog.
+Not extensively tested, but seems to work fine.
+Also change the input hack for ParcelIdDialog a bit to probably make it more compatible.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1256036653,1256036926,7b19a4cb562f09f39a8ebbc620e176a29da59210
+7b19a4cb562f09f39a8ebbc620e176a29da59210,7b19a4cb,"Bump version to 1.1beta and remove aTrackDog ""dlUrl"".","Bump version to 1.1beta and remove aTrackDog ""dlUrl"".
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1256021891,1256021891,2f7504137af365c5fb5d487dd96752ccf7998756
+2f7504137af365c5fb5d487dd96752ccf7998756,2f750413,Fix aTrackDog metadata in Manifest.,"Fix aTrackDog metadata in Manifest.
+Minor bump of versionCode due to application already being released on Market.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1255077095,1255077095,3d0a1be87b99be2f6b3b27d57f4dd39c122463bc
+3d0a1be87b99be2f6b3b27d57f4dd39c122463bc,3d0a1be8,"Version bump to 1.0, I think it's release time! :)","Version bump to 1.0, I think it's release time! :)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1255071113,1255071113,6f6a93ee792ed110bacdb3651683f3bd16c9eb1b
+6f6a93ee792ed110bacdb3651683f3bd16c9eb1b,6f6a93ee,Bump version number to 1.0rc3,"Bump version number to 1.0rc3
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1254911146,1254911146,d98058eea29a2f386ba648d5e478c24b457b1c3f
+d98058eea29a2f386ba648d5e478c24b457b1c3f,d98058ee,Fix service starting on boot even when database is empty.,"Fix service starting on boot even when database is empty.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1254910958,1254910958,c1dde52428ad2bb7a344a82fb6c0981880f04024
+c1dde52428ad2bb7a344a82fb6c0981880f04024,c1dde524,"Make empty mass updates update tell its RefreshContext that it ended directly, don't just return.","Make empty mass updates update tell its RefreshContext that it ended directly, don't just return.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252682710,1252682710,98928c5a7a84c94914735bdcd48a75d7e7790b50
+98928c5a7a84c94914735bdcd48a75d7e7790b50,98928c5a,Don't start the service if no parcels are in the database. Also stop and start…,"Don't start the service if no parcels are in the database. Also stop and start the service when the database becomes (un)empty.
+(Some minor code cleanup is also included.)
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252681814,1252681814,82c69fae5dfdc54beaf2b184de45398bc1f203db
+82c69fae5dfdc54beaf2b184de45398bc1f203db,82c69fae,Bump version to 1.0rc2.,"Bump version to 1.0rc2.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252681789,1252681789,9f4a15a79adeb157e87c122ca85f4d5648f97682
+9f4a15a79adeb157e87c122ca85f4d5648f97682,9f4a15a7,"New icons, a bit closer to Android's icon design guidelines.","New icons, a bit closer to Android's icon design guidelines.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252677603,1252677603,0349c27706964b401d9099809d0a7ae9af5d2c87
+0349c27706964b401d9099809d0a7ae9af5d2c87,0349c277,"Add translatable=""false"" to values in constants.xml","Add translatable=""false"" to values in constants.xml
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252670647,1252670647,aec18da582a6d9bfec98ae23f37e170bdaaeec6e
+aec18da582a6d9bfec98ae23f37e170bdaaeec6e,aec18da5,Some minor fixes before public release of 1.0rc1:,"Some minor fixes before public release of 1.0rc1:
+* Fix Manifest for aTrackDog.
+* Fix a bug in the status icon code.
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252621645,1252621645,893dc70253c365ca9adf9223b98d9ecd1c7cb527
+893dc70253c365ca9adf9223b98d9ecd1c7cb527,893dc702,Add Eclipse project files,"Add Eclipse project files
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252619345,1252619345,e6033b22eadacb843b04a6ea021ebad4c10982e1
+e6033b22eadacb843b04a6ea021ebad4c10982e1,e6033b22,Initial commit (version 1.0rc1).,"Initial commit (version 1.0rc1).
+",,,,Joakim Andersson,jocke@barbanet.com,Joakim Andersson,jocke@barbanet.com,1252619276,1252619276,

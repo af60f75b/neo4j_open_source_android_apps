@@ -1,0 +1,264 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+d6a97b1a69bf6a547b317673628725ee121fc0b8,d6a97b1a,Merge pull request #38 from javaBin/refactor/cleanup-linting-and-tests,"Merge pull request #38 from javaBin/refactor/cleanup-linting-and-tests
+
+Refactor/cleanup linting and tests",,,,Khiem-Kim Ho Xuan,kkh@computas.com,GitHub,noreply@github.com,1500400427,1500400427,"d1b81afa4d6a13a854b4dfd9e99694b35642d51d,e7fc427020a77ed5cd1b2dfdfce0e4ea5a168058"
+e7fc427020a77ed5cd1b2dfdfce0e4ea5a168058,e7fc4270,Merge branch 'develop' into refactor/cleanup-linting-and-tests,Merge branch 'develop' into refactor/cleanup-linting-and-tests,,,,Ingar Abrahamsen,ingar@abrahams1.com,GitHub,noreply@github.com,1500386625,1500386625,"2c4efdc57ac00badd79e3024ff6051d78c5165a1,d1b81afa4d6a13a854b4dfd9e99694b35642d51d"
+d1b81afa4d6a13a854b4dfd9e99694b35642d51d,d1b81afa,Merge pull request #39 from javaBin/feature/fonts-for-ios,"Merge pull request #39 from javaBin/feature/fonts-for-ios
+
+Feature/fonts for ios",,,,Ingar Abrahamsen,ingar@abrahams1.com,GitHub,noreply@github.com,1500386542,1500386542,"36f86e509cffcdfc21716e80e4b62b087a00e277,438d89a6d1410abfdef0415ca23c0ff805bd56bb"
+438d89a6d1410abfdef0415ca23c0ff805bd56bb,438d89a6,chore: remove react-moment dependency,"chore: remove react-moment dependency
+
+Not used.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500386096,1500386096,dc06fecd718ab4f65a100bbcd12702305200c7ac
+dc06fecd718ab4f65a100bbcd12702305200c7ac,dc06fecd,chore: using right version of react,"chore: using right version of react
+
+React native requires version 16 or react.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500384222,1500386059,8f91a79c0e1f3528401838795eaa1e2f0e610c8b
+8f91a79c0e1f3528401838795eaa1e2f0e610c8b,8f91a79c,chore: pod upgrade,"chore: pod upgrade
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500237708,1500237708,3b101568de16968357ece9503644f6c78eb98cce
+3b101568de16968357ece9503644f6c78eb98cce,3b101568,chore: upgrade react-native,"chore: upgrade react-native
+
+Used react-native-git-upgrade
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500236817,1500236817,8c3bb145ac9cf9876073fca79646d32db8686c11
+8c3bb145ac9cf9876073fca79646d32db8686c11,8c3bb145,chore: add pod files,"chore: add pod files
+
+Don't like it but it looks like this is the way of doing it.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500159775,1500159775,9bad2db3669596429b03b9649ec6eb9d56859c3a
+9bad2db3669596429b03b9649ec6eb9d56859c3a,9bad2db3,chore: disable devSupport for this version of react-native,"chore: disable devSupport for this version of react-native
+
+We'er using 0.42 atm. We need to inline this when upgrading RN
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500159606,1500159606,f576c184a6d00d6bc8bad4cb7b5a5811e58cf039
+f576c184a6d00d6bc8bad4cb7b5a5811e58cf039,f576c184,feature: expose the fonts for ios,"feature: expose the fonts for ios
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500158752,1500158752,094df8edde19a08f8e0a70b680a48671f4dcab8a
+094df8edde19a08f8e0a70b680a48671f4dcab8a,094df8ed,feature: pod setup for react native vector icons,"feature: pod setup for react native vector icons
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500158734,1500158734,36f86e509cffcdfc21716e80e4b62b087a00e277
+2c4efdc57ac00badd79e3024ff6051d78c5165a1,2c4efdc5,refactor: simplify the startup files for ios and android,"refactor: simplify the startup files for ios and android
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500155836,1500155836,07f3e13a334fa03d7b2bc7e18e44b66bc18d2e9f
+07f3e13a334fa03d7b2bc7e18e44b66bc18d2e9f,07f3e13a,chore: run tests as part of the travis build,"chore: run tests as part of the travis build
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500155429,1500155429,cbfe68ef9481c03bb40f506d96b9776f8d89c39e
+cbfe68ef9481c03bb40f506d96b9776f8d89c39e,cbfe68ef,test: remove test that does not work,"test: remove test that does not work
+
+The test is to depending on external stuff to work (calling network
+etc). The symptoms was that the jest runner never finished executing.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500155387,1500155387,b0acf343674bc4a7b8f390da70f9c443b7260dc1
+b0acf343674bc4a7b8f390da70f9c443b7260dc1,b0acf343,chore: fix jest setup,"chore: fix jest setup
+
+This should fix the issues we have with jest not working properly.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500155283,1500155283,ade12522990f4605e15d8291c6662ea7616209be
+ade12522990f4605e15d8291c6662ea7616209be,ade12522,chore: add PropTypes to validate react props,"chore: add PropTypes to validate react props
+
+This will reduce the amount of lint warnings we have. I wasn't able
+to remove all of them now since it looks like the remaining ones
+requires some more intrusive code changes.
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500152904,1500153353,a67e6b7eb547c569ee21b4c5b546fb73d11254ba
+a67e6b7eb547c569ee21b4c5b546fb73d11254ba,a67e6b7e,refactor: use const/let and not var keyword,"refactor: use const/let and not var keyword
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500151030,1500151030,e8ccf96701c1bfe75a7291ee77ba28a2cb93bbf4
+e8ccf96701c1bfe75a7291ee77ba28a2cb93bbf4,e8ccf967,refactor: add defaults to switch blocks,"refactor: add defaults to switch blocks
+
+eslint...
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500150705,1500150705,b95f6a630f51afb0050f5607e8aaf0b476bec0f3
+b95f6a630f51afb0050f5607e8aaf0b476bec0f3,b95f6a63,refactor: change require with import,"refactor: change require with import
+
+No point using the old way of importing stuff when we have the new
+syntax :-)
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500150644,1500150644,0b0359653b379d95b47ca43cb4e3b40925a69015
+0b0359653b379d95b47ca43cb4e3b40925a69015,0b035965,chore: fix lint warning,"chore: fix lint warning
+
+npm run lint -- --fix
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500150056,1500150056,b50fd031d7e9f872f5171682afc49283cfdfb13a
+b50fd031d7e9f872f5171682afc49283cfdfb13a,b50fd031,doc: improve the readme with how you start up the app for development,"doc: improve the readme with how you start up the app for development
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500149682,1500149682,de3226cdcd95e599579726a2691b83c2dfd6f67a
+de3226cdcd95e599579726a2691b83c2dfd6f67a,de3226cd,refactor: simplify the util file,"refactor: simplify the util file
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1500149605,1500149605,36f86e509cffcdfc21716e80e4b62b087a00e277
+36f86e509cffcdfc21716e80e4b62b087a00e277,36f86e50,Merge pull request #36 from javaBin/feature/filterdays,"Merge pull request #36 from javaBin/feature/filterdays
+
+Feature/filterdays",,,,Eivind,eivhyl@users.noreply.github.com,GitHub,noreply@github.com,1499093110,1499093110,"738d8ad381a4a1912b998dddf8b034afa08714f6,a995033eef3b38a7c85bf66aa0f00a91b38c65bc"
+a995033eef3b38a7c85bf66aa0f00a91b38c65bc,a995033e,namechange from conferencedays to filter,"namechange from conferencedays to filter
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498932325,1498932325,0357cdf05a727d56ff3d5e47cbba7ba4d755c617
+0357cdf05a727d56ff3d5e47cbba7ba4d755c617,0357cdf0,added spread operator to reducer,"added spread operator to reducer
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498931967,1498931967,f0350edfabbd2f867aa07ea7e3f0fb8733f490ad
+f0350edfabbd2f867aa07ea7e3f0fb8733f490ad,f0350edf,added day toggling to session list,"added day toggling to session list
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498329688,1498329868,3309805fe769fb0ccf6a7344b541833a92a40170
+3309805fe769fb0ccf6a7344b541833a92a40170,3309805f,fixed some linter issues,"fixed some linter issues
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498329332,1498329868,47cdb8705e320b57b92aea450ada4394f62a24ce
+47cdb8705e320b57b92aea450ada4394f62a24ce,47cdb870,added reduced for handling conference day,"added reduced for handling conference day
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498313580,1498329868,738d8ad381a4a1912b998dddf8b034afa08714f6
+738d8ad381a4a1912b998dddf8b034afa08714f6,738d8ad3,fixed maps in develop,"fixed maps in develop
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1498161011,1498161011,736ac876fa9b537b4c63f98936b9ab81d0e57098
+736ac876fa9b537b4c63f98936b9ab81d0e57098,736ac876,Merge pull request #35 from javaBin/feature/styling,"Merge pull request #35 from javaBin/feature/styling
+
+Feature/styling",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1498157344,1498157344,"cbfe392ee9d5c054c964334e14c83913bed25da0,3a0e3a970fc46695112dd669cfd80af2319f563b"
+3a0e3a970fc46695112dd669cfd80af2319f563b,3a0e3a97,Merge branch 'feature/styling' of https://github.com/javaBin/appZone into feature/styling,"Merge branch 'feature/styling' of https://github.com/javaBin/appZone into feature/styling
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498156534,1498156534,"22424a2ff2bee1d4f7e033f4afc9c40b61bed326,28abd252e1812392e0b7e049e2837881f68810b0"
+22424a2ff2bee1d4f7e033f4afc9c40b61bed326,22424a2f,"removed testing from travis, should be reintoduced later","removed testing from travis, should be reintoduced later
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498156149,1498156149,f32970159a3afd1b2290146b7527a2a0f9a8c02d
+28abd252e1812392e0b7e049e2837881f68810b0,28abd252,Merge branch 'develop' into feature/styling,Merge branch 'develop' into feature/styling,,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1498149292,1498149292,"f32970159a3afd1b2290146b7527a2a0f9a8c02d,cbfe392ee9d5c054c964334e14c83913bed25da0"
+f32970159a3afd1b2290146b7527a2a0f9a8c02d,f3297015,Merge branch 'feature/styling' of https://github.com/javaBin/appZone into feature/styling,"Merge branch 'feature/styling' of https://github.com/javaBin/appZone into feature/styling
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498078055,1498078055,"bc15cbbf52c9f70bc2e7a6aba8f2ed3128298d84,d72ea728b6cdeb561ad008e10136382b0d1e2e13"
+bc15cbbf52c9f70bc2e7a6aba8f2ed3128298d84,bc15cbbf,added ignore rule for display name,"added ignore rule for display name
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498078043,1498078043,44e5f1666f9d05db57190f755196bad1d5544643
+44e5f1666f9d05db57190f755196bad1d5544643,44e5f166,removed erroneous imports,"removed erroneous imports
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1498073571,1498077999,a2af48d68211cba97c4aa4ce83488187b5c00ea5
+d72ea728b6cdeb561ad008e10136382b0d1e2e13,d72ea728,Updated jest config,"Updated jest config
+
+",,,,Eivind Hyldmo,eivind_h@outlook.com,Eivind Hyldmo,eivind_h@outlook.com,1498031474,1498031474,a2af48d68211cba97c4aa4ce83488187b5c00ea5
+a2af48d68211cba97c4aa4ce83488187b5c00ea5,a2af48d6,added desperate workaround for ios icons and fonts,"added desperate workaround for ios icons and fonts
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497990821,1497990821,e179124e7a35b5d46c64de868aae6c635b02159d
+e179124e7a35b5d46c64de868aae6c635b02159d,e179124e,added correct varible in session detail view,"added correct varible in session detail view
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497979489,1497979489,7460d87bf4b8c21a1037abb41130358e1558ab16
+7460d87bf4b8c21a1037abb41130358e1558ab16,7460d87b,added sort function to session list,"added sort function to session list
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497906959,1497908036,9dfb5048d97e793be414ba8c69caac5c658e87e4
+9dfb5048d97e793be414ba8c69caac5c658e87e4,9dfb5048,added styling to list view,"added styling to list view
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497906916,1497906916,a5a5dce0c72213eab29776dc373129949da054ff
+a5a5dce0c72213eab29776dc373129949da054ff,a5a5dce0,added platform speciffic style config,"added platform speciffic style config
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497702228,1497702228,3abb24af38576f2c3747b11c5ae63dd28ae62641
+3abb24af38576f2c3747b11c5ae63dd28ae62641,3abb24af,added icons on tab bar,"added icons on tab bar
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497560924,1497702055,307d6b372b7ea353daf510099982fb2a9cf68908
+cbfe392ee9d5c054c964334e14c83913bed25da0,cbfe392e,Merge pull request #34 from javaBin/feature/sessionsmasterdetail,"Merge pull request #34 from javaBin/feature/sessionsmasterdetail
+
+Feature/sessionsmasterdetail",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1497458728,1497458728,"cff5baad359469aa6a9b9f20e3aa068306061a10,ee961dd96a7864119addfcb917313db39473221b"
+307d6b372b7ea353daf510099982fb2a9cf68908,307d6b37,adjusted session detail view for better readability,"adjusted session detail view for better readability
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497379287,1497379287,924d89a1156a90f5b719d278106576f69adf47cb
+924d89a1156a90f5b719d278106576f69adf47cb,924d89a1,moved font properties to its own style object,"moved font properties to its own style object
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497379225,1497379225,fa2b79d8964a5deb7cc976c81530b64b71fa0edd
+fa2b79d8964a5deb7cc976c81530b64b71fa0edd,fa2b79d8,added styling to tab bar and session detail,"added styling to tab bar and session detail
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497299541,1497299541,abf666be663ad084c1d8d29469cce66a5694934d
+abf666be663ad084c1d8d29469cce66a5694934d,abf666be,added fonts to android,"added fonts to android
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497299444,1497299444,5946b97a41f11938481c9076eb309cc50e83d61b
+5946b97a41f11938481c9076eb309cc50e83d61b,5946b97a,added icons to android,"added icons to android
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497299390,1497299390,ee961dd96a7864119addfcb917313db39473221b
+ee961dd96a7864119addfcb917313db39473221b,ee961dd9,removed some warnings,"removed some warnings
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497197385,1497197385,2f2d588305c5e789b384e1e18eb7da13e1a1a023
+2f2d588305c5e789b384e1e18eb7da13e1a1a023,2f2d5883,removed unused compoments,"removed unused compoments
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497193615,1497193615,fb17d6f34aac36a19ec5347c7fc1148b573edf50
+fb17d6f34aac36a19ec5347c7fc1148b573edf50,fb17d6f3,added session list and detail,"added session list and detail
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497192741,1497192741,5e76031f22e91343336933dfffd0d093ee86a64d
+5e76031f22e91343336933dfffd0d093ee86a64d,5e76031f,added moment nb locale,"added moment nb locale
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497192601,1497192601,cff5baad359469aa6a9b9f20e3aa068306061a10
+cff5baad359469aa6a9b9f20e3aa068306061a10,cff5baad,Merge pull request #32 from javaBin/addmomentlib,"Merge pull request #32 from javaBin/addmomentlib
+
+added react-moment",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1497180083,1497180083,"072993bfb88d54702c32f8a0a7eafeb087c0911b,f76c48637442c8a2659738477b4223e603d71a13"
+072993bfb88d54702c32f8a0a7eafeb087c0911b,072993bf,Merge pull request #33 from javaBin/feature/map,"Merge pull request #33 from javaBin/feature/map
+
+Feature/map",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1497180042,1497180042,"5e3407e74f1cc048fa2c7d953152a3a84473a7ed,3bf57bb03bacfb658a88708aa63c7fb50c09a793"
+3bf57bb03bacfb658a88708aa63c7fb50c09a793,3bf57bb0,Merge branch 'develop' into feature/map,Merge branch 'develop' into feature/map,,,,Khiem-Kim Ho Xuan,kkh@computas.com,GitHub,noreply@github.com,1497122937,1497122937,"8139e1aaf271aec0cda62fa10eb0b071a9bdc3d3,5e3407e74f1cc048fa2c7d953152a3a84473a7ed"
+5e3407e74f1cc048fa2c7d953152a3a84473a7ed,5e3407e7,fixed asyncstorage problem,"fixed asyncstorage problem
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1497115069,1497115069,ae690e958160471311c442980185fe58558bb751
+f76c48637442c8a2659738477b4223e603d71a13,f76c4863,added react-moment,"added react-moment
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1497106637,1497106637,ae690e958160471311c442980185fe58558bb751
+ae690e958160471311c442980185fe58558bb751,ae690e95,Merge pull request #29 from javaBin/feature/tabbarnavigation,"Merge pull request #29 from javaBin/feature/tabbarnavigation
+
+Feature/tabbarnavigation",,,,Kristoffer Johansen,monkeecheetah@gmail.com,GitHub,noreply@github.com,1496652827,1496652827,"0f9e4672fa1fad6f492ac9f2486a1f2c5e2d279c,2fdd74f849d73ec9938336c276b28efd2550e69e"
+2fdd74f849d73ec9938336c276b28efd2550e69e,2fdd74f8,Merge pull request #31 from javaBin/feature/activatedevtools,"Merge pull request #31 from javaBin/feature/activatedevtools
+
+Feature/activatedevtools",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1496596679,1496596679,"aa511d542eccea21248c0c259f08793004cd687e,68a0db44a228ace191aea7ea7e373186c904405f"
+68a0db44a228ace191aea7ea7e373186c904405f,68a0db44,Added a postinstall that will set the port for debugging to always be 8083 and…,"Added a postinstall that will set the port for debugging to always be 8083 and changed version of remote-redux-devtools to always be 0.5.0 (newer versions not compatible with new react-native as of 04.06.2017)
+",,,,Kristoffer Johansen,monkeecheetah@gmail.com,Kristoffer Johansen,monkeecheetah@gmail.com,1496596285,1496596285,66a1002e230ae0cfbfa6efbe99dae9cf221b6c60
+aa511d542eccea21248c0c259f08793004cd687e,aa511d54,export correct class in HomeNavigationClass,"export correct class in HomeNavigationClass
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496596153,1496596153,7753c1aae7ee6cb6d9bf39bb96e146c1fe5285d7
+7753c1aae7ee6cb6d9bf39bb96e146c1fe5285d7,7753c1aa,fixed faulty ListView,"fixed faulty ListView
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496594112,1496594112,25ad28d0878e93be36e806133a1bc8a60d5fc118
+66a1002e230ae0cfbfa6efbe99dae9cf221b6c60,66a1002e,Added to readme how to enable remote debugging (based on earlier branch feature/remote-devtools,"Added to readme how to enable remote debugging (based on earlier branch feature/remote-devtools
+",,,,Kristoffer Johansen,monkeecheetah@gmail.com,Kristoffer Johansen,monkeecheetah@gmail.com,1496592747,1496592830,25ad28d0878e93be36e806133a1bc8a60d5fc118
+25ad28d0878e93be36e806133a1bc8a60d5fc118,25ad28d0,fixed some travis issues,"fixed some travis issues
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496591840,1496591998,dd4f6c76616acda49dba524eab400260961b1da0
+dd4f6c76616acda49dba524eab400260961b1da0,dd4f6c76,fixed merge error,"fixed merge error
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496589308,1496589308,072c02ec27a144348912c54d3588bb0db630ccf2
+072c02ec27a144348912c54d3588bb0db630ccf2,072c02ec,updated sessions view,"updated sessions view
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496586426,1496589236,846a755d0d605495da4715002aa0fe029af8d5c3
+846a755d0d605495da4715002aa0fe029af8d5c3,846a755d,removed unused code,"removed unused code
+",,,,Stine Grumheden,stinemarie86@gmail.com,Stine Grumheden,stinemarie86@gmail.com,1496586033,1496589235,51e0c6d92df15c20f84be365724fc672fbe9e747
+51e0c6d92df15c20f84be365724fc672fbe9e747,51e0c6d9,added settings to tab,"added settings to tab
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Stine Grumheden,stinemarie86@gmail.com,1496174844,1496589235,b98a71db590d9516bca39d7b13c7144fb20f7bb6
+b98a71db590d9516bca39d7b13c7144fb20f7bb6,b98a71db,removed unneccessary navigator and added reducer example to tabview navigator,"removed unneccessary navigator and added reducer example to tabview navigator
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Stine Grumheden,stinemarie86@gmail.com,1496164228,1496589235,ab97d2cd530ffca696492ce583562d62b14f7553
+ab97d2cd530ffca696492ce583562d62b14f7553,ab97d2cd,added settings to tabbar,"added settings to tabbar
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Stine Grumheden,stinemarie86@gmail.com,1496160563,1496589113,a92d4a32e7922494a70bfd9ca985f7bd78260483
+a92d4a32e7922494a70bfd9ca985f7bd78260483,a92d4a32,added redux navigation and tabs,"added redux navigation and tabs
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Stine Grumheden,stinemarie86@gmail.com,1495577278,1496589113,993938b31a2c9478a93897e7e20462e6002f49a6
+993938b31a2c9478a93897e7e20462e6002f49a6,993938b3,added a working tab for ios,"added a working tab for ios
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Stine Grumheden,stinemarie86@gmail.com,1495566129,1496588901,612d941e616ce04fbbbaa619bbad3224d57c3742
+612d941e616ce04fbbbaa619bbad3224d57c3742,612d941e,added config for induvidual tabs,"added config for induvidual tabs
+",,,,Stine Grumheden,Stine.Grumheden@acando.no,Stine Grumheden,stinemarie86@gmail.com,1494168288,1496588891,2bcfcc1396f5ff487347689380778dc64eafff0b
+2bcfcc1396f5ff487347689380778dc64eafff0b,2bcfcc13,added router for android,"added router for android
+",,,,Stine Grumheden,Stine.Grumheden@acando.no,Stine Grumheden,stinemarie86@gmail.com,1494064352,1496588830,0f9e4672fa1fad6f492ac9f2486a1f2c5e2d279c
+0f9e4672fa1fad6f492ac9f2486a1f2c5e2d279c,0f9e4672,Merge pull request #28 from javaBin/feature/settings,"Merge pull request #28 from javaBin/feature/settings
+
+Feature/settings",,,,stinemarie,stinemarie@users.noreply.github.com,GitHub,noreply@github.com,1496089329,1496089329,"cacaaba285fe2575c8edde7d9a6001d419fe9e59,72a6873ba04ae8ad6b5de0a8065006148be623a6"
+72a6873ba04ae8ad6b5de0a8065006148be623a6,72a6873b,removed stuff at action settings,"removed stuff at action settings
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1495704894,1495704894,af6c3a26e1d755f8168e4d7ed7de403278c7d9bd
+af6c3a26e1d755f8168e4d7ed7de403278c7d9bd,af6c3a26,fixed lint errors,"fixed lint errors
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1495702701,1495702701,d90d15894e02cd3fb622d4f8dc839cd61ad9753d
+d90d15894e02cd3fb622d4f8dc839cd61ad9753d,d90d1589,removed console.log,"removed console.log
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494611085,1494611085,871ae27f522b8563affa3bdf5583c06634ad2775
+871ae27f522b8563affa3bdf5583c06634ad2775,871ae27f,merge conflict solved,"merge conflict solved
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494610977,1494610977,"6616debcc6194d04ca40da39028b2c8cd8aa6bb9,cacaaba285fe2575c8edde7d9a6001d419fe9e59"
+6616debcc6194d04ca40da39028b2c8cd8aa6bb9,6616debc,settingsscreen is now working,"settingsscreen is now working
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494610842,1494610842,6ca4b3a010a8522c988088f277ddf74c958d414f
+cacaaba285fe2575c8edde7d9a6001d419fe9e59,cacaaba2,Merge pull request #9 from javaBin/buildstatus,"Merge pull request #9 from javaBin/buildstatus
+
+Update README.md",,,,Ingar Abrahamsen,ingar@abrahams1.com,GitHub,noreply@github.com,1494540731,1494540731,"6564030d3918fbdaf9d173913623eabf43d5082c,0e29b394e7bf01d04886c1e3480cb68b6298465e"
+6564030d3918fbdaf9d173913623eabf43d5082c,6564030d,Merge pull request #6 from javaBin/feature/travis,"Merge pull request #6 from javaBin/feature/travis
+
+Feature/travis",,,,Ingar Abrahamsen,ingar@abrahams1.com,GitHub,noreply@github.com,1494540410,1494540410,"7839783a5a74f9527ddc9875f3848e6bbd2c29aa,a34edecc5a99cc430a272facab83bfaf17b0f004"
+6ca4b3a010a8522c988088f277ddf74c958d414f,6ca4b3a0,"added small function to settings, will add asynstorage","added small function to settings, will add asynstorage
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494446881,1494446881,7839783a5a74f9527ddc9875f3848e6bbd2c29aa
+0e29b394e7bf01d04886c1e3480cb68b6298465e,0e29b394,Update README.md,Update README.md,,,,Eivind,eivhyl@users.noreply.github.com,GitHub,noreply@github.com,1494356772,1494356772,7839783a5a74f9527ddc9875f3848e6bbd2c29aa
+a34edecc5a99cc430a272facab83bfaf17b0f004,a34edecc,Fixed linter errors and added react/native rules,"Fixed linter errors and added react/native rules
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1494355109,1494355109,b9342c37e5be9f3d52621410e6f27295dd25a2e8
+b9342c37e5be9f3d52621410e6f27295dd25a2e8,b9342c37,Added missing lint script,"Added missing lint script
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1494352698,1494352698,21ba050e482c9da10b2d7df5f589095767159dfe
+21ba050e482c9da10b2d7df5f589095767159dfe,21ba050e,Added linting to travis scripts,"Added linting to travis scripts
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1494352536,1494352536,42590b9bbb5447b812df9d8f1fc93c427b05b07e
+42590b9bbb5447b812df9d8f1fc93c427b05b07e,42590b9b,Removed iojs,"Removed iojs
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1494351444,1494351444,7786ffda8f50debeff5a84ff7149ed5457b198bc
+7786ffda8f50debeff5a84ff7149ed5457b198bc,7786ffda,Added travis file,"Added travis file
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1494351231,1494351231,7839783a5a74f9527ddc9875f3848e6bbd2c29aa
+8139e1aaf271aec0cda62fa10eb0b071a9bdc3d3,8139e1aa,"added a fully working map and also videoscreen that renders webview, both will…","added a fully working map and also videoscreen that renders webview, both will need more adjustments
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494104672,1494104672,3f946dd344fdf11905411363c38918af4e1c512a
+3f946dd344fdf11905411363c38918af4e1c512a,3f946dd3,"added a fully working map and also videoscreen that renders webview, both will…","added a fully working map and also videoscreen that renders webview, both will need more adjustments
+",,,,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,Khiem-Kim Ho Xuan,khiem_89@hotmail.com,1494104564,1494104564,7839783a5a74f9527ddc9875f3848e6bbd2c29aa
+7839783a5a74f9527ddc9875f3848e6bbd2c29aa,7839783a,Fixed eslint not understanding es6,"Fixed eslint not understanding es6
+
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1493135816,1493135816,53f34abeb23cbffcafa9d662991d5a646beab787
+53f34abeb23cbffcafa9d662991d5a646beab787,53f34abe,Merge pull request #1 from javaBin/feature/sleepingpill-api,"Merge pull request #1 from javaBin/feature/sleepingpill-api
+
+Feature/sleepingpill api",,,,Eivind,eivhyl@users.noreply.github.com,GitHub,noreply@github.com,1492538659,1492538658,"7dba9b71dee79e152e61a62614e698f2b28b4314,f92d63578591a83031e95ad800376cc164d00114"
+7dba9b71dee79e152e61a62614e698f2b28b4314,7dba9b71,Updated linting rules,"Updated linting rules
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1491510622,1491510622,8d77a5fb57556f0561bfc7e8c22e0e9101ca0f78
+f92d63578591a83031e95ad800376cc164d00114,f92d6357,feat: setup sagas,"feat: setup sagas
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491510524,1491510540,3fcdea8af39ea446fdc038e0152b1e6e74f7ff81
+3fcdea8af39ea446fdc038e0152b1e6e74f7ff81,3fcdea8a,feat: add action and reduces for conference and session,"feat: add action and reduces for conference and session
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491510474,1491510474,262f2fb7948e35b7cefac71116fa98d7a7165790
+262f2fb7948e35b7cefac71116fa98d7a7165790,262f2fb7,feat: view to display all conferences,"feat: view to display all conferences
+
+Just a basic view listing all available conferences,
+no styling or other actions ;-)
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491510428,1491510428,484e7cc194158e91e9bf589faafc32bdeb7299ca
+484e7cc194158e91e9bf589faafc32bdeb7299ca,484e7cc1,feat: add sleeping pill api,"feat: add sleeping pill api
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491510337,1491510337,2378350f35f7c68100651a456944a819cdc490dc
+2378350f35f7c68100651a456944a819cdc490dc,2378350f,feat: add sleeping pill api types,"feat: add sleeping pill api types
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491339204,1491506989,b95333b3c0139ddd3d0a3bd188ff828ca2383cfc
+b95333b3c0139ddd3d0a3bd188ff828ca2383cfc,b95333b3,chore: replace thunk with saga,"chore: replace thunk with saga
+",,,,Ingar Abrahamsen,ingar@abrahams1.com,Ingar Abrahamsen,ingar@abrahams1.com,1491336968,1491336968,8d77a5fb57556f0561bfc7e8c22e0e9101ca0f78
+8d77a5fb57556f0561bfc7e8c22e0e9101ca0f78,8d77a5fb,Merge branch 'feature/material-design' into develop,"Merge branch 'feature/material-design' into develop
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1491333801,1491333801,"7a5f6be99dfd26a1910c04b82fb2122ceab00746,a335725b49588cb4e59663c78c3477589f9c29f9"
+a335725b49588cb4e59663c78c3477589f9c29f9,a335725b,Added eslint config,"Added eslint config
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1491333793,1491333793,1e005f1f12672dfb76fab4a9bba3250ab968d958
+1e005f1f12672dfb76fab4a9bba3250ab968d958,1e005f1f,Fixed android build,"Fixed android build
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1491333045,1491333045,7a5f6be99dfd26a1910c04b82fb2122ceab00746
+7a5f6be99dfd26a1910c04b82fb2122ceab00746,7a5f6be9,Added material design to android and redux to both,"Added material design to android and redux to both
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1490733057,1490733057,deb3731ee42c24969ac1100cb872d9e109b5a3c7
+deb3731ee42c24969ac1100cb872d9e109b5a3c7,deb3731e,Made some components stateless,"Made some components stateless
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1490127570,1490127570,8c82109e80e1136e854de53f9af16c33eebbfc6d
+8c82109e80e1136e854de53f9af16c33eebbfc6d,8c82109e,Added redux,"Added redux
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1490127170,1490127170,484ab181327362be794c19f454ccd69f6c3a21f9
+484ab181327362be794c19f454ccd69f6c3a21f9,484ab181,Create README.md,Create README.md,,,,Eivind,eivhyl@users.noreply.github.com,GitHub,noreply@github.com,1490121701,1490121701,36dc520f237813f871b5ee9a04a172b582380906
+36dc520f237813f871b5ee9a04a172b582380906,36dc520f,Added initial app,"Added initial app
+",,,,Eivind Hyldmo,eivind.hyldmo@avanade.com,Eivind Hyldmo,eivind.hyldmo@avanade.com,1490121391,1490121437,1ad648d4f8e30737e5ba7e19695a3afc6c8c4b54
+1ad648d4f8e30737e5ba7e19695a3afc6c8c4b54,1ad648d4,Initial commit,Initial commit,,,,Eivind,eivhyl@users.noreply.github.com,Eivind,eivhyl@users.noreply.github.com,1490120209,1490120209,

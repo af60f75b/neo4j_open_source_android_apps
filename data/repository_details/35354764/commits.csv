@@ -1,0 +1,260 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+7b53074206622f5cf5d82091d891a7ed8b9f06cd,7b530742,Fix TransitionAnimation.resetAnimation crashing when animation was not started,Fix TransitionAnimation.resetAnimation crashing when animation was not started,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492360333,1492360333,d4bb5a9de4caa492b60c9c0a8d05f5479f5f66b0
+d4bb5a9de4caa492b60c9c0a8d05f5479f5f66b0,d4bb5a9d,Fix ViewTransitionBuilder.clone not properly cloning some attributes,Fix ViewTransitionBuilder.clone not properly cloning some attributes,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492360210,1492360210,d68aad0beb4a8165878d5ffa3c91431b339adec3
+d68aad0beb4a8165878d5ffa3c91431b339adec3,d68aad0b,Update app & extensions to accomodate library's refactorings,Update app & extensions to accomodate library's refactorings,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492342959,1492342959,b6a36dff86cce8a7f38cdf74f0cf87c2027b3cc8
+b6a36dff86cce8a7f38cdf74f0cf87c2027b3cc8,b6a36dff,Update app & extension libraries' gradle,"Update app & extension libraries' gradle
+
+- update compileSdkVersion to 25
+- update com.sothree.slidinguppanel:library to 3.3.1
+- app references slidinguppanel module instead of published com.github.kaichunlin.transition:slidinguppanel libray",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492342408,1492342408,e69254960bca813fcf0cae51bf6aed3ae4c00259
+e69254960bca813fcf0cae51bf6aed3ae4c00259,e6925496,"Add width, delayWidth to ViewTransitionBuilder","Add width, delayWidth to ViewTransitionBuilder",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492342078,1492342078,03f2f19a8bf301551f24388d2e8da5baa845744f
+03f2f19a8bf301551f24388d2e8da5baa845744f,03f2f19a,Fix translationYAsFractionOfHeight,Fix translationYAsFractionOfHeight,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492341983,1492341983,7bdca9b1050b3b778a54b01f64e7a6853af80264
+7bdca9b1050b3b778a54b01f64e7a6853af80264,7bdca9b1,Fix ViewTransitionBuilder.delay*** methods,"Fix ViewTransitionBuilder.delay*** methods
+
+- fix delayTranslationXAsFractionOfWidth
+- fix delayHeight",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492341946,1492341946,127ff480873756de0a90ba9f29e0bb965fd1614d
+127ff480873756de0a90ba9f29e0bb965fd1614d,127ff480,Refactor CustomTransitionController.addTransitionHandler to addViewTransformer,Refactor CustomTransitionController.addTransitionHandler to addViewTransformer,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492340579,1492340579,d3ac4b8e08d6a76b14edb8305eba2c28a17930b6
+d3ac4b8e08d6a76b14edb8305eba2c28a17930b6,d3ac4b8e,Update gradle build config,Update gradle build config,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492253109,1492253109,f9a328d1dd626b4617ba753d7fb84bf1bfe458de
+f9a328d1dd626b4617ba753d7fb84bf1bfe458de,f9a328d1,Create transformer package,"Create transformer package
+
+ - Rename TransitionHandler to ViewTransformer and move it to the .transformer package
+ - Rename ScaledTransitionHandler to ScaledTransformer and move it to the .transformer package
+ - Rename ColorTransition to ColorTransformer and move it to the .transformer package
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492010718,1492010718,4903f36c9b51e4e16589a30037f12f6653625cd6
+4903f36c9b51e4e16589a30037f12f6653625cd6,4903f36c,Remove @CheckResult annotation for AbstractTransition.merge() as it's not strictly necessary,"Remove @CheckResult annotation for AbstractTransition.merge() as it's not strictly necessary
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1492000174,1492000174,79fd0fcf2eab1a64c8b691c20d7cbb0f4e364b64
+79fd0fcf2eab1a64c8b691c20d7cbb0f4e364b64,79fd0fcf,Rename TransitionListener to TransitionManagerListener to better reflect its…,"Rename TransitionListener to TransitionManagerListener to better reflect its purpose (breaks compat)
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491999874,1491999874,2231bf6bb0c9a478b11669aa38047c41119ee35c
+2231bf6bb0c9a478b11669aa38047c41119ee35c,2231bf6b,Change Cascade constructors' type param annotation from IntRange to IntDef,"Change Cascade constructors' type param annotation from IntRange to IntDef
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491998294,1491998294,f93c11bb3359553db0730be8659102cee4749343
+f93c11bb3359553db0730be8659102cee4749343,f93c11bb,Rename AbstractTransition.compatible to isCompatible,"Rename AbstractTransition.compatible to isCompatible
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491998079,1491998079,83bedbf83db571cc19f97b6698239fa0f2548592
+83bedbf83db571cc19f97b6698239fa0f2548592,83bedbf8,Add/improve comments,"Add/improve comments
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491997698,1491997698,193c5b314ee5b08db664becc76fe809f7397d3a1
+193c5b314ee5b08db664becc76fe809f7397d3a1,193c5b31,Tidy up annotations (most on @UiThread),Tidy up annotations (most on @UiThread),,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491833762,1491833762,27080f2b9a6088cbea91ed06b2bd79565b3223c3
+27080f2b9a6088cbea91ed06b2bd79565b3223c3,27080f2b,Update comments,Update comments,,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1491739029,1491739029,8bd086e2853511e8dc60c410167a9320af90ce4e
+8bd086e2853511e8dc60c410167a9320af90ce4e,8bd086e2,Update build tools and dependency lib versions,"Update build tools and dependency lib versions
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1465827855,1465827855,6c16502e5b3fc084a68afd184396992022484006
+6c16502e5b3fc084a68afd184396992022484006,6c16502e,Merge pull request #3 from ravidsrk/patch-1,"Merge pull request #3 from ravidsrk/patch-1
+
+Added code syntax highlighting to Readme (thanks @ravidsrk)",,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1455953055,1455953055,"41969ac3e775d13646f46fcac62ade4ccbc4cf64,5501acdb9d8c11e61cdab18ebd8a34f2413e3f2a"
+5501acdb9d8c11e61cdab18ebd8a34f2413e3f2a,5501acdb,Added code syntax highlighting to Readme,Added code syntax highlighting to Readme,,,,Ravindra Kumar,ravindrakumar8088@gmail.com,Ravindra Kumar,ravindrakumar8088@gmail.com,1455950594,1455950594,41969ac3e775d13646f46fcac62ade4ccbc4cf64
+41969ac3e775d13646f46fcac62ade4ccbc4cf64,41969ac3,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1453033972,1453033972,936c50a5985f3f24b3bed4568f444da60126dac0
+936c50a5985f3f24b3bed4568f444da60126dac0,936c50a5,"Update library versions, fix #2","Update library versions, fix #2
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1453021399,1453021399,07030d5f0fb25b43d6d599a2498cb784fbb29bc3
+07030d5f0fb25b43d6d599a2498cb784fbb29bc3,07030d5f,Update dependent library versions,"Update dependent library versions
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1453019865,1453019865,94f4f872020e78a58a3ae32d55a518c223af3dab
+94f4f872020e78a58a3ae32d55a518c223af3dab,94f4f872,Add ColorTransition,"Add ColorTransition
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1453019784,1453019784,40f5aad24a7d8c0e626bb946c803a5842db653dd
+40f5aad24a7d8c0e626bb946c803a5842db653dd,40f5aad2,Add AutoReverseAnimationListener,"Add AutoReverseAnimationListener
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1451570646,1451570646,ed2d46ffe53dbb2a7f757f55bdc06834c2376c79
+ed2d46ffe53dbb2a7f757f55bdc06834c2376c79,ed2d46ff,Reduce transient objects created by ViewTransitionBuilder,"Reduce transient objects created by ViewTransitionBuilder
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1451570595,1451570595,c39cdc3b791b960d27de484566bdcff85a657cba
+c39cdc3b791b960d27de484566bdcff85a657cba,c39cdc3b,Add a bunch of delayed methods with varargs to *TransitionBuilder,"Add a bunch of delayed methods with varargs to *TransitionBuilder
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1451570493,1451570493,41e389bf0e4f8540aa8d2476e219b993b8af880d
+41e389bf0e4f8540aa8d2476e219b993b8af880d,41e389bf,Fix TransitionAnimation.forceEndState() doesn't cause…,"Fix TransitionAnimation.forceEndState() doesn't cause AnimationListener.onAnimationEnd() to be called
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1451402690,1451402690,d2019b99dfb6b6293142757421ec781617f69d69
+d2019b99dfb6b6293142757421ec781617f69d69,d2019b99,Add Animation.forceEndState() t& DefaultAnimationListener.java,"Add Animation.forceEndState() t& DefaultAnimationListener.java
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1450275721,1450275721,781b06816c794d19865b7b0a7e01e4a56b8fd761
+781b06816c794d19865b7b0a7e01e4a56b8fd761,781b0681,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1449202052,1449202052,3216d57bfa0a21071ed86f36036c17980577417a
+3216d57bfa0a21071ed86f36036c17980577417a,3216d57b,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1448974213,1448974213,01d40305b655aa4535728d3baca5b37e842104e2
+01d40305b655aa4535728d3baca5b37e842104e2,01d40305,Update version number,"Update version number
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1448891948,1448891948,6b1e09e5da081d03b8b445d99540a397b2097e96
+6b1e09e5da081d03b8b445d99540a397b2097e96,6b1e09e5,Update sample app,"Update sample app
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1448551029,1448551029,5fc6f1f08267db948567b6f35cdd15761420f822
+5fc6f1f08267db948567b6f35cdd15761420f822,5fc6f1f0,Fix erroneously shared TransitionBuilder states & make Cascade its own class,"Fix erroneously shared TransitionBuilder states & make Cascade its own class
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1448550652,1448550652,77376fab7b65f3d4815dba6a0b00b7bff953fca9
+77376fab7b65f3d4815dba6a0b00b7bff953fca9,77376fab,Add functions and remove implicit inner class instance creation,"Add functions and remove implicit inner class instance creation
+
+- add visible()/invisible()/gone() methods which modifies the target view's visibility
+- use static inner class to manage delayed evaluations
+- fix incorrect Cascade.transit calculation when transitionEnd value isn't 1f
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1448378679,1448378679,49bc108609774e55164ab80273101783ac3766fd
+49bc108609774e55164ab80273101783ac3766fd,49bc1086,Implement minor speed/GC optimizations,"Implement minor speed/GC optimizations
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1445656789,1445656789,fae47fef614f8994ad738768474f565c39fdcd2e
+fae47fef614f8994ad738768474f565c39fdcd2e,fae47fef,"Support varargs  by a number of *TransitionBuilder methods, move…","Support varargs  by a number of *TransitionBuilder methods, move ScaledTransitionHandler out of com.kaichunlin.transition.internal package, remove android:allowBackup from AndroidManifest.xml
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1440639495,1440639495,4ab66d0f0fe4c0857d7babc6d0558ff25b03fec2
+4ab66d0f0fe4c0857d7babc6d0558ff25b03fec2,4ab66d0f,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1440298707,1440298707,3e8e9bca56a9065d6bffedf9cabba46e736267cb
+3e8e9bca56a9065d6bffedf9cabba46e736267cb,3e8e9bca,"Add TransitionUtil. executeOnGlobalLayout(Activity, ViewTreeObserver.OnGlobalLayoutListener)","Add TransitionUtil. executeOnGlobalLayout(Activity, ViewTreeObserver.OnGlobalLayoutListener)
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439209030,1439209030,023b0ede0917a2f75c617007bbfce88bda98740e
+023b0ede0917a2f75c617007bbfce88bda98740e,023b0ede,Fix memory leak with MenuItem transition,"Fix memory leak with MenuItem transition
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439109375,1439109375,d8d06e50543bfb699efd36039d96673055dfa695
+d8d06e50543bfb699efd36039d96673055dfa695,d8d06e50,Fix transition ordering bug,"Fix transition ordering bug
+Change method signature for ViewGroupTransition.transit(...)
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439103898,1439103898,b2c5afa0432e16fc2b29000ef0b3989db0c57d52
+b2c5afa0432e16fc2b29000ef0b3989db0c57d52,b2c5afa0,ScaledTransitionHandler.onUpdateScaledProgress return progress in the range [0..1],"ScaledTransitionHandler.onUpdateScaledProgress return progress in the range [0..1]
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439092593,1439092593,f9e1970ce831bc6726e6dbab936ec8150b5f46c5
+f9e1970ce831bc6726e6dbab936ec8150b5f46c5,f9e1970c,AnimationManager sort Animations to allow modification of the same property of…,"AnimationManager sort Animations to allow modification of the same property of the same view at different stage of the animation
+Optimize AnimationManager
+Remove AnimationManager.removeAnimation(Animation) to support optimization
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439054871,1439054871,9c55043003108688240490aae993d98c6dace5f7
+9c55043003108688240490aae993d98c6dace5f7,9c550430,Allow the transition/animation of a single MenuItem,"Allow the transition/animation of a single MenuItem
+Remove upper bound for scaling operations using  Android Support Annotation
+Reduce garbage generation
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1439042897,1439042897,951d424e5a1db23f35eca472a2dd769a331a2a28
+951d424e5a1db23f35eca472a2dd769a331a2a28,951d424e,Add ScaledTransitionHandler,"Add ScaledTransitionHandler
+Add ViewTransitionBuilder.height(int) / ViewTransitionBuilder.delayHeight(int)
+AnimationManager/TransitionAnimation can specify either Animation or Animator as its backing controller
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1438965135,1438965135,72c132c73015dd302b084c6df9c41eba61881135
+72c132c73015dd302b084c6df9c41eba61881135,72c132c7,"Remove AnimatorUpdateListener, AnimatorListener from TransitionAnimation's interfaces","Remove AnimatorUpdateListener, AnimatorListener from TransitionAnimation's interfaces
+TransitionAnimation can share one ValueAnimator when managed by a AnimationManager
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1438274832,1438274832,a0d3dcf5f36a7c2ade981e1188db3c368089060a
+a0d3dcf5f36a7c2ade981e1188db3c368089060a,a0d3dcf5,Fix incorrect state when reverse transiting a View with a range not between 0f and 1f,"Fix incorrect state when reverse transiting a View with a range not between 0f and 1f
+Clear TransitionStateLogger on DefaultTransitionController.startTransition()
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1438271858,1438271858,a604c3c9c54fe260a5cfe5e4db21ef79be74018d
+a604c3c9c54fe260a5cfe5e4db21ef79be74018d,a604c3c9,Reduce Object creation,"Reduce Object creation
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1438005818,1438005818,c8c5595977d42e428b58155ec11e33673a8817ba
+c8c5595977d42e428b58155ec11e33673a8817ba,c8c55959,V0.9.1,V0.9.1,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1437403696,1437403696,612296260da76a09a32e2ac8042ef24e1ce18cb7
+612296260da76a09a32e2ac8042ef24e1ce18cb7,61229626,Rename package com.kaichunlin.transition.anim back to kaichunlin.transition.animation,"Rename package com.kaichunlin.transition.anim back to kaichunlin.transition.animation
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1437402970,1437402970,687be5a5bc7a533d6d39d83bb2f178d9beab7d2d
+687be5a5bc7a533d6d39d83bb2f178d9beab7d2d,687be5a5,Rename package com.kaichunlin.transition.animation to kaichunlin.transition.anim…,"Rename package com.kaichunlin.transition.animation to kaichunlin.transition.anim to remove capitalized version
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1437402902,1437402902,ac111c7ea5d1f0fbbfe31a9636663d9386ea3219
+ac111c7ea5d1f0fbbfe31a9636663d9386ea3219,ac111c7e,Fix mistakenly capitalized package name,"Fix mistakenly capitalized package name
+createtransition() in AbstractTransitionBuild should be protected instead of public
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1437401669,1437401669,fc2f22878d807ba98a4c5cc3a3fd0de045dd5b15
+fc2f22878d807ba98a4c5cc3a3fd0de045dd5b15,fc2f2287,Update SDK build tool version ('23.0.0 rc3' --> '22.0.1'),"Update SDK build tool version ('23.0.0 rc3' --> '22.0.1')
+Remove signingConfigs & buildTypes from app/build.gradle
+",,,,Kai,kaichun.lin@gmail.com,Kai,kaichun.lin@gmail.com,1437384410,1437384410,674c3d2f0967f20d9f372a233651b2ae6b5ca90c
+674c3d2f0967f20d9f372a233651b2ae6b5ca90c,674c3d2f,"More refactoring, removing ""I"" prefix from interfaces, change Base*.java to Default*.java,","More refactoring, removing ""I"" prefix from interfaces, change Base*.java to Default*.java,
+Complete Animation support
+Fix OnPageChangeListenerAdapter
+Add Cascade to ViewTransitionBuilder
+Update app
+Remove stale javadoc
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1437324565,1437324565,9dc38d0832be969db25b345ff02d4f415c1b42e8
+9dc38d0832be969db25b345ff02d4f415c1b42e8,9dc38d08,Extract ITransitionManager and TransitionManager from ITransitionAdapter and BaseAdapter,"Extract ITransitionManager and TransitionManager from ITransitionAdapter and BaseAdapter
+Extract ITransitionAdapter from BaseAdapter
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436887750,1436887750,6e0c1a98a92e2ccc462fc84d9006dac54c0541f8
+6e0c1a98a92e2ccc462fc84d9006dac54c0541f8,6e0c1a98,Update README.md,"Update README.md
+
+0.9.0-beta",,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1436751085,1436751085,827c6f0aa7782400c542c365ae9b9c0f1e172d9c
+827c6f0aa7782400c542c365ae9b9c0f1e172d9c,827c6f0a,Comment out release buildTypes to prevent error when required gradle properties are not present,"Comment out release buildTypes to prevent error when required gradle properties are not present
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436715113,1436715113,53a75b5d43b02f8370b5017adbd7cfd5f7cf3d6f
+53a75b5d43b02f8370b5017adbd7cfd5f7cf3d6f,53a75b5d,Update gradle,"Update gradle
+Add animation + transition gif
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436714199,1436714199,9d32703c99142c424cb2ba36bb4d6af22f13f7c1
+9d32703c99142c424cb2ba36bb4d6af22f13f7c1,9d32703c,Update app,"Update app
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436713850,1436713850,8b1fd74e64acb2144ada3ba236ec98878e715d89
+8b1fd74e64acb2144ada3ba236ec98878e715d89,8b1fd74e,Update SlidingUpPanelAdapter,"Update SlidingUpPanelAdapter
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436713608,1436713608,52eab97418dd17ca73f20272dd942d30d9887265
+52eab97418dd17ca73f20272dd942d30d9887265,52eab974,Bugfixes,"Bugfixes
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436713456,1436713456,709bb4dd42f25863862f092b752b26279aa3a563
+709bb4dd42f25863862f092b752b26279aa3a563,709bb4dd,Still broken,"Still broken
+Yet more refactoring...
+Add ITransitionHandler
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436689847,1436689847,3e0bf0115263506c87fc7154ab5fb1123a660b78
+3e0bf0115263506c87fc7154ab5fb1123a660b78,3e0bf011,Unstable,"Unstable
+Refactoring to improve code packaging
+Add BaseTransitionBuilder.buildFor(ITransitionAdapter)
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436687945,1436687945,c9442d308e141df0e40f0c725a9174a581796f81
+c9442d308e141df0e40f0c725a9174a581796f81,c9442d30,"More refactoring, buggy","More refactoring, buggy
+Add IAnimation, Animation
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436679767,1436679767,426f29c7b9433cb7c183e280b50abf3c1c891ac5
+426f29c7b9433cb7c183e280b50abf3c1c891ac5,426f29c7,Rudimentary Animator XML support,"Rudimentary Animator XML support
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436633383,1436633383,3b844f9452cdb2ec67ba433d244b6765c54802c1
+3b844f9452cdb2ec67ba433d244b6765c54802c1,3b844f94,Clean up TransitionManager,"Clean up TransitionManager
+",,,,Kai-Chun Lin,kaichun.lin@gmail.com,Kai-Chun Lin,kaichun.lin@gmail.com,1436629337,1436629337,99c380d99ab481b41eb3b20fae4f0015e33a2bfc
+99c380d99ab481b41eb3b20fae4f0015e33a2bfc,99c380d9,Add setProgress(int) to ITransition,"Add setProgress(int) to ITransition
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436624683,1436624683,bcbdb8b50ffe2ab01e2d9da4d97aa883c236c1da
+bcbdb8b50ffe2ab01e2d9da4d97aa883c236c1da,bcbdb8b5,Integrate animation support into the framework,"Integrate animation support into the framework
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436623890,1436623890,abead7ebe79f2c09350c2ecfaf5e3e25dcfba5b3
+abead7ebe79f2c09350c2ecfaf5e3e25dcfba5b3,abead7eb,Changed API for TransitionListener,"Changed API for TransitionListener
+AdapterState is now a class instead of interface, changed API
+Remove IMenuOptionHandler.isOpened()
+Remove BaseAdapter.isTransitioning()
+Preliminary UnifiedAdapter implementation
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436606644,1436606644,cf8623aa942e1840532a42a262f154aaa6307d09
+cf8623aa942e1840532a42a262f154aaa6307d09,cf8623aa,Add AnimationAdapter,"Add AnimationAdapter
+Rename AnimateMenuAdapter to MenuAnimationAdapter
+Rename MenuOptionHandler to DefaultMenuOptionHandler
+Extract IMenuOptionHandler interface used by MenuAnimationAdapter, MenuOptionHandler, MenuBaseAdapter
+API breaking refactor (ITransitionAdapter.clearTransition() --> removeAllTransitions())
+Add TransitionListener interface
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436532413,1436532413,17264d1f1e2ab4c59f5cfb60384c9cad723fa392
+17264d1f1e2ab4c59f5cfb60384c9cad723fa392,17264d1f,Add comments,"Add comments
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436458060,1436458060,86b1315bb1f0f187950a29ab717dd4cfdfa6c108
+86b1315bb1f0f187950a29ab717dd4cfdfa6c108,86b1315b,Remove @CheckResult that shouldn't have been added in the first place,"Remove @CheckResult that shouldn't have been added in the first place
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436457413,1436457413,d11868743064dec55db3f9024d4325aab96eb69f
+d11868743064dec55db3f9024d4325aab96eb69f,d1186874,Update README.md,"Update README.md
+
+update for 0.8.3",,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1436413967,1436413967,6a25a97f77ad229e71996ad8dc6f4c854174bb43
+6a25a97f77ad229e71996ad8dc6f4c854174bb43,6a25a97f,Apply Android Support Annotations,"Apply Android Support Annotations
+Apply default ID to BaseTransitionController
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436367863,1436367863,17d0d11cf08f24b95ef6b0f360073cf84e5be980
+17d0d11cf08f24b95ef6b0f360073cf84e5be980,17d0d11c,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1436108612,1436108612,d4bb037a6ffe2aa3f6f45a692f28b43d1a7fdcbd
+d4bb037a6ffe2aa3f6f45a692f28b43d1a7fdcbd,d4bb037a,More documentation for AnimateMenuAdapter,"More documentation for AnimateMenuAdapter
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436108430,1436108430,286c94a748b9366a6dce3cdbf38bfe9c2949894a
+286c94a748b9366a6dce3cdbf38bfe9c2949894a,286c94a7,AbstractMenuOptionHandler is now MenuOptionHandler,"AbstractMenuOptionHandler is now MenuOptionHandler
+Interface AdapterState is used to convey the open/close state of an adapter
+Add AnimateMenuAdapter
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1436107781,1436107781,b4b5b57f8efabc0d899176b90e281d7de17bcfb8
+b4b5b57f8efabc0d899176b90e281d7de17bcfb8,b4b5b57f,Add additional explanation,"Add additional explanation
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1435019298,1435019298,bf627e324d2224fed3c35f25abb8738cbfb13c94
+bf627e324d2224fed3c35f25abb8738cbfb13c94,bf627e32,Update README.md,Update README.md,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1434709174,1434709174,ec0c508e096cb02fc9db7a6bffd7eaed420d1d73
+ec0c508e096cb02fc9db7a6bffd7eaed420d1d73,ec0c508e,Add changelog,Add changelog,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1434709042,1434709042,b2913acea8f47030b99e225f32b19f1fa0e3ec9a
+b2913acea8f47030b99e225f32b19f1fa0e3ec9a,b2913ace,Fix Javadoc error messages,"Fix Javadoc error messages
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1434705793,1434705793,703013dbe8c0b3d58de73be4e00e639350786cd2
+703013dbe8c0b3d58de73be4e00e639350786cd2,703013db,Fix app strings,"Fix app strings
+Bump up minSdkVersion for app
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1434705188,1434705188,1926625cffffc536070501438d71ca7d8b45933f
+1926625cffffc536070501438d71ca7d8b45933f,1926625c,Fix incorrect MenuItem position when transiting on some devices,"Fix incorrect MenuItem position when transiting on some devices
+Bump up the minSdkVersion
+Rename ViewUtil.getVisibleMenuItem
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1434705015,1434705015,f1381d0fb5b204f4810c8a2a35b418c78cba0b91
+f1381d0fb5b204f4810c8a2a35b418c78cba0b91,f1381d0f,Fixing typos,"Fixing typos
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1434688111,1434688111,84490fb9e5892ce9d1ad78a4298cad747fe55c0b
+84490fb9e5892ce9d1ad78a4298cad747fe55c0b,84490fb9,Fix code quality issues found by FindBugs,"Fix code quality issues found by FindBugs
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1434685502,1434685502,60918fc569ddb61fc0605731743c500737b1517f
+60918fc569ddb61fc0605731743c500737b1517f,60918fc5,Remove unused strings,"Remove unused strings
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1433345075,1433345075,165401e98f2aa08c13bca293ce0fd85bbdb6cfda
+165401e98f2aa08c13bca293ce0fd85bbdb6cfda,165401e9,Fix gradle sample,Fix gradle sample,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432824966,1432824966,6a256f6c8fbba1d0db62b9dd41568eabce34316a
+6a256f6c8fbba1d0db62b9dd41568eabce34316a,6a256f6c,Add instructions on integration,Add instructions on integration,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432824906,1432824906,e4913cb77f015ff924864a2a09046f0645ac1e5c
+e4913cb77f015ff924864a2a09046f0645ac1e5c,e4913cb7,Change CustomTransitionController.updateProgress(float) to…,"Change CustomTransitionController.updateProgress(float) to CustomTransitionController.updateProgress(View, float) to make it easier to work with
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432744545,1432744545,23672869823f4be01893132c7c25858d80672bd5
+23672869823f4be01893132c7c25858d80672bd5,23672869,App shows dialog to guide user on how to see transition effects,"App shows dialog to guide user on how to see transition effects
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432744087,1432744087,e87d1921fbf8de5f08c0156157967f0fc163316e
+e87d1921fbf8de5f08c0156157967f0fc163316e,e87d1921,Rename setListener(PanelSlideListener) to setPanelSlideListener(PanelSlideListener),"Rename setListener(PanelSlideListener) to setPanelSlideListener(PanelSlideListener)
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432742632,1432742632,90859adefdd50ec3b0c2a568e84d742c877e89f0
+90859adefdd50ec3b0c2a568e84d742c877e89f0,90859ade,Add setListener(PanelSlideListener) to SlidingUpPanelLayoutAdapter,"Add setListener(PanelSlideListener) to SlidingUpPanelLayoutAdapter
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432742172,1432742172,3396df937dadee85c55bf93de5f1c958721cde86
+3396df937dadee85c55bf93de5f1c958721cde86,3396df93,Remove superfluous code,"Remove superfluous code
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432741119,1432741119,f59cf75ddceb509c918eb02648adfcfc5b99b29b
+f59cf75ddceb509c918eb02648adfcfc5b99b29b,f59cf75d,ViewTransitionBuilder uses ViewHelper to lower the minimum SDK to 9,"ViewTransitionBuilder uses ViewHelper to lower the minimum SDK to 9
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432741080,1432741080,f3c0ed0cfff5ce7a0a5bdad11f3a263ffd4785a0
+f3c0ed0cfff5ce7a0a5bdad11f3a263ffd4785a0,f3c0ed0c,New transition for SlidingUpPanelActivity,"New transition for SlidingUpPanelActivity
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432740881,1432740881,bb8aee6272cb36f92ac6ed5b49b4b1b5c5d47d3e
+bb8aee6272cb36f92ac6ed5b49b4b1b5c5d47d3e,bb8aee62,Auto open Drawer / SlidingUpPanel on changing transition,"Auto open Drawer / SlidingUpPanel on changing transition
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432732697,1432732697,efefa855c5565952ffc7042890f9caf94c615e79
+efefa855c5565952ffc7042890f9caf94c615e79,efefa855,Change module names due to Maven constraint…,"Change module names due to Maven constraint (http://stackoverflow.com/questions/30475780/how-to-change-the-default-artifactid-of-maven-metadata-xml-when-uploading-to-bin/30476385#30476385)
+Change minSdkVersion from 11 to 9
+Update gradle to support uploading to JCenter
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432728209,1432728209,badb7d5913953db5489561ba8b7a927c4d7044ed
+badb7d5913953db5489561ba8b7a927c4d7044ed,badb7d59,Update code comments,"Update code comments
+Update app launcher icon
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432713602,1432713602,585a7077c1fe6b9a3d316ac667a6b21882d051e5
+585a7077c1fe6b9a3d316ac667a6b21882d051e5,585a7077,Add Google Play link,Add Google Play link,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432446947,1432446947,7afb435b209d4c18c33089ffc7ddca3a5d5d0d2a
+7afb435b209d4c18c33089ffc7ddca3a5d5d0d2a,7afb435b,Formatting,Formatting,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432206775,1432206775,44941b80e538364decfb296c77ac6440845ece79
+44941b80e538364decfb296c77ac6440845ece79,44941b80,Formatting,Formatting,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432206513,1432206513,294af3a34115e16afc89c8781e0c8fbf1ac4ec2e
+294af3a34115e16afc89c8781e0c8fbf1ac4ec2e,294af3a3,Fix button name,"Fix button name
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432206358,1432206358,a8feebb3ca59af11ec66af3b66987320f5e72dd8
+a8feebb3ca59af11ec66af3b66987320f5e72dd8,a8feebb3,Add Usage section,Add Usage section,,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432206295,1432206295,02a84b83923fc721c13eb270082184a7626c4f34
+02a84b83923fc721c13eb270082184a7626c4f34,02a84b83,Add Description & Feature,"Add Description & Feature
+
+Usage to be added",,,,Kai,kaichunlin@users.noreply.github.com,Kai,kaichunlin@users.noreply.github.com,1432200301,1432200301,5dfea447f72e864db5e1c9ff3090c2faa4473674
+5dfea447f72e864db5e1c9ff3090c2faa4473674,5dfea447,Add example gifs,"Add example gifs
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432199768,1432199768,ecc00df03b5c51e91a7f7cb3d9692189c0ef4935
+ecc00df03b5c51e91a7f7cb3d9692189c0ef4935,ecc00df0,Add GitHub sample gifs,"Add GitHub sample gifs
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432197082,1432197082,581bf6593f8802862d82946e98a9dd3ee92c19c0
+581bf6593f8802862d82946e98a9dd3ee92c19c0,581bf659,Refactors sample code,"Refactors sample code
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432191550,1432191550,6804f3e9e517c5daf9ef0afebb2609e914a29fc4
+6804f3e9e517c5daf9ef0afebb2609e914a29fc4,6804f3e9,Add new transition to DrawerViewActivity,"Add new transition to DrawerViewActivity
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432191524,1432191524,e29fe80a4667273cf1ecc2a491ce842f59166f0d
+e29fe80a4667273cf1ecc2a491ce842f59166f0d,e29fe80a,Fix ViewTransitionBuilder.translationXAsFractionOfWidth(float),"Fix ViewTransitionBuilder.translationXAsFractionOfWidth(float)
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432191349,1432191349,2716ef3544410105c49902c61d2226b7ff6756da
+2716ef3544410105c49902c61d2226b7ff6756da,2716ef35,Merge branch 'master' of https://github.com/kaichunlin/android-transition,"Merge branch 'master' of https://github.com/kaichunlin/android-transition
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432181758,1432181758,"a6b49db9f1f772a42178116f4ded95db65e8a176,2a24cbe035f2d27a22d8c5cb237acb1e90642268"
+a6b49db9f1f772a42178116f4ded95db65e8a176,a6b49db9,first commit,"first commit
+",,,,Kai-Chun Lin,kaichun.lin+git@gmail.com,Kai-Chun Lin,kaichun.lin+git@gmail.com,1432181370,1432181370,
+2a24cbe035f2d27a22d8c5cb237acb1e90642268,2a24cbe0,Update README.md,Update README.md,,,,kaichunlin,kaichunlin@users.noreply.github.com,kaichunlin,kaichunlin@users.noreply.github.com,1431227140,1431227140,e28b78fdc4fbd5e21c76c8fc82e8a7d2d4c2c7f3
+e28b78fdc4fbd5e21c76c8fc82e8a7d2d4c2c7f3,e28b78fd,Initial commit,"Initial commit
+",,,,kaichunlin,kaichunlin@users.noreply.github.com,kaichunlin,kaichunlin@users.noreply.github.com,1431226798,1431226798,

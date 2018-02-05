@@ -1,0 +1,1215 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+0b8b93d3d0b1fb2228131847efc32be8b28effcd,0b8b93d3,Fix some StrictMode crashes when running monkey tests.,"Fix some StrictMode crashes when running monkey tests.
+
+* Cache a `SharedPreferences` object to be used throughout the app.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492359111,1492362617,70dd3bd4cf2db6cc32cb163d1a686b01b135115e
+70dd3bd4cf2db6cc32cb163d1a686b01b135115e,70dd3bd4,Merge branch 'add-rxjava',"Merge branch 'add-rxjava'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492353034,1492353034,"825a7cfd48017855db31f7434453c5cfd6c3b8d1,c77a66a39a102f497012b4891e33955a84d38a19"
+c77a66a39a102f497012b4891e33955a84d38a19,c77a66a3,Add retrolambda and RxJava to the about screen.,"Add retrolambda and RxJava to the about screen.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492352590,1492352590,6dfa85a5f95924e7163ecc3e17eaee5e16adc4d6
+6dfa85a5f95924e7163ecc3e17eaee5e16adc4d6,6dfa85a5,Remove some copy/paste in RxJava code.,"Remove some copy/paste in RxJava code.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492350084,1492350084,013d8ecd9626e53dc416244ad0b3c51dafcc78c3
+013d8ecd9626e53dc416244ad0b3c51dafcc78c3,013d8ecd,Add RxJava2,"Add RxJava2
+
+For now, just migrate `AsyncTask`s.
+
+Replace foreach loop with Observable/subscribe.
+
+Fix some Android Studio code inspection issues.
+
+Simplify some logic in MeetingActivity: We had unnecessary logic to create a meeting if needed.  The meeting should already be created before we enter this screen.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492267083,1492345039,8b1fe3e233a5f196e7ed76a4911c63e56ff11dd2
+8b1fe3e233a5f196e7ed76a4911c63e56ff11dd2,8b1fe3e2,Add retrolambda,"Add retrolambda
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492265363,1492265363,825a7cfd48017855db31f7434453c5cfd6c3b8d1
+825a7cfd48017855db31f7434453c5cfd6c3b8d1,825a7cfd,Ignore Android Studio warnings about unused View parameter in click methods,"Ignore Android Studio warnings about unused View parameter in click methods
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492264999,1492264999,dd7dc07908868b40ad8b71ad649caf414ed23b5e
+dd7dc07908868b40ad8b71ad649caf414ed23b5e,dd7dc079,Fix copyright headers and javadoc,"Fix copyright headers and javadoc
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492264818,1492264818,230eed807f2201478e27622c805c40c26a427e42
+230eed807f2201478e27622c805c40c26a427e42,230eed80,Use :: notation instead of . notation for data binding listeners.,"Use :: notation instead of . notation for data binding listeners.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492264380,1492264380,ad5f0af3704c93156865c0aba14bc9f1c4ad801b
+ad5f0af3704c93156865c0aba14bc9f1c4ad801b,ad5f0af3,Update build environment:,"Update build environment:
+
+support lib 25.3.1
+gradle plugin 2.3.1
+gradle 3.3
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1492263960,1492264182,56740e39a4452b3c6b25d9549d60ed307d5cdcce
+56740e39a4452b3c6b25d9549d60ed307d5cdcce,56740e39,"ScrumChatterCursorAdapter.changeCursor(), don't need to close the old cursor.","ScrumChatterCursorAdapter.changeCursor(), don't need to close the old cursor.
+
+This is done (just after) in `CursorLoader.deliverResult()`:
+
+```
+if (oldCursor != null && oldCursor != cursor && !oldCursor.isClosed()) {
+    oldCursor.close();
+}
+```
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1488138940,1488138940,8ee775d06df0858ae7abdf87cfc64d5408c4b9cb
+8ee775d06df0858ae7abdf87cfc64d5408c4b9cb,8ee775d0,New version 1.6.3: Update support library: 25.2.0,"New version 1.6.3: Update support library: 25.2.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1488138918,1488138918,91a3bd82d55a037086f7a91e418a5c536aeecc0a
+91a3bd82d55a037086f7a91e418a5c536aeecc0a,91a3bd82,Merge branch 'remove-external-storage-permission',"Merge branch 'remove-external-storage-permission'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487197736,1487197736,"fe33d6de4e4b74e986b3761d40a227fc98e2af25,34ab72cc9b85f009143dda1dd2c723c79bd7de7a"
+34ab72cc9b85f009143dda1dd2c723c79bd7de7a,34ab72cc,New version 1.6.2: remove EXTERNAL_STORAGE permissions.,"New version 1.6.2: remove EXTERNAL_STORAGE permissions.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487197358,1487197489,6eaaac5e94ecbbde2dade57c372a036aea585816
+6eaaac5e94ecbbde2dade57c372a036aea585816,6eaaac5e,Android studio code inspection cleanup,"Android studio code inspection cleanup
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487196150,1487197489,c74bd6aafc2eda5c9033e1a6d5d4075f2a772e48
+c74bd6aafc2eda5c9033e1a6d5d4075f2a772e48,c74bd6aa,Remove EXTERNAL_STORAGE permissions.,"Remove EXTERNAL_STORAGE permissions.
+
+Import is done using ACTION_OPEN_DOCUMENT.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487193436,1487197483,c073997c9652d9bd93917bc96cc2ddbc7a8c9e17
+c073997c9652d9bd93917bc96cc2ddbc7a8c9e17,c073997c,Use a FileProvider to share files,"Use a FileProvider to share files
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487191844,1487197114,fe33d6de4e4b74e986b3761d40a227fc98e2af25
+fe33d6de4e4b74e986b3761d40a227fc98e2af25,fe33d6de,Update build environment.,"Update build environment.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1487186516,1487186516,43864d6b902707b5d5f40f59f8c8373ce533e061
+43864d6b902707b5d5f40f59f8c8373ce533e061,43864d6b,"Update privacy policy, regarding `WRITE_EXTERNAL_STORAGE`","Update privacy policy, regarding `WRITE_EXTERNAL_STORAGE`
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1486865679,1486865679,d522d34253fb35893c2206bed7bac9bd8162cfd6
+d522d34253fb35893c2206bed7bac9bd8162cfd6,d522d342,Update PRIVACY.md,Update PRIVACY.md,,,,Carmen Alvarez,c@rmen.ca,GitHub,noreply@github.com,1486865153,1486865153,703dfd64ed0a908510c63237541fe7b633058a22
+703dfd64ed0a908510c63237541fe7b633058a22,703dfd64,Added privacy policy,"Added privacy policy
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1486865011,1486865038,b8e80072c311682f274da850bd7b5f402f9986bf
+b8e80072c311682f274da850bd7b5f402f9986bf,b8e80072,Merge pull request #54 from Poussinou/master,"Merge pull request #54 from Poussinou/master
+
+Add buttons to get your app easily ;)",,,,Carmen Alvarez,c@rmen.ca,GitHub,noreply@github.com,1484369433,1484369433,"9077a87fdda8f8a69767236e30550e1f635988cc,1ef3e6272bfe24b766ad0adb88f0bd880a74d333"
+1ef3e6272bfe24b766ad0adb88f0bd880a74d333,1ef3e627,Add buttons to get your app easily ;),Add buttons to get your app easily ;),,,,Poussinou,francoisvincentmail-game@yahoo.fr,GitHub,noreply@github.com,1484349596,1484349596,9077a87fdda8f8a69767236e30550e1f635988cc
+9077a87fdda8f8a69767236e30550e1f635988cc,9077a87f,1.6.1: translated japanese translation credit text for the about screen,"1.6.1: translated japanese translation credit text for the about screen
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1481478233,1481478233,c57c59249685af9d2bbf79dd07e8fdb701b687f2
+c57c59249685af9d2bbf79dd07e8fdb701b687f2,c57c5924,1.6.0: added japanese translations,"1.6.0: added japanese translations
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1481376018,1481376018,adcd97290fa4028710dcedbd1b8932d041dad97a
+adcd97290fa4028710dcedbd1b8932d041dad97a,adcd9729,Merge branch 'naofum-master',"Merge branch 'naofum-master'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1481375675,1481375675,"6a8e1c0a9d20db9812ed489ea6fae6e780af32b3,a6903e23ff07cfc6da37a73f8e1b083accc0b84b"
+a6903e23ff07cfc6da37a73f8e1b083accc0b84b,a6903e23,Added Naofumi Fukue to the about screen for the Japanese translation.,"Added Naofumi Fukue to the about screen for the Japanese translation.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1481149862,1481149862,402613cb7e05fb49e832c2c30897d8d9acf8fdc2
+402613cb7e05fb49e832c2c30897d8d9acf8fdc2,402613cb,default_team_member1 and 2,"default_team_member1 and 2
+",,,,naofum,naofum@gmail.com,naofum,naofum@gmail.com,1481119826,1481119826,1c7806e702bea71e9ba8fe50d660e80be95fe495
+1c7806e702bea71e9ba8fe50d660e80be95fe495,1c7806e7,Added Japanese translation,"Added Japanese translation
+",,,,naofum,naofum@gmail.com,naofum,naofum@gmail.com,1480834873,1480834873,6a8e1c0a9d20db9812ed489ea6fae6e780af32b3
+6a8e1c0a9d20db9812ed489ea6fae6e780af32b3,6a8e1c0a,Updated build environment,"Updated build environment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1479506629,1479506629,b3a0afda0e75baa568b6f39aa0e7d5ddd901e834
+b3a0afda0e75baa568b6f39aa0e7d5ddd901e834,b3a0afda,Revert to support lib 24.2.1 because of crash on 2.x:…,"Revert to support lib 24.2.1 because of crash on 2.x: https://code.google.com/p/android/issues/detail?id=225647
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1478364764,1478364764,50c42b64a6715eb907195911e0fbed66865e8d56
+50c42b64a6715eb907195911e0fbed66865e8d56,50c42b64,Merge branch 'issue-52-meeting-row-click',"Merge branch 'issue-52-meeting-row-click'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1478363343,1478363343,"5709169c1371250dfcb88302f40c69739e896994,11e594079f13097c85b5a23395f2e9914252fadd"
+11e594079f13097c85b5a23395f2e9914252fadd,11e59407,"Issue #52 in a meeting, click anywhere on a row to toggle the member speaking","Issue #52 in a meeting, click anywhere on a row to toggle the member speaking
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1478360808,1478363284,38b2f1612d3246f2724f1b467d3b4293f4d397ca
+38b2f1612d3246f2724f1b467d3b4293f4d397ca,38b2f161,Update build environment,"Update build environment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1478360763,1478360763,5709169c1371250dfcb88302f40c69739e896994
+5709169c1371250dfcb88302f40c69739e896994,5709169c,Some code cleanup,"Some code cleanup
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475629748,1475630038,0ec263aa7270b728ca63eb55601f3661d46d40a0
+0ec263aa7270b728ca63eb55601f3661d46d40a0,0ec263aa,1.5.2: Fix legend on pre-lollipop devices,"1.5.2: Fix legend on pre-lollipop devices
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475628797,1475628797,41a1d46a26112b5698cb1e5398123099fd264d83
+41a1d46a26112b5698cb1e5398123099fd264d83,41a1d46a,1.5.1: Always use the same color for a given member,"1.5.1: Always use the same color for a given member
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475626402,1475626402,be2c6fa1692ed10ea0ea6b3e5d18b79051ed2939
+be2c6fa1692ed10ea0ea6b3e5d18b79051ed2939,be2c6fa1,Merge branch 'issue-50-member-colors',"Merge branch 'issue-50-member-colors'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475625939,1475625939,"5cb71040f69269a2470ad10e3c306ebc00eb3ad0,4695e333311b8edf1214dc4a0411a96bd6a3b250"
+4695e333311b8edf1214dc4a0411a96bd6a3b250,4695e333,"Determine a member's color based on their id, rather than their name's hashcode","Determine a member's color based on their id, rather than their name's hashcode
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475622085,1475625736,fc63a94a1bf3b676c4a5932bb3f1e1b09dc7f4ce
+fc63a94a1bf3b676c4a5932bb3f1e1b09dc7f4ce,fc63a94a,Issue #50: Use the same color for a member across all charts,"Issue #50: Use the same color for a member across all charts
+
+This is not working yet: Many members seem to have the same colors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475616737,1475618098,5cb71040f69269a2470ad10e3c306ebc00eb3ad0
+5cb71040f69269a2470ad10e3c306ebc00eb3ad0,5cb71040,Fix fab margins,"Fix fab margins
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475433047,1475433047,94154bee9bae5f83f77c392dad1a21a3cf1c0110
+94154bee9bae5f83f77c392dad1a21a3cf1c0110,94154bee,Fix for showing/hiding share icons based on number of meetings,"Fix for showing/hiding share icons based on number of meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475431971,1475431971,7c0deccd6d5419b4389ff002bda2d9ef1774c1d0
+7c0deccd6d5419b4389ff002bda2d9ef1774c1d0,7c0deccd,Only show members who spoke at a finished meeting,"Only show members who spoke at a finished meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475431312,1475431312,a4be48c33b207f5a7e7612cb7248004bd693609d
+a4be48c33b207f5a7e7612cb7248004bd693609d,a4be48c3,Merge branch 'fabs',"Merge branch 'fabs'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475430574,1475430574,"629cc0b7695aee50e3a17b5dab731aafd4c3041d,70b8a1e616580f52bdc59d71341318db9137d01a"
+70b8a1e616580f52bdc59d71341318db9137d01a,70b8a1e6,put the new meeting fab on the left,"put the new meeting fab on the left
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475430550,1475430550,6c96b34d5cc21aa645f358102decfd1834b63e70
+6c96b34d5cc21aa645f358102decfd1834b63e70,6c96b34d,"Revert ""Put the new meeting fab on the meetings layout instead of the meetings_list layout""","Revert ""Put the new meeting fab on the meetings layout instead of the meetings_list layout""
+
+This reverts commit 794e0407c387d7a5d9ff42251589e5f6cc02e6e6.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475430383,1475430383,794e0407c387d7a5d9ff42251589e5f6cc02e6e6
+794e0407c387d7a5d9ff42251589e5f6cc02e6e6,794e0407,Put the new meeting fab on the meetings layout instead of the meetings_list layout,"Put the new meeting fab on the meetings layout instead of the meetings_list layout
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475430364,1475430364,a9eaf723efa396c5c4c19be7fb4245f956624aac
+a9eaf723efa396c5c4c19be7fb4245f956624aac,a9eaf723,Added fab to create meeting and members,"Added fab to create meeting and members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475428007,1475429384,629cc0b7695aee50e3a17b5dab731aafd4c3041d
+629cc0b7695aee50e3a17b5dab731aafd4c3041d,629cc0b7,Set proper font sizes and list item sizes,"Set proper font sizes and list item sizes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475427194,1475427194,2cf138777142927e346e73798a5bfc4041645c83
+2cf138777142927e346e73798a5bfc4041645c83,2cf13877,Fixing some margins,"Fixing some margins
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475426036,1475426036,85f6a201e42d7ad7608edfc2bc5acec486439a7a
+85f6a201e42d7ad7608edfc2bc5acec486439a7a,85f6a201,Merge branch 'tablet-design',"Merge branch 'tablet-design'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475423551,1475423551,"add81cac9974e3094bd2f9452dea9c5cef354566,650b9bcf9ea1b570c3ee244a6a2be49d9906cb5a"
+650b9bcf9ea1b570c3ee244a6a2be49d9906cb5a,650b9bcf,New version 1.5.0,"New version 1.5.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475422942,1475422942,f4200542440a7b0dbfa7a05e7c499aeb635a8045
+f4200542440a7b0dbfa7a05e7c499aeb635a8045,f4200542,Fix hiding some menu items if we're not viewing a finished meeting,"Fix hiding some menu items if we're not viewing a finished meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475422110,1475422110,37b4a3bb5855e8613f55a3cf037ee06c09dc3565
+37b4a3bb5855e8613f55a3cf037ee06c09dc3565,37b4a3bb,Updated permissions dispatcher 2.2.0 and gradle plugin 2.2.0,"Updated permissions dispatcher 2.2.0 and gradle plugin 2.2.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475421676,1475421676,a7a9da81a10716c569e31eada5dfef8b97716282
+a7a9da81a10716c569e31eada5dfef8b97716282,a7a9da81,Fix android studio warning about vector drawables,"Fix android studio warning about vector drawables
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475419208,1475419261,8621d86956319b9769905f990b65d24ef8d22564
+8621d86956319b9769905f990b65d24ef8d22564,8621d869,Update buildTools to 24.0.3 and support library 24.2.0,"Update buildTools to 24.0.3 and support library 24.2.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475417815,1475418245,ad9bd6cb4ff8744683675a93873529b5e21fb572
+ad9bd6cb4ff8744683675a93873529b5e21fb572,ad9bd6cb,Fix meeting list selector on 2.x,"Fix meeting list selector on 2.x
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475416854,1475418241,dc3d83bdd1c9768fb2070eb2cae7ce44147bdabb
+dc3d83bdd1c9768fb2070eb2cae7ce44147bdabb,dc3d83bd,Ignore some invalid code inspection warnings,"Ignore some invalid code inspection warnings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475415948,1475415948,86b1a5a834e1f7db746b586b3fdb07339629dc3f
+86b1a5a834e1f7db746b586b3fdb07339629dc3f,86b1a5a8,Fix some code inspection issues,"Fix some code inspection issues
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475415594,1475415594,97d7869c45cfc8e68b4ca2da13f0f591f731e0ce
+97d7869c45cfc8e68b4ca2da13f0f591f731e0ce,97d7869c,Removed unnecessary framelayout in member list,"Removed unnecessary framelayout in member list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475414488,1475414488,6424d7dcb534a1faa1496b5eb2eeb57988174a9e
+6424d7dcb534a1faa1496b5eb2eeb57988174a9e,6424d7dc,Remove some unnecessary code,"Remove some unnecessary code
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475413469,1475413469,f943af0cd54db7713b12b76b30ac29e295df51c7
+f943af0cd54db7713b12b76b30ac29e295df51c7,f943af0c,"The MeetingFragment, not MainActivity, is responsible for sharing a meeting and…","The MeetingFragment, not MainActivity, is responsible for sharing a meeting and showing stats for a meeting.
+
+On both phone and tablet
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475413249,1475413249,627b9c231dddb704e102087dbfdfa962946d6172
+627b9c231dddb704e102087dbfdfa962946d6172,627b9c23,Code cleanup after tablet refactoring,"Code cleanup after tablet refactoring
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475412298,1475412298,7cb8573155b70c851b91d1ba24138e5f6456afd7
+7cb8573155b70c851b91d1ba24138e5f6456afd7,7cb85731,Removed unused code,"Removed unused code
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475411593,1475411593,9af552e74bc51b2856188d98632835f40bb53eaa
+9af552e74bc51b2856188d98632835f40bb53eaa,9af552e7,Fix crash when creating first meeting,"Fix crash when creating first meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475402181,1475402181,7dee73f83d6314066d2c871cebb83ec917611f14
+7dee73f83d6314066d2c871cebb83ec917611f14,7dee73f8,Odd/even coloring of meeting members,"Odd/even coloring of meeting members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475401438,1475401438,5aaba43b265fcbf245a058ca9f0d3bd7077bb0be
+5aaba43b265fcbf245a058ca9f0d3bd7077bb0be,5aaba43b,"Allow viewing charts for all meetings, or selected meeting, on tablets","Allow viewing charts for all meetings, or selected meeting, on tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475396730,1475396730,5fe669e124b3a267220bd076deb4dc2fb44d77b3
+5fe669e124b3a267220bd076deb4dc2fb44d77b3,5fe669e1,"Create a new meeting in the main activity, on tablets","Create a new meeting in the main activity, on tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475396226,1475396226,eb04d00b1d2b42822ff4b826019a3a91ef0c5ebd
+eb04d00b1d2b42822ff4b826019a3a91ef0c5ebd,eb04d00b,"Improve auto-select of a meeting, on tablet","Improve auto-select of a meeting, on tablet
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475394608,1475394697,8499d34872b36f6b2dd48792f97a8d5e7bd88e02
+8499d34872b36f6b2dd48792f97a8d5e7bd88e02,8499d348,"Allow sharing either global data or the current meeting, from the main screen on a tablet","Allow sharing either global data or the current meeting, from the main screen on a tablet
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475392122,1475392288,e64c8747879421aa31ea04a83dc8db29bb88e83e
+e64c8747879421aa31ea04a83dc8db29bb88e83e,e64c8747,Don't have menu items in the MeetingFragment on tablets,"Don't have menu items in the MeetingFragment on tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475366825,1475366825,0d4e9226ea790b51f1fa90f111b52504dc038ba4
+0d4e9226ea790b51f1fa90f111b52504dc038ba4,0d4e9226,Show pseudo-ripple when selecting a meeting,"Show pseudo-ripple when selecting a meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475365782,1475365782,f7b407a3ac53faae78cd44898c0865a4d9b4e275
+f7b407a3ac53faae78cd44898c0865a4d9b4e275,f7b407a3,Show selected meeting,"Show selected meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475365455,1475365455,635524a4558c95b3852e36a06aa50f1e3fb4d320
+635524a4558c95b3852e36a06aa50f1e3fb4d320,635524a4,"Use different colors for the meeting list and meeting detail, on tablets","Use different colors for the meeting list and meeting detail, on tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475361508,1475361508,43e92bd685a702908af1adce4e26e868c2a54e53
+43e92bd685a702908af1adce4e26e868c2a54e53,43e92bd6,"Show the meeting list and selected meeting on the same screen, on tablets","Show the meeting list and selected meeting on the same screen, on tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475356907,1475359682,3e1649ad3e3ec432d50a545a38a2c088a1d718f6
+3e1649ad3e3ec432d50a545a38a2c088a1d718f6,3e1649ad,Different width and margins for the member list for tablet vs phone,"Different width and margins for the member list for tablet vs phone
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1475342590,1475343246,add81cac9974e3094bd2f9452dea9c5cef354566
+add81cac9974e3094bd2f9452dea9c5cef354566,add81cac,Increment version to 1.4.0,"Increment version to 1.4.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473545933,1473545933,617d69d7ecce8f929cb1e216212d4f71b84c6d30
+617d69d7ecce8f929cb1e216212d4f71b84c6d30,617d69d7,Removed unused resources,"Removed unused resources
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473545262,1473545262,03d20498c50838941bcf49ae1d7d8f9e31dfccae
+03d20498c50838941bcf49ae1d7d8f9e31dfccae,03d20498,Added auto mode for the theme,"Added auto mode for the theme
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473545252,1473545252,efac27b86b614c1cfba3b78943683391006c25e1
+efac27b86b614c1cfba3b78943683391006c25e1,efac27b8,Hide the empty view when loading,"Hide the empty view when loading
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473543389,1473543389,c231f313f9a9e9fcd0ad26b665e693a5f7170766
+c231f313f9a9e9fcd0ad26b665e693a5f7170766,c231f313,Simplify some layouts,"Simplify some layouts
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473543378,1473543378,3b376aea45490f0ec2ce4171a99334d1a93b95c6
+3b376aea45490f0ec2ce4171a99334d1a93b95c6,3b376aea,Simplify layout of member list + header,"Simplify layout of member list + header
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473542715,1473542715,d7783751824039f57dbe0633b1879f0249f2c520
+d7783751824039f57dbe0633b1879f0249f2c520,d7783751,Some style changes,"Some style changes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473542066,1473542066,a370897a3f3c2058f4b3c8e893d0fac33e6ad3e9
+a370897a3f3c2058f4b3c8e893d0fac33e6ad3e9,a370897a,new version 1.3.4,"new version 1.3.4
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473538128,1473538128,f54e88551026fd041c2b766b1ed733a1a58bc0ad
+f54e88551026fd041c2b766b1ed733a1a58bc0ad,f54e8855,Merge branch 'recyclerview',"Merge branch 'recyclerview'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473538045,1473538045,"157854a4a082b0bf205d6100ab4e89826dcd0d94,48467b49b46dd6f45d2be9143653bdfb52c50c12"
+48467b49b46dd6f45d2be9143653bdfb52c50c12,48467b49,Update copyrights,"Update copyrights
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473537928,1473537928,ec889d5a688b6c2f246e7c67b61689d181e1da0c
+ec889d5a688b6c2f246e7c67b61689d181e1da0c,ec889d5a,Revert DB change which added a new column _id to the meeting_member tables.,"Revert DB change which added a new column _id to the meeting_member tables.
+
+We don't need this for now.  An alias will suffice.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473537062,1473537062,6ac3c1704d0ccd06c8e7ef556538e49a63930307
+6ac3c1704d0ccd06c8e7ef556538e49a63930307,6ac3c170,Migrate meeting to recyclerview,"Migrate meeting to recyclerview
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473528687,1473536823,67323ff9fc7303330ac953250884c14bf453849a
+67323ff9fc7303330ac953250884c14bf453849a,67323ff9,migrate the members list to a recyclerview,"migrate the members list to a recyclerview
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473522415,1473522612,38063b2f6cfe73fa447010972a9858775beec68f
+38063b2f6cfe73fa447010972a9858775beec68f,38063b2f,Migrate meetings list to recyclerview,"Migrate meetings list to recyclerview
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473521014,1473521014,891877330d464e2d989892138d204405672bd2c4
+891877330d464e2d989892138d204405672bd2c4,89187733,Use databinding in the meetings list,"Use databinding in the meetings list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473518127,1473518904,cba29592fb0999d258a58483d8f62ea5ceb60870
+cba29592fb0999d258a58483d8f62ea5ceb60870,cba29592,add databinding to member deletion and editing,"add databinding to member deletion and editing
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473513454,1473517509,a698911a569226162a11622f2a521f494e8d3786
+a698911a569226162a11622f2a521f494e8d3786,a698911a,Add databinding for member list column headings,"Add databinding for member list column headings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473512770,1473517509,16313bfd111d40a3336b0e7b7352b3ff81ad4814
+16313bfd111d40a3336b0e7b7352b3ff81ad4814,16313bfd,databinding for meeting member start/stop button and meeting stop button.,"databinding for meeting member start/stop button and meeting stop button.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473511542,1473517505,157854a4a082b0bf205d6100ab4e89826dcd0d94
+157854a4a082b0bf205d6100ab4e89826dcd0d94,157854a4,code inspection fixes,"code inspection fixes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473509198,1473509198,29cbc25f4447031c6de055d68aac5ad1dc3e1c26
+29cbc25f4447031c6de055d68aac5ad1dc3e1c26,29cbc25f,More databinding,"More databinding
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1473509187,1473509187,bf759c37d858fdf5341f1aef550ee0d1728ba17d
+bf759c37d858fdf5341f1aef550ee0d1728ba17d,bf759c37,1.3.3: maintenance release,"1.3.3: maintenance release
+
+* Update to support library 24.2.0
+* Update to the gradle plugin 2.1.3
+* Update to gradle 2.14.1
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1472909057,1472909057,45fe74058a9ed6d877aa32e01cfdfb38e334e061
+45fe74058a9ed6d877aa32e01cfdfb38e334e061,45fe7405,Only look for relase versions of libraries (ben-manes plugin),"Only look for relase versions of libraries (ben-manes plugin)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1466943053,1466943053,c2b828aa6fd32b6411bc7391e5faf718ea7c879c
+c2b828aa6fd32b6411bc7391e5faf718ea7c879c,c2b828aa,Improve the way a db file can be selected for import,"Improve the way a db file can be selected for import
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1466356937,1466356937,4d8500de78a109407a30b643a7dfa824b2bf5518
+4d8500de78a109407a30b643a7dfa824b2bf5518,4d8500de,New version 1.3.2: Update build tools:,"New version 1.3.2: Update build tools:
+
+buildToolsVersion, compileSdkVersion, support library: 24.
+
+gradle plugin: 2.1.2
+
+target 24
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1466355794,1466355794,0ed95e5821c6995940b2bc1ba88854f178b9f3af
+0ed95e5821c6995940b2bc1ba88854f178b9f3af,0ed95e58,Merge branch 'drawer-redesign',"Merge branch 'drawer-redesign'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464950491,1464950491,"29145c1426cae6490460872cd2f08af3396225b9,0bc9f91b940e6374c45b0f0adcf57164a6c5f4a8"
+0bc9f91b940e6374c45b0f0adcf57164a6c5f4a8,0bc9f91b,New version 1.3.1,"New version 1.3.1
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464950478,1464950478,2d284f7b4f0be9457a5ba9077d644fc6add1872a
+2d284f7b4f0be9457a5ba9077d644fc6add1872a,2d284f7b,Minor ui improvements,"Minor ui improvements
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464943751,1464950146,e8ec1971a92ef6a3db396c87392fd365df5f7453
+e8ec1971a92ef6a3db396c87392fd365df5f7453,e8ec1971,Isolated code from MainActivity into MainPagerAdapter.,"Isolated code from MainActivity into MainPagerAdapter.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464909765,1464909765,cc5c541a3a11482797341e9d94e66870ed936bfb
+cc5c541a3a11482797341e9d94e66870ed936bfb,cc5c541a,Some cleanup for the drawer,"Some cleanup for the drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464908312,1464908781,d20cb0b55f6016096a1138bcff20b1f047df7357
+d20cb0b55f6016096a1138bcff20b1f047df7357,d20cb0b5,Improve colors in the night-mode side menu,"Improve colors in the night-mode side menu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464907976,1464907976,82668cae4420820d499705d9a0011eb33e306d4c
+82668cae4420820d499705d9a0011eb33e306d4c,82668cae,moved TeamNavigationView -> TeamNavigationMenu,"moved TeamNavigationView -> TeamNavigationMenu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464907511,1464907511,cac259198d1a7147eabb4adbdf4e5e29f1030a09
+cac259198d1a7147eabb4adbdf4e5e29f1030a09,cac25919,Use the menu xml for the navigation drawer,"Use the menu xml for the navigation drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464904299,1464907154,749214de2932d0cbe9a8536b61010d3211af1b3e
+749214de2932d0cbe9a8536b61010d3211af1b3e,749214de,wip resign drawer,"wip resign drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464820166,1464820786,3af29e1e1b08430ba941caaffe90356d53382fd5
+3af29e1e1b08430ba941caaffe90356d53382fd5,3af29e1e,Fix the drawer:,"Fix the drawer:
+
+* The drawer should be drawn to the top of the screen, behind the status bar.
+* Use a static hamburger icon in the activity with the drawer.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464814079,1464814079,29145c1426cae6490460872cd2f08af3396225b9
+29145c1426cae6490460872cd2f08af3396225b9,29145c14,Specify a dark color.,"Specify a dark color.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464807351,1464807351,fe3a47b7f9efeaf28e84112d328083ecefc6e2be
+fe3a47b7f9efeaf28e84112d328083ecefc6e2be,fe3a47b7,Fix some chart export issues,"Fix some chart export issues
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464126074,1464126074,965be017e108492945067e4cdd0ba16f940340f1
+965be017e108492945067e4cdd0ba16f940340f1,965be017,Merge branch 'single_meeting_chart',"Merge branch 'single_meeting_chart'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464123734,1464123734,"0f11296f98d79732120b255260ea0d4ead4ff89a,e8e06f515c89245922e56f4415913a2f2d42f28f"
+e8e06f515c89245922e56f4415913a2f2d42f28f,e8e06f51,Update javadoc.,"Update javadoc.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464123489,1464123489,20ee2458bf34d7040b10c2e9f0ae1fdaa49ea623
+20ee2458bf34d7040b10c2e9f0ae1fdaa49ea623,20ee2458,Updated chart color palette,"Updated chart color palette
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464123112,1464123112,870461af5e8acf22d939bd7580d3af11dd95c703
+870461af5e8acf22d939bd7580d3af11dd95c703,870461af,Added meeting duration to the single meeting column chart,"Added meeting duration to the single meeting column chart
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464122516,1464122516,5c2832c56de10830df684fadff92ef3373006eb9
+5c2832c56de10830df684fadff92ef3373006eb9,5c2832c5,Rename some views for the member speaking time chart.,"Rename some views for the member speaking time chart.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464121410,1464121410,d8c24acddf567d75de323e4469b77f91ef4d2a5f
+d8c24acddf567d75de323e4469b77f91ef4d2a5f,d8c24acd,Don't include a subject when sharing a chart.,"Don't include a subject when sharing a chart.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464121047,1464121047,95dab258ac7fa9ddf1955bca164a24cf95017261
+95dab258ac7fa9ddf1955bca164a24cf95017261,95dab258,"Use an action item instead of a fab, for the meeting chart","Use an action item instead of a fab, for the meeting chart
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464044050,1464044050,e2c08551662595c2315156b186f211bd6ce6c5d9
+e2c08551662595c2315156b186f211bd6ce6c5d9,e2c08551,Use a column chart for a single meeting,"Use a column chart for a single meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464042714,1464043549,59d192e6c934a311a71834d32400cf91b73ff2c9
+59d192e6c934a311a71834d32400cf91b73ff2c9,59d192e6,Up/back navigation from MeetingChartActivity,"Up/back navigation from MeetingChartActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464036468,1464036468,17a718150b3a9e31089a20f5eb6199e3ae2e587b
+17a718150b3a9e31089a20f5eb6199e3ae2e587b,17a71815,Add chart for a single meeting,"Add chart for a single meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464034864,1464036435,0f11296f98d79732120b255260ea0d4ead4ff89a
+0f11296f98d79732120b255260ea0d4ead4ff89a,0f11296f,"Strings changes, related to charts","Strings changes, related to charts
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1464030985,1464030985,8806cdd2d388e90cad1e0965dabe0a035c88579a
+8806cdd2d388e90cad1e0965dabe0a035c88579a,8806cdd2,Added date range to the pie chart subtitle,"Added date range to the pie chart subtitle
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463957270,1463957270,86832cc1f861c3cb1650dbf89ef4a0c4c6561e4a
+86832cc1f861c3cb1650dbf89ef4a0c4c6561e4a,86832cc1,Fixed bug where the chart legend entries were duplicated.,"Fixed bug where the chart legend entries were duplicated.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463955888,1463955888,de5e03f19645edbc00e21d542ac98a5a92ce0d4c
+de5e03f19645edbc00e21d542ac98a5a92ce0d4c,de5e03f1,Show up to 10 members in the pie chart,"Show up to 10 members in the pie chart
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463953583,1463953583,f621f5f62b34fa8b8ac24ff3fd48392cfc612c46
+f621f5f62b34fa8b8ac24ff3fd48392cfc612c46,f621f5f6,Some refactoring of the chart classes.,"Some refactoring of the chart classes.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463952473,1463953262,f941eeda40eaf31616e1c0717ed8d5cf06cf05a9
+f941eeda40eaf31616e1c0717ed8d5cf06cf05a9,f941eeda,Merge branch 'chart_pager_adapter',"Merge branch 'chart_pager_adapter'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463951648,1463951648,"3b4a00ff4f062354fe1b732bbb124c7bb8dd56f1,f57da902a9a5a792d9fc73dfb35fec5d39430372"
+f57da902a9a5a792d9fc73dfb35fec5d39430372,f57da902,move the charts into a pager adapter,"move the charts into a pager adapter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463950220,1463951301,3b4a00ff4f062354fe1b732bbb124c7bb8dd56f1
+3b4a00ff4f062354fe1b732bbb124c7bb8dd56f1,3b4a00ff,Repackaged the chart classes into one chart package.,"Repackaged the chart classes into one chart package.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463947832,1463947996,2b368368b2a2c74998ae2ab5d152f4282ab9e981
+2b368368b2a2c74998ae2ab5d152f4282ab9e981,2b368368,"Renamed ""graph"" to ""chart"" everywhere, for consistency.","Renamed ""graph"" to ""chart"" everywhere, for consistency.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463947081,1463947081,c89189f1acc9a75373c9ba95084f5d66b426234d
+c89189f1acc9a75373c9ba95084f5d66b426234d,c89189f1,Merge branch 'graphs',"Merge branch 'graphs'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463923569,1463923569,"26656e218da1711dcc83661b78c2fdc934e1b37f,ca77c611a9b9e1d38f768cec32dceb0afcc63c53"
+ca77c611a9b9e1d38f768cec32dceb0afcc63c53,ca77c611,New version 1.3.0.,"New version 1.3.0.
+
+New graphs feature.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463923482,1463923482,59d18a9a3edef09a9b711d03511cf1d4512d5728
+59d18a9a3edef09a9b711d03511cf1d4512d5728,59d18a9a,Fix code inspection issues,"Fix code inspection issues
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463923059,1463923059,66215733e675ca46b4bfa7bf4b23e69d4b6d2acc
+66215733e675ca46b4bfa7bf4b23e69d4b6d2acc,66215733,Refactoring pie chart,"Refactoring pie chart
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463920373,1463922752,cdea98ca642204edbea384665ccecf685dc97b39
+cdea98ca642204edbea384665ccecf685dc97b39,cdea98ca,Use stacked column chart,"Use stacked column chart
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463911313,1463913727,2f6e198a6acfa96abc8e37d673ea008ca501089d
+2f6e198a6acfa96abc8e37d673ea008ca501089d,2f6e198a,Added pie charts for average and total speaking duration,"Added pie charts for average and total speaking duration
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463901409,1463905179,752c202a1c52059c6c1e3d9d497b0074fc9fdae9
+752c202a1c52059c6c1e3d9d497b0074fc9fdae9,752c202a,Split MeetingsGraph into two classes: MeetingsDurationGraph and MemberSpeakingTimeGraph,"Split MeetingsGraph into two classes: MeetingsDurationGraph and MemberSpeakingTimeGraph
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463899242,1463899242,f23e19bc37c3ec1c14d7a239a5133e7fc996e4da
+f23e19bc37c3ec1c14d7a239a5133e7fc996e4da,f23e19bc,Further cleanup of the line graphs,"Further cleanup of the line graphs
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463898449,1463898449,4de5976896ed5fe33c17e5267ae49a83b4a66225
+4de5976896ed5fe33c17e5267ae49a83b4a66225,4de59768,Attempt to simplify the charts a bit,"Attempt to simplify the charts a bit
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463897365,1463897365,7e0b6ec24637cf7dabadea50723bbed002383201
+7e0b6ec24637cf7dabadea50723bbed002383201,7e0b6ec2,"Revert ""Individual charts for each member as well as one chart at the end for all members""","Revert ""Individual charts for each member as well as one chart at the end for all members""
+
+This reverts commit 5d418056a44af39eb76f36ce029d35d2a552f78a.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463896000,1463896000,5d418056a44af39eb76f36ce029d35d2a552f78a
+5d418056a44af39eb76f36ce029d35d2a552f78a,5d418056,Individual charts for each member as well as one chart at the end for all members,"Individual charts for each member as well as one chart at the end for all members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463892781,1463892781,ed5660febeded47209fe4d48f66ca74aaa32b1ff
+ed5660febeded47209fe4d48f66ca74aaa32b1ff,ed5660fe,Added speaking time graph,"Added speaking time graph
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463877554,1463887749,7f8318df1241835212f2cefbd34224b11e667ae3
+7f8318df1241835212f2cefbd34224b11e667ae3,7f8318df,Add a screen with a graph of meeting durations.,"Add a screen with a graph of meeting durations.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463859405,1463874084,26656e218da1711dcc83661b78c2fdc934e1b37f
+26656e218da1711dcc83661b78c2fdc934e1b37f,26656e21,Added static start* methods to MeetingActivity,"Added static start* methods to MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463860326,1463860326,fc363a01bab3a86be89907b52994ac81f78007e2
+fc363a01bab3a86be89907b52994ac81f78007e2,fc363a01,New version 1.2.3: update credits in about screen.,"New version 1.2.3: update credits in about screen.
+
+Added credits for the jxl lib.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463832625,1463832625,3a82dd687ad8e0d5217cbf793938a434c68fd8ef
+3a82dd687ad8e0d5217cbf793938a434c68fd8ef,3a82dd68,Move the version name and version code to app/build.gradle.,"Move the version name and version code to app/build.gradle.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463779834,1463779834,9aa12e3b69a830c2bd87f80be3f9e1675fc05a1b
+9aa12e3b69a830c2bd87f80be3f9e1675fc05a1b,9aa12e3b,Issue #36: Add some default team members,"Issue #36: Add some default team members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463778999,1463778999,9cc04a05d869bd242ced99cdbea56c678dec05a4
+9cc04a05d869bd242ced99cdbea56c678dec05a4,9cc04a05,Reformat ScrumChatterDatabase,"Reformat ScrumChatterDatabase
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463777028,1463777028,015079bdbed0e31b3e5436818c47a9e86709fc7a
+015079bdbed0e31b3e5436818c47a9e86709fc7a,015079bd,Don't allow creating or renaming a member with an empty name.,"Don't allow creating or renaming a member with an empty name.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463605293,1463605293,cfeb9b24d57e816026a2dea4dbd9f7d45af92ff0
+cfeb9b24d57e816026a2dea4dbd9f7d45af92ff0,cfeb9b24,Merge branch 'rename-members',"Merge branch 'rename-members'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463604799,1463604799,"b715f01baf6733d6076c95bbe855fe27c723b755,b7b0106332c3dd8a543dfefafcbad4373ccd3e61"
+b7b0106332c3dd8a543dfefafcbad4373ccd3e61,b7b01063,Add a check for renaming a member to an existing member.,"Add a check for renaming a member to an existing member.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463604669,1463604669,b57f9249375d945623aad2e7a49b7e9d33916146
+b57f9249375d945623aad2e7a49b7e9d33916146,b57f9249,Added feature to rename a member,"Added feature to rename a member
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461877039,1463600243,b715f01baf6733d6076c95bbe855fe27c723b755
+b715f01baf6733d6076c95bbe855fe27c723b755,b715f01b,Use snackbar instead of toast,"Use snackbar instead of toast
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463600213,1463600213,07649aa80743e5d93966c3c2b9998f2a5621b18a
+07649aa80743e5d93966c3c2b9998f2a5621b18a,07649aa8,New version 1.2.1,"New version 1.2.1
+
+Update to support librarion 23.4.0.
+Update to permissions dispatcher 2.1.3.
+Update the gradle plugin to 2.1.0.
+Update to gradle 2.13.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1463599551,1463599551,28da41142abee6834f20358af23b476da0d016a3
+28da41142abee6834f20358af23b476da0d016a3,28da4114,Merge branch 'night-mode',"Merge branch 'night-mode'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461623075,1461623075,"ce9fc1a4385d2eb49b09193e868f15f239e7e4e8,22a9651229e9a23a4fd61c532fae686d966fde1b"
+22a9651229e9a23a4fd61c532fae686d966fde1b,22a96512,Update copyrights of files modified in this branch,"Update copyrights of files modified in this branch
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461622877,1461622877,015f4700b4cecef6968d1020e76da7fc54ec8ce9
+015f4700b4cecef6968d1020e76da7fc54ec8ce9,015f4700,New version 1.2.0,"New version 1.2.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461622108,1461622108,79db94d07505ab5648621f0cafada36f4ff18f35
+79db94d07505ab5648621f0cafada36f4ff18f35,79db94d0,Updated colors in about screen,"Updated colors in about screen
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461622015,1461622015,fc00ebc0cf5293feac74d153ea7a94fd4015d46a
+fc00ebc0cf5293feac74d153ea7a94fd4015d46a,fc00ebc0,Added setting for light/dark mode,"Added setting for light/dark mode
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461620212,1461621334,05ab78faadef24b167bb77f3eb95bfc919c5328e
+05ab78faadef24b167bb77f3eb95bfc919c5328e,05ab78fa,Added night mode theme.,"Added night mode theme.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461618625,1461618625,ce9fc1a4385d2eb49b09193e868f15f239e7e4e8
+ce9fc1a4385d2eb49b09193e868f15f239e7e4e8,ce9fc1a4,New version 1.1.3,"New version 1.1.3
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461532713,1461532713,71ae88df46b6ce93bba3bab02860da14bc95893b
+71ae88df46b6ce93bba3bab02860da14bc95893b,71ae88df,Merge branch 'cleanup',"Merge branch 'cleanup'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461532513,1461532513,"f024125e08c09d4bbf2328cd78670927db9bccde,bd845d809a6bf0d54a9daaf3df99b625790b9f21"
+bd845d809a6bf0d54a9daaf3df99b625790b9f21,bd845d80,Added backup configuration,"Added backup configuration
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461532410,1461532410,effdebee5db7e95eaa359e807322bf8353b5ca0d
+effdebee5db7e95eaa359e807322bf8353b5ca0d,effdebee,Replace the logo icon with a vector drawable,"Replace the logo icon with a vector drawable
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461530977,1461531325,1e2ec2d6be6aefeff8d1c0a688973ab50e08c0c1
+1e2ec2d6be6aefeff8d1c0a688973ab50e08c0c1,1e2ec2d6,Use pngs again for the launcher icon,"Use pngs again for the launcher icon
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461529750,1461529750,e448c9599c035a83908e4e828b25d4e7150d0d60
+e448c9599c035a83908e4e828b25d4e7150d0d60,e448c959,Use a vector asset for the launcher icon,"Use a vector asset for the launcher icon
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461529480,1461529480,3acdc6138db5ee8e557875ab396ffb996409631d
+3acdc6138db5ee8e557875ab396ffb996409631d,3acdc613,Use vector drawables for icons,"Use vector drawables for icons
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461525956,1461528793,9b04ec2a0812240905e55dd9317ea1676d1507a5
+9b04ec2a0812240905e55dd9317ea1676d1507a5,9b04ec2a,"Sorry, BoD.","Sorry, BoD.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461523961,1461523961,e19b5b7c865c66abf6d445eb046c8b6f0c3dd9c6
+e19b5b7c865c66abf6d445eb046c8b6f0c3dd9c6,e19b5b7c,Updated the feature graphic with the new emoticons,"Updated the feature graphic with the new emoticons
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461523807,1461523807,556d7424dc275241657a0c3215f582189b296ebc
+556d7424dc275241657a0c3215f582189b296ebc,556d7424,Replace the chatter face emoticons with the ones from https://design.google.com/icons/,"Replace the chatter face emoticons with the ones from https://design.google.com/icons/
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461522828,1461522828,eccc96ca4c6d9f223acaa5a2a8331f9431211763
+eccc96ca4c6d9f223acaa5a2a8331f9431211763,eccc96ca,Use vector assets for the chatter face,"Use vector assets for the chatter face
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461520947,1461520947,969d64a7f23cb070c99953b576975509575537fc
+969d64a7f23cb070c99953b576975509575537fc,969d64a7,removed app/lint.xml,"removed app/lint.xml
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461519682,1461519682,ef495baf7a895443b1c2e0a1780f6d427f5f2cda
+ef495baf7a895443b1c2e0a1780f6d427f5f2cda,ef495baf,Exclude some files from android studio code inspection,"Exclude some files from android studio code inspection
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461519588,1461519588,bc5d12850dc675a57b873eeb679eb26d9cbe00f6
+bc5d12850dc675a57b873eeb679eb26d9cbe00f6,bc5d1285,Fix spelling error,"Fix spelling error
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461518773,1461518773,58ff64547c7bad73e515cd267d64e8c04c69e9ea
+58ff64547c7bad73e515cd267d64e8c04c69e9ea,58ff6454,Fixing last Android Studio code inspection issues!,"Fixing last Android Studio code inspection issues!
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461518479,1461518479,a9761dd45b65cb56e5a121e8635c53cea6da0862
+a9761dd45b65cb56e5a121e8635c53cea6da0862,a9761dd4,Ignore more warnings about unclosed cursors (they are closed by cursor wrappers),"Ignore more warnings about unclosed cursors (they are closed by cursor wrappers)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461517694,1461517694,8dbb3171b22ca5793dea96da07dc1ab9cc6d3da6
+8dbb3171b22ca5793dea96da07dc1ab9cc6d3da6,8dbb3171,Ignoring some warnings about constant parameters,"Ignoring some warnings about constant parameters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461517505,1461517505,2033948a57f016552627e0bcefbbe86cd1a1c4f6
+2033948a57f016552627e0bcefbbe86cd1a1c4f6,2033948a,RTL support,"RTL support
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461515930,1461517283,6197ed4ea8063405a44aedee942a623185291f4d
+6197ed4ea8063405a44aedee942a623185291f4d,6197ed4e,Remove deprecated layout params,"Remove deprecated layout params
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461515299,1461515299,e32e088d4198e95ee713fa51682d8ad468ae3c59
+e32e088d4198e95ee713fa51682d8ad468ae3c59,e32e088d,Fix some Android Studio null check issue,"Fix some Android Studio null check issue
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461515127,1461515127,0cca13097415ae41cfe5d9390aa63542556453e5
+0cca13097415ae41cfe5d9390aa63542556453e5,0cca1309,More Android Studio code inspection: removed some unused method parameters,"More Android Studio code inspection: removed some unused method parameters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461514686,1461514686,c0deee62925ef5310fa9fcd90d1c875d8efb775d
+c0deee62925ef5310fa9fcd90d1c875d8efb775d,c0deee62,More Android Studio code inspection fixes:,"More Android Studio code inspection fixes:
+
+* removed unused setters
+* add SuppressLint(""Recycle"") for cursors that lint thinks aren't closed,
+  but are actually closed by a cursor wrapper.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461514250,1461514250,7c1fb153c4b15a8e5e642d32d61518587bafaefc
+7c1fb153c4b15a8e5e642d32d61518587bafaefc,7c1fb153,Use the databinding library,"Use the databinding library
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461511796,1461513512,2606997c7d26886c02b25340d9450c0a0c62eba4
+2606997c7d26886c02b25340d9450c0a0c62eba4,2606997c,Ignore the TryFinallyCanBeTryWithResources warning.,"Ignore the TryFinallyCanBeTryWithResources warning.
+
+We need a higher minsdk to use this feature.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461508833,1461508833,37d2de87247062a75c9de508975e9849bad216f8
+37d2de87247062a75c9de508975e9849bad216f8,37d2de87,Fix some Android Studio code inspection issues,"Fix some Android Studio code inspection issues
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1461508737,1461508737,f024125e08c09d4bbf2328cd78670927db9bccde
+f024125e08c09d4bbf2328cd78670927db9bccde,f024125e,1.1.2: remove logging from release build,"1.1.2: remove logging from release build
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460239163,1460240117,5a38d6e2459e4e98a3c6b2a292bda212c9d871bf
+5a38d6e2459e4e98a3c6b2a292bda212c9d871bf,5a38d6e2,Fix indeterminate progressbar color.,"Fix indeterminate progressbar color.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460150275,1460150275,95205d9bced06867bf71701eea6a2a8e1379d7b0
+95205d9bced06867bf71701eea6a2a8e1379d7b0,95205d9b,Don't enable proguard on the release build,"Don't enable proguard on the release build
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460148071,1460148071,ed090ed038a27175dcdf7545f85115fe01ae5754
+ed090ed038a27175dcdf7545f85115fe01ae5754,ed090ed0,Version 1.1.0,"Version 1.1.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460146784,1460146784,e3bdecafefd32ac00f58b96e19773584333a2a6c
+e3bdecafefd32ac00f58b96e19773584333a2a6c,e3bdecaf,Merge branch 'appcompat',"Merge branch 'appcompat'
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460146648,1460146648,"07ff2e9681070a3f04131924a64191a9ae4fab73,a5c307ffc9ae5492d25e51bd8afa74e1403706b3"
+a5c307ffc9ae5492d25e51bd8afa74e1403706b3,a5c307ff,put the permissions library in the module gradle file,"put the permissions library in the module gradle file
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460145470,1460145470,8738183c6c0c0ade4818bf788c0e7f0748b91629
+8738183c6c0c0ade4818bf788c0e7f0748b91629,8738183c,Check for permission before importing a db,"Check for permission before importing a db
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460070627,1460073885,b6105a1b0690f09e45884addf8fe7d4f5e022e9d
+b6105a1b0690f09e45884addf8fe7d4f5e022e9d,b6105a1b,"Target 22 for now, as we need to manage permissions","Target 22 for now, as we need to manage permissions
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460068763,1460068763,d2af3708d0fa1805998a2efdf4d7f6270f2014b4
+d2af3708d0fa1805998a2efdf4d7f6270f2014b4,d2af3708,Android studio code inspection fixes,"Android studio code inspection fixes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460067496,1460067496,7cf601eac5235d09ffeb3a7c02a49bd1b1781bfd
+7cf601eac5235d09ffeb3a7c02a49bd1b1781bfd,7cf601ea,Remove deprecated Tab apis,"Remove deprecated Tab apis
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460066950,1460066950,8271f9f9422f825d233fb40aec94bafacbadea4d
+8271f9f9422f825d233fb40aec94bafacbadea4d,8271f9f9,Update to gradle plugin 2.0.0 and gradle 2.10,"Update to gradle plugin 2.0.0 and gradle 2.10
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460066430,1460066430,dc7021945af5f30de064eae42e823bbb06102045
+dc7021945af5f30de064eae42e823bbb06102045,dc702194,Use the support library 23.3.0,"Use the support library 23.3.0
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1460065198,1460065198,05e8fdf3e21483513d49a78517ea1ac8d2d5e0f4
+05e8fdf3e21483513d49a78517ea1ac8d2d5e0f4,05e8fdf3,Fix shadow under actionbar,"Fix shadow under actionbar
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459988021,1459988021,3ccba30868188cfc426dcd7b3264b44a0a7bd405
+3ccba30868188cfc426dcd7b3264b44a0a7bd405,3ccba308,Fix overflow icon color,"Fix overflow icon color
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459985197,1459985197,e04c50cb9078d6bf62d928d8d9f4ee640d7d4b42
+e04c50cb9078d6bf62d928d8d9f4ee640d7d4b42,e04c50cb,Changed color of hamburger icon,"Changed color of hamburger icon
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459984186,1459984186,e5a3f703a099e97725b5cac32ed8abe5b7a7f4a2
+e5a3f703a099e97725b5cac32ed8abe5b7a7f4a2,e5a3f703,Fix colors of tab and toolbar text,"Fix colors of tab and toolbar text
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459983675,1459983675,f38d60a774b40fab294fbb12273a8e2b45198e2c
+f38d60a774b40fab294fbb12273a8e2b45198e2c,f38d60a7,Use toolbar instead of actionbar,"Use toolbar instead of actionbar
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459982337,1459982337,27830feaaac382d77224c8933e1ad941ed27ebd9
+27830feaaac382d77224c8933e1ad941ed27ebd9,27830fea,Correct inflation of views inside adapters,"Correct inflation of views inside adapters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459978635,1459978635,54f45d9a8c0e57ca486e23f185c075fb071522e4
+54f45d9a8c0e57ca486e23f185c075fb071522e4,54f45d9a,Removed some deprecated calls,"Removed some deprecated calls
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459978393,1459978393,35e040c8f7b1adafb51bd2ec9ac7069e2672f22a
+35e040c8f7b1adafb51bd2ec9ac7069e2672f22a,35e040c8,Fixed more Android Studio code inspection issues,"Fixed more Android Studio code inspection issues
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459978101,1459978101,043bd2804a0b9718021f12113979796a6ccb5be6
+043bd2804a0b9718021f12113979796a6ccb5be6,043bd280,More Android Studio code inspection fixes,"More Android Studio code inspection fixes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459977355,1459977355,b3cb3932ddf7350d8f33f38671efb7f12ec0afa2
+b3cb3932ddf7350d8f33f38671efb7f12ec0afa2,b3cb3932,Android studio code inspection fixes.,"Android studio code inspection fixes.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459976914,1459976914,0d5fcab480eea6125563985fb6008025f37b3e7a
+0d5fcab480eea6125563985fb6008025f37b3e7a,0d5fcab4,Android studio code inspection,"Android studio code inspection
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459898313,1459898313,a050b9d3c63d75a64a4ecfd15b05b247ae147435
+a050b9d3c63d75a64a4ecfd15b05b247ae147435,a050b9d3,Fixed hamburger icon,"Fixed hamburger icon
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459896404,1459896504,b366b029fbcb202ac67f66471aa27e4007a8d268
+b366b029fbcb202ac67f66471aa27e4007a8d268,b366b029,Fix radio button in side menu,"Fix radio button in side menu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459895530,1459896499,4d2f089bea3a7b906531343748ef04b253491614
+4d2f089bea3a7b906531343748ef04b253491614,4d2f089b,Improve the dialog colors,"Improve the dialog colors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459894864,1459896495,d61daa11e901a6b2f04b3cdc5ef97414e650524d
+d61daa11e901a6b2f04b3cdc5ef97414e650524d,d61daa11,Partially fix alert dialog colors,"Partially fix alert dialog colors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459893818,1459893818,b4b412c4d88614892dac0820191c036a825afd9b
+b4b412c4d88614892dac0820191c036a825afd9b,b4b412c4,Use the support v7 AlertDialog,"Use the support v7 AlertDialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459893329,1459893329,80fcb8cfaa450f083a9c42842c636447881959e9
+80fcb8cfaa450f083a9c42842c636447881959e9,80fcb8cf,Fix list selector,"Fix list selector
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459893052,1459893052,ccdda3b432885f8276c50b8e7aa0af7637f710eb
+ccdda3b432885f8276c50b8e7aa0af7637f710eb,ccdda3b4,Fix display of ImageButtons,"Fix display of ImageButtons
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459892388,1459892388,49e426c36d7c5b40057a41c5b684d6ff64657bbb
+49e426c36d7c5b40057a41c5b684d6ff64657bbb,49e426c3,Define the primary and accent colors,"Define the primary and accent colors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459891940,1459891940,02ecf68b7da0e75ce8d793fd0757ae9915e73d3d
+02ecf68b7da0e75ce8d793fd0757ae9915e73d3d,02ecf68b,Add missiing height and width attributes of views,"Add missiing height and width attributes of views
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459891916,1459891916,38e729b012188734ebcf11bd972ac5458e44d941
+38e729b012188734ebcf11bd972ac5458e44d941,38e729b0,menu items: use app:showAsAction instead of android:showAsAction,"menu items: use app:showAsAction instead of android:showAsAction
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459891885,1459891885,6a4213346c907cb816d7b8bc68f231adda158c69
+6a4213346c907cb816d7b8bc68f231adda158c69,6a421334,Migrate actionbarsherlock to appcompat.,"Migrate actionbarsherlock to appcompat.
+
+Step #1: it compiles and main screens run without crashing
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1459891333,1459891333,07ff2e9681070a3f04131924a64191a9ae4fab73
+07ff2e9681070a3f04131924a64191a9ae4fab73,07ff2e96,Added mapping file for 1.0.24,"Added mapping file for 1.0.24
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1439000908,1439000908,50d4e35614d596165170ec21952c415525bf95b3
+50d4e35614d596165170ec21952c415525bf95b3,50d4e356,New version 1.0.24,"New version 1.0.24
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1439000550,1439000550,7c15f6bdb646cb68b78febaaa756d63dfb5ceee2
+7c15f6bdb646cb68b78febaaa756d63dfb5ceee2,7c15f6bd,Issue #42: Fix bug (?) on lolipop with the face animation not working,"Issue #42: Fix bug (?) on lolipop with the face animation not working
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1439000327,1439000327,007920941f2ae9ba97b98c63282bafca533750fc
+007920941f2ae9ba97b98c63282bafca533750fc,00792094,Updated readme to indicate that the microphone is not used.,"Updated readme to indicate that the microphone is not used.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1427558837,1427558837,6bd17aec751529c18f1a8818d461adb34914ff6b
+6bd17aec751529c18f1a8818d461adb34914ff6b,6bd17aec,Added proguard mapping file for 1.0.23,"Added proguard mapping file for 1.0.23
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424625376,1424625376,593e825b53c56ab4f0d7cd852f84bc3d656b7b6d
+593e825b53c56ab4f0d7cd852f84bc3d656b7b6d,593e825b,New version 1.0.23,"New version 1.0.23
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424622389,1424622389,36510a14d0f15ef27a4da7d9deb69a76abe0503a
+36510a14d0f15ef27a4da7d9deb69a76abe0503a,36510a14,Merge branch 'issue-40-menu-item-color-lollipop' of https://github.com/caarmen/scrumchatter,"Merge branch 'issue-40-menu-item-color-lollipop' of https://github.com/caarmen/scrumchatter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424622307,1424622307,"41ff3da0dbb4a0eb023a6cbf1d9d43e0e2c812ee,0ccdee43b3d80f3c539069c6ea297dba6a31420d"
+0ccdee43b3d80f3c539069c6ea297dba6a31420d,0ccdee43,Target api level 21,"Target api level 21
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424621992,1424622222,51c89644e865b9a08c88f349b1f8bebf333da755
+51c89644e865b9a08c88f349b1f8bebf333da755,51c89644,Issue #40: fix for menu item color in lollipop,"Issue #40: fix for menu item color in lollipop
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424621961,1424622222,41ff3da0dbb4a0eb023a6cbf1d9d43e0e2c812ee
+41ff3da0dbb4a0eb023a6cbf1d9d43e0e2c812ee,41ff3da0,Remove iml files from source control,"Remove iml files from source control
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424621332,1424622204,5f3559774c5b0b40f8bb945917752b7acbc57bc1
+5f3559774c5b0b40f8bb945917752b7acbc57bc1,5f355977,Upgrade gradle plugin,"Upgrade gradle plugin
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424621005,1424622204,942303f936d454f803e9d7d2f5ac5efe63440868
+942303f936d454f803e9d7d2f5ac5efe63440868,942303f9,Update README.md,Update README.md,,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1424549323,1424549323,3953bf9af8da83642507f7f957296ba517cf7f45
+3953bf9af8da83642507f7f957296ba517cf7f45,3953bf9a,New version 1.0.22,"New version 1.0.22
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416177290,1416177290,ba653bd7ca91885a5d7a3fbc125e5f17383aa510
+ba653bd7ca91885a5d7a3fbc125e5f17383aa510,ba653bd7,Handle the case where there is no signing.properties file,"Handle the case where there is no signing.properties file
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416176493,1416176780,31c14bbef820aa2e43023348ed61973073d8e3a3
+31c14bbef820aa2e43023348ed61973073d8e3a3,31c14bbe,Fixing some gradle configuration,"Fixing some gradle configuration
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416176207,1416176207,d46aae9689cd156c4d575575a7ddd547d8b5b883
+d46aae9689cd156c4d575575a7ddd547d8b5b883,d46aae96,Fix lint errors,"Fix lint errors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416176180,1416176180,19e5ed1e21544e79ac0fd3ec30a6f909ca52bd14
+19e5ed1e21544e79ac0fd3ec30a6f909ca52bd14,19e5ed1e,Add signing properties,"Add signing properties
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416174942,1416174942,c9882555983fe1f416073bb8397f8271debd1c29
+c9882555983fe1f416073bb8397f8271debd1c29,c9882555,Gradlized project,"Gradlized project
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416173333,1416173333,54a85a297fa0c74af4bbada627b08e00d51280ef
+54a85a297fa0c74af4bbada627b08e00d51280ef,54a85a29,Update license headers to GPLv3.,"Update license headers to GPLv3.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416168040,1416168040,aab7bdac238765e6ccf74110efe188637be21126
+aab7bdac238765e6ccf74110efe188637be21126,aab7bdac,New version 1.0.21,"New version 1.0.21
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416095099,1416095099,6272b6c6bf2884906d8399618a06308a78654225
+6272b6c6bf2884906d8399618a06308a78654225,6272b6c6,Change license from GPLv2 to GPLv3,"Change license from GPLv2 to GPLv3
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416094994,1416094994,f4e4abe08135a9531811cefd19b4fc2e81651f47
+f4e4abe08135a9531811cefd19b4fc2e81651f47,f4e4abe0,Fixed some proguard errors related to actionbarsherlock and java 8,"Fixed some proguard errors related to actionbarsherlock and java 8
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1416088128,1416088128,be84f55eb17fcd364adf47f3d82333cea640780c
+be84f55eb17fcd364adf47f3d82333cea640780c,be84f55e,Issue #35: use a ViewHolder in adapters,"Issue #35: use a ViewHolder in adapters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1413128618,1413128618,484af0ef4cc62517c23dd53e4a6cd491b17ae4e0
+484af0ef4cc62517c23dd53e4a6cd491b17ae4e0,484af0ef,Changed ant project name to ScrumChatter,"Changed ant project name to ScrumChatter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1413128599,1413128599,a2851fcb363f5ef3879fe65541797950bfc83b70
+a2851fcb363f5ef3879fe65541797950bfc83b70,a2851fcb,Added feature graphic,"Added feature graphic
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1413128532,1413128532,c337fe5ec23ea6b71ee2fd5b9ee8daa293146810
+c337fe5ec23ea6b71ee2fd5b9ee8daa293146810,c337fe5e,Removed useless method fillView from adapters,"Removed useless method fillView from adapters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1412965966,1412965966,73d21b94616f384427d668f1dab18021f91cdef7
+73d21b94616f384427d668f1dab18021f91cdef7,73d21b94,New version 1.0.20,"New version 1.0.20
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1412965946,1412965946,6b3f5b2ac49b850b355cbf706680110269e2f7aa
+6b3f5b2ac49b850b355cbf706680110269e2f7aa,6b3f5b2a,New version 1.0.19,"New version 1.0.19
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380750340,1380750340,1aaa3cdbdbcfb6619ccfce1c45469291535bd04d
+1aaa3cdbdbcfb6619ccfce1c45469291535bd04d,1aaa3cdb,New version 1.0.19,"New version 1.0.19
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380750329,1380750329,4efcf6103d18a8f710cb363e71a2b85c9cd5a204
+4efcf6103d18a8f710cb363e71a2b85c9cd5a204,4efcf610,"Some cleanup, plus a correction where the ViewPager for meetings wasn't filtering on the team","Some cleanup, plus a correction where the ViewPager for meetings wasn't filtering on the team
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380749528,1380749528,64ee327daa344e5b003bb3e4a4b29e6120377703
+64ee327daa344e5b003bb3e4a4b29e6120377703,64ee327d,"Oops, forgot to add the new ids.xml file...","Oops, forgot to add the new ids.xml file...
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380742575,1380742575,593ed356169ac847701b4e3398f293f543270462
+593ed356169ac847701b4e3398f293f543270462,593ed356,Fixing lint and UCDetector problems,"Fixing lint and UCDetector problems
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380742259,1380742259,ff82c5125f9af7367716bc25d7871dc3c1e1c848
+ff82c5125f9af7367716bc25d7871dc3c1e1c848,ff82c512,Fix crash when loading the team list for the drawer,"Fix crash when loading the team list for the drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380742239,1380742239,656fad5eb2a558cd5fe03d9ebe3e95e7c6af7960
+656fad5eb2a558cd5fe03d9ebe3e95e7c6af7960,656fad5e,Refactor the adapter for the list of teams (for the drawer),"Refactor the adapter for the list of teams (for the drawer)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380740665,1380740665,9d2dd5ab9fa534ea91a9c873d50239f7ed20fb2c
+9d2dd5ab9fa534ea91a9c873d50239f7ed20fb2c,9d2dd5ab,New version 1.0.18 with side menu,"New version 1.0.18 with side menu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380671482,1380671482,c7a04f7cbd9a134712f597a93e24dd6d7d1ba128
+c7a04f7cbd9a134712f597a93e24dd6d7d1ba128,c7a04f7c,"Issue #33: No radio button for the ""New team..."" item","Issue #33: No radio button for the ""New team..."" item
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380669331,1380669331,b303ce739b5951d1a9ad731103016d3f858b6aa6
+b303ce739b5951d1a9ad731103016d3f858b6aa6,b303ce73,"Issue #33: remove ""Teams"" menu","Issue #33: remove ""Teams"" menu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380668652,1380668652,290f9154a5d7fd9db12e7d6880c9a3f4d0127e3f
+290f9154a5d7fd9db12e7d6880c9a3f4d0127e3f,290f9154,Issue #33: improve drawer layout,"Issue #33: improve drawer layout
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380668628,1380668628,a6441b793a481e5470c0beb01e6cd5ad51047d1d
+a6441b793a481e5470c0beb01e6cd5ad51047d1d,a6441b79,Issue #33: Set the cacheColorHint on the drawer to fix a UI bug on the drawer on 2.x,"Issue #33: Set the cacheColorHint on the drawer to fix a UI bug on the drawer on 2.x
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380665801,1380665801,757d29ad27ea5e284d28bf3d7b09a7d420a9d7f3
+757d29ad27ea5e284d28bf3d7b09a7d420a9d7f3,757d29ad,"Issue #33: Hack to style the radio button in the drawer, on 2.x","Issue #33: Hack to style the radio button in the drawer, on 2.x
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380665175,1380665175,869804f9225fc24b964c18fea45a20c2c4ebbe24
+869804f9225fc24b964c18fea45a20c2c4ebbe24,869804f9,Issue #33: Some layout improvements for the drawer,"Issue #33: Some layout improvements for the drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380663927,1380663927,af34069ca3d45d45ff2b9777a26cef31ec5b79f6
+af34069ca3d45d45ff2b9777a26cef31ec5b79f6,af34069c,Issue #33: increase the drawer size,"Issue #33: increase the drawer size
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380661943,1380661943,286dc88f70639dbb68799b28d8e244309deca40f
+286dc88f70639dbb68799b28d8e244309deca40f,286dc88f,"Issue #33: Removed menu item to switch teams, as this is now only done from the…","Issue #33: Removed menu item to switch teams, as this is now only done from the left drawer. Correction to preselect the current team in the list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380661470,1380661470,cbb5a965861f1a1c837cd95b52583a5e69a9e8f5
+cbb5a965861f1a1c837cd95b52583a5e69a9e8f5,cbb5a965,Issue #33: Almost working left drawer,"Issue #33: Almost working left drawer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380660958,1380660958,8c6bca648985c321e23e8375f20c7cbce0caf256
+8c6bca648985c321e23e8375f20c7cbce0caf256,8c6bca64,Issue #33: populate the drawer list with the list of teams,"Issue #33: populate the drawer list with the list of teams
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380660235,1380660235,b37137047a6f60d2e3d2b34aacac4f795fb5946b
+b37137047a6f60d2e3d2b34aacac4f795fb5946b,b3713704,Issue #33: setting up a placeholder drawer layout,"Issue #33: setting up a placeholder drawer layout
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380658020,1380658020,cff7283a5baddb542e13214f69ca773489431d29
+cff7283a5baddb542e13214f69ca773489431d29,cff7283a,Show loading animation when loading the view pager,"Show loading animation when loading the view pager
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380471204,1380471204,e6464dd9b83888804c0099e4b98653767ce2769d
+e6464dd9b83888804c0099e4b98653767ce2769d,e6464dd9,Fix some monkey crashes in MeetingFragment,"Fix some monkey crashes in MeetingFragment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380430894,1380430894,e4f18c8e51305909de666d7a7a61a119fd24856d
+e4f18c8e51305909de666d7a7a61a119fd24856d,e4f18c8e,Correct monkey crash related to the meeting pager adapter,"Correct monkey crash related to the meeting pager adapter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380429707,1380429707,6a3fcca41ef9c5a47cc45354eac4add6c2c007ee
+6a3fcca41ef9c5a47cc45354eac4add6c2c007ee,6a3fcca4,Fixing some more (but not all) monkey crashes due to strict mode violations in the pager adapter,"Fixing some more (but not all) monkey crashes due to strict mode violations in the pager adapter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380426462,1380426462,92a647663a29bb9585ee3b25d34a1b9c796f9d53
+92a647663a29bb9585ee3b25d34a1b9c796f9d53,92a64766,Simplify MeetingActivity: no more MeetingLoaderTask,"Simplify MeetingActivity: no more MeetingLoaderTask
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380423349,1380423349,2334356e1fae2fd3baca9bd8017220fe4fb15277
+2334356e1fae2fd3baca9bd8017220fe4fb15277,2334356e,Some optimizations for the meeting view pager,"Some optimizations for the meeting view pager
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380418627,1380418627,3928a0890f5762a104f505f9d99879a4b268e6e2
+3928a0890f5762a104f505f9d99879a4b268e6e2,3928a089,New version 1.0.17,"New version 1.0.17
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380342578,1380342578,233fd0322a8c29248681122911611b30f7434363
+233fd0322a8c29248681122911611b30f7434363,233fd032,Add comments and cleanup,"Add comments and cleanup
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380342372,1380342372,0b1ed897fe52af5c610cfb88ae2fca1908ab1514
+0b1ed897fe52af5c610cfb88ae2fca1908ab1514,0b1ed897,Correction to show the share action bar icon after stopping a meeting,"Correction to show the share action bar icon after stopping a meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380340212,1380340212,d1204254d97f6af45548645dfba84b010c875dbc
+d1204254d97f6af45548645dfba84b010c875dbc,d1204254,"Putting back some null checks in the dialog fragments.  Thanks, monkey","Putting back some null checks in the dialog fragments.  Thanks, monkey
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380339643,1380339643,55a7f090f1327aa88484c679e7aef4f0359012d9
+55a7f090f1327aa88484c679e7aef4f0359012d9,55a7f090,Issue #32: Use supportInvalidateOptionsMenu instead of invalidateOptionsMenu,"Issue #32: Use supportInvalidateOptionsMenu instead of invalidateOptionsMenu
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380338632,1380338632,2f45fcd7e98214d7afd039cff7ec5bcfcdf9a424
+2f45fcd7e98214d7afd039cff7ec5bcfcdf9a424,2f45fcd7,Issue #32: workaround for bug where rotating the device makes the action bar…,"Issue #32: workaround for bug where rotating the device makes the action bar icons disappear: https://code.google.com/p/android/issues/detail?id=29472
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380337782,1380337782,138c396dd29d7f2c8c19b10ff33a354fd62fa73d
+138c396dd29d7f2c8c19b10ff33a354fd62fa73d,138c396d,Issue #32: don't recreate the pager adapter each time we swipe,"Issue #32: don't recreate the pager adapter each time we swipe
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380323678,1380323678,8d041917a492438721a5123b22ee7a9905e96e4b
+8d041917a492438721a5123b22ee7a9905e96e4b,8d041917,Issue #32: Don't read from the db in the ui thread (MeetingPagerAdapter),"Issue #32: Don't read from the db in the ui thread (MeetingPagerAdapter)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380322956,1380322956,a1735b6b776a13a9d8977662fa5647713d6adcdd
+a1735b6b776a13a9d8977662fa5647713d6adcdd,a1735b6b,Issue #32: Some corrections related to the view pager of meetings,"Issue #32: Some corrections related to the view pager of meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380322517,1380322517,c6e17dcb71d243400e41d085c144cd0eb21437c2
+c6e17dcb71d243400e41d085c144cd0eb21437c2,c6e17dcb,"Issue #32: Correction to save the last selected meeting of the viewpager, when rotating","Issue #32: Correction to save the last selected meeting of the viewpager, when rotating
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380319159,1380319159,6a644249b7187642f7c4af17df9bc911f71e6b33
+6a644249b7187642f7c4af17df9bc911f71e6b33,6a644249,Issue #32: Correction for the MeetingFragment disappearing when rotating the device.,"Issue #32: Correction for the MeetingFragment disappearing when rotating the device.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380317710,1380317710,86efe9b376b21628359e893688494640ba73f43d
+86efe9b376b21628359e893688494640ba73f43d,86efe9b3,Issue #32: First draft of meeting pager adapter,"Issue #32: First draft of meeting pager adapter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380315482,1380315482,7f43f149259c7c22a97371a597dfc26b5f50aed2
+7f43f149259c7c22a97371a597dfc26b5f50aed2,7f43f149,minor change for deleting meetings,"minor change for deleting meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380312521,1380312521,e23b37b414e5461bdfa11091915d85a4ed3ff58d
+e23b37b414e5461bdfa11091915d85a4ed3ff58d,e23b37b4,Remove some seemingly unneeded null checks in the dialog fragments,"Remove some seemingly unneeded null checks in the dialog fragments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380312495,1380312495,251fced345c14ade12d36e4a26b1f8a0e52438f3
+251fced345c14ade12d36e4a26b1f8a0e52438f3,251fced3,Fixing monkey crash when deleting meeting,"Fixing monkey crash when deleting meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380311531,1380311531,b2c082026fbe0271bb4d9adacedd86ca7dca12d5
+b2c082026fbe0271bb4d9adacedd86ca7dca12d5,b2c08202,Refactoring MeetingActivity/MeetingFragment: some code cleanup for deleting meetings,"Refactoring MeetingActivity/MeetingFragment: some code cleanup for deleting meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380310458,1380310458,6c86d2069903e90b33555084023cc8e6d22b8630
+6c86d2069903e90b33555084023cc8e6d22b8630,6c86d206,More refactoring: move most logic out of MeetingActivity and into MeetingFragment,"More refactoring: move most logic out of MeetingActivity and into MeetingFragment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1380308162,1380308162,6d205a510be389f3d6fc5463274b28d6e75a0405
+6d205a510be389f3d6fc5463274b28d6e75a0405,6d205a51,Fixing some monkey crashes,"Fixing some monkey crashes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1379778447,1379778447,98c70403d339f0b3d38bde3b16b1bea59448d928
+98c70403d339f0b3d38bde3b16b1bea59448d928,98c70403,Prevent crash in MeetingFragment when a meeting is deleted and the observer is notified,"Prevent crash in MeetingFragment when a meeting is deleted and the observer is notified
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1379776869,1379776869,f9dd29cfeede0e4b265a23f326eea1941590d924
+f9dd29cfeede0e4b265a23f326eea1941590d924,f9dd29cf,"Unregister before registering the content observer, to prevent being notified twice","Unregister before registering the content observer, to prevent being notified twice
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1379776841,1379776841,cc177fc3ba3062c3d258c310ffd318241f863f94
+cc177fc3ba3062c3d258c310ffd318241f863f94,cc177fc3,Trying to remove some dependencies between MeetingFragment and MeetingActivity,"Trying to remove some dependencies between MeetingFragment and MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1379772186,1379772186,3a6bce93cd86c8d611d6614b5efd6f8bc946ebed
+3a6bce93cd86c8d611d6614b5efd6f8bc946ebed,3a6bce93,Added mapping file for 1.0.16,"Added mapping file for 1.0.16
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376755376,1376755376,5bb88cd9387353907cb74ef9ff146a5b01e392ff
+5bb88cd9387353907cb74ef9ff146a5b01e392ff,5bb88cd9,Some spanish translation corrections,"Some spanish translation corrections
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376755062,1376755062,f140622de0ed0a1fb46f2bf9e134a71d426e0933
+f140622de0ed0a1fb46f2bf9e134a71d426e0933,f140622d,New version 1.0.16,"New version 1.0.16
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376754683,1376754683,35bea14d48f5492e7949de03ec893973d8851ee5
+35bea14d48f5492e7949de03ec893973d8851ee5,35bea14d,Translated into Spanish,"Translated into Spanish
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376754283,1376754283,26d37f06cb82aa08ae0f1143a3db415bdcad1d37
+26d37f06cb82aa08ae0f1143a3db415bdcad1d37,26d37f06,Add mapping file for 1.0.15,"Add mapping file for 1.0.15
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376685297,1376685297,77c2af3eeffd7c8b4e299dd07234a1eb22e82ef2
+77c2af3eeffd7c8b4e299dd07234a1eb22e82ef2,77c2af3e,Fixed some French translations,"Fixed some French translations
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376684815,1376684815,bffec5cb64fc1b112be8782250822ae2bd5f82bd
+bffec5cb64fc1b112be8782250822ae2bd5f82bd,bffec5cb,New version 1.0.15,"New version 1.0.15
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376580236,1376580236,9af1b79afd2c8d6841e7a5c650d9b0f2a0d09f5c
+9af1b79afd2c8d6841e7a5c650d9b0f2a0d09f5c,9af1b79a,Issue #14: Translate into French.,"Issue #14: Translate into French.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376579263,1376579263,04aff2892321981d5148e72dd995d3014962d191
+04aff2892321981d5148e72dd995d3014962d191,04aff289,Fixing some lint errors,"Fixing some lint errors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376261278,1376261278,df4015fd1170f6903004ee97e3784142cd0bb2ca
+df4015fd1170f6903004ee97e3784142cd0bb2ca,df4015fd,Added mapping file for 1.0.14,"Added mapping file for 1.0.14
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376258479,1376258479,b3825b583ec00cb3d33950386fe318c349593081
+b3825b583ec00cb3d33950386fe318c349593081,b3825b58,Enable strict mode for monkey tests,"Enable strict mode for monkey tests
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376257740,1376257740,3d4d15605e4b4d488d3eb4872d5540a56e785f2c
+3d4d15605e4b4d488d3eb4872d5540a56e785f2c,3d4d1560,Fix for monkey crash: unregister meeting content observer when there is no more meeting,"Fix for monkey crash: unregister meeting content observer when there is no more meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376257712,1376257712,eed8856926a7e4d05bfc0daab1c0f17295b05318
+eed8856926a7e4d05bfc0daab1c0f17295b05318,eed88569,Issue 16 : try to improve logo pngs,"Issue 16 : try to improve logo pngs
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376254410,1376254410,9457f909954bed2f7d18e209fb9fb314d0246c4c
+9457f909954bed2f7d18e209fb9fb314d0246c4c,9457f909,Retouching the logo for hdpi,"Retouching the logo for hdpi
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376227182,1376227182,9eaded0fc2f000bce78f86ebcf34e9053efe50c6
+9eaded0fc2f000bce78f86ebcf34e9053efe50c6,9eaded0f,Issue #16 : drawables in all densities,"Issue #16 : drawables in all densities
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376225411,1376225411,62d2ab1aaf834618c088a81be2faa24dbb3cf8f4
+62d2ab1aaf834618c088a81be2faa24dbb3cf8f4,62d2ab1a,close the imported db,"close the imported db
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376198867,1376198867,5dc51776a5c147dc4feb21f42d5c1ea60aa646ad
+5dc51776a5c147dc4feb21f42d5c1ea60aa646ad,5dc51776,Removed some methods that are > API 11,"Removed some methods that are > API 11
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376198842,1376198842,66c067bbaffef6d3369b3196dcc096f91d9fa6db
+66c067bbaffef6d3369b3196dcc096f91d9fa6db,66c067bb,trying to fix monkey bugs.  Again.,"trying to fix monkey bugs.  Again.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376195777,1376195777,f8f789fa69b4926efccfe01e6273ec8c3bc7b262
+f8f789fa69b4926efccfe01e6273ec8c3bc7b262,f8f789fa,"Dont allow exiting the app by pressing back, when running monkey tests","Dont allow exiting the app by pressing back, when running monkey tests
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376194882,1376194882,dbcf58c4c45a992833794c8b51bd30d974fb96de
+dbcf58c4c45a992833794c8b51bd30d974fb96de,dbcf58c4,"Add null checks in dialog fragments: when the user clicks on the dialog, check…","Add null checks in dialog fragments: when the user clicks on the dialog, check if getActivity() is null
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376194813,1376194813,7df2a69e85a18cf7a3abc4195abebf0757047530
+7df2a69e85a18cf7a3abc4195abebf0757047530,7df2a69e,Trying to avoid some monkey freezes,"Trying to avoid some monkey freezes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376185310,1376185310,60684a8224ecbaf3885b7bf2b03fd60a425ba4ea
+60684a8224ecbaf3885b7bf2b03fd60a425ba4ea,60684a82,Add logging to MainActivity,"Add logging to MainActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376163018,1376163018,5449817c8be008866e39a1f324f4c4ea1c0e91df
+5449817c8be008866e39a1f324f4c4ea1c0e91df,5449817c,Added logging to MeetingListFragment,"Added logging to MeetingListFragment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376162971,1376162971,e01222cd8051003c2b21b32002959c6606c82315
+e01222cd8051003c2b21b32002959c6606c82315,e01222cd,Log the uri of a row just inserted,"Log the uri of a row just inserted
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376158945,1376158945,db8adc5037b6d9978947a5cd5dc22a215d356c27
+db8adc5037b6d9978947a5cd5dc22a215d356c27,db8adc50,New version 1.0.14,"New version 1.0.14
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376145900,1376145900,5150877a42703a98a6740bd4e0866d1918ed27b6
+5150877a42703a98a6740bd4e0866d1918ed27b6,5150877a,"Do batch operations in a single transaction, only notifying at the end.","Do batch operations in a single transaction, only notifying at the end.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376145852,1376145852,1b0b038c2d6df62b31c896c596ea4f4a18b63fec
+1b0b038c2d6df62b31c896c596ea4f4a18b63fec,1b0b038c,Added mapping file for 1.0.13,"Added mapping file for 1.0.13
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376088230,1376088230,4d9ac13fec7136d2f39f6514a53bd5094d39d63d
+4d9ac13fec7136d2f39f6514a53bd5094d39d63d,4d9ac13f,Version 1.0.13,"Version 1.0.13
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376087914,1376087914,313140648476cf5ac9d913e3c61d2c3b20660769
+313140648476cf5ac9d913e3c61d2c3b20660769,31314064,Fix for dialog themes on 2.x.  Yes.  AGAIN.,"Fix for dialog themes on 2.x.  Yes.  AGAIN.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376086582,1376086582,7f7b9f95b28e00ad79512d9659a68467f59518bc
+7f7b9f95b28e00ad79512d9659a68467f59518bc,7f7b9f95,Some cleanup of MeetingActivity,"Some cleanup of MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376083377,1376083377,a5d7ab48376b4ecffe96cfb7efa86aff4646ea96
+a5d7ab48376b4ecffe96cfb7efa86aff4646ea96,a5d7ab48,Added mapping file for 1.0.12,"Added mapping file for 1.0.12
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376080364,1376080364,a9c3e41e0ff58cb67c1c81fe68ce2d892a6649cf
+a9c3e41e0ff58cb67c1c81fe68ce2d892a6649cf,a9c3e41e,added logging,"added logging
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376035311,1376035311,daded8d09fab669935af1055f6b1bfd3f338852c
+daded8d09fab669935af1055f6b1bfd3f338852c,daded8d0,Use an AsyncTaskLoader to load the meeting,"Use an AsyncTaskLoader to load the meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376034289,1376034289,cc1f1287bbe8c112d51886cafe6b504a925146c6
+cc1f1287bbe8c112d51886cafe6b504a925146c6,cc1f1287,Correction for rotating the screen while a meeting loads,"Correction for rotating the screen while a meeting loads
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376031867,1376031867,6dfd73a7fb4b07c4d47272cec2b61465e2056043
+6dfd73a7fb4b07c4d47272cec2b61465e2056043,6dfd73a7,Trying to fix bug where duplicate meetings are created when rotating the screen…,"Trying to fix bug where duplicate meetings are created when rotating the screen when creating a new meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1376006172,1376006172,7718958c1902c303c4186f0f50989ff8574825e7
+7718958c1902c303c4186f0f50989ff8574825e7,7718958c,New version 1.0.12,"New version 1.0.12
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375915951,1375915951,00b6928d359df59aac102a7b5c39815863b1ece9
+00b6928d359df59aac102a7b5c39815863b1ece9,00b6928d,Add logging and some error checking for monkey crashes,"Add logging and some error checking for monkey crashes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375915308,1375915308,e75ece665aa0ac132552a4494ce33380387ca3bf
+e75ece665aa0ac132552a4494ce33380387ca3bf,e75ece66,Corrections for exporting the db and managing the progress dialog,"Corrections for exporting the db and managing the progress dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375912083,1375912083,cead946cf7ad0ebef93977596b7fefd67ec0d093
+cead946cf7ad0ebef93977596b7fefd67ec0d093,cead946c,"Fix to save the entered text on an input dialog, when rotating the device","Fix to save the entered text on an input dialog, when rotating the device
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375910369,1375910369,1b7189f31f9217a45fa4d64a33f52f9e57d876c9
+1b7189f31f9217a45fa4d64a33f52f9e57d876c9,1b7189f3,Renamed ScrumChatter*DialogFragment to *DialogFragment.  Added javadoc.,"Renamed ScrumChatter*DialogFragment to *DialogFragment.  Added javadoc.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375909776,1375909776,f804de26c44bf72119e8ee41664a228df4016fec
+f804de26c44bf72119e8ee41664a228df4016fec,f804de26,Javadoc correction,"Javadoc correction
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375744288,1375744288,acf89ed8d109749ba256ae44677c950238d96f6b
+acf89ed8d109749ba256ae44677c950238d96f6b,acf89ed8,More dialog fragment refactoring,"More dialog fragment refactoring
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375743738,1375743738,80c9c1b01bd2f0e1547bb5216024d181f733e4ff
+80c9c1b01bd2f0e1547bb5216024d181f733e4ff,80c9c1b0,More refactoring of dialog fragments,"More refactoring of dialog fragments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375743570,1375743570,2ea5d6b78e130608faa09f93909d8a0c4183eb35
+2ea5d6b78e130608faa09f93909d8a0c4183eb35,2ea5d6b7,Refactoring dialog fragments,"Refactoring dialog fragments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375741588,1375741588,72e041f62dff3e6382f33b73e7b389dc6b9f35ef
+72e041f62dff3e6382f33b73e7b389dc6b9f35ef,72e041f6,javadoc,"javadoc
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375324588,1375324588,7a295ccf11b42ada51dedb84a2462a58ad526cc6
+7a295ccf11b42ada51dedb84a2462a58ad526cc6,7a295ccf,Ran UCDetector,"Ran UCDetector
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375324473,1375324473,29aa2ffdcc56c6e11125de73254546d19b4b28a1
+29aa2ffdcc56c6e11125de73254546d19b4b28a1,29aa2ffd,Created ScrumChatterInputDialogFragment,"Created ScrumChatterInputDialogFragment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375324218,1375324218,bf822bc1849877a30a231b6aea16ad3511c8f690
+bf822bc1849877a30a231b6aea16ad3511c8f690,bf822bc1,Corrections for the progress bar and rotation,"Corrections for the progress bar and rotation
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375323332,1375323332,da7149c6e1f5bb64933bb5e2fbfd216929587243
+da7149c6e1f5bb64933bb5e2fbfd216929587243,da7149c6,WIP attempt to use a dialog fragment for the progress dialog,"WIP attempt to use a dialog fragment for the progress dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375319049,1375319049,2afc8134b13a545548fb5f6824ac67ade1eeccdf
+2afc8134b13a545548fb5f6824ac67ade1eeccdf,2afc8134,Use dialog fragments when importing the db,"Use dialog fragments when importing the db
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375316423,1375316423,83f2aa7eccb6636d6f615ad47efc9e4693b5c487
+83f2aa7eccb6636d6f615ad47efc9e4693b5c487,83f2aa7e,"Use dialog fragments for renaming and creating teams, and creating members","Use dialog fragments for renaming and creating teams, and creating members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375313941,1375313941,c2022bf11c681ee87c33b1c87723ff2ef11f4c60
+c2022bf11c681ee87c33b1c87723ff2ef11f4c60,c2022bf1,Use dialog fragments to create a team member,"Use dialog fragments to create a team member
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375310703,1375310703,93d6e6928b43452c186d7cc9aeb1c80a525f184f
+93d6e6928b43452c186d7cc9aeb1c80a525f184f,93d6e692,Use dialog fragments to share the set of meetings,"Use dialog fragments to share the set of meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375307136,1375307136,7a64cca3b4b45bdd5bf95f4d39df8faf853bd06b
+7a64cca3b4b45bdd5bf95f4d39df8faf853bd06b,7a64cca3,Use dialog fragments for switching teams,"Use dialog fragments for switching teams
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375306859,1375306859,bce4b74e8e6b6e789f846f19f478fb453c3f3feb
+bce4b74e8e6b6e789f846f19f478fb453c3f3feb,bce4b74e,Use dialog fragments to delete a team,"Use dialog fragments to delete a team
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375305106,1375305106,0be2f3353a9f3747fed9e53a8f58ddacec7059ba
+0be2f3353a9f3747fed9e53a8f58ddacec7059ba,0be2f335,Use dialog fragments to delete a member,"Use dialog fragments to delete a member
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375304499,1375304499,4b6c3d845745bec717da5e233642727d0f65d568
+4b6c3d845745bec717da5e233642727d0f65d568,4b6c3d84,Use dialog fragment to stop a meeting,"Use dialog fragment to stop a meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375303760,1375303760,6aeb5474c70dd90f7d6b2ae98b4f1b16009fffe1
+6aeb5474c70dd90f7d6b2ae98b4f1b16009fffe1,6aeb5474,Use dialog fragment for deleting a meeting,"Use dialog fragment for deleting a meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375303052,1375303052,44f3c78d4f93a6f3ce51adfa6bc7c3237bd53f63
+44f3c78d4f93a6f3ce51adfa6bc7c3237bd53f63,44f3c78d,Isolate the dialog style hacks into DialogStyleHacks.java,"Isolate the dialog style hacks into DialogStyleHacks.java
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375300365,1375300365,c2c93b1c0d2361caecc2849c7da09a7477fe1eea
+c2c93b1c0d2361caecc2849c7da09a7477fe1eea,c2c93b1c,WIP for dialog fragments,"WIP for dialog fragments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375220726,1375220726,d7d3f1666231115b30c188078f4526023765cb1d
+d7d3f1666231115b30c188078f4526023765cb1d,d7d3f166,WIP for dialog fragments,"WIP for dialog fragments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375220187,1375220187,7bc19313fdaf8246702ed5d3127a47de5e81eddf
+7bc19313fdaf8246702ed5d3127a47de5e81eddf,7bc19313,First draft of dialog fragments with plenty of duplicated copy/pasted code,"First draft of dialog fragments with plenty of duplicated copy/pasted code
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1375219707,1375219707,3bee97f3af3065a84014abf7237b6669c69725af
+3bee97f3af3065a84014abf7237b6669c69725af,3bee97f3,Added tablet screenshots,"Added tablet screenshots
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374976691,1374976691,9759cedc434bdb59ced9391e7f1c1839b490795c
+9759cedc434bdb59ced9391e7f1c1839b490795c,9759cedc,New version 1.0.11,"New version 1.0.11
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374975794,1374975794,cee646c759622a89d6f1e74ee31722d04ede741c
+cee646c759622a89d6f1e74ee31722d04ede741c,cee646c7,New version 1.0.11,"New version 1.0.11
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374975777,1374975777,4398341e2bfe06b9398afa46d89810f610079b9c
+4398341e2bfe06b9398afa46d89810f610079b9c,4398341e,Issue #25 - Support landscape mode,"Issue #25 - Support landscape mode
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374974876,1374974876,e017edc89c8ea69817f01800502f31090ed105b1
+e017edc89c8ea69817f01800502f31090ed105b1,e017edc8,Corrections for the chatter face animation on 4.0 tablets,"Corrections for the chatter face animation on 4.0 tablets
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374968609,1374968609,9eda508722557d7f2f1b538234d72b6422c0a084
+9eda508722557d7f2f1b538234d72b6422c0a084,9eda5087,Added some traces for lifecycle methods to MeetingActivity,"Added some traces for lifecycle methods to MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374968478,1374968478,245682130114107d27fe2d1a1f0d4ea26a7204a2
+245682130114107d27fe2d1a1f0d4ea26a7204a2,24568213,Move the about menu item to the menu (never show in the action bar),"Move the about menu item to the menu (never show in the action bar)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374951105,1374951105,208a4a43fc178a1d5beb66f607b507c37dc2f753
+208a4a43fc178a1d5beb66f607b507c37dc2f753,208a4a43,Fix app icon in about screen (stretch it),"Fix app icon in about screen (stretch it)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374950907,1374950907,089a51d9f36797c3019adf11abec3ea1e85133dc
+089a51d9f36797c3019adf11abec3ea1e85133dc,089a51d9,Reverting change to tab width,"Reverting change to tab width
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374949795,1374949795,958f30e5a83d189c87eacc1f482c9c9e443a416c
+958f30e5a83d189c87eacc1f482c9c9e443a416c,958f30e5,Fix for tab text color on jelly bean tablets in portrait,"Fix for tab text color on jelly bean tablets in portrait
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374949348,1374949348,f155cb4af724d72fe0c85e63ced07ddeb379a2ec
+f155cb4af724d72fe0c85e63ced07ddeb379a2ec,f155cb4a,Fixed problem on 4.0 tablets where the tab text was black,"Fixed problem on 4.0 tablets where the tab text was black
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374944544,1374944544,dcf9e76448d4a47f8704a0edfce88a2d3d23b914
+dcf9e76448d4a47f8704a0edfce88a2d3d23b914,dcf9e764,Added mapping file for 1.0.10,"Added mapping file for 1.0.10
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374931709,1374931709,5ef55e48b80072e234f74dcb14b73701426caa54
+5ef55e48b80072e234f74dcb14b73701426caa54,5ef55e48,More monkey crash corrections,"More monkey crash corrections
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374889828,1374889828,86c1615c406d1b075be58d680a70635751e79a6d
+86c1615c406d1b075be58d680a70635751e79a6d,86c1615c,New version 1.0.10,"New version 1.0.10
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374889624,1374889624,6db991d3f5187e8ecd527479586ba4876e5c4bf5
+6db991d3f5187e8ecd527479586ba4876e5c4bf5,6db991d3,More monkey crash corrections,"More monkey crash corrections
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374889257,1374889257,10cce8db1fbc6b434eef8807061fba920c37a4a4
+10cce8db1fbc6b434eef8807061fba920c37a4a4,10cce8db,Fixing more monkey crashes,"Fixing more monkey crashes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374886017,1374886017,c63576d292a192a3eb4742dd066b80f371ce3b1e
+c63576d292a192a3eb4742dd066b80f371ce3b1e,c63576d2,Trying to fix monkey crashes,"Trying to fix monkey crashes
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374883449,1374883449,06bbca2cde8e4e50aacb657a21afa5fa9236d368
+06bbca2cde8e4e50aacb657a21afa5fa9236d368,06bbca2c,added mapping file for 1.0.9,"added mapping file for 1.0.9
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374717153,1374717153,ffccf64d16b53bc8ef7c2cdd31732f0620c80913
+ffccf64d16b53bc8ef7c2cdd31732f0620c80913,ffccf64d,Added ignoreme directory to .gitignore,"Added ignoreme directory to .gitignore
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374716881,1374716881,1403e7414bbac2b8a2453a9a608c6d1183e20b4d
+1403e7414bbac2b8a2453a9a608c6d1183e20b4d,1403e741,"Reverting some attempted monkey crash corrections, in the master branch","Reverting some attempted monkey crash corrections, in the master branch
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374716860,1374716860,85c87a0a0ef1e82efe5997feeea029324cda24bd
+85c87a0a0ef1e82efe5997feeea029324cda24bd,85c87a0a,1.0.9: fix monkey crash with synchronized blocks in MeetingActivity,"1.0.9: fix monkey crash with synchronized blocks in MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374709587,1374709587,1ad151b7e6696f8f7676b994b916208398b674db
+1ad151b7e6696f8f7676b994b916208398b674db,1ad151b7,Fix for alter table statement: to specify the member.delete column as integer,"Fix for alter table statement: to specify the member.delete column as integer
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374703511,1374703511,1a5b78e042b854e0b3fca885eda94c2528e07337
+1a5b78e042b854e0b3fca885eda94c2528e07337,1a5b78e0,Use aliases for view columns,"Use aliases for view columns
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374702515,1374702515,c471d6a7165c5f3579598d10555b0de54a8aaf0e
+c471d6a7165c5f3579598d10555b0de54a8aaf0e,c471d6a7,Add possibility to delete a meeting from the meeting screen,"Add possibility to delete a meeting from the meeting screen
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374701655,1374701655,d1f900cd09811b112fa64c136230f376a775450c
+d1f900cd09811b112fa64c136230f376a775450c,d1f900cd,Ran UCDetector,"Ran UCDetector
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374698509,1374698509,957877f23bdd070ffb49aa20b9a3cccdc94a0b6b
+957877f23bdd070ffb49aa20b9a3cccdc94a0b6b,957877f2,Fix to show the soft keyboard when bringing up an edit text dialog. Fix to…,"Fix to show the soft keyboard when bringing up an edit text dialog. Fix to capitalize the first letter of each word in the edit text
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374618538,1374618538,d40c36697016aa6ce290e064d9e2b6162160cced
+d40c36697016aa6ce290e064d9e2b6162160cced,d40c3669,Make the dialog EditText capitalize each word,"Make the dialog EditText capitalize each word
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374615800,1374615800,0dcd374a0d86b3eefd2cf1d53c503fd1cb3f5bd7
+0dcd374a0d86b3eefd2cf1d53c503fd1cb3f5bd7,0dcd374a,Correction for checking if a team has members before starting a meeting,"Correction for checking if a team has members before starting a meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374615771,1374615771,0dc21875a81fd4acc7944b99366337219f452872
+0dc21875a81fd4acc7944b99366337219f452872,0dc21875,"When inserting members, set them to not deleted","When inserting members, set them to not deleted
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374614777,1374614777,1a48163d4ad44d948d1fa5bb24b4c2bc457b6218
+1a48163d4ad44d948d1fa5bb24b4c2bc457b6218,1a48163d,New version 1.0.8,"New version 1.0.8
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374431831,1374431831,09892fe85a870c9f331a350cf745f2643803a977
+09892fe85a870c9f331a350cf745f2643803a977,09892fe8,Issue #21 - keep deleted members,"Issue #21 - keep deleted members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374428828,1374428828,2f76a3e8bc23fcf0fe16841e287c0de1352ab42e
+2f76a3e8bc23fcf0fe16841e287c0de1352ab42e,2f76a3e8,Moe meeting refactoring,"Moe meeting refactoring
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374423284,1374423284,8975567c21afa342229892d34f2d213ed0711950
+8975567c21afa342229892d34f2d213ed0711950,8975567c,"Made it easier to click on the ""Name"" column in the members list","Made it easier to click on the ""Name"" column in the members list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374423243,1374423243,a8c97f602b4aeab3ed05296e4c1a2c3caaeae605
+a8c97f602b4aeab3ed05296e4c1a2c3caaeae605,a8c97f60,Refactoring meetings.,"Refactoring meetings.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374420791,1374420791,65d675a6158b8ce6bfdae41951b9db32a56ab23f
+65d675a6158b8ce6bfdae41951b9db32a56ab23f,65d675a6,Refactoring logic for creating and deleting members,"Refactoring logic for creating and deleting members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374413201,1374413201,21f345132913f303d37f31222fb806f59297af5b
+21f345132913f303d37f31222fb806f59297af5b,21f34513,Ran UCDetector,"Ran UCDetector
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374411099,1374411099,7edddcc68e5997bc3c776e21b5a7223539693b87
+7edddcc68e5997bc3c776e21b5a7223539693b87,7edddcc6,Refactoring packages.,"Refactoring packages.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374409936,1374409936,35d5471e251bbf9d7e701850250a03df54df02b1
+35d5471e251bbf9d7e701850250a03df54df02b1,35d5471e,New version 1.0.7,"New version 1.0.7
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374315414,1374315414,d243130a8966d2e87c55114adf058a0226d8e215
+d243130a8966d2e87c55114adf058a0226d8e215,d243130a,Improve the list header style,"Improve the list header style
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374314895,1374314895,6d6da4ccd262c0c5c8ba703c2b72febf13a5e909
+6d6da4ccd262c0c5c8ba703c2b72febf13a5e909,6d6da4cc,Issue #24 - themed radio buttons in 2.x in dialog,"Issue #24 - themed radio buttons in 2.x in dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374313889,1374313889,4acc6a3b8710452512216f402df4d13ca0c08ebe
+4acc6a3b8710452512216f402df4d13ca0c08ebe,4acc6a3b,Merge branch 'issue-20' of https://github.com/caarmen/scrumchatter,"Merge branch 'issue-20' of https://github.com/caarmen/scrumchatter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374312292,1374312292,"d28ca2025cd1bea71505aa2932fbfcf42a6c5f6f,56dd4635742310f17d166c221ab2a32f95eb9fb9"
+56dd4635742310f17d166c221ab2a32f95eb9fb9,56dd4635,Issue #20 - add themed radio button,"Issue #20 - add themed radio button
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374311632,1374311632,5fe5076914c4e157cd7dbc1d885909b344909a50
+5fe5076914c4e157cd7dbc1d885909b344909a50,5fe50769,"Issue #10 - add themed radio buttons, and dismiss dialog when selecting team","Issue #10 - add themed radio buttons, and dismiss dialog when selecting team
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374311257,1374311257,df8e8df7f6b616c7c1abed2cb748b79f131c34e9
+d28ca2025cd1bea71505aa2932fbfcf42a6c5f6f,d28ca202,Issue #22 - Add empty list text,"Issue #22 - Add empty list text
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374218387,1374218387,b0e8e5e10a85baeef2ab2b17e284433a095b110b
+df8e8df7f6b616c7c1abed2cb748b79f131c34e9,df8e8df7,Issue #20: show single choice item for team selection,"Issue #20: show single choice item for team selection
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374218228,1374218228,b0e8e5e10a85baeef2ab2b17e284433a095b110b
+b0e8e5e10a85baeef2ab2b17e284433a095b110b,b0e8e5e1,Issue #23: Prevent starting meeting if team has no members,"Issue #23: Prevent starting meeting if team has no members
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374190443,1374190443,6601ebcbb7b74143296080c2d8a19bb46d692908
+6601ebcbb7b74143296080c2d8a19bb46d692908,6601ebcb,Updating comments in ScrumChatterDialog,"Updating comments in ScrumChatterDialog
+",,,,Carmen Alvarez,calvarez@Carmens-MacBook-Pro.local,Carmen Alvarez,calvarez@Carmens-MacBook-Pro.local,1374188760,1374188760,536040fe0e65ebbe47b09467958b651eb71e563a
+536040fe0e65ebbe47b09467958b651eb71e563a,536040fe,Merge branch 'multi-team' of https://github.com/caarmen/scrumchatter,"Merge branch 'multi-team' of https://github.com/caarmen/scrumchatter
+",,,,Carmen Alvarez,calvarez@Carmens-MacBook-Pro.local,Carmen Alvarez,calvarez@Carmens-MacBook-Pro.local,1374187834,1374187834,"e7624870222982211793065883443c9dc0ced1df,dde1a095eef899ff8f7d0137a679ddc41fa9824d"
+e7624870222982211793065883443c9dc0ced1df,e7624870,Update ScrumChatterDialog.java,Update ScrumChatterDialog.java,,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1374102552,1374102552,035052499981f93036b42823e977b711bc898037
+dde1a095eef899ff8f7d0137a679ddc41fa9824d,dde1a095,Some cleanup of constants,"Some cleanup of constants
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373843521,1373843521,fed590ca9c3eb7f76d09163106114d0e10af2171
+fed590ca9c3eb7f76d09163106114d0e10af2171,fed590ca,New version 1.0.6,"New version 1.0.6
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373841543,1373841543,53e000620bdccd63cbe552a1cba2e97c02336d85
+53e000620bdccd63cbe552a1cba2e97c02336d85,53e00062,"Fix for crash which I can't reproduce: in MeetingsListFragment, unregister the…","Fix for crash which I can't reproduce: in MeetingsListFragment, unregister the shared preference listener in onDetach
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373841516,1373841516,29941db2882ccf09b16a05fe0f97a0702e3a8fc3
+29941db2882ccf09b16a05fe0f97a0702e3a8fc3,29941db2,New version 1.0.5,"New version 1.0.5
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373840470,1373840470,facf83775af63d8563c04181093a610ad34c824e
+facf83775af63d8563c04181093a610ad34c824e,facf8377,Excel export: one worksheet per team,"Excel export: one worksheet per team
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373840206,1373840206,83b9c8d3a892318069d076df3bef19cdf48acb12
+83b9c8d3a892318069d076df3bef19cdf48acb12,83b9c8d3,Some cleanup related to multi team,"Some cleanup related to multi team
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373838953,1373838953,76f611731d131710f475cffca7dfd96b8d92992c
+76f611731d131710f475cffca7dfd96b8d92992c,76f61173,Fixing transparency of new meeting action icon,"Fixing transparency of new meeting action icon
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373836835,1373836835,78dc5574c0741e0a595b43e64c8e0efc5a8c7b61
+78dc5574c0741e0a595b43e64c8e0efc5a8c7b61,78dc5574,Updating icons for teams,"Updating icons for teams
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373835839,1373835839,1c2962be9a24e79045c5c0e573c36b78dd4a1b96
+1c2962be9a24e79045c5c0e573c36b78dd4a1b96,1c2962be,Fixed some db import issues related to multiple teams,"Fixed some db import issues related to multiple teams
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373832815,1373832815,7bcdf72cb3ea4e00fc2a5e3a8d329768db74c9b8
+7bcdf72cb3ea4e00fc2a5e3a8d329768db74c9b8,7bcdf72c,"For the delete and rename team menu items, show the team name","For the delete and rename team menu items, show the team name
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373831748,1373831748,292b3f25a3b5475baeb667ccb560a4824fca5a06
+292b3f25a3b5475baeb667ccb560a4824fca5a06,292b3f25,More improvements for team management,"More improvements for team management
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373831032,1373831032,6768de6d90085635fa9bb363e04b04cadc0369d4
+6768de6d90085635fa9bb363e04b04cadc0369d4,6768de6d,Some improvements for team management,"Some improvements for team management
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373829792,1373829792,3d6d5888b6ae05901bc6054930df1c66ee2aa414
+3d6d5888b6ae05901bc6054930df1c66ee2aa414,3d6d5888,Implemented deleting a team,"Implemented deleting a team
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373828456,1373828456,ae2888b7d8648e32dcac6347f69130d28f57dbd7
+ae2888b7d8648e32dcac6347f69130d28f57dbd7,ae2888b7,Corrections for switching and renaming teams,"Corrections for switching and renaming teams
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373825225,1373825225,3426fef44fc418626993c20c6908bcc4e4ea45ae
+3426fef44fc418626993c20c6908bcc4e4ea45ae,3426fef4,"WIP menu items to switch, rename, and delete teams","WIP menu items to switch, rename, and delete teams
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373824520,1373824520,d80b1a772e2c8a1a6c6a0954fdec66a7abdb3f7f
+d80b1a772e2c8a1a6c6a0954fdec66a7abdb3f7f,d80b1a77,"Created method in ScrumChatterDialog to show a dialog with an edit text, and to validate the input","Created method in ScrumChatterDialog to show a dialog with an edit text, and to validate the input
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373820281,1373820281,e2b13c1b36343cb2c2e7be77071c868b087cd90e
+e2b13c1b36343cb2c2e7be77071c868b087cd90e,e2b13c1b,Sort members by name ignoring case,"Sort members by name ignoring case
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373818246,1373818246,1367c2526ba946f84d86287e3632e97519cff19b
+1367c2526ba946f84d86287e3632e97519cff19b,1367c252,Fix some upgrade crashes,"Fix some upgrade crashes
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373817885,1373817885,52f14e4db4f1d81ee5a79734c1081ca90cd60c55
+52f14e4db4f1d81ee5a79734c1081ca90cd60c55,52f14e4d,WIP adding support for multiple teams in the different screens,"WIP adding support for multiple teams in the different screens
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373816381,1373816381,72a6543c9a71848a5da89777fff869fc5f811e95
+72a6543c9a71848a5da89777fff869fc5f811e95,72a6543c,Multiple teams: add new database structure,"Multiple teams: add new database structure
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1373812190,1373812190,035052499981f93036b42823e977b711bc898037
+035052499981f93036b42823e977b711bc898037,03505249,Show most recent meeting first,"Show most recent meeting first
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373499906,1373499906,a5aaec4d0a803aa8111c8272149c67963753b770
+a5aaec4d0a803aa8111c8272149c67963753b770,a5aaec4d,New version 1.0.4,"New version 1.0.4
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373494634,1373494634,133bad18f94ead8c1af656772f40bb81b0b07cfc
+133bad18f94ead8c1af656772f40bb81b0b07cfc,133bad18,Improving the horizontal progress dialog for in-progress meetings,"Improving the horizontal progress dialog for in-progress meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373493952,1373493952,91d83d7c749e28424d73d8b8bb489d476a7b630e
+91d83d7c749e28424d73d8b8bb489d476a7b630e,91d83d7c,Add negative bottom margin to progress bar,"Add negative bottom margin to progress bar
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373492759,1373492759,2a0947e77bd1d8421deff64edef4766a94397b27
+2a0947e77bd1d8421deff64edef4766a94397b27,2a0947e7,"Show horizontal progress bar instead of blinking chronometer, in meeting in progress","Show horizontal progress bar instead of blinking chronometer, in meeting in progress
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373492298,1373492298,ebb9a1ae110e6b88e2f1c314a70b977165d03f98
+ebb9a1ae110e6b88e2f1c314a70b977165d03f98,ebb9a1ae,"Issue #18 - fix the color of the text in the text error popup, on 2.x","Issue #18 - fix the color of the text in the text error popup, on 2.x
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373440987,1373440987,801cd308ff38850d2136987e20a70dfc04f3d138
+801cd308ff38850d2136987e20a70dfc04f3d138,801cd308,Only force the horizontal divider to visible on 2.x,"Only force the horizontal divider to visible on 2.x
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373412856,1373412856,0042f0426e3616f5d1059d93778ff8ff0b269dfc
+0042f0426e3616f5d1059d93778ff8ff0b269dfc,0042f042,Show the divider on a 2.x dialog with a list,"Show the divider on a 2.x dialog with a list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373412494,1373412494,aa3d1e405e1f355c8818d19351501cf1c80a4182
+aa3d1e405e1f355c8818d19351501cf1c80a4182,aa3d1e40,Starting 2.x styles,"Starting 2.x styles
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373411771,1373411771,45c7c02e7273c45d384727ebc7a63a1d4b00b3f1
+45c7c02e7273c45d384727ebc7a63a1d4b00b3f1,45c7c02e,Fix for crash when importing and no activities can import,"Fix for crash when importing and no activities can import
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373116431,1373116431,ce19c75661e44dc00a82265932b7f02d5562f6b2
+ce19c75661e44dc00a82265932b7f02d5562f6b2,ce19c756,Don't allow opening email attachments,"Don't allow opening email attachments
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373105840,1373105840,fdac92e3e3209b30166229659d461f1079d844ee
+fdac92e3e3209b30166229659d461f1079d844ee,fdac92e3,New version 1.0.1,"New version 1.0.1
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373102078,1373102078,0859b703b32ec7917c1ca9028db2bb1b89b698df
+0859b703b32ec7917c1ca9028db2bb1b89b698df,0859b703,Add intent filters on MainActivity so that the app can import a db from a file…,"Add intent filters on MainActivity so that the app can import a db from a file manager or email attachment
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373066170,1373066170,5f41717fc539aa34f80ee1148d05e9e14019b5f9
+5f41717fc539aa34f80ee1148d05e9e14019b5f9,5f41717f,Error handling for import,"Error handling for import
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373012042,1373012042,cbe096df5376a2c447c7be2a620be9842ba66778
+cbe096df5376a2c447c7be2a620be9842ba66778,cbe096df,Added db import function,"Added db import function
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1373010812,1373010812,72c0e41509d3f40c341f60fb76159683f15051d1
+72c0e41509d3f40c341f60fb76159683f15051d1,72c0e415,Removing some ugly code to style the buttons in the alert dialog,"Removing some ugly code to style the buttons in the alert dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372663805,1372663805,6305db41e8769dbaceb9b56523071c4c9e1a1531
+6305db41e8769dbaceb9b56523071c4c9e1a1531,6305db41,Change popup message to stop meeting,"Change popup message to stop meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372633343,1372633343,6f84c8d595a109e253afcf99cd81705d44fddcb3
+6f84c8d595a109e253afcf99cd81705d44fddcb3,6f84c8d5,Fix to show the share button on the meeting screen on nexus one,"Fix to show the share button on the meeting screen on nexus one
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372632767,1372632767,1d9447aea5b423467f8b60419bfe974d860c4956
+1d9447aea5b423467f8b60419bfe974d860c4956,1d9447ae,Fix division by 0 error,"Fix division by 0 error
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372631921,1372631921,c301e66f766662c8e01c672480f4b73a71778051
+c301e66f766662c8e01c672480f4b73a71778051,c301e66f,Set the horizontal divider in the alert dialog on honeycomb,"Set the horizontal divider in the alert dialog on honeycomb
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372631799,1372631799,34cbd13e386a2d4fc350ccc9c3576b4241d8679a
+34cbd13e386a2d4fc350ccc9c3576b4241d8679a,34cbd13e,Document ScrumChatterDialog.  Customize the selector for the list in the alert dialog,"Document ScrumChatterDialog.  Customize the selector for the list in the alert dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372624314,1372624314,66b0437cc431be364044706461f45f6d293e6624
+66b0437cc431be364044706461f45f6d293e6624,66b0437c,Hacky code to customize the alert dialogs,"Hacky code to customize the alert dialogs
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372623725,1372623725,c94ab046b299126a42c90180eab4609f3ca95ea5
+c94ab046b299126a42c90180eab4609f3ca95ea5,c94ab046,First attempt at styling the dialog,"First attempt at styling the dialog
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372607975,1372607975,49dc4f489dbb3ad67a67b5ebe9d3a1fef90f2ec9
+49dc4f489dbb3ad67a67b5ebe9d3a1fef90f2ec9,49dc4f48,First draft at customizing the holo style,"First draft at customizing the holo style
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372601390,1372601390,69b745bcfd42edaa99662797e461ddd482f57d72
+69b745bcfd42edaa99662797e461ddd482f57d72,69b745bc,Add .gitignore,"Add .gitignore
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372600555,1372600555,4125203e9717ba5dac01e309fcc91e471f8acf5e
+4125203e9717ba5dac01e309fcc91e471f8acf5e,4125203e,Added play store screenshots to git,"Added play store screenshots to git
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372600493,1372600493,0de6f2573495eb4213b2fd5b185a9ccfb81033dd
+0de6f2573495eb4213b2fd5b185a9ccfb81033dd,0de6f257,Build with ant/proguard,"Build with ant/proguard
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372597459,1372597459,4cce724e472f54f439c2cd8ca4000ddd6e6c6374
+4cce724e472f54f439c2cd8ca4000ddd6e6c6374,4cce724e,UCDetector cleanup,"UCDetector cleanup
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372503957,1372503957,2d8b9b4415dca5fb3370593871cbb03cd3ae53cc
+2d8b9b4415dca5fb3370593871cbb03cd3ae53cc,2d8b9b44,Issue #17 - export the raw DB file,"Issue #17 - export the raw DB file
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372500192,1372500192,2286d33cdefc310507a5bc6a652cf230c7175638
+2286d33cdefc310507a5bc6a652cf230c7175638,2286d33c,Correction for long duration format (HH:mm:ss),"Correction for long duration format (HH:mm:ss)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372459137,1372459137,ec95a48b169334ae021c789cf1d7e76f4044772e
+ec95a48b169334ae021c789cf1d7e76f4044772e,ec95a48b,Don't use formulas for average and sum calculations.  Some excel readers…,"Don't use formulas for average and sum calculations.  Some excel readers (including ExcelViewer) require the values to be pre-computed, and jxl doesn't allow this.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372458575,1372458575,142f645fc7883bdea191486ddd6e2ccc846971ba
+142f645fc7883bdea191486ddd6e2ccc846971ba,142f645f,Need to set the cell format of formulas after creating the cells,"Need to set the cell format of formulas after creating the cells
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372369327,1372369327,a8e3bdebeb64014d43e304feec3f3e94dfa15a43
+a8e3bdebeb64014d43e304feec3f3e94dfa15a43,a8e3bdeb,Formatting the excel export,"Formatting the excel export
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372317080,1372317080,093d6b30ebc42bebc1d35c48c569a089706229b2
+093d6b30ebc42bebc1d35c48c569a089706229b2,093d6b30,[excel-formulas] use a progress dialog instead of progress view when exporting to excel,"[excel-formulas] use a progress dialog instead of progress view when exporting to excel
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372288655,1372288655,52d97c1a409c3d1070c2ff54548f69dd46614e3e
+52d97c1a409c3d1070c2ff54548f69dd46614e3e,52d97c1a,[excel-formulas] Show progress when exporting to excel,"[excel-formulas] Show progress when exporting to excel
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372286094,1372286094,60da5b9eba24a6c325598508703f53972e9b21fb
+60da5b9eba24a6c325598508703f53972e9b21fb,60da5b9e,[excel-formulas] Formatting of the exported excel file,"[excel-formulas] Formatting of the exported excel file
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372283906,1372283906,327d4972ce3e375baf16555e4d3e62beebd7880e
+327d4972ce3e375baf16555e4d3e62beebd7880e,327d4972,[excel-formulas] Add average and total Excel formulas,"[excel-formulas] Add average and total Excel formulas
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372283194,1372283194,fda031f675598e45f29ac6ba374ef4797419fd91
+fda031f675598e45f29ac6ba374ef4797419fd91,fda031f6,"Prevent crash when exporting, by using NEW_TASK. Correction for verifying a…","Prevent crash when exporting, by using NEW_TASK. Correction for verifying a member name when adding a new member
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372232918,1372232918,cf8dd3b13949a9cd253dea2f6782b27d92622eae
+cf8dd3b13949a9cd253dea2f6782b27d92622eae,cf8dd3b1,Adding some comments and reformatting (160 characters per line instead of 80),"Adding some comments and reformatting (160 characters per line instead of 80)
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372231534,1372231534,f5db7e5497cccee93b75ae2a05679765d4f3b816
+f5db7e5497cccee93b75ae2a05679765d4f3b816,f5db7e54,Removed onNewIntent from MeetingActivity,"Removed onNewIntent from MeetingActivity
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372202581,1372202581,6aff88b484074bf0d4a1a15c0249377d303c97aa
+6aff88b484074bf0d4a1a15c0249377d303c97aa,6aff88b4,Added a contentobserver in the MeetingActivity to update the share icon,"Added a contentobserver in the MeetingActivity to update the share icon
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372200558,1372200558,10c63f97bf0f6d17b971811040b6bd1355bb199b
+10c63f97bf0f6d17b971811040b6bd1355bb199b,10c63f97,Issue #15 - Adding lots of ugly AsyncTasks to avoid DB ops on the UI thread,"Issue #15 - Adding lots of ugly AsyncTasks to avoid DB ops on the UI thread
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372198872,1372198872,7988f9d28b7e8866f8f6605a48388eebb9512702
+7988f9d28b7e8866f8f6605a48388eebb9512702,7988f9d2,Update README.md,Update README.md,,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372143249,1372143249,30ddb50a4404a45bea72868ddcd5050a55e30ccd
+30ddb50a4404a45bea72868ddcd5050a55e30ccd,30ddb50a,Issue #13 - update README,Issue #13 - update README,,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372112417,1372112417,8105107d8730576a10b17e6dacf69f8ba2c4433e
+8105107d8730576a10b17e6dacf69f8ba2c4433e,8105107d,Issue #13 - Ran UCDetector,"Issue #13 - Ran UCDetector
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372111921,1372111921,b12437f7769121331b606bf827fc70fa1a051aa7
+b12437f7769121331b606bf827fc70fa1a051aa7,b12437f7,Issue #13 - update copyright headers,"Issue #13 - update copyright headers
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372111732,1372111732,31755336391eaab2d201d7c2f5cea95099374b45
+31755336391eaab2d201d7c2f5cea95099374b45,31755336,Issue #13 - add license file.,"Issue #13 - add license file.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372111215,1372111215,c191b1fec691a3d509338bad09331edf729131c9
+c191b1fec691a3d509338bad09331edf729131c9,c191b1fe,Issue #13 - Clean up javadoc in the provider.,"Issue #13 - Clean up javadoc in the provider.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372110867,1372110867,6a8a85340411a7acd664efb264b2e598081c59cb
+6a8a85340411a7acd664efb264b2e598081c59cb,6a8a8534,cleaning up provider,"cleaning up provider
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372109702,1372109702,ab0f3a38e8bcb774ed5a4736b61edfa7e75e05b8
+ab0f3a38e8bcb774ed5a4736b61edfa7e75e05b8,ab0f3a38,Removed TODO comments about caching in the adapters,"Removed TODO comments about caching in the adapters
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372054921,1372054921,a49e4e3f78b4181a3440b81387b250922907c48a
+a49e4e3f78b4181a3440b81387b250922907c48a,a49e4e3f,"Cache the localized names of meeting states, in MeetingsCursorAdapter","Cache the localized names of meeting states, in MeetingsCursorAdapter
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1372054303,1372054303,d332ca4f5cae07d1310bedf7b58fd432b0ce2be2
+d332ca4f5cae07d1310bedf7b58fd432b0ce2be2,d332ca4f,Correction to notify member stats uri when a meeting is deleted,"Correction to notify member stats uri when a meeting is deleted
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372020371,1372020371,a19262663c6a0f7ac492e5064cff39609790a66c
+a19262663c6a0f7ac492e5064cff39609790a66c,a1926266,Issue #11 - Added about string,"Issue #11 - Added about string
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372019775,1372019775,240860739ddd6753ffeb583560ab35dd0d46e987
+240860739ddd6753ffeb583560ab35dd0d46e987,24086073,First draft of showing the progress while loading a list,"First draft of showing the progress while loading a list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372012362,1372012825,f3f47054a6d489be3adb8c33f8fa7b1f675f80f2
+f3f47054a6d489be3adb8c33f8fa7b1f675f80f2,f3f47054,Add the android:listViewStyle attribute to the AppTheme for v11.  Not sure why this is needed....,"Add the android:listViewStyle attribute to the AppTheme for v11.  Not sure why this is needed....
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372012761,1372012761,48cffdf1bd45766353a809e79ad0d70f52a5deb6
+48cffdf1bd45766353a809e79ad0d70f52a5deb6,48cffdf1,Corrections for fading back in views after the blinking animation stopped,"Corrections for fading back in views after the blinking animation stopped
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372008112,1372008112,ca1e6730f96618e6af589a256c606fc04657ae72
+ca1e6730f96618e6af589a256c606fc04657ae72,ca1e6730,"Show the ""in progress"" status of meetings in the meeting list as blinking purple","Show the ""in progress"" status of meetings in the meeting list as blinking purple
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372007105,1372007105,df3bb4fbc862d8ec3f21c8e903f7b2005eb0d513
+df3bb4fbc862d8ec3f21c8e903f7b2005eb0d513,df3bb4fb,Add blink animation to chronometer in meeting,"Add blink animation to chronometer in meeting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372005670,1372005670,fd3b7e0d6338dc67c60fe74543af5aca510d0003
+fd3b7e0d6338dc67c60fe74543af5aca510d0003,fd3b7e0d,"New chatter icons, thanks to BoD.","New chatter icons, thanks to BoD.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372004928,1372004928,71286cc82b8e3f321d1e3d35ec221754955ca1e0
+71286cc82b8e3f321d1e3d35ec221754955ca1e0,71286cc8,Simplify the way we start the chatter face animation,"Simplify the way we start the chatter face animation
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372004051,1372004051,0b1a4a6ffa91b9f38be67f65ba15ac03bbd097a3
+0b1a4a6ffa91b9f38be67f65ba15ac03bbd097a3,0b1a4a6f,Added first draft of chatter face animation in meeting list item,"Added first draft of chatter face animation in meeting list item
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1372003849,1372003849,4804942333e0d0110bd3f24be93dafaae704b830
+4804942333e0d0110bd3f24be93dafaae704b830,48049423,Change the color of the header background,"Change the color of the header background
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371999604,1371999604,acfb4f59b9c4d4d68f9211522b53ff2f5a9b579e
+acfb4f59b9c4d4d68f9211522b53ff2f5a9b579e,acfb4f59,Added disabled stop button for hdpi and mdpi,"Added disabled stop button for hdpi and mdpi
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371998951,1371998951,4ae94b966a5308f547cab388df7f775697d62dd3
+4ae94b966a5308f547cab388df7f775697d62dd3,4ae94b96,Ask for confirmation before stopping a meeting,"Ask for confirmation before stopping a meeting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371998630,1371998630,2d42537b1c719433bf9ac08be356bb8a1da470b7
+2d42537b1c719433bf9ac08be356bb8a1da470b7,2d42537b,Disable the stop button for a meeting not yet started,"Disable the stop button for a meeting not yet started
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371998265,1371998265,b63f5663a85c5fc7b586a8a99aff35eb8689f890
+b63f5663a85c5fc7b586a8a99aff35eb8689f890,b63f5663,"Some UI improvements for the ""stop meeting"" button","Some UI improvements for the ""stop meeting"" button
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371997368,1371997368,2493f6d92c4c3a0e0f58851fb34a694f2b912155
+2493f6d92c4c3a0e0f58851fb34a694f2b912155,2493f6d9,Layout cleanup of the member list,"Layout cleanup of the member list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371996516,1371996516,69ee3537bbacf966eb9286290e168b613948a310
+69ee3537bbacf966eb9286290e168b613948a310,69ee3537,Layout cleanup,"Layout cleanup
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371996059,1371996059,a9604c5b7835c01b53d62f498f330ca0f89ed018
+a9604c5b7835c01b53d62f498f330ca0f89ed018,a9604c5b,Issue #10 - Meeting screen UI improvements,"Issue #10 - Meeting screen UI improvements
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371994039,1371994039,d25ef94ed67d1a74f025706642cec1a9927da15b
+d25ef94ed67d1a74f025706642cec1a9927da15b,d25ef94e,Added up navigation from meeting activity,"Added up navigation from meeting activity
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371990954,1371990954,3249edfe2384a632924858bddb14ff2ba96e4e36
+3249edfe2384a632924858bddb14ff2ba96e4e36,3249edfe,"Issue #10 - In the meeting screen, put the meeting date in the action bar","Issue #10 - In the meeting screen, put the meeting date in the action bar
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371990293,1371990293,b83d2940aae6017fad1241407a4c81a21d191ddd
+b83d2940aae6017fad1241407a4c81a21d191ddd,b83d2940,Support 2.3,"Support 2.3
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371989274,1371989274,df3f70315f9661eb5b67b08836454328478925e7
+df3f70315f9661eb5b67b08836454328478925e7,df3f7031,Adding source svg for the app icon (from openclipart.org),"Adding source svg for the app icon (from openclipart.org)
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371988712,1371988712,de1f0923d3a9e13ca228da41a7f2cac848e1908e
+de1f0923d3a9e13ca228da41a7f2cac848e1908e,de1f0923,Change tab colors to gray,"Change tab colors to gray
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371988620,1371988620,f083924b5556695529317b118816907ec7a27be8
+f083924b5556695529317b118816907ec7a27be8,f083924b,Change the color of the vertical divider between tabs,"Change the color of the vertical divider between tabs
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371988247,1371988247,bc2a0aa50995be29273d946ec0e3bca4ae6bec3b
+bc2a0aa50995be29273d946ec0e3bca4ae6bec3b,bc2a0aa5,Merge branch 'test-theme' of https://github.com/caarmen/scrumchatter,"Merge branch 'test-theme' of https://github.com/caarmen/scrumchatter
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371952450,1371952450,"886023bcee9004d7cf5538d1f41093d470be820f,f776f2fe7b7ad04843c8a995458d9ea4a21cc9c4"
+f776f2fe7b7ad04843c8a995458d9ea4a21cc9c4,f776f2fe,Don't modify generated files,"Don't modify generated files
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371952362,1371952362,cc28d00a87dc73569e2ab11a93a51c3a96c23f70
+886023bcee9004d7cf5538d1f41093d470be820f,886023bc,new launcher icon,"new launcher icon
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371951321,1371951321,4af8d8e051e0c090108a7c1a6423429448edecbf
+cc28d00a87dc73569e2ab11a93a51c3a96c23f70,cc28d00a,make the tabs black on white,"make the tabs black on white
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371950973,1371950973,7db175820a55ba5854d6bdd46ab004b6185ff997
+7db175820a55ba5854d6bdd46ab004b6185ff997,7db17582,test theme,"test theme
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371948384,1371948384,4af8d8e051e0c090108a7c1a6423429448edecbf
+4af8d8e051e0c090108a7c1a6423429448edecbf,4af8d8e0,new icon,"new icon
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371947802,1371947802,27be541d4855cab3245667df82888cfcb819e5ef
+27be541d4855cab3245667df82888cfcb819e5ef,27be541d,New icon,"New icon
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371947732,1371947732,106bf5d426ea7a2fcadc7436388a790e9a0d6509
+106bf5d426ea7a2fcadc7436388a790e9a0d6509,106bf5d4,Different color for Chronometers depending on state of the speaker,"Different color for Chronometers depending on state of the speaker
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371942173,1371942173,15e54d366e7d3e9761feb748385cf560a81ef987
+15e54d366e7d3e9761feb748385cf560a81ef987,15e54d36,Merge branch 'export_meetings_excel' of https://github.com/caarmen/scrumchatter,"Merge branch 'export_meetings_excel' of https://github.com/caarmen/scrumchatter
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371941187,1371941187,"2dfbb64769de55456d74bc43f6fdca2cbabb7604,dfefae4fafaea93dccaf2071966cd87af69668cd"
+2dfbb64769de55456d74bc43f6fdca2cbabb7604,2dfbb647,First draft of app icon,"First draft of app icon
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371941156,1371941156,c892feac2a24cceaef82b9aec91baebbfd5bd105
+dfefae4fafaea93dccaf2071966cd87af69668cd,dfefae4f,Put the code for the chooser for exporting/sharing the meetings into the export…,"Put the code for the chooser for exporting/sharing the meetings into the export classes themselves (instead of the activities)
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371936204,1371936204,b0d80f81c5810c89b5d7c6c554164fd733e5e10d
+b0d80f81c5810c89b5d7c6c554164fd733e5e10d,b0d80f81,For Excel export. changed the mime type from message/rfc822 to application/vnd.ms-excel.,"For Excel export. changed the mime type from message/rfc822 to application/vnd.ms-excel.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371934477,1371934477,661b17d59384370bf1f85474c732e720afd736b9
+661b17d59384370bf1f85474c732e720afd736b9,661b17d5,"Excel export: format duration as elapsed time, and include excel lib","Excel export: format duration as elapsed time, and include excel lib
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371924615,1371924615,eb7bb383e10fe7bce07e88c3fdc950fb95318682
+eb7bb383e10fe7bce07e88c3fdc950fb95318682,eb7bb383,First draft of exporting all meeting data to excel,"First draft of exporting all meeting data to excel
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371924403,1371924403,c892feac2a24cceaef82b9aec91baebbfd5bd105
+c892feac2a24cceaef82b9aec91baebbfd5bd105,c892feac,Issue #1 - Added text export of a single meeting,"Issue #1 - Added text export of a single meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371800061,1371800061,4a0ab330d6230215ea587628750c1ea2ca3a98e1
+4a0ab330d6230215ea587628750c1ea2ca3a98e1,4a0ab330,Added skeleton share action in the meeting screen,"Added skeleton share action in the meeting screen
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371796272,1371796272,339109c05f40f493dcdc932472aebe9f0300a661
+339109c05f40f493dcdc932472aebe9f0300a661,339109c0,Make the member list and meeting member lists selectable,"Make the member list and meeting member lists selectable
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371795943,1371795943,3e934959c6a886ebbc3339026765bad30f0f68ed
+3e934959c6a886ebbc3339026765bad30f0f68ed,3e934959,Inherit the sherlock list style,"Inherit the sherlock list style
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371771950,1371771950,9bb9556d20e084fdd1bb6328b76fa751766c26fc
+9bb9556d20e084fdd1bb6328b76fa751766c26fc,9bb9556d,Use selector for list background.  Change the selector color.,"Use selector for list background.  Change the selector color.
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371771037,1371771037,e67edca6f1d94e7a4c4cbda0465661e52a319c13
+e67edca6f1d94e7a4c4cbda0465661e52a319c13,e67edca6,Issue #3 - Replace the ugly buttons with icons with selectors,"Issue #3 - Replace the ugly buttons with icons with selectors
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371769583,1371769583,83900147410a1b06bcd1dfca6105b712f178d8cf
+83900147410a1b06bcd1dfca6105b712f178d8cf,83900147,"Issue #3 - Replace delete ImageButton with an ImageView, in the member list","Issue #3 - Replace delete ImageButton with an ImageView, in the member list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371769034,1371769034,7c48592cc6e30c9bb08c7dc2e45de0187d5e39b5
+7c48592cc6e30c9bb08c7dc2e45de0187d5e39b5,7c48592c,"Issue #3 - Replace delete ImageButton with an ImageView, in the meeting list","Issue #3 - Replace delete ImageButton with an ImageView, in the meeting list
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371768828,1371768828,23c48852e209ebc82f1b406338cac344a50eaa92
+23c48852e209ebc82f1b406338cac344a50eaa92,23c48852,Issue #8 - Increase the clickable area in the meeting list items,"Issue #8 - Increase the clickable area in the meeting list items
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371763103,1371763103,ffe26db6b7d1c8d601dde5f4eb8623493b4d3683
+ffe26db6b7d1c8d601dde5f4eb8623493b4d3683,ffe26db6,Created MemberStatsColumns to correspond to the member_stats view,"Created MemberStatsColumns to correspond to the member_stats view
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371762530,1371762530,7d36e459dba0eb17e387025ab916204acc9c01c8
+7d36e459dba0eb17e387025ab916204acc9c01c8,7d36e459,Issue #7 - Order members by duration in finished meetings,"Issue #7 - Order members by duration in finished meetings
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371711470,1371711470,2ca07c0da1570784c0e10b72243f45a7c567f017
+2ca07c0da1570784c0e10b72243f45a7c567f017,2ca07c0d,Simplifying the provider,"Simplifying the provider
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371675995,1371675995,74c407a757e06117114c658e39bfd8fbfc35b63a
+74c407a757e06117114c658e39bfd8fbfc35b63a,74c407a7,Issue #6 - Don't include 0 talk time in average calculation,"Issue #6 - Don't include 0 talk time in average calculation
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371674437,1371674437,9dcf685cf2843e9fd887004ee630f04af16b9d58
+9dcf685cf2843e9fd887004ee630f04af16b9d58,9dcf685c,Log the Cursor query.  Correction for combining the selection args given to the…,"Log the Cursor query.  Correction for combining the selection args given to the content provider with the selection args we need to pass to the db
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371596445,1371596445,ca0055ca20ec3e8a48e3240c3fc93009906d9869
+ca0055ca20ec3e8a48e3240c3fc93009906d9869,ca0055ca,"Issue #4: when one person starts talking, stop the previously talking person","Issue #4: when one person starts talking, stop the previously talking person
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371589468,1371589468,b961a41b6fdc1cb193ee8da845c434538a1b63fe
+b961a41b6fdc1cb193ee8da845c434538a1b63fe,b961a41b,Issue #5: only show participating members in a finished meeting,"Issue #5: only show participating members in a finished meeting
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371588632,1371588632,e996cdb76fce904f9e189221cfe1dc0654af0e7c
+e996cdb76fce904f9e189221cfe1dc0654af0e7c,e996cdb7,Correction for updating the team screen when a meeting is deleted,"Correction for updating the team screen when a meeting is deleted
+",,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371451623,1371451623,2e65cfed561f7a7a4a54ab959fc7d65381798c34
+2e65cfed561f7a7a4a54ab959fc7d65381798c34,2e65cfed,Sort by name as a secondary column,"Sort by name as a secondary column
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371422658,1371422658,da4fd52ac4546702b6fcb3a78b3a84429a2ed99c
+da4fd52ac4546702b6fcb3a78b3a84429a2ed99c,da4fd52a,Merge branch 'master' of https://github.com/caarmen/scrumchatter,"Merge branch 'master' of https://github.com/caarmen/scrumchatter
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371422351,1371422351,"5e0f0de10a75bcbc7e979e2464649d59e7b6625e,de26f03da0c21435e1fbe398da509d96af84cf9c"
+5e0f0de10a75bcbc7e979e2464649d59e7b6625e,5e0f0de1,Highlight the sort column in the member list,"Highlight the sort column in the member list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371422302,1371422302,08656973b046b484e389407d161854401eadce0e
+de26f03da0c21435e1fbe398da509d96af84cf9c,de26f03d,Create README.md,Create README.md,,,,Carmen Alvarez,c@rmen.ca,Carmen Alvarez,c@rmen.ca,1371419722,1371419722,08656973b046b484e389407d161854401eadce0e
+08656973b046b484e389407d161854401eadce0e,08656973,Centralize date formatting,"Centralize date formatting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371419396,1371419396,be82b5b20aaaf4b8a04443602f8caf429fffb1fd
+be82b5b20aaaf4b8a04443602f8caf429fffb1fd,be82b5b2,Added placeholder share action,"Added placeholder share action
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371418845,1371418845,7fe12abbcf73695fed729479742d57457fdeb03c
+7fe12abbcf73695fed729479742d57457fdeb03c,7fe12abb,Added more comments,"Added more comments
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371418306,1371418306,3ca404790c412e597622251420194c2c7a0984e8
+3ca404790c412e597622251420194c2c7a0984e8,3ca40479,Adding more javadoc and comments,"Adding more javadoc and comments
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371417345,1371417345,89ac2c1a105e4a51411e39987335ec09b87da978
+89ac2c1a105e4a51411e39987335ec09b87da978,89ac2c1a,"Adding comments, javadoc","Adding comments, javadoc
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371415787,1371415787,ecd8fd6d14161066f02f3fda3cebfdb7786a5bee
+ecd8fd6d14161066f02f3fda3cebfdb7786a5bee,ecd8fd6d,UCDetector pass,"UCDetector pass
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371413451,1371413451,d1808fea2cbbc836179b2d22ab5be14309bbcbc8
+d1808fea2cbbc836179b2d22ab5be14309bbcbc8,d1808fea,Added copyright to xml files,"Added copyright to xml files
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371412952,1371412952,9186228d92372eae961415837ba455b9ba10d9b8
+9186228d92372eae961415837ba455b9ba10d9b8,9186228d,Added copyright to java files,"Added copyright to java files
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371412466,1371412466,c68bb54f9d1f4c70b37cb2d7d04996372caa88ff
+c68bb54f9d1f4c70b37cb2d7d04996372caa88ff,c68bb54f,Allow uris with an id for updates,"Allow uris with an id for updates
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371412029,1371412029,a70706f0dc0ca34808ceadc0e97091b7c529d7df
+a70706f0dc0ca34808ceadc0e97091b7c529d7df,a70706f0,Allow uris with an id for deletion,"Allow uris with an id for deletion
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371411706,1371411706,7780e8f7454fcb2e9657004c564360075a97a65a
+7780e8f7454fcb2e9657004c564360075a97a65a,7780e8f7,Corrections for the duration for each member when the meeting is finished,"Corrections for the duration for each member when the meeting is finished
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371410478,1371410478,b1839e90ad43141c20dc76663d5715a83d7c6f37
+b1839e90ad43141c20dc76663d5715a83d7c6f37,b1839e90,Add list header to the meeting list,"Add list header to the meeting list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371407984,1371407984,eb81b89b2a4205f4b68f36bbedca61156ab9d6f5
+eb81b89b2a4205f4b68f36bbedca61156ab9d6f5,eb81b89b,Mostly working first messy draft version.,"Mostly working first messy draft version.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371405497,1371405497,12ac7e1750c30d36ad9d5d23ed6fa12a30b46598
+12ac7e1750c30d36ad9d5d23ed6fa12a30b46598,12ac7e17,Work in progress to time each member during a meeting,"Work in progress to time each member during a meeting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371404742,1371404742,d0e040ff6af1d040582d800ba0b6de335524518a
+d0e040ff6af1d040582d800ba0b6de335524518a,d0e040ff,Dont allow modifying a meeting already finished,"Dont allow modifying a meeting already finished
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371400103,1371400103,a9e6bca7475817dcb785ddc6a95eea9d169410c0
+a9e6bca7475817dcb785ddc6a95eea9d169410c0,a9e6bca7,Beginning work on chronometers,"Beginning work on chronometers
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371399015,1371399015,3b9a6799efe5f7ca04e95a8d2efab4c5feaac835
+3b9a6799efe5f7ca04e95a8d2efab4c5feaac835,3b9a6799,Added the meeting status,"Added the meeting status
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371394846,1371394846,72a0c8a596d2913fe09d1f60b01472fd3d4f6ae7
+72a0c8a596d2913fe09d1f60b01472fd3d4f6ae7,72a0c8a5,"Move the logic to add team members to a meeting, to the provider","Move the logic to add team members to a meeting, to the provider
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371392672,1371392672,9ffbfcfe1f94bdf4d0a800de9717083c2da476c3
+9ffbfcfe1f94bdf4d0a800de9717083c2da476c3,9ffbfcfe,on delete cascade,"on delete cascade
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371382555,1371382555,9db69be556b71147a4a9935739fbe955991673bf
+9db69be556b71147a4a9935739fbe955991673bf,9db69be5,Corrections for creating and deleting meetings,"Corrections for creating and deleting meetings
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371382467,1371382467,5f484df178bd8341b02aca48f517e5e3502e915e
+5f484df178bd8341b02aca48f517e5e3502e915e,5f484df1,Separate the meeting activity into a meeting fragment,"Separate the meeting activity into a meeting fragment
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371380768,1371380768,10a7b40ab3d042c88541781a199aa2dfec313846
+10a7b40ab3d042c88541781a199aa2dfec313846,10a7b40a,Open the meeting activity for an existing meeting,"Open the meeting activity for an existing meeting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371373681,1371373681,159235f8a38ce8eb0d08f7013582061c8e1276ee
+159235f8a38ce8eb0d08f7013582061c8e1276ee,159235f8,Added layout for meeting list item,"Added layout for meeting list item
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371373225,1371373225,4bb6dc41ddcd3c56e8ddd92ff11dd93229f7f41b
+4bb6dc41ddcd3c56e8ddd92ff11dd93229f7f41b,4bb6dc41,Allow deleting a meeting,"Allow deleting a meeting
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371373203,1371373203,5aad733e942c30202508302914fc403c83a5fde5
+5aad733e942c30202508302914fc403c83a5fde5,5aad733e,Added skeleton meeting activity,"Added skeleton meeting activity
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371371850,1371371850,f7ffb286529f27dd4f2ed8243319e4e443a38a64
+f7ffb286529f27dd4f2ed8243319e4e443a38a64,f7ffb286,Simplify the way we format elapsed time.,"Simplify the way we format elapsed time.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371369032,1371369032,729b3c506736d8068ffe3f3ba4585c0ee7ec4dd6
+729b3c506736d8068ffe3f3ba4585c0ee7ec4dd6,729b3c50,Make the list header stay at the top,"Make the list header stay at the top
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371341266,1371341266,a214b2b4bcd9e88d7a1d28348847a5708acb23e1
+a214b2b4bcd9e88d7a1d28348847a5708acb23e1,a214b2b4,Added a list header,"Added a list header
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371340392,1371340392,627821cdb4f55684316943c2c306025ff4b323dd
+627821cdb4f55684316943c2c306025ff4b323dd,627821cd,Added header to member list,"Added header to member list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371339472,1371339472,12b4663e0b14545e1ec89134ca134dee10020b77
+12b4663e0b14545e1ec89134ca134dee10020b77,12b4663e,Show the duration in the member list,"Show the duration in the member list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371338298,1371338298,73adaedbc8ed947df216d42655fd40ea689bd4fa
+73adaedbc8ed947df216d42655fd40ea689bd4fa,73adaedb,Work in progress to query the average and total durations for the member screen,"Work in progress to query the average and total durations for the member screen
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371337455,1371337455,5baac246ea90c73034afdb92dcbfe9614b2f2403
+5baac246ea90c73034afdb92dcbfe9614b2f2403,5baac246,Work in progress to use the right query for the team members screen,"Work in progress to use the right query for the team members screen
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371336035,1371336035,317f225ff8fd17dff1cd6b6f9e4a7b36e5890c79
+317f225ff8fd17dff1cd6b6f9e4a7b36e5890c79,317f225f,Trying to adapt the content provider for the join between meeting_members and members,"Trying to adapt the content provider for the join between meeting_members and members
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371333302,1371333302,5009774cd5d60381cac4eeffcf64f271b7199ebe
+5009774cd5d60381cac4eeffcf64f271b7199ebe,5009774c,Order members by name,"Order members by name
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371328184,1371328184,9e634f1c942feb08a42a3931491d68e3505dabeb
+9e634f1c942feb08a42a3931491d68e3505dabeb,9e634f1c,Add delete member functionality,"Add delete member functionality
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371328091,1371328091,c1dc22fe3eebcc301614d148c85d37b982ed93f4
+c1dc22fe3eebcc301614d148c85d37b982ed93f4,c1dc22fe,Added layout for member list item,"Added layout for member list item
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371325248,1371325248,8b28aed8e98a191739bc039065416fe23570f33f
+8b28aed8e98a191739bc039065416fe23570f33f,8b28aed8,Force the application in portrait mode (taking the easy way out for now),"Force the application in portrait mode (taking the easy way out for now)
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371324325,1371324325,9544dc8cc5f59d1b9ddc725a9bab98afbf755047
+9544dc8cc5f59d1b9ddc725a9bab98afbf755047,9544dc8c,Add error checking to prevent adding multiple team members with the same name. …,"Add error checking to prevent adding multiple team members with the same name.  Add title to new team member dialog
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1371324295,1371324295,07462376daf1b1e68c052ce3d61dd1b9ec2a7bd3
+07462376daf1b1e68c052ce3d61dd1b9ec2a7bd3,07462376,Added fragment for the meeting list,"Added fragment for the meeting list
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370817343,1370817343,2ee527b8b16d16018393ee63ef7ea8b7b5117441
+2ee527b8b16d16018393ee63ef7ea8b7b5117441,2ee527b8,Move the creation of team members to the member fragment,"Move the creation of team members to the member fragment
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370816427,1370816427,017e52a8109a2c5f9394167ccb2edb0db4851420
+017e52a8109a2c5f9394167ccb2edb0db4851420,017e52a8,Added dialog to add team member,"Added dialog to add team member
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370815844,1370815844,c8d552259abac3583506d5b542098a2fa2238039
+c8d552259abac3583506d5b542098a2fa2238039,c8d55225,Added ListView/ListFragment for team,"Added ListView/ListFragment for team
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370813568,1370813568,e418309eb21f7b8a62165ec5389f4cab2ab7ce00
+e418309eb21f7b8a62165ec5389f4cab2ab7ce00,e418309e,Added generated content provider. Changed the tab names.,"Added generated content provider. Changed the tab names.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370809799,1370809799,a793e7da31bc6067a108f85cb38bf644ca045293
+a793e7da31bc6067a108f85cb38bf644ca045293,a793e7da,Project generated by ADT plugin.,"Project generated by ADT plugin.
+",,,,Carmen,c@rmen.ca,Carmen,c@rmen.ca,1370807305,1370807305,

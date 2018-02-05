@@ -1,0 +1,521 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+8fb85a60a260dbcdd1110719deb1c86e8ec37a48,8fb85a60,Update README.md,Update README.md,,,,Poussinou,francoisvincentmail-game@yahoo.fr,Stephan Windmüller,windy@white-hawk.de,1501250170,1501250408,b9f8b9558bcff7da77f86c6d00c697d1e229a3b3
+b9f8b9558bcff7da77f86c6d00c697d1e229a3b3,b9f8b955,Reverted back to Java 7,"Reverted back to Java 7
+
+Java 8 support for Android is rather unstable at the moment.
+The Jack compiler is deprecated and the default toolchain
+requires dependencies marked as alpha.
+
+Since this app currently only used lambdas as a Java 8 feature,
+these have been removed for now.
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1496521622,1496521931,54fdead5e276bd6f0f52e5ff298bb3dd37cea703
+54fdead5e276bd6f0f52e5ff298bb3dd37cea703,54fdead5,Fixed calculation of duration < 48 hours (fixes #10),"Fixed calculation of duration < 48 hours (fixes #10)
+
+If an item was lent two days ago, but not 48 hours,
+the duration displayed was ""Yesterday"". This fix has
+been secured by unit tests.
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1496468350,1496521756,b14da530e2124386b1ed7519ba1f9b02c2ed2f19
+b14da530e2124386b1ed7519ba1f9b02c2ed2f19,b14da530,Updated Spanish translation,"Updated Spanish translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495955997,1495955997,8f21ccab65f3236bf52e9e00243e25efeb8c4266
+8f21ccab65f3236bf52e9e00243e25efeb8c4266,8f21ccab,Allow builds even if release key is not available,"Allow builds even if release key is not available
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495952263,1495952263,fb31d042929bd3f6b83dda61f2414c836fe38fa7
+fb31d042929bd3f6b83dda61f2414c836fe38fa7,fb31d042,Next version is 1.0.31,"Next version is 1.0.31
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495803080,1495803080,db29602ef54ee652f48e698894a969df719a98be
+db29602ef54ee652f48e698894a969df719a98be,db29602e,Disabling ProGuard,"Disabling ProGuard
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495802892,1495802892,73e93a336676ebea58ce80af55d8b4a5e517f981
+73e93a336676ebea58ce80af55d8b4a5e517f981,73e93a33,Next version is 1.0.30,"Next version is 1.0.30
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495778497,1495778497,56000f1fa0dde3eb4c72a8fb4c31022bc6966545
+56000f1fa0dde3eb4c72a8fb4c31022bc6966545,56000f1f,"Disabled deprecated Jack compiler, allow build with Gradle","Disabled deprecated Jack compiler, allow build with Gradle
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495777539,1495778248,0814b9bf133cbf0165b07e3b647d1f807450937a
+0814b9bf133cbf0165b07e3b647d1f807450937a,0814b9bf,Next version is 1.0.29,"Next version is 1.0.29
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495708343,1495708343,1a9ec27044493ac62af75148da8a6436d94067bc
+1a9ec27044493ac62af75148da8a6436d94067bc,1a9ec270,Updated changelog for 1.0.28,"Updated changelog for 1.0.28
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495707069,1495707069,dcb9a567f2aab462ad9ae30749237044c3b90733
+dcb9a567f2aab462ad9ae30749237044c3b90733,dcb9a567,Updated translations,"Updated translations
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1495706895,1495706895,91ddb937000950561ee3c8d4a0ad2c75493d93a8
+91ddb937000950561ee3c8d4a0ad2c75493d93a8,91ddb937,Keep date selection visible after orientation change (fixes #24),"Keep date selection visible after orientation change (fixes #24)
+",,,,trikaphundo,trikaphundo@users.noreply.github.com,Stephan Windmüller,windy@white-hawk.de,1495566199,1495706087,71527ed49051db0ed55c94c9f3f0988d2d7e6be6
+71527ed49051db0ed55c94c9f3f0988d2d7e6be6,71527ed4,Dialogs don't disappear anymore due to config changes (fixes #22),"Dialogs don't disappear anymore due to config changes (fixes #22)
+",,,,trikaphundo,trikaphundo@users.noreply.github.com,Stephan Windmüller,windy@white-hawk.de,1495326503,1495704991,584c0da2305a89f074d040d61059d8c4cf8a0e97
+584c0da2305a89f074d040d61059d8c4cf8a0e97,584c0da2,Added a missing string,"Added a missing string
+
+There was one string from the default strings file which did not appear in the catalan translation; I added it and translated it",,,,trikaphundo,trikaphundo@users.noreply.github.com,Stephan Windmüller,windy@white-hawk.de,1494637349,1494689062,c5e69126828e49db38b42be946282836c9097652
+c5e69126828e49db38b42be946282836c9097652,c5e69126,Fixed minor typos,Fixed minor typos,,,,trikaphundo,trikaphundo@users.noreply.github.com,Stephan Windmüller,windy@white-hawk.de,1494637027,1494689062,a223cfc5f90843e3a91b899cd6c6a091c7ec219a
+a223cfc5f90843e3a91b899cd6c6a091c7ec219a,a223cfc5,Add Crowdin link to README (fixes #26),"Add Crowdin link to README (fixes #26)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1494688912,1494688912,7e0d205f092e0ddcf5a0608d4980832baa04fc24
+7e0d205f092e0ddcf5a0608d4980832baa04fc24,7e0d205f,Fixed language name in changelog,"Fixed language name in changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492449516,1492449516,04afe54d27538642d4898db8fa98bdb6d7054afd
+04afe54d27538642d4898db8fa98bdb6d7054afd,04afe54d,Next version is 1.0.28,"Next version is 1.0.28
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492365011,1492365011,da3839ca14ded98bbd046450bc267e7b96ed416e
+da3839ca14ded98bbd046450bc267e7b96ed416e,da3839ca,Updated Gradle Wrapper to 3.5,"Updated Gradle Wrapper to 3.5
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492364207,1492364207,0e1d68790469689c49c650d50a8b7b79e6b43834
+0e1d68790469689c49c650d50a8b7b79e6b43834,0e1d6879,Updated changelog for 1.0.27,"Updated changelog for 1.0.27
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492363949,1492363949,911a3294be73dee8ebeecf58a71277d154321788
+911a3294be73dee8ebeecf58a71277d154321788,911a3294,Added Turkish app name,"Added Turkish app name
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492363653,1492363807,cb232a72d1dfafe8e84aea9257745802d1345f1b
+cb232a72d1dfafe8e84aea9257745802d1345f1b,cb232a72,Norwegian translation,"Norwegian translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1492363642,1492363642,5a582d3876dda99969c3468466561fcfbdaea6ba
+5a582d3876dda99969c3468466561fcfbdaea6ba,5a582d38,Updated permission justification,"Updated permission justification
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487511605,1487511605,9a792519de1466e536ec427272ba5e418395f5b8
+9a792519de1466e536ec427272ba5e418395f5b8,9a792519,Next version is 1.0.27,"Next version is 1.0.27
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487511557,1487511557,d19368536a1fee3bb2b4e5ce7100f51f1d12ee7b
+d19368536a1fee3bb2b4e5ce7100f51f1d12ee7b,d1936853,Updated changelog for 1.0.26,"Updated changelog for 1.0.26
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487506553,1487510195,af01bc5bacaec58c2938d13c22dcabe9e14bc324
+af01bc5bacaec58c2938d13c22dcabe9e14bc324,af01bc5b,Open contact selector if permissions have been granted,"Open contact selector if permissions have been granted
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487509855,1487510195,84d323fe7801ad3e8e0f599b9fa40bc4df3e571d
+84d323fe7801ad3e8e0f599b9fa40bc4df3e571d,84d323fe,Use Material theme,"Use Material theme
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487508590,1487510195,2af4fb055d8c1e21575417eb709899f15c54624e
+2af4fb055d8c1e21575417eb709899f15c54624e,2af4fb05,Update to API level 25 (Android 7.1.1),"Update to API level 25 (Android 7.1.1)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487505234,1487506117,dfa0333ba5c3e352e2191b7008b21fd600ca2745
+dfa0333ba5c3e352e2191b7008b21fd600ca2745,dfa0333b,Updated Gradle and its Android plugin,"Updated Gradle and its Android plugin
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487503170,1487503170,68641275328245f6567b21a09a1f86e6a4c5e3b0
+68641275328245f6567b21a09a1f86e6a4c5e3b0,68641275,Added privacy policy,"Added privacy policy
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1487499763,1487499763,f90c2142829edf6664bd1918e094ac2a9ebf29a5
+f90c2142829edf6664bd1918e094ac2a9ebf29a5,f90c2142,Use runtime permissions for devices with Marshmallow and newer,"Use runtime permissions for devices with Marshmallow and newer
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1476026943,1476034213,38af42a8f058f696feda65c34fda433d05fb397d
+38af42a8f058f696feda65c34fda433d05fb397d,38af42a8,"Use calendar intent for creating events, remove permissions","Use calendar intent for creating events, remove permissions
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1476014143,1476014143,a330c5bcccd45bd61c753ebdeddca2a50f17def5
+a330c5bcccd45bd61c753ebdeddca2a50f17def5,a330c5bc,Upgrade Java language level to 1.8,"Upgrade Java language level to 1.8
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1470079900,1470081828,ef028500adc1b02de77a91935c51e10522c81689
+ef028500adc1b02de77a91935c51e10522c81689,ef028500,Next version is 1.0.26,"Next version is 1.0.26
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469913317,1469913317,235e589bffdc20dac63f8d377e1bcea98282a1bf
+235e589bffdc20dac63f8d377e1bcea98282a1bf,235e589b,Update changelog for 1.0.25,"Update changelog for 1.0.25
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469913119,1469913119,755759eeab6f91dab958e6ee202977d3a21824c2
+755759eeab6f91dab958e6ee202977d3a21824c2,755759ee,Allow backup,"Allow backup
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469904617,1469904617,9e6d44988453362e69c0af813ecaf5462cdd84b8
+9e6d44988453362e69c0af813ecaf5462cdd84b8,9e6d4498,Add Arabic translation,"Add Arabic translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469898889,1469898889,1311377efd07cc84c398035c314df98ad141dcb8
+1311377efd07cc84c398035c314df98ad141dcb8,1311377e,Remove obsolete res directory,"Remove obsolete res directory
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469897735,1469897735,171fcee79b5cf3af3eaf296a5aec28b403861491
+171fcee79b5cf3af3eaf296a5aec28b403861491,171fcee7,Use Gradle for build,"Use Gradle for build
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469897597,1469897597,52eddfb4b2e08d2d0bf9115e9d73d96d3234acb7
+52eddfb4b2e08d2d0bf9115e9d73d96d3234acb7,52eddfb4,Remove support library,"Remove support library
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469894360,1469894360,2f63a04de33d7c22e0d976c46ada8322c8bf305d
+2f63a04de33d7c22e0d976c46ada8322c8bf305d,2f63a04d,Limit Android version to API level 16 and above,"Limit Android version to API level 16 and above
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1469891051,1469894337,591d10289344b4638d777d794d7aef5cb02f0154
+591d10289344b4638d777d794d7aef5cb02f0154,591d1028,Next version is 1.0.25,"Next version is 1.0.25
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1427381959,1469889856,9ed2b3cf583c0564ac994cac5f951e360d87e189
+9ed2b3cf583c0564ac994cac5f951e360d87e189,9ed2b3cf,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1427381882,1427381882,"cad1f6ddde18b3f3fcd221499d89afc6153a1c28,b7a84b1fec5d9ef315ff15b562b80b1f8bf6e636"
+b7a84b1fec5d9ef315ff15b562b80b1f8bf6e636,b7a84b1f,Updated changelog for 1.0.24,"Updated changelog for 1.0.24
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1427380461,1427381121,87495968708f25a190a13b5cd1757741b9269cd5
+87495968708f25a190a13b5cd1757741b9269cd5,87495968,Use autocomplete for descriptions,"Use autocomplete for descriptions
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1427380307,1427381121,7700484e42cd14648b487d5087c9a1433b0838f2
+7700484e42cd14648b487d5087c9a1433b0838f2,7700484e,Use autocomplete for person names,"Use autocomplete for person names
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421361188,1427381121,a684cabb896d518353f81925b8ad78b3b0d3f1df
+a684cabb896d518353f81925b8ad78b3b0d3f1df,a684cabb,Updated french translation,"Updated french translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1427377547,1427377547,1a10da30b07c10b1e29f7b3cefc2b0de4c65379f
+1a10da30b07c10b1e29f7b3cefc2b0de4c65379f,1a10da30,Next version is 1.0.24,"Next version is 1.0.24
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422199349,1422199349,a481de989f8ba3976e660f9f570eae671d4e8832
+cad1f6ddde18b3f3fcd221499d89afc6153a1c28,cad1f6dd,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422199312,1422199312,"1b8d68efbe76f5ecc0f9ffbacc4b72800f54bc23,a481de989f8ba3976e660f9f570eae671d4e8832"
+a481de989f8ba3976e660f9f570eae671d4e8832,a481de98,Updated changelog,"Updated changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422199265,1422199265,8e5f4770e5b22e7bca72f3db81e729c563769e09
+8e5f4770e5b22e7bca72f3db81e729c563769e09,8e5f4770,"Revert ""Use autocomplete for person names""","Revert ""Use autocomplete for person names""
+
+This reverts commit ad51f30a9db3d5a4e59ff782326449bd6258dcf0.
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422199089,1422199089,c1ed6732c6737dcbcca519411200e53b85bca27d
+c1ed6732c6737dcbcca519411200e53b85bca27d,c1ed6732,Next version is 1.0.23,"Next version is 1.0.23
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422184614,1422184614,eac47242a0e243e64d262f60ba66dc7113de4b03
+1b8d68efbe76f5ecc0f9ffbacc4b72800f54bc23,1b8d68ef,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422184579,1422184579,"e9e7813b793e074ddfdb0eaa650c8b3469a1e4f4,eac47242a0e243e64d262f60ba66dc7113de4b03"
+eac47242a0e243e64d262f60ba66dc7113de4b03,eac47242,Updated changelog for 1.0.22,"Updated changelog for 1.0.22
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1422184145,1422184145,ad51f30a9db3d5a4e59ff782326449bd6258dcf0
+ad51f30a9db3d5a4e59ff782326449bd6258dcf0,ad51f30a,Use autocomplete for person names,"Use autocomplete for person names
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421361188,1421361188,ccacb1518d607d3b7e16ca496b05e3234a085dfd
+ccacb1518d607d3b7e16ca496b05e3234a085dfd,ccacb151,Updated Czech and Galician translation,"Updated Czech and Galician translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421351829,1421351829,b1e9cef249704979838e610e1cd95a627c8a4ef2
+b1e9cef249704979838e610e1cd95a627c8a4ef2,b1e9cef2,Next version is 1.0.22,"Next version is 1.0.22
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421269868,1421269868,e9e7813b793e074ddfdb0eaa650c8b3469a1e4f4
+e9e7813b793e074ddfdb0eaa650c8b3469a1e4f4,e9e7813b,Updated changelog for 1.0.21,"Updated changelog for 1.0.21
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421269336,1421269336,10bf82e9a5f739437bd84eb459167aad6862841b
+10bf82e9a5f739437bd84eb459167aad6862841b,10bf82e9,Updated French app name,"Updated French app name
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421268085,1421268978,a94272cd7bb654d7df683a6a2b3384399b0e2876
+a94272cd7bb654d7df683a6a2b3384399b0e2876,a94272cd,"Example data is no longer created, fixed button description","Example data is no longer created, fixed button description
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421267876,1421268978,bfeb28ffd60c9bd839634708f51c1a2bc7fb31a2
+bfeb28ffd60c9bd839634708f51c1a2bc7fb31a2,bfeb28ff,Show last modification date (fixes #18),"Show last modification date (fixes #18)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421267676,1421268978,ac9ca4cc0dce98ee94938ad3f3759602f2f5b2e7
+ac9ca4cc0dce98ee94938ad3f3759602f2f5b2e7,ac9ca4cc,Fixed warning about constructor in DialogFragment,"Fixed warning about constructor in DialogFragment
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421182082,1421182082,fe2803b82c5aa9db45efe5e2d25086b4e0cc6be9
+fe2803b82c5aa9db45efe5e2d25086b4e0cc6be9,fe2803b8,Make return dates independent again (fixes #19),"Make return dates independent again (fixes #19)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1421101559,1421101559,2bf16cd923d52dd0e5cd14f1ef3cae11bd5b6f69
+2bf16cd923d52dd0e5cd14f1ef3cae11bd5b6f69,2bf16cd9,Next version is 1.0.21,"Next version is 1.0.21
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1414254184,1414254184,96643097b0579d9a13d9615f948cf851306dcd02
+96643097b0579d9a13d9615f948cf851306dcd02,96643097,Updated changelog,"Updated changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1414253768,1414253768,4d19e0ede82ec45660f020c51ce71de9334cc7b8
+4d19e0ede82ec45660f020c51ce71de9334cc7b8,4d19e0ed,Updated other translations,"Updated other translations
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1414253663,1414253663,b77e4d2bd896ae5551aa14f51439aa4d27dbb0ff
+b77e4d2bd896ae5551aa14f51439aa4d27dbb0ff,b77e4d2b,Added Czech translation,"Added Czech translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1414253644,1414253644,903ead93fddfbcae614255240fd3d47ccf0fd107
+903ead93fddfbcae614255240fd3d47ccf0fd107,903ead93,Next version is 1.0.20,"Next version is 1.0.20
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1412150305,1412150305,93bca4c271dc62c147e4a8685bd792149af50af9
+93bca4c271dc62c147e4a8685bd792149af50af9,93bca4c2,Adding changelog for 1.0.19,"Adding changelog for 1.0.19
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1412149770,1412149770,182fbf15c056bfd2566be6d47563306a2d7a18b4
+182fbf15c056bfd2566be6d47563306a2d7a18b4,182fbf15,Merge github.com:valerio-bozzolan/whohasmystuff into develop,"Merge github.com:valerio-bozzolan/whohasmystuff into develop
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411848006,1411848006,"151db106d1ea2143dc19b7bef0d0388bee5e01d2,c6baabda8025cb49f347dd6b65892d336660b168"
+c6baabda8025cb49f347dd6b65892d336660b168,c6baabda,Added localization support for Italian language,"Added localization support for Italian language
+",,,,Valerio Bozzolan,valerio.bozzolan@gmail.com,Valerio Bozzolan,valerio.bozzolan@gmail.com,1411717580,1411717580,cf8898294452887c1b366229c9b437becdac6f0b
+151db106d1ea2143dc19b7bef0d0388bee5e01d2,151db106,Next version is 1.0.19,"Next version is 1.0.19
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411672732,1411672732,0e196313e4594655a68cb392e9c7ed315f289690
+cf8898294452887c1b366229c9b437becdac6f0b,cf889829,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411672656,1411672656,"36032e1dd7f83b1d056b796813bb8610be836de2,0e196313e4594655a68cb392e9c7ed315f289690"
+0e196313e4594655a68cb392e9c7ed315f289690,0e196313,Changelog for 1.0.18,"Changelog for 1.0.18
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411672634,1411672634,20b3a984dc83fa654e9ae64df56cb3623bdbbf35
+20b3a984dc83fa654e9ae64df56cb3623bdbbf35,20b3a984,Merge branch 'srtr' of github.com:pejakm/whohasmystuff into develop,"Merge branch 'srtr' of github.com:pejakm/whohasmystuff into develop
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411672320,1411672320,"141421f2c2d3cc0c0e4392591e695a746b4c23a2,051556347989a809cdf0d592d13a414b50e14faf"
+051556347989a809cdf0d592d13a414b50e14faf,05155634,Serbian translation fix,"Serbian translation fix
+",,,,Mladen Pejaković,pejakm@autistici.org,Mladen Pejaković,pejakm@autistici.org,1411646849,1411646849,36032e1dd7f83b1d056b796813bb8610be836de2
+141421f2c2d3cc0c0e4392591e695a746b4c23a2,141421f2,Next version is 1.0.18,"Next version is 1.0.18
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411590302,1411590302,d17eaf9ab120b4068cc54c94133126bcaa1d89ce
+36032e1dd7f83b1d056b796813bb8610be836de2,36032e1d,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411590186,1411590186,"7f0101c3b0dd6ea7071c6818eb0b01befa9d51fd,d17eaf9ab120b4068cc54c94133126bcaa1d89ce"
+d17eaf9ab120b4068cc54c94133126bcaa1d89ce,d17eaf9a,Adding changelog for 1.0.17,"Adding changelog for 1.0.17
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411589559,1411589559,ee05090dc52a6293d15aa9de8dceca261f4a9ae0
+ee05090dc52a6293d15aa9de8dceca261f4a9ae0,ee05090d,Merge branch 'srtr' of github.com:pejakm/whohasmystuff into develop,"Merge branch 'srtr' of github.com:pejakm/whohasmystuff into develop
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411589337,1411589337,"5d60fe6e9785c6f63413eaedd4fc0155e8683c07,0ae9b28661bc0a4e110103f3cb881a737c5a5c15"
+5d60fe6e9785c6f63413eaedd4fc0155e8683c07,5d60fe6e,Adding required feature graphic,"Adding required feature graphic
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1411588738,1411588738,678ecc6f39263d61b308b8a5511ec7f32e1b250b
+0ae9b28661bc0a4e110103f3cb881a737c5a5c15,0ae9b286,[Translations] Add Serbian,"[Translations] Add Serbian
+",,,,Mladen Pejaković,pejakm@autistici.org,Mladen Pejaković,pejakm@autistici.org,1411497283,1411497283,7f0101c3b0dd6ea7071c6818eb0b01befa9d51fd
+678ecc6f39263d61b308b8a5511ec7f32e1b250b,678ecc6f,Next version is 1.0.17,"Next version is 1.0.17
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1408301413,1408301413,44fd8f3f462c54d4da5820b00e0158e33c0d1324
+7f0101c3b0dd6ea7071c6818eb0b01befa9d51fd,7f0101c3,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1408301385,1408301385,"09870cebc12b756834f6441546134d5a97b36fdf,44fd8f3f462c54d4da5820b00e0158e33c0d1324"
+44fd8f3f462c54d4da5820b00e0158e33c0d1324,44fd8f3f,Updated changelog for 1.0.16,"Updated changelog for 1.0.16
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1408300970,1408300970,2a2fa0c0ee0027ec8211ad2d123eb9cb1e1f7f73
+2a2fa0c0ee0027ec8211ad2d123eb9cb1e1f7f73,2a2fa0c0,Adding japanese translation,"Adding japanese translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1408300913,1408300913,53b5fc2b9c0b0968eb3462753246ce976cca7eff
+53b5fc2b9c0b0968eb3462753246ce976cca7eff,53b5fc2b,Next version is 1.0.16,"Next version is 1.0.16
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097475,1407097475,49b8459dcdcc226874ac975f67e481cbeef98e38
+09870cebc12b756834f6441546134d5a97b36fdf,09870ceb,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097440,1407097440,"4ec17e30cf8672e98a6c0062e5a0508416bdf145,49b8459dcdcc226874ac975f67e481cbeef98e38"
+49b8459dcdcc226874ac975f67e481cbeef98e38,49b8459d,Updated changelog for 1.0.15,"Updated changelog for 1.0.15
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097402,1407097402,2f771d7c0d7c68e309e82128bba719ab2af27fb1
+2f771d7c0d7c68e309e82128bba719ab2af27fb1,2f771d7c,Ignore ProGuard logs,"Ignore ProGuard logs
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097384,1407097384,a5f577494edb4e6f392cac486b7cc400d0865c46
+a5f577494edb4e6f392cac486b7cc400d0865c46,a5f57749,"Excluding support library from ProGuard, disabling obfuscation","Excluding support library from ProGuard, disabling obfuscation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097359,1407097359,9cb2bc05ad64e292cfe0f7329e076289590dab2a
+9cb2bc05ad64e292cfe0f7329e076289590dab2a,9cb2bc05,Merge branch 'fragments' into develop,"Merge branch 'fragments' into develop
+
+Introducing fragments in order to support action bar icons
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407097225,1407097225,"298aed611c3dc65b06354a994e2d3f639d540d8b,4812dbbf1191337f5ee487f43d4290ebe74e7a79"
+4812dbbf1191337f5ee487f43d4290ebe74e7a79,4812dbbf,Example data is no longer needed,"Example data is no longer needed
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407060968,1407060968,932f18498487e8657d60fec2b96550198d918706
+932f18498487e8657d60fec2b96550198d918706,932f1849,Fix creation of example data,"Fix creation of example data
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407056767,1407056767,2941385af79e94abcd064fc55fac902040205a4e
+2941385af79e94abcd064fc55fac902040205a4e,2941385a,Use singleton for database adapter since list fragments now share the same activity context,"Use singleton for database adapter since list fragments now share the same activity context
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407056294,1407056294,c9e98c22c06c3138af4f43d1cba8593ce7b9b3e7
+c9e98c22c06c3138af4f43d1cba8593ce7b9b3e7,c9e98c22,Use dialog fragments to replace deprecated API usage,"Use dialog fragments to replace deprecated API usage
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407053644,1407053913,26e5bfcc1568f16c99918c5c63a08167d937ba90
+26e5bfcc1568f16c99918c5c63a08167d937ba90,26e5bfcc,Fixed exception after lending an item again,"Fixed exception after lending an item again
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407053319,1407053847,377c2e79010626e44988bbc6e2ed91c43dd9932d
+377c2e79010626e44988bbc6e2ed91c43dd9932d,377c2e79,"Fixed spelling of ""occurred""","Fixed spelling of ""occurred""
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407017624,1407053847,4ab70e6e23215ee0979b116300dfd4428e2b40b2
+4ab70e6e23215ee0979b116300dfd4428e2b40b2,4ab70e6e,"Use fragments to support ""new item"" button in action bar","Use fragments to support ""new item"" button in action bar
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1407012066,1407049659,298aed611c3dc65b06354a994e2d3f639d540d8b
+298aed611c3dc65b06354a994e2d3f639d540d8b,298aed61,Changing version to 1.0.15,"Changing version to 1.0.15
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1405542954,1405542954,5a85f7f237ffec991d3bf19e2c45daf4f500c981
+4ec17e30cf8672e98a6c0062e5a0508416bdf145,4ec17e30,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1405540690,1405540690,"95d3a5ec663525509029de573a745024a3b545ea,5a85f7f237ffec991d3bf19e2c45daf4f500c981"
+5a85f7f237ffec991d3bf19e2c45daf4f500c981,5a85f7f2,Adding changelog entry for 1.0.14,"Adding changelog entry for 1.0.14
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1405540675,1405540675,a230ddc262e25e65e8068d7848511159834a40d9
+a230ddc262e25e65e8068d7848511159834a40d9,a230ddc2,Adding Catalan translation (thanks to jmontane),"Adding Catalan translation (thanks to jmontane)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1405366451,1405366451,420686ca35a27405bfb304e7dc2f13223e7de9b1
+420686ca35a27405bfb304e7dc2f13223e7de9b1,420686ca,Next version is 1.0.14,"Next version is 1.0.14
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394053644,1394053644,e5390e91177c849995a105554abc2b2f0872eb7f
+95d3a5ec663525509029de573a745024a3b545ea,95d3a5ec,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394052992,1394052992,"f4f4b80d1cc8934223a8e8b0c80da873d659a090,e5390e91177c849995a105554abc2b2f0872eb7f"
+e5390e91177c849995a105554abc2b2f0872eb7f,e5390e91,Changing version to 1.0.13,"Changing version to 1.0.13
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394052915,1394052915,df984b41bbdf2e171a8a54fda0757e2e46d30bd5
+df984b41bbdf2e171a8a54fda0757e2e46d30bd5,df984b41,Adding Galician translation,"Adding Galician translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394052763,1394052763,4c9e03e58f219a40ebe892adb82e626dbdf93279
+4c9e03e58f219a40ebe892adb82e626dbdf93279,4c9e03e5,Preparing changelog for 1.0.13,"Preparing changelog for 1.0.13
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394038936,1394039004,9afcc63b6d9174bdde8c986d8231cb31b2bba7d7
+9afcc63b6d9174bdde8c986d8231cb31b2bba7d7,9afcc63b,Added Dutch translation,"Added Dutch translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394038816,1394038816,01f8f81d4f1c2407020fd4674b939518d6fa9307
+01f8f81d4f1c2407020fd4674b939518d6fa9307,01f8f81d,Update French translation,"Update French translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394038715,1394038715,7a59e6395e8601e94b8aacea5edebc4db7961722
+7a59e6395e8601e94b8aacea5edebc4db7961722,7a59e639,Using English strings.xml from crowdin,"Using English strings.xml from crowdin
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1394038678,1394038700,acafc75ab28b13ccc4d1d30a1d5b37b99c9c85be
+acafc75ab28b13ccc4d1d30a1d5b37b99c9c85be,acafc75a,Updated Russian translation,"Updated Russian translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1390497055,1390497055,f2779dfc123284355e8fd18ecaeb6d5402a9f896
+f2779dfc123284355e8fd18ecaeb6d5402a9f896,f2779dfc,Adding Ukrainian translations for #4,"Adding Ukrainian translations for #4
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1389526774,1389526774,8bec62273622a922de7ee61224deba787b574ded
+8bec62273622a922de7ee61224deba787b574ded,8bec6227,Do not assume first start on app update,"Do not assume first start on app update
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1389526230,1389526230,79cb1494466e3c639ac575e36c8d08cb6d89d2ba
+79cb1494466e3c639ac575e36c8d08cb6d89d2ba,79cb1494,Fixed german translation,"Fixed german translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1389484163,1389484163,6d8451aeb29ca0bea1a9e22cb1e0074f5235bd31
+6d8451aeb29ca0bea1a9e22cb1e0074f5235bd31,6d8451ae,Fixed typo,"Fixed typo
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1389483796,1389483796,6c37b0a2c36bf60707935eb27aa4e00058443dfd
+6c37b0a2c36bf60707935eb27aa4e00058443dfd,6c37b0a2,Ask to restore the backup file on first start (fixes #4),"Ask to restore the backup file on first start (fixes #4)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1389483772,1389483772,9442437488681200c1b040d556d6a3f1457d785d
+9442437488681200c1b040d556d6a3f1457d785d,94424374,Next version is 1.0.13,"Next version is 1.0.13
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378796769,1378796769,8c89624b160dae86a7256eaa08a5da9d0abe90ba
+f4f4b80d1cc8934223a8e8b0c80da873d659a090,f4f4b80d,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378796464,1378796464,"2ce4e0458bce5c5b64bcd6e84e00a82ef2af3071,8c89624b160dae86a7256eaa08a5da9d0abe90ba"
+8c89624b160dae86a7256eaa08a5da9d0abe90ba,8c89624b,Releasing 1.0.12,"Releasing 1.0.12
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378796451,1378796451,dc5ea2d59132f8824b3c669edfccd44deaf0c07a
+dc5ea2d59132f8824b3c669edfccd44deaf0c07a,dc5ea2d5,Adding Spanish translation,"Adding Spanish translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378795618,1378796357,d41d12b0b2c1b339ce8e490b55cb7a61cb930bf6
+d41d12b0b2c1b339ce8e490b55cb7a61cb930bf6,d41d12b0,Next version is 1.0.12,"Next version is 1.0.12
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378741692,1378741692,9b6c86ba06083d1c21e9e32dfbf8b753b8f0d418
+2ce4e0458bce5c5b64bcd6e84e00a82ef2af3071,2ce4e045,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378740581,1378740581,"f6c293e5e9844adb12606023441aa17de0449d1f,9b6c86ba06083d1c21e9e32dfbf8b753b8f0d418"
+9b6c86ba06083d1c21e9e32dfbf8b753b8f0d418,9b6c86ba,Releasing 1.0.11,"Releasing 1.0.11
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378740561,1378740561,a57744882c3945d440d200ac8a1fcecd5c1b1d5f
+a57744882c3945d440d200ac8a1fcecd5c1b1d5f,a5774488,Missing changelog entry for 1.0.10,"Missing changelog entry for 1.0.10
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378740294,1378740294,402ddd9e11e64d8643eb8409e57c9f89bbfa5bb8
+402ddd9e11e64d8643eb8409e57c9f89bbfa5bb8,402ddd9e,Adding Danish translation,"Adding Danish translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1378739874,1378739874,97deb6fc5364cf745c2752c9029c820f02ec063b
+97deb6fc5364cf745c2752c9029c820f02ec063b,97deb6fc,Adding new strings to Portuguese translation,"Adding new strings to Portuguese translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1374695055,1374695055,2c4e603552f7e897107b8505f6eb417b5bd74230
+2c4e603552f7e897107b8505f6eb417b5bd74230,2c4e6035,Next version is 1.0.11,"Next version is 1.0.11
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1365333317,1365333317,cf88e29cd345065ec337ec481c4083832fdc8170
+f6c293e5e9844adb12606023441aa17de0449d1f,f6c293e5,Merge branch 'develop',"Merge branch 'develop'
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1365332952,1365332952,"4a5cd48c9cc0d8889701904805cfb5354ec92f5b,cf88e29cd345065ec337ec481c4083832fdc8170"
+cf88e29cd345065ec337ec481c4083832fdc8170,cf88e29c,Clarify meaning of date field,"Clarify meaning of date field
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1365332905,1365332905,f2ebb86aa2e8433e64d494790df9e4dd4ac70390
+f2ebb86aa2e8433e64d494790df9e4dd4ac70390,f2ebb86a,Next version is 1.0.10,"Next version is 1.0.10
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364822027,1364822027,4a5cd48c9cc0d8889701904805cfb5354ec92f5b
+4a5cd48c9cc0d8889701904805cfb5354ec92f5b,4a5cd48c,Releasing 1.0.9,"Releasing 1.0.9
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364821814,1364821814,46bc19b089328a548c38672f2c6b5f27d6553421
+46bc19b089328a548c38672f2c6b5f27d6553421,46bc19b0,Updated translations,"Updated translations
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364821756,1364821756,c575f5e4d47b4c99f27820c20d92ee70d32132bb
+c575f5e4d47b4c99f27820c20d92ee70d32132bb,c575f5e4,Next version is 1.0.9,"Next version is 1.0.9
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364768721,1364768721,b1dc07f616c946956a7cdff93618d1b9c591b0be
+b1dc07f616c946956a7cdff93618d1b9c591b0be,b1dc07f6,Changelog entries for 1.0.8,"Changelog entries for 1.0.8
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364767303,1364767303,7734e523ec689a5ef3cd619055e8b3855684b969
+7734e523ec689a5ef3cd619055e8b3855684b969,7734e523,Updated translations,"Updated translations
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364766684,1364766684,a304de971beb228be001338fa3d566cb751441a1
+a304de971beb228be001338fa3d566cb751441a1,a304de97,Use constructor of lent item to create it from bundle,"Use constructor of lent item to create it from bundle
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364742098,1364742098,53567370b434bbd48c57558a5883e7d174f335de
+53567370b434bbd48c57558a5883e7d174f335de,53567370,Allow returned items to be lent again (fixes #2),"Allow returned items to be lent again (fixes #2)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364741621,1364741621,5f34f9c7de4c003901a0e0c80ed6be1d6537cdab
+5f34f9c7de4c003901a0e0c80ed6be1d6537cdab,5f34f9c7,Adding ukrainian and russian translations,"Adding ukrainian and russian translations
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1364726589,1364726589,18c483fe6f9f6bffdecbdba044c6983de7895ed8
+18c483fe6f9f6bffdecbdba044c6983de7895ed8,18c483fe,Using generated strings from crowdin,"Using generated strings from crowdin
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1356818429,1356818429,b74b1654f3f98abaa5751f0ef4718f3f784b0a85
+b74b1654f3f98abaa5751f0ef4718f3f784b0a85,b74b1654,Show correct duration if item was lent yesterday (fixes #1),"Show correct duration if item was lent yesterday (fixes #1)
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1356817661,1356817661,4527eb6057192a9d460e8b06937db275c9c0a928
+4527eb6057192a9d460e8b06937db275c9c0a928,4527eb60,Clarify that this is an Android app,"Clarify that this is an Android app
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1348328068,1348328068,7de3fc96cc43055f01a72d968ef1dff5c411a502
+7de3fc96cc43055f01a72d968ef1dff5c411a502,7de3fc96,Added README,"Added README
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1348327985,1348327985,09a07936bbc52875ef63102c412bfbf1fa53a9cb
+09a07936bbc52875ef63102c412bfbf1fa53a9cb,09a07936,Next version is 1.0.8,"Next version is 1.0.8
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1347985585,1347985585,05c3170694d29344746ffade5c81c4378aa6a450
+05c3170694d29344746ffade5c81c4378aa6a450,05c31706,Changelog entries for 1.0.7,"Changelog entries for 1.0.7
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1347984979,1347984979,9827cfb0ad6c9602dfbe2d42ca6898fdba731a33
+9827cfb0ad6c9602dfbe2d42ca6898fdba731a33,9827cfb0,Sort items always by date,"Sort items always by date
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1347984859,1347984859,b549d491ef3ed7920a68687e115fddb60ff7a5af
+b549d491ef3ed7920a68687e115fddb60ff7a5af,b549d491,Added french translation,"Added french translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1347984328,1347984328,fe8ec75a856f62461200f3a34def3800192d1fe8
+fe8ec75a856f62461200f3a34def3800192d1fe8,fe8ec75a,Add icon in xhdpi resolution,"Add icon in xhdpi resolution
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1343076997,1343076997,8b8a3317e8dcb8d0e64f1767c35405c5af604a39
+8b8a3317e8dcb8d0e64f1767c35405c5af604a39,8b8a3317,Replaced deprecated API usage of Date,"Replaced deprecated API usage of Date
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1343076545,1343076545,7d6cc904b9af2cf97628d55580512c8b9c2a83d1
+7d6cc904b9af2cf97628d55580512c8b9c2a83d1,7d6cc904,Fixed lint errors,"Fixed lint errors
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1343075376,1343075376,837d1ba3577f97b70711da5c829f0137ad03af4d
+837d1ba3577f97b70711da5c829f0137ad03af4d,837d1ba3,Next version is 1.0.7,"Next version is 1.0.7
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1342374852,1342374852,b6a6c4adf8e06395cc050c14a75d033de5254796
+b6a6c4adf8e06395cc050c14a75d033de5254796,b6a6c4ad,Releasing 1.0.6,"Releasing 1.0.6
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1342374370,1342374370,7bc5f0321d38d00e1869beb337e1614c8f7b6fd0
+7bc5f0321d38d00e1869beb337e1614c8f7b6fd0,7bc5f032,Fixed crash on ICS devices,"Fixed crash on ICS devices
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1342374273,1342374273,4a199a2e8ad790a723013840af011350938ecbfb
+4a199a2e8ad790a723013840af011350938ecbfb,4a199a2e,Next version is 1.0.6,"Next version is 1.0.6
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1332451911,1332451911,479fd5749aeae51c08c6348e3383bd9df1eff92e
+479fd5749aeae51c08c6348e3383bd9df1eff92e,479fd574,Releasing 1.0.5,"Releasing 1.0.5
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1332451837,1332451837,1eacbe27de6449dcc609b510cd1c65e618b690ef
+1eacbe27de6449dcc609b510cd1c65e618b690ef,1eacbe27,- Added brazilian portuguese translation,"- Added brazilian portuguese translation
+- Added hebrew translation
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1332451731,1332451731,8c039493d78844b73904c1e16f673bb8de4f592c
+8c039493d78844b73904c1e16f673bb8de4f592c,8c039493,Next version is 1.0.5,"Next version is 1.0.5
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1331754111,1331754111,9d85130faf516ff68bf79cf11a9f18d148254c90
+9d85130faf516ff68bf79cf11a9f18d148254c90,9d85130f,Releasing 1.0.4,"Releasing 1.0.4
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1331753661,1331753661,083a4cb05bf3e29fb8f0ac9935c85eeefec2dde0
+083a4cb05bf3e29fb8f0ac9935c85eeefec2dde0,083a4cb0,Updating changelog,"Updating changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1331753558,1331753558,0a6d8018a1ab04dd526f2522b973e89a1ce0f5be
+0a6d8018a1ab04dd526f2522b973e89a1ce0f5be,0a6d8018,- German translation of type selector,"- German translation of type selector
+- Do not show input keyboard when editing an item
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1331748488,1331748488,9246ecb3de51ff394ec40135b7f819c703a882ac
+9246ecb3de51ff394ec40135b7f819c703a882ac,9246ecb3,- Add static type selector,"- Add static type selector
+- Improved translation: object -> item
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1331745980,1331745980,46911d3d79a80af12f78ae3b3f720c31356e2a84
+46911d3d79a80af12f78ae3b3f720c31356e2a84,46911d3d,Next version will be 1.0.4,"Next version will be 1.0.4
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325767151,1325767151,21aaa94eaed57f1dea94f42a4158f921fc04d987
+21aaa94eaed57f1dea94f42a4158f921fc04d987,21aaa94e,Release 1.0.3,"Release 1.0.3
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325762788,1325762788,c75eb61ab181cfc9f7a4111e24c35728d061cf87
+c75eb61ab181cfc9f7a4111e24c35728d061cf87,c75eb61a,"Removed debug log, fixed NPE","Removed debug log, fixed NPE
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325762082,1325762082,c1ad0a48059068a19edd70137cef8ec06a1c0344
+c1ad0a48059068a19edd70137cef8ec06a1c0344,c1ad0a48,Show calendar select only when needed,"Show calendar select only when needed
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325760134,1325760134,e8de4edebc68d4abaf4445a5f878b236884a4783
+e8de4edebc68d4abaf4445a5f878b236884a4783,e8de4ede,Add field for expected return date while add lent object,"Add field for expected return date while add lent object
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325757812,1325757812,d74383dc84e0c0ce33a02dbcd1410cbb966550a5
+d74383dc84e0c0ce33a02dbcd1410cbb966550a5,d74383dc,Show time difference instead of date in main list,"Show time difference instead of date in main list
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325684824,1325684824,b9f903eaaed2d0ce13a959b1c0bf2f27614c3846
+b9f903eaaed2d0ce13a959b1c0bf2f27614c3846,b9f903ea,Replace constants of newer api level,"Replace constants of newer api level
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1325669126,1325669126,7a25bebf821ec57ba18ee8560a6352f36a11c32c
+7a25bebf821ec57ba18ee8560a6352f36a11c32c,7a25bebf,Store URI of created calendar event in database,"Store URI of created calendar event in database
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318452905,1318452905,31bcf0d24ee529f5a3d6c402605ff6a25d283f84
+31bcf0d24ee529f5a3d6c402605ff6a25d283f84,31bcf0d2,Cleaning up code,"Cleaning up code
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318074032,1318074032,044b68b5df23efb4962be000e547daef859c5843
+044b68b5df23efb4962be000e547daef859c5843,044b68b5,Remember last used calendar,"Remember last used calendar
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318073446,1318073446,21078baa90d080e8bfd8c9e434bbf958782da74b
+21078baa90d080e8bfd8c9e434bbf958782da74b,21078baa,First integration of calendar entries,"First integration of calendar entries
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318071284,1318071284,11f906400dc944c5714066c9860fcc90d153f242
+11f906400dc944c5714066c9860fcc90d153f242,11f90640,Applied new version schema to changelog,"Applied new version schema to changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318008267,1318008267,3d3378c727baa757e3c193f8d6d492f931dd04e2
+3d3378c727baa757e3c193f8d6d492f931dd04e2,3d3378c7,Next version will be 1.0.3,"Next version will be 1.0.3
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318008194,1318008194,8eeae4b5c6466ac5824191e58e26a54f9a861888
+8eeae4b5c6466ac5824191e58e26a54f9a861888,8eeae4b5,"Fixed special character in backup file, released 1.0.2","Fixed special character in backup file, released 1.0.2
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1318007998,1318007998,bc04b030cc32c7fb9664cda2dce2fcb20a8ca0d4
+bc04b030cc32c7fb9664cda2dce2fcb20a8ca0d4,bc04b030,Added changelog,"Added changelog
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317758646,1317758646,5ea58793677ae974a02af98fe98f4da7147150d6
+5ea58793677ae974a02af98fe98f4da7147150d6,5ea58793,Next release is 1.02,"Next release is 1.02
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317758381,1317758381,36ffd33739a740696cd003c52ca025a98cfef9c8
+36ffd33739a740696cd003c52ca025a98cfef9c8,36ffd337,Escape more XML characters,"Escape more XML characters
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317758249,1317758249,fc5fb4603d602150a61afbd443296317b848a7af
+fc5fb4603d602150a61afbd443296317b848a7af,fc5fb460,"Confirmation dialog for export, backup fixes","Confirmation dialog for export, backup fixes
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317756555,1317756555,ac8d99551fe68b175510572dc392194af316093f
+ac8d99551fe68b175510572dc392194af316093f,ac8d9955,"Offer ""mark as returned"" in context menu","Offer ""mark as returned"" in context menu
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317754752,1317754752,02c48ec84f0123c6e440a965845740e80f9275d6
+02c48ec84f0123c6e440a965845740e80f9275d6,02c48ec8,Create example entries on first start,"Create example entries on first start
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317754335,1317754335,904f22ef9ae4d76e69071c454e724000a9976e61
+904f22ef9ae4d76e69071c454e724000a9976e61,904f22ef,Next release will be 1.01,"Next release will be 1.01
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317754315,1317754315,87b3cb9cd59d942b76543c9133a403011c9d27b2
+87b3cb9cd59d942b76543c9133a403011c9d27b2,87b3cb9c,Preparing for next release,"Preparing for next release
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317654875,1317654875,6d11d699baf261c3fa57e408a497334caa500dfd
+6d11d699baf261c3fa57e408a497334caa500dfd,6d11d699,SVG source moved,"SVG source moved
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317652242,1317652242,4770fdd4ae74478794ed3433a579a6004b9eee05
+4770fdd4ae74478794ed3433a579a6004b9eee05,4770fdd4,Preparing for first release,"Preparing for first release
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317650160,1317650160,00c71cebd80a9f08a1439306caf26bfc7c7a72e2
+00c71cebd80a9f08a1439306caf26bfc7c7a72e2,00c71ceb,API level 5 required for ContactsContract,"API level 5 required for ContactsContract
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317638469,1317638469,a9a3e08c5577799ee571fe4090ee3f1820f22ac3
+a9a3e08c5577799ee571fe4090ee3f1820f22ac3,a9a3e08c,Newline after xml header,"Newline after xml header
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317635776,1317635776,cd4f0818795a96138b757dd9d429039e58000b5b
+cd4f0818795a96138b757dd9d429039e58000b5b,cd4f0818,Changed main menu icons and text,"Changed main menu icons and text
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317635608,1317635608,4d6d3d7b606f8991b3bcb14fb8b981d20324e234
+4d6d3d7b606f8991b3bcb14fb8b981d20324e234,4d6d3d7b,Removing generated files from VCS,"Removing generated files from VCS
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317634741,1317634741,8aeb352606c1ca63cc673c9e2157723cf3844ae2
+8aeb352606c1ca63cc673c9e2157723cf3844ae2,8aeb3526,Removing generated files from VCS,"Removing generated files from VCS
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317634588,1317634588,057922cdf08b13057effcde245f1fdbb2d4aae93
+057922cdf08b13057effcde245f1fdbb2d4aae93,057922cd,Refactoring,"Refactoring
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317634392,1317634392,4f875c1bee3b2c629c268e71406da3c1912be4a7
+4f875c1bee3b2c629c268e71406da3c1912be4a7,4f875c1b,Show error messages when import/export fails,"Show error messages when import/export fails
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317634292,1317634292,ae4ab065c10be1cf70eae0e1171e6368aa3a4e06
+ae4ab065c10be1cf70eae0e1171e6368aa3a4e06,ae4ab065,Ask for confirmation before import,"Ask for confirmation before import
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317632850,1317632850,9645b8048ce37f1425d64e1c4d352cf00bb190a9
+9645b8048ce37f1425d64e1c4d352cf00bb190a9,9645b804,Add import function,"Add import function
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317631761,1317631761,726f72592b4ed461cf6328b44b02bcdbed792379
+726f72592b4ed461cf6328b44b02bcdbed792379,726f7259,Add export function,"Add export function
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317592032,1317592032,821cba792bfb2af36ecca31d0653772a52c75573
+821cba792bfb2af36ecca31d0653772a52c75573,821cba79,Allow installation on SD card,"Allow installation on SD card
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317578859,1317578859,d28914be66f824f409eef7003b1a52cb95256d1f
+d28914be66f824f409eef7003b1a52cb95256d1f,d28914be,Use title from properties,"Use title from properties
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317577668,1317577668,295c5bdc8bf2f5abbd9f22c30d8851737f419335
+295c5bdc8bf2f5abbd9f22c30d8851737f419335,295c5bdc,Store contact lookup key for future use,"Store contact lookup key for future use
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317575616,1317575616,97a6bd0f74236967bfcc0358f62ba2d4009df50a
+97a6bd0f74236967bfcc0358f62ba2d4009df50a,97a6bd0f,Removed local.properties from VCS,"Removed local.properties from VCS
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317573422,1317573422,f906fd1ab4b3dc988a93ab23be4c782da453fd8c
+f906fd1ab4b3dc988a93ab23be4c782da453fd8c,f906fd1a,Add german i10n,"Add german i10n
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317573256,1317573256,244f30d8d8c77ae300782e07601e7f5a3e444623
+244f30d8d8c77ae300782e07601e7f5a3e444623,244f30d8,Package refactoring,"Package refactoring
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317557378,1317557378,f1d341f75265acd7402009e7557d19db6fdb8e05
+f1d341f75265acd7402009e7557d19db6fdb8e05,f1d341f7,Added GPL3 license text,"Added GPL3 license text
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317546084,1317546084,fbbb3dc85c6bcf05faf8e5d0191ba8b2aa58b54a
+fbbb3dc85c6bcf05faf8e5d0191ba8b2aa58b54a,fbbb3dc8,New feature: History,"New feature: History
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@20 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317489095,1317489095,27d75497968cde9e9480384523cdd5378daa60c6
+27d75497968cde9e9480384523cdd5378daa60c6,27d75497,Transparent Icons,"Transparent Icons
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@19 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317455158,1317455158,09e385abd52b0ed8d6b2f2485a9f33bb7e001ae1
+09e385abd52b0ed8d6b2f2485a9f33bb7e001ae1,09e385ab,"Custom icon, based on SVG files from Open Clipart (Public Domain)","Custom icon, based on SVG files from Open Clipart (Public Domain)
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@18 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317422764,1317422764,d669b6ea82bbd1d1a7b43a335351781dca035fd0
+d669b6ea82bbd1d1a7b43a335351781dca035fd0,d669b6ea,Allow easier deletion,"Allow easier deletion
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@17 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317421177,1317421177,528f3e755d6ea8dae831cd86c76726f46ec8fd6b
+528f3e755d6ea8dae831cd86c76726f46ec8fd6b,528f3e75,- Define required permission,"- Define required permission
+- Change button layout
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@16 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317418008,1317418008,9e70d20b254f4e9ec214eb2ae2bc3c8e33e53d01
+9e70d20b254f4e9ec214eb2ae2bc3c8e33e53d01,9e70d20b,- Removed type categorization,"- Removed type categorization
+- Renamed to ""Who Has My Stuff?""
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@15 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1317414471,1317414471,0545f805bcc1d5e10f4d15dced047fe0ab5f2b67
+0545f805bcc1d5e10f4d15dced047fe0ab5f2b67,0545f805,Select and store person information,"Select and store person information
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@14 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1306532922,1306532922,246adc1e226ee4800a44d190a234f0f0783c033e
+246adc1e226ee4800a44d190a234f0f0783c033e,246adc1e,Some display changes,"Some display changes
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@13 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1306511326,1306511326,9ba4b0e076bf60868b911a4d9001ba0cd948dc38
+9ba4b0e076bf60868b911a4d9001ba0cd948dc38,9ba4b0e0,Added cancel button,"Added cancel button
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@12 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1306272117,1306272117,8053c14d96c2be117fb9d2b7c48b85e4f8decec1
+8053c14d96c2be117fb9d2b7c48b85e4f8decec1,8053c14d,Implemented default action on main list,"Implemented default action on main list
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@11 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1306184319,1306184319,b55753ca2200714d96be1f43fbb8419b4450dfb6
+b55753ca2200714d96be1f43fbb8419b4450dfb6,b55753ca,Using spinner for type,"Using spinner for type
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@10 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293756646,1293756646,7f9c129249129f1633491fa0dcfdd56c504f8caf
+7f9c129249129f1633491fa0dcfdd56c504f8caf,7f9c1292,Adding new types,"Adding new types
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@9 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293664323,1293664323,e856b4c75ae2bfc4bdfe00cdd7775dd5690ec538
+e856b4c75ae2bfc4bdfe00cdd7775dd5690ec538,e856b4c7,Allow editing of entries,"Allow editing of entries
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@8 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293583655,1293583655,ebfe4a009d1824e246a4328ca2c5b0d84a322167
+ebfe4a009d1824e246a4328ca2c5b0d84a322167,ebfe4a00,Specify date when adding,"Specify date when adding
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@7 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293408605,1293408605,8745cd74d47e222247333bc508d6af8e7b75ad34
+8745cd74d47e222247333bc508d6af8e7b75ad34,8745cd74,Specify values when adding,"Specify values when adding
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@6 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293407116,1293407116,baa55b2ac75d4417f53e1d8269a84f7fa1897334
+baa55b2ac75d4417f53e1d8269a84f7fa1897334,baa55b2a,Show correct date format,"Show correct date format
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@5 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293406002,1293406002,fa51825731e0683aacee2bfdcb2f1ac848f53d27
+fa51825731e0683aacee2bfdcb2f1ac848f53d27,fa518257,- Moved to SQLite,"- Moved to SQLite
+- Show date in list
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@4 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293369903,1293369903,0ff58439589be29771fdb65774882b2586e1c08e
+0ff58439589be29771fdb65774882b2586e1c08e,0ff58439,Removing out,"Removing out
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@3 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293367999,1293367999,74c88ae0b12cfd766e825c62655b2b9826af6345
+74c88ae0b12cfd766e825c62655b2b9826af6345,74c88ae0,First import,"First import
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@2 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293367740,1293367740,d8f25be464a2e9e20c5308a65e9311f535eb1235
+d8f25be464a2e9e20c5308a65e9311f535eb1235,d8f25be4,Basic structure,"Basic structure
+
+
+git-svn-id: file:///tmp/whohasmystuff/trunk@1 0044fe5e-b2f0-46fc-a54f-76fd91428c36
+",,,,Stephan Windmüller,windy@white-hawk.de,Stephan Windmüller,windy@white-hawk.de,1293367680,1293367680,

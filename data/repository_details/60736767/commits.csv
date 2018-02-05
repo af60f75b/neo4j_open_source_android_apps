@@ -1,0 +1,1016 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+05cf51a889ff9f6b5e6297b22e1c220b56640861,05cf51a8,Release 1.1.0 (#77),"Release 1.1.0 (#77)
+
+* Animate timer progress changes.
+
+* Switch back to AlarmManager for short alarms.
+
+* Restore AlarmManager's deleted timer observer.
+
+* Injected AlarmScheduler properties can be private.
+
+* Signal to observers immediately when cycle starts.
+
+* Remove unnecessary Cycle.isFinishingPhase property.
+
+* TimerPresenter properties can be private.
+
+* Reorder TimerPresenter methods.
+
+* Fire an intermediate event on timer start to prevent UI lag.
+
+* Refactor PhaseProgress data class.
+
+* Expose Phase progress Observable with a function instead of a property.
+
+* Preserve paused timer mode across configuration changes.
+
+* Update Gradle plugin from 2.2.0-beta3 to 2.2.0-rc1.
+
+* Remove unused vector assets.
+
+* Replace notification action icon vector with PNG asset.
+
+* Bump version number from 1.0.1 to 1.0.2
+
+* Reactivate Support Library-based vector drawable usage.
+
+* Extract values from the vectors that will be animated.
+
+* Define animated vectors for timer FAB.
+
+* Animate timer FAB icon changes.
+
+* Tweak animation timing for timer FAB icon.
+
+* Refresh FAB icon when starting TimerActivity/Presenter.
+
+* Break up vector for timer reset button icon so it can be animated.
+
+* Define animated vector drawable for timer reset button.
+
+* Animate timer reset button on Lollipop and higher.
+
+* Only allow timer buttons to dodge Snackbars, not the whole view.
+
+* Add preference switch for enabling/disabling break recommendations.
+
+* Use exercise recommendation preference when generating phase notifications.
+
+* Notifier properties can be private.
+
+* Update Gradle plugin from 2.2.0-rc1 to 2.2.0.
+
+* Update Gradle from v3.0 to v3.1.
+
+* Update Support Library version from v24.2.0 to v24.2.1.
+
+* Update LeakCanary dependency from v1.4-beta2 to v1.4; remove HAHA dependency.
+
+LeakCanary 1.4 updates its internal HAHA dependency, preventing all the compiler warnings that made me add HAHA to our project to begin with.
+
+* Update Dexter dependency from v2.3.0 to v2.3.1.
+
+* Update Kotlin version from 1.0.3 to 1.0.4.
+
+* Use timer background instead of solid color for splash screen.
+
+* Add preference option for not automatically starting successive timer phases.
+
+* Use timer auto-start preference to determine whether the timer continues when alarms fire.
+
+* Pass actions received by TimerActivity to its presenter to process.
+
+* Add new actions for starting paused timers from notifications.
+
+* Adjust phase complete notification based on user's auto-start preference.
+
+* Update Gradle plugin from 2.2.0 to 2.2.1.
+
+* Use alternative to CoordinatorLayout anchoring to avoid Support Library bug.
+
+* Bump version number to 1.1.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1476557313,1476557313,6fd301482469cfcaa880f61516f9371471b604f2
+6fd301482469cfcaa880f61516f9371471b604f2,6fd30148,Config release 1.0.2 (#68),"Config release 1.0.2 (#68)
+
+* Animate timer progress changes.
+* Switch back to AlarmManager for short alarms.
+* Restore AlarmManager's deleted timer observer.
+* Injected AlarmScheduler properties can be private.
+* Signal to observers immediately when cycle starts.
+* Remove unnecessary Cycle.isFinishingPhase property.
+* TimerPresenter properties can be private.
+* Reorder TimerPresenter methods.
+* Fire an intermediate event on timer start to prevent UI lag.
+* Refactor PhaseProgress data class.
+* Expose Phase progress Observable with a function instead of a property.
+* Preserve paused timer mode across configuration changes.
+* Update Gradle plugin from 2.2.0-beta3 to 2.2.0-rc1.
+* Bump version number from 1.0.1 to 1.0.2",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1473422672,1473422672,616d79455af2cd8599c5911d64bf85635714e855
+616d79455af2cd8599c5911d64bf85635714e855,616d7945,Release 1.0.1 (#60),"Release 1.0.1 (#60)
+
+* Block touches on timer content while the tutorial is shown.
+
+* Don't allow menu interaction until the tutorial is finished.
+
+* Don't duplicate tutorial views.
+
+* Replace support-v4 dependency with new individual library dependencies.
+
+* Bump version code from 1.0.0 to 1.0.1
+",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472444944,1472444944,7a6de9cbfd0d958e35c2ced3e78b9d32d2c307d9
+7a6de9cbfd0d958e35c2ced3e78b9d32d2c307d9,7a6de9cb,Merge pull request #56 from ronaldsmartin/config-release-1.0.0,"Merge pull request #56 from ronaldsmartin/config-release-1.0.0
+
+Config release 1.0.0",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472275740,1472275740,"da52324168092afa1477bb4313d30742d5efabfc,5d6069cd216d8d1d7cb336e1b5c2a5f1b00f96f7"
+5d6069cd216d8d1d7cb336e1b5c2a5f1b00f96f7,5d6069cd,Update README.md,Update README.md,,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472258315,1472258315,f69ff0b667659e324e23593873bc8b4ac72074c3
+f69ff0b667659e324e23593873bc8b4ac72074c3,f69ff0b6,Merge pull request #55 from ronaldsmartin/design-settings-clarification,"Merge pull request #55 from ronaldsmartin/design-settings-clarification
+
+Clarify timer settings changes.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472256428,1472256428,"878a02338b38af028ac52f54c2a57ca1e3b223bd,720b27b54b16e9b606c03968abc0d6205a3a30b5"
+720b27b54b16e9b606c03968abc0d6205a3a30b5,720b27b5,Show clarification message when timer durations are changed.,"Show clarification message when timer durations are changed.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472256222,1472256222,628936517d4a7f73c50be33198c3c5f2e56ceae4
+628936517d4a7f73c50be33198c3c5f2e56ceae4,62893651,Update Gradle plugin to 2.2.0-beta3.,"Update Gradle plugin to 2.2.0-beta3.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472253178,1472253178,878a02338b38af028ac52f54c2a57ca1e3b223bd
+878a02338b38af028ac52f54c2a57ca1e3b223bd,878a0233,Merge pull request #54 from ronaldsmartin/design-increase-timer-padding,"Merge pull request #54 from ronaldsmartin/design-increase-timer-padding
+
+Increase timer toggle padding",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472252228,1472252228,"c11af70f6a559a9caf4e2968a360d6c65f2ead55,01dc9386385a5f89a8b86908bf7801c801732da6"
+01dc9386385a5f89a8b86908bf7801c801732da6,01dc9386,Use material elevation to focus timers more.,"Use material elevation to focus timers more.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1472245440,1472245440,079168daced821514ca184c54c9841e6ec9e189b
+079168daced821514ca184c54c9841e6ec9e189b,079168da,Only record tutorial as finished if the user has gotten through all of it.,"Only record tutorial as finished if the user has gotten through all of it.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1472244405,1472244405,ad4ed73fedff94c36e73888e7ca4f92a016b1ab9
+ad4ed73fedff94c36e73888e7ca4f92a016b1ab9,ad4ed73f,Add new toggle buttons to landscape layout.,"Add new toggle buttons to landscape layout.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1472244250,1472244250,9063af9bd4a855731e3e7e1c4ef3c0afea3a71b6
+9063af9bd4a855731e3e7e1c4ef3c0afea3a71b6,9063af9b,Remove extraneous import.,"Remove extraneous import.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472241994,1472241994,d33df5dd6140dd557f645ae4c344453896ce71d8
+d33df5dd6140dd557f645ae4c344453896ce71d8,d33df5dd,Use clear buttons to expand timer touch surface.,"Use clear buttons to expand timer touch surface.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472238179,1472238179,c11af70f6a559a9caf4e2968a360d6c65f2ead55
+c11af70f6a559a9caf4e2968a360d6c65f2ead55,c11af70f,Merge pull request #53 from ronaldsmartin/bugfix-minified-handler,"Merge pull request #53 from ronaldsmartin/bugfix-minified-handler
+
+Fix minified handler",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472174314,1472174314,"341b79cd45a4ebc75e6a260ff63f60317613bd5c,2e7c61898105ec7e8766b85aa9b26d89bf3514ff"
+2e7c61898105ec7e8766b85aa9b26d89bf3514ff,2e7c6189,Add docs for AlarmScheduler.,"Add docs for AlarmScheduler.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472168761,1472168761,d778d6c1ac0adfc7363f89c996cf9b364c5e1c84
+d778d6c1ac0adfc7363f89c996cf9b364c5e1c84,d778d6c1,Don't fire redundant TimerEvents.,"Don't fire redundant TimerEvents.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472168109,1472168109,367b0b3c3e7b8d1261debc9a29ae6930d9fa07db
+367b0b3c3e7b8d1261debc9a29ae6930d9fa07db,367b0b3c,Fix docs for TimerControl methods.,"Fix docs for TimerControl methods.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472167246,1472167246,8be37ec182a9df696f009911652650e946c967ab
+8be37ec182a9df696f009911652650e946c967ab,8be37ec1,Replace AlarmScheduler's Handler with reactive implementation.,"Replace AlarmScheduler's Handler with reactive implementation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472167210,1472167210,5832082161fc4a2a8327ad77e36d4d9d2dd0986a
+5832082161fc4a2a8327ad77e36d4d9d2dd0986a,58320821,Offload AlarmReceiver's work to an IntentService.,"Offload AlarmReceiver's work to an IntentService.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472167074,1472167074,341b79cd45a4ebc75e6a260ff63f60317613bd5c
+341b79cd45a4ebc75e6a260ff63f60317613bd5c,341b79cd,Merge pull request #51 from ronaldsmartin/bugfix-issue-reporter-textinput-layout,"Merge pull request #51 from ronaldsmartin/bugfix-issue-reporter-textinput-layout
+
+Use version of android-issue-reporter that fixes unsafe class cast.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472100969,1472100969,"1fd4f5d1bc8324f38243bff3db9814192840c1ce,2a27e1bec0258f4839a457419afa0a78ca806ecd"
+2a27e1bec0258f4839a457419afa0a78ca806ecd,2a27e1be,Use version of android-issue-reporter that fixes unsafe class cast.,"Use version of android-issue-reporter that fixes unsafe class cast.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472098923,1472098923,1fd4f5d1bc8324f38243bff3db9814192840c1ce
+1fd4f5d1bc8324f38243bff3db9814192840c1ce,1fd4f5d1,Bump version code to 1.0.0.,"Bump version code to 1.0.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472097233,1472097233,da52324168092afa1477bb4313d30742d5efabfc
+da52324168092afa1477bb4313d30742d5efabfc,da523241,Merge pull request #50 from ronaldsmartin/bugfix-handler-alarms,"Merge pull request #50 from ronaldsmartin/bugfix-handler-alarms
+
+Cancel pending timer notifications before scheduling new ones.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472087224,1472087224,"b7463893bffb21199fe1de2c0cab8ae57e7faadd,1201a1bf87a8163f703482c6ab991cc0ab9e8456"
+b7463893bffb21199fe1de2c0cab8ae57e7faadd,b7463893,Merge pull request #48 from ronaldsmartin/bugfix-proguard-aboutlibs,"Merge pull request #48 from ronaldsmartin/bugfix-proguard-aboutlibs
+
+Save library credits from Proguard/minify",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472084283,1472084283,"abb338979edcf179e9bda96d1a0726b333fafd82,f60bc69233c1dd65bce4354ce28b81a09e43ea57"
+1201a1bf87a8163f703482c6ab991cc0ab9e8456,1201a1bf,Cancel pending timer notifications before scheduling new ones.,"Cancel pending timer notifications before scheduling new ones.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472078325,1472082750,abb338979edcf179e9bda96d1a0726b333fafd82
+abb338979edcf179e9bda96d1a0726b333fafd82,abb33897,Merge pull request #47 from ronaldsmartin/config-update-build-tools,"Merge pull request #47 from ronaldsmartin/config-update-build-tools
+
+Update build tools version from 24.0.1 to 24.0.2",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472082413,1472082413,"e5ddfd0a4a3e9f794dca97531b0fbbf28cf9e3c1,daa9881793807b2ce4d93889500283d4b8b0b3fb"
+f60bc69233c1dd65bce4354ce28b81a09e43ea57,f60bc692,Manually specify libraries to be shown on About screen.,"Manually specify libraries to be shown on About screen.
+
+This prevents them from not appearing because of Proguard/minify.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472080059,1472080059,2b700b762ad8e844a4af7271bef9fccf699fd728
+daa9881793807b2ce4d93889500283d4b8b0b3fb,daa98817,Update build tools version from 24.0.1 to 24.0.2,"Update build tools version from 24.0.1 to 24.0.2
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472077034,1472077034,e5ddfd0a4a3e9f794dca97531b0fbbf28cf9e3c1
+2b700b762ad8e844a4af7271bef9fccf699fd728,2b700b76,Keep fields for use with AboutLibraries.,"Keep fields for use with AboutLibraries.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472072444,1472072444,e5ddfd0a4a3e9f794dca97531b0fbbf28cf9e3c1
+e5ddfd0a4a3e9f794dca97531b0fbbf28cf9e3c1,e5ddfd0a,Merge pull request #46 from ronaldsmartin/cleanup-1.0.0,"Merge pull request #46 from ronaldsmartin/cleanup-1.0.0
+
+Cleanup 1.0.0",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1472014192,1472014192,"ef880007b0692c1607bf635e50b8b2714d8fad11,d12a7866117f05738ae82967efa456c337312cbb"
+d12a7866117f05738ae82967efa456c337312cbb,d12a7866,Bump version code from 0.2.0 to 0.3.0.,"Bump version code from 0.2.0 to 0.3.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472009542,1472009731,ad1d646a2993d3638e7fffded886725b039cd81f
+ad1d646a2993d3638e7fffded886725b039cd81f,ad1d646a,Use Handler to schedule alarms shorter than a minute away.,"Use Handler to schedule alarms shorter than a minute away.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472009259,1472009259,e9ba90f36bb63e796e3146c6e0f16c27bd3c5cea
+e9ba90f36bb63e796e3146c6e0f16c27bd3c5cea,e9ba90f3,Remove redundant component names from some Intents.,"Remove redundant component names from some Intents.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472008160,1472008160,29b66ecff1188ba6973b06e680f397a8dc80ef4e
+29b66ecff1188ba6973b06e680f397a8dc80ef4e,29b66ecf,Log correct date for scheduled alarms.,"Log correct date for scheduled alarms.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1472003693,1472003693,0b57f8aaca9fedd6dbeacd3c4bd135f734c79173
+0b57f8aaca9fedd6dbeacd3c4bd135f734c79173,0b57f8aa,Make sure Cycle is started by triggered alarms.,"Make sure Cycle is started by triggered alarms.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471994651,1471994651,d7a8f9119eac3f3d7d5df5ae18e78be5a5c26da2
+d7a8f9119eac3f3d7d5df5ae18e78be5a5c26da2,d7a8f911,Don't draw timer under ActionBar in portrait.,"Don't draw timer under ActionBar in portrait.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471991022,1471991022,758d4278fcae222588f50ae19033aed9c65de73e
+758d4278fcae222588f50ae19033aed9c65de73e,758d4278,Use different app name for debug builds.,"Use different app name for debug builds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471985252,1471985252,451ffdb11fbd6a7184f16d0004cd3bd587ec59cd
+451ffdb11fbd6a7184f16d0004cd3bd587ec59cd,451ffdb1,Use injection to build Settings' PermissionsListener.,"Use injection to build Settings' PermissionsListener.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471979716,1471979716,293a7bae2490ec33e9ad5e94cadd7f75023f8d71
+293a7bae2490ec33e9ad5e94cadd7f75023f8d71,293a7bae,Provide SettingsPresenter with access to the SettingsComponent.,"Provide SettingsPresenter with access to the SettingsComponent.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471976805,1471976805,227e608b8a9e64c4403fb92097a65330cd01c18b
+227e608b8a9e64c4403fb92097a65330cd01c18b,227e608b,Enable StrictMode for debug builds.,"Enable StrictMode for debug builds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471975245,1471975245,81c6f07602c70924aab3103f81b836e3178a9425
+81c6f07602c70924aab3103f81b836e3178a9425,81c6f076,Package Settings dependency injection code.,"Package Settings dependency injection code.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471974127,1471974127,08ce96ae965b8b689343dc28841e015411e558c4
+08ce96ae965b8b689343dc28841e015411e558c4,08ce96ae,Fix bug where location-based night mode setting was not unset if location…,"Fix bug where location-based night mode setting was not unset if location permission was denied from the Settings app.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471933770,1471933770,5d128a2fa5e989d90876d48862580958823f5cec
+5d128a2fa5e989d90876d48862580958823f5cec,5d128a2f,Use app-consistent colors in About activity.,"Use app-consistent colors in About activity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471929361,1471929361,6142a7e412d7658a8d52d8787b54a34a9ce1fc2f
+6142a7e412d7658a8d52d8787b54a34a9ce1fc2f,6142a7e4,Disable timer SeekBars.,"Disable timer SeekBars.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471925344,1471925344,29083361061990e099c334f7d4744756e08a8b8b
+29083361061990e099c334f7d4744756e08a8b8b,29083361,Adjust tutorial colors.,"Adjust tutorial colors.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471923649,1471923649,0119e5931f95799559bca4ddbb8220b045cc3e6d
+0119e5931f95799559bca4ddbb8220b045cc3e6d,0119e593,Place tutorial button out of the way of timer FAB.,"Place tutorial button out of the way of timer FAB.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471923550,1471923550,7efba1706f56ddc259a805eea5fd63952eebc3cc
+7efba1706f56ddc259a805eea5fd63952eebc3cc,7efba170,Fix leak of TimerActivity from AboutPresenter.,"Fix leak of TimerActivity from AboutPresenter.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471919969,1471919969,d55d353881caee62d74e6a32ce5ff0f36f9b12e8
+d55d353881caee62d74e6a32ce5ff0f36f9b12e8,d55d3538,Remove full screen option from preferences while it's still buggy.,"Remove full screen option from preferences while it's still buggy.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471918250,1471918250,18e533a6479db300912d3312a99c732d9056895e
+18e533a6479db300912d3312a99c732d9056895e,18e533a6,Only run debug minify on CI builds.,"Only run debug minify on CI builds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471916690,1471916690,981fdf2818a040035442b250ba46d41ef464f77d
+981fdf2818a040035442b250ba46d41ef464f77d,981fdf28,Create landscape layout for timer.,"Create landscape layout for timer.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471856150,1471856150,1b0a9defbf99d0b514ecf8d4913d8ab3a7f61304
+1b0a9defbf99d0b514ecf8d4913d8ab3a7f61304,1b0a9def,Use locale-aware formatting for timer text.,"Use locale-aware formatting for timer text.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471843952,1471843952,3daa5e9fa88b2327ce2907b7bed601bd8cfba9c4
+3daa5e9fa88b2327ce2907b7bed601bd8cfba9c4,3daa5e9f,Fix bug where time text was updating incorrectly on activity start.,"Fix bug where time text was updating incorrectly on activity start.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471841509,1471841509,3eb681af7332f030d63acdf5eabf0aca8b0b749d
+3eb681af7332f030d63acdf5eabf0aca8b0b749d,3eb681af,Temporarily allow anonymous feedback submissions.,"Temporarily allow anonymous feedback submissions.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471840327,1471840327,7a622fc3fc04bf21f3f6f9b349b883ab71e1b8fa
+7a622fc3fc04bf21f3f6f9b349b883ab71e1b8fa,7a622fc3,Make sure runtime location preference for night mode is not shown on pre-Marshallow devices.,"Make sure runtime location preference for night mode is not shown on pre-Marshallow devices.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471826266,1471826266,7b184202dd0232173741a7953d1be8e51c7fb12f
+7b184202dd0232173741a7953d1be8e51c7fb12f,7b184202,Make sure TimerActivity night mode is applied when global setting changes.,"Make sure TimerActivity night mode is applied when global setting changes.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471820250,1471820250,09f4bb426a9c3e7dc31dbf817fc672fd92f9f156
+09f4bb426a9c3e7dc31dbf817fc672fd92f9f156,09f4bb42,Increase allowed Gradle daemon memory to speed up builds.,"Increase allowed Gradle daemon memory to speed up builds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471812320,1471812320,0817214482e06e51de51fe7e9d95c794847c75c5
+0817214482e06e51de51fe7e9d95c794847c75c5,08172144,Change colorAccent in Day mode.,"Change colorAccent in Day mode.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471811135,1471811135,cc2060368d589dee0e001c5e555ed14411fb1527
+cc2060368d589dee0e001c5e555ed14411fb1527,cc206036,Prevent Proguard from obfuscating library information so it can be read by AboutLibraries.,"Prevent Proguard from obfuscating library information so it can be read by AboutLibraries.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471808627,1471809367,ef880007b0692c1607bf635e50b8b2714d8fad11
+ef880007b0692c1607bf635e50b8b2714d8fad11,ef880007,Merge pull request #45 from ronaldsmartin/design-improve-icons,"Merge pull request #45 from ronaldsmartin/design-improve-icons
+
+Improve icons",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471805617,1471805617,"c1e2bdfb0635949cdf8b5e6728ac275f8aafdc09,ddfdcb2b3d1843eedea11dcbe0e97cc3e358ea11"
+ddfdcb2b3d1843eedea11dcbe0e97cc3e358ea11,ddfdcb2b,Remove unused notification option icon.,"Remove unused notification option icon.
+
+This was generated back when adding a PreferenceActivity, but we don't need it.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471771516,1471771516,69664a9739ff5c23e8e5e99cb6b5cc27b506a161
+69664a9739ff5c23e8e5e99cb6b5cc27b506a161,69664a97,Add small icon for notifications.,"Add small icon for notifications.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471771044,1471771044,d2e0abac2e49548d362f427fc6c3d7c35d25a5eb
+d2e0abac2e49548d362f427fc6c3d7c35d25a5eb,d2e0abac,Replace placeholder app icon with real icon.,"Replace placeholder app icon with real icon.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471758605,1471758605,4f12f06ef4741e8315a005605a935987be96f9e0
+4f12f06ef4741e8315a005605a935987be96f9e0,4f12f06e,Mask suspend alarm icon in white for backwards compatibility.,"Mask suspend alarm icon in white for backwards compatibility.
+
+Otherwise, it will show up in black on pre-Lollipop notifications.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471736879,1471736879,da713ad8d52774a67ea603ccabaac27f78f24243
+da713ad8d52774a67ea603ccabaac27f78f24243,da713ad8,Use vector assets for Play and Pause buttons.,"Use vector assets for Play and Pause buttons.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471736734,1471736734,5a36f995924aaa4df099dae1e724bd4c17de15cd
+c1e2bdfb0635949cdf8b5e6728ac275f8aafdc09,c1e2bdfb,Merge pull request #44 from ronaldsmartin/bugfix-compatibility-issues,"Merge pull request #44 from ronaldsmartin/bugfix-compatibility-issues
+
+Bugfix compatibility issues",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471727156,1471727156,"6145bf3cdbfb370d8c3c40718651fb5081e4ecfe,5a36f995924aaa4df099dae1e724bd4c17de15cd"
+5a36f995924aaa4df099dae1e724bd4c17de15cd,5a36f995,Turn on vector drawable PNG generation.,"Turn on vector drawable PNG generation.
+
+While vector support works within the application, vector resources cannot be handed to system services (notably, Notifications). This caused the crash described by https://trello.com/c/bSazrh7y.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471676981,1471676981,6abace0819d3ae53af743fbd356c91ace5adf27b
+6abace0819d3ae53af743fbd356c91ace5adf27b,6abace08,Use Theme.DayNight as base application theme.,"Use Theme.DayNight as base application theme.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471672191,1471672191,56f17bfb2effb86e33c637d69f18ea043f582e6e
+56f17bfb2effb86e33c637d69f18ea043f582e6e,56f17bfb,Prevent ActionBar shadow on pre-Lollipop devices.,"Prevent ActionBar shadow on pre-Lollipop devices.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471667121,1471667121,e610b37a46d2fb3012ef019830ef66872ce7aab9
+e610b37a46d2fb3012ef019830ef66872ce7aab9,e610b37a,Set density-independent font size for timer text.,"Set density-independent font size for timer text.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471663512,1471663512,6145bf3cdbfb370d8c3c40718651fb5081e4ecfe
+6145bf3cdbfb370d8c3c40718651fb5081e4ecfe,6145bf3c,Merge pull request #43 from ronaldsmartin/update-dependencies-20160819,"Merge pull request #43 from ronaldsmartin/update-dependencies-20160819
+
+Update Gradle plugin to 2.2.0-beta2.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471642437,1471642437,"b33d07337c95561f6b3e6c872a22ad1ff2abba45,9f0f7c24d462e559ac4fa25e4e596e12a644a7c1"
+9f0f7c24d462e559ac4fa25e4e596e12a644a7c1,9f0f7c24,Update Gradle plugin to 2.2.0-beta2.,"Update Gradle plugin to 2.2.0-beta2.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471637649,1471637649,b33d07337c95561f6b3e6c872a22ad1ff2abba45
+b33d07337c95561f6b3e6c872a22ad1ff2abba45,b33d0733,Merge pull request #42 from ronaldsmartin/design-revise-timer-layout,"Merge pull request #42 from ronaldsmartin/design-revise-timer-layout
+
+Revise timer layout",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471629781,1471629781,"185e33836c16a9d09ff5505d06afc59f6b5ebce9,0780bd4f9bcfad2927f3106061063fd22291b230"
+0780bd4f9bcfad2927f3106061063fd22291b230,0780bd4f,Position restart timer button correctly.,"Position restart timer button correctly.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471592529,1471592529,9e77ca7a438600b53fb20514abf353164fa9b643
+9e77ca7a438600b53fb20514abf353164fa9b643,9e77ca7a,Replace timer switching button with clickable timers.,"Replace timer switching button with clickable timers.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471591514,1471591514,2e75c9c5447ede10abf709f9ebce86167aaf455f
+2e75c9c5447ede10abf709f9ebce86167aaf455f,2e75c9c5,Animate timer alpha changes.,"Animate timer alpha changes.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471588764,1471588764,b45ab8cc8879ba7e8e37370a9eecf48996e0578c
+b45ab8cc8879ba7e8e37370a9eecf48996e0578c,b45ab8cc,Properly bring active seekbar to front.,"Properly bring active seekbar to front.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471588604,1471588604,f1d975c819c8bc05e61f20f5b651d585aa780f3c
+f1d975c819c8bc05e61f20f5b651d585aa780f3c,f1d975c8,Visually distinguish which phase timer is active.,"Visually distinguish which phase timer is active.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471587707,1471587707,42a4e256fec8e5a32713b60241e8057c71a535a1
+42a4e256fec8e5a32713b60241e8057c71a535a1,42a4e256,Add night mode colors for gradient background.,"Add night mode colors for gradient background.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471582548,1471582548,115a5cf88e53d61ffd96e3ccbf56120362992f2c
+115a5cf88e53d61ffd96e3ccbf56120362992f2c,115a5cf8,Remove old resources for progress ring backgrounds.,"Remove old resources for progress ring backgrounds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471581490,1471581490,a2dda4d28be813b46616a209193e8087a5ebbd42
+a2dda4d28be813b46616a209193e8087a5ebbd42,a2dda4d2,Use max progress from cycle when setting progress bars.,"Use max progress from cycle when setting progress bars.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471576411,1471576411,6702016bf3f4c84635b3981d060b39f390ff7290
+6702016bf3f4c84635b3981d060b39f390ff7290,6702016b,Adjust sizes in timer layout.,"Adjust sizes in timer layout.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471575261,1471575261,0c18082bec732aa8fa69563dba622e7373f5187d
+0c18082bec732aa8fa69563dba622e7373f5187d,0c18082b,Use PercentRelativeLayout for TimerActivity.,"Use PercentRelativeLayout for TimerActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471573150,1471573150,ac27beddd53c710b360eacdba51e2767b364a256
+ac27beddd53c710b360eacdba51e2767b364a256,ac27bedd,Update support libraries from version 24.1.1 to 24.2.0.,"Update support libraries from version 24.1.1 to 24.2.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471564685,1471564685,0778971090cd7dd8b41d8d34ea7d019f88591148
+0778971090cd7dd8b41d8d34ea7d019f88591148,07789710,Replace constraint support lib dependency with percent layout lib.,"Replace constraint support lib dependency with percent layout lib.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471564208,1471564208,5513d30da4dc70e17bdfc3da84bea4715ff9ee80
+5513d30da4dc70e17bdfc3da84bea4715ff9ee80,5513d30d,Flip break and work indicators in timer layout.,"Flip break and work indicators in timer layout.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471562609,1471562609,e32b0d20628d8b89415f72fd57ce999a2d912903
+e32b0d20628d8b89415f72fd57ce999a2d912903,e32b0d20,Merge branch 'master' into use-tankery-circularseekbar,"Merge branch 'master' into use-tankery-circularseekbar
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471559959,1471559959,"08141a2b8b182e44c66ff751b2eab18404e48b9d,185e33836c16a9d09ff5505d06afc59f6b5ebce9"
+185e33836c16a9d09ff5505d06afc59f6b5ebce9,185e3383,Merge pull request #41 from ronaldsmartin/config-update-dependencies-20160818,"Merge pull request #41 from ronaldsmartin/config-update-dependencies-20160818
+
+Update AboutLibraries version from 5.7.1 to 5.7.3.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471558857,1471558857,"6d19d34a933152cfcbf8f8b884c6292815f1d8e4,f7fd1e833d1788233e57f530ac9bc48a13897e88"
+f7fd1e833d1788233e57f530ac9bc48a13897e88,f7fd1e83,Update AboutLibraries version from 5.7.1 to 5.7.3.,"Update AboutLibraries version from 5.7.1 to 5.7.3.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471555533,1471556316,6d19d34a933152cfcbf8f8b884c6292815f1d8e4
+6d19d34a933152cfcbf8f8b884c6292815f1d8e4,6d19d34a,Merge pull request #40 from ronaldsmartin/bugfix-notification-action-dismissal,"Merge pull request #40 from ronaldsmartin/bugfix-notification-action-dismissal
+
+Cancel phase complete notification when pause action is clicked.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471555725,1471555725,"5406ced980a5cf547fce72e0b060d81353d54c32,cde7f66e4e37bfb8af5ec2a2456e7b7ad0c6ca7f"
+cde7f66e4e37bfb8af5ec2a2456e7b7ad0c6ca7f,cde7f66e,Use alarm off icon for pause cycle notification action.,"Use alarm off icon for pause cycle notification action.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471553636,1471553636,421d3e14afc2465d1947b784e1f27ce7ed8212a6
+421d3e14afc2465d1947b784e1f27ce7ed8212a6,421d3e14,Cancel phase complete notification when pause action is clicked.,"Cancel phase complete notification when pause action is clicked.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471550548,1471550548,5406ced980a5cf547fce72e0b060d81353d54c32
+08141a2b8b182e44c66ff751b2eab18404e48b9d,08141a2b,Replace SeekArc with CircularSeekBar in timer layout.,"Replace SeekArc with CircularSeekBar in timer layout.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471504859,1471504859,d5d3a625c1e588ea2425f518cffc17d9d7912323
+d5d3a625c1e588ea2425f518cffc17d9d7912323,d5d3a625,Install tankery's CircularSeekBar as Gradle dependency.,"Install tankery's CircularSeekBar as Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471501999,1471501999,fa707f18f5762d7cb7c2214d77d8fbfeabcb9779
+fa707f18f5762d7cb7c2214d77d8fbfeabcb9779,fa707f18,Replace timer TextViews with number morphing views.,"Replace timer TextViews with number morphing views.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471040165,1471399841,ec915b2cf3ecbbd62cccdd80070de259cbfb68b7
+ec915b2cf3ecbbd62cccdd80070de259cbfb68b7,ec915b2c,Add android-number-morphing as Gradle dependency.,"Add android-number-morphing as Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471040117,1471399841,16c6bd15f2ad65e210718cc028621281570a1616
+16c6bd15f2ad65e210718cc028621281570a1616,16c6bd15,Use overlay style for ActionBar.,"Use overlay style for ActionBar.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470960253,1471399841,a8f04bd32d4b2b1d4f8629fdce004898276604f0
+a8f04bd32d4b2b1d4f8629fdce004898276604f0,a8f04bd3,Use gradient for timer background.,"Use gradient for timer background.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470960190,1471399841,d31b2e339c8a46e6848c84043c61cf39b82d67ca
+d31b2e339c8a46e6848c84043c61cf39b82d67ca,d31b2e33,Use transparent action bar in timer.,"Use transparent action bar in timer.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470954720,1471399841,4c1a58ce4feddea00da4a566181da112668e191e
+4c1a58ce4feddea00da4a566181da112668e191e,4c1a58ce,Use two SeekArcs to display cycle progress.,"Use two SeekArcs to display cycle progress.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470953426,1471399841,0da95870edc2d51a9e7293312e6f66328b457699
+0da95870edc2d51a9e7293312e6f66328b457699,0da95870,Prevent clipping of timer progress rings.,"Prevent clipping of timer progress rings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470949814,1471399841,ea9f48d95ea5272f59a478540313cf4cc89ece3c
+ea9f48d95ea5272f59a478540313cf4cc89ece3c,ea9f48d9,Display timer progress with SeekArc lib.,"Display timer progress with SeekArc lib.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470689573,1471399841,41b0da3118e34671f28d3b6af7ce60ea2548dc8f
+41b0da3118e34671f28d3b6af7ce60ea2548dc8f,41b0da31,Remove WaveView from timer layout.,"Remove WaveView from timer layout.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470464016,1471399734,5406ced980a5cf547fce72e0b060d81353d54c32
+5406ced980a5cf547fce72e0b060d81353d54c32,5406ced9,Update help/feedback (#39),"Update help/feedback (#39)
+
+Use android-issue-reporter for feedback instead of custom Chrome tab
+
+* Add build config field for GitHub bot API key.
+
+* Use android-issue-reporter to replace GitHub custom Chrome tab.
+
+* Track events from menu clicks.
+
+* Require email address when submitting guest feedback.
+
+* Remove Custom Tabs Support lib dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471399259,1471399259,706b2eb36d589935df64b425cffc90c7cef50405
+706b2eb36d589935df64b425cffc90c7cef50405,706b2eb3,Merge pull request #36 from ronaldsmartin/config-update-dependencies-20160815,"Merge pull request #36 from ronaldsmartin/config-update-dependencies-20160815
+
+Update dependencies",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471385132,1471385132,"d887934d5b3b432784a028ed0e82f7a0ba424ed8,f8a7d9524835838298d040338f3667ad346191b5"
+f8a7d9524835838298d040338f3667ad346191b5,f8a7d952,Update Dagger from v2.5 to v2.6.,"Update Dagger from v2.5 to v2.6.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471375831,1471375831,f92138c787196f1467476246c496a7a98b410209
+f92138c787196f1467476246c496a7a98b410209,f92138c7,Remove Dokka dependency.,"Remove Dokka dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471375783,1471375783,67c0ce30e3403fd698b4882ff95e708b838e9dd8
+67c0ce30e3403fd698b4882ff95e708b838e9dd8,67c0ce30,Update RxJava from v1.1.8 to v1.1.9.,"Update RxJava from v1.1.8 to v1.1.9.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471374846,1471374846,a6ba3516a5dc1d7bef57d07f11b31ead40567c78
+a6ba3516a5dc1d7bef57d07f11b31ead40567c78,a6ba3516,Update Gradle to v3.0 and Gradle plugging to v2.2.0-beta1.,"Update Gradle to v3.0 and Gradle plugging to v2.2.0-beta1.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471312349,1471312389,d887934d5b3b432784a028ed0e82f7a0ba424ed8
+d887934d5b3b432784a028ed0e82f7a0ba424ed8,d887934d,Merge pull request #35 from ronaldsmartin/feature-answers-analytics,"Merge pull request #35 from ronaldsmartin/feature-answers-analytics
+
+Add Answers analytics",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471303196,1471303196,"e2d06e89c7bba62e83026d0455a84ec835d41ce7,44d1205ca724463b0eaed6ba44ea41ebe1e12b0a"
+44d1205ca724463b0eaed6ba44ea41ebe1e12b0a,44d1205c,"Track ""phase complete"" analytics event.","Track ""phase complete"" analytics event.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471298297,1471298297,dda31906245f970cb7acadf4686c02689a78b15e
+dda31906245f970cb7acadf4686c02689a78b15e,dda31906,"Report Timer ""phase skipped"" and ""restarted"" events.","Report Timer ""phase skipped"" and ""restarted"" events.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471298239,1471298239,10fbcb4e3f0de965e4e6a17025080dec6afb4960
+10fbcb4e3f0de965e4e6a17025080dec6afb4960,10fbcb4e,Report timer toggle events from TimerPresenter.,"Report timer toggle events from TimerPresenter.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471295830,1471295830,13a52abeb5ef83ee0372656c6b2a89767ccaabc3
+13a52abeb5ef83ee0372656c6b2a89767ccaabc3,13a52abe,Provide Context via Dagger.,"Provide Context via Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471291376,1471291376,77f8c5d7184e1b6f2490aa7495149407202db1db
+77f8c5d7184e1b6f2490aa7495149407202db1db,77f8c5d7,Remove redundant Dagger @Provides.,"Remove redundant Dagger @Provides.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471287324,1471287324,5340cc7b1f9d4c5ace23f2e11f1f785237879805
+5340cc7b1f9d4c5ace23f2e11f1f785237879805,5340cc7b,Create injectable analytics event tracker.,"Create injectable analytics event tracker.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471286223,1471286223,1df6ad4692a14e0e1ebe79739c35e9f5808179c8
+1df6ad4692a14e0e1ebe79739c35e9f5808179c8,1df6ad46,Install Fabric Answers kit on application launch.,"Install Fabric Answers kit on application launch.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471249666,1471278654,fe84f05815dc3ac45af5a51f0ad863b257f6e25f
+fe84f05815dc3ac45af5a51f0ad863b257f6e25f,fe84f058,Install Fabric Answers v1.3.9 as Gradle dependency.,"Install Fabric Answers v1.3.9 as Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471240086,1471278654,e2d06e89c7bba62e83026d0455a84ec835d41ce7
+e2d06e89c7bba62e83026d0455a84ec835d41ce7,e2d06e89,Merge pull request #34 from ronaldsmartin/feature-about-page,"Merge pull request #34 from ronaldsmartin/feature-about-page
+
+Add ""About"" page",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471248727,1471248727,"e097b8be5fa11c1abbbdd9e34dcf2dda250f4173,8e0dbe8c58ffc8746eaba0a508c1104d2ec9d481"
+8e0dbe8c58ffc8746eaba0a508c1104d2ec9d481,8e0dbe8c,Add app description to About page.,"Add app description to About page.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471237434,1471237434,a34d38fe49ed5da90f7d4345a8525bd4a40cd832
+a34d38fe49ed5da90f7d4345a8525bd4a40cd832,a34d38fe,Open links from About page buttons.,"Open links from About page buttons.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471236381,1471236381,169ef6eb8e91483c84e35217fa5f0791d661b323
+169ef6eb8e91483c84e35217fa5f0791d661b323,169ef6eb,Vend AboutPresenter instances with Dagger.,"Vend AboutPresenter instances with Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471234659,1471234659,83085cdc0a3cc98ede3126239feaa435a765ba27
+83085cdc0a3cc98ede3126239feaa435a765ba27,83085cdc,Extract About generation and interaction listening to its own class.,"Extract About generation and interaction listening to its own class.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471233044,1471233044,1bc49479b8219a41a1993004018d9ef9d1770b46
+1bc49479b8219a41a1993004018d9ef9d1770b46,1bc49479,Add some styling to About page.,"Add some styling to About page.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471232845,1471232845,758425b2e738b6cb350af009242c1abc1a4b4d17
+758425b2e738b6cb350af009242c1abc1a4b4d17,758425b2,Use AboutLibraries lib to show an About page from Timer.,"Use AboutLibraries lib to show an About page from Timer.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471119661,1471119661,2686bbbcd8b838c46bfb1af03950fbab483b3a52
+2686bbbcd8b838c46bfb1af03950fbab483b3a52,2686bbbc,Add AboutLibraries v5.7.1 as Gradle dependency.,"Add AboutLibraries v5.7.1 as Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471118764,1471118764,e097b8be5fa11c1abbbdd9e34dcf2dda250f4173
+e097b8be5fa11c1abbbdd9e34dcf2dda250f4173,e097b8be,Merge pull request #33 from ronaldsmartin/feature-crashlytics-reporting,"Merge pull request #33 from ronaldsmartin/feature-crashlytics-reporting
+
+Add Crashlytics crash reporting",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1471115989,1471115989,"00a88f7f4b83236afb0671d304f96a0bc6aef5f2,2ac15f364832e44ecaeacbb26982a653962a70e1"
+2ac15f364832e44ecaeacbb26982a653962a70e1,2ac15f36,Log errors and warnings to Crashlytics.,"Log errors and warnings to Crashlytics.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471113195,1471113195,a1560d89dd20c32f3f625f6267c791c49ae54f6b
+a1560d89dd20c32f3f625f6267c791c49ae54f6b,a1560d89,Update Proguard rules for Crashlytics.,"Update Proguard rules for Crashlytics.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471104758,1471104758,0753fd0db6045115e9059fd82ed1b7ee95521b88
+0753fd0db6045115e9059fd82ed1b7ee95521b88,0753fd0d,Initialize Crashlytics on application start.,"Initialize Crashlytics on application start.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471104149,1471104149,1443bf19f9d163331c21a4a2ab0ae0dc20e480bb
+1443bf19f9d163331c21a4a2ab0ae0dc20e480bb,1443bf19,Install Crashlytics lib v2.6.2 as Gradle dependency.,"Install Crashlytics lib v2.6.2 as Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1471072011,1471072011,00a88f7f4b83236afb0671d304f96a0bc6aef5f2
+00a88f7f4b83236afb0671d304f96a0bc6aef5f2,00a88f7f,Merge pull request #32 from ronaldsmartin/bugfix-unserializable-enum,"Merge pull request #32 from ronaldsmartin/bugfix-unserializable-enum
+
+Fix Intent extra bug",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1470689158,1470689158,"9ec80fb9432fa8339632ea2ae983e4d69fff5654,57123114392a1450c4363d49ab43fb0eac57ce2b"
+9ec80fb9432fa8339632ea2ae983e4d69fff5654,9ec80fb9,Merge pull request #31 from ronaldsmartin/config-update-dependencies-2016-08-06,"Merge pull request #31 from ronaldsmartin/config-update-dependencies-2016-08-06
+
+Update dependencies",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1470687137,1470687137,"121b50eb2d587679fcfd3c39fb65f0def865b3b7,3645e5849160b2fa0d73f5cd469b898aa2c23f45"
+57123114392a1450c4363d49ab43fb0eac57ce2b,57123114,Fix bug where cycle phase was sometimes not deserialized in alarm broadcasts.,"Fix bug where cycle phase was sometimes not deserialized in alarm broadcasts.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470686365,1470686365,3645e5849160b2fa0d73f5cd469b898aa2c23f45
+3645e5849160b2fa0d73f5cd469b898aa2c23f45,3645e584,Upgrade RxJava from v1.1.5 to v1.1.8.,"Upgrade RxJava from v1.1.5 to v1.1.8.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470683812,1470683812,ba907e7e3526a8ce9d7c270dd538e83deecb2157
+ba907e7e3526a8ce9d7c270dd538e83deecb2157,ba907e7e,Update constraint layout lib from v1.0.0-alpha3 to v1.0.0-alpha4.,"Update constraint layout lib from v1.0.0-alpha3 to v1.0.0-alpha4.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470462378,1470682393,c8a9184708dec29811d5b6ecdddef893fc6779d8
+c8a9184708dec29811d5b6ecdddef893fc6779d8,c8a91847,Override LeakCanary's haha dependency to silence build warnings.,"Override LeakCanary's haha dependency to silence build warnings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470460889,1470682393,5ff4b0d6d04aab91cfbe56be4f0828bab47fdee1
+5ff4b0d6d04aab91cfbe56be4f0828bab47fdee1,5ff4b0d6,Update Support lib from v24.1.0 to v24.1.1.,"Update Support lib from v24.1.0 to v24.1.1.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470458499,1470682393,121b50eb2d587679fcfd3c39fb65f0def865b3b7
+121b50eb2d587679fcfd3c39fb65f0def865b3b7,121b50eb,Merge pull request #30 from ronaldsmartin/refactor-notification-service,"Merge pull request #30 from ronaldsmartin/refactor-notification-service
+
+Refactor notification service",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1470682195,1470682195,"0ae053e61cdd8b358877dc04495addef66bbfacc,688f0e6f23fb6bb505b3290e03e3e86536e39a49"
+688f0e6f23fb6bb505b3290e03e3e86536e39a49,688f0e6f,"Use correct Phase duration in ""break complete"" notification.","Use correct Phase duration in ""break complete"" notification.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470679518,1470679518,ded817eb53602573bc98a39d6e4bc27033dbe3ac
+ded817eb53602573bc98a39d6e4bc27033dbe3ac,ded817eb,"Revert ""Update Gradle plugin version from 2.2.0-alpha6 to 2.2.0-alpha7""","Revert ""Update Gradle plugin version from 2.2.0-alpha6 to 2.2.0-alpha7""
+
+This reverts commit c24356127726bff2f1f1682dc558761e546a3aad.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470673866,1470673866,814e9b53bf595c219bcdad18bdfa2a34b83c4df6
+814e9b53bf595c219bcdad18bdfa2a34b83c4df6,814e9b53,Don't export alarm BroadcastReceiver.,"Don't export alarm BroadcastReceiver.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470663984,1470663984,4e555df4ddee85c36d26dbf695f47e8a01cb7322
+4e555df4ddee85c36d26dbf695f47e8a01cb7322,4e555df4,Ensure Cycle restarts if running when the app process is killed.,"Ensure Cycle restarts if running when the app process is killed.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470456339,1470456339,32b8de442e40aaa6d72e15bf0045479aecb19a53
+32b8de442e40aaa6d72e15bf0045479aecb19a53,32b8de44,Rename CycleService to ForegroundProgressService.,"Rename CycleService to ForegroundProgressService.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470430227,1470430227,0518f0a5d356eb3168b7ca694acda9f256480364
+0518f0a5d356eb3168b7ca694acda9f256480364,0518f0a5,Update Katlin version to 1.0.3,"Update Katlin version to 1.0.3
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470429907,1470429907,95bc3e37398eb11dc766727a36059701611d4174
+95bc3e37398eb11dc766727a36059701611d4174,95bc3e37,Move responsibility for starting/stoping CycleService from TimerPresenter to Notifier.,"Move responsibility for starting/stoping CycleService from TimerPresenter to Notifier.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470427907,1470427907,c24356127726bff2f1f1682dc558761e546a3aad
+c24356127726bff2f1f1682dc558761e546a3aad,c2435612,Update Gradle plugin version from 2.2.0-alpha6 to 2.2.0-alpha7,"Update Gradle plugin version from 2.2.0-alpha6 to 2.2.0-alpha7
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470424324,1470424324,0182da7b9cb4f18a0c37408a1a4fd57c992bd9b8
+0182da7b9cb4f18a0c37408a1a4fd57c992bd9b8,0182da7b,Use AlarmManager.setAlarmClock to work around Doze mode limitations.,"Use AlarmManager.setAlarmClock to work around Doze mode limitations.
+
+In Android M, Doze Mode limits alarms from firing too frequently and can defer alarms up to 15 minutes. This will not work for our use case.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470114409,1470114409,67002499ae3e08c9e95a45e46535323e17c91683
+67002499ae3e08c9e95a45e46535323e17c91683,67002499,Remove TimerPresenter's dependency on AlarmScheduler.,"Remove TimerPresenter's dependency on AlarmScheduler.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470107102,1470107102,b25cb2ab4948758fdb425255c29e7976a6162b3d
+b25cb2ab4948758fdb425255c29e7976a6162b3d,b25cb2ab,Observe Cycle from AlarmScheduler to figure out when to update alarms.,"Observe Cycle from AlarmScheduler to figure out when to update alarms.
+
+This removes the responsibility from TimerPresenter.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470088921,1470088921,a286dbf3c61e10c027b335dba59e424416d2de05
+a286dbf3c61e10c027b335dba59e424416d2de05,a286dbf3,Decouple Cycle.startNextPhase from Cycle.restartPhase() method.,"Decouple Cycle.startNextPhase from Cycle.restartPhase() method.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470082324,1470082324,62492f0a59580f491608f52790b494d662e62395
+62492f0a59580f491608f52790b494d662e62395,62492f0a,Remove AlarmScheduler's unnecessary dependency on Notifier.,"Remove AlarmScheduler's unnecessary dependency on Notifier.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470081195,1470081195,9a28bc127e533897762de14b3889309efbf57add
+9a28bc127e533897762de14b3889309efbf57add,9a28bc12,Add documentation for AlarmScheduler and AlarmReceiver.,"Add documentation for AlarmScheduler and AlarmReceiver.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470080922,1470080922,3fb38f0683ff6cacb3f2bc26d62a2597c538e5c4
+3fb38f0683ff6cacb3f2bc26d62a2597c538e5c4,3fb38f06,Refactor AlarmScheduler Intents as computed properties.,"Refactor AlarmScheduler Intents as computed properties.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470080482,1470080482,0cbb476b011d94f1bfe29b37313d95f0ece8146a
+0cbb476b011d94f1bfe29b37313d95f0ece8146a,0cbb476b,Remove unnecessary lifecycle callbacks from AlarmScheduler.,"Remove unnecessary lifecycle callbacks from AlarmScheduler.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470078292,1470078292,b196957a7d22ebc98a42839119cdf6648df9f0a9
+b196957a7d22ebc98a42839119cdf6648df9f0a9,b196957a,Don't rely on casting application context to access ApplicationComponent in Broadcast receiver.,"Don't rely on casting application context to access ApplicationComponent in Broadcast receiver.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1470074646,1470074646,553bddab149c62cffab455b36178ce6e49f7caac
+553bddab149c62cffab455b36178ce6e49f7caac,553bddab,Remove responsibility for delivering standard cycle notifications from CycleService.,"Remove responsibility for delivering standard cycle notifications from CycleService.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469656994,1469656994,421af1ff7223e9fe8fd088c4d1558a7c6a78cb61
+421af1ff7223e9fe8fd088c4d1558a7c6a78cb61,421af1ff,Associate AlarmScheduler with Timer controls.,"Associate AlarmScheduler with Timer controls.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469656557,1469656557,f8360c5e4111170bc6d845b7d76968812a4000ff
+f8360c5e4111170bc6d845b7d76968812a4000ff,f8360c5e,Implement logic for scheduling and receiving cycle alarms.,"Implement logic for scheduling and receiving cycle alarms.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469656174,1469656174,7f10bc99fcef3bd5fcd77e3fc87af6c5536bdf00
+7f10bc99fcef3bd5fcd77e3fc87af6c5536bdf00,7f10bc99,Avoid needless RxPreferences usage during app startup.,"Avoid needless RxPreferences usage during app startup.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469655853,1469655853,71ce4acb678d1894187162db43c5a101c4ff3686
+71ce4acb678d1894187162db43c5a101c4ff3686,71ce4acb,"Add getter for Cycle's remaining time, in milliseconds.","Add getter for Cycle's remaining time, in milliseconds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469655800,1469655800,ab66e512785764dcad2ed766ee9347309a97a913
+ab66e512785764dcad2ed766ee9347309a97a913,ab66e512,Inject AlarmScheduler with Dagger on application creation.,"Inject AlarmScheduler with Dagger on application creation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469649187,1469649187,abd4ce4f8e9c1181d740aca049105bfb531bc1e3
+abd4ce4f8e9c1181d740aca049105bfb531bc1e3,abd4ce4f,Inject Notifier with Dagger instead of instantiating it by hand.,"Inject Notifier with Dagger instead of instantiating it by hand.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469567853,1469567853,0ae053e61cdd8b358877dc04495addef66bbfacc
+0ae053e61cdd8b358877dc04495addef66bbfacc,0ae053e6,Merge pull request #28 from ronaldsmartin/feature-first-time-tutorial,"Merge pull request #28 from ronaldsmartin/feature-first-time-tutorial
+
+Add first time tutorial",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1469245159,1469245159,"e31fbc071bfd81472995fd8ef67c556b0f2c51d4,6b3acdf74f7198478830eea5b2cca387cf7e6193"
+6b3acdf74f7198478830eea5b2cca387cf7e6193,6b3acdf7,Only show the tutorial on the first installation.,"Only show the tutorial on the first installation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469242403,1469242403,89b6f160860fa33259890138134945b92e3d10f9
+89b6f160860fa33259890138134945b92e3d10f9,89b6f160,Improve messages in tutorial.,"Improve messages in tutorial.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469240985,1469242225,8fc39ffeb3b8a09f2331ad277cf02ef852aa9186
+8fc39ffeb3b8a09f2331ad277cf02ef852aa9186,8fc39ffe,Dispose of ShowcaseView when we're done with it.,"Dispose of ShowcaseView when we're done with it.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469240558,1469240558,1a3c9a4c28d5900e7ed3e291847d3900ff66ff1f
+1a3c9a4c28d5900e7ed3e291847d3900ff66ff1f,1a3c9a4c,Showcase all timer controls during first-time tutorial.,"Showcase all timer controls during first-time tutorial.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469239802,1469239802,6b3e1b0d5dcc1373a918fdcf91983a62884913f3
+6b3e1b0d5dcc1373a918fdcf91983a62884913f3,6b3e1b0d,Use styles to customize tutorial appearance.,"Use styles to customize tutorial appearance.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469228591,1469228591,b4485f36a8fe9ea0bfaa54511cd62d734ce6c80e
+b4485f36a8fe9ea0bfaa54511cd62d734ce6c80e,b4485f36,Use ShowcaseView to display a tutorial on first launch.,"Use ShowcaseView to display a tutorial on first launch.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469054428,1469054428,262af20c130b6415442a951ef8382371b4eb8de6
+262af20c130b6415442a951ef8382371b4eb8de6,262af20c,Install lib ShowcaseView via Gradle.,"Install lib ShowcaseView via Gradle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469052173,1469052173,77f14d6b2d1d6bd222ac78ef126ad590ea71d551
+77f14d6b2d1d6bd222ac78ef126ad590ea71d551,77f14d6b,Define control flow for first time tutorial check and display.,"Define control flow for first time tutorial check and display.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469051267,1469051344,9a190385d445d1a2a98a6eeabde2b7c5be93c8c6
+9a190385d445d1a2a98a6eeabde2b7c5be93c8c6,9a190385,Expose non-default SharedPreferences in ResourceRepository.,"Expose non-default SharedPreferences in ResourceRepository.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469050505,1469051344,cbfeb570d5bff78c03becdcd7d65b5e588d0a77b
+cbfeb570d5bff78c03becdcd7d65b5e588d0a77b,cbfeb570,Externalize notification-related Strings to their own resource file.,"Externalize notification-related Strings to their own resource file.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469049407,1469051344,e31fbc071bfd81472995fd8ef67c556b0f2c51d4
+e31fbc071bfd81472995fd8ef67c556b0f2c51d4,e31fbc07,Merge pull request #27 from ronaldsmartin/testing-test-cycle,"Merge pull request #27 from ronaldsmartin/testing-test-cycle
+
+Add unit tests for Cycle and Cycle.Phase",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1469049367,1469049367,"39ca243e66fe70b88f96e2c4dfcdfb320bba3620,67a4db2a2c151fda493de61bebd6473dfb9c9a71"
+67a4db2a2c151fda493de61bebd6473dfb9c9a71,67a4db2a,Add a test for Cycle.remainingTimeText.,"Add a test for Cycle.remainingTimeText.
+
+Should add more comprehensive ones in the future. Ideally we would spy on cycle and use it to return different remainingTimes to run the gamut of remainingTimeText cases.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469047643,1469047643,855052273ec7a63408238b94996072e18a29c548
+855052273ec7a63408238b94996072e18a29c548,85505227,Add test for Cycle.isFinishingPhase.,"Add test for Cycle.isFinishingPhase.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469044154,1469044154,db87676bc436dee7800c964d693b8198bb0bca85
+db87676bc436dee7800c964d693b8198bb0bca85,db87676b,Add tests for Cycle.phase and Cycle.toggleRunning().,"Add tests for Cycle.phase and Cycle.toggleRunning().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469043452,1469043452,10a8c59305f2f2db4fee75369115d635b82e72da
+10a8c59305f2f2db4fee75369115d635b82e72da,10a8c593,Add tests for Cycle.duration and Cycle.remainingTime.,"Add tests for Cycle.duration and Cycle.remainingTime.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469043208,1469043208,2ba93b868576ff1ca49cf0ab6c3cc060b1bf8283
+2ba93b868576ff1ca49cf0ab6c3cc060b1bf8283,2ba93b86,Add tests for Cycle.running and Cycle.elapsedTime,"Add tests for Cycle.running and Cycle.elapsedTime
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469042677,1469042677,f6c544f8186eefd7dab56b60810908cbb278166a
+f6c544f8186eefd7dab56b60810908cbb278166a,f6c544f8,Add tests for Cycle.durationMinutes and Cycle.elapseTimeMinutes.,"Add tests for Cycle.durationMinutes and Cycle.elapseTimeMinutes.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469041274,1469041274,5290e0eee5164f6cff460f86a24de4f8995742aa
+5290e0eee5164f6cff460f86a24de4f8995742aa,5290e0ee,Add tests for Cycle.restartPhase().,"Add tests for Cycle.restartPhase().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469040832,1469040832,c2da394cae340a41ed9ab4ae0371dca66b84b261
+c2da394cae340a41ed9ab4ae0371dca66b84b261,c2da394c,Add more tests for Cycle.start().,"Add more tests for Cycle.start().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469037738,1469037738,3ac037693aca63cb2ba4015ec0cd7fae4d1c398d
+3ac037693aca63cb2ba4015ec0cd7fae4d1c398d,3ac03769,Add unit tests for Cycle.start(),"Add unit tests for Cycle.start()
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1469037444,1469037444,ac1648c85c5646e07a97a22d30cf7a31b6666921
+ac1648c85c5646e07a97a22d30cf7a31b6666921,ac1648c8,Add unit test for Cycle.phaseName,"Add unit test for Cycle.phaseName
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468990284,1468990284,fa2550d4feabea921785875ec684f664c8b3baab
+fa2550d4feabea921785875ec684f664c8b3baab,fa2550d4,Remove unnecessary stubbing from Cycle initial state test.,"Remove unnecessary stubbing from Cycle initial state test.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468988179,1468988179,9b23efe5477e4be133306f1598bffa47cefc2cc1
+9b23efe5477e4be133306f1598bffa47cefc2cc1,9b23efe5,Convert to extended Hamcrest Matchers set.,"Convert to extended Hamcrest Matchers set.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468988039,1468988039,b1b6d4eaeba1da2c35f36f0dc09623cad357a3e0
+b1b6d4eaeba1da2c35f36f0dc09623cad357a3e0,b1b6d4ea,Install more Hamcrest Matchers via Gradle dependency.,"Install more Hamcrest Matchers via Gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468985561,1468985561,bcba4f811969993070e980a861cd869083471bd7
+bcba4f811969993070e980a861cd869083471bd7,bcba4f81,Add unit tests for Cycle.pause().,"Add unit tests for Cycle.pause().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468980009,1468980009,f5d37c757894a2484caf659968b78263816aa17c
+f5d37c757894a2484caf659968b78263816aa17c,f5d37c75,Add unit tests for Cycle.startNextPhase(),"Add unit tests for Cycle.startNextPhase()
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468977526,1468977526,e7cf0dc86a315a7c6ced5a9516002abdeb856cbf
+e7cf0dc86a315a7c6ced5a9516002abdeb856cbf,e7cf0dc8,Add unit test for Cycle's initial state.,"Add unit test for Cycle's initial state.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468977015,1468977015,fe08492252c9c7e6fa5befdb9ad288621e55e124
+fe08492252c9c7e6fa5befdb9ad288621e55e124,fe084922,Add unit tests for Cycle.Phase.duration().,"Add unit tests for Cycle.Phase.duration().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468974437,1468974437,cff692bf15619a04959b666acd1af1e7e19ed122
+cff692bf15619a04959b666acd1af1e7e19ed122,cff692bf,Remove Cycle's dependence on RxSharedPreferences instance.,"Remove Cycle's dependence on RxSharedPreferences instance.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468973504,1468973504,37b465c78a4eb9cd3d32fa9d205e93be505c6a93
+37b465c78a4eb9cd3d32fa9d205e93be505c6a93,37b465c7,Correct implementation of Cycle.Phase.defaultDuration to satisfy tests.,"Correct implementation of Cycle.Phase.defaultDuration to satisfy tests.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468971584,1468971584,bc8f7f2a28014cc152df56d11b21bd70f6d7f433
+bc8f7f2a28014cc152df56d11b21bd70f6d7f433,bc8f7f2a,Add unit tests for Cycle.Phase.defaultDuration.,"Add unit tests for Cycle.Phase.defaultDuration.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468971483,1468971483,57e7bd0f1591c5f8206e3b3f6fb8f94d43b47f62
+57e7bd0f1591c5f8206e3b3f6fb8f94d43b47f62,57e7bd0f,Add unit tests for Cycle.Phase.localizedName,"Add unit tests for Cycle.Phase.localizedName
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468971258,1468971258,2bf011221fbb3207d31ba4f910a404c90b12ef20
+2bf011221fbb3207d31ba4f910a404c90b12ef20,2bf01122,Add unit tests for Cycle.Phase.nextPhase.,"Add unit tests for Cycle.Phase.nextPhase.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468966658,1468966658,26347db6afd784caa239f9a616217054f435fb51
+26347db6afd784caa239f9a616217054f435fb51,26347db6,Install Mockito lib v2.0.87-beta via Gradle.,"Install Mockito lib v2.0.87-beta via Gradle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468965198,1468965198,3751d1ede623739ad0c693b79611462fbaa88a21
+3751d1ede623739ad0c693b79611462fbaa88a21,3751d1ed,Install Android Testing Support Libs via Gradle,"Install Android Testing Support Libs via Gradle
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468964263,1468964263,783a5ec69bae238f2db5a9f15125663e35b95798
+783a5ec69bae238f2db5a9f15125663e35b95798,783a5ec6,Update Gradle plugin from v2.2.0-alpha4 to v2.2.0-alpha6.,"Update Gradle plugin from v2.2.0-alpha4 to v2.2.0-alpha6.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468961863,1468961863,27fda6eb8cea3861d44f2af9c95902930baaefd7
+27fda6eb8cea3861d44f2af9c95902930baaefd7,27fda6eb,Update Android support library version from 24.0.0 to 24.1.0.,"Update Android support library version from 24.0.0 to 24.1.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468959742,1468959742,24cc2c79cc49d0d50ce6d88c1e37dd07627794be
+24cc2c79cc49d0d50ce6d88c1e37dd07627794be,24cc2c79,Update SDK build tools version to v24.0.1,"Update SDK build tools version to v24.0.1
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468958905,1468958905,39ca243e66fe70b88f96e2c4dfcdfb320bba3620
+39ca243e66fe70b88f96e2c4dfcdfb320bba3620,39ca243e,Merge pull request #26 from ronaldsmartin/refactor-context-repository,"Merge pull request #26 from ronaldsmartin/refactor-context-repository
+
+Refactor Context dependencies",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468870035,1468870035,"b2abb2c40828ac4ba69e5a490f8ff1c112e2bd15,0e2a711e1216b7ef1ca62ad560997a3651640511"
+0e2a711e1216b7ef1ca62ad560997a3651640511,0e2a711e,Remove remaining references to Context from Cycle.,"Remove remaining references to Context from Cycle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468865768,1468865768,2c251cfefb238b3b95e8fbbb9c1e124b9c4a6d06
+2c251cfefb238b3b95e8fbbb9c1e124b9c4a6d06,2c251cfe,Remove Cycle dependency on Context.,"Remove Cycle dependency on Context.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468864017,1468864017,ab1f6283f1d34c18b96d814b6431b48ab5f32f1c
+ab1f6283f1d34c18b96d814b6431b48ab5f32f1c,ab1f6283,Remove Context as a required base View property.,"Remove Context as a required base View property.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468823226,1468823226,b497508622091160b02932d655faacc3e2be918a
+b497508622091160b02932d655faacc3e2be918a,b4975086,Use ResourceRepository to simplify SettingsPresenter.,"Use ResourceRepository to simplify SettingsPresenter.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468823193,1468823193,dc93430964557684850537f658f19485813a5e3f
+dc93430964557684850537f658f19485813a5e3f,dc934309,Inject ResourceRepository into SettingsPresenter via Dagger.,"Inject ResourceRepository into SettingsPresenter via Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468823017,1468823017,ab38b9fb892fa3e6ca1346aba7aede10a35d489c
+ab38b9fb892fa3e6ca1346aba7aede10a35d489c,ab38b9fb,Initialize default preferences from XML resource on app launch instead of activity creation.,"Initialize default preferences from XML resource on app launch instead of activity creation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468822848,1468822848,d2f4ce00d6f2b6db84393457969f7a5e5fab3733
+d2f4ce00d6f2b6db84393457969f7a5e5fab3733,d2f4ce00,Remove accidental space in string-res notification_message_break_cycle_complete.,"Remove accidental space in string-res notification_message_break_cycle_complete.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468822747,1468822747,f675063cbacf355064965fe3c683239987a9908d
+f675063cbacf355064965fe3c683239987a9908d,f675063c,Provide colors through the ResourceRepository.,"Provide colors through the ResourceRepository.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468821505,1468821505,e1f36579653ea52efb6074cdaf50c9fe8ca4de23
+e1f36579653ea52efb6074cdaf50c9fe8ca4de23,e1f36579,Use spread operator to pass format varargs properly to Context.getString(),"Use spread operator to pass format varargs properly to Context.getString()
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468820736,1468820736,899812c1aeb6f55ecc49d07719b42019f85805c0
+899812c1aeb6f55ecc49d07719b42019f85805c0,899812c1,Inject ResourceRepository into TimerPresenter with Dagger.,"Inject ResourceRepository into TimerPresenter with Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468820694,1468820694,19759979d026dbe6b5dc8d274d734df7f91e9f1d
+19759979d026dbe6b5dc8d274d734df7f91e9f1d,19759979,Create abstraction over Context.getString().,"Create abstraction over Context.getString().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468818772,1468818772,b2abb2c40828ac4ba69e5a490f8ff1c112e2bd15
+b2abb2c40828ac4ba69e5a490f8ff1c112e2bd15,b2abb2c4,Merge pull request #25 from ronaldsmartin/feature-timer-button-interaction,"Merge pull request #25 from ronaldsmartin/feature-timer-button-interaction
+
+Refine timer button interaction",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468816957,1468816957,"dba4e52fcff17dd48ddf9dc3cbc4bbd9b113ee5a,6a1eecc6129dc5e3453a7f0f71957126e66112ec"
+6a1eecc6129dc5e3453a7f0f71957126e66112ec,6a1eecc6,Make sure timer CoordinatorLayout responds to fullscreen window changes properly.,"Make sure timer CoordinatorLayout responds to fullscreen window changes properly.
+
+Fixes a bug where after the timer was set to fullscreen and back, Snackbars were drawn under the navigation bar.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468797812,1468797812,b9b7e246c4589d111d0e44b73a99cfbb37d0e288
+b9b7e246c4589d111d0e44b73a99cfbb37d0e288,b9b7e246,"When skipping to the next phase, run the timer only if the cycle was already running.","When skipping to the next phase, run the timer only if the cycle was already running.
+
+This makes the timer's Skip button's behavior consistent with the Restart button.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468709869,1468709869,2ed9b4d35b1130f02cde0deed833d4745efba082
+2ed9b4d35b1130f02cde0deed833d4745efba082,2ed9b4d3,Remove inadvertent leading space from string resources.,"Remove inadvertent leading space from string resources.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468647384,1468647384,8e3c42762fc06cbde9ed9b39bf7b57e230d7e0e1
+8e3c42762fc06cbde9ed9b39bf7b57e230d7e0e1,8e3c4276,Use custom CoordinatorLayout.Behavior to push up timer contents when Snackbar appears.,"Use custom CoordinatorLayout.Behavior to push up timer contents when Snackbar appears.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468647306,1468647306,4247a0917157e2aa420d651c07781dfa4b9af07d
+4247a0917157e2aa420d651c07781dfa4b9af07d,4247a091,Display message when timer's next phase button is pressed.,"Display message when timer's next phase button is pressed.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468631908,1468631908,6466e42f1a4d0b85ca890be44241ea833cf43d8d
+6466e42f1a4d0b85ca890be44241ea833cf43d8d,6466e42f,Display a Snacker message when timer reset button is pressed.,"Display a Snacker message when timer reset button is pressed.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468630079,1468630079,dba4e52fcff17dd48ddf9dc3cbc4bbd9b113ee5a
+dba4e52fcff17dd48ddf9dc3cbc4bbd9b113ee5a,dba4e52f,Merge pull request #24 from ronaldsmartin/cleanup-lint-warnings,"Merge pull request #24 from ronaldsmartin/cleanup-lint-warnings
+
+Cleanup some lint warnings.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468624166,1468624166,"4b122fa42ef32e10d5f153c630b3a67bd9f9e19c,e9f6dcf3b917a88e64f47d0947c4affc0e393fb2"
+e9f6dcf3b917a88e64f47d0947c4affc0e393fb2,e9f6dcf3,Add explicit type to platform variable 'timer'.,"Add explicit type to platform variable 'timer'.
+
+Fixes lint warning about platform types.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468623058,1468623058,f6d21b0899055b15f5c124e4d1cec7846ef3cc4b
+f6d21b0899055b15f5c124e4d1cec7846ef3cc4b,f6d21b08,Use direct setters for timer buttons' OnClickListeners.,"Use direct setters for timer buttons' OnClickListeners.
+
+This provides better integration with the Android SDK: the layout XML file does have to resolve references to public Java methods that it cannot find.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468622016,1468622102,59ca0856e36238518490bd813c2035d8a8d7ecb1
+59ca0856e36238518490bd813c2035d8a8d7ecb1,59ca0856,Use RxKotlin's filterNotNull() instead of combining filter() and map().,"Use RxKotlin's filterNotNull() instead of combining filter() and map().
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468617010,1468622102,0e9ed3d434954f93c7dd0e5c59173dc6eaefe3c3
+0e9ed3d434954f93c7dd0e5c59173dc6eaefe3c3,0e9ed3d4,Use ContextCompat.getDrawable instead of API 21 method.,"Use ContextCompat.getDrawable instead of API 21 method.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468616788,1468622102,4b122fa42ef32e10d5f153c630b3a67bd9f9e19c
+4b122fa42ef32e10d5f153c630b3a67bd9f9e19c,4b122fa4,Merge pull request #23 from ronaldsmartin/bugfix-timer-fab-icon,"Merge pull request #23 from ronaldsmartin/bugfix-timer-fab-icon
+
+Using cycle buttons does not change pause button icon",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468616682,1468616682,"f44d35c5679f9e1ec1432169f30de174e29c1da6,9db234a4459055dc46666b1cb056096537d43654"
+9db234a4459055dc46666b1cb056096537d43654,9db234a4,Add docs to other timer Observables.,"Add docs to other timer Observables.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468614514,1468614514,e1615f0cdac23a871a9ab1d39b7724c1e823d9fa
+e1615f0cdac23a871a9ab1d39b7724c1e823d9fa,e1615f0c,Use Observable to change timer FAB correctly.,"Use Observable to change timer FAB correctly.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468614484,1468614484,a6ffa2b5bc0fd6f456454ba11346100eb106fc5e
+a6ffa2b5bc0fd6f456454ba11346100eb106fc5e,a6ffa2b5,Refactor timer Observables as functions.,"Refactor timer Observables as functions.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468533735,1468533846,f44d35c5679f9e1ec1432169f30de174e29c1da6
+f44d35c5679f9e1ec1432169f30de174e29c1da6,f44d35c5,Merge pull request #22 from ronaldsmartin/feature-custom-notification-sound,"Merge pull request #22 from ronaldsmartin/feature-custom-notification-sound
+
+Use the user's preferred sound for notifications.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468533057,1468533057,"93de6e359f140851ab8345b2577f9f6d91575550,1f16e6e4b4b1f17b0fa5ee1a4b28e17f87589f22"
+1f16e6e4b4b1f17b0fa5ee1a4b28e17f87589f22,1f16e6e4,Use the user's preferred sound for notifications.,"Use the user's preferred sound for notifications.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468526718,1468526718,93de6e359f140851ab8345b2577f9f6d91575550
+93de6e359f140851ab8345b2577f9f6d91575550,93de6e35,Merge pull request #21 from ronaldsmartin/feature-night-mode-uses-location,"Merge pull request #21 from ronaldsmartin/feature-night-mode-uses-location
+
+Feature location-based automatic night mode ",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468452288,1468452288,"7f9a8add91c0a825f9c041003898ba9d51cb3094,182cd2a9ab8311dc26bc563701effb586814e366"
+182cd2a9ab8311dc26bc563701effb586814e366,182cd2a9,Enable the location-based night mode switch iff the night mode is MODE_NIGHT_AUTO.,"Enable the location-based night mode switch iff the night mode is MODE_NIGHT_AUTO.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468448813,1468448813,77c8c40e6fb2d01fe44a9140b36a972b25cd239a
+77c8c40e6fb2d01fe44a9140b36a972b25cd239a,77c8c40e,Refactor SettingsView implementation.,"Refactor SettingsView implementation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468391281,1468391281,0bc7458402b6659fb75727b967c73152e282d874
+0bc7458402b6659fb75727b967c73152e282d874,0bc74584,Hide location-based Night Mode preference for API < 23.,"Hide location-based Night Mode preference for API < 23.
+
+In this scenario, the switch is irrelevant because the permission is granted on install.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468390145,1468390145,7a19a19c1625c58d67b37d5529b0280ab080ac5d
+7f9a8add91c0a825f9c041003898ba9d51cb3094,7f9a8add,Merge pull request #20 from ronaldsmartin/config-upgrade-build-tools,"Merge pull request #20 from ronaldsmartin/config-upgrade-build-tools
+
+Upgrade Android build tools",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468389626,1468389626,"5991fbc75aea032cea2ddac71cc5a20c25088785,856d67dcf10ddc4e57bae02019a596e8b59fc9b3"
+7a19a19c1625c58d67b37d5529b0280ab080ac5d,7a19a19c,Merge branch 'config-upgrade-build-tools' into feature-night-mode-uses-location,"Merge branch 'config-upgrade-build-tools' into feature-night-mode-uses-location
+
+# Conflicts:
+#	app/src/main/java/com/itsronald/twenty2020/settings/SettingsPresenter.kt
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468387820,1468387820,"552c04f284ed3acec2fc3e37c988597daf9a69b0,856d67dcf10ddc4e57bae02019a596e8b59fc9b3"
+856d67dcf10ddc4e57bae02019a596e8b59fc9b3,856d67dc,Upgrade Android build tools version from 23.0.3 to 24.0.0,"Upgrade Android build tools version from 23.0.3 to 24.0.0
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468386873,1468386873,5991fbc75aea032cea2ddac71cc5a20c25088785
+552c04f284ed3acec2fc3e37c988597daf9a69b0,552c04f2,Update location permission from COARSE to FINE location for Theme.DayNight compatibility.,"Update location permission from COARSE to FINE location for Theme.DayNight compatibility.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468384557,1468384557,c504db3a2d572df083941ccf50fff13263af8003
+c504db3a2d572df083941ccf50fff13263af8003,c504db3a,Allow Dexter to continue interrupted permission requests.,"Allow Dexter to continue interrupted permission requests.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468379799,1468379799,6b624592ab1ae27c4180238463f6d1d008896425
+5991fbc75aea032cea2ddac71cc5a20c25088785,5991fbc7,Merge pull request #19 from ronaldsmartin/feature-autobackup-prefs,"Merge pull request #19 from ronaldsmartin/feature-autobackup-prefs
+
+Auto-Backup Preferences",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468377839,1468377839,"4985e1740e3f4b9fad5ecc26ffc16a8cd365ef81,6d630d37a86a6ebcf5f763b4f2148ef395db292f"
+6d630d37a86a6ebcf5f763b4f2148ef395db292f,6d630d37,Configure app to use Android 6.0's auto-backup API.,"Configure app to use Android 6.0's auto-backup API.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468375571,1468375571,0c501f45168ed9b544ac90033d28019c17084619
+0c501f45168ed9b544ac90033d28019c17084619,0c501f45,Request app backup when SettingsPresenter stops.,"Request app backup when SettingsPresenter stops.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468360267,1468360267,bc8abdb6f5b6e5bddff4ed001bc187d088382985
+bc8abdb6f5b6e5bddff4ed001bc187d088382985,bc8abdb6,Configure BackupAgent to back up SharedPreferences.,"Configure BackupAgent to back up SharedPreferences.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468360226,1468360226,ec797d73bdb6df828601439e93cfbb55efb87fe0
+ec797d73bdb6df828601439e93cfbb55efb87fe0,ec797d73,Configure manifest to use pre-Marshmallow custom backup agent.,"Configure manifest to use pre-Marshmallow custom backup agent.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468354296,1468354296,21b2e29e11391c3550714bcfb0224f42d716c798
+21b2e29e11391c3550714bcfb0224f42d716c798,21b2e29e,Use Gradle to copy API keys to resources from gradle.properties.,"Use Gradle to copy API keys to resources from gradle.properties.
+
+The subproject gradle.properties is kept out of source control.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468352876,1468352876,ce136426147e4226e2a0a3b78167f9cf2e9ad4fe
+ce136426147e4226e2a0a3b78167f9cf2e9ad4fe,ce136426,Ignore subproject-local gradle.properties file where API keys are kept.,"Ignore subproject-local gradle.properties file where API keys are kept.
+
+These properties can be overridden on the CI server by using environmental variables.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468352789,1468352789,4985e1740e3f4b9fad5ecc26ffc16a8cd365ef81
+6b624592ab1ae27c4180238463f6d1d008896425,6b624592,"Request location permission when ""location-based night mode"" setting is checked.","Request location permission when ""location-based night mode"" setting is checked.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468110228,1468110228,ff9ce45aa215cb3a9492b6988f259502f2814911
+ff9ce45aa215cb3a9492b6988f259502f2814911,ff9ce45a,Declare ACCESS_COARSE_LOCATION permission in Manifest.,"Declare ACCESS_COARSE_LOCATION permission in Manifest.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468109524,1468109524,1992d1c3a3eb3ab2dfc2ccb14f730404e2167d0d
+1992d1c3a3eb3ab2dfc2ccb14f730404e2167d0d,1992d1c3,Upgrade Dexter lib to v2.3.0.,"Upgrade Dexter lib to v2.3.0.
+
+This introduces the Snackbar.Callback API in SnackbarOnDeniedPermissionListener.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468103312,1468103312,f36286b514d0958f2e48d0f0bbc187399b99ed82
+f36286b514d0958f2e48d0f0bbc187399b99ed82,f36286b5,Refactor night mode preference Observable as function.,"Refactor night mode preference Observable as function.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468100259,1468100259,aa0e09c9a404ae1dd597e3fb94115fb5500dd62f
+aa0e09c9a404ae1dd597e3fb94115fb5500dd62f,aa0e09c9,Install Dexter lib as Gradle dependency for permissions management.,"Install Dexter lib as Gradle dependency for permissions management.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468098469,1468098469,4985e1740e3f4b9fad5ecc26ffc16a8cd365ef81
+4985e1740e3f4b9fad5ecc26ffc16a8cd365ef81,4985e174,Merge pull request #18 from ronaldsmartin/improve-notifications,"Merge pull request #18 from ronaldsmartin/improve-notifications
+
+Improve notifications",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1468046650,1468046650,"c3dab0edb3bcdde3bf75e4ad320af329f62b6a15,14159515e744e37ba590596af0fd4e72f70b1193"
+14159515e744e37ba590596af0fd4e72f70b1193,14159515,Recommend a random exercise to the user when the work phase completes.,"Recommend a random exercise to the user when the work phase completes.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468045062,1468045062,d83ea10e0a18930887cb7e4085c1928802c95b1c
+d83ea10e0a18930887cb7e4085c1928802c95b1c,d83ea10e,Notify the Cycle observers when the cycle timer pauses.,"Notify the Cycle observers when the cycle timer pauses.
+
+This ensures that the foreground progress notification's message is always accurate.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468040229,1468040332,72bf8e4826b7e1099df2299daa36f66aac48bd48
+72bf8e4826b7e1099df2299daa36f66aac48bd48,72bf8e48,Change notification content text.,"Change notification content text.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468040191,1468040191,321a4bcc4ecf06503226446c7056dbece9d2c53f
+321a4bcc4ecf06503226446c7056dbece9d2c53f,321a4bcc,Add accent color to cycle progress notification.,"Add accent color to cycle progress notification.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468037930,1468037930,b91f90c6bc79a6ccdf8890aeb9f115267316e2d3
+b91f90c6bc79a6ccdf8890aeb9f115267316e2d3,b91f90c6,Replace dummy content title and message in progress notification.,"Replace dummy content title and message in progress notification.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468037622,1468037622,acf202c02c86be82dd25e5a4815d5940135503d6
+acf202c02c86be82dd25e5a4815d5940135503d6,acf202c0,Refactor API for progress notification; add method docs.,"Refactor API for progress notification; add method docs.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1468036755,1468036755,cb9236b45d34831fbbc3f99509cbc2b9597646b1
+cb9236b45d34831fbbc3f99509cbc2b9597646b1,cb9236b4,Merge branch 'config-buddybuild-ci' of…,"Merge branch 'config-buddybuild-ci' of https://github.com/ronaldsmartin/20twenty20 into improve-notifications
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467953058,1467953058,"13f5b50d64944af3e181773184a942a26a9ecb83,a0a0c822a36ca211492c1cf5e0bf99b8c0b264dd"
+c3dab0edb3bcdde3bf75e4ad320af329f62b6a15,c3dab0ed,Merge pull request #17 from ronaldsmartin/config-buddybuild-ci,"Merge pull request #17 from ronaldsmartin/config-buddybuild-ci
+
+Config buddybuild CI",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467944413,1467944413,"501474d6224bfa54c4dbc9d14c109cc890d6c969,a0a0c822a36ca211492c1cf5e0bf99b8c0b264dd"
+a0a0c822a36ca211492c1cf5e0bf99b8c0b264dd,a0a0c822,Create README.md,"Create README.md
+
+Including buddybuild status badge.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467943265,1467943265,c98fc38c32f41ee8eabac47782329a481cfa0255
+c98fc38c32f41ee8eabac47782329a481cfa0255,c98fc38c,Move Gradle plugin dependency back to root project.,"Move Gradle plugin dependency back to root project.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467939100,1467939100,501474d6224bfa54c4dbc9d14c109cc890d6c969
+13f5b50d64944af3e181773184a942a26a9ecb83,13f5b50d,Only update the foreground notification if its user pref. is enabled.,"Only update the foreground notification if its user pref. is enabled.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467500854,1467500854,d3b9db357844cbc2e93fc32dd7356c54ea5b2d9c
+d3b9db357844cbc2e93fc32dd7356c54ea5b2d9c,d3b9db35,Link CycleService to foreground progress notification when enabled in settings.,"Link CycleService to foreground progress notification when enabled in settings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467325519,1467325519,26037e3dafd70233828eb80327fbc015b316f46a
+26037e3dafd70233828eb80327fbc015b316f46a,26037e3d,Inline notification content title.,"Inline notification content title.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467316954,1467316954,e3cccdc4bf701343dcc4a0979cf7778772c9fa17
+e3cccdc4bf701343dcc4a0979cf7778772c9fa17,e3cccdc4,Use NotificationManagerCompat instead of NotificationManager.,"Use NotificationManagerCompat instead of NotificationManager.
+
+Will allow better wearable support in the future.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467277013,1467277013,045b556395e6581be31bb825fb0fbd3fc08db432
+045b556395e6581be31bb825fb0fbd3fc08db432,045b5563,Add accent color to notification based on completed phase.,"Add accent color to notification based on completed phase.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467274025,1467274025,c11444489c36e479e41777f6dc9bd7214caef0a8
+c11444489c36e479e41777f6dc9bd7214caef0a8,c1144448,Give phase complete notification public visibility.,"Give phase complete notification public visibility.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467272383,1467272383,a151f337a469ab1063fa24476c090ad3525adc86
+a151f337a469ab1063fa24476c090ad3525adc86,a151f337,Add category to phase complete notification.,"Add category to phase complete notification.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467272240,1467272240,501474d6224bfa54c4dbc9d14c109cc890d6c969
+501474d6224bfa54c4dbc9d14c109cc890d6c969,501474d6,Merge pull request #16 from ronaldsmartin/user-settings,"Merge pull request #16 from ronaldsmartin/user-settings
+
+Enable user settings",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467269755,1467269755,"2bf4bbb08fad1b5ea673df43138f9d49ef18a82f,23165c30973977baf3adbb4e28d90e79099981fb"
+2bf4bbb08fad1b5ea673df43138f9d49ef18a82f,2bf4bbb0,Merge pull request #15 from ronaldsmartin/bugfix-timer-activity-leak,"Merge pull request #15 from ronaldsmartin/bugfix-timer-activity-leak
+
+Fix memory leak in timer observables.",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467269378,1467269378,"b346672e4e16ed2551d13e791de5130de5ee39b7,977ddccf9a51c0ed1158833d16250bcc960051af"
+23165c30973977baf3adbb4e28d90e79099981fb,23165c30,Link Full Screen preference to TimerActivity's fullscreen ability.,"Link Full Screen preference to TimerActivity's fullscreen ability.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467247449,1467247449,4e3187757f4428c2f64b88a52a3dbc21f180f7ef
+4e3187757f4428c2f64b88a52a3dbc21f180f7ef,4e318775,Use the default preference for night mode on application start.,"Use the default preference for night mode on application start.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467244847,1467244847,2a242cfd3f4e49785f3fc81bf5263a066d6b4af7
+2a242cfd3f4e49785f3fc81bf5263a066d6b4af7,2a242cfd,Change Settings.nightModeObserver's visibility to private.,"Change Settings.nightModeObserver's visibility to private.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467244771,1467244771,b2d85c617399f4a740cdbe2d676b356b6f53e140
+b2d85c617399f4a740cdbe2d676b356b6f53e140,b2d85c61,Only recreate SettingsActivity if the DayNight resources change.,"Only recreate SettingsActivity if the DayNight resources change.
+e.g., Night -> Not Night, but not Day -> Automatic during the day.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467235851,1467235851,80dc7ea07f1abe00ce9214f3330967139faa8e6c
+80dc7ea07f1abe00ce9214f3330967139faa8e6c,80dc7ea0,Observer night mode changes off the main thread.,"Observer night mode changes off the main thread.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467235763,1467235763,eba9c81f41c93f03f93944832237cfe3864ec449
+eba9c81f41c93f03f93944832237cfe3864ec449,eba9c81f,Don't make a Toast when night mode setting changes.,"Don't make a Toast when night mode setting changes.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467233895,1467233895,1b7e62b647349306011d9542245f08cb6884046e
+1b7e62b647349306011d9542245f08cb6884046e,1b7e62b6,Use night mode preference to control theme of SettingsActivity.,"Use night mode preference to control theme of SettingsActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467231013,1467231013,fb4e8612ddfd9193c404d6c75ffc0613001c13db
+fb4e8612ddfd9193c404d6c75ffc0613001c13db,fb4e8612,Inject SettingsPresenter via Dagger.,"Inject SettingsPresenter via Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467183011,1467183011,95b531f49ea1331e2729fd630e47f9cd2a1b8ab1
+95b531f49ea1331e2729fd630e47f9cd2a1b8ab1,95b531f4,Rename SettingsComponent/Module to PreferencesComponent/Module.,"Rename SettingsComponent/Module to PreferencesComponent/Module.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467180977,1467180977,b488a0ee830c30cc1f9ea0128b5111b728a36690
+b488a0ee830c30cc1f9ea0128b5111b728a36690,b488a0ee,Add secondary text color for nighttime settings legibility.,"Add secondary text color for nighttime settings legibility.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467178041,1467178041,b296912f2e4fe5717cc338e575d0f81931c1471b
+b296912f2e4fe5717cc338e575d0f81931c1471b,b296912f,Inject RxSharedPreferences into Cycle via Dagger.,"Inject RxSharedPreferences into Cycle via Dagger.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467177526,1467177526,56b1ab1ce6684186953564dafcb98cd6bf006275
+56b1ab1ce6684186953564dafcb98cd6bf006275,56b1ab1c,Cycle uses SharedPreferences to determine phase length on start.,"Cycle uses SharedPreferences to determine phase length on start.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467174783,1467174783,5cd8c6a0a9d427f80de823aa68d67855d980968c
+5cd8c6a0a9d427f80de823aa68d67855d980968c,5cd8c6a0,Clear lint warnings in NotificationHelper.,"Clear lint warnings in NotificationHelper.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467171427,1467171427,84f5c89d8493b5516a4e4bba2e5186596a53cbf6
+84f5c89d8493b5516a4e4bba2e5186596a53cbf6,84f5c89d,Refactor default notification flags calculation.,"Refactor default notification flags calculation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467170260,1467170260,78bd4562804cc0f287221dc7a298ac839faeb564
+78bd4562804cc0f287221dc7a298ac839faeb564,78bd4562,Use user settings to determine whether notification have sound/vibration/light.,"Use user settings to determine whether notification have sound/vibration/light.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467168320,1467168320,67201acb8cf1d24784fef13351a64d6e25e09174
+67201acb8cf1d24784fef13351a64d6e25e09174,67201acb,Use SharedPreference to determine whether the timer screen stays on.,"Use SharedPreference to determine whether the timer screen stays on.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467164730,1467164730,bd97d6114464affdf9a56175a4545f5e6c6cda2d
+bd97d6114464affdf9a56175a4545f5e6c6cda2d,bd97d611,Remove unnecessary MVP interface for Settings.,"Remove unnecessary MVP interface for Settings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467163641,1467163641,8b4e6613b1665e51d3227d2a79f2fbf479dd42c2
+8b4e6613b1665e51d3227d2a79f2fbf479dd42c2,8b4e6613,Inject RxSharedPreferences instance into TimerPresenter on creation.,"Inject RxSharedPreferences instance into TimerPresenter on creation.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467163430,1467163430,9e563106dbfa25304402e48562ba7701c93b17ba
+9e563106dbfa25304402e48562ba7701c93b17ba,9e563106,Install lib RxPreferences via Gradle.,"Install lib RxPreferences via Gradle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467162127,1467162127,6f195f20c5a22af98f3d9058b8e6db53b84420f8
+6f195f20c5a22af98f3d9058b8e6db53b84420f8,6f195f20,Notification vibration is disabled by default.,"Notification vibration is disabled by default.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467152271,1467152271,5bc586cc0bca972742c64c3f1c83585e86e3f7a5
+5bc586cc0bca972742c64c3f1c83585e86e3f7a5,5bc586cc,Bind ListPreference summaries to their values.,"Bind ListPreference summaries to their values.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467151948,1467152255,1dc9208dc14e76437516e359b4a27a684c934489
+1dc9208dc14e76437516e359b4a27a684c934489,1dc9208d,Persist default preferences when TimerActivity is created.,"Persist default preferences when TimerActivity is created.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467150200,1467150200,bfad60cee31b24e7aa8f2aca744aaeb057e27828
+bfad60cee31b24e7aa8f2aca744aaeb057e27828,bfad60ce,Clarify format string for notification break complete message.,"Clarify format string for notification break complete message.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467148767,1467148767,de629a12e66b8f73cd11b33d6c2884307d55c1fe
+de629a12e66b8f73cd11b33d6c2884307d55c1fe,de629a12,Define main user preferences in XML.,"Define main user preferences in XML.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467148712,1467148712,f3a3b45bdd07022b14a69b189cbeb5d298767eed
+f3a3b45bdd07022b14a69b189cbeb5d298767eed,f3a3b45b,Replace default nested notification layout with flat hierarchy.,"Replace default nested notification layout with flat hierarchy.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467141295,1467141295,578be6b872caaeac5588a52660d082bfb94b3b8d
+578be6b872caaeac5588a52660d082bfb94b3b8d,578be6b8,Define Presenter interface and keys for Settings.,"Define Presenter interface and keys for Settings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467132514,1467132514,b594352b0fa2071bf0c9347cd0596ffff3fc7021
+b594352b0fa2071bf0c9347cd0596ffff3fc7021,b594352b,Merge branch 'bugfix-timer-activity-leak' into user-settings,"Merge branch 'bugfix-timer-activity-leak' into user-settings
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467098574,1467098574,"f10aca39270cee0ff433127ae8ebe556265dbbb0,977ddccf9a51c0ed1158833d16250bcc960051af"
+977ddccf9a51c0ed1158833d16250bcc960051af,977ddccf,Properly unsubscribe from TimerPresenter observables to avoid leaking context.,"Properly unsubscribe from TimerPresenter observables to avoid leaking context.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467098544,1467098544,b346672e4e16ed2551d13e791de5130de5ee39b7
+f10aca39270cee0ff433127ae8ebe556265dbbb0,f10aca39,Use fully qualified names for Android ID constants.,"Use fully qualified names for Android ID constants.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467095574,1467095574,7fbc558a996438c3d85f3519da87da3858cb6069
+7fbc558a996438c3d85f3519da87da3858cb6069,7fbc558a,Use textColorPrimary for Settings icons.,"Use textColorPrimary for Settings icons.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467094857,1467094857,b346672e4e16ed2551d13e791de5130de5ee39b7
+b346672e4e16ed2551d13e791de5130de5ee39b7,b346672e,Merge pull request #14 from ronaldsmartin/upgrade-api-24,"Merge pull request #14 from ronaldsmartin/upgrade-api-24
+
+Upgrade to API 24",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467067374,1467067374,"cbe6a56537efe61d024398ce22f9ced29dbc6b4c,357d0d900772be4a2ee9993c5d20aadb6f1da326"
+357d0d900772be4a2ee9993c5d20aadb6f1da326,357d0d90,Clear some lint warnings.,"Clear some lint warnings.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467066756,1467066756,502aec36c909303c2ed1bdb388431299b7fa7399
+502aec36c909303c2ed1bdb388431299b7fa7399,502aec36,Update targetSdkVersion and compileSdkVersion to 24.,"Update targetSdkVersion and compileSdkVersion to 24.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467066739,1467066739,cbe6a56537efe61d024398ce22f9ced29dbc6b4c
+cbe6a56537efe61d024398ce22f9ced29dbc6b4c,cbe6a565,Merge pull request #13 from ronaldsmartin/center-progress-view,"Merge pull request #13 from ronaldsmartin/center-progress-view
+
+Add center progress view",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1467065474,1467065474,"a10f1ac4be640788dbd3ed07b69f38f0d05ebb64,1346463bd3adad5bdd19e8c250c5643766289947"
+1346463bd3adad5bdd19e8c250c5643766289947,1346463b,Upgrade Gradle plugin to v2.2.0-alpha4.,"Upgrade Gradle plugin to v2.2.0-alpha4.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1467065024,1467065024,963b3f8978acfe60d77b42c5a03a53085f770b8d
+963b3f8978acfe60d77b42c5a03a53085f770b8d,963b3f89,Increase the refresh rate of the timer progress view.,"Increase the refresh rate of the timer progress view.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466711161,1466711161,543ab4f6c312ba208477a4a0dc43ac0aa9f95453
+543ab4f6c312ba208477a4a0dc43ac0aa9f95453,543ab4f6,Use WaveView to display total progress in TimerActivity.,"Use WaveView to display total progress in TimerActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466667539,1466667539,04f3885f5e85cb35fcfaa3765882a803e440a3f2
+04f3885f5e85cb35fcfaa3765882a803e440a3f2,04f3885f,Install WaveView as Gradle dependency via nitpick.,"Install WaveView as Gradle dependency via nitpick.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466646015,1466646015,1a6aa976a5a9d48821bd7bd652a6664e13a9f70e
+1a6aa976a5a9d48821bd7bd652a6664e13a9f70e,1a6aa976,Upgrade Support Library version to 24.0.0.,"Upgrade Support Library version to 24.0.0.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466645465,1466645465,a10f1ac4be640788dbd3ed07b69f38f0d05ebb64
+a10f1ac4be640788dbd3ed07b69f38f0d05ebb64,a10f1ac4,Merge pull request #12 from ronaldsmartin/notification-service,"Merge pull request #12 from ronaldsmartin/notification-service
+
+Notification Service",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466644721,1466644721,"a7cd3ac501850cf1e388234727cc118518d5e52a,9e111d9d7dd21127b42d668ef1008b1cef52e4d2"
+9e111d9d7dd21127b42d668ef1008b1cef52e4d2,9e111d9d,Minor style fixes in NotificationHelper.,"Minor style fixes in NotificationHelper.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466634438,1466634438,44bf0653dfddf5ad1c9b70b6994a1170f8d74635
+44bf0653dfddf5ad1c9b70b6994a1170f8d74635,44bf0653,Run notifications through the CycleService.,"Run notifications through the CycleService.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466634348,1466634348,a7f3d459f1f7ca997e44aea6f04a00ba51f67b4e
+a7f3d459f1f7ca997e44aea6f04a00ba51f67b4e,a7f3d459,Inject Cycle into CycleService when the service is created.,"Inject Cycle into CycleService when the service is created.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466628462,1466628462,aaae0613ed48c281ee8a4d831121e7049d2e34c2
+aaae0613ed48c281ee8a4d831121e7049d2e34c2,aaae0613,Use Dagger to inject Cycle as a dependency where necessary.,"Use Dagger to inject Cycle as a dependency where necessary.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466627723,1466627723,120803c9741492ee298a117078e90b20837bb555
+120803c9741492ee298a117078e90b20837bb555,120803c9,Declare the service that will run and manage the main Cycle.,"Declare the service that will run and manage the main Cycle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466623251,1466623251,80974a8dd94c28313cdfde0fd88eae1aa62028c5
+80974a8dd94c28313cdfde0fd88eae1aa62028c5,80974a8d,Move notification helper to its own feature package.,"Move notification helper to its own feature package.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466620259,1466620259,a7cd3ac501850cf1e388234727cc118518d5e52a
+a7cd3ac501850cf1e388234727cc118518d5e52a,a7cd3ac5,Merge pull request #11 from ronaldsmartin/refactor-cycle,"Merge pull request #11 from ronaldsmartin/refactor-cycle
+
+Refactor Cycle",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466571877,1466571877,"738113d6d3668067f5d92c107b2e8ff81269db29,bef2033f049eeed2d5ebfd5f2466871677c83ae9"
+bef2033f049eeed2d5ebfd5f2466871677c83ae9,bef2033f,Hook up restart phase and skip phase buttons.,"Hook up restart phase and skip phase buttons.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466483528,1466483528,2f5e43194ef905b3c25f7da3d514759f9c9b9290
+2f5e43194ef905b3c25f7da3d514759f9c9b9290,2f5e4319,Delegate TimerPresenter's timer control to Cycle,"Delegate TimerPresenter's timer control to Cycle
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466480119,1466480119,3c1ad81c56113c3cea08fb0edd27f856bd6e37d2
+3c1ad81c56113c3cea08fb0edd27f856bd6e37d2,3c1ad81c,Capture timer control API with an interface.,"Capture timer control API with an interface.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466479137,1466479137,3d25cadf3d79088b81c4a91327e1f52d98d17bfa
+3d25cadf3d79088b81c4a91327e1f52d98d17bfa,3d25cadf,Encapsulate timer logic in the Cycle model object.,"Encapsulate timer logic in the Cycle model object.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466477016,1466477016,13e2dfd54a4b652a269972641d4329b7441fc615
+13e2dfd54a4b652a269972641d4329b7441fc615,13e2dfd5,Update Dagger to v2.5,"Update Dagger to v2.5
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466463532,1466463532,738113d6d3668067f5d92c107b2e8ff81269db29
+738113d6d3668067f5d92c107b2e8ff81269db29,738113d6,Merge pull request #10 from ronaldsmartin/notification-timer-pause,"Merge pull request #10 from ronaldsmartin/notification-timer-pause
+
+Pause from notification",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466304703,1466304703,"28288e1bd5d07e3ca53b6f68aef853facb3549c0,c6f9ec162dbc2e4b9c939c6ed92862b409e8eab0"
+c6f9ec162dbc2e4b9c939c6ed92862b409e8eab0,c6f9ec16,Handle pause action in timer notification.,"Handle pause action in timer notification.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466304551,1466304551,817372cbdc69919c9b6c3f6b2433d0bd704441cf
+817372cbdc69919c9b6c3f6b2433d0bd704441cf,817372cb,Add button in notification for pausing the timer.,"Add button in notification for pausing the timer.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466303701,1466303701,28288e1bd5d07e3ca53b6f68aef853facb3549c0
+28288e1bd5d07e3ca53b6f68aef853facb3549c0,28288e1b,Merge pull request #9 from ronaldsmartin/augment-notifications,"Merge pull request #9 from ronaldsmartin/augment-notifications
+
+Augment Notifications",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466301178,1466301178,"8925080d0fbc07f0c759a1bdf39ef72df80bee01,fb0342f302390ed3fef55f275d808c4f2b79e7fd"
+fb0342f302390ed3fef55f275d808c4f2b79e7fd,fb0342f3,Cancel the timer notifcation on click.,"Cancel the timer notifcation on click.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466301059,1466301059,0b153dc5f3143fe91c4eb21862b96d0b59c4d75c
+0b153dc5f3143fe91c4eb21862b96d0b59c4d75c,0b153dc5,Clicking a phase complete notification returns the user to the timer.,"Clicking a phase complete notification returns the user to the timer.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466300854,1466300854,d42544f4500dc13cca2feaf948e57d2d059a740f
+d42544f4500dc13cca2feaf948e57d2d059a740f,d42544f4,Install Kotlin dokka plugin for docs.,"Install Kotlin dokka plugin for docs.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466298583,1466298583,3d8e633956ac4d8a249c5b28089f62c325e93a1d
+3d8e633956ac4d8a249c5b28089f62c325e93a1d,3d8e6339,Inform user of the next break using notification text.,"Inform user of the next break using notification text.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466298562,1466298562,8925080d0fbc07f0c759a1bdf39ef72df80bee01
+8925080d0fbc07f0c759a1bdf39ef72df80bee01,8925080d,Merge pull request #8 from ronaldsmartin/add-secondary-progress,"Merge pull request #8 from ronaldsmartin/add-secondary-progress
+
+Add secondary progress",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466278903,1466278903,"b1f5ded1cd73b98a384fa97f65623101874f5e16,033cd0d1d68ede5f59a3384b779c64c8c38abe36"
+033cd0d1d68ede5f59a3384b779c64c8c38abe36,033cd0d1,Use dimens file to store progress ring radius ratios.,"Use dimens file to store progress ring radius ratios.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466276447,1466276447,1d3e6ba8c683f379f1ad203f34bf1af928f8d972
+1d3e6ba8c683f379f1ad203f34bf1af928f8d972,1d3e6ba8,Move timer button dimensions to dimen values.,"Move timer button dimensions to dimen values.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466275340,1466275340,0908cad1c0575d53b7f2af39313fbeaa5cad0afd
+0908cad1c0575d53b7f2af39313fbeaa5cad0afd,0908cad1,Change timer progress to a more visible color in night mode.,"Change timer progress to a more visible color in night mode.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466273868,1466273868,113b43546f579475f997eb64eea62a3448ba6983
+113b43546f579475f997eb64eea62a3448ba6983,113b4354,Let TimerActivity animate its layout changes.,"Let TimerActivity animate its layout changes.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466227785,1466227785,15bd236fdf337c3b19bf9312dc1cbb3889ac2228
+15bd236fdf337c3b19bf9312dc1cbb3889ac2228,15bd236f,Update major progress bar using the minutes in the current cycle.,"Update major progress bar using the minutes in the current cycle.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466194823,1466194823,920a7909e6f0abea44a8dda34c52dc70c6a1193a
+920a7909e6f0abea44a8dda34c52dc70c6a1193a,920a7909,Reverse notification title and message.,"Reverse notification title and message.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466193043,1466193043,df99443394cf5fe84c6eee292cd95f9d571a110a
+df99443394cf5fe84c6eee292cd95f9d571a110a,df994433,Refactor timer Observables using factory functions.,"Refactor timer Observables using factory functions.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466192926,1466192926,efd0cb1368626d10c56dd4c7052a6aae584cc48d
+efd0cb1368626d10c56dd4c7052a6aae584cc48d,efd0cb13,Adjust color of timer inner-ring.,"Adjust color of timer inner-ring.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466191376,1466191376,a1b36dfef8b93aa6961d567c36a1fc744caacff0
+a1b36dfef8b93aa6961d567c36a1fc744caacff0,a1b36dfe,Add inner progress ring to layout.,"Add inner progress ring to layout.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466190108,1466190108,637f7ea49512e204ab23e2f18dd24e689579ab09
+637f7ea49512e204ab23e2f18dd24e689579ab09,637f7ea4,Upgrade constraint layout library to v1.0.0-alpha3,"Upgrade constraint layout library to v1.0.0-alpha3
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466190008,1466190008,b1f5ded1cd73b98a384fa97f65623101874f5e16
+b1f5ded1cd73b98a384fa97f65623101874f5e16,b1f5ded1,Merge pull request #7 from ronaldsmartin/day-night-mode,"Merge pull request #7 from ronaldsmartin/day-night-mode
+
+Day Night mode - text",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466186442,1466186442,"bc2bf65efb2ddd2a0a99a2c2c9f59d31da8109b9,1a463200eb6359e54afa0e670ac54ff40a1d37e9"
+1a463200eb6359e54afa0e670ac54ff40a1d37e9,1a463200,Replace dummy buttons with day-night tinted image buttons.,"Replace dummy buttons with day-night tinted image buttons.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466185996,1466185996,178e35244494d8cbf643345e3131307a61235921
+178e35244494d8cbf643345e3131307a61235921,178e3524,Provide up navigation for Settings activity.,"Provide up navigation for Settings activity.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466150211,1466150211,974205af3df216317d5caccf4daa7d9cc623ba2b
+974205af3df216317d5caccf4daa7d9cc623ba2b,974205af,Rename activity_main layout to activity_timer.,"Rename activity_main layout to activity_timer.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466149877,1466149877,3fea7400dbb781c9709987d6bd05e0cbb8863ed0
+3fea7400dbb781c9709987d6bd05e0cbb8863ed0,3fea7400,Text color respects day-night mode in activity_main,"Text color respects day-night mode in activity_main
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466149000,1466149000,bc2bf65efb2ddd2a0a99a2c2c9f59d31da8109b9
+bc2bf65efb2ddd2a0a99a2c2c9f59d31da8109b9,bc2bf65e,Merge pull request #6 from ronaldsmartin/timer-logic,"Merge pull request #6 from ronaldsmartin/timer-logic
+
+Timer logic Part I",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466147556,1466147556,"e98bdb75b5bbbc086e426a231968fc3f8f8bd1bd,eecfcc2e2057feb508151f91ea212f3d28bc4eaf"
+eecfcc2e2057feb508151f91ea212f3d28bc4eaf,eecfcc2e,Upgrade Kotlin version to 1.0.2-1,"Upgrade Kotlin version to 1.0.2-1
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466147007,1466147007,8092b30ab516e6d7a36aa046f7daa61d92d25952
+8092b30ab516e6d7a36aa046f7daa61d92d25952,8092b30a,Fix bug where pausing cycle broke the time left calculation.,"Fix bug where pausing cycle broke the time left calculation.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466125093,1466125093,552c4f5b413aa71ca9ca1a7707ec860e2ba52ea9
+552c4f5b413aa71ca9ca1a7707ec860e2ba52ea9,552c4f5b,Display notification at the end of each cycle.,"Display notification at the end of each cycle.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466125035,1466125035,52f2caca182dee93fdfe3efcab530e50dffb8063
+52f2caca182dee93fdfe3efcab530e50dffb8063,52f2caca,Format cycle time left and display immediately on start.,"Format cycle time left and display immediately on start.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466123092,1466123092,768c8c916cda63b0471b1c497641b960ac217aff
+768c8c916cda63b0471b1c497641b960ac217aff,768c8c91,Change FAB icon based on Paused/Playing state.,"Change FAB icon based on Paused/Playing state.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466121681,1466121681,08c347829ef88ed1be9cb420c7dc5c6c9f79b5b4
+08c347829ef88ed1be9cb420c7dc5c6c9f79b5b4,08c34782,Implement basic cycling timer logic with Rx,"Implement basic cycling timer logic with Rx
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466118262,1466118262,cedebc9891011ff06c5344ea1a36784a4843ecb2
+cedebc9891011ff06c5344ea1a36784a4843ecb2,cedebc98,Add TextView to timer layout to display time left.,"Add TextView to timer layout to display time left.
+",,,,Ronald Martin,ronaldsmartin@gmail.com,Ronald Martin,ronaldsmartin@gmail.com,1466117983,1466117983,e98bdb75b5bbbc086e426a231968fc3f8f8bd1bd
+e98bdb75b5bbbc086e426a231968fc3f8f8bd1bd,e98bdb75,Merge pull request #5 from ronaldsmartin/help-feedback-chrome-tab,"Merge pull request #5 from ronaldsmartin/help-feedback-chrome-tab
+
+Help/Feedback Chrome Tab",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466036335,1466036335,"fa05a36d56b3216623c2343bd0c999258cfa4476,94cc2e0abf1a09b3dc29d74047fbc2663b2f0fb4"
+94cc2e0abf1a09b3dc29d74047fbc2663b2f0fb4,94cc2e0a,Add default implementations for presenters' activity lifecycle functions.,"Add default implementations for presenters' activity lifecycle functions.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466035034,1466035480,f86303096f5295aaf311207bee77b252bd2101b3
+f86303096f5295aaf311207bee77b252bd2101b3,f8630309,Add referrer to Help/Feedback custom tab.,"Add referrer to Help/Feedback custom tab.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466034667,1466034667,d21f8a027da1c17869acb5904b3967113be0c41f
+d21f8a027da1c17869acb5904b3967113be0c41f,d21f8a02,Open custom chrome tab to GitHub issues on Help &Feedback press.,"Open custom chrome tab to GitHub issues on Help &Feedback press.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466033247,1466033247,9571922fb9d1389257a545f7954aa0bcaa159e23
+9571922fb9d1389257a545f7954aa0bcaa159e23,9571922f,"Always show Settings, Help & feedback in overflow menu.","Always show Settings, Help & feedback in overflow menu.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466033166,1466033166,6bf413f8c27f585a88d1e64af89330cf28c15108
+6bf413f8c27f585a88d1e64af89330cf28c15108,6bf413f8,Add Chrome Custom Tabs dependency to Gradle.,"Add Chrome Custom Tabs dependency to Gradle.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465621289,1466026159,fa05a36d56b3216623c2343bd0c999258cfa4476
+fa05a36d56b3216623c2343bd0c999258cfa4476,fa05a36d,Merge pull request #4 from ronaldsmartin/refactor-mvp,"Merge pull request #4 from ronaldsmartin/refactor-mvp
+
+Refactor TimerActivity",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1466025741,1466025741,"75e8bfe5ccdda34bd8bc562d6f15a3161a4941ad,90cc913a1f3cce942a964b89655b3ea78c48032c"
+90cc913a1f3cce942a964b89655b3ea78c48032c,90cc913a,Factor out other calls to findViewById in TimerActivity.,"Factor out other calls to findViewById in TimerActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466025629,1466025629,d143aa5e234464202c984a685c64660db65e5ebb
+d143aa5e234464202c984a685c64660db65e5ebb,d143aa5e,Upgrade Dagger to v2.4.,"Upgrade Dagger to v2.4.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466014664,1466014664,c5f4d846a48a102a880eba8d45a0b9fbee346b6b
+c5f4d846a48a102a880eba8d45a0b9fbee346b6b,c5f4d846,Remove Android annotations processor plugin from class path.,"Remove Android annotations processor plugin from class path.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1466014088,1466014088,de400e00e6fa04b6cf3ed96b6166850c8fde3259
+de400e00e6fa04b6cf3ed96b6166850c8fde3259,de400e00,Turn off code minification in debug builds.,"Turn off code minification in debug builds.
+
+This prevents conflicts between Dagger 2.2 and kotlin-android-extensions.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465977871,1466012071,1f5241dc3055573b26bf3f55ff6780fd72a55901
+1f5241dc3055573b26bf3f55ff6780fd72a55901,1f5241dc,Refactor TimerActivity using kotlin-android-extensions.,"Refactor TimerActivity using kotlin-android-extensions.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465968939,1465968939,191436bc341326dc0ec63a22219441ae9f712ea3
+191436bc341326dc0ec63a22219441ae9f712ea3,191436bc,Rollback to constraint-layout lib v1.0.0-alpha1 due to runtime errors.,"Rollback to constraint-layout lib v1.0.0-alpha1 due to runtime errors.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465961009,1465961009,5356cb207c68a6675e89836fa50ad0a3785e99b9
+5356cb207c68a6675e89836fa50ad0a3785e99b9,5356cb20,Use Dagger to inject MVP dependencies in .timer package.,"Use Dagger to inject MVP dependencies in .timer package.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465955651,1465955651,757ca396f4156aa66425ec8f46fa82f4842b3df4
+757ca396f4156aa66425ec8f46fa82f4842b3df4,757ca396,Remove nullability from abstract View and Presenter properties to work with lateinit.,"Remove nullability from abstract View and Presenter properties to work with lateinit.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465955417,1465955417,a35aa6da3ce34910b5df9500836b7cb07029b3a0
+a35aa6da3ce34910b5df9500836b7cb07029b3a0,a35aa6da,Use Katlin annotation processor instead of Android apt plugin.,"Use Katlin annotation processor instead of Android apt plugin.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465949902,1465949902,2653a39980b4c9c2380d18fb5482ef4bafb6e838
+2653a39980b4c9c2380d18fb5482ef4bafb6e838,2653a399,Update Support Constraint Layout Library to v1.0.0-alpha2.,"Update Support Constraint Layout Library to v1.0.0-alpha2.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465943296,1465943296,68e4864bc8596b64531821e5290958b403c4236c
+68e4864bc8596b64531821e5290958b403c4236c,68e4864b,Use default Gradle wrapper.,"Use default Gradle wrapper.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465943266,1465943266,a2150872d8255d97c180e5a58bf73416cddf0c4d
+a2150872d8255d97c180e5a58bf73416cddf0c4d,a2150872,Refactor MainActivity as MVP-based TimerActivity.,"Refactor MainActivity as MVP-based TimerActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465942010,1465942010,75e8bfe5ccdda34bd8bc562d6f15a3161a4941ad
+75e8bfe5ccdda34bd8bc562d6f15a3161a4941ad,75e8bfe5,Merge pull request #3 from ronaldsmartin/advanced-project-setup,"Merge pull request #3 from ronaldsmartin/advanced-project-setup
+
+Advanced project setup",,,,Ronald Martin,ronald@ronaldsmartin.com,GitHub,noreply@github.com,1465938784,1465938784,"5d2940308cc5dd23ff4967a7db6035b8ed68706c,78ade71411b8bda27edbc485bf2f795d70b6e2b1"
+78ade71411b8bda27edbc485bf2f795d70b6e2b1,78ade714,Prototype MVP architecture.,"Prototype MVP architecture.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465938410,1465938410,eea1a215f67b393fd0416516c683c422b3321832
+eea1a215f67b393fd0416516c683c422b3321832,eea1a215,Refactor: move to per-feature package model.,"Refactor: move to per-feature package model.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465861999,1465861999,365e49f6517cd2c6a2fcaa5a0936777d2ca382ea
+365e49f6517cd2c6a2fcaa5a0936777d2ca382ea,365e49f6,Install LeakCanary as gradle dependency.,"Install LeakCanary as gradle dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465673403,1465673403,e1fff6bd3e13c55d6b30ca88bffde9ee34982be9
+e1fff6bd3e13c55d6b30ca88bffde9ee34982be9,e1fff6bd,Use Timber in custom application class.,"Use Timber in custom application class.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465673383,1465673383,61d141f0a7d50f1fff0074f4e81e5ee98af301d8
+61d141f0a7d50f1fff0074f4e81e5ee98af301d8,61d141f0,Install Dagger 2 as grade dependency.,"Install Dagger 2 as grade dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465671560,1465671560,fe3b456ffb2c5098866043fd2ce7409e82d7a5c0
+fe3b456ffb2c5098866043fd2ce7409e82d7a5c0,fe3b456f,Install Timber logging lib as grade dependency.,"Install Timber logging lib as grade dependency.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465662982,1465662982,b79cdea13d4a6d53fe99b7819d6c6d8f978644ac
+b79cdea13d4a6d53fe99b7819d6c6d8f978644ac,b79cdea1,Install RxJava libs as grade dependencies.,"Install RxJava libs as grade dependencies.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465661347,1465662227,cbda657d180208d006801f922505864fe5a81012
+cbda657d180208d006801f922505864fe5a81012,cbda657d,Add Debug build config to allow installation alongside release builds.,"Add Debug build config to allow installation alongside release builds.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465626216,1465626216,cae4599e6521c916eb8d5b5a28d28a34cd46d752
+cae4599e6521c916eb8d5b5a28d28a34cd46d752,cae4599e,Pull tools and dependency versions to project root.,"Pull tools and dependency versions to project root.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465626181,1465626181,5d2940308cc5dd23ff4967a7db6035b8ed68706c
+5d2940308cc5dd23ff4967a7db6035b8ed68706c,5d294030,Merge pull request #2 from ronaldsmartin/day-night-mode,"Merge pull request #2 from ronaldsmartin/day-night-mode
+
+Day Night Mode - Part I",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465490878,1465490878,"2f4d8d204a52dd094ceb1397baada3b905285dab,3187c1cc0abb7776bc3443c7c20fd3be9411839a"
+3187c1cc0abb7776bc3443c7c20fd3be9411839a,3187c1cc,Generate SettingsActivity that links from the MainActivity's menu.,"Generate SettingsActivity that links from the MainActivity's menu.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465489862,1465489862,ab97666ab4f78c9d6e782881d85261e02bb401e8
+ab97666ab4f78c9d6e782881d85261e02bb401e8,ab97666a,Add MenuItems for Settings and Help to MainActivity.,"Add MenuItems for Settings and Help to MainActivity.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465456817,1465456817,e26b70c2a7ed59c5f7eb9212974cbcdb5f54d00e
+e26b70c2a7ed59c5f7eb9212974cbcdb5f54d00e,e26b70c2,Use AppCompat DayNight theme to switch colors automatically.,"Use AppCompat DayNight theme to switch colors automatically.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465449168,1465449168,2f4d8d204a52dd094ceb1397baada3b905285dab
+2f4d8d204a52dd094ceb1397baada3b905285dab,2f4d8d20,Create LICENSE.md,Create LICENSE.md,,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465427647,1465427647,bfeab0c8945e08504824b2600debbfe39ce7bbec
+bfeab0c8945e08504824b2600debbfe39ce7bbec,bfeab0c8,Merge pull request #1 from ronaldsmartin/create-main-layout,"Merge pull request #1 from ronaldsmartin/create-main-layout
+
+Create main layout",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465427473,1465427473,"2f0407f8d1835a886c7fe7c2501c4df8a0a7d3d5,b2558319b7c5ea9beb9689248b249797753af5cc"
+b2558319b7c5ea9beb9689248b249797753af5cc,b2558319,Use Theme windowBackground to set background colors.,"Use Theme windowBackground to set background colors.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465426941,1465426941,ff0b95f88425d286602261154d3b5d6ffa521eef
+ff0b95f88425d286602261154d3b5d6ffa521eef,ff0b95f8,Use Solarized color palette.,"Use Solarized color palette.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465426292,1465426292,fe39b0cc6d730fffdc14e9adc6401f197017bb96
+fe39b0cc6d730fffdc14e9adc6401f197017bb96,fe39b0cc,Use fitsSystemWindows to position controls correctly outside of fullscreen mode.,"Use fitsSystemWindows to position controls correctly outside of fullscreen mode.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465426256,1465426256,c9e5e9a48e06fe1859b906d49263042d4de20410
+c9e5e9a48e06fe1859b906d49263042d4de20410,c9e5e9a4,Switch to Gradle plugin 2.2.0-alpha2 to enable Instant Run in Android Studio 2.2-preview2.,"Switch to Gradle plugin 2.2.0-alpha2 to enable Instant Run in Android Studio 2.2-preview2.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465424822,1465424822,f17f6da2a9d3923da1ebe649b9d97e545d8acc0c
+f17f6da2a9d3923da1ebe649b9d97e545d8acc0c,f17f6da2,Build skeleton layout.,"Build skeleton layout.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465424672,1465424672,2f0407f8d1835a886c7fe7c2501c4df8a0a7d3d5
+2f0407f8d1835a886c7fe7c2501c4df8a0a7d3d5,2f0407f8,Set up Kotlin usage in project.,"Set up Kotlin usage in project.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465415767,1465415767,98806e91f0bc9027f4064da211f04af9759c56fe
+98806e91f0bc9027f4064da211f04af9759c56fe,98806e91,Generate Android Studio project.,"Generate Android Studio project.
+",,,,Ronald Martin,ronald@ronaldsmartin.com,Ronald Martin,ronald@ronaldsmartin.com,1465359317,1465359317,

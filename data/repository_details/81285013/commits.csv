@@ -1,0 +1,687 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+a58e49ddaa4cb63073f5305de0600b72773e2d17,a58e49dd,Merge pull request #32 from Austin-Ray/develop,"Merge pull request #32 from Austin-Ray/develop
+
+Implement last minute changes",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1499822892,1499822892,"86826de02f585ade78c3d8fa2390ce60aca4d78a,5ab8407b15cd548a8c5841a8d2f53acea645f15f"
+5ab8407b15cd548a8c5841a8d2f53acea645f15f,5ab8407b,Implement last minute changes,"Implement last minute changes
+
+Implemented a few last minute changes before the release. This includes
+a fix to a null pointer exception that was occurring on rotation.
+
+Additionally, several changes to the layout were added to improve the
+visual aesthetics.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1499309442,1499309442,61f17beeea86d5443df5551970efa941c0029fc0
+86826de02f585ade78c3d8fa2390ce60aca4d78a,86826de0,Merge pull request #31 from Austin-Ray/develop,"Merge pull request #31 from Austin-Ray/develop
+
+Merge develop into master for release",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1499230495,1499230495,"f7c834ab6693d769f5f27f1c3b2e6c2c8982a9a8,61f17beeea86d5443df5551970efa941c0029fc0"
+61f17beeea86d5443df5551970efa941c0029fc0,61f17bee,Merge pull request #30 from Austin-Ray/release-unit-tests,"Merge pull request #30 from Austin-Ray/release-unit-tests
+
+Release unit tests",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1499129900,1499129900,"56ef615a7699bdfdb36624c1f2fe53a3b0edefb9,8a80e256315608abc978b4429c23c61975bb9b05"
+8a80e256315608abc978b4429c23c61975bb9b05,8a80e256,Lint project,"Lint project
+
+Ran the linter and static analysis tool on the codebase. Incorporated
+the majority of recommendations that were subjected. Some changes were
+ignored as they affected compilation (e.g. Butterknife annotates)
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1499129244,1499129244,28e7e8c9bf694c9dfee0378345fd17a40768846d
+28e7e8c9bf694c9dfee0378345fd17a40768846d,28e7e8c9,Fix issue with merge conflict,"Fix issue with merge conflict
+
+Fixed an issue where the merge conflict resolution did not properly
+update the file in the release-unit-tests branch.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1499063722,1499063722,271d62379d90a7aeed9f36cee9dac3f63770b49c
+271d62379d90a7aeed9f36cee9dac3f63770b49c,271d6237,Merge branch 'ae-release-unit-tests' into release-unit-tests,"Merge branch 'ae-release-unit-tests' into release-unit-tests
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1499063572,1499063572,"e032de3ec9ca7b8e45718410e9013531b0858b56,37b19157120954b2beeedf49a23cd5f53027a150"
+37b19157120954b2beeedf49a23cd5f53027a150,37b19157,Resolve test issues and add comments,"Resolve test issues and add comments
+
+Resolved previous test issues and added additional comments.
+Broke tests into individual methods and implemented assertEquals
+in place of assert.  Currently passes all tests.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1499051949,1499051949,1ddf5fb70444cb7845ffbea0692fb704bc991cb3
+1ddf5fb70444cb7845ffbea0692fb704bc991cb3,1ddf5fb7,Add unit tests for util package,"Add unit tests for util package
+
+Added unit tests for util package to test sql classes.  Refractored
+original SqlLiteHelperTest to kotlin.  Increased util package code
+coverage to 89%.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1498966225,1498966225,80960ceafb422d5616587bebd45db14ab12ccd9b
+80960ceafb422d5616587bebd45db14ab12ccd9b,80960cea,Add tests for util package,"Add tests for util package
+
+Added SQL tests and refactored original SqlLiterHelperTest class to
+kotlin.  Increased util package code coverage to 80%+
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1498964280,1498964280,96482b6a9fe60bd276e3924c22539f4e6f65bdff
+e032de3ec9ca7b8e45718410e9013531b0858b56,e032de3e,Fix unit test,"Fix unit test
+
+Unit test was broken because a mock object lacked a proper mock method
+call.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498960294,1498960294,d11b0679b6abd0fc042569996ae395e4683158e5
+d11b0679b6abd0fc042569996ae395e4683158e5,d11b0679,Fix improper Gradle configuration,"Fix improper Gradle configuration
+
+Fixed an issue with the jacocoDebugReport and jacocoReleaseReport task
+configuration. Several critical lines were not in the previous commit.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498959452,1498959452,bb57afcc155be4d36f6117355ce661a66e48299a
+bb57afcc155be4d36f6117355ce661a66e48299a,bb57afcc,Increase coverage for io.ray.hexis.view to 96%,"Increase coverage for io.ray.hexis.view to 96%
+
+Increased the unit test coverage for the io.ray.hexis.view package to
+96% according to the local JaCoCo report.
+
+Discrepancies between CodeCov and local reports are bound to occur This
+commit includes a new Gradle task to reduce the variation in coverage
+percentages. To use the new report run jacocoDebugReport or
+jacocoReleaseReport and open the HTML file in app/build/reports/jacoco
+to view the results. I am currently exploring a way have to report
+appear in Android Studio.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498891196,1498891196,96482b6a9fe60bd276e3924c22539f4e6f65bdff
+96482b6a9fe60bd276e3924c22539f4e6f65bdff,96482b6a,Improve unit test coverage,"Improve unit test coverage
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498873705,1498873705,a36bbdb1715b14985ee2cb3df4b319e37bf82642
+a36bbdb1715b14985ee2cb3df4b319e37bf82642,a36bbdb1,Refactor MatrixPresenter.kt,"Refactor MatrixPresenter.kt
+
+Refactored the MatrixPresenter.kt file to remove the use of Kotlin's
+non-null operator. The usage of the non-null operator is not good
+practice. Additionally, it messed up the code coverage for the
+MatrixPresenter as the generated Java bytecode has hidden branching.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498868727,1498868727,22a23c03d1e9b6a5ff1a1567a3bad261f6aa83d7
+22a23c03d1e9b6a5ff1a1567a3bad261f6aa83d7,22a23c03,Increase test coverage for model and presenters,"Increase test coverage for model and presenters
+
+Increase the unit test coverage for the model and presenters packages.
+Android Studio is reporting 100% coverage for both packages.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1498700306,1498700306,56ef615a7699bdfdb36624c1f2fe53a3b0edefb9
+56ef615a7699bdfdb36624c1f2fe53a3b0edefb9,56ef615a,Merge pull request #28 from Austin-Ray/icon-description-ar,"Merge pull request #28 from Austin-Ray/icon-description-ar
+
+Icon description ar",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1497755708,1497755708,"58ebf61b84ee9aa3423463b9ad8f8ce61cf4f881,5b8174c797082048956a2fcc79bc026c7f25b8c5"
+5b8174c797082048956a2fcc79bc026c7f25b8c5,5b8174c7,Modify README description,"Modify README description
+
+Improved upon the first draft to include more marketing fluff and make
+the description sound better. The first paragraph can be used as the
+description on Android app stores.
+
+Signed-off-by: Austin Ray <austinray1995@gmail.com>
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1496320326,1496320462,549c50e08933f1dec478fa59e1df255da1fce48f
+549c50e08933f1dec478fa59e1df255da1fce48f,549c50e0,Add personal draft,"Add personal draft
+
+Added my personal copy of the IconDescription branch so that I can make
+my own revisions to the README without interrupting anyone else.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1495718775,1495718775,3465fd85fb65195b3cd85266dff406710ba19c59
+58ebf61b84ee9aa3423463b9ad8f8ce61cf4f881,58ebf61b,Merge pull request #27 from Austin-Ray/refactor-sql-layer,"Merge pull request #27 from Austin-Ray/refactor-sql-layer
+
+Refactor sql layer",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1495324815,1495324815,"afffce80986b3f56c8674f63da83804271f3e4e2,b93ceb03717ded5c1383756031244bbf53d37d62"
+b93ceb03717ded5c1383756031244bbf53d37d62,b93ceb03,Additional coverage for MatrixPresenter unit test,"Additional coverage for MatrixPresenter unit test
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1495318616,1495318616,d4ebe5b8895ad30af43e61d2169eecfa042b9d81
+d4ebe5b8895ad30af43e61d2169eecfa042b9d81,d4ebe5b8,Add documentation and unit tests,"Add documentation and unit tests
+
+Configured the build.gradle file to pull in the Dokka documentation
+plugin for Kotlin. Javadocs can now be generated for Kotlin files.
+
+Additionally, the MatrixPresenter class now has full unit testing
+coverage. This unit test is written in Kotlin so it is officially the
+first Kotlin unit test file.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1493525423,1493525423,a9db888919ddf401ad17052c802a063adb768ec3
+a9db888919ddf401ad17052c802a063adb768ec3,a9db8889,Refactor SQL code,"Refactor SQL code
+
+Refactored the SQL code in the various views and presenters to have it
+all in the MatrixPresenter. This makes each class adhere more to the
+single responsibility principle. Additionally, it reduces the repetition
+of code in several spots.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1493354678,1493354678,afffce80986b3f56c8674f63da83804271f3e4e2
+3465fd85fb65195b3cd85266dff406710ba19c59,3465fd85,Update README.md,Update README.md,,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1492825679,1492825679,06a7ef818ff850324459b0f18930278ea87cd9fe
+06a7ef818ff850324459b0f18930278ea87cd9fe,06a7ef81,Update app icon,"Update app icon
+
+Updated app icons with new
+material design based icon.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1492825145,1492825145,afffce80986b3f56c8674f63da83804271f3e4e2
+afffce80986b3f56c8674f63da83804271f3e4e2,afffce80,Merge pull request #26 from Austin-Ray/CompletionBugFix,"Merge pull request #26 from Austin-Ray/CompletionBugFix
+
+Fix completion status update bug",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1492224476,1492224476,"50eaa6b369cce52ac84a3b283e3c0a6763dd738b,3b083fa864f2e0ccc9e7e4aad3d814c1c8507ae0"
+3b083fa864f2e0ccc9e7e4aad3d814c1c8507ae0,3b083fa8,Fix completion status update bug,"Fix completion status update bug
+
+Updated QuadrantFragment to update item
+data model on completion status change.
+Added sql database update methods in QuadrantFragment
+to save completion status changes.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1492197422,1492197422,50eaa6b369cce52ac84a3b283e3c0a6763dd738b
+50eaa6b369cce52ac84a3b283e3c0a6763dd738b,50eaa6b3,Merge pull request #24 from Austin-Ray/move-items-edit-dialog,"Merge pull request #24 from Austin-Ray/move-items-edit-dialog
+
+Move QuadrantItems between Quadrants",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1492133596,1492133596,"46457137dfccb4081749579b70999298404d51e4,70c87bc840a04cfef33a7b96a104f9104eae326b"
+70c87bc840a04cfef33a7b96a104f9104eae326b,70c87bc8,Refactor previous commit,"Refactor previous commit
+
+Refactored the code added in the previous commit. In this commit,
+AddItemDialogFragment and EditItemDialogFragment have had similar code
+merged into a new parent class, ModifyItemDialogFragment.
+
+Tests have been added to completely cover AddItemDialogFragment and
+EditItemDialogFragment.
+
+NOTE: The .gradle folder needs to be deleted before unit tests will run
+properly due to Robolectric cache files.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1492131017,1492131017,00247b1f7b81d1e16d77b8ec3cc029de73b02316
+00247b1f7b81d1e16d77b8ec3cc029de73b02316,00247b1f,Implement changing existing items' quadrant,"Implement changing existing items' quadrant
+
+Created a rough implementation for moving QuadrantItems between
+quadrants. In order to accomplish this, MVP had to be broken slightly to
+allow a IQuadrantPresenter to fetch data from IMatrixPresenter.
+Otherwise, the Quadrant layer of code would not be able to swap between
+fragments.
+
+Code added in this commit needs to be refactored to reduce its length
+and to simplify logic. This is not final code and will require a
+refactor being being merged into develop
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1492028124,1492028124,dfbcfff0f6680625640be3b34f14d58e033b0ad7
+dfbcfff0f6680625640be3b34f14d58e033b0ad7,dfbcfff0,Refactor code to simplify logic,"Refactor code to simplify logic
+
+Refactored the code to simplify the logic when dealing with
+QuadrantItems. Several case dependent methods have been replaced with
+general methods that take in the modified parameter.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1492021718,1492021718,46457137dfccb4081749579b70999298404d51e4
+46457137dfccb4081749579b70999298404d51e4,46457137,Merge pull request #23 from Austin-Ray/CompletionStatus,"Merge pull request #23 from Austin-Ray/CompletionStatus
+
+Completion status",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1492003797,1492003797,"5a5f47c52e6f03fd2ed1835e162ab90ed46ec99d,6209937648a13570a6f7da0033301b6830b6e359"
+6209937648a13570a6f7da0033301b6830b6e359,62099376,Add completion status feature,"Add completion status feature
+
+Updated existing completion status
+feature to allow for sql database
+updates.  Added setCompletion method
+to QuadrantItem class to set completion
+value in item model.
+Fixed bug in sql that caused item message
+text to be set to item id.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1491974684,1491974684,f811101788c7a19648d2a57eb3d3f52916c930e0
+f811101788c7a19648d2a57eb3d3f52916c930e0,f8111017,Merge remote-tracking branch 'origin/develop' into CompletionStatus,"Merge remote-tracking branch 'origin/develop' into CompletionStatus
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1491967554,1491967554,"a81689c535003fdbdc94cb82cbc74604dcd074f5,5a5f47c52e6f03fd2ed1835e162ab90ed46ec99d"
+5a5f47c52e6f03fd2ed1835e162ab90ed46ec99d,5a5f47c5,Merge pull request #22 from Austin-Ray/refactor-sql-code,"Merge pull request #22 from Austin-Ray/refactor-sql-code
+
+Refactor QuadrantItem SQL code",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1491958540,1491958540,"2693f22c4eee7a93a3473630c0b6e1b88965afed,6fc313752d9bd1f46af0406b1aa53a8952d4f4cb"
+6fc313752d9bd1f46af0406b1aa53a8952d4f4cb,6fc31375,Refactor QuadrantItem SQL code,"Refactor QuadrantItem SQL code
+
+Refactored QuadrantItemReader and QuadrantItemWriter to inherit from
+QuadrantItemSqlInterator. The reader and writer now share some methods
+that are used by both. Previous implementation had the writer
+instantiating a reader to check if it exists.
+
+The main goal of the refactor was to reduce the amount of code to
+prevent use of case dependent methods. Lower level code was implemented
+to update an SQL row given an item, quadrant number, and/or goal number.
+Furthermore, querying information in a column can be down via higher
+level methods that call a lower level method. The lower level method
+will return whatever type in the that position; however, casting is
+necessary.
+
+SQL code for GoalReader and GoalWriter needs to be refactored, but was
+not touched in this refactoring period due to not being used.
+
+Static analysis was used on all the SQL code.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491955526,1491956101,2693f22c4eee7a93a3473630c0b6e1b88965afed
+a81689c535003fdbdc94cb82cbc74604dcd074f5,a81689c5,Add completion status feature,"Add completion status feature
+
+Changed item TextView to CheckedTextView.
+Updated QuadrantFragment and QuadrantItemViewHolder/QuadrantViewHolder
+to use CheckedTextView instead of TextView for items.
+Added OnItemClick listener to QuadrantViewAdapter.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1491942017,1491942017,2693f22c4eee7a93a3473630c0b6e1b88965afed
+2693f22c4eee7a93a3473630c0b6e1b88965afed,2693f22c,Merge pull request #21 from Austin-Ray/DialogTitle,"Merge pull request #21 from Austin-Ray/DialogTitle
+
+Dialog title",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1491935379,1491935379,"29a1068e801e4b1dee824f0254f829878b0f43ec,d66d1ff6c116db356a35287a7263d73e2d7b6366"
+d66d1ff6c116db356a35287a7263d73e2d7b6366,d66d1ff6,Add titles to dialogs,"Add titles to dialogs
+
+Added titles to dialog fragments.
+Added TextView for title in fragment_add_item_dialog
+layout file.  Modified AddItemDialogFragment
+and EditItemDialogFragment to include title
+TextView and set title accordingly.
+",,,,Andrew,Andrewgevans95@gmail.com,Andrew,Andrewgevans95@gmail.com,1491883439,1491883439,29a1068e801e4b1dee824f0254f829878b0f43ec
+29a1068e801e4b1dee824f0254f829878b0f43ec,29a1068e,Merge pull request #20 from Austin-Ray/card-view,"Merge pull request #20 from Austin-Ray/card-view
+
+Pull QuadrantItemViewHolder card layout",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1491879422,1491879422,"4dee8bbb2ab93b2f4315a82e21f3c3da1d3ef882,f56c3c91d2eb991ba09fa6132a220c95f84cad85"
+f56c3c91d2eb991ba09fa6132a220c95f84cad85,f56c3c91,Fix Android Lint error in unit tests,"Fix Android Lint error in unit tests
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491870558,1491871080,643ae4f84dacb7b82aa43dda40e244a8bcfc792b
+643ae4f84dacb7b82aa43dda40e244a8bcfc792b,643ae4f8,Remove test for navigation drawer,"Remove test for navigation drawer
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491869422,1491869558,c769d2db2704ed70997a6ea47e298dfd001297fd
+c769d2db2704ed70997a6ea47e298dfd001297fd,c769d2db,Implement CardView for QuadrantItem,"Implement CardView for QuadrantItem
+
+Implemented a CardView for the QuadrantItems. Additionally, removed the
+files for the navigation drawer to prevent it from appearing in the app.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491868888,1491868888,4dee8bbb2ab93b2f4315a82e21f3c3da1d3ef882
+4dee8bbb2ab93b2f4315a82e21f3c3da1d3ef882,4dee8bbb,Merge pull request #19 from Austin-Ray/bug-fix,"Merge pull request #19 from Austin-Ray/bug-fix
+
+Fix Issue #18",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1491798902,1491798902,"f6e9abd8904ebb12b4c2cb43e94a1f17029328b5,5095f46031f1672d6e4313d260242b99ec9da434"
+5095f46031f1672d6e4313d260242b99ec9da434,5095f460,Fix Issue #18,"Fix Issue #18
+
+Fixed Issue #18 (https://github.com/Austin-Ray/Hexis/issues/18). The
+issue did not result from the add item code as previously suspected, but
+rather from the code that inflated the ViewHolder.
+
+The issue was due to the ViewHolder being inflated to the same size as
+the RecyclerView. The additional items were there; however, since each
+ViewHolder was as large as the RecyclerView the other items did not
+appear to exist. If you scrolled the RecyclerView you could find the
+other items.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491797862,1491797862,f6e9abd8904ebb12b4c2cb43e94a1f17029328b5
+f6e9abd8904ebb12b4c2cb43e94a1f17029328b5,f6e9abd8,Merge pull request #17 from Austin-Ray/add-items-checks,"Merge pull request #17 from Austin-Ray/add-items-checks
+
+Add items checks",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1491608997,1491608997,"cec4a3f72b535ea9683ff23bc1646dd0d98149ae,8c54855886cde9cf83404274cc659cec8f26d359"
+8c54855886cde9cf83404274cc659cec8f26d359,8c548558,Clean code via static analysis,"Clean code via static analysis
+
+Cleaned the code base using static analysis tools and Checkstyle.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491604620,1491604620,1977e944747189380ee3b65544695d3d4854ad2f
+1977e944747189380ee3b65544695d3d4854ad2f,1977e944,Fix regression bug,"Fix regression bug
+
+Fixed a regression bug that prevented the items from being editted or
+saved. This was introduced when checking if the string was empty or not
+due to using the wrong addItem() method.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491597770,1491597770,d4e4dba45d12d3aacf7f3a73b5c6595deee1097e
+d4e4dba45d12d3aacf7f3a73b5c6595deee1097e,d4e4dba4,Implement add item check,"Implement add item check
+
+Implemented a rudimentary add item check that prevents empty strings
+from being added to the list.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491589846,1491589846,cec4a3f72b535ea9683ff23bc1646dd0d98149ae
+cec4a3f72b535ea9683ff23bc1646dd0d98149ae,cec4a3f7,Merge pull request #16 from Austin-Ray/RemoveItems,"Merge pull request #16 from Austin-Ray/RemoveItems
+
+Remove items",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1491535068,1491535068,"b7ff15f5ce825e5e50def62cbc8efe8c61e4987a,b754cb6b660833dc088afa2ffe571772be80227f"
+b754cb6b660833dc088afa2ffe571772be80227f,b754cb6b,Fix remove item reappearance bug,"Fix remove item reappearance bug
+
+Fixed the bug where deleted items would reappear if the app was
+minimized then resumed. The bug appeared because the data storage wasn't
+being informed of the deletion. Deletion was occuring in the view space
+and changes were not being propagated to the model space.
+
+Deletion was moved to higher in the view space where the presenter space
+could update the model space. This resolved the bug.
+
+Additionally, the EditItemDialogFragmentTest needed to be modified to
+handle the changes. The resulting tests are more simplified than the
+previous tests; however, there are areas that could be improved.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1491531085,1491531085,dedca5c90d4aad8ce813b410f493b0e120a9321a
+dedca5c90d4aad8ce813b410f493b0e120a9321a,dedca5c9,Implement remove item feature,"Implement remove item feature
+
+Added button to EditItemDialogFragment to
+allow user to delete selected item.  Updated
+QuadrantViewAdapter with new listener to
+delete an item.  Added delete item test
+to EditItemDialogFragmentTest class.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1490580720,1490580720,b7ff15f5ce825e5e50def62cbc8efe8c61e4987a
+b7ff15f5ce825e5e50def62cbc8efe8c61e4987a,b7ff15f5,Merge pull request #15 from Austin-Ray/google_style_format,"Merge pull request #15 from Austin-Ray/google_style_format
+
+Refactor non-test codebase to follow Google's Java",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1490503103,1490503103,"7446920a30e15a6f21cf249e7913d194da6bc68a,43b95ec582b165913bdb3422ad326a6a6aa4d2b3"
+43b95ec582b165913bdb3422ad326a6a6aa4d2b3,43b95ec5,Refactor non-test codebase to follow Google's Java,"Refactor non-test codebase to follow Google's Java
+
+Refactored the entire non-test related codebase to follow Google's
+guidelines for programming java. Use of the Checkstyle plugin allowed
+for determining what needed to be changed.
+
+All code from this moment forward shall be done using Google's
+guidelines. Code not abiding Google's guidelines will not be accepted
+into the codebase, unless by extreme exception.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1490501955,1490501955,7446920a30e15a6f21cf249e7913d194da6bc68a
+7446920a30e15a6f21cf249e7913d194da6bc68a,7446920a,Add sudo flag to .travis.yml,"Add sudo flag to .travis.yml
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1490477093,1490477093,4476e23718ef438b1e1f0b107dcada1ab1f82403
+4476e23718ef438b1e1f0b107dcada1ab1f82403,4476e237,Merge pull request #14 from Austin-Ray/EditItems,"Merge pull request #14 from Austin-Ray/EditItems
+
+Edit items",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1490421538,1490421538,"8cf35eb478d3fb62da35b9726c8fe5eb155806a2,10ad066b31d435aefbf6be2b919207cb7bcb611d"
+10ad066b31d435aefbf6be2b919207cb7bcb611d,10ad066b,Add tests for EditItemDialogFragment,"Add tests for EditItemDialogFragment
+
+Added tests for EditItemDialogFragment.  Code
+coverage is currently at 100 percent for this class.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1489543677,1489543677,cb7de886ca21aed30c3ee6f7e32d49c8cb94cc95
+cb7de886ca21aed30c3ee6f7e32d49c8cb94cc95,cb7de886,Implement EditItem feature,"Implement EditItem feature
+
+Added listener between EditItemDialogFragment and
+QuadrantViewAdapter.  Implement method to save udpated
+items in sql database.  Updated QuadrantItem class to
+include setMessage method for updating an item message.
+Added comments and formmated code.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1489457471,1489457471,22afbec9c3d43384d4a30edb941006958428cdba
+22afbec9c3d43384d4a30edb941006958428cdba,22afbec9,Add item OnLongClickListener,"Add item OnLongClickListener
+
+Added an onLongClickListener to detect
+longclick actions on single items in each
+quadrant.
+Added new addItem method to set item UID
+when a new item is created and added to a
+quadrant.
+Added and updated existing documentation in
+util package classes.
+Updated existing tests and added additional tests.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1488339720,1488339720,8cf35eb478d3fb62da35b9726c8fe5eb155806a2
+8cf35eb478d3fb62da35b9726c8fe5eb155806a2,8cf35eb4,Merge pull request #13 from Austin-Ray/LoadData,"Merge pull request #13 from Austin-Ray/LoadData
+
+Read Matrix data",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1488169387,1488169387,"a3bbf3cebac81d6c7da08ed10b2acf296b305423,d711e4d6e07900c5e51935a06b9af33baac63c66"
+d711e4d6e07900c5e51935a06b9af33baac63c66,d711e4d6,Read Matrix data,"Read Matrix data
+
+Matrix data can now be loaded on start up. Any item added to a matrix
+will now be saved to the SQL DB, and loaded on app startup.
+
+Additionally, in the AddItemOnClickListener, QuadrantFragment has been
+substituted for its abstract form in order to follow more closely to the
+SOLID design philosophy.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1488065683,1488065981,a3bbf3cebac81d6c7da08ed10b2acf296b305423
+a3bbf3cebac81d6c7da08ed10b2acf296b305423,a3bbf3ce,Merge pull request #12 from Austin-Ray/SQLiteHelper-ae,"Merge pull request #12 from Austin-Ray/SQLiteHelper-ae
+
+Sqlite helper ae",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1487883881,1487883881,"68d12f169f32066c2d3ace421b2dbe30712237ee,521c44f986860c203f19afd9d3f9a5ac433c2ca5"
+521c44f986860c203f19afd9d3f9a5ac433c2ca5,521c44f9,Add util documentation,"Add util documentation
+
+Added documention to sql classes within
+the util package.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487874240,1487874240,625becd2eb28f62906d3fa845fefb3d0eccdf831
+625becd2eb28f62906d3fa845fefb3d0eccdf831,625becd2,Add documention,"Add documention
+
+Added documentation to classed in previous
+commit.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487822830,1487822830,e0091d7584544a27e9034db71ff9e82dee288f58
+e0091d7584544a27e9034db71ff9e82dee288f58,e0091d75,Create SQL read/write classes,"Create SQL read/write classes
+
+Added classes to read and write to sqlite database.
+Added read/write classes to interact with Goal and
+GoalItems tables in sqlite database.  Updated AddItemDialog
+to save item to GoalItems table.  Cleaned up MainActivity.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487819715,1487819715,6c07e9f98df9affb6f5f4166378b2b2c60007b4f
+6c07e9f98df9affb6f5f4166378b2b2c60007b4f,6c07e9f9,Merge pull request #11 from Austin-Ray/read-write-sql,"Merge pull request #11 from Austin-Ray/read-write-sql
+
+Read write sql",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1487735933,1487735933,"c0832e05dd293c3f564844f63a5d4bcd3de4b718,e3f7891aa1d369317d62a3efc845a310d10baa0d"
+e3f7891aa1d369317d62a3efc845a310d10baa0d,e3f7891a,Implement rudimentary read for SQL DB,"Implement rudimentary read for SQL DB
+
+This commits include very rough code. It is only meant as a proof of
+concept. This code will require refactoring before it is properly
+incorporated into the development branch.
+
+While working on this branch, a flaw in the save implementation was
+discovered. The save implementation needs to be rewritten to include
+updating existing rows.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487700720,1487700720,732dcb44545cdc2e98e8198055f7875fbe31ac32
+732dcb44545cdc2e98e8198055f7875fbe31ac32,732dcb44,Implement rudimentary SQL write,"Implement rudimentary SQL write
+
+Implemented a rudimentary SQL write system for the SQL implementation
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487645253,1487645535,059f2fd75d77c480460f22549afd4a2e9ba55a94
+059f2fd75d77c480460f22549afd4a2e9ba55a94,059f2fd7,Add GoalsContract and QuadrantItemsContract,"Add GoalsContract and QuadrantItemsContract
+
+Added GoalsContract and QuadrantItemsContract to make management of SQL
+tables easier. This allows easy use of table names and columns through
+the use of static values.
+
+All hardcoded references to the tables have been modified to reflect the
+change. Changes to the tables should be significantly easier now.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487565123,1487565123,c0832e05dd293c3f564844f63a5d4bcd3de4b718
+c0832e05dd293c3f564844f63a5d4bcd3de4b718,c0832e05,Add SQLiteHelper class,"Add SQLiteHelper class
+
+Added SQLiteHelper class to create
+sqlite database.  Implemented option
+to purge database which may be needed
+during development and testing.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487559608,1487559608,68d12f169f32066c2d3ace421b2dbe30712237ee
+68d12f169f32066c2d3ace421b2dbe30712237ee,68d12f16,Merge pull request #10 from Austin-Ray/matrix-mvp,"Merge pull request #10 from Austin-Ray/matrix-mvp
+
+Matrix mvp",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1487478523,1487478523,"1ac1a0aa0c2e2341ef3f717038093d49a1d66dd0,d7a87e7238495eba0e382f7651ea0cf4ae2b5c4f"
+d7a87e7238495eba0e382f7651ea0cf4ae2b5c4f,d7a87e72,Implement MVP pattern on Quadrants,"Implement MVP pattern on Quadrants
+
+Implemented the MVP pattern on Quadrants. These changes were done to
+make the codebase more reusable and have less cohesion.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487476690,1487476690,2f8f78fa71912482f70ac95273cfacf254a3ee80
+2f8f78fa71912482f70ac95273cfacf254a3ee80,2f8f78fa,Add basic high level MVP model,"Add basic high level MVP model
+
+Added a basic high level MVP model for a Matrix. Further discussion is
+needed as to how to implement MVP on other layers such as the
+QuadrantLayer.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487473521,1487473521,1ac1a0aa0c2e2341ef3f717038093d49a1d66dd0
+1ac1a0aa0c2e2341ef3f717038093d49a1d66dd0,1ac1a0aa,Refactor codebase,"Refactor codebase
+
+Refactored codebase so that Java files are located within various
+packages. This is done to keep the file structure more organized.
+
+Retrolambda has been added a dependency to allow the use of lambdas,
+which should reduce line count in certain areas.
+
+Additionally, Gradle configuration files have been modified to hopefully
+prevent error 137 when building on Travis.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487388782,1487391239,f5960172127012711e5a910480636419a0a5e50d
+f5960172127012711e5a910480636419a0a5e50d,f5960172,Merge branch 'QuadrantChooser-ae' into develop,"Merge branch 'QuadrantChooser-ae' into develop
+
+Merged branch into develop. Furthermore, AddItemDialogFragment was
+refactored to be cleaner, more concise, and more useable.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487384858,1487384858,"bcc39d079ddea3c0c1b509c007e72f61facdceec,19a9de9fe85f7b40a47db473192d3b29fa599675"
+19a9de9fe85f7b40a47db473192d3b29fa599675,19a9de9f,Add button tests,"Add button tests
+
+Added tests for toggle button in dialog
+fragment.  Increased codecoverage for
+AddItemDialogFragment.
+
+Fix dialog tests
+
+Fixed dialog tests and update
+AddItemDialogFragment to include
+a method to get listener for tests.
+
+Update quadrant chooser
+
+Update AddItemDialogFragment to check
+button that corresponds with active quadrant.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487371768,1487381381,cee9a78b3fb96e3bfd91809f5e32cd98dc9242f8
+bcc39d079ddea3c0c1b509c007e72f61facdceec,bcc39d07,Merge pull request #8 from Austin-Ray/refactor-unit-tests,"Merge pull request #8 from Austin-Ray/refactor-unit-tests
+
+Refactor unit tests",,,,Andrew Evans,AndrewGEvans95@users.noreply.github.com,GitHub,noreply@github.com,1487373636,1487373636,"aa92f9fcf3d6121ff46cce8b95c604350907afcc,f8e18a2d6ceee3c71e28ceeff8326da5931239e2"
+cee9a78b3fb96e3bfd91809f5e32cd98dc9242f8,cee9a78b,Fix test issue,"Fix test issue
+
+Moved setOffScreenLimit to constructor
+to resolve ""FragmentManager is already executing transactions""
+errors.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487364091,1487364091,93ebac9c82b8406ceda0f86d182773b8a9206d2a
+93ebac9c82b8406ceda0f86d182773b8a9206d2a,93ebac9c,Add quadrant choice option,"Add quadrant choice option
+
+Updated to include toggle button logic.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487362258,1487362258,712ce3f24a674fb78965598e477997b4d4b18dea
+712ce3f24a674fb78965598e477997b4d4b18dea,712ce3f2,Add quadrant choice option,"Add quadrant choice option
+
+Added the option to chose which quadrant
+to add an item.  Added a method to allow for
+addition of an item to any specified quadrant.
+Updated fragment dialog layout to include four
+toggle buttons.
+",,,,Andrew Evans,Andrewgevans95@gmail.com,Andrew Evans,Andrewgevans95@gmail.com,1487362009,1487362009,aa92f9fcf3d6121ff46cce8b95c604350907afcc
+f8e18a2d6ceee3c71e28ceeff8326da5931239e2,f8e18a2d,Refactor AddItemDialogFragmentTest,"Refactor AddItemDialogFragmentTest
+
+Refactored AddItemDialogFragmentTest to remove redundant calls. This
+should reduce the amount of time it takes to execute, and make it easier
+to refactor in the future.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487307087,1487307087,aa92f9fcf3d6121ff46cce8b95c604350907afcc
+aa92f9fcf3d6121ff46cce8b95c604350907afcc,aa92f9fc,Merge pull request #7 from Austin-Ray/UnitTest,"Merge pull request #7 from Austin-Ray/UnitTest
+
+Add unit test for Dialog button clicks",,,,Andrew Evans,Andrewgevans95@gmail.com,GitHub,noreply@github.com,1487218648,1487218648,"f7c834ab6693d769f5f27f1c3b2e6c2c8982a9a8,da374bd2432d19a5e574f9a0716c320cc496a3e5"
+da374bd2432d19a5e574f9a0716c320cc496a3e5,da374bd2,Add unit test for Dialog button clicks,"Add unit test for Dialog button clicks
+
+Added two additional tests that click both the positive and negative
+buttons on the AddItemDialogFragment popup.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487217974,1487217974,f7c834ab6693d769f5f27f1c3b2e6c2c8982a9a8
+f7c834ab6693d769f5f27f1c3b2e6c2c8982a9a8,f7c834ab,Create develop branch,"Create develop branch
+
+Created the develop branch, which stages all changes to the repo before
+being merged into the master or release branch. All development will
+branch off of this branch.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1487127510,1487127510,6bec22d23a35a667b50d821facab5cecdce64cda
+6bec22d23a35a667b50d821facab5cecdce64cda,6bec22d2,Create README.md,Create README.md,,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1487093594,1487093594,ee8a59375e79c943d52575998fe6beb52fb7547b
+ee8a59375e79c943d52575998fe6beb52fb7547b,ee8a5937,Merge pull request #6 from Austin-Ray/AddItemDialog-ae,"Merge pull request #6 from Austin-Ray/AddItemDialog-ae
+
+Add item dialog ae",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1487029846,1487029846,"001d17f6cccefc7e0ada297a85e789776b598eb6,39ea23bcf6ac74661e94b19e2def72a72646c315"
+39ea23bcf6ac74661e94b19e2def72a72646c315,39ea23bc,Update AddItemDialog tests,"Update AddItemDialog tests
+
+Updated AddItemDialog tests with better
+implementation of shadow dialog test.
+Add test for newItem edit text.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1487014721,1487014721,00f8f2d30e9c428c9ae1d2ade60034bef4fdf6c3
+00f8f2d30e9c428c9ae1d2ade60034bef4fdf6c3,00f8f2d3,Add additional tests for better code coverage,"Add additional tests for better code coverage
+
+Added additional tests for ItemDialogFragment.
+Added shadow dialog test for ItemDialogFragment.
+Added new test to AddItemOnClickListenerTest.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1487013739,1487013739,918247271abb53c3515767cbfb1b621ba1374d22
+918247271abb53c3515767cbfb1b621ba1374d22,91824727,Add tests for AddItemDialogFragment,"Add tests for AddItemDialogFragment
+
+Added additional tests for AddItemDialogFragment
+for better code coverage.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1487011951,1487011951,c71f1a6e1e3220fafed7478bc9f5583a0c3244da
+c71f1a6e1e3220fafed7478bc9f5583a0c3244da,c71f1a6e,Add tests for AddItemDialogFragment and update layout,"Add tests for AddItemDialogFragment and update layout
+
+Added tests for the AddItemDialogFragment.  Updated
+dialog layout.  Added a closeDrawer test for MainActivity.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1487010712,1487010712,38fcaa31c29b9a246e35c4092db22d4854e0d0d9
+38fcaa31c29b9a246e35c4092db22d4854e0d0d9,38fcaa31,Add AddItemDialogFragment tests,"Add AddItemDialogFragment tests
+
+Added instance test for AddItemDialogFragment.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486959605,1486959605,9c2ff2ec8e7f05508a198298a863badd1ca17f46
+9c2ff2ec8e7f05508a198298a863badd1ca17f46,9c2ff2ec,Connect AddItemDialogFragment to QuadrantFragment,"Connect AddItemDialogFragment to QuadrantFragment
+
+Added a callback listener for the AddItemDialogFragment to pass the
+necessary information back to instantiate a new QuadrantFragment and add
+it to the current QuadrantFragment.
+
+Listener was appended to the AddItemOnClickListener for sake of
+simplicity; however, it should be refactored in the future to adhere
+more to the single responsibility principle.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486950106,1486950106,c8fe47614c233ab3153aac53bd6e8768fab12929
+c8fe47614c233ab3153aac53bd6e8768fab12929,c8fe4761,Merge branch 'master' into AddItemDialog-ae,"Merge branch 'master' into AddItemDialog-ae
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486947025,1486947025,"138a09e48e0538d5c5a16e4b8f469a5d27cbec8b,001d17f6cccefc7e0ada297a85e789776b598eb6"
+138a09e48e0538d5c5a16e4b8f469a5d27cbec8b,138a09e4,Add item dialog fragment,"Add item dialog fragment
+
+Added dialog to retrieve item input.
+Implemented dialog in AddItemOnclickListener.
+Added layout file for dialog fragment.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486942501,1486942501,9761b66be3529419edf26cca83a1c2662bece9e9
+001d17f6cccefc7e0ada297a85e789776b598eb6,001d17f6,Merge pull request #5 from Austin-Ray/UnitTests-ar,"Merge pull request #5 from Austin-Ray/UnitTests-ar
+
+Unit tests ar",,,,Andrew Evans,Andrewgevans95@gmail.com,GitHub,noreply@github.com,1486926473,1486926473,"333f8c965f036e7cafed3dbe1bcbb44463b4448e,817d2c96bd84b9d28710801b342c903f04923e3d"
+817d2c96bd84b9d28710801b342c903f04923e3d,817d2c96,Add total test coverage to NavigationViewAdapter,"Add total test coverage to NavigationViewAdapter
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486920981,1486920981,9ac56173b4adaca622f614b7f0a3bade324ef1ca
+9ac56173b4adaca622f614b7f0a3bade324ef1ca,9ac56173,Increase MainActivity testing coverage,"Increase MainActivity testing coverage
+
+Increased the testing coverage of MainActivity to 95% (according to
+Android Studio.) Unable to increase higher than that, even when
+specifically targeting the if condition within the onBackPressed()
+method. If condition within onBackPressed() may be unnecessary.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486883598,1486883598,280812ebe0b057524f254111a3fbcb97df37f5a5
+280812ebe0b057524f254111a3fbcb97df37f5a5,280812eb,Add complete coverage to QuadrantFragment,"Add complete coverage to QuadrantFragment
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486882414,1486882414,e972c1525f9a70a7c765ad8661e5d053d12116d6
+e972c1525f9a70a7c765ad8661e5d053d12116d6,e972c152,Add complete testing coverage for QuadrantItem,"Add complete testing coverage for QuadrantItem
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486880551,1486880551,333f8c965f036e7cafed3dbe1bcbb44463b4448e
+333f8c965f036e7cafed3dbe1bcbb44463b4448e,333f8c96,Merge pull request #4 from Austin-Ray/QuadrantFragmentPersistence-ar,"Merge pull request #4 from Austin-Ray/QuadrantFragmentPersistence-ar
+
+Quadrant fragment persistence ar",,,,Andrew Evans,Andrewgevans95@gmail.com,GitHub,noreply@github.com,1486877413,1486877413,"9761b66be3529419edf26cca83a1c2662bece9e9,a321b3a702e90985ae56005f0a615214f80bdd80"
+a321b3a702e90985ae56005f0a615214f80bdd80,a321b3a7,Add data persistence to QuadrantFragment,"Add data persistence to QuadrantFragment
+
+Implemented savedInstanceBundles to the QuadrantFragment in order to
+allow for data persistence of the QuadrantFragment. This is prevent
+QuadrantItem instances from disappearing when another QuadrantFragment
+is active.
+
+On an unrelated note, JaCoCo tests should now properly report test
+coverage on Robolectric unit tests. Additionally, several unused imports
+were removed after running static analysis.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486875924,1486875924,1d6271b2cc932d9c8b2d86cf3d19d12ed6a570f3
+1d6271b2cc932d9c8b2d86cf3d19d12ed6a570f3,1d6271b2,Convert QuadrantItem to Parcelable,"Convert QuadrantItem to Parcelable
+
+Added the Parcelable interface to the QuadrantItem to allow saving
+the state of a QuadrantFragment
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486874191,1486874191,9761b66be3529419edf26cca83a1c2662bece9e9
+9761b66be3529419edf26cca83a1c2662bece9e9,9761b66b,Merge pull request #3 from Austin-Ray/FloatingActionButton-ar,"Merge pull request #3 from Austin-Ray/FloatingActionButton-ar
+
+Floating action button ar",,,,Andrew Evans,Andrewgevans95@gmail.com,GitHub,noreply@github.com,1486859658,1486859658,"9f152196cda942e0c90b5de39ab16c2ce55f3e60,03b4b6ae20fdc45b17aabd7f71eec0881db22295"
+03b4b6ae20fdc45b17aabd7f71eec0881db22295,03b4b6ae,Merge branch 'remotes/origin/master',"Merge branch 'remotes/origin/master'
+
+Merged master into this branch, and resolved all conflicts.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486857285,1486857285,"88252132e6d1d6a8489e9b9dafe4d5f4ba9f7ffd,9f152196cda942e0c90b5de39ab16c2ce55f3e60"
+88252132e6d1d6a8489e9b9dafe4d5f4ba9f7ffd,88252132,Add unit test for AddItemOnClickListener,"Add unit test for AddItemOnClickListener
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486793224,1486793224,7984116113fb21a4b3a108290063eac0d66ff7f9
+7984116113fb21a4b3a108290063eac0d66ff7f9,79841161,Add experimental unit test with Robolectric,"Add experimental unit test with Robolectric
+
+Added an experimental unit test while covering all the code added in the
+repo as none had been covered. This is to test if Robolectric runs on
+Travis CI.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486792142,1486792142,87dff5bcd5af484d1d9f5ad1cb4073a49202fa0a
+87dff5bcd5af484d1d9f5ad1cb4073a49202fa0a,87dff5bc,Add FloatingActionButton add functionality,"Add FloatingActionButton add functionality
+
+Primitive implementation of adding items to a quadrant. Currently the
+quadrant does not retain the added data when swiped; however, that is
+not the intention of the branch. Only to add the data in the first
+place.
+
+Data retention will be added in a future commit.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486790662,1486790662,a07b85b4a1d0f4f44df3c56fb8312dd3055713b7
+9f152196cda942e0c90b5de39ab16c2ce55f3e60,9f152196,Merge pull request #2 from Austin-Ray/NavigationDrawer-ae,"Merge pull request #2 from Austin-Ray/NavigationDrawer-ae
+
+Navigation drawer ae",,,,Austin Ray,austinray1995@gmail.com,GitHub,noreply@github.com,1486789056,1486789056,"32eea219b05f0bcadb02dc26c6507120d4dd7dc7,bd5ace25c171fa91eb9214f2d5d3af4827645485"
+bd5ace25c171fa91eb9214f2d5d3af4827645485,bd5ace25,Create navigation adapter,"Create navigation adapter
+
+Created NavigationAdapter class to handle
+navigation drawer item selection events.
+Removed navigation item selection listener
+from main activity.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486779460,1486779460,e8f6ff3e7b595f7d730e53a3ad4546b2c62095fa
+e8f6ff3e7b595f7d730e53a3ad4546b2c62095fa,e8f6ff3e,Add toolbar to replace actionbar,"Add toolbar to replace actionbar
+
+Replaced ActionBar with toolbar.  Changed
+theme from DarkActionBar to NoActionbar.
+Added navigation drawer icon to toolbar.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486762586,1486762586,8a976fe45cb75e32d6284e89e55a0fc6eab2c975
+8a976fe45cb75e32d6284e89e55a0fc6eab2c975,8a976fe4,Add DrawerLayout widget to main layout,"Add DrawerLayout widget to main layout
+
+Added DrawerLayout widget and NavigationView widget to activity_main.
+Removed main.xml which originally held both widgets and included
+activity_main.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486760801,1486760801,bccfb186cf5daf761cd426c90519c83738fa2a8a
+bccfb186cf5daf761cd426c90519c83738fa2a8a,bccfb186,Merge branch 'master' of https://github.com/Austin-Ray/Hexis into NavigationDrawer-ae,"Merge branch 'master' of https://github.com/Austin-Ray/Hexis into NavigationDrawer-ae
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486751902,1486751902,"f91f325b04386a986b38599c007b845f53da38dc,32eea219b05f0bcadb02dc26c6507120d4dd7dc7"
+a07b85b4a1d0f4f44df3c56fb8312dd3055713b7,a07b85b4,Remove fragment_quadrant.xml.orig from repository,"Remove fragment_quadrant.xml.orig from repository
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486706478,1486706478,28df0f807d5798bd2c4f9731d66d4b961d804d5f
+28df0f807d5798bd2c4f9731d66d4b961d804d5f,28df0f80,Merge master into FloatingActionButton-ar,"Merge master into FloatingActionButton-ar
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486705763,1486705763,"9123dace519514ed5c2bb21c2340769abacead60,32eea219b05f0bcadb02dc26c6507120d4dd7dc7"
+32eea219b05f0bcadb02dc26c6507120d4dd7dc7,32eea219,Merge pull request #1 from Austin-Ray/QuadrantFragment-ar,"Merge pull request #1 from Austin-Ray/QuadrantFragment-ar
+
+Quadrant fragment ar",,,,Andrew Evans,Andrewgevans95@gmail.com,GitHub,noreply@github.com,1486703208,1486703208,"d748445985304f0033a4db177f9a17db1f59d08e,a45120db49a19843a4a1a909df3f7c22f602ed09"
+a45120db49a19843a4a1a909df3f7c22f602ed09,a45120db,Add RecyclerView implementation,"Add RecyclerView implementation
+
+Implementation for RecyclerView includes RecyclerView.Adapter,
+QuadrantItem, and QuadrantViewHolder. All of those components are
+required to display an item on the QuadrantFragment.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486697446,1486697446,37a480dff1697e8455c2d710584c8aaede6dc7e2
+37a480dff1697e8455c2d710584c8aaede6dc7e2,37a480df,"Add Butterknife,RecyclerViews as dependencies","Add Butterknife,RecyclerViews as dependencies
+
+Added Butterknife and RecyclerView as dependencies, and used Butterknife
+to bind the QuadrantFragment RecyclerView.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486653509,1486694369,d748445985304f0033a4db177f9a17db1f59d08e
+f91f325b04386a986b38599c007b845f53da38dc,f91f325b,Add basic navigation drawer,"Add basic navigation drawer
+
+Added a basic navigation drawer to activity_main.  Added
+DrawerLayout which includes main_activity layout.  MainAcitiy
+now sets content view to the aforementioned DrawerLayout.
+Created new resource directory menu to hold navigation menu layout.
+Updated dimens file as per Android Design guidelines for navigation
+screen margins.  Added onBackPress override in activity_main
+to handle closing navigation drawer.
+",,,,AndrewGEvans95,Andrewgevans95@gmail.com,AndrewGEvans95,Andrewgevans95@gmail.com,1486680491,1486680491,d748445985304f0033a4db177f9a17db1f59d08e
+9123dace519514ed5c2bb21c2340769abacead60,9123dace,Fix Lint issues,"Fix Lint issues
+
+Fixed lint issues causing a failed build on Travis CI. The cause was
+from using vector graphics without proper configuration. Without this
+configuration, the app may not build on platforms with an SDK < 23.
+
+Other corrects were made based on suggestion from Lint. These include:
+
+- Commenting out dimens values (they may be used again in the future)
+
+- Removing hardcoded string
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486658516,1486658516,87e30c7c3b708c51dbc33090ece1376dba356991
+87e30c7c3b708c51dbc33090ece1376dba356991,87e30c7c,Add FloatingActionButton,"Add FloatingActionButton
+
+Added a FloatingActionButton to activity_main. Padding from removed from
+activity_main to prevent the button's shadow from being cut off. Removal
+of padding has the added benefit of improving the FragmentPager's
+appearance.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486652642,1486652642,d748445985304f0033a4db177f9a17db1f59d08e
+d748445985304f0033a4db177f9a17db1f59d08e,d7484459,Add basic Time Matrix layout,"Add basic Time Matrix layout
+
+Added a basic time matrix layout that consists of four fragments with a
+tab bar for the user to either click or swipe between. This is a
+rudimentary layout to show how the time matrix should be presented. In
+order to accomplish this, the Android Design Support Library was added
+as a dependency.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486595648,1486595648,66adf08f921829a278e52fd719517a04623086cb
+66adf08f921829a278e52fd719517a04623086cb,66adf08f,Initial configuration,"Initial configuration
+
+Configured repository with a cross-platform .gitignore, and integration
+with Travis-CI and CodeCov. Both integrations should be successfully
+setup with no more errors.
+
+This is a squashed commit that resolves all previous issues experienced
+with Travis-CI and CodeCov.
+",,,,Austin Ray,austinray1995@gmail.com,Austin Ray,austinray1995@gmail.com,1486527651,1486588695,

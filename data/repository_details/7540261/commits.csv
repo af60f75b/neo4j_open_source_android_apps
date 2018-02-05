@@ -1,0 +1,274 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+b8ec13bc4ba69deca168a2423a64c40cb3638182,b8ec13bc,Add LICENSE file.,"Add LICENSE file.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1394902314,1394902314,8e66b5120c06ecab39fc8be4d57b46b80ccb5f9a
+8e66b5120c06ecab39fc8be4d57b46b80ccb5f9a,8e66b512,Fix crash when starting random game before first run of custom.,"Fix crash when starting random game before first run of custom.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359432282,1359432282,f963facb40d27cb18aee53adda48971ed6e5c27d
+f963facb40d27cb18aee53adda48971ed6e5c27d,f963facb,Code cleanup.,"Code cleanup.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359428979,1359428979,ed211b17f927244d898b52f92c3edca8b7f3cf0d
+ed211b17f927244d898b52f92c3edca8b7f3cf0d,ed211b17,Switch to standard number keyboard (use input type properly).,"Switch to standard number keyboard (use input type properly).
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359424682,1359424682,466e8b91afabafc942116164012e06df43bc4c5c
+466e8b91afabafc942116164012e06df43bc4c5c,466e8b91,Externalize strings from xml files and format xml.,"Externalize strings from xml files and format xml.
+Fix crash caused by %d where %s needed in hud strings. [412ea5f935]
+Remove residual ad layout view.
+Remove unused mission and multiplayer buttons.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359346574,1359346574,4345967b6752eb9ec4b2867db71f36aab8718322
+4345967b6752eb9ec4b2867db71f36aab8718322,4345967b,"Apply Apache License, Version 2.0.","Apply Apache License, Version 2.0.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359339479,1359339479,412ea5f9358771fc6555069cc8152f7dbad601dc
+412ea5f9358771fc6555069cc8152f7dbad601dc,412ea5f9,Externalize strings.,"Externalize strings.
+Don't kill process on exit.
+Reduce visibility modifiers.
+.classpath update by ADT.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1359326089,1359326089,dc115b30f6706244b17300601b48ced7a5463c6f
+dc115b30f6706244b17300601b48ced7a5463c6f,dc115b30,Crash fixes and updates.,"Crash fixes and updates.
+
+Fix crash at launch by removing ads.
+Fix NoClassDefFoundError at GameField start by exporting AndEngine libs.
+Ignore gen directory and unignore .gitignore.
+Changes from updated Android SDK.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1357789510,1357789510,7e03d3f09dbc603503ce74103b4623b65fae0488
+7e03d3f09dbc603503ce74103b4623b65fae0488,7e03d3f0,Move project into git root.,"Move project into git root.
+
+-This is because a Pro version is no longer expected.
+
+Remove tasks.txt (move into ignored dev folder).
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1303159354,1303159354,0e7a40ea8f75142dae30d0aa0dc13e539287fc98
+0e7a40ea8f75142dae30d0aa0dc13e539287fc98,0e7a40ea,"Remove ""(v2 only)"" from Projectile radius description.","Remove ""(v2 only)"" from Projectile radius description.
+
+Also small update to tasks.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294924537,1294924537,762069d9adfc288e860bbc0ccc41f172d3292f8d
+762069d9adfc288e860bbc0ccc41f172d3292f8d,762069d9,Move Custom game type button to bottom,"Move Custom game type button to bottom
+
+Rename ""Random target"" to ""Random Targets"".
+Center ad in portrait mode. (just in case)
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294913414,1294913414,6195b4616ed5bfd3451f31f74f3816ade0b89b68
+6195b4616ed5bfd3451f31f74f3816ade0b89b68,6195b461,"Scale font overlay to screen density, fix velocity limit.","Scale font overlay to screen density, fix velocity limit.
+
+-Remove final from FONT_SIZE & rename accordingly.
+-Fix velocity limit mistake.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294909883,1294909883,cbca3a498cff18eabab94123c14f36909f6e5e9a
+cbca3a498cff18eabab94123c14f36909f6e5e9a,cbca3a49,Add touchscreen angle/velocity control.,"Add touchscreen angle/velocity control.
+
+-Add touchscreen drag & pressure sensitivity preferences.
+-Add check/reset for sensitivity preferences.
+-Update Help with the new controls.
+
+-Add summary to Scale PreferenceScreen indicating contained options.
+-Limit range of angle to 0 - 90 and velocity minimum 0.
+-Limit display of angle/velocity to 1 decimal point.
+-Change from SmoothCamera to Camera since not using zoom.
+-Insert newline between sentences of toast for corrected preferences.
+-Replace summary of hit target color with text from it's dialogTitle.
+-Remove dialogTitle from all preferences, title is good enough.
+-Tweak summaryOn & summaryOff for Auto-fire.
+-Tweak some wording in Help.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294906829,1294906829,faf2086df6d9b96c98ee7f1a684371be52a7d1d9
+faf2086df6d9b96c98ee7f1a684371be52a7d1d9,faf2086d,Fix autofire for certain devices & add for touchscreen.,"Fix autofire for certain devices & add for touchscreen.
+
+-Change from key repeat to TimerTask/Timer.
+  -Eliminate long press issue.
+  -Fix issue found on G1 where key repeat didn't occur.
+-Boolean for autofire firing to avoid Dpad/touchscreen overlap.
+
+Also:
+-Remove commented zoom code, expect much different zoom code later.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294893429,1294893429,33e9947f55f58ecd4485c2d8549940074f408525
+33e9947f55f58ecd4485c2d8549940074f408525,33e9947f,Add MdotM SDK for more ads through AdWhirl.,"Add MdotM SDK for more ads through AdWhirl.
+
+-Recompile custom AdWhirl lib with support for SDK's beyond AdMob.
+-Add READ_PHONE_STATE permission required by MdotM.
+-Add MdotM SDK.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294880955,1294880955,e6ae889e639b742fe316621efb18c6ba640381a8
+e6ae889e639b742fe316621efb18c6ba640381a8,e6ae889e,Classic: Add custom projectile size & clean up.,"Classic: Add custom projectile size & clean up.
+
+-Move defining of variables into ClassicView class.
+-Add custom projectile size.
+-Change variable & method names to fit naming conventions.
+-Remove unnecessary brackets from single-line if statements.
+-Remove commented experimental explosion code.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294864189,1294864189,492aa54654566beb62e6fd0ced32725b9d29e1a0
+492aa54654566beb62e6fd0ced32725b9d29e1a0,492aa546,"Move projectile size to Custom Game, separate XML for items.","Move projectile size to Custom Game, separate XML for items.
+
+-Move projectile size setting from preferences to Custom Game.
+-Move Custom Game scrollview items into separate XML & include.
+  -Reuses XML for both portrait & landscape.
+
+Also:
+-Change Custom Game variables to fit naming convention.
+-Change textSize type in all Custom Game layouts from dp to sp.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294850751,1294850751,630aaa80ba716c5b0531de7b812cade2552b83b1
+630aaa80ba716c5b0531de7b812cade2552b83b1,630aaa80,Disable Pixels Per Meter option.,"Disable Pixels Per Meter option.
+
+-Comment out preference.
+-Change getString default value from null to ""1"", same for speed.
+
+Reason: More trouble than it's worth & zoom/pan should replace it.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294846333,1294846333,54b7b55b0d8db53e33fbd2328dbf6a1a36390438
+54b7b55b0d8db53e33fbd2328dbf6a1a36390438,54b7b55b,Revise scoring.,"Revise scoring.
+
+-Add to global variables: boolean collide, String scoreType.
+-Move from beginContact to global variables: expTarget, keepTargets.
+-Separate score equations for Random game type.
+  -Collide & Keep Targets: score += nTargets * hits
+  -Else: hits * 20
+-Separate high scores for Random game type.
+  -Collide & Keep Targets: ""rMulti""
+  -Else: ""rSingle""
+-Add more detail about scoring in Help.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294804475,1294804475,29f878dba81e040c2aac9e161db7a328b7b7259e
+29f878dba81e040c2aac9e161db7a328b7b7259e,29f878db,Fix invisible targets with high Pixels Per Meter.,"Fix invisible targets with high Pixels Per Meter.
+
+-Change targetRadius, targetD, targetH type from int to float.
+-Include entire equation for nextInt in cast to int.
+-Remove cast to int when setting targetRadius.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294792094,1294792094,bf2d08d8f029e535fe2599c15d89299800036451
+bf2d08d8f029e535fe2599c15d89299800036451,bf2d08d8,"Fix very high score crash, align score to right edge.","Fix very high score crash, align score to right edge.
+
+-Change score type to long.
+-Fix crash at start caused by text going beyond set maximum.
+-Change font typeface to monospace.
+-Add FONT_SIZE constant of 20.
+-Keep score text aligned to right edge of screen.
+-Remove HorizontalAlign.RIGHT.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294776018,1294776018,d2e943f55f0cb4953e2d35b08f19a11837ea4c3d
+d2e943f55f0cb4953e2d35b08f19a11837ea4c3d,d2e943f5,Fix borders & random target position/size when scaled.,"Fix borders & random target position/size when scaled.
+
+-Borders at screen edge with 1px thickness regardless of meter scale.
+-Random targets stay within screen, scale to px instead of meter.
+
+Also:
+-Increase minimum random target radius from 3px to 6px.
+-Remove unnecessary setting target variables before calling addTarget.
+-Remove old comment that is no longer relevant.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294767017,1294767017,ccbde3d8d77e9a55269bdbf2f4c0d09ae3c1a2a2
+ccbde3d8d77e9a55269bdbf2f4c0d09ae3c1a2a2,ccbde3d8,Clear saved scores in preferences.,"Clear saved scores in preferences.
+
+Also change ""Reset Preferences"" to ""Reset preferences"".
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294764646,1294764646,60901fdebd8445bae8164511174cb2a3e9a7da02
+60901fdebd8445bae8164511174cb2a3e9a7da02,60901fde,Rename preference keys.,"Rename preference keys.
+
+-Remove ""pref"" from all key names.
+-Add check to GameType class to move old preferences if they exist.
+-Fix resetting custom values in Preferences (forgot to change earlier).
+  -Rename prefs from valuePref to custom.
+  -Change toast message when resetting custom values.
+-Fix Custom prefs in Classic Mode (forgot to change earlier).
+  -Rename prefs from valuePref to custom.
+  -Rename variable from values to prefCustom.
+  -Remove ""pref"" from key names.
+  -Change mode from 0 to MODE_PRIVATE (0).
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294755037,1294755037,b948f6917d2f1125a09489ca27bfb07f9b32c42a
+b948f6917d2f1125a09489ca27bfb07f9b32c42a,b948f691,Update About dialog.,"Update About dialog.
+
+-Set text color to light gray to prevent it from changing when touched.
+-Add link to Cannon website.
+-Update main text to be like that used in my other apps.
+-Add controls and scoring information.
+-Change name in menu from ""About"" to ""Help/About"".
+-Change title from ""About Cannon"" to ""Help/About"".
+-Add toast message at launch telling users that help and prefs are in menu.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294701818,1294701818,291e379a4d12827232dbd4715e8753a806e7be99
+291e379a4d12827232dbd4715e8753a806e7be99,291e379a,"Save and display high score, preference tweaks.","Save and display high score, preference tweaks.
+
+-Save high score to a new SharedPreferences for scores.
+-Display high score under current score in scene.
+-Only keep and display scores in Random Mode.
+-Rename values (SharedPrefs: valuePref) to prefCustom (custom).
+-Rename SharedPreferences for custom game from valuePref to custom.
+    If old prefs exist, move data from old prefs to new prefs.
+-Change mode for all SharedPreferences from 0 to MODE_PRIVATE (0).
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294692610,1294692610,a69c3bc01282634392c86cfbe8eae24ab964dc0d
+a69c3bc01282634392c86cfbe8eae24ab964dc0d,a69c3bc0,Move tasks from source file into own text file.,"Move tasks from source file into own text file.
+
+-Move TODO's and FIXME's into own file: tasks.txt.
+-Remove source block comment.
+-Remove TODO and FIXME tags.
+-Indent items.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294682413,1294682413,0949b43f2e3273b3d11b52abbb6ccdafef091d29
+0949b43f2e3273b3d11b52abbb6ccdafef091d29,0949b43f,Organize TODO's and FIXME's.,"Organize TODO's and FIXME's.
+
+Add priority for FIXME's.
+Add v2.0.2.
+More focus on smaller updates.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294601680,1294601680,2554bf8e189881f12dec317c9115b8a9603531e2
+2554bf8e189881f12dec317c9115b8a9603531e2,2554bf8e,Include Eclipse project files.,"Include Eclipse project files.
+
+Include .classpath and .project so it can be imported
+into Eclipse as existing project.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294560615,1294560615,09fa515b56c1bf85d4cea2c46cd40aec80c2e089
+09fa515b56c1bf85d4cea2c46cd40aec80c2e089,09fa515b,Update icons to style of v2.,"Update icons to style of v2.
+
+Change target to solid circle, slightly larger.
+Fully transparent background.
+Feather grid into transparency at edges.
+Unlike v1 icons, only scale for different resolutions.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294540898,1294540898,fae239da3a97af284e6d2c831f06464ebd7f3cbb
+fae239da3a97af284e6d2c831f06464ebd7f3cbb,fae239da,Combo scoring and remove trail when below velocity.,"Combo scoring and remove trail when below velocity.
+
+Combo scoring:
+  -Hit score = Number of targets by power of hits per projectile.
+  -Track per-ball hits.
+  -Track number of targets on screen.
+  -Track shot number with projectile. (not yet used in scoring)
+
+Remove trail from ball if it goes below 5m/s.
+Removed most commented code not planned to be used later.
+Few changes to TODO's and added a FIXME.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294534939,1294534939,beb3abbbf548d5ef485348e4b37b4a9783ecf449
+beb3abbbf548d5ef485348e4b37b4a9783ecf449,beb3abbb,Reorganize preferences.,"Reorganize preferences.
+
+Reorganize preferences into categorical screens.
+Old: Screen for v2-only options, categories for option types.
+New: Screens for option types, categories for v2-only options.
+
+Also organize TODO's a bit and add a FIXME.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294481137,1294481137,35f02b42285ef0278960e0c4b15a2f9a5652b47e
+35f02b42285ef0278960e0c4b15a2f9a5652b47e,35f02b42,Add auto-fire to v2 and improve targets.,"Add auto-fire to v2 and improve targets.
+
+-Fix crashes by including calls to body within runOnUpdateThread
+-Use targetBody.getUserData to determine if target is most recent
+-Move target contact actions from endContact to beginContact
+-Use TimerTask to delay target firework & removal by 100ms
+	Allows ball to bounce off target
+-removeTaget unnecessary, use removeBall directly
+-Add auto-fire (machine gun sytle)
+	Uses preference from v1
+-Change onKeyDown from if-statements to switch
+-Rename removeBall to removeSprite for more accurate description
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294472371,1294472371,9776d346a12f157dc99874664fded2ecff26656b
+9776d346a12f157dc99874664fded2ecff26656b,9776d346,Fix freeze and color entry issues.,"Fix freeze and color entry issues.
+
+-Fix freeze in random mode caused by adding target
+	PhysicsFactory.createCircleBody needed runOnUpdateThread
+-Fix invalid color reset for Completed Target
+	Reset was going to color of normal Target
+-Fix color entry to prioritize letters before numbers on physical keyboard
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294446470,1294446470,f87187e3f5edd21a1d879ed88709fd6edbbb4432
+f87187e3f5edd21a1d879ed88709fd6edbbb4432,f87187e3,-Changed version in manifest from r1 to @string/app_version,"-Changed version in manifest from r1 to @string/app_version
+-Enabled trail for v2
+-Basic check of impossible projectile return to screen
+-Added WAKE_LOCK permission
+-Moved add/remove entity into methods
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294401533,1294401533,0eac660cce43aa3d7b190999f97e48aebe7ddde8
+0eac660cce43aa3d7b190999f97e48aebe7ddde8,0eac660c,-Adjusted score overlay position,"-Adjusted score overlay position
+-Changed scoring to remove points upon firing and add points on hit
+-Added custom color for hit target
+-Moved initial preference defaults loader from CustomGame to GameType
+-Changed wording of toast messages for empty grid scale preference
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294364914,1294364914,ca8af8ab81f8065e5c446e291e40e3ca28ce7508
+ca8af8ab81f8065e5c446e291e40e3ca28ce7508,ca8af8ab,-Fireworks,"-Fireworks
+-Increased circle texture resolution from 32x32 to 128x128
+-Score overlay
+-Changed to a simpler scoring method (mostly)
+-Various other changes and improvements (don't remember them all after long day)
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294321827,1294321827,543c308044c7d76513b13e9c54f6f2eba8107f11
+543c308044c7d76513b13e9c54f6f2eba8107f11,543c3080,-Fixed landscape layout not renamed,"-Fixed landscape layout not renamed
+-CustomGame screen no longer restarted when exiting preferences
+-Process is killed when exiting with back button from first screen
+-Several v2-only preferences
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1294202291,1294202291,7dcc8c13988e1e8ae674713d4e14467b7de462c4
+7dcc8c13988e1e8ae674713d4e14467b7de462c4,7dcc8c13,-Renamed some classes and main layout,"-Renamed some classes and main layout
+-Added game type selection screen
+-Moved Fire button to right in landscape
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1293957339,1293957339,cacd5b2c213e84d50ade81d38bdf240f09bfaff1
+cacd5b2c213e84d50ade81d38bdf240f09bfaff1,cacd5b2c,Initial commit.,"Initial commit.
+",,,,Pilot_51,pilota51@gmail.com,Pilot_51,pilota51@gmail.com,1293902178,1293902178,

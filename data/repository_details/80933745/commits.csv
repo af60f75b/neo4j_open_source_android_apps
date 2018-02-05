@@ -1,0 +1,341 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+6e46624e1a6400e8be988e18eaf304f78699cd30,6e46624e,"And search in Make/model - also iOS compatibility, and the last of the three…","And search in Make/model - also iOS compatibility, and the last of the three places impacted by expandiblelistview.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512271820,1512271820,cd3c8348353970f35cc5e1d48cf1174449101bef
+cd3c8348353970f35cc5e1d48cf1174449101bef,cd3c8348,"Add search in visited airports, since it builds off of expandable list too (so…","Add search in visited airports, since it builds off of expandable list too (so had the search box).  Another iOS feature match
+Fixed a couple of warnings too
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512271372,1512271372,5d3162f101f43bf75926bf151c332b5d4ecb59e7
+5d3162f101f43bf75926bf151c332b5d4ecb59e7,5d3162f1,Issue #6 - search for properties,"Issue #6 - search for properties
+Real-time filtering as you type.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512257368,1512257368,b7b0df8c2ed83bd05612208e81896949b543c747
+b7b0df8c2ed83bd05612208e81896949b543c747,b7b0df8c,Kill obsolete dlgpropedit.,"Kill obsolete dlgpropedit.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512256064,1512256064,97e004f189954b95c49a989fc0033c83bca078fb
+97e004f189954b95c49a989fc0033c83bca078fb,97e004f1,"Issue #52: inline editing of properties, like iOS.","Issue #52: inline editing of properties, like iOS.
+
+Lots of code changes:
+ - new PropertyEdit control.  Encapsulates editing, press-to-make-favorite, and tap-to-toast description
+ - Reworked ActViewProperties to use an expandablelist (no longer uses SimpleExpandableListAdapter)  Actually ended up cleaning things up quite a bit.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512255797,1512255797,c7897894590db4bded564c62bfa105f2a0c73ac8
+c7897894590db4bded564c62bfa105f2a0c73ac8,c7897894,Clean up some more warnings.,"Clean up some more warnings.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512156956,1512156956,9402e43ac79b46f24ccbb2a05cc090b2be37d4f5
+9402e43ac79b46f24ccbb2a05cc090b2be37d4f5,9402e43a,Clean up some warnings.  Mostly about casts that are redundant as of SDK 26 (lots more to go),"Clean up some warnings.  Mostly about casts that are redundant as of SDK 26 (lots more to go)
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512088985,1512088985,eaa6535e0f115d13307cec1f4114b6b3c0850138
+eaa6535e0f115d13307cec1f4114b6b3c0850138,eaa6535e,"Move GPX writing into GPX.java, KML writing into KML.java, where they belong.","Move GPX writing into GPX.java, KML writing into KML.java, where they belong.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512088291,1512088291,9e3d926935a20a5e2b8d9a6f85048be9777c7b07
+9e3d926935a20a5e2b8d9a6f85048be9777c7b07,9e3d9269,Issue #4 and #54: register for and import GPX and KML.,"Issue #4 and #54: register for and import GPX and KML.
+
+A bit of a hack, but this more or less follows the iOS model.  An abstract Telemetry base class, with two subclasses (GPXReader and KMLReader) that can read GPX and KML, respectively.
+
+The hacky bits come from the fact that MFBMain has to respond to the incoming import request, including requesting read permissions.  Also because autototals is baked into ActNewFlight, I had to (slightly) re-invent auto-fill of cross-country and auto-fill of totals.
+
+This does NOT handle all of the many flavors of KML.  KML without timestamps is useless and ignored.  Even KML with timestamps requires speed to be derived.
+
+Still need to move export into these classes (despite saying ""reader"")
+
+Fixed a few things, including:
+ - Using the passed loc for takeoff/landing, rather than the current loc
+ - LocSample had no getLocation method to return a Location object.
+ - MFBLocation now has a flag to suppress recording, so that we don't overwrite an in-progress flight's telemetry with imported telemetry.  (We attach the raw imported telemetry afterwards)
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1512087926,1512087926,e356d828708cba68546d7ec7673b2129f54785da
+e356d828708cba68546d7ec7673b2129f54785da,e356d828,Issue #53: add GLS approach,"Issue #53: add GLS approach
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1511831211,1511831211,6d7a7ab44563096248e1c2484a77b580d1c9e80e
+6d7a7ab44563096248e1c2484a77b580d1c9e80e,6d7a7ab4,Better alternative for debugging server.,"Better alternative for debugging server.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1511652202,1511652202,01b236730c75fa2b446b82910d4e904300cff19e
+01b236730c75fa2b446b82910d4e904300cff19e,01b23673,Fix (again) build issues with new Android Studio,"Fix (again) build issues with new Android Studio
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1511652173,1511652173,8a933339eca2e7b320106e03b3686035f135db10
+8a933339eca2e7b320106e03b3686035f135db10,8a933339,update airport database,"update airport database
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1508859303,1511649700,958b91f6d190f79012b609269747038a85088b9e
+958b91f6d190f79012b609269747038a85088b9e,958b91f6,Merge remote-tracking branch 'origin/master',"Merge remote-tracking branch 'origin/master'
+
+# Conflicts:
+#	build.gradle
+",,,,ericberman,ericberman@users.noreply.github.com,ericberman,ericberman@users.noreply.github.com,1511070035,1511070035,"c91532120e20713f4323cb31c4da5c641b12d18e,ea82e9a0a2d2010e9d40ced247f17d58678d9ef9"
+c91532120e20713f4323cb31c4da5c641b12d18e,c9153212,Support upgrade to Android Studio 3.0,"Support upgrade to Android Studio 3.0
+",,,,ericberman,ericberman@users.noreply.github.com,ericberman,ericberman@users.noreply.github.com,1511069984,1511069984,a1fd2e3126255b2e94bd3d24e806d90d657f7153
+ea82e9a0a2d2010e9d40ced247f17d58678d9ef9,ea82e9a0,Fix layout issue with large property values.,"Fix layout issue with large property values.
+",,,,Eric Berman,ericberman@users.noreply.github.com,Eric Berman,ericberman@users.noreply.github.com,1508812100,1508812100,36b557c1ef607431d4f2088bb9d2a8afd450c597
+36b557c1ef607431d4f2088bb9d2a8afd450c597,36b557c1,Request storage permission before going to endorsements so that we can access…,"Request storage permission before going to endorsements so that we can access PDF as well as images.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504891374,1504891374,c1e83b0563754c091d480b9bbdac0481a487a3a9
+c1e83b0563754c091d480b9bbdac0481a487a3a9,c1e83b05,Bump version.,"Bump version.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504828106,1504828106,ec5b7b043b7b2e4c83f3239c5e4267e906f60da6
+ec5b7b043b7b2e4c83f3239c5e4267e906f60da6,ec5b7b04,Allow PDF selection too,"Allow PDF selection too
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504720262,1504720262,7cb1513761f582654d58121894136d1a53be53ba
+7cb1513761f582654d58121894136d1a53be53ba,7cb15137,"Add back/forward buttons, in case we want to implement next/previous in webview.","Add back/forward buttons, in case we want to implement next/previous in webview.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504719764,1504719764,b7dcfffe7c67d8b6f9cae3f3578c1dc9d007af37
+b7dcfffe7c67d8b6f9cae3f3578c1dc9d007af37,b7dcfffe,Fix issue #51 - enable file chooser to work in webview.,"Fix issue #51 - enable file chooser to work in webview.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504718687,1504718687,34e5b80251c773cc263561b77f904c5ae289c3bf
+34e5b80251c773cc263561b77f904c5ae289c3bf,34e5b802,Bump version in anticipation of release,"Bump version in anticipation of release
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1504474254,1504474254,20b96cf623f4bd9c5fef2c86a9555e030e591ce1
+20b96cf623f4bd9c5fef2c86a9555e030e591ce1,20b96cf6,Update database,"Update database
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1503865574,1503865574,f26aed1f274de84bba87ffae34bac588708b01c1
+f26aed1f274de84bba87ffae34bac588708b01c1,f26aed1f,Fix a couple of LTR issues.,"Fix a couple of LTR issues.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1503865562,1503865562,98d1a6ee314aa1aaa73dd706a4be9172f76dcd04
+98d1a6ee314aa1aaa73dd706a4be9172f76dcd04,98d1a6ee,Yikes - had reversed engine/flight start in landscape mode!,"Yikes - had reversed engine/flight start in landscape mode!
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1503198522,1503198522,bae0ba5cc0da88f7b66c5c1ea0e307760015a313
+bae0ba5cc0da88f7b66c5c1ea0e307760015a313,bae0ba5c,Update database in anticipation of release.,"Update database in anticipation of release.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1503182240,1503182240,f802244b9f0c21d31eb89af73bac7fa7d9ca4589
+f802244b9f0c21d31eb89af73bac7fa7d9ca4589,f802244b,Fix issue #38 - check for getActivity() returning null,"Fix issue #38 - check for getActivity() returning null
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1502734981,1502734981,e8c544e17e7e475485265325943e822a53d85499
+e8c544e17e7e475485265325943e822a53d85499,e8c544e1,Code inspection was wrong - this MUST be public,"Code inspection was wrong - this MUST be public
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1502734954,1502734954,0470e84c9385f3eb14252d12beb33a538b743f72
+0470e84c9385f3eb14252d12beb33a538b743f72,0470e84c,Clean up a bunch of code inspection warnings.,"Clean up a bunch of code inspection warnings.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1502734205,1502734205,93562d0f9c91f2efeed00c50ee0f76622db86669
+93562d0f9c91f2efeed00c50ee0f76622db86669,93562d0f,Issue #41 - add ability to view signature on an existing flight,"Issue #41 - add ability to view signature on an existing flight
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1502395583,1502395583,6e0a51f389344abceebd3bb13eff00a0915e12a1
+6e0a51f389344abceebd3bb13eff00a0915e12a1,6e0a51f3,"Issue #49: Change the Save button to do GPX instead of KML, get full-resolution…","Issue #49: Change the Save button to do GPX instead of KML, get full-resolution from the server (or use pending/existing flight data).
+  - New support for FlightPathForFlightGPX in RecentFlightsSvc
+  - New getFlightDataStringAsGPX in LocSample
+  - Request permissions to write to external storage, if they have no already been granted.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1502128514,1502128514,214438dd9f6b370bedf39b2679cabafd349b481e
+214438dd9f6b370bedf39b2679cabafd349b481e,214438dd,Issue #48 - offer a high-resolution option to work better with apps like CloudAhoy.,"Issue #48 - offer a high-resolution option to work better with apps like CloudAhoy.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1501969960,1501969960,5abca88ba8bcbde5e3893000d0530fafa6e7ab31
+5abca88ba8bcbde5e3893000d0530fafa6e7ab31,5abca88b,"Set the context synchronously, have a fallback.  Hopefully this avoids some of…","Set the context synchronously, have a fallback.  Hopefully this avoids some of the null Context errors we've been seeing (issue #32)
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1499292080,1499292080,614e65239d31bd01b2be91dc983e2a2bfe95458b
+614e65239d31bd01b2be91dc983e2a2bfe95458b,614e6523,"Woops, accidentally changed cross-country flight feature.","Woops, accidentally changed cross-country flight feature.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1499286787,1499286787,c65121768cbf04527156e10a28edf1f532819a90
+c65121768cbf04527156e10a28edf1f532819a90,c6512176,Search for flights with images.,"Search for flights with images.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1497903771,1497903771,0b62a6e100eb9119b3fd7e2338aaa269b696a19e
+0b62a6e100eb9119b3fd7e2338aaa269b696a19e,0b62a6e1,"Bump version #, update databases, prepare to release 3.0.2","Bump version #, update databases, prepare to release 3.0.2
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1494878370,1494878370,dacf0d8a3918b48ba9dc45e12c214730d625a77c
+dacf0d8a3918b48ba9dc45e12c214730d625a77c,dacf0d8a,"Fixed (guarded against) issue #39, handling potential null m_leNewFlight","Fixed (guarded against) issue #39, handling potential null m_leNewFlight
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1494450758,1494450758,939801d4795da8560739a4ce1f74b6aab8359507
+939801d4795da8560739a4ce1f74b6aab8359507,939801d4,updated build tools,"updated build tools
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1494450517,1494450517,0d08204ab2e8500aa25731b848fb50ef12f73e77
+0d08204ab2e8500aa25731b848fb50ef12f73e77,0d08204a,"Issue #33.  m_le should never be null, but let's at least guard against it.","Issue #33.  m_le should never be null, but let's at least guard against it.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1494450387,1494450387,0c2e6dae64298d0a1089cae1e7717550d3a3986d
+0c2e6dae64298d0a1089cae1e7717550d3a3986d,0c2e6dae,"Round (well, truncate) date/times to whole minutes for property editing too. …","Round (well, truncate) date/times to whole minutes for property editing too.  Needed to move the truncation routines into mfbutil.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1490894433,1490894433,655b9bdbf718e048de6ce93aaa04eb7ebba6abc4
+655b9bdbf718e048de6ce93aaa04eb7ebba6abc4,655b9bdb,"Round (well, truncate) date/times to whole minutes","Round (well, truncate) date/times to whole minutes
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1490891787,1490891787,1c2a7e3d01987303b50cf9e4676b9fef7915c6af
+1c2a7e3d01987303b50cf9e4676b9fef7915c6af,1c2a7e3d,Fix typo,"Fix typo
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1490891732,1490891732,69412c711e6e681c93650205d19bc6826533608a
+69412c711e6e681c93650205d19bc6826533608a,69412c71,Option to show/hide images in flights.,"Option to show/hide images in flights.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1490049980,1490049980,b612eb8d2d9fcf2dba2fcdce0a2541de51e5ce17
+b612eb8d2d9fcf2dba2fcdce0a2541de51e5ce17,b612eb8d,"Issue #31 - getActivity can sometimes return null (!), so we do a check and…","Issue #31 - getActivity can sometimes return null (!), so we do a check and silently fail if that's the case
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1488048309,1488048309,4abded44146be8aabd2744abff889da24b5474ec
+4abded44146be8aabd2744abff889da24b5474ec,4abded44,Fix a potential bug calling Invoke with getContext returning null?,"Fix a potential bug calling Invoke with getContext returning null?
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1488047790,1488047790,940fb2ad0a918d1e0f7a93b5cf72e93adbabae21
+940fb2ad0a918d1e0f7a93b5cf72e93adbabae21,940fb2ad,"Back up to SDK 19 - try/with (i.e., the ""using"" equivalent) requires SDK 19.","Back up to SDK 19 - try/with (i.e., the ""using"" equivalent) requires SDK 19.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487551104,1487551104,3315c5a075ceb3a88009004bd8dcc985a908e3ac
+3315c5a075ceb3a88009004bd8dcc985a908e3ac,3315c5a0,Use latest google play (required a clean build),"Use latest google play (required a clean build)
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487550914,1487550914,b0c13112abc489fe8defa3fe2e26e4f405d8f80f
+b0c13112abc489fe8defa3fe2e26e4f405d8f80f,b0c13112,Two more minor fixes:,"Two more minor fixes:
+ - When assigning a new listener, update it right away (faster initialization of GPS data)
+ - Fix alignment in layout of GPS section of newflight
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487549852,1487549852,b098f398f2e9c7eeec6ab2ba466e4458ca3f5444
+b098f398f2e9c7eeec6ab2ba466e4458ca3f5444,b098f398,Prep for v3 upgrade:,"Prep for v3 upgrade:
+ - fixed spacing issue in create user
+ - lower minimum SDK to 17
+ - bump version number and code.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487548898,1487548898,73751c1068bf6872c971b3299f3571c7adfc3c0a
+73751c1068bf6872c971b3299f3571c7adfc3c0a,73751c10,Issue #30 - properties not coming down.  I think we had a race condition (which…,"Issue #30 - properties not coming down.  I think we had a race condition (which would explain why it worked fine in the debugger), so we only assign rgcustomprops on the main thread now in postexecute; seems to work fine.
+
+Removed fViewProps flag too since it's obsolete.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487539664,1487539664,286010eaf45cf220b1d14ab23f5f2ec5bcfe5ac9
+286010eaf45cf220b1d14ab23f5f2ec5bcfe5ac9,286010ea,Woops - need to escape the apostrophe,"Woops - need to escape the apostrophe
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487538607,1487538607,974f3ad5971672a3f6c4937dbd9764c0abca737e
+974f3ad5971672a3f6c4937dbd9764c0abca737e,974f3ad5,Localize a string that should have been a resource.,"Localize a string that should have been a resource.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487537720,1487537720,1948830dd1e944df3e198028ff0169269a16c8af
+1948830dd1e944df3e198028ff0169269a16c8af,1948830d,Refactored the MFBLocation singleton into MFBlocation and out of MFBMain.  Ditto the HasGPS method.,"Refactored the MFBLocation singleton into MFBlocation and out of MFBMain.  Ditto the HasGPS method.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487537513,1487537513,01e09e1e12cfa16ad42feadba5a8395b7d32c1ba
+01e09e1e12cfa16ad42feadba5a8395b7d32c1ba,01e09e1e,"Wow, getting rid of the last static reference to a context touches EVERYTHING,…","Wow, getting rid of the last static reference to a context touches EVERYTHING, but I think I've done it.  We do have a global resource object now, but otherwise we pass activities/contexts around as needed.
+
+MFBMain has two new methods:
+ - getResourceString - gets a string resource by ID
+ - getAppResources - gets a resources object that can get things like strings, drawables, etc.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487526486,1487526486,bc6e3eb247a655965869c813da4e7b355b780cb3
+bc6e3eb247a655965869c813da4e7b355b780cb3,bc6e3eb2,Update databases in preparation for release,"Update databases in preparation for release
+Simplified database update since I always seem to just slam it in anyhow...
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487279459,1487279459,82c26dca132ab226d960ee2f9d945471ecf2ec53
+82c26dca132ab226d960ee2f9d945471ecf2ec53,82c26dca,Cleaned up a few more warnings around iconography:,"Cleaned up a few more warnings around iconography:
+ - Rounded the edges on the app icon to meet Android design guidelines
+ - Added high-res versions of pay/plause/recording
+ - Moved hdpi noimage.png to xhdpi (since it's double the resolution of the mdpi one)
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487267962,1487267962,9d4823602d3a0bfad39836fe5fb4b1294ed6b9ba
+9d4823602d3a0bfad39836fe5fb4b1294ed6b9ba,9d482360,Remove static reference to context in MFBLocation.  It's only needed to…,"Remove static reference to context in MFBLocation.  It's only needed to start/stop listening and check permissions.
+Also removed a few unused functions/variable.s
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487264716,1487264716,679a7f2fc5afb488d9d5b673d29ea026225c1b28
+679a7f2fc5afb488d9d5b673d29ea026225c1b28,679a7f2f,"Bump version number, suppress warning about app not being indexible.","Bump version number, suppress warning about app not being indexible.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487263313,1487263313,584b85e84a1e6df9530ecab705544fbf93cc2473
+584b85e84a1e6df9530ecab705544fbf93cc2473,584b85e8,Higher resolution no-image and properly scaled sunrise/sunset images.,"Higher resolution no-image and properly scaled sunrise/sunset images.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487263279,1487263279,88f9a785bc91bf561ba5d545cdc4ab1b4d0a5273
+88f9a785bc91bf561ba5d545cdc4ab1b4d0a5273,88f9a785,Eliminate a warning about inverted boolean calls,"Eliminate a warning about inverted boolean calls
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487028486,1487028486,b7a35fd07455bda6fac9d6a38a36c520c1ff17cc
+b7a35fd07455bda6fac9d6a38a36c520c1ff17cc,b7a35fd0,"Stop holding a context object, so that it's OK to have a static reference to the…","Stop holding a context object, so that it's OK to have a static reference to the two database helper objects.  Just glean what we need...(DB file path, files directory, and assetmanager)
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487026402,1487026402,fce2ca860d4189fa059ca71124632427abb12887
+fce2ca860d4189fa059ca71124632427abb12887,fce2ca86,Back button should work without necessarily updating.,"Back button should work without necessarily updating.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487025395,1487025395,f9e12e3069e7e424a6f18cf8d7d6300a6c90b79d
+f9e12e3069e7e424a6f18cf8d7d6300a6c90b79d,f9e12e30,Remove ldpi - obsolete,"Remove ldpi - obsolete
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487011520,1487011520,8bbc28f4909e69f8b171fdbacd1f15587d7bcdc3
+8bbc28f4909e69f8b171fdbacd1f15587d7bcdc3,8bbc28f4,Added missing resolutions for sigok/sigvalid,"Added missing resolutions for sigok/sigvalid
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487010984,1487010984,0ba168ea773d01a7e15ad97faa48ec30544b8cd3
+0ba168ea773d01a7e15ad97faa48ec30544b8cd3,0ba168ea,Add missing files to git.,"Add missing files to git.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487009751,1487009751,dc007f6a9655ff4b2543525e0176336fe150ccfa
+dc007f6a9655ff4b2543525e0176336fe150ccfa,dc007f6a,Center items for timecalc and put copy icon on the copy button,"Center items for timecalc and put copy icon on the copy button
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487007216,1487007216,4817a2558cdfbba722aca4543a737f1bdec707fb
+4817a2558cdfbba722aca4543a737f1bdec707fb,4817a255,Remove spelling from inspection profiles.,"Remove spelling from inspection profiles.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487006720,1487006720,04c8193a7b9e6f0c23e4b86df5dca878986e8655
+04c8193a7b9e6f0c23e4b86df5dca878986e8655,04c8193a,Woops - typo in name of string,"Woops - typo in name of string
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487006630,1487006630,8f37380c2d48c8103e03df28c86745494cb2c0c6
+8f37380c2d48c8103e03df28c86745494cb2c0c6,8f37380c,Fix typo in name of segment start,"Fix typo in name of segment start
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1487006282,1487006282,a0ad21d3ca59206b9663ea722debeb3b024868e1
+a0ad21d3ca59206b9663ea722debeb3b024868e1,a0ad21d3,Fix bug when removing a property - we weren't allowed to modify the returned hashset.,"Fix bug when removing a property - we weren't allowed to modify the returned hashset.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486944437,1486944437,070b3d0b9210e3a6d7e66ba26e8f9fe346a6f31b
+070b3d0b9210e3a6d7e66ba26e8f9fe346a6f31b,070b3d0b,"Added a time calculator.  Press-and-hold on totals to launch it, lets you add…","Added a time calculator.  Press-and-hold on totals to launch it, lets you add additional flight segments to your total time (i.e., just makes the math easier).
+
+Shows an equation using decimal or hh:mm.  You can copy the value to the clipboard, or just hit back.
+
+Had to modify DecimalEdit to include a force flag to force HH:MM.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486942971,1486942971,4a429e838c7ecd4d3ea3beef1b134ae04a75ab7b
+4a429e838c7ecd4d3ea3beef1b134ae04a75ab7b,4a429e83,"fix a few warnings, upgrade to sdk 25.","fix a few warnings, upgrade to sdk 25.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486922879,1486922879,eb335dffba8b127f9d185b1b6d7da65f680f3310
+eb335dffba8b127f9d185b1b6d7da65f680f3310,eb335dff,apk file should be ignored.,"apk file should be ignored.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486921524,1486921524,5dbdaab7a1719b992ee7e59b6a4888295a43b010
+5dbdaab7a1719b992ee7e59b6a4888295a43b010,5dbdaab7,Replace e.printStackTrace with Log.e calls.,"Replace e.printStackTrace with Log.e calls.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486841593,1486841593,ce816b5b33a7b65d8391efe3daa082aa4613e31b
+ce816b5b33a7b65d8391efe3daa082aa4613e31b,ce816b5b,Be smarter about expand/collapse:,"Be smarter about expand/collapse:
+ - Added a flag to do no-animation expand/collapse so that we can set state without a lot of flashing
+ - Aircraft auto-expands sections based on having non-empty information to dispaly.  E.g., maintenance or a pilot role
+ - NewFlight remembers last state of the InTheCockpit section expansion.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486840438,1486840438,07291fe354e78f1ead982f1e2908ec9dec584cb9
+07291fe354e78f1ead982f1e2908ec9dec584cb9,07291fe3,Remove a few SuppressLints,"Remove a few SuppressLints
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486838423,1486838423,6cf4696eebcad76061a8b5269522ab8fa9953d86
+6cf4696eebcad76061a8b5269522ab8fa9953d86,6cf4696e,Fixed landscape mode - use just layout-land instead of layout-large-land so that…,"Fixed landscape mode - use just layout-land instead of layout-large-land so that it works on phones.
+Fixed location of Total time, and centering of the times rows in landscape view, and spacing in options
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486837331,1486837331,1b29bb78ab59367e755f0b889db8eb6b9ad6358f
+1b29bb78ab59367e755f0b889db8eb6b9ad6358f,1b29bb78,Append Nearest button is better using a standardized icon.,"Append Nearest button is better using a standardized icon.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486836298,1486836298,affaca528e22382dcb16c55b5256e253f5e4a96d
+affaca528e22382dcb16c55b5256e253f5e4a96d,affaca52,Added support to match iOS with properties:,"Added support to match iOS with properties:
+ - Can edit properties directly from within the new flight screen
+ - Can press-and-hold to make properties be favorites.
+ - Eliminated the text display of properties.
+ - fixed toString in flightproperty to work even when m_cpt is null
+ - Cleaned up dlgeditprop
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486835009,1486835009,0103a37b872eab843629391b64890d087b06d1db
+0103a37b872eab843629391b64890d087b06d1db,0103a37b,Code inspection says cancel button should be on the left,"Code inspection says cancel button should be on the left
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486749092,1486749092,c2e9d207f83fc53aa4d9b2c8c6886b82fc803c3d
+c2e9d207f83fc53aa4d9b2c8c6886b82fc803c3d,c2e9d207,Remove unused resources.,"Remove unused resources.
+Also fixed warning in cpititem, flight items, about localization causing items to run into each other and about setting wrap_content when a weight is specified
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486748434,1486748434,c4f197ad49ffc2beb06b9965a2d3ca40acc492c4
+c4f197ad49ffc2beb06b9965a2d3ca40acc492c4,c4f197ad,Performance issue - remove redundant background paint,"Performance issue - remove redundant background paint
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486746527,1486746527,1ca953046ce3568027ff83af2ff6c8a3645a6997
+1ca953046ce3568027ff83af2ff6c8a3645a6997,1ca95304,Use plurals where recommended to do so.,"Use plurals where recommended to do so.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486746350,1486746350,747666ef50f49488dbd1181c6f30ae67b1db2f2c
+747666ef50f49488dbd1181c6f30ae67b1db2f2c,747666ef,Yet more inspection issues.,"Yet more inspection issues.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486702803,1486702803,657cd84a6a339118b0256d6f64f82cde7bc65252
+657cd84a6a339118b0256d6f64f82cde7bc65252,657cd84a,Yet more inspection issues.,"Yet more inspection issues.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486702311,1486702311,c0f9cb57f935341ab48315b1e5480858363c635b
+c0f9cb57f935341ab48315b1e5480858363c635b,c0f9cb57,Remove obsolete @SuppressWarning's,"Remove obsolete @SuppressWarning's
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486701262,1486701262,080358bc0d18f9c714a289cd46ebadcefa53d644
+080358bc0d18f9c714a289cd46ebadcefa53d644,080358bc,"Switch to using MFBConstants.LOG_TAG instead of ""MFBAndroid""","Switch to using MFBConstants.LOG_TAG instead of ""MFBAndroid""
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486699166,1486699166,beae519684e61e24485a0ed347a6cced8dcf3a7e
+beae519684e61e24485a0ed347a6cced8dcf3a7e,beae5196,More code analysis cleanup,"More code analysis cleanup
+ - Removed empty XML tags
+ - ExpandableListfragment has a ton of unused code, but I don't want to remove it so I suppress a lot of it.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486697491,1486697491,6c4be4930f41f5765c4b4aa85c894d6a602ca16d
+6c4be4930f41f5765c4b4aa85c894d6a602ca16d,6c4be493,Address lint (mostly) in menus.,"Address lint (mostly) in menus.
+Fix toggle airport.
+Use getViewId() instead of hardcoded constant in expandablelistfragment
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486690386,1486690386,7d5647d6e475d78abf665f285f04adf2ccdf837f
+7d5647d6e475d78abf665f285f04adf2ccdf837f,7d5647d6,Somehow I had missed ActVisitedAirports,"Somehow I had missed ActVisitedAirports
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486687452,1486687452,0dc15c1be4540e4f93136e0f459d181e29b06341
+0dc15c1be4540e4f93136e0f459d181e29b06341,0dc15c1b,final bulk reformat/warning address,"final bulk reformat/warning address
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486670617,1486670617,eb363fedbc1560892d30e57d0ac095686a344764
+eb363fedbc1560892d30e57d0ac095686a344764,eb363fed,"Clean up a bunch of XML files.  Mostly reformating and removing empty tags, but…","Clean up a bunch of XML files.  Mostly reformating and removing empty tags, but also switched to button bar style for a number of buttons.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486670227,1486670227,320aa1607a9f3f29ee523d6ceff89d3020dab12d
+320aa1607a9f3f29ee523d6ceff89d3020dab12d,320aa160,Yet more code cleanup (WebServices this time).  That finishes most of the items in java code,"Yet more code cleanup (WebServices this time).  That finishes most of the items in java code
+Also cleaned up flight item code to have better layout for flights, especially when signed.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486666885,1486666885,e6c9537ca45bb84cf92562d20662b1f409303c9a
+e6c9537ca45bb84cf92562d20662b1f409303c9a,e6c9537c,Yet more code cleanup,"Yet more code cleanup
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486663759,1486663759,615c0474119d1c0c3542b6791d6d5b5dfd0d9572
+615c0474119d1c0c3542b6791d6d5b5dfd0d9572,615c0474,More code cleanup,"More code cleanup
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486659280,1486659280,3de5f7100496a59f335be1228aef4961f46be4bf
+3de5f7100496a59f335be1228aef4961f46be4bf,3de5f710,Show the no-image icon when no image to display for a flight,"Show the no-image icon when no image to display for a flight
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486657875,1486657875,c301592e347c2d8d45c2c1d8d63c36d906a6d77e
+c301592e347c2d8d45c2c1d8d63c36d906a6d77e,c301592e,Show the no-image icon when no image to display for an aircraft.,"Show the no-image icon when no image to display for an aircraft.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486602636,1486602636,37b767a4ddd548c791fb3f0f6c914aade9c8689e
+37b767a4ddd548c791fb3f0f6c914aade9c8689e,37b767a4,"Address (most) lint issues, reformat.","Address (most) lint issues, reformat.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486601889,1486601889,e3282a61f7c86f0592927e3703559f1852395767
+e3282a61f7c86f0592927e3703559f1852395767,e3282a61,"Address (most) lint issues, reformat.","Address (most) lint issues, reformat.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486600184,1486600184,dda4698a2df96a76d1cdfbdf93278c0d66ffcbe1
+dda4698a2df96a76d1cdfbdf93278c0d66ffcbe1,dda4698a,"Don't show the images section if there are no images.  (I.e., no empty images…","Don't show the images section if there are no images.  (I.e., no empty images section).  Enhanced the gallerysource protocol to include GetGalleryHeader call, which is the expand/collapse header.
+Also fixed a non-localized string in ActNewFlight and reformatted ActMFBForm
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486599319,1486599319,de76b7de0748850ba4e958aeb241ee978d9a6dfb
+de76b7de0748850ba4e958aeb241ee978d9a6dfb,de76b7de,"Lots more cleanup (i.e., addressing Lint issues) and formatting.","Lots more cleanup (i.e., addressing Lint issues) and formatting.
+
+Changed the way the prompt to set up social networking works, so that it isn't so HTML-ish.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486596424,1486596424,fb269daad26aa1269373281050ff465f1ee6b23f
+fb269daad26aa1269373281050ff465f1ee6b23f,fb269daa,"Clean up newmake, new aircraft - don't select a model by default.","Clean up newmake, new aircraft - don't select a model by default.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486514447,1486514447,9325ef156ee15e16267f38411cf90c2641b7cd6c
+9325ef156ee15e16267f38411cf90c2641b7cd6c,9325ef15,"Reformat, remove more warnings.","Reformat, remove more warnings.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486512261,1486512261,6115d232616c4296dc9bb5706c3dc59b950e334a
+6115d232616c4296dc9bb5706c3dc59b950e334a,6115d232,Merge branch 'master' of https://github.com/ericberman/MyFlightbookAndroid,"Merge branch 'master' of https://github.com/ericberman/MyFlightbookAndroid
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486484747,1486484747,"9127300c8d71f442b1536401b63c8b11e29ae3c0,a1fd2e3126255b2e94bd3d24e806d90d657f7153"
+a1fd2e3126255b2e94bd3d24e806d90d657f7153,a1fd2e31,Clean up some more Lint issues.,"Clean up some more Lint issues.
+",,,,ericberman,ericbe_expe@hotmail.com,ericberman,ericbe_expe@hotmail.com,1486484697,1486484697,7d39c25ff7cb42f5eb87b5eeaf9c41896cc99d5f
+9127300c8d71f442b1536401b63c8b11e29ae3c0,9127300c,"Reformat, remove some warnings.","Reformat, remove some warnings.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486439499,1486439499,7d39c25ff7cb42f5eb87b5eeaf9c41896cc99d5f
+7d39c25ff7cb42f5eb87b5eeaf9c41896cc99d5f,7d39c25f,Eliminate deprecated Gallery in favor of putting images in-line a-la iOS.,"Eliminate deprecated Gallery in favor of putting images in-line a-la iOS.
+Added expand/collapse to images in editAircraft and newFlight
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486438936,1486438936,35c849272c7a1bf38f4984585701611c687f2660
+35c849272c7a1bf38f4984585701611c687f2660,35c84927,Center headings vertically as well as horizontally.,"Center headings vertically as well as horizontally.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486431051,1486431051,bf7f9397d5974d52fff12707ead73626872e20f1
+bf7f9397d5974d52fff12707ead73626872e20f1,bf7f9397,"More Lint cleanup, upgrade build to java 1.8","More Lint cleanup, upgrade build to java 1.8
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486422803,1486422803,fb45891dcde5ae9e785b36855f5451e4c94e5802
+fb45891dcde5ae9e785b36855f5451e4c94e5802,fb45891d,More Lint cleanup,"More Lint cleanup
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486353410,1486353410,e0bb2f6acd623915f2654e0df1deba1447af9000
+e0bb2f6acd623915f2654e0df1deba1447af9000,e0bb2f6a,More Lint cleanup,"More Lint cleanup
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486352635,1486352635,2984b9b4272b818a8eb68248a0b8cd7f0caaef90
+2984b9b4272b818a8eb68248a0b8cd7f0caaef90,2984b9b4,Clean up some warnings,"Clean up some warnings
+Link to disclaimer wasn't localized and was using an obsolete way to load the disclaimer
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486351144,1486351144,b2cb8532e0723a9d62f8552d129f931b61994142
+b2cb8532e0723a9d62f8552d129f931b61994142,b2cb8532,removing .idea files that shouldn't have been committed,"removing .idea files that shouldn't have been committed
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486335122,1486335122,8a74f157b905d156428ca7da3591e56c89a30baa
+8a74f157b905d156428ca7da3591e56c89a30baa,8a74f157,"Expand/collapse on aircraft, flight query as well as new flight.","Expand/collapse on aircraft, flight query as well as new flight.
+SetListener also didn't need to cast to button.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486334928,1486334928,2cb2344b3a93d21008cd0f6a858b7539c3b80093
+2cb2344b3a93d21008cd0f6a858b7539c3b80093,2cb2344b,"Expand/collapse functionality, first client is the ""in the cockpit"" section of newflight.","Expand/collapse functionality, first client is the ""in the cockpit"" section of newflight.
+Cleaned up the icons for expand/collapse too.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486332086,1486332086,f74eb9778dedcb64d064b3451f8bc1bcabcaa121
+f74eb9778dedcb64d064b3451f8bc1bcabcaa121,f74eb977,Delete Gradle directory contents.,"Delete Gradle directory contents.
+",,,,ericberman,ericbe_expe@hotmail.com,ericberman,ericbe_expe@hotmail.com,1486320524,1486320524,3f61963f3fc3e6348178ae71f0b12d736dfb7970
+3f61963f3fc3e6348178ae71f0b12d736dfb7970,3f61963f,Merge branch 'master' of https://github.com/ericberman/MyFlightbookAndroid,"Merge branch 'master' of https://github.com/ericberman/MyFlightbookAndroid
+
+# Conflicts:
+#	.gradle/2.14.1/taskArtifacts/cache.properties.lock
+#	.gradle/2.14.1/taskArtifacts/fileHashes.bin
+#	.gradle/2.14.1/taskArtifacts/fileSnapshots.bin
+#	.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin
+#	.gradle/2.14.1/taskArtifacts/taskArtifacts.bin
+#	.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin
+#	.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock
+#	.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin
+#	.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock
+",,,,ericberman,ericbe_expe@hotmail.com,ericberman,ericbe_expe@hotmail.com,1486320406,1486320406,"5d1fc87fdfad3a5732e674f9f30cf0747e879aee,b0a53bc9106dbd10899ac08be404c1d082977e37"
+5d1fc87fdfad3a5732e674f9f30cf0747e879aee,5d1fc87f,Shouldn't have been in the project,"Shouldn't have been in the project
+",,,,ericberman,ericbe_expe@hotmail.com,ericberman,ericbe_expe@hotmail.com,1486319922,1486319922,f22f164b934e4c21f99cb5ccda9704d3a7004719
+b0a53bc9106dbd10899ac08be404c1d082977e37,b0a53bc9,"Ensure that we have GPS permissions when turning on autodetect or recording, or…","Ensure that we have GPS permissions when turning on autodetect or recording, or when pressing ""Nearest"".
+Also, in start/stop listening, DON'T request permissions (since we do this frequently) and DO check that GPS and NETWORK providers are available.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486316342,1486316342,ccc1daf6ab609a61fa9fa4504936fb329ec57c64
+ccc1daf6ab609a61fa9fa4504936fb329ec57c64,ccc1daf6,"Use network to initialize GPS, send that to the app.","Use network to initialize GPS, send that to the app.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486250651,1486250651,3011aa907d9ea95f97411ac8d0233069bc980e20
+3011aa907d9ea95f97411ac8d0233069bc980e20,3011aa90,Remove warning about not checking permissions (since we were) by catching…,"Remove warning about not checking permissions (since we were) by catching SecurityException.  Pointless code...
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486249691,1486249691,a7738bd0e30574d7ce1273491dbf99132bd8ab83
+a7738bd0e30574d7ce1273491dbf99132bd8ab83,a7738bd0,Fix broken error reporting.  We now write it to a file and on startup send any pending files.,"Fix broken error reporting.  We now write it to a file and on startup send any pending files.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486249437,1486249437,bff49153df62eda6adf880ec66ef43ee788a6edc
+bff49153df62eda6adf880ec66ef43ee788a6edc,bff49153,"Cleaned up permissioning around images/videos, cleaned up video/image handling…","Cleaned up permissioning around images/videos, cleaned up video/image handling (in particular, fixed a bug where I wasn't using content: uris and this caused crashes, removed permission check at app first run (not needed).
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486244270,1486244270,f22f164b934e4c21f99cb5ccda9704d3a7004719
+f22f164b934e4c21f99cb5ccda9704d3a7004719,f22f164b,Moved LICENSE and README to the correct directory,"Moved LICENSE and README to the correct directory
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486231615,1486231615,4f5f5ad2ef368f7630c3687e3e94f8c2ad919de0
+4f5f5ad2ef368f7630c3687e3e94f8c2ad919de0,4f5f5ad2,Eclipse is finally broken to where I can't figure out how to recover it; I…,"Eclipse is finally broken to where I can't figure out how to recover it; I deleted some SDK component or another and it won't build, so I bit the bullet and migrated to Android Studio, which, of course, rearranges everything.
+
+ But...I'll also start this fresh in GitHub and make my first foray into open-source code.
+
+ Code changes made (I hope I'm not missing any):
+  - (Obvious) Android Studio rearrangement
+  - GPL LIcense notification in each file and license at route
+  - Had to edit ActFlightMap to use getMapAsync, since the code has changed
+  - Removed obsolete Geopoint
+  - Moved GoogleMaps key and webservice key into apikeys.xml, which is ignored.
+  - Had to move to multi-dex to be able to create an APK file
+  - Had to change several layouts to better include decimaledit.
+",,,,Eric Berman,ericbe@hothpark.com,Eric Berman,ericbe@hothpark.com,1486231429,1486231430,

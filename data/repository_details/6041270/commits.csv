@@ -1,0 +1,658 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+d108296520e616698ae4559d7d0d133852f65456,d1082965,Version bump to 2.2.3,"Version bump to 2.2.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1511576389,1511576389,dd98ecf0a046fd49d383286ec2bc400b2dcec8a3
+dd98ecf0a046fd49d383286ec2bc400b2dcec8a3,dd98ecf0,Merge branch 'fix-#94' of https://github.com/maxbruecken/encdroid into maxbruecken-fix-#94,"Merge branch 'fix-#94' of https://github.com/maxbruecken/encdroid into maxbruecken-fix-#94
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1511576308,1511576308,"986239254a4414c2dbf84536473cb4b6f0d6db15,5f3e6752638e70e4543bc3e7a2975ef91804ee38"
+986239254a4414c2dbf84536473cb4b6f0d6db15,98623925,Upgrade gradle and build tools versions,"Upgrade gradle and build tools versions
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1511575743,1511575743,c0fb071267267f06ec7b04125f1bcf5c5330ad75
+5f3e6752638e70e4543bc3e7a2975ef91804ee38,5f3e6752,request GET_ACCOUNTS permissions if not already granted,"request GET_ACCOUNTS permissions if not already granted
+",,,,maxbruecken,becker.maxim@gmail.com,maxbruecken,becker.maxim@gmail.com,1510562659,1510562659,c0fb071267267f06ec7b04125f1bcf5c5330ad75
+c0fb071267267f06ec7b04125f1bcf5c5330ad75,c0fb0712,Version bump to 2.2.2,"Version bump to 2.2.2
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507409363,1507409363,165d70ba6a303ffe601e5fd44244e13fc1fdf685
+165d70ba6a303ffe601e5fd44244e13fc1fdf685,165d70ba,Runtime permissions for WRITE_EXTERNAL_STORAGE,"Runtime permissions for WRITE_EXTERNAL_STORAGE
+
+API target bump to 23 caused breakage on 23+ devices because runtime
+permissions weren't implemented properly. This commit implements runtime
+permission checks for WRITE_EXTERNAL_STORAGE requests.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507408246,1507409329,11fbefa42dc4bd8cc07abb69fc2045a277d4f134
+11fbefa42dc4bd8cc07abb69fc2045a277d4f134,11fbefa4,Fix IndexOutOfBoundsException in VolumeListActivity,"Fix IndexOutOfBoundsException in VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507404991,1507404991,c67af60e51ca98f15edc77001a69b974cb0e68b9
+c67af60e51ca98f15edc77001a69b974cb0e68b9,c67af60e,Fix NullPointerException in FileChooserActivity,"Fix NullPointerException in FileChooserActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507403229,1507403229,7d72d2e968d6647b7a208a89953bb48bf9942785
+7d72d2e968d6647b7a208a89953bb48bf9942785,7d72d2e9,Version bump to 2.2.1,"Version bump to 2.2.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507360245,1507360245,d053c38bc615e97bfa7928a4847cd051f05e823d
+d053c38bc615e97bfa7928a4847cd051f05e823d,d053c38b,Remove jniLibs from .gitignore,"Remove jniLibs from .gitignore
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507360211,1507360211,b4de052c99022eef4aefe972a564f8aab657c0ca
+b4de052c99022eef4aefe972a564f8aab657c0ca,b4de052c,Version bump to 2.2.0,"Version bump to 2.2.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507355116,1507355706,afc4409407ec981c446357a347978608c045a0cb
+afc4409407ec981c446357a347978608c045a0cb,afc44094,Upgrade Dropbox API to v2,"Upgrade Dropbox API to v2
+
+Dropbox deprecated their v1 API recently. This commit adds support for
+the v2 API and adds an upgrade path for the linked accounts to get
+re-linked. Also use gradle dependencies to fetch the Dropbox SDK online
+instead of hardcoding it in the repository.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500887626,1507354960,c214ae17df209ce5598b368ae2e91b4f2ea1ac4d
+c214ae17df209ce5598b368ae2e91b4f2ea1ac4d,c214ae17,Version updates,"Version updates
+
+* Move compileSdkVersion and targetSdkVersion to 23 (Marshmallow).
+* Bump play-services dependencies from 11.0.2 to 11.0.4
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1507345274,1507346699,c489f40cff02b9613ae70873accb2dd6f739b9cb
+c489f40cff02b9613ae70873accb2dd6f739b9cb,c489f40c,Upgrade to OpenSSL 1.1.0f,"Upgrade to OpenSSL 1.1.0f
+
+Picked up prebuilt OpenSSL 1.1.0f for Android from:
+https://github.com/leenjewel/openssl_for_ios_and_android
+
+Switched to using static libraries instead of shared objects.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500711526,1500711526,48241e7b1769f53bf1ad029d01f565e0d7dfdebf
+48241e7b1769f53bf1ad029d01f565e0d7dfdebf,48241e7b,README update,"README update
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500613988,1500613988,a338eaea44273d0cf2eb8a7820438ee0a34bcf54
+a338eaea44273d0cf2eb8a7820438ee0a34bcf54,a338eaea,Replace in-repo Google libs with gradle dependencies,"Replace in-repo Google libs with gradle dependencies
+
+Remove all the Google libraries checked into the repository under
+encdroid/libs and replace their usage with gradle dependencies in
+encdroid build.gradle.
+
+Also upgrade to using 1.22.0 (latest version) of these Google libraries
+instead of the old 1.16.0 versions.
+
+Also removed the bundled googleplayservices_lib/ project and using
+gradle dependencies to pull in the latest version (11.0.2) of the google
+play services library.
+
+As a side effect of this change also ended up cleaning some of the
+libraries that I thought the Dropbox SDK was using (jackson, httpmime
+etc.) but turns out they weren't being used.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500612761,1500613267,4a2f1cf87e41796120caff491826f9f91b2512e1
+4a2f1cf87e41796120caff491826f9f91b2512e1,4a2f1cf8,Ignore linter errors on gradle release builds,"Ignore linter errors on gradle release builds
+
+Will eventually fix these but for now let's just ignore them.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500608049,1500608124,ab5290b78f0d0c20aebc9f0aba1baab6731f3021
+ab5290b78f0d0c20aebc9f0aba1baab6731f3021,ab5290b7,README updates for gradle build,"README updates for gradle build
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500262399,1500262399,75021cb1b1ce91f54e728f549e51fe6275a46537
+75021cb1b1ce91f54e728f549e51fe6275a46537,75021cb1,Move the build system to gradle,"Move the build system to gradle
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1500260910,1500260910,7e956847587b3f0fccb29dcc5bbba195c10bc549
+7e956847587b3f0fccb29dcc5bbba195c10bc549,7e956847,Update Dropbox Android SDK to 1.6.3,"Update Dropbox Android SDK to 1.6.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1458375969,1458375969,ff630578c0c87b62deadbfbf87c9d763892cff7b
+ff630578c0c87b62deadbfbf87c9d763892cff7b,ff630578,Fix linking to Google Account from AccountsActivity,"Fix linking to Google Account from AccountsActivity
+
+Because GoogleAccount was starting the authentication intent from the
+AccountActivity context instead of the fragment context the activity
+would get the result instead of the fragment. Just proxy the result to
+the fragment.
+
+Fixes mrpdaemon/encdroid #73
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1422679225,1422679225,2128e0c441d9d16a0bd9b3f54bdfa9a96dec940c
+2128e0c441d9d16a0bd9b3f54bdfa9a96dec940c,2128e0c4,Encapsulate AsyncTask's in their own Fragment,"Encapsulate AsyncTask's in their own Fragment
+
+This commit introduces TaskFragment, which is used to encapsulate an
+EDAsyncTask. For the fragment we do setRetainInstance() which makes sure
+that the hosting Activity will retain the fragment upon being recreated.
+In TaskFragment we manage attaching/detaching to an Activity and adjust
+the necessary state such as progress bars etc.
+
+There is also a rather large refactoring of the progress reporting code
+in this commit, which introduces TaskProgress which is now used by all
+EDAsyncTask to report job status. In a future commit, it will be
+possible to improve the ProgressDialog used with a custom implementation
+since all tasks now use a common progress reporting mechanism.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1417774938,1418380941,f7b1c05d01fdebc20ff1d6edefbe91f1d155989e
+f7b1c05d01fdebc20ff1d6edefbe91f1d155989e,f7b1c05d,Convert AccountsActivity to ListFragment,"Convert AccountsActivity to ListFragment
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415862146,1418380941,c11750f6fe69ab2311c5e66d22337097d2399d29
+c11750f6fe69ab2311c5e66d22337097d2399d29,c11750f6,Convert EDPreferenceActivity to PreferenceFragment,"Convert EDPreferenceActivity to PreferenceFragment
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1406452760,1418380941,8db3c15f25c18a37771267bc0a6eaf913d6ce6d7
+8db3c15f25c18a37771267bc0a6eaf913d6ce6d7,8db3c15f,encfs-java 0.8 update,"encfs-java 0.8 update
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1417423461,1417423461,e23cc9a504dfcb68de1fac4aad4d2435db3ae6a2
+e23cc9a504dfcb68de1fac4aad4d2435db3ae6a2,e23cc9a5,DropboxFileProvider crash fix for volume in DB root,"DropboxFileProvider crash fix for volume in DB root
+
+When we have a volume in the Dropbox root directory we would end up with
+a crash in DropboxFileProvider.entryToFileInfo. This is because
+apparently DropboxAPI.Entry has modified=null for the root directory.
+Commit also fixes the relative path handling logic for the root
+directory entry.
+
+Fixes mrpdaemon/encdroid#70
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1417251276,1417251276,603ff7c0181da4f192e6828ee2d0d446c1aa0d11
+603ff7c0181da4f192e6828ee2d0d446c1aa0d11,603ff7c0,New material color scheme,"New material color scheme
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1416812350,1416813671,a89a098d6d95d89d4cb9fd2c864f482fe4205d05
+a89a098d6d95d89d4cb9fd2c864f482fe4205d05,a89a098d,Use material design on Android 5.0,"Use material design on Android 5.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1416811697,1416813671,a6c4e7bb8b6dd177c121117c2bb4d205815b7f60
+a6c4e7bb8b6dd177c121117c2bb4d205815b7f60,a6c4e7bb,bump targetSdkVersion to 21,"bump targetSdkVersion to 21
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1416810339,1416813671,2288712f7d2ea844734953969a1112f7f840aea7
+2288712f7d2ea844734953969a1112f7f840aea7,2288712f,Handle NULL items in VolumeListAdapter.isEnabled(),"Handle NULL items in VolumeListAdapter.isEnabled()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1416802712,1416803009,ab5c9fa40691766700c680fdac800eadc831dd41
+ab5c9fa40691766700c680fdac800eadc831dd41,ab5c9fa4,Fix crash caused by previous fix,"Fix crash caused by previous fix
+
+The previous fix would crash when VolumeListActivity tried to call
+EDApplication.getFSIndex(null).
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415859975,1415859975,3cb4ba6419c66911d4db21e416266c39b0816c0f
+3cb4ba6419c66911d4db21e416266c39b0816c0f,3cb4ba64,Fix DB crash on negative volume type,"Fix DB crash on negative volume type
+
+Through a bug it was possible for volumes to be inserted to the database
+with type == -1. This commit fixes the bug in EDApplication.getFSIndex()
+and patches the DBHelper code to drop affected volumes from the
+database.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415859201,1415859416,ba6c23f845601830c1a2d26c0b06a79b5a1dbf7b
+ba6c23f845601830c1a2d26c0b06a79b5a1dbf7b,ba6c23f8,Version bump to 2.1.1,"Version bump to 2.1.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415730148,1415730148,5ca4af3eb44c14dd4499d7272163c3e0f8b3fb12
+5ca4af3eb44c14dd4499d7272163c3e0f8b3fb12,5ca4af3e,Fix crashes with pre-Kitkat versions,"Fix crashes with pre-Kitkat versions
+
+Before Android 4.4 calling ListView.addHeaderView() after
+ListView.setAdapter() leads to a crash. Fix reorders these two calls.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415730077,1415730077,37d0d2000e06f7b4c0d52f51638678d18166b6fc
+37d0d2000e06f7b4c0d52f51638678d18166b6fc,37d0d200,Version bump to 2.1.0,"Version bump to 2.1.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1415691098,1415691098,3133ae12e05021ad952abb951003e5795623c876
+3133ae12e05021ad952abb951003e5795623c876,3133ae12,Multiple file/folder selection support,"Multiple file/folder selection support
+
+This (large) commit adds support for selecting multiple files/folders
+for the following operations:
+
+* Import files/folders
+* Export files/folders
+* Delete files/folders
+* Cut/Copy and paste files/folders
+
+The multiple selection mode is triggered via long pressing on a file
+name. A multiple item chooser interface replaces the previous context
+menu. Upon making their selections the user can then choose the action
+they want to invoke using the CAB (context action bar) interface.
+
+The progress display mechanism was somewhat reworked to display a more
+useful progress indication, although further work is needed to improve
+on it. Currently we can show individual file names in all multiple
+selection operations which can give the user a good sense of where the
+long running operation is at.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1410239652,1415690762,f2f5757e108ca22b2abac20388976492c1bf7ac2
+f2f5757e108ca22b2abac20388976492c1bf7ac2,f2f5757e,Cleanup config file browser dialog code,"Cleanup config file browser dialog code
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1409713653,1409714713,f33d5945b31524584b734e6c1e2f06bbdb48d36b
+f33d5945b31524584b734e6c1e2f06bbdb48d36b,f33d5945,Use a custom dialog layout for volume deletion,"Use a custom dialog layout for volume deletion
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1409707362,1409709193,280870e69d6f0bb980472254638bb6f25db57762
+280870e69d6f0bb980472254638bb6f25db57762,280870e6,Show filesystem label when deleting a volume,"Show filesystem label when deleting a volume
+
+Doesn't quite work right - needs to hook into onPrepareDialog()
+otherwise deleting two volumes consecutively only shows the first one's
+filesystem type correctly.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385110099,1409709193,d432dd96a6df0f88228040a4357f5172efca8eb6
+d432dd96a6df0f88228040a4357f5172efca8eb6,d432dd96,Don't pass null to LayoutInflater.inflate(),"Don't pass null to LayoutInflater.inflate()
+
+Fixing some Android Lint warnings, passing the proper layout as parent
+to LayoutInflater.inflate() is recommended.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1406185650,1406185650,afb820bb90a204cc826c44f58d5585f7bcc0b313
+afb820bb90a204cc826c44f58d5585f7bcc0b313,afb820bb,Remove unused imports in VolumeListActivity,"Remove unused imports in VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1406184192,1406184192,bffcbf15745f90d257ebee627d2aecc016301d67
+bffcbf15745f90d257ebee627d2aecc016301d67,bffcbf15,Merge branch 'ashjas/master',"Merge branch 'ashjas/master'
+
+Closes pull request #67
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1406180737,1406180737,"b72ffe65fea5b76065ca005a81bd1720fc3a9c67,91f684821facbb8432753c1a3b8d382d2b6be22a"
+91f684821facbb8432753c1a3b8d382d2b6be22a,91f68482,little documentation.,"little documentation.
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1405387818,1405387818,c0f9cdbf6e95145c6d13ae0d7c37552a398de936
+c0f9cdbf6e95145c6d13ae0d7c37552a398de936,c0f9cdbf,Whitespace formatting & if/else brackets,"Whitespace formatting & if/else brackets
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1405387496,1405387496,687a7d8589442e77a1dcf9d383075a3ec6d3b130
+687a7d8589442e77a1dcf9d383075a3ec6d3b130,687a7d85,Tidy up try/catch block.,"Tidy up try/catch block.
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1405385617,1405385617,3eed4b3375055337cdb8f29ceba73381f3d7d591
+3eed4b3375055337cdb8f29ceba73381f3d7d591,3eed4b33,Handle upgrade on DB version change.,"Handle upgrade on DB version change.
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1405385364,1405385364,7adf507add6d27494a45fc679192eafc18dc5d52
+b72ffe65fea5b76065ca005a81bd1720fc3a9c67,b72ffe65,Remove unused .google_apis directory,"Remove unused .google_apis directory
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1405238157,1405238157,5c02c9b3212b8baccab77bcaaea477bbb4603b58
+7adf507add6d27494a45fc679192eafc18dc5d52,7adf507a,Now browse config through file dialog & for cloud volumes too.,"Now browse config through file dialog & for cloud volumes too.
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1404864900,1404864900,cfd623775ecc43229205fa107d1737d9401ae834
+5c02c9b3212b8baccab77bcaaea477bbb4603b58,5c02c9b3,Version bump to 2.0.5,"Version bump to 2.0.5
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1403410056,1403410056,2c079a2ab7b8d493679aad6c65a5fa0c150562f8
+2c079a2ab7b8d493679aad6c65a5fa0c150562f8,2c079a2a,Upgrade to OpenSSL 1.0.1h,"Upgrade to OpenSSL 1.0.1h
+
+In light of recent vulnerabilities disclosed in OpenSSL Google is
+requiring all Google Play apps to upgrade their OpenSSL versions. Even
+though Encdroid isn't really affected by any of the vulnerabilities we
+will still upgrade to remain compliant.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1403375908,1403377042,b420c148c3f912fd4ca70ceb6c1a9a12baa88f6f
+cfd623775ecc43229205fa107d1737d9401ae834,cfd62377,Feature: Adding Custom config file provision.,"Feature: Adding Custom config file provision.
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1402158627,1402159007,b420c148c3f912fd4ca70ceb6c1a9a12baa88f6f
+b420c148c3f912fd4ca70ceb6c1a9a12baa88f6f,b420c148,Version bump to 2.0.4,"Version bump to 2.0.4
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392707973,1392707973,5654a92cdcd76848587e6c748a3460dac5d9d516
+5654a92cdcd76848587e6c748a3460dac5d9d516,5654a92c,Bring in encfs-java fix for unicode filename decoding,"Bring in encfs-java fix for unicode filename decoding
+
+Fix #46 in mrpdaemon/encdroid
+
+Refer to mrpdaemon/encfs-java@5f477a9aee8985068aec38b214f19124e8dc1c74
+for details of the fix.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392707238,1392707238,d0e1bee27f9fa7f1a8761e2dacecdc1c48f1a0ad
+d0e1bee27f9fa7f1a8761e2dacecdc1c48f1a0ad,d0e1bee2,encfs-java update to remove PBKDF2 passwordLen,"encfs-java update to remove PBKDF2 passwordLen
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392701708,1392701910,7118c19671339d40654610683437ea60afd8781f
+7118c19671339d40654610683437ea60afd8781f,7118c196,Add libs/*.properties to .gitignore,"Add libs/*.properties to .gitignore
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392701588,1392701910,3ae80a86bbe860382c206ffd52cfcc95826bda65
+3ae80a86bbe860382c206ffd52cfcc95826bda65,3ae80a86,Fix native PBKDF2 behavior with Unicode passwords,"Fix native PBKDF2 behavior with Unicode passwords
+
+The native PBKDF2 provider marshalls a Java string into a byte array
+using GetStringUTFChars() which expands unicode characters into 2 bytes.
+However for determining the size of the character array it was using the
+password length parameter passed by the Java caller, which simply uses
+String.length() that counts unicode characters as a single character
+resulting in truncated data for the PBKDF2 computation. Fix uses
+strlen() on the GetStringUTFChars() result.
+
+Fixes #61 in mrpdaemon/encdroid
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392679243,1392679508,e68026ca9476f131fecfea08d011cf9e12286d6e
+e68026ca9476f131fecfea08d011cf9e12286d6e,e68026ca,Workaround for null MenuInfo in onContextItemSelected(),"Workaround for null MenuInfo in onContextItemSelected()
+
+MenuItem.getMenuInfo() is returning null in onContextItemSelected() due
+to proxying showContextMenu() through ListView.setOnItemLongClickListener().
+This is a workaround to save the position of the currently selected list
+item in the long click listener and use that in onContextItemSelected().
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392615340,1392616020,ba654c2d11e4fba8e32d89de97fb227e2ec79207
+ba654c2d11e4fba8e32d89de97fb227e2ec79207,ba654c2d,Don't show context menu for list header in VolumeBrowserActivity,"Don't show context menu for list header in VolumeBrowserActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384767848,1392616020,20990a420ec516d08c4564fec1e45cac0ee50d56
+20990a420ec516d08c4564fec1e45cac0ee50d56,20990a42,Don't crash on illegal file names,"Don't crash on illegal file names
+
+File names starting with '/' aren't allowed in EncFS - if we encounter
+such files we'd crash before. Just ignore such files now.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1386322594,1392611239,31dba096cb46de2b6b6d61e3400aa887708f28ef
+31dba096cb46de2b6b6d61e3400aa887708f28ef,31dba096,Merge pull request #65 from ashjas/master,"Merge pull request #65 from ashjas/master
+
+Show keepass icon love for .kdbx files too",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1392610747,1392610747,"92dd204b0b9e3639ed8b47e228222f98e2bafee3,5d67748c59b677f3cefb2d91eb27ddb6de3f53ab"
+5d67748c59b677f3cefb2d91eb27ddb6de3f53ab,5d67748c,Show keepass icon love for .kdbx files too,"Show keepass icon love for .kdbx files too
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1383750399,1389603245,92dd204b0b9e3639ed8b47e228222f98e2bafee3
+92dd204b0b9e3639ed8b47e228222f98e2bafee3,92dd204b,Version bump to 2.0.3,"Version bump to 2.0.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385203148,1385203148,fbf3e843a5acbab3c37fb889cda90018e035c3ee
+fbf3e843a5acbab3c37fb889cda90018e035c3ee,fbf3e843,Clear authInProgress in GoogleDriveAccount.unlink(),"Clear authInProgress in GoogleDriveAccount.unlink()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385194230,1385199865,018ead65c00373c673479781c06a22e9d217d716
+018ead65c00373c673479781c06a22e9d217d716,018ead65,Comment update in FileChooserActivity.onCreate(),"Comment update in FileChooserActivity.onCreate()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385193530,1385199865,1e1cf8bef1785594e2d510162cfa495ca6b74021
+1e1cf8bef1785594e2d510162cfa495ca6b74021,1e1cf8be,Refresh error dialog text in VolumeListActivity.onPrepareDialog(),"Refresh error dialog text in VolumeListActivity.onPrepareDialog()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385193160,1385199865,b7b4133aa69b942de97a59411b80a5dbac365877
+b7b4133aa69b942de97a59411b80a5dbac365877,b7b4133a,Unset linkInProgress after linking in GoogleDriveAccount,"Unset linkInProgress after linking in GoogleDriveAccount
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385192892,1385199865,7f21c2a21f406bda21612b30e200c28de42d7adc
+7f21c2a21f406bda21612b30e200c28de42d7adc,7f21c2a2,Make Account.linkOrAuthIfNeeded() a member function,"Make Account.linkOrAuthIfNeeded() a member function
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385192386,1385199865,d7a38eff2b893ed78a020b8379b1a1cd1f5bb46c
+d7a38eff2b893ed78a020b8379b1a1cd1f5bb46c,d7a38eff,Add linking to Account.linkOrAuthIfNeeded(),"Add linking to Account.linkOrAuthIfNeeded()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385192184,1385199865,1eba8fea3fdc2bf12d579e0bb5737b48151e1b61
+1eba8fea3fdc2bf12d579e0bb5737b48151e1b61,1eba8fea,Call Account.authIfNeeded() from all async tasks,"Call Account.authIfNeeded() from all async tasks
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385190986,1385199865,e7e15a9e5416b2deffd532170dba7da9d09289b4
+e7e15a9e5416b2deffd532170dba7da9d09289b4,e7e15a9e,Use AsyncTask to launch file chooser from VolumeListActivity,"Use AsyncTask to launch file chooser from VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385190297,1385199865,73c40436e9c16e5aef42d36e6a9f2f61fb161848
+73c40436e9c16e5aef42d36e6a9f2f61fb161848,73c40436,Safely dereference context in GoogleDriveAccount.startLinkOrAuth(),"Safely dereference context in GoogleDriveAccount.startLinkOrAuth()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385189474,1385199865,99ecadeaa9d37cb2e665bf6babdf1bbe4cb565d7
+99ecadeaa9d37cb2e665bf6babdf1bbe4cb565d7,99ecadea,Add a timeout to prevent infinite loop,"Add a timeout to prevent infinite loop
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385189214,1385199865,396e217af136087109a38ff870a77a03391a9490
+396e217af136087109a38ff870a77a03391a9490,396e217a,Move delete/unlock waits to AsyncTask,"Move delete/unlock waits to AsyncTask
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385116371,1385199865,474daaaebddc4b3a0cc70423644a61ed166a5cd1
+474daaaebddc4b3a0cc70423644a61ed166a5cd1,474daaae,Block authentication and wait for auth thread,"Block authentication and wait for auth thread
+
+Doesn't quite work, deadlock when app is booted without wifi but then
+wifi is enabled.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385115595,1385199865,47ac57b2d2acab809b05393cc74b1428375a2e0e
+47ac57b2d2acab809b05393cc74b1428375a2e0e,47ac57b2,Don't crash if no Google Play Services installed,"Don't crash if no Google Play Services installed
+
+Instead show a toast / error dialog. Closes #56
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385109470,1385109470,aa66ee0462252255f7251bcbb6e2027468671e4a
+aa66ee0462252255f7251bcbb6e2027468671e4a,aa66ee04,Fix MIME type detection for capitalized extensions,"Fix MIME type detection for capitalized extensions
+
+Closes #55
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385108721,1385108721,dcc20c00a20427f8158bd439f496bf1371537834
+dcc20c00a20427f8158bd439f496bf1371537834,dcc20c00,Fix rename behavior in GoogleDriveFileProvider.move(),"Fix rename behavior in GoogleDriveFileProvider.move()
+
+When doing simple renames we shouldn't be deleting the source parent
+directory from the file's parent list.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385108365,1385108365,400631b5b814eeae4f519c2dc0def55e97d9e375
+400631b5b814eeae4f519c2dc0def55e97d9e375,400631b5,Do an About.Get() request to Drive API on Auth,"Do an About.Get() request to Drive API on Auth
+
+This is needed to make sure we can access drive API. Also fixed an issue
+with the previous commit using case statements without breaks.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385106139,1385106139,9c780e6ffde8347de778ba86618582d19f9bef0d
+9c780e6ffde8347de778ba86618582d19f9bef0d,9c780e6f,Show toast if Google Drive login fails,"Show toast if Google Drive login fails
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1385105360,1385105360,0af740e0d0326bab03c19c46cdece652d905d551
+0af740e0d0326bab03c19c46cdece652d905d551,0af740e0,Version bump to 2.0.2,"Version bump to 2.0.2
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384940049,1384940049,89be3a053b46a085c9a1fe6453f1220d002dc800
+89be3a053b46a085c9a1fe6453f1220d002dc800,89be3a05,"Revert ""Don't show context menu for list header in VolumeBrowserActivity""","Revert ""Don't show context menu for list header in VolumeBrowserActivity""
+
+This reverts commit f1404dc081b4c862b384a969d9786d5e6899bb40.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384939845,1384940001,5dc34855d0d72ea8facb2042d67a89d26d4fb818
+5dc34855d0d72ea8facb2042d67a89d26d4fb818,5dc34855,Version bump to 2.0.1,"Version bump to 2.0.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384937868,1384937895,3fdeaef40a7bfe27c21d38cf5d6d6f013d3286c8
+3fdeaef40a7bfe27c21d38cf5d6d6f013d3286c8,3fdeaef4,Don't filter hidden files in GoogleDriveFileProvider,"Don't filter hidden files in GoogleDriveFileProvider
+
+Looks like the file.hidden label is deprecated in Google Drive v2 API.
+Files uploaded via folder upload were having hidden=true set and we were
+filtering them out.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384937694,1384937694,f1404dc081b4c862b384a969d9786d5e6899bb40
+f1404dc081b4c862b384a969d9786d5e6899bb40,f1404dc0,Don't show context menu for list header in VolumeBrowserActivity,"Don't show context menu for list header in VolumeBrowserActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384767848,1384767848,656b82806b5e3080532298ab2c03844a7f569d53
+656b82806b5e3080532298ab2c03844a7f569d53,656b8280,Fix crash in VolumeBrowserActivity.onActivityResult(),"Fix crash in VolumeBrowserActivity.onActivityResult()
+
+Reported on Google Play - it's possible to reach this function with a
+null mFileObserver, especially if a long time is spent in the viewer app
+(such as a video player) and Encdroid is killed in the meanwhile. Let's
+just ignore the result in that case.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384766882,1384766882,35b8c573e1cac86b83c97ed509409a585b9c1c6f
+35b8c573e1cac86b83c97ed509409a585b9c1c6f,35b8c573,Version bump to 2.0.0,"Version bump to 2.0.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384761964,1384761964,d4eed188ff7baf5c1c93c3cf95ec9642cb4164af
+d4eed188ff7baf5c1c93c3cf95ec9642cb4164af,d4eed188,README update for Google Drive support,"README update for Google Drive support
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384750560,1384750735,0c532e9cca23b8bab81efa5577d4fca66eba05d4
+0c532e9cca23b8bab81efa5577d4fca66eba05d4,0c532e9c,GoogleDriveOutputStream implementation,"GoogleDriveOutputStream implementation
+
+Also add MANAGE_ACCOUNTS and USE_ACCOUNTS permission to Manifest
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384599306,1384750735,9d1d2e2126c0c96f177484b3e9a00abf00186b0d
+9d1d2e2126c0c96f177484b3e9a00abf00186b0d,9d1d2e21,Fix account crash,"Fix account crash
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384676018,1384750735,269d9071df71553264dee61a4198df0fc13aa9bb
+269d9071df71553264dee61a4198df0fc13aa9bb,269d9071,Implement GoogleDriveFileProvider.createFile(),"Implement GoogleDriveFileProvider.createFile()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384425145,1384750735,2f1d7e8b01c3f9da4db71397a9b82b8ee9bbfff2
+2f1d7e8b01c3f9da4db71397a9b82b8ee9bbfff2,2f1d7e8b,Implement GoogleDriveFileProvider.copy(),"Implement GoogleDriveFileProvider.copy()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384424146,1384750735,474f4feb0ed1a560eee3c9a032615d7a43e93ec1
+474f4feb0ed1a560eee3c9a032615d7a43e93ec1,474f4feb,Implement GoogleDriveFileProvider.delete(),"Implement GoogleDriveFileProvider.delete()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384423510,1384750735,807e5e1051d39e11be0a6b0469c5a379ea599c17
+807e5e1051d39e11be0a6b0469c5a379ea599c17,807e5e10,Implement GoogleDriveFileProvider.mkdir(),"Implement GoogleDriveFileProvider.mkdir()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384422821,1384750735,a3a3fc171ede80a5f7ce8b04dde941d95a22f394
+a3a3fc171ede80a5f7ce8b04dde941d95a22f394,a3a3fc17,Implement GoogleDriveFileProvider.move(),"Implement GoogleDriveFileProvider.move()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384421424,1384750735,f78429b768e7e263a1a70a6924b4616f3b5b2549
+f78429b768e7e263a1a70a6924b4616f3b5b2549,f78429b7,Fix Google Drive icon aspect ratio,"Fix Google Drive icon aspect ratio
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384173208,1384750735,5be96207b5a82043f686886c25e1bd14e405cb35
+5be96207b5a82043f686886c25e1bd14e405cb35,5be96207,Auto login to Google Drive when application is created,"Auto login to Google Drive when application is created
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1384147428,1384750735,5837853666f5dd646db63aafdd5a9e176e91cc71
+5837853666f5dd646db63aafdd5a9e176e91cc71,58378536,Save Drive preferences and implement unlink,"Save Drive preferences and implement unlink
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383904074,1384750735,f690af5ecf538bc9e311af768ec48c1125d217d8
+f690af5ecf538bc9e311af768ec48c1125d217d8,f690af5e,Use credential.getToken() in GoogleDriveAccount,"Use credential.getToken() in GoogleDriveAccount
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383902818,1384750735,e7274953c9da1f8b9d34014eb33e1534aaf93b44
+e7274953c9da1f8b9d34014eb33e1534aaf93b44,e7274953,Show login toast,"Show login toast
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383900280,1384750735,83b36ecba54b5add221c74ab36a7f7791919316f
+83b36ecba54b5add221c74ab36a7f7791919316f,83b36ecb,Allow linking from VolumeListActivity,"Allow linking from VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383899985,1384750735,648a982b114cb07d2811a92e26b60a0c1e83c1f1
+648a982b114cb07d2811a92e26b60a0c1e83c1f1,648a982b,Fix modifiedDate in GoogleDriveFileProvider.fileToEncFSFileInfo(),"Fix modifiedDate in GoogleDriveFileProvider.fileToEncFSFileInfo()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383898633,1384750735,41ca8fafa69cbfa831561c4356cea19eff57ed69
+41ca8fafa69cbfa831561c4356cea19eff57ed69,41ca8faf,Implement GoogleDriveFileProvider.isDirectory(),"Implement GoogleDriveFileProvider.isDirectory()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383898296,1384750735,8fe20a8e2dc45f71fe0609a58eeaa4b55c322e24
+8fe20a8e2dc45f71fe0609a58eeaa4b55c322e24,8fe20a8e,Implement file ID caching for faster performance,"Implement file ID caching for faster performance
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383897420,1384750735,b8b4317cfc2dde9eeb3889e33d53358a7ef0c0b2
+b8b4317cfc2dde9eeb3889e33d53358a7ef0c0b2,b8b4317c,Implement GoogleDriveFileProvider.openInputStream();,"Implement GoogleDriveFileProvider.openInputStream();
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383894379,1384750734,4ee3ff56bea01e544e170857a5fed67f59d6a7e9
+4ee3ff56bea01e544e170857a5fed67f59d6a7e9,4ee3ff56,Implement GoogleDriveFileProvider.listFiles(),"Implement GoogleDriveFileProvider.listFiles()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383563916,1384750734,b4fe01b574321c779ee67c8239fae53ba03a5e9d
+b4fe01b574321c779ee67c8239fae53ba03a5e9d,b4fe01b5,Able to instantiate a Drive service and authenticate,"Able to instantiate a Drive service and authenticate
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383556204,1384750734,18a25f7c6c8e9c5916b939ed1913947e0bc759c8
+18a25f7c6c8e9c5916b939ed1913947e0bc759c8,18a25f7c,Implement linking to Google account,"Implement linking to Google account
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383447648,1384750734,2d6e6028583f0e08f0e2cdd87efdd077d7dcbc9a
+2d6e6028583f0e08f0e2cdd87efdd077d7dcbc9a,2d6e6028,Add Google Drive API dependencies,"Add Google Drive API dependencies
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383441860,1384750734,d5937d1eacf22863e0f4245792ddebbf3d81bed5
+d5937d1eacf22863e0f4245792ddebbf3d81bed5,d5937d1e,Add skeleton implementation files,"Add skeleton implementation files
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383378308,1384750734,2ccc30373bf5f40b0842d7aa828a731b88cf89f8
+2ccc30373bf5f40b0842d7aa828a731b88cf89f8,2ccc3037,Add graphic assets for Google Drive,"Add graphic assets for Google Drive
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383377397,1384750734,e25cf8378d74d47241619d1cade8460228dd6394
+e25cf8378d74d47241619d1cade8460228dd6394,e25cf837,Set activity title from onCreate() instead of fill(),"Set activity title from onCreate() instead of fill()
+
+In VolumeBrowserActivity and FileChooserActivity the title setting was
+delayed for network based file providers. Set the title in onCreate()
+directly to avoid this.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383376780,1383376840,7323ecafe47130a7692b42908a4bab29983572f2
+7323ecafe47130a7692b42908a4bab29983572f2,7323ecaf,Move target to 18 in project.properties,"Move target to 18 in project.properties
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383376233,1383376233,b74fb32f827dfecc2274d23d1198f902851e4111
+b74fb32f827dfecc2274d23d1198f902851e4111,b74fb32f,Version bump to 1.8.0,"Version bump to 1.8.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383373146,1383373228,47d3f47d6b65d73bee5a07497b31c494dd60d8e0
+47d3f47d6b65d73bee5a07497b31c494dd60d8e0,47d3f47d,Commit project.properties to git,"Commit project.properties to git
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383194278,1383194278,a8a349bc0079d7cb3106531d372df8acc179882a
+a8a349bc0079d7cb3106531d372df8acc179882a,a8a349bc,Fix VolumeListActivity crash on orientation change,"Fix VolumeListActivity crash on orientation change
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383121616,1383121616,9a9ea0579c11b3e72198c1e8b99dabd6500248c5
+9a9ea0579c11b3e72198c1e8b99dabd6500248c5,9a9ea057,Increase padding on FS dialog items,"Increase padding on FS dialog items
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383120159,1383120159,221b356d251155572457f43af896ffe1b0d9f1c1
+221b356d251155572457f43af896ffe1b0d9f1c1,221b356d,Use SuppressWarnings for PowerManager.FULL_WAKE_LOCK,"Use SuppressWarnings for PowerManager.FULL_WAKE_LOCK
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383118922,1383119511,1ddbdac56dc4ddc87b77c4b6c267ca95612fbbe7
+1ddbdac56dc4ddc87b77c4b6c267ca95612fbbe7,1ddbdac5,Use LayoutParams.MATCH_PARENT instead of FILL_PARENT,"Use LayoutParams.MATCH_PARENT instead of FILL_PARENT
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383118760,1383119511,30516a77b1b7997906e0d0e64b4165c94223dd1a
+30516a77b1b7997906e0d0e64b4165c94223dd1a,30516a77,Fix README.md to mentioned DropboxAccount.java,"Fix README.md to mentioned DropboxAccount.java
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383118627,1383118627,80f44463eb2faec3bf34578579b7f01a9b1977ea
+80f44463eb2faec3bf34578579b7f01a9b1977ea,80f44463,Don't put FS name in FileChooserActivity title,"Don't put FS name in FileChooserActivity title
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383117022,1383118031,7d5b1cf8bc67c7a4561b69f816b700f23b6c8a43
+7d5b1cf8bc67c7a4561b69f816b700f23b6c8a43,7d5b1cf8,Get rid of ActionBarHelper,"Get rid of ActionBarHelper
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383116496,1383118031,eccff41bc6c19f8bb1ea00d315f08bfd614454bb
+eccff41bc6c19f8bb1ea00d315f08bfd614454bb,eccff41b,Use FS icon in the ActionBar,"Use FS icon in the ActionBar
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383115852,1383118031,bde1adc1d1ed03abcb04e4021f359bd6fbdeddf6
+bde1adc1d1ed03abcb04e4021f359bd6fbdeddf6,bde1adc1,Bump up to API level 14,"Bump up to API level 14
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383115845,1383118031,d742263e922054fc099444e33cab857efe299166
+d742263e922054fc099444e33cab857efe299166,d742263e,Increase height of fs dialog items,"Increase height of fs dialog items
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383113656,1383118031,219ed47259d9a3cbd8e4d723e61e2ffad026d3bb
+219ed47259d9a3cbd8e4d723e61e2ffad026d3bb,219ed472,Nuke EDApplication.getDropbox(),"Nuke EDApplication.getDropbox()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383020451,1383118031,8512dc87f5adf38ba47805bba3528bf31811a9c9
+8512dc87f5adf38ba47805bba3528bf31811a9c9,8512dc87,Add note about filesystem ordering to EDApplication,"Add note about filesystem ordering to EDApplication
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383020348,1383118031,d61d46884ddc14aa792eb5beecde3c167c30fc66
+d61d46884ddc14aa792eb5beecde3c167c30fc66,d61d4688,Add icons to FS dialog in VolumeListActivity,"Add icons to FS dialog in VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383019732,1383118031,1dba3b4d7bb2a6f5badeadcf9d4069a38d8878bf
+1dba3b4d7bb2a6f5badeadcf9d4069a38d8878bf,1dba3b4d,Fix fsType logic in VolumeListActivity,"Fix fsType logic in VolumeListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383017376,1383118031,89c55872018d63a8e63fd997d0e83402f9fc5501
+89c55872018d63a8e63fd997d0e83402f9fc5501,89c55872,Show filesystem icons in VolumeList,"Show filesystem icons in VolumeList
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383017039,1383118031,7d5c3da4336339cf55d236fe46f090ff01a2d659
+7d5c3da4336339cf55d236fe46f090ff01a2d659,7d5c3da4,Add graphics for local/sd filesystems,"Add graphics for local/sd filesystems
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1383015425,1383118031,e8e0ee7ba267e9d36ecf768412f81c78b9b9bd61
+e8e0ee7ba267e9d36ecf768412f81c78b9b9bd61,e8e0ee7b,WIP: File system changes,"WIP: File system changes
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382952529,1383118031,90618cfd303e0cc5e991e52c366d612fd391ebd2
+90618cfd303e0cc5e991e52c366d612fd391ebd2,90618cfd,Add FileSystem.isEnabled() and override for ExtSDFileSystem,"Add FileSystem.isEnabled() and override for ExtSDFileSystem
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382948552,1383118031,84b849e43345bd409a127c8613096e14acfaa870
+84b849e43345bd409a127c8613096e14acfaa870,84b849e4,Add Account list and make AccountsActivity a ListActivity,"Add Account list and make AccountsActivity a ListActivity
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382947456,1383118031,b7347a1e075295f914a9249ad7323b363982affd
+b7347a1e075295f914a9249ad7323b363982affd,b7347a1e,Make DropboxAccount extend Account,"Make DropboxAccount extend Account
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382943634,1383118031,8779ff71988f045a44381c754c345e3da1f5d008
+8779ff71988f045a44381c754c345e3da1f5d008,8779ff71,Add Account and FileSystem base classes,"Add Account and FileSystem base classes
+
+Also implement Local, Ext SD and Dropbox file system classes
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382941129,1383118031,66cbcffd126618a636936454c89bad6d89fec88d
+66cbcffd126618a636936454c89bad6d89fec88d,66cbcffd,Version bump to 1.7.1,"Version bump to 1.7.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382765816,1382765816,5d787a24c03d0c008a71e95595d17cbac244d567
+5d787a24c03d0c008a71e95595d17cbac244d567,5d787a24,Pick up encfs-java 0.7,"Pick up encfs-java 0.7
+
+Contains a bug fix for a crash in EncFSLocalFileProvider.listFiles()
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382600281,1382600339,61b88b2566d18634fe043ba240a25df2c0b80a1a
+61b88b2566d18634fe043ba240a25df2c0b80a1a,61b88b25,Use UI thread for error dialog in VolumeBrowserActivity.fill(),"Use UI thread for error dialog in VolumeBrowserActivity.fill()
+
+If we get an IOException from EncFSFile.listFiles() we would try to run
+showDialog() from the context of AsyncTask FillTask which would cause a
+RuntimeException. Show the dialog from the UI thread instead.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382599222,1382599354,9f7b232fcf1292075f5b8ccede6230d905bb8842
+9f7b232fcf1292075f5b8ccede6230d905bb8842,9f7b232f,Save/restore mOrigModifiedDate in VolumeBrowserActivity,"Save/restore mOrigModifiedDate in VolumeBrowserActivity
+
+Got a crash report on Google play because of a NullPointerException in
+VolumeBrowserActivity.onActivityResult() due to mOrigModifiedDate being
+null. This could happen if the activity was paused and is being
+restored. The fix is to save/restore mOrigModifiedDate with the rest of
+the activity state.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382598702,1382598880,fb9722dae2d3a42ddc7eb04c97d3917b041a3593
+fb9722dae2d3a42ddc7eb04c97d3917b041a3593,fb9722da,Fix crash in FileChooserFillTask.onPreExecute(),"Fix crash in FileChooserFillTask.onPreExecute()
+
+A similar fix was done to VolumeBrowserActivity$FillTask.onPreExecute()
+but wasn't applied to FileChooserFillTask.onPreExecute(). In case the
+user spams refresh the ListView can return null from getParent(), which
+leads to a NullPointerException. The fix is to not create a progress bar
+in these cases.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382597616,1382598034,7ebb733703e4eb2de56014ca5ea256b578bff651
+7ebb733703e4eb2de56014ca5ea256b578bff651,7ebb7337,More renaming cleanups,"More renaming cleanups
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382424927,1382425094,154632c192e5c0cc8b78bb6a040f1bb85f8ffb86
+154632c192e5c0cc8b78bb6a040f1bb85f8ffb86,154632c1,Build native libraries for all arches,"Build native libraries for all arches
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382423972,1382424197,3bcb52bc71a4b7dcad921957fb98a9a96d4969e6
+3bcb52bc71a4b7dcad921957fb98a9a96d4969e6,3bcb52bc,Mass rename of class names to drop ED prefix,"Mass rename of class names to drop ED prefix
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382423949,1382424197,7408ac7c24274ade3f66d4f64972c3f6f6b542a0
+7408ac7c24274ade3f66d4f64972c3f6f6b542a0,7408ac7c,Version bump to 1.7.0,"Version bump to 1.7.0
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382419244,1382419244,2ac4c2e81c83641281b7d33a310aadbdce896bb4
+2ac4c2e81c83641281b7d33a310aadbdce896bb4,2ac4c2e8,Slightly darken the folder mimetype icon,"Slightly darken the folder mimetype icon
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382418938,1382419089,24fd63ff81010620546645a453bf4a9a88c2ae2f
+24fd63ff81010620546645a453bf4a9a88c2ae2f,24fd63ff,Add graphics/ folder with SVG assets,"Add graphics/ folder with SVG assets
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382418163,1382419089,c985dd8ccf969fa8e55c61b67d1c0409467ba688
+c985dd8ccf969fa8e55c61b67d1c0409467ba688,c985dd8c,Add copyright header to EDFileUtils.java,"Add copyright header to EDFileUtils.java
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382417684,1382419089,c83c3303fd5cef698e14d06bc5012bcde893cf11
+c83c3303fd5cef698e14d06bc5012bcde893cf11,c83c3303,Fix mimetype icon for a few file extensions,"Fix mimetype icon for a few file extensions
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382349133,1382349211,989a2b12f4c8776ff50fe845eb42e6526ddee91f
+989a2b12f4c8776ff50fe845eb42e6526ddee91f,989a2b12,Add KeePass db mimetype icon,"Add KeePass db mimetype icon
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382348930,1382349211,1e627df6ccb66a436208c068ef84b4c60fa00aa9
+1e627df6ccb66a436208c068ef84b4c60fa00aa9,1e627df6,Add PDF mimetype icon,"Add PDF mimetype icon
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382348297,1382349211,c49214c43a1bff6b1a47fccadca81438764e2ba8
+c49214c43a1bff6b1a47fccadca81438764e2ba8,c49214c4,Replace folder icon with tango equivalent,"Replace folder icon with tango equivalent
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382347745,1382349211,fdd051e17da2353aef48f0b39d863164cbdb17dd
+fdd051e17da2353aef48f0b39d863164cbdb17dd,fdd051e1,Add code to display mime type icons,"Add code to display mime type icons
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382346955,1382349211,cfe62060554f3deb408a583e5f286e2d9559b6ea
+cfe62060554f3deb408a583e5f286e2d9559b6ea,cfe62060,Add mime type icons,"Add mime type icons
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1382343708,1382349210,409de6a11dad1cdfa7ab4cc67d1bb7d73fce7655
+409de6a11dad1cdfa7ab4cc67d1bb7d73fce7655,409de6a1,Clean up alpha around top corners of launcher icon,"Clean up alpha around top corners of launcher icon
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1380527938,1380528756,ed969ee3ccf7f144a31b9adc5a0ce806f8722f07
+ed969ee3ccf7f144a31b9adc5a0ce806f8722f07,ed969ee3,Add xxhdpi resources,"Add xxhdpi resources
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1380527489,1380528756,7100d88c835a0b5ec2912a92c3ec79ad782328ac
+7100d88c835a0b5ec2912a92c3ec79ad782328ac,7100d88c,Version bump to 1.6.1,"Version bump to 1.6.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1380181670,1380181670,f1ccd64db5a57d6d4a961f487993630d01f5996e
+f1ccd64db5a57d6d4a961f487993630d01f5996e,f1ccd64d,Fix whitespace formatting,"Fix whitespace formatting
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1380180325,1380180364,e0d86d4bc1bbfdfd0691779de74262ff41b1d5c4
+e0d86d4bc1bbfdfd0691779de74262ff41b1d5c4,e0d86d4b,Fix Encdroid now syncs back modified keepassdroid .kdb/x databases,"Fix Encdroid now syncs back modified keepassdroid .kdb/x databases
+",,,,Ashish Soni,ashjas@gmail.com,Ashish Soni,ashjas@gmail.com,1377798471,1377798471,f5ce71d7968a19b37a0433befc182dd2c88b405d
+f5ce71d7968a19b37a0433befc182dd2c88b405d,f5ce71d7,Version bump to 1.6,"Version bump to 1.6
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1369692768,1369692768,b84012dd440b80e15fadfc34134074e0d294a4da
+b84012dd440b80e15fadfc34134074e0d294a4da,b84012dd,Update encfs-java to 0.6,"Update encfs-java to 0.6
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1369692612,1369692612,3bb896bfd9592a8657bbf938d049942c71f0ee8d
+3bb896bfd9592a8657bbf938d049942c71f0ee8d,3bb896bf,Don't autocomplete password dialogs,"Don't autocomplete password dialogs
+
+Fixes #32 in mrpdaemon/encdroid
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1369374262,1369374388,9804b1a8dcafb25489b01be835cb06f1da64d1eb
+9804b1a8dcafb25489b01be835cb06f1da64d1eb,9804b1a8,Upgrade Dropbox SDK to 1.5.4,"Upgrade Dropbox SDK to 1.5.4
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1369121793,1369371451,92e0a17f3b8f8e9a7a668e99f998ffde71a40cc2
+92e0a17f3b8f8e9a7a668e99f998ffde71a40cc2,92e0a17f,Add build.xml for building Encdroid with ant,"Add build.xml for building Encdroid with ant
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1367562879,1367562879,3f68960e2f1874c44b97c99965c0ec3413a08e81
+3f68960e2f1874c44b97c99965c0ec3413a08e81,3f68960e,Fix NullPointerException in FillTask.onPreExecute(),"Fix NullPointerException in FillTask.onPreExecute()
+
+Fixes issue #37 - NullPointerException in EDVolumeBrowserActivity's
+FillTask.onPreExecute(). Can be reproduced by spamming the  Refresh
+action bar item in the volume browser.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1366784815,1366784815,9969a8f6537b0fb5be46e3955ffa1c5be44d7218
+9969a8f6537b0fb5be46e3955ffa1c5be44d7218,9969a8f6,Add .vimrc and cscope* to .gitignore,"Add .vimrc and cscope* to .gitignore
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1366576981,1366576981,b0007373cdb7f905fb748dbc2754f900ad8ce5a2
+b0007373cdb7f905fb748dbc2754f900ad8ce5a2,b0007373,Version bump to 1.5,"Version bump to 1.5
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1364089381,1364089381,88e63eb5ba260d0710b738482ab875c06bccf1bb
+88e63eb5ba260d0710b738482ab875c06bccf1bb,88e63eb5,Integrate with encfs-java 0.5 changes,"Integrate with encfs-java 0.5 changes
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1361775458,1364088947,6b871c8d43799e311b4486266ae8a1544f5ed199
+6b871c8d43799e311b4486266ae8a1544f5ed199,6b871c8d,Upgrade to encfs-java 0.5,"Upgrade to encfs-java 0.5
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1364069162,1364088947,deca93343da24e5bcbeb74e632ffde9a244f6920
+deca93343da24e5bcbeb74e632ffde9a244f6920,deca9334,Use ProgressDialog instead of ProgressBar for FillTask's,"Use ProgressDialog instead of ProgressBar for FillTask's
+
+Roman Nurik mentioned on his Google+ post[1] that its lame to use
+ProgressDialog's for showing load progress, so here we go :)
+
+[1] https://plus.google.com/113735310430199015092/posts/eSCfnyTzFUx
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1364016434,1364018972,f7a31442b4ede4cd42d8da9db83a53222bf0f8ab
+f7a31442b4ede4cd42d8da9db83a53222bf0f8ab,f7a31442,Modify ListView adapter in UI thread,"Modify ListView adapter in UI thread
+
+Fixes #31 on mrpdaemon/encdroid in GitHub.
+
+EDVolumeListActivity.UnlockVolumeTask was modifying the ListView adapter
+outside of the UI thread which led to an IllegalStateException. This
+commit moves the notification to run on the UI thread and cleans up the
+code a bit.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1363760731,1363760960,294b453163afd307a07a650cf2fb0561198dbffc
+294b453163afd307a07a650cf2fb0561198dbffc,294b4531,Upgrade to Dropbox SDK 1.5.3,"Upgrade to Dropbox SDK 1.5.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1361265152,1361265152,4ecd77338a361c87f3653410c6911f7b3d57f564
+4ecd77338a361c87f3653410c6911f7b3d57f564,4ecd7733,Commit the libraries used for building Encdroid,"Commit the libraries used for building Encdroid
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1361264715,1361264850,62af5cf0bab8f579386ccbe8ad4a9a14bf0b9c76
+62af5cf0bab8f579386ccbe8ad4a9a14bf0b9c76,62af5cf0,Fix restoring dialogs when EDVolumeListActivity is killed,"Fix restoring dialogs when EDVolumeListActivity is killed
+
+We could crash with NullPointerException because mSelectedVolume is
+not available when EDVolumeListActivity is killed and is being
+restored.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1361147766,1361149165,d6e00c20e61c0fce638850960e307f63c8f57d7f
+d6e00c20e61c0fce638850960e307f63c8f57d7f,d6e00c20,Version bump to 1.4,"Version bump to 1.4
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1360454635,1360454635,d62888d1447156903ce79fdaeb4088346be13c42
+d62888d1447156903ce79fdaeb4088346be13c42,d62888d1,Improve exception logging,"Improve exception logging
+
+Log.e() has trouble with null strings, and passing e.getMessage() to
+it would lead to issues.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1360453297,1360453400,a0a159826b26e6ddbedd803192dd70a2a1a98899
+a0a159826b26e6ddbedd803192dd70a2a1a98899,a0a15982,Cancel EDVolumeBrowserActivity.FillTask onDestroy(),"Cancel EDVolumeBrowserActivity.FillTask onDestroy()
+
+FillTask shouldn't carry over to the recreated activity.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1359969259,1359969259,c6a6996854c5ce11678ce788081cd81d57c98708
+c6a6996854c5ce11678ce788081cd81d57c98708,c6a69968,Restore activity state for EDVolume{List|Browser}Activity,"Restore activity state for EDVolume{List|Browser}Activity
+
+Prior to this commit we used the cop-out way of handling rotation events
+by using 'android:configChanges=""orientation|screenSize""' for
+EDVolume{List|Browser}Activity. This let the app work fine when the
+device is rotated, but resulted in the activity not getting destroyed
+and recreated, which among other things prevented the ActionBar layout
+from being recreated. Especially for tablets such as Nexus 7 the
+landscape layout is dramatically more spacious than the portrait layout,
+so recreating view layout is desirable.
+
+This change reworks EDVolume{List|Browser}Activity to properly save and
+restore activity state so the configChanges workaround is no longer
+needed.
+
+The change also contains cleanups in file organization.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353901244,1359615647,b01e4132f8456c64efbce003fd1d28678f2a8f87
+b01e4132f8456c64efbce003fd1d28678f2a8f87,b01e4132,Version bump to 1.3,"Version bump to 1.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353389789,1353389789,b068674dcfa9a127bfd763253b7771528e9ffd1d
+b068674dcfa9a127bfd763253b7771528e9ffd1d,b068674d,Add Android NDK title to README,"Add Android NDK title to README
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353389523,1353389523,59554f2e6383dac9c23235c3a1906a0013bba1af
+59554f2e6383dac9c23235c3a1906a0013bba1af,59554f2e,README update about Android NDK,"README update about Android NDK
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353389223,1353389420,6de2781730a079c8e195cba1611b747455b0ecdb
+6de2781730a079c8e195cba1611b747455b0ecdb,6de27817,Use native PBKDF2 method in ED{Unlock|Create}VolumeTask,"Use native PBKDF2 method in ED{Unlock|Create}VolumeTask
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353317270,1353389420,fea76200efdbe91d877d70fbfd0cf110f332e299
+fea76200efdbe91d877d70fbfd0cf110f332e299,fea76200,Properly implement native helper for PBKDF2,"Properly implement native helper for PBKDF2
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353310434,1353389420,991587b378f513e938f9c3976e8169693dd77076
+991587b378f513e938f9c3976e8169693dd77076,991587b3,Bring in openssl and create a jni/ build system,"Bring in openssl and create a jni/ build system
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353282822,1353389420,f6636f23270216913dc92ff3d66574b39706bdc8
+f6636f23270216913dc92ff3d66574b39706bdc8,f6636f23,Remove unused import,"Remove unused import
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1353284348,1353284348,8f97f6072d6ff6ddb77e63c4b153aa492f71ae46
+8f97f6072d6ff6ddb77e63c4b153aa492f71ae46,8f97f607,Add support for external SD cards,"Add support for external SD cards
+
+This commit adds a new preference for enabling volumes to be created on
+and imported from an external SD card. The location of this SD card
+defaults to /mnt/external1 but it is configurable through the
+preferences. External SD card volumes become unavailable when the
+preference is switched to disable external SD card support. A future
+change could make this dynamic so we gray out volumes if we detect that
+the external SD card is not mounted.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1352689861,1352788774,d8c70a7f157ffb85134cd4ff81098a2d3c9a7316
+d8c70a7f157ffb85134cd4ff81098a2d3c9a7316,d8c70a7f,Version bump to 1.2.3,"Version bump to 1.2.3
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1352532544,1352532544,e3b606eb72c49bc58e7cdc963fc6fb4744294635
+e3b606eb72c49bc58e7cdc963fc6fb4744294635,e3b606eb,Fix file chooser crash with long press of dir title,"Fix file chooser crash with long press of dir title
+
+The user could crash the app by long pressing the directory title item
+in EDFileChooserActivity either when selecting a volume to import or
+when selecting a file to import. Fix adds a check to prevent the crash.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1352531970,1352531970,fc8f3b7a46e8cc9caae23f9857b1027875b59d3a
+fc8f3b7a46e8cc9caae23f9857b1027875b59d3a,fc8f3b7a,Version bump to 1.2.2,"Version bump to 1.2.2
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350807006,1350807006,ec1dc4c1bc2451dcc5a9205af789eafa630d62a7
+ec1dc4c1bc2451dcc5a9205af789eafa630d62a7,ec1dc4c1,Fix EDVolumeBrowserActivity.onCreate() crash,"Fix EDVolumeBrowserActivity.onCreate() crash
+
+When the task is killed (due to low memory) if the user navigates back
+to EDVolumeBrowserActivity (for example via Recent Tasks) we would crash
+because EncFSVolume creation isn't performed in this path. Fix is to
+simply return back to EDVolumeListActivity in this situation.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350806635,1350806635,0fba60db34b196e9f28aab414117f3c34b1db9bd
+0fba60db34b196e9f28aab414117f3c34b1db9bd,0fba60db,Version bump to 1.2.1,"Version bump to 1.2.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350367806,1350367806,3d1f639ccb78b6ebb563a9604fe138fb21e98124
+3d1f639ccb78b6ebb563a9604fe138fb21e98124,3d1f639c,Fix handling filenames with spaces,"Fix handling filenames with spaces
+
+It looks like MimeTypeMap.getFileExtensionFromUrl() doesn't properly
+handle filenames with spaces in them, so in case it fails to grab the
+correct extension we manually attempt to extract it from the filename.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350367540,1350367540,813bc3a9155cd059b82b3cb5f5c086a3158248cc
+813bc3a9155cd059b82b3cb5f5c086a3158248cc,813bc3a9,Version bump to 1.2,"Version bump to 1.2
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350278393,1350278393,127c558b1e8862e344ff29b3f45874705d546814
+127c558b1e8862e344ff29b3f45874705d546814,127c558b,Improve file change tracking reliability,"Improve file change tracking reliability
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350264729,1350264729,4348558aeae9564eee30c0ca97f94485ed460cbc
+4348558aeae9564eee30c0ca97f94485ed460cbc,4348558a,Increase current folder name font size,"Increase current folder name font size
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1350262972,1350262972,ec77a8073b4d9c5682301bbac6af5748d9b03540
+ec77a8073b4d9c5682301bbac6af5748d9b03540,ec77a807,Version bump to 1.1,"Version bump to 1.1
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349552938,1349552938,50b203768ea563ca69f0a65d72e8baf1db46bc83
+50b203768ea563ca69f0a65d72e8baf1db46bc83,50b20376,Bump up minSdkVersion to 10,"Bump up minSdkVersion to 10
+
+Turns out 2.2 doesn't support the PBKDF2WithSHA1 algorithm so the app
+doesn't run on Froyo.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349552467,1349552467,aa926b38169a92b6796196fd4eb546eda3443663
+aa926b38169a92b6796196fd4eb546eda3443663,aa926b38,"Add menu layout for 7"" tablets","Add menu layout for 7"" tablets
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349551671,1349551671,249f442298b0c4a3abacffe9f93d521ed6604ce7
+249f442298b0c4a3abacffe9f93d521ed6604ce7,249f4422,Hide Refresh button on Export Files and Create Volume,"Hide Refresh button on Export Files and Create Volume
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349551140,1349551410,0fa563119a0ca575a2e15f43333df91eb0f0c6ea
+0fa563119a0ca575a2e15f43333df91eb0f0c6ea,0fa56311,"Add menu layout for 10"" tablets","Add menu layout for 10"" tablets
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349550970,1349551404,da01d40e97d3853f23effca9d2dac66d322fbba6
+da01d40e97d3853f23effca9d2dac66d322fbba6,da01d40e,ActionBar Layout improvements,"ActionBar Layout improvements
+
+On phone screens icons without text in the ActionBar are not very
+intuitive, so move most of the non-essential icons back into the
+overflow menu.
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349549870,1349549870,d68eee156ecf248b25b35668cd60f31fabe5d2c9
+d68eee156ecf248b25b35668cd60f31fabe5d2c9,d68eee15,Update README.md to remove export notice,"Update README.md to remove export notice
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349244979,1349244979,30db3c3c9d7407e88c0fb38e5506e806c2fe4134
+30db3c3c9d7407e88c0fb38e5506e806c2fe4134,30db3c3c,Add Google Play store link,"Add Google Play store link
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349194173,1349194173,01377d3a474781e4fc6370fae0403b281f228023
+01377d3a474781e4fc6370fae0403b281f228023,01377d3a,Encdroid 1.0 release,"Encdroid 1.0 release
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349161149,1349161149,1c9fc520706082d517683ecc0b63c05214135d11
+1c9fc520706082d517683ecc0b63c05214135d11,1c9fc520,Initial commit of Encdroid,"Initial commit of Encdroid
+",,,,Mark Pariente,markpariente@gmail.com,Mark Pariente,markpariente@gmail.com,1349160536,1349160536,

@@ -1,0 +1,222 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+2eb857001ccd5ce5a58f019e5fb1f4be151fec6d,2eb85700,:books: Update README.md,":books: Update README.md
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495302222,1495387443,a714f09cbb25b02e348cbe4f61939efebde6ac4d
+a714f09cbb25b02e348cbe4f61939efebde6ac4d,a714f09c,:recycle: Re-authenticate only with custom auth token,":recycle: Re-authenticate only with custom auth token
+
+It's important to understand that AccountManager is not an encryption
+service or a keychain. It stores account credentials just as you pass
+them, in plain text. On most devices, this isn't a particular concern,
+because it stores them in a database that is only accessible to root.
+But on a rooted device, the credentials would be readable by anyone with
+adb access to the device.
+
+With this in mind, the account password will no longer be stored in the
+account manager. The re-authentication will happend using the custom
+auth token obtained from AccountManager.peekToken.
+
+Given a token is obtained from the cache, for the sake of simplicity:
+
+  - The expiration datetime will not be checked.
+  - The token will be cached indefinitely until the app explicitely
+    invidates it (i.e. customTokens=false).
+  - If the sign in fails, the user will be prompted to the authenticator
+    activity.
+
+References:
+
+  - Google Firebase Authentication
+    See https://firebase.google.com/docs/auth/android/manage-users
+
+  - Google Android Documentation - KEY_CUSTOM_TOKEN_EXPIRY
+    See https://goo.gl/Xtk053
+
+  - AccountManager.peekAuthToken returning null value.
+    See http://www.stackoverflow.com/questions/29657289
+
+  - Do Firebase tokens expire?
+    See http://www.stackoverflow.com/questions/39091833/
+
+  - JSON Web Tokens documentation
+    See https://jwt.io/introduction/
+
+  - RS256 vs HS256: What's the difference?
+    See http://stackoverflow.com/questions/39239051
+
+  - Google Training - Custom Auth: Be Smart about Security!
+    https://developer.android.com/training/id-auth/custom_auth.html
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495385712,1495387443,224643468764d2903040ece149f6adafedff6cf0
+224643468764d2903040ece149f6adafedff6cf0,22464346,:sparkles: Sign in using token stored in account manager,":sparkles: Sign in using token stored in account manager
+
+Given a (email, password) pair is provided to sign up a new account (or
+just sign in into an existing one) at Firebase Authentication service, a
+JSON web token will be obtained (RSA Signature with SHA-256) in a
+successful authentication.
+
+When the app requires to re-authenticate, instead of providing once more
+the (email, password) pair, it can use the custom token while it is valid.
+
+The expiration datetime can be obtained decoding the JWT token and could
+be send to the authenticator activity using KEY_CUSTOM_TOKEN_EXPIRY.
+
+Once the token is expired, the re-authentication happens providing once
+more (email, password) pair, where the password can be obtained from
+Android account manager or by user input.
+
+References:
+
+  - Google Firebase Authentication
+    See https://firebase.google.com/docs/auth/android/manage-users
+
+  - Google Android Documentation - KEY_CUSTOM_TOKEN_EXPIRY
+    See https://goo.gl/Xtk053
+
+  - AccountManager.peekAuthToken returning null value.
+    See http://www.stackoverflow.com/questions/29657289
+
+  - Do Firebase tokens expire?
+    See http://www.stackoverflow.com/questions/39091833/
+
+  - JSON Web Tokens documentation
+    See https://jwt.io/introduction/
+
+  - RS256 vs HS256: What's the difference?
+    See http://stackoverflow.com/questions/39239051
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495382550,1495387217,df17873f468ace267e3937df84b695b67ec8cf7d
+df17873f468ace267e3937df84b695b67ec8cf7d,df17873f,:sparkles: Allow (or not) to refresh token on sign in,":sparkles: Allow (or not) to refresh token on sign in
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495365381,1495387217,3006af44fd5a6bbbe9d4e2d8a79396e2ca5c23be
+3006af44fd5a6bbbe9d4e2d8a79396e2ca5c23be,3006af44,:recycle: Apply material design app theme,":recycle: Apply material design app theme
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296920,1495387217,6cadf1a280c9a230751db28fd4b960fa7a18a6d2
+6cadf1a280c9a230751db28fd4b960fa7a18a6d2,6cadf1a2,:bug: Authenticator activities using theme background color,":bug: Authenticator activities using theme background color
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296890,1495387217,b8bee0e77e13a914203f8699dfc152e6ae5502c7
+b8bee0e77e13a914203f8699dfc152e6ae5502c7,b8bee0e7,:recycle: Example apps with material design toolbar,":recycle: Example apps with material design toolbar
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296825,1495387217,5d10202679d47ff1aced53d71bd0c08b8e16f658
+5d10202679d47ff1aced53d71bd0c08b8e16f658,5d102026,:sparkles: Create example app content layouts,":sparkles: Create example app content layouts
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296631,1495387217,af556879a6baf4418064575dd30ccb6092adfa59
+af556879a6baf4418064575dd30ccb6092adfa59,af556879,:sparkles: Create backward-compatible authenticator activity,":sparkles: Create backward-compatible authenticator activity
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296291,1495387217,a56d2d489430dba194fd33a67d6cb0b495c09a3e
+a56d2d489430dba194fd33a67d6cb0b495c09a3e,a56d2d48,:sparkles: Create material design color palette,":sparkles: Create material design color palette
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495296207,1495387217,2938ce9b8aa3f164fe4a3d99cca531f165c5eb5a
+2938ce9b8aa3f164fe4a3d99cca531f165c5eb5a,2938ce9b,:wrench: Android Support Library v25.3.0,":wrench: Android Support Library v25.3.0
+
+  - Android AppCompat library v25.3.0
+  - Android Design libraries v25.3.0
+  - Android Constraint library v1.0.2
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495295849,1495387217,590f95dc7370d19e894727e113ba7ce01328894e
+590f95dc7370d19e894727e113ba7ce01328894e,590f95dc,:books: Update contributors list,":books: Update contributors list
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495282110,1495387217,fbc6fc9c3e571b14cd2564e31c6f32f09b6410dd
+fbc6fc9c3e571b14cd2564e31c6f32f09b6410dd,fbc6fc9c,:wrench: Android Keystore configuration,":wrench: Android Keystore configuration
+
+In order to create an account at Google Firebase, the application must be
+propertly signed and the SHA1 fingerprint and package name authorized on
+Firebase console.
+
+References:
+  - How can I create a keystore? (at stackoverflow.com/questions/3997748/)
+  - SHA-1 fingerprint of keystore (at stackoverflow.com/questions/15727912/)
+  - Firebase Authentication (at https://firebase.google.com/docs/auth/)
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495281102,1495387217,da021a82a942c06a8c2fda314049241fb41d3fc5
+da021a82a942c06a8c2fda314049241fb41d3fc5,da021a82,:recycle: Replace Facebook Parse by Google Firebase,":recycle: Replace Facebook Parse by Google Firebase
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284546,1495387217,1ad7677523534c3bbfac3aeaea14fdc9722abb3c
+1ad7677523534c3bbfac3aeaea14fdc9722abb3c,1ad76775,:sparkles: Create Firebase sign in task,":sparkles: Create Firebase sign in task
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284499,1495382375,9a0fbaad9d266dcdb456a9d5fdcbfd7cab7c401e
+9a0fbaad9d266dcdb456a9d5fdcbfd7cab7c401e,9a0fbaad,:sparkles: Create Firebase sign up task,":sparkles: Create Firebase sign up task
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284484,1495382375,219d616bd8ba297569bf799945c9d5d41eb66b5d
+219d616bd8ba297569bf799945c9d5d41eb66b5d,219d616b,:wrench: Firebase Auth v10.2.4,":wrench: Firebase Auth v10.2.4
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284467,1495382375,6e2b2f17c4b9d81e8edd1b438d87b5f047a64be7
+6e2b2f17c4b9d81e8edd1b438d87b5f047a64be7,6e2b2f17,:wrench: Google Play services v10.2.4,":wrench: Google Play services v10.2.4
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284448,1495382375,a13d093299ebeefde769fd09ec6daf2a563684ef
+a13d093299ebeefde769fd09ec6daf2a563684ef,a13d0932,:wrench: Google Guava v20.0,":wrench: Google Guava v20.0
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284428,1495382375,d5793a841b8406cb14d5a5e9b0ef228b6788f8be
+d5793a841b8406cb14d5a5e9b0ef228b6788f8be,d5793a84,:lipstick: Rename sign in/up activity layouts,":lipstick: Rename sign in/up activity layouts
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284411,1495382375,d228c62f1ff83f17973f00d6cef9deba4e2d7fce
+d228c62f1ff83f17973f00d6cef9deba4e2d7fce,d228c62f,:lipstick: Activities implementing View.OnClickListener,":lipstick: Activities implementing View.OnClickListener
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284394,1495382375,8e5497b7ef233dbf34c73db6966d4cbc0e07deeb
+8e5497b7ef233dbf34c73db6966d4cbc0e07deeb,8e5497b7,:lipstick: Log should use class names as tags,":lipstick: Log should use class names as tags
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283908,1495382375,c7156326d36d341d9a02abae53422f3e0902e0f9
+c7156326d36d341d9a02abae53422f3e0902e0f9,c7156326,:books: Typo on Java documentation,":books: Typo on Java documentation
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495284185,1495382375,cbdb9b970f6b91ad2702750ebbaa34ce21b35405
+cbdb9b970f6b91ad2702750ebbaa34ce21b35405,cbdb9b97,:books: Apache License v2.0,":books: Apache License v2.0
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283730,1495382375,07f4a6e7428dd0662ad105ac2cc7730a22d6b2c8
+07f4a6e7428dd0662ad105ac2cc7730a22d6b2c8,07f4a6e7,:wrench: Ignore automatic files,":wrench: Ignore automatic files
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283708,1495382375,7bfddff23f983044e77b6f88422e7b739c5a9169
+7bfddff23f983044e77b6f88422e7b739c5a9169,7bfddff2,:lipstick: Rename main activities,":lipstick: Rename main activities
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283688,1495382375,c55abf7955773e735747bf8daf6418afc465b00a
+c55abf7955773e735747bf8daf6418afc465b00a,c55abf79,:lipstick: Sort attributes and methods,":lipstick: Sort attributes and methods
+
+Classes attributes are sorted according:
+  - Visibility (public, protected, package protected and private)
+  - Ascending lexicographical order
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283631,1495382375,d783e5b7cc75d89fbcd3a28bd8eb86c0563e16c3
+d783e5b7cc75d89fbcd3a28bd8eb86c0563e16c3,d783e5b7,:lipstick: Google Java code style,":lipstick: Google Java code style
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283614,1495382375,803e111b88a1c0ad2fe35335f62abe2c4d69855e
+803e111b88a1c0ad2fe35335f62abe2c4d69855e,803e111b,:bug: Account authenticator package name,":bug: Account authenticator package name
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283577,1495382375,748b20dffa9e2d0f38f63a9b5e790747a45acfec
+748b20dffa9e2d0f38f63a9b5e790747a45acfec,748b20df,:lipstick: Google XML code style,":lipstick: Google XML code style
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283560,1495382375,cb00a7e4123872322b983fec98fb7192aadadd61
+cb00a7e4123872322b983fec98fb7192aadadd61,cb00a7e4,:wrench: Upgrade build dependencies,":wrench: Upgrade build dependencies
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495380792,1495382375,849af641e5a786dc23270e09e90c203e496073c8
+849af641e5a786dc23270e09e90c203e496073c8,849af641,:wrench: Upgrade build dependencies,":wrench: Upgrade build dependencies
+
+  - Android SDK 25
+  - Android Build Tools 25.0.3
+  - Android Support Library v25.3.0
+  - Google Gson v2.7
+  - Gradle Plugin v2.3.2
+",,,,JP Ventura,contact@jpventura.com,JP Ventura,contact@jpventura.com,1495283508,1495382375,10c858734f0fb5ba4721ac9e2566a11aa449892d
+10c858734f0fb5ba4721ac9e2566a11aa449892d,10c85873,Merge pull request #9 from hidroh/master,"Merge pull request #9 from hidroh/master
+
+Port project to default gradle setup",,,,Udi Cohen,Udinic@gmail.com,GitHub,noreply@github.com,1482354049,1482354049,"1ba524cee98ef003d7af3d814698177f6c9ae8c1,e9a1be03109d0aadb536c070e1884dcabb97cf7e"
+e9a1be03109d0aadb536c070e1884dcabb97cf7e,e9a1be03,Port project to default gradle setup,"Port project to default gradle setup
+",,,,Ha Duy Trung,haduytrung@gmail.com,Ha Duy Trung,haduytrung@gmail.com,1449738177,1449740305,1ba524cee98ef003d7af3d814698177f6c9ae8c1
+1ba524cee98ef003d7af3d814698177f6c9ae8c1,1ba524ce,Merge pull request #2 from Turbo87/patch-1,"Merge pull request #2 from Turbo87/patch-1
+
+AccountAuthenticator: Pass account name to AuthenticatorActivity",,,,Udi Cohen,Udinic@gmail.com,Udi Cohen,Udinic@gmail.com,1377037976,1377037976,"606f3b15f104405cb9445d4c05d051e4d5614117,f9d29d5c61c69a868fd889112886a12c4fdea1df"
+606f3b15f104405cb9445d4c05d051e4d5614117,606f3b15,Merge pull request #1 from mrmike/master,"Merge pull request #1 from mrmike/master
+
+Fixed AlertDialog orientation",,,,Udi Cohen,Udinic@gmail.com,Udi Cohen,Udinic@gmail.com,1376960014,1376960014,"f93bb2020271fcfe052fdf7773cc0354cd0a3d8f,df327b970934bc4aec9ad5c8e447ac44d582e9b9"
+f9d29d5c61c69a868fd889112886a12c4fdea1df,f9d29d5c,AccountAuthenticator: Pass account name to AuthenticatorActivity,"AccountAuthenticator: Pass account name to AuthenticatorActivity
+
+Given that `ARG_ACCOUNT_NAME` was not used anywhere else it seems that this got forgotten in the original implementation.",,,,Tobias Bieniek,Tobias.Bieniek@gmx.de,Tobias Bieniek,Tobias.Bieniek@gmx.de,1373465604,1373465604,f93bb2020271fcfe052fdf7773cc0354cd0a3d8f
+df327b970934bc4aec9ad5c8e447ac44d582e9b9,df327b97,Fixed AlertDialog orientation,"Fixed AlertDialog orientation
+",,,,Michal Moczulski,michal.moczulski@appunite.com,Michal Moczulski,michal.moczulski@appunite.com,1366921745,1366921745,f93bb2020271fcfe052fdf7773cc0354cd0a3d8f
+f93bb2020271fcfe052fdf7773cc0354cd0a3d8f,f93bb202,Update README.md,Update README.md,,,,Udi Cohen,Udinic@gmail.com,Udi Cohen,Udinic@gmail.com,1366897384,1366897384,e4a6173419bb1f579612f1711971f11ad2679ac5
+e4a6173419bb1f579612f1711971f11ad2679ac5,e4a61734,Update README.md,Update README.md,,,,Udi Cohen,Udinic@gmail.com,Udi Cohen,Udinic@gmail.com,1366766570,1366766570,a1e06d343e34b1cfdaab4905b55c6369a3b86a5a
+a1e06d343e34b1cfdaab4905b55c6369a3b86a5a,a1e06d34,screenshots,"screenshots
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366766168,1366766168,c41b4ed464b4a4b86de2f65aea7199a76eb0d38e
+c41b4ed464b4a4b86de2f65aea7199a76eb0d38e,c41b4ed4,update,"update
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366765594,1366765594,6982aaef4de3dab1844f86009588bccafa444317
+6982aaef4de3dab1844f86009588bccafa444317,6982aaef,added screenshots,"added screenshots
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366765417,1366765417,cbc7778b5c162b203fbeac9bd10405e08326abf2
+cbc7778b5c162b203fbeac9bd10405e08326abf2,cbc7778b,Rename README to README.md,Rename README to README.md,,,,Udi Cohen,Udinic@gmail.com,Udi Cohen,Udinic@gmail.com,1366765152,1366765152,8989eec576042b221c1734708a74f2efd8f54fb8
+8989eec576042b221c1734708a74f2efd8f54fb8,8989eec5,added readme,"added readme
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366765071,1366765071,9f12414353a2dbe8048f398beddeba0306252e37
+9f12414353a2dbe8048f398beddeba0306252e37,9f124143,Getting the code prettier for release,"Getting the code prettier for release
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366762644,1366762644,694013f248b7fa5b719aa3d8b83bda9988e6b982
+694013f248b7fa5b719aa3d8b83bda9988e6b982,694013f2,minor modifications,"minor modifications
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366759492,1366759492,433573e736c799c35e9b995922b720729d0eebee
+433573e736c799c35e9b995922b720729d0eebee,433573e7,removed redundant manifest stuff,"removed redundant manifest stuff
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366756215,1366756215,213ab397e26e930a79f919f7e01d509724b07344
+213ab397e26e930a79f919f7e01d509724b07344,213ab397,Handle errors,"Handle errors
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366676835,1366676835,fd40cbf73f8d31ea1ec2db5220559f4a64fbd29f
+fd40cbf73f8d31ea1ec2db5220559f4a64fbd29f,fd40cbf7,identifies bad credentials situation,"identifies bad credentials situation
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366588254,1366588254,72e787f5545d076d576e6cf2dde8d6494a78c264
+72e787f5545d076d576e6cf2dde8d6494a78c264,72e787f5,added 2 example apps to use the authenticator,"added 2 example apps to use the authenticator
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366579575,1366579575,305c49ab17dad0f6c8a2f0357a049f808dbfbe34
+305c49ab17dad0f6c8a2f0357a049f808dbfbe34,305c49ab,added 2 example apps to use the authenticator,"added 2 example apps to use the authenticator
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1366579479,1366579479,ea134ca4fed6c66dff557ea67f7246855d5013fe
+ea134ca4fed6c66dff557ea67f7246855d5013fe,ea134ca4,icon change,"icon change
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1365635539,1365635539,7373df0f7cae3a45b6bba54e662cba1ac0f297e5
+7373df0f7cae3a45b6bba54e662cba1ac0f297e5,7373df0f,"Some adjustments: remobing redundant studd, adding some cool prefs to the authenticator and more.","Some adjustments: remobing redundant studd, adding some cool prefs to the authenticator and more.
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1365467846,1365467846,8ca45f9ab326cda2d900aee6647a987feb8a4bb0
+8ca45f9ab326cda2d900aee6647a987feb8a4bb0,8ca45f9a,extracted the authenticator into a library project,"extracted the authenticator into a library project
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1365463869,1365463869,50a7ab18e35fe16d7517658db3f982c2aafa7ef9
+50a7ab18e35fe16d7517658db3f982c2aafa7ef9,50a7ab18,extracted the authenticator into a library project,"extracted the authenticator into a library project
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1365463791,1365463791,99fe2251471f758cf6ff7506d3c9065500577239
+99fe2251471f758cf6ff7506d3c9065500577239,99fe2251,Added parse.com authentication,"Added parse.com authentication
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1364351185,1364351185,4581450f58cdf32702ea5303865bb392303cb3c2
+4581450f58cdf32702ea5303865bb392303cb3c2,4581450f,added some more files,"added some more files
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1364346506,1364346506,a14891c5afa4b47df276d0301ff86145698dee86
+a14891c5afa4b47df276d0301ff86145698dee86,a14891c5,first commit,"first commit
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1364345513,1364345513,c30519053c75df1ac6955eef25a9cc800c4e0e49
+c30519053c75df1ac6955eef25a9cc800c4e0e49,c3051905,First commit,"First commit
+",,,,udinic,udinic@gmail.com,udinic,udinic@gmail.com,1364345373,1364345373,

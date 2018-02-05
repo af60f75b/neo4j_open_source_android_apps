@@ -1,0 +1,1047 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+43c2c980045fb608b23f783e557947b4ead2d061,43c2c980,Remove old ant build script,"Remove old ant build script
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1398186383,1398186383,ebf95183c76b207b484d310446b2438aff3d032c
+ebf95183c76b207b484d310446b2438aff3d032c,ebf95183,Add README,"Add README
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1398186128,1398186128,c095d7d0efed4c0f675db5ce455affb31bfcd66b
+c095d7d0efed4c0f675db5ce455affb31bfcd66b,c095d7d0,Change license to apache 2.0,"Change license to apache 2.0
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1398185939,1398185939,90b8f64139f0915328473fd188633dbc427483e3
+90b8f64139f0915328473fd188633dbc427483e3,90b8f641,Update copyright date,"Update copyright date
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1398185419,1398185419,b307960f793f23226cec739e97c8a005af669e79
+b307960f793f23226cec739e97c8a005af669e79,b307960f,Move project to gradle,"Move project to gradle
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1398184167,1398184167,ac8f73de9836f2741229d01377dcd4dbd41ef820
+ac8f73de9836f2741229d01377dcd4dbd41ef820,ac8f73de,Updated the search by location page - made the GPS notification a bit,"Updated the search by location page - made the GPS notification a bit
+smaller so that the Eyekabob logo could still fit on the screen.  This
+very well may still need to be adjusted based on the size of the
+Google ads.  Also - I updated the zip entry field to only allow digits
+(and only 5 digits furthermore) as well as made sure that if the user
+selected a different checkbox, the electronic keyboard is being taken
+down - since it was not before.
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1345509377,1345509377,e4da541d2df8752c70aa3517f8d824d203cba0dc
+e4da541d2df8752c70aa3517f8d824d203cba0dc,e4da541d,Added Eyekabob logo to each view.,"Added Eyekabob logo to each view.
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1345257700,1345257700,db19c16a4e8571873f4485381266b7996049abe2
+db19c16a4e8571873f4485381266b7996049abe2,db19c16a,Initial commit for city/state search.  *This is not final*,"Initial commit for city/state search.  *This is not final*
+
+Removed small image backgrounds
+
+Added in functionality to determine what location search is being used.
+
+Added Toast for ""else"" statment when no checkbox is selected
+
+Change-Id: I47a3bf4c9ad4c91a23c5298b7ff0888108d6838b
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1345173710,1345173710,9580fa3997b9e16495a995de642cffc4eed1917c
+9580fa3997b9e16495a995de642cffc4eed1917c,9580fa39,Initial city/state location search commit,"Initial city/state location search commit
+
+Begin work on the city and state event search. Outstanding work:
+ - Add all 50 state abbreviations
+ - Improve UI
+ - Handle errors more gracefully
+ - Handle more than one google location result
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1344566632,1344566632,277dc1ebf9c5063ca9a127f020c964a4142bd99a
+277dc1ebf9c5063ca9a127f020c964a4142bd99a,277dc1eb,Merge 1.0 branch into master,"Merge 1.0 branch into master
+
+commit e36b97ca53a281efb1942e8bd32630932a373d5f
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Mon Aug 6 19:35:52 2012 -0500
+
+    Revert ""Enable AdMob ads""
+
+    This reverts commit 706433e616c7c4ed0c21f16dc5e40efa4bf8227d.
+
+commit 00f0022943116a2468d26120d17ce4a6331c894a
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Mon Aug 6 15:39:17 2012 -0500
+
+    Increase info page bottom margin and support SDK 7
+
+    15% of devices are still on 2.2 (SDK 8) and 5% are on 2.1 (SDK 7) so we
+    should allow those devices to download the app.
+
+    Change-Id: Id2fff7a9a39bb865c8c1cad0133b95beca63e827
+
+commit 706433e616c7c4ed0c21f16dc5e40efa4bf8227d
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 02:12:28 2012 -0500
+
+    Enable AdMob ads
+
+    Change-Id: If22257b1ee10eff02959201f0b37515cd7305aef
+
+commit b8a3eae88eb7e3af9d1d56ee3c3ed40c81fa95e4
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 21:39:05 2012 -0500
+
+    Make artist future events clickable
+
+    Accomplish this by using a linear layout for the future events
+    and dynamically populating events using a custom TextView.
+
+    Change-Id: Iecc8545d8672c2f6da8fda7ae868062e29a75598
+
+commit ad811a63eb1ae1797923f98a9db8415957101358
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 20:27:45 2012 -0500
+
+    Add about message
+
+commit 6e0490a56cbcf9761b1e1d3bf765b7d52f18d4fc
+Author: Adam Sill <adam.sill01@gmail.com>
+Date:   Sun Aug 5 18:59:22 2012 -0500
+
+    Fixed spacing issue on AritistInfo and EventInfo Views.
+
+    Also set website view to be visible.
+
+    Change-Id: I238c3e75371181562cb7fbee2bb3e926283188d8
+
+commit 5d19744962285502b3b06e6e83bedd156de3d1bf
+Merge: 15028ca ff08d69
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 17:32:03 2012 -0500
+
+    Merge ""Make home page beta transparency mask work for all devices"" into 1.0
+
+commit ff08d6939fca255bc6d13ea989d2dc3110becc92
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 17:17:56 2012 -0500
+
+    Make home page beta transparency mask work for all devices
+
+commit 15028cab1ff41d4aa89ab2df85e445d7c6363d4f
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 17:10:36 2012 -0500
+
+    Include beta message in home transparent mask
+
+commit d73de90474b587438f010602f3ee5f4057e4d791
+Merge: 91524bf 271b0e6
+Author: Adam Sill <adam.sill01@gmail.com>
+Date:   Sun Aug 5 16:59:51 2012 -0500
+
+    Merge ""Updated bio view to be a TextView because a WebView transparency bug"" into 1.0
+
+commit 91524bff5c64eff188f6ee141d5c25ce5d46c5b7
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 15:58:10 2012 -0500
+
+    Trim artist and venue input
+
+    Change-Id: I2e1e1cbf38236619ae4cb22c47b9a00674fba94c
+
+commit 271b0e63c50b60bf23e0581ac12ce1d8d2431a85
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 16:44:00 2012 -0500
+
+    Updated bio view to be a TextView because a WebView transparency bug
+
+    Change-Id: Ib289c2709140edcd576f706325856e0c02700647
+
+commit 18018c62cb4b4aeb7f182f8c55b9af9b2b8a251c
+Merge: 55cdbad 507e287
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 15:58:04 2012 -0500
+
+    Merge ""Use large images instead of medium for thumbnails."" into 1.0
+
+commit 507e287674657ef9cdeeb7230553c22de60c2aec
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 15:11:24 2012 -0500
+
+    Use large images instead of medium for thumbnails.
+
+    Change-Id: I2e07a7c7f7946749274626049872554cdab33e90
+
+commit 55cdbad6b683bedf724905722519ca4b52300fd0
+Merge: 5c8a0dd 5b47155
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sun Aug 5 14:42:24 2012 -0500
+
+    Merge ""Prevent orientation change and add better GPS warning"" into 1.0
+
+commit 5c8a0ddf0124b5e2d06fc64d66429a85cbcc249b
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 20:51:55 2012 -0500
+
+    Change admin email addresses
+
+commit 5b471554a0cc4dd32ab3afa995b845ecdc3ada06
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 22:25:28 2012 -0500
+
+    Prevent orientation change and add better GPS warning
+
+commit d1e08d853150772a2383284bcdb45192279be331
+Author: Adam Sill <adam.sill01@gmail.com>
+Date:   Sat Aug 4 21:41:58 2012 -0500
+
+    Implemented a (temporary) About Eyekabob dialog.
+
+    Also, one small change to the Intermediate Search - instead of labeling
+    the button ""contact"", I changed it to be ""contact eyekabob"" for consistency
+    with other screens.
+
+    Change-Id: I382eb2260d3325118d94814aa2971781b1068ad7
+
+commit 475368ac00224292f9cb9e23345811c35fef12c8
+Merge: e4f853a e70ce57
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 20:40:44 2012 -0500
+
+    Merge ""Warn user if GPS is disabled"" into 1.0
+
+commit e70ce57b3f095b24c9cc7c033bf223558a6f9041
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 15:21:48 2012 -0500
+
+    Warn user if GPS is disabled
+
+    Allow user to go to GPS settings page if GPS is disabled and ""Use current
+    location"" checkbox is checked.
+
+    Also fix some warnings
+
+commit e4f853a8cd76bc4b9eadf535e2123758b2ec2104
+Author: Adam Sill <adam.sill01@gmail.com>
+Date:   Sat Aug 4 14:25:16 2012 -0500
+
+    Added listeners on VenueInfo, EventInfo, and IntermediateSearch
+    for the links at the top of each View.
+
+    Change-Id: I45d018ded118be7acead8fba15283dbb19df5b49
+
+commit c21552e579a646f26d965eeccf39e2b74610f9fa
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 13:22:12 2012 -0500
+
+    Update target SDK to android-15
+
+    Justification: most ICS users are on 4.0.X and not 4.0
+
+commit e2200041411ff674e89739385a2889a5af4b46ed
+Author: Adam Sill <adam.sill01@gmail.com>
+Date:   Sat Aug 4 12:34:18 2012 -0500
+
+    Use medium background for intermediate search button background.
+
+    The large (""big"") background was being used, which was too large
+    vertically. The new medium background leaves room for the advertisements
+    at the bottom of the activity.
+
+    Change-Id: Ia6a268bb563ab08b64353345a32ff1cda542e49a
+
+commit 2e609db22c7d31ca4274277bfd54b75d0b7afc2e
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Sat Aug 4 00:41:20 2012 -0500
+
+    Implemented the VenueInfo view
+
+    Change-Id: I9fa1b12de26c5f63fc023de86889d74b339f60b1
+
+commit ac4577e60a08f98bffcd5de4ccbb513703335076
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Fri Aug 3 22:18:18 2012 -0500
+
+    Fix cached zip search for events so that subsequent searches return results
+
+    Latitude and longitude are cached for a particular zip code. They are stored
+    as strings with a ""|"" delimiter. Splitting on that delimiter was not
+    correct, and would result in splitting on the empty string. Escaping the
+    pipe like so: ""\\|"" resolves the issue, so the second through Nth search
+    for the same zip will now return event results.
+
+commit 7d4366768841d51ed64e682e48696587206b86fa
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Fri Aug 3 20:23:37 2012 -0500
+
+    Disable the 6 bottom home buttons for 1.0
+
+    These features will be implemented in a later release
+
+    Change-Id: I11d26db95206249a397d21d4ed171a5d40ee3009
+
+commit 05564328e75ee3c02193dcf3fb3846d13d7110d4
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Fri Aug 3 19:50:24 2012 -0500
+
+    Handle venue search that only returns one venue.
+
+    There was a JSONException being thrown for trying to cast a JSONObject to
+    a JSONArray. This happens when there's only one venue result returned from
+    last.fm. So wrap that one result in a JSONArray and continue on as normal.
+
+    Also render the venue list better for rows that have no street address.
+
+commit dabe9764d5757de837cef8c13d2b512cee15657f
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Thu Aug 2 00:29:32 2012 -0500
+
+    Use lat/long for zip search instead of city name
+
+    This resolves an issue where city names may conflict.
+    For example, searching for a Colorado zip code would return
+    results for Austin Texas instead of Austin Colorado.
+
+    Change-Id: I585460910e987de06b987e0a9b6246932a072300
+
+commit 249e55b1a6d0221cbd2a4479c24547c3f472d4d1
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Tue Jul 31 22:24:36 2012 -0500
+
+    Updated the EventInfo page to use the same layout as the ArtistInfo page
+
+    Also updated the artist_info layout to add a buy_tickets button which is
+    currently only used by EventInfo.
+
+    Some more work needs to be done to condense ArtistInfo and EventInfo but
+    it can wait until after 1.0
+
+    Change-Id: I696dc806bc2c3e382107f591f6948bedeec91baf
+
+commit 2472dd7bc7f68916b3209e265a49f3b9c931506e
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Mon Jul 30 20:27:15 2012 -0500
+
+    Use jdk 1.7 instead of 1.6
+
+    Just because it's good to use the latest java if you can
+
+commit 2480af45858ebe875d4fc42b04d3d97bf48d7e3e
+Merge: 8be5ba1 db44cae
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Tue Jul 31 17:35:20 2012 -0500
+
+    Merge ""Resolve runtime error on event info page for request on main thread"" into 1.0
+
+commit db44cae6caf2bee7bcf0d1de2857901607c308e1
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Tue Jul 31 13:24:00 2012 -0500
+
+    Resolve runtime error on event info page for request on main thread
+
+    Also get medium images for the event list, and largest image for the event
+    info page.
+
+commit 8be5ba11556d4e302b7df0af33245d27d1ad9849
+Author: Brien Coffield <coffbr01@gmail.com>
+Date:   Tue Jul 31 13:03:03 2012 -0500
+
+    Change font color for venue list to default white.
+
+    The venue list items were not visible before this change. Now they are.
+    Also in this commit, remove the ""add band"" button from the artist list.
+
+Change-Id: I9ef488880eddb4caa925d1c2f7a7b1a7acc7b771
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1344299817,1344299817,0943200791f33bafaa55a8324925f1a427f7ff7e
+0943200791f33bafaa55a8324925f1a427f7ff7e,09432007,Use jdk 1.7 instead of 1.6,"Use jdk 1.7 instead of 1.6
+
+Just because it's good to use the latest java if you can
+",,,,Brien Coffield,coffbr01@gmail.com,Gerrit Code Review,git@bco-server,1343698035,1343772536,b423f7d1296f3c61a84058f8243e9663b8c73c3f
+b423f7d1296f3c61a84058f8243e9663b8c73c3f,b423f7d1,Complete event search by name,"Complete event search by name
+
+Prepend and append wildcard characters to the search parameter before querying
+for the event with the given name.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343698705,1343698705,d615cfdc56c8994553ed5852c988282ca5d83d93
+d615cfdc56c8994553ed5852c988282ca5d83d93,d615cfdc,Complete event ID web service,"Complete event ID web service
+
+A number of problems were present with the event service when using an ID.
+The issues resolved in this submission were:
+ - Begin result set column indexing by 1 instead of 0
+ - Handle String prepared statement argument
+ - Load jdbc driver class at runtime
+ - Modify ID select query to remove erroneous single quotes
+
+In addition to these changes, also remove old build framework artifacts
+since Maven is used for the web module now instead of ant.
+
+Change-Id: I27a02b5c2f41d5fbfd2782e09559e598a123dbec
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343695213,1343695213,ffe0e70e09d32978147c40c55d33c3f182cd112a
+ffe0e70e09d32978147c40c55d33c3f182cd112a,ffe0e70e,Get medium image thumbnails for the artist list instead of large thumbs,"Get medium image thumbnails for the artist list instead of large thumbs
+
+The images were taking too long to load, even over 4g. So restrict the
+size of the thumbnails retrieved.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343669739,1343669739,3b2a1be07290e34945cbf1ccd44e47123f65d0aa
+3b2a1be07290e34945cbf1ccd44e47123f65d0aa,3b2a1be0,Add class comments for the SearchIntermediate view,"Add class comments for the SearchIntermediate view
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343588302,1343588302,053cd27f51efe8f7992e7887dca67a2edc7838a1
+053cd27f51efe8f7992e7887dca67a2edc7838a1,053cd27f,Remove Float to allow autoboxing,"Remove Float to allow autoboxing
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343584504,1343584504,d7ab8d21a71335b0d99f06559b63eb028ed4ecfc
+d7ab8d21a71335b0d99f06559b63eb028ed4ecfc,d7ab8d21,Merge branch 'master' of bcoffield.dyndns.org:eyekabob,"Merge branch 'master' of bcoffield.dyndns.org:eyekabob
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1343487632,1343487632,"4cd34c298decbdbf6601be81e4e7554c6bd40302,7530887a7489083b8b07626c017e99f0195b2e8c"
+4cd34c298decbdbf6601be81e4e7554c6bd40302,4cd34c29,"Fixed image sizing issue, as well as a couple of other minor underlying issues.","Fixed image sizing issue, as well as a couple of other minor underlying issues.
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1343487577,1343487577,02c4de51f1a325a01e018cab960bf85b60e7cf1f
+7530887a7489083b8b07626c017e99f0195b2e8c,7530887a,"CachedImageTask wasn't storing images, so store image after successful requests","CachedImageTask wasn't storing images, so store image after successful requests
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343485598,1343485598,a0b9ae3292b8a951b34df754d3184746019a7017
+a0b9ae3292b8a951b34df754d3184746019a7017,a0b9ae32,Adjust the ImageTask and CachedImageTask hierarchy so they share more code.,"Adjust the ImageTask and CachedImageTask hierarchy so they share more code.
+
+Push all the request code to ImageTask while leaving all the cache logic
+inside CachedImageTask, so their hierarchy makes more sense.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343485034,1343485034,02c4de51f1a325a01e018cab960bf85b60e7cf1f
+02c4de51f1a325a01e018cab960bf85b60e7cf1f,02c4de51,Move the image task request into ImageTask and create new CachedImageTask,"Move the image task request into ImageTask and create new CachedImageTask
+
+The generic image task will take care of most image requests. Lists need
+special caching so subclass image task with CachedImageTask which takes
+care of caching images and memory management if the images take up too much
+memory
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343451252,1343451252,73c278c97c4c86159989950d6b1528caf1bedf57
+73c278c97c4c86159989950d6b1528caf1bedf57,73c278c9,Fixed get largest Image issue - at least temporarily.,"Fixed get largest Image issue - at least temporarily.
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1343437061,1343437061,1e595e760b1a54956e4c2cbfeb723f586d3ee791
+1e595e760b1a54956e4c2cbfeb723f586d3ee791,1e595e76,Get rid of the render method in artist info,"Get rid of the render method in artist info
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343365258,1343365258,95c683139a81a3bfcd4e41701a898f03e6e64ae7
+95c683139a81a3bfcd4e41701a898f03e6e64ae7,95c68313,Adjust red text size on search UIs and handle artists with no future events,"Adjust red text size on search UIs and handle artists with no future events
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343359743,1343359743,85f53dbfcf71638d21bbf23eaf2f3dbc46d62065
+85f53dbfcf71638d21bbf23eaf2f3dbc46d62065,85f53dbf,Fix artist info dialog regression caused by artist info rework,"Fix artist info dialog regression caused by artist info rework
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343359195,1343359195,680a791ee593bc9737af01a361f9880ea59a43a3
+680a791ee593bc9737af01a361f9880ea59a43a3,680a791e,Smaller magnifying glasses for intermediate search page,"Smaller magnifying glasses for intermediate search page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343358843,1343358843,54b36235abd3c56900ded4650bb94f7ffa00373a
+54b36235abd3c56900ded4650bb94f7ffa00373a,54b36235,Shrink intermediate search and artist info links to 14dp from 16dp,"Shrink intermediate search and artist info links to 14dp from 16dp
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343357988,1343357988,b44101dcaccc2a338fd52b5e6d3fa80127eb8e63
+b44101dcaccc2a338fd52b5e6d3fa80127eb8e63,b44101dc,Import only needed classes in DBUtil instead of java.sql.*,"Import only needed classes in DBUtil instead of java.sql.*
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343357545,1343357545,6bdd94997f748aa019451441928a1adce9029e56
+6bdd94997f748aa019451441928a1adce9029e56,6bdd9499,Unignore event service tests by mocking data layer,"Unignore event service tests by mocking data layer
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343357277,1343357277,23d77a3aa43478ac85624520da5d7fcce42baec6
+23d77a3aa43478ac85624520da5d7fcce42baec6,23d77a3a,these classes have relatively no documenation. so it'd be find by me to let than try thier p,"these classes have relatively no documenation. so it'd be find by me to let than try thier p
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343286076,1343286076,54e6c756c256a6f6c80518d5f51d368923738c0d
+54e6c756c256a6f6c80518d5f51d368923738c0d,54e6c756,Fix the last PMD error in jaxrs Event class,"Fix the last PMD error in jaxrs Event class
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343282308,1343282308,7f681337b5e0574e4e722f4fb6e0e66e5c61b939
+7f681337b5e0574e4e722f4fb6e0e66e5c61b939,7f681337,Fix PMD warnings for jaxrs Event class,"Fix PMD warnings for jaxrs Event class
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343281471,1343281471,acdccbc662056104b23bb3eb638418fdf7a9d81d
+acdccbc662056104b23bb3eb638418fdf7a9d81d,acdccbc6,Add database calls to the web services.,"Add database calls to the web services.
+
+Unfortunately the tests are being ignored because mocking is more effort
+than is warranted. But the java db connector is in the product now.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343280518,1343280577,fe236d47dd133f99cc23a5af675d103b9d03a393
+fe236d47dd133f99cc23a5af675d103b9d03a393,fe236d47,Indentation modification for the artist_info xml layout,"Indentation modification for the artist_info xml layout
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343277034,1343277034,9d90c39e22ded541fc12d9549603d4a6f0036059
+9d90c39e22ded541fc12d9549603d4a6f0036059,9d90c39e,Make link dividers on artist info page their own widget.,"Make link dividers on artist info page their own widget.
+
+Using widgets for dividers should help when/if we need to style the
+dividers separately
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343276877,1343276877,4a39112fbb64546b9977d24055ab2a71b6f8b5c1
+4a39112fbb64546b9977d24055ab2a71b6f8b5c1,4a39112f,Get largest available image from last.fm for artist info.,"Get largest available image from last.fm for artist info.
+
+Create a new getLargestImage API to use when trying to find the highest
+resolution image in an array.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343273754,1343273754,1dc8c3eedea70c205fda519df11409ab9afaa06e
+1dc8c3eedea70c205fda519df11409ab9afaa06e,1dc8c3ee,Add intermediate search magnifying glass images,"Add intermediate search magnifying glass images
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343186549,1343186549,e850d0fd633308c618e29b233fa61cd759930fb2
+e850d0fd633308c618e29b233fa61cd759930fb2,e850d0fd,Add links and search text to intermediate search view.,"Add links and search text to intermediate search view.
+
+Add ""about eyekabob | contact | advertise"" and ""search live music by""
+to the intermediate search view.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343177046,1343177046,ad73f8e4010609f6f7c4ed27c320267b3f6fa76b
+ad73f8e4010609f6f7c4ed27c320267b3f6fa76b,ad73f8e4,Move the location search button to the top and modify its text.,"Move the location search button to the top and modify its text.
+
+Changed the location search button text from ""search by zip"" to ""search by location""
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343106209,1343106209,9622926c16e08ab86b1e2b4bd256446443f09c5b
+9622926c16e08ab86b1e2b4bd256446443f09c5b,9622926c,Resolve regression with list fade component.,"Resolve regression with list fade component.
+
+The list fade component was being displayed at the top of the list as
+a result of moving to AdMob ads. So move the fade component inside the
+linear layout that the ad is in.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343103361,1343103361,0c3a019b9cf4e9ef4ca152cfd5ea1d601d1ebfdb
+0c3a019b9cf4e9ef4ca152cfd5ea1d601d1ebfdb,0c3a019b,Dismiss loading dialog for artist info only after all data is loaded,"Dismiss loading dialog for artist info only after all data is loaded
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343102762,1343102762,d996b376e7b71dd124c81b6e0a541a9f7c95419a
+d996b376e7b71dd124c81b6e0a541a9f7c95419a,d996b376,Add AdMob library,"Add AdMob library
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343102215,1343102215,8e8da5cdc7f40b82e4e7c0f0fa2336a804a56e8b
+8e8da5cdc7f40b82e4e7c0f0fa2336a804a56e8b,8e8da5cd,Fix the search artist page.,"Fix the search artist page.
+
+I'm not sure why this needed a different layout width value, but it seems
+to fix the runtime exception
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343102086,1343102086,72b1fcb4cece1152efaa8c2523a6a61da26b46a9
+72b1fcb4cece1152efaa8c2523a6a61da26b46a9,72b1fcb4,"Set android target to 14, add AdMob, and fix artist info errors for api 14","Set android target to 14, add AdMob, and fix artist info errors for api 14
+
+AdMob requires a build target of android-14. As a result of that, the artist
+info had a runtime error because it was requesting an image in the main
+thread. That is fixed with this submission.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1343099100,1343099113,82b63fc49b49a952a50b548f6ff89f8e8e288792
+82b63fc49b49a952a50b548f6ff89f8e8e288792,82b63fc4,Added Future Events request and section to Artist Info View,"Added Future Events request and section to Artist Info View
+",,,,Adam Sill,adam.sill01@gmail.com,Adam Sill,adam.sill01@gmail.com,1342993729,1342993729,39e01e836250b7b106e6b4b84edf0cb824a989fc
+39e01e836250b7b106e6b4b84edf0cb824a989fc,39e01e83,Fix test compilation error and add event search limit test,"Fix test compilation error and add event search limit test
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342982316,1342982316,ed3b8d847c49c281f27deac544a7072a15091e10
+ed3b8d847c49c281f27deac544a7072a15091e10,ed3b8d84,Add web service documentation,"Add web service documentation
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342981635,1342981635,2edfd4964a45769e59aa625668b2efb8d9085fb7
+2edfd4964a45769e59aa625668b2efb8d9085fb7,2edfd496,Add more event web service tests,"Add more event web service tests
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342973844,1342973844,614be1018d478aa0deaf148049120390b38c19f7
+614be1018d478aa0deaf148049120390b38c19f7,614be101,Add web application test and fix deprecated junit imports,"Add web application test and fix deprecated junit imports
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342973458,1342973458,5780f11db6d3f4193a1497f796fcb226e9a37d8f
+5780f11db6d3f4193a1497f796fcb226e9a37d8f,5780f11d,More event web service tests and a root android clean target,"More event web service tests and a root android clean target
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342973230,1342973230,91cb108a2997a4c64f00ef16e1fad128566b680e
+91cb108a2997a4c64f00ef16e1fad128566b680e,91cb108a,Add root test,"Add root test
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342972619,1342972619,6d4348bd7ad26445ffd1a75f8ebc91786f4c3524
+6d4348bd7ad26445ffd1a75f8ebc91786f4c3524,6d4348bd,Include emma dependency,"Include emma dependency
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342972156,1342972156,cd0b7190f29a85a440e52681c7bba24738c6202c
+cd0b7190f29a85a440e52681c7bba24738c6202c,cd0b7190,Add first unit test to event web service,"Add first unit test to event web service
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342971549,1342971549,055c2fc91e6cd8b71c916a38f84b4c0647d74dbb
+055c2fc91e6cd8b71c916a38f84b4c0647d74dbb,055c2fc9,Begin event web service framework,"Begin event web service framework
+
+Also add copyright information to files that didn't yet have it
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342969935,1342969935,332de7ac93a1ad876a0d87e2ecea979143a35c46
+332de7ac93a1ad876a0d87e2ecea979143a35c46,332de7ac,Add base event service class,"Add base event service class
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342941970,1342941970,a3fcb47487ce8e49b8cf2a8bb3c37978c227b69a
+a3fcb47487ce8e49b8cf2a8bb3c37978c227b69a,a3fcb474,Clean up some trailing whitespace and convert tabs to 4 spaces,"Clean up some trailing whitespace and convert tabs to 4 spaces
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342930183,1342930183,5d2bc5149b7f9dfc9572f0f2ea6c2333095f25d7
+5d2bc5149b7f9dfc9572f0f2ea6c2333095f25d7,5d2bc514,Introduce PMD to the project and remove an unused import,"Introduce PMD to the project and remove an unused import
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342928934,1342928934,bc7f444d719fc6a4447a14f849a9eab7329f3dc8
+bc7f444d719fc6a4447a14f849a9eab7329f3dc8,bc7f444d,Updated the Artist Info page - scaled the image and added more detail.  Also…,"Updated the Artist Info page - scaled the image and added more detail.  Also fixed the issue of the add banner covering up part of the Artist Info screen. NOTE: Still a work in progress.
+",,,,unknown,Adam@Adam-PC.(none),unknown,Adam@Adam-PC.(none),1342837066,1342837234,b61fd606b15db2596f5ffc902241d406ce8ee857
+b61fd606b15db2596f5ffc902241d406ce8ee857,b61fd606,Added an Eyekabob Theme for Info pages.  Also added an Artist Details Screen.,"Added an Eyekabob Theme for Info pages.  Also added an Artist Details Screen.
+",,,,unknown,Adam@Adam-PC.(none),unknown,Adam@Adam-PC.(none),1340551569,1342837234,d4af07e3d00264c0240ece15c4811f6ee1551911
+d4af07e3d00264c0240ece15c4811f6ee1551911,d4af07e3,Handle root requests and explain web services to ensure server is up,"Handle root requests and explain web services to ensure server is up
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342391883,1342391883,2d2507559218bcffa149e59ea681972136d23bb8
+2d2507559218bcffa149e59ea681972136d23bb8,2d250755,"Remove unnecessary ""rest"" and ""main"" path from the web service urls","Remove unnecessary ""rest"" and ""main"" path from the web service urls
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342320165,1342320165,d9d0e8817074851d9113c67012908d9c40447615
+d9d0e8817074851d9113c67012908d9c40447615,d9d0e881,Add query param to the hello world web service,"Add query param to the hello world web service
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342289034,1342289034,b10d752629eb3a92db83d67b67282a15636c9192
+b10d752629eb3a92db83d67b67282a15636c9192,b10d7526,trying another way to use utf-8 encoding,"trying another way to use utf-8 encoding
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342282689,1342282689,e746c4d698fd656fc6c6cd9de0404a03cc7c1e6a
+e746c4d698fd656fc6c6cd9de0404a03cc7c1e6a,e746c4d6,compile using utf-8 instead of ascii,"compile using utf-8 instead of ascii
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342282526,1342282526,c7eaaf82101bb33d64bcfcbd5b1dce47bce31988
+c7eaaf82101bb33d64bcfcbd5b1dce47bce31988,c7eaaf82,"Simple first web service returns {""response"":""Hello, world!""}","Simple first web service returns {""response"":""Hello, world!""}
+
+Using jersey rest apis, create a web service that returns mimetype
+application/json with some static content.
+
+Also move license.txt to the root directory
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342281880,1342281880,f73b3733fc9cd443233049faee1cdf51b0222e55
+f73b3733fc9cd443233049faee1cdf51b0222e55,f73b3733,tell maven to compile with java 1.6 and introduce jersey dependency,"tell maven to compile with java 1.6 and introduce jersey dependency
+
+also remove eclipse artifacts
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342244941,1342244941,6b7158f55debf2ca85696b8522de947045f29149
+6b7158f55debf2ca85696b8522de947045f29149,6b7158f5,forgot to remove the web call from build.xml,"forgot to remove the web call from build.xml
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342237177,1342237177,2688e36c1ab5e3f56a0df43c67c59c2c046b24c2
+2688e36c1ab5e3f56a0df43c67c59c2c046b24c2,2688e36c,Use maven to build the web services instead of ant,"Use maven to build the web services instead of ant
+
+The need for dependency resolution in the web services pushed the module
+to use maven instead of ant. But instead of using maven to build the whole
+project, only use it to build the web services. Ant is still used to compile
+and package the android module because I don't trust the maven android
+plugins nor the ant maven interactivity plugins.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342237083,1342237083,d8507fe3ef604712aa33081969ab43b6f09c4b3c
+d8507fe3ef604712aa33081969ab43b6f09c4b3c,d8507fe3,get rid of ivy because the public repos are error prone,"get rid of ivy because the public repos are error prone
+
+will investigate maven
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342058517,1342058517,6b86bf26232c5eecb1d9f4fdaaae1e67dd55f334
+6b86bf26232c5eecb1d9f4fdaaae1e67dd55f334,6b86bf26,get web module libraries out of source control and remove jsp web service,"get web module libraries out of source control and remove jsp web service
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1342056468,1342056468,6a86348f91f64de9bf174215837f80f58fd33dec
+6a86348f91f64de9bf174215837f80f58fd33dec,6a86348f,move web build framework inside the web module,"move web build framework inside the web module
+",,,,Alysia Lawson,lawsal01@alysias-laptop.(none),Alysia Lawson,lawsal01@alysias-laptop.(none),1342053121,1342053121,0b994b01321e3fca668380a33dbfdca5c20eef69
+0b994b01321e3fca668380a33dbfdca5c20eef69,0b994b01,"Add checks for bad artist list response, and only compile newer classes.","Add checks for bad artist list response, and only compile newer classes.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1341971094,1341971094,5f3689445b30a5f16d25f3c6dc582f588a0993d4
+5f3689445b30a5f16d25f3c6dc582f588a0993d4,5f368944,Introduce an intermediate search activity to distinguish between search types,"Introduce an intermediate search activity to distinguish between search types
+
+SearchIntermediate is the new activity that allows a user to decide whether
+to search by artist, venue, or location. After that selection the user can
+then actually search by whichever category they chose.
+
+SearchVenue still has problems and I'm not sure why. More investigation will
+need to be done in this area.
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1341806519,1341806519,f6e4fda3bc3fc7e5c72ed68a3d558f2855675a86
+f6e4fda3bc3fc7e5c72ed68a3d558f2855675a86,f6e4fda3,Move directory Android to android,"Move directory Android to android
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1339965825,1339965825,a5c50e39356d37be299f6f45259473ca814f9231
+a5c50e39356d37be299f6f45259473ca814f9231,a5c50e39,Amend copyright notice,"Amend copyright notice
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1338862826,1338862826,d450ebb486f99f82b276c17e69ac3b23046bf565
+d450ebb486f99f82b276c17e69ac3b23046bf565,d450ebb4,Added updated EventInfo (.xml & java files).,"Added updated EventInfo (.xml & java files).
+
+Also updated VenueList to include info about recently found bug.
+",,,,Adam,adam.sill01@gmail.com,Adam,adam.sill01@gmail.com,1338341049,1338341049,2297360b094d6deb7e3d167d124e1e4f247d803f
+2297360b094d6deb7e3d167d124e1e4f247d803f,2297360b,remove traces of iOS from the build framework,"remove traces of iOS from the build framework
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337981490,1337981490,86557471c00319988cf576a57c5b92f6499abd03
+86557471c00319988cf576a57c5b92f6499abd03,86557471,remove unused iOS and lib directories,"remove unused iOS and lib directories
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337981109,1337981109,878d73b9f3ef2bd051f838e71c3548f2ef8e3631
+878d73b9f3ef2bd051f838e71c3548f2ef8e3631,878d73b9,Merge branch 'master' of ssh://bcoffield.dyndns.org/usr/local/git/eyekabob,"Merge branch 'master' of ssh://bcoffield.dyndns.org/usr/local/git/eyekabob
+",,,,Adam,adam.sill01@gmail.com,Adam,adam.sill01@gmail.com,1337950385,1337950385,"c9d04b33619cb536b0c9678025d24b5e95c8b8fe,fdf11745a1bed5c9c045d1ccdfc847d118d11ee3"
+fdf11745a1bed5c9c045d1ccdfc847d118d11ee3,fdf11745,add todo in build.xml to move deps to ivy,"add todo in build.xml to move deps to ivy
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337916439,1337916439,ab3381d710d7083007c6d2f80d7e147b57c0b4fb
+c9d04b33619cb536b0c9678025d24b5e95c8b8fe,c9d04b33,	modified:   AdBanner.java,"	modified:   AdBanner.java
+	modified:   AddBand.java
+	modified:   ArtistInfo.java
+	modified:   ArtistList.java
+	modified:   Checkin.java
+	modified:   CheckinSearchList.java
+	modified:   EditView.java
+	modified:   EventInfo.java
+	modified:   EventList.java
+	modified:   EyekabobActivity.java
+	modified:   FindMusic.java
+	modified:   ListFadeImage.java
+	modified:   OAuthWebView.java
+	modified:   Prototype.java
+	modified:   ScaledImage.java
+	modified:   SignInView.java
+	modified:   VenueInfo.java
+	modified:   VenueList.java
+	modified:   adapters/ArtistListAdapter.java
+	modified:   adapters/EventListAdapter.java
+	modified:   adapters/VenueListAdapter.java
+	modified:   models/Artist.java
+	modified:   models/Event.java
+	modified:   models/Venue.java
+	modified:   util/EyekabobHelper.java
+	modified:   util/ImageTask.java
+	modified:   util/JSONTask.java
+	modified:   util/facebook/Facebook.java
+	modified:   util/facebook/Util.java
+",,,,Adam,adam.sill01@gmail.com,Adam,adam.sill01@gmail.com,1337913259,1337913259,ab3381d710d7083007c6d2f80d7e147b57c0b4fb
+ab3381d710d7083007c6d2f80d7e147b57c0b4fb,ab3381d7,fix ldpi image size. it was too large,"fix ldpi image size. it was too large
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337819412,1337819412,869f5d9185e5dc38b6e11f047b34d552071a1ad7
+869f5d9185e5dc38b6e11f047b34d552071a1ad7,869f5d91,allow cross-platform web service deployment to tomcat,"allow cross-platform web service deployment to tomcat
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337814464,1337814586,7d0758b47697f69d66e9d80fb47f3ae5c959f2bf
+7d0758b47697f69d66e9d80fb47f3ae5c959f2bf,7d0758b4,move the add artist to the bands button on home page,"move the add artist to the bands button on home page
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337792483,1337792483,8f2d2e76b78f315c1147dd088e18e3af5cfbffe1
+8f2d2e76b78f315c1147dd088e18e3af5cfbffe1,8f2d2e76,remove phonegap library from Android/libs,"remove phonegap library from Android/libs
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337790194,1337790194,2efeab858ff16909ea0fb513ed99d92287529735
+2efeab858ff16909ea0fb513ed99d92287529735,2efeab85,"convert tabs to spaces in home.java, and add out to .gitignore","convert tabs to spaces in home.java, and add out to .gitignore
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337742475,1337742475,f973d0f3f269cec2d26f9193b7533e72c3137f7a
+f973d0f3f269cec2d26f9193b7533e72c3137f7a,f973d0f3,remove phonegap and ignore idea project files,"remove phonegap and ignore idea project files
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337740866,1337740866,898346def8806a0ca8e587cf2cd4a38329407114
+898346def8806a0ca8e587cf2cd4a38329407114,898346de,update eyekabob logo,"update eyekabob logo
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337739932,1337739932,56c559772df099bf3d8cb22fcf64b490e6d7d90f
+56c559772df099bf3d8cb22fcf64b490e6d7d90f,56c55977,remove forum button and add calendar button,"remove forum button and add calendar button
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337737460,1337737460,ed9fd37ac39a0da6c693be02255f98690041420f
+ed9fd37ac39a0da6c693be02255f98690041420f,ed9fd37a,new mockup images for bands and status page,"new mockup images for bands and status page
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337663193,1337663193,32c1bc25f94ffe00b3f352c8e943d7ebdfdbe448
+32c1bc25f94ffe00b3f352c8e943d7ebdfdbe448,32c1bc25,move adapters to their own package,"move adapters to their own package
+
+also update license blurbs for new classes
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337536216,1337536216,1dcc38c6d2a6827f8a389deaf96cd7d43b96cda3
+1dcc38c6d2a6827f8a389deaf96cd7d43b96cda3,1dcc38c6,fix ad handling for pages besides the find music activity,"fix ad handling for pages besides the find music activity
+
+also internationalize the email launcher label
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337535762,1337535762,329c899da3c3edb66ee07efc8b2aecc754ee073f
+329c899da3c3edb66ee07efc8b2aecc754ee073f,329c899d,got eyekabob artist search working!,"got eyekabob artist search working!
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337534969,1337534969,40af428754f54a9580b5ce6bb2e4ee35fb58bd09
+40af428754f54a9580b5ce6bb2e4ee35fb58bd09,40af4287,allow eyekabob artists to be searched for,"allow eyekabob artists to be searched for
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337396440,1337396440,2d418e6700115ae7b0d6fff2e77c581f6820cc53
+2d418e6700115ae7b0d6fff2e77c581f6820cc53,2d418e67,modify artist search web service to return results,"modify artist search web service to return results
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337389236,1337389236,d71f56cfba921daabdf0ab2b9bf8c817e1d35bda
+d71f56cfba921daabdf0ab2b9bf8c817e1d35bda,d71f56cf,"ignore empty string and null, as they are not web service errors","ignore empty string and null, as they are not web service errors
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337312074,1337312074,4f2ee5b17845f32f4743b09b04778e23c1a9b136
+4f2ee5b17845f32f4743b09b04778e23c1a9b136,4f2ee5b1,allow client to add artist,"allow client to add artist
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337310504,1337310504,a9e1ab209615ccb047814a786f7c559ef7df9922
+a9e1ab209615ccb047814a786f7c559ef7df9922,a9e1ab20,don't use get or post to determine what method is used,"don't use get or post to determine what method is used
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337309995,1337309995,a2ca3f671db55f68eac59e2dc0f8d33677f17e93
+a2ca3f671db55f68eac59e2dc0f8d33677f17e93,a2ca3f67,add more logging to the web service for post,"add more logging to the web service for post
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337303304,1337303304,f2502ebf0ac86d966e7260d78f654a384096e87d
+f2502ebf0ac86d966e7260d78f654a384096e87d,f2502ebf,put error in web service post response and allow it to show on client,"put error in web service post response and allow it to show on client
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337302750,1337302750,5eeded7c14dbe28edebcc78ecb678f3805dd8d05
+5eeded7c14dbe28edebcc78ecb678f3805dd8d05,5eeded7c,add feedback for failed artist add,"add feedback for failed artist add
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337232406,1337232406,f4c3cb670c4facd0eeada51aeddffb91217e4d1c
+f4c3cb670c4facd0eeada51aeddffb91217e4d1c,f4c3cb67,trying autoReconnect=true on the jdbc connection string,"trying autoReconnect=true on the jdbc connection string
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337231920,1337231920,362c5c43d709b918d251de4bdfa66db430e75a8b
+362c5c43d709b918d251de4bdfa66db430e75a8b,362c5c43,"Revert ""trying to use IP for bcoffield.dyndns.org for jdbc connection""","Revert ""trying to use IP for bcoffield.dyndns.org for jdbc connection""
+
+This reverts commit 826b81aa7414093f185e3221e71138bca171540a.
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337231435,1337231435,826b81aa7414093f185e3221e71138bca171540a
+826b81aa7414093f185e3221e71138bca171540a,826b81aa,trying to use IP for bcoffield.dyndns.org for jdbc connection,"trying to use IP for bcoffield.dyndns.org for jdbc connection
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337231186,1337231186,d2ae0287f583307970a8671c51a3cedfd3e099d9
+d2ae0287f583307970a8671c51a3cedfd3e099d9,d2ae0287,use the proper IP for localhost instead of the shorthand domain name,"use the proper IP for localhost instead of the shorthand domain name
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337230821,1337230821,70fd9c65d59960756049f92101f0cfdc32916d87
+70fd9c65d59960756049f92101f0cfdc32916d87,70fd9c65,try jdbc executeUpdate instead of executeQuery for adding artist,"try jdbc executeUpdate instead of executeQuery for adding artist
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337230489,1337230489,acda661e5e0fd785bb46bd9781e27f477f6ad76d
+acda661e5e0fd785bb46bd9781e27f477f6ad76d,acda661e,don't use singleton for mysql driver,"don't use singleton for mysql driver
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337230013,1337230013,ef913938072e965a6c49617905b2b2b701bb35a3
+ef913938072e965a6c49617905b2b2b701bb35a3,ef913938,attempting artist add web service,"attempting artist add web service
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337229745,1337229745,d3b70707461841ca5c83f9867bdcf6debfbdbcf9
+d3b70707461841ca5c83f9867bdcf6debfbdbcf9,d3b70707,allow reuse of the mysql driver for subsequent requests,"allow reuse of the mysql driver for subsequent requests
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337229312,1337229312,7b68048aa82b8380efbffdbeca985100e9fe2d28
+7b68048aa82b8380efbffdbeca985100e9fe2d28,7b68048a,update client to use tomcat port for web service,"update client to use tomcat port for web service
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337227947,1337227947,01c4a1f82ac38931bfe6041e5a52a6285c53ad42
+01c4a1f82ac38931bfe6041e5a52a6285c53ad42,01c4a1f8,connect web service to select artist statement for database using jdbc,"connect web service to select artist statement for database using jdbc
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337227531,1337227531,f4e67f9d1d488cbe35c1959184b3cdf47868f91f
+f4e67f9d1d488cbe35c1959184b3cdf47868f91f,f4e67f9d,deploy war to tomcat and initial json object response,"deploy war to tomcat and initial json object response
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337220301,1337220301,a578596dcb3d4424e3cc3f077adcf6b9b9f1139b
+a578596dcb3d4424e3cc3f077adcf6b9b9f1139b,a578596d,switch web service from php to java and add build framework support,"switch web service from php to java and add build framework support
+
+also remove unused src directory
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337217727,1337217727,5b04aaca12c926341ea8696bd9bc1a059a40ee9a
+5b04aaca12c926341ea8696bd9bc1a059a40ee9a,5b04aaca,some web service debugging to determine the request verb,"some web service debugging to determine the request verb
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337139671,1337139671,ec46b65a53c4229637a1c0e2b1fa94a6bc74c7ff
+ec46b65a53c4229637a1c0e2b1fa94a6bc74c7ff,ec46b65a,fix syntax error in artist add sql statement,"fix syntax error in artist add sql statement
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337139235,1337139235,f99112a63d7b5aba2467d1d2a3d65d616d60c115
+f99112a63d7b5aba2467d1d2a3d65d616d60c115,f99112a6,add artist name to json response in case of successful adding of artist,"add artist name to json response in case of successful adding of artist
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337139052,1337139052,932c26b641385ef8b61b83759a793e47f0af8c9d
+932c26b641385ef8b61b83759a793e47f0af8c9d,932c26b6,fix web service method in the client to allow adding of artists,"fix web service method in the client to allow adding of artists
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337138809,1337138809,190c06ad1618626e23395f5be9383af4eaf2300e
+190c06ad1618626e23395f5be9383af4eaf2300e,190c06ad,fix syntax error in elseif branch of web service,"fix syntax error in elseif branch of web service
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337138118,1337138118,5a43773ce972f3bf88187ec0da7740a973486910
+5a43773ce972f3bf88187ec0da7740a973486910,5a43773c,testing adding artist UI,"testing adding artist UI
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337137268,1337137268,4dfc63f27fdfe311e9d2d575306eecc0eb7a1b4a
+4dfc63f27fdfe311e9d2d575306eecc0eb7a1b4a,4dfc63f2,add facebook sign in to the settings button,"add facebook sign in to the settings button
+
+also add empty ""add artist"" button after sign in
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1337050825,1337050825,4cf82bcfeb62428cee184f13c8af5b6618dc0e03
+4cf82bcfeb62428cee184f13c8af5b6618dc0e03,4cf82bcf,launch prototype images for each of the home buttons,"launch prototype images for each of the home buttons
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336697635,1336697635,6efa16a448831e67287db3474b75c557ffe3bc10
+6efa16a448831e67287db3474b75c557ffe3bc10,6efa16a4,fix search bug and make event info scrollable,"fix search bug and make event info scrollable
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336610630,1336610630,b1727655ada0ad17fe03ed56242d6daad00d4ee3
+b1727655ada0ad17fe03ed56242d6daad00d4ee3,b1727655,web service for adding artist,"web service for adding artist
+
+bcoffield.dyndns.org/eyekabob/web?artist=aNewArtist
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336359126,1336359126,1ba7cca0b1422752f8d46dcac7e802dade19f39b
+1ba7cca0b1422752f8d46dcac7e802dade19f39b,1ba7cca0,fixed bug where url params were not being encoded,"fixed bug where url params were not being encoded
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336344075,1336344075,8e9c4134d771ea42a65fee3846e0216243e313e3
+8e9c4134d771ea42a65fee3846e0216243e313e3,8e9c4134,"bug fixes for search, and different current location ui","bug fixes for search, and different current location ui
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336339471,1336339471,cd0bbc2b608ee06851f70accb6856f03c795fc76
+cd0bbc2b608ee06851f70accb6856f03c795fc76,cd0bbc2b,fix bug where no artist results would error.,"fix bug where no artist results would error.
+
+also add name retrival to artist web service
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336337562,1336337562,3a84a58a9915f892d10ee653011f50ad4282bb06
+3a84a58a9915f892d10ee653011f50ad4282bb06,3a84a58a,change color of event list item so it's more readable,"change color of event list item so it's more readable
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336330068,1336330068,ae6bb5e5a87bd85ee00aba9fe110e712588f1a63
+ae6bb5e5a87bd85ee00aba9fe110e712588f1a63,ae6bb5e5,revert the commit that didn't sign the apk,"revert the commit that didn't sign the apk
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336329647,1336329647,b6069244d9be0e2fcadf3fcbcaa30184deea98e1
+b6069244d9be0e2fcadf3fcbcaa30184deea98e1,b6069244,don't sign the apk for debug mode,"don't sign the apk for debug mode
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336326210,1336326210,4d0e3022a0fc5ffedaafa56bdf21163b60ed0a5f
+4d0e3022a0fc5ffedaafa56bdf21163b60ed0a5f,4d0e3022,web service test,"web service test
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336278951,1336278951,51d133206abbfdeaf407d0ef4847d0d8d135bd91
+51d133206abbfdeaf407d0ef4847d0d8d135bd91,51d13320,convert last.fm requests to json. no UI changes,"convert last.fm requests to json. no UI changes
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1336262193,1336262193,105c4406c20406f13a8d60358af2d1ddd0cc4a28
+105c4406c20406f13a8d60358af2d1ddd0cc4a28,105c4406,image updates!,"image updates!
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1335498905,1335498905,613d6c59136bb27bfed9b5c4a5ef9e0185cf1a1a
+613d6c59136bb27bfed9b5c4a5ef9e0185cf1a1a,613d6c59,"added ""add artist"" webview. this still has some errors","added ""add artist"" webview. this still has some errors
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1335498105,1335498105,8938cd0469a9bf945dd6823959cf9f11240b717f
+8938cd0469a9bf945dd6823959cf9f11240b717f,8938cd04,"show ""add band"" button if no band matches search","show ""add band"" button if no band matches search
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1335487864,1335487864,7110182672567fe1f1c62d5d9d12968b95895198
+7110182672567fe1f1c62d5d9d12968b95895198,71101826,fixed a couple bugs around the foursquare authentication,"fixed a couple bugs around the foursquare authentication
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334540453,1334540453,55020d4027f0bc3b689b57e48008980a991c3540
+55020d4027f0bc3b689b57e48008980a991c3540,55020d40,checkin comments field requests focus,"checkin comments field requests focus
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334509159,1334509159,a45768e34b4e82e13e592d9ab8ca144804061b3e
+a45768e34b4e82e13e592d9ab8ca144804061b3e,a45768e3,foursquare checkin works!,"foursquare checkin works!
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334508916,1334508916,2e592b7a2ed0a4accad8d6a1d711abd04541531b
+2e592b7a2ed0a4accad8d6a1d711abd04541531b,2e592b7a,checkin now searches nearby foursquare places. still need to actually check in,"checkin now searches nearby foursquare places. still need to actually check in
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334502706,1334502706,770a608df903a419e1669169957c1a640b6f7136
+770a608df903a419e1669169957c1a640b6f7136,770a608d,foursquare login. next step is to check in using 4sq and send it to fb,"foursquare login. next step is to check in using 4sq and send it to fb
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334427704,1334427704,19b5ee879085ff7125a7d4ef177caa2db15ccc1b
+19b5ee879085ff7125a7d4ef177caa2db15ccc1b,19b5ee87,checkin still doesn't work. it's not supported by facebook. need more investigation,"checkin still doesn't work. it's not supported by facebook. need more investigation
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334285227,1334285227,4b13fbd449c2866da09550e21a82d1a1f898c142
+4b13fbd449c2866da09550e21a82d1a1f898c142,4b13fbd4,added facebook sdk and hooked up login to the checkin button,"added facebook sdk and hooked up login to the checkin button
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334196920,1334196920,902afb2f2575058ec2304ceea88b80d445666c38
+902afb2f2575058ec2304ceea88b80d445666c38,902afb2f,unused facebook class,"unused facebook class
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334188270,1334188270,986dbf65768140e4cc959527992a8ea09935deb9
+986dbf65768140e4cc959527992a8ea09935deb9,986dbf65,turn date blue in events list,"turn date blue in events list
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334114205,1334114205,c94e1c9488ab6ef6853e1c196f7978fd4472d067
+c94e1c9488ab6ef6853e1c196f7978fd4472d067,c94e1c94,changed eventactivity to event_info,"changed eventactivity to event_info
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334110851,1334110851,fb6f9a94cbeb59bdd393f36a5339f883d2d51d73
+fb6f9a94cbeb59bdd393f36a5339f883d2d51d73,fb6f9a94,make event list header red and larger,"make event list header red and larger
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1334032359,1334032359,a5e0c032b02ef85ebbf62d0786e8d0922de93517
+a5e0c032b02ef85ebbf62d0786e8d0922de93517,a5e0c032,redo the event model to include venue and artists instead of duplicating the data,"redo the event model to include venue and artists instead of duplicating the data
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1333837767,1333837767,21f1fc02a4977db6d1ec2777dc8ec8a15cb7c778
+21f1fc02a4977db6d1ec2777dc8ec8a15cb7c778,21f1fc02,documentation for Phil to help understand the attributes of the models,"documentation for Phil to help understand the attributes of the models
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1333811357,1333811357,bb2413c559199c02a8ccbc2de60dba4230a04f72
+bb2413c559199c02a8ccbc2de60dba4230a04f72,bb2413c5,fill out example artist rendering for Phil,"fill out example artist rendering for Phil
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1333779526,1333779526,dfee869433022363b3bd18d65b86cd587abb30b0
+dfee869433022363b3bd18d65b86cd587abb30b0,dfee8694,fixed a couple row rendering bugs for venue and events list,"fixed a couple row rendering bugs for venue and events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333678825,1333678825,115ea07ecb864874fdba0a3d107a2a277345a1c6
+115ea07ecb864874fdba0a3d107a2a277345a1c6,115ea07e,refactored a number of back-end things that were bothersome,"refactored a number of back-end things that were bothersome
+
+-alert dialog to-do is now in one place: eyekabobactivity
+-event model now has lat/lon instead of distance
+-overloaded getDistance in eyekabobhelper
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333678000,1333678000,1a632de63d12f9f0904e422c8984dbc9c571b122
+1a632de63d12f9f0904e422c8984dbc9c571b122,1a632de6,moved lastfmutility into eyekabobhelper's static lastfm class,"moved lastfmutility into eyekabobhelper's static lastfm class
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333673862,1333673862,38687f64fa02e22e6796d5a5ad8131e7f68a6d61
+38687f64fa02e22e6796d5a5ad8131e7f68a6d61,38687f64,figured out how to serialize the models and pass them to intents,"figured out how to serialize the models and pass them to intents
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333672787,1333672787,6b3c654e5a06f13c2dd72320d3881c4b9d06bff9
+6b3c654e5a06f13c2dd72320d3881c4b9d06bff9,6b3c654e,change height and width for events and artist list,"change height and width for events and artist list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333598634,1333598634,82dec9e1556664b125d2cba1bd8f58b04209294b
+82dec9e1556664b125d2cba1bd8f58b04209294b,82dec9e1,modified venue model and leave question of what to do with venue info,"modified venue model and leave question of what to do with venue info
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333597035,1333597035,30d9e39761ce9350d33b3f0d1fda0e1b992e0142
+30d9e39761ce9350d33b3f0d1fda0e1b992e0142,30d9e397,fixed some bugs with the list image sizes and OOM errors,"fixed some bugs with the list image sizes and OOM errors
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333593930,1333593930,41f1648421ad1077a89f3fc5ac9cd6300545a1a9
+41f1648421ad1077a89f3fc5ac9cd6300545a1a9,41f16484,more model rework,"more model rework
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333511565,1333511565,4cb60f34f377e3f10227b9ec08b1b17019389e18
+4cb60f34f377e3f10227b9ec08b1b17019389e18,4cb60f34,sort code into utilities vs models. no UI changes,"sort code into utilities vs models. no UI changes
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333506176,1333506176,86027aa01e5511656a30a17429bceb2e09b70541
+86027aa01e5511656a30a17429bceb2e09b70541,86027aa0,created artist placeholder for Phil,"created artist placeholder for Phil
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333425080,1333425080,7dd715a565b24dee106ea16c3bc80329a24dcc81
+7dd715a565b24dee106ea16c3bc80329a24dcc81,7dd715a5,rename home image,"rename home image
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333420730,1333420730,aa4ab444de510085769058aa9d96600e76dfcfbc
+aa4ab444de510085769058aa9d96600e76dfcfbc,aa4ab444,Updated home eye button,"Updated home eye button
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1333420528,1333420528,e15daa5da339c800ed96ce5cd5fbe05cc425ffdc
+e15daa5da339c800ed96ce5cd5fbe05cc425ffdc,e15daa5d,"old eye btn, no bloodshot","old eye btn, no bloodshot
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332991055,1332991055,b9fe6a178e54fb591155ed3f5d3e31fae37dd2dc
+b9fe6a178e54fb591155ed3f5d3e31fae37dd2dc,b9fe6a17,loading instead of searching when loading events page,"loading instead of searching when loading events page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332989053,1332989053,939940d98d63c33550c7720a4a247a0d2b75d72f
+939940d98d63c33550c7720a4a247a0d2b75d72f,939940d9,background for event list items,"background for event list items
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332988825,1332988825,6b265bd6ca4fb44cdfbb40349979a0bed2b52bca
+6b265bd6ca4fb44cdfbb40349979a0bed2b52bca,6b265bd6,updated images from Phil,"updated images from Phil
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332912257,1332912257,740e16e31c15c7386ee6cae7db736a13b19ad9ae
+740e16e31c15c7386ee6cae7db736a13b19ad9ae,740e16e3,increase margin on bottom of events list,"increase margin on bottom of events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332908380,1332908380,358c0679fed79d14375bfe12a7627854714b06a0
+358c0679fed79d14375bfe12a7627854714b06a0,358c0679,Inflate every row to fill image,"Inflate every row to fill image
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332907984,1332907984,8d0ed34939eff5e4b79faeda649266c35ffac18d
+8d0ed34939eff5e4b79faeda649266c35ffac18d,8d0ed349,even more of a smooth fade for the events list,"even more of a smooth fade for the events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332907180,1332907180,ec83197366c0acfc0e24ae2ec8125693bcc5de49
+ec83197366c0acfc0e24ae2ec8125693bcc5de49,ec831973,more gradual fade from black to visible,"more gradual fade from black to visible
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332906931,1332906931,a422db7727738e28df9429f96b0f53cc71198888
+a422db7727738e28df9429f96b0f53cc71198888,a422db77,faded image above the ad for events list,"faded image above the ad for events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332906101,1332906101,c8813a62152e1d6ee005485424196db58ca91e01
+c8813a62152e1d6ee005485424196db58ca91e01,c8813a62,fix event row tap bug. now goes to event page,"fix event row tap bug. now goes to event page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332904573,1332904573,897ed81a1ae2f4ae0d31a4f9ba80e30e10b0ce45
+897ed81a1ae2f4ae0d31a4f9ba80e30e10b0ce45,897ed81a,centered eyekabob logo,"centered eyekabob logo
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1332878086,1332878086,faea4486e8956231b892b9dc69057a38c6a209cb
+faea4486e8956231b892b9dc69057a38c6a209cb,faea4486,added images to the events list,"added images to the events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332818686,1332818686,8afb6deac397e386cfab99bdd1378b1364d0ec0b
+8afb6deac397e386cfab99bdd1378b1364d0ec0b,8afb6dea,larger bottom margin for events list,"larger bottom margin for events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332710409,1332710409,631f3fb30d7ebcbd53d2cc4c15c1c9998fcb91c8
+631f3fb30d7ebcbd53d2cc4c15c1c9998fcb91c8,631f3fb3,"ad on events list, and update build framework to not copy js","ad on events list, and update build framework to not copy js
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332710268,1332710268,e058b90411f186f1caca5d47d11d17a2a62acf95
+e058b90411f186f1caca5d47d11d17a2a62acf95,e058b904,disable distance when searching by zip,"disable distance when searching by zip
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332705246,1332705246,587dc255d1b54f4846ab1e377ace2d28847afc2c
+587dc255d1b54f4846ab1e377ace2d28847afc2c,587dc255,retrieve string state from extras,"retrieve string state from extras
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332704704,1332704704,d715fe991fe4c2c8a53dfe7b317238c6c0e9c70a
+d715fe991fe4c2c8a53dfe7b317238c6c0e9c70a,d715fe99,better use of eventresults extras state regarding zip,"better use of eventresults extras state regarding zip
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332703752,1332703752,f8f8ee1f3e7a0828703fac44b8c9254420337af4
+f8f8ee1f3e7a0828703fac44b8c9254420337af4,f8f8ee1f,turn events list into a generic activity and remove unused artist layout,"turn events list into a generic activity and remove unused artist layout
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332702544,1332702544,143985ed8371675a922e88217ee78386c288bce2
+143985ed8371675a922e88217ee78386c288bce2,143985ed,make getDistance return a long. handle rendering in activities,"make getDistance return a long. handle rendering in activities
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332702006,1332702006,1f9b6c509df2c80ec78ed0b375fc1ce1eccc27f1
+1f9b6c509df2c80ec78ed0b375fc1ce1eccc27f1,1f9b6c50,"optionally show distance, city and venue for the events result list","optionally show distance, city and venue for the events result list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332700953,1332700953,499974abb4d5483bcd074f9e3a1a3e8e3851dd1c
+499974abb4d5483bcd074f9e3a1a3e8e3851dd1c,499974ab,some rework to reduce code duplication. nicenodelist,"some rework to reduce code duplication. nicenodelist
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332699462,1332699462,f48259045a0b909eed3c8f3b84f108c7fc89993e
+f48259045a0b909eed3c8f3b84f108c7fc89993e,f4825904,check lat and lon to make sure they have values,"check lat and lon to make sure they have values
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332629410,1332629410,4cab9d3ae3bf174efe1959a4134f0c41fd439da6
+4cab9d3ae3bf174efe1959a4134f0c41fd439da6,4cab9d3a,use the best enabled location service to determine location,"use the best enabled location service to determine location
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332626026,1332626026,d0de387dcb32ea8e668b0aef69ec7a0a9547f8e2
+d0de387dcb32ea8e668b0aef69ec7a0a9547f8e2,d0de387d,network location,"network location
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332625350,1332625350,179f9c29ccb3c3bc7865bfc02940d359a8aa77fb
+179f9c29ccb3c3bc7865bfc02940d359a8aa77fb,179f9c29,"find by zip, find background opacity at 70%","find by zip, find background opacity at 70%
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332620791,1332620791,c661eff94a80f7be0043504bc5cb69579a893a43
+c661eff94a80f7be0043504bc5cb69579a893a43,c661eff9,bigger search magnifying glasses,"bigger search magnifying glasses
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332619204,1332619204,d4a5720b8e036633a796508ca1898eb57f8037af
+d4a5720b8e036633a796508ca1898eb57f8037af,d4a5720b,higher resolution ad,"higher resolution ad
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332573472,1332573472,0dccf09d5018697ad1f149068173735f40fd896f
+0dccf09d5018697ad1f149068173735f40fd896f,0dccf09d,add to-do to source control,"add to-do to source control
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332565123,1332565123,a1fca9427b8a1b8d4cf5fd104463032eca331174
+a1fca9427b8a1b8d4cf5fd104463032eca331174,a1fca942,trying more of the six icon centering.,"trying more of the six icon centering.
+
+I really should hook up my phone to debug
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332465634,1332465634,36ec46c21ce8581286541df8813bcff68b619730
+36ec46c21ce8581286541df8813bcff68b619730,36ec46c2,trying to center the button rows again,"trying to center the button rows again
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332465378,1332465378,f9401211a87dc9cd01a69a9425020d10aa63c116
+f9401211a87dc9cd01a69a9425020d10aa63c116,f9401211,bottom align the six home buttons,"bottom align the six home buttons
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332465134,1332465134,8cbdf826092bad31f02aa25cdd7368999c237f99
+8cbdf826092bad31f02aa25cdd7368999c237f99,8cbdf826,Move the eyekabob logo above the six eyeballs on the home page,"Move the eyekabob logo above the six eyeballs on the home page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332463901,1332463901,31826420bf285a488d29179eea5a324b575b44fc
+31826420bf285a488d29179eea5a324b575b44fc,31826420,round the miles,"round the miles
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332212008,1332212008,89052dbc3c40eabb912e14506a8743de440976d7
+89052dbc3c40eabb912e14506a8743de440976d7,89052dbc,rough location estimate for events,"rough location estimate for events
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332211888,1332211888,fc177440259b9ecf4baf47940bf52479fd9bebf6
+fc177440259b9ecf4baf47940bf52479fd9bebf6,fc177440,scaled the ad banner successfully!!,"scaled the ad banner successfully!!
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332209255,1332209255,2ae01159de1f3a91eed52316114a1d38ca029261
+2ae01159de1f3a91eed52316114a1d38ca029261,2ae01159,remove the hard-coded ad width,"remove the hard-coded ad width
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332208849,1332208849,4fb4aa78c6b5a390475b78e9eeef73974f9d9627
+4fb4aa78c6b5a390475b78e9eeef73974f9d9627,4fb4aa78,give the ad a little more height. this is very tricky ...,"give the ad a little more height. this is very tricky ...
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332202413,1332202413,39dfee7eede39d36c677afe2e16ed827b3e936aa
+39dfee7eede39d36c677afe2e16ed827b3e936aa,39dfee7e,new find eyeballs,"new find eyeballs
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332200986,1332200986,56938c2be154fd358e4cf109da20fbf00cfdd505
+56938c2be154fd358e4cf109da20fbf00cfdd505,56938c2b,convert miles to km for the last.fm geo query,"convert miles to km for the last.fm geo query
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332133081,1332133081,c1a185959665342f1b9bbcd8e995cb75b4ae9754
+c1a185959665342f1b9bbcd8e995cb75b4ae9754,c1a18595,stretch ad across the bottom,"stretch ad across the bottom
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332132246,1332132246,8c55d1a8c912e6603b3071747cdede18e1deb9e0
+8c55d1a8c912e6603b3071747cdede18e1deb9e0,8c55d1a8,city added to events list,"city added to events list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332129879,1332129879,cd8fc5b4d74e81f4f9f6e3ef701ff4714da18274
+cd8fc5b4d74e81f4f9f6e3ef701ff4714da18274,cd8fc5b4,remove the ic_launcher I added to keep eclipse happy,"remove the ic_launcher I added to keep eclipse happy
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332115624,1332115624,49740802b7b879f19cc21c5e06cd4cdc47569903
+49740802b7b879f19cc21c5e06cd4cdc47569903,49740802,enable/disable search by location based on the current location checkbox,"enable/disable search by location based on the current location checkbox
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332110484,1332110484,c27319d9eac1839d08293ba8167a7556dd5fba68
+c27319d9eac1839d08293ba8167a7556dd5fba68,c27319d9,render event description in a webview,"render event description in a webview
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332108663,1332108663,c7a77dc4b3ebb716209caec2a7baca72f4da24f1
+c7a77dc4b3ebb716209caec2a7baca72f4da24f1,c7a77dc4,"use zip code service to get city name from zip, related to location search","use zip code service to get city name from zip, related to location search
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332107126,1332107126,ed301f8c1301173d765b73414f54d51a55166713
+ed301f8c1301173d765b73414f54d51a55166713,ed301f8c,trim the location input,"trim the location input
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332098433,1332098433,881f1863d8509a307f873aa38334aa5da65c9ff4
+881f1863d8509a307f873aa38334aa5da65c9ff4,881f1863,"search by location, not find by","search by location, not find by
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332098330,1332098330,4aab79314ea88a269a5ec10b33dbd38a8ccc349f
+4aab79314ea88a269a5ec10b33dbd38a8ccc349f,4aab7931,gracefully fail if no events found,"gracefully fail if no events found
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332098166,1332098166,2a529dec069cc09ec5f329e3589fa64a7381dd0d
+2a529dec069cc09ec5f329e3589fa64a7381dd0d,2a529dec,add location handling,"add location handling
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332097764,1332097764,fffa7cef72b87ba8f8a381a58c50686d6e63ca98
+fffa7cef72b87ba8f8a381a58c50686d6e63ca98,fffa7cef,remove the eyekabob logo from the search page,"remove the eyekabob logo from the search page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332096462,1332096462,f772055ae5a75cab2a9fe5ab32c7657f749f61c4
+f772055ae5a75cab2a9fe5ab32c7657f749f61c4,f772055a,email type,"email type
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332095094,1332095094,33c2820d0cb26163be889aa417dcdff34bf4fa8e
+33c2820d0cb26163be889aa417dcdff34bf4fa8e,33c2820d,ad and email,"ad and email
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332094917,1332094917,e17981f1d0f10ab8374d7c5f21e8d9fa49abe8e8
+e17981f1d0f10ab8374d7c5f21e8d9fa49abe8e8,e17981f1,large background for location inputs,"large background for location inputs
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332093397,1332093397,3b597d8eec12e276dc9052bdb389c5211a621f67
+3b597d8eec12e276dc9052bdb389c5211a621f67,3b597d8e,search page slider,"search page slider
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1332092537,1332092537,8ca0530687f8c3379d4b357ddb1ee67ee090530b
+8ca0530687f8c3379d4b357ddb1ee67ee090530b,8ca05306,fix eclipse,"fix eclipse
+
+no reason it neeeded to be fixed because ant compiled and ran the project
+just fine. eclipse, yet again, fails to be a useful tool
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331957371,1331957371,d6ece9663ccc952e5ddabbf8c956817438e1c838
+d6ece9663ccc952e5ddabbf8c956817438e1c838,d6ece966,search UI looks a bit funny,"search UI looks a bit funny
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331874239,1331874239,47a05edba2f2b5f624c9464668a4e35f8b2412c3
+47a05edba2f2b5f624c9464668a4e35f8b2412c3,47a05edb,high and low density launcher icons,"high and low density launcher icons
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331872074,1331872074,1e8d8845e1c1111af5b8e57b26d0e4ff73ea8128
+1e8d8845e1c1111af5b8e57b26d0e4ff73ea8128,1e8d8845,medium and high res launcher icons,"medium and high res launcher icons
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331871148,1331871148,bbe3c1d8732acaa3e1a67a52c6da7a895819fef5
+bbe3c1d8732acaa3e1a67a52c6da7a895819fef5,bbe3c1d8,Add launcher icons to source control,"Add launcher icons to source control
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331870941,1331870941,8cf927280f1cbe8ffdc5af34c3126ca6330be062
+8cf927280f1cbe8ffdc5af34c3126ca6330be062,8cf92728,search live music string,"search live music string
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331783012,1331783012,05854dd709c6184e5b75dd802444da1276f198d7
+05854dd709c6184e5b75dd802444da1276f198d7,05854dd7,update some form backgrounds on the find live music activity,"update some form backgrounds on the find live music activity
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331782053,1331782053,642fcdec967a8ee4d7e72b1623e6cab69dd484ba
+642fcdec967a8ee4d7e72b1623e6cab69dd484ba,642fcdec,make search text inputs fill remaining space,"make search text inputs fill remaining space
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331780320,1331780320,f737404900d90b01c342d351f99643abab6cbacc
+f737404900d90b01c342d351f99643abab6cbacc,f7374049,Disable orientation change on most activities. don't prevent it on lists though,"Disable orientation change on most activities. don't prevent it on lists though
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331779195,1331779195,3a50728a86ab3c117dfd16443cca6acc05cd04ce
+3a50728a86ab3c117dfd16443cca6acc05cd04ce,3a50728a,attempt to prevent orientation change,"attempt to prevent orientation change
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331778876,1331778876,6fe5c9a819955fa59655baf2ead7f4c30f21543e
+6fe5c9a819955fa59655baf2ead7f4c30f21543e,6fe5c9a8,revert the containing layout's fill type,"revert the containing layout's fill type
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331778684,1331778684,7de335a7760b7684e2e7e4764516943bced0ee10
+7de335a7760b7684e2e7e4764516943bced0ee10,7de335a7,attempt to prevent orientation change,"attempt to prevent orientation change
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331778578,1331778578,d2c248ba20603b9a254c888bad99f7dfd1cc8083
+d2c248ba20603b9a254c888bad99f7dfd1cc8083,d2c248ba,figured out home screen layout centering,"figured out home screen layout centering
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331778261,1331778261,8888ef1ba656420177c10e2bef90b8ea66b4a26a
+8888ef1ba656420177c10e2bef90b8ea66b4a26a,8888ef1b,more linear layout centering tests,"more linear layout centering tests
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331778032,1331778032,89682eac20e251fd4ce4269ead2a28a99d610c03
+89682eac20e251fd4ce4269ead2a28a99d610c03,89682eac,trying different layout gravity,"trying different layout gravity
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1331777790,1331777790,c2e9bffe75e0def6a6398ce8ff17146482715c72
+c2e9bffe75e0def6a6398ce8ff17146482715c72,c2e9bffe,hide title bar on home screen,"hide title bar on home screen
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330919859,1330919859,3c2becbd7ed143c39701411f1f0de459eaba393a
+3c2becbd7ed143c39701411f1f0de459eaba393a,3c2becbd,home ad,"home ad
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330918974,1330918974,3c0d69486ef95488aa5d989eab81f6af7c2eddac
+3c0d69486ef95488aa5d989eab81f6af7c2eddac,3c0d6948,added all the home page icons,"added all the home page icons
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330917299,1330917299,0184072ba53193b2dbc6950c7614f39f7d59df3f
+0184072ba53193b2dbc6950c7614f39f7d59df3f,0184072b,"pics button on home, instead of audio (oops)","pics button on home, instead of audio (oops)
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330915840,1330915840,74d77dbde9ec88cd2220b06f67eb772d4dc4c5d2
+74d77dbde9ec88cd2220b06f67eb772d4dc4c5d2,74d77dbd,added audio button to home page,"added audio button to home page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330915440,1330915440,344493bee5bea0ce6e9eb4c2cb24f3430971b114
+344493bee5bea0ce6e9eb4c2cb24f3430971b114,344493be,format dates and make event more readable,"format dates and make event more readable
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1330395958,1330395958,94cc8a96b4624359d7799cc14c6aee7c5abfa111
+94cc8a96b4624359d7799cc14c6aee7c5abfa111,94cc8a96,"event is buggy, but with pics","event is buggy, but with pics
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1330062589,1330062589,33c8a8b29ad55ddcd1502ef022cd7a86ee306a66
+33c8a8b29ad55ddcd1502ef022cd7a86ee306a66,33c8a8b2,need to do more work on the event page,"need to do more work on the event page
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1330058451,1330058451,efa46c9f6dc102b1a0ebfceed133d2d7520f9a73
+efa46c9f6dc102b1a0ebfceed133d2d7520f9a73,efa46c9f,condense lastfm requests into a utility,"condense lastfm requests into a utility
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1330048591,1330048591,014c7444f1807c6cda74003317aef501c36d7392
+014c7444f1807c6cda74003317aef501c36d7392,014c7444,"event req/resp done, now need to display","event req/resp done, now need to display
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1330047956,1330047956,3f660ce7153ace9c345a897ba572d41efbdfb649
+3f660ce7153ace9c345a897ba572d41efbdfb649,3f660ce7,find by location,"find by location
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1330044296,1330044296,35b20295dda4528fcc7ed0ff6878f4512c95b117
+35b20295dda4528fcc7ed0ff6878f4512c95b117,35b20295,"eye search image, and empty string handler","eye search image, and empty string handler
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329866693,1329866693,cb32d90e33329dddfb327534f4557b1ec95f38e6
+cb32d90e33329dddfb327534f4557b1ec95f38e6,cb32d90e,venue search!,"venue search!
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329802164,1329802164,8d50978992307523a480471d9163261006407531
+8d50978992307523a480471d9163261006407531,8d509789,get rid of multiple launcher icons,"get rid of multiple launcher icons
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329799052,1329799052,67159b406ba3c9f6c095d6436c92b2260529e227
+67159b406ba3c9f6c095d6436c92b2260529e227,67159b40,fixed the url encoding problem,"fixed the url encoding problem
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329796330,1329796330,83a47a16f10257837ed5c111863b100365eff629
+83a47a16f10257837ed5c111863b100365eff629,83a47a16,events from artists,"events from artists
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329794482,1329794482,ac0597c751be1a41a9cf705a2c53522c112c9d40
+ac0597c751be1a41a9cf705a2c53522c112c9d40,ac0597c7,artist list working,"artist list working
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329790802,1329790802,596bcb1f7b8f147c670d452c3a99db0b6dd13a90
+596bcb1f7b8f147c670d452c3a99db0b6dd13a90,596bcb1f,lots of work still to do around populating the list,"lots of work still to do around populating the list
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329713335,1329713335,2a18d8476346507455f414a92a6d6c996977368e
+2a18d8476346507455f414a92a6d6c996977368e,2a18d847,handle artists,"handle artists
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329709623,1329709623,b7b936f5c3388080a0054fb1662faf63c837e656
+b7b936f5c3388080a0054fb1662faf63c837e656,b7b936f5,searching dialog and enter key listener,"searching dialog and enter key listener
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329707077,1329707077,2c6825c2832b7162e36472554d79c2db748701cf
+2c6825c2832b7162e36472554d79c2db748701cf,2c6825c2,rework how the request is sent,"rework how the request is sent
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329703403,1329703403,8c752cac3a8cd1b47b9956b9b5f3f43dd583e5e3
+8c752cac3a8cd1b47b9956b9b5f3f43dd583e5e3,8c752cac,higher res find button icons,"higher res find button icons
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329699174,1329699174,41ba5fe6c666240ccb9aab0523c8639ff6b55cdd
+41ba5fe6c666240ccb9aab0523c8639ff6b55cdd,41ba5fe6,refactor layouts for different device sizes,"refactor layouts for different device sizes
+
+I hope this works, because I can't seem to test
+it on my real device. android SDK says ""mac
+just works"" for detecting devices. lies.
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329697903,1329697903,bd0246a1000ea5ab3dbc4ad2581447fab5a85422
+bd0246a1000ea5ab3dbc4ad2581447fab5a85422,bd0246a1,mac eclipse shtuff,"mac eclipse shtuff
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1329633049,1329633049,503b92958531327e7b50fe02c5c454bcd61daf7c
+503b92958531327e7b50fe02c5c454bcd61daf7c,503b9295,some async artist rework,"some async artist rework
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329459952,1329459952,fa914aead9e9a19f67e48c3109b3063fef557694
+fa914aead9e9a19f67e48c3109b3063fef557694,fa914aea,use another thread for the artist task,"use another thread for the artist task
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329458574,1329458574,d48852899627c953a0f664b47556f3f6935c6251
+d48852899627c953a0f664b47556f3f6935c6251,d4885289,helper with last.fm values,"helper with last.fm values
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329456421,1329456421,9758d3ab4f37e43ea7923b4ea9512777a769e5fb
+9758d3ab4f37e43ea7923b4ea9512777a769e5fb,9758d3ab,eye tap changes images,"eye tap changes images
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329451884,1329451884,8cec6d945ed1e7133974fda3a6620276d00dde06
+8cec6d945ed1e7133974fda3a6620276d00dde06,8cec6d94,add intent to the find music activity,"add intent to the find music activity
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329451124,1329451124,e7dd2e5f6e7b49e71eacd7be2c53b027279f6d4f
+e7dd2e5f6e7b49e71eacd7be2c53b027279f6d4f,e7dd2e5f,smaller find music button,"smaller find music button
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329449898,1329449898,dd72abd627dc4ee56e1fcd7ea089b4b2600344a8
+dd72abd627dc4ee56e1fcd7ea089b4b2600344a8,dd72abd6,get rid of camera permissions and add large button images,"get rid of camera permissions and add large button images
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329446627,1329446627,bea708ea5f8aa10e30805a28ad85228cc2dbf528
+bea708ea5f8aa10e30805a28ad85228cc2dbf528,bea708ea,add images from Phil and begin conversion to native,"add images from Phil and begin conversion to native
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1329201276,1329201276,5b50d176146a40b4a08fd022ee5e8c24a80ef1bd
+5b50d176146a40b4a08fd022ee5e8c24a80ef1bd,5b50d176,set height and width on home page find live events button,"set height and width on home page find live events button
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328995895,1328995895,834dbb46390197341aae4024541df0e225cfc5be
+834dbb46390197341aae4024541df0e225cfc5be,834dbb46,Add ontap handlers to the find live music button,"Add ontap handlers to the find live music button
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328994790,1328994790,53e8b0705604074dab0c7a2fbe2c239404e15417
+53e8b0705604074dab0c7a2fbe2c239404e15417,53e8b070,Add find live music image to home page,"Add find live music image to home page
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328839906,1328839906,4ed3af0680e45c35b061ba3cbf3c54642665cd7f
+4ed3af0680e45c35b061ba3cbf3c54642665cd7f,4ed3af06,venue chooser message,"venue chooser message
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328838956,1328838956,1464c6237b2b4c96bbce32fdfd32e006ed7a7639
+1464c6237b2b4c96bbce32fdfd32e006ed7a7639,1464c623,some of the venue part done. need to create a venue chooser,"some of the venue part done. need to create a venue chooser
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328838879,1328838879,7b7e191fe98e35d9318a94013f14e28276941eac
+7b7e191fe98e35d9318a94013f14e28276941eac,7b7e191f,"search by band, and beginning of search form","search by band, and beginning of search form
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328836801,1328836801,d848bad1493f2933a71f43d4f32f8972b909d149
+d848bad1493f2933a71f43d4f32f8972b909d149,d848bad1,black background,"black background
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328832310,1328832310,b5ecc4993d2b80c8b980e9bf128f51878f09a121
+b5ecc4993d2b80c8b980e9bf128f51878f09a121,b5ecc499,ripped out facebook and camera prototyping; added crude find live events button,"ripped out facebook and camera prototyping; added crude find live events button
+
+also added an empty form for the live events button to dispatch to
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1328831209,1328831209,e13a8ebbd525e922a914650d5ccc54c12a511fd4
+e13a8ebbd525e922a914650d5ccc54c12a511fd4,e13a8ebb,fix the silly broken lib stuff,"fix the silly broken lib stuff
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1327380349,1327380349,3ccad6b45bd5edd90c7604db49d6fbbcb6c9c0af
+3ccad6b45bd5edd90c7604db49d6fbbcb6c9c0af,3ccad6b4,remove desktop image hack,"remove desktop image hack
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1327179947,1327179947,dcf2719d62ac08a2bdd5ef7f202c328140bc6f3d
+dcf2719d62ac08a2bdd5ef7f202c328140bc6f3d,dcf2719d,libs dir and copy libs into android. non-working facebook,"libs dir and copy libs into android. non-working facebook
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1327179475,1327179475,01d445fe69874fd888bc1d88f3cc66abc04445bc
+01d445fe69874fd888bc1d88f3cc66abc04445bc,01d445fe,add android target to main build file,"add android target to main build file
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326649833,1326649833,b3b699a2f8cc0ae548cbf6e758adb9ee4d3a6cb6
+b3b699a2f8cc0ae548cbf6e758adb9ee4d3a6cb6,b3b699a2,remove generated files,"remove generated files
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326581657,1326581657,d01ac642108ab8f58fac0d697e5bd545ec4df9f3
+d01ac642108ab8f58fac0d697e5bd545ec4df9f3,d01ac642,build framework,"build framework
+",,,,Coffield,bcoffiel@bcoffieldML.local,Coffield,bcoffiel@bcoffieldML.local,1326581344,1326581344,e749e6faaed3e5777cf0fe9ecb7fd1844ddf7a85
+e749e6faaed3e5777cf0fe9ecb7fd1844ddf7a85,e749e6fa,phonegap works with iOS,"phonegap works with iOS
+",,,,Coffield,bcoffiel@bcoffieldML.local,Coffield,bcoffiel@bcoffieldML.local,1326577763,1326577763,a1553ce75fb01bbb883d36961c7e401f2797cb6e
+a1553ce75fb01bbb883d36961c7e401f2797cb6e,a1553ce7,Move Android into a subfolder and create iOS,"Move Android into a subfolder and create iOS
+
+Created common phonegap and jquery folders
+",,,,Coffield,bcoffiel@bcoffieldML.local,Coffield,bcoffiel@bcoffieldML.local,1326577313,1326577313,1ea61cdccaf6f9b5651c3ef6076b23ed50433964
+1ea61cdccaf6f9b5651c3ef6076b23ed50433964,1ea61cdc,fix camera bug,"fix camera bug
+",,,,Coffield,bcoffiel@bcoffieldml.ptcnet.ptc.com,Coffield,bcoffiel@bcoffieldml.ptcnet.ptc.com,1326318318,1326318318,95ddc2d66804e160cbba8029dfb29d2e843bcdef
+95ddc2d66804e160cbba8029dfb29d2e843bcdef,95ddc2d6,Handle nearby json appropriately,"Handle nearby json appropriately
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1326215176,1326215176,353f36c279b5ce8101ef26da6f2b95d9539a8a2b
+353f36c279b5ce8101ef26da6f2b95d9539a8a2b,353f36c2,Finished xml to json converter. Might have to license the GPL version,"Finished xml to json converter. Might have to license the GPL version
+under a different license
+",,,,Brien Coffield,bcoffield@ptc.com,Brien Coffield,bcoffield@ptc.com,1326214911,1326214911,bc4dbecce64b7e20b38f65ec0bd13d0c5597d17d
+bc4dbecce64b7e20b38f65ec0bd13d0c5597d17d,bc4dbecc,restructure,"restructure
+
+also failed at creating xmlToJson. argh
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326173439,1326173439,acee7b45370efdc5cc358f0ec24188c5440568f6
+acee7b45370efdc5cc358f0ec24188c5440568f6,acee7b45,ignore public repo on the server,"ignore public repo on the server
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326146520,1326146520,7c2650cf42496dd77d43f961639693121c91b7d8
+7c2650cf42496dd77d43f961639693121c91b7d8,7c2650cf,dev mocking for desktop,"dev mocking for desktop
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326145257,1326145257,a4d4e6f14c425c8994f92092c40fde756413bd56
+a4d4e6f14c425c8994f92092c40fde756413bd56,a4d4e6f1,Image preview,"Image preview
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326141845,1326141845,2fd5e6f0fb3abb0369c845972004df7548261ec7
+2fd5e6f0fb3abb0369c845972004df7548261ec7,2fd5e6f0,beginning to think about camera applications,"beginning to think about camera applications
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326139361,1326139361,8bc8d6e89f4ee26eec6bfa8458f4f3cd70005be9
+8bc8d6e89f4ee26eec6bfa8458f4f3cd70005be9,8bc8d6e8,Fix bug where newly added list items were rendered as blue hyperlinks,"Fix bug where newly added list items were rendered as blue hyperlinks
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326134493,1326134493,9103a1bd148dd88b6ca3d3f329b9376c47f3cc51
+9103a1bd148dd88b6ca3d3f329b9376c47f3cc51,9103a1bd,nearby events works!!,"nearby events works!!
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326050728,1326050728,03f6f7dd1db69f851bba8ca2354246f1b83ef069
+03f6f7dd1db69f851bba8ca2354246f1b83ef069,03f6f7dd,geolocation and nearby events response works.,"geolocation and nearby events response works.
+
+need to handle response and put in a list
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326048616,1326048616,3746e9b300dc61de402225019ff8d1c3c77c541c
+3746e9b300dc61de402225019ff8d1c3c77c541c,3746e9b3,remove footer,"remove footer
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326042457,1326042457,ea998254248c52fccbed8673d241c50e1118a956
+ea998254248c52fccbed8673d241c50e1118a956,ea998254,fullscreen pages,"fullscreen pages
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326038858,1326038858,c594e50d6cc933734827012ad19f107e700c9c6d
+c594e50d6cc933734827012ad19f107e700c9c6d,c594e50d,added phonegap to the project,"added phonegap to the project
+
+this puts phonegap js and jar into source control. that's bad.
+I'll need to take it out of SCM before release!
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326038499,1326038499,a78ab814ad7523ac37bf12d32c990a2b7696948c
+a78ab814ad7523ac37bf12d32c990a2b7696948c,a78ab814,move eyekabobactivity to eyekabob,"move eyekabobactivity to eyekabob
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1326026691,1326026691,d29d03a92dec352197bb5a44c041939645d564b2
+d29d03a92dec352197bb5a44c041939645d564b2,d29d03a9,rename project to Eyekabob,"rename project to Eyekabob
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1325804093,1325804093,ec28fc19c4760c4f05ac568db80c67aaa55e23f0
+ec28fc19c4760c4f05ac568db80c67aaa55e23f0,ec28fc19,Initial commit,"Initial commit
+",,,,Brien Coffield,coffbr01@gmail.com,Brien Coffield,coffbr01@gmail.com,1325803825,1325803825,

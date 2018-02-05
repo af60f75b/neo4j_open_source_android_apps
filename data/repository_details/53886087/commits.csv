@@ -1,0 +1,210 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+cecd506f2cf848e41c136adf16589cb061faf82d,cecd506f,v3.8,"v3.8
+
+Gave ""Advanced Mode"" a confirmation box with a warning explaining what it does, and the mode now enables the AI's thinking to modify its brain.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1505991942,1505991942,56dba030d0caa4013901453fa8477e9707c2311e
+56dba030d0caa4013901453fa8477e9707c2311e,56dba030,v3.7,"v3.7
+
+Fixed crash from entering all spaces
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1505858627,1505858627,7b9fa2c0b53e28e90ba6e641a4f12a2b01249bc2
+7b9fa2c0b53e28e90ba6e641a4f12a2b01249bc2,7b9fa2c0,v3.6,"v3.6
+
+Implemented prioritization for higher frequency topic associations
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1503312871,1503312871,61bb15170981066d088a65cf76d8e97efa3e3112
+61bb15170981066d088a65cf76d8e97efa3e3112,61bb1517,v3.5a,"v3.5a
+
+Fixed a few bugs that were causing crashes.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1502299340,1502299340,a969d3268927ad5f1184e9344d4b39fb898f6c92
+a969d3268927ad5f1184e9344d4b39fb898f6c92,a969d326,v3.5,"v3.5
+
+Improved the multiple topic tracking and made the thinking logic incorporate multiple topics.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1502019556,1502019556,254c46a236a361143f2aa5ad1b47cbe396c10795
+254c46a236a361143f2aa5ad1b47cbe396c10795,254c46a2,v3.5,"v3.5
+
+Improved the multiple topic tracking and made the thinking logic incorporate multiple topics.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1502019505,1502019505,00a31203bf3d4e94a0d9b91703dd40aca1dec70a
+00a31203bf3d4e94a0d9b91703dd40aca1dec70a,00a31203,v3.4,"v3.4
+
+Added multiple topic tracking.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1501983908,1501983908,d4a52e5ce682ac86ffbc72e05b553399b951e81d
+d4a52e5ce682ac86ffbc72e05b553399b951e81d,d4a52e5c,v3.3,"v3.3
+
+Fixed a bug that was causing a rare crash. The AI will also now change
+the topic if it generates a response that contains only the topic word
+itself, which happens if there's no data associated with the topic.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1492740759,1492740759,f5285c531a443df7b36f7139ba936472fa7f2103
+f5285c531a443df7b36f7139ba936472fa7f2103,f5285c53,v3.2,"v3.2
+
+Made the CleanMemory() function remove all empty files in the Brain
+folder.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1491516194,1491516194,39a4188c0015fb54bbe558a74b9630bad72e426b
+39a4188c0015fb54bbe558a74b9630bad72e426b,39a4188c,v3.1,"v3.1
+
+Can enter input via soft keyboard instead of ""Enter"" button, and added
+""Advanced Mode"" menu option to toggle the AI only using procedural
+response generation.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1491272933,1491272933,3fff3052488869706358c62aea0e27ad9282c29e
+3fff3052488869706358c62aea0e27ad9282c29e,3fff3052,v3.0,"v3.0
+
+Fixed a critical bug with the phrase generation algorithm.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1488794832,1488794832,885bc04391f535d8a1ebea69840f6711e9c7a3fd
+885bc04391f535d8a1ebea69840f6711e9c7a3fd,885bc043,v2.9,"v2.9
+
+Created a screen with instructions for enabling the 'Storage' and 'Draw
+over other apps' permissions when they're not enabled, instead of just
+auto-exiting the app since people thought this was the app crashing.
+Also improved the Discourage and procedural phrase generation functions
+by enabling frequencies of pre/pro words to drop to 0 via Discouraging,
+but not allowing the generation algorithm to use them when they're at 0.
+The frequencies can still be raised via encouraging or responding.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1488760349,1488760349,9c290710d3a7a26f7a578b39d1a553f31a0d2582
+9c290710d3a7a26f7a578b39d1a553f31a0d2582,9c290710,v2.8a,"v2.8a
+
+Fixed the frequencies for the pre/pro words getting reduced to 0, which
+would cause them not to be found when the AI attempted to update them.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1488727844,1488727844,0000b6ab6d8be5bee5043695d77cd5ef84ac2704
+0000b6ab6d8be5bee5043695d77cd5ef84ac2704,0000b6ab,v2.8,"v2.8
+
+Waiting for a new response no longer 'Discourages' the AI and it should
+now maintain the topic, so the AI can now give ""multiple responses"".
+Also fixed a bug with the Discouraging that would cause the pre/pro word
+files to lose entries whose frequencies were reduced to 0... this lead
+to the AI repeating a single word when it would attempt to generate a
+response, since it would no longer find any words it learned to go
+before/after the identified topic. Another bug that would cause pre/pro
+word files to be needlessly created was also fixed.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1488727131,1488727131,224d89d3d26b0e56910daa5089ff6c3ad8273f06
+224d89d3d26b0e56910daa5089ff6c3ad8273f06,224d89d3,v2.8,"v2.8
+
+Implemented better topic tracking, and removed discouraging when waiting
+for a new response.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1487929297,1487929297,891a7f4f2671ad9d7cc206c4e2f319781c6471c5
+891a7f4f2671ad9d7cc206c4e2f319781c6471c5,891a7f4f,v2.7c,"v2.7c
+
+- Fixed a couple bugs with the data parsing
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1484142017,1484142017,7a41ee39053e85b13a9be16b724112cf337a869b
+7a41ee39053e85b13a9be16b724112cf337a869b,7a41ee39,v2.7b,"v2.7b
+
+- Fixed a bug with parsing the Words.txt file, which would cause the app
+to crash when attempting to convert an empty result ("""") into a number.
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1483670079,1483670079,87e0e76facdba7e6f574b0e5cfe1c8aa2023d7b6
+87e0e76facdba7e6f574b0e5cfe1c8aa2023d7b6,87e0e76f,v2.7a,"v2.7a
+
+- Fixed another bug with the permission checking
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1483014134,1483014134,683ab06420b3c7ac2ce7637bce72401531469e9f
+683ab06420b3c7ac2ce7637bce72401531469e9f,683ab064,v2.7,"v2.7
+
+Fixed some bugs with the permission checking
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1482534040,1482534040,e1c7fb76e90923e5da270585284228b2ec93405b
+e1c7fb76e90923e5da270585284228b2ec93405b,e1c7fb76,v2.6,"v2.6
+
+- Updated the Tips to explain the Encourage/Discourage buttons and the
+Set Delay menu option
+- Fixed a bug that would allow quotes (and other special characters) to
+be accepted within an input
+- Modified the way the app checks for required permissions
+- Gave the smiley face a slight delay before returning to a neutral
+state
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1482246809,1482246809,161fa86f3ab1d9c9a5f22cd10aedb5936179b233
+161fa86f3ab1d9c9a5f22cd10aedb5936179b233,161fa86f,v2.5,"v2.5
+
+- Added buttons to manually encourage/discourage phrase structuring
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1480940177,1480940177,da076894e26bf5cf3104a68b830d9550521dad49
+da076894e26bf5cf3104a68b830d9550521dad49,da076894,v2.4,"v2.4
+
+- Added permission check for SYSTEM_ALERT_WINDOW
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1480927589,1480927589,df30a964df733a2bba8da3fa728042e8c720e8e0
+df30a964df733a2bba8da3fa728042e8c720e8e0,df30a964,v2.3,"v2.3
+
+- Added a ""Tips"" menu option to display tips for teaching the AI
+(displays automatically when app starts)
+- Re-organized the menu listing
+- Renamed the ""Word Fix"" menu option to ""Correct Spelling""
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476715653,1476715653,d5def67cedcef6a9ec12feb2c5c27aeb73a680f7
+d5def67cedcef6a9ec12feb2c5c27aeb73a680f7,d5def67c,v2.2,"v2.2
+
+Added a ""Set Delay"" menu option to change the amount of time before the
+AI tries to initiate conversation itself (infinite = never try to
+initiate conversation).
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476710265,1476710265,23c98d43e270d04e0e3258918d780b06956d840f
+23c98d43e270d04e0e3258918d780b06956d840f,23c98d43,v2.1,"v2.1
+
+- Made the ""Enter"" button change to a ""Back"" button when viewing
+Thoughts or WordFix interface (for devices that don't have a back
+button)
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476483856,1476483856,6e9c337570f9832080c2008fc5132af3a91ea1d4
+6e9c337570f9832080c2008fc5132af3a91ea1d4,6e9c3375,v2.0,"v2.0
+
+- Removed the 100 line limit from the thought list
+- Fixed the thought log being deleted upon exit
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476085841,1476085841,2bdb927da666a167c0c36313c241cd304d7ca30e
+2bdb927da666a167c0c36313c241cd304d7ca30e,2bdb927d,v1.9,"v1.9
+
+- Overhauled/optimized most of the code structure
+- Made 'thinking' a background process that runs continually
+- Fixed the spelling correction menu overlaying the output text
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476085461,1476085461,"de057341f3edb466d3bd5cdde82f6e55363169c8,d7174213ce647f94b767723439985756ae87bb9c"
+de057341f3edb466d3bd5cdde82f6e55363169c8,de057341,v1.9,"v1.9
+
+- Overhauled/optimized most of the code structure
+- Made 'thinking' a background process that runs continually
+- Fixed the spelling correction menu overlaying the output text
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1476085377,1476085377,ef68feaf5357c94aedc2ca2b465d454b416590d5
+d7174213ce647f94b767723439985756ae87bb9c,d7174213,Add files via upload,Add files via upload,,,,Oblivionburn,donney.lane@gmail.com,GitHub,noreply@github.com,1470617370,1470617370,e8d1567f8e460c7d5e5b28ef761da913de06fc2e
+e8d1567f8e460c7d5e5b28ef761da913de06fc2e,e8d1567f,Add files via upload,Add files via upload,,,,Oblivionburn,donney.lane@gmail.com,GitHub,noreply@github.com,1470617359,1470617359,9129e404a4e1573625e08c51ba421da4d679a477
+9129e404a4e1573625e08c51ba421da4d679a477,9129e404,v1.8,v1.8,,,,Oblivionburn,donney.lane@gmail.com,GitHub,noreply@github.com,1470617330,1470617330,e836297d082b3630206a635ff3dc36a62649202c
+ef68feaf5357c94aedc2ca2b465d454b416590d5,ef68feaf,v1.8,"v1.8
+
+- Identified topic now gets saved with the output in
+Data.saveOutput(String input)
+- Data.getOutputList(String input) now excludes the topic line
+- Added Data.getTopic(String input) method to extract only the saved
+topic from a given input
+- Data.pullInfo now does topic comparison to determine 'relevant' output
+for the current topic
+- Misc optimizations
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1470616539,1470616539,e836297d082b3630206a635ff3dc36a62649202c
+e836297d082b3630206a635ff3dc36a62649202c,e836297d,v1.7d,"v1.7d
+
+- Increased the number of lines displayed to 40
+- Tweaked the auto-scrolling
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1468802502,1468802502,80b2c7e5eba9243e15c1b12ff45a264f018cbe94
+80b2c7e5eba9243e15c1b12ff45a264f018cbe94,80b2c7e5,v1.7c,"v1.7c
+
+- Reverted the layout (and made some improvements)
+- Fixed the AI not running background processes while idle
+- Fixed being able to enter empty responses
+- Fixed the Output window not auto-scrolling
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1468128652,1468128652,c7594bc633d0a7f640ba56b114c8b48a9ab72829
+c7594bc633d0a7f640ba56b114c8b48a9ab72829,c7594bc6,v1.7a,"v1.7a
+
+- Added check for android version
+- Adjusted layout
+- Added adjustments for the layout in code when opening menu or software
+keyboard
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467995779,1467995779,8711a1798ee8fb520cdc3e28716bbfcc9fa3688d
+8711a1798ee8fb520cdc3e28716bbfcc9fa3688d,8711a179,v1.7,"v1.7
+
+Fixed a bug with the storage permission prompt
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467981718,1467981725,12fe1167494833742bf781417e38954c438483a2
+12fe1167494833742bf781417e38954c438483a2,12fe1167,Update README.md,Update README.md,,,,Oblivionburn,donney.lane@gmail.com,GitHub,noreply@github.com,1467944537,1467944537,8d6c143b0ddd9c412699cfd9bcc924218c62a896
+8d6c143b0ddd9c412699cfd9bcc924218c62a896,8d6c143b,v1.6e,"v1.6e
+
+- Ported to Android Studio
+- Added prompt for granting storage permission
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467944371,1467944371,24f131fc39aeb110b54517737aeeb7bceab7b7b8
+24f131fc39aeb110b54517737aeeb7bceab7b7b8,24f131fc,v1.6d,"v1.6d
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467418438,1467418438,4c9dae8e3413fc9cd8435db452cad808347c4ba0
+4c9dae8e3413fc9cd8435db452cad808347c4ba0,4c9dae8e,v1.6c,"v1.6c
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467352465,1467352465,d26dc240f035e1f5be8cf7426d11424cf7789ab8
+d26dc240f035e1f5be8cf7426d11424cf7789ab8,d26dc240,v1.6c,"v1.6c
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1467351990,1467351990,289050acdee9fb391ab6d614b4585710b94f1407
+289050acdee9fb391ab6d614b4585710b94f1407,289050ac,v1.6b,"v1.6b
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1466558239,1466558239,f964cbd18fc8abe3a6d7b02c824405f43e769f56
+f964cbd18fc8abe3a6d7b02c824405f43e769f56,f964cbd1,v1.6a,"v1.6a
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1466556754,1466556754,822e5f173aa2f57ddc91f5834354b6df294b18e4
+822e5f173aa2f57ddc91f5834354b6df294b18e4,822e5f17,Delete ic_launcher-web.png,Delete ic_launcher-web.png,,,,Oblivionburn,donney.lane@gmail.com,GitHub,noreply@github.com,1466556303,1466556303,80c64e661bfa74f1021b284bdd92db780566e42f
+80c64e661bfa74f1021b284bdd92db780566e42f,80c64e66,Updated readme,"Updated readme
+",,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1457985394,1457985394,d895f2c4e63087b94dcdef8ca70fb35a364a40f6
+d895f2c4e63087b94dcdef8ca70fb35a364a40f6,d895f2c4,Added files via upload,Added files via upload,,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1457984999,1457984999,48652a761ae82b3e7e52689a58b9495d1ec099ee
+48652a761ae82b3e7e52689a58b9495d1ec099ee,48652a76,Initial commit,Initial commit,,,,Oblivionburn,donney.lane@gmail.com,Oblivionburn,donney.lane@gmail.com,1457984200,1457984200,

@@ -1,0 +1,111 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+7911d152ad4387fed64eb889c5807b1b4b0271bd,7911d152,Add TheMovieDB.org water mark.,"Add TheMovieDB.org water mark.
+
+Summary:
+  - This product uses the TMDb API but is not endorsed or certified by TMDb.
+    Since has noncommercial purpose, all images has the TMDb watermark
+    applyied over them.
+  - For more information related to the API, see http://www.themoviedb.org.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442937788,1442951907,317eedc4915462ab865721da4f5d34f091f5759f
+317eedc4915462ab865721da4f5d34f091f5759f,317eedc4,Create OverviewActivity.,"Create OverviewActivity.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442838868,1442951832,0fe37a6cd9edd18b0ea2de640ad5da589bcea631
+0fe37a6cd9edd18b0ea2de640ad5da589bcea631,0fe37a6c,Create recycler view containing movie posters thumnails.,"Create recycler view containing movie posters thumnails.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442795029,1442951832,702a01eb989ef32b5cb66e7526b7387a52c49b6b
+702a01eb989ef32b5cb66e7526b7387a52c49b6b,702a01eb,Create RecyclerAdapter.OnItemSelectedListener interface.,"Create RecyclerAdapter.OnItemSelectedListener interface.
+
+Summary:
+  - Unlike AdapterView, RecyclerView.Adapter does not defines a
+    OnItemSelectedListener interface.
+  - Once the behavior of this interface is implemented and assigned to the
+    related RecyclerAdapter subclass, it is possible to determinate which
+    recycler view item was clicked and trigger a response action.
+  - References:
+    * Materialize Your App, by Antonio Leiva. See http://goo.gl/RxTHOH
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442769330,1442951832,823aebf65e17bd32d95744cba5f72758fbe05604
+823aebf65e17bd32d95744cba5f72758fbe05604,823aebf6,Create CursorRecyclerAdapter.,"Create CursorRecyclerAdapter.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442694775,1442951832,4e206d9ef5d732853510e84ebe5f938633dcb8f6
+4e206d9ef5d732853510e84ebe5f938633dcb8f6,4e206d9e,Retry download for missing movie details.,"Retry download for missing movie details.
+
+Summary:
+Some details are not available on the movie list download. If the backdrop
+image, overview, vote average are missing, a second network request by ID
+is called.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442930519,1442951832,3eed70cdf22cbddfc4f9939d563c29d5bb400e8a
+3eed70cdf22cbddfc4f9939d563c29d5bb400e8a,3eed70cd,Download movie data from server and store into SQLite database.,"Download movie data from server and store into SQLite database.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442931841,1442951832,81dbae0e4e70f470f61a6f19f1e95d6ff5be9e2f
+81dbae0e4e70f470f61a6f19f1e95d6ff5be9e2f,81dbae0e,Turn AbstractContentValues into a generic class.,"Turn AbstractContentValues into a generic class.
+
+Summary:
+In order to make the process of transform a POJO, created by Retrofit, into a
+ContentValue, an abstract method method with a generic type was added to the
+AbstractContentValues definition.
+
+Thus any subclass, which is also an adapter to a SQLite table, will have to
+tie the POJO to the concrete implementation, turning the SyncAdapter loosely
+coupled to content provider implementation.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442774733,1442933162,a5e537c5228c46c9cef12444a7eb67de4ba4ef5a
+a5e537c5228c46c9cef12444a7eb67de4ba4ef5a,a5e537c5,"Create SyncAdapter, SyncService, and AccountAuthenticator.","Create SyncAdapter, SyncService, and AccountAuthenticator.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442544138,1442933161,9963241b343b47fe268a7712827375ca6092fd05
+9963241b343b47fe268a7712827375ca6092fd05,9963241b,Create a proxy for communicating with Movie DB API backend.,"Create a proxy for communicating with Movie DB API backend.
+
+Summary:
+  - Proxy hides communication details about the REST API endpoint access.
+  - Proxy also implements command pattern, which will be used by the
+    SyncAdapter intance.
+  - Reference:
+    * Command Pattern, by Source Making. See https://goo.gl/4HkdtB.
+    * Command Revisited, by Markus Voelter. See https://goo.gl/7FYf43
+    * Proxy Pattern, by Source Making.  See https://goo.gl/D1A461
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442774856,1442933161,37ccd9b0da22eaabac31875cb9b881645243ea3d
+37ccd9b0da22eaabac31875cb9b881645243ea3d,37ccd9b0,Create a content provider as a facade to the Movie DB REST API.,"Create a content provider as a facade to the Movie DB REST API.
+
+Summary:
+  - Create a content provider as a facade to the Movie DB REST API. The facade
+    acts like a domain layer in a Android Layer Architecture design.
+  - The content provider code was automatically generated using a json
+    configuration.
+  - Reference:
+    * Architecting Android - The Clean Way?, by Fernando Cejas.
+      See http://goo.gl/V8fv5b.
+    * Android Contentent Provider Generator, by Benoit Lubek. See
+      https://github.com/BoD/android-contentprovider-generator
+    * Java generics - get class? See http://goo.gl/fAPcvf
+    * Google I/O 2010 - Android REST client applications, by Viril Dobjanschi,
+      at https://www.youtube.com/watch?v=xHXn3Kg2IQE
+    * How to convert a Java object to key-value pairs. See http://goo.gl/NFIsfM
+    * Map to ContentValues (Abusing Parcelable). See https://goo.gl/3f3Ooa
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442779974,1442933161,8e9455a3117cc84a948b1d701cf4fad39695d2e5
+8e9455a3117cc84a948b1d701cf4fad39695d2e5,8e9455a3,Refactor to Material Design toolbar.,"Refactor to Material Design toolbar.
+
+Summary:
+  - Refactor ActionBar tab layout to Material Design collapsible toolbar layout.
+  - Reference:
+    * Materialize Your App, by Antonio Leiva. See http://antonioleiva.com/materialize-app/.
+    * How to hide/show Toolbar when list is scrolling, by Michal Z. See https://goo.gl/RWJTdW
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442329817,1442799467,0be514ba8518482c50227953cd5021cfa78c336b
+0be514ba8518482c50227953cd5021cfa78c336b,0be514ba,Create Material Design Aquamarine Palette.,"Create Material Design Aquamarine Palette.
+
+Summary:
+Color palette were calculated using Material Palette. For more details,
+please check https://www.materialpalette.com/.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442329304,1442794824,d4c9587dac027fabfdfa24454df30b0e404c64ed
+d4c9587dac027fabfdfa24454df30b0e404c64ed,d4c9587d,Support some foreign languages.,"Support some foreign languages.
+
+Summary:
+Add translations to Brazilian Portuguese, Japanese, Spanish, and Swedish.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442328675,1442794824,05ce04ce113f3478dcef7eb8e36edfe1c880ebf9
+05ce04ce113f3478dcef7eb8e36edfe1c880ebf9,05ce04ce,Create Popular Movies project.,"Create Popular Movies project.
+
+Summary:
+  - Create Alpha project version for testing Google Play console publishing.
+  - Sofware versioning system according to Wikipedia article. For more
+    information, check https://en.wikipedia.org/wiki/Software_versioning.
+  - Develoment environment:
+    * Android Studio 1.3.2
+    * Android SDK 23.0.1
+    * Gradle 2.4
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442315253,1442794818,89533d1c56e0bdca63d6603719b1b6d990758c16
+89533d1c56e0bdca63d6603719b1b6d990758c16,89533d1c,Ignore automatic files.,"Ignore automatic files.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442315159,1442315159,17ed4c143b93fd7d5d505cef17d95fab89f5085f
+17ed4c143b93fd7d5d505cef17d95fab89f5085f,17ed4c14,Initial commit.,"Initial commit.
+",,,,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,Joao Paulo Fernandes Ventura,jp.ventura@outlook.com,1442314812,1442314812,

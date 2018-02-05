@@ -1,0 +1,2084 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+3266908cc9ad0a8e36372b3efe1cb832c5dcab7b,3266908c,Bump VersionName to 1.0.7,"Bump VersionName to 1.0.7
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1511569676,1511569676,f77ba83369684a7a04e479dcaaa1fa42ba56421e
+f77ba83369684a7a04e479dcaaa1fa42ba56421e,f77ba833,"Use IBM diarizer, not Aalto","Use IBM diarizer, not Aalto
+
+- IBM is 3x better (fewer errors)
+- IBM gives us 1000 free minutes / month
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1511568898,1511568898,d40f38bbdf6fd836acf5ca1bfc76c3c58b9f31ad
+d40f38bbdf6fd836acf5ca1bfc76c3c58b9f31ad,d40f38bb,Gradle 3.0.0 → 3.0.1,"Gradle 3.0.0 → 3.0.1
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1511568567,1511568567,ce68b387439830c07afb08fe566f9c948cccd950
+ce68b387439830c07afb08fe566f9c948cccd950,ce68b387,Android client sends its version to the server,"Android client sends its version to the server
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1509933037,1509933037,a693af80fb9ce1cb596f42c80ed293816ae08d94
+a693af80fb9ce1cb596f42c80ed293816ae08d94,a693af80,"""CMU Sphinx4"" :arrow_right: ""CMU Sphinx 4""","""CMU Sphinx4"" :arrow_right: ""CMU Sphinx 4""
+
+If ""CMU Sphinx4"" has spaces, it should have spaces in all the right
+places.
+
+Fixes a bug where it couldn't find the OptionMenu checkbox. We use the
+[new] variables, `mDiarizer` & `mTranscriber` instead.
+
+Fixes inappropriate comment-delimiter in `AndroidManifest.xml`
+
+fixes (on backend server) (note: the backend server needs to update to
+the new ""CMU Sphinx 4"" string, too):
+```
+I couldn't find Transcriber[""CMU Sphinx4""]!
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1509459542,1509459542,69df26178e1f0d4c13253e4a5e2d4ca8a6b1c5f3
+69df26178e1f0d4c13253e4a5e2d4ca8a6b1c5f3,69df2617,Deprecate transcription :black_nib: :scroll:,"Deprecate transcription :black_nib: :scroll:
+
+- ""Use IBM Diarizer"" has been replaced with a set of choices for the
+  diarization and for the transcription. For example, you can use choose
+  to use IBM for only the transcription and use Aalto for Diarization.
+  This will allow us to flexibly add new back-ends.
+- ""No transcription"" is the default setting. We're deprecating
+  transcription: The CMU Sphinx4 transcriber is not good enough for spoken
+  conversation — my co-workers made fun of how awful the transcription of
+  our meeting was — and the IBM transcriber costs money. Better to go
+  without transcription. Also, Charlotte's initial layout didn't include
+  transcription.
+- use Toolbar/Menu instead of NavigationView/Drawer on RecordingActivity
+  to display menu. Toolbar/Menu is readily accessible via a vertical
+  ellipsis (it's a first class citizen); the NavigationView/Drawer was
+  hidden; to access it you needed to know to swipe right. I don't like it
+  being hidden.
+- persist the data (use test server, diarizer, transcriber)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1509027492,1509226783,5e620ad6045b4c13f6a84dc24cbb1e7e3f573a1a
+5e620ad6045b4c13f6a84dc24cbb1e7e3f573a1a,5e620ad6,:wrench: Android Studio 3 & other bumps,":wrench: Android Studio 3 & other bumps
+
+- gradle: 3.3 -> 4.1
+- compiledSdkVersion: 26 -> 27
+- targetSdkVersion: 26 -> 27
+- remove ""multiDexEnabled"" directive (LIUM? Robelectric?)
+- supportLibVersion: 26.+ -> 27.0.0
+  - appcompat-v7
+  - support-annotations
+  - design
+- espresso: 2.2.2 -> 3.0.1
+- test:runner: 0.5 -> 1.0.1
+- mockito: 1.2 ->  2.7.22
+
+and other bumps, too
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1509128694,1509128694,5bc6e5eb5e6c46acbcdc7259a0380d225579355b
+5bc6e5eb5e6c46acbcdc7259a0380d225579355b,5bc6e5eb,:package: Bump versionName to 1.0.6,":package: Bump versionName to 1.0.6
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508707130,1508707130,8202a0f39734500ec013be52c369357b1feec7d1
+8202a0f39734500ec013be52c369357b1feec7d1,8202a0f3,":stopwatch: Tests are more forgiving on slow, virtual devices",":stopwatch: Tests are more forgiving on slow, virtual devices
+
+Virtual Android devices cause test failures. Tests have been made more
+generous with timing (e.g. rotation can take as long as three seconds on
+virtualized hardware).
+
+fixes:
+```
+java.lang.AssertionError: Started, time elapsed should return should be less than 60 ms
+Expected: a value less than <60L>
+but: <67L> was greater than <60L>
+...
+but: <126L> was greater than <110L>
+...
+but: <205L> was greater than <160L>
+...
+but: <88L> was greater than <60L>
+...
+but: <96L> was greater than <60L>
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508686332,1508706568,3b4997f171249319d68c22f3a135d4c866300772
+3b4997f171249319d68c22f3a135d4c866300772,3b4997f1,"Bump dependencies, `26.0.0-beta2` :arrow_right: `26.+`","Bump dependencies, `26.0.0-beta2` :arrow_right: `26.+`
+
+- even though Android Studio warns us that we shouldn't ""float""
+dependencies (i.e. `26.+` is bad), the default behavior on a greenfield
+Android project is to float dependencies (i.e. it's the canonical
+behavior). So we do as Android Studio does, not as it says.
+- Also we do a slight bump to espresso, 2.2.1 -> 2.2.2. There is a 3.0.1
+out there, but even though the documentation indicates it's available,
+it doesn't appear to work in the stable version of Android Studio
+(2.3.3). It appears to work in the beta Android Studio 3, but switching
+to a beta Android Studio seems to invite more problems.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508685134,1508685134,99b8946bd0b06491b1a162f1a8417c389e9506fe
+99b8946bd0b06491b1a162f1a8417c389e9506fe,99b8946b,:clock: Timing tests are more forgiving,":clock: Timing tests are more forgiving
+
+We experience timing-related failures when running tests against virtual
+Android devices. We don't experience the failure when running on
+actual Android hardware. We suspect the problem is due to slow
+emulation, specifically that rotating the phone takes almost an entire
+second. We re-engineer the test to be more accommodating yet still be as
+accurate.
+
+fixes:
+```
+android.support.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'with text: is ""0:01""' doesn't match the selected view.
+Expected: with text: is ""0:01""
+Got: ""TextView{id=2131624084, res-name=meeting_timer, visibility=VISIBLE, width=323, height=224, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=1034.0, y=709.0, text=0:02, input-type=0, ime-target=false, has-links=false}""
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508617278,1508617278,597c725d28a430becbc45b37d8c19020d604d06e
+597c725d28a430becbc45b37d8c19020d604d06e,597c725d,:moyai: App is configured with new launcher icons,":moyai: App is configured with new launcher icons
+
+Tested with Android 25 & 26 -- looks great!
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508616334,1508616334,422e55a74b4a2e85ea9528c307693cd8629b683c
+422e55a74b4a2e85ea9528c307693cd8629b683c,422e55a7,:moyai: new round icon assets,":moyai: new round icon assets
+
+Created round icons to accommodate Android Oreo:
+<https://developer.android.com/about/versions/nougat/android-7.1.html#circular-icons>
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Charlotte Cunningham,mahgninnuc@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1508614264,1508614264,50906177df56c8874ad186517659e33cc1c4a7c5
+50906177df56c8874ad186517659e33cc1c4a7c5,50906177,Merge pull request #66 from blabbertabber/rush_limbaugh_no_more,"Merge pull request #66 from blabbertabber/rush_limbaugh_no_more
+
+Remove Easter Egg ""Rush Limbaugh is Wrong""",,,,Brendan Cunnie,saintbrendan@gmail.com,GitHub,noreply@github.com,1507254257,1507254257,"1c90bc5c761d6210423d5fcbb647f16893a64acc,57499323d028afc21216ec4f0d2c979c7b4a7af1"
+57499323d028afc21216ec4f0d2c979c7b4a7af1,57499323,"Remove Easter :egg: ""Rush Limbaugh is Wrong""","Remove Easter :egg: ""Rush Limbaugh is Wrong""
+
+If you tap the welcome screen three times, you are redirected to
+a Google search for ""Rush Limbaugh Wrong"". There's only one problem:
+the Easter Egg triggers too easily, and the result is confusing.
+I watched my co-worker, Tom Dunlap, install BlabberTabber, hit
+the ""Got it!"" button, and then watched him become confused as he
+was directed to Google & Rush Limbaugh.
+
+It was funny nine months ago. Nowadays it's not so funny. Remove.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1507253856,1507254137,1c90bc5c761d6210423d5fcbb647f16893a64acc
+1c90bc5c761d6210423d5fcbb647f16893a64acc,1c90bc5c,Merge pull request #65 from blabbertabber/disconnect_crash,"Merge pull request #65 from blabbertabber/disconnect_crash
+
+BlabberTabber does NOT crash when server disconnects",,,,Brendan Cunnie,saintbrendan@gmail.com,GitHub,noreply@github.com,1505678977,1505678977,"5ba9529de1a72f97c3c44cb5df9b16fc208a3b93,e51bed2224fde0302356dc3e87056b55623d6daa"
+e51bed2224fde0302356dc3e87056b55623d6daa,e51bed22,BlabberTabber does NOT crash when server disconnects,"BlabberTabber does NOT crash when server disconnects
+
+- When the server disconnects (i.e. crashes), the thread that's doing
+the uploading attempts to turn the ProgressBar invisible (it's no longer
+necessary, there's no progress)
+- Unfortunately, this triggers an error: `Only the original thread that created a view hierarchy can touch its views.`
+
+Our solution is to simply not bother trying to turn the ProgressBar
+off. Admittedly, we could put some engineering into turning the
+ProgressBar off, but I don't think it's worth it for this corner-case
+(i.e. the App is broken, can't upload the sound file, so the cosmetic
+presence of a ProgressBar is dwarfed by the non-functioning app)>
+
+fixes:
+```
+09-17 07:18:31.989 969-2112/com.blabbertabber.blabbertabber I/RecordingActivity: addFilePart()
+09-17 07:18:32.110 969-2112/com.blabbertabber.blabbertabber W/RecordingActivity: Caught IOException: unexpected end of stream on Connection{test.diarizer.com:8080, proxy=DIRECT hostAddress=2001:19f0:8001:2e4:: cipherSuite=none protocol=http/1.1} (recycle count=0)
+09-17 07:18:32.132 969-969/com.blabbertabber.blabbertabber D/UnreachableServer: onCreateDialog()
+09-17 07:18:32.132 969-2112/com.blabbertabber.blabbertabber E/AndroidRuntime: FATAL EXCEPTION: Thread-11
+                                                                              Process: com.blabbertabber.blabbertabber, PID: 969
+                                                                              android.view.ViewRootImpl$CalledFromWrongThreadException: Only the original thread that created a view hierarchy can touch its views.
+                                                                                  at android.view.ViewRootImpl.checkThread(ViewRootImpl.java:6892)
+                                                                                  at android.view.ViewRootImpl.invalidateChildInParent(ViewRootImpl.java:1083)
+                                                                                  at android.view.ViewGroup.invalidateChild(ViewGroup.java:5205)
+                                                                                  at android.view.View.invalidateInternal(View.java:13656)
+                                                                                  at android.view.View.invalidate(View.java:13620)
+                                                                                  at android.view.View.setFlags(View.java:11527)
+                                                                                  at android.view.View.setVisibility(View.java:8069)
+                                                                                  at com.blabbertabber.blabbertabber.RecordingActivity.upload(RecordingActivity.java:431)
+                                                                                  at com.blabbertabber.blabbertabber.RecordingActivity.access$300(RecordingActivity.java:43)
+                                                                                  at com.blabbertabber.blabbertabber.RecordingActivity$4.run(RecordingActivity.java:327)
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1505660209,1505660209,5ba9529de1a72f97c3c44cb5df9b16fc208a3b93
+5ba9529de1a72f97c3c44cb5df9b16fc208a3b93,5ba9529d,Bump versionName to 1.0.5,"Bump versionName to 1.0.5
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan E Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1503784815,1503784815,f053be5703451f6f715abb483d118747079bdeb1
+f053be5703451f6f715abb483d118747079bdeb1,f053be57,ProgressBar replaces ProgressDialog,"ProgressBar replaces ProgressDialog
+
+- Upload ticks are granular, 32kB, for a better user experience
+- We no longer ""guess"" at how much we upload; we measure how much we
+  upload & update the progressBar accordingly
+- ProgressDialog is deprecated per the [docs](https://developer.android.com/reference/android/app/ProgressDialog.html):
+
+> This class was deprecated in API level 26.  ProgressDialog is a modal dialog, which prevents the user from interacting with the app
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan E Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1503784550,1503784550,eace7947fac58277600a184d63e71a99d3023803
+eace7947fac58277600a184d63e71a99d3023803,eace7947,Merge pull request #63 from blabbertabber/ECONNREFUSED,"Merge pull request #63 from blabbertabber/ECONNREFUSED
+
+User sees message when server is unreachable",,,,Brendan Cunnie,saintbrendan@gmail.com,GitHub,noreply@github.com,1503369106,1503369106,"a3a971a1d46ee27d71f3e1c1fcd75a5d11479ad8,0ebf97a71d7e2c810120a4474926cd555d957525"
+0ebf97a71d7e2c810120a4474926cd555d957525,0ebf97a7,User sees message when server is unreachable,"User sees message when server is unreachable
+
+- Previously would seen a lingering ProgressBar
+- User sees error details and suggested resolution (""try again later"")
+- No tests, feeling tired
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1503057747,1503166512,a3a971a1d46ee27d71f3e1c1fcd75a5d11479ad8
+a3a971a1d46ee27d71f3e1c1fcd75a5d11479ad8,a3a971a1,"README has link to App Store, adds transcription","README has link to App Store, adds transcription
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1499034800,1499034800,bbd829ec3783f916af0c9504164cb00f0230f6bc
+bbd829ec3783f916af0c9504164cb00f0230f6bc,bbd829ec,Bump versionName to 1.0.4,"Bump versionName to 1.0.4
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1498139851,1498139851,2af4fbb443fca38af4d5d9e1db7593dc69e48031
+2af4fbb443fca38af4d5d9e1db7593dc69e48031,2af4fbb4,Test Diarizer uses HTTP not HTTPS,"Test Diarizer uses HTTP not HTTPS
+
+- enables packet traceing in the clear (easier debugging)
+- bumped SDK Version 25 -> 26
+- bumped Support Libraries, 25.3.1 -> 26.0.0-beta2
+  - added maven section to find support libraries
+- bumped gradle 2.3.2 -> 2.3.3
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1498139194,1498139194,fea98684ad500380ef347cff584821ee52098c1e
+fea98684ad500380ef347cff584821ee52098c1e,fea98684,Bump versionName to 1.0.3,"Bump versionName to 1.0.3
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1495242763,1495242763,b0ce14f6063cee67fb5f08e390e50e5d07f0ad96
+b0ce14f6063cee67fb5f08e390e50e5d07f0ad96,b0ce14f6,Specify which Diarizer and Transcriber to use,"Specify which Diarizer and Transcriber to use
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan E Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494702262,1494702262,12e11122707f24da4a2ac263ab00fe0fdaa8b553
+12e11122707f24da4a2ac263ab00fe0fdaa8b553,12e11122,Add checkbox to use IBM Diarizer,"Add checkbox to use IBM Diarizer
+
+- backend is not implemented
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494696906,1494696906,c9f7bbcd90f69318798222f36c217a859b383f56
+c9f7bbcd90f69318798222f36c217a859b383f56,c9f7bbcd,Bump versionName to 1.0.2,"Bump versionName to 1.0.2
+
+- gradle: 2.3.1 -> 2.3.2
+- buildTools: 25.0.0 -> 25.0.2
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494693270,1494693270,ab000df0c373414e88745d97b3f708df1602aba4
+ab000df0c373414e88745d97b3f708df1602aba4,ab000df0,"Take advantage of the new, large aspect ratios","Take advantage of the new, large aspect ratios
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494692664,1494692664,3a378250fc795ebdd291c9049b816278eb32fe6a
+3a378250fc795ebdd291c9049b816278eb32fe6a,3a378250,Allow user to send wav file to test server,"Allow user to send wav file to test server
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan E Cunnie,saintbrendan@gmail.com,1494470168,1494470168,4c561b85f5732ea692b087a054652e3fb69f6af7
+4c561b85f5732ea692b087a054652e3fb69f6af7,4c561b85,Bump versionName to 1.0.1,"Bump versionName to 1.0.1
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494177736,1494177736,9fa1bdf06ba3bd02fb146eda24836a154cf5f3b1
+9fa1bdf06ba3bd02fb146eda24836a154cf5f3b1,9fa1bdf0,Update README's screenshots.,"Update README's screenshots.
+
+- The old screenshots were very stale, from when we were using
+  the native app to display the results.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494177611,1494177611,7e3617c01caf8ec558dc2f0475fc2ef5ce7960e0
+7e3617c01caf8ec558dc2f0475fc2ef5ce7960e0,7e3617c0,Upload uses shorter URL,"Upload uses shorter URL
+
+- diarizer.com instead of diarizer.blabbertabber.com
+- removed the unneeded library dependencies (we're no longer
+  using LIUM nor the baggage it requires)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494097936,1494098536,f6a9a4e8c244cf38ac33cbce49deaa6621e17b66
+f6a9a4e8c244cf38ac33cbce49deaa6621e17b66,f6a9a4e8,Purge code to display diarization results,"Purge code to display diarization results
+
+- we are not using the app to display results; we are using the web
+- months of work gone. So sad.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494082290,1494082290,332e92b76135fd3b77bcd57fbab46cf3093bf607
+332e92b76135fd3b77bcd57fbab46cf3093bf607,332e92b7,Remove overly-chatty Log messages,"Remove overly-chatty Log messages
+
+- previously the log messages were so voluminous that it made debugging
+  difficult, and that code has proved solid, so the voluminous messages
+  offered little value.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494081566,1494081566,23d782086bcf7f56c43045d1cddfe531e3467e57
+23d782086bcf7f56c43045d1cddfe531e3467e57,23d78208,ReplayMeeting accommodates Nougat permissions,"ReplayMeeting accommodates Nougat permissions
+
+- enables the playing back of meeting recording under Nougat
+- must use FileProvider
+- WavFile extends File (makes using it easier)
+
+fixes:
+```
+Caused by: android.os.FileUriExposedException: file:///data/user/0/com.blabbertabber.blabbertabber/files/meeting.wav exposed beyond app through Intent.getData()
+```
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1494081366,1494081366,a264787ca7b6a9a12e351d1af8e395574c3c5151
+a264787ca7b6a9a12e351d1af8e395574c3c5151,a264787c,BlabberTabber is geared towards researchers!,"BlabberTabber is geared towards researchers!
+
+- Google Play Store descriptions scope the application to speech
+  researchers, not general users
+- We've been getting a lot of installs/uninstalls, and we think we
+  haven't been doing a good job setting people's expectations
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1492896473,1492896608,d0d02d6895dfd7735e7f722c7728b9edc17da1d5
+d0d02d6895dfd7735e7f722c7728b9edc17da1d5,d0d02d68,Use non noise cancelling microphone to assist diarization,"Use non noise cancelling microphone to assist diarization
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan E Cunnie,saintbrendan@gmail.com,1492895492,1492895492,3799ef61062acc46bfd7f811c3b4f25bc1fc629d
+3799ef61062acc46bfd7f811c3b4f25bc1fc629d,3799ef61,Descriptions for Google Play Store,"Descriptions for Google Play Store
+
+- Evolve over time
+- Should store in revision control to track
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1492879820,1492879820,e015804b6838856f9ecc169892dca3c43c023b3f
+e015804b6838856f9ecc169892dca3c43c023b3f,e015804b,Ignore projectFilesBackup/ backup directory,"Ignore projectFilesBackup/ backup directory
+
+- artifact of Android Studio upgrade
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan E Cunnie,saintbrendan@gmail.com,1492268464,1492268464,b4dcd94f2b0d03539784b7356747d8aafd10baed
+b4dcd94f2b0d03539784b7356747d8aafd10baed,b4dcd94f,Update privacy policy to specify retention.,"Update privacy policy to specify retention.
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan E Cunnie,saintbrendan@gmail.com,1492268288,1492268288,a1a6c35c1dfe215201567283a492d941bcf478dd
+a1a6c35c1dfe215201567283a492d941bcf478dd,a1a6c35c,Merge branch 'master' of https://github.com/blabbertabber/blabbertabber,"Merge branch 'master' of https://github.com/blabbertabber/blabbertabber
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1492266212,1492266212,"9664223995ea9ff08f68f48eb3330fe20ecce818,088dacd09ef41f27e7ae98165c926a8932db6daf"
+9664223995ea9ff08f68f48eb3330fe20ecce818,96642239,Create privacy policy for BlabberTabber application,"Create privacy policy for BlabberTabber application
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan E Cunnie,saintbrendan@gmail.com,1492266079,1492266079,c02f4ceeb4be69cc545b3ccda111eb0123926aa9
+088dacd09ef41f27e7ae98165c926a8932db6daf,088dacd0,Merge pull request #58 from blabbertabber/sliding_drawer,"Merge pull request #58 from blabbertabber/sliding_drawer
+
+RecordingActivity has navigation drawer",,,,Brendan Cunnie,saintbrendan@gmail.com,GitHub,noreply@github.com,1492054593,1492054593,"fd1d0e24f32babc08fde80423572b6d098de2a90,ff56db34db438c947ce725214e3d5a3feaa85678"
+ff56db34db438c947ce725214e3d5a3feaa85678,ff56db34,RecordingActivity has navigation drawer,"RecordingActivity has navigation drawer
+
+- previously navigation drawer was on SummaryActivity
+- SummaryActivity, SpeakerStatsActivity deleted (no longer used)
+- LIUM-specific navigation drawer menuitems also removed
+  - show_mfc_file, show_uem_seg_file, etc...
+- ""Show .raw"" and .wav menuitems also removed (used for early testing, no longer needed)
+- drawer tests moved to RecordingActivityTest
+- formatting fixes on splash screen (extra new lines)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1492019030,1492019392,fd1d0e24f32babc08fde80423572b6d098de2a90
+fd1d0e24f32babc08fde80423572b6d098de2a90,fd1d0e24,Bump versionName to 1.0.0,"Bump versionName to 1.0.0
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1491395563,1491395563,c055cb9376542dc809555ce3eb23db5072d2f931
+c055cb9376542dc809555ce3eb23db5072d2f931,c055cb93,"Update splash screen (+Aalto, +bandwidth usage)","Update splash screen (+Aalto, +bandwidth usage)
+
+- remove portion that says ""it does not work yet"".
+  it works;
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1491395160,1491395160,69efe89ec0af7add4321faac3a0f1a295f6d8f63
+69efe89ec0af7add4321faac3a0f1a295f6d8f63,69efe89e,"Bump Android libraries, excise LIUM from gradle","Bump Android libraries, excise LIUM from gradle
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1491395056,1491395056,c99326a8234a83a7441364e361a7dfe1a8d46372
+c99326a8234a83a7441364e361a7dfe1a8d46372,c99326a8,Remove LIUM java library; we no longer use it,"Remove LIUM java library; we no longer use it
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1491394996,1491394996,c02f4ceeb4be69cc545b3ccda111eb0123926aa9
+c02f4ceeb4be69cc545b3ccda111eb0123926aa9,c02f4cee,Upload .wav file to server for processing,"Upload .wav file to server for processing
+
+- Add *.jks (Java KeyStore) to .gitignore
+- remove references to LIUM in ""about""
+  (we don't use LIUM any more)
+-  multipart boundary is friendly to read & delineate
+- bumped gradle 2.3.0 -> 2.3.1
+- removed deprecated diarize() code -- we're not using LIUM
+
+Signed-off-by: Brendan E Cunnie <saintbrendan@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1491275643,1491362018,32a8293841055aea68c736e926a399d80caeb81a
+32a8293841055aea68c736e926a399d80caeb81a,32a82938,Add *.jks (Java KeyStore) to .gitignore,"Add *.jks (Java KeyStore) to .gitignore
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1491275643,1491275643,255636c1361585a260b1e604b104f4e523b69570
+255636c1361585a260b1e604b104f4e523b69570,255636c1,Bump versionName to 0.9.1,"Bump versionName to 0.9.1
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1489874930,1489874930,435f40ad087d0a0e8e5b73a1d98d63b203551539
+435f40ad087d0a0e8e5b73a1d98d63b203551539,435f40ad,Change file mode to MODE_PRIVATE,"Change file mode to MODE_PRIVATE
+
+- fixes crash when pressing FINISH on Nougat
+- minor bump of supporting files
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1489845009,1489845009,66113f6f0dbf7e19ef39c701ec37f39bb260e34d
+66113f6f0dbf7e19ef39c701ec37f39bb260e34d,66113f6f,Bump versionName to 0.9.0.  Bump versionCode to 10.,"Bump versionName to 0.9.0.  Bump versionCode to 10.
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1489115273,1489115273,8be74ce4a53ca7d1c7027c597d802108145121cf
+8be74ce4a53ca7d1c7027c597d802108145121cf,8be74ce4,Tests pass with new Android Studio version,"Tests pass with new Android Studio version
+
+- including new libaries, APKs
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1488649064,1488649064,30c9c31046e718a783b171ac9e3d804835baaef9
+30c9c31046e718a783b171ac9e3d804835baaef9,30c9c310,Refresh to latest release of SDK and libraries,"Refresh to latest release of SDK and libraries
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1488646489,1488646489,f3ed53a6df7b2a4aa5496c663c03373f7765c0d2
+f3ed53a6df7b2a4aa5496c663c03373f7765c0d2,f3ed53a6,Enbiggened circles.  Corrected height/width.,"Enbiggened circles.  Corrected height/width.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1465443707,1465443707,31341259788c88dee213288d8bf42939221324f2
+31341259788c88dee213288d8bf42939221324f2,31341259,Containing Rectangle doesn't throw exception.,"Containing Rectangle doesn't throw exception.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1465067059,1465067059,8f181440840c60982075065dd427766c2855259f
+8f181440840c60982075065dd427766c2855259f,8f181440,WIP: ContainingRectangle has tests,"WIP: ContainingRectangle has tests
+
+Doesn't quite work, but we're closing in.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1465056239,1465056239,4f26fe94f7a78e235b7be81294b9ea3bb5983b9a
+4f26fe94f7a78e235b7be81294b9ea3bb5983b9a,4f26fe94,Merge branch 'packed_circle_activity' into develop,"Merge branch 'packed_circle_activity' into develop
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1464835144,1464835144,"a79065086c438dc6cbdcc3cde5ab04da04b52e0d,433b46c2f7a5dcbf8f4cc8ced4242762525673b1"
+433b46c2f7a5dcbf8f4cc8ced4242762525673b1,433b46c2,WIP: PackedCircleActivity draws circles,"WIP: PackedCircleActivity draws circles
+
+- called from debug menu
+- currently crashes with java.lang.UnsupportedOperationException
+- removed deprecated Packing class
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1464834978,1464834978,4af51d3f51ce741090aea9545cc6b30f08a5a448
+4af51d3f51ce741090aea9545cc6b30f08a5a448,4af51d3f,Simple circle packing algorithm.,"Simple circle packing algorithm.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463930978,1463930978,b8c3108da07998732c106c390ae080fc01814332
+b8c3108da07998732c106c390ae080fc01814332,b8c3108d,Misc packing logic clarifications.,"Misc packing logic clarifications.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463624273,1463624273,bad5acab49863e645eabd95459150c357fe66555
+bad5acab49863e645eabd95459150c357fe66555,bad5acab,Zero-area enclosing boxes throws exception,"Zero-area enclosing boxes throws exception
+
+- drawing logic is back [temporarily] in onDraw()
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463619798,1463619798,e9e06e54397fe9aedf4b97560afdfdb2d327ebfe
+e9e06e54397fe9aedf4b97560afdfdb2d327ebfe,e9e06e54,WIP: Android Dockerfile,"WIP: Android Dockerfile
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463408002,1463616882,ae261495677a7e01edd3b087011200a79e20d067
+ae261495677a7e01edd3b087011200a79e20d067,ae261495,Dockerfile image: Fedora + OpendJDK,"Dockerfile image: Fedora + OpendJDK
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463403181,1463616882,f715d3b779b87e4f9ac413d6bae722976de2e328
+f715d3b779b87e4f9ac413d6bae722976de2e328,f715d3b7,Dockerfile patterned after jacekmarchwicki/android/,"Dockerfile patterned after jacekmarchwicki/android/
+
+https://hub.docker.com/r/jacekmarchwicki/android/
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462968229,1463616882,c9bfa7b94ef487cebb43e06f8f4814433659f7f8
+c9bfa7b94ef487cebb43e06f8f4814433659f7f8,c9bfa7b9,Concourse jobs' tasks have correct paths,"Concourse jobs' tasks have correct paths
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462655941,1463616882,e8716463fd43072dbccf2448725f781998d83e17
+e8716463fd43072dbccf2448725f781998d83e17,e8716463,Robolectric tests run properly under Concourse CI,"Robolectric tests run properly under Concourse CI
+
+- upgraded Gradle 2.10 -> 2.13
+- created 2 Concourse jobs:
+  - Robolectric
+  - Android instrumentation
+- build.gradle outputs test failures to terminal
+- `TERM=dumb` fixes `Could not open terminal for stdout: $TERM not set`
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462650028,1463616882,956e1b10c08d0a0525e27d862608e70053c0bf8e
+a79065086c438dc6cbdcc3cde5ab04da04b52e0d,a7906508,Dockerfile image: Fedora + OpendJDK,"Dockerfile image: Fedora + OpendJDK
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463403181,1463403395,f30d865ae25184da0a5b6806e86f602f95ee50e1
+956e1b10c08d0a0525e27d862608e70053c0bf8e,956e1b10,Added method to check ShapePairs after adding a circle.,"Added method to check ShapePairs after adding a circle.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463323544,1463323544,3d5732cc57d0820d5c72e98ed421b4463fb2ec6e
+3d5732cc57d0820d5c72e98ed421b4463fb2ec6e,3d5732cc,Additional packing logic and tests.,"Additional packing logic and tests.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463260262,1463260262,f30d865ae25184da0a5b6806e86f602f95ee50e1
+f30d865ae25184da0a5b6806e86f602f95ee50e1,f30d865a,More Line test coverage.,"More Line test coverage.
+
+- Clean build after add a new resource id
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463242527,1463242527,a834ee229d45a30cb16d112064f034bcc2769881
+a834ee229d45a30cb16d112064f034bcc2769881,a834ee22,"Cannot use 'android:id=""@+id/...""' in PackedCircleActivity.","Cannot use 'android:id=""@+id/...""' in PackedCircleActivity.
+
+It causes 7/85 tests to fail.
+
+It appears it throws the indexing off in latter set of tests.
+(R.ids are wrong; e.g. tests search for a Button but find a TextView)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463233396,1463233396,7bc264862e4bf41c3d976017b7134b77ad41b254
+7bc264862e4bf41c3d976017b7134b77ad41b254,7bc26486,Java RAM options optimized for Google Instance,"Java RAM options optimized for Google Instance
+
+- g1-small has 1.7GB RAM and costs $166/yr
+- next-highest, n1-standard-1 has 3.75GB, but costs $306/yr
+- 1.7GB is not quite enough for this config, but we'll swap as needed
+
+Fixes:
+```
+To run dex in process, the Gradle daemon needs a larger heap.
+It currently has approximately 1365 MB.
+For faster builds, increase the maximum heap size for the Gradle daemon
+to more than 2048 MB.
+To do this set org.gradle.jvmargs=-Xmx2048M in the project
+gradle.properties.
+For more information see
+https://docs.gradle.org/current/userguide/build_environment.html
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1463232520,1463232520,fc598255006d021ed7142738df6de5e8f278e082
+fc598255006d021ed7142738df6de5e8f278e082,fc598255,New Summary Activity displays Packed Circles,"New Summary Activity displays Packed Circles
+
+- FIXME: including the image in the PackedCircleActivity's layout
+  causes 7 of the tests to fail. We need to fix this & include
+  the image in the layout
+- currently a mock-up
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1463018359,1463062950,7115568d7e44f71ee3f490fa608e500407b78c74
+7115568d7e44f71ee3f490fa608e500407b78c74,7115568d,Gradle upgraded to 2.13,"Gradle upgraded to 2.13
+
+- upgraded ancillary tools as well
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462991191,1462991191,1e560e3243f8aa31dfb6ec2d1a864664d518dab0
+1e560e3243f8aa31dfb6ec2d1a864664d518dab0,1e560e32,Shapes to pack circles in containers,"Shapes to pack circles in containers
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1462115686,1462646951,a66dc7a26427ba5baadc74b223c11480158148ae
+a66dc7a26427ba5baadc74b223c11480158148ae,a66dc7a2,Set maxProcessCount 4 and incremental dexOptions,"Set maxProcessCount 4 and incremental dexOptions
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462111061,1462111061,bd0fa8ca7e559468c57ee42e859d8d01e9b03f0c
+bd0fa8ca7e559468c57ee42e859d8d01e9b03f0c,bd0fa8ca,"Updated shape classes.  Started ShapePair, Packing","Updated shape classes.  Started ShapePair, Packing
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462049885,1462049885,aa7b2b7c63eacb8b20fbab2867a67bbf43de2e57
+aa7b2b7c63eacb8b20fbab2867a67bbf43de2e57,aa7b2b7c,"Circlepacker is tested via Robolectric, not Androidtest","Circlepacker is tested via Robolectric, not Androidtest
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1462034243,1462034243,ad582195ba00a1ee27deb191e8d18d0981a52bde
+ad582195ba00a1ee27deb191e8d18d0981a52bde,ad582195,Shape classes have thorough test coverage,"Shape classes have thorough test coverage
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462033899,1462033899,338c27cfaa67509ed5c2c1352b6c6f2f507ca1cf
+338c27cfaa67509ed5c2c1352b6c6f2f507ca1cf,338c27cf,Circle has Robolectric tests,"Circle has Robolectric tests
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1462033113,1462033113,2473b7129c949228382416c7ce007592e5a4653b
+2473b7129c949228382416c7ce007592e5a4653b,2473b712,Lines detect intersection,"Lines detect intersection
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462031644,1462031644,3901e2079b4d1134db644134568de8430d86daa6
+3901e2079b4d1134db644134568de8430d86daa6,3901e207,Shape uses Robolectric test framework,"Shape uses Robolectric test framework
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1462028995,1462029816,6529d9e587b105998410df3305deda4a341c2abd
+6529d9e587b105998410df3305deda4a341c2abd,6529d9e5,"Got robolectric test to run, breaking regular test","Got robolectric test to run, breaking regular test
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1461441255,1462027169,d1d58cb571b2368cd12b334f4bacfffc7c757971
+d1d58cb571b2368cd12b334f4bacfffc7c757971,d1d58cb5,Gradle 2.1.0,"Gradle 2.1.0
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1462027076,1462027076,bb2accc3834fd379e8592884230a6d653038d41b
+bb2accc3834fd379e8592884230a6d653038d41b,bb2accc3,Merge pull request #54 from blabbertabber/2d_shapes,"Merge pull request #54 from blabbertabber/2d_shapes
+
+Created wrappers for Circle2D and Line2D.",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1461639173,1461639173,"2c14e0ababb7ed9c636b645b3dadb532aeae99a8,ec8a3b0220b6e6f49d2081d21bc1864133e6db93"
+ec8a3b0220b6e6f49d2081d21bc1864133e6db93,ec8a3b02,Created wrappers for Circle2D and Line2D.,"Created wrappers for Circle2D and Line2D.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1461638982,1461638982,2c14e0ababb7ed9c636b645b3dadb532aeae99a8
+2c14e0ababb7ed9c636b645b3dadb532aeae99a8,2c14e0ab,CirclePacker WIP,"CirclePacker WIP
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1461433887,1461433887,a31fc51f4a597be5c6ab78bdcf638bb3208bbe99
+a31fc51f4a597be5c6ab78bdcf638bb3208bbe99,a31fc51f,Added test and beginning of CirclePacker code.,"Added test and beginning of CirclePacker code.
+
+Added the java geometry jar.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1461201829,1461201829,518d4df3ccf0b1ac1d5ae6c5c3119edc06656978
+518d4df3ccf0b1ac1d5ae6c5c3119edc06656978,518d4df3,Bump versionName to 0.8.7,"Bump versionName to 0.8.7
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460831368,1460831368,7fb23a3650188a0809e78108cbbbda73ae018bbe
+7fb23a3650188a0809e78108cbbbda73ae018bbe,7fb23a36,Added comma in list of attributions.,"Added comma in list of attributions.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460830890,1460830890,2fc990390e0f0c818c8e8ba96d12b17574974ea5
+2fc990390e0f0c818c8e8ba96d12b17574974ea5,2fc99039,Circle packing algorithm attribution in README,"Circle packing algorithm attribution in README
+
+- Charlotte is partner (""thanks"" aren't necessary for partners)
+- Ektarina Gonina was never really an advisor
+- small typographic cosmetic adjustments
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460822280,1460822280,24e89fe6a9067868cd00fc611eccba58e6aebebc
+24e89fe6a9067868cd00fc611eccba58e6aebebc,24e89fe6,Upgraded gradle classpath to com.android.tools.build:gradle:2.1.0-beta1,"Upgraded gradle classpath to com.android.tools.build:gradle:2.1.0-beta1
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460821292,1460821292,b35fbcf84a7c73b68228cda22aad69a796370232
+b35fbcf84a7c73b68228cda22aad69a796370232,b35fbcf8,"Legal warning on MainActivity, new screenshots","Legal warning on MainActivity, new screenshots
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460815196,1460815223,00320f54c4dcb770756925e5fdfdb3afbcccf970
+00320f54c4dcb770756925e5fdfdb3afbcccf970,00320f54,Merge pull request #52 from blabbertabber/better_pause_icon,"Merge pull request #52 from blabbertabber/better_pause_icon
+
+Better-looking *pause* and *play* buttons",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460772272,1460772272,"4ba3a9d92c4bd8abab6d8bfde89e39deb846b10d,93d9d8938aa8e5fbcd437bf0cbd993540106c839"
+4ba3a9d92c4bd8abab6d8bfde89e39deb846b10d,4ba3a9d9,Merge pull request #51 from blabbertabber/rotateTest,"Merge pull request #51 from blabbertabber/rotateTest
+
+Test rotation and timer during RecordingActivity",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460772026,1460772026,"25772035b9327f2bf62a5b001f71acb54745e4fa,2e3a47c5146be281ec1fbeb75b73c5ba3e8c6eed"
+93d9d8938aa8e5fbcd437bf0cbd993540106c839,93d9d893,Better-looking *pause* and *play* buttons,"Better-looking *pause* and *play* buttons
+
+- *play* and *pause* no longer overwhelm the red circle when rotated
+- removed long-unneeded icons (e.g. ""upload"")
+- replaced red circle with vector image
+- replaced pause-in-circle with pause
+- simpler naming scheme for drawables
+  (e.g. *white_play* instead of *ic_play_arrow_24dp*)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460768233,1460768233,25772035b9327f2bf62a5b001f71acb54745e4fa
+2e3a47c5146be281ec1fbeb75b73c5ba3e8c6eed,2e3a47c5,Test rotation and timer during RecordingActivity,"Test rotation and timer during RecordingActivity
+
+- ensures that *Timer* doesn't jump ahead or fall behind when rotating
+- works for both real recording and emulated recording
+- AudioEventProcessor doesn't `sleep()` if recording.
+  `AudioRecordEmulator#read()` is a sub-optimal emulation of `AudioRecord#read()`.
+  If are any other sleeps in the same thread it'll slow down the throughput
+  (e.g. you won't get 16k shorts/sec; instead you might get 8k shorts/sec).
+  The alternative, spawning a separate thread, seemed overly complex.
+  This has caused problems with the tests because the Timer is way off
+  when rotated.
+- Use `ActivityTestRule`, not `ActivityInstrumentationTestCase2`. It's
+  newer, it's less complex, and it's run when *all* the tests are run.
+  (*ActivityInstrumentationTestCase2* tests were mysteriously skipped when
+  all the tests were run)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460644103,1460723757,25772035b9327f2bf62a5b001f71acb54745e4fa
+25772035b9327f2bf62a5b001f71acb54745e4fa,25772035,Merge pull request #50 from blabbertabber/cleanup,"Merge pull request #50 from blabbertabber/cleanup
+
+Cleanup: implement Android Studio suggestions",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460602668,1460602668,"3f0e5568b1ef57c87ee1f4d2251a0d9ad9b04345,b4988aef3d04644ecbd184d0671f043fe1c66a28"
+b4988aef3d04644ecbd184d0671f043fe1c66a28,b4988aef,Update RecordingActivity.java,"Update RecordingActivity.java
+
+Added type Bundle to @param savedInstanceState",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460602477,1460602477,2c77d0525792d8c5722da12a5f88827bb795c444
+2c77d0525792d8c5722da12a5f88827bb795c444,2c77d052,Cleanup: implement Android Studio suggestions,"Cleanup: implement Android Studio suggestions
+
+- use `String.format()` in place of String concatenation (+)
+- use `Local.getDefault()` as first argument to `String.format()`
+- remove unneeded methods (`sendVolume()`, `RecordingBinder.getService()`) and variables
+- update comments at top of classes
+- fix mistake in `onRequestPermissionsResult()` (wrong type)
+- catch `NullPointerException` as appropriate
+- remove stale comments
+- simplify expressions, e.g.
+  - `value >> 0` &rarr; `value`
+  - `value * 1` &rarr; `value`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460588919,1460602310,3f0e5568b1ef57c87ee1f4d2251a0d9ad9b04345
+3f0e5568b1ef57c87ee1f4d2251a0d9ad9b04345,3f0e5568,Merge pull request #49 from blabbertabber/no-dropped-audio,"Merge pull request #49 from blabbertabber/no-dropped-audio
+
+No dropped audio",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1460427221,1460427221,"fb6c02a48ef542a9c50ebbeb7045d0a7025607cf,771680a8b5d51823f9fe5a745e91511b00d246bf"
+771680a8b5d51823f9fe5a745e91511b00d246bf,771680a8,Saving recorded audio to file is done in background thread,"Saving recorded audio to file is done in background thread
+
+fixes: `W/AudioFlinger: RecordThread: buffer overflow`
+
+- removed the now-unneeded routines:
+  - setRecordPositionUpdateListener
+  - onMarkerReached
+  - onPeriodicNotification
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460378955,1460378955,e32a684a8a924755b5b0b3e53a5f25289807b971
+e32a684a8a924755b5b0b3e53a5f25289807b971,e32a684a,AudioRecordAbstract has read() method,"AudioRecordAbstract has read() method
+
+- has test
+- makes AudioRecordAbstract more full-fledged AudioRecord encapsulator
+  which lays the groundwork for writing audio data to a file in the
+  background thread.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460335730,1460335730,fb6c02a48ef542a9c50ebbeb7045d0a7025607cf
+fb6c02a48ef542a9c50ebbeb7045d0a7025607cf,fb6c02a4,Bump versionName to 0.8.6,"Bump versionName to 0.8.6
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460220659,1460220659,02c7eef7c4a871a5d7566da558ced8fc1bebb5a0
+02c7eef7c4a871a5d7566da558ced8fc1bebb5a0,02c7eef7,"When we Reset the meeting, it stays in the paused state.","When we Reset the meeting, it stays in the paused state.
+
+- Tightened-up RecordingActivityTest
+  - factored-out assertMeetingIsPaused(), assertMeetingIsRecording()
+  - asserts time-elapsed
+- RecordingActivity starts paused, NOT recording
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460219510,1460219677,219e6cd605eaa62fc8e3e93aa1fb5f3018f8dbcf
+219e6cd605eaa62fc8e3e93aa1fb5f3018f8dbcf,219e6cd6,Modest formatting changes,"Modest formatting changes
+
+Android Studio re-organized the lines.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460206519,1460206519,af042afbeb46ee71f30f2f70507320fc14f5d867
+af042afbeb46ee71f30f2f70507320fc14f5d867,af042afb,Bump versions in build.gradle,"Bump versions in build.gradle
+
+Android Studio was pestering me.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460206487,1460206487,5078873a5fa56eaea110e8fc97ef0954930bd740
+5078873a5fa56eaea110e8fc97ef0954930bd740,5078873a,Bump Android Studio 2.0.0-rc1 -> 2.0.0,"Bump Android Studio 2.0.0-rc1 -> 2.0.0
+
+Finally it's stable
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1460117824,1460117824,cb14f2a934049361f84a8cdaf5a7c944bb049dd6
+cb14f2a934049361f84a8cdaf5a7c944bb049dd6,cb14f2a9,Bump Android Studio 2.0.0-beta7 -> 2.0.0-rc1,"Bump Android Studio 2.0.0-beta7 -> 2.0.0-rc1
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459632006,1459632006,de7dc2a8e5bbedd783a47ee0f545085c9bd5a042
+de7dc2a8e5bbedd783a47ee0f545085c9bd5a042,de7dc2a8,Merge pull request #47 from blabbertabber/version,"Merge pull request #47 from blabbertabber/version
+
+BlabberTabber version is displayed in AboutActivity",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1459221825,1459221825,"90ab0cc3dced55bd4839cb09c9a2a32b25087437,2937b47fc3a05df2a0f41a2aa801259e01e7bcf1"
+2937b47fc3a05df2a0f41a2aa801259e01e7bcf1,2937b47f,BlabberTabber version is displayed in AboutActivity,"BlabberTabber version is displayed in AboutActivity
+
+- AboutActivity: added Log.i()
+- Fixed lingering acknowledgements -> about search-replacements.
+- Tweaked wording
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459162157,1459163108,90ab0cc3dced55bd4839cb09c9a2a32b25087437
+90ab0cc3dced55bd4839cb09c9a2a32b25087437,90ab0cc3,Fix test to accommodate state left over previous run/test,"Fix test to accommodate state left over previous run/test
+
+We can't assume it's recording when it starts up; it might be paused.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1459090153,1459090153,64ea26fcb830fdab72db00025d36e8d6e6c6903c
+64ea26fcb830fdab72db00025d36e8d6e6c6903c,64ea26fc,AcknowledgementsActivity -> AboutActivity,"AcknowledgementsActivity -> AboutActivity
+
+Lay the groundword for ""About"" selection which will show
+version number as well as acknowledgements.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459090096,1459090096,89e32686cc93c8b06d03c7b8d6f576c464efba69
+89e32686cc93c8b06d03c7b8d6f576c464efba69,89e32686,Bump versionName to 0.8.5,"Bump versionName to 0.8.5
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459035348,1459035348,30d3932124423cfcb8fb2cde00a76afc6110f577
+30d3932124423cfcb8fb2cde00a76afc6110f577,30d39321,Merge pull request #45 from blabbertabber/service_runs_forever,"Merge pull request #45 from blabbertabber/service_runs_forever
+
+Service runs forever",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1459022673,1459022673,"6ba05ce464d5213da478355fbcaa221e9502c2d8,0dbb83aa33484e356b76776a6b17d40dbb71e716"
+0dbb83aa33484e356b76776a6b17d40dbb71e716,0dbb83aa,Continue recording audio when Activity is destroyed,"Continue recording audio when Activity is destroyed
+
+- RecordingService runs in background when activity is destroyed
+  (e.g. when user checks email or something)
+- START_NOT_STICKY allows you to kill the Service instead of being
+  continuously restarted
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459018065,1459018065,782afc291503e143a9a4b136ae214fc68370e2b4
+782afc291503e143a9a4b136ae214fc68370e2b4,782afc29,RecordingService runs forever in background,"RecordingService runs forever in background
+
+- uses onStart() AND bindService()
+- is not supposed to exit
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1459000043,1459000043,6ba05ce464d5213da478355fbcaa221e9502c2d8
+6ba05ce464d5213da478355fbcaa221e9502c2d8,6ba05ce4,Saving and restoring the recording state.,"Saving and restoring the recording state.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1458508156,1458508156,640c212f9594d9b8812fbec002250d399fa8b303
+640c212f9594d9b8812fbec002250d399fa8b303,640c212f,Upgraded AndroidStudio to 2.0 Beta7.,"Upgraded AndroidStudio to 2.0 Beta7.
+
+Commented out dexInProcess false because we were hitting ""Gradle DSL method not found: 'dexInProcess()'"".
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1458396403,1458396403,0e4fb9a72101ed981baf0db69c84de757c3b8558
+0e4fb9a72101ed981baf0db69c84de757c3b8558,0e4fb9a7,Bump versionName to 0.8.4,"Bump versionName to 0.8.4
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457309856,1457309856,a3cfc63d713632aa8847396dd5f041ad85174b64
+a3cfc63d713632aa8847396dd5f041ad85174b64,a3cfc63d,"Revert ""Quadrupled gradle.properties memory settings to  -Xmx4g -XX:MaxPermSize=1024m""","Revert ""Quadrupled gradle.properties memory settings to  -Xmx4g -XX:MaxPermSize=1024m""
+
+This reverts commit 042930dd6c9295b75c18a8904f78463ad688f744.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457308697,1457308697,167bca6f86c0943ea864086c82a073119eda3772
+167bca6f86c0943ea864086c82a073119eda3772,167bca6f,Reduce build time from 14 minutes to 90 seconds by disabling dexInProcess.,"Reduce build time from 14 minutes to 90 seconds by disabling dexInProcess.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457304557,1457304557,a005239fb05c8525e32b4c056949408fefed71a7
+a005239fb05c8525e32b4c056949408fefed71a7,a005239f,Added the notification microphone when recording.,"Added the notification microphone when recording.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457278829,1457278829,5820cd7b5f2ba562c390f2ca6f94a51b761f3c92
+5820cd7b5f2ba562c390f2ca6f94a51b761f3c92,5820cd7b,Changed how we determine meeting elapsed time on RecorderActivity resumption.,"Changed how we determine meeting elapsed time on RecorderActivity resumption.
+
+- fixed Timer test
+- reduced logging level of particularly verbose logs
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457215216,1457215216,314a54e49051cf9a846576c62dfbc95b03126c20
+314a54e49051cf9a846576c62dfbc95b03126c20,314a54e4,Made RecordingActivity's elapsed time slightly more persistent.,"Made RecordingActivity's elapsed time slightly more persistent.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457197201,1457197201,661e02e886a0d3fbd3eaa93edd5313ff917c5e03
+661e02e886a0d3fbd3eaa93edd5313ff917c5e03,661e02e8,Update README.md,Update README.md,,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1457195964,1457195964,55d9a4b8568ecd97d6f567963f04be19d4be3691
+55d9a4b8568ecd97d6f567963f04be19d4be3691,55d9a4b8,Update README.md,Update README.md,,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1457195924,1457195924,231790509fdbabd739dc1459acbe74e5d72f4392
+231790509fdbabd739dc1459acbe74e5d72f4392,23179050,Update README.md,Update README.md,,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1457195680,1457195680,f768f335b74493f0c9defbb9bbea757ac719e08a
+f768f335b74493f0c9defbb9bbea757ac719e08a,f768f335,Update README.md,Update README.md,,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1457195485,1457195485,042930dd6c9295b75c18a8904f78463ad688f744
+042930dd6c9295b75c18a8904f78463ad688f744,042930dd,Quadrupled gradle.properties memory settings to  -Xmx4g -XX:MaxPermSize=1024m,"Quadrupled gradle.properties memory settings to  -Xmx4g -XX:MaxPermSize=1024m
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1457193693,1457193693,a822ba1153a0ca4c2a3ab80557b498a1032d32dd
+a822ba1153a0ca4c2a3ab80557b498a1032d32dd,a822ba11,Placed text correctly for Nexus 6,"Placed text correctly for Nexus 6
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456887038,1456887038,f2822c3c1e115c0a992a04ba702dd95ef678735f
+f2822c3c1e115c0a992a04ba702dd95ef678735f,f2822c3c,Merge branch 'develop' of github.com:blabbertabber/blabbertabber into develop,"Merge branch 'develop' of github.com:blabbertabber/blabbertabber into develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456607889,1456607889,"fb75a5b2eda17735892837f65b808e2d85d3c303,e1f786bbb4d627a499f5a3d75f95b1a102e92034"
+e1f786bbb4d627a499f5a3d75f95b1a102e92034,e1f786bb,record/pause toggle has record and pause icons,"record/pause toggle has record and pause icons
+
+- new, white pause & record icons
+- red-orange circle is bigger
+- FIXME: placing of ""RECORD"" and ""PAUSE"" text is flaky depending on screen
+- record button calls clickRecord() when clicked
+- pause button calls clickPause() when clicked
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456607805,1456607805,b14b7456b76d8015260bd8e770b83c3ef8dfb2e6
+b14b7456b76d8015260bd8e770b83c3ef8dfb2e6,b14b7456,Bump versionName to 0.8.3,"Bump versionName to 0.8.3
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456600105,1456600105,c4c10f2edd0a7752b9ec7a65ffe0a29ba0831e32
+c4c10f2edd0a7752b9ec7a65ffe0a29ba0831e32,c4c10f2e,Record/Pause button is in center,"Record/Pause button is in center
+
+- removed pause/record button at bottom
+- reset & finish are hidden while recording
+- reset & finish are hidden initially
+- modified tests accordingly
+- remove default timer text (""01:59:59"", flashed briefly on screen)
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456597363,1456598708,d348f6b6714af9ed5e870266b68ea30c2b024661
+fb75a5b2eda17735892837f65b808e2d85d3c303,fb75a5b2,Merge branch 'develop' of github.com:blabbertabber/blabbertabber into develop,"Merge branch 'develop' of github.com:blabbertabber/blabbertabber into develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456597466,1456597466,"ae5467b8f0d3d87dd2bc18b47b3efea3dd147a9f,d348f6b6714af9ed5e870266b68ea30c2b024661"
+ae5467b8f0d3d87dd2bc18b47b3efea3dd147a9f,ae5467b8,gradle updated from beta5 to beta6.,"gradle updated from beta5 to beta6.
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456597464,1456597464,368021137455757e11c14963524b7e9df0725bfd
+d348f6b6714af9ed5e870266b68ea30c2b024661,d348f6b6,Recording Activity shows meeting timer,"Recording Activity shows meeting timer
+
+- added timer TextView widget
+- added timeToHMMSSMinuteMandatory(milliseconds) and tests
+- fixed junit test argument order
+- added more thorough Timer test
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456595644,1456595644,15f1fc3bb0196158591f3ddf7e69d0991f0af7ee
+15f1fc3bb0196158591f3ddf7e69d0991f0af7ee,15f1fc3b,Rotating Pie Slices are gone,"Rotating Pie Slices are gone
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1456586555,1456586555,f0d34f376ab39481444b305a9799284781a5b37e
+f0d34f376ab39481444b305a9799284781a5b37e,f0d34f37,Upgrade Android Studio to 2.0 Beta 6,"Upgrade Android Studio to 2.0 Beta 6
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456585546,1456585546,6dbfc43d50b42e7fccb22e8eee3853e9862e57c7
+6dbfc43d50b42e7fccb22e8eee3853e9862e57c7,6dbfc43d,Merge pull request #41 from blabbertabber/recording_activity_now_has_toolbar,"Merge pull request #41 from blabbertabber/recording_activity_now_has_toolbar
+
+Recording activity now has toolbar",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1456281736,1456281736,"368021137455757e11c14963524b7e9df0725bfd,611cc88800a365abfe0b181fefdb08dadabf2fd4"
+611cc88800a365abfe0b181fefdb08dadabf2fd4,611cc888,ToolBar is gray; removed unneeded cruft,"ToolBar is gray; removed unneeded cruft
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456117512,1456117512,22220afe048a3e8574fe0adc69ef92e69c6afd8c
+22220afe048a3e8574fe0adc69ef92e69c6afd8c,22220afe,Added Toolbar with title.,"Added Toolbar with title.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1456087400,1456087400,368021137455757e11c14963524b7e9df0725bfd
+368021137455757e11c14963524b7e9df0725bfd,36802113,"Bumped versionName (to 0.8.2), and versionCode.","Bumped versionName (to 0.8.2), and versionCode.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455994854,1455994928,b973d622a5c63689cf0a55bd8f79fff2494a5978
+b973d622a5c63689cf0a55bd8f79fff2494a5978,b973d622,"Changed the displayed names from ""S0"", ""S1"", ""S2"" to ""Speaker 1"", ""Speaker 2"", ""Speaker 3"", etc.","Changed the displayed names from ""S0"", ""S1"", ""S2"" to ""Speaker 1"", ""Speaker 2"", ""Speaker 3"", etc.
+
+- Kept the original LIUM lable (""S0"") as a member in case we need it
+  to say, procure the GMMs for later speaker identification.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455985850,1455985850,c74613cb1e7b220c1149ab2a1d3291bd9f6e4e47
+c74613cb1e7b220c1149ab2a1d3291bd9f6e4e47,c74613cb,Merge pull request #40 from blabbertabber/moreHardTimes,"Merge pull request #40 from blabbertabber/moreHardTimes
+
+.l.seg file's times are converted to milliseconds",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1455982810,1455982810,"e3715c28c48e4d4cc88526f1cf08733018a8f2b3,a2fe91af1de4cc9ef1a604e2bc7aeaf5cb9656bb"
+e3715c28c48e4d4cc88526f1cf08733018a8f2b3,e3715c28,UX Speed Date feedback,"UX Speed Date feedback
+
+- Simplified intro text, bigger font
+- Recording Activity: changed Diarization Progress to Analyzing Meeting
+- Summary Activity: moved totals to bottom, changed first Duration title to H:MM:SS
+- Upgraded build.gradle to Android Studio 2.0 Beta 5
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455982171,1455982171,cd067955f130d9218b0b7f7a2a215a070165899f
+a2fe91af1de4cc9ef1a604e2bc7aeaf5cb9656bb,a2fe91af,.l.seg file's times are converted to milliseconds,".l.seg file's times are converted to milliseconds
+
+(everywhere else uses milliseconds; why use centiseconds?)
+
+- removed now-unnecessary (* 10) and (/ 10) from code
+- removed various unneeded member variables/imports
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455716600,1455716600,cd067955f130d9218b0b7f7a2a215a070165899f
+cd067955f130d9218b0b7f7a2a215a070165899f,cd067955,Merge pull request #39 from blabbertabber/timesAreHard,"Merge pull request #39 from blabbertabber/timesAreHard
+
+Durations and Percents are calculated correctly",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1455673081,1455673081,"144f23c76529d1bc5a1c8d4390f0c7639e77d60c,867a981acc40951c0e49901e0b4b72109098ddff"
+867a981acc40951c0e49901e0b4b72109098ddff,867a981a,Durations and Percents are calculated correctly,"Durations and Percents are calculated correctly
+
+- calculated meeting duration based on .raw file size instead of the completely incorrect .l.seg file size.
+- the meeting's duration/average/min/max are displayed in H:MM:SS[s] format
+- individual speaker's time & percent are displayed
+- individual speaker's time & percent are extracted to a tested method
+- fixed typo ""milliseconds""
+- placated IDE with Locale.getDefault()
+
+Through testing it appears that ""features"" correspond to hundredths of a second.
+We ran a test meeting of 57400ms (57.4 seconds) and came up with 5738 features (4,606 + 1132):
+
+57400ms / 5738 features = 10.003485535ms/feature
+
+Lingering questions:
+- should we extract the methods in Helper class to a more-specific StringsAndDurations class?
+- should we move speakerDurationAndPercent() to that class?
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455635081,1455635081,144f23c76529d1bc5a1c8d4390f0c7639e77d60c
+144f23c76529d1bc5a1c8d4390f0c7639e77d60c,144f23c7,"Bumped versionName (to 0.8.1), and versionCode.","Bumped versionName (to 0.8.1), and versionCode.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455558356,1455558356,62d7aeb92de0ec0befadbc5713ce309651047afb
+62d7aeb92de0ec0befadbc5713ce309651047afb,62d7aeb9,Enable BlabberTabber tests to run on the emulator,"Enable BlabberTabber tests to run on the emulator
+
+- Real and emulated audio events are processed with the same logic.
+  - emulated audio data is random (white noise)
+- TheSpeakers and TheSpeakersTest classes have been removed
+  - replace by SpeakersBuilder
+- removed fake real-time diarization identification
+  - variables
+    - speaker
+    - nextSpeakerChange
+    - mPreviousSpeakerId
+  - functions
+    - getSpeakerId()
+    - newSpeaker()
+    - stopPreviousSpeaker()
+- UPDATES_PER_SECOND now a variable
+- WavFileTest uses correct TAG
+- meeting duration is calculated from size of raw audio file
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455556864,1455556864,6e52993d6d0e021a413791737473373fa32f2d6f
+6e52993d6d0e021a413791737473373fa32f2d6f,6e52993d,We don't check in our signed release to GitHub,"We don't check in our signed release to GitHub
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455548318,1455548318,11ba1b31fe7ebe6cc0699bbf9046e8d11739d66d
+11ba1b31fe7ebe6cc0699bbf9046e8d11739d66d,11ba1b31,Bump versioncode to '2',"Bump versioncode to '2'
+
+Fixes
+
+```
+Upload failed
+
+You need to use a different version code for your APK because you
+already have one with version code 1.
+```
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455483074,1455483074,4cec90cf47927cde30966074466ea4bda841117f
+4cec90cf47927cde30966074466ea4bda841117f,4cec90cf,Proguard removes Log.x() calls,"Proguard removes Log.x() calls
+
+needed for release APK
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455481918,1455481918,c4dd685742dfb78ac7377195d85c563c48083cc5
+c4dd685742dfb78ac7377195d85c563c48083cc5,c4dd6857,Changed disclaimer.,"Changed disclaimer.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455478793,1455478793,8f62ab1d52fc6e42e7562403cebeea3a972c808e
+8f62ab1d52fc6e42e7562403cebeea3a972c808e,8f62ab1d,Merge pull request #38 from blabbertabber/SummaryActivity,"Merge pull request #38 from blabbertabber/SummaryActivity
+
+SummaryActivity displays LIUM output in bar charts",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1455465836,1455465836,"43b426ee4921f4548220b0d37bf745f393b423ae,246eda3995e74b46de59c4154f9a6a26a4a4ee36"
+246eda3995e74b46de59c4154f9a6a26a4a4ee36,246eda39,RectangleView's expensive new() are in constructor,"RectangleView's expensive new() are in constructor
+
+- removed unneeded comments
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455465383,1455465383,f41abbb5e38519cb8c4a1f696ed81cf6db1df98e
+f41abbb5e38519cb8c4a1f696ed81cf6db1df98e,f41abbb5,Bars Use SP units instead of PX,"Bars Use SP units instead of PX
+
+8px is way too thin
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455464446,1455464446,25a9dadf18914d35ca49b8e9b32db9c8aa58aae1
+25a9dadf18914d35ca49b8e9b32db9c8aa58aae1,25a9dadf,WIP: bar chart still doesn't draw properly,"WIP: bar chart still doesn't draw properly
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455462796,1455462796,639d6e2d4c90bdc71167e3c2437ccebda47680a2
+639d6e2d4c90bdc71167e3c2437ccebda47680a2,639d6e2d,SpeakersBuilder parses entire file not just first line,"SpeakersBuilder parses entire file not just first line
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455449012,1455449012,43b426ee4921f4548220b0d37bf745f393b423ae
+43b426ee4921f4548220b0d37bf745f393b423ae,43b426ee,WIP: SummaryActivity's Views are dynamically added,"WIP: SummaryActivity's Views are dynamically added
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455391133,1455391133,7e9ef50f9c50409be9e85186b6e9a89ea398ef2c
+7e9ef50f9c50409be9e85186b6e9a89ea398ef2c,7e9ef50f,Speakers are now ArrayList<> rather than Array,"Speakers are now ArrayList<> rather than Array
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455386962,1455386962,df944ef00c8b4c58412072bfc53959008a90e3ad
+df944ef00c8b4c58412072bfc53959008a90e3ad,df944ef0,SpeakersBuilder replaces TheSpeakers,"SpeakersBuilder replaces TheSpeakers
+
+Added logging to assist in troubleshooting
+Illegalstateexception crashes
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455382367,1455382367,8b0836bba23fd28f3ad44b76d782285dd9325f05
+8b0836bba23fd28f3ad44b76d782285dd9325f05,8b0836bb,SpeakerBuilder.build() assigns colors to speakers,"SpeakerBuilder.build() assigns colors to speakers
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455374592,1455378598,afd0311d9a5719e22fa97cf8d4e72fb5b63bd733
+afd0311d9a5719e22fa97cf8d4e72fb5b63bd733,afd0311d,Initial parsing of .seg file.,"Initial parsing of .seg file.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1455378506,1455378545,3a3b84f10c6631a4c97b4b3191b8be4cf82f9019
+3a3b84f10c6631a4c97b4b3191b8be4cf82f9019,3a3b84f1,Merge pull request #37 from blabbertabber/timerTestTweaks,"Merge pull request #37 from blabbertabber/timerTestTweaks
+
+TimerTest are more informative; upgrade to Studio 2 beta 4",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1455335184,1455335184,"05a81017454ec92bfeee74247b3dfa309df06744,8fd2e540195d168d240aeec191ac0b553aa0485e"
+8fd2e540195d168d240aeec191ac0b553aa0485e,8fd2e540,README says that app doesn't work; another paper,"README says that app doesn't work; another paper
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455288055,1455288055,6c7540dcb83b218382a5aa35b222279a0537e48e
+6c7540dcb83b218382a5aa35b222279a0537e48e,6c7540dc,TimerTest are more informative; upgrade to Studio 2 beta 4,"TimerTest are more informative; upgrade to Studio 2 beta 4
+
+New test will say by how much it failed, rather than the previous,
+cryptic expected-true-but-was-false:
+
+```
+java.lang.AssertionError: Started, time elapsed should return should be
+less than 60 ms
+Expected: a value less than <60L>
+but: <66L> was greater than <60L>
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455272297,1455272297,05a81017454ec92bfeee74247b3dfa309df06744
+05a81017454ec92bfeee74247b3dfa309df06744,05a81017,SpeakersBuilder now builds a *sorted* array of Speakers.,"SpeakersBuilder now builds a *sorted* array of Speakers.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1455075782,1455075782,2a2deffe035e1617e223d355ca1cc8294a91041c
+2a2deffe035e1617e223d355ca1cc8294a91041c,2a2deffe,Created new SpeakersBuilderTest class.  Created new SpeakerBuilder class.,"Created new SpeakersBuilderTest class.  Created new SpeakerBuilder class.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454989523,1454989523,2d024e6c84fe587de7000a31bc5713dbed4b9573
+2d024e6c84fe587de7000a31bc5713dbed4b9573,2d024e6c,Partial refactoring of Speaker and associated classes.,"Partial refactoring of Speaker and associated classes.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454884876,1454884876,fc31077cfe23f2db70adeca37b7cb55fe5845ed6
+fc31077cfe23f2db70adeca37b7cb55fe5845ed6,fc31077c,Fixed reset by refactoring AudioRecordReal.,"Fixed reset by refactoring AudioRecordReal.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454789543,1454789543,95b9966c774ff39f1c732d1fd4eee216b9c7db38
+95b9966c774ff39f1c732d1fd4eee216b9c7db38,95b9966c,Merge pull request #34 from blabbertabber/shareableStats,"Merge pull request #34 from blabbertabber/shareableStats
+
+BlabberTabber can share its generated files",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1454768020,1454768020,"ecf9f4c917049755e9f435b630713726c804fafe,29f2b273c84923a6080b174e644747240f9edeb4"
+29f2b273c84923a6080b174e644747240f9edeb4,29f2b273,BlabberTabber can share its output files,"BlabberTabber can share its output files
+
+- uses FileProvider.getUriForFile()
+- displaying a file is limited to 32k (~16 screens)
+  didn't want to exhaust RAM displaying a 1.5MB .wav file
+- changed ""reset meeting"" icon from rewind to skip_previous
+- Updated from Android Studio 1.5 to Android Studio 2 beta2
+  - emulator's Build.HARDWARE has changed from ""goldfish"" to ""ranchu""
+- RecordingActivity creates an anonymous thread (fewer variables)
+- TimerTest is more forgiving, waits as long as 400ms
+  (we had been seeing intermittent failures on emulator)
+- Updated README's screenshots
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454679059,1454766779,ecf9f4c917049755e9f435b630713726c804fafe
+ecf9f4c917049755e9f435b630713726c804fafe,ecf9f4c9,Merge pull request #33 from blabbertabber/progressDialog,"Merge pull request #33 from blabbertabber/progressDialog
+
+Diarization shows progressDialog",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1454646587,1454646587,"6988c727c4a5aa37ef78eb8e5c3624f5c3ad78cc,ea9ebf3aff449724987ce690b34b877bda0124f7"
+ea9ebf3aff449724987ce690b34b877bda0124f7,ea9ebf3a,Diarization shows progressDialog,"Diarization shows progressDialog
+
+- diarization split into separate threads
+  - diarize()
+  - diarizationProgress()
+- processor Speed is calculated first time & stored
+- new helper methods
+  - how fast is the processor
+  - how long did meeting take (based on size of file in bytes)
+  - how long will it take to diarize
+- cleaned up redundant Strings in test
+- AudioEventProcessor.RECORDER_SAMPLE_RATE_IN_HZ is now public
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454426933,1454596943,6988c727c4a5aa37ef78eb8e5c3624f5c3ad78cc
+6988c727c4a5aa37ef78eb8e5c3624f5c3ad78cc,6988c727,Added toasting around diarization failures,"Added toasting around diarization failures
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454549150,1454549155,147a79678d781f1b27ebc3e4167a73778f95868a
+147a79678d781f1b27ebc3e4167a73778f95868a,147a7967,Merge pull request #31 from blabbertabber/lium-integration,"Merge pull request #31 from blabbertabber/lium-integration
+
+Diarization generates .seg files",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1454328756,1454328756,"58bd02dcdafdca2a3fd2974feaad3a851c643f9e,35571620826d9d308cbbeca73d938ad6b228ae5b"
+58bd02dcdafdca2a3fd2974feaad3a851c643f9e,58bd02dc,Merge pull request #32 from blabbertabber/new-icons,"Merge pull request #32 from blabbertabber/new-icons
+
+RecordingActivity's revamped screen",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1454328697,1454328697,"61798839245d15b6f8b2e1ce74693d015ff4ce23,bc89c5b5c34baf28176e76491c4b9b56b6066496"
+bc89c5b5c34baf28176e76491c4b9b56b6066496,bc89c5b5,RecordingActivity's revamped screen,"RecordingActivity's revamped screen
+
+- icons are play/pause, rewind, stop
+- icons have text underneath them
+- tapping the red circle has the same effect as toggling the
+  play/pause button
+- README has new RecordingActivity screenshot
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454291630,1454291995,61798839245d15b6f8b2e1ce74693d015ff4ce23
+35571620826d9d308cbbeca73d938ad6b228ae5b,35571620,Diarization generates .seg files,"Diarization generates .seg files
+
+- There is no .seg file; it should be .uem.seg
+- comment out useless code
+  Fix java.io.FileNotFoundException: /sdcard/linSegMeasures: open failed: EACCES (Permission denied)
+  I don't think we need that line of code (that writes the file).
+  The file is never read, and attempting to write it causes an error:
+- Added blas.jar (Basic Linear Algebra Subprograms)
+  Fixes `java.lang.NoClassDefFoundError: Failed resolution of: Lorg/netlib/blas/Ddot;`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454283009,1454289348,61798839245d15b6f8b2e1ce74693d015ff4ce23
+61798839245d15b6f8b2e1ce74693d015ff4ce23,61798839,Merge pull request #30 from blabbertabber/statsActivity,"Merge pull request #30 from blabbertabber/statsActivity
+
+Navigation Drawer options to view all output files",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1454272284,1454272284,"aa9a14cf5361f9f11b1b7b341684c8d813118024,24bb3848d29d890d7d2fc665512dc60db51737ca"
+24bb3848d29d890d7d2fc665512dc60db51737ca,24bb3848,NavigationDrawer has options to view every output file,"NavigationDrawer has options to view every output file
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454270955,1454270955,ca835281dee9aef1d063176e7d270155d7632131
+ca835281dee9aef1d063176e7d270155d7632131,ca835281,don't clobber .mfc; view .mfc not .l.seg,"don't clobber .mfc; view .mfc not .l.seg
+
+future: see ALL the generated output for debugging
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454255061,1454255061,aa9a14cf5361f9f11b1b7b341684c8d813118024
+aa9a14cf5361f9f11b1b7b341684c8d813118024,aa9a14cf,Added new SpeakerStatsActivity activity.  Display .l.seg file.,"Added new SpeakerStatsActivity activity.  Display .l.seg file.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1454225287,1454225287,affaac8e8ee1837d871c2797fead74f0733b7ebb
+affaac8e8ee1837d871c2797fead74f0733b7ebb,affaac8e,Added Linear Segmentation and Clusterization,"Added Linear Segmentation and Clusterization
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1454190402,1454190402,e81966194555d0a7d6a107a4c3ca4ee9f2479d40
+e81966194555d0a7d6a107a4c3ca4ee9f2479d40,e8196619,Mel Frequency Cepstral Coefficients are generated to a file,"Mel Frequency Cepstral Coefficients are generated to a file
+
+""What's the deal with these Mel Frequency Coefficients anyway?
+Their delineations are completely subjective.""
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454186181,1454186212,c3f8122e22f201cae3860b2d57f27cad86db20ca
+c3f8122e22f201cae3860b2d57f27cad86db20ca,c3f8122e,sphinx4_config.xml is in correct assets directory,"sphinx4_config.xml is in correct assets directory
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454185183,1454185183,02d4482ac142b7ebbe27fd06a0726e10cd982106
+02d4482ac142b7ebbe27fd06a0726e10cd982106,02d4482a,RecordingActivity copies Sphinx4's config file into place,"RecordingActivity copies Sphinx4's config file into place
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1454183048,1454183048,1a94f0746bc66f57d88a6aacbc56853835142859
+1a94f0746bc66f57d88a6aacbc56853835142859,1a94f074,Helper method to copy InputStream to file,"Helper method to copy InputStream to file
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1454181809,1454181809,30ca6aa81486a45beac483edfa344cfca9d6e98b
+30ca6aa81486a45beac483edfa344cfca9d6e98b,30ca6aa8,Merge pull request #29 from blabbertabber/acknowledgements,"Merge pull request #29 from blabbertabber/acknowledgements
+
+AcknowledgementsActivity displays gratitude",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1453988306,1453988306,"9e66d24cfb44d3309e3601abf2c5039d9b395a2a,ad36b88ae9dd520f8486d619e99beccb1b9a2675"
+ad36b88ae9dd520f8486d619e99beccb1b9a2675,ad36b88a,AcknowledgementsActivity displays gratitude,"AcknowledgementsActivity displays gratitude
+
+""nanos gigantum humeris insidentes"" --Bernard of Chartres
+
+- backfilled tests for SummaryActivity's NavigationDrawer
+- re-organized methods to more closely follow UI
+- updated build.gradle to fix open() causing
+  `java.lang.IncompatibleClassChangeError:
+  android.support.design.internal.NavigationMenuView`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1453730092,1453904769,9e66d24cfb44d3309e3601abf2c5039d9b395a2a
+9e66d24cfb44d3309e3601abf2c5039d9b395a2a,9e66d24c,Code reformatted,"Code reformatted
+
+also put ""private"" in front of notifier Thread
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1453728964,1453728964,c065d748443970af9bf790096a308ef31c634dcf
+c065d748443970af9bf790096a308ef31c634dcf,c065d748,Start the notifier thread.,"Start the notifier thread.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453688417,1453688417,18ac70444630b48aae53d8631f35971c3e0f6a46
+18ac70444630b48aae53d8631f35971c3e0f6a46,18ac7044,"Added AudioRecorReal and AudioRecordEmulator, and associated changes.","Added AudioRecorReal and AudioRecordEmulator, and associated changes.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453687931,1453687931,0acaf05d94f75c3bbd21348a4301d111dc03091b
+0acaf05d94f75c3bbd21348a4301d111dc03091b,0acaf05d,Started creating AudioRecordAbstract class.,"Started creating AudioRecordAbstract class.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453577455,1453577455,f3ca75dd0270f4d791bb0d8f4c43da2a174b896e
+f3ca75dd0270f4d791bb0d8f4c43da2a174b896e,f3ca75dd,"Fixed resume, reset, restart meeting.","Fixed resume, reset, restart meeting.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453567794,1453567794,fb72ead0cf3743757ff2814e706baa52e26dd809
+fb72ead0cf3743757ff2814e706baa52e26dd809,fb72ead0,Continued refactoring of event-driven audio.,"Continued refactoring of event-driven audio.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453073995,1453073995,05f998f92df3fff8cfc95a739e6097a2a7cdc0f5
+05f998f92df3fff8cfc95a739e6097a2a7cdc0f5,05f998f9,Continued refactoring to make audio event-driven.,"Continued refactoring to make audio event-driven.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1453046715,1453046715,4f091c39051f24e19d768668eaa450c0d9ed102c
+4f091c39051f24e19d768668eaa450c0d9ed102c,4f091c39,Added recording check.,"Added recording check.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452971874,1452971874,ebf50302db5fb2449870f20e28dd60bdaf94e5ff
+ebf50302db5fb2449870f20e28dd60bdaf94e5ff,ebf50302,Created initial AudioEventProcessor class.,"Created initial AudioEventProcessor class.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452971501,1452971501,3b1c08716958fce403633cd48b5cb1bbbbdd4d0a
+3b1c08716958fce403633cd48b5cb1bbbbdd4d0a,3b1c0871,Fixed restart when requesting RECORD_AUDIO permission.,"Fixed restart when requesting RECORD_AUDIO permission.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452735978,1452735978,7798c0cd1bbd083e2592a571429b53e55447b7ca
+7798c0cd1bbd083e2592a571429b53e55447b7ca,7798c0cd,clean-up after FORCE PUSH,"clean-up after FORCE PUSH
+
+- reduce repo size from 60MB -> 6MB using these instructions
+  [https://github.com/CodeBlastr/Zuha/wiki/Git-Reduce-Repo-Size](https://github.com/CodeBlastr/Zuha/wiki/Git-Reduce-Repo-Size)
+- `git push --force`
+- move libs to directory that is NOT absolute
+  (previously only worked if your android directory was
+  `/brendancunnie/AndroidStudioProjects/BlabberTabber/`
+- passed tests
+- ran okay
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452442108,1452442108,e8c117083c49eb9faac3450e15f2d7bdf7936ce5
+e8c117083c49eb9faac3450e15f2d7bdf7936ce5,e8c11708,Call older version of LIUM with different parameters.,"Call older version of LIUM with different parameters.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452363682,1452363682,6ab8a0bd4d3637ac80fc37e141e2392fefd291f1
+6ab8a0bd4d3637ac80fc37e141e2392fefd291f1,6ab8a0bd,Resolved constant removed in lates rebase.,"Resolved constant removed in lates rebase.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1452361413,1452361413,7b25891e49bfd928bae73b87e21764905ad1ff0d
+7b25891e49bfd928bae73b87e21764905ad1ff0d,7b25891e,Used correct libraries and lium version.,"Used correct libraries and lium version.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1452359988,1452360599,017dceb3f9d340b8bc85678e1d20d1c0aa6b7076
+017dceb3f9d340b8bc85678e1d20d1c0aa6b7076,017dceb3,WIP: checking in bloat,"WIP: checking in bloat
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451682021,1452360599,db62b92291a49d7cadb75895d6b7324e367cb82d
+db62b92291a49d7cadb75895d6b7324e367cb82d,db62b922,WIP (broken): attempt at integrating LIUM .jar,"WIP (broken): attempt at integrating LIUM .jar
+
+Error:com.android.dx.cf.iface.ParseException: class name (GetoptDemo)
+does not match path (gnu/getopt/GetoptDemo.class)
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451657621,1452360599,8f15d5509d157d949d7185e4c7ad54c4cdaa87e0
+8f15d5509d157d949d7185e4c7ad54c4cdaa87e0,8f15d550,Trying to integrate LIUM .jar into BlabberTabber,"Trying to integrate LIUM .jar into BlabberTabber
+
+...but not succeeding.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451270695,1452360599,14e0a9d1398393b06749b19729e662de27236b5d
+14e0a9d1398393b06749b19729e662de27236b5d,14e0a9d1,Merge pull request #28 from blabbertabber/remove_WRITE_EXTERNAL_STORAGE_permission,"Merge pull request #28 from blabbertabber/remove_WRITE_EXTERNAL_STORAGE_permission
+
+Remove write external storage permission",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451882264,1451882264,"06a952452e96f8fdc7dde00a414deba7431cb173,63696e9d22073970038dd3517a14f3748e179a30"
+63696e9d22073970038dd3517a14f3748e179a30,63696e9d,Got writing to world-readable file working!,"Got writing to world-readable file working!
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451881943,1451881943,6a9f915a1ec70cf5910e1bee379cf3fd56b87597
+6a9f915a1ec70cf5910e1bee379cf3fd56b87597,6a9f915a,WIP.  Making .wav file world readable.,"WIP.  Making .wav file world readable.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451881282,1451881282,04716b6f0bf1fd95cb213d1d659800d9059894ce
+04716b6f0bf1fd95cb213d1d659800d9059894ce,04716b6f,Removed WRITE_EXTERNAL_STORAGE permission from manifest.,"Removed WRITE_EXTERNAL_STORAGE permission from manifest.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451873128,1451873128,06a952452e96f8fdc7dde00a414deba7431cb173
+06a952452e96f8fdc7dde00a414deba7431cb173,06a95245,Added tests to AudioRecordWrapper.,"Added tests to AudioRecordWrapper.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451174902,1451174902,a14ae7b8f36da74368344f25675862c9dc8a97ba
+a14ae7b8f36da74368344f25675862c9dc8a97ba,a14ae7b8,Merge pull request #27 from blabbertabber/pause-recording,"Merge pull request #27 from blabbertabber/pause-recording
+
+Recording while RecordingActivity is being destroyed",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1451172794,1451172794,"94e3481ad8bb3f09076e60c000f24a8a469cf6b8,a8cf7446570db393bb124ac6d5a71757be41723d"
+a8cf7446570db393bb124ac6d5a71757be41723d,a8cf7446,"Pause, New Meeting, Recording during rotation works","Pause, New Meeting, Recording during rotation works
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451172290,1451172290,7631fe223b29e715053902840bb2e2b7c695264e
+7631fe223b29e715053902840bb2e2b7c695264e,7631fe22,WIP: trying to achieve stable RecordingActivity create/destroy,"WIP: trying to achieve stable RecordingActivity create/destroy
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1451162963,1451162963,219ea18a22f2c25c82d3f4c93b114e2a8839d60f
+219ea18a22f2c25c82d3f4c93b114e2a8839d60f,219ea18a,"WIP: reset, pause work","WIP: reset, pause work
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450908436,1450908436,94e3481ad8bb3f09076e60c000f24a8a469cf6b8
+94e3481ad8bb3f09076e60c000f24a8a469cf6b8,94e3481a,Merge pull request #26 from blabbertabber/three-icons,"Merge pull request #26 from blabbertabber/three-icons
+
+Recording Activity has three icons instead of four",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1450748707,1450748707,"2562f281255c7260804ff67f11b48e6821c7da27,3b8de4d7666395fd5c531744e441148365a6aa3c"
+3b8de4d7666395fd5c531744e441148365a6aa3c,3b8de4d7,README has screenshot of new RecordingActivity,"README has screenshot of new RecordingActivity
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450746810,1450746810,310af1c44c02976e4f730583c5b5a7734c840757
+310af1c44c02976e4f730583c5b5a7734c840757,310af1c4,added javadoc comments to Timer class,"added javadoc comments to Timer class
+
+- also added another test just to be sure
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450736182,1450736182,1bd4a7703a8af287311c06fad366d1e6109adac4
+1bd4a7703a8af287311c06fad366d1e6109adac4,1bd4a770,New Timer class with tests,"New Timer class with tests
+
+needed to keep track of a meeting's duration. We need this foundation
+before we implement the ""pause"" button (we have a pause button, but it
+doesn't pause the meeting, just the animation).
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450735513,1450735513,f6be4638ad598e0b8aede67b8bcfb06e0c1ce7cd
+f6be4638ad598e0b8aede67b8bcfb06e0c1ce7cd,f6be4638,Small code cleanups,"Small code cleanups
+
+- eliminated empty test
+- updated comment to include new Volume range
+- removed comment-cruft
+- used System.currentTimeMillis() instead of new Date().getTime(); to save µseconds
+- set ""unPause"" button to hidden invisibility (just to be sure)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450735260,1450735260,617b5ce64bdd0669b0ae3dd0e10cfec637aa4f1c
+617b5ce64bdd0669b0ae3dd0e10cfec637aa4f1c,617b5ce6,RecordingActivity has a toggle button to pause/record,"RecordingActivity has a toggle button to pause/record
+
+Merge RecordingActivity's Record & Pause button into a toggle button.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450702863,1450702863,2562f281255c7260804ff67f11b48e6821c7da27
+2562f281255c7260804ff67f11b48e6821c7da27,2562f281,Sample at twice the AudioRecord buffer size,"Sample at twice the AudioRecord buffer size
+
+otherwise the recorded audio is choppy.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450623302,1450623302,ea585673d680ccc6ac1e2134801bbb0bc588fd9c
+ea585673d680ccc6ac1e2134801bbb0bc588fd9c,ea585673,Merge pull request #25 from blabbertabber/animation-tweak,"Merge pull request #25 from blabbertabber/animation-tweak
+
+Animation tweaks",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1450622173,1450622173,"3c1582456c0647c54870c45f15a55e0a6c7b0000,ad7a1ff7c857bb3ae4f6eca877cada89e9c1a56b"
+ad7a1ff7c857bb3ae4f6eca877cada89e9c1a56b,ad7a1ff7,PieSlices reflect the recorded volume,"PieSlices reflect the recorded volume
+
+Recorder
+- changed getSpeakerVolume() call interval from 50ms to 100ms (our frame period is 100ms)
+
+DeviceRecorder
+- changed speakerVolume from 0-100 to 0-32767
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450621570,1450621570,12c968a69cb27c33184e73882277d2b7f42d3e89
+12c968a69cb27c33184e73882277d2b7f42d3e89,12c968a6,RecordingActivity's extraneous Toast messages are gone,"RecordingActivity's extraneous Toast messages are gone
+
+- removed Toast messages confirming the pressing of buttons--they had
+  outlived their usefulness
+- refactored onPause() and onResume() code into pause() and record()
+- lighter colors on top (yellow), darker on bottom (blue)
+- PieSlices' starting point is at the top, so when the animation slows
+  it appears that it's fighting gravity, a more natural look
+- fixed bug where animations would be frozen if switching back from
+  another activity
+
+Changed the severity for frequently-called (more than several times a
+second) Log.i() to Log.v().
+
+TheAudioRecord
+- removed debugging Log.i()
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450619254,1450619254,8a63ba7a3c55ca74ddde067cc12436792b32487f
+8a63ba7a3c55ca74ddde067cc12436792b32487f,8a63ba7a,Buttons Reset and Pause are better integrated with animation,"Buttons Reset and Pause are better integrated with animation
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450574375,1450574375,3c1582456c0647c54870c45f15a55e0a6c7b0000
+3c1582456c0647c54870c45f15a55e0a6c7b0000,3c158245,Commented endianness of data record array.,"Commented endianness of data record array.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450564478,1450564478,36970547f40c3f8cccae1e1409e41c522dab208f
+36970547f40c3f8cccae1e1409e41c522dab208f,36970547,"Write PCM data in byte[], not short.","Write PCM data in byte[], not short.
+
+The performance of writeShort is awful.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450562668,1450562668,a782c4825a49dbfadaed4c6cb3f7b98851a41bf9
+a782c4825a49dbfadaed4c6cb3f7b98851a41bf9,a782c482,Javadoc'd up all the classes.,"Javadoc'd up all the classes.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450543254,1450543254,e771142ede54ea61a8ea48cb0ef452a32bdf9e18
+e771142ede54ea61a8ea48cb0ef452a32bdf9e18,e771142e,Merge pull request #24 from blabbertabber/scaled-icons,"Merge pull request #24 from blabbertabber/scaled-icons
+
+Bigger Button Icons, Animations",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1450412769,1450412769,"34416a189351b51afb6ba49de2c80e977e6505a2,ed1d396e0e83371c9288a8f1463111a860443859"
+34416a189351b51afb6ba49de2c80e977e6505a2,34416a18,"Revert ""README has screenshot with bigger icons""","Revert ""README has screenshot with bigger icons""
+
+This reverts commit 5bba0a2893b48fb2424e21c7c12d1b641c9b87e1.
+
+It should never have been committed directly to develop.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450412723,1450412723,e87824bf9432d88f3bdd15319dbb2efaa06b56f5
+ed1d396e0e83371c9288a8f1463111a860443859,ed1d396e,Deleted unused files,"Deleted unused files
+
+- PieChart.java
+- miscellaneous XML files before PieSlice becamse a class
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450408449,1450408449,be8a7a6698556d13abd4ff73076d1a0d94d190aa
+be8a7a6698556d13abd4ff73076d1a0d94d190aa,be8a7a66,"README has screenshot with bigger icons, summary icons","README has screenshot with bigger icons, summary icons
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450406561,1450408135,4ccb89ff693d13e05242f5eb5631a0b31b4609a0
+e87824bf9432d88f3bdd15319dbb2efaa06b56f5,e87824bf,README has screenshot with bigger icons,"README has screenshot with bigger icons
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450406561,1450406561,b08ee34b2132d29f926f5520341faf190a43b849
+4ccb89ff693d13e05242f5eb5631a0b31b4609a0,4ccb89ff,Animations work properly,"Animations work properly
+
+- called in onResume, called off in onPause, pause
+
+- there is a stuttering effect
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450405840,1450405840,31f38fd1104e49fa5260ea103d7b30ca4311d414
+31f38fd1104e49fa5260ea103d7b30ca4311d414,31f38fd1,WIP: laying groundwork for animations,"WIP: laying groundwork for animations
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450363883,1450363883,fa01871d4a98324b06bbc9b16795a5f9f5920ce0
+fa01871d4a98324b06bbc9b16795a5f9f5920ce0,fa01871d,"RecordingActivity has 3 pie slices: Red, Yellow, Blue","RecordingActivity has 3 pie slices: Red, Yellow, Blue
+
+- PieSlice is a View
+- PieSlice has custom attributes that can be set in layout XML
+  - color
+  - startAngle
+  - sweepAngle
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450355488,1450355488,de8a468c36a7481e2cb24d5ccc2ead6adf7d1c14
+de8a468c36a7481e2cb24d5ccc2ead6adf7d1c14,de8a468c,RecordingActivity does not record until permission is granted,"RecordingActivity does not record until permission is granted
+
+RecordingActivity would attempt to start recoring as soon as
+RECORD_AUDIO was granted, but it needed to also make sure
+the WRITE_EXTERNAL_STORAGE was also granted.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450352466,1450352466,741a20775188fec8a3a2f5b8a6c0b98b06bd563f
+741a20775188fec8a3a2f5b8a6c0b98b06bd563f,741a2077,"Big yellow pie slice: no rotation, no scaling.","Big yellow pie slice: no rotation, no scaling.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450351054,1450351054,bbad603d743eb8b933ea780a1ffe3eb3597d5ef2
+bbad603d743eb8b933ea780a1ffe3eb3597d5ef2,bbad603d,Speaker colors are 31% transparent,"Speaker colors are 31% transparent
+
+Colors are transparent.  Charlotte said, ""70% transparency is
+what I used on my mock-ups."" It gives the colors a nice, pastel-ish
+hue.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450127499,1450127499,b43e79403133ecf389049fdf969251add5f9e26a
+b43e79403133ecf389049fdf969251add5f9e26a,b43e7940,RecordingActivity's Icons are three times bigger,"RecordingActivity's Icons are three times bigger
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450104585,1450104585,b08ee34b2132d29f926f5520341faf190a43b849
+b08ee34b2132d29f926f5520341faf190a43b849,b08ee34b,Replaced buttons with icons.,"Replaced buttons with icons.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450046854,1450046854,e51ed6b9483917e16ca7376b86b188b91077447f
+e51ed6b9483917e16ca7376b86b188b91077447f,e51ed6b9,Icons instead of text in record activity.,"Icons instead of text in record activity.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1450041321,1450041321,32ca1313f4353517dca2452b8b8e59b121718f02
+32ca1313f4353517dca2452b8b8e59b121718f02,32ca1313,Merge pull request #23 from blabbertabber/playback-and-rush,"Merge pull request #23 from blabbertabber/playback-and-rush
+
+User can playback meeting",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1450018717,1450018717,"51b8fc891ca806b1db02f807bb1485418e5bb1f8,ec36c9e87b65d5666d0caefe9dfc4183b40f2438"
+ec36c9e87b65d5666d0caefe9dfc4183b40f2438,ec36c9e8,User can playback meeting,"User can playback meeting
+
+- Also can display splash screen again
+- Rush Limbaugh Easter Egg
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449971154,1449971154,51b8fc891ca806b1db02f807bb1485418e5bb1f8
+51b8fc891ca806b1db02f807bb1485418e5bb1f8,51b8fc89,Merge pull request #22 from blabbertabber/hamburger,"Merge pull request #22 from blabbertabber/hamburger
+
+Navigation Drawer on SummaryActivity for debug options",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1449941219,1449941219,"5982b1ec932159153d7636a964ddb30bd2784119,ecef8ac9b23ee865344d4c7f0c5311eb3b38cad8"
+ecef8ac9b23ee865344d4c7f0c5311eb3b38cad8,ecef8ac9,Removed commented-out invalidationOptionsMenu(),"Removed commented-out invalidationOptionsMenu()
+
+wasn't needed; we don't use an OptionsMenu.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449928564,1449928564,8bdbf6aa7688104b92d608ffcf31863fe6658100
+8bdbf6aa7688104b92d608ffcf31863fe6658100,8bdbf6aa,Navigation Drawer which lets you replay meeting,"Navigation Drawer which lets you replay meeting
+
+It only performs a Toast call, but in the future
+you can pass an Intent to playback the meeting.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449928233,1449928233,efcfcc7c46bd3b33227c964ec833d06076eb8794
+efcfcc7c46bd3b33227c964ec833d06076eb8794,efcfcc7c,WIP: NavigationView requires AppCompat theme,"WIP: NavigationView requires AppCompat theme
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449760145,1449760145,b69e11b828d8a8a64b3766e8ce8192877d27fca0
+b69e11b828d8a8a64b3766e8ce8192877d27fca0,b69e11b8,WIP: still struggling with Navigationview Drawer,"WIP: still struggling with Navigationview Drawer
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449581344,1449581344,ef4c12be965a438d95688123632df6754fb216a8
+ef4c12be965a438d95688123632df6754fb216a8,ef4c12be,WIP Nav Drawer. NullPointerException,"WIP Nav Drawer. NullPointerException
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449491080,1449491080,14da720ffb0af64849b968008b239ce09b2bbd92
+14da720ffb0af64849b968008b239ce09b2bbd92,14da720f,"Replaced -1, -52 with constants.","Replaced -1, -52 with constants.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449418137,1449437250,25ac635979b69985f6afa5b7b56681094dd5ef99
+25ac635979b69985f6afa5b7b56681094dd5ef99,25ac6359,WIP: adding navbar to SummaryActivity,"WIP: adding navbar to SummaryActivity
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449418638,1449418638,c2fcfdf12e809e2ebb45ebf60e0192e3ce1e5216
+5982b1ec932159153d7636a964ddb30bd2784119,5982b1ec,"Replaced -1, -52 with constants.","Replaced -1, -52 with constants.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449418137,1449418137,c2fcfdf12e809e2ebb45ebf60e0192e3ce1e5216
+c2fcfdf12e809e2ebb45ebf60e0192e3ce1e5216,c2fcfdf1,README's references include Daniel's senior thesis,"README's references include Daniel's senior thesis
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449355510,1449355510,332d5d47a49b4fad93513f9403a9536efc25056d
+332d5d47a49b4fad93513f9403a9536efc25056d,332d5d47,"""Thank you, Daniel Di Matteo"" & new screenshots","""Thank you, Daniel Di Matteo"" & new screenshots
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449346782,1449346782,74f89f7423c27e0130be14adad68629cb0048e38
+74f89f7423c27e0130be14adad68629cb0048e38,74f89f74,Added error handling if the microphone is already in use.,"Added error handling if the microphone is already in use.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449342210,1449342210,e9349015c160a22a7a18e65ac6649c5c80cf416c
+e9349015c160a22a7a18e65ac6649c5c80cf416c,e9349015,Added logging to WavFile.,"Added logging to WavFile.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449336281,1449336281,53b79a294b2c6bffbb3639558181ea1f09b3e129
+53b79a294b2c6bffbb3639558181ea1f09b3e129,53b79a29,Created the skeleton of factory methods to construct a WavFile.,"Created the skeleton of factory methods to construct a WavFile.
+Added unit tests related to generated file path.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449332103,1449332103,517c491e209b892e6e0f7dbe8c36d4c2c0dbe677
+517c491e209b892e6e0f7dbe8c36d4c2c0dbe677,517c491e,Merge pull request #21 from blabbertabber/new-layout,"Merge pull request #21 from blabbertabber/new-layout
+
+Change theme from light-on-dark to dark-on-light",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1449327794,1449327794,"19d18a6aa161032625a43c408fa9b2f73e183d13,cbf1374f61363f9ee356fa16812e3bf3d8678d17"
+cbf1374f61363f9ee356fa16812e3bf3d8678d17,cbf1374f,"One big circle, not 16. Black-on-white.","One big circle, not 16. Black-on-white.
+
+- used black-on-white (gray-on-white) theme
+- used circle-in-circle-in-square for spacing
+- got rid of the long-unused ""play"" icon
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449324693,1449324693,d84ab929bf9a49742a2983afb995277cb158d015
+d84ab929bf9a49742a2983afb995277cb158d015,d84ab929,WIP: downsizing from 16 speaker balls to 1,"WIP: downsizing from 16 speaker balls to 1
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449110918,1449110918,c90f08edf33ba1aacb54bfa3f0c2ef9bbcc30817
+c90f08edf33ba1aacb54bfa3f0c2ef9bbcc30817,c90f08ed,Change theme from light-on-dark to dark-on-light,"Change theme from light-on-dark to dark-on-light
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1449029915,1449029915,19d18a6aa161032625a43c408fa9b2f73e183d13
+19d18a6aa161032625a43c408fa9b2f73e183d13,19d18a6a,Beginnings of Raw -> Wav convertor.,"Beginnings of Raw -> Wav convertor.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1448812681,1448812745,aab7f56c1c382b503ad4c360e5f1e8e1097a5095
+aab7f56c1c382b503ad4c360e5f1e8e1097a5095,aab7f56c,Merge pull request #20 from blabbertabber/return-of-the-emulator,"Merge pull request #20 from blabbertabber/return-of-the-emulator
+
+EmulatorRecorder is needed for Mac Pro Emulator",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448808109,1448808109,"d532d4eb73b5ec1d898b100195434170cb73523a,65741f66ed7536d10d773dec596021d207e44c43"
+65741f66ed7536d10d773dec596021d207e44c43,65741f66,EmulatorRecorder is needed for Mac Pro Emulator,"EmulatorRecorder is needed for Mac Pro Emulator
+
+- Mac Pro (Brian) emulator throws exception when trying to capture audio
+- MacBook Pro (Brendan) captures audio w/out problem
+
+Fixes:
+
+```
+Could not get audio input for record source 0, sample rate 16000, format 0x1, channel mask 0x10, session 14, flags 0
+java.lang.IllegalStateException: startRecording() called on an uninitialized AudioRecord.
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448807496,1448807496,d532d4eb73b5ec1d898b100195434170cb73523a
+d532d4eb73b5ec1d898b100195434170cb73523a,d532d4eb,Merge pull request #19 from blabbertabber/gradle-upgrade,"Merge pull request #19 from blabbertabber/gradle-upgrade
+
+Record to a file",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448737011,1448737011,"62819283e7f5eaa2a5e1d90cc789daadb7f50143,078e3fb4d42694077c8971c49857d68375c6ca86"
+078e3fb4d42694077c8971c49857d68375c6ca86,078e3fb4,Record to a file,"Record to a file
+
+- file is .raw, not .wav
+- 16,000 sampling, 1 channel, 16-bit PCM
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448736787,1448736787,07fa2187785291e129fafce1f0dfabb29dac6118
+62819283e7f5eaa2a5e1d90cc789daadb7f50143,62819283,Merge pull request #18 from blabbertabber/gradle-upgrade,"Merge pull request #18 from blabbertabber/gradle-upgrade
+
+Upgrade versions of libraries, gradle, etc...",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448730881,1448730881,"d591df495566720f8b6349c6a1716aad91348103,07fa2187785291e129fafce1f0dfabb29dac6118"
+07fa2187785291e129fafce1f0dfabb29dac6118,07fa2187,"Upgrade versions of libraries, gradle, etc...","Upgrade versions of libraries, gradle, etc...
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448725940,1448725940,d591df495566720f8b6349c6a1716aad91348103
+d591df495566720f8b6349c6a1716aad91348103,d591df49,Create destination subdirectory and file for sound data.,"Create destination subdirectory and file for sound data.
+
+- removed now-unneeded EmulatorRecorder (apparently emulator DOES do sound)
+- added SDK 23 callback permissions to write external storage
+- created BlabberTabber directory to not write in root (no need for sloppiness)
+- added the LIUM .jar file, but not using it yet
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448650483,1448650483,b65bd8e6e97d9decfa67d6095e987945b693895a
+b65bd8e6e97d9decfa67d6095e987945b693895a,b65bd8e6,Merge pull request #17 from blabbertabber/audiorecord,"Merge pull request #17 from blabbertabber/audiorecord
+
+AudioRecord replaces MediaRecorder",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448425308,1448425308,"a3c85bb71786ae400664ce200a2aa61c46218a4f,e9dd8b342e4fe23de5b7d5618510dec56ddbcaab"
+e9dd8b342e4fe23de5b7d5618510dec56ddbcaab,e9dd8b34,getMaxAmplitude() works!,"getMaxAmplitude() works!
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448415947,1448415947,031eaeea5640b611db3eaaf7b8c1147cd539a329
+031eaeea5640b611db3eaaf7b8c1147cd539a329,031eaeea,MediaRecorder is dead; long live AudioRecord,"MediaRecorder is dead; long live AudioRecord
+
+- getMaxAmplitude() needs to be written.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448407243,1448407243,f0092b9211d6b79e5fb6f125c4ec1683e6352b71
+f0092b9211d6b79e5fb6f125c4ec1683e6352b71,f0092b92,BestMicrophone uses static methods,"BestMicrophone uses static methods
+
+- no constructor(s)
+- default behavior: returns DEFAULT microphone instead of MIC
+- changes to BestMicrophoneTest
+  - assertion arguments are now in proper order (expected, actual)
+  - BestMicrophone is called using static methods
+  - test is updated to reflect new default behavior
+- comments explained why we didn't make BuildMODEL's methods static.
+- explained RecordingActivityTest failure the first time the app is
+  installed (permission dialog)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448379218,1448379603,a3c85bb71786ae400664ce200a2aa61c46218a4f
+a3c85bb71786ae400664ce200a2aa61c46218a4f,a3c85bb7,Merge pull request #15 from blabbertabber/icons-and-tweaks,"Merge pull request #15 from blabbertabber/icons-and-tweaks
+
+Charlotte's new icons",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448335164,1448335164,"12441464627db7a87e76ee16060498e8d327d8c9,d630cbfa4de6e21b2f09d20ab3f360734c65e433"
+12441464627db7a87e76ee16060498e8d327d8c9,12441464,Updated README,"Updated README
+
+- removed the build-failing icons; they no longer added value
+  and made it look like our build was broken
+- acknowledged Charlotte's logo
+- added shrunk-down screenshots
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448243189,1448243189,fde46eec3b6d96b456baeda8ffa8845e96bc8419
+d630cbfa4de6e21b2f09d20ab3f360734c65e433,d630cbfa,Charlotte's new icons,"Charlotte's new icons
+
+- SummaryActivity
+  - headers have legends (H:MM:SS)
+  - headers are right-justified
+  - smaller gap between stats at top and charts
+  - chart header ""Duration"" is right-justified
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448241082,1448241082,fde46eec3b6d96b456baeda8ffa8845e96bc8419
+fde46eec3b6d96b456baeda8ffa8845e96bc8419,fde46eec,Added share button.  Removed Email/SMS buttons.,"Added share button.  Removed Email/SMS buttons.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1448207576,1448207576,ecb0eff98242e33dc1d6b0aa9700adc65e802e05
+ecb0eff98242e33dc1d6b0aa9700adc65e802e05,ecb0eff9,Merge pull request #13 from blabbertabber/bars-and-durations,"Merge pull request #13 from blabbertabber/bars-and-durations
+
+Bars and durations",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448203050,1448203050,"33b3691bc57fb771ebb15d11004fc2e9b17d3ed6,1160663e4d13ee78692f65bf945dbfa7a20e78de"
+33b3691bc57fb771ebb15d11004fc2e9b17d3ed6,33b3691b,Merge pull request #14 from blabbertabber/feature/refactor_static_method,"Merge pull request #14 from blabbertabber/feature/refactor_static_method
+
+Make TestHelpers.getActivityInstance a static method.",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448202924,1448202924,"eab9548831bf47a99155c04a5dcfc9d806aa6ee7,86a59635d04acdcc34362ea9903cdf3d4d98ab3e"
+1160663e4d13ee78692f65bf945dbfa7a20e78de,1160663e,Fix last speaker's (least spoken) bar from drooping,"Fix last speaker's (least spoken) bar from drooping
+
+The last speaker's bar would shift a couple of pixels downward.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448200942,1448200942,d7a5ba807fa05fc2eb67e23add52da842601ad09
+d7a5ba807fa05fc2eb67e23add52da842601ad09,d7a5ba80,Bars are correct length and are vertical-centered,"Bars are correct length and are vertical-centered
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448199474,1448199474,da8b483857479bfa9c46cbc76688073e5b6f71d3
+86a59635d04acdcc34362ea9903cdf3d4d98ab3e,86a59635,Mase TestHelpers.getActivityInstance a static method.,"Mase TestHelpers.getActivityInstance a static method.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448196389,1448196389,eab9548831bf47a99155c04a5dcfc9d806aa6ee7
+da8b483857479bfa9c46cbc76688073e5b6f71d3,da8b4838,"Bar chart is working, but the lengths are off.","Bar chart is working, but the lengths are off.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448141438,1448141438,06044eddea08d03bd6ccbaac28d7c54db6ece9f9
+06044eddea08d03bd6ccbaac28d7c54db6ece9f9,06044edd,"Bars and durations; Bars don't work, durations do.","Bars and durations; Bars don't work, durations do.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448139459,1448139459,eab9548831bf47a99155c04a5dcfc9d806aa6ee7
+eab9548831bf47a99155c04a5dcfc9d806aa6ee7,eab95488,Added RectangleView.,"Added RectangleView.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448121419,1448121419,3b4cff00a66b969333eeeb7d0d699090b4766735
+3b4cff00a66b969333eeeb7d0d699090b4766735,3b4cff00,Merge pull request #12 from blabbertabber/permissions-23,"Merge pull request #12 from blabbertabber/permissions-23
+
+Permissions 23",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1448116853,1448116853,"7de364850ee02e25951feaaf735d165735d3ede2,68ca2ee03642fa3f94a8882a4a232cdd7b1e0ed3"
+68ca2ee03642fa3f94a8882a4a232cdd7b1e0ed3,68ca2ee0,RecordingActivity works on 2nd onResume(),"RecordingActivity works on 2nd onResume()
+
+previously it registered the listener the first time only.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448030017,1448030017,eea605755b195c813a944429096a611831eac2b8
+eea605755b195c813a944429096a611831eac2b8,eea60575,Fixes BlabberTabber for Marshmallow users,"Fixes BlabberTabber for Marshmallow users
+
+The crashes had nothing to do with MediaRecorder;
+instead, the problem was due to not adhering to the new
+permissions model.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1448023516,1448023516,7de364850ee02e25951feaaf735d165735d3ede2
+7de364850ee02e25951feaaf735d165735d3ede2,7de36485,Merge pull request #11 from blabbertabber/failing-test,"Merge pull request #11 from blabbertabber/failing-test
+
+Move register/unregister to onResume/OnPause instead of onStart/onStop",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1447990214,1447990214,"8f5c0d0439423e5ceee0a7b6673f1a7d8b63393a,72dc450e016603b2678ec13ecf3331db6710d17f"
+72dc450e016603b2678ec13ecf3331db6710d17f,72dc450e,Move register/unregister to onResume/OnPause instead of onStart/onStop,"Move register/unregister to onResume/OnPause instead of onStart/onStop
+
+fixes `Attempt to invoke virtual method 'void
+android.widget.ImageView.setVisibility(int)' on a null object reference`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447944532,1447944532,8f5c0d0439423e5ceee0a7b6673f1a7d8b63393a
+8f5c0d0439423e5ceee0a7b6673f1a7d8b63393a,8f5c0d04,Added speaker names,"Added speaker names
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1447900952,1447900952,5825f251aa65a00ab96270ec28503effd4f2c917
+5825f251aa65a00ab96270ec28503effd4f2c917,5825f251,Merge pull request #10 from blabbertabber/summary-screen,"Merge pull request #10 from blabbertabber/summary-screen
+
+Summary screen",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1447897114,1447897114,"64748a8893817714b9d5d883b0f0b5b0b60f279a,79e02fd9efa67e771ce500c0da7ddae8ebbf0ec0"
+79e02fd9efa67e771ce500c0da7ddae8ebbf0ec0,79e02fd9,TheSpeakers.getSortedSpeakerList() sorts Speakers,"TheSpeakers.getSortedSpeakerList() sorts Speakers
+
+- good for displaying them in the SummaryActivity
+- create TestHelpers class for tests to use
+- fixed MainActivity tests
+  - didn't account for not-the-first-time running application
+- Speakers now have names (it was bound to happen)
+- improved Speaker's comparator
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447894598,1447894598,8b18c5617b16c28f81f3dd270d445d1f338c1f36
+8b18c5617b16c28f81f3dd270d445d1f338c1f36,8b18c561,"Speaker is a Comparable; with tests, too","Speaker is a Comparable; with tests, too
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447818605,1447818605,3817037c33d6fe15e9c4b990edb59a6c61d6af50
+3817037c33d6fe15e9c4b990edb59a6c61d6af50,3817037c,Layout for summary screen: speakers & bars,"Layout for summary screen: speakers & bars
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447814194,1447814194,64748a8893817714b9d5d883b0f0b5b0b60f279a
+64748a8893817714b9d5d883b0f0b5b0b60f279a,64748a88,Pie Chart is centered and perfect circle,"Pie Chart is centered and perfect circle
+
+Also uses XML for layout, which is pretty damn cool.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1447602297,1447602297,b5477e00eaf75a522d04a25397a181668e22629f
+b5477e00eaf75a522d04a25397a181668e22629f,b5477e00,PieChart uses real speaker information.,"PieChart uses real speaker information.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447528718,1447528718,550116fde31244fc204d27eb1a200a9cb212b610
+550116fde31244fc204d27eb1a200a9cb212b610,550116fd,Very lame pie chart,"Very lame pie chart
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447524559,1447524647,9ab4bc6d3384a4330eb22c4ebfef663933c44b0b
+9ab4bc6d3384a4330eb22c4ebfef663933c44b0b,9ab4bc6d,Added Min and Max.,"Added Min and Max.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447516504,1447516504,e189c291ffa0a643feecdc71779de8e5b8094c61
+e189c291ffa0a643feecdc71779de8e5b8094c61,e189c291,Simplified TheSpeakers singleton constructor.,"Simplified TheSpeakers singleton constructor.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447514682,1447514682,9276df71d1d790c7c2e318efdb43d3d06be0cdb9
+9276df71d1d790c7c2e318efdb43d3d06be0cdb9,9276df71,Merge pull request #9 from blabbertabber/summary-screen,"Merge pull request #9 from blabbertabber/summary-screen
+
+Summary screen now has ""Start new meeting""",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1447514029,1447514029,"30835ace66306a37579b172e19d0b1e0ef23886d,f50f5ececc7891702fd0300421073c832f7aaffc"
+f50f5ececc7891702fd0300421073c832f7aaffc,f50f5ece,Speaker reset works properly,"Speaker reset works properly
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447513196,1447513196,dbd28369a2d47822090882a18adbfe34d8b886ea
+dbd28369a2d47822090882a18adbfe34d8b886ea,dbd28369,"You can now ""reset"" or ""start new meeting""","You can now ""reset"" or ""start new meeting""
+
+borked though; need to find a way to tell the service
+to reset the number of speakers
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447429485,1447429485,64ff19a7b3119c381b9df82282c3e77e79519e72
+64ff19a7b3119c381b9df82282c3e77e79519e72,64ff19a7,"Meeting duration is reported in seconds, not deciseconds","Meeting duration is reported in seconds, not deciseconds
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447419829,1447419829,30835ace66306a37579b172e19d0b1e0ef23886d
+30835ace66306a37579b172e19d0b1e0ef23886d,30835ace,Merge pull request #8 from blabbertabber/track-and-time,"Merge pull request #8 from blabbertabber/track-and-time
+
+Track and time",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1447292723,1447292723,"e07d96be5be5f68b5f0e674dac76e7b578a3a3cc,b8263ee793470f0660e0e405afcc063acae26a07"
+b8263ee793470f0660e0e405afcc063acae26a07,b8263ee7,Half-baked Summary Activity,"Half-baked Summary Activity
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447292316,1447292316,7e1d81f6790ceb25c77ed9945c19927b22fea22c
+7e1d81f6790ceb25c77ed9945c19927b22fea22c,7e1d81f6,Helper method to format strings properly,"Helper method to format strings properly
+
+used for duration methods
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447283371,1447283371,9044dc2e541f8364968ec04856a7231cc9ac5b5b
+9044dc2e541f8364968ec04856a7231cc9ac5b5b,9044dc2e,Summary Activity's layout is mostly complete,"Summary Activity's layout is mostly complete
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447167518,1447167518,847ed2b565aab31c49b0f4751b1cd6576cce6519
+847ed2b565aab31c49b0f4751b1cd6576cce6519,847ed2b5,speakers' times are recorded,"speakers' times are recorded
+
+Also began summary screen.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1447120942,1447120942,e07d96be5be5f68b5f0e674dac76e7b578a3a3cc
+e07d96be5be5f68b5f0e674dac76e7b578a3a3cc,e07d96be,Merge pull request #7 from blabbertabber/docs-and-tweaks,"Merge pull request #7 from blabbertabber/docs-and-tweaks
+
+Balls have consistent sizes, more dim. New screenshots",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1446994207,1446994207,"192a234f261241f9d98704ba6c42d8fa7d448437,b3fb0edea1859634770c6cc14e4a7b0f9bda34c7"
+b3fb0edea1859634770c6cc14e4a7b0f9bda34c7,b3fb0ede,"Balls have consistent sizes, more dim. New screenshots","Balls have consistent sizes, more dim. New screenshots
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446924472,1446924472,192a234f261241f9d98704ba6c42d8fa7d448437
+192a234f261241f9d98704ba6c42d8fa7d448437,192a234f,Restructured InterruptedException catching to avoid possible timing issue.,"Restructured InterruptedException catching to avoid possible timing issue.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446912967,1446912967,73deda5bd9a96a7e0c18fb56b065ef0f645e4bd8
+73deda5bd9a96a7e0c18fb56b065ef0f645e4bd8,73deda5b,Merge branch 'dots-and-balls' into develop,"Merge branch 'dots-and-balls' into develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1446909880,1446909880,"18d1ff5f5f38b4b5bda7a1da94f0497c768cf973,cb03573e2642e66322aa7ca668c9c8e1dbc228ff"
+cb03573e2642e66322aa7ca668c9c8e1dbc228ff,cb03573e,merged from develop,"merged from develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1446909867,1446909867,"28f7256d85c853e925945f75593e3731a2b27806,18d1ff5f5f38b4b5bda7a1da94f0497c768cf973"
+18d1ff5f5f38b4b5bda7a1da94f0497c768cf973,18d1ff5f,Merge branch 'stop-and-finish' into develop,"Merge branch 'stop-and-finish' into develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1446908925,1446908925,"f325502404f4ff941879c837d68af99477f56de9,203ee36f3bd5bc8c8a39a7a75c5e7a0ca65b3d0e"
+203ee36f3bd5bc8c8a39a7a75c5e7a0ca65b3d0e,203ee36f,merged from develop,"merged from develop
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1446908906,1446908906,"2c7ffa526e2ac5d8872eac688a8cc307e9caed9a,f325502404f4ff941879c837d68af99477f56de9"
+f325502404f4ff941879c837d68af99477f56de9,f3255024,Merge pull request #4 from blabbertabber/first-time,"Merge pull request #4 from blabbertabber/first-time
+
+Splash screen is displayed once, ever",,,,saintbrendan,saintbrendan@gmail.com,saintbrendan,saintbrendan@gmail.com,1446908489,1446908489,"3338675a506e2d9b29c8852db515e2bb0b3e459d,82d3620ff411ec235500ea59071747c00813835c"
+28f7256d85c853e925945f75593e3731a2b27806,28f7256d,Different colored balls are throbbing,"Different colored balls are throbbing
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446871911,1446871911,53b143f100c3de403b7cc9c4dd88541ce4928b39
+3338675a506e2d9b29c8852db515e2bb0b3e459d,3338675a,"Sample manifest updates Concourse, Stemcell, AWS CPI","Sample manifest updates Concourse, Stemcell, AWS CPI
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446869381,1446869381,02569767ccc87ff34b90d5d8ab7ba995d9c80c21
+53b143f100c3de403b7cc9c4dd88541ce4928b39,53b143f1,WIP; still need to dynamically set colors,"WIP; still need to dynamically set colors
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446735897,1446735897,35424f67908a4b7fcdcf5a1d23fe060e68dd4671
+35424f67908a4b7fcdcf5a1d23fe060e68dd4671,35424f67,"added ""Speaker"" and ""Speakers""","added ""Speaker"" and ""Speakers""
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446727063,1446727063,85d0baf22dcddfe55378418f5feabb7b9c868107
+2c7ffa526e2ac5d8872eac688a8cc307e9caed9a,2c7ffa52,"Buttons are ""Record"" ""Pause"" ""Reset"" ""Finish""","Buttons are ""Record"" ""Pause"" ""Reset"" ""Finish""
+
+Also, ""Finish"" terminates the App, finally
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446677366,1446677366,02569767ccc87ff34b90d5d8ab7ba995d9c80c21
+85d0baf22dcddfe55378418f5feabb7b9c868107,85d0baf2,"Cleared out a ton of old, commented-out code","Cleared out a ton of old, commented-out code
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446675310,1446675310,02569767ccc87ff34b90d5d8ab7ba995d9c80c21
+82d3620ff411ec235500ea59071747c00813835c,82d3620f,"Splash screen is displayed once, ever","Splash screen is displayed once, ever
+
+- android:noHistory=""true"" in AndroidManifest.xml
+  http://stackoverflow.com/questions/1898886/removing-an-activity-from-the-history-stack
+- Save settings persistently
+- got rid of android.permission.MODIFY_PHONE_STATE""; only system
+  Activities can use it.
+- no tests :-( I manually tested but couldn't figure out an automated
+  test
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446664062,1446664062,02569767ccc87ff34b90d5d8ab7ba995d9c80c21
+02569767ccc87ff34b90d5d8ab7ba995d9c80c21,02569767,"Compiles correctly, dots move","Compiles correctly, dots move
+
+bugs:
+- dots are all same color
+- dots don't move back to starting position
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446469584,1446469584,e048689eeb78863c1e15c48729fb12a0a1ef6eae
+e048689eeb78863c1e15c48729fb12a0a1ef6eae,e048689e,Merge pull request #3 from robdimsdale/develop,"Merge pull request #3 from robdimsdale/develop
+
+Fix typo in README",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446186974,1446186974,"14b4c4af836e555fe33270cadfbb3983693895b8,f901b5f4cdedcbc5c0f5d417ecbbb522f716af98"
+f901b5f4cdedcbc5c0f5d417ecbbb522f716af98,f901b5f4,Fix typo in README,Fix typo in README,,,,Rob Dimsdale,robert.dimsdale@gmail.com,Rob Dimsdale,robert.dimsdale@gmail.com,1446095351,1446095351,14b4c4af836e555fe33270cadfbb3983693895b8
+14b4c4af836e555fe33270cadfbb3983693895b8,14b4c4af,Removed question which had been answered,"Removed question which had been answered
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446073090,1446073090,8f03117c278acbcb401af919bcd1d3316cdaec30
+8f03117c278acbcb401af919bcd1d3316cdaec30,8f03117c,Updated to latest release of Concourse,"Updated to latest release of Concourse
+
+added ""micro"" worker""
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1446072840,1446072840,a1519d550a39b52d04821990c873955dc2eebb7d
+a1519d550a39b52d04821990c873955dc2eebb7d,a1519d55,CHANGEME -> FIXME,"CHANGEME -> FIXME
+
+FIXME is highlight in vim",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1445864588,1445864588,c51c9071dac7c82c25bfbac04b042fdf36a84edd
+c51c9071dac7c82c25bfbac04b042fdf36a84edd,c51c9071,4x4 grid,"4x4 grid
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1445812949,1445812982,23212b1a485b5e4d5e2ef4ba7447f0f926b16ddc
+23212b1a485b5e4d5e2ef4ba7447f0f926b16ddc,23212b1a,Sample BOSH manifest for Concourse CI,Sample BOSH manifest for Concourse CI,,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1445715307,1445715307,8c4c30b714daf9966f096f7bc7d8d454e70c0d61
+8c4c30b714daf9966f096f7bc7d8d454e70c0d61,8c4c30b7,Sample BOSH manifest for bosh-init,"Sample BOSH manifest for bosh-init
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1445715055,1445715055,0457f855da90785dc72fd8120ff8f7683cceb465
+0457f855da90785dc72fd8120ff8f7683cceb465,0457f855,changed layout of listener circles.,"changed layout of listener circles.
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1445709118,1445709118,47eabaed0b81ce8c684ac143c64c6112554a5d3b
+47eabaed0b81ce8c684ac143c64c6112554a5d3b,47eabaed,Acknowledging Gerald & Katya,"Acknowledging Gerald & Katya
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1445438348,1445438348,40d3b4faaedc435344ff4201b369eb2648d7e763
+40d3b4faaedc435344ff4201b369eb2648d7e763,40d3b4fa,"Vagrantfile: enable public IP, nested virtualization","Vagrantfile: enable public IP, nested virtualization
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444917091,1444917091,f4182cda3639fd865294f7652c93bdb366664714
+f4182cda3639fd865294f7652c93bdb366664714,f4182cda,Vagrantfile created via `vagrant init concourse/lite`,"Vagrantfile created via `vagrant init concourse/lite`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444916513,1444916513,274bf942cd205be946ee8ba0a6ab74d38f9ba720
+274bf942cd205be946ee8ba0a6ab74d38f9ba720,274bf942,"blabbertabber has Concourse tasks, really","blabbertabber has Concourse tasks, really
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444877513,1444877655,e3a3c03f0d2005736d06111bf4c5803caf0ef55d
+e3a3c03f0d2005736d06111bf4c5803caf0ef55d,e3a3c03f,Concourse pipeline blabbertabber has tasks,"Concourse pipeline blabbertabber has tasks
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444873436,1444873436,802fe724b5a43b4046df93e654160df855dd8f5b
+802fe724b5a43b4046df93e654160df855dd8f5b,802fe724,Moar Concourse!,"Moar Concourse!
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444873127,1444873127,a8736f5f5d3371bca0951d3d2383d7ef7bb5faa1
+a8736f5f5d3371bca0951d3d2383d7ef7bb5faa1,a8736f5f,Beginnings of Android Test Run,"Beginnings of Android Test Run
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444870229,1444870229,080e1d528f5c3e5c9f2985b027da8553eb9a6d7a
+080e1d528f5c3e5c9f2985b027da8553eb9a6d7a,080e1d52,First attempt at a Concourse pipeline,"First attempt at a Concourse pipeline
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444869703,1444869703,35309559c2cf71e40826922647662249312afb9a
+35309559c2cf71e40826922647662249312afb9a,35309559,Provide technical references in the README,"Provide technical references in the README
+
+We'll probably be looking at these quite a bit.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444658281,1444658281,b872adc78277c1c4cc8d2468afa7ff9924789889
+b872adc78277c1c4cc8d2468afa7ff9924789889,b872adc7,Update Travis to from android-22 to -23,"Update Travis to from android-22 to -23
+
+We had updated build.gradle but forgot to update .travis.yml
+
+fixes `failed to find target android-23 : /usr/local/android-sdk`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1444654903,1444654903,ac3deaabcff0f4a1caf28c3b058e02df09b86664
+ac3deaabcff0f4a1caf28c3b058e02df09b86664,ac3deaab,Upgrade targetsdkversion and compilesdkversion,"Upgrade targetsdkversion and compilesdkversion
+
+and some other stuff too
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444606981,1444606981,c9e3732bf4ff3ec19cc3e1f7e2572f7605d77798
+c9e3732bf4ff3ec19cc3e1f7e2572f7605d77798,c9e3732b,RecordingActivity is ALWAYS in portrait mode.,"RecordingActivity is ALWAYS in portrait mode.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1444604163,1444604163,38774a3542956e92fd4006f8e319c8d222870cdb
+38774a3542956e92fd4006f8e319c8d222870cdb,38774a35,"Renamed MediaRecorderSingleton to TheMediaRecorder, and associated","Renamed MediaRecorderSingleton to TheMediaRecorder, and associated
+changes.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444569985,1444574002,79211849e4c7789d98f09dae0ea4570c0a052daf
+79211849e4c7789d98f09dae0ea4570c0a052daf,79211849,MainActivity has become a Welcome Screen,"MainActivity has become a Welcome Screen
+
+- new welcome text
+- refactored to use
+     ALIGN_PARENT_START instead of ALIGN_PARENT_LEFT
+     ALIGN_PARENT_END instead of ALIGN_PARENT_RIGHT
+- button to launch RecordingActivity
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444497327,1444573939,9f0aa7d158490c1a257227d6b8dfd1663bdaddc4
+9f0aa7d158490c1a257227d6b8dfd1663bdaddc4,9f0aa7d1,Internationalize strings in RecordingActivity(),"Internationalize strings in RecordingActivity()
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444492804,1444573939,45e411ac0887c9272535c7582acbc61898eea047
+45e411ac0887c9272535c7582acbc61898eea047,45e411ac,"onReceive() uses more descriptive variables names (speaker, volume)","onReceive() uses more descriptive variables names (speaker, volume)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444491191,1444573939,d069058201fbfc741d1e6e4bddc85ca77bf38a15
+d069058201fbfc741d1e6e4bddc85ca77bf38a15,d0690582,RecordingActivity has buttons on the bottom,"RecordingActivity has buttons on the bottom
+
+- Toggle Recording
+- Stop Recording
+- Finish
+
+Also includes tests
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444490934,1444573758,dcbf87f762519eab8b027bfd164338fc839c137f
+dcbf87f762519eab8b027bfd164338fc839c137f,dcbf87f7,Needs .png extension to present just the screenshot,"Needs .png extension to present just the screenshot
+
+...instead of displaying HTML
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444571859,1444571859,c953167a1d5040c27fa8e727206593181c704d6b
+c953167a1d5040c27fa8e727206593181c704d6b,c953167a,imgur.com works better than Google w.r.t. embedded .png,"imgur.com works better than Google w.r.t. embedded .png
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1444571676,1444571676,5aba3329295ec231c7f5617ab71d30881d8d3388
+5aba3329295ec231c7f5617ab71d30881d8d3388,5aba3329,"Renamed MediaRecorderSingleton to TheMediaRecorder, and associated","Renamed MediaRecorderSingleton to TheMediaRecorder, and associated
+changes.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444569985,1444569985,c7a9f310be6d2d86020e19c6a91a02073ab506ca
+c7a9f310be6d2d86020e19c6a91a02073ab506ca,c7a9f310,Screenshots with proper URL,"Screenshots with proper URL
+
+Google wraps URLs because sometimes google is way too clever for its
+own good. We unwrapped the URL.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444500234,1444500234,c6cb0a52810fe34f76ddcbe13689bc0327058ebd
+c6cb0a52810fe34f76ddcbe13689bc0327058ebd,c6cb0a52,Screen Shots on the README!,"Screen Shots on the README!
+
+It's starting to look mighty fine.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444498891,1444498891,ec08c80cba7db43fddf85e15730cf26c9823c2fb
+ec08c80cba7db43fddf85e15730cf26c9823c2fb,ec08c80c,MediaRecorderSingleton is no longer final static,"MediaRecorderSingleton is no longer final static
+
+final static is hard to test.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444443103,1444443103,934c72bad580acc7ee404475781c8eaa0794559e
+934c72bad580acc7ee404475781c8eaa0794559e,934c72ba,Use MediaRecorder Singleton to make app much more robust,"Use MediaRecorder Singleton to make app much more robust
+
+Fixes many applications crashes; however I have seen 2 cases where the
+app has crashed but I wasn't logcat'ing at the time.
+
+[Fixes #1]
+
+Notice how startRecording() is called 84ms BEFORE stopRecording()
+
+10-09 05:22:32.474 7960-8554/com.blabbertabber.blabbertabber I/Recorder: startRecording()
+10-09 05:22:32.474 7960-8554/com.blabbertabber.blabbertabber V/BestMicrophone(): getBestMicrophone() Build.MODEL == Nexus 6
+10-09 05:22:32.474 7960-8554/com.blabbertabber.blabbertabber E/MediaRecorder: audio source has already been set
+10-09 05:22:32.475 7960-8415/com.blabbertabber.blabbertabber I/Recorder: InterruptedException, return
+10-09 05:22:32.476 7960-8415/com.blabbertabber.blabbertabber W/System.err: java.lang.InterruptedException
+10-09 05:22:32.488 7960-7960/com.blabbertabber.blabbertabber V/RecordingActivity: mReceiver.onReceive()0, 3
+10-09 05:22:32.488 7960-7960/com.blabbertabber.blabbertabber V/RecordingActivity: mReceiver.onReceive()0, 4
+10-09 05:22:32.493 7960-7960/com.blabbertabber.blabbertabber V/RecordingActivity: mServerConn.onServiceConnected()
+10-09 05:22:32.555 7960-7972/com.blabbertabber.blabbertabber W/art: Suspending all threads took: 5.801ms
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber W/System.err:     at java.lang.Thread.sleep(Native Method)
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber W/System.err:     at java.lang.Thread.sleep(Thread.java:1031)
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber W/System.err:     at java.lang.Thread.sleep(Thread.java:985)
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber W/System.err:     at com.blabbertabber.blabbertabber.Recorder.run(Recorder.java:62)
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber W/System.err:     at java.lang.Thread.run(Thread.java:818)
+10-09 05:22:32.558 7960-8415/com.blabbertabber.blabbertabber I/Recorder: stopRecording()
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime: FATAL EXCEPTION: Thread-28221
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime: Process: com.blabbertabber.blabbertabber, PID: 7960
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime: java.lang.IllegalStateException
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime:     at android.media.MediaRecorder.setAudioSource(Native Method)
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime:     at com.blabbertabber.blabbertabber.DeviceRecorder.startRecording(DeviceRecorder.java:25)
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime:     at com.blabbertabber.blabbertabber.Recorder.run(Recorder.java:59)
+10-09 05:22:32.570 7960-8554/com.blabbertabber.blabbertabber E/AndroidRuntime:     at java.lang.Thread.run(Thread.java:818)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444396458,1444396458,dfeab088f565ec98f8f93a292813d79276e750a3
+dfeab088f565ec98f8f93a292813d79276e750a3,dfeab088,New Singleton class wraps MediaRecorder,"New Singleton class wraps MediaRecorder
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444391918,1444391918,8a24dd9a982cb6ae6160c8329f4a287934202ec3
+8a24dd9a982cb6ae6160c8329f4a287934202ec3,8a24dd9a,Catches runtime exception during MediaRecorder.stop(),"Catches runtime exception during MediaRecorder.stop()
+
+- makes application more robust
+- TODO: clean up half-baked files (when we record to files)
+- unrelated, cleaned up log messages
+
+[#1]
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444311856,1444311856,ce1b9053f6f7e6658a9aba4df165e3c8146fec70
+ce1b9053f6f7e6658a9aba4df165e3c8146fec70,ce1b9053,RecordingActivity overrides onDestroy(),"RecordingActivity overrides onDestroy()
+
+- makes debugging via logcat more complete
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444273398,1444273398,e109e0eebad1aefbb9469c3a7d2d7c82b6af6e7c
+e109e0eebad1aefbb9469c3a7d2d7c82b6af6e7c,e109e0ee,testing added for determining best microphone,"testing added for determining best microphone
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444223516,1444223672,521ef5f8434473355e9e5344d4d1e2bdbb21f39c
+521ef5f8434473355e9e5344d4d1e2bdbb21f39c,521ef5f8,getBestMicrophone() returns appropriate mic for Nexus 5 & Nexus 6,"getBestMicrophone() returns appropriate mic for Nexus 5 & Nexus 6
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444051766,1444051766,4de642ef5b7160fc5c6195597d0806d5e0e526f3
+4de642ef5b7160fc5c6195597d0806d5e0e526f3,4de642ef,unbindService is in Recording Activity's onStop,"unbindService is in Recording Activity's onStop
+
+Previously in onPause(); matches onStart()'s bindservice().
+
+also, added more Log.i().
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1444049016,1444049016,987c9ba3182771998bd927eefe0f42ea2626751e
+987c9ba3182771998bd927eefe0f42ea2626751e,987c9ba3,run() must call stopRecord() when finishing,"run() must call stopRecord() when finishing
+
+Fixes:
+10-04 06:25:28.956 356-4196/? E/AudioPolicyManager: startInput(1850) failed: other input 1845 already started
+10-04 06:25:28.956 356-4196/? E/AudioRecord: start() status -38
+...
+10-04 06:25:28.986 3311-4186/com.blabbertabber.blabbertabber E/AndroidRuntime:     at com.blabbertabber.blabbertabber.DeviceRecorder.startRecording(DeviceRecorder.java:42)
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443964798,1443965915,4456204b290ffb5ad678f199021350967aa73045
+4456204b290ffb5ad678f199021350967aa73045,4456204b,Credit Charlotte for work well done.,"Credit Charlotte for work well done.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1443907234,1443907234,208eea34163cfde3c56b4c1647e5bc4e90b05ecd
+208eea34163cfde3c56b4c1647e5bc4e90b05ecd,208eea34,Derived class records from real microphone for real devices,"Derived class records from real microphone for real devices
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443889346,1443889346,86b589b315d81412282f0327fd41ddc2ada717f3
+86b589b315d81412282f0327fd41ddc2ada717f3,86b589b3,Runs on emulator,"Runs on emulator
+
+- previously would crash with
+
+10-03 08:20:39.878 948-948/? E/AudioSystem: AudioSystem::getInputBufferSize failed sampleRate 8000 format 0x1 channelMask 10
+10-03 08:20:39.878 948-948/? E/AudioRecord: AudioSystem could not query the input buffer size for sampleRate 8000, format 0x1, channelMask 0x10; status -22
+10-03 08:20:39.878 948-948/? E/StagefrightRecorder: audio source is not initialized
+10-03 08:20:39.878 2183-2321/com.blabbertabber.blabbertabber E/MediaRecorder: start failed: -2147483648
+10-03 08:20:39.878 2183-2321/com.blabbertabber.blabbertabber E/AndroidRuntime: FATAL EXCEPTION: Thread-117
+
+- refactored SpeakerAndVolumeRunnable to Recorder
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1443887179,1443887179,7ff4f26e8a6ff55f459694180b735017de78ef3f
+7ff4f26e8a6ff55f459694180b735017de78ef3f,7ff4f26e,Circle has color that doesn't wash away white volume band,"Circle has color that doesn't wash away white volume band
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443885273,1443885273,14e3e9e4fd3d1625abc6a4da93c2df84bdf25ece
+14e3e9e4fd3d1625abc6a4da93c2df84bdf25ece,14e3e9e4,BlabberTabber uses VOICE_RECOGNITION microphone,"BlabberTabber uses VOICE_RECOGNITION microphone
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1443884307,1443884307,d5ab394665464a0208e5c96572be026e4ed4cc47
+d5ab394665464a0208e5c96572be026e4ed4cc47,d5ab3946,Good animation,"Good animation
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443883126,1443883126,cd719565982e079eee7294a038bccfd36f12bfd4
+cd719565982e079eee7294a038bccfd36f12bfd4,cd719565,Real Audio is sampled.,"Real Audio is sampled.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1443661435,1443661435,d99285cf9d0a31acb9687536388a93b4937f8c6a
+d99285cf9d0a31acb9687536388a93b4937f8c6a,d99285cf,Cleaner threading,"Cleaner threading
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443658317,1443658317,09c735a9eaec4b156b474d67df10510047b3a8ed
+09c735a9eaec4b156b474d67df10510047b3a8ed,09c735a9,Changes in phone's orientation don't spawn extra threads,"Changes in phone's orientation don't spawn extra threads
+
+- fixes problem where multiple speakers are shown as speaking
+  at once.
+- the thread (SpeakerAndVolumeRunnable) stores a reference to
+  itself in the parent (RecordingService.mThreadSAVR)
+- SpeakerAndVolumeRunnable invokes `return` if interrupted
+- RecordingService `interrupt` SpeakerAndVolumeRunnable in
+  onDestroy()
+- RecordingService checks to make sure there's not a
+  pre-existing SpeakerAndVolumeRunnable before spawning a new one
+- severity of logging dropped from .wtf to .i
+  (less chatter)
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443622307,1443622307,1f255e68329e88b62a67df2ca3d9c5d575a48cba
+1f255e68329e88b62a67df2ca3d9c5d575a48cba,1f255e68,Removed the red button; removed unneeded code,"Removed the red button; removed unneeded code
+
+Even more beautiful, if that's possible.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1443402119,1443402119,d9fbe7a6c49251f35e439060b3b69c5863b17b0d
+d9fbe7a6c49251f35e439060b3b69c5863b17b0d,d9fbe7a6,"Intents, Broadcasts, Threads","Intents, Broadcasts, Threads
+
+Most awesome program ever.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443401267,1443401267,be49f621abd64c5e62659dfe1ed8ffd166547baf
+be49f621abd64c5e62659dfe1ed8ffd166547baf,be49f621,Better colors for strawman speakers.,"Better colors for strawman speakers.
+",,,,Charlotte Cunningham,mahgninnuc@gmail.com,Charlotte Cunningham,mahgninnuc@gmail.com,1443312226,1443312226,d28f71a862b31e1ff797041fc6e7d1bd517d6fcf
+d28f71a862b31e1ff797041fc6e7d1bd517d6fcf,d28f71a8,build.gradle has dexmaker,"build.gradle has dexmaker
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1443033243,1443033243,7ab8197e471953e91476123b7ca698464be94e76
+7ab8197e471953e91476123b7ca698464be94e76,7ab8197e,Include Mockito in build.gradle,"Include Mockito in build.gradle
+
+- ""Cunnie"" is capitalized
+- numspeakers is public
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442809001,1442809001,4a3038fb31225e936fc948b55d1be7bd783f5ee7
+4a3038fb31225e936fc948b55d1be7bd783f5ee7,4a3038fb,Volume is represented by a white ring,"Volume is represented by a white ring
+
+- increases and decreases, ring gets bigger/smaller
+- removed ""Toast"" from Recording Activity; it slowed
+  everything down
+- made speakers change more often, on average every
+  five seconds instead of every fifteen. Easier to test
+- white circle had to come last in the layout otherwise
+  it was obscured by the colored circle when it was
+  small.
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1442706875,1442706875,779ac9d286c9ab2480873179a98b2d9190b45e56
+779ac9d286c9ab2480873179a98b2d9190b45e56,779ac9d2,"Animation works, kinda, not very well","Animation works, kinda, not very well
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1442456920,1442456920,823587c6c5c4ee2ba25b0e73fea9a4c50d46462b
+823587c6c5c4ee2ba25b0e73fea9a4c50d46462b,823587c6,newSpeaker() works with even probability gradient,"newSpeaker() works with even probability gradient
+
+Thanks Brendan!
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1442452526,1442452526,70b402d94737c796b5a91aeed6d62b350c5df539
+70b402d94737c796b5a91aeed6d62b350c5df539,70b402d9,Code reformatted for elegance,"Code reformatted for elegance
+
+Signed-off-by: Brendan Cunnie <saintbrendan@gmail.com>
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1442447464,1442447464,412ad58cf0ca8ec71cd01d7a39522cfb8e8df987
+412ad58cf0ca8ec71cd01d7a39522cfb8e8df987,412ad58c,SpeakerAndVolume class has tests,"SpeakerAndVolume class has tests
+
+They're pretty lame, but at least there's some test coverage.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442447000,1442447000,62be8439eaba73cf6b3c0481a5c060ed78f435f5
+62be8439eaba73cf6b3c0481a5c060ed78f435f5,62be8439,Speaker Diarisation back-end in place,"Speaker Diarisation back-end in place
+
+- needed to bump minSdkVersion to 21 to accommodate
+  ThreadLocalRandom.current().nextInt
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442433060,1442433060,d9c5f44fd0d80c6805881764825ce3761452c8f2
+d9c5f44fd0d80c6805881764825ce3761452c8f2,d9c5f44f,Four circles on RecordingActivity,"Four circles on RecordingActivity
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442425325,1442425325,2da6d22d1ebaaa81ba53c06607141c748f8177c3
+2da6d22d1ebaaa81ba53c06607141c748f8177c3,2da6d22d,getSpeakerID() returns random number,"getSpeakerID() returns random number
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442420490,1442420490,5c38fee37b13d3729735a62f74ac52e1cf1cec25
+5c38fee37b13d3729735a62f74ac52e1cf1cec25,5c38fee3,Android Emulator needs 32s to settle,"Android Emulator needs 32s to settle
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442261974,1442261974,723ada29d04c4006ee56efc91c6891ec2127e780
+723ada29d04c4006ee56efc91c6891ec2127e780,723ada29,Service created AND runs!,"Service created AND runs!
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442187344,1442187344,e5470980214d965ae61dbb7411f1f2d8e582a071
+e5470980214d965ae61dbb7411f1f2d8e582a071,e5470980,StartRecordingService skeleton service complete,"StartRecordingService skeleton service complete
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442088498,1442088498,16bab1e664b28f5cc1bb4758b02d31f25c0942c9
+16bab1e664b28f5cc1bb4758b02d31f25c0942c9,16bab1e6,Initial Test for RecordingActivity,"Initial Test for RecordingActivity
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442077642,1442077642,70a8236b6cbb44348c3f94ca2540f28dd103e734
+70a8236b6cbb44348c3f94ca2540f28dd103e734,70a8236b,The Intent actually works. It's amazing.,"The Intent actually works. It's amazing.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1442071648,1442071648,9e846ed3dc7259d201f5d73c1b5dcc36a424ff84
+9e846ed3dc7259d201f5d73c1b5dcc36a424ff84,9e846ed3,-AppCompatActivity; +Intents TDD,"-AppCompatActivity; +Intents TDD
+
+- add Intents test; I think that's the direction we're going
+- Remove AppCompatActivity; I don't think we need backward
+  compatibility; certainly not to v7
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1441657491,1441657491,53778f19da9fcf48a69d4facc22dd23d51ce6074
+53778f19da9fcf48a69d4facc22dd23d51ce6074,53778f19,"Background color is blue, not purple.","Background color is blue, not purple.
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1441632597,1441632597,7cd5d9025fa89567b70544d1acb437a98d75b06d
+7cd5d9025fa89567b70544d1acb437a98d75b06d,7cd5d902,First working espresso test,"First working espresso test
+",,,,Brendain Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1441568797,1441568797,11f12dfc3f1e2d7a0af360f50141110ff8f1cbf5
+11f12dfc3f1e2d7a0af360f50141110ff8f1cbf5,11f12dfc,Minor changes while making Espresso,"Minor changes while making Espresso
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1441552091,1441552091,4c974163d93b745f23ecb893838dcef0bcee19f0
+4c974163d93b745f23ecb893838dcef0bcee19f0,4c974163,Framework for testing of launching Recording Activity.,"Framework for testing of launching Recording Activity.
+
+Involved setting Theme in MainActivity's onCreate().
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1440378441,1440378441,87d59121e510c5f6c7e35365614d6058369d11c3
+87d59121e510c5f6c7e35365614d6058369d11c3,87d59121,Just got first UI control test working.,"Just got first UI control test working.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1440256243,1440256243,11afddb515bc8573a236f2c33a53468d405d311c
+11afddb515bc8573a236f2c33a53468d405d311c,11afddb5,Got Android test class working under correct package.,"Got Android test class working under correct package.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1439770811,1439770811,760f8b4f73c327f308814e46087af64a625770ac
+760f8b4f73c327f308814e46087af64a625770ac,760f8b4f,Added recording button,"Added recording button
+
+- added Recording Activity
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1439764745,1439764745,ad96e4838ad38a831aaa94034e08d538acf54319
+ad96e4838ad38a831aaa94034e08d538acf54319,ad96e483,Added start-stop button,"Added start-stop button
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1439168735,1439168735,7a318795af8616333923510da556f45c32e2e4c4
+7a318795af8616333923510da556f45c32e2e4c4,7a318795,icons from Google's DeskClock,"icons from Google's DeskClock
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439165281,1439165281,dda7ba594e2afc5833326121f2718f0cd3dd61bc
+dda7ba594e2afc5833326121f2718f0cd3dd61bc,dda7ba59,Removed unnecessary test file,"Removed unnecessary test file
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439145014,1439145014,b552c61fcf27a1d4fba86b1d00e8dcdcc56f637e
+b552c61fcf27a1d4fba86b1d00e8dcdcc56f637e,b552c61f,matches master,"matches master
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439144871,1439144871,b2be577215a8a833e3f3da005a2c5045665d378a
+b2be577215a8a833e3f3da005a2c5045665d378a,b2be5772,Create new TDD unit test,"Create new TDD unit test
+
+empty test, works
+
+Signed-off-by: Brian Cunnie <brian.cunnie@gmail.com>
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1439144430,1439144476,df5d6977226fd0094accdbd002d3c9717070d0db
+df5d6977226fd0094accdbd002d3c9717070d0db,df5d6977,Update README.md,Update README.md,,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439144141,1439144141,281cc1334da4afcdf4345fc77b7e1ee9aadf7e9a
+281cc1334da4afcdf4345fc77b7e1ee9aadf7e9a,281cc133,Create new TDD unit test: test failure,"Create new TDD unit test: test failure
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439143312,1439143312,e13ab37534d3fec436e14f88a10d5b00f1a1df62
+e13ab37534d3fec436e14f88a10d5b00f1a1df62,e13ab375,Create new TDD unit test,"Create new TDD unit test
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439142498,1439142498,8e6743b2a021884a5a827960ef0777299644f4c0
+8e6743b2a021884a5a827960ef0777299644f4c0,8e6743b2,"WIP, encore","WIP, encore
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439127813,1439127813,3840c47a260c813842b8c55b906d67091e322c7b
+3840c47a260c813842b8c55b906d67091e322c7b,3840c47a,"WIP: background, red circle, white arrow","WIP: background, red circle, white arrow
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1439052328,1439052328,fdbc52bf94f66f9bba265371b220d6bc67195f32
+fdbc52bf94f66f9bba265371b220d6bc67195f32,fdbc52bf,A different icon,"A different icon
+
+We'll probably go with a different icon; this is a placeholder.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438811147,1438811147,b81d56d8cb5fa9af4279d10a746087a8ded1ee6c
+b81d56d8cb5fa9af4279d10a746087a8ded1ee6c,b81d56d8,README.md contains most-recent build status,"README.md contains most-recent build status
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438804421,1438804421,15a1cbe859b09ca1ce00b636cea41f224d8a47d2
+15a1cbe859b09ca1ce00b636cea41f224d8a47d2,15a1cbe8,Travis uses ARM v7a ABI,"Travis uses ARM v7a ABI
+
+Can't get x86 to work:
+
+```
+emulator: ERROR: x86 emulation currently requires hardware acceleration!
+Please ensure KVM is properly installed and usable.
+CPU acceleration status: KVM is not installed on this machine (/dev/kvm is missing).
+```
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438803393,1438803393,5f52c16a38cfb0c9ed6edd49b2f3d977ebb6bc71
+5f52c16a38cfb0c9ed6edd49b2f3d977ebb6bc71,5f52c16a,Travis uses appropriate emulator,"Travis uses appropriate emulator
+
+Fixes `Error: Invalid --abi x86-android-22 for the selected target.`
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438802466,1438802466,69d4f65bd6c4e9fb39dee4ec43c1fee32bd94e99
+69d4f65bd6c4e9fb39dee4ec43c1fee32bd94e99,69d4f65b,Travis starts emulator,"Travis starts emulator
+
+Fixes:
+Execution failed for task ':app:connectedAndroidTestDebug'.
+> com.android.builder.testing.api.DeviceException: java.lang.RuntimeException: No connected devices!
+
+http://stackoverflow.com/questions/31264136/travis-ci-android-tests-no-connected-devices
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438801954,1438801954,ee98a4541bbffb46e1b0730d28f182238973fe76
+ee98a4541bbffb46e1b0730d28f182238973fe76,ee98a454,Travis has additional android repository,"Travis has additional android repository
+
+Fixes 'Could not find com.android.support:appcompat-v7:22.2.1.'
+http://stackoverflow.com/questions/18704412/gradle-dependencies-with-travis-ci-on-android-project
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438800816,1438800816,7471aa6984b98a04a25b17f5ea444c53a62ac0c6
+7471aa6984b98a04a25b17f5ea444c53a62ac0c6,7471aa69,"Travis uses Android 22 APIs (5.1, Lollipop MR1)","Travis uses Android 22 APIs (5.1, Lollipop MR1)
+
+Fixes ""failed to find Build Tools revision 22.0.1""
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438799892,1438799892,0d13856907d5b9c241fd5b1645b74d9d72f0e2ab
+0d13856907d5b9c241fd5b1645b74d9d72f0e2ab,0d138569,"Integration with Travis-CI, generic config","Integration with Travis-CI, generic config
+
+configuration cut-and-pasted from travis-ci.org docs
+http://docs.travis-ci.com/user/languages/android/
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438799494,1438799494,ecda0580a1c90cc115f387693844b6ee1abf911d
+ecda0580a1c90cc115f387693844b6ee1abf911d,ecda0580,No longer tracking .idea and *.iml,"No longer tracking .idea and *.iml
+
+Ryan Spore says it's okay to ignore them,
+but may require manual synchronization.
+
+For example, if you only focus on one test.
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438717350,1438717350,4e0dacc89e76564927d641d98d7a8f73207d7a51
+4e0dacc89e76564927d641d98d7a8f73207d7a51,4e0dacc8,Added file created during first build: app/app.iml,"Added file created during first build: app/app.iml
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1438549037,1438549037,56ad1939d79ccb56c74514c6a05c4b08377a959b
+56ad1939d79ccb56c74514c6a05c4b08377a959b,56ad1939,GNU AFFERO GENERAL PUBLIC LICENSE Version 3,"GNU AFFERO GENERAL PUBLIC LICENSE Version 3
+",,,,Brian Cunnie,brian.cunnie@gmail.com,Brian Cunnie,brian.cunnie@gmail.com,1438548492,1438548492,889dac16cea1eab2ae70f3c8faa1dec37b8133a9
+889dac16cea1eab2ae70f3c8faa1dec37b8133a9,889dac16,First commit: All initial files.,"First commit: All initial files.
+",,,,Brendan Cunnie,saintbrendan@gmail.com,Brendan Cunnie,saintbrendan@gmail.com,1438548081,1438548081,

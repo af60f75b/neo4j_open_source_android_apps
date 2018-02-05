@@ -1,0 +1,304 @@
+id,short_id,title,message,additions,deletions,total,author_name,author_email,committer_name,committer_email,authored_date,committed_date,parent_ids
+9fa0c22f697dea32d159fb749072ae8003c11cd6,9fa0c22f,克隆；深度克隆；浅度克隆,"克隆；深度克隆；浅度克隆
+
+好处：直接克隆一个对象的所有值；不用通过new一个对象，然后逐步赋值给新对象。省去操作。
+共同点：深度克隆和浅度克隆都需要实现接口Cloneable。
+不同点：
+浅度克隆，只是简单的将某个对象成员的基本类型的数值(int , boolean,
+String)复制到新的对象。只在成员是基本类型的情况下，克隆才成功。只需简单重写clone方法，返回一个对象便可。
+深度克隆，成员是复杂类型(对象)。要重写clone方法，并在clone方法中执行赋值操作，最后再返回克隆的对象。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1392984184,1392984184,1b7690570f6b42aa6d344e98b530a28015d65830
+1b7690570f6b42aa6d344e98b530a28015d65830,1b769057,SQLite复习,"SQLite复习
+
+SQLite没什么好说的。
+就以下几点：
+
+1.创建和管理SQLite数据库，继承SQLiteDataBaseHelper,实现回调函数onCreate(),onUpgrade()数据库更新时，系统会回调该方法。然后，就可以通过SQLiteDataBaseHelper获取数据库实例,getReadDataBase()，然后执行操作。
+-----------可以考虑更多的地方---------------------------
+1.在一个类中，成员变量存放的是整个数据库的信息；
+所有内部类成员变量，存放的是该数据库中某个表的信息。
+------数据维护，用一个类来实现。
+------这样，当数据库表发生变化时，只是在这个类中发生变化，但是，它会影响到所有通过它来获取数据库信息的类。
+2.对所有访问数据库的类，屏蔽数据库的变化。
+------这个待续。
+------在例子展示中，总是难以实现的，要有具体的需求才可以展示出来。
+
+-----通常，对客户端(使用数据库信息)来说，它们只关注，要得到什么信息，比如，所有订单；所有门店。它们是没有必要关注如何通过数据库获取指定数据的。
+------这个地方，可以采用一定的设计模式来实现。
+-----待续。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1392034537,1392034537,a5569dcf61c587cf227c09fbe87a2d847ec8630f
+a5569dcf61c587cf227c09fbe87a2d847ec8630f,a5569dcf,通过降低UI层次的方式来提高app的性能,"通过降低UI层次的方式来提高app的性能
+
+提高app的性能有多种方式，通过减少UI层次的方式是种方式：
+
+1.使用Relativelayout。同样的界面，使用RealativeLayout只需要一层就可以完成，用LinearLayout需要多层。另外，使用RelativeLayout，在屏幕适配方面也是方便的，因为，只需确定相对位置。
+2.通过merge来减少UI的层次。
+3.通过include来复用重复出现的UI元素。
+4.通过ViewStub来加载不常用的UI元素；在需要的时候，才加载ViewStub。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1391911299,1391911299,4f1f98ecb882e7dda54dd1c7e05f4131e1e97b6a
+4f1f98ecb882e7dda54dd1c7e05f4131e1e97b6a,4f1f98ec,采用依赖注入的方式，减少重复代码,"采用依赖注入的方式，减少重复代码
+
+类似，组件初始化，资源初始化，这些重复代码是在任何界面都会出现的。所以，要尽量减少它们的出现。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1391773618,1391773618,3097ecdfa7a578abe86a48d1d17265bbf8b4d2d8
+3097ecdfa7a578abe86a48d1d17265bbf8b4d2d8,3097ecdf,小修改,"小修改
+
+小修改。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1390228420,1390228420,6a99b87b52c879828807c3dd07b682b70fc9a642
+6a99b87b52c879828807c3dd07b682b70fc9a642,6a99b87b,图片压缩总结,"图片压缩总结
+
+图片压缩，采用的就是两种方式：
+1.取样(inSampleing)
+2.失真(将quality设置得低一些)。
+
+两种方法的比较：
+方法1，可以大概的计算出数值，计算出压缩后的图片大小范围，比如是小于240*400*4/1024 KB。只能到这里为止。
+
+方法2，对图片进行失真，得到的图片大小，只能说是小于原始图片，比如，对1M的原始图片，设置quality
+60，得到压缩后的图片，其大小小于1M；然后，对8M的的原始图片，设置quality 60,得到压缩后的图片，其大小小于8M。
+所以，只靠失真程度对图片压缩的话，只能保证压缩后的图片其大小小于原始图片，不能保证图片大小小于某个数值。
+",,,,albertxiaoyu,albertxiaoyu@163.com,albertxiaoyu,albertxiaoyu@163.com,1390227575,1390227614,6f9f7a4c6694939bb9d06e387e50be977c8dee1b
+6f9f7a4c6694939bb9d06e387e50be977c8dee1b,6f9f7a4c,dd,dd,,,,albertxiaoyu@163.com,albertxiaoyu@163.com,albertxiaoyu@163.com,albertxiaoyu@163.com,1389426843,1389426843,2d89208395e42463fb821616508cfdda568dcd20
+2d89208395e42463fb821616508cfdda568dcd20,2d892083,匿名内部类使用总结，及为什么使用final,"匿名内部类使用总结，及为什么使用final
+",,,,LuShuWei,albertxiaoyu@163.com,LuShuWei,albertxiaoyu@163.com,1385193711,1385193711,ad76ebdc02aaf2bb92af866b359bc820cf877eb8
+ad76ebdc02aaf2bb92af866b359bc820cf877eb8,ad76ebdc,匿名内部类的使用总结及,"匿名内部类的使用总结及
+",,,,LuShuWei,albertxiaoyu@163.com,LuShuWei,albertxiaoyu@163.com,1385192559,1385192559,965ed7b7e137ba4421233e457d7345866317616c
+965ed7b7e137ba4421233e457d7345866317616c,965ed7b7,Update InheritInner.java,Update InheritInner.java,,,,Lushuwei(Albert),albertxiaoyu@163.com,Lushuwei(Albert),albertxiaoyu@163.com,1384086790,1384086790,f924da2e16341ccc9bef4ccd4186ff29c69bb75c
+f924da2e16341ccc9bef4ccd4186ff29c69bb75c,f924da2e,内部类的继承类(即是内部类的导出类)在实例化时，要注意的问题：,"内部类的继承类(即是内部类的导出类)在实例化时，要注意的问题：
+1.要告诉父类，父类实例化时可以持有的外部类对象是谁。
+",,,,LuShuWei,albertxiaoyu@163.com,LuShuWei,albertxiaoyu@163.com,1384086212,1384086212,abcde234ed83c167f8e1fd0c505c00b9575a8884
+abcde234ed83c167f8e1fd0c505c00b9575a8884,abcde234,内部类(Inner class)是一个闭包。,"内部类(Inner class)是一个闭包。
+客户端持有指向接口实现者的引用，在初始化的时候，将该引用赋值给成员callbackReferences。
+这样，客户端，在需要的时候，就可以回调Incrementable的实现者Closure
+",,,,LuShuWei,albertxiaoyu@163.com,LuShuWei,albertxiaoyu@163.com,1384006338,1384006338,850297067d63f6170984a2cf7fff87c4af22501b
+850297067d63f6170984a2cf7fff87c4af22501b,85029706,Context泄漏,"Context泄漏
+
+导致Context-activity泄漏的原因：
+
+1.在系统回调onDestroy方法时，Context仍然被其他对象引用。于是导致了在执行onDestroy完，Context占用的内存没有被GC回收。
+
+2.而创建新的Context实例的时候，虽然此时的Context没有被引用，但是因为它不处在生命周期中，所以系统就不会调用GC回收，此时就是Context的泄漏了。
+--------所以，要避免Context泄漏，那么，就要在系统回调onDestroy的时候，确保所有指向
+Context的引用都设置为null或者是使其不可达Context对象。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380940589,1380940589,688716b4b9406aad680cea239f2a9dc5fb3145ac
+688716b4b9406aad680cea239f2a9dc5fb3145ac,688716b4,适配器模式,"适配器模式
+
+设计一个类，该类的功能是：
+1.从构造器中接收一个接口类型(某个类的实例)
+2.然后，对外生成你所需要的接口(即该类是某种接口类型)
+那么，就称该类在设计上使用了适配器模式。
+比如，
+FilterAdapter接收Filter接口；
+
+然后FilterAdapter实现了Processor接口，也就是FilterAdapter是Processor接口类型了，提供了你所需要的Processor接口。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380878405,1380878405,dfdf24b36e2d792bbf59fb7b40bd8e2231a3eb42
+dfdf24b36e2d792bbf59fb7b40bd8e2231a3eb42,dfdf24b3,策略设计模式,"策略设计模式
+
+添加部分注释
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380857670,1380857670,57e71e2cca93f7b5495ff844b7fb3fb156225bb8
+57e71e2cca93f7b5495ff844b7fb3fb156225bb8,57e71e2c,Stragtegy模式，策略设计模式,"Stragtegy模式，策略设计模式
+
+一个类中，含有这样一个方法，提供给它的输入参数代表一个策略(某个类的对象)，
+提供的策略不同，就会影响该方法的行为；该方法中包含固定的处理流程，但是因为流程中的策略不同，导致了最终行为的不同。
+1.Actor的act值的不同，就会有不同的处理s的方法--Actor的值就是策略。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380857515,1380857515,7eeb6d7237f0b6b95d77bf4cc7e97413073a9666
+7eeb6d7237f0b6b95d77bf4cc7e97413073a9666,7eeb6d72,状态模式,"状态模式
+
+一条通用的准则是“用继承表达行文间的差异，并用字段表达状态上的变化”
+Stage类使用了状态模式：
+1.用Actor的值的不同来表示Stage的状态变化
+
+2.Actor的不同子类，对act方法有不同的实现(即其子类有不同的act行为)--这是通过继承父类Actor，然后重写父类的act方法，实现自己的act方法(实现自己的act行为)。
+
+3.Stage的状态发生变化了，其performPlay行为也相应的发生了变化---这就是状态模式，某一对象的状态发生变化，则其行为也发生变化(状态的变化通过成员值的变化来表现；行为的变化通过其中的方法操作发生改变来表现)。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380854654,1380854654,1620b802d907ee0831e4f4e01d1b286cc75aca8a
+1620b802d907ee0831e4f4e01d1b286cc75aca8a,1620b802,组合；代理;继承,"组合；代理;继承
+
+1.一个类中，它有这样的成员，其类型是来自其他类的。那么，就说这个类使用了组合的方式来设计。这样一种通过组合的方式，就可以通过使用成员对象的方式，来复用很多其他已经开发好的类。
+2.继承的使用场景-----当父类和子类存在“通用-特殊”的关系时；当存在多态特征的时候。
+此时对某个类才使用继承的方式来设计。
+
+3.当存在这种情况时：1.它具有继承的部分特征(使用者可以通过该类(A),访问类(B)的所有公共方法；继承后有这一特征，子类拥有父类的所有）2.但是，它并不存在""通用-特殊“的关系，也不
+存在多态的特征。--------那么，此时，就可以使用代理的方式来设计该类。具体见代码。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380852262,1380852262,da9ccd4e5d9e17dee6df4c2eb457e1065dfe8e1f
+da9ccd4e5d9e17dee6df4c2eb457e1065dfe8e1f,da9ccd4e,状态模式---多态,"状态模式---多态
+
+利用Java的多态来实现状态模式。
+1.父类，可以被赋予不同的子类实现引用地址。
+2.每个子类代表一种状态。
+3.每个子类在覆盖父类所定义的方法(即行为)是各自不同的。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380459236,1380459236,d83980736f64f0824b0c950a0651d33a3e3d3daf
+d83980736f64f0824b0c950a0651d33a3e3d3daf,d8398073,编写构造器的准则,"编写构造器的准则
+
+“
+用尽可能简单的方法使对象进入正常状态；如果可以的话，避免调用其他方法
+”
+----如果非要调用方法，那就调用修饰符为private的或者有修饰符final的方法。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380381945,1380381945,df8051794d002efb5bf69be51f2dc3b0763d93cc
+df8051794d002efb5bf69be51f2dc3b0763d93cc,df805179,Java对象的清理操作--finalize方法的使用,"Java对象的清理操作--finalize方法的使用
+
+// 垃圾回收器，回收该对象的内存空间时，会调用该对象的finalize方法。
+// 在下次垃圾回收动作发生时，才真正回收该对象的内存空间。
+// 因为Shared是被多个其他对象所使用的，所以，在回收Shared对象时，
+// 要确保其他对象没有持有指向Shared对象的引用，这样才不会出现潜在的错误
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380374530,1380374530,ee5cc5b8892d543aad5a4343d8019aed8dddc0f8
+ee5cc5b8892d543aad5a4343d8019aed8dddc0f8,ee5cc5b8,Update 自定义手势.txt,"Update 自定义手势.txt
+
+调整排版。",,,,Lushuwei(Albert),albertxiaoyu@163.com,Lushuwei(Albert),albertxiaoyu@163.com,1380337718,1380337718,48b4fb8524fb32615e1e1f5b7571a410f3d3df3c
+48b4fb8524fb32615e1e1f5b7571a410f3d3df3c,48b4fb85,自定义手势,"自定义手势
+
+1.设定已经定义好的手势(借助GestureBuilder)
+
+2.读取用户输入的手势(借助GestureOverlayView)；当GestureOverlayView识别到一个完整的手势时，就会将信息通过OnGesturePerformedListener接口中的方法传递给该接口的实现者。
+3.多个Gesture Point组成一个Gesture Stroke；多个Gesture
+Stroke组成一个Gesture；多个Gesture存放在一个Gesture Store中；一个Gesture
+Libray就相当于一个Gesture Store，以文件的形式存在。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380337508,1380337508,6c552ceca9e445a9fb01bb106a226e376502d2f3
+6c552ceca9e445a9fb01bb106a226e376502d2f3,6c552cec,手势识别---放大，缩小手势的识别,"手势识别---放大，缩小手势的识别
+
+ScaleGestureDetector负责识别，根据输入的一系列Motionevent；
+ScaleGestureListener定义了，当识别出来时，ScaleGestureDetector会回调的方法。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380273368,1380273368,9e5981d054cd18c213d084d46ed56646bfa285d6
+9e5981d054cd18c213d084d46ed56646bfa285d6,9e5981d0,多点触控--Multiple Touch,"多点触控--Multiple Touch
+
+抓住这几个关键概念的意义：ACTION_POINTER_DOWN; ACTION_POINTER_UP;
+Pointer Index, Pointer ID;
+Android系统用一个MotionEvent来记录屏幕上多个触控点的事件信息；在获取某个触控点的信息时，要提供该触控点的Index。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380198580,1380198580,8d08722e4e2129f71bd972686a90dee5e5d1816a
+8d08722e4e2129f71bd972686a90dee5e5d1816a,8d08722e,计算滑动速度VelocityTracker,"计算滑动速度VelocityTracker
+
+利用VelocityTracker可以计算滑动速度；但是使用VelocityTracker是十分耗费内存的，要谨慎使用；或者，可以反复使用，使用完后调用recyle，这样系统就可以再次分配使用者。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380162068,1380162068,d6714808b7d2a3ad951e5908aa1800d15d771e68
+d6714808b7d2a3ad951e5908aa1800d15d771e68,d6714808,在什么地方自行调用MotionEvent的recyle方法,"在什么地方自行调用MotionEvent的recyle方法
+
+保留了MotionEvent的副本，用于逻辑处理；在处理完毕后，就要自行调用
+MotionEvent的recyle的方法来进行销毁。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380112155,1380112155,e38492edf8c5d14a031c191045208c63ca2d69d5
+e38492edf8c5d14a031c191045208c63ca2d69d5,e38492ed,添加系统处理事件的规律,"添加系统处理事件的规律
+
+添加系统处理事件的规律描述。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380110812,1380110812,7bb5910bb9346f8e252f97e991b7bf18c48b8d72
+7bb5910bb9346f8e252f97e991b7bf18c48b8d72,7bb5910b,SingleTouch--单次触摸；MotionEvent,"SingleTouch--单次触摸；MotionEvent
+
+MotionEvent复习
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1380109469,1380109469,d50ba89e129ae07a69a516652997bfdbdb907a52
+d50ba89e129ae07a69a516652997bfdbdb907a52,d50ba89e,增加作者标识,"增加作者标识
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379929092,1379929092,5703d2a5029321e80c36b28e62a06a2f4418f6c5
+5703d2a5029321e80c36b28e62a06a2f4418f6c5,5703d2a5,Spinner与BaseAdapter，ArrayAdapter,"Spinner与BaseAdapter，ArrayAdapter
+
+在使用BaseAdapter,ArrayAdapter为Spinner设定自定Item时，二者在使用上是存在些许差别的。
+ArrayAdapter运行Item可以直接从布局文件中Inflate；而BaseAdapter不允许；
+ArrayAdapter要设定DropDownViewResource；而BaseAdapter不需要。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379928541,1379928541,adf98b4e3f686898d1dc0ce4d8139af5c1c4b1cd
+adf98b4e3f686898d1dc0ce4d8139af5c1c4b1cd,adf98b4e,Launche编写小结,"Launche编写小结
+
+Launcher就是由多个Activity组成的，与其他app相同。不同之处，是它的启动模式是singleInstance；它所属的category是Home。
+其他的，就跟编写普通的app类型，该怎么写，就怎么写。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379851696,1379851696,c64fa2988dff9bfb330314e6c7b8ad860c898b90
+c64fa2988dff9bfb330314e6c7b8ad860c898b90,c64fa298,初始化顺序的复习,"初始化顺序的复习
+
+类实例化，类成员初始化顺序的复习
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379834829,1379834829,47b1d178536fc265242887f81f998a0976cf8537
+47b1d178536fc265242887f81f998a0976cf8537,47b1d178,Override-覆盖,"Override-覆盖
+
+覆盖方法的选择；动态绑定(对象与对象拥有的方法的绑定)
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379833558,1379833558,ca3f27aa8ed1e9e3d98eef12254f4f9fa4d72fd9
+ca3f27aa8ed1e9e3d98eef12254f4f9fa4d72fd9,ca3f27aa,Property Animation,"Property Animation
+
+展示实现属性动画的几个关键因素的使用：ObjectAnimator,PropertyValuesHolder,AnimatorSet,TypeEvaluator的使用。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379818913,1379818913,642ea8e9821f36ee6fb6fea11fb9270fb1518558
+642ea8e9821f36ee6fb6fea11fb9270fb1518558,642ea8e9,invalidate();的使用,"invalidate();的使用
+
+添加官方文档对  invalidate()的使用解释
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379759562,1379759562,8045acbc6a0f5ebdc93c0c9a135979be36158992
+8045acbc6a0f5ebdc93c0c9a135979be36158992,8045acbc,delete,"delete
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379754489,1379754489,7dec36ca60fa4925925bcaf2570a28b94a7da3bb
+7dec36ca60fa4925925bcaf2570a28b94a7da3bb,7dec36ca,ObjectAnimatore的使用-简单的使用分析,"ObjectAnimatore的使用-简单的使用分析
+
+阐述AnimationCloning的代码逻辑。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379753381,1379753381,183f30dcc6cd6e800e510f39b5e87383c4110115
+183f30dcc6cd6e800e510f39b5e87383c4110115,183f30dc,ObjectAnimator;AnimatorSet;invalidate()的组合使用,"ObjectAnimator;AnimatorSet;invalidate()的组合使用
+
+一个ObjectAnimator代表一个动画效果；
+AnimatoreSet代表多个动画效果，是一个动画效果集合，它可以安排动画的发生顺序。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379752998,1379752998,d5a77859ab8f7025661a0ce70869748fda7fb38c
+d5a77859ab8f7025661a0ce70869748fda7fb38c,d5a77859,DrawableAnimation;FrameAnimation,"DrawableAnimation;FrameAnimation
+
+DrawableAnimation;FrameAnimation;
+通过不断更换图片，一帧一帧的更换图片来实现动画效果；
+在实现的时候，关键只需要填写animation-list中的各个item
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379653234,1379653234,487a233d47de42442dbae664b975fbab8d8304c7
+487a233d47de42442dbae664b975fbab8d8304c7,487a233d,TweenAnimation,"TweenAnimation
+
+TweenAnimation,补间动画。就只有以下几个动画指令：
+透明度变化；位置移动；缩放变化；旋转变化
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379641875,1379641875,cd4870e89e5d112de39887a78b56584d364aab06
+cd4870e89e5d112de39887a78b56584d364aab06,cd4870e8,自定义View,"自定义View
+
+添加自定义属性项的设置方法
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379556405,1379556405,084acd850e2c19293464324468bbe8c32c4714e0
+084acd850e2c19293464324468bbe8c32c4714e0,084acd85,onDraw方法--自定义View,"onDraw方法--自定义View
+
+通过重写onDraw中实现自定义View
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379555118,1379555118,78228ae7a1d0a1b5bf0d3e3c011373b434c49132
+78228ae7a1d0a1b5bf0d3e3c011373b434c49132,78228ae7,更新,"更新
+
+添加更多注释--便于理解原理
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379390091,1379390091,39e799f8f7185fd192c70dc919ca40685e111631
+39e799f8f7185fd192c70dc919ca40685e111631,39e799f8,String变量的赋值与char[] 的赋值 的区别,"String变量的赋值与char[] 的赋值 的区别
+
+String 变量的赋值，改变的是引用，即指向了新的字符串起始地址；
+char[] 的赋值，是修改指针所指向的内存单元的值。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379389399,1379389399,ac30c64fed3322d8e73fcf0e2f0040638548f889
+ac30c64fed3322d8e73fcf0e2f0040638548f889,ac30c64f,PackageInfo--Get,"PackageInfo--Get
+
+获取已经安装的所有应用信息
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379143626,1379143626,6d84857809b4baf726a3c798fc909ca7d40f1eb7
+6d84857809b4baf726a3c798fc909ca7d40f1eb7,6d848578,PackageManager;ResolveInfo;ActivityInfo,"PackageManager;ResolveInfo;ActivityInfo
+
+获取系统中已经安装的应用；展示了如何使用PackageManager
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1379081498,1379081498,729a05dd526f2a5c4dc047b51ec6549939401812
+729a05dd526f2a5c4dc047b51ec6549939401812,729a05dd,SAX--XMLReader-To parser XML,"SAX--XMLReader-To parser XML
+
+我在贡献一下正确的解析XML的方式。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378710764,1378710764,4294029280b1bf7e09b8c829d2c162b1048ae3fe
+4294029280b1bf7e09b8c829d2c162b1048ae3fe,42940292,Util used to CompressImage,"Util used to CompressImage
+
+add a uitl used to compress image which is larger than 200KB
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378607874,1378607874,198fd4f9b9b819f01d55e4c87be7607259ac4fda
+198fd4f9b9b819f01d55e4c87be7607259ac4fda,198fd4f9,JsonParser-,"JsonParser-
+
+Helper methods which can be used when perform action related to JSON.
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378607527,1378607527,d6a8d3e0ca25926e4021e3dfb1a9fd4879b19d79
+d6a8d3e0ca25926e4021e3dfb1a9fd4879b19d79,d6a8d3e0,imgCache implemented,"imgCache implemented
+
+code used to implemented imgCache.
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378607368,1378607368,7d3f331e1f68d6d967c5adc3e9154cb61783ec7f
+7d3f331e1f68d6d967c5adc3e9154cb61783ec7f,7d3f331e,MD5CodePiece add,"MD5CodePiece add
+
+add MD5Util------Can be used to generated Signature.
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378607243,1378607243,86bac0e057fa9e53f36bf3b491d488de963a2048
+86bac0e057fa9e53f36bf3b491d488de963a2048,86bac0e0,注释,"注释
+
+将注释的意思表达的更清楚。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378523834,1378523834,d1360d1ce449b05f8a540145af655f70d4df2eac
+d1360d1ce449b05f8a540145af655f70d4df2eac,d1360d1c,LooperHandler,"LooperHandler
+
+为了进一步理解Looper和Handler，我写了一个实践例子。
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378523196,1378523227,b89277fc90d52cea693d0f67c249d2c7936828c4
+b89277fc90d52cea693d0f67c249d2c7936828c4,b89277fc,Update PullParserXMLService.java,Update PullParserXMLService.java,,,,ttylinux,albertxiaoyu@163.com,ttylinux,albertxiaoyu@163.com,1378515076,1378515076,c46f47ee145af4ca07eb14dca65f30a20427e054
+c46f47ee145af4ca07eb14dca65f30a20427e054,c46f47ee,change file name,"change file name
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378514929,1378514929,72ac11bb4f82b5ee0748da7d75a7054078960aaa
+72ac11bb4f82b5ee0748da7d75a7054078960aaa,72ac11bb,Update PullParserXMLService.java,Update PullParserXMLService.java,,,,ttylinux,albertxiaoyu@163.com,ttylinux,albertxiaoyu@163.com,1378477741,1378477741,55406c95b3bbef32d029d04a974dd9797007179d
+55406c95b3bbef32d029d04a974dd9797007179d,55406c95,Update PullParserXMLService.java,Update PullParserXMLService.java,,,,ttylinux,albertxiaoyu@163.com,ttylinux,albertxiaoyu@163.com,1378477496,1378477496,406c2f307da5b9f2c402136a0629004040a922c3
+406c2f307da5b9f2c402136a0629004040a922c3,406c2f30,Android_Pull解析XML文件,"Android_Pull解析XML文件
+
+使用Android_Pull解析XML文件
+XmlPullParser来解析XML文件---关键就是：
+XmlPullParser对象的获取；然后要产生第一个事件--event = parser.getEventType();
+XmlPullParser.START_DOCUMENT---表示XML文件的开头；
+XmlPullParser.END_DOCUMENT---表示XML文件的结束；
+XmlPullParser.START_TAG---表示XML文件中某个元素的开始标签
+XmlPullParser.END_TAG---表示XML文件中某个元素的结束标签
+",,,,albert,albertxiaoyu@163.com,albert,albertxiaoyu@163.com,1378477022,1378477022,1fb083650b12234a52eed7ccaf3097544c1aad06
+1fb083650b12234a52eed7ccaf3097544c1aad06,1fb08365,Initial commit,"Initial commit
+",,,,ttylinux,albertxiaoyu@163.com,ttylinux,albertxiaoyu@163.com,1378476314,1378476314,
