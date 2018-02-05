@@ -437,10 +437,8 @@ def _main(args: argparse.Namespace):
     __log__.info('--neo4j-port: %d', args.neo4j_port)
     __log__.info('------- Arguments end -------')
 
-    neo4j_user = os.getenv('NEO4J_USER')
-    __log__.info('Use `%s` to login to Neo4j', neo4j_user)
-    neo4j_password = os.getenv('NEO4J_PASSWORD')
-    __log__.info('Read Neo4j password from environment')
+    neo4j_user = ''
+    neo4j_password = ''
 
     with Neo4j(NEO4J_HOST, neo4j_user, neo4j_password, NEO4J_PORT) as neo4j:
         add_repository_info(
