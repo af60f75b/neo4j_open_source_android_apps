@@ -1,42 +1,28 @@
 Graph database of 8,431 open-source Android apps
 ================================================
 
-This Docker image contains an installation of [Neo4j](https://neo4j.com) with
-a dataset of 8,431 open-source Android apps, Google Play page data, and
-version control data in one graph database.
+This Docker image contains an installation of [Neo4j](https://neo4j.com) with a dataset of 8,431 open-source Android apps, Google Play page data, and version control data in one graph database.
 
-Snapshots of all GitHub repositories are cloned to a local Gitlab instance in
-a separate container (TBA; with 136GB in size the image is not suitable for
-Docker Hub).
+Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a separate container (TBA; with 136GB in size the image is not suitable for Docker Hub).
 
 
 ## Background and motivation
 
-The idea is to create a dataset of open-source Android applications which can
-serve as a base for research. Data on Android apps is spread out over multiple
-source and finding a large number real-world applications with access to source
-code requires combining these different databases.
+The idea is to create a dataset of open-source Android applications which can serve as a base for research. Data on Android apps is spread out over multiple source and finding a large number real-world applications with access to source code requires combining these different databases.
 
 
 ## Graph database content
 
-The results of the data collection process are a list of 8,431 open-source
-Android apps with metadata from their Google Play pages and 8,216 GitHub
-repositories with the source code of those apps.
+The results of the data collection process are a list of 8,431 open-source Android apps with metadata from their Google Play pages and 8,216 GitHub repositories with the source code of those apps.
 
 All this information is made available in two ways:
 
- 1. A Neo4j graph database containing metadata of
-    repositories and apps and highlevel information on commit history of all
-    repositories.
- 2. Snapshots of all GitHub repositories in the dataset cloned to a local
-    Gitlab instance.
+ 1. A Neo4j graph database containing metadata of repositories and apps and highlevel information on commit history of all repositories.
+ 2. Snapshots of all GitHub repositories in the dataset cloned to a local Gitlab instance.
 
-![Schema of the graph database](doc/img/dbstructure.png)
+![Schema of the graph database](https://github.com/af60f75b/neo4j_open_source_android_apps/raw/master/doc/img/dbstructure.png)
 
-Additionally, `FORKS` relationships are introduced between nodes labeled
-`GitHubRepository` if an `parentId` or `sourceId` property matches with the
-`id` property of another `GitHubRepository` node.
+Additionally, `FORKS` relationships are introduced between nodes labeled `GitHubRepository` if an `parentId` or `sourceId` property matches with the `id` property of another `GitHubRepository` node.
 
 All properties of node `GooglePlayPage`
 --------------------------------------
@@ -90,30 +76,24 @@ sourceId           |Int     |Id of ancestor repository if this is a fork, otherw
 
 ## Installation and usage
 
-The Docker image is based on the official Neo4j image.
-The only difference is, that this Docker image contains the dataset and an
-[`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image)
-([`load_db.sh`](scripts/load_db.sh)) which preloads the data when starting the container.
+The Docker image is based on the official Neo4j image.  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
 
  1. You need to [install Docker](https://docs.docker.com/install/)
-
  2. Pull this image: `docker pull af60f75b/neo4j_open_source_android_apps`
-
  3. Use it as decribed in [official documentation](http://neo4j.com/docs/operations-manual/current/installation/docker/)
 
 For example:
-```
-docker run \
-    --publish=7474:7474 --publish=7687:7687 \
-    --volume=$HOME/neo4j/data:/data \
-    --volume=$HOME/neo4j/logs:/logs \
-    af60f75b/neo4j_open_source_android_apps
-```
+
+    docker run \
+        --publish=7474:7474 --publish=7687:7687 \
+        --volume=$HOME/neo4j/data:/data \
+        --volume=$HOME/neo4j/logs:/logs \
+        af60f75b/neo4j_open_source_android_apps
 
 You can access the Neo4j web-interface at `http://localhost:7474` and
 connect _Gopher_ clients to `bolt://localhost:7687`.
 
-![Neo4j Web Interface](doc/img/neo4jwebinterface.png)
+![Neo4j Web Interface](https://github.com/af60f75b/neo4j_open_source_android_apps/raw/master/doc/img/neo4jwebinterface.png)
 
 ## Example Queries
 
@@ -121,79 +101,62 @@ connect _Gopher_ clients to `bolt://localhost:7687`.
 
 Select all apps belonging to the _Finance_ category with more than 10 commits in a given week.
 
-```
-WITH apoc.date.parse('2017-01-01', 's', 'yyyy-MM-dd')
-		as begin,
-	apoc.date.parse('2017-01-08', 's', 'yyyy-MM-dd')
-		as end
-MATCH (p:GooglePlayPage)<-[:PUBLISHED_AT]-
-	(a:App)-[*]-(:Commit)<-[c:COMMITS]-()
-WHERE 'Finance' in p.appCategory
-	AND start <= c.timestamp < end
-WITH a, SIZE(COLLECT(DISTINCT c)) as commitCount
-WHERE commitCount > 10
-RETURN a.id, commitCount
-```
+    WITH apoc.date.parse('2017-01-01', 's', 'yyyy-MM-dd')
+            as begin,
+        apoc.date.parse('2017-01-08', 's', 'yyyy-MM-dd')
+            as end
+    MATCH (p:GooglePlayPage)<-[:PUBLISHED_AT]-
+        (a:App)-[*]-(:Commit)<-[c:COMMITS]-()
+    WHERE 'Finance' in p.appCategory
+        AND start <= c.timestamp < end
+    WITH a, SIZE(COLLECT(DISTINCT c)) as commitCount
+    WHERE commitCount > 10
+    RETURN a.id, commitCount
 
 ### Example 2
 
 Select all contributors who worked on more than one app in a given month.
 
-```
-WITH apoc.date.parse('2017-07-01', 's', 'yyyy-MM-dd')
-		as start,
-	apoc.date.parse('2017-08-01', 's', 'yyyy-MM-dd')
-		as end
-MATCH (app1:App)-[*]-(:Commit)<-[c1:COMMITS|AUTHORS]-
-	(c:Contributor)
-	-[c2:COMMITS|AUTHORS]->(:Commit)-[*]-(app2:App)
-WHERE a1.id != a2.id
-	AND start <= c1.timestamp > end
-	AND start <= c2.timestamp > end
-RETURN contrib
-```
+    WITH apoc.date.parse('2017-07-01', 's', 'yyyy-MM-dd')
+            as start,
+        apoc.date.parse('2017-08-01', 's', 'yyyy-MM-dd')
+            as end
+    MATCH (app1:App)-[*]-(:Commit)<-[c1:COMMITS|AUTHORS]-
+        (c:Contributor)
+        -[c2:COMMITS|AUTHORS]->(:Commit)-[*]-(app2:App)
+    WHERE a1.id != a2.id
+        AND start <= c1.timestamp > end
+        AND start <= c2.timestamp > end
+    RETURN contrib
 
 ### Example 3
 
-Providing our dataset in containerized form allows future research to easily augment the data and combine it for new insights. The following is a very simple example showcasing this possibility. 
-Assuming all commits have been tagged with self-reported activity of developers, select all commits in which the developer is fixing a performance-related bug.
-For demonstration purposes, a very simple tagger is applied. Optimally, tagging is done with a more sophisticated model.
+Providing our dataset in containerized form allows future research to easily augment the data and combine it for new insights. The following is a very simple example showcasing this possibility.  Assuming all commits have been tagged with self-reported activity of developers, select all commits in which the developer is fixing a performance-related bug.  For demonstration purposes, a very simple tagger is applied. Optimally, tagging is done with a more sophisticated model.
 
-```
-MATCH (c:Commit)
-WHERE c.message CONTAINS 'performance'
-SET c :PerformanceFix
-```
+    MATCH (c:Commit)
+    WHERE c.message CONTAINS 'performance'
+    SET c :PerformanceFix
 
 Also, given these additional labels, performance related fixes can then be easily used in any kind of query via the following snippet.
 
-```
-MATCH (c:Commit:PerformanceFix) RETURN c
-```
+    MATCH (c:Commit:PerformanceFix) RETURN c
 
 ### Example 4
 
-Metadata from GitHub and Google Play can be combined and compared.
-Both platforms have popularity measures such as star ratings.
-The following query returns these metrics about each app for further analysis.
+Metadata from GitHub and Google Play can be combined and compared.  Both platforms have popularity measures such as star ratings.  The following query returns these metrics about each app for further analysis.
 
-```
-MATCH (r:GitHubRepository)<-[:IMPLEMENTED_BY]-
-	(a:App)-[:PUBLISHED_AT]->(p:GooglePlayPage)
-RETURN a.id, p.starRating, r.forksCount,
-	r.stargazersCount, r.subscribersCount,
-	r.watchersCount, r.networkCount
-```
-
+    MATCH (r:GitHubRepository)<-[:IMPLEMENTED_BY]-
+        (a:App)-[:PUBLISHED_AT]->(p:GooglePlayPage)
+    RETURN a.id, p.starRating, r.forksCount,
+        r.stargazersCount, r.subscribersCount,
+        r.watchersCount, r.networkCount
 
 ### Example 5
 
 Does a higher number of contributors relates to more successful apps? The following query returns the average review rating on Google Play and the number of contributors to the source code of each app within the dataset.
 
-```
-MATCH (c:Contributor)-[*]-
-	(a:App)-[:PUBLISHED_AT]->(play:GooglePlayPage)
-WITH a, SIZE(COLLECT(DISTINCT c)) as contribCount
-RETURN a:id, p.starRating, contribCount
-```
+    MATCH (c:Contributor)-[*]-
+        (a:App)-[:PUBLISHED_AT]->(play:GooglePlayPage)
+    WITH a, SIZE(COLLECT(DISTINCT c)) as contribCount
+    RETURN a:id, p.starRating, contribCount
 
