@@ -5,4 +5,9 @@
 set -e
 set -u
 
-neo4j-admin load --from=/var/persist_graph/android_apps.dump --database=graph.db
+mkdir -p /data/databases
+echo "Importing data ..."
+neo4j-admin load \
+        --from=/var/persist_graph/android_apps.dump \
+        --database=graph.db \
+    || echo "Continue without importing."
