@@ -126,7 +126,7 @@ For some of these queries, the Neo4j plugin [APOC](https://guides.neo4j.com/apoc
 
 ### Example 1
 
-Select all apps belonging to the _Finance_ category with more than 10 commits in a given week.
+Select apps belonging to the _Finance_ category with more than 10 commits in a given week.
 
     WITH apoc.date.parse('2017-01-01', 's', 'yyyy-MM-dd')
             as start,
@@ -141,11 +141,11 @@ Select all apps belonging to the _Finance_ category with more than 10 commits in
     WITH a, SIZE(COLLECT(DISTINCT c)) as commitCount
     WHERE commitCount > 10
     RETURN a.id, commitCount
-    LIMIT 10
+    LIMIT 20
 
 ### Example 2
 
-Select all contributors who worked on more than one app in a given month.
+Select contributors who worked on more than one app in a given month.
 
     WITH apoc.date.parse('2017-07-01', 's', 'yyyy-MM-dd')
             as start,
@@ -163,7 +163,7 @@ Select all contributors who worked on more than one app in a given month.
         AND start <= c1.timestamp < end
         AND start <= c2.timestamp < end
     RETURN c
-    LIMIT 10
+    LIMIT 20
 
 ### Example 3
 
@@ -175,21 +175,22 @@ Providing our dataset in containerized form allows future research to easily aug
 
 Also, given these additional labels, performance related fixes can then be easily used in any kind of query via the following snippet.
 
-    MATCH (c:Commit:PerformanceFix) RETURN c
+    MATCH (c:Commit:PerformanceFix) RETURN c LIMIT 20
 
 ### Example 4
 
-Metadata from GitHub and Google Play can be combined and compared.  Both platforms have popularity measures such as star ratings.  The following query returns these metrics about each app for further analysis.
+Metadata from GitHub and Google Play can be combined and compared.  Both platforms have popularity measures such as star ratings.  The following query returns these metrics for further analysis.
 
     MATCH (r:GitHubRepository)<-[:IMPLEMENTED_BY]-
         (a:App)-[:PUBLISHED_AT]->(p:GooglePlayPage)
     RETURN a.id, p.starRating, r.forksCount,
         r.stargazersCount, r.subscribersCount,
         r.watchersCount, r.networkCount
+    LIMIT 20
 
 ### Example 5
 
-Does a higher number of contributors relates to more successful apps? The following query returns the average review rating on Google Play and the number of contributors to the source code of each app within the dataset.
+Does a higher number of contributors relates to more successful apps? The following query returns the average review rating on Google Play and the number of contributors to the source code.
 
     MATCH (c:Contributor)-[:AUTHORS|COMMITS]->
         (:Commit)-[:BELONGS_TO]->
