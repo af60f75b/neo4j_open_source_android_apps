@@ -1,6 +1,8 @@
 Graph database of 8,431 open-source Android apps
 ================================================
 
+**Note: Some example queries in the submission are inefficient or include mistakes. See below for corrected versions.**
+
 This Docker image contains an installation of [Neo4j](https://neo4j.com) with a dataset of 8,431 open-source Android apps, Google Play page data, and version control data in one graph database.
 
 Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a separate container (TBA; with 136GB in size the image is not suitable for Docker Hub).
@@ -111,21 +113,35 @@ sourceId           |Int     |Id of ancestor repository if this is a fork, otherw
 
 ## Example Queries
 
+For some of these queries, the Neo4j plugin [APOC](https://guides.neo4j.com/apoc) is necessary. Install it by mapping it into the container as follows:
+
+    $ mkdir plugins
+    $ cd plugins
+    $ wget https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/3.3.0.1/apoc-3.3.0.1-all.jar
+    $ cd ..
+    $ docker run --rm --detach=true \
+        --publish=7474:7474 --publish=7687:7687 \
+        --volume=$PWD:/plugins \
+        af60f75b/neo4j_open_source_android_apps
+
 ### Example 1
 
 Select all apps belonging to the _Finance_ category with more than 10 commits in a given week.
 
     WITH apoc.date.parse('2017-01-01', 's', 'yyyy-MM-dd')
-            as begin,
+            as start,
         apoc.date.parse('2017-01-08', 's', 'yyyy-MM-dd')
             as end
     MATCH (p:GooglePlayPage)<-[:PUBLISHED_AT]-
-        (a:App)-[*]-(:Commit)<-[c:COMMITS]-()
+        (a:App)-[:IMPLEMENTED_BY]->
+        (:GitHubRepository)<-[:BELONGS_TO]-
+        (:Commit)<-[c:COMMITS]-(:Contributor)
     WHERE 'Finance' in p.appCategory
         AND start <= c.timestamp < end
     WITH a, SIZE(COLLECT(DISTINCT c)) as commitCount
     WHERE commitCount > 10
     RETURN a.id, commitCount
+    LIMIT 10
 
 ### Example 2
 
@@ -135,13 +151,19 @@ Select all contributors who worked on more than one app in a given month.
             as start,
         apoc.date.parse('2017-08-01', 's', 'yyyy-MM-dd')
             as end
-    MATCH (app1:App)-[*]-(:Commit)<-[c1:COMMITS|AUTHORS]-
-        (c:Contributor)
-        -[c2:COMMITS|AUTHORS]->(:Commit)-[*]-(app2:App)
-    WHERE a1.id != a2.id
-        AND start <= c1.timestamp > end
-        AND start <= c2.timestamp > end
-    RETURN contrib
+    MATCH (app1:App)-[:IMPLEMENTED_BY]->
+        (:GitHubRepository)<-[:BELONGS_TO]-
+        (:Commit)<-[c1:COMMITS|AUTHORS]-
+        (c:Contributor)-[c2:COMMITS|AUTHORS]->
+        (:Commit)-[:BELONGS_TO]->
+        (:GitHubRepository)<-[:IMPLEMENTED_BY]-
+        (app2:App)
+    WHERE c.email <> 'noreply@github.com'
+        AND app1.id <> app2.id
+        AND start <= c1.timestamp < end
+        AND start <= c2.timestamp < end
+    RETURN c
+    LIMIT 10
 
 ### Example 3
 
@@ -169,8 +191,10 @@ Metadata from GitHub and Google Play can be combined and compared.  Both platfor
 
 Does a higher number of contributors relates to more successful apps? The following query returns the average review rating on Google Play and the number of contributors to the source code of each app within the dataset.
 
-    MATCH (c:Contributor)-[*]-
-        (a:App)-[:PUBLISHED_AT]->(play:GooglePlayPage)
-    WITH a, SIZE(COLLECT(DISTINCT c)) as contribCount
-    RETURN a:id, p.starRating, contribCount
-
+    MATCH (c:Contributor)-[:AUTHORS|COMMITS]->
+        (:Commit)-[:BELONGS_TO]->
+        (:GitHubRepository)<-[:IMPLEMENTED_BY]-
+        (a:App)-[:PUBLISHED_AT]->(p:GooglePlayPage)
+    WITH p, a, SIZE(COLLECT(DISTINCT c)) as contribCount
+    RETURN a.id, p.starRating, contribCount
+    LIMIT 20
