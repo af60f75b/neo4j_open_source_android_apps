@@ -1,6 +1,5 @@
 FROM neo4j:3.3
 
-COPY scripts/load_db.sh /var/persist_graph/load_db.sh
 COPY data /tmp/import
 RUN bin/neo4j-admin import \
         --database=graph.db \
@@ -25,6 +24,7 @@ RUN bin/neo4j-admin import \
 # running the container. The entry point of the parent
 # image (/docker-entrypoint.sh) sources the script
 # specified in EXTENSION_SCRIPT.
+COPY scripts/load_db.sh /var/persist_graph/load_db.sh
 ENV EXTENSION_SCRIPT=/var/persist_graph/load_db.sh
 
 CMD ["neo4j"]
