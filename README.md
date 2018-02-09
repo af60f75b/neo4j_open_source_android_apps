@@ -13,7 +13,7 @@ Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a 
 The idea is to create a dataset of open-source Android applications which can serve as a base for research. Data on Android apps is spread out over multiple source and finding a large number real-world applications with access to source code requires combining these different databases.
 
 
-## Installation and usage
+## Installation
 
 The Docker image is based on the official Neo4j image.  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
 
@@ -40,9 +40,18 @@ Map volumes into the container in order to persist state between executions:
 
 When running the container for the first time, data gets imported into the graph database. This can take several seconds. Subsequent starts with an existing database in a mapped volume skip the importing step.
 
-When logging in for the first time, a new password needs to be set. Log-in with username `neo4j` and password `neo4j` to set a new password. [This step can be skipped by setting a default password or disabling authentication.](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-overview).
+
+## Usage
 
 You can access the Neo4j web-interface at `http://localhost:7474` and connect _Gopher_ clients to `bolt://localhost:7687`.
+
+Alternatively, a  _Cypher_ shell can be run with the `bin/cypher-shell` command once a container is running.  Use the container ID returned by the `docker run` command or find it out with `docker ps`.
+
+    $ docker run <...>  # As above
+    6455917a2532b0c9bc335f93568022bd66c6dd4208f16b29b7f8b14b9418238b
+    $ docker exec --interactive --tty 6455917a2532b0c9bc335f93568022bd66c6dd4208f16b29b7f8b14b9418238b bin/cypher-shell
+
+When logging in for the first time, a new password needs to be set. Log-in with username `neo4j` and password `neo4j` to set a new password. [This step can be skipped by setting a default password or disabling authentication.](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-overview).
 
 
 ![Neo4j Web Interface](https://github.com/af60f75b/neo4j_open_source_android_apps/raw/master/doc/img/neo4jwebinterface.png)
