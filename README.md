@@ -11,6 +11,41 @@ Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a 
 The idea is to create a dataset of open-source Android applications which can serve as a base for research. Data on Android apps is spread out over multiple source and finding a large number real-world applications with access to source code requires combining these different databases.
 
 
+## Installation and usage
+
+The Docker image is based on the official Neo4j image.  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
+
+ 1. You need to [install Docker](https://docs.docker.com/install/)
+ 2. Pull this image: `docker pull af60f75b/neo4j_open_source_android_apps`
+ 3. Use it as decribed in [official documentation](http://neo4j.com/docs/operations-manual/current/installation/docker/)
+
+For example:
+
+    docker run --rm --detach=true \
+        --publish=7474:7474 --publish=7687:7687 \
+        af60f75b/neo4j_open_source_android_apps
+
+This command starts the Docker image and exposes ports used by Neo4j. The `--rm` options tells Docker to remove any newly created data inside the container after it has stopped running.
+
+Map volumes into the container in order to persist state between executions:
+
+    docker run --rm --detach=true \
+        --publish=7474:7474 --publish=7687:7687 \
+        --volume=$HOME/neo4j/data:/data \
+        --volume=$HOME/neo4j/logs:/logs \
+        af60f75b/neo4j_open_source_android_apps
+
+
+When running the container for the first time, data gets imported into the graph database. This can take several seconds. Subsequent starts with an existing database in a mapped volume skip the importing step.
+
+When logging in for the first time, a new password needs to be set. Log-in with username `neo4j` and password `neo4j` to set a new password. [This step can be skipped by setting a default password or disabling authentication.](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-overview).
+
+You can access the Neo4j web-interface at `http://localhost:7474` and connect _Gopher_ clients to `bolt://localhost:7687`.
+
+
+![Neo4j Web Interface](https://github.com/af60f75b/neo4j_open_source_android_apps/raw/master/doc/img/neo4jwebinterface.png)
+
+
 ## Graph database content
 
 The results of the data collection process are a list of 8,431 open-source Android apps with metadata from their Google Play pages and 8,216 GitHub repositories with the source code of those apps.
@@ -73,27 +108,6 @@ ownerType          |String  |Account type of the owner, either “User” or “
 parentId           |Int     |Id of parent repository if this is a fork, otherwise -1.
 sourceId           |Int     |Id of ancestor repository if this is a fork, otherwise -1.
 
-
-## Installation and usage
-
-The Docker image is based on the official Neo4j image.  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
-
- 1. You need to [install Docker](https://docs.docker.com/install/)
- 2. Pull this image: `docker pull af60f75b/neo4j_open_source_android_apps`
- 3. Use it as decribed in [official documentation](http://neo4j.com/docs/operations-manual/current/installation/docker/)
-
-For example:
-
-    docker run \
-        --publish=7474:7474 --publish=7687:7687 \
-        --volume=$HOME/neo4j/data:/data \
-        --volume=$HOME/neo4j/logs:/logs \
-        af60f75b/neo4j_open_source_android_apps
-
-You can access the Neo4j web-interface at `http://localhost:7474` and
-connect _Gopher_ clients to `bolt://localhost:7687`.
-
-![Neo4j Web Interface](https://github.com/af60f75b/neo4j_open_source_android_apps/raw/master/doc/img/neo4jwebinterface.png)
 
 ## Example Queries
 
