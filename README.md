@@ -147,16 +147,15 @@ Select apps belonging to the _Finance_ category with more than 10 commits in a g
         (:Commit)<-[c:COMMITS]-(:Contributor)
     WHERE 'Finance' in p.appCategory
         AND start <= c.timestamp < end
-    WITH a, SIZE(COLLECT(DISTINCT c)) as commitCount
+    WITH a.id as package, SIZE(COLLECT(DISTINCT c)) as commitCount
     WHERE commitCount > 10
-    RETURN a.id, commitCount
-    LIMIT 20
+    RETURN package, commitCount
 
 ### Example 2
 
 Select contributors who worked on more than one app in a given month.
 
-    WITH apoc.date.parse('2017-07-01', 's', 'yyyy-MM-dd')
+    WITH apoc.date.parse('2017-01-01', 's', 'yyyy-MM-dd')
             as start,
         apoc.date.parse('2017-08-01', 's', 'yyyy-MM-dd')
             as end
@@ -171,7 +170,7 @@ Select contributors who worked on more than one app in a given month.
         AND app1.id <> app2.id
         AND start <= c1.timestamp < end
         AND start <= c2.timestamp < end
-    RETURN c
+    RETURN DISTINCT c
     LIMIT 20
 
 ### Example 3
@@ -205,6 +204,7 @@ Does a higher number of contributors relates to more successful apps? The follow
         (:Commit)-[:BELONGS_TO]->
         (:GitHubRepository)<-[:IMPLEMENTED_BY]-
         (a:App)-[:PUBLISHED_AT]->(p:GooglePlayPage)
-    WITH p, a, SIZE(COLLECT(DISTINCT c)) as contribCount
-    RETURN a.id, p.starRating, contribCount
+    WITH p.starRating as rating, a.id as package,
+        SIZE(COLLECT(DISTINCT c)) as contribCount
+    RETURN package, rating, contribCount
     LIMIT 20
