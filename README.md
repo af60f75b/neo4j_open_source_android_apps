@@ -51,7 +51,7 @@ When running the container for the first time, data gets imported into the graph
 
 ### Git repositories: Gitlab
 
-The image containing Git repositories is a fork of the [official Gitlab Docker image.](https://store.docker.com/images/gitlab-enterprise-edition) The main difference is, that instead of in a mountable volume, data is persisted inside the image.
+The image containing Git repositories is [built from a fork](https://github.com/af60f75b/gitlab_open_source_android_apps/blob/gitlab_open_source_android_apps/docker/Dockerfile) of the [official Gitlab Docker image.](https://store.docker.com/images/gitlab-enterprise-edition) The main difference is, that instead of in a mountable volume, all Git repositories in out dataset are manually persisted in the image.
 
 With almost 150GB in size the image containing clones of all Git repositories in the dataset exceeds size limits of Docker Hub and needs to be downloaded and imloaded manually:
 
