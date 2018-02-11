@@ -5,7 +5,7 @@ Graph database of 8,431 open-source Android apps
 
 This Docker image contains an installation of [Neo4j](https://neo4j.com) with a dataset of 8,431 open-source Android apps, Google Play page data, and version control data in one graph database.
 
-Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a separate container (TBA; with 136GB in size the image is not suitable for Docker Hub).
+Snapshots of all GitHub repositories are cloned to a local Gitlab instance in a separate container (see below).
 
 
 ## Background and motivation
@@ -15,11 +15,19 @@ The idea is to create a dataset of open-source Android applications which can se
 
 ## Installation
 
-The Docker image is based on the official Neo4j image.  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
+Data is split into two parts:
 
- 1. You need to [install Docker](https://docs.docker.com/install/)
- 2. Pull this image: `docker pull af60f75b/neo4j_open_source_android_apps`
- 3. Use it as decribed in [official documentation](http://neo4j.com/docs/operations-manual/current/installation/docker/)
+ * Neo4j graph database which contains metadata as described in Section _Graph database content_.
+ * Gitlab instance with snapshots of all Git repositories in the dataset.
+
+For either image to run [Docker needs to be installed.](https://docs.docker.com/install/)
+
+### Graph database: Neo4j
+
+The Docker image containing the graph database is based on the [official Neo4j image.](https://store.docker.com/images/neo4j)  The only difference is, that this Docker image contains the dataset and an [`EXTENSION_SCRIPT`](http://neo4j.com/docs/operations-manual/current/installation/docker/#docker-new-image) ([`load_db.sh`](https://github.com/af60f75b/neo4j_open_source_android_apps/blob/master/scripts/load_db.sh)) which preloads the data when starting the container.
+
+ 1. Pull this image: `docker pull af60f75b/neo4j_open_source_android_apps`
+ 2. Use it as decribed in [official documentation](http://neo4j.com/docs/operations-manual/current/installation/docker/)
 
 For example:
 
@@ -39,6 +47,26 @@ Map volumes into the container in order to persist state between executions:
 
 
 When running the container for the first time, data gets imported into the graph database. This can take several seconds. Subsequent starts with an existing database in a mapped volume skip the importing step.
+
+
+### Git repositories: Gitlab
+
+The image containing Git repositories is a fork of the [official Gitlab Docker image.](https://store.docker.com/images/gitlab-enterprise-edition) The main difference is, that instead of in a mountable volume, data is persisted inside the image.
+
+With almost 150GB in size the image containing clones of all Git repositories in the dataset exceeds size limits of Docker Hub and needs to be downloaded and imloaded manually:
+
+ 1. [Download the image (tar archive, 145GB)](https://www.dropbox.com/s/e9ld70s72mxc85y/docker_gitlab_open_source_android_apps.tar.gz?dl=0)
+ 2. Load the image into Docker: `docker load -i path/to/docker_gitlab_open_source_android_apps.tar.gz`
+ 3. Use the image as described in the [official documentation.](https://docs.gitlab.com/omnibus/docker/README.html).
+
+ For instance:
+
+    docker run --rm --detach=true \
+        --publish 80:80 --publish 2222:22 \
+        --hostname=145.108.225.21 \
+        gitlab_open_source_android_apps
+
+The web interface is available at port 80 after Gitlab has started up, which may take several minutes. Log-in is possible with user `root` and password `gitlab`. Git repositories can be cloned from port `2222`.
 
 
 ## Usage
