@@ -53,7 +53,7 @@ When running the container for the first time, data gets imported into the graph
 
 The image containing Git repositories is [built from a fork](https://github.com/af60f75b/gitlab_open_source_android_apps/blob/gitlab_open_source_android_apps/docker/Dockerfile) of the [official Gitlab Docker image.](https://store.docker.com/images/gitlab-enterprise-edition) The main difference is, that instead of in a mountable volume, all Git repositories in out dataset are manually persisted in the image.
 
-With almost 150GB in size the image containing clones of all Git repositories in the dataset exceeds size limits of Docker Hub and needs to be downloaded and imloaded manually:
+With almost 150GB in size the image containing clones of all Git repositories in the dataset exceeds size limits of Docker Hub and needs to be downloaded and loaded manually:
 
  1. [Download the image (tar archive, 145GB)](https://www.dropbox.com/s/e9ld70s72mxc85y/docker_gitlab_open_source_android_apps.tar.gz?dl=0)
  2. Load the image into Docker: `docker load -i path/to/docker_gitlab_open_source_android_apps.tar.gz`
@@ -61,10 +61,12 @@ With almost 150GB in size the image containing clones of all Git repositories in
 
  For instance:
 
+```
     docker run --rm --detach=true \
         --publish 80:80 --publish 2222:22 \
         --hostname=145.108.225.21 \
         gitlab_open_source_android_apps
+```
 
 The web interface is available at port 80 after Gitlab has started up, which may take several minutes. Log-in is possible with user `root` and password `gitlab`. Git repositories can be cloned from port `2222`.
 
